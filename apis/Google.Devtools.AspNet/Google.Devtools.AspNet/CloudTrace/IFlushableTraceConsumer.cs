@@ -17,7 +17,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A flushable trace consumer that takes Stackdriver Trace traces.
     /// </summary>
-    public interface IFlushableTraceConsumer : ITraceConsumer
+    internal interface IFlushableTraceConsumer : ITraceConsumer
     {
         /// <summary>
         /// Flush the trace consumer.

@@ -17,7 +17,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A factory to generate trace options such as if the current request should be traced.
     /// </summary>
-    public interface ITraceOptionsFactory
+    internal interface ITraceOptionsFactory
     {
         /// <summary>
         /// Creates a new <see cref="TraceOptions"/>.

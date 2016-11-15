@@ -20,7 +20,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A factory to create random trace ids.
     /// </summary>
-    public sealed class TraceIdFactory
+    internal sealed class TraceIdFactory
     {
         private readonly Random _random;
 

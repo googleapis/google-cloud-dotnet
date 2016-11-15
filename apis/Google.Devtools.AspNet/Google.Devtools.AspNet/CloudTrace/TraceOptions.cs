@@ -17,7 +17,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// Options about a trace, such as if tracing should occur.
     /// </summary>
-    public sealed class TraceOptions
+    internal sealed class TraceOptions
     {
         private readonly bool _shouldTrace;
 

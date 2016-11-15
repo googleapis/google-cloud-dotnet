@@ -21,7 +21,7 @@ namespace Google.Devtools.AspNet
     /// A <see cref="IFlushableTraceConsumer"/> that will automatically flush traces when
     /// the buffer is full.
     /// </summary>
-    public sealed class BufferingTraceConsumer : IFlushableTraceConsumer
+    internal sealed class BufferingTraceConsumer : IFlushableTraceConsumer
     {
         // The default buffer size in bytes. 2^16 = 65536.
         public static readonly int DefaultBufferSize = 65536;

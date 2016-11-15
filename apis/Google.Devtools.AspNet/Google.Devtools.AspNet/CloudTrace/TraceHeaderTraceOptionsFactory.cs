@@ -20,7 +20,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A factory to generate trace options based on the trace header.
     /// </summary>
-    public sealed class TraceHeaderTraceOptionsFactory : ITraceOptionsFactory
+    internal sealed class TraceHeaderTraceOptionsFactory : ITraceOptionsFactory
     {
         private TraceHeaderTraceOptionsFactory() { }
 

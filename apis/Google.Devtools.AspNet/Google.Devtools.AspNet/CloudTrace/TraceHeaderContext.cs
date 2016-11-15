@@ -28,7 +28,7 @@ namespace Google.Devtools.AspNet
     /// The trace id, parent span id and whether or not to trace can be set.
     /// See: https://cloud.google.com/trace/docs/faq#how_do_i_force_a_request_to_be_traced
     /// </remarks>
-    public sealed class TraceHeaderContext
+    internal sealed class TraceHeaderContext
     {
         // An TraceHeaderContext representing no information or invalid information from a header.
         private static readonly TraceHeaderContext InvalidTraceHeaderContext =

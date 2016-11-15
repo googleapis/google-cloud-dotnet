@@ -19,7 +19,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A factory to generate trace options based on a rate limiter.
     /// </summary>
-    public sealed class RateLimitingTraceOptionsFactory : ITraceOptionsFactory
+    internal sealed class RateLimitingTraceOptionsFactory : ITraceOptionsFactory
     {
         private readonly RateLimiter _rateLimiter;
 

@@ -19,7 +19,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A factory to create random span ids.
     /// </summary>
-    public sealed class SpanIdFactory
+    internal sealed class SpanIdFactory
     {
         private readonly Random _random;
 

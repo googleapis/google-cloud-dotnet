@@ -20,7 +20,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A managed tracer that does nothing.
     /// </summary>
-    public sealed class DoNothingTracer : IManagedTracer
+    internal sealed class DoNothingTracer : IManagedTracer
     {
         public static DoNothingTracer Instance = new DoNothingTracer();
         private DoNothingTracer() { }
