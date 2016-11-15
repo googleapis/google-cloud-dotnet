@@ -38,7 +38,6 @@ namespace Google.Storage.V1.Tests
         };
 
         // Samples as per https://github.com/google/guava/blob/master/guava-tests/test/com/google/common/hash/Crc32cHashFunctionTest.java
-        // We only test the byte[] version of the hash for a couple of values, as it's just a transformation of the CRC.
         public static IEnumerable<object[]> SampleData => new object[][]
         {
             new object[] { Enumerable.Repeat((byte) 0, 32), new byte[] { 0x8a, 0x91, 0x36, 0xaa } },
