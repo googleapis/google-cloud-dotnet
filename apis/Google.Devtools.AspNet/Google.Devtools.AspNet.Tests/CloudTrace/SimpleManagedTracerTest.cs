@@ -85,7 +85,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
-            mockConsumer.Setup(c => c.Recieve(
+            mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
                     t.Traces_[0].Spans.Count == 1 &&
@@ -102,7 +102,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace(), 123);
 
-            mockConsumer.Setup(c => c.Recieve(
+            mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
                     t.Traces_[0].Spans.Count == 1 &&
@@ -119,7 +119,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
-            mockConsumer.Setup(c => c.Recieve(
+            mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
                     t.Traces_[0].Spans.Count == 1 &&
@@ -140,7 +140,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Dictionary<string, string> annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
-            mockConsumer.Setup(c => c.Recieve(
+            mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
                     t.Traces_[0].Spans.Count == 1 &&
@@ -162,7 +162,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Dictionary<string, string> annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
-            mockConsumer.Setup(c => c.Recieve(
+            mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
                     t.Traces_[0].Spans.Count == 1 &&
@@ -184,7 +184,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Dictionary<string, string> annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
-            mockConsumer.Setup(c => c.Recieve(
+            mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
                     t.Traces_[0].Spans.Count == 5 &&
@@ -222,7 +222,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             tracer.StartSpan("span-name-2");
             tracer.EndSpan();
             tracer.EndSpan();
-            mockConsumer.Verify(c => c.Recieve(It.IsAny<Traces>()), Times.Never());
+            mockConsumer.Verify(c => c.Receive(It.IsAny<Traces>()), Times.Never());
         }
 
         [Fact]
