@@ -30,7 +30,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         }
 
         [Fact]
-        public void Recieve()
+        public void Receive()
         {
             int bufferSize = 1024;
             Traces traces = new Traces();
@@ -38,8 +38,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
 
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, bufferSize);
-            consumer.Recieve(traces);
-            mockConsumer.Verify(c => c.Recieve(It.IsAny<Traces>()), Times.Never());
+            consumer.Receive(traces);
+            mockConsumer.Verify(c => c.Receive(It.IsAny<Traces>()), Times.Never());
 
             traces = new Traces();
             while (traces.Traces_.Count < 1000 && traces.CalculateSize() < bufferSize)
@@ -50,9 +50,9 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             // Add the initial trace to the current list.
             Traces combined = traces;
             combined.Traces_.Add(CreateTrace());
-            mockConsumer.Setup(c => c.Recieve(traces));
+            mockConsumer.Setup(c => c.Receive(traces));
 
-            consumer.Recieve(traces);
+            consumer.Receive(traces);
             mockConsumer.VerifyAll();
         }
         
@@ -64,10 +64,10 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             traces.Traces_.Add(trace);
 
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
-            mockConsumer.Setup(c => c.Recieve(traces));
+            mockConsumer.Setup(c => c.Receive(traces));
             BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, int.MaxValue);
-            consumer.Recieve(traces);
-            mockConsumer.Verify(c => c.Recieve(It.IsAny<Traces>()), Times.Never());
+            consumer.Receive(traces);
+            mockConsumer.Verify(c => c.Receive(It.IsAny<Traces>()), Times.Never());
 
             consumer.Flush();
             mockConsumer.VerifyAll();
@@ -78,8 +78,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         {
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, int.MaxValue);
-            consumer.Recieve(new Traces());
-            mockConsumer.Verify(c => c.Recieve(It.IsAny<Traces>()), Times.Never());
+            consumer.Receive(new Traces());
+            mockConsumer.Verify(c => c.Receive(It.IsAny<Traces>()), Times.Never());
         }
     }
 }
