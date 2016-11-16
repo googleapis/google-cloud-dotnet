@@ -32,6 +32,3 @@ Alpha releases from
 - [Google.Devtools.Clouderrorreporting.V1Beta1](Google.Devtools.Clouderrorreporting.V1Beta1/index.html)
 - [Google.Devtools.Cloudtrace.V1](Google.Devtools.Cloudtrace.V1/index.html)
 - [Google.Monitoring.V3](Google.Monitoring.V3/index.html)
-
-Deprecated:
-- [Google.Cloud.Language.V1Beta1](Google.Cloud.Language.V1Beta1/index.html)
