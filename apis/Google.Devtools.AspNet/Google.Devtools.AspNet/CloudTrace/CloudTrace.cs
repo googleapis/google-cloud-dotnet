@@ -65,9 +65,9 @@ namespace Google.Devtools.AspNet
             config = config ?? TraceConfiguration.Create();
 
             _traceIdfactory = TraceIdFactory.Create();
-            _bufferingConsumer = BufferingTraceConsumer.Create(GrpcTraceConsumer.Create(client)); ;
-            _rateFactory = RateLimitingTraceOptionsFactory.Create(config); ;
-            _headerFactory = TraceHeaderTraceOptionsFactory.Create(); ;
+            _bufferingConsumer = BufferingTraceConsumer.Create(GrpcTraceConsumer.Create(client));
+            _rateFactory = RateLimitingTraceOptionsFactory.Create(config);
+            _headerFactory = TraceHeaderTraceOptionsFactory.Create();
 
             // Add event handlers to the application.
             application.BeginRequest += new EventHandler(BeginRequest);
