@@ -25,7 +25,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A helper class to handle span labels.
     /// </summary>
-    public static class Labels
+    internal static class Labels
     {
         // The label to denote the size of a request.
         public static readonly string HttpRequestSize = "trace.cloud.google.com/http/request/size";

@@ -35,18 +35,16 @@ namespace Google.Devtools.AspNet
         // The amount of time that must be waited before allowing tracing.
         private readonly long _fixedDelayMillis;
 
-        // A stopwatch to manage time between event.s
+        // A stopwatch to manage time between events.
         private readonly Stopwatch _stopWatch;
 
-        // The last time this allowed tracing.
+        // The last time tracing was allowed.
         private long _lastCallMillis;
 
         /// <summary>
         /// Gets the instance of the <see cref="RateLimiter"/>.  The first request will set the
         /// QPS of the rate limiter.  All subsequent request's QPS will not change the QPS of the rate limiter.
         /// </summary>
-        /// <param name="qps"></param>
-        /// <returns></returns>
         public static RateLimiter GetInstance(double qps)
         {
             if (_instance == null)

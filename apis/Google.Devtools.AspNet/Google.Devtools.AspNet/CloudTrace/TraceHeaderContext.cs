@@ -24,7 +24,7 @@ namespace Google.Devtools.AspNet
     /// </summary>
     /// 
     /// <remarks>
-    /// A trace can be forced by passing informatio along in the trace header ("X-Cloud-Trace-Context").
+    /// A trace can be forced by passing information along in the trace header ("X-Cloud-Trace-Context").
     /// The trace id, parent span id and whether or not to trace can be set.
     /// See: https://cloud.google.com/trace/docs/faq#how_do_i_force_a_request_to_be_traced
     /// </remarks>
