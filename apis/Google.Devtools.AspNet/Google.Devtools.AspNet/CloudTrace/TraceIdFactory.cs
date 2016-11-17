@@ -45,7 +45,7 @@ namespace Google.Devtools.AspNet
         {
             byte[] bytes = new byte[128 / 8];
             _random.NextBytes(bytes);
-            BigInteger idInt = new BigInteger(bytes);
+            BigInteger idInt = new BigInteger(1, bytes);
             return idInt.ToString(16).PadLeft(32, '0');
         }
     }
