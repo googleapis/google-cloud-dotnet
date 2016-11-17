@@ -144,7 +144,7 @@ namespace Google.Devtools.AspNet
         {
             Traces traces = new Traces();
             traces.Traces_.Add(_trace);
-            _consumer.Recieve(traces);
+            _consumer.Receive(traces);
         }
     }
 }
