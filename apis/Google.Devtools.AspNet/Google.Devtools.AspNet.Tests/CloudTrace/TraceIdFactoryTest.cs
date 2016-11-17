@@ -44,11 +44,18 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
 
         [Fact]
         public void NextId() {
-            // TODO(talarico): Add Tests
+            byte[] bytes = Enumerable.Repeat(byte.MinValue, 16).ToArray();
+            bytes[0] = 222;
+            bytes[1] = 173;
+            bytes[2] = 190;
+            bytes[3] = 239;
+            Random fakeRandom = new FakeRandom(bytes);
+            TraceIdFactory factory = TraceIdFactory.Create(fakeRandom);
+            Assert.Equal("deadbeef".PadRight(32, '0'), factory.NextId());
         }
 
         [Fact]
-        public void NextId_Zeros()
+        public void NextId_Min()
         {
             byte[] bytes = Enumerable.Repeat(byte.MinValue, 16).ToArray();
             Random fakeRandom = new FakeRandom(bytes);
