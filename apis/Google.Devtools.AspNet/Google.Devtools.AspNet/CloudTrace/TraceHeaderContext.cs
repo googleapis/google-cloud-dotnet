@@ -54,13 +54,13 @@ namespace Google.Devtools.AspNet
         public static TraceHeaderContext FromRequest(HttpRequest request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            return FromCollection(request.Headers);
+            return FromWrapper(new HttpRequestWrapper(request));
         }
 
-        internal static TraceHeaderContext FromCollection(NameValueCollection collection)
+        internal static TraceHeaderContext FromWrapper(HttpRequestWrapper wrapper)
         {
-            GaxPreconditions.CheckNotNull(collection, nameof(collection));
-            string header = collection.Get(TraceHeader);
+            GaxPreconditions.CheckNotNull(wrapper, nameof(wrapper));
+            string header = wrapper.Headers.Get(TraceHeader);
             if (header == null)
             {
                 return InvalidTraceHeaderContext;
@@ -87,7 +87,7 @@ namespace Google.Devtools.AspNet
             }
         }
 
-        private TraceHeaderContext(string traceId, ulong? spanId, bool shouldTrace)
+        internal TraceHeaderContext(string traceId, ulong? spanId, bool shouldTrace)
         {
             _traceId = traceId;
             _spanId = spanId;
