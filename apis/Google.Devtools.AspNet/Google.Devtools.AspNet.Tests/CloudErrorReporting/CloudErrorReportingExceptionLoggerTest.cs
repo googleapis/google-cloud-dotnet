@@ -106,11 +106,6 @@ namespace Google.Devtools.AspNet.Tests
             );
         }
 
-        private Mock<ReportErrorsServiceClient> GetClientMock()
-        {
-            return new Mock<ReportErrorsServiceClient>();
-        }
-
         private CloudErrorReportingExceptionLogger GetLogger(ReportErrorsServiceClient client)
         {
             return CloudErrorReportingExceptionLogger.Create(client, ProjectId, ServiceName, Version);
@@ -119,7 +114,7 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void ShouldLog()
         {
-            Mock<ReportErrorsServiceClient> mockClient = GetClientMock();
+            Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
 
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
 
@@ -130,37 +125,37 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void Log()
         {
-            Mock<ReportErrorsServiceClient> mockClient = GetClientMock();
-            mockClient.Setup(client => client.ReportErrorEvent(It.IsAny<string>(), It.IsAny<ReportedErrorEvent>(), null));
+            Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
+            mockClient.Setup(client => client.ReportErrorEvent(FormattedProjectId, IsComplexContext(), null));
 
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             logger.Log(CreateComplexContext());
 
-            mockClient.Verify(client => client.ReportErrorEvent(FormattedProjectId, IsComplexContext(), null), Times.Once());
+            mockClient.VerifyAll();
         }
 
         [Fact]
         public void Log_Simple()
         {
-            Mock<ReportErrorsServiceClient> mockClient = GetClientMock();
-            mockClient.Setup(client => client.ReportErrorEvent(It.IsAny<string>(), It.IsAny<ReportedErrorEvent>(), null));
+            Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
+            mockClient.Setup(client => client.ReportErrorEvent(FormattedProjectId, IsSimpleContext(), null));
 
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             logger.Log(SimpleContext);
 
-            mockClient.Verify(client => client.ReportErrorEvent(FormattedProjectId, IsSimpleContext(), null), Times.Once());
+            mockClient.VerifyAll();
         }
 
         [Fact]
         public void LogAsync()
         {
-            Mock<ReportErrorsServiceClient> mockClient = GetClientMock();
-            mockClient.Setup(client => client.ReportErrorEventAsync(It.IsAny<string>(), It.IsAny<ReportedErrorEvent>(), null));
+            Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
+            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null));
 
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             logger.LogAsync(CreateComplexContext(), CancellationToken.None);
 
-            mockClient.Verify(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null), Times.Once());
+            mockClient.VerifyAll();
         }
     }
 }
