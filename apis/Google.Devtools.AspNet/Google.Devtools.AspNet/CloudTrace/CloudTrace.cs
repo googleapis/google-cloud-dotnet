@@ -55,23 +55,18 @@ namespace Google.Devtools.AspNet
         private readonly RateLimitingTraceOptionsFactory _rateFactory;
         private readonly TraceHeaderTraceOptionsFactory _headerFactory;
 
-        private CloudTrace(string projectId, HttpApplication application, TraceConfiguration config = null,  Task<TraceServiceClient> client = null)
+        private CloudTrace(string projectId, TraceConfiguration config = null,  Task<TraceServiceClient> client = null)
         {
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            GaxPreconditions.CheckNotNull(application, nameof(application));
 
             // Create the default values if not set.
             client = client ?? TraceServiceClient.CreateAsync();
             config = config ?? TraceConfiguration.Create();
 
             _traceIdfactory = TraceIdFactory.Create();
-            _bufferingConsumer = BufferingTraceConsumer.Create(GrpcTraceConsumer.Create(client));
+            _bufferingConsumer = BufferingTraceConsumer.Create(new GrpcTraceConsumer(client));
             _rateFactory = RateLimitingTraceOptionsFactory.Create(config);
             _headerFactory = TraceHeaderTraceOptionsFactory.Create();
-
-            // Add event handlers to the application.
-            application.BeginRequest += new EventHandler(BeginRequest);
-            application.EndRequest += new EventHandler(EndRequest);
         }
 
         /// <summary>
@@ -83,7 +78,12 @@ namespace Google.Devtools.AspNet
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
         public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null,  Task<TraceServiceClient> client = null)
         {
-            new CloudTrace(projectId, application, config, client);
+            GaxPreconditions.CheckNotNull(application, nameof(application));
+            CloudTrace trace = new CloudTrace(projectId, config, client);
+
+            // Add event handlers to the application.
+            application.BeginRequest += new EventHandler(trace.BeginRequest);
+            application.EndRequest += new EventHandler(trace.EndRequest);
         }
 
         /// <summary>

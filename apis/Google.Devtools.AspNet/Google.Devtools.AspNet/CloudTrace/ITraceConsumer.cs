@@ -24,6 +24,6 @@ namespace Google.Devtools.AspNet
         /// <summary>
         /// Accepts Stackdriver Trace traces.
         /// </summary>
-        void Recieve(Traces traces);
+        void Receive(Traces traces);
     }
 }
