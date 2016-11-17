@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from collections import OrderedDict
-import common, datetime, json, os, urllib, urllib2
+import common, datetime, json, os, threading, time, urllib, urllib2
 
 # These tests can be run with pytest: http://doc.pytest.org/en/latest/index.html
 
@@ -77,11 +77,12 @@ def expect_error_updating_content(path, new_data, expected_code):
   if not isinstance(new_data, str):
     new_data = json.dumps(new_data, separators=(',', ':'))
 
-  data = urllib.urlencode({'data': new_data})
+  data = urllib.quote_plus(new_data)
   url = update_template.format(path)
   request = urllib2.Request(url,
                             data,
-                            headers={common.metadata_flavor: common.metadata_flavor_google})
+                            headers={common.metadata_flavor: common.metadata_flavor_google,
+                                     common.content_type: common.content_type_text})
   
   try:
     response = urllib2.urlopen(request)
@@ -179,10 +180,11 @@ def update_content(path, new_data):
   if not isinstance(new_data, str):
     new_data = json.dumps(new_data, separators=(',', ':'))
 
-  data = urllib.urlencode({'data': new_data})
+  data = urllib.quote_plus(new_data)
   request = urllib2.Request(update_template.format(path),
                             data,
-                            headers={common.metadata_flavor: common.metadata_flavor_google})
+                            headers={common.metadata_flavor: common.metadata_flavor_google,
+                                     common.content_type: common.content_type_text})
   
   try:
     urllib2.urlopen(request)
@@ -627,3 +629,75 @@ def test_etag_reverts_when_original_value_restored():
 
   etag3 = expect_content(path, original, common.content_type_text)
   assert etag1 == etag3
+
+def test_wait_for_change():
+  path = 'instance/cpu-platform'
+  original = 'Intel Haswell'
+  changed = 'My Platform'
+
+  def changeData():
+    time.sleep(1)
+    update_content(path, changed)
+    update_content(path, original)
+
+  thread = threading.Thread(target=changeData)
+  thread.start()
+  expect_content(path + '?wait_for_change=true&timeout_sec=5', changed, common.content_type_text)
+  thread.join()
+
+def test_wait_for_change_on_descendant():
+  path = 'instance/disks'
+  descendant_path = 'instance/disks/0/device-name'
+  original = 'boot'
+  changed = 'My Custom Disk'
+
+  def changeData():
+    time.sleep(1)
+    update_content(descendant_path, changed)
+    update_content(descendant_path, original)
+
+  thread = threading.Thread(target=changeData)
+  thread.start()
+  expect_content(path + '?recursive=True&wait_for_change=true&timeout_sec=5',
+                 '[{"deviceName":"My Custom Disk","index":0,"mode":"READ_WRITE","type":"PERSISTENT"}]',
+                 common.content_type_json)
+  thread.join()
+
+def test_last_etag_match():
+  path = 'instance/cpu-platform'
+  original = 'Intel Haswell'
+  changed = 'My Platform'
+  etag1 = expect_content(path, original, common.content_type_text)
+
+  def changeData():
+    time.sleep(1)
+    update_content(path, changed)
+    update_content(path, original)
+
+  thread = threading.Thread(target=changeData)
+
+  thread.start()
+  etag2 = expect_content(path + '?wait_for_change=true&last_etag=%s&timeout_sec=5' % etag1,
+                         changed,
+                         common.content_type_text)
+  assert etag1 != etag2
+  thread.join()
+
+def test_last_etag_non_match():
+  path = 'instance/cpu-platform'
+  original = 'Intel Haswell'
+  changed = 'My Platform'
+
+  etag1 = expect_content(path, original, common.content_type_text)
+  update_content(path, changed)
+  try:
+    start = datetime.datetime.now()
+    etag2 = expect_content(path + '?wait_for_change=true&last_etag=%s&timeout_sec=5' % etag1,
+                           changed,
+                           common.content_type_text)
+    end = datetime.datetime.now()
+    elapsed = end - start
+    assert elapsed.seconds < 5
+    assert etag1 != etag2
+  finally:
+    update_content(path, original)

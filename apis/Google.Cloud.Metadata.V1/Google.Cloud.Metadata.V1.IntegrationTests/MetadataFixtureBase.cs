@@ -18,9 +18,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Metadata.V1.IntegrationTests
@@ -34,8 +36,10 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
         private readonly StringBuilder emulatorErrorOutput = new StringBuilder();
         private readonly StringBuilder emulatorOutput = new StringBuilder();
+        private readonly string emulatorHost;
         private readonly Process emulatorProcess;
         private readonly string emulatorPath;
+        private readonly HttpClient httpClient = new HttpClient();
 
         protected MetadataFixtureBase()
         {
@@ -64,7 +68,8 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             int port = ((IPEndPoint)temp.LocalEndpoint).Port;
             temp.Stop();
 
-            Environment.SetEnvironmentVariable(EmulatorEnvironmentVariable, $"localhost:{port}");
+            emulatorHost = $"localhost:{port}";
+            Environment.SetEnvironmentVariable(EmulatorEnvironmentVariable, emulatorHost);
 
             var startInfo = new ProcessStartInfo("python", $"{emulatorFilePath} --test --port {port}");
             startInfo.RedirectStandardError = true;
@@ -115,5 +120,13 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
             Directory.Delete(emulatorPath, recursive: true);
         }
+
+        public Task UpdateMetadata(string path, string data) =>
+            httpClient.SendAsync(
+                new HttpRequestMessage(HttpMethod.Post, $"http://{emulatorHost}/emulator/v1/update/{path}")
+                {
+                    Content = new StringContent(data),
+                    Headers = { { "Metadata-Flavor", "Google" } }
+                });
     }
 }
