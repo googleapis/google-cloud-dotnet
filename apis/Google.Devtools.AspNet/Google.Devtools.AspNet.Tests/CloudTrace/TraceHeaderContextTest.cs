@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using Moq;
 using System.Collections.Specialized;
 using System.Web;
 using Xunit;
@@ -20,6 +21,7 @@ namespace Google.Devtools.AspNet.Tests
 {
     public class TraceHeaderContextTest
     {
+        private static readonly HttpRequest Request = new HttpRequest("file_name", "https://www.google.com", "");
         private static readonly string TraceId = "105445aa7843bc8bf206b12000100f00";
         private static readonly ulong SpanId = 81237123;
 
@@ -39,11 +41,13 @@ namespace Google.Devtools.AspNet.Tests
         /// <summary>
         /// Create a <see cref="NameValueCollection"/> with the trace header set.
         /// </summary>
-        private NameValueCollection CreateCollectionWithTraceHeader(string header)
+        private HttpRequestWrapper CreateWrapperWithTraceHeader(string header)
         {
             NameValueCollection headers = new NameValueCollection();
             headers.Add(TraceHeaderContext.TraceHeader, header);
-            return headers;
+            Mock<HttpRequestWrapper> mockWrapper = new Mock<HttpRequestWrapper>(Request);
+            mockWrapper.Setup(w => w.Headers).Returns(headers);
+            return mockWrapper.Object;
         }
 
         /// <summary>
@@ -60,22 +64,21 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void FromRequest_NoHeader()
         {
-            HttpRequest request = new HttpRequest("file_name", "https://www.google.com", "");
-            CheckInvalid(TraceHeaderContext.FromRequest(request));
+            CheckInvalid(TraceHeaderContext.FromRequest(Request));
         }
 
         [Fact]
         public void FromRequest_InvalidHeader()
         {
-            NameValueCollection collection = CreateCollectionWithTraceHeader("1234=0");
-            CheckInvalid(TraceHeaderContext.FromCollection(collection));
+            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader("1234=0");
+            CheckInvalid(TraceHeaderContext.FromWrapper(wrapper));
         }
 
         [Fact]
         public void FromRequest_Valid()
         {
-            NameValueCollection collection = CreateCollectionWithTraceHeader(CreateTraceHeaderValue());
-            TraceHeaderContext context = TraceHeaderContext.FromCollection(collection);
+            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue());
+            TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
 
             Assert.True(SpanId == context.GetSpanId());
             Assert.Equal(TraceId, context.GetTraceId());
@@ -86,8 +89,8 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void FromRequest_ValidNoTrace()
         {
-            NameValueCollection collection = CreateCollectionWithTraceHeader(CreateTraceHeaderValue(0));
-            TraceHeaderContext context = TraceHeaderContext.FromCollection(collection);
+            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(0));
+            TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
 
             Assert.True(SpanId == context.GetSpanId());
             Assert.Equal(TraceId, context.GetTraceId());
@@ -97,8 +100,8 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void FromRequest_ValidTrace()
         {
-            NameValueCollection collection = CreateCollectionWithTraceHeader(CreateTraceHeaderValue(1));
-            TraceHeaderContext context = TraceHeaderContext.FromCollection(collection);
+            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(1));
+            TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
 
             Assert.True(SpanId == context.GetSpanId());
             Assert.Equal(TraceId, context.GetTraceId());
