@@ -65,8 +65,10 @@ namespace Google.Devtools.AspNet
         public void Receive(Traces traces)
         {
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
-            lock (_mutex) {
-                foreach (Trace trace in traces.Traces_) {
+            lock (_mutex)
+            {
+                foreach (Trace trace in traces.Traces_)
+                {
                     _size += trace.CalculateSize();
                     _traces.Traces_.Add(trace);
                     if (_size >= _bufferSize)
@@ -87,6 +89,7 @@ namespace Google.Devtools.AspNet
                 _traces = new Traces();
                 _size = 0;
             }
+
             if (old.Traces_.Count > 0)
             {
                 _consumer.Receive(old);
