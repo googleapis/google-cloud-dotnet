@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using System;
+using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Web;
 
@@ -61,7 +62,13 @@ namespace Google.Devtools.AspNet
         public static TraceHeaderContext FromRequest(HttpRequest request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            string header = request.Headers.Get(TraceHeader);
+            return FromCollection(request.Headers);
+        }
+
+        internal static TraceHeaderContext FromCollection(NameValueCollection collection)
+        {
+            GaxPreconditions.CheckNotNull(collection, nameof(collection));
+            string header = collection.Get(TraceHeader);
             if (header == null)
             {
                 return InvalidTraceHeaderContext;
@@ -76,10 +83,12 @@ namespace Google.Devtools.AspNet
             string traceId = match.Groups[1].Value;
             ulong spanId;
             if (!ulong.TryParse(match.Groups[2].Value, out spanId))
+
             {
                 return InvalidTraceHeaderContext;
             }
-            int traceMask = match.Groups.Count > 4 ? Convert.ToInt32(match.Groups[4].Value) : 0;
+            bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
+            int traceMask = hasMask ? Convert.ToInt32(match.Groups[4].Value) : 0;
             bool shouldTrace = traceMask > 0;
             return new TraceHeaderContext(traceId, spanId, shouldTrace);
         }
