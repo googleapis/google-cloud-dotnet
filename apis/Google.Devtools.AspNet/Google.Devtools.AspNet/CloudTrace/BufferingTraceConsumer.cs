@@ -59,7 +59,6 @@ namespace Google.Devtools.AspNet
         /// </summary>
         /// <param name="consumer">The consumer to flush traces to, cannot be null.</param>
         /// <param name="bufferSize">Optional, buffer size in bytes.</param>
-        /// <returns></returns>
         public static BufferingTraceConsumer Create(ITraceConsumer consumer, int bufferSize = DefaultBufferSize)
         {
             return new BufferingTraceConsumer(consumer, bufferSize);
