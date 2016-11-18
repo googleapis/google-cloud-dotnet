@@ -75,7 +75,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Assert.Equal(fakeConsumer.ReceiveCalls, 0);
         }
 
-        public class FakeConsumer : ITraceConsumer
+        private class FakeConsumer : ITraceConsumer
         {
             public int ReceiveCalls { get; private set; }
             public void Recieve(Traces traces)
