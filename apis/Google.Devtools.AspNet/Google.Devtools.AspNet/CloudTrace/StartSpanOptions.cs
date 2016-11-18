@@ -19,7 +19,7 @@ namespace Google.Devtools.AspNet
     /// </summary>
     public sealed class StartSpanOptions
     {
-        public readonly SpanKind SpanKind;
+        public SpanKind SpanKind { get; }
 
         private StartSpanOptions(SpanKind spanKind)
         {

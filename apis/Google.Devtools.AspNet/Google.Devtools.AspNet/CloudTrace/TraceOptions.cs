@@ -20,7 +20,7 @@ namespace Google.Devtools.AspNet
     internal sealed class TraceOptions
     {
         /// <summary>True if the request should be traced.</summary>
-        public readonly bool ShouldTrace;
+        public bool ShouldTrace { get; }
 
         private TraceOptions(bool shouldTrace)
         {
