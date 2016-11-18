@@ -56,9 +56,9 @@ namespace Google.Devtools.AspNet.Tests
         /// </summary>
         private void CheckInvalid(TraceHeaderContext context)
         {
-            Assert.Null(context.GetSpanId());
-            Assert.Null(context.GetTraceId());
-            Assert.False(context.ShouldTrace());
+            Assert.Null(context.SpanId);
+            Assert.Null(context.TraceId);
+            Assert.False(context.ShouldTrace);
         }
 
         [Fact]
@@ -80,9 +80,9 @@ namespace Google.Devtools.AspNet.Tests
             HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue());
             TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
 
-            Assert.True(SpanId == context.GetSpanId());
-            Assert.Equal(TraceId, context.GetTraceId());
-            Assert.False(context.ShouldTrace());
+            Assert.True(SpanId == context.SpanId);
+            Assert.Equal(TraceId, context.TraceId);
+            Assert.False(context.ShouldTrace);
 
         }
 
@@ -92,9 +92,9 @@ namespace Google.Devtools.AspNet.Tests
             HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(0));
             TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
 
-            Assert.True(SpanId == context.GetSpanId());
-            Assert.Equal(TraceId, context.GetTraceId());
-            Assert.False(context.ShouldTrace());
+            Assert.True(SpanId == context.SpanId);
+            Assert.Equal(TraceId, context.TraceId);
+            Assert.False(context.ShouldTrace);
         }
 
         [Fact]
@@ -103,9 +103,9 @@ namespace Google.Devtools.AspNet.Tests
             HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(1));
             TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
 
-            Assert.True(SpanId == context.GetSpanId());
-            Assert.Equal(TraceId, context.GetTraceId());
-            Assert.True(context.ShouldTrace());
+            Assert.True(SpanId == context.SpanId);
+            Assert.Equal(TraceId, context.TraceId);
+            Assert.True(context.ShouldTrace);
         }
 
     }
