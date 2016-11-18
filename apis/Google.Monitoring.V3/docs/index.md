@@ -8,7 +8,7 @@ Monitoring API](https://cloud.google.com/monitoring/api/v3/).
 Install the `Google.Monitoring.V3` package from our
 [early access MyGet
 feed](https://www.myget.org/gallery/google-dotnet-public).
-First onfigure your environment to include the appropriate NuGet feed
+First configure your environment to include the appropriate NuGet feed
 URL:
 
 - NuGet v2: `https://www.myget.org/F/google-dotnet-public/`
