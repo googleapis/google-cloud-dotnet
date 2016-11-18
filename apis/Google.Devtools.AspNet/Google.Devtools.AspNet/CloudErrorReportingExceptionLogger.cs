@@ -31,8 +31,12 @@ namespace Google.Devtools.AspNet
     /// public static void Register(HttpConfiguration config)
     /// {
     ///   // Add a catch all for the uncaught exceptions.
+    ///   string projectId = "[Google Cloud Platform project ID]";
+    ///   string serviceName = "[Name of service]";
+    ///   string version = "[Version of service]";
+    ///   // Add a catch all for the uncaught exceptions.
     ///   config.Services.Add(typeof(IExceptionLogger),
-    ///       CloudErrorReportingExceptionLogger.Create());
+    ///     CloudErrorReportingExceptionLogger.Create(projectId, serviceName, version));
     /// }
     /// </example>
     /// 
