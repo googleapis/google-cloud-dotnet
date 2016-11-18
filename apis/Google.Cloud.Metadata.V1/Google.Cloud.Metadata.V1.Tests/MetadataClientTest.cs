@@ -63,12 +63,14 @@ namespace Google.Cloud.Metadata.V1.Tests
             Assert.Throws<ArgumentException>(() => client.WaitForChange("a b"));
             Assert.Throws<ArgumentException>(() => client.WaitForChange("a?b"));
             Assert.Throws<ArgumentException>(() => client.WaitForChange("http://www.google.com"));
-            Assert.Throws<ArgumentException>(() => client.WaitForChange("instance", TimeSpan.FromSeconds(-1)));
+            Assert.Throws<ArgumentException>(() => client.WaitForChange("instance", lastETag: "bad-etag"));
+            Assert.Throws<ArgumentException>(() => client.WaitForChange("instance", timeout: TimeSpan.FromSeconds(-1)));
 
             Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("a b"));
             Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("a?b"));
             Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("http://www.google.com"));
-            Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("instance", TimeSpan.FromSeconds(-1)));
+            Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("instance", lastETag: "bad-etag"));
+            Assert.ThrowsAsync<ArgumentException>(() => client.WaitForChangeAsync("instance", timeout: TimeSpan.FromSeconds(-1)));
         }
     }
 }

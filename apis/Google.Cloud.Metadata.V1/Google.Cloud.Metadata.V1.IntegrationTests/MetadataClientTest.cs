@@ -143,7 +143,8 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             try
             {
                 var result = client.WaitForChange("instance/attributes");
-                Assert.Equal(result, "{\"my_instance_key1\":\"foo\"}");
+                Assert.Equal(result.Content, "{\"my_instance_key1\":\"foo\"}");
+                Assert.NotNull(result.ETag);
             }
             finally
             {
@@ -158,16 +159,18 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
             // Wait for change on a value key
             var sw = Stopwatch.StartNew();
-            var result = client.WaitForChange("instance/tags", TimeSpan.FromSeconds(7));
+            var result = client.WaitForChange("instance/tags", timeout: TimeSpan.FromSeconds(7));
             sw.Stop();
-            Assert.Equal(result, "[\"a\",\"b\",\"c\"]");
+            Assert.Equal(result.Content, "[\"a\",\"b\",\"c\"]");
+            Assert.NotNull(result.ETag);
             Assert.True(sw.Elapsed.TotalSeconds >= 7);
 
             // Wait for change on a directory key
             sw = Stopwatch.StartNew();
-            result = client.WaitForChange("instance/attributes", TimeSpan.FromSeconds(5));
+            result = client.WaitForChange("instance/attributes", timeout: TimeSpan.FromSeconds(5));
             sw.Stop();
-            Assert.Equal(result, "{\"my_instance_key1\":\"my_instance_value1\"}");
+            Assert.Equal(result.Content, "{\"my_instance_key1\":\"my_instance_value1\"}");
+            Assert.NotNull(result.ETag);
             Assert.True(sw.Elapsed.TotalSeconds >= 5);
         }
     }

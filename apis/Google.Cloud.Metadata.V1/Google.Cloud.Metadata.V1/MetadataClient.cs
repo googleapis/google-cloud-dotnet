@@ -16,7 +16,6 @@ using Google.Apis.Auth.OAuth2.Responses;
 using Google.Apis.Compute.v1.Data;
 using Google.Apis.Http;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -335,19 +334,21 @@ namespace Google.Cloud.Metadata.V1
             remove { throw new NotImplementedException(); }
         }
 
-        // TODO(mdour): To support ETags (https://cloud.google.com/compute/docs/storing-retrieving-metadata#etags), we may want to have a result object
-        //              returned here instead and then have overloads which take the previous result or an ETag exposed off the previous result.
-
         /// <summary>
         /// Waits for changes to the value or values specified by the relative URL synchronously.
         /// </summary>
         /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="lastETag">The ETag of the last known value. May be null.</param>
         /// <param name="timeout">The amount of time to wait for changes.</param>
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
         /// If the key specified is a directory, a recursive request must be made and the result will be a JSON object containing all values in the directory.
         /// For example, to wait for changes on all instance metadata use a key of "instance?recursive=true".
+        /// </para>
+        /// <para>
+        /// If the <paramref name="lastETag"/> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
+        /// changed since the last known value as obtained, and the changed value will be returned immediately.
         /// </para>
         /// <para>
         /// If the <paramref name="timeout"/> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
@@ -363,15 +364,16 @@ namespace Google.Cloud.Metadata.V1
         /// </para>
         /// </remarks>
         /// <exception cref="ArgumentException">
-        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, or <paramref name="timeout"/> represents a negative duration.
+        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, <paramref name="timeout"/> represents a negative duration,
+        /// or <paramref name="lastETag"/> is invalid.
         /// </exception>
         /// <exception cref="TaskCanceledException">
         /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
         /// </exception>
-        /// <returns>The changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
+        /// <returns>The <see cref="WaitForChangeResult"/> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
         /// <seealso cref="InstanceMetadataChanged"/>
         /// <seealso cref="ProjectMetadataChanged"/>
-        public virtual string WaitForChange(string key, TimeSpan timeout = default(TimeSpan))
+        public virtual WaitForChangeResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan))
         {
             throw new NotImplementedException();
         }
@@ -380,6 +382,7 @@ namespace Google.Cloud.Metadata.V1
         /// Waits for changes to the value or values specified by the relative URL asynchronously.
         /// </summary>
         /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="lastETag">The ETag of the last known value. May be null.</param>
         /// <param name="timeout">The amount of time to wait for changes.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <remarks>
@@ -389,6 +392,10 @@ namespace Google.Cloud.Metadata.V1
         /// For example, to wait for changes on all instance metadata use a key of "instance?recursive=true".
         /// </para>
         /// <para>
+        /// If the <paramref name="lastETag"/> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
+        /// changed since the last known value as obtained, and the changed value will be returned immediately.
+        /// </para>
+        /// <para>
         /// If the <paramref name="timeout"/> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
         /// the <see cref="HttpClient"/> will be used instead. Note that if the the timeout in the <see cref="HttpClient"/> elapses before the wait timeout elapses
         /// on the server a <see cref="TaskCanceledException"/> exception will occur.
@@ -402,15 +409,19 @@ namespace Google.Cloud.Metadata.V1
         /// </para>
         /// </remarks>
         /// <exception cref="ArgumentException">
-        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, or <paramref name="timeout"/> represents a negative duration.
+        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, <paramref name="timeout"/> represents a negative duration,
+        /// or <paramref name="lastETag"/> is invalid.
         /// </exception>
         /// <exception cref="TaskCanceledException">
         /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
         /// </exception>
-        /// <returns>A task containing the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
+        /// <returns>
+        /// A task containing the <see cref="WaitForChangeResult"/> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.
+        /// </returns>
         /// <seealso cref="InstanceMetadataChanged"/>
         /// <seealso cref="ProjectMetadataChanged"/>
-        public virtual Task<string> WaitForChangeAsync(string key, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
+        public virtual Task<WaitForChangeResult> WaitForChangeAsync(
+            string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
