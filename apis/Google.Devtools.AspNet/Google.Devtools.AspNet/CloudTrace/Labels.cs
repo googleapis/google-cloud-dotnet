@@ -92,10 +92,16 @@ namespace Google.Devtools.AspNet
         }
 
         /// <summary>
-        /// Creates a string JSON representation of a stack trace.
+        /// Creates a string JSON representation of a stack trace or the empty string
+        /// if the stack trace has no frames.
         /// </summary>
         private static string GenerateJsonStringStackTrace(StackTrace stackTrace)
         {
+            if (stackTrace.FrameCount == 0)
+            {
+                return string.Empty;
+            }
+
             StringBuilder sb = new StringBuilder();
             StringWriter sw = new StringWriter(sb);
 
