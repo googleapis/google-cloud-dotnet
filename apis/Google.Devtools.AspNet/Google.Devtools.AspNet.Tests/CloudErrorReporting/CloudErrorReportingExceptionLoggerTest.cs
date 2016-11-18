@@ -72,14 +72,15 @@ namespace Google.Devtools.AspNet.Tests
         /// </summary>
         private ReportedErrorEvent IsComplexContext()
         {
+            bool isWindows = Environment.OSVersion.ToString().Contains("Windows");
             return Match.Create<ReportedErrorEvent>(e =>
                 e.Message.Contains(SimpleException.Message) &&
                 e.Context.HttpRequest.Method.Equals(DeleteMethod.ToString()) &&
                 e.Context.HttpRequest.Url.Equals(GoogleUri.ToString()) &&
                 e.Context.HttpRequest.UserAgent.Equals(UserAgentValue.ToString()) &&
                 e.Context.HttpRequest.ResponseStatusCode == (int)ConflictStatusCode &&
-                e.Context.ReportLocation.LineNumber > 0 &&
-                !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath) &&
+                (!isWindows || e.Context.ReportLocation.LineNumber > 0) &&
+                (!isWindows || !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath)) &&
                 e.Context.ReportLocation.FunctionName.Equals("CreateComplexContext") &&
                 e.ServiceContext.Service.Equals(ServiceName) &&
                 e.ServiceContext.Version.Equals(Version)
