@@ -22,20 +22,14 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class TraceIdFactory
     {
-        private readonly Random _random;
-
-        private TraceIdFactory(Random random = null)
-        {
-            _random = random ?? new Random();
-        }
+        private TraceIdFactory() {}
 
         /// <summary>
         /// Create a new <see cref="TraceIdFactory"/>.
         /// </summary>
-        /// <param name="random">Optional, a random number generator, if none supplied the system default will be used.</param>
         public static TraceIdFactory Create(Random random = null)
         {
-            return new TraceIdFactory(random);
+            return new TraceIdFactory();
         }
 
         /// <summary>
@@ -43,10 +37,7 @@ namespace Google.Devtools.AspNet
         /// </summary>
         public string NextId()
         {
-            byte[] bytes = new byte[128 / 8];
-            _random.NextBytes(bytes);
-            BigInteger idInt = new BigInteger(bytes);
-            return idInt.ToString(16).PadLeft(32, '0');
+            return Guid.NewGuid().ToString("N");
         }
     }
 

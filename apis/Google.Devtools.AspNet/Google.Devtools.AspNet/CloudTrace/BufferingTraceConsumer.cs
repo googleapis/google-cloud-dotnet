@@ -23,7 +23,7 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class BufferingTraceConsumer : IFlushableTraceConsumer
     {
-        // The default buffer size in bytes. 2^16 = 65536.
+        /// <summary>The default buffer size in bytes. 2^16 = 65536.</summary>
         private const int DefaultBufferSize = 65536;
 
         // A mutex to protect the buffer.
@@ -54,7 +54,7 @@ namespace Google.Devtools.AspNet
         /// given <see cref="ITraceConsumer"/>. 
         /// </summary>
         /// <param name="consumer">The consumer to flush traces to, cannot be null.</param>
-        /// <param name="bufferSize">Optional, buffer size in bytes. Defaults to <see cref="DefaultBufferSize"/></param>
+        /// <param name="bufferSize">Optional, buffer size in bytes.</param>
         /// <returns></returns>
         public static BufferingTraceConsumer Create(ITraceConsumer consumer, int bufferSize = DefaultBufferSize)
         {

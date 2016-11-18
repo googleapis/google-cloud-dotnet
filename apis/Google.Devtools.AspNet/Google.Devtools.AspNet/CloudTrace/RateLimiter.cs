@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using System;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Google.Devtools.AspNet
 {
@@ -28,9 +29,6 @@ namespace Google.Devtools.AspNet
 
         // The single rate limiter instance.
         private static RateLimiter _instance;
-
-        // A mutex to handle access.
-        private object _mutex = new object();
 
         // The amount of time that must be waited before allowing tracing.
         private readonly long _fixedDelayMillis;
@@ -60,7 +58,8 @@ namespace Google.Devtools.AspNet
             return _instance;
         }
 
-        private RateLimiter(double qps) {
+        private RateLimiter(double qps)
+        {
             GaxPreconditions.CheckArgument(qps > 0, nameof(qps), "qps must be greater than 0");
 
             _stopWatch = new Stopwatch();
@@ -74,25 +73,12 @@ namespace Google.Devtools.AspNet
         /// See if tracing is allowed.
         /// </summary>
         /// <returns>True tracing is allowed.</returns>
-        public bool CanTrace() {
-            if (CanTrace(_stopWatch.ElapsedMilliseconds))
-            {
-                lock (_mutex)
-                {
-                    long nowMillis = _stopWatch.ElapsedMilliseconds;
-                    if (CanTrace(nowMillis))
-                    {
-                        _lastCallMillis = nowMillis;
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-
-        private bool CanTrace(long nowMillis)
+        public bool CanTrace()
         {
-            return nowMillis - _lastCallMillis > _fixedDelayMillis;
+            var nowMillis = _stopWatch.ElapsedMilliseconds;
+            var lastCallMillis = _lastCallMillis;
+            return (nowMillis - lastCallMillis > _fixedDelayMillis) &&
+                Interlocked.CompareExchange(ref _lastCallMillis, nowMillis, lastCallMillis) == lastCallMillis;
         }
     }
 }

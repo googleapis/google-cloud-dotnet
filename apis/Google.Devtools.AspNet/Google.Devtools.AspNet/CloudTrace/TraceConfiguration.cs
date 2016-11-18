@@ -21,15 +21,15 @@ namespace Google.Devtools.AspNet
     /// </summary>
     public sealed class TraceConfiguration
     {
-        public static readonly double DefaultQpsSampleRate = 1.0;
+        public const double DefaultQpsSampleRate = 1.0;
 
-        private readonly double _qpsSampleRate;
+        public readonly double QpsSampleRate;
 
         private TraceConfiguration(double qpsSampleRate)
         {
             GaxPreconditions.CheckArgument(
                 qpsSampleRate > 0, nameof(qpsSampleRate), "qpsSampleRate must be greater than 0.");
-            _qpsSampleRate = qpsSampleRate;
+            QpsSampleRate = qpsSampleRate;
         }
 
         /// <summary>
@@ -38,14 +38,9 @@ namespace Google.Devtools.AspNet
         /// <param name="qpsSampleRate">Optional, the qps sample rate.  The sample rate determines
         ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>
         /// </param>
-        public static TraceConfiguration Create(double? qpsSampleRate = null)
+        public static TraceConfiguration Create(double qpsSampleRate = DefaultQpsSampleRate)
         {
-            return new TraceConfiguration(qpsSampleRate ?? DefaultQpsSampleRate);
+            return new TraceConfiguration(qpsSampleRate);
         }
-
-        /// <summary>
-        /// Gets the QPS sample rate.
-        /// </summary>
-        public double QpsSampleRate() => _qpsSampleRate;
     }
 }

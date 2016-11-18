@@ -22,7 +22,7 @@ namespace Google.Devtools.AspNet
     internal static class TracerManager
     {
         // The key to save the tracer under.
-        private static readonly string TraceKey = "Google.Devtools.AspNet.CloudTrace";
+        private const string TraceKey = "Google.Devtools.AspNet.CloudTrace";
 
         /// <summary>
         /// Sets the current <see cref="IManagedTracer"/>
