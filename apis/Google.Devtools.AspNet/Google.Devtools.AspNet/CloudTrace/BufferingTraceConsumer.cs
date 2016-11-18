@@ -43,6 +43,9 @@ namespace Google.Devtools.AspNet
 
         private BufferingTraceConsumer(ITraceConsumer consumer, int bufferSize)
         {
+            GaxPreconditions.CheckArgument(
+                bufferSize > 0, nameof(bufferSize), "bufferSize must be greater than 0");
+
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _bufferSize = bufferSize;
             _traces = new Traces();
@@ -90,8 +93,7 @@ namespace Google.Devtools.AspNet
                 _size = 0;
             }
 
-            if (old.Traces_.Count > 0)
-            {
+            if (old.Traces_.Count != 0) { 
                 _consumer.Receive(old);
             }
         }
