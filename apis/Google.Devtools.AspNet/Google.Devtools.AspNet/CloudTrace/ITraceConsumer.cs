@@ -19,7 +19,7 @@ namespace Google.Devtools.AspNet
     /// <summary>
     /// A trace consumer that takes Stackdriver Trace traces.
     /// </summary>
-    public interface ITraceConsumer
+    internal interface ITraceConsumer
     {
         /// <summary>
         /// Accepts Stackdriver Trace traces.
