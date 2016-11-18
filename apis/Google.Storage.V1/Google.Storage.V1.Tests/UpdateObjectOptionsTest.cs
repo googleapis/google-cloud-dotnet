@@ -16,6 +16,7 @@ using System;
 using Xunit;
 using static Google.Apis.Storage.v1.ObjectsResource;
 using static Google.Apis.Storage.v1.ObjectsResource.UpdateRequest;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1.Tests
 {
@@ -24,9 +25,26 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_DefaultOptions()
         {
-            var request = new UpdateRequest(null, null, "bucket", "object");
+            var obj = new Object { Generation = 10L, Metageneration = 20L };
+            var request = new UpdateRequest(null, obj, "bucket", "object");
             var options = new UpdateObjectOptions();
-            options.ModifyRequest(request);
+            options.ModifyRequest(request, obj);
+            Assert.Null(request.Generation);
+            Assert.Equal(10L, request.IfGenerationMatch);
+            Assert.Null(request.IfGenerationNotMatch);
+            Assert.Equal(20L, request.IfMetagenerationMatch);
+            Assert.Null(request.IfMetagenerationNotMatch);
+            Assert.Null(request.PredefinedAcl);
+            Assert.Null(request.Projection);
+        }
+
+        [Fact]
+        public void ModifyRequest_ForceNoPreconditions()
+        {
+            var obj = new Object { Generation = 10L, Metageneration = 20L };
+            var request = new UpdateRequest(null, obj, "bucket", "object");
+            var options = new UpdateObjectOptions { ForceNoPreconditions = true };
+            options.ModifyRequest(request, obj);
             Assert.Null(request.Generation);
             Assert.Null(request.IfGenerationMatch);
             Assert.Null(request.IfGenerationNotMatch);
@@ -39,7 +57,8 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_PositiveMatchOptions()
         {
-            var request = new UpdateRequest(null, null, "bucket", "object");
+            var obj = new Object { Generation = 10L, Metageneration = 20L };
+            var request = new UpdateRequest(null, obj, "bucket", "object");
             var options = new UpdateObjectOptions
             {
                 Generation = 1L,
@@ -48,7 +67,7 @@ namespace Google.Storage.V1.Tests
                 PredefinedAcl = PredefinedObjectAcl.AuthenticatedRead,
                 Projection = Projection.Full
             };
-            options.ModifyRequest(request);
+            options.ModifyRequest(request, obj);
             Assert.Equal(1L, request.Generation);
             Assert.Equal(2L, request.IfGenerationMatch);
             Assert.Null(request.IfGenerationNotMatch);
@@ -61,7 +80,8 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_NegativeMatchOptions()
         {
-            var request = new UpdateRequest(null, null, "bucket", "object");
+            var obj = new Object { Generation = 10L, Metageneration = 20L };
+            var request = new UpdateRequest(null, obj, "bucket", "object");
             var options = new UpdateObjectOptions
             {
                 Generation = 1L,
@@ -70,7 +90,7 @@ namespace Google.Storage.V1.Tests
                 PredefinedAcl = PredefinedObjectAcl.AuthenticatedRead,
                 Projection = Projection.Full
             };
-            options.ModifyRequest(request);
+            options.ModifyRequest(request, obj);
             Assert.Equal(1L, request.Generation);
             Assert.Null(request.IfGenerationMatch);
             Assert.Equal(2L, request.IfGenerationNotMatch);
@@ -83,17 +103,27 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_MatchNotMatchConflicts()
         {
-            var request = new UpdateRequest(null, null, "bucket", "object");
+            var obj = new Object { Generation = 10L, Metageneration = 20L };
+            var request = new UpdateRequest(null, obj, "bucket", "object");
             Assert.Throws<ArgumentException>(() =>
             {
                 var options = new UpdateObjectOptions { IfGenerationMatch = 1L, IfGenerationNotMatch = 2L };
-                options.ModifyRequest(request);
+                options.ModifyRequest(request, obj);
             });
             Assert.Throws<ArgumentException>(() =>
             {
                 var options = new UpdateObjectOptions { IfMetagenerationMatch = 1L, IfMetagenerationNotMatch = 2L };
-                options.ModifyRequest(request);
+                options.ModifyRequest(request, obj);
             });
+        }
+
+        [Fact]
+        public void ModifyRequest_ForceNoPreconditions_ButPreconditionsSet()
+        {
+            var obj = new Object { Generation = 10L, Metageneration = 20L };
+            var request = new UpdateRequest(null, obj, "bucket", "object");
+            var options = new UpdateObjectOptions { ForceNoPreconditions = true, IfGenerationMatch = 2L };
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(request, obj));
         }
     }
 }

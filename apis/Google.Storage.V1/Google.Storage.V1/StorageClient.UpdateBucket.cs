@@ -25,9 +25,16 @@ namespace Google.Storage.V1
         /// Updates the metadata for a storage bucket synchronously.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// As this is a full update, <paramref name="bucket"/> must be fully populated. This is typically
         /// obtained by performing another operation (such as <see cref="GetBucket(string, GetBucketOptions)"/>
         /// with a "full" projection, and then modifying the returned object.
+        /// </para>
+        /// <para>
+        /// If no preconditions are explicitly set in <paramref name="options"/>, the metageneration of <paramref name="bucket"/>
+        /// is used as a precondition for the update, unless <see cref="UpdateBucketOptions.ForceNoPreconditions"/> is
+        /// set to <c>true</c>.
+        /// </para>
         /// </remarks>
         /// <param name="bucket">Bucket to update. Must not be null, and must have populated <c>Name</c>,
         /// <c>Bucket</c> and <c>Acl</c> properties.</param>
@@ -45,9 +52,16 @@ namespace Google.Storage.V1
         /// Updates the metadata for storage bucket asynchronously.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// As this is a full update, <paramref name="bucket"/> must be fully populated. This is typically
         /// obtained by performing another operation (such as <see cref="GetBucketAsync(string, GetBucketOptions, CancellationToken)"/>
         /// with a "full" projection, and then modifying the returned object.
+        /// </para>
+        /// <para>
+        /// If no preconditions are explicitly set in <paramref name="options"/>, the metageneration of <paramref name="bucket"/>
+        /// is used as a precondition for the update, unless <see cref="UpdateBucketOptions.ForceNoPreconditions"/> is
+        /// set to <c>true</c>.
+        /// </para>
         /// </remarks>
         /// <param name="bucket">Bucket to update. Must not be null, and must have populated <c>Name</c>
         /// and <c>Acl</c> properties.</param>
