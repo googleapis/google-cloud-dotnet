@@ -47,6 +47,11 @@ namespace Google.Devtools.AspNet
         /// </summary>
         public static Dictionary<string, string> FromHttpRequest(HttpRequest request)
         {
+            return FromHttpRequestWrapper(new HttpRequestWrapper(request));
+        }
+
+        internal static Dictionary<string, string> FromHttpRequestWrapper(HttpRequestWrapper request)
+        {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             Dictionary<string, string> labels = new Dictionary<string, string>();
             labels.Add(HttpRequestSize, request.ContentLength.ToString());
@@ -60,11 +65,17 @@ namespace Google.Devtools.AspNet
         /// </summary>
         public static Dictionary<string, string> FromHttpResponse(HttpResponse response)
         {
+            return FromHttpResponseWrapper(new HttpResponseWrapper(response));
+        }
+
+        internal static Dictionary<string, string> FromHttpResponseWrapper(HttpResponseWrapper response)
+        {
             GaxPreconditions.CheckNotNull(response, nameof(response));
             Dictionary<string, string> labels = new Dictionary<string, string>();
             labels.Add(HttpStatusCode, response.StatusCode.ToString());
             return labels;
         }
+
 
         /// <summary>
         /// Creates a a map of labels to represent a <see cref="StackTrace"/> for a span.
@@ -92,7 +103,6 @@ namespace Google.Devtools.AspNet
 
             foreach (StackFrame stackFrame in stackTrace.GetFrames())
             {
-
                 writer.WriteStartObject();
                 writer.WritePropertyName("class_name");
                 writer.WriteValue(stackFrame.GetMethod().DeclaringType.Name);
