@@ -19,24 +19,21 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class TraceOptions
     {
-        private readonly bool _shouldTrace;
+        /// <summary>True if the request should be traced.</summary>
+        public readonly bool ShouldTrace;
 
         private TraceOptions(bool shouldTrace)
         {
-            _shouldTrace = shouldTrace;
+            ShouldTrace = shouldTrace;
         }
 
         /// <summary>
         /// Creates a <see cref="TraceOptions"/>.
         /// </summary>
-        /// <param name="shouldTrace">True if the tracing should occur</param>
-        /// <returns></returns>
+        /// <param name="shouldTrace">True if the tracing should occur.</param>
         public static TraceOptions Create(bool shouldTrace)
         {
             return new TraceOptions(shouldTrace);
         }
-
-        /// <returns>True if the request should be traced.</returns>
-        public bool ShouldTrace() => _shouldTrace;
     }
 }

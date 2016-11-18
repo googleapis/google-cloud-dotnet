@@ -26,14 +26,13 @@ namespace Google.Devtools.AspNet
         private RateLimitingTraceOptionsFactory(TraceConfiguration config)
         {
             GaxPreconditions.CheckNotNull(config, nameof(config));
-            _rateLimiter = RateLimiter.GetInstance(config.QpsSampleRate());
+            _rateLimiter = RateLimiter.GetInstance(config.QpsSampleRate);
         }
 
         /// <summary>
         /// Create a new <see cref="RateLimitingTraceOptionsFactory"/>.
         /// </summary>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
-        /// <returns></returns>
         public static RateLimitingTraceOptionsFactory Create(TraceConfiguration config = null)
         {
             return new RateLimitingTraceOptionsFactory(config ?? TraceConfiguration.Create());

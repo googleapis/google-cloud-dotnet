@@ -55,7 +55,7 @@ namespace Google.Devtools.AspNet
         private readonly RateLimitingTraceOptionsFactory _rateFactory;
         private readonly TraceHeaderTraceOptionsFactory _headerFactory;
 
-        private CloudTrace(string projectId, TraceConfiguration config = null,  Task<TraceServiceClient> client = null)
+        private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
@@ -76,14 +76,14 @@ namespace Google.Devtools.AspNet
         /// <param name="application">The Http application.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
-        public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null,  Task<TraceServiceClient> client = null)
+        public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
             CloudTrace trace = new CloudTrace(projectId, config, client);
 
             // Add event handlers to the application.
-            application.BeginRequest += new EventHandler(trace.BeginRequest);
-            application.EndRequest += new EventHandler(trace.EndRequest);
+            application.BeginRequest += trace.BeginRequest;
+            application.EndRequest += trace.EndRequest;
         }
 
         /// <summary>
@@ -100,10 +100,10 @@ namespace Google.Devtools.AspNet
             TraceOptions headerOptions = _headerFactory.CreateOptions(headerContext);
 
             // If the trace header says to trace or if the rate limiter allows tracing continue.
-            if (!headerOptions.ShouldTrace())
+            if (!headerOptions.ShouldTrace)
             {
                 TraceOptions options = _rateFactory.CreateOptions();
-                if (!options.ShouldTrace())
+                if (!options.ShouldTrace)
                 {
                     return;
                 }
@@ -113,9 +113,9 @@ namespace Google.Devtools.AspNet
             Trace trace = new Trace()
             {
                 ProjectId = _projectId,
-                TraceId = headerContext.GetTraceId() ?? _traceIdfactory.NextId(),
+                TraceId = headerContext.TraceId ?? _traceIdfactory.NextId(),
             };
-            IManagedTracer tracer = SimpleManagedTracer.Create(_bufferingConsumer, trace, headerContext.GetSpanId());
+            IManagedTracer tracer = SimpleManagedTracer.Create(_bufferingConsumer, trace, headerContext.SpanId);
             TracerManager.SetCurrentTracer(tracer);
 
             // Start the span and annotate it with information from the current request.

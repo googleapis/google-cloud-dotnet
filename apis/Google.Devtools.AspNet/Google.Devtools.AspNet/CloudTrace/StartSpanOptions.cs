@@ -19,11 +19,11 @@ namespace Google.Devtools.AspNet
     /// </summary>
     public sealed class StartSpanOptions
     {
-        private readonly SpanKind _spanKind;
+        public readonly SpanKind SpanKind;
 
         private StartSpanOptions(SpanKind spanKind)
         {
-            _spanKind = spanKind;
+            SpanKind = spanKind;
         }
 
         /// <summary>
@@ -34,10 +34,5 @@ namespace Google.Devtools.AspNet
         {
             return new StartSpanOptions(spanKind);
         }
-
-        /// <summary>
-        /// Gets the span kind.
-        /// </summary>
-        public SpanKind GetSpanKind() => _spanKind;
     }
 }

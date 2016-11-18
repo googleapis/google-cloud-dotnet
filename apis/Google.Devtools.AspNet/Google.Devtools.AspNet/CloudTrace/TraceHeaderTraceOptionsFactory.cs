@@ -43,7 +43,7 @@ namespace Google.Devtools.AspNet
         public TraceOptions CreateOptions(TraceHeaderContext context)
         {
             GaxPreconditions.CheckNotNull(context, nameof(context));
-            return TraceOptions.Create(context.ShouldTrace());
+            return TraceOptions.Create(context.ShouldTrace);
         }
     }
 }

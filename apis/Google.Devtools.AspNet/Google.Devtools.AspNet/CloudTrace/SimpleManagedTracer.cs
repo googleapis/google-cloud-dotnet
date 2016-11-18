@@ -56,27 +56,20 @@ namespace Google.Devtools.AspNet
         /// <param name="consumer">The consumer to push finised traces to.</param>
         /// <param name="trace">The current trace.</param>
         /// <param name="rootSpanParentId">Optional, the parent span id of the root span of the passed in trace.</param>
-        /// <returns></returns>
         public static SimpleManagedTracer Create(ITraceConsumer consumer, Cloudtrace.V1.Trace trace, ulong? rootSpanParentId = null)
         {
             return new SimpleManagedTracer(consumer, trace, rootSpanParentId);
         }
 
         /// <inheritdoc />
-        public void StartSpan(string name)
-        {
-            StartSpan(name, StartSpanOptions.Create());
-        }
-
-        /// <inheritdoc />
-        public void StartSpan(string name, StartSpanOptions options)
+        public void StartSpan(string name, StartSpanOptions options = null)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
-            GaxPreconditions.CheckNotNull(options, nameof(options));
+            options = options ?? StartSpanOptions.Create();
 
             TraceSpan span = new TraceSpan();
             span.SpanId = _spanIdFactory.NextId();
-            span.Kind = options.GetSpanKind().Convert();
+            span.Kind = options.SpanKind.Convert();
             span.Name = name;
             span.StartTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
 
@@ -115,7 +108,8 @@ namespace Google.Devtools.AspNet
             CheckStackNotEmpty();
 
             TraceSpan span = _traceStack.Peek();
-            foreach (var l in labels) {
+            foreach (var l in labels)
+            {
                 span.Labels.Add(l.Key, l.Value);
             }
         }
