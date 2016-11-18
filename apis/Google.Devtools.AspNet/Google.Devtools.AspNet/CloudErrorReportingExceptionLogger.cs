@@ -28,6 +28,7 @@ namespace Google.Devtools.AspNet
     /// </summary>
     /// 
     /// <example>
+    /// <code>
     /// public static void Register(HttpConfiguration config)
     /// {
     ///   // Add a catch all for the uncaught exceptions.
@@ -38,6 +39,7 @@ namespace Google.Devtools.AspNet
     ///   config.Services.Add(typeof(IExceptionLogger),
     ///       CloudErrorReportingExceptionLogger.Create(projectId, serviceName, version));
     /// }
+    /// </code>
     /// </example>
     /// 
     /// <remarks>
