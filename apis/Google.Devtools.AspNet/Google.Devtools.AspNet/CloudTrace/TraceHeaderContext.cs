@@ -44,8 +44,13 @@ namespace Google.Devtools.AspNet
         public static readonly Regex TraceHeaderRegex =
             new Regex(@"^([A-Fa-f0-9]{32})/([0-9]+);(o=([0-3]))?$", RegexOptions.Compiled);
 
+        /// <summary>Gets the trace id or null if none is available.</summary>
         public string TraceId { get; }
+
+        /// <summary>Gets the span id or null if none is available.</summary>
         public ulong? SpanId { get; }
+
+        /// <summary>True if the request should be traced.</summary>
         public bool ShouldTrace { get; }
 
         /// <summary>

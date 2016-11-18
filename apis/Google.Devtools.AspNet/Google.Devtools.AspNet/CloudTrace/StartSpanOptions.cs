@@ -19,6 +19,7 @@ namespace Google.Devtools.AspNet
     /// </summary>
     public sealed class StartSpanOptions
     {
+        /// <summary>Gets the span kind.</summary>
         public SpanKind SpanKind { get; }
 
         private StartSpanOptions(SpanKind spanKind)
