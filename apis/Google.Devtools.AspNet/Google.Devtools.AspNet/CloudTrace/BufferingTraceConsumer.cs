@@ -24,7 +24,7 @@ namespace Google.Devtools.AspNet
     internal sealed class BufferingTraceConsumer : IFlushableTraceConsumer
     {
         // The default buffer size in bytes. 2^16 = 65536.
-        public static readonly int DefaultBufferSize = 65536;
+        public const int DefaultBufferSize = 65536;
 
         // A mutex to protect the buffer.
         private readonly object _mutex = new object();
@@ -41,10 +41,13 @@ namespace Google.Devtools.AspNet
         // The current size of traces.
         private int _size;
 
-        private BufferingTraceConsumer(ITraceConsumer consumer, int? bufferSize = null)
+        private BufferingTraceConsumer(ITraceConsumer consumer, int bufferSize)
         {
+            GaxPreconditions.CheckArgument(
+                bufferSize > 0, nameof(bufferSize), "bufferSize must be greater than 0");
+
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _bufferSize = bufferSize ?? DefaultBufferSize;
+            _bufferSize = bufferSize;
             _traces = new Traces();
             _size = 0;
         }
@@ -56,7 +59,7 @@ namespace Google.Devtools.AspNet
         /// <param name="consumer">The consumer to flush traces too.</param>
         /// <param name="bufferSize">Optional, buffer size in bytes. Defaults to <see cref="DefaultBufferSize"/></param>
         /// <returns></returns>
-        public static BufferingTraceConsumer Create(ITraceConsumer consumer, int? bufferSize = null)
+        public static BufferingTraceConsumer Create(ITraceConsumer consumer, int bufferSize = DefaultBufferSize)
         {
             return new BufferingTraceConsumer(consumer, bufferSize);
         }
@@ -87,7 +90,10 @@ namespace Google.Devtools.AspNet
                 _traces = new Traces();
                 _size = 0;
             }
-            _consumer.Recieve(old);
+
+            if (old.Traces_.Count != 0) { 
+                _consumer.Recieve(old);
+            }
         }
     }
 }
