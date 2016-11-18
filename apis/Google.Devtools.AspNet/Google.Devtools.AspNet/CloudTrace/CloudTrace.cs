@@ -59,7 +59,7 @@ namespace Google.Devtools.AspNet
         private readonly RateLimitingTraceOptionsFactory _rateFactory;
         private readonly TraceHeaderTraceOptionsFactory _headerFactory;
 
-        private CloudTrace(string projectId, TraceConfiguration config = null,  Task<TraceServiceClient> client = null)
+        private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 

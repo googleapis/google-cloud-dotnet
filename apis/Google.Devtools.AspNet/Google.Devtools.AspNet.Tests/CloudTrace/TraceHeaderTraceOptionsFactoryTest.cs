@@ -25,11 +25,11 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
 
             TraceHeaderContext contextTrace = new TraceHeaderContext(null, null, true);
             TraceOptions optionsTrace = factory.CreateOptions(contextTrace);
-            Assert.True(optionsTrace.ShouldTrace());
+            Assert.True(optionsTrace.ShouldTrace);
 
             TraceHeaderContext contextNoTrace = new TraceHeaderContext(null, null, false);
             TraceOptions optionsNoTrace = factory.CreateOptions(contextNoTrace);
-            Assert.False(optionsNoTrace.ShouldTrace());
+            Assert.False(optionsNoTrace.ShouldTrace);
         }
     }
 }

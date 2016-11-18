@@ -24,7 +24,6 @@ namespace Google.Devtools.AspNet
     {
         /// <summary>
         /// Starts a new span using the most recent (if any) unfinished span as the parent.
-        /// Users the default <see cref="StartSpanOptions"/>.
         /// </summary>
         /// <param name="name">The name of the span, cannot be null.</param>
         /// <param name="options">The span options to override default values.</param>
