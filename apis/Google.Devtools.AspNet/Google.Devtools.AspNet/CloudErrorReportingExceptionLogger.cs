@@ -32,7 +32,7 @@ namespace Google.Devtools.AspNet
     /// {
     ///   // Add a catch all for the uncaught exceptions.
     ///   config.Services.Add(typeof(IExceptionLogger),
-    ///       CloudErrorReportingExceptionLogger.Create());
+    ///       CloudErrorReportingExceptionLogger.Create(projectId, serviceName, version));
     /// }
     /// </example>
     /// 
