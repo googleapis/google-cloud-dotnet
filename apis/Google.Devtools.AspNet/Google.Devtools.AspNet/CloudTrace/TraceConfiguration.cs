@@ -23,6 +23,7 @@ namespace Google.Devtools.AspNet
     {
         public const double DefaultQpsSampleRate = 1.0;
 
+        /// <summary>Gets the QPS sample rate.</summary>
         public double QpsSampleRate { get; }
 
         private TraceConfiguration(double qpsSampleRate)
