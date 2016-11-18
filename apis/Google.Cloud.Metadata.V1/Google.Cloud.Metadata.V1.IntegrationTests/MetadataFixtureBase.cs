@@ -13,17 +13,15 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Xunit;
 
 namespace Google.Cloud.Metadata.V1.IntegrationTests
 {
@@ -94,12 +92,42 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             emulatorProcess.Start();
             emulatorProcess.BeginOutputReadLine();
             emulatorProcess.BeginErrorReadLine();
+
+            // Block until the server becomes available.
+            var client = MetadataClient.Create();
+            var sw = Stopwatch.StartNew();
+            while (!client.IsServerAvailable() && sw.Elapsed.TotalSeconds < 30)
+            {
+                Thread.Sleep(50);
+            }
+
+            if (!client.IsServerAvailable())
+            {
+                Cleanup();
+                ThrowEmulatorError("The metadata server emulator failed to start");
+            }
+        }
+
+        private void Cleanup()
+        {
+            emulatorProcess.Exited -= EmulatorProcess_Exited;
+            emulatorProcess.Kill();
+
+            Directory.Delete(emulatorPath, recursive: true);
+        }
+
+        public void Dispose()
+        {
+            Cleanup();
         }
 
         private void EmulatorProcess_Exited(object sender, EventArgs e)
         {
-            var message = $"The metadata server emulator exited with code {emulatorProcess.ExitCode}";
+            ThrowEmulatorError($"The metadata server emulator exited with code {emulatorProcess.ExitCode}");
+        }
 
+        private void ThrowEmulatorError(string message)
+        {
             var output = emulatorOutput.ToString();
             if (!string.IsNullOrEmpty(output))
             {
@@ -111,14 +139,6 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
                 message += $"\nError Output:\n-------------\n{error}\n--------------------";
             }
             throw new InvalidOperationException(message);
-        }
-
-        public void Dispose()
-        {
-            emulatorProcess.Exited -= EmulatorProcess_Exited;
-            emulatorProcess.Kill();
-
-            Directory.Delete(emulatorPath, recursive: true);
         }
 
         public Task UpdateMetadata(string path, string data) =>

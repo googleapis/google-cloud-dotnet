@@ -129,13 +129,16 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
         [Fact]
         public void WaitForChange()
         {
+            const string key = "my_instance_key1";
+
             var client = MetadataClient.Create();
+            var originalValue = client.GetCustomInstanceMetadata(key);
 
             var task = Task.Run(async () =>
             {
                 await Task.Delay(TimeSpan.FromSeconds(1));
-                await _fixture.UpdateMetadata("instance/attributes/my_instance_key1", "foo");
-                await _fixture.UpdateMetadata("instance/attributes/my_instance_key1", "my_instance_value1");
+                await _fixture.UpdateMetadata($"instance/attributes/{key}", "foo");
+                await _fixture.UpdateMetadata($"instance/attributes/{key}", originalValue);
             });
             try
             {
