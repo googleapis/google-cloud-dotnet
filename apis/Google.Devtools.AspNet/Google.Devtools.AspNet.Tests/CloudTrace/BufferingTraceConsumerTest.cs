@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Devtools.Cloudtrace.V1;
+using Moq;
 using Xunit;
 
 namespace Google.Devtools.AspNet.Tests.CloudTrace
@@ -35,10 +36,10 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Traces traces = new Traces();
             traces.Traces_.Add(CreateTrace());
 
-            FakeConsumer fakeConsumer = new FakeConsumer();
-            BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(fakeConsumer, bufferSize);
+            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, bufferSize);
             consumer.Recieve(traces);
-            Assert.Equal(fakeConsumer.ReceiveCalls, 0);
+            mockConsumer.Verify(c => c.Recieve(It.IsAny<Traces>()), Times.Never());
 
             traces = new Traces();
             while (traces.Traces_.Count < 1000 && traces.CalculateSize() < bufferSize)
@@ -46,10 +47,15 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
                 traces.Traces_.Add(CreateTrace());
             }
 
-            consumer.Recieve(traces);
-            Assert.Equal(fakeConsumer.ReceiveCalls, 1);
-        }
+            // Add the initial trace to the current list.
+            Traces combined = traces;
+            combined.Traces_.Add(CreateTrace());
+            mockConsumer.Setup(c => c.Recieve(traces));
 
+            consumer.Recieve(traces);
+            mockConsumer.VerifyAll();
+        }
+        
         [Fact]
         public void Flush()
         {
@@ -57,31 +63,23 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Trace trace = new Trace();
             traces.Traces_.Add(trace);
 
-            FakeConsumer fakeConsumer = new FakeConsumer();
-            BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(fakeConsumer, int.MaxValue);
+            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            mockConsumer.Setup(c => c.Recieve(traces));
+            BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, int.MaxValue);
             consumer.Recieve(traces);
-            Assert.Equal(fakeConsumer.ReceiveCalls, 0);
+            mockConsumer.Verify(c => c.Recieve(It.IsAny<Traces>()), Times.Never());
 
             consumer.Flush();
-            Assert.Equal(fakeConsumer.ReceiveCalls, 1);
+            mockConsumer.VerifyAll();
         }
 
         [Fact]
         public void Flush_NoTraces()
         {
-            FakeConsumer fakeConsumer = new FakeConsumer();
-            BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(fakeConsumer, int.MaxValue);
+            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, int.MaxValue);
             consumer.Recieve(new Traces());
-            Assert.Equal(fakeConsumer.ReceiveCalls, 0);
-        }
-
-        private class FakeConsumer : ITraceConsumer
-        {
-            public int ReceiveCalls { get; private set; }
-            public void Recieve(Traces traces)
-            {
-                ReceiveCalls++;
-            }
+            mockConsumer.Verify(c => c.Recieve(It.IsAny<Traces>()), Times.Never());
         }
     }
 }
