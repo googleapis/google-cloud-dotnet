@@ -25,7 +25,7 @@ except KeyError:
 request_template = server_address + '/computeMetadata/v1/{}'
 update_template = server_address + '/emulator/v1/update/{}'
 
-def check_header(headers, url, key, value):
+def check_header(headers, key, value):
   assert headers.get(key.lower()) == value
 
 def expect_content_absolute(url, expected, expected_content_type, expect_metadata_header=True):
@@ -38,12 +38,12 @@ def expect_content_absolute(url, expected, expected_content_type, expect_metadat
   headers = response.info().dict
 
   if expect_metadata_header:
-    check_header(headers, url, common.metadata_flavor, common.metadata_flavor_google)
+    check_header(headers, common.metadata_flavor, common.metadata_flavor_google)
   else:
     assert common.metadata_flavor.lower() not in headers
 
-  check_header(headers, url, common.server, common.server_value)
-  check_header(headers, url, common.content_type, expected_content_type)
+  check_header(headers, common.server, common.server_value)
+  check_header(headers, common.content_type, expected_content_type)
   
   contents = response.read()
   assert expected == contents
@@ -66,9 +66,25 @@ def expect_error(path, expected_code, metadata_flavor_value=common.metadata_flav
     # This will always fail but I'm asserting so the response appears in the test results
     assert response.read() is None
   except urllib2.HTTPError as e:
-    check_header(e.headers, url, common.metadata_flavor, common.metadata_flavor_google)
-    check_header(e.headers, url, common.server, common.server_value)
-    check_header(e.headers, url, common.content_type, common.content_type_html)
+    check_header(e.headers, common.metadata_flavor, common.metadata_flavor_google)
+    check_header(e.headers, common.server, common.server_value)
+    check_header(e.headers, common.content_type, common.content_type_html)
+    assert e.code == expected_code
+  except urllib2.URLError as e:
+    raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
+
+def expect_error_deleting_content(path, expected_code):
+  request = urllib2.Request(url = update_template.format(path),
+                            headers={common.metadata_flavor: common.metadata_flavor_google})
+  request.get_method = lambda: "DELETE"
+  try:
+    response = urllib2.urlopen(request)
+    # This will always fail but I'm asserting so the response appears in the test results
+    assert response.read() is None
+  except urllib2.HTTPError as e:
+    check_header(e.headers, common.metadata_flavor, common.metadata_flavor_google)
+    check_header(e.headers, common.server, common.server_value)
+    check_header(e.headers, common.content_type, common.content_type_html)
     assert e.code == expected_code
   except urllib2.URLError as e:
     raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
@@ -78,8 +94,7 @@ def expect_error_updating_content(path, new_data, expected_code):
     new_data = json.dumps(new_data, separators=(',', ':'))
 
   data = urllib.quote_plus(new_data)
-  url = update_template.format(path)
-  request = urllib2.Request(url,
+  request = urllib2.Request(update_template.format(path),
                             data,
                             headers={common.metadata_flavor: common.metadata_flavor_google,
                                      common.content_type: common.content_type_text})
@@ -89,9 +104,9 @@ def expect_error_updating_content(path, new_data, expected_code):
     # This will always fail but I'm asserting so the response appears in the test results
     assert response.read() is None
   except urllib2.HTTPError as e:
-    check_header(e.headers, url, common.metadata_flavor, common.metadata_flavor_google)
-    check_header(e.headers, url, common.server, common.server_value)
-    check_header(e.headers, url, common.content_type, common.content_type_html)
+    check_header(e.headers, common.metadata_flavor, common.metadata_flavor_google)
+    check_header(e.headers, common.server, common.server_value)
+    check_header(e.headers, common.content_type, common.content_type_html)
     assert e.code == expected_code
   except urllib2.URLError as e:
     raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
@@ -176,6 +191,15 @@ def check_dir_recursive(path, expected, test_trailing_slash=True, use_recursive_
   assert etag1 == etag5
   assert etag1 == etag6
 
+def delete_content(path):
+  request = urllib2.Request(update_template.format(path),
+                            headers={common.metadata_flavor: common.metadata_flavor_google})
+  request.get_method = lambda: "DELETE"
+  try:
+    urllib2.urlopen(request)
+  except urllib2.URLError as e:
+    raise Exception('Error connecting to emulator at %s - %s' % (server_address, e))
+
 def update_content(path, new_data):
   if not isinstance(new_data, str):
     new_data = json.dumps(new_data, separators=(',', ':'))
@@ -244,7 +268,7 @@ def test_instance_image():
   check_path('instance/image', '')
 
 def test_instance_licenses():
-  check_dir('instance/licenses', '0/\n')
+  check_dir('instance/licenses', '0/\n1/\n2/\n')
 
 def test_instance_licenses_0():
   check_dir('instance/licenses/0', 'id\n')
@@ -401,7 +425,7 @@ def test_recursive_instance_disks_0():
   check_dir_recursive('instance/disks/0', '{"deviceName":"boot","index":0,"mode":"READ_WRITE","type":"PERSISTENT"}')
 
 def test_recursive_instance_licenses():
-  check_dir_recursive('instance/licenses', '[{"id":"0"}]')
+  check_dir_recursive('instance/licenses', '[{"id":"0"},{"id":"1"},{"id":"2"}]')
 
 def test_recursive_instance_licenses_0():
   check_dir_recursive('instance/licenses/0', '{"id":"0"}')
@@ -549,6 +573,12 @@ def test_update_indexed_list():
   original = [
       {
         "id": "0"
+      },
+      {
+        "id": "1"
+      },
+      {
+        "id": "2"
       }
     ]
   changed = [
@@ -592,11 +622,6 @@ def test_update_directory():
     check_dir_recursive(path, json.dumps(changed, separators=(',', ':')))
   finally:
     update_content(path, original)
-
-def test_update_invalid_path():
-  path = 'instance/foo'
-  changed = 'bar'
-  expect_error_updating_content(path, changed, 404)
 
 def test_update_invalid_value():
   path = 'instance/attributes'
@@ -663,6 +688,21 @@ def test_wait_for_change_on_descendant():
                  common.content_type_json)
   thread.join()
 
+def test_wait_for_change_on_delete():
+  path = 'instance/attributes'
+  original = {'my_instance_key1':
+              'my_instance_value1'}
+
+  def changeData():
+    time.sleep(1)
+    delete_content(path + '/my_instance_key1')
+    update_content(path, original)
+
+  thread = threading.Thread(target=changeData)
+  thread.start()
+  expect_content(path + '?recursive=True&wait_for_change=true&timeout_sec=5', '{}', common.content_type_json)
+  thread.join()
+
 def test_last_etag_match():
   path = 'instance/cpu-platform'
   original = 'Intel Haswell'
@@ -701,3 +741,51 @@ def test_last_etag_non_match():
     assert etag1 != etag2
   finally:
     update_content(path, original)
+
+def test_add_value():
+  update_content('instance/attributes/foo', 'bar')
+  try:
+    check_dir_recursive('instance/attributes', '{"my_instance_key1":"my_instance_value1","foo":"bar"}')
+  finally:
+    update_content('instance/attributes', '{"my_instance_key1":"my_instance_value1"}')
+
+def test_add_value_invalid():
+  expect_error_updating_content('instance/foo', 'bar', 400)
+
+def test_delete_content():
+  delete_content('instance/attributes/my_instance_key1')
+  try:
+    check_dir_recursive('instance/attributes', '{}')
+  finally:
+    update_content('instance/attributes', '{"my_instance_key1":"my_instance_value1"}')
+
+def test_delete_list_item():
+  path = 'instance/licenses'
+  original = [
+      {
+        "id": "0"
+      },
+      {
+        "id": "1"
+      },
+      {
+        "id": "2"
+      }
+    ]
+  changed = [
+      {
+        "id": "0"
+      },
+      {
+        "id": "2"
+      }
+    ]
+  check_dir_recursive(path, json.dumps(original, separators=(',', ':')))
+  delete_content(path + '/1')
+  try:
+    check_dir_recursive(path, json.dumps(changed, separators=(',', ':')))
+  finally:
+    update_content(path, original)
+
+def test_delete_value_invalid():
+  expect_error_deleting_content('instance/attributes', 400)
