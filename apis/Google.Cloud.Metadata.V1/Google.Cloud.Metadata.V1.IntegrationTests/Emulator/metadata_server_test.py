@@ -749,6 +749,13 @@ def test_add_value():
   finally:
     update_content('instance/attributes', '{"my_instance_key1":"my_instance_value1"}')
 
+def test_add_key_with_dashes():
+  update_content('instance/attributes/foo-bar', 'baz')
+  try:
+    check_dir_recursive('instance/attributes', '{"my_instance_key1":"my_instance_value1","foo-bar":"baz"}')
+  finally:
+    update_content('instance/attributes', '{"my_instance_key1":"my_instance_value1"}')
+
 def test_add_value_invalid():
   expect_error_updating_content('instance/foo', 'bar', 400)
 

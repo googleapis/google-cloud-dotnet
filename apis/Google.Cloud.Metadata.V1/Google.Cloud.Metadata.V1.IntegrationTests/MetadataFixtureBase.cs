@@ -126,6 +126,8 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             ThrowEmulatorError($"The metadata server emulator exited with code {emulatorProcess.ExitCode}");
         }
 
+        public string GenerateCustomKey() => Guid.NewGuid().ToString();
+
         private void ThrowEmulatorError(string message)
         {
             var output = emulatorOutput.ToString();
@@ -141,7 +143,7 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             throw new InvalidOperationException(message);
         }
 
-        public Task UpdateMetadata(string path, string data) =>
+        public Task UpdateMetadataAsync(string path, string data) =>
             httpClient.SendAsync(
                 new HttpRequestMessage(HttpMethod.Post, $"http://{emulatorHost}/emulator/v1/update/{path}")
                 {

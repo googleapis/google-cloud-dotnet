@@ -415,7 +415,7 @@ namespace Google.Cloud.Metadata.V1
         {
             add
             {
-                HookChangeEvent(ref instanceWatcher, value, "instance?recursive=true", (sender, newValue) =>
+                HookChangeEvent(ref instanceWatcher, value, "instance", (sender, newValue) =>
                 {
                     var temp = sender.Event as EventHandler;
                     temp?.Invoke(this, EventArgs.Empty);
@@ -449,7 +449,7 @@ namespace Google.Cloud.Metadata.V1
         {
             add
             {
-                HookChangeEvent(ref projectWatcher, value, "project?recursive=true", (sender, newValue) =>
+                HookChangeEvent(ref projectWatcher, value, "project", (sender, newValue) =>
                 {
                     var temp = sender.Event as EventHandler;
                     temp?.Invoke(this, EventArgs.Empty);
@@ -483,6 +483,10 @@ namespace Google.Cloud.Metadata.V1
 
             // Always add recursive. It is ignored for values and required for directories when waiting for changes.
             key += $"?wait_for_change=true&recursive=true&timeout_sec={(int)timeout.TotalSeconds}";
+            if (lastETag != null)
+            {
+                key += $"&last_etag={lastETag}";
+            }
             var response = await RequestMetadataAsync(key, cancellationToken).ConfigureAwait(false);
             return new WaitForChangeResult(
                 await response.Content.ReadAsStringAsync().ConfigureAwait(false),
@@ -495,6 +499,7 @@ namespace Google.Cloud.Metadata.V1
             private readonly Action<ValueWatcher, string> changeAction;
             private readonly MetadataClientImpl client;
             private readonly string path;
+            private readonly ManualResetEventSlim ready;
             private readonly Task waitTask;
 
             public Delegate Event { get; set; }
@@ -506,7 +511,15 @@ namespace Google.Cloud.Metadata.V1
                 this.path = path;
                 
                 cancellationTokenSource = new CancellationTokenSource();
+                ready = new ManualResetEventSlim(false);
                 waitTask = Task.Run(WaitForChange);
+
+                if (!ready.Wait(TimeSpan.FromSeconds(10)))
+                {
+                    var exception = waitTask.Exception;
+                    var innerException = exception?.InnerExceptions.FirstOrDefault() ?? exception;
+                    throw new InvalidOperationException($"Unable to wait for changes on {path}", innerException);
+                }
             }
 
             public void Stop()
@@ -518,6 +531,8 @@ namespace Google.Cloud.Metadata.V1
             {
                 var response = await client.RequestMetadataAsync(path, cancellationTokenSource.Token).ConfigureAwait(false);
                 var lastETag = GetETag(response);
+                ready.Set();
+
                 var timeout = new TimeSpan(client.HttpClient.Timeout.Ticks / 2);
 
                 while (!cancellationTokenSource.Token.IsCancellationRequested)
