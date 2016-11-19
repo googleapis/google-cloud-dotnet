@@ -337,9 +337,6 @@ namespace Google.Cloud.Metadata.V1
         /// <summary>
         /// Waits for changes to the value or values specified by the relative URL synchronously.
         /// </summary>
-        /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
-        /// <param name="lastETag">The ETag of the last known value. May be null.</param>
-        /// <param name="timeout">The amount of time to wait for changes.</param>
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
@@ -363,6 +360,9 @@ namespace Google.Cloud.Metadata.V1
         /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
         /// </para>
         /// </remarks>
+        /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="lastETag">The ETag of the last known value. May be null.</param>
+        /// <param name="timeout">The amount of time to wait for changes.</param>
         /// <exception cref="ArgumentException">
         /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, <paramref name="timeout"/> represents a negative duration,
         /// or <paramref name="lastETag"/> is invalid.
@@ -381,10 +381,6 @@ namespace Google.Cloud.Metadata.V1
         /// <summary>
         /// Waits for changes to the value or values specified by the relative URL asynchronously.
         /// </summary>
-        /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
-        /// <param name="lastETag">The ETag of the last known value. May be null.</param>
-        /// <param name="timeout">The amount of time to wait for changes.</param>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
@@ -408,6 +404,10 @@ namespace Google.Cloud.Metadata.V1
         /// Alternatively, use <seealso cref="ProjectMetadataChanged"/> or <seealso cref="InstanceMetadataChanged"/>, respectively.
         /// </para>
         /// </remarks>
+        /// <param name="key">The metadata key on which to wait for changes, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="lastETag">The ETag of the last known value. May be null.</param>
+        /// <param name="timeout">The amount of time to wait for changes.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <exception cref="ArgumentException">
         /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL, <paramref name="timeout"/> represents a negative duration,
         /// or <paramref name="lastETag"/> is invalid.
