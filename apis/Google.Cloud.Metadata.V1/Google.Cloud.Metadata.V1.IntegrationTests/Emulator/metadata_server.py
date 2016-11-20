@@ -173,8 +173,8 @@ class ServerState:
         process(result, 0)
 
     if hasattr(self, '_all_data') and self._all_data:
-      (original, error) = self._getDataAt(path)
-      assert original
+      original = self._getDataTemplateAt(path)
+      assert original is not None
       result = original.verifyShape(result, self._lock)
 
     if result:
@@ -211,6 +211,23 @@ class ServerState:
 
     return (result, None)
 
+  def _getDataTemplateAt(self, path):
+    """Gets the raw data at the specified path which can be used to verify the data shape of a new value.
+
+    Args:
+      path: The resource path from where the data template should be obtained.
+    """
+    result = self._all_data
+    for component in path.split('/'):
+      if len(component) == 0:
+        continue
+
+      result = result.getChildTemplate(component, self._lock)
+      if result is None:
+        return None
+
+    return result
+
   def _getResult(self, raw_data, is_recursive, is_json, is_json_default, alt):
     """Returns a tuple containing the result data which should be returned, the result data which should
     be hashed to obtain the ETag, and the error. Either the result and result to be hashed will be valid
@@ -236,6 +253,34 @@ class ServerState:
       assert result_to_hash is not None
 
     return (result, result_to_hash, None)
+
+  def deleteData(self, path):
+    """Gets the response when requesting to delete data.
+
+    Args:
+      path: The resource path from where the data should be deleted.
+    """
+    components = [component for component in path.split('/') if component]
+    parent_path = '/'.join(components[:-1])
+    last_component = components[-1]
+
+    with self._lock:
+      (parent_data, error) = self._getDataAt(parent_path)
+      if error:
+        return error
+
+      if parent_data.hasFixedKeys():
+        return update_data_error_fixed_keys
+
+      old_data = parent_data.getChild(last_component)
+      if not parent_data.deleteChild(last_component):
+        return update_data_error
+
+      if old_data is not None:
+        old_data.notifyAllChanged()
+      parent_data.notifyAncestorsChanged()
+
+      return update_success
 
   def getResponseForDataRequest(self, path, alt, is_recursive, timeout_sec, wait_for_change, last_etag):
     """Gets the response when requesting data, which will either be an error response if the request is
@@ -335,19 +380,21 @@ class ServerState:
         return error
 
       old_data = parent_data.getChild(last_component)
-      if not old_data:
-        return not_found_error
+      if old_data is None and parent_data.hasFixedKeys():
+        return update_data_error_fixed_keys
 
-      if old_data.isDirectory():
+      data_template = parent_data.getChildTemplate(last_component, self._lock)
+      if data_template is not None and data_template.isDirectory():
         data = json.loads(data, object_pairs_hook=OrderedDict)
 
       cleaned_path = parent_path + '/' + last_component
       data = self._prepareLoadedData(cleaned_path, data)
-      if not data:
+      if data is None:
         return update_data_error
 
       parent_data.setChild(last_component, data)
-      old_data.notifyAllChanged()
+      if old_data is not None:
+        old_data.notifyAllChanged()
       parent_data.notifyAncestorsChanged()
 
       return update_success
@@ -410,7 +457,24 @@ class MetadataValue(object):
     self._parent = None
     self._changeConditon = threading.Condition(lock)
 
+  def deleteChild(self, child_name):
+    """Attempts to delete the child with the specified name and returns whether the operation was successful.
+
+    Args:
+      child_name: The name where the value should be deleted.
+    """
+    return False
+
   def getChild(self, child_name):
+    return None
+
+  def getChildTemplate(self, child_name, lock):
+    """Gets the data template against which a child with the specified name can have its data shape verified.
+
+    Args:
+      child_name: The name where the new value will be placed.
+      lock: the lock to use to create new metadata values if necessary.
+    """
     return None
 
   def getValueToJSONEncode(self):
@@ -510,6 +574,9 @@ class MetadataDirectory(MetadataValue):
   def __iter__(self):
     return self._value.__iter__()
 
+  def __contains__(self, key):
+    return self._value.__contains__(key)
+
   def __len__(self):
     return self._value.__len__()
 
@@ -528,6 +595,28 @@ class MetadataDirectory(MetadataValue):
   def childIter(self):
     """Gets an iterator for all child data."""
     return self.__iter__()
+
+  def getChildTemplate(self, child_name, lock):
+    """Gets the data template against which a child with the specified name can have its data shape verified.
+
+    Args:
+      child_name: The name where the new value will be placed.
+      lock: the lock to use to create new metadata values if necessary.
+    """
+    if self.hasFixedKeys():
+      return self.getChild(child_name)
+
+    child = next(self.childIter(), None)
+    if child is not None:
+      return child
+
+    return MetadataString(u'', lock)
+
+  def hasFixedKeys(self):
+    """Gets the value indicating whether the directory has a fixed set of keys or not. If False, the directory
+    can have an arbitrary set of keys, but the values associated with those keys must conform to a certain data
+    shape."""
+    return False
 
   def initializeParents(self):
     """Sets the parent references on all descendant data."""
@@ -555,6 +644,21 @@ class MetadataDict(MetadataDirectory):
     """Gets an iterator for all child data."""
     for key in self:
       yield self[key] 
+
+  def deleteChild(self, child_name):
+    """Attempts to delete the child with the specified name and returns whether the operation was successful.
+
+    Args:
+      child_name: The name where the value should be deleted.
+    """
+    if self.hasFixedKeys():
+      return False
+
+    if child_name not in self:
+      return False
+
+    del self[child_name]
+    return True
 
   def getChild(self, child_name):
     if not child_name in self:
@@ -598,10 +702,7 @@ class MetadataDict(MetadataDirectory):
 
         data[key] = child
     else:
-      if len(self) == 0:
-        template = MetadataString(u'')
-      else:
-        template = self._value.values()[0]
+      template = self.getChildTemplate(u'', lock)
 
       for key in data:
         child = template.verifyShape(data[key], lock)
@@ -611,6 +712,12 @@ class MetadataDict(MetadataDirectory):
         data[key] = child
 
     return data
+
+  def hasFixedKeys(self):
+    """Gets the value indicating whether the dictionary has a fixed set of keys or not. If False, the dictionary
+    can have an arbitrary set of keys, but the values associated with those keys must conform to a certain data
+    shape."""
+    return self._has_fixed_keys
 
   def isServiceAccount(self):
     return "email" in self and "scopes" in self and "token" in self
@@ -664,6 +771,23 @@ class MetadataIndexedList(MetadataDirectory):
     assert isinstance(items, list)
     MetadataDirectory.__init__(self, items, lock)
 
+  def deleteChild(self, child_name):
+    """Attempts to delete the child with the specified name and returns whether the operation was successful.
+
+    Args:
+      child_name: The name where the value should be deleted.
+    """
+    try:
+      index = int(child_name)
+    except ValueError:
+      pass
+    else:
+      if 0 <= index and index < len(self):
+        del self[index]
+        return True
+
+    return False
+
   def getChild(self, child_name):
     try:
       index = int(child_name)
@@ -682,10 +806,7 @@ class MetadataIndexedList(MetadataDirectory):
     if not data:
       return None
 
-    if len(self) > 0:
-      template = self[0]
-    else:
-      template = MetadataString(u'')
+    template = self.getChildTemplate(u'', lock)
 
     for i in range(len(data)):
       child = template.verifyShape(data[i], lock)
@@ -747,10 +868,7 @@ class MetadataList(MetadataDirectory):
     if not data:
       return None
 
-    if len(self) > 0:
-      template = self[0]
-    else:
-      template = MetadataString(u'')
+    template = self.getChildTemplate(u'', lock)
 
     for i in range(len(data)):
       child = template.verifyShape(data[i], lock)
@@ -795,6 +913,7 @@ not_found_error = formatResponse(u'Error: Not found', 404, common.content_type_h
 bad_request_error = formatResponse(u'Error: bad request', 400, common.content_type_html)
 update_success = formatResponse(u'Update successful', 200, common.content_type_text)
 update_data_error = formatResponse(u'Updated data does not have the correct format', 400, common.content_type_html)
+update_data_error_fixed_keys = formatResponse(u'Cannot add or remove data at the specified path', 400, common.content_type_html)
 
 @app.after_request
 def add_headers(response):
@@ -825,8 +944,6 @@ def getRootData():
 def getData(path):
   global state
   # TODO There are 500 max hanging gets (not sure if we need to enforce this)
-  # TODO Actually handle waiting for changes and last_etag
-
   def asBool(value):
     if not value:
       return False
@@ -865,9 +982,12 @@ def updateAllData():
 
   return state.setAllData(new_data)
 
-@app.route('/emulator/v1/update/<path:path>', methods = ['POST'])
+@app.route('/emulator/v1/update/<path:path>', methods = ['POST', 'DELETE'])
 def updateData(path):
   global state
+
+  if request.method == 'DELETE':
+    return state.deleteData(path)
 
   (new_data, error) = getUpdatedData()
   if error:
@@ -979,12 +1099,15 @@ FLAGS
   print "Use this environment variable to connect to the emulator"
   print "  %s %s=%s" % ("set" if os.name == 'nt' else "export", common.host_environment_variable, emulator_host)
   print "---------------------------------"
-  print "To update data in the emulator, send a POST request to"
+  print "To update or delete data in the emulator, send a POST or DELETE request, respectively, to"
   print "  http://%s/emulator/v1/update/<path>" % emulator_host
-  print "With the content being the URL-encoded new value (specified in JSON for directory paths)"
+  print "For POSTs, the content should be the URL-encoded new value (specified in JSON for directory paths)"
   print ""
   print "For example, the following command will change the CPU platform"
-  print '  wget -q -SO- --header="Metadata-Flavor: Google" "http://%s/emulator/v1/update/instance/cpu-platform" --post-data="Intel+Ivy+Bridge"' % emulator_host
+  print '  curl -d "Intel+Ivy+Bridge" -H "Metadata-Flavor: Google" http://%s/emulator/v1/update/instance/cpu-platform"' % emulator_host
+  print ""
+  print "And this command will remove the 2nd license"
+  print '  curl -X DELETE -H "Metadata-Flavor: Google" http://%s/emulator/v1/update/instance/licenses/1"' % emulator_host
   print "---------------------------------"
 
   # If the process is killed while standard output is getting redirected, the output above
@@ -1000,4 +1123,3 @@ FLAGS
     except socket.error as error:
       if error.errno != errno.WSAECONNRESET:
         raise
-
