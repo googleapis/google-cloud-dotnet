@@ -38,7 +38,6 @@ namespace Google.Storage.V1
         private BucketsResource.UpdateRequest CreateUpdateBucketRequest(Bucket bucket, UpdateBucketOptions options)
         {
             ValidateBucket(bucket, nameof(bucket));
-            GaxPreconditions.CheckArgument(bucket.Acl != null, nameof(bucket), "The Acl property of the bucket to update is null");
             var request = Service.Buckets.Update(bucket, bucket.Name);
             options?.ModifyRequest(request, bucket);
             return request;

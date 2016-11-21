@@ -36,21 +36,10 @@ namespace Google.Storage.V1.IntegrationTests
         {
             var client = _fixture.Client;
             var obj = client.UploadObject(_fixture.SingleVersionBucket, GenerateName(), null,
-                new MemoryStream(_fixture.SmallContent), new UploadObjectOptions { Projection = Projection.Full });
+                new MemoryStream(_fixture.SmallContent));
             obj.Metadata = new Dictionary<string, string> { { "key", "value" } };
             var updated = client.UpdateObject(obj);
             Assert.Equal("value", updated.Metadata["key"]);
-        }
-
-        [Fact]
-        public void NoAcl()
-        {
-            // Common way this would happen... we're not getting the full projection, so we have no ACLs.
-            var client = _fixture.Client;
-            var obj = client.UploadObject(_fixture.SingleVersionBucket, GenerateName(), null,
-                new MemoryStream(_fixture.SmallContent));
-            obj.Metadata = new Dictionary<string, string> { { "key", "value" } };
-            Assert.Throws<ArgumentException>(() => client.UpdateObject(obj));
         }
     }
 }
