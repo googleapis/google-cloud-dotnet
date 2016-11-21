@@ -8,7 +8,9 @@
   "dependencies": {
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Devtools.AspNet": { "target": "project" },
-    "xunit": "2.2.0-beta3-build3402"
+    "xunit": "2.2.0-beta3-build3402",
+    "Google.Api.Gax.Testing": "1.0.0-beta04",
+    "Moq": "4.6.36-alpha"
   },
   "testRunner": "xunit",
 

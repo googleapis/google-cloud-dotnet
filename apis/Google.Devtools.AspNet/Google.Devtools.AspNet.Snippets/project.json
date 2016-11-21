@@ -1,5 +1,5 @@
-﻿{
-  "description": "Google.Logging.Log4Net.Snippets Class Library",
+{
+  "description": "",
 
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk",
@@ -9,13 +9,13 @@
   },
 
   "dependencies": {
-    "Google.Logging.Log4Net": { "target": "project" },
-    "xunit": "2.2.0-beta2-build3300",
+    "Google.Devtools.AspNet": { "target": "project" },
+    "xunit": "2.2.0-beta4-build3444",
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
   "testRunner": "xunit",
 
   "frameworks": {
-    "net451": { }
+    "net451": {}
   }
 }

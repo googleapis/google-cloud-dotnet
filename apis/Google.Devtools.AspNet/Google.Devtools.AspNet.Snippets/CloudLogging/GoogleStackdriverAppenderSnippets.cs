@@ -17,7 +17,7 @@ using log4net.Config;
 using System.IO;
 using Xunit;
 
-namespace Google.Logging.Log4Net.Snippets
+namespace Google.Devtools.AspNet.Snippets
 {
     [Collection(nameof(Log4NetSnippetFixture))]
     public class GoogleStackdriverAppenderSnippets

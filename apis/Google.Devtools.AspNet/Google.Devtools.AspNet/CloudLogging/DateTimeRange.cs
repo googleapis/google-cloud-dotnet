@@ -15,7 +15,7 @@
 using Google.Api.Gax;
 using System;
 
-namespace Google.Logging.Log4Net
+namespace Google.Devtools.AspNet
 {
     internal sealed class DateTimeRange
     {

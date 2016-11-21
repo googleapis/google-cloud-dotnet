@@ -15,7 +15,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Google.Logging.Log4Net
+namespace Google.Devtools.AspNet
 {
     internal interface ILogQueue
     {
