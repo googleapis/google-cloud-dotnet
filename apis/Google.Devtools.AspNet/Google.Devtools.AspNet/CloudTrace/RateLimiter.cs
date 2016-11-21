@@ -35,8 +35,8 @@ namespace Google.Devtools.AspNet
         // The amount of time that must be waited before allowing tracing.
         private readonly long _fixedDelayMillis;
 
-        // A stopwatch to manage time between events.
-        private readonly Stopwatch _stopWatch;
+        // A timer to manage time between events.
+        private readonly ITimer _timer;
 
         // The last time tracing was allowed.
         private long _lastCallMillis;
@@ -53,18 +53,18 @@ namespace Google.Devtools.AspNet
                 {
                     if (_instance == null)
                     {
-                        _instance = new RateLimiter(qps);
+                        _instance = new RateLimiter(qps, StopwatchTimer.Create());
                     }
                 }
             }
             return _instance;
         }
 
-        private RateLimiter(double qps) {
+        internal RateLimiter(double qps, ITimer timer) {
             GaxPreconditions.CheckArgument(qps > 0, nameof(qps), "qps must be greater than 0");
 
-            _stopWatch = new Stopwatch();
-            _stopWatch.Start();
+            _timer = timer;
+            _timer.Start();
 
             _lastCallMillis = 0;
             _fixedDelayMillis = Convert.ToInt64(TimeSpan.FromSeconds(1 / qps).TotalMilliseconds);
@@ -75,11 +75,11 @@ namespace Google.Devtools.AspNet
         /// </summary>
         /// <returns>True tracing is allowed.</returns>
         public bool CanTrace() {
-            if (CanTrace(_stopWatch.ElapsedMilliseconds))
+            if (CanTrace(_timer.GetElapsedMilliseconds()))
             {
                 lock (_mutex)
                 {
-                    long nowMillis = _stopWatch.ElapsedMilliseconds;
+                    long nowMillis = _timer.GetElapsedMilliseconds();
                     if (CanTrace(nowMillis))
                     {
                         _lastCallMillis = nowMillis;
