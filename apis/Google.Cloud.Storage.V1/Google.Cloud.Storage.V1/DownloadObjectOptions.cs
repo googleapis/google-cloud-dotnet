@@ -55,7 +55,7 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public long? IfMetagenerationNotMatch { get; set; }
 
-        internal void ModifyDownloader(MediaDownloader downloader)
+        internal void ModifyDownloader(TmpMediaDownloader downloader)
         {
             if (ChunkSize != null)
             {

@@ -56,7 +56,8 @@ namespace Google.Cloud.Storage.V1.Tests
         public void Hash(IEnumerable<byte> source, byte[] expectedHash)
         {
             var hasher = new Crc32c();
-            byte[] actualHash = hasher.ComputeHash(source.ToArray());
+            hasher.UpdateHash(source.ToArray(), 0, source.Count());
+            byte[] actualHash = hasher.GetHash();
             Assert.Equal(expectedHash, actualHash);
         }
     }
