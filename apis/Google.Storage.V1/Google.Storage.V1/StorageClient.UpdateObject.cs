@@ -28,19 +28,14 @@ namespace Google.Storage.V1
         /// </summary>
         /// <remarks>
         /// <para>
-        /// As this is a full update, <paramref name="obj"/> must be fully populated. This is typically
-        /// obtained by performing another operation (such as <see cref="GetObject(string, string, GetObjectOptions)"/>
-        /// with a "full" projection, and then modifying the returned object.
-        /// </para>
-        /// <para>
         /// If no preconditions are explicitly set in <paramref name="options"/>, the generation and
         /// metageneration of <paramref name="obj"/> are used as a precondition for the update,
         /// unless <see cref="UpdateObjectOptions.ForceNoPreconditions"/> is
         /// set to <c>true</c>.
         /// </para>
         /// </remarks>
-        /// <param name="obj">Object to update. Must not be null, and must have populated <c>Name</c>,
-        /// <c>Bucket</c> and <c>Acl</c> properties.</param>
+        /// <param name="obj">Object to update. Must not be null, and must have populated <c>Name</c> and
+        /// <c>Bucket</c> properties.</param>
         /// <param name="options">Additional options for the update. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <returns>The <see cref="Object"/> representation of the updated storage object.</returns>
@@ -56,19 +51,14 @@ namespace Google.Storage.V1
         /// </summary>
         /// <remarks>
         /// <para>
-        /// As this is a full update, <paramref name="obj"/> must be fully populated. This is typically
-        /// obtained by performing another operation (such as <see cref="GetObjectAsync(string, string, GetObjectOptions, CancellationToken)"/>
-        /// with a "full" projection, and then modifying the returned object.
-        /// </para>
-        /// <para>
         /// If no preconditions are explicitly set in <paramref name="options"/>, the generation and
         /// metageneration of <paramref name="obj"/> are used as a precondition for the update,
         /// unless <see cref="UpdateObjectOptions.ForceNoPreconditions"/> is
         /// set to <c>true</c>.
         /// </para>
         /// </remarks>
-        /// <param name="obj">Object to update. Must not be null, and must have populated <c>Name</c>,
-        /// <c>Bucket</c> and <c>Acl</c> properties.</param>
+        /// <param name="obj">Object to update. Must not be null, and must have populated <c>Name</c> and
+        /// <c>Bucket</c> properties.</param>
         /// <param name="options">Additional options for the update. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>

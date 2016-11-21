@@ -123,7 +123,7 @@ namespace Google.Storage.V1.Snippets
 
             // Snippet: UpdateBucket
             var client = StorageClient.Create();
-            var bucket = client.GetBucket(bucketName, new GetBucketOptions { Projection = Projection.Full });
+            var bucket = client.GetBucket(bucketName);
             bucket.Website = new Bucket.WebsiteData
             {
                 MainPageSuffix = "index.html",
@@ -285,10 +285,7 @@ namespace Google.Storage.V1.Snippets
                     { "key2", "value2" }
                 }
             };
-            // The update call requires full object information, so we set the projection to "full" here.
-            // An alternative would be to upload the object and then separately fetch it, again with
-            // a full projection.
-            obj = client.UploadObject(obj, new MemoryStream(content), new UploadObjectOptions { Projection = Projection.Full });
+            obj = client.UploadObject(obj, new MemoryStream(content));
             obj.Metadata.Remove("key1");
             obj.Metadata["key2"] = "updated-value2";
             obj.Metadata["key3"] = "value3";

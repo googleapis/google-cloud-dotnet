@@ -40,7 +40,6 @@ namespace Google.Storage.V1
             GaxPreconditions.CheckNotNull(obj, nameof(obj));
             GaxPreconditions.CheckArgument(obj.Bucket != null, nameof(obj), "The Bucket property of the object to update is null");
             GaxPreconditions.CheckArgument(obj.Name != null, nameof(obj), "The Name property of the object to update is null");
-            GaxPreconditions.CheckArgument(obj.Acl != null, nameof(obj), "The Acl property of the object to update is null");
             var request = Service.Objects.Update(obj, obj.Bucket, obj.Name);
             options?.ModifyRequest(request, obj);
             return request;
