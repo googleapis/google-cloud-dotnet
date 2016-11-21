@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Google.Logging.Log4Net
+namespace Google.Devtools.AspNet
 {
     /// <summary>
     /// Types of metadata that can be attached to log events.

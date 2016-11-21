@@ -27,7 +27,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Logging.Log4Net.Tests
+namespace Google.Devtools.AspNet.Tests
 {
     public class Log4NetTest
     {

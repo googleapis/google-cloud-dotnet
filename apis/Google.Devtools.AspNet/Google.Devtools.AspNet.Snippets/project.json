@@ -1,14 +1,17 @@
 {
-  "description": "Snippets for the ASP.NET instrumentation library.",
+  "description": "",
 
   "buildOptions": {
-    "keyFile": "../../GoogleApis.snk"
+    "keyFile": "../../GoogleApis.snk",
+    "embed": {
+      "include": [ "log4net-template.xml" ]
+    }
   },
 
   "dependencies": {
-    "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Devtools.AspNet": { "target": "project" },
-    "xunit": "2.2.0-beta3-build3402"
+    "xunit": "2.2.0-beta4-build3444",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
   "testRunner": "xunit",
 

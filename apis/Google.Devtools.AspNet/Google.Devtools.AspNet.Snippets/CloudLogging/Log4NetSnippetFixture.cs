@@ -16,7 +16,7 @@ using Google.Logging.V2;
 using System;
 using Xunit;
 
-namespace Google.Logging.Log4Net.Snippets
+namespace Google.Devtools.AspNet.Snippets
 {
     [CollectionDefinition(nameof(Log4NetSnippetFixture))]
     public sealed class Log4NetSnippetFixture : IDisposable, ICollectionFixture<Log4NetSnippetFixture>
