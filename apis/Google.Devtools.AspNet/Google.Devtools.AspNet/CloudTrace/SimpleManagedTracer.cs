@@ -22,23 +22,26 @@ using System.Diagnostics;
 namespace Google.Devtools.AspNet
 {
     /// <summary>
-    /// A simple implemnetation of the <see cref="IManagedTracer"/> that handles spans in a stack.
+    /// A simple implementation of the <see cref="IManagedTracer"/> that handles spans in a stack.
     /// </summary>
     internal sealed class SimpleManagedTracer : IManagedTracer
     {
-        // The trace consumer to push the trace to when completed.
+        /// <summary>A mutex to protect the rate limiter instance.</summary>
+        private static object _stackMutex = new object();
+
+        /// <summary>The trace consumer to push the trace to when completed.</summary>
         private readonly ITraceConsumer _consumer;
 
-        // The current trace.
+        /// <summary>The current trace.</summary>
         private readonly Cloudtrace.V1.Trace _trace;
 
-        // A stack of trace spans.
+        /// <summary>A stack of trace spans.</summary>
         private readonly Stack<TraceSpan> _traceStack;
 
-        // The span id factory to generate new span ids.
+        /// <summary>The span id factory to generate new span ids.</summary>
         private readonly SpanIdFactory _spanIdFactory;
 
-        // The span id of the parent span of the root span of this trace.
+        /// <summary>The span id of the parent span of the root span of this trace.</summary>
         private readonly ulong? _rootSpanParentId;
 
         private SimpleManagedTracer(ITraceConsumer consumer, Cloudtrace.V1.Trace trace, ulong? rootSpanParentId = null)
@@ -73,31 +76,37 @@ namespace Google.Devtools.AspNet
             span.Name = name;
             span.StartTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
 
-            if (_traceStack.Count != 0)
+            lock (_stackMutex)
             {
-                span.ParentSpanId = _traceStack.Peek().SpanId;
-            }
-            else if(_rootSpanParentId != null)
-            {
-                span.ParentSpanId = (ulong)_rootSpanParentId;
-            }
+                if (_traceStack.Count != 0)
+                {
+                    span.ParentSpanId = _traceStack.Peek().SpanId;
+                }
+                else if (_rootSpanParentId != null)
+                {
+                    span.ParentSpanId = (ulong)_rootSpanParentId;
+                }
 
-            _traceStack.Push(span);
+                _traceStack.Push(span);
+            }
         }
 
         /// <inheritdoc />
         public void EndSpan()
         {
-            CheckStackNotEmpty();
-
-            TraceSpan span = _traceStack.Pop();
-            span.EndTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
-
-            _trace.Spans.Add(span);
-
-            if (_traceStack.Count == 0)
+            lock (_stackMutex)
             {
-                Flush();
+                CheckStackNotEmpty();
+
+                TraceSpan span = _traceStack.Pop();
+                span.EndTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
+
+                _trace.Spans.Add(span);
+
+                if (_traceStack.Count == 0)
+                {
+                    Flush();
+                }
             }
         }
 
@@ -105,12 +114,16 @@ namespace Google.Devtools.AspNet
         public void AnnotateSpan(Dictionary<string, string> labels)
         {
             GaxPreconditions.CheckNotNull(labels, nameof(labels));
-            CheckStackNotEmpty();
 
-            TraceSpan span = _traceStack.Peek();
-            foreach (var l in labels)
+            lock (_stackMutex)
             {
-                span.Labels.Add(l.Key, l.Value);
+                CheckStackNotEmpty();
+
+                TraceSpan span = _traceStack.Peek();
+                foreach (var l in labels)
+                {
+                    span.Labels.Add(l.Key, l.Value);
+                }
             }
         }
 

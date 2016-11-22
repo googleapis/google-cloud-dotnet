@@ -31,9 +31,6 @@ namespace Google.Devtools.AspNet
         /// Creates a <see cref="TraceOptions"/>.
         /// </summary>
         /// <param name="shouldTrace">True if the tracing should occur.</param>
-        public static TraceOptions Create(bool shouldTrace)
-        {
-            return new TraceOptions(shouldTrace);
-        }
+        public static TraceOptions Create(bool shouldTrace) => new TraceOptions(shouldTrace);
     }
 }

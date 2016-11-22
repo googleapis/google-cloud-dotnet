@@ -18,7 +18,7 @@ using System.Diagnostics;
 namespace Google.Devtools.AspNet
 {
     /// <summary>
-    /// Mangages creating spans for a trace as well as adding meta data to them.
+    /// Manages creating spans for a trace as well as adding meta data to them.
     /// </summary>
     public interface IManagedTracer
     {

@@ -25,22 +25,26 @@ namespace Google.Devtools.AspNet
     /// </summary>
     /// 
     /// <example>
+    /// <code>
     ///  public class Global : HttpApplication
     ///  { 
-    ///     void Application_Start(object sender, EventArgs e)
-    ///     {
-    ///         CloudTrace.Initialize("some-project-id", this);
-    ///     }
+    ///       void Application_Start(object sender, EventArgs e)
+    ///       {
+    ///           CloudTrace.Initialize("some-project-id", this);
+    ///       }
     ///  }
+    /// </code>
     /// </example>
     /// 
     /// <example>
+    /// <code>
     /// public void DoSomething()
     /// {
-    ///   CloudTrace.GetCurrentTracer().StartSpan("DoSomething");
-    ///   ...
-    ///   CloudTrace.GetCurrentTracer().EndSpan();
+    ///     CloudTrace.GetCurrentTracer().StartSpan("DoSomething");
+    ///     ...
+    ///     CloudTrace.GetCurrentTracer().EndSpan();
     /// }
+    /// </code>
     /// </example>
     /// 
     /// <remarks>
@@ -87,7 +91,7 @@ namespace Google.Devtools.AspNet
         }
 
         /// <summary>
-        /// Gets the current <see cref="IManagedTracer"/>.
+        /// Gets the current <see cref="IManagedTracer"/> for the given request.
         /// </summary>
         public static IManagedTracer GetCurrentTracer()
         {

@@ -21,28 +21,27 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class SpanIdFactory
     {
-        private readonly Random _random;
+        /// <summary>A mutex to the instance of <see cref="Random"/>.</summary>
+        private static object _randomMutex = new object();
 
-        private SpanIdFactory(Random random = null)
-        {
-            _random = random ?? new Random();
-        }
+        private static readonly Random _random = new Random();
+
+        private SpanIdFactory() {}
 
         /// <summary>
         /// Create a new <see cref="SpanIdFactory"/>.
         /// </summary>
-        /// <param name="random">Optional, a random number generator, if none supplied the system default will be used.</param>
-        public static SpanIdFactory Create(Random random = null)
-        {
-            return new SpanIdFactory(random);
-        }
+        public static SpanIdFactory Create() => new SpanIdFactory();
 
         /// <summary>
         /// Gets a random span id.
         /// </summary>
         public ulong NextId()
         {
-            return (ulong)(_random.NextDouble() * Int64.MaxValue);
+            lock (_randomMutex)
+            {
+                return (ulong)(_random.NextDouble() * Int64.MaxValue);
+            }
         }
     }
 }
