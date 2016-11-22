@@ -49,7 +49,6 @@ namespace Google.Devtools.AspNet
             {
                 if (_instance == null)
                 {
-
                     _instance = new RateLimiter(qps, StopwatchTimer.Create());
                 }
             }
