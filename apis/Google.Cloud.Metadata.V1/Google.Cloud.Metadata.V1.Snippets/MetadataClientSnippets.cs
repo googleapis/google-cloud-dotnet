@@ -14,6 +14,7 @@
 
 using Google.Apis.Compute.v1.Data;
 using Google.Cloud.Metadata.V1;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
@@ -72,17 +73,17 @@ namespace Google.Cloud.Metadata.V1.Snippets
         }
 
         [Fact]
-        public void WaitForChange()
+        public async Task WaitForChange()
         {
-            const string key = "my_instance_key1";
-            var originalValue = MetadataClient.Create().GetCustomInstanceMetadata(key);
+            const string newValue = "foo";
+            string key = _fixture.GenerateCustomKey();
+
+            await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", "initial value");
 
             var task = Task.Run(async () =>
             {
                 await Task.Delay(TimeSpan.FromSeconds(2));
-                await _fixture.UpdateMetadata($"instance/attributes/{key}", "foo");
-                await Task.Delay(TimeSpan.FromSeconds(2));
-                await _fixture.UpdateMetadata($"instance/attributes/{key}", originalValue);
+                await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", newValue);
             });
 
             // TODO: This pattern to get the original ETag seems messy. Maybe add something to get an ETag.
@@ -110,8 +111,9 @@ namespace Google.Cloud.Metadata.V1.Snippets
             }
             // End snippet
 
-            Assert.Equal("{\"my_instance_key1\":\"foo\"}", result.Content);
-            task.Wait();
+            dynamic obj = JsonConvert.DeserializeObject(result.Content);
+            Assert.Equal(newValue, obj[key].Value);
+            await task;
         }
     }
 }

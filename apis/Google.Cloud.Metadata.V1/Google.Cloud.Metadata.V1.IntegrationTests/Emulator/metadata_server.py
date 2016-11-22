@@ -508,9 +508,6 @@ class MetadataValue(object):
   def isDirectory(self):
     return False
 
-  def isServiceAccount(self):
-    return False
-
   def notifyAllChanged(self):
     """Notifies any waiting threads that all data has changed."""
     self._changeConditon.notify_all()
@@ -674,8 +671,8 @@ class MetadataDict(MetadataDirectory):
 
       value = self[key]
 
-      # Service account email keys should not be converted to camel case.
-      newKey = key if value.isServiceAccount() else common.convertToCamelCase(key)
+      # Service account email and custom metadata keys should not be converted to camel case.
+      newKey = common.convertToCamelCase(key) if self._has_fixed_keys else key
       result[newKey] = value.getValueToJSONEncode()
 
     return result
@@ -718,9 +715,6 @@ class MetadataDict(MetadataDirectory):
     can have an arbitrary set of keys, but the values associated with those keys must conform to a certain data
     shape."""
     return self._has_fixed_keys
-
-  def isServiceAccount(self):
-    return "email" in self and "scopes" in self and "token" in self
 
   def prepareNonRecursiveResult(self, is_json):
     def includeSlash(key):
