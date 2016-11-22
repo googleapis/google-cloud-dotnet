@@ -91,7 +91,7 @@ namespace Google.Devtools.AspNet
         }
 
         /// <summary>
-        /// Gets the current <see cref="IManagedTracer"/>.
+        /// Gets the current <see cref="IManagedTracer"/> for the given request.
         /// </summary>
         public static IManagedTracer GetCurrentTracer()
         {
