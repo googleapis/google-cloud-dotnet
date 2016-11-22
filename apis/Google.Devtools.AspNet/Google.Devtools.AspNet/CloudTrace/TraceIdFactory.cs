@@ -27,18 +27,11 @@ namespace Google.Devtools.AspNet
         /// <summary>
         /// Create a new <see cref="TraceIdFactory"/>.
         /// </summary>
-        public static TraceIdFactory Create(Random random = null)
-        {
-            return new TraceIdFactory();
-        }
+        public static TraceIdFactory Create() => new TraceIdFactory();
 
         /// <summary>
         /// Gets a random trace id.
         /// </summary>
-        public string NextId()
-        {
-            return Guid.NewGuid().ToString("N");
-        }
+        public string NextId() => Guid.NewGuid().ToString("N");
     }
-
 }

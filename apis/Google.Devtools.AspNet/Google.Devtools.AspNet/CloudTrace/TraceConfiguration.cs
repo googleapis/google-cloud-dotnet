@@ -21,7 +21,7 @@ namespace Google.Devtools.AspNet
     /// </summary>
     public sealed class TraceConfiguration
     {
-        public const double DefaultQpsSampleRate = 1.0;
+        internal const double DefaultQpsSampleRate = 1.0;
 
         /// <summary>Gets the QPS sample rate.</summary>
         public double QpsSampleRate { get; }
@@ -40,8 +40,6 @@ namespace Google.Devtools.AspNet
         ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>
         /// </param>
         public static TraceConfiguration Create(double qpsSampleRate = DefaultQpsSampleRate)
-        {
-            return new TraceConfiguration(qpsSampleRate);
-        }
+            => new TraceConfiguration(qpsSampleRate);
     }
 }

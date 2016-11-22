@@ -32,8 +32,6 @@ namespace Google.Devtools.AspNet
         /// </summary>
         /// <param name="spanKind">Optional, the span kind.  Defaults to <see cref="SpanKind.Unspecified"/></param>
         public static StartSpanOptions Create(SpanKind spanKind = SpanKind.Unspecified)
-        {
-            return new StartSpanOptions(spanKind);
-        }
+            => new StartSpanOptions(spanKind);
     }
 }

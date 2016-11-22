@@ -24,19 +24,19 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class RateLimiter
     {
-        // A mutex to protect the rate limiter instance.
+        /// <summary>A mutex to protect the rate limiter instance.</summary>
         private static object _instanceMutex = new object();
 
-        // The single rate limiter instance.
+        /// <summary>The single rate limiter instance.</summary>
         private static RateLimiter _instance;
 
-        // The amount of time that must be waited before allowing tracing.
+        /// <summary>The amount of time that must be waited before allowing tracing.</summary>
         private readonly long _fixedDelayMillis;
 
-        // A stopwatch to manage time between events.
+        /// <summary>A stopwatch to manage time between events.</summary>
         private readonly Stopwatch _stopWatch;
 
-        // The last time tracing was allowed.
+        /// <summary>The last time tracing was allowed.</summary>
         private long _lastCallMillis;
 
         /// <summary>
@@ -45,17 +45,14 @@ namespace Google.Devtools.AspNet
         /// </summary>
         public static RateLimiter GetInstance(double qps)
         {
-            if (_instance == null)
+            lock (_instanceMutex)
             {
-                lock (_instanceMutex)
+                if (_instance == null)
                 {
-                    if (_instance == null)
-                    {
-                        _instance = new RateLimiter(qps);
-                    }
+                    _instance = new RateLimiter(qps);
                 }
             }
-            return _instance;
+             return _instance;
         }
 
         private RateLimiter(double qps)
@@ -70,9 +67,10 @@ namespace Google.Devtools.AspNet
         }
 
         /// <summary>
-        /// See if tracing is allowed.
+        /// See if tracing is allowed.  If tracing is allowed, tracing will not be allowed to occur 
+        /// again until the allotted time (1/qps) has passed.
         /// </summary>
-        /// <returns>True tracing is allowed.</returns>
+        /// <returns>True if tracing is allowed.</returns>
         public bool CanTrace()
         {
             var nowMillis = _stopWatch.ElapsedMilliseconds;

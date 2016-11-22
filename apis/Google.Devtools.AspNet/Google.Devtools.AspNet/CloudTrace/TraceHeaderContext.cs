@@ -30,18 +30,20 @@ namespace Google.Devtools.AspNet
     /// </remarks>
     internal sealed class TraceHeaderContext
     {
-        // An TraceHeaderContext representing no information or invalid information from a header.
+        /// <summary>An TraceHeaderContext representing no information or invalid information from a header.</summary>
         private static readonly TraceHeaderContext InvalidTraceHeaderContext =
             new TraceHeaderContext(null, null, false);
 
-        // The trace header.
-        public static readonly string TraceHeader = "X-Cloud-Trace-Context";
+        /// <summary>The trace header.</summary>
+        internal const string TraceHeader = "X-Cloud-Trace-Context";
 
-        // A regex to match the trace header. 
-        // - ([A-Fa-f0-9]{32}): The trace id, a 32 character hex value.
-        // - ([0-9]+): The span id, a 64 bit integer.
-        // - (o=([0-3])): The trace mask, 1-3 denote it should be traced.
-        public static readonly Regex TraceHeaderRegex =
+        /// <summary>
+        /// A regex to match the trace header. 
+        /// - ([A-Fa-f0-9]{32}): The trace id, a 32 character hex value.
+        /// - ([0-9]+): The span id, a 64 bit integer.
+        /// - (o=([0-3])): The trace mask, 1-3 denote it should be traced.
+        /// </summary>
+        internal static readonly Regex TraceHeaderRegex =
             new Regex(@"^([A-Fa-f0-9]{32})/([0-9]+);(o=([0-3]))?$", RegexOptions.Compiled);
 
         /// <summary>Gets the trace id or null if none is available.</summary>
@@ -71,18 +73,15 @@ namespace Google.Devtools.AspNet
                 return InvalidTraceHeaderContext;
             }
 
-            try
-            {
-                string traceId = match.Groups[1].Value;
-                ulong spanId = Convert.ToUInt64(match.Groups[2].Value);
-                int traceMask = match.Groups.Count > 4 ? Convert.ToInt32(match.Groups[4].Value) : 0;
-                bool shouldTrace = traceMask > 0;
-                return new TraceHeaderContext(traceId, spanId, shouldTrace);
-            }
-            catch (Exception ex) when (ex is FormatException || ex is FormatException)
+            string traceId = match.Groups[1].Value;
+            ulong spanId;
+            if (!ulong.TryParse(match.Groups[2].Value, out spanId))
             {
                 return InvalidTraceHeaderContext;
             }
+            int traceMask = match.Groups.Count > 4 ? Convert.ToInt32(match.Groups[4].Value) : 0;
+            bool shouldTrace = traceMask > 0;
+            return new TraceHeaderContext(traceId, spanId, shouldTrace);
         }
 
         private TraceHeaderContext(string traceId, ulong? spanId, bool shouldTrace)
