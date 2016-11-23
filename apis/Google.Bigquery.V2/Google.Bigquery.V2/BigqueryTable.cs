@@ -97,6 +97,20 @@ namespace Google.Bigquery.V2
         public BigqueryJob UploadJson(Stream input, UploadJsonOptions options = null) => _client.UploadJson(Reference, Schema, input, options);
 
         /// <summary>
+        /// Uploads a sequence of JSON rows to this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJson(TableReference, TableSchema, IEnumerable{String}, UploadJsonOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
+        /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
+        /// original JSON can be formatted however you choose.
+        /// </remarks>
+        /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public BigqueryJob UploadJson(IEnumerable<string> rows, UploadJsonOptions options = null) => _client.UploadJson(Reference, Schema, rows, options);
+
+        /// <summary>
         /// Lists the rows within this table, similar to a <c>SELECT * FROM ...</c> query.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.ListRows(TableReference, TableSchema, ListRowsOptions)"/>.
         /// </summary>
@@ -151,6 +165,23 @@ namespace Google.Bigquery.V2
 
         /// <summary>
         /// Asynchronously uploads a stream of JSON data to this table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJsonAsync(TableReference, TableSchema, IEnumerable{String}, UploadJsonOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// Each element of <paramref name="rows"/> is converted into a single line of text by replacing carriage returns and line
+        /// feeds with spaces. This is safe as they cannot exist within well-formed JSON keys or values, and simply means that the
+        /// original JSON can be formatted however you choose.
+        /// </remarks>
+        /// <param name="rows">The sequence of JSON strings to upload. Must not be null, and must not contain null elements.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public Task<BigqueryJob> UploadJsonAsync(IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UploadJsonAsync(Reference, Schema, rows, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a sequence of JSON rows to this table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigqueryClient.UploadJsonAsync(TableReference, TableSchema, Stream, UploadJsonOptions, CancellationToken)"/>.
         /// </summary>
         /// <param name="input">The stream of input data. Must not be null.</param>

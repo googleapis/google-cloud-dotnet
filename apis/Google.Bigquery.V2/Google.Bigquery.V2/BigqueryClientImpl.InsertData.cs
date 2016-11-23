@@ -46,6 +46,10 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
+        public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null)
+            => UploadJson(tableReference, schema, CreateJsonStream(rows), options);
+
+        /// <inheritdoc />
         public override BigqueryJob UploadJson(TableReference tableReference, TableSchema schema, Stream input, UploadJsonOptions options = null)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
@@ -143,6 +147,11 @@ namespace Google.Bigquery.V2
         }
 
         /// <inheritdoc />
+        public override Task<BigqueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, IEnumerable<string> rows,
+            UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            => UploadJsonAsync(tableReference, schema, CreateJsonStream(rows), options, cancellationToken);
+
+        /// <inheritdoc />
         public override async Task<BigqueryJob> UploadJsonAsync(TableReference tableReference, TableSchema schema, Stream input,
             UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
@@ -199,6 +208,29 @@ namespace Google.Bigquery.V2
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             HandleInsertAllResponse(response);
+        }
+
+        /// <summary>
+        /// Creates a stream containing JSON data from the given rows. Each row is sanitized to a single
+        /// line by replacing CR and LF with space. The stream contains UTF-8, LF-separated lines.
+        /// </summary>
+        private static Stream CreateJsonStream(IEnumerable<string> rows)
+        {
+            GaxPreconditions.CheckNotNull(rows, nameof(rows));
+            var stream = new MemoryStream();
+            // No using statement here, as we want the stream to stay open. StreamWriter.Dispose()
+            // will dispose of the underlying stream in this case.
+            var writer = new StreamWriter(stream);
+            foreach (var row in rows)
+            {
+                GaxPreconditions.CheckArgument(row != null, nameof(rows), "JSON string sequence cannot contain null elements");
+                var sanitized = row.Replace('\n', ' ').Replace('\r', ' ');
+                writer.Write(sanitized);
+                writer.Write('\n');
+            }
+            writer.Flush();
+            stream.Position = 0;
+            return stream;
         }
     }
 }

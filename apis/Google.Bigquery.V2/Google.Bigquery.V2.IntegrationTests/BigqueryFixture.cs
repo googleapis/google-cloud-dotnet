@@ -126,10 +126,8 @@ namespace Google.Bigquery.V2.IntegrationTests
                     FieldMode.Repeated
                 }
             }.Build());
-            // TODO: We need to make this easier to use.
             List<string> jsonRows = LoadTextResource("personsData.json");
-            var bytes = Encoding.UTF8.GetBytes(string.Join("\n", jsonRows));
-            var job = table.UploadJson(new MemoryStream(bytes));
+            var job = table.UploadJson(jsonRows);
 
             var result = job.PollUntilCompleted();
             var errors = result.Status.ErrorResult;
