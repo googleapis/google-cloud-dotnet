@@ -1,5 +1,5 @@
 {
-  "description": "",
+  "description": "Snippets for the ASP.NET instrumentation library.",
 
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk",
