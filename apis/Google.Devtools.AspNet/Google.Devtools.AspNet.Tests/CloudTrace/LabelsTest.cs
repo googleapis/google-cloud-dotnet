@@ -112,6 +112,9 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Assert.Equal(string.Empty, labels[Labels.StackTrace]);
         }
 
+        /// <summary>
+        /// A simple fake class to test stack traces on.
+        /// </summary>
         private class FakeClass
         {
             void SpecialMethod() { }

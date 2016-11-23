@@ -43,7 +43,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         [Fact]
         public void CanTrace_DecimalQps()
         {
-            Queue<long> returnQueue = new Queue<long>(new long[] { 9999, 10001, 10001 });
+            Queue<long> returnQueue = new Queue<long>(new long[] { 9999, 10001 });
             Mock <ITimer> watch = new Mock<ITimer>();
             watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() => returnQueue.Dequeue());
 

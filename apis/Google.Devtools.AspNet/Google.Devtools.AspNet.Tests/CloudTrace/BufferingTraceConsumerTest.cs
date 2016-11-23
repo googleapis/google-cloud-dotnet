@@ -79,6 +79,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, int.MaxValue);
             consumer.Receive(new Traces());
+            consumer.Flush();
             mockConsumer.Verify(c => c.Receive(It.IsAny<Traces>()), Times.Never());
         }
     }

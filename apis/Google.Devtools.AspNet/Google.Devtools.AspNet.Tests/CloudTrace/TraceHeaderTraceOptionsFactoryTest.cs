@@ -19,13 +19,19 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
     public class TraceHeaderTraceOptionsFactoryTest
     {
         [Fact]
-        public void CreateOptions()
+        public void CreateOptions_Trace()
         {
             TraceHeaderTraceOptionsFactory factory = TraceHeaderTraceOptionsFactory.Create();
 
             TraceHeaderContext contextTrace = new TraceHeaderContext(null, null, true);
             TraceOptions optionsTrace = factory.CreateOptions(contextTrace);
             Assert.True(optionsTrace.ShouldTrace);
+        }
+
+        [Fact]
+        public void CreateOptions_NoTrace()
+        {
+            TraceHeaderTraceOptionsFactory factory = TraceHeaderTraceOptionsFactory.Create();
 
             TraceHeaderContext contextNoTrace = new TraceHeaderContext(null, null, false);
             TraceOptions optionsNoTrace = factory.CreateOptions(contextNoTrace);
