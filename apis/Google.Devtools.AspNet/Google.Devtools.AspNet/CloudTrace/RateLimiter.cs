@@ -51,7 +51,7 @@ namespace Google.Devtools.AspNet
                     _instance = new RateLimiter(qps, StopwatchTimer.Create());
                 }
             }
-             return _instance;
+            return _instance;
         }
 
         internal RateLimiter(double qps, ITimer timer) {
