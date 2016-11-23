@@ -21,10 +21,15 @@
     "Google.Api.CommonProtos": "1.0.0-beta04",
     "Google.Api.Gax": "1.0.0-beta04",
     "Google.Devtools.Clouderrorreporting.V1Beta1": { "target": "project" },
+    "Google.Devtools.Cloudtrace.V1": "0.3.0",
     "Microsoft.AspNet.WebApi.Core": "5.2.3"
   },
 
   "frameworks": {
-    "net45": {},
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Web": "4.0.0.0"
+      }
+    }
   }
 }
