@@ -274,8 +274,6 @@ namespace Google.Cloud.Metadata.V1
             throw new NotImplementedException();
         }
 
-        // TODO: Do we want separate events for when standard and custom metadata changes? Same question for project metadata.
-        
         /// <summary>
         /// Occurs when the the instance's metadata has changed.
         /// </summary>
@@ -291,7 +289,7 @@ namespace Google.Cloud.Metadata.V1
         /// <seealso cref="GetInstanceMetadataAsync"/>
         /// <seealso cref="WaitForChange"/>
         /// <seealso cref="WaitForChangeAsync"/>
-        public virtual event EventHandler InstanceMetadataChanged
+        public virtual event EventHandler<Instance> InstanceMetadataChanged
         {
             add { throw new NotImplementedException(); }
             remove { throw new NotImplementedException(); }
@@ -328,7 +326,7 @@ namespace Google.Cloud.Metadata.V1
         /// <seealso cref="GetProjectMetadataAsync"/>
         /// <seealso cref="WaitForChange"/>
         /// <seealso cref="WaitForChangeAsync"/>
-        public virtual event EventHandler ProjectMetadataChanged
+        public virtual event EventHandler<Project> ProjectMetadataChanged
         {
             add { throw new NotImplementedException(); }
             remove { throw new NotImplementedException(); }

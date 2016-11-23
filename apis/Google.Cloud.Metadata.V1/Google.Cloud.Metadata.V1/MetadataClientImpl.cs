@@ -99,16 +99,6 @@ namespace Google.Cloud.Metadata.V1
             return eTagValues?.FirstOrDefault();
         }
 
-        private static MaintenanceStatus GetMaintenanceStatus(string result)
-        {
-            switch (result)
-            {
-                case "NONE": return MaintenanceStatus.None;
-                case "MIGRATE_ON_HOST_MAINTENANCE": return MaintenanceStatus.Migrate;
-                default: return MaintenanceStatus.Unknown;
-            }
-        }
-
         private static T GetResult<T>(Func<CancellationToken, Task<T>> operation)
         {
             try
@@ -118,6 +108,116 @@ namespace Google.Cloud.Metadata.V1
             catch (AggregateException e)
             {
                 throw e.InnerExceptions.FirstOrDefault() ?? e;
+            }
+        }
+
+        private static Instance ParseInstanceMetadata(string content)
+        {
+            try
+            {
+                dynamic obj = JObject.Parse(content);
+                // TODO: Detect when format is missing keys here
+                return new Instance
+                {
+                    CpuPlatform = obj.cpuPlatform,
+                    Description = obj.description,
+                    Disks = ((JArray)obj.disks).ToList(disk => new AttachedDisk
+                    {
+                        DeviceName = disk.deviceName,
+                        Index = disk.index,
+                        Mode = disk.mode,
+                        Type = disk.type
+                    }),
+                    Id = obj.id,
+                    MachineType = obj.machineType,
+                    Metadata = new Apis.Compute.v1.Data.Metadata()
+                    {
+                        Items = ((JObject)obj.attributes).ToList(attribute => new ItemsData
+                        {
+                            Key = attribute.Name,
+                            Value = attribute.Value
+                        })
+                    },
+                    Name = obj.hostname,
+                    NetworkInterfaces = ((JArray)obj.networkInterfaces).ToList(networkInterface => new NetworkInterface
+                    {
+                        AccessConfigs = ((JArray)networkInterface.accessConfigs).ToList(accessConfig => new AccessConfig
+                        {
+                            NatIP = accessConfig.externalIp,
+                            Type = accessConfig.type
+                        }),
+                        Network = networkInterface.network,
+                        NetworkIP = networkInterface.ip
+                    }),
+                    Scheduling = new Scheduling
+                    {
+                        AutomaticRestart = obj.scheduling.automaticRestart,
+                        OnHostMaintenance = obj.scheduling.onHostMaintenance,
+                        Preemptible = obj.scheduling.preemptible
+                    },
+                    ServiceAccounts = ((JObject)obj.serviceAccounts).ToList(serviceAccount => new ServiceAccount
+                    {
+                        Email = serviceAccount.Name,
+                        Scopes = ((JArray)serviceAccount.Value.scopes).ToList(scope => (string)scope.Value)
+                    }),
+                    Tags = new Tags
+                    {
+                        Items = ((JArray)obj.tags).ToList(tag => (string)tag.Value)
+                    },
+                    Zone = obj.zone
+                };
+            }
+            catch (JsonException e)
+            {
+                Logger.Error(e, $"Exception was caught when deserializing {nameof(Instance)}. Content is: {content}");
+                throw new FormatException("Unexpected instance metadata format.", e);
+            }
+            catch (RuntimeBinderException e)
+            {
+                Logger.Error(e, $"Exception was caught when deserializing {nameof(Instance)}. Content is: {content}");
+                throw new FormatException("Unexpected instance metadata format.", e);
+            }
+        }
+
+        private static MaintenanceStatus ParseMaintenanceStatus(string content)
+        {
+            switch (content)
+            {
+                case "NONE": return MaintenanceStatus.None;
+                case "MIGRATE_ON_HOST_MAINTENANCE": return MaintenanceStatus.Migrate;
+                default: return MaintenanceStatus.Unknown;
+            }
+        }
+
+        private static Project ParseProjectMetadata(string content)
+        {
+            try
+            {
+                dynamic obj = JObject.Parse(content);
+                // TODO: Detect when format is missing keys here
+                return new Project
+                {
+                    CommonInstanceMetadata = new Apis.Compute.v1.Data.Metadata
+                    {
+                        Items = ((JObject)obj.attributes).ToList(attribute => new ItemsData
+                        {
+                            Key = attribute.Name,
+                            Value = attribute.Value
+                        })
+                    },
+                    Id = obj.numericProjectId,
+                    Name = obj.projectId
+                };
+            }
+            catch (JsonException e)
+            {
+                Logger.Error(e, $"Exception was caught when deserializing {nameof(Project)}. Content is: {content}");
+                throw new FormatException("Unexpected project metadata format.", e);
+            }
+            catch (RuntimeBinderException e)
+            {
+                Logger.Error(e, $"Exception was caught when deserializing {nameof(Project)}. Content is: {content}");
+                throw new FormatException("Unexpected project metadata format.", e);
             }
         }
 
@@ -243,70 +343,7 @@ namespace Google.Cloud.Metadata.V1
         {
             var response = await RequestMetadataAsync("instance?recursive=true", cancellationToken).ConfigureAwait(false);
             var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            try
-            {
-                dynamic obj = JObject.Parse(content);
-                // TODO: Detect when format is missing keys here
-                return new Instance
-                {
-                    CpuPlatform = obj.cpuPlatform,
-                    Description = obj.description,
-                    Disks = ((JArray)obj.disks).ToList(disk => new AttachedDisk
-                    {
-                        DeviceName = disk.deviceName,
-                        Index = disk.index,
-                        Mode = disk.mode,
-                        Type = disk.type
-                    }),
-                    Id = obj.id,
-                    MachineType = obj.machineType,
-                    Metadata = new Apis.Compute.v1.Data.Metadata()
-                    {
-                        Items = ((JObject)obj.attributes).ToList(attribute => new ItemsData
-                        {
-                            Key = attribute.Name,
-                            Value = attribute.Value
-                        })
-                    },
-                    Name = obj.hostname,
-                    NetworkInterfaces = ((JArray)obj.networkInterfaces).ToList(networkInterface => new NetworkInterface
-                    {
-                        AccessConfigs = ((JArray)networkInterface.accessConfigs).ToList(accessConfig => new AccessConfig
-                        {
-                            NatIP = accessConfig.externalIp,
-                            Type = accessConfig.type
-                        }),
-                        Network = networkInterface.network,
-                        NetworkIP = networkInterface.ip
-                    }),
-                    Scheduling = new Scheduling
-                    {
-                        AutomaticRestart = obj.scheduling.automaticRestart,
-                        OnHostMaintenance = obj.scheduling.onHostMaintenance,
-                        Preemptible = obj.scheduling.preemptible
-                    },
-                    ServiceAccounts = ((JObject)obj.serviceAccounts).ToList(serviceAccount => new ServiceAccount
-                    {
-                        Email = serviceAccount.Name,
-                        Scopes = ((JArray)serviceAccount.Value.scopes).ToList(scope => (string)scope.Value)
-                    }),
-                    Tags = new Tags
-                    {
-                        Items = ((JArray)obj.tags).ToList(tag => (string)tag.Value)
-                    },
-                    Zone = obj.zone
-                };
-            }
-            catch (JsonException e)
-            {
-                Logger.Error(e, $"Exception was caught when deserializing {nameof(Instance)}. Content is: {content}");
-                throw new FormatException("Unexpected instance metadata format.", e);
-            }
-            catch (RuntimeBinderException e)
-            {
-                Logger.Error(e, $"Exception was caught when deserializing {nameof(Instance)}. Content is: {content}");
-                throw new FormatException("Unexpected instance metadata format.", e);
-            }
+            return ParseInstanceMetadata(content);
         }
 
         /// <inheritdoc/>
@@ -316,7 +353,7 @@ namespace Google.Cloud.Metadata.V1
         public override async Task<MaintenanceStatus> GetMaintenanceStatusAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
             var response = await RequestMetadataAsync("instance/maintenance-event", cancellationToken).ConfigureAwait(false);
-            return GetMaintenanceStatus(await response.Content.ReadAsStringAsync().ConfigureAwait(false));
+            return ParseMaintenanceStatus(await response.Content.ReadAsStringAsync().ConfigureAwait(false));
         }
 
         /// <inheritdoc/>
@@ -327,34 +364,7 @@ namespace Google.Cloud.Metadata.V1
         {
             var response = await RequestMetadataAsync("project?recursive=true", cancellationToken).ConfigureAwait(false);
             var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            try
-            {
-                dynamic obj = JObject.Parse(content);
-                // TODO: Detect when format is missing keys here
-                return new Project
-                {
-                    CommonInstanceMetadata = new Apis.Compute.v1.Data.Metadata
-                    {
-                        Items = ((JObject)obj.attributes).ToList(attribute => new ItemsData
-                        {
-                            Key = attribute.Name,
-                            Value = attribute.Value
-                        })
-                    },
-                    Id = obj.numericProjectId,
-                    Name = obj.projectId
-                };
-            }
-            catch (JsonException e)
-            {
-                Logger.Error(e, $"Exception was caught when deserializing {nameof(Project)}. Content is: {content}");
-                throw new FormatException("Unexpected project metadata format.", e);
-            }
-            catch (RuntimeBinderException e)
-            {
-                Logger.Error(e, $"Exception was caught when deserializing {nameof(Project)}. Content is: {content}");
-                throw new FormatException("Unexpected project metadata format.", e);
-            }
+            return ParseProjectMetadata(content);
         }
 
         /// <inheritdoc/>
@@ -411,14 +421,14 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override event EventHandler InstanceMetadataChanged
+        public override event EventHandler<Instance> InstanceMetadataChanged
         {
             add
             {
                 HookChangeEvent(ref instanceWatcher, value, "instance", (sender, newValue) =>
                 {
-                    var temp = sender.Event as EventHandler;
-                    temp?.Invoke(this, EventArgs.Empty);
+                    var temp = sender.Event as EventHandler<Instance>;
+                    temp?.Invoke(this, ParseInstanceMetadata(newValue));
                 });
             }
             remove
@@ -435,7 +445,7 @@ namespace Google.Cloud.Metadata.V1
                 HookChangeEvent(ref maintenanceStatusWatcher, value, "instance/maintenance-event", (sender, newValue) =>
                 {
                     var temp = sender.Event as EventHandler<MaintenanceStatus>;
-                    temp?.Invoke(this, GetMaintenanceStatus(newValue));
+                    temp?.Invoke(this, ParseMaintenanceStatus(newValue));
                 });
             }
             remove
@@ -445,14 +455,14 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override event EventHandler ProjectMetadataChanged
+        public override event EventHandler<Project> ProjectMetadataChanged
         {
             add
             {
                 HookChangeEvent(ref projectWatcher, value, "project", (sender, newValue) =>
                 {
-                    var temp = sender.Event as EventHandler;
-                    temp?.Invoke(this, EventArgs.Empty);
+                    var temp = sender.Event as EventHandler<Project>;
+                    temp?.Invoke(this, ParseProjectMetadata(newValue));
                 });
             }
             remove
