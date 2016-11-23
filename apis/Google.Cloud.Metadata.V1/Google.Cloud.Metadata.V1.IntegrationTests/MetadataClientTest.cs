@@ -129,9 +129,9 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
             var waitHandle = new ManualResetEventSlim(false);
             int eventCount = 0;
-            client.InstanceMetadataChanged += (s, instance) =>
+            client.InstanceMetadataChanged += (s, e) =>
             {
-                Assert.Equal(newValue, instance.Metadata.Items.FirstOrDefault(i => i.Key == key)?.Value);
+                Assert.Equal(newValue, e.NewMetadata.Metadata.Items.FirstOrDefault(i => i.Key == key)?.Value);
                 eventCount++;
                 waitHandle.Set();
             };
@@ -155,15 +155,15 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             int eventCount = 0;
             Instance instance1 = null;
             Instance instance2 = null;
-            client.InstanceMetadataChanged += (s, instance) =>
+            client.InstanceMetadataChanged += (s, e) =>
             {
-                instance1 = instance;
+                instance1 = e.NewMetadata;
                 Interlocked.Increment(ref eventCount);
                 waitHandle1.Set();
             };
-            client.InstanceMetadataChanged += (s, instance) =>
+            client.InstanceMetadataChanged += (s, e) =>
             {
-                instance2 = instance;
+                instance2 = e.NewMetadata;
                 Interlocked.Increment(ref eventCount);
                 waitHandle2.Set();
             };
@@ -191,9 +191,9 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
             var waitHandle = new ManualResetEventSlim(false);
             int eventCount = 0;
-            client.MaintenanceStatusChanged += (s, maintenanceStatus) =>
+            client.MaintenanceStatusChanged += (s, e) =>
             {
-                Assert.Equal(MaintenanceStatus.Migrate, maintenanceStatus);
+                Assert.Equal(MaintenanceStatus.Migrate, e.NewMetadata);
                 eventCount++;
                 waitHandle.Set();
             };
@@ -221,9 +221,9 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
             var waitHandle = new ManualResetEventSlim(false);
             int eventCount = 0;
-            client.ProjectMetadataChanged += (s, project) =>
+            client.ProjectMetadataChanged += (s, e) =>
             {
-                Assert.Equal(newValue, project.CommonInstanceMetadata.Items.FirstOrDefault(i => i.Key == key)?.Value);
+                Assert.Equal(newValue, e.NewMetadata.CommonInstanceMetadata.Items.FirstOrDefault(i => i.Key == key)?.Value);
                 eventCount++;
                 waitHandle.Set();
             };
