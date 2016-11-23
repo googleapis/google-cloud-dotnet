@@ -14,13 +14,16 @@ box).
 
 # Authentication
 
-To authenticate all your API calls, first install and setup the
-[Google Cloud SDK](https://cloud.google.com/sdk/). After that is
-installed, run the following command in a Google Cloud SDK Shell:
+When running on Google Cloud Platform, no action needs to be taken to authenticate.
 
-```sh
-> gcloud auth login
-```
+Otherwise, the simplest way of authenticating your API calls is to
+[download a service account JSON file](https://developers.google.com/identity/protocols/OAuth2ServiceAccount),
+then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it. The
+credentials will automatically be used to authenticate.
+
+Note that the default credentials obtained by running `gcloud auth login` from the Cloud SDK
+are not suitable for use with this API. (They will work initially, but implicitly have a very
+small request quota.)
 
 # Getting started
 
