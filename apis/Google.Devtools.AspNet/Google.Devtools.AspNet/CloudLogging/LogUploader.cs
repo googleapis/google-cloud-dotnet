@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Google.Logging.Log4Net
+namespace Google.Devtools.AspNet
 {
     /// <summary>
     /// Background task that uploads log entries to Google Logging from the local queue.

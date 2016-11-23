@@ -12,13 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
 using System;
 
-namespace Google.Logging.Log4Net
+namespace Google.Devtools.AspNet
 {
-    internal static class Extensions
+    internal static class LoggingExtensions
     {
         public static Timestamp ToTimestamp(this DateTime dt)
         {

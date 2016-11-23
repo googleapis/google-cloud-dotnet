@@ -3,15 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net", "Google.Logging.Log4Net\Google.Logging.Log4Net.xproj", "{B27E7461-3714-44F6-BD2D-E7579A85F759}"
-EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Type", "Google.Logging.Type\Google.Logging.Type.xproj", "{A8382B79-21E7-4AAD-AFF8-AB8707958128}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.V2", "Google.Logging.V2\Google.Logging.V2.xproj", "{35B8D21D-0253-417F-B171-06BF70AA9485}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net.Snippets", "Google.Logging.Log4Net.Snippets\Google.Logging.Log4Net.Snippets.xproj", "{A41CFEF8-67FF-47EF-9EB0-671EF5861733}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.Log4Net.Tests", "Google.Logging.Log4Net.Tests\Google.Logging.Log4Net.Tests.xproj", "{C359B60F-6E40-43EA-BEF3-9C1222BA7B28}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Logging.V2.Snippets", "Google.Logging.V2.Snippets\Google.Logging.V2.Snippets.xproj", "{569CFE43-C1A1-4BF4-9D88-C69621195C3A}"
 EndProject
