@@ -56,7 +56,7 @@ namespace Google.Devtools.AspNet
         public bool ShouldTrace { get; }
 
         /// <summary>
-        /// Create a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>.  
+        /// Create a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
         /// </summary>
         public static TraceHeaderContext FromRequest(HttpRequest request)
         {

@@ -41,7 +41,7 @@ namespace Google.Devtools.AspNet
         /// <summary>The current size of traces.</summary>
         private int _size;
 
-        private BufferingTraceConsumer(ITraceConsumer consumer, int bufferSize = DefaultBufferSize)
+        private BufferingTraceConsumer(ITraceConsumer consumer, int bufferSize)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _bufferSize = bufferSize;
@@ -65,10 +65,8 @@ namespace Google.Devtools.AspNet
         public void Receive(Traces traces)
         {
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
-            lock (_mutex)
-            {
-                foreach (Trace trace in traces.Traces_)
-                {
+            lock (_mutex) {
+                foreach (Trace trace in traces.Traces_) {
                     _size += trace.CalculateSize();
                     _traces.Traces_.Add(trace);
                     if (_size >= _bufferSize)
@@ -89,7 +87,10 @@ namespace Google.Devtools.AspNet
                 _traces = new Traces();
                 _size = 0;
             }
-            _consumer.Receive(old);
+            if (old.Traces_.Count > 0)
+            {
+                _consumer.Receive(old);
+            }
         }
     }
 }
