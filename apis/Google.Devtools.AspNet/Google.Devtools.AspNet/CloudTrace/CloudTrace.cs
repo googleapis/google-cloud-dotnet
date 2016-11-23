@@ -71,6 +71,7 @@ namespace Google.Devtools.AspNet
             _bufferingConsumer = BufferingTraceConsumer.Create(new GrpcTraceConsumer(client));
             _rateFactory = RateLimitingTraceOptionsFactory.Create(config);
             _headerFactory = TraceHeaderTraceOptionsFactory.Create();
+
         }
 
         /// <summary>
@@ -91,7 +92,7 @@ namespace Google.Devtools.AspNet
         }
 
         /// <summary>
-        /// Gets the current <see cref="IManagedTracer"/> for the given request.
+        /// Gets the current <see cref="IManagedTracer"/>.
         /// </summary>
         public static IManagedTracer GetCurrentTracer()
         {
