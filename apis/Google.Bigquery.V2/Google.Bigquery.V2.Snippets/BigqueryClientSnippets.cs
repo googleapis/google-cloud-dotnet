@@ -318,7 +318,7 @@ namespace Google.Bigquery.V2.Snippets
         }
 
         [Fact]
-        public void UploadJson()
+        public void UploadJson_Stream()
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
@@ -327,7 +327,7 @@ namespace Google.Bigquery.V2.Snippets
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: UploadJson(*,*,*,*,*)
+            // Snippet: UploadJson(*,*,*,Stream,*)
             BigqueryClient client = BigqueryClient.Create(projectId);
             // Note that there's a single line per JSON object. This is not a JSON array.
             IEnumerable<string> jsonRows = new string[]
@@ -344,6 +344,49 @@ namespace Google.Bigquery.V2.Snippets
             // create a schema to pass into the call.
             TableSchema schema = null;
             BigqueryJob job = client.UploadJson(datasetId, tableId, schema, stream);
+            // Use the job to find out when the data has finished being inserted into the table,
+            // report errors etc.
+            // End snippet
+
+            BigqueryJob result = job.PollUntilCompleted();
+            // If there are any errors, display them *then* fail.
+            if (result.Status.ErrorResult != null)
+            {
+                foreach (ErrorProto error in result.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            Assert.Null(result.Status.ErrorResult);
+
+            int rowsAfter = table.ListRows().Count();
+            Assert.Equal(rowsBefore + 2, rowsAfter);
+        }
+
+        [Fact]
+        public void UploadJson_Strings()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
+            int rowsBefore = table.ListRows().Count();
+
+            // Snippet: UploadJson(*,*,*,IEnumerable<string>,*)
+            BigqueryClient client = BigqueryClient.Create(projectId);
+            // Note that there's a single line per JSON object. This is not a JSON array.
+            IEnumerable<string> jsonRows = new string[]
+            {
+                "{ 'player': 'Jean', 'score': 500, 'level': 1, 'game_started': '2012-08-19 12:41:35.220' }",
+                "{ 'player': 'Joe', 'score': 705, 'level': 1, 'game_started': '2014-01-01 08:30:35.000' }",
+            }.Select(row => row.Replace('\'', '"')); // Simple way of representing C# in JSON to avoid escaping " everywhere.
+
+            // This example uploads data to an existing table. If the upload will create a new table
+            // or if the schema in the JSON isn't identical to the schema in the table,
+            // create a schema to pass into the call.
+            TableSchema schema = null;
+            BigqueryJob job = client.UploadJson(datasetId, tableId, schema, jsonRows);
             // Use the job to find out when the data has finished being inserted into the table,
             // report errors etc.
             // End snippet
@@ -933,7 +976,7 @@ namespace Google.Bigquery.V2.Snippets
         }
 
         [Fact]
-        public async Task UploadJsonAsync()
+        public async Task UploadJsonAsync_Stream()
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
@@ -942,7 +985,7 @@ namespace Google.Bigquery.V2.Snippets
             BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: UploadJsonAsync(*,*,*,*,*,*)
+            // Snippet: UploadJsonAsync(*,*,*,*,Stream,*,*)
             BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
             // Note that there's a single line per JSON object. This is not a JSON array.
             IEnumerable<string> jsonRows = new string[]
@@ -959,6 +1002,49 @@ namespace Google.Bigquery.V2.Snippets
             // create a schema to pass into the call.
             TableSchema schema = null;
             BigqueryJob job = await client.UploadJsonAsync(datasetId, tableId, schema, stream);
+            // Use the job to find out when the data has finished being inserted into the table,
+            // report errors etc.
+            // End snippet
+
+            BigqueryJob result = job.PollUntilCompleted();
+            // If there are any errors, display them *then* fail.
+            if (result.Status.ErrorResult != null)
+            {
+                foreach (ErrorProto error in result.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            Assert.Null(result.Status.ErrorResult);
+
+            int rowsAfter = table.ListRows().Count();
+            Assert.Equal(rowsBefore + 2, rowsAfter);
+        }
+
+        [Fact]
+        public async Task UploadJsonAsync_Strings()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            BigqueryTable table = BigqueryClient.Create(projectId).GetTable(datasetId, tableId);
+            int rowsBefore = table.ListRows().Count();
+
+            // Snippet: UploadJsonAsync(*,*,*,*,IEnumerable<string>,*,*)
+            BigqueryClient client = await BigqueryClient.CreateAsync(projectId);
+            // Note that there's a single line per JSON object. This is not a JSON array.
+            IEnumerable<string> jsonRows = new string[]
+            {
+                "{ 'player': 'Jean', 'score': 500, 'level': 1, 'game_started': '2012-08-19 12:41:35.220' }",
+                "{ 'player': 'Joe', 'score': 705, 'level': 1, 'game_started': '2014-01-01 08:30:35.000' }",
+            }.Select(row => row.Replace('\'', '"')); // Simple way of representing C# in JSON to avoid escaping " everywhere.
+
+            // This example uploads data to an existing table. If the upload will create a new table
+            // or if the schema in the JSON isn't identical to the schema in the table,
+            // create a schema to pass into the call.
+            TableSchema schema = null;
+            BigqueryJob job = await client.UploadJsonAsync(datasetId, tableId, schema, jsonRows);
             // Use the job to find out when the data has finished being inserted into the table,
             // report errors etc.
             // End snippet

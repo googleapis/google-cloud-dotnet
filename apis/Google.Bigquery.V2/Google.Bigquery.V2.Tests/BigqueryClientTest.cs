@@ -363,7 +363,7 @@ namespace Google.Bigquery.V2.Tests
         }
 
         [Fact]
-        public void UploadJsonEquivalents()
+        public void UploadJson_Stream_Equivalents()
         {
             var datasetId = "dataset";
             var tableId = "table";
@@ -377,6 +377,23 @@ namespace Google.Bigquery.V2.Tests
                 client => client.UploadJson(datasetId, tableId, schema, stream, options),
                 client => client.UploadJson(ProjectId, datasetId, tableId, schema, stream, options),
                 client => new BigqueryTable(client, GetTable(tableReference, schema)).UploadJson(stream, options));
+        }
+
+        [Fact]
+        public void UploadJson_Strings_Equivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var tableReference = GetTableReference(datasetId, tableId);
+            var schema = new TableSchemaBuilder().Build();
+            var options = new UploadJsonOptions();
+            var rows = new[] { "a", "b" };
+            VerifyEquivalent(new BigqueryJob(new DerivedBigqueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadJson(MatchesWhenSerialized(tableReference), schema, rows, options),
+                client => client.UploadJson(datasetId, tableId, schema, rows, options),
+                client => client.UploadJson(ProjectId, datasetId, tableId, schema, rows, options),
+                client => new BigqueryTable(client, GetTable(tableReference, schema)).UploadJson(rows, options));
         }
 
         [Fact]
@@ -676,7 +693,7 @@ namespace Google.Bigquery.V2.Tests
         }
 
         [Fact]
-        public void UploadJsonAsyncEquivalents()
+        public void UploadJson_Stream_AsyncEquivalents()
         {
             var datasetId = "dataset";
             var tableId = "table";
@@ -691,6 +708,24 @@ namespace Google.Bigquery.V2.Tests
                 client => client.UploadJsonAsync(datasetId, tableId, schema, stream, options, token),
                 client => client.UploadJsonAsync(ProjectId, datasetId, tableId, schema, stream, options, token),
                 client => new BigqueryTable(client, GetTable(tableReference, schema)).UploadJsonAsync(stream, options, token));
+        }
+
+        [Fact]
+        public void UploadJson_Strings_AsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var tableReference = GetTableReference(datasetId, tableId);
+            var schema = new TableSchemaBuilder().Build();
+            var options = new UploadJsonOptions();
+            var token = new CancellationTokenSource().Token;
+            var rows = new[] { "a", "b" };
+            VerifyEquivalentAsync(new BigqueryJob(new DerivedBigqueryClient(), new Job { JobReference = jobReference }),
+                client => client.UploadJsonAsync(MatchesWhenSerialized(tableReference), schema, rows, options, token),
+                client => client.UploadJsonAsync(datasetId, tableId, schema, rows, options, token),
+                client => client.UploadJsonAsync(ProjectId, datasetId, tableId, schema, rows, options, token),
+                client => new BigqueryTable(client, GetTable(tableReference, schema)).UploadJsonAsync(rows, options, token));
         }
 
         [Fact]

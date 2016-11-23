@@ -61,15 +61,15 @@ namespace Google.Bigquery.V2.IntegrationTests
         }
 
         [Fact]
-        public void UploadJson()
+        public void UploadJson_Stream()
         {
             var client = BigqueryClient.Create(_fixture.ProjectId);
 
             // We use ' instead of " in the JSON to make it easier to write the string literals, then fix it up.
             var jsonRows = new[]
             {
-                "{ 'player': 'UploadJsonTest1', 'score': 90, 'GameStarted': '2015-01-01T00:00:00.000Z' }",
-                "{ 'player': 'UploadJsonTest2', 'score': 100, 'GameStarted': '2014-01-01T01:00:00.000Z' }"
+                "{ 'player': 'UploadJsonStreamTest1', 'score': 90, 'GameStarted': '2015-01-01T00:00:00.000Z' }",
+                "{ 'player': 'UploadJsonStreamTest2', 'score': 100, 'GameStarted': '2014-01-01T01:00:00.000Z' }"
             }.Select(x => x.Replace('\'', '"'));
 
             var bytes = Encoding.UTF8.GetBytes(string.Join("\n", jsonRows));
@@ -84,13 +84,45 @@ namespace Google.Bigquery.V2.IntegrationTests
             var afterRows = table.ListRows().ToList();
             Assert.Equal(beforeRowCount + 2, afterRows.Count);
 
-            var sql = $"SELECT player, score FROM {table} WHERE STARTS_WITH(player, 'UploadJsonTest') ORDER BY player";
+            var sql = $"SELECT player, score FROM {table} WHERE STARTS_WITH(player, 'UploadJsonStreamTest') ORDER BY player";
             var rows = client.ExecuteQuery(sql).GetRows().ToList();
             Assert.Equal(2, rows.Count);
-            Assert.Equal("UploadJsonTest1", (string)rows[0]["player"]);
-            Assert.Equal("UploadJsonTest2", (string)rows[1]["player"]);
+            Assert.Equal("UploadJsonStreamTest1", (string)rows[0]["player"]);
+            Assert.Equal("UploadJsonStreamTest2", (string)rows[1]["player"]);
             Assert.Equal(90L, (long)rows[0]["score"]);
             Assert.Equal(100L, (long)rows[1]["score"]);
+        }
+
+        [Fact]
+        public void UploadJson_Strings()
+        {
+            var client = BigqueryClient.Create(_fixture.ProjectId);
+
+            // We use ' instead of " in the JSON to make it easier to write the string literals, then fix it up.
+            var jsonRows = new[]
+            {
+                "{ 'player': 'UploadJsonStringsTest1', \r\n 'score': 90, 'GameStarted': '2015-01-01T00:00:00.000Z' }",
+                "{ 'player': 'UploadJsonStringsTest2', \n 'score': 100, 'GameStarted': '2014-01-01T01:00:00.000Z' }"
+            }.Select(x => x.Replace('\'', '"'));
+
+
+            var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
+            var beforeRowCount = table.ListRows().Count();
+
+            var job = table.UploadJson(jsonRows);
+            var result = job.PollUntilCompleted();
+            Assert.Null(result.Status.ErrorResult);
+
+            var afterRows = table.ListRows().ToList();
+            Assert.Equal(beforeRowCount + 2, afterRows.Count);
+
+            var sql = $"SELECT player, score FROM {table} WHERE STARTS_WITH(player, 'UploadJsonStringsTest') ORDER BY player";
+            var rows = client.ExecuteQuery(sql).GetRows().ToList();
+            Assert.Equal(2, rows.Count);
+            Assert.Equal("UploadJsonStringsTest1", (string) rows[0]["player"]);
+            Assert.Equal("UploadJsonStringsTest2", (string) rows[1]["player"]);
+            Assert.Equal(90L, (long) rows[0]["score"]);
+            Assert.Equal(100L, (long) rows[1]["score"]);
         }
     }
 }
