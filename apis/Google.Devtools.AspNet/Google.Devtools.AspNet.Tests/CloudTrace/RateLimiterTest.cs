@@ -56,7 +56,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         public void CanTrace_Multiple()
         {
             Queue<long> returnQueue = new Queue<long>(
-                new long[] { 999, 1001, 1001, 1790, 1850, 2030, 2400, 2700, 4000, 5000});
+                new long[] { 999, 1001, 1790, 1850, 2030, 2700, 5000});
             Mock<ITimer> watch = new Mock<ITimer>();
             watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() => returnQueue.Dequeue());
 
