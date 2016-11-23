@@ -12,25 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-
 namespace Google.Devtools.AspNet
 {
     /// <summary>
-    /// A factory to create random trace ids.
+    /// A simple interface for a timer.
     /// </summary>
-    internal sealed class TraceIdFactory
+    internal interface ITimer
     {
-        private TraceIdFactory() { }
+        /// <summary>
+        /// Starts the timer.
+        /// </summary>
+        void Start();
 
         /// <summary>
-        /// Create a new <see cref="TraceIdFactory"/>.
+        /// Gets the elapsed milliseconds since the timer has started.
         /// </summary>
-        public static TraceIdFactory Create() => new TraceIdFactory();
-
-        /// <summary>
-        /// Gets a random trace id.
-        /// </summary>
-        public string NextId() => Guid.NewGuid().ToString("N");
+        /// <returns></returns>
+        long GetElapsedMilliseconds();
     }
 }
