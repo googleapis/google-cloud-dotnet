@@ -289,7 +289,7 @@ namespace Google.Cloud.Metadata.V1
         /// <seealso cref="GetInstanceMetadataAsync"/>
         /// <seealso cref="WaitForChange"/>
         /// <seealso cref="WaitForChangeAsync"/>
-        public virtual event EventHandler<Instance> InstanceMetadataChanged
+        public virtual event EventHandler<InstanceMetadataChangedEventArgs> InstanceMetadataChanged
         {
             add { throw new NotImplementedException(); }
             remove { throw new NotImplementedException(); }
@@ -305,7 +305,7 @@ namespace Google.Cloud.Metadata.V1
         /// </remarks>
         /// <seealso cref="GetMaintenanceStatus"/>
         /// <seealso cref="GetMaintenanceStatusAsync(CancellationToken)"/>
-        public virtual event EventHandler<MaintenanceStatus> MaintenanceStatusChanged
+        public virtual event EventHandler<MaintenanceStatusChangedEventArgs> MaintenanceStatusChanged
         {
             add { throw new NotImplementedException(); }
             remove { throw new NotImplementedException(); }
@@ -326,7 +326,7 @@ namespace Google.Cloud.Metadata.V1
         /// <seealso cref="GetProjectMetadataAsync"/>
         /// <seealso cref="WaitForChange"/>
         /// <seealso cref="WaitForChangeAsync"/>
-        public virtual event EventHandler<Project> ProjectMetadataChanged
+        public virtual event EventHandler<ProjectMetadataChangedEventArgs> ProjectMetadataChanged
         {
             add { throw new NotImplementedException(); }
             remove { throw new NotImplementedException(); }

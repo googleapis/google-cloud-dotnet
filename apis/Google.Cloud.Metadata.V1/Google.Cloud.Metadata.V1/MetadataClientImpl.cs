@@ -421,14 +421,14 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override event EventHandler<Instance> InstanceMetadataChanged
+        public override event EventHandler<InstanceMetadataChangedEventArgs> InstanceMetadataChanged
         {
             add
             {
                 HookChangeEvent(ref instanceWatcher, value, "instance", (sender, newValue) =>
                 {
-                    var temp = sender.Event as EventHandler<Instance>;
-                    temp?.Invoke(this, ParseInstanceMetadata(newValue));
+                    var temp = sender.Event as EventHandler<InstanceMetadataChangedEventArgs>;
+                    temp?.Invoke(this, new InstanceMetadataChangedEventArgs(ParseInstanceMetadata(newValue)));
                 });
             }
             remove
@@ -438,14 +438,14 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override event EventHandler<MaintenanceStatus> MaintenanceStatusChanged
+        public override event EventHandler<MaintenanceStatusChangedEventArgs> MaintenanceStatusChanged
         {
             add
             {
                 HookChangeEvent(ref maintenanceStatusWatcher, value, "instance/maintenance-event", (sender, newValue) =>
                 {
-                    var temp = sender.Event as EventHandler<MaintenanceStatus>;
-                    temp?.Invoke(this, ParseMaintenanceStatus(newValue));
+                    var temp = sender.Event as EventHandler<MaintenanceStatusChangedEventArgs>;
+                    temp?.Invoke(this, new MaintenanceStatusChangedEventArgs(ParseMaintenanceStatus(newValue)));
                 });
             }
             remove
@@ -455,14 +455,14 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override event EventHandler<Project> ProjectMetadataChanged
+        public override event EventHandler<ProjectMetadataChangedEventArgs> ProjectMetadataChanged
         {
             add
             {
                 HookChangeEvent(ref projectWatcher, value, "project", (sender, newValue) =>
                 {
-                    var temp = sender.Event as EventHandler<Project>;
-                    temp?.Invoke(this, ParseProjectMetadata(newValue));
+                    var temp = sender.Event as EventHandler<ProjectMetadataChangedEventArgs>;
+                    temp?.Invoke(this, new ProjectMetadataChangedEventArgs(ParseProjectMetadata(newValue)));
                 });
             }
             remove
