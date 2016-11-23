@@ -14,6 +14,8 @@
 
 using Moq;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Devtools.AspNet.Tests.CloudTrace
@@ -68,6 +70,43 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             Assert.True(rateLimiter.CanTrace());
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
+        }
+
+        [Fact]
+        public async void CanTrace_StressTest()
+        {
+            // Create a rate limiter that allows 1 QPS
+            RateLimiter rateLimiter = RateLimiter.GetInstance(1);
+            int canTraceCounter = 0;
+            int threads = 10;
+
+            // Start 10 threads to hit the rate limiter
+            Task[] tasks = new Task[threads + 1];
+            for (int i = 0; i < threads; i++)
+            {
+                tasks[i] = Task.Factory.StartNew(() =>
+                {
+                    while (true)
+                    {
+                        if (rateLimiter.CanTrace())
+                        {
+                            Interlocked.Increment(ref canTraceCounter);
+                        }
+                    }
+                });
+            }
+
+            // Set a timeout of 2.1 seconds which should allow 2 traces.
+            Task timeout = Task.Delay(2100);
+            tasks[threads] = timeout;
+            if (await Task.WhenAny(tasks) == timeout)
+            {
+                Assert.Equal(2, canTraceCounter);
+            }
+            else
+            {
+                Assert.False(true, "A task completed that should not have");
+            }
         }
     }
 }

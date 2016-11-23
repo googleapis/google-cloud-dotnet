@@ -32,23 +32,14 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         private static readonly StackTrace EmptyStackTrace = new StackTrace();
 
         private static Cloudtrace.V1.Trace CreateTrace(string projectId = ProjectId, string traceId = TraceId)
-        {
-            return new Cloudtrace.V1.Trace()
-            {
-                ProjectId = ProjectId,
-                TraceId = TraceId
-            };
-        }
+            => new Cloudtrace.V1.Trace { ProjectId = ProjectId, TraceId = TraceId };
+        
 
         private static bool IsValidSpan(TraceSpan span, string name)
-        {
-            return IsValidSpan(span, name, 0);
-        }
+            => IsValidSpan(span, name, 0);
 
         private static bool IsValidSpan(TraceSpan span, string name, ulong parentId)
-        {
-            return IsValidSpan(span, name, parentId, SpanKind.Unspecified);
-        }
+            => IsValidSpan(span, name, parentId, SpanKind.Unspecified);
 
         private static bool IsValidSpan(TraceSpan span, string name, ulong parentId, SpanKind kind)
         {
@@ -61,17 +52,17 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
                 span.StartTime.ToDateTime() <= span.EndTime.ToDateTime();
         }
 
-        private static bool IsValidAnnotation(TraceSpan span, Dictionary<string, string> annotaion)
+        private static bool IsValidAnnotation(TraceSpan span, Dictionary<string, string> annotation)
         {
             MapField<string, string> labels = span.Labels;
-            if (labels.Count != annotaion.Count)
+            if (labels.Count != annotation.Count)
             {
                 return false;
             }
 
             foreach (KeyValuePair<string, string> label in labels)
             {
-                if (annotaion[label.Key] != label.Value)
+                if (annotation[label.Key] != label.Value)
                 {
                     return false;
                 }
@@ -88,8 +79,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
-                    t.Traces_[0].Spans.Count == 1 &&
-                    IsValidSpan(t.Traces_[0].Spans[0], "span-name"))));
+                        t.Traces_[0].Spans.Count == 1 &&
+                        IsValidSpan(t.Traces_[0].Spans[0], "span-name"))));
 
             tracer.StartSpan("span-name");
             tracer.EndSpan();
@@ -105,8 +96,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
-                    t.Traces_[0].Spans.Count == 1 &&
-                    IsValidSpan(t.Traces_[0].Spans[0], "span-name", 123))));
+                        t.Traces_[0].Spans.Count == 1 &&
+                        IsValidSpan(t.Traces_[0].Spans[0], "span-name", 123))));
 
             tracer.StartSpan("span-name");
             tracer.EndSpan();
@@ -122,8 +113,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
-                    t.Traces_[0].Spans.Count == 1 &&
-                    IsValidSpan(t.Traces_[0].Spans[0], "span-name", 0, SpanKind.RpcClient))));
+                        t.Traces_[0].Spans.Count == 1 &&
+                        IsValidSpan(t.Traces_[0].Spans[0], "span-name", 0, SpanKind.RpcClient))));
 
             StartSpanOptions options = StartSpanOptions.Create(SpanKind.RpcClient);
             tracer.StartSpan("span-name", options);
@@ -143,9 +134,9 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
-                    t.Traces_[0].Spans.Count == 1 &&
-                    IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
-                    IsValidAnnotation(t.Traces_[0].Spans[0], annotation))));
+                        t.Traces_[0].Spans.Count == 1 &&
+                        IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
+                        IsValidAnnotation(t.Traces_[0].Spans[0], annotation))));
 
             tracer.StartSpan("span-name");
             tracer.AnnotateSpan(annotation);
@@ -165,9 +156,9 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
-                    t.Traces_[0].Spans.Count == 1 &&
-                    IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
-                    !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]))));
+                        t.Traces_[0].Spans.Count == 1 &&
+                        IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
+                        !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]))));
 
             tracer.StartSpan("span-name");
             tracer.SetStackTrace(EmptyStackTrace);
@@ -187,14 +178,14 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<Traces>(
                     t => t.Traces_.Count == 1 &&
-                    t.Traces_[0].Spans.Count == 5 &&
-                    IsValidSpan(t.Traces_[0].Spans[0], "child-one", t.Traces_[0].Spans[4].SpanId) &&
-                    IsValidSpan(t.Traces_[0].Spans[1], "grandchild-one", t.Traces_[0].Spans[3].SpanId, SpanKind.RpcClient) &&
-                    IsValidSpan(t.Traces_[0].Spans[2], "grandchild-two", t.Traces_[0].Spans[3].SpanId) &&
-                    IsValidAnnotation(t.Traces_[0].Spans[2], annotation) &&
-                    IsValidSpan(t.Traces_[0].Spans[3], "child-two", t.Traces_[0].Spans[4].SpanId) &&
-                    !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]) &&
-                    IsValidSpan(t.Traces_[0].Spans[4], "root"))));
+                        t.Traces_[0].Spans.Count == 5 &&
+                        IsValidSpan(t.Traces_[0].Spans[0], "child-one", t.Traces_[0].Spans[4].SpanId) &&
+                        IsValidSpan(t.Traces_[0].Spans[1], "grandchild-one", t.Traces_[0].Spans[3].SpanId, SpanKind.RpcClient) &&
+                        IsValidSpan(t.Traces_[0].Spans[2], "grandchild-two", t.Traces_[0].Spans[3].SpanId) &&
+                        IsValidAnnotation(t.Traces_[0].Spans[2], annotation) &&
+                        IsValidSpan(t.Traces_[0].Spans[3], "child-two", t.Traces_[0].Spans[4].SpanId) &&
+                        !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]) &&
+                        IsValidSpan(t.Traces_[0].Spans[4], "root"))));
 
             tracer.StartSpan("root");
             tracer.StartSpan("child-one");

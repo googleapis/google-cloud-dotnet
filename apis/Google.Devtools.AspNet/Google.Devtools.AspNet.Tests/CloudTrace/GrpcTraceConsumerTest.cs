@@ -24,16 +24,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
     {
         private static readonly string ProjectId = "pid";
 
-        private Traces GetTraces()
-        {
-            Traces traces = new Traces();
-            Trace trace = new Trace()
-            {
-                ProjectId = ProjectId
-            };
-            traces.Traces_.Add(trace);
-            return traces;
-        }
+        private Traces GetTraces() => new Traces
+            { Traces_ = { new Trace { ProjectId = ProjectId } } };
 
         [Fact]
         public void Receive()
@@ -50,7 +42,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         }
 
         [Fact]
-        public void Receive_NoTraces()
+        public void Receive_EmptyTracesIgnored()
         {
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);

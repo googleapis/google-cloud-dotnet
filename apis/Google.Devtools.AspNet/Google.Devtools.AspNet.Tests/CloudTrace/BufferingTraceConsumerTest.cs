@@ -20,37 +20,34 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
 {
     public class BufferingTraceConsumerTest
     {
-        private Trace CreateTrace()
-        {
-            return new Trace()
-            {
-                ProjectId = "some-pid",
-                TraceId = "f05445aa7843bc8bf206b12000100000"
-            };
-        }
+        private Trace CreateTrace() => new Trace()
+            { ProjectId = "some-pid", TraceId = "f05445aa7843bc8bf206b12000100000" };
 
         [Fact]
         public void Receive()
         {
             int bufferSize = 1024;
-            Traces traces = new Traces();
-            traces.Traces_.Add(CreateTrace());
+            Traces initialTraces = new Traces { Traces_ = { CreateTrace() } };
 
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(mockConsumer.Object, bufferSize);
-            consumer.Receive(traces);
+            consumer.Receive(initialTraces);
+
+            // Ensure the traces have not been sent as they are not bigger then the buffer.
             mockConsumer.Verify(c => c.Receive(It.IsAny<Traces>()), Times.Never());
 
-            traces = new Traces();
+            // Fill up traces to be bigger then the buffer.
+            Traces traces = new Traces();
             while (traces.Traces_.Count < 1000 && traces.CalculateSize() < bufferSize)
             {
                 traces.Traces_.Add(CreateTrace());
             }
 
-            // Add the initial trace to the current list.
-            Traces combined = traces;
-            combined.Traces_.Add(CreateTrace());
-            mockConsumer.Setup(c => c.Receive(traces));
+            // Add the initial trace the list of traces.  This ensures we verify the right 
+            // traces where received.
+            Traces allTraces = traces.Clone();
+            allTraces.Traces_.Add(initialTraces.Traces_[0]);
+            mockConsumer.Setup(c => c.Receive(allTraces));
 
             consumer.Receive(traces);
             mockConsumer.VerifyAll();
@@ -59,9 +56,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         [Fact]
         public void Flush()
         {
-            Traces traces = new Traces();
-            Trace trace = new Trace();
-            traces.Traces_.Add(trace);
+            Traces traces = new Traces { Traces_ = { CreateTrace() } };
 
             Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
             mockConsumer.Setup(c => c.Receive(traces));
