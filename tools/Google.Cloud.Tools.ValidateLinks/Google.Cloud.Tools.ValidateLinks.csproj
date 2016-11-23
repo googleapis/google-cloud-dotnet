@@ -4,6 +4,7 @@
   <PropertyGroup>
     <Description>Console app to validate relative links in generated HTML</Description>
     <TargetFramework>net451</TargetFramework>
+    <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
     <AssemblyName>Google.Cloud.Tools.ValidateLinks</AssemblyName>
     <OutputType>Exe</OutputType>
   </PropertyGroup>

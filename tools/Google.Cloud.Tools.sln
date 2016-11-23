@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.GenerateSnippetMarkdown", "Google.Cloud.Tools.GenerateSnippetMarkdown\Google.Cloud.Tools.GenerateSnippetMarkdown.xproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.GenerateSnippetMarkdown", "Google.Cloud.Tools.GenerateSnippetMarkdown\Google.Cloud.Tools.GenerateSnippetMarkdown.csproj", "{656E050F-D24B-4CBE-9771-B3EF472342C0}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.GenerateDocfxSources", "Google.Cloud.Tools.GenerateDocfxSources\Google.Cloud.Tools.GenerateDocfxSources.xproj", "{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.GenerateDocfxSources", "Google.Cloud.Tools.GenerateDocfxSources\Google.Cloud.Tools.GenerateDocfxSources.csproj", "{8460DA8C-ECAD-4BD8-AC01-5021F9D96C06}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.Common", "Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.xproj", "{818C2F19-64A3-4C00-9D59-C2AC7A26AEDF}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.Common", "Google.Cloud.Tools.Common\Google.Cloud.Tools.Common.csproj", "{818C2F19-64A3-4C00-9D59-C2AC7A26AEDF}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Docs.Snippets", "Google.Cloud.Docs.Snippets\Google.Cloud.Docs.Snippets.xproj", "{F8839F14-EE7B-4B29-8601-E535D2E4DBEB}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Docs.Snippets", "Google.Cloud.Docs.Snippets\Google.Cloud.Docs.Snippets.csproj", "{F8839F14-EE7B-4B29-8601-E535D2E4DBEB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1", "..\apis\Google.Pubsub.V1\Google.Pubsub.V1\Google.Pubsub.V1.xproj", "{768566BC-8F77-4F7C-8A15-F8A11308B74B}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Pubsub.V1", "..\apis\Google.Pubsub.V1\Google.Pubsub.V1\Google.Pubsub.V1.csproj", "{768566BC-8F77-4F7C-8A15-F8A11308B74B}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.ValidateLinks", "Google.Cloud.Tools.ValidateLinks\Google.Cloud.Tools.ValidateLinks.xproj", "{C5AA500F-BDED-4BAC-9402-79149673F89A}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.ValidateLinks", "Google.Cloud.Tools.ValidateLinks\Google.Cloud.Tools.ValidateLinks.csproj", "{C5AA500F-BDED-4BAC-9402-79149673F89A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.xproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ClientTesting", "Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{4810D3AB-8422-4940-BB99-0A89AD057C1D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Iam.V1", "..\apis\Google.Iam.V1\Google.Iam.V1\Google.Iam.V1.xproj", "{8BF4C91C-5611-444B-8550-D67DEBAF72F1}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Iam.V1", "..\apis\Google.Iam.V1\Google.Iam.V1\Google.Iam.V1.csproj", "{8BF4C91C-5611-444B-8550-D67DEBAF72F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

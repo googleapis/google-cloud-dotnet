@@ -4,6 +4,7 @@
   <PropertyGroup>
     <Description>Console app to generate Markdown files for docfx with snippet references</Description>
     <TargetFramework>net451</TargetFramework>
+    <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
     <AssemblyName>Google.Cloud.Tools.GenerateSnippetMarkdown</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageTargetFallback Condition=" '$(TargetFramework)' == 'net451' ">$(PackageTargetFallback);dnx451</PackageTargetFallback>
