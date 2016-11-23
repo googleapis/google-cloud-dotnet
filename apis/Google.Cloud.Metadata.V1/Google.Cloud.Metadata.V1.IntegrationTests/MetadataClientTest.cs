@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Compute.v1.Data;
 using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
@@ -72,7 +73,7 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             Assert.Equal(67890ul, instance.Id.Value);
             Assert.Equal("projects/12345/machineTypes/n1-standard-1", instance.MachineType);
             Assert.True(instance.Metadata.Items.Count >= 1);
-            Assert.Equal("my_instance_value1", instance.Metadata.Items.FirstOrDefault(i=>i.Key == "my_instance_key1")?.Value);
+            Assert.Equal("my_instance_value1", instance.Metadata.Items.FirstOrDefault(i => i.Key == "my_instance_key1")?.Value);
             Assert.Equal("name.project.google.com.internal", instance.Name);
             Assert.Equal(1, instance.NetworkInterfaces.Count);
             Assert.Equal(1, instance.NetworkInterfaces[0].AccessConfigs.Count);
@@ -123,14 +124,14 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
         {
             const string newValue = "foo";
             string key = _fixture.GenerateCustomKey();
-            await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", "initial value");
 
             var client = MetadataClient.Create();
 
             var waitHandle = new ManualResetEventSlim(false);
             int eventCount = 0;
-            client.InstanceMetadataChanged += (s, e) =>
+            client.InstanceMetadataChanged += (s, instance) =>
             {
+                Assert.Equal(newValue, instance.Metadata.Items.FirstOrDefault(i => i.Key == key)?.Value);
                 eventCount++;
                 waitHandle.Set();
             };
@@ -139,6 +140,41 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             waitHandle.Wait(TimeSpan.FromSeconds(10));
             Assert.Equal(1, eventCount);
             Assert.Equal(newValue, await client.GetCustomInstanceMetadataAsync(key));
+        }
+
+        [Fact]
+        public async Task InstanceMetadataChanged_HookTwice()
+        {
+            const string newValue = "foo";
+            string key = _fixture.GenerateCustomKey();
+
+            var client = MetadataClient.Create();
+
+            var waitHandle1 = new ManualResetEventSlim(false);
+            var waitHandle2 = new ManualResetEventSlim(false);
+            int eventCount = 0;
+            Instance instance1 = null;
+            Instance instance2 = null;
+            client.InstanceMetadataChanged += (s, instance) =>
+            {
+                instance1 = instance;
+                Interlocked.Increment(ref eventCount);
+                waitHandle1.Set();
+            };
+            client.InstanceMetadataChanged += (s, instance) =>
+            {
+                instance2 = instance;
+                Interlocked.Increment(ref eventCount);
+                waitHandle2.Set();
+            };
+
+            await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", newValue);
+            waitHandle1.Wait(TimeSpan.FromSeconds(10));
+            waitHandle2.Wait(TimeSpan.FromSeconds(1));
+            Assert.Equal(2, eventCount);
+            // Ensure the result string is only parsed once and (indirectly) that we only performed a
+            // single handing get on the server.
+            Assert.Same(instance1, instance2);
         }
 
         [Fact]
@@ -155,8 +191,9 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
             var waitHandle = new ManualResetEventSlim(false);
             int eventCount = 0;
-            client.MaintenanceStatusChanged += (s, e) =>
+            client.MaintenanceStatusChanged += (s, maintenanceStatus) =>
             {
+                Assert.Equal(MaintenanceStatus.Migrate, maintenanceStatus);
                 eventCount++;
                 waitHandle.Set();
             };
@@ -179,14 +216,14 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
         {
             const string newValue = "foo";
             string key = _fixture.GenerateCustomKey();
-            await _fixture.UpdateMetadataAsync($"project/attributes/{key}", "initial value");
 
             var client = MetadataClient.Create();
 
             var waitHandle = new ManualResetEventSlim(false);
             int eventCount = 0;
-            client.ProjectMetadataChanged += (s, e) =>
+            client.ProjectMetadataChanged += (s, project) =>
             {
+                Assert.Equal(newValue, project.CommonInstanceMetadata.Items.FirstOrDefault(i => i.Key == key)?.Value);
                 eventCount++;
                 waitHandle.Set();
             };
