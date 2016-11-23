@@ -21,8 +21,13 @@ namespace Google.Devtools.AspNet
     /// </summary>
     public enum SpanKind
     {
+        /// <summary>No span kind was specified.</summary>
         Unspecified,
+
+        /// <summary>The span covers time spent on the client side.</summary>
         RpcClient,
+
+        /// <summary>The span covers time spent on the server side.</summary>
         RpcServer,
     }
 

@@ -14,7 +14,7 @@
 
 using Google.Api.Gax;
 using System;
-using System.Diagnostics;
+using System.Threading;
 
 namespace Google.Devtools.AspNet
 {
@@ -23,22 +23,19 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class RateLimiter
     {
-        // A mutex to protect the rate limiter instance.
+        /// <summary>A mutex to protect the rate limiter instance.</summary>
         private static object _instanceMutex = new object();
 
-        // The single rate limiter instance.
+        /// <summary>The single rate limiter instance.</summary>
         private static RateLimiter _instance;
 
-        // A mutex to handle access.
-        private object _mutex = new object();
-
-        // The amount of time that must be waited before allowing tracing.
+        /// <summary>The amount of time that must be waited before allowing tracing.</summary>
         private readonly long _fixedDelayMillis;
 
         // A timer to manage time between events.
         private readonly ITimer _timer;
 
-        // The last time tracing was allowed.
+        /// <summary>The last time tracing was allowed.</summary>
         private long _lastCallMillis;
 
         /// <summary>
@@ -47,14 +44,11 @@ namespace Google.Devtools.AspNet
         /// </summary>
         public static RateLimiter GetInstance(double qps)
         {
-            if (_instance == null)
+            lock (_instanceMutex)
             {
-                lock (_instanceMutex)
+                if (_instance == null)
                 {
-                    if (_instance == null)
-                    {
-                        _instance = new RateLimiter(qps, StopwatchTimer.Create());
-                    }
+                    _instance = new RateLimiter(qps, StopwatchTimer.Create());
                 }
             }
             return _instance;
@@ -71,28 +65,16 @@ namespace Google.Devtools.AspNet
         }
 
         /// <summary>
-        /// See if tracing is allowed.
+        /// See if tracing is allowed.  If tracing is allowed, tracing will not be allowed to occur 
+        /// again until the allotted time (1/qps) has passed.
         /// </summary>
-        /// <returns>True tracing is allowed.</returns>
-        public bool CanTrace() {
-            if (CanTrace(_timer.GetElapsedMilliseconds()))
-            {
-                lock (_mutex)
-                {
-                    long nowMillis = _timer.GetElapsedMilliseconds();
-                    if (CanTrace(nowMillis))
-                    {
-                        _lastCallMillis = nowMillis;
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-
-        private bool CanTrace(long nowMillis)
+        /// <returns>True if tracing is allowed.</returns>
+        public bool CanTrace()
         {
-            return nowMillis - _lastCallMillis > _fixedDelayMillis;
+            var nowMillis = _timer.GetElapsedMilliseconds();
+            var lastCallMillis = _lastCallMillis;
+            return (nowMillis - lastCallMillis > _fixedDelayMillis) &&
+                Interlocked.CompareExchange(ref _lastCallMillis, nowMillis, lastCallMillis) == lastCallMillis;
         }
     }
 }

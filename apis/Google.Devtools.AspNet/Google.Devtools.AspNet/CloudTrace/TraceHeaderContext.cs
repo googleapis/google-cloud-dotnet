@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using System;
-using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Web;
 
@@ -31,25 +30,33 @@ namespace Google.Devtools.AspNet
     /// </remarks>
     internal sealed class TraceHeaderContext
     {
-        // An TraceHeaderContext representing no information or invalid information from a header.
+        /// <summary>An TraceHeaderContext representing no information or invalid information from a header.</summary>
         private static readonly TraceHeaderContext InvalidTraceHeaderContext =
             new TraceHeaderContext(null, null, false);
 
-        // The trace header.
-        public static readonly string TraceHeader = "X-Cloud-Trace-Context";
-
-        // A regex to match the trace header. 
-        // - ([A-Fa-f0-9]{32}): The trace id, a 32 character hex value.
-        // - ([0-9]+): The span id, a 64 bit integer.
-        // - (o=([0-3])): The trace mask, 1-3 denote it should be traced.
-        public static readonly Regex TraceHeaderRegex = new Regex(@"([A-Fa-f0-9]{32})/([0-9]+);(o=([0-3]))?$");
-
-        private readonly string _traceId;
-        private readonly ulong? _spanId;
-        private readonly bool _shouldTrace;
+        /// <summary>The trace header.</summary>
+        internal const string TraceHeader = "X-Cloud-Trace-Context";
 
         /// <summary>
-        /// Create a <see cref="TraceHeaderContext"/> from and <see cref="HttpRequest"/>.  
+        /// A regex to match the trace header. 
+        /// - ([A-Fa-f0-9]{32}): The trace id, a 32 character hex value.
+        /// - ([0-9]+): The span id, a 64 bit integer.
+        /// - (o=([0-3])): The trace mask, 1-3 denote it should be traced.
+        /// </summary>
+        internal static readonly Regex TraceHeaderRegex =
+            new Regex(@"^([A-Fa-f0-9]{32})/([0-9]+);(o=([0-3]))?$", RegexOptions.Compiled);
+
+        /// <summary>Gets the trace id or null if none is available.</summary>
+        public string TraceId { get; }
+
+        /// <summary>Gets the span id or null if none is available.</summary>
+        public ulong? SpanId { get; }
+
+        /// <summary>True if the request should be traced.</summary>
+        public bool ShouldTrace { get; }
+
+        /// <summary>
+        /// Create a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>.  
         /// </summary>
         public static TraceHeaderContext FromRequest(HttpRequest request)
         {
@@ -72,39 +79,23 @@ namespace Google.Devtools.AspNet
                 return InvalidTraceHeaderContext;
             }
 
-            try
-            {
-                string traceId = match.Groups[1].Value;
-                ulong spanId = Convert.ToUInt64(match.Groups[2].Value);
-                bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
-                int traceMask = hasMask ? Convert.ToInt32(match.Groups[4].Value) : 0;
-                bool shouldTrace = traceMask > 0;
-                return new TraceHeaderContext(traceId, spanId, shouldTrace);
-            }
-            catch (Exception ex) when (ex is FormatException || ex is FormatException)
+            string traceId = match.Groups[1].Value;
+            ulong spanId;
+            if (!ulong.TryParse(match.Groups[2].Value, out spanId))
             {
                 return InvalidTraceHeaderContext;
             }
+            bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
+            int traceMask = hasMask ? Convert.ToInt32(match.Groups[4].Value) : 0;
+            bool shouldTrace = traceMask > 0;
+            return new TraceHeaderContext(traceId, spanId, shouldTrace);
         }
 
         internal TraceHeaderContext(string traceId, ulong? spanId, bool shouldTrace)
         {
-            _traceId = traceId;
-            _spanId = spanId;
-            _shouldTrace = shouldTrace; 
+            TraceId = traceId;
+            SpanId = spanId;
+            ShouldTrace = shouldTrace; 
         }
-
-        /// <summary>
-        /// Gets the trace id or null if none is available.
-        /// </summary>
-        public string GetTraceId() => _traceId;
-
-        /// <summary>
-        /// Gets the span id or null if none is available.
-        /// </summary>
-        public ulong? GetSpanId() => _spanId;
-
-        /// <returns>True if the request should be traced.</returns>
-        public bool ShouldTrace() => _shouldTrace;
     }
 }

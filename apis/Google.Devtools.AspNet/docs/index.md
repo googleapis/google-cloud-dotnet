@@ -1,11 +1,13 @@
-# Google.Monitoring.V3
+# Google.Devtools.AspNet
 
-`Google.Monitoring.V3` is a .NET client library for the [Google
-Monitoring API](https://cloud.google.com/monitoring/api/v3/).
+`Google.Devtools.AspNet` is an ASP.NET instrumentation library for Google Stackdriver.
+It allows for simple integration of Stackdriver into ASP.NET applications with minimal code changes.
+
+`Google.Devtools.AspNet` currently supports Stackdriver Error Reporting.
 
 # Installation
 
-Install the `Google.Monitoring.V3` package from our
+Install the `Google.Devtools.AspNet` package from our
 [early access MyGet
 feed](https://www.myget.org/gallery/google-dotnet-public).
 First configure your environment to include the appropriate NuGet feed
@@ -32,17 +34,6 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 # Getting started
 
-There are three client classes to be aware of:
+## Registering error Reporting
 
-- [AgentTranslationServiceClient](obj/api/Google.Monitoring.V3.AgentTranslationServiceClient.yml)
-- [GroupServiceClient](obj/api/Google.Monitoring.V3.GroupServiceClient.yml)
-- [MetricServiceClient](obj/api/Google.Monitoring.V3.MetricServiceClient.yml)
-
-In each case, create an instance using the static `Create` method,
-optionally specifying a service endpoint and settings.
-
-# Sample code
-
-## List metric descriptors
-
-[!code-cs[](obj/snippets/Google.Monitoring.V3.MetricServiceClient.txt#ListMetricDescriptors)]
+[!code-cs[](obj/snippets/Google.Devtools.AspNet.AspNet.txt#RegisterExceptionLogger)]

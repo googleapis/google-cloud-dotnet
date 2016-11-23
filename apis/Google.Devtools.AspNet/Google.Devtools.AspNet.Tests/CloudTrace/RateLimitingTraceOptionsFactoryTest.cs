@@ -32,7 +32,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         {
             RateLimiter rateLimiter = GetRateLimiter(1001);
             RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
-            Assert.True(factory.CreateOptions().ShouldTrace());
+            Assert.True(factory.CreateOptions().ShouldTrace);
         }
 
         [Fact]
@@ -40,7 +40,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         {
             RateLimiter rateLimiter = GetRateLimiter(999);
             RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
-            Assert.False(factory.CreateOptions().ShouldTrace());
+            Assert.False(factory.CreateOptions().ShouldTrace);
         }
     }
 }

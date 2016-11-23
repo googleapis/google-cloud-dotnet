@@ -35,7 +35,7 @@ namespace Google.Storage.V1.IntegrationTests
             var bucketName = _fixture.BucketPrefix + "bucket-to-update";
             _fixture.CreateBucket(bucketName, false);
 
-            var bucket = client.GetBucket(bucketName, new GetBucketOptions { Projection = Projection.Full });
+            var bucket = client.GetBucket(bucketName);
             bucket.Website = new WebsiteData { MainPageSuffix = "http://example.com" };
 
             client.UpdateBucket(bucket);

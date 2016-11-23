@@ -51,6 +51,7 @@ namespace Google.Cloud.Metadata.V1
 
         private static readonly CreateHttpClientArgs HttpClientArgs = new CreateHttpClientArgs();
         private static readonly Regex CustomKeyRegex = new Regex(@"\A[a-zA-Z0-9-_]{1,127}\Z", RegexOptions.Compiled);
+        private static readonly Regex ETagRegex = new Regex(@"\A[a-zA-Z0-9]{16}\Z", RegexOptions.Compiled);
         // TODO: Should this be created with a MetadataClient instead?
         private static readonly ILogger Logger = ApplicationContext.Logger.ForType<MetadataClientImpl>();
         private static readonly Lazy<string> MetadataHost = new Lazy<string>(() =>
@@ -90,6 +91,13 @@ namespace Google.Cloud.Metadata.V1
 
         private static string CreateAbsoluteUrl(string relativeUrl) =>
             $"http://{MetadataHost.Value}/computeMetadata/v1/{relativeUrl}";
+
+        private static string GetETag(HttpResponseMessage response)
+        {
+            IEnumerable<string> eTagValues;
+            response.Headers.TryGetValues("ETag", out eTagValues);
+            return eTagValues?.FirstOrDefault();
+        }
 
         private static MaintenanceStatus GetMaintenanceStatus(string result)
         {
@@ -157,6 +165,14 @@ namespace Google.Cloud.Metadata.V1
             if (!CustomKeyRegex.IsMatch(key))
             {
                 throw new ArgumentException("Invalid custom metadata key.", nameof(key));
+            }
+        }
+
+        private static void ValidateETag(string eTag, string paramName)
+        {
+            if (eTag != null && !ETagRegex.IsMatch(eTag))
+            {
+                throw new ArgumentException("Invalid ETag.", paramName);
             }
         }
 
@@ -399,7 +415,7 @@ namespace Google.Cloud.Metadata.V1
         {
             add
             {
-                HookChangeEvent(ref instanceWatcher, value, "instance?recursive=true", (sender, newValue) =>
+                HookChangeEvent(ref instanceWatcher, value, "instance", (sender, newValue) =>
                 {
                     var temp = sender.Event as EventHandler;
                     temp?.Invoke(this, EventArgs.Empty);
@@ -433,7 +449,7 @@ namespace Google.Cloud.Metadata.V1
         {
             add
             {
-                HookChangeEvent(ref projectWatcher, value, "project?recursive=true", (sender, newValue) =>
+                HookChangeEvent(ref projectWatcher, value, "project", (sender, newValue) =>
                 {
                     var temp = sender.Event as EventHandler;
                     temp?.Invoke(this, EventArgs.Empty);
@@ -446,12 +462,14 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override string WaitForChange(string key, TimeSpan timeout = default(TimeSpan)) => GetResult(token => WaitForChangeAsync(key, timeout, token));
+        public override WaitForChangeResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan)) =>
+            GetResult(token => WaitForChangeAsync(key, lastETag, timeout, token));
 
         /// <inheritdoc/>
-        public override async Task<string> WaitForChangeAsync(string key, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task<WaitForChangeResult> WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
         {
             ValidateMetadataKey(key);
+            ValidateETag(lastETag, nameof(lastETag));
 
             if (timeout.Ticks < 0)
             {
@@ -465,8 +483,14 @@ namespace Google.Cloud.Metadata.V1
 
             // Always add recursive. It is ignored for values and required for directories when waiting for changes.
             key += $"?wait_for_change=true&recursive=true&timeout_sec={(int)timeout.TotalSeconds}";
+            if (lastETag != null)
+            {
+                key += $"&last_etag={lastETag}";
+            }
             var response = await RequestMetadataAsync(key, cancellationToken).ConfigureAwait(false);
-            return await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            return new WaitForChangeResult(
+                await response.Content.ReadAsStringAsync().ConfigureAwait(false),
+                GetETag(response));
         }
 
         private class ValueWatcher
@@ -475,6 +499,7 @@ namespace Google.Cloud.Metadata.V1
             private readonly Action<ValueWatcher, string> changeAction;
             private readonly MetadataClientImpl client;
             private readonly string path;
+            private readonly ManualResetEventSlim ready;
             private readonly Task waitTask;
 
             public Delegate Event { get; set; }
@@ -486,7 +511,15 @@ namespace Google.Cloud.Metadata.V1
                 this.path = path;
                 
                 cancellationTokenSource = new CancellationTokenSource();
+                ready = new ManualResetEventSlim(false);
                 waitTask = Task.Run(WaitForChange);
+
+                if (!ready.Wait(TimeSpan.FromSeconds(10)))
+                {
+                    var exception = waitTask.Exception;
+                    var innerException = exception?.InnerExceptions.FirstOrDefault() ?? exception;
+                    throw new InvalidOperationException($"Unable to wait for changes on {path}", innerException);
+                }
             }
 
             public void Stop()
@@ -494,36 +527,24 @@ namespace Google.Cloud.Metadata.V1
                 cancellationTokenSource.Cancel();
             }
 
-            private string GetETag(HttpResponseMessage response)
-            {
-                IEnumerable<string> eTagValues;
-                if (response.Headers.TryGetValues("ETag", out eTagValues))
-                {
-                    return eTagValues.FirstOrDefault();
-                }
-
-                return null;
-            }
-
             private async Task WaitForChange()
             {
                 var response = await client.RequestMetadataAsync(path, cancellationTokenSource.Token).ConfigureAwait(false);
                 var lastETag = GetETag(response);
+                ready.Set();
 
-                var connector = path.Contains('?') ? '&' : '?';
-                var pathForWaiting = $"{path}{connector}wait_for_change=true&timeout_sec={client.HttpClient.Timeout.TotalSeconds / 2}&last_etag=";
+                var timeout = new TimeSpan(client.HttpClient.Timeout.Ticks / 2);
 
                 while (!cancellationTokenSource.Token.IsCancellationRequested)
                 {
                     try
                     {
-                        response = await client.RequestMetadataAsync(pathForWaiting + lastETag, cancellationTokenSource.Token).ConfigureAwait(false);
+                        var result = await client.WaitForChangeAsync(path, lastETag, timeout, cancellationTokenSource.Token).ConfigureAwait(false);
 
-                        var eTag = GetETag(response);
-                        if (lastETag != eTag)
+                        if (lastETag != result.ETag)
                         {
-                            changeAction(this, await response.Content.ReadAsStringAsync().ConfigureAwait(false));
-                            lastETag = eTag;
+                            changeAction(this, result.Content);
+                            lastETag = result.ETag;
                         }
                     }
                     catch (OperationCanceledException) { }

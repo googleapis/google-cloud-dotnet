@@ -14,9 +14,11 @@
 
 using Google.Apis.Compute.v1.Data;
 using Google.Cloud.Metadata.V1;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Metadata.V1.Snippets
@@ -71,18 +73,47 @@ namespace Google.Cloud.Metadata.V1.Snippets
         }
 
         [Fact]
-        public void WaitForChange()
+        public async Task WaitForChange()
         {
+            const string newValue = "foo";
+            string key = _fixture.GenerateCustomKey();
+
+            await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", "initial value");
+
+            var task = Task.Run(async () =>
+            {
+                await Task.Delay(TimeSpan.FromSeconds(2));
+                await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", newValue);
+            });
+
+            // TODO: This pattern to get the original ETag seems messy. Maybe add something to get an ETag.
+
             // Snippet: WaitForChange
             MetadataClient client = MetadataClient.Create();
-            string result = client.WaitForChange("instance/attributes", timeout: TimeSpan.FromSeconds(5));
-            JObject currentCustomMetadata = JObject.Parse(result);
-            foreach(JProperty customMetadata in currentCustomMetadata.Properties())
+
+            // Get the original ETag so we know when the metadata changes.
+            string lastETag = client.WaitForChange("instance/attributes", timeout: TimeSpan.FromMilliseconds(1)).ETag;
+
+            WaitForChangeResult result;
+            while (true)
             {
-                Console.WriteLine(customMetadata.Name + " = " + customMetadata.Value);
+                // Wait in 30 second blocks until the value actually changes.
+                result = client.WaitForChange("instance/attributes", lastETag, TimeSpan.FromSeconds(30));
+                if (result.ETag != lastETag)
+                {
+                    JObject currentCustomMetadata = JObject.Parse(result.Content);
+                    foreach (JProperty customMetadata in currentCustomMetadata.Properties())
+                    {
+                        Console.WriteLine(customMetadata.Name + " = " + customMetadata.Value);
+                    }
+                    break;
+                }
             }
             // End snippet
-            Assert.Equal("{\"my_instance_key1\":\"my_instance_value1\"}", result);
+
+            dynamic obj = JsonConvert.DeserializeObject(result.Content);
+            Assert.Equal(newValue, obj[key].Value);
+            await task;
         }
     }
 }

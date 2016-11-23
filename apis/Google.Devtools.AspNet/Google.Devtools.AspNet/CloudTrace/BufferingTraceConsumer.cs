@@ -23,22 +23,22 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class BufferingTraceConsumer : IFlushableTraceConsumer
     {
-        // The default buffer size in bytes. 2^16 = 65536.
-        public const int DefaultBufferSize = 65536;
+        /// <summary>The default buffer size in bytes. 2^16 = 65536.</summary>
+        private const int DefaultBufferSize = 65536;
 
-        // A mutex to protect the buffer.
+        /// <summary>A mutex to protect the buffer.</summary>
         private readonly object _mutex = new object();
 
-        // The trace consumer to flush traces too.
+        /// <summary>The trace consumer to flush traces to.</summary>
         private readonly ITraceConsumer _consumer;
 
-        // The size of the buffer in bytes.
+        /// <summary>The size of the buffer in bytes.</summary>
         private readonly int _bufferSize;
 
-        // The buffered traces.
-        private Traces _traces;        
+        /// <summary>The buffered traces.</summary>
+        private Traces _traces;
 
-        // The current size of traces.
+        /// <summary>The current size of traces.</summary>
         private int _size;
 
         private BufferingTraceConsumer(ITraceConsumer consumer, int bufferSize)
@@ -56,8 +56,8 @@ namespace Google.Devtools.AspNet
         /// Creates a new <see cref="BufferingTraceConsumer"/> that will flush traces to the
         /// given <see cref="ITraceConsumer"/>. 
         /// </summary>
-        /// <param name="consumer">The consumer to flush traces too.</param>
-        /// <param name="bufferSize">Optional, buffer size in bytes. Defaults to <see cref="DefaultBufferSize"/></param>
+        /// <param name="consumer">The consumer to flush traces to, cannot be null.</param>
+        /// <param name="bufferSize">Optional, buffer size in bytes.</param>
         /// <returns></returns>
         public static BufferingTraceConsumer Create(ITraceConsumer consumer, int bufferSize = DefaultBufferSize)
         {
@@ -65,11 +65,13 @@ namespace Google.Devtools.AspNet
         }
 
         /// <inheritdoc />
-        public void Recieve(Traces traces)
+        public void Receive(Traces traces)
         {
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
-            lock (_mutex) {
-                foreach (Trace trace in traces.Traces_) {
+            lock (_mutex)
+            {
+                foreach (Trace trace in traces.Traces_)
+                {
                     _size += trace.CalculateSize();
                     _traces.Traces_.Add(trace);
                     if (_size >= _bufferSize)
@@ -92,7 +94,7 @@ namespace Google.Devtools.AspNet
             }
 
             if (old.Traces_.Count != 0) { 
-                _consumer.Recieve(old);
+                _consumer.Receive(old);
             }
         }
     }

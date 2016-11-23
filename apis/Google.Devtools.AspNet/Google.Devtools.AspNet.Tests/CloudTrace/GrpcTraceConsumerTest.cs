@@ -36,40 +36,40 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         }
 
         [Fact]
-        public void Recieve()
+        public void Receive()
         {
             Traces traces = GetTraces();
 
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
             mockClient.Setup(c => c.PatchTracesAsync(ProjectId, traces, null));
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
-            GrpcTraceConsumer consumer = GrpcTraceConsumer.Create(taskClient);
+            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
-            consumer.Recieve(traces);
+            consumer.Receive(traces);
             mockClient.VerifyAll();
         }
 
         [Fact]
-        public void Recieve_NoTraces()
+        public void Receive_NoTraces()
         {
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
-            GrpcTraceConsumer consumer = GrpcTraceConsumer.Create(taskClient);
+            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
-            consumer.Recieve(new Traces());
+            consumer.Receive(new Traces());
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
 
         [Fact]
-        public void Recieve_ClientNotReady()
+        public void Receive_ClientNotReady()
         {
             Traces traces = GetTraces();
 
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
             Task<TraceServiceClient> taskClient = new Task<TraceServiceClient>(() => mockClient.Object);           
-            GrpcTraceConsumer consumer = GrpcTraceConsumer.Create(taskClient);
+            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
-            consumer.Recieve(traces);
+            consumer.Receive(traces);
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
     }

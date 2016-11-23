@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using System;
 using static Google.Apis.Storage.v1.ObjectsResource;
 using static Google.Apis.Storage.v1.ObjectsResource.UpdateRequest;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Storage.V1
 {
@@ -63,7 +64,17 @@ namespace Google.Storage.V1
         /// </summary>
         public PredefinedObjectAcl? PredefinedAcl { get; set; }
 
-        internal void ModifyRequest(UpdateRequest request)
+        /// <summary>
+        /// If set to true, no other preconditions must be set, and
+        /// the local metageneration of the object being updated is not used
+        /// to create a precondition.
+        /// </summary>
+        public bool? ForceNoPreconditions { get; set; }
+
+        private bool AnyExplicitPreconditions =>
+            IfGenerationMatch != null || IfGenerationNotMatch != null || IfMetagenerationMatch != null || IfMetagenerationNotMatch != null;
+
+        internal void ModifyRequest(UpdateRequest request, Object obj)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid
             // options being passed to a public method.
@@ -75,26 +86,38 @@ namespace Google.Storage.V1
             {
                 throw new ArgumentException($"Cannot specify {nameof(IfMetagenerationMatch)} and {nameof(IfMetagenerationNotMatch)} in the same options", "options");
             }
+            if (ForceNoPreconditions == true && AnyExplicitPreconditions)
+            {
+                throw new ArgumentException($"Cannot specify {nameof(ForceNoPreconditions)} and any explicit precondition in the same options", "options");
+            }
 
             if (Generation != null)
             {
                 request.Generation = Generation;
             }
-            if (IfGenerationMatch != null)
+            if (ForceNoPreconditions != true && !AnyExplicitPreconditions)
             {
-                request.IfGenerationMatch = IfGenerationMatch;
+                request.IfMetagenerationMatch = obj.Metageneration;
+                request.IfGenerationMatch = obj.Generation;
             }
-            if (IfGenerationNotMatch != null)
+            else
             {
-                request.IfGenerationNotMatch = IfGenerationNotMatch;
-            }
-            if (IfMetagenerationMatch != null)
-            {
-                request.IfMetagenerationMatch = IfMetagenerationMatch;
-            }
-            if (IfMetagenerationNotMatch != null)
-            {
-                request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
+                if (IfGenerationMatch != null)
+                {
+                    request.IfGenerationMatch = IfGenerationMatch;
+                }
+                if (IfGenerationNotMatch != null)
+                {
+                    request.IfGenerationNotMatch = IfGenerationNotMatch;
+                }
+                if (IfMetagenerationMatch != null)
+                {
+                    request.IfMetagenerationMatch = IfMetagenerationMatch;
+                }
+                if (IfMetagenerationNotMatch != null)
+                {
+                    request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
+                }
             }
             if (Projection != null)
             {

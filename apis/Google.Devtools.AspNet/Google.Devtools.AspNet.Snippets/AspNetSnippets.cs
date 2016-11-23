@@ -11,17 +11,23 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
 
-using System.Threading.Tasks;
-using Xunit;
-
-namespace Google.Devtools.AspNet.Tests
+namespace Google.Devtools.AspNet.Snippets
 {
-    public class CloudErrorReportingExceptionLoggerTest
+    public class AspNetSnippets
     {
-        public async Task Test()
+        // Sample: RegisterExceptionLogger
+        public static void Register(HttpConfiguration config)
         {
-            // TODO(talarico): Write tests.
+            string projectId = "[Google Cloud Platform project ID]";
+            string serviceName = "[Name of service]";
+            string version = "[Version of service]";
+            // Add a catch all for the uncaught exceptions.
+            config.Services.Add(typeof(IExceptionLogger),
+                CloudErrorReportingExceptionLogger.Create(projectId, serviceName, version));
         }
+        // End sample
     }
 }

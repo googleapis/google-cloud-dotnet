@@ -20,8 +20,6 @@ install:
   - mkdir .\scripts
   - curl -SL https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.ps1 -o .\scripts\dotnet-install.ps1
   - ps: $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetcli"
-  # Workaround for https://github.com/dotnet/cli/issues/4712
-  - mkdir .dotnetcli
   - ps: '& .\scripts\dotnet-install.ps1 -InstallDir "$env:DOTNET_INSTALL_DIR" -Version 1.0.0-preview2-003121 -NoPath'
   # Download and unpack docfx
   - mkdir docfx

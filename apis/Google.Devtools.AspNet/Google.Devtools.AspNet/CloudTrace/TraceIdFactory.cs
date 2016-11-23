@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Org.BouncyCastle.Math;
 using System;
 
 namespace Google.Devtools.AspNet
@@ -22,32 +21,16 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class TraceIdFactory
     {
-        private readonly Random _random;
-
-        private TraceIdFactory(Random random = null)
-        {
-            _random = random ?? new Random();
-        }
+        private TraceIdFactory() {}
 
         /// <summary>
         /// Create a new <see cref="TraceIdFactory"/>.
         /// </summary>
-        /// <param name="random">Optional, a random number generator, if none supplied the system default will be used.</param>
-        public static TraceIdFactory Create(Random random = null)
-        {
-            return new TraceIdFactory(random);
-        }
+        public static TraceIdFactory Create() => new TraceIdFactory();
 
         /// <summary>
         /// Gets a random trace id.
         /// </summary>
-        public string NextId()
-        {
-            byte[] bytes = new byte[128 / 8];
-            _random.NextBytes(bytes);
-            BigInteger idInt = new BigInteger(1, bytes);
-            return idInt.ToString(16).PadLeft(32, '0');
-        }
+        public string NextId() => Guid.NewGuid().ToString("N");
     }
-
 }

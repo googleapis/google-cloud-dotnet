@@ -12,10 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -70,9 +71,8 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             Assert.Equal("PERSISTENT", instance.Disks[0].Type);
             Assert.Equal(67890ul, instance.Id.Value);
             Assert.Equal("projects/12345/machineTypes/n1-standard-1", instance.MachineType);
-            Assert.Equal(1, instance.Metadata.Items.Count);
-            Assert.Equal("my_instance_key1", instance.Metadata.Items[0].Key);
-            Assert.Equal("my_instance_value1", instance.Metadata.Items[0].Value);
+            Assert.True(instance.Metadata.Items.Count >= 1);
+            Assert.Equal("my_instance_value1", instance.Metadata.Items.FirstOrDefault(i=>i.Key == "my_instance_key1")?.Value);
             Assert.Equal("name.project.google.com.internal", instance.Name);
             Assert.Equal(1, instance.NetworkInterfaces.Count);
             Assert.Equal(1, instance.NetworkInterfaces[0].AccessConfigs.Count);
@@ -112,11 +112,33 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
         {
             var client = MetadataClient.Create();
             var project = client.GetProjectMetadata();
-            Assert.Equal(1, project.CommonInstanceMetadata.Items.Count);
-            Assert.Equal("my_project_key1", project.CommonInstanceMetadata.Items[0].Key);
-            Assert.Equal("my_project_value1", project.CommonInstanceMetadata.Items[0].Value);
+            Assert.True(project.CommonInstanceMetadata.Items.Count >= 1);
+            Assert.Equal("my_project_value1", project.CommonInstanceMetadata.Items.FirstOrDefault(i => i.Key == "my_project_key1")?.Value);
             Assert.Equal(12345ul, project.Id.Value);
             Assert.Equal("fake-project", project.Name);
+        }
+
+        [Fact]
+        public async Task InstanceMetadataChanged()
+        {
+            const string newValue = "foo";
+            string key = _fixture.GenerateCustomKey();
+            await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", "initial value");
+
+            var client = MetadataClient.Create();
+
+            var waitHandle = new ManualResetEventSlim(false);
+            int eventCount = 0;
+            client.InstanceMetadataChanged += (s, e) =>
+            {
+                eventCount++;
+                waitHandle.Set();
+            };
+
+            await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", newValue);
+            waitHandle.Wait(TimeSpan.FromSeconds(10));
+            Assert.Equal(1, eventCount);
+            Assert.Equal(newValue, await client.GetCustomInstanceMetadataAsync(key));
         }
 
         [Fact]
@@ -127,22 +149,103 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
         }
 
         [Fact]
-        public void WaitForChange()
+        public async Task MaintenanceStatusChanged()
         {
             var client = MetadataClient.Create();
 
+            var waitHandle = new ManualResetEventSlim(false);
+            int eventCount = 0;
+            client.MaintenanceStatusChanged += (s, e) =>
+            {
+                eventCount++;
+                waitHandle.Set();
+            };
+
+            try
+            {
+                await _fixture.UpdateMetadataAsync("instance/maintenance-event", "MIGRATE_ON_HOST_MAINTENANCE");
+                waitHandle.Wait(TimeSpan.FromSeconds(10));
+                Assert.Equal(1, eventCount);
+                Assert.Equal(MaintenanceStatus.Migrate, client.GetMaintenanceStatus());
+            }
+            finally
+            {
+                await _fixture.UpdateMetadataAsync("instance/maintenance-event", "NONE");
+            }
+        }
+
+        [Fact]
+        public async Task ProjectMetadataChanged()
+        {
+            const string newValue = "foo";
+            string key = _fixture.GenerateCustomKey();
+            await _fixture.UpdateMetadataAsync($"project/attributes/{key}", "initial value");
+
+            var client = MetadataClient.Create();
+
+            var waitHandle = new ManualResetEventSlim(false);
+            int eventCount = 0;
+            client.ProjectMetadataChanged += (s, e) =>
+            {
+                eventCount++;
+                waitHandle.Set();
+            };
+
+            await _fixture.UpdateMetadataAsync($"project/attributes/{key}", newValue);
+            waitHandle.Wait(TimeSpan.FromSeconds(10));
+            Assert.Equal(1, eventCount);
+            Assert.Equal(newValue, await client.GetCustomProjectMetadataAsync(key));
+        }
+
+        [Fact]
+        public void WaitForChange()
+        {
+            const string newValue = "foo";
+            string key = _fixture.GenerateCustomKey();
+
+            var task = Task.Run(async () =>
+            {
+                await Task.Delay(TimeSpan.FromSeconds(1));
+                await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", newValue);
+            });
+
+            try
+            {
+                var client = MetadataClient.Create();
+                var result = client.WaitForChange("instance/attributes");
+                dynamic obj = JsonConvert.DeserializeObject(result.Content);
+                Assert.Equal(newValue, obj[key].Value);
+                Assert.NotNull(result.ETag);
+            }
+            finally
+            {
+                task.Wait();
+            }
+        }
+
+        [Fact]
+        public void WaitForChangeTimeout()
+        {
+            var client = MetadataClient.Create();
+            var initialTags = client.WaitForChange("instance/tags", timeout: TimeSpan.FromMilliseconds(1));
+            var initialAttributes = client.WaitForChange("instance/attributes", timeout: TimeSpan.FromMilliseconds(1));
+
             // Wait for change on a value key
             var sw = Stopwatch.StartNew();
-            var result = client.WaitForChange("instance/tags", TimeSpan.FromSeconds(7));
+            var result = client.WaitForChange("instance/tags", timeout: TimeSpan.FromSeconds(7));
             sw.Stop();
-            Assert.Equal(result, "[\"a\",\"b\",\"c\"]");
+            Assert.Equal(initialTags.Content, result.Content);
+            Assert.Equal(initialTags.ETag, result.ETag);
+            Assert.NotNull(result.ETag);
             Assert.True(sw.Elapsed.TotalSeconds >= 7);
 
             // Wait for change on a directory key
             sw = Stopwatch.StartNew();
-            result = client.WaitForChange("instance/attributes", TimeSpan.FromSeconds(5));
+            result = client.WaitForChange("instance/attributes", timeout: TimeSpan.FromSeconds(5));
             sw.Stop();
-            Assert.Equal(result, "{\"my_instance_key1\":\"my_instance_value1\"}");
+            Assert.Equal(initialAttributes.Content, result.Content);
+            Assert.Equal(initialAttributes.ETag, result.ETag);
+            Assert.NotNull(result.ETag);
             Assert.True(sw.Elapsed.TotalSeconds >= 5);
         }
     }

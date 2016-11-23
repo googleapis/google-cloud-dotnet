@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Storage.v1.Data;
 using System;
 using static Google.Apis.Storage.v1.BucketsResource;
 using static Google.Apis.Storage.v1.BucketsResource.UpdateRequest;
@@ -51,20 +52,40 @@ namespace Google.Storage.V1
         /// </summary>
         public PredefinedObjectAcl? PredefinedDefaultObjectAcl { get; set; }
 
-        internal void ModifyRequest(UpdateRequest request)
+        /// <summary>
+        /// If set to true, no other preconditions must be set, and
+        /// the local metageneration of the bucket being updated is not used
+        /// to create a precondition.
+        /// </summary>
+        public bool? ForceNoPreconditions { get; set; }
+
+        private bool AnyExplicitPreconditions => IfMetagenerationMatch != null || IfMetagenerationNotMatch != null;
+
+        internal void ModifyRequest(UpdateRequest request, Bucket bucket)
         {
             if (IfMetagenerationMatch != null && IfMetagenerationNotMatch != null)
             {
                 throw new ArgumentException($"Cannot specify {nameof(IfMetagenerationMatch)} and {nameof(IfMetagenerationNotMatch)} in the same options", "options");
             }
-
-            if (IfMetagenerationMatch != null)
+            if (ForceNoPreconditions == true && AnyExplicitPreconditions)
             {
-                request.IfMetagenerationMatch = IfMetagenerationMatch;
+                throw new ArgumentException($"Cannot specify {nameof(ForceNoPreconditions)} and any explicit precondition in the same options", "options");
             }
-            if (IfMetagenerationNotMatch != null)
+
+            if (ForceNoPreconditions != true && !AnyExplicitPreconditions)
             {
-                request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
+                request.IfMetagenerationMatch = bucket.Metageneration;
+            }
+            else
+            {
+                if (IfMetagenerationMatch != null)
+                {
+                    request.IfMetagenerationMatch = IfMetagenerationMatch;
+                }
+                if (IfMetagenerationNotMatch != null)
+                {
+                    request.IfMetagenerationNotMatch = IfMetagenerationNotMatch;
+                }
             }
             if (Projection != null)
             {

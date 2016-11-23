@@ -13,15 +13,15 @@
 // limitations under the License.
 
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
-using Xunit;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Metadata.V1.IntegrationTests
 {
@@ -34,8 +34,10 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
 
         private readonly StringBuilder emulatorErrorOutput = new StringBuilder();
         private readonly StringBuilder emulatorOutput = new StringBuilder();
+        private readonly string emulatorHost;
         private readonly Process emulatorProcess;
         private readonly string emulatorPath;
+        private readonly HttpClient httpClient = new HttpClient();
 
         protected MetadataFixtureBase()
         {
@@ -64,7 +66,8 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             int port = ((IPEndPoint)temp.LocalEndpoint).Port;
             temp.Stop();
 
-            Environment.SetEnvironmentVariable(EmulatorEnvironmentVariable, $"localhost:{port}");
+            emulatorHost = $"localhost:{port}";
+            Environment.SetEnvironmentVariable(EmulatorEnvironmentVariable, emulatorHost);
 
             var startInfo = new ProcessStartInfo("python", $"{emulatorFilePath} --test --port {port}");
             startInfo.RedirectStandardError = true;
@@ -89,12 +92,44 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             emulatorProcess.Start();
             emulatorProcess.BeginOutputReadLine();
             emulatorProcess.BeginErrorReadLine();
+
+            // Block until the server becomes available.
+            var client = MetadataClient.Create();
+            var sw = Stopwatch.StartNew();
+            while (!client.IsServerAvailable() && sw.Elapsed.TotalSeconds < 30)
+            {
+                Thread.Sleep(50);
+            }
+
+            if (!client.IsServerAvailable())
+            {
+                Cleanup();
+                ThrowEmulatorError("The metadata server emulator failed to start");
+            }
+        }
+
+        private void Cleanup()
+        {
+            emulatorProcess.Exited -= EmulatorProcess_Exited;
+            emulatorProcess.Kill();
+
+            Directory.Delete(emulatorPath, recursive: true);
+        }
+
+        public void Dispose()
+        {
+            Cleanup();
         }
 
         private void EmulatorProcess_Exited(object sender, EventArgs e)
         {
-            var message = $"The metadata server emulator exited with code {emulatorProcess.ExitCode}";
+            ThrowEmulatorError($"The metadata server emulator exited with code {emulatorProcess.ExitCode}");
+        }
 
+        public string GenerateCustomKey() => Guid.NewGuid().ToString();
+
+        private void ThrowEmulatorError(string message)
+        {
             var output = emulatorOutput.ToString();
             if (!string.IsNullOrEmpty(output))
             {
@@ -108,12 +143,12 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             throw new InvalidOperationException(message);
         }
 
-        public void Dispose()
-        {
-            emulatorProcess.Exited -= EmulatorProcess_Exited;
-            emulatorProcess.Kill();
-
-            Directory.Delete(emulatorPath, recursive: true);
-        }
+        public Task UpdateMetadataAsync(string path, string data) =>
+            httpClient.SendAsync(
+                new HttpRequestMessage(HttpMethod.Post, $"http://{emulatorHost}/emulator/v1/update/{path}")
+                {
+                    Content = new StringContent(data),
+                    Headers = { { "Metadata-Flavor", "Google" } }
+                });
     }
 }

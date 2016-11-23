@@ -19,11 +19,12 @@ namespace Google.Devtools.AspNet
     /// </summary>
     public sealed class StartSpanOptions
     {
-        private readonly SpanKind _spanKind;
+        /// <summary>Gets the span kind.</summary>
+        public SpanKind SpanKind { get; }
 
         private StartSpanOptions(SpanKind spanKind)
         {
-            _spanKind = spanKind;
+            SpanKind = spanKind;
         }
 
         /// <summary>
@@ -31,13 +32,6 @@ namespace Google.Devtools.AspNet
         /// </summary>
         /// <param name="spanKind">Optional, the span kind.  Defaults to <see cref="SpanKind.Unspecified"/></param>
         public static StartSpanOptions Create(SpanKind spanKind = SpanKind.Unspecified)
-        {
-            return new StartSpanOptions(spanKind);
-        }
-
-        /// <summary>
-        /// Gets the span kind.
-        /// </summary>
-        public SpanKind GetSpanKind() => _spanKind;
+            => new StartSpanOptions(spanKind);
     }
 }

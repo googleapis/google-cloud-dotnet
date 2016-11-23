@@ -18,22 +18,16 @@ using System.Diagnostics;
 namespace Google.Devtools.AspNet
 {
     /// <summary>
-    /// Mangages creating spans for a trace as well as adding meta data to them.
+    /// Manages creating spans for a trace as well as adding meta data to them.
     /// </summary>
     public interface IManagedTracer
     {
         /// <summary>
         /// Starts a new span using the most recent (if any) unfinished span as the parent.
         /// </summary>
-        /// <param name="name">The name of the span.</param>
-        void StartSpan(string name);
-
-        /// <summary>
-        /// Starts a new span using the most recent (if any) unfinished span as the parent.
-        /// </summary>
-        /// <param name="name">The name of the span.</param>
+        /// <param name="name">The name of the span, cannot be null.</param>
         /// <param name="options">The span options to override default values.</param>
-        void StartSpan(string name, StartSpanOptions options);
+        void StartSpan(string name, StartSpanOptions options = null);
 
         /// <summary>
         /// Ends the current span.
@@ -46,14 +40,13 @@ namespace Google.Devtools.AspNet
         void AnnotateSpan(Dictionary<string, string> labels);
 
         /// <summary>
-        /// Adds the give StackTrace to the current span.
+        /// Adds the given StackTrace to the current span.
         /// </summary>
         void SetStackTrace(StackTrace stackTrace);
 
         /// <summary>
         /// Gets the current trace id or null if none exists.
         /// </summary>
-        /// <returns></returns>
         string GetCurrentTraceId();
     }
 }

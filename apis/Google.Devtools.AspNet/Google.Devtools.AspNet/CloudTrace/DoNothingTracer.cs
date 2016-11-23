@@ -24,8 +24,7 @@ namespace Google.Devtools.AspNet
     {
         public static DoNothingTracer Instance = new DoNothingTracer();
         private DoNothingTracer() { }
-        public void StartSpan(string name) { }
-        public void StartSpan(string name, StartSpanOptions options) { }
+        public void StartSpan(string name, StartSpanOptions options = null) { }
         public void EndSpan() { }
         public void AnnotateSpan(Dictionary<string, string> labels) { }
         public void SetStackTrace(StackTrace stackTrace) { }

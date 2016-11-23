@@ -19,28 +19,20 @@ using System.Threading.Tasks;
 namespace Google.Devtools.AspNet
 {
     /// <summary>
-    /// A <see cref="ITraceConsumer"/> that will send recieved traces to the Stackdriver Trace API.
+    /// A <see cref="ITraceConsumer"/> that will send received traces to the Stackdriver Trace API.
     /// </summary>
     internal sealed class GrpcTraceConsumer : ITraceConsumer
     {
         private readonly Task<TraceServiceClient> _client;
 
-        private GrpcTraceConsumer(Task<TraceServiceClient> client)
+        /// <param name="client">The trace client that will push traces to the Stackdriver Trace API.</param>
+        internal GrpcTraceConsumer(Task<TraceServiceClient> client)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
         }
 
-        /// <summary>
-        /// Creates a new <see cref="GrpcTraceConsumer"/>.
-        /// </summary>
-        /// <param name="client">The trace client that will push traces to the Stackdriver Trace API.</param>
-        public static GrpcTraceConsumer Create(Task<TraceServiceClient> client)
-        {
-            return new GrpcTraceConsumer(client);
-        }
-
         /// <inheritdoc />
-        public void Recieve(Traces traces)
+        public void Receive(Traces traces)
         {
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
 

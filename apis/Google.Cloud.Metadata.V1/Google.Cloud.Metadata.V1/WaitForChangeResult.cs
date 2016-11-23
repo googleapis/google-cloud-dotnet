@@ -1,47 +1,41 @@
 ﻿// Copyright 2016 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-
-namespace Google.Devtools.AspNet
+namespace Google.Cloud.Metadata.V1
 {
     /// <summary>
-    /// A factory to create random span ids.
+    /// Contains the result from the wait for change operation.
     /// </summary>
-    internal sealed class SpanIdFactory
+    /// <seealso cref="MetadataClient.WaitForChange"/>
+    /// <seealso cref="MetadataClient.WaitForChangeAsync"/>
+    public sealed class WaitForChangeResult
     {
-        /// <summary>A mutex to the instance of <see cref="Random"/>.</summary>
-        private static object _randomMutex = new object();
-
-        private static readonly Random _random = new Random();
-
-        private SpanIdFactory() {}
+        /// <summary>
+        /// Gets the ETag header from the server response.
+        /// </summary>
+        public string ETag { get; }
 
         /// <summary>
-        /// Create a new <see cref="SpanIdFactory"/>.
+        /// Gets the content of the server response, which may or may not be a changed value, depending on whether the
+        /// timeout expired.
         /// </summary>
-        public static SpanIdFactory Create() => new SpanIdFactory();
+        public string Content { get; }
 
-        /// <summary>
-        /// Gets a random span id.
-        /// </summary>
-        public ulong NextId()
+        internal WaitForChangeResult(string content, string etag)
         {
-            lock (_randomMutex)
-            {
-                return (ulong)(_random.NextDouble() * Int64.MaxValue);
-            }
+            Content = content;
+            ETag = etag;
         }
     }
 }

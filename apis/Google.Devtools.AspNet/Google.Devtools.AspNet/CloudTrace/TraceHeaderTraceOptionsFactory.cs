@@ -24,18 +24,12 @@ namespace Google.Devtools.AspNet
     {
         private TraceHeaderTraceOptionsFactory() { }
 
-        public static TraceHeaderTraceOptionsFactory Create()
-        {
-            return new TraceHeaderTraceOptionsFactory();
-        }
+        public static TraceHeaderTraceOptionsFactory Create() => new TraceHeaderTraceOptionsFactory();
 
         /// <summary>
         /// Create a new <see cref="TraceHeaderTraceOptionsFactory"/>.
         /// </summary>
-        public TraceOptions CreateOptions()
-        {
-            return CreateOptions(TraceHeaderContext.FromRequest(HttpContext.Current.Request));
-        }
+        public TraceOptions CreateOptions() => CreateOptions(TraceHeaderContext.FromRequest(HttpContext.Current.Request));
 
         /// <summary>
         /// Create a new <see cref="TraceHeaderTraceOptionsFactory"/> from a <see cref="TraceHeaderContext"/>
@@ -43,7 +37,7 @@ namespace Google.Devtools.AspNet
         public TraceOptions CreateOptions(TraceHeaderContext context)
         {
             GaxPreconditions.CheckNotNull(context, nameof(context));
-            return TraceOptions.Create(context.ShouldTrace());
+            return TraceOptions.Create(context.ShouldTrace);
         }
     }
 }

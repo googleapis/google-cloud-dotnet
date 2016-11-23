@@ -27,20 +27,20 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal static class Labels
     {
-        // The label to denote the size of a request.
-        public static readonly string HttpRequestSize = "trace.cloud.google.com/http/request/size";
+        ///<summary>The label to denote the size of a request.</summary> 
+        internal const string HttpRequestSize = "trace.cloud.google.com/http/request/size";
 
-        // The label to denote the host.
-        public static readonly string HttpHost = "trace.cloud.google.com/http/host";
+        ///<summary>The label to denote the host.</summary> 
+        internal const string HttpHost = "trace.cloud.google.com/http/host";
 
-        // The label to denote the request method.
-        public static readonly string HttpMethod = "trace.cloud.google.com/http/method";
+        ///<summary>The label to denote the request method.</summary> 
+        internal const string HttpMethod = "trace.cloud.google.com/http/method";
 
-        // The label to denote the response status code.
-        public static readonly string HttpStatusCode = "trace.cloud.google.com/http/status_code";
+        ///<summary>The label to denote the response status code.</summary> 
+        internal const string HttpStatusCode = "trace.cloud.google.com/http/status_code";
 
-        // The label to denote a stack trace.
-        public static readonly string StackTrace = "trace.cloud.google.com/stacktrace";
+        ///<summary>The label to denote a stack trace.</summary> 
+        internal const string StackTrace = "trace.cloud.google.com/stacktrace";
 
         /// <summary>
         /// Gets a map of labels for a span from an <see cref="HttpRequest"/>, such as request size, method, ect.
@@ -53,11 +53,12 @@ namespace Google.Devtools.AspNet
         internal static Dictionary<string, string> FromHttpRequestWrapper(HttpRequestWrapper request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            Dictionary<string, string> labels = new Dictionary<string, string>();
-            labels.Add(HttpRequestSize, request.ContentLength.ToString());
-            labels.Add(HttpHost, request.UserHostName);
-            labels.Add(HttpMethod, request.HttpMethod);
-            return labels;
+            return new Dictionary<string, string>()
+            {
+                { HttpRequestSize, request.ContentLength.ToString() },
+                { HttpHost, request.UserHostName },
+                { HttpMethod, request.HttpMethod }
+            };
         }
 
         /// <summary>
@@ -71,9 +72,10 @@ namespace Google.Devtools.AspNet
         internal static Dictionary<string, string> FromHttpResponseWrapper(HttpResponseWrapper response)
         {
             GaxPreconditions.CheckNotNull(response, nameof(response));
-            Dictionary<string, string> labels = new Dictionary<string, string>();
-            labels.Add(HttpStatusCode, response.StatusCode.ToString());
-            return labels;
+            return new Dictionary<string, string>()
+            {
+                { HttpStatusCode, response.StatusCode.ToString() }
+            };
         }
 
 
@@ -83,9 +85,10 @@ namespace Google.Devtools.AspNet
         public static Dictionary<string, string> FromStackTrace(StackTrace stackTrace)
         {
             GaxPreconditions.CheckNotNull(stackTrace, nameof(stackTrace));
-            Dictionary<string, string> labels = new Dictionary<string, string>();
-            labels.Add(StackTrace, GenerateJsonStringStackTrace(stackTrace));
-            return labels;
+            return new Dictionary<string, string>()
+            {
+                { StackTrace, GenerateJsonStringStackTrace(stackTrace) }
+            };
         }
 
         /// <summary>

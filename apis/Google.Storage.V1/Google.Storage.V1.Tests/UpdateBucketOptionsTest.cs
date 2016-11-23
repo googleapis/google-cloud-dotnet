@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1.Data;
 using System;
 using Xunit;
 using static Google.Apis.Storage.v1.BucketsResource;
@@ -24,9 +25,24 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_DefaultOptions()
         {
-            var request = new UpdateRequest(null, null, "bucket");
+            var bucket = new Bucket { Metageneration = 10L };
+            var request = new UpdateRequest(null, bucket, "bucket");
             var options = new UpdateBucketOptions();
-            options.ModifyRequest(request);
+            options.ModifyRequest(request, bucket);
+            Assert.Equal(10L, request.IfMetagenerationMatch);
+            Assert.Null(request.IfMetagenerationNotMatch);
+            Assert.Null(request.PredefinedAcl);
+            Assert.Null(request.PredefinedDefaultObjectAcl);
+            Assert.Null(request.Projection);
+        }
+
+        [Fact]
+        public void ModifyRequest_ForceNoPreconditions()
+        {
+            var bucket = new Bucket { Metageneration = 10L };
+            var request = new UpdateRequest(null, bucket, "bucket");
+            var options = new UpdateBucketOptions { ForceNoPreconditions = true };
+            options.ModifyRequest(request, bucket);
             Assert.Null(request.IfMetagenerationMatch);
             Assert.Null(request.IfMetagenerationNotMatch);
             Assert.Null(request.PredefinedAcl);
@@ -37,7 +53,8 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_PositiveMatchOptions()
         {
-            var request = new UpdateRequest(null, null, "bucket");
+            var bucket = new Bucket { Metageneration = 10L };
+            var request = new UpdateRequest(null, bucket, "bucket");
             var options = new UpdateBucketOptions
             {
                 IfMetagenerationMatch = 1L,
@@ -45,7 +62,7 @@ namespace Google.Storage.V1.Tests
                 PredefinedDefaultObjectAcl = PredefinedObjectAcl.BucketOwnerFullControl,
                 Projection = Projection.Full
             };
-            options.ModifyRequest(request);
+            options.ModifyRequest(request, bucket);
             Assert.Equal(1L, request.IfMetagenerationMatch);
             Assert.Null(request.IfMetagenerationNotMatch);
             Assert.Equal(PredefinedAclEnum.AuthenticatedRead, request.PredefinedAcl);
@@ -56,7 +73,8 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_NegativeMatchOptions()
         {
-            var request = new UpdateRequest(null, null, "bucket");
+            var bucket = new Bucket { Metageneration = 10L };
+            var request = new UpdateRequest(null, bucket, "bucket");
             var options = new UpdateBucketOptions
             {
                 IfMetagenerationNotMatch = 1L,
@@ -64,7 +82,7 @@ namespace Google.Storage.V1.Tests
                 PredefinedDefaultObjectAcl = PredefinedObjectAcl.BucketOwnerFullControl,
                 Projection = Projection.Full
             };
-            options.ModifyRequest(request);
+            options.ModifyRequest(request, bucket);
             Assert.Null(request.IfMetagenerationMatch);
             Assert.Equal(1L, request.IfMetagenerationNotMatch);
             Assert.Equal(PredefinedAclEnum.AuthenticatedRead, request.PredefinedAcl);
@@ -75,12 +93,22 @@ namespace Google.Storage.V1.Tests
         [Fact]
         public void ModifyRequest_MatchNotMatchConflicts()
         {
-            var request = new UpdateRequest(null, null, "bucket");
+            var bucket = new Bucket { Metageneration = 10L };
+            var request = new UpdateRequest(null, bucket, "bucket");
             Assert.Throws<ArgumentException>(() =>
             {
                 var options = new UpdateBucketOptions { IfMetagenerationMatch = 1L, IfMetagenerationNotMatch = 2L };
-                options.ModifyRequest(request);
+                options.ModifyRequest(request, bucket);
             });
+        }
+
+        [Fact]
+        public void ModifyRequest_ForceNoPreconditions_ButPreconditionsSet()
+        {
+            var bucket = new Bucket { Metageneration = 10L };
+            var request = new UpdateRequest(null, bucket, "bucket");
+            var options = new UpdateBucketOptions { ForceNoPreconditions = true, IfMetagenerationMatch = 2L };
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(request, bucket));
         }
     }
 }
