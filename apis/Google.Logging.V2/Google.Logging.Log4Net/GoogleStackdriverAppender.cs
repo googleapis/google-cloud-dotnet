@@ -182,7 +182,8 @@ namespace Google.Logging.Log4Net
             var labels = new Dictionary<string, string>();
             if (_withMetaData.Contains(MetaDataType.Location))
             {
-                labels.Add(nameof(MetaDataType.Location) + ".FileName", loggingEvent.LocationInformation.FileName);
+                if(loggingEvent.LocationInformation.FileName != null)
+                    labels.Add(nameof(MetaDataType.Location) + ".FileName", loggingEvent.LocationInformation.FileName);
                 labels.Add(nameof(MetaDataType.Location) + ".ClassName", loggingEvent.LocationInformation.ClassName);
                 labels.Add(nameof(MetaDataType.Location) + ".LineNumber", loggingEvent.LocationInformation.LineNumber);
             }
