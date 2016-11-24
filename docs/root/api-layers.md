@@ -23,7 +23,7 @@ either the REST-based HTTP 1.1 and JSON, or gRPC over HTTP 2.0 and
 [Protocol Buffers](https://developers.google.com/protocol-buffers/).
 
 The google-cloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
-`Google.Storage.V1` and `Google.Bigquery.V2` are hand-written layers over the existing REST-based
+`Google.Cloud.Storage.V1` and `Google.Bigquery.V2` are hand-written layers over the existing REST-based
 libraries for the [Google Cloud Storage](https://cloud.google.com/storage) and
 [BigQuery](https://cloud.google.com/bigquery) APIs, whereas other libraries target gRPC-based APIs.
 Where gRPC access to an API is available, our client libraries use it.
@@ -98,16 +98,16 @@ built incrementally based on feedback.
 ## Layers of REST-based libraries
 
 The REST-based libraries wrap existing generated code provided in other NuGet packages. For example,
-`Google.Storage.V1` depends on `Google.Apis.Storage.v1`. The wrapper libraries exist to provide
+`Google.Cloud.Storage.V1` depends on `Google.Apis.Storage.v1`. The wrapper libraries exist to provide
 a more idiomatic way of working with the APIs than is exposed by the auto-generated code.
 
 Where functionality hasn't been explicitly wrapped, application code can always access
 the underlying REST service.
 
-To show the layering involved, we'll use the Google.Storage.V1 client library as an example.
+To show the layering involved, we'll use the Google.Cloud.Storage.V1 client library as an example.
 An application using this library will typically end up with the following assemblies:
 
-- Google.Storage.V1: the wrapper library
+- Google.Cloud.Storage.V1: the wrapper library
 - Google.Apis.Storage.v1: the REST service library that the wrapper library uses to call the REST API
 - Google.Api.Gax/Google.Api.Gax.Rest: support libraries providing functionality required across multiple
   REST-based wrapper libraries, such as [page streaming](page-streaming.md).
@@ -119,9 +119,9 @@ An application using this library will typically end up with the following assem
   asynchronous sequences
 
 For simple use cases, you can simply use the
-[Google.Storage.V1.StorageClient](Google.Storage.V1/api/Google.Storage.V1.StorageClient.html) class.
+[Google.Cloud.Storage.V1.StorageClient](Google.Cloud.Storage.V1/api/Google.Cloud.Storage.V1.StorageClient.html) class.
 If your application code requires functionality which isn't wrapped, you can use the
-[StorageClient.Service](Google.Storage.V1/api/Google.Storage.V1.StorageClient.html##Google_Storage_V1_StorageClient_Service) property
+[StorageClient.Service](Google.Cloud.Storage.V1/api/Google.Cloud.Storage.V1.StorageClient.html##Google_Storage_V1_StorageClient_Service) property
 to obtain a reference to a `Google.Apis.Storage.v1.StorageService` which can be used
 for all other operations. This is the same `StorageService` object that the `StorageClient`
 uses for its API calls, with whatever authentication information you provided when creating
