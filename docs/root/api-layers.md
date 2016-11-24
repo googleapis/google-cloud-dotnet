@@ -23,7 +23,7 @@ either the REST-based HTTP 1.1 and JSON, or gRPC over HTTP 2.0 and
 [Protocol Buffers](https://developers.google.com/protocol-buffers/).
 
 The google-cloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
-`Google.Cloud.Storage.V1` and `Google.Bigquery.V2` are hand-written layers over the existing REST-based
+`Google.Cloud.Storage.V1` and `Google.Cloud.BigQuery.V2` are hand-written layers over the existing REST-based
 libraries for the [Google Cloud Storage](https://cloud.google.com/storage) and
 [BigQuery](https://cloud.google.com/bigquery) APIs, whereas other libraries target gRPC-based APIs.
 Where gRPC access to an API is available, our client libraries use it.
