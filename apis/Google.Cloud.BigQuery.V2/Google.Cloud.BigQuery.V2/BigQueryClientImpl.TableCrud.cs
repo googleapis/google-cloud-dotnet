@@ -53,12 +53,12 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<TableList, BigQueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
+        public override PagedEnumerable<TableList, BigQueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
 
             var pageManager = new TablePageManager(this);
-            return new PagedEnumerable<ListRequest, TableList, BigQueryTable>(
+            return new RestPagedEnumerable<ListRequest, TableList, BigQueryTable>(
                 () => CreateListTablesRequest(datasetReference, options),
                 pageManager);
         }
@@ -120,12 +120,12 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(DatasetReference datasetReference, ListTablesOptions options = null)
+        public override PagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(DatasetReference datasetReference, ListTablesOptions options = null)
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
 
             var pageManager = new TablePageManager(this);
-            return new PagedAsyncEnumerable<ListRequest, TableList, BigQueryTable>(
+            return new RestPagedAsyncEnumerable<ListRequest, TableList, BigQueryTable>(
                 () => CreateListTablesRequest(datasetReference, options),
                 pageManager);
         }

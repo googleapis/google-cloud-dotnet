@@ -99,7 +99,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within this dataset.</returns>
-        public IPagedEnumerable<TableList, BigQueryTable> ListTables(ListTablesOptions options = null) => _client.ListTables(Reference, options);
+        public PagedEnumerable<TableList, BigQueryTable> ListTables(ListTablesOptions options = null) => _client.ListTables(Reference, options);
 
         /// <summary>
         /// Creates a table within this dataset.
@@ -182,7 +182,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of tables within this dataset.</returns>
-        public IPagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(ListTablesOptions options = null) => _client.ListTablesAsync(Reference, options);
+        public PagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(ListTablesOptions options = null) => _client.ListTablesAsync(Reference, options);
 
         /// <summary>
         /// Asynchronously creates a table within this dataset.

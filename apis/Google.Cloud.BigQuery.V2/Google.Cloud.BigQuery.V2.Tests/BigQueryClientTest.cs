@@ -871,36 +871,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
         private static JobReference GetJobReference(string JobId) =>
             new JobReference { ProjectId = ProjectId, JobId = JobId };
 
-        // TODO: Create a simple implementation in Google.Api.Gax.Testing, after the planned refactoring.
-        private class UnimplementedPagedEnumerable<TResponse, TResource> : IPagedEnumerable<TResponse, TResource>
+        private class UnimplementedPagedEnumerable<TResponse, TResource> : PagedEnumerable<TResponse, TResource>
         {
-            public IResponseEnumerable<TResponse, TResource> AsPages()
-            {
-                throw new NotImplementedException();
-            }
-
-            public IEnumerator<TResource> GetEnumerator()
-            {
-                throw new NotImplementedException();
-            }
-
-            IEnumerator IEnumerable.GetEnumerator()
-            {
-                throw new NotImplementedException();
-            }
         }
 
-        private class UnimplementedPagedAsyncEnumerable<TResponse, TResource> : IPagedAsyncEnumerable<TResponse, TResource>
+        private class UnimplementedPagedAsyncEnumerable<TResponse, TResource> : PagedAsyncEnumerable<TResponse, TResource>
         {
-            public IResponseAsyncEnumerable<TResponse, TResource> AsPages()
-            {
-                throw new NotImplementedException();
-            }
-
-            public IAsyncEnumerator<TResource> GetEnumerator()
-            {
-                throw new NotImplementedException();
-            }
         }
     }
 }

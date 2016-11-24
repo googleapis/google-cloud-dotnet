@@ -44,12 +44,12 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<JobList, BigQueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
+        public override PagedEnumerable<JobList, BigQueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var pageManager = new JobPageManager(this);
-            return new PagedEnumerable<ListRequest, JobList, BigQueryJob>(
+            return new RestPagedEnumerable<ListRequest, JobList, BigQueryJob>(
                 () => CreateListJobsRequest(projectReference, options),
                 pageManager);
         }
@@ -92,12 +92,12 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(ProjectReference projectReference, ListJobsOptions options = null)
+        public override PagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(ProjectReference projectReference, ListJobsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var pageManager = new JobPageManager(this);
-            return new PagedAsyncEnumerable<ListRequest, JobList, BigQueryJob>(
+            return new RestPagedAsyncEnumerable<ListRequest, JobList, BigQueryJob>(
                 () => CreateListJobsRequest(projectReference, options),
                 pageManager);
         }

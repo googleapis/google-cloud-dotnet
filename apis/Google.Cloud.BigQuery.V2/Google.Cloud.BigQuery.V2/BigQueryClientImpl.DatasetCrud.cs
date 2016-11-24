@@ -51,12 +51,12 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
+        public override PagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var pageManager = new DatasetPageManager(this);
-            return new PagedEnumerable<ListRequest, DatasetList, BigQueryDataset>(
+            return new RestPagedEnumerable<ListRequest, DatasetList, BigQueryDataset>(
                 () => CreateListDatasetsRequest(projectReference, options),
                 pageManager);
         }
@@ -111,12 +111,12 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)
+        public override PagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(projectReference, nameof(projectReference));
 
             var pageManager = new DatasetPageManager(this);
-            return new PagedAsyncEnumerable<ListRequest, DatasetList, BigQueryDataset>(
+            return new RestPagedAsyncEnumerable<ListRequest, DatasetList, BigQueryDataset>(
                 () => CreateListDatasetsRequest(projectReference, options),
                 pageManager);
         }

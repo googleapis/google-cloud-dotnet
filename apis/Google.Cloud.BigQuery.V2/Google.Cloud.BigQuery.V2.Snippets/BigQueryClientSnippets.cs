@@ -204,7 +204,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Now populate the table with data...
             // End snippet
 
-            IPagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
+            PagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
             List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.Contains(tableId, ids);
         }
@@ -218,7 +218,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Snippet: ListRows(*,*,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
-            IPagedEnumerable<TableDataList, BigQueryRow> result = client.ListRows(datasetId, tableId);
+            PagedEnumerable<TableDataList, BigQueryRow> result = client.ListRows(datasetId, tableId);
             foreach (BigQueryRow row in result)
             {
                 DateTime timestamp = (DateTime) row["game_started"];
@@ -558,7 +558,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             client.PollJobUntilCompleted(job.JobReference);
 
             // Now list its rows
-            IPagedEnumerable<TableDataList, BigQueryRow> result = client.ListRows(datasetId, destinationTableId);
+            PagedEnumerable<TableDataList, BigQueryRow> result = client.ListRows(datasetId, destinationTableId);
             foreach (BigQueryRow row in result)
             {
                 DateTime timestamp = (DateTime) row["game_started"];
@@ -594,7 +594,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             client.DeleteTable(datasetId, tableId);
             // End snippet
 
-            IPagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
+            PagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
             List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.DoesNotContain(tableId, ids);
         }
@@ -610,7 +610,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             client.DeleteDataset(datasetId);
             // End snippet
 
-            IPagedEnumerable<DatasetList, BigQueryDataset> datasets = client.ListDatasets();
+            PagedEnumerable<DatasetList, BigQueryDataset> datasets = client.ListDatasets();
             List<string> ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
             Assert.DoesNotContain(datasetId, ids);
         }
@@ -620,7 +620,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             // Snippet: ListProjects(*)
             BigQueryClient client = BigQueryClient.Create("irrelevant");
-            IPagedEnumerable<ProjectList, CloudProject> projects = client.ListProjects();
+            PagedEnumerable<ProjectList, CloudProject> projects = client.ListProjects();
             foreach (CloudProject project in projects)
             {
                 Console.WriteLine($"{project.ProjectId}: {project.FriendlyName}");
@@ -862,7 +862,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Now populate the table with data...
             // End snippet
 
-            IPagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
+            PagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
             List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.Contains(tableId, ids);
         }
@@ -876,7 +876,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Snippet: ListRowsAsync(*,*,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-            IPagedAsyncEnumerable<TableDataList, BigQueryRow> result = client.ListRowsAsync(datasetId, tableId);
+            PagedAsyncEnumerable<TableDataList, BigQueryRow> result = client.ListRowsAsync(datasetId, tableId);
             await result.ForEachAsync(row =>
             {
                 DateTime timestamp = (DateTime) row["game_started"];
@@ -1216,7 +1216,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             await client.PollJobUntilCompletedAsync(job.JobReference);
 
             // Now list its rows
-            IPagedAsyncEnumerable<TableDataList, BigQueryRow> result = client.ListRowsAsync(datasetId, destinationTableId);
+            PagedAsyncEnumerable<TableDataList, BigQueryRow> result = client.ListRowsAsync(datasetId, destinationTableId);
             await result.ForEachAsync(row =>
             {
                 DateTime timestamp = (DateTime) row["game_started"];
@@ -1252,7 +1252,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             await client.DeleteTableAsync(datasetId, tableId);
             // End snippet
 
-            IPagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
+            PagedEnumerable<TableList, BigQueryTable> tables = client.ListTables(datasetId);
             List<string> ids = tables.Select(ds => ds.Reference.TableId).ToList();
             Assert.DoesNotContain(tableId, ids);
         }
@@ -1268,7 +1268,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             await client.DeleteDatasetAsync(datasetId);
             // End snippet
 
-            IPagedEnumerable<DatasetList, BigQueryDataset> datasets = client.ListDatasets();
+            PagedEnumerable<DatasetList, BigQueryDataset> datasets = client.ListDatasets();
             List<string> ids = datasets.Select(ds => ds.Reference.DatasetId).ToList();
             Assert.DoesNotContain(datasetId, ids);
         }
@@ -1278,7 +1278,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             // Snippet: ListProjectsAsync(*)
             BigQueryClient client = BigQueryClient.Create("irrelevant");
-            IPagedAsyncEnumerable<ProjectList, CloudProject> projects = client.ListProjectsAsync();
+            PagedAsyncEnumerable<ProjectList, CloudProject> projects = client.ListProjectsAsync();
             await projects.ForEachAsync(project =>
             {
                 Console.WriteLine($"{project.ProjectId}: {project.FriendlyName}");

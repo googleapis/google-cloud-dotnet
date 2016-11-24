@@ -33,19 +33,19 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc />
-        public override IPagedAsyncEnumerable<Buckets, Bucket> ListBucketsAsync(
+        public override PagedAsyncEnumerable<Buckets, Bucket> ListBucketsAsync(
             string projectId, ListBucketsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            return new PagedAsyncEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
+            return new RestPagedAsyncEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
                 () => CreateListBucketsRequest(projectId, options), BucketPageManager.Instance);
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<Buckets, Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
+        public override PagedEnumerable<Buckets, Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            return new PagedEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
+            return new RestPagedEnumerable<BucketsResource.ListRequest, Buckets, Bucket>(
                 () => CreateListBucketsRequest(projectId, options), BucketPageManager.Instance);
         }
 

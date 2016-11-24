@@ -153,7 +153,7 @@ namespace Google.Cloud.BigQuery.V2
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public virtual IPagedEnumerable<TableDataList, BigQueryRow> ListRows(string projectId, string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
+        public virtual PagedEnumerable<TableDataList, BigQueryRow> ListRows(string projectId, string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
             ListRows(GetTableReference(projectId, datasetId, tableId), schema, options);
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Google.Cloud.BigQuery.V2
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public virtual IPagedEnumerable<TableDataList, BigQueryRow> ListRows(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
+        public virtual PagedEnumerable<TableDataList, BigQueryRow> ListRows(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
             ListRows(GetTableReference(datasetId, tableId), schema, options);
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Google.Cloud.BigQuery.V2
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public virtual IPagedEnumerable<TableDataList, BigQueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        public virtual PagedEnumerable<TableDataList, BigQueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -333,7 +333,7 @@ namespace Google.Cloud.BigQuery.V2
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the rows within the table.</returns>
-        public virtual IPagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(string projectId, string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
+        public virtual PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(string projectId, string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
             ListRowsAsync(GetTableReference(projectId, datasetId, tableId), schema, options);
 
         /// <summary>
@@ -346,7 +346,7 @@ namespace Google.Cloud.BigQuery.V2
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the rows within the table.</returns>
-        public virtual IPagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
+        public virtual PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(string datasetId, string tableId, TableSchema schema = null, ListRowsOptions options = null) =>
             ListRowsAsync(GetTableReference(datasetId, tableId), schema, options);
 
         /// <summary>
@@ -357,7 +357,7 @@ namespace Google.Cloud.BigQuery.V2
         /// the table first.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the rows within the table.</returns>
-        public virtual IPagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        public virtual PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             throw new NotImplementedException();
         }

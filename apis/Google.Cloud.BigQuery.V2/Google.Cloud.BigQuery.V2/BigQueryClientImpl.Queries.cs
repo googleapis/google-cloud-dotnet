@@ -119,7 +119,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<TableDataList, BigQueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        public override PagedEnumerable<TableDataList, BigQueryRow> ListRows(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
@@ -132,7 +132,7 @@ namespace Google.Cloud.BigQuery.V2
                 options?.ModifyRequest(request);
                 return request;
             };
-            return new PagedEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
+            return new RestPagedEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 requestProvider,
                 pageManager);
         }
@@ -213,7 +213,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
+        public override PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(TableReference tableReference, TableSchema schema = null, ListRowsOptions options = null)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             schema = schema ?? GetSchema(tableReference);
@@ -226,7 +226,7 @@ namespace Google.Cloud.BigQuery.V2
                 options?.ModifyRequest(request);
                 return request;
             };
-            return new PagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
+            return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 requestProvider,
                 pageManager);
         }
