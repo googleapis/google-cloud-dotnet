@@ -14,7 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
-using Google.Storage.V1;
+using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.IO;

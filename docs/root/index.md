@@ -18,11 +18,11 @@ Alpha and beta releases from NuGet.org:
 
 - [Google.Bigquery.V2](Google.Bigquery.V2/index.html)
 - [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
+- [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 - [Google.Datastore.V1](Google.Datastore.V1/index.html)
 - [Google.Logging.V2](Google.Logging.V2/index.html)
 - [Google.Pubsub.V1](Google.Pubsub.V1/index.html)
-- [Google.Storage.V1](Google.Storage.V1/index.html)
 
 Alpha releases from
 [MyGet](https://www.myget.org/gallery/google-dotnet-public):

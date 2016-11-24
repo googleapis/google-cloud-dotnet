@@ -16,7 +16,7 @@ The Google Cloud Libraries for .NET support the following Google Cloud Platform 
 * [Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Logging.V2/)
 * Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1)
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Pubsub.V1/)
-* [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Storage.V1/)
+* [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/)
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/)
 * [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1Beta1/)
 * [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1Beta1/)
