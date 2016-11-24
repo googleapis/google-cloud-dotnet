@@ -28,7 +28,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of projects the user has access to.</returns>
-        public virtual IPagedEnumerable<ProjectList, CloudProject> ListProjects(ListProjectsOptions options = null)
+        public virtual PagedEnumerable<ProjectList, CloudProject> ListProjects(ListProjectsOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -41,7 +41,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of projects the user has access to.</returns>
-        public virtual IPagedAsyncEnumerable<ProjectList, CloudProject> ListProjectsAsync(ListProjectsOptions options = null)
+        public virtual PagedAsyncEnumerable<ProjectList, CloudProject> ListProjectsAsync(ListProjectsOptions options = null)
         {
             throw new NotImplementedException();
         }

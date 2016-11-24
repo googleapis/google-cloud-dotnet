@@ -40,19 +40,19 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<ProjectList, CloudProject> ListProjects(ListProjectsOptions options = null)
+        public override PagedEnumerable<ProjectList, CloudProject> ListProjects(ListProjectsOptions options = null)
         {
             var pageManager = new ProjectsPageManager(this);
-            return new PagedEnumerable<ListRequest, ProjectList, CloudProject>(
+            return new RestPagedEnumerable<ListRequest, ProjectList, CloudProject>(
                 () => CreateListProjectsRequest(options),
                 pageManager);
         }
 
         /// <inheritdoc />
-        public override IPagedAsyncEnumerable<ProjectList, CloudProject> ListProjectsAsync(ListProjectsOptions options = null)
+        public override PagedAsyncEnumerable<ProjectList, CloudProject> ListProjectsAsync(ListProjectsOptions options = null)
         {
             var pageManager = new ProjectsPageManager(this);
-            return new PagedAsyncEnumerable<ListRequest, ProjectList, CloudProject>(
+            return new RestPagedAsyncEnumerable<ListRequest, ProjectList, CloudProject>(
                 () => CreateListProjectsRequest(options),
                 pageManager);
         }

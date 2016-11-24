@@ -28,7 +28,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of the jobs within this project.</returns>
-        public virtual IPagedEnumerable<JobList, BigQueryJob> ListJobs(ListJobsOptions options = null) =>
+        public virtual PagedEnumerable<JobList, BigQueryJob> ListJobs(ListJobsOptions options = null) =>
             ListJobs(GetProjectReference(ProjectId), options);
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project to list the jobs from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of the jobs within the specified project.</returns>
-        public virtual IPagedEnumerable<JobList, BigQueryJob> ListJobs(string projectId, ListJobsOptions options = null) =>
+        public virtual PagedEnumerable<JobList, BigQueryJob> ListJobs(string projectId, ListJobsOptions options = null) =>
             ListJobs(GetProjectReference(projectId), options);
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of the jobs within the specified project.</returns>
-        public virtual IPagedEnumerable<JobList, BigQueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
+        public virtual PagedEnumerable<JobList, BigQueryJob> ListJobs(ProjectReference projectReference, ListJobsOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -160,7 +160,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the jobs within this project.</returns>
-        public virtual IPagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(ListJobsOptions options = null) =>
+        public virtual PagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(ListJobsOptions options = null) =>
             ListJobsAsync(GetProjectReference(ProjectId), options);
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project to list the jobs from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the jobs within the specified project.</returns>
-        public virtual IPagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(string projectId, ListJobsOptions options = null) =>
+        public virtual PagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(string projectId, ListJobsOptions options = null) =>
             ListJobsAsync(GetProjectReference(projectId), options);
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the jobs within the specified project.</returns>
-        public virtual IPagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(ProjectReference projectReference, ListJobsOptions options = null)
+        public virtual PagedAsyncEnumerable<JobList, BigQueryJob> ListJobsAsync(ProjectReference projectReference, ListJobsOptions options = null)
         {
             throw new NotImplementedException();
         }

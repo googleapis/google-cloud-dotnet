@@ -116,7 +116,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The results of listing the rows within the table.</returns>
-        public IPagedEnumerable<TableDataList, BigQueryRow> ListRows(ListRowsOptions options = null) => _client.ListRows(Reference, Schema, options);
+        public PagedEnumerable<TableDataList, BigQueryRow> ListRows(ListRowsOptions options = null) => _client.ListRows(Reference, Schema, options);
 
         /// <summary>
         /// Inserts a single row of data into this table.
@@ -198,7 +198,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of the rows within the table.</returns>
-        public IPagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(ListRowsOptions options = null) => _client.ListRowsAsync(Reference, Schema, options);
+        public PagedAsyncEnumerable<TableDataList, BigQueryRow> ListRowsAsync(ListRowsOptions options = null) => _client.ListRowsAsync(Reference, Schema, options);
 
         /// <summary>
         /// Asynchronously inserts a single row of data into this table.

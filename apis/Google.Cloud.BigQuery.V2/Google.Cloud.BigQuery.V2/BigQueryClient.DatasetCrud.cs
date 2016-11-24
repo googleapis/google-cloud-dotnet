@@ -60,7 +60,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of datasets within this project.</returns>
-        public virtual IPagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(ListDatasetsOptions options = null) =>
+        public virtual PagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(ListDatasetsOptions options = null) =>
             ListDatasets(GetProjectReference(ProjectId), options);
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project to list the datasets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of datasets within the specified project.</returns>
-        public virtual IPagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(string projectId, ListDatasetsOptions options = null) =>
+        public virtual PagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(string projectId, ListDatasetsOptions options = null) =>
             ListDatasets(GetProjectReference(projectId), options);
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of datasets within the specified project.</returns>
-        public virtual IPagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
+        public virtual PagedEnumerable<DatasetList, BigQueryDataset> ListDatasets(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -226,7 +226,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of datasets within this project.</returns>
-        public virtual IPagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ListDatasetsOptions options = null) =>
+        public virtual PagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ListDatasetsOptions options = null) =>
             ListDatasetsAsync(GetProjectReference(ProjectId), options);
 
         /// <summary>
@@ -236,7 +236,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The project to list the datasets from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of datasets within the specified project.</returns>
-        public virtual IPagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(string projectId, ListDatasetsOptions options = null) =>
+        public virtual PagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(string projectId, ListDatasetsOptions options = null) =>
             ListDatasetsAsync(GetProjectReference(projectId), options);
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectReference">A fully-qualified identifier for the project. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of datasets within the specified project.</returns>
-        public virtual IPagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)
+        public virtual PagedAsyncEnumerable<DatasetList, BigQueryDataset> ListDatasetsAsync(ProjectReference projectReference, ListDatasetsOptions options = null)
         {
             throw new NotImplementedException();
         }

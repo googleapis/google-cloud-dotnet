@@ -43,7 +43,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Snippet: ListRows
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, tableId);
-            IPagedEnumerable<TableDataList, BigQueryRow> result = table.ListRows();
+            PagedEnumerable<TableDataList, BigQueryRow> result = table.ListRows();
             foreach (BigQueryRow row in result)
             {
                 DateTime timestamp = (DateTime)row["game_started"];
@@ -68,7 +68,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Snippet: ListRowsAsync
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, tableId);
-            IPagedAsyncEnumerable<TableDataList, BigQueryRow> result = table.ListRowsAsync();
+            PagedAsyncEnumerable<TableDataList, BigQueryRow> result = table.ListRowsAsync();
             await result.ForEachAsync(row =>
             {
                 DateTime timestamp = (DateTime)row["game_started"];

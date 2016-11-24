@@ -64,7 +64,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within the dataset.</returns>
-        public virtual IPagedEnumerable<TableList, BigQueryTable> ListTables(string projectId, string datasetId, ListTablesOptions options = null) =>
+        public virtual PagedEnumerable<TableList, BigQueryTable> ListTables(string projectId, string datasetId, ListTablesOptions options = null) =>
             ListTables(GetDatasetReference(projectId, datasetId), options);
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within the dataset.</returns>
-        public virtual IPagedEnumerable<TableList, BigQueryTable> ListTables(string datasetId, ListTablesOptions options = null) =>
+        public virtual PagedEnumerable<TableList, BigQueryTable> ListTables(string datasetId, ListTablesOptions options = null) =>
             ListTables(GetDatasetReference(datasetId), options);
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within the dataset.</returns>
-        public virtual IPagedEnumerable<TableList, BigQueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
+        public virtual PagedEnumerable<TableList, BigQueryTable> ListTables(DatasetReference datasetReference, ListTablesOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -247,7 +247,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of tables within the dataset.</returns>
-        public virtual IPagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(string projectId, string datasetId, ListTablesOptions options = null) =>
+        public virtual PagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(string projectId, string datasetId, ListTablesOptions options = null) =>
             ListTablesAsync(GetDatasetReference(projectId, datasetId), options);
 
         /// <summary>
@@ -257,7 +257,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetId">The ID of the dataset to list tables from. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of tables within the dataset.</returns>
-        public virtual IPagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(string datasetId, ListTablesOptions options = null) =>
+        public virtual PagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(string datasetId, ListTablesOptions options = null) =>
             ListTablesAsync(GetDatasetReference(datasetId), options);
 
         /// <summary>
@@ -266,7 +266,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="datasetReference">A fully-qualified identifier for the dataset. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of tables within the dataset.</returns>
-        public virtual IPagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(DatasetReference datasetReference, ListTablesOptions options = null)
+        public virtual PagedAsyncEnumerable<TableList, BigQueryTable> ListTablesAsync(DatasetReference datasetReference, ListTablesOptions options = null)
         {
             throw new NotImplementedException();
         }

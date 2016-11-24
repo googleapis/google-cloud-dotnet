@@ -37,21 +37,21 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc />
-        public override IPagedAsyncEnumerable<Objects, Object> ListObjectsAsync(
+        public override PagedAsyncEnumerable<Objects, Object> ListObjectsAsync(
             string bucket,
             string prefix = null,
             ListObjectsOptions options = null)
         {
             ValidateBucketName(bucket);
-            return new PagedAsyncEnumerable<ObjectsResource.ListRequest, Objects, Object>(
+            return new RestPagedAsyncEnumerable<ObjectsResource.ListRequest, Objects, Object>(
                 () => CreateListObjectsRequest(bucket, prefix, options), ObjectPageManager.Instance);
         }
 
         /// <inheritdoc />
-        public override IPagedEnumerable<Objects, Object> ListObjects(string bucket, string prefix = null, ListObjectsOptions options = null)
+        public override PagedEnumerable<Objects, Object> ListObjects(string bucket, string prefix = null, ListObjectsOptions options = null)
         {
             ValidateBucketName(bucket);
-            return new PagedEnumerable<ObjectsResource.ListRequest, Objects, Object>(
+            return new RestPagedEnumerable<ObjectsResource.ListRequest, Objects, Object>(
                 () => CreateListObjectsRequest(bucket, prefix, options), ObjectPageManager.Instance);
         }
 

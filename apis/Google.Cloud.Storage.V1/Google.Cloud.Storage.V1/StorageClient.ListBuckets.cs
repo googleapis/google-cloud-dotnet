@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>An asynchronous sequence of buckets.</returns>
-        public virtual IPagedAsyncEnumerable<Buckets, Bucket> ListBucketsAsync(string projectId, ListBucketsOptions options = null)
+        public virtual PagedAsyncEnumerable<Buckets, Bucket> ListBucketsAsync(string projectId, ListBucketsOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -48,7 +48,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">The options for the operation. May be null, in which case
         /// defaults will be supplied.</param>
         /// <returns>A sequence of buckets within the project.</returns>
-        public virtual IPagedEnumerable<Buckets, Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
+        public virtual PagedEnumerable<Buckets, Bucket> ListBuckets(string projectId, ListBucketsOptions options = null)
         {
             throw new NotImplementedException();
         }
