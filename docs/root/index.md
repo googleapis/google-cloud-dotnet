@@ -16,7 +16,7 @@ supported here.
 
 Alpha and beta releases from NuGet.org:
 
-- [Google.Bigquery.V2](Google.Bigquery.V2/index.html)
+- [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
 - [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
