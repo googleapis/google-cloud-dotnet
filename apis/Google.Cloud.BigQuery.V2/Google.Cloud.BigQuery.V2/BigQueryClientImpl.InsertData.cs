@@ -108,18 +108,19 @@ namespace Google.Cloud.BigQuery.V2
 
         private void HandleInsertAllResponse(TableDataInsertAllResponse response)
         {
-            if (response.InsertErrors != null)
+            var errors = response.InsertErrors;
+            if (errors?.Count > 0)
             {
                 var exception = new GoogleApiException(Service.Name, "Error inserting data")
                 {
                     Error = new RequestError
                     {
                         Errors = response.InsertErrors
-                            .SelectMany(errors => (errors.Errors ?? Enumerable.Empty<ErrorProto>()).Select(error => new SingleError
+                            .SelectMany(rowErrors => (rowErrors.Errors ?? Enumerable.Empty<ErrorProto>()).Select(error => new SingleError
                             {
                                 Location = error.Location,
                                 Reason = error.Reason,
-                                Message = $"Row {errors.Index}: {error.Message}"
+                                Message = $"Row {rowErrors.Index}: {error.Message}"
                             }))
                             .ToList()
                     }
