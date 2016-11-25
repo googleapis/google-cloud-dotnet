@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
+using Google.Apis.Requests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -157,6 +158,35 @@ namespace Google.Cloud.BigQuery.V2
 
             }
             return new BigQueryResultSet(rows, Schema, JobReference, pageToken);
+        }
+
+        /// <summary>
+        /// Returns <c>this</c> if the job has no errors, or throws an exception containing the
+        /// errors. A job may have errors but still contain useful information, and may also contain
+        /// errors before completing.
+        /// </summary>
+        /// <exception cref="GoogleApiException">The job has errors.</exception>
+        /// <returns><c>this</c> if the job has no errors.</returns>
+        public BigQueryQueryJob ThrowOnAnyError()
+        {
+            var errors = _response.Errors;
+            if (errors?.Count > 0)
+            {
+                throw new GoogleApiException(_client.Service.Name, $"Job {JobReference.ProjectId}/{JobReference.JobId} contained errors")
+                {
+                    Error = new RequestError
+                    {
+                        Errors = errors.Select(error => new SingleError
+                        {
+                            Location = error.Location,
+                            Reason = error.Reason,
+                            Message = error.Message
+                        })
+                        .ToList()
+                    }
+                };
+            }
+            return this;
         }
 
         /// <summary>
