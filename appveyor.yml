@@ -32,8 +32,6 @@ install:
 
 # Perform the build.
 build_script:
-  - where bash
-  - bash --version
   - dotnet --info
   - bash build.sh
   - bash coveralls.sh
