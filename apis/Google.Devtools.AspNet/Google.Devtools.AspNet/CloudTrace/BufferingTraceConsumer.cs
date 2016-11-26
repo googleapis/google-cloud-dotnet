@@ -41,10 +41,14 @@ namespace Google.Devtools.AspNet
         /// <summary>The current size of traces.</summary>
         private int _size;
 
-        private BufferingTraceConsumer(ITraceConsumer consumer, int bufferSize = DefaultBufferSize)
+        private BufferingTraceConsumer(ITraceConsumer consumer, int bufferSize)
         {
+            GaxPreconditions.CheckArgument(
+                bufferSize > 0, nameof(bufferSize), "bufferSize must be greater than 0");
+
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _bufferSize = bufferSize;
+
             _traces = new Traces();
             _size = 0;
         }
@@ -55,7 +59,6 @@ namespace Google.Devtools.AspNet
         /// </summary>
         /// <param name="consumer">The consumer to flush traces to, cannot be null.</param>
         /// <param name="bufferSize">Optional, buffer size in bytes.</param>
-        /// <returns></returns>
         public static BufferingTraceConsumer Create(ITraceConsumer consumer, int bufferSize = DefaultBufferSize)
         {
             return new BufferingTraceConsumer(consumer, bufferSize);
@@ -89,7 +92,10 @@ namespace Google.Devtools.AspNet
                 _traces = new Traces();
                 _size = 0;
             }
-            _consumer.Receive(old);
+
+            if (old.Traces_.Count != 0) { 
+                _consumer.Receive(old);
+            }
         }
     }
 }

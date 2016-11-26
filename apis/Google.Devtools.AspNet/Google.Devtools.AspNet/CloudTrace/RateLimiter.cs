@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using System;
-using System.Diagnostics;
 using System.Threading;
 
 namespace Google.Devtools.AspNet
@@ -33,8 +32,8 @@ namespace Google.Devtools.AspNet
         /// <summary>The amount of time that must be waited before allowing tracing.</summary>
         private readonly long _fixedDelayMillis;
 
-        /// <summary>A stopwatch to manage time between events.</summary>
-        private readonly Stopwatch _stopWatch;
+        /// <summary>A timer to manage time between events.</summary>
+        private readonly ITimer _timer;
 
         /// <summary>The last time tracing was allowed.</summary>
         private long _lastCallMillis;
@@ -49,18 +48,17 @@ namespace Google.Devtools.AspNet
             {
                 if (_instance == null)
                 {
-                    _instance = new RateLimiter(qps);
+                    _instance = new RateLimiter(qps, StopwatchTimer.Create());
                 }
             }
-             return _instance;
+            return _instance;
         }
 
-        private RateLimiter(double qps)
-        {
+        internal RateLimiter(double qps, ITimer timer) {
             GaxPreconditions.CheckArgument(qps > 0, nameof(qps), "qps must be greater than 0");
 
-            _stopWatch = new Stopwatch();
-            _stopWatch.Start();
+            _timer = timer;
+            _timer.Start();
 
             _lastCallMillis = 0;
             _fixedDelayMillis = Convert.ToInt64(TimeSpan.FromSeconds(1 / qps).TotalMilliseconds);
@@ -73,7 +71,7 @@ namespace Google.Devtools.AspNet
         /// <returns>True if tracing is allowed.</returns>
         public bool CanTrace()
         {
-            var nowMillis = _stopWatch.ElapsedMilliseconds;
+            var nowMillis = _timer.GetElapsedMilliseconds();
             var lastCallMillis = _lastCallMillis;
             return (nowMillis - lastCallMillis > _fixedDelayMillis) &&
                 Interlocked.CompareExchange(ref _lastCallMillis, nowMillis, lastCallMillis) == lastCallMillis;

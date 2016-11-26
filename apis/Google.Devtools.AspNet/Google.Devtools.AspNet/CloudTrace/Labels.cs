@@ -47,6 +47,11 @@ namespace Google.Devtools.AspNet
         /// </summary>
         public static Dictionary<string, string> FromHttpRequest(HttpRequest request)
         {
+            return FromHttpRequestWrapper(new HttpRequestWrapper(request));
+        }
+
+        internal static Dictionary<string, string> FromHttpRequestWrapper(HttpRequestWrapper request)
+        {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             return new Dictionary<string, string>()
             {
@@ -60,6 +65,11 @@ namespace Google.Devtools.AspNet
         /// Gets a map of labels for a span from an <see cref="HttpResponse"/>, such as status code.
         /// </summary>
         public static Dictionary<string, string> FromHttpResponse(HttpResponse response)
+        {
+            return FromHttpResponseWrapper(new HttpResponseWrapper(response));
+        }
+
+        internal static Dictionary<string, string> FromHttpResponseWrapper(HttpResponseWrapper response)
         {
             GaxPreconditions.CheckNotNull(response, nameof(response));
             return new Dictionary<string, string>()
@@ -81,10 +91,16 @@ namespace Google.Devtools.AspNet
         }
 
         /// <summary>
-        /// Creates a string JSON representation of a stack trace.
+        /// Creates a string JSON representation of a stack trace or the empty string
+        /// if the stack trace has no frames.
         /// </summary>
         private static string GenerateJsonStringStackTrace(StackTrace stackTrace)
         {
+            if (stackTrace.FrameCount == 0)
+            {
+                return string.Empty;
+            }
+
             StringBuilder sb = new StringBuilder();
             StringWriter sw = new StringWriter(sb);
 
@@ -95,7 +111,6 @@ namespace Google.Devtools.AspNet
 
             foreach (StackFrame stackFrame in stackTrace.GetFrames())
             {
-
                 writer.WriteStartObject();
                 writer.WritePropertyName("class_name");
                 writer.WriteValue(stackFrame.GetMethod().DeclaringType.Name);

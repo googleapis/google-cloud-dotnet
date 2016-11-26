@@ -29,6 +29,11 @@ namespace Google.Devtools.AspNet
             _rateLimiter = RateLimiter.GetInstance(config.QpsSampleRate);
         }
 
+        internal RateLimitingTraceOptionsFactory(RateLimiter rateLimiter)
+        {
+            _rateLimiter = GaxPreconditions.CheckNotNull(rateLimiter, nameof(rateLimiter)); ;
+        }
+
         /// <summary>
         /// Create a new <see cref="RateLimitingTraceOptionsFactory"/>.
         /// </summary>
