@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Iam.V1 {
+namespace Google.Cloud.Iam.V1 {
 
   /// <summary>Holder for reflection information generated from google/iam/v1/iam_policy.proto</summary>
   public static partial class IamPolicyReflection {
@@ -38,15 +38,16 @@ namespace Google.Iam.V1 {
             "bVBvbGljeToBKhKaAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlh",
             "bS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52",
             "MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSIvgtPkkwIpIiQvdjEve3Jl",
-            "c291cmNlPSoqfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpCKAoRY29tLmdvb2ds",
-            "ZS5pYW0udjFCDklhbVBvbGljeVByb3RvUAH4AQFiBnByb3RvMw=="));
+            "c291cmNlPSoqfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpCPgoRY29tLmdvb2ds",
+            "ZS5pYW0udjFCDklhbVBvbGljeVByb3RvUAH4AQGqAhNHb29nbGUuQ2xvdWQu",
+            "SWFtLlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Iam.V1.PolicyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.SetIamPolicyRequest), global::Google.Iam.V1.SetIamPolicyRequest.Parser, new[]{ "Resource", "Policy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.GetIamPolicyRequest), global::Google.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.TestIamPermissionsRequest), global::Google.Iam.V1.TestIamPermissionsRequest.Parser, new[]{ "Resource", "Permissions" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.TestIamPermissionsResponse), global::Google.Iam.V1.TestIamPermissionsResponse.Parser, new[]{ "Permissions" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.SetIamPolicyRequest), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser, new[]{ "Resource", "Policy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.GetIamPolicyRequest), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser, new[]{ "Resource" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser, new[]{ "Resource", "Permissions" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.TestIamPermissionsResponse), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser, new[]{ "Permissions" }, null, null, null)
           }));
     }
     #endregion
@@ -63,7 +64,7 @@ namespace Google.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -107,7 +108,7 @@ namespace Google.Iam.V1 {
 
     /// <summary>Field number for the "policy" field.</summary>
     public const int PolicyFieldNumber = 2;
-    private global::Google.Iam.V1.Policy policy_;
+    private global::Google.Cloud.Iam.V1.Policy policy_;
     /// <summary>
     ///  REQUIRED: The complete policy to be applied to the `resource`. The size of
     ///  the policy is limited to a few 10s of KB. An empty policy is a
@@ -115,7 +116,7 @@ namespace Google.Iam.V1 {
     ///  might reject them.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Iam.V1.Policy Policy {
+    public global::Google.Cloud.Iam.V1.Policy Policy {
       get { return policy_; }
       set {
         policy_ = value;
@@ -187,7 +188,7 @@ namespace Google.Iam.V1 {
       }
       if (other.policy_ != null) {
         if (policy_ == null) {
-          policy_ = new global::Google.Iam.V1.Policy();
+          policy_ = new global::Google.Cloud.Iam.V1.Policy();
         }
         Policy.MergeFrom(other.Policy);
       }
@@ -207,7 +208,7 @@ namespace Google.Iam.V1 {
           }
           case 18: {
             if (policy_ == null) {
-              policy_ = new global::Google.Iam.V1.Policy();
+              policy_ = new global::Google.Cloud.Iam.V1.Policy();
             }
             input.ReadMessage(policy_);
             break;
@@ -228,7 +229,7 @@ namespace Google.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -353,7 +354,7 @@ namespace Google.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -504,7 +505,7 @@ namespace Google.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

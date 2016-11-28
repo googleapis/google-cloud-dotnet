@@ -22,7 +22,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Grpc.Core;
 
-namespace Google.Iam.V1 {
+namespace Google.Cloud.Iam.V1 {
   /// <summary>
   ///  ## API Overview
   ///
@@ -54,27 +54,27 @@ namespace Google.Iam.V1 {
   {
     static readonly string __ServiceName = "google.iam.v1.IAMPolicy";
 
-    static readonly Marshaller<global::Google.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Iam.V1.Policy> __Marshaller_Policy = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Iam.V1.SetIamPolicyRequest, global::Google.Iam.V1.Policy> __Method_SetIamPolicy = new Method<global::Google.Iam.V1.SetIamPolicyRequest, global::Google.Iam.V1.Policy>(
+    static readonly Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         MethodType.Unary,
         __ServiceName,
         "SetIamPolicy",
         __Marshaller_SetIamPolicyRequest,
         __Marshaller_Policy);
 
-    static readonly Method<global::Google.Iam.V1.GetIamPolicyRequest, global::Google.Iam.V1.Policy> __Method_GetIamPolicy = new Method<global::Google.Iam.V1.GetIamPolicyRequest, global::Google.Iam.V1.Policy>(
+    static readonly Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         MethodType.Unary,
         __ServiceName,
         "GetIamPolicy",
         __Marshaller_GetIamPolicyRequest,
         __Marshaller_Policy);
 
-    static readonly Method<global::Google.Iam.V1.TestIamPermissionsRequest, global::Google.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new Method<global::Google.Iam.V1.TestIamPermissionsRequest, global::Google.Iam.V1.TestIamPermissionsResponse>(
+    static readonly Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
         MethodType.Unary,
         __ServiceName,
         "TestIamPermissions",
@@ -84,7 +84,7 @@ namespace Google.Iam.V1 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Iam.V1.IamPolicyReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of IAMPolicy</summary>
@@ -94,7 +94,7 @@ namespace Google.Iam.V1 {
       ///  Sets the access control policy on the specified resource. Replaces any
       ///  existing policy.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Iam.V1.Policy> SetIamPolicy(global::Google.Iam.V1.SetIamPolicyRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -104,7 +104,7 @@ namespace Google.Iam.V1 {
       ///  Returns an empty policy if the resource exists and does not have a policy
       ///  set.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Iam.V1.Policy> GetIamPolicy(global::Google.Iam.V1.GetIamPolicyRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -112,7 +112,7 @@ namespace Google.Iam.V1 {
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -146,7 +146,7 @@ namespace Google.Iam.V1 {
       ///  Sets the access control policy on the specified resource. Replaces any
       ///  existing policy.
       /// </summary>
-      public virtual global::Google.Iam.V1.Policy SetIamPolicy(global::Google.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -154,7 +154,7 @@ namespace Google.Iam.V1 {
       ///  Sets the access control policy on the specified resource. Replaces any
       ///  existing policy.
       /// </summary>
-      public virtual global::Google.Iam.V1.Policy SetIamPolicy(global::Google.Iam.V1.SetIamPolicyRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
@@ -162,7 +162,7 @@ namespace Google.Iam.V1 {
       ///  Sets the access control policy on the specified resource. Replaces any
       ///  existing policy.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -170,7 +170,7 @@ namespace Google.Iam.V1 {
       ///  Sets the access control policy on the specified resource. Replaces any
       ///  existing policy.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Iam.V1.SetIamPolicyRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
@@ -179,7 +179,7 @@ namespace Google.Iam.V1 {
       ///  Returns an empty policy if the resource exists and does not have a policy
       ///  set.
       /// </summary>
-      public virtual global::Google.Iam.V1.Policy GetIamPolicy(global::Google.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -188,7 +188,7 @@ namespace Google.Iam.V1 {
       ///  Returns an empty policy if the resource exists and does not have a policy
       ///  set.
       /// </summary>
-      public virtual global::Google.Iam.V1.Policy GetIamPolicy(global::Google.Iam.V1.GetIamPolicyRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
@@ -197,7 +197,7 @@ namespace Google.Iam.V1 {
       ///  Returns an empty policy if the resource exists and does not have a policy
       ///  set.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -206,35 +206,35 @@ namespace Google.Iam.V1 {
       ///  Returns an empty policy if the resource exists and does not have a policy
       ///  set.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Iam.V1.GetIamPolicyRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
       /// </summary>
-      public virtual global::Google.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissions(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
       /// </summary>
-      public virtual global::Google.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissionsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
