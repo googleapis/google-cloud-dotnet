@@ -75,14 +75,14 @@ namespace Google.Devtools.AspNet.Tests
                 {
                     tasks[i] = Task.Run(() =>
                     {
-                        while (true)
+                        while (!source.IsCancellationRequested)
                         {
                             if (rateLimiter.CanTrace())
                             {
                                 Interlocked.Increment(ref canTraceCounter);
                             }
                         }
-                    }, source.Token);
+                    });
                 }
 
                 // Set a timeout of 2.1 seconds which should allow 2 traces.
