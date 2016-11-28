@@ -12,25 +12,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Moq;
 using Xunit;
 
-namespace Google.Devtools.AspNet.Tests.CloudTrace
+namespace Google.Devtools.AspNet.Tests
 {
     public class RateLimitingTraceOptionsFactoryTest
     {
-        // Creates a rate limiter that will allow 1 QPS with the elapsed milliseconds.
-        private RateLimiter GetRateLimiter(long elapsedMilliseconds)
-        {
-            Mock<ITimer> watch = new Mock<ITimer>();
-            watch.Setup(w => w.GetElapsedMilliseconds()).Returns(elapsedMilliseconds);
-            return new RateLimiter(1, watch.Object);
-        }
+       
 
         [Fact]
         public void CreateOptions_ShouldTrace()
         {
-            RateLimiter rateLimiter = GetRateLimiter(1001);
+            RateLimiter rateLimiter = Utils.GetRateLimiter(1001);
             RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
             Assert.True(factory.CreateOptions().ShouldTrace);
         }
@@ -38,7 +31,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         [Fact]
         public void CreateOptions_ShouldNotTrace()
         {
-            RateLimiter rateLimiter = GetRateLimiter(999);
+            RateLimiter rateLimiter = Utils.GetRateLimiter(999);
             RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
             Assert.False(factory.CreateOptions().ShouldTrace);
         }

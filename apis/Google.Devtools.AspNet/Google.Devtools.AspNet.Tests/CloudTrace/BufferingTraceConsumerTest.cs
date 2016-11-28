@@ -16,7 +16,7 @@ using Google.Devtools.Cloudtrace.V1;
 using Moq;
 using Xunit;
 
-namespace Google.Devtools.AspNet.Tests.CloudTrace
+namespace Google.Devtools.AspNet.Tests
 {
     public class BufferingTraceConsumerTest
     {

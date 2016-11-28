@@ -21,7 +21,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using Xunit;
 
-namespace Google.Devtools.AspNet.Tests.CloudTrace
+namespace Google.Devtools.AspNet.Tests
 {
     public class LabelsTest
     {

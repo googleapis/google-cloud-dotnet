@@ -20,7 +20,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Google.Protobuf.Collections;
 
-namespace Google.Devtools.AspNet.Tests.CloudTrace
+using Trace = Google.Devtools.Cloudtrace.V1.Trace;
+
+namespace Google.Devtools.AspNet.Tests
 {
     public class SimpleManagedTracerTest
     {
@@ -31,8 +33,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         private static readonly Dictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
         private static readonly StackTrace EmptyStackTrace = new StackTrace();
 
-        private static Cloudtrace.V1.Trace CreateTrace(string projectId = ProjectId, string traceId = TraceId)
-            => new Cloudtrace.V1.Trace { ProjectId = ProjectId, TraceId = TraceId };
+        private static Trace CreateTrace(string projectId = ProjectId, string traceId = TraceId)
+            => new Trace { ProjectId = ProjectId, TraceId = TraceId };
         
 
         private static bool IsValidSpan(TraceSpan span, string name)

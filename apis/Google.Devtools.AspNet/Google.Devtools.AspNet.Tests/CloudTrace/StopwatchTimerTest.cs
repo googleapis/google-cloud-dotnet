@@ -15,7 +15,7 @@
 using System.Threading;
 using Xunit;
 
-namespace Google.Devtools.AspNet.Tests.CloudTrace
+namespace Google.Devtools.AspNet.Tests
 {
     public class StopwatchTimerTest
     {
@@ -41,6 +41,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             StopwatchTimer timer = StopwatchTimer.Create();
 
             Assert.Equal(0, timer.GetElapsedMilliseconds());
+            Thread.Sleep(10);
             Assert.Equal(0, timer.GetElapsedMilliseconds());
         }
     }

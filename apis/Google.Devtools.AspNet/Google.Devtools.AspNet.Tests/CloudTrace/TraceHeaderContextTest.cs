@@ -30,7 +30,7 @@ namespace Google.Devtools.AspNet.Tests
         /// </summary>
         private string CreateTraceHeaderValue(int? mask = null)
         {
-            string headerValue = TraceId + "/" + SpanId + ";";
+            string headerValue = $"{TraceId}/{SpanId};";
             if (mask != null)
             {
                 headerValue += "o=" + mask;

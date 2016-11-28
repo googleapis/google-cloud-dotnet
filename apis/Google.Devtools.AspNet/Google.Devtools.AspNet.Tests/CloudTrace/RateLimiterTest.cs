@@ -18,38 +18,28 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Devtools.AspNet.Tests.CloudTrace
+namespace Google.Devtools.AspNet.Tests
 {
     public class RateLimiterTest
     {
         [Fact]
         public void CanTrace()
         {
-            Mock<ITimer> watch = new Mock<ITimer>();
-            watch.Setup(w => w.GetElapsedMilliseconds()).Returns(1001);
-
-            RateLimiter rateLimiter = new RateLimiter(1, watch.Object);
+            RateLimiter rateLimiter = Utils.GetRateLimiter(1001);
             Assert.True(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_False()
         {
-            Mock<ITimer> watch = new Mock<ITimer>();
-            watch.Setup(w => w.GetElapsedMilliseconds()).Returns(999);
-
-            RateLimiter rateLimiter = new RateLimiter(1, watch.Object);
+            RateLimiter rateLimiter = Utils.GetRateLimiter(999);
             Assert.False(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_DecimalQps()
         {
-            Queue<long> returnQueue = new Queue<long>(new long[] { 9999, 10001 });
-            Mock<ITimer> watch = new Mock<ITimer>();
-            watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() => returnQueue.Dequeue());
-
-            RateLimiter rateLimiter = new RateLimiter(0.1, watch.Object);
+            RateLimiter rateLimiter = Utils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
         }
@@ -57,12 +47,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         [Fact]
         public void CanTrace_Multiple()
         {
-            Queue<long> returnQueue = new Queue<long>(
-                new long[] { 999, 1001, 1790, 1850, 2030, 2700, 5000 });
-            Mock<ITimer> watch = new Mock<ITimer>();
-            watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() => returnQueue.Dequeue());
-
-            RateLimiter rateLimiter = new RateLimiter(1, watch.Object);
+            RateLimiter rateLimiter = Utils.GetRateLimiter(
+                1, new long[] { 999, 1001, 1790, 1850, 2030, 2700, 5000 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
             Assert.False(rateLimiter.CanTrace());
@@ -73,7 +59,7 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
         }
 
         [Fact]
-        public async void CanTrace_StressTest()
+        public async Task CanTrace_StressTest()
         {
             // Create a rate limiter that allows 1 QPS
             RateLimiter rateLimiter = RateLimiter.GetInstance(1);
@@ -81,10 +67,10 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             int threads = 10;
 
             // Start 10 threads to hit the rate limiter
-            Task[] tasks = new Task[threads + 1];
+            Task[] tasks = new Task[threads];
             for (int i = 0; i < threads; i++)
             {
-                tasks[i] = Task.Factory.StartNew(() =>
+                tasks[i] = Task.Run(() =>
                 {
                     while (true)
                     {
@@ -97,16 +83,8 @@ namespace Google.Devtools.AspNet.Tests.CloudTrace
             }
 
             // Set a timeout of 2.1 seconds which should allow 2 traces.
-            Task timeout = Task.Delay(2100);
-            tasks[threads] = timeout;
-            if (await Task.WhenAny(tasks) == timeout)
-            {
-                Assert.Equal(2, canTraceCounter);
-            }
-            else
-            {
-                Assert.False(true, "A task completed that should not have");
-            }
+            await Task.Delay(2100);
+            Assert.Equal(2, canTraceCounter);
         }
     }
 }

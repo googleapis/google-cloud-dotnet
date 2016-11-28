@@ -31,7 +31,7 @@ namespace Google.Devtools.AspNet
 
         internal RateLimitingTraceOptionsFactory(RateLimiter rateLimiter)
         {
-            _rateLimiter = GaxPreconditions.CheckNotNull(rateLimiter, nameof(rateLimiter)); ;
+            _rateLimiter = GaxPreconditions.CheckNotNull(rateLimiter, nameof(rateLimiter));
         }
 
         /// <summary>

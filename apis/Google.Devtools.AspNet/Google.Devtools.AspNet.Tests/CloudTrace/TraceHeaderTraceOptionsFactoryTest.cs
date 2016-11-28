@@ -14,7 +14,7 @@
 
 using Xunit;
 
-namespace Google.Devtools.AspNet.Tests.CloudTrace
+namespace Google.Devtools.AspNet.Tests
 {
     public class TraceHeaderTraceOptionsFactoryTest
     {

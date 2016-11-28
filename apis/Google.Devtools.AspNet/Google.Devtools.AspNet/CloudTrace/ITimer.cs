@@ -27,7 +27,6 @@ namespace Google.Devtools.AspNet
         /// <summary>
         /// Gets the elapsed milliseconds since the timer has started.
         /// </summary>
-        /// <returns></returns>
         long GetElapsedMilliseconds();
     }
 }
