@@ -30,7 +30,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -40,7 +39,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Longrunning
+namespace Google.LongRunning
 {
     /// <summary>
     /// Settings for a <see cref="OperationsClient"/>.
@@ -283,23 +282,6 @@ namespace Google.Longrunning
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a operation_path resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>operationPath</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate OperationPathTemplate { get; } = new PathTemplate("operations/{operation_path=**}");
-
-        /// <summary>
-        /// Creates a operation_path resource name from its component IDs.
-        /// </summary>
-        /// <param name="operationPathId">The operationPath ID.</param>
-        /// <returns>
-        /// The full operation_path resource name.
-        /// </returns>
-        public static string FormatOperationPathName(string operationPathId) => OperationPathTemplate.Expand(operationPathId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
@@ -456,7 +438,7 @@ namespace Google.Longrunning
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
+        public virtual PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
             string name,
             string filter,
             string pageToken = null,
@@ -493,7 +475,7 @@ namespace Google.Longrunning
         /// <returns>
         /// A pageable sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListOperationsResponse, Operation> ListOperations(
+        public virtual PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
             string name,
             string filter,
             string pageToken = null,
@@ -774,7 +756,7 @@ namespace Google.Longrunning
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
+        public override PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
             string name,
             string filter,
             string pageToken = null,
@@ -789,7 +771,7 @@ namespace Google.Longrunning
                 PageSize = pageSize ?? 0,
             };
             Modify_ListOperationsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
         }
 
         /// <summary>
@@ -819,7 +801,7 @@ namespace Google.Longrunning
         /// <returns>
         /// A pageable sequence of <see cref="Operation"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListOperationsResponse, Operation> ListOperations(
+        public override PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
             string name,
             string filter,
             string pageToken = null,
@@ -834,7 +816,7 @@ namespace Google.Longrunning
                 PageSize = pageSize ?? 0,
             };
             Modify_ListOperationsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
+            return new GrpcPagedEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
         }
 
         /// <summary>

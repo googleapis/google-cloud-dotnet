@@ -30,7 +30,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Longrunning;
+using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -42,7 +42,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Longrunning.Snippets
+namespace Google.LongRunning.Snippets
 {
     public class GeneratedOperationsClientSnippets
     {
@@ -53,9 +53,9 @@ namespace Google.Longrunning.Snippets
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string formattedName = OperationsClient.FormatOperationPathName("[OPERATION_PATH]");
+            string name = "";
             // Make the request
-            Operation response = await operationsClient.GetOperationAsync(formattedName);
+            Operation response = await operationsClient.GetOperationAsync(name);
             // End snippet
         }
 
@@ -65,9 +65,9 @@ namespace Google.Longrunning.Snippets
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string formattedName = OperationsClient.FormatOperationPathName("[OPERATION_PATH]");
+            string name = "";
             // Make the request
-            Operation response = operationsClient.GetOperation(formattedName);
+            Operation response = operationsClient.GetOperation(name);
             // End snippet
         }
 
@@ -80,7 +80,7 @@ namespace Google.Longrunning.Snippets
             string name = "";
             string filter = "";
             // Make the request
-            IPagedAsyncEnumerable<ListOperationsResponse,Operation> response =
+            PagedAsyncEnumerable<ListOperationsResponse,Operation> response =
                 operationsClient.ListOperationsAsync(name, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -90,10 +90,8 @@ namespace Google.Longrunning.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<Operation>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<Operation> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListOperationsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -102,6 +100,18 @@ namespace Google.Longrunning.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -114,7 +124,7 @@ namespace Google.Longrunning.Snippets
             string name = "";
             string filter = "";
             // Make the request
-            IPagedEnumerable<ListOperationsResponse,Operation> response =
+            PagedEnumerable<ListOperationsResponse,Operation> response =
                 operationsClient.ListOperations(name, filter);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -124,9 +134,8 @@ namespace Google.Longrunning.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<Operation> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListOperationsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -135,6 +144,18 @@ namespace Google.Longrunning.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Operation> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Operation item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -145,9 +166,9 @@ namespace Google.Longrunning.Snippets
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string formattedName = OperationsClient.FormatOperationPathName("[OPERATION_PATH]");
+            string name = "";
             // Make the request
-            await operationsClient.CancelOperationAsync(formattedName);
+            await operationsClient.CancelOperationAsync(name);
             // End snippet
         }
 
@@ -157,9 +178,9 @@ namespace Google.Longrunning.Snippets
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string formattedName = OperationsClient.FormatOperationPathName("[OPERATION_PATH]");
+            string name = "";
             // Make the request
-            operationsClient.CancelOperation(formattedName);
+            operationsClient.CancelOperation(name);
             // End snippet
         }
 
@@ -170,9 +191,9 @@ namespace Google.Longrunning.Snippets
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string formattedName = OperationsClient.FormatOperationPathName("[OPERATION_PATH]");
+            string name = "";
             // Make the request
-            await operationsClient.DeleteOperationAsync(formattedName);
+            await operationsClient.DeleteOperationAsync(name);
             // End snippet
         }
 
@@ -182,9 +203,9 @@ namespace Google.Longrunning.Snippets
             // Create client
             OperationsClient operationsClient = OperationsClient.Create();
             // Initialize request argument(s)
-            string formattedName = OperationsClient.FormatOperationPathName("[OPERATION_PATH]");
+            string name = "";
             // Make the request
-            operationsClient.DeleteOperation(formattedName);
+            operationsClient.DeleteOperation(name);
             // End snippet
         }
 
