@@ -61,30 +61,39 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public async Task CanTrace_StressTest()
         {
-            // Create a rate limiter that allows 1 QPS
-            RateLimiter rateLimiter = RateLimiter.GetInstance(1);
-            int canTraceCounter = 0;
-            int threads = 10;
-
-            // Start 10 threads to hit the rate limiter
-            Task[] tasks = new Task[threads];
-            for (int i = 0; i < threads; i++)
+            CancellationTokenSource source = new CancellationTokenSource();
+            try
             {
-                tasks[i] = Task.Run(() =>
-                {
-                    while (true)
-                    {
-                        if (rateLimiter.CanTrace())
-                        {
-                            Interlocked.Increment(ref canTraceCounter);
-                        }
-                    }
-                });
-            }
+                // Create a rate limiter that allows 1 QPS
+                RateLimiter rateLimiter = RateLimiter.GetInstance(1);
+                int canTraceCounter = 0;
+                int threads = 10;
 
-            // Set a timeout of 2.1 seconds which should allow 2 traces.
-            await Task.Delay(2100);
-            Assert.Equal(2, canTraceCounter);
+                // Start 10 threads to hit the rate limiter
+                Task[] tasks = new Task[threads];
+                for (int i = 0; i < threads; i++)
+                {
+                    tasks[i] = Task.Run(() =>
+                    {
+                        while (true)
+                        {
+                            if (rateLimiter.CanTrace())
+                            {
+                                Interlocked.Increment(ref canTraceCounter);
+                            }
+                        }
+                    }, source.Token);
+                }
+
+                // Set a timeout of 2.1 seconds which should allow 2 traces.
+                await Task.Delay(2100);
+                Assert.Equal(2, canTraceCounter);
+            }
+            finally
+            {
+                source.Cancel();
+                source.Dispose();
+            }
         }
     }
 }
