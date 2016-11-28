@@ -67,7 +67,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "cm91cFNlcnZpY2VQcm90b1ABqgIaR29vZ2xlLkNsb3VkLk1vbml0b3Jpbmcu",
             "VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.GroupReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.GroupReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupsRequest), global::Google.Cloud.Monitoring.V3.ListGroupsRequest.Parser, new[]{ "Name", "ChildrenOfGroup", "AncestorsOfGroup", "DescendantsOfGroup", "PageSize", "PageToken" }, new[]{ "Filter" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupsResponse), global::Google.Cloud.Monitoring.V3.ListGroupsResponse.Parser, new[]{ "Group", "NextPageToken" }, null, null, null),
@@ -1263,7 +1263,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "interval" field.</summary>
     public const int IntervalFieldNumber = 6;
-    private global::Google.Monitoring.V3.TimeInterval interval_;
+    private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
     ///  An optional time interval for which results should be returned. Only
     ///  members that were part of the group during the specified interval are
@@ -1271,7 +1271,7 @@ namespace Google.Cloud.Monitoring.V3 {
     ///  membership over the last minute is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TimeInterval Interval {
+    public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
       get { return interval_; }
       set {
         interval_ = value;
@@ -1379,7 +1379,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Monitoring.V3.TimeInterval();
+          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
@@ -1407,7 +1407,7 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 50: {
             if (interval_ == null) {
-              interval_ = new global::Google.Monitoring.V3.TimeInterval();
+              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
             input.ReadMessage(interval_);
             break;

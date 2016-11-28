@@ -18,7 +18,6 @@ using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Monitoring.V3;
-using Google.Monitoring.V3;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -30,7 +29,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Monitoring.V3.Snippets
+namespace Google.Cloud.Monitoring.V3.Snippets
 {
     public class GeneratedMetricServiceClientSnippets
     {

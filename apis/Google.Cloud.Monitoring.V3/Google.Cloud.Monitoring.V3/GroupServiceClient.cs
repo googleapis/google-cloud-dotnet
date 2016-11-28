@@ -17,7 +17,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Monitoring.V3;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -27,7 +26,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Monitoring.V3
+namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Settings for a <see cref="GroupServiceClient"/>.

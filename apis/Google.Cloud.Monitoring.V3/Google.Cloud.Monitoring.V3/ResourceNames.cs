@@ -18,7 +18,7 @@ using Google.Api.Gax;
 using System;
 using System.Linq;
 
-namespace Google.Monitoring.V3
+namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Resource name for the 'project' resource.

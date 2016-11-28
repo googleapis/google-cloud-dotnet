@@ -93,7 +93,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "GGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ISTWV0cmljU2VydmljZVByb3Rv",
             "UAGqAhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5WM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null),
@@ -1481,14 +1481,14 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "interval" field.</summary>
     public const int IntervalFieldNumber = 4;
-    private global::Google.Monitoring.V3.TimeInterval interval_;
+    private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
     ///  The time interval for which results should be returned. Only time series
     ///  that contain data points in the specified interval are included
     ///  in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TimeInterval Interval {
+    public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
       get { return interval_; }
       set {
         interval_ = value;
@@ -1497,14 +1497,14 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "aggregation" field.</summary>
     public const int AggregationFieldNumber = 5;
-    private global::Google.Monitoring.V3.Aggregation aggregation_;
+    private global::Google.Cloud.Monitoring.V3.Aggregation aggregation_;
     /// <summary>
     ///  By default, the raw time series data is returned.
     ///  Use this field to combine multiple time series for different
     ///  views of the data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.Aggregation Aggregation {
+    public global::Google.Cloud.Monitoring.V3.Aggregation Aggregation {
       get { return aggregation_; }
       set {
         aggregation_ = value;
@@ -1696,13 +1696,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Monitoring.V3.TimeInterval();
+          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
       if (other.aggregation_ != null) {
         if (aggregation_ == null) {
-          aggregation_ = new global::Google.Monitoring.V3.Aggregation();
+          aggregation_ = new global::Google.Cloud.Monitoring.V3.Aggregation();
         }
         Aggregation.MergeFrom(other.Aggregation);
       }
@@ -1734,14 +1734,14 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           case 34: {
             if (interval_ == null) {
-              interval_ = new global::Google.Monitoring.V3.TimeInterval();
+              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
             input.ReadMessage(interval_);
             break;
           }
           case 42: {
             if (aggregation_ == null) {
-              aggregation_ = new global::Google.Monitoring.V3.Aggregation();
+              aggregation_ = new global::Google.Cloud.Monitoring.V3.Aggregation();
             }
             input.ReadMessage(aggregation_);
             break;

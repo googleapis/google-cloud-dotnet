@@ -37,7 +37,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "Lmdvb2dsZS5tb25pdG9yaW5nLnYzQgtNZXRyaWNQcm90b1ABqgIaR29vZ2xl",
             "LkNsb3VkLk1vbml0b3JpbmcuVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Monitoring.V3.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "MetricKind", "ValueType", "Points" }, null, null, null)
@@ -85,7 +85,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "interval" field.</summary>
     public const int IntervalFieldNumber = 1;
-    private global::Google.Monitoring.V3.TimeInterval interval_;
+    private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
     ///  The time interval to which the data point applies.  For GAUGE metrics, only
     ///  the end time of the interval is used.  For DELTA metrics, the start and end
@@ -97,7 +97,7 @@ namespace Google.Cloud.Monitoring.V3 {
     ///  following points.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TimeInterval Interval {
+    public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
       get { return interval_; }
       set {
         interval_ = value;
@@ -106,12 +106,12 @@ namespace Google.Cloud.Monitoring.V3 {
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
-    private global::Google.Monitoring.V3.TypedValue value_;
+    private global::Google.Cloud.Monitoring.V3.TypedValue value_;
     /// <summary>
     ///  The value of the data point.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TypedValue Value {
+    public global::Google.Cloud.Monitoring.V3.TypedValue Value {
       get { return value_; }
       set {
         value_ = value;
@@ -180,13 +180,13 @@ namespace Google.Cloud.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Monitoring.V3.TimeInterval();
+          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
       if (other.value_ != null) {
         if (value_ == null) {
-          value_ = new global::Google.Monitoring.V3.TypedValue();
+          value_ = new global::Google.Cloud.Monitoring.V3.TypedValue();
         }
         Value.MergeFrom(other.Value);
       }
@@ -202,14 +202,14 @@ namespace Google.Cloud.Monitoring.V3 {
             break;
           case 10: {
             if (interval_ == null) {
-              interval_ = new global::Google.Monitoring.V3.TimeInterval();
+              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
             input.ReadMessage(interval_);
             break;
           }
           case 18: {
             if (value_ == null) {
-              value_ = new global::Google.Monitoring.V3.TypedValue();
+              value_ = new global::Google.Cloud.Monitoring.V3.TypedValue();
             }
             input.ReadMessage(value_);
             break;
