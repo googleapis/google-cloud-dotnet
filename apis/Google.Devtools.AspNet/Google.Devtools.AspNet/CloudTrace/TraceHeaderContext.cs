@@ -56,12 +56,19 @@ namespace Google.Devtools.AspNet
         public bool ShouldTrace { get; }
 
         /// <summary>
-        /// Create a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>.  
+        /// Create a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
         /// </summary>
         public static TraceHeaderContext FromRequest(HttpRequest request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            string header = request.Headers.Get(TraceHeader);
+            return FromWrapper(new HttpRequestWrapper(request));
+        }
+
+        internal static TraceHeaderContext FromWrapper(HttpRequestWrapper wrapper)
+        {
+            GaxPreconditions.CheckNotNull(wrapper, nameof(wrapper));
+            string header = wrapper.Headers.Get(TraceHeader);
+
             if (header == null)
             {
                 return InvalidTraceHeaderContext;
@@ -79,16 +86,17 @@ namespace Google.Devtools.AspNet
             {
                 return InvalidTraceHeaderContext;
             }
-            int traceMask = match.Groups.Count > 4 ? Convert.ToInt32(match.Groups[4].Value) : 0;
+            bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
+            int traceMask = hasMask ? Convert.ToInt32(match.Groups[4].Value) : 0;
             bool shouldTrace = traceMask > 0;
             return new TraceHeaderContext(traceId, spanId, shouldTrace);
         }
 
-        private TraceHeaderContext(string traceId, ulong? spanId, bool shouldTrace)
+        internal TraceHeaderContext(string traceId, ulong? spanId, bool shouldTrace)
         {
             TraceId = traceId;
             SpanId = spanId;
-            ShouldTrace = shouldTrace; 
+            ShouldTrace = shouldTrace;
         }
     }
 }
