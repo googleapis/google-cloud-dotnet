@@ -1,12 +1,12 @@
-# Google.Devtools.Cloudtrace.V1
+# Google.Cloud.Trace.V1
 
-`Google.Devtools.Cloudtrace.V1` is a .NET client
+`Google.Cloud.Trace.V1` is a .NET client
 library for the [Stackdriver Trace
 API](https://cloud.google.com/trace/).
 
 # Installation
 
-Install the `Google.Devtools.Cloudtrace.V1` package from our
+Install the `Google.Cloud.Trace.V1` package from our
 [early access MyGet
 feed](https://www.myget.org/gallery/google-dotnet-public).
 First configure your environment to include the appropriate NuGet feed
@@ -33,11 +33,11 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 # Getting started
 
-The main entry point for the API is [TraceServiceClient](obj/api/Google.Devtools.Cloudtrace.V1.TraceServiceClient.yml).
+The main entry point for the API is [TraceServiceClient](obj/api/Google.Cloud.Trace.V1.TraceServiceClient.yml).
 Create an instance using the static `Create` method, optionally specifying a service endpoint and settings.
 
 # Sample code
 
 ## List traces
 
-[!code-cs[](obj/snippets/Google.Devtools.Cloudtrace.V1.TraceServiceClient.txt#ListTraces)]
+[!code-cs[](obj/snippets/Google.Cloud.Trace.V1.TraceServiceClient.txt#ListTraces)]
