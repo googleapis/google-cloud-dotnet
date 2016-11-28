@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax.Grpc;
-using Google.Pubsub.V1;
+using Google.Cloud.PubSub.V1;
 using Grpc.Core;
 using System;
 using System.Threading;
@@ -40,8 +40,8 @@ namespace Google.Cloud.Tools.Snippets
             // Sample: PerRpc
             // Create a PublisherClient with default settings.
             PublisherClient client = PublisherClient.Create();
-            // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            // Create a topic name from the projectId and topicId.
+            TopicName topicName = new TopicName(projectId, topicId);
             // Create a CallSettings with a custom header.
             CallSettings callSettings = new CallSettings(null, null, null, metadata => metadata.Add("ClientVersion", "1.0.0"), null, null);
             // This will cause the custom 'ClientVersion' header to be included in the RPC call.
@@ -62,8 +62,8 @@ namespace Google.Cloud.Tools.Snippets
                 CallSettings = new CallSettings(null, null, null, metadata => metadata.Add("ClientVersion", "1.0.0"), null, null)
             };
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
-            // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            // Create a topic name from the projectId and topicId.
+            TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
             // the client being configured with 'publishersettings' above.
             Topic topic = client.CreateTopic(topicName);
@@ -82,8 +82,8 @@ namespace Google.Cloud.Tools.Snippets
             PublisherSettings publisherSettings = new PublisherSettings();
             publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings.WithHeader("ClientVersion", "1.0.0");
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
-            // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            // Create a topic name from the projectId and topicId.
+            TopicName topicName = new TopicName(projectId, topicId);
             // The custom 'ClientVersion' header will be included in the RPC call, due to
             // the client being configured with 'publishersettings' above.
             Topic topic = client.CreateTopic(topicName);
@@ -118,8 +118,8 @@ namespace Google.Cloud.Tools.Snippets
             // Create the client with the configured publisherSettings
             PublisherClient client = PublisherClient.Create(settings: publisherSettings);
 
-            // Format topicName from the projectId and topicId.
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            // Create a topic name from the projectId and topicId.
+            TopicName topicName = new TopicName(projectId, topicId);
 
             // Call CreateTopic(). Override only the CancellationToken, using a per-RPC-method CallSettings.
             // The CallSettings used during this RPC invocation is:

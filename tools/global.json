@@ -1,5 +1,5 @@
 ﻿{
-  "projects": [ ".", "../apis/Google.Pubsub.V1" ],
+  "projects": [ ".", "../apis/Google.Cloud.PubSub.V1" ],
   "sdk": {
     "version": "1.0.0-preview2-003131"
   }
