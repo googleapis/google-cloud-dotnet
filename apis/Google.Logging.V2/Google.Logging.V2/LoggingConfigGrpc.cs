@@ -24,8 +24,8 @@ using Grpc.Core;
 
 namespace Google.Logging.V2 {
   /// <summary>
-  ///  Service for configuring sinks used to export log entries outside Stackdriver
-  ///  Logging.
+  ///  Service for configuring sinks used to export log entries outside of
+  ///  Stackdriver Logging.
   /// </summary>
   public static class ConfigServiceV2
   {

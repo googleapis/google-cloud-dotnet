@@ -59,9 +59,8 @@ namespace Google.Logging.V2 {
             "dG9ycxI6Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJj",
             "ZURlc2NyaXB0b3JzUmVxdWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RN",
             "b25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2UiKILT5JMCIhIg",
-            "L3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnNCXAoVY29tLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJvdG9QAVowZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3Yy+AEBYgZwcm90bzM="));
+            "L3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnNCKgoVY29tLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJvdG9QAfgBAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -117,8 +116,16 @@ namespace Google.Logging.V2 {
     public const int LogNameFieldNumber = 1;
     private string logName_ = "";
     /// <summary>
-    ///  Required. The resource name of the log to delete.  Example:
-    ///  `"projects/my-project/logs/syslog"`.
+    ///  Required. The resource name of the log to delete:
+    ///
+    ///      "projects/[PROJECT_ID]/logs/[LOG_ID]"
+    ///      "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+    ///
+    ///  `[LOG_ID]` must be URL-encoded. For example,
+    ///  `"projects/my-project-id/logs/syslog"`,
+    ///  `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+    ///  For more information about log names, see
+    ///  [LogEntry][google.logging.v2.LogEntry].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LogName {
@@ -246,8 +253,15 @@ namespace Google.Logging.V2 {
     private string logName_ = "";
     /// <summary>
     ///  Optional. A default log resource name that is assigned to all log entries
-    ///  in `entries` that do not specify a value for `log_name`.  Example:
-    ///  `"projects/my-project/logs/syslog"`.  See
+    ///  in `entries` that do not specify a value for `log_name`:
+    ///
+    ///      "projects/[PROJECT_ID]/logs/[LOG_ID]"
+    ///      "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+    ///
+    ///  `[LOG_ID]` must be URL-encoded. For example,
+    ///  `"projects/my-project-id/logs/syslog"` or
+    ///  `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+    ///  For more information about log names, see
     ///  [LogEntry][google.logging.v2.LogEntry].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -604,7 +618,7 @@ namespace Google.Logging.V2 {
     private readonly pbc::RepeatedField<string> projectIds_ = new pbc::RepeatedField<string>();
     /// <summary>
     ///  Deprecated. One or more project identifiers or project numbers from which
-    ///  to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
+    ///  to retrieve log entries.  Example: `"my-project-1A"`. If
     ///  present, these project identifiers are converted to resource format and
     ///  added to the list of resources in `resourceNames`. Callers should use
     ///  `resourceNames` rather than this parameter.
@@ -620,9 +634,13 @@ namespace Google.Logging.V2 {
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> resourceNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  Optional. One or more cloud resources from which to retrieve log entries.
-    ///  Example: `"projects/my-project-1A"`, `"projects/1234567890"`.  Projects
-    ///  listed in `projectIds` are added to this list.
+    ///  Required. One or more cloud resources from which to retrieve log
+    ///  entries:
+    ///
+    ///      "projects/[PROJECT_ID]"
+    ///      "organizations/[ORGANIZATION_ID]"
+    ///
+    ///  Projects listed in the `project_ids` field are added to this list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ResourceNames {
@@ -636,6 +654,7 @@ namespace Google.Logging.V2 {
     ///  Optional. A filter that chooses which log entries to return.  See [Advanced
     ///  Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
     ///  match the filter are returned.  An empty filter matches all log entries.
+    ///  The maximum length of the filter is 20000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {

@@ -77,8 +77,8 @@ namespace Google.Logging.V2 {
     public abstract class LoggingServiceV2Base
     {
       /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
+      ///  Deletes all the log entries in a log.
+      ///  The log reappears if it receives new entries.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLog(global::Google.Logging.V2.DeleteLogRequest request, ServerCallContext context)
       {
@@ -138,32 +138,32 @@ namespace Google.Logging.V2 {
       }
 
       /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
+      ///  Deletes all the log entries in a log.
+      ///  The log reappears if it receives new entries.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Logging.V2.DeleteLogRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteLog(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
+      ///  Deletes all the log entries in a log.
+      ///  The log reappears if it receives new entries.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Logging.V2.DeleteLogRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteLog, null, options, request);
       }
       /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
+      ///  Deletes all the log entries in a log.
+      ///  The log reappears if it receives new entries.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Logging.V2.DeleteLogRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteLogAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a log and all its log entries.
-      ///  The log will reappear if it receives new entries.
+      ///  Deletes all the log entries in a log.
+      ///  The log reappears if it receives new entries.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Logging.V2.DeleteLogRequest request, CallOptions options)
       {

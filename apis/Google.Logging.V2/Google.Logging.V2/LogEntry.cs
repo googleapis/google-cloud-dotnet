@@ -42,9 +42,8 @@ namespace Google.Logging.V2 {
             "RW50cnlPcGVyYXRpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
             "BXZhbHVlGAIgASgJOgI4AUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3BlcmF0",
             "aW9uEgoKAmlkGAEgASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0GAMg",
-            "ASgIEgwKBGxhc3QYBCABKAhCXQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1M",
-            "b2dFbnRyeVByb3RvUAFaMGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
-            "b2dsZWFwaXMvbG9nZ2luZy92MvgBAWIGcHJvdG8z"));
+            "ASgIEgwKBGxhc3QYBCABKAhCKwoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1M",
+            "b2dFbnRyeVByb3RvUAH4AQFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -114,17 +113,22 @@ namespace Google.Logging.V2 {
     public const int LogNameFieldNumber = 12;
     private string logName_ = "";
     /// <summary>
-    ///  Required. The resource name of the log to which this log entry
-    ///  belongs. The format of the name is
-    ///  `"projects/&lt;project-id>/logs/&lt;log-id>"`.  Examples:
-    ///  `"projects/my-projectid/logs/syslog"`,
-    ///  `"projects/my-projectid/logs/library.googleapis.com%2Fbook_log"`.
+    ///  Required. The resource name of the log to which this log entry belongs:
     ///
-    ///  The log ID part of resource name must be less than 512 characters
-    ///  long and can only include the following characters: upper and
-    ///  lower case alphanumeric characters: [A-Za-z0-9]; and punctuation
-    ///  characters: forward-slash, underscore, hyphen, and period.
-    ///  Forward-slash (`/`) characters in the log ID must be URL-encoded.
+    ///      "projects/[PROJECT_ID]/logs/[LOG_ID]"
+    ///      "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+    ///
+    ///  `[LOG_ID]` must be URL-encoded within `log_name`. Example:
+    ///  `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+    ///  `[LOG_ID]` must be less than 512 characters long and can only include the
+    ///  following characters: upper and lower case alphanumeric characters,
+    ///  forward-slash, underscore, hyphen, and period.
+    ///
+    ///  For backward compatibility, if `log_name` begins with a forward-slash, such
+    ///  as `/projects/...`, then the log entry is ingested as usual but the
+    ///  forward-slash is removed. Listing the log entry will not show the leading
+    ///  slash and filtering for a log name with a leading slash will never return
+    ///  any results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LogName {
@@ -184,8 +188,8 @@ namespace Google.Logging.V2 {
     /// <summary>Field number for the "json_payload" field.</summary>
     public const int JsonPayloadFieldNumber = 6;
     /// <summary>
-    ///  The log entry payload, represented as a structure that
-    ///  is expressed as a JSON object.
+    ///  The log entry payload, represented as a structure that is
+    ///  expressed as a JSON object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct JsonPayload {

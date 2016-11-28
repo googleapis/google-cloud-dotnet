@@ -25,46 +25,49 @@ namespace Google.Logging.V2 {
             "CiZnb29nbGUvbG9nZ2luZy92Mi9sb2dnaW5nX2NvbmZpZy5wcm90bxIRZ29v",
             "Z2xlLmxvZ2dpbmcudjIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
             "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byLfAQoHTG9nU2luaxIMCgRuYW1lGAEgASgJEhMK",
+            "L3RpbWVzdGFtcC5wcm90byK9AgoHTG9nU2luaxIMCgRuYW1lGAEgASgJEhMK",
             "C2Rlc3RpbmF0aW9uGAMgASgJEg4KBmZpbHRlchgFIAEoCRJHChVvdXRwdXRf",
             "dmVyc2lvbl9mb3JtYXQYBiABKA4yKC5nb29nbGUubG9nZ2luZy52Mi5Mb2dT",
-            "aW5rLlZlcnNpb25Gb3JtYXQSFwoPd3JpdGVyX2lkZW50aXR5GAggASgJIj8K",
-            "DVZlcnNpb25Gb3JtYXQSHgoaVkVSU0lPTl9GT1JNQVRfVU5TUEVDSUZJRUQQ",
-            "ABIGCgJWMhABEgYKAlYxEAIiSQoQTGlzdFNpbmtzUmVxdWVzdBIOCgZwYXJl",
-            "bnQYASABKAkSEgoKcGFnZV90b2tlbhgCIAEoCRIRCglwYWdlX3NpemUYAyAB",
-            "KAUiVwoRTGlzdFNpbmtzUmVzcG9uc2USKQoFc2lua3MYASADKAsyGi5nb29n",
-            "bGUubG9nZ2luZy52Mi5Mb2dTaW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSIjCg5HZXRTaW5rUmVxdWVzdBIRCglzaW5rX25hbWUYASABKAkiTQoRQ3Jl",
-            "YXRlU2lua1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEigKBHNpbmsYAiABKAsy",
-            "Gi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIlAKEVVwZGF0ZVNpbmtSZXF1",
-            "ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCRIoCgRzaW5rGAIgASgLMhouZ29vZ2xl",
-            "LmxvZ2dpbmcudjIuTG9nU2luayImChFEZWxldGVTaW5rUmVxdWVzdBIRCglz",
-            "aW5rX25hbWUYASABKAky/gQKD0NvbmZpZ1NlcnZpY2VWMhJ9CglMaXN0U2lu",
-            "a3MSIy5nb29nbGUubG9nZ2luZy52Mi5MaXN0U2lua3NSZXF1ZXN0GiQuZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuTGlzdFNpbmtzUmVzcG9uc2UiJYLT5JMCHxIdL3Yy",
-            "L3twYXJlbnQ9cHJvamVjdHMvKn0vc2lua3MSdAoHR2V0U2luaxIhLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyLkdldFNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxvZ2dpbmcu",
-            "djIuTG9nU2luayIqgtPkkwIkEiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8q",
-            "L3NpbmtzLyp9EnsKCkNyZWF0ZVNpbmsSJC5nb29nbGUubG9nZ2luZy52Mi5D",
-            "cmVhdGVTaW5rUmVxdWVzdBoaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1Npbmsi",
-            "K4LT5JMCJSIdL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vc2lua3M6BHNpbmsS",
-            "gAEKClVwZGF0ZVNpbmsSJC5nb29nbGUubG9nZ2luZy52Mi5VcGRhdGVTaW5r",
-            "UmVxdWVzdBoaLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ1NpbmsiMILT5JMCKhoi",
-            "L3YyL3tzaW5rX25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfToEc2luaxJ2CgpE",
-            "ZWxldGVTaW5rEiQuZ29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlU2lua1JlcXVl",
-            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiKoLT5JMCJCoiL3YyL3tzaW5r",
-            "X25hbWU9cHJvamVjdHMvKi9zaW5rcy8qfUJaChVjb20uZ29vZ2xlLmxvZ2dp",
-            "bmcudjJCDUxvZ2dpbmdDb25maWdQAVowZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyYgZwcm90bzM="));
+            "aW5rLlZlcnNpb25Gb3JtYXQSFwoPd3JpdGVyX2lkZW50aXR5GAggASgJEi4K",
+            "CnN0YXJ0X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EiwKCGVuZF90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cCI/Cg1WZXJzaW9uRm9ybWF0Eh4KGlZFUlNJT05fRk9STUFUX1VOU1BFQ0lG",
+            "SUVEEAASBgoCVjIQARIGCgJWMRACIkkKEExpc3RTaW5rc1JlcXVlc3QSDgoG",
+            "cGFyZW50GAEgASgJEhIKCnBhZ2VfdG9rZW4YAiABKAkSEQoJcGFnZV9zaXpl",
+            "GAMgASgFIlcKEUxpc3RTaW5rc1Jlc3BvbnNlEikKBXNpbmtzGAEgAygLMhou",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luaxIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkiIwoOR2V0U2lua1JlcXVlc3QSEQoJc2lua19uYW1lGAEgASgJIm0K",
+            "EUNyZWF0ZVNpbmtSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIoCgRzaW5rGAIg",
+            "ASgLMhouZ29vZ2xlLmxvZ2dpbmcudjIuTG9nU2luaxIeChZ1bmlxdWVfd3Jp",
+            "dGVyX2lkZW50aXR5GAMgASgIInAKEVVwZGF0ZVNpbmtSZXF1ZXN0EhEKCXNp",
+            "bmtfbmFtZRgBIAEoCRIoCgRzaW5rGAIgASgLMhouZ29vZ2xlLmxvZ2dpbmcu",
+            "djIuTG9nU2luaxIeChZ1bmlxdWVfd3JpdGVyX2lkZW50aXR5GAMgASgIIiYK",
+            "EURlbGV0ZVNpbmtSZXF1ZXN0EhEKCXNpbmtfbmFtZRgBIAEoCTL+BAoPQ29u",
+            "ZmlnU2VydmljZVYyEn0KCUxpc3RTaW5rcxIjLmdvb2dsZS5sb2dnaW5nLnYy",
+            "Lkxpc3RTaW5rc1JlcXVlc3QaJC5nb29nbGUubG9nZ2luZy52Mi5MaXN0U2lu",
+            "a3NSZXNwb25zZSIlgtPkkwIfEh0vdjIve3BhcmVudD1wcm9qZWN0cy8qfS9z",
+            "aW5rcxJ0CgdHZXRTaW5rEiEuZ29vZ2xlLmxvZ2dpbmcudjIuR2V0U2lua1Jl",
+            "cXVlc3QaGi5nb29nbGUubG9nZ2luZy52Mi5Mb2dTaW5rIiqC0+STAiQSIi92",
+            "Mi97c2lua19uYW1lPXByb2plY3RzLyovc2lua3MvKn0SewoKQ3JlYXRlU2lu",
+            "axIkLmdvb2dsZS5sb2dnaW5nLnYyLkNyZWF0ZVNpbmtSZXF1ZXN0GhouZ29v",
+            "Z2xlLmxvZ2dpbmcudjIuTG9nU2luayIrgtPkkwIlIh0vdjIve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9zaW5rczoEc2luaxKAAQoKVXBkYXRlU2luaxIkLmdvb2ds",
+            "ZS5sb2dnaW5nLnYyLlVwZGF0ZVNpbmtSZXF1ZXN0GhouZ29vZ2xlLmxvZ2dp",
+            "bmcudjIuTG9nU2luayIwgtPkkwIqGiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0",
+            "cy8qL3NpbmtzLyp9OgRzaW5rEnYKCkRlbGV0ZVNpbmsSJC5nb29nbGUubG9n",
+            "Z2luZy52Mi5EZWxldGVTaW5rUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIqgtPkkwIkKiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8qL3Npbmtz",
+            "Lyp9QigKFWNvbS5nb29nbGUubG9nZ2luZy52MkINTG9nZ2luZ0NvbmZpZ1AB",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogSink), global::Google.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity" }, null, new[]{ typeof(global::Google.Logging.V2.LogSink.Types.VersionFormat) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.LogSink), global::Google.Logging.V2.LogSink.Parser, new[]{ "Name", "Destination", "Filter", "OutputVersionFormat", "WriterIdentity", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Logging.V2.LogSink.Types.VersionFormat) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksRequest), global::Google.Logging.V2.ListSinksRequest.Parser, new[]{ "Parent", "PageToken", "PageSize" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.ListSinksResponse), global::Google.Logging.V2.ListSinksResponse.Parser, new[]{ "Sinks", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.GetSinkRequest), global::Google.Logging.V2.GetSinkRequest.Parser, new[]{ "SinkName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateSinkRequest), global::Google.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.UpdateSinkRequest), global::Google.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.CreateSinkRequest), global::Google.Logging.V2.CreateSinkRequest.Parser, new[]{ "Parent", "Sink", "UniqueWriterIdentity" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.UpdateSinkRequest), global::Google.Logging.V2.UpdateSinkRequest.Parser, new[]{ "SinkName", "Sink", "UniqueWriterIdentity" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Logging.V2.DeleteSinkRequest), global::Google.Logging.V2.DeleteSinkRequest.Parser, new[]{ "SinkName" }, null, null, null)
           }));
     }
@@ -73,7 +76,11 @@ namespace Google.Logging.V2 {
   }
   #region Messages
   /// <summary>
-  ///  Describes a sink used to export log entries outside Stackdriver Logging.
+  ///  Describes a sink used to export log entries outside of Stackdriver Logging.
+  ///  A logs filter controls which log entries are exported.  Sinks can have a
+  ///  start time and an end time; these can be used to place log entries from an
+  ///  exact time range into a particular destination.  If both `start_time` and
+  ///  `end_time` are present, then `start_time` must be less than `end_time`.
   /// </summary>
   public sealed partial class LogSink : pb::IMessage<LogSink> {
     private static readonly pb::MessageParser<LogSink> _parser = new pb::MessageParser<LogSink>(() => new LogSink());
@@ -104,6 +111,8 @@ namespace Google.Logging.V2 {
       filter_ = other.filter_;
       outputVersionFormat_ = other.outputVersionFormat_;
       writerIdentity_ = other.writerIdentity_;
+      StartTime = other.startTime_ != null ? other.StartTime.Clone() : null;
+      EndTime = other.endTime_ != null ? other.EndTime.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -117,9 +126,9 @@ namespace Google.Logging.V2 {
     /// <summary>
     ///  Required. The client-assigned sink identifier, unique within the
     ///  project. Example: `"my-syslog-errors-to-pubsub"`.  Sink identifiers are
-    ///  limited to 1000 characters and can include only the following characters:
-    ///  `A-Z`, `a-z`, `0-9`, and the special characters `_-.`.  The maximum length
-    ///  of the name is 100 characters.
+    ///  limited to 100 characters and can include only the following characters:
+    ///  upper and lower-case alphanumeric characters, underscores, hyphens, and
+    ///  periods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -133,13 +142,14 @@ namespace Google.Logging.V2 {
     public const int DestinationFieldNumber = 3;
     private string destination_ = "";
     /// <summary>
-    ///  Required. The export destination. See
-    ///  [Exporting Logs With Sinks](/logging/docs/api/tasks/exporting-logs).
-    ///  Examples:
+    ///  Required. The export destination:
     ///
-    ///      "storage.googleapis.com/my-gcs-bucket"
-    ///      "bigquery.googleapis.com/projects/my-project-id/datasets/my-dataset"
-    ///      "pubsub.googleapis.com/projects/my-project/topics/my-topic"
+    ///      "storage.googleapis.com/[GCS_BUCKET]"
+    ///      "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
+    ///      "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
+    ///
+    ///  For more information,  see
+    ///  [Exporting Logs With Sinks](/logging/docs/api/tasks/exporting-logs).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Destination {
@@ -157,10 +167,10 @@ namespace Google.Logging.V2 {
     ///  Only log entries matching the filter are exported. The filter
     ///  must be consistent with the log entry format specified by the
     ///  `outputVersionFormat` parameter, regardless of the format of the
-    ///  log entry that was originally written to Stackdriver Logging.
-    ///  Example filter (V2 format):
+    ///  log entry that was originally ingested by Stackdriver Logging.
+    ///  The following example uses field names in the v2 log entry format:
     ///
-    ///      logName=projects/my-projectid/logs/syslog AND severity>=ERROR
+    ///      logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -191,22 +201,49 @@ namespace Google.Logging.V2 {
     public const int WriterIdentityFieldNumber = 8;
     private string writerIdentity_ = "";
     /// <summary>
-    ///  Output only. The iam identity to which the destination needs to grant write
-    ///  access.  This may be a service account or a group.
-    ///  Examples (Do not assume these specific values):
-    ///     "serviceAccount:cloud-logs@system.gserviceaccount.com"
-    ///     "group:cloud-logs@google.com"
-    ///
-    ///    For GCS destinations, the role "roles/owner" is required on the bucket
-    ///    For Cloud Pubsub destinations, the role "roles/pubsub.publisher" is
-    ///      required on the topic
-    ///    For BigQuery, the role "roles/editor" is required on the dataset
+    ///  Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;that
+    ///  will write exported log entries to the destination on behalf of Stackdriver
+    ///  Logging. You must grant this identity write-access to the destination.
+    ///  Consult the destination service's documentation to determine the exact role
+    ///  that must be granted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string WriterIdentity {
       get { return writerIdentity_; }
       set {
         writerIdentity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    ///  Optional. The time at which this sink will begin exporting log entries.  If
+    ///  this value is present, then log entries are exported only if `start_time`
+    ///  &lt;=`entry.timestamp`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    ///  Optional. Time at which this sink will stop exporting log entries.  If this
+    ///  value is present, then log entries are exported only if `entry.timestamp` &lt;
+    ///  `end_time`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
       }
     }
 
@@ -228,6 +265,8 @@ namespace Google.Logging.V2 {
       if (Filter != other.Filter) return false;
       if (OutputVersionFormat != other.OutputVersionFormat) return false;
       if (WriterIdentity != other.WriterIdentity) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
       return true;
     }
 
@@ -239,6 +278,8 @@ namespace Google.Logging.V2 {
       if (Filter.Length != 0) hash ^= Filter.GetHashCode();
       if (OutputVersionFormat != 0) hash ^= OutputVersionFormat.GetHashCode();
       if (WriterIdentity.Length != 0) hash ^= WriterIdentity.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
       return hash;
     }
 
@@ -269,6 +310,14 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(66);
         output.WriteString(WriterIdentity);
       }
+      if (startTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(EndTime);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -288,6 +337,12 @@ namespace Google.Logging.V2 {
       }
       if (WriterIdentity.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(WriterIdentity);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
       return size;
     }
@@ -311,6 +366,18 @@ namespace Google.Logging.V2 {
       }
       if (other.WriterIdentity.Length != 0) {
         WriterIdentity = other.WriterIdentity;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
       }
     }
 
@@ -342,6 +409,20 @@ namespace Google.Logging.V2 {
             WriterIdentity = input.ReadString();
             break;
           }
+          case 82: {
+            if (startTime_ == null) {
+              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(startTime_);
+            break;
+          }
+          case 90: {
+            if (endTime_ == null) {
+              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(endTime_);
+            break;
+          }
         }
       }
     }
@@ -351,7 +432,7 @@ namespace Google.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Available log entry formats. Log entries can be written to Cloud
+      ///  Available log entry formats. Log entries can be written to Stackdriver
       ///  Logging in either format and can be exported in either format.
       ///  Version 2 is the preferred format.
       /// </summary>
@@ -416,8 +497,10 @@ namespace Google.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The cloud resource containing the sinks.
-    ///  Example: `"projects/my-logging-project"`.
+    ///  Required. The resource name where this sink was created:
+    ///
+    ///      "projects/[PROJECT_ID]"
+    ///      "organizations/[ORGANIZATION_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -753,8 +836,10 @@ namespace Google.Logging.V2 {
     public const int SinkNameFieldNumber = 1;
     private string sinkName_ = "";
     /// <summary>
-    ///  Required. The resource name of the sink to return.
-    ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
+    ///  Required. The resource name of the sink to return:
+    ///
+    ///      "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+    ///      "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {
@@ -867,6 +952,7 @@ namespace Google.Logging.V2 {
     public CreateSinkRequest(CreateSinkRequest other) : this() {
       parent_ = other.parent_;
       Sink = other.sink_ != null ? other.Sink.Clone() : null;
+      uniqueWriterIdentity_ = other.uniqueWriterIdentity_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -878,9 +964,10 @@ namespace Google.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The resource in which to create the sink.
-    ///  Example: `"projects/my-project-id"`.
-    ///  The new sink must be provided in the request.
+    ///  Required. The resource in which to create the sink:
+    ///
+    ///      "projects/[PROJECT_ID]"
+    ///      "organizations/[ORGANIZATION_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -905,6 +992,24 @@ namespace Google.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "unique_writer_identity" field.</summary>
+    public const int UniqueWriterIdentityFieldNumber = 3;
+    private bool uniqueWriterIdentity_;
+    /// <summary>
+    ///  Optional. Whether the sink will have a dedicated service account returned
+    ///  in the sink's writer_identity. Set this field to be true to export
+    ///  logs from one project to a different project. This field is ignored for
+    ///  non-project sinks (e.g. organization sinks) because those sinks are
+    ///  required to have dedicated service accounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool UniqueWriterIdentity {
+      get { return uniqueWriterIdentity_; }
+      set {
+        uniqueWriterIdentity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateSinkRequest);
@@ -920,6 +1025,7 @@ namespace Google.Logging.V2 {
       }
       if (Parent != other.Parent) return false;
       if (!object.Equals(Sink, other.Sink)) return false;
+      if (UniqueWriterIdentity != other.UniqueWriterIdentity) return false;
       return true;
     }
 
@@ -928,6 +1034,7 @@ namespace Google.Logging.V2 {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (sink_ != null) hash ^= Sink.GetHashCode();
+      if (UniqueWriterIdentity != false) hash ^= UniqueWriterIdentity.GetHashCode();
       return hash;
     }
 
@@ -946,6 +1053,10 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Sink);
       }
+      if (UniqueWriterIdentity != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UniqueWriterIdentity);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -956,6 +1067,9 @@ namespace Google.Logging.V2 {
       }
       if (sink_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sink);
+      }
+      if (UniqueWriterIdentity != false) {
+        size += 1 + 1;
       }
       return size;
     }
@@ -973,6 +1087,9 @@ namespace Google.Logging.V2 {
           sink_ = new global::Google.Logging.V2.LogSink();
         }
         Sink.MergeFrom(other.Sink);
+      }
+      if (other.UniqueWriterIdentity != false) {
+        UniqueWriterIdentity = other.UniqueWriterIdentity;
       }
     }
 
@@ -993,6 +1110,10 @@ namespace Google.Logging.V2 {
               sink_ = new global::Google.Logging.V2.LogSink();
             }
             input.ReadMessage(sink_);
+            break;
+          }
+          case 24: {
+            UniqueWriterIdentity = input.ReadBool();
             break;
           }
         }
@@ -1030,6 +1151,7 @@ namespace Google.Logging.V2 {
     public UpdateSinkRequest(UpdateSinkRequest other) : this() {
       sinkName_ = other.sinkName_;
       Sink = other.sink_ != null ? other.Sink.Clone() : null;
+      uniqueWriterIdentity_ = other.uniqueWriterIdentity_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1042,8 +1164,12 @@ namespace Google.Logging.V2 {
     private string sinkName_ = "";
     /// <summary>
     ///  Required. The resource name of the sink to update, including the parent
-    ///  resource and the sink identifier.  If the sink does not exist, this method
-    ///  creates the sink.  Example: `"projects/my-project-id/sinks/my-sink-id"`.
+    ///  resource and the sink identifier:
+    ///
+    ///      "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+    ///      "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+    ///
+    ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {
@@ -1069,6 +1195,24 @@ namespace Google.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "unique_writer_identity" field.</summary>
+    public const int UniqueWriterIdentityFieldNumber = 3;
+    private bool uniqueWriterIdentity_;
+    /// <summary>
+    ///  Optional. Whether the sink will have a dedicated service account returned
+    ///  in the sink's writer_identity. Set this field to be true to export
+    ///  logs from one project to a different project. This field is ignored for
+    ///  non-project sinks (e.g. organization sinks) because those sinks are
+    ///  required to have dedicated service accounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool UniqueWriterIdentity {
+      get { return uniqueWriterIdentity_; }
+      set {
+        uniqueWriterIdentity_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UpdateSinkRequest);
@@ -1084,6 +1228,7 @@ namespace Google.Logging.V2 {
       }
       if (SinkName != other.SinkName) return false;
       if (!object.Equals(Sink, other.Sink)) return false;
+      if (UniqueWriterIdentity != other.UniqueWriterIdentity) return false;
       return true;
     }
 
@@ -1092,6 +1237,7 @@ namespace Google.Logging.V2 {
       int hash = 1;
       if (SinkName.Length != 0) hash ^= SinkName.GetHashCode();
       if (sink_ != null) hash ^= Sink.GetHashCode();
+      if (UniqueWriterIdentity != false) hash ^= UniqueWriterIdentity.GetHashCode();
       return hash;
     }
 
@@ -1110,6 +1256,10 @@ namespace Google.Logging.V2 {
         output.WriteRawTag(18);
         output.WriteMessage(Sink);
       }
+      if (UniqueWriterIdentity != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(UniqueWriterIdentity);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1120,6 +1270,9 @@ namespace Google.Logging.V2 {
       }
       if (sink_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sink);
+      }
+      if (UniqueWriterIdentity != false) {
+        size += 1 + 1;
       }
       return size;
     }
@@ -1137,6 +1290,9 @@ namespace Google.Logging.V2 {
           sink_ = new global::Google.Logging.V2.LogSink();
         }
         Sink.MergeFrom(other.Sink);
+      }
+      if (other.UniqueWriterIdentity != false) {
+        UniqueWriterIdentity = other.UniqueWriterIdentity;
       }
     }
 
@@ -1157,6 +1313,10 @@ namespace Google.Logging.V2 {
               sink_ = new global::Google.Logging.V2.LogSink();
             }
             input.ReadMessage(sink_);
+            break;
+          }
+          case 24: {
+            UniqueWriterIdentity = input.ReadBool();
             break;
           }
         }
@@ -1205,9 +1365,12 @@ namespace Google.Logging.V2 {
     private string sinkName_ = "";
     /// <summary>
     ///  Required. The resource name of the sink to delete, including the parent
-    ///  resource and the sink identifier.  Example:
-    ///  `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if the sink
-    ///  does not exist.
+    ///  resource and the sink identifier:
+    ///
+    ///      "projects/[PROJECT_ID]/sinks/[SINK_ID]"
+    ///      "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+    ///
+    ///  It is an error if the sink does not exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {

@@ -54,9 +54,8 @@ namespace Google.Logging.V2 {
             "fToGbWV0cmljEoQBCg9EZWxldGVMb2dNZXRyaWMSKS5nb29nbGUubG9nZ2lu",
             "Zy52Mi5EZWxldGVMb2dNZXRyaWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
             "LkVtcHR5Ii6C0+STAigqJi92Mi97bWV0cmljX25hbWU9cHJvamVjdHMvKi9t",
-            "ZXRyaWNzLyp9QlsKFWNvbS5nb29nbGUubG9nZ2luZy52MkIOTG9nZ2luZ01l",
-            "dHJpY3NQAVowZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9sb2dnaW5nL3YyYgZwcm90bzM="));
+            "ZXRyaWNzLyp9QikKFWNvbS5nb29nbGUubG9nZ2luZy52MkIOTG9nZ2luZ01l",
+            "dHJpY3NQAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -116,14 +115,21 @@ namespace Google.Logging.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The client-assigned metric identifier. Example:
-    ///  `"severe_errors"`.  Metric identifiers are limited to 100
-    ///  characters and can include only the following characters: `A-Z`,
-    ///  `a-z`, `0-9`, and the special characters `_-.,+!*',()%/`.  The
-    ///  forward-slash character (`/`) denotes a hierarchy of name pieces,
-    ///  and it cannot be the first character of the name.  The '%' character
-    ///  is used to URL encode unsafe and reserved characters and must be
-    ///  followed by two hexadecimal digits according to RFC 1738.
+    ///  Required. The client-assigned metric identifier.
+    ///  Examples: `"error_count"`, `"nginx/requests"`.
+    ///
+    ///  Metric identifiers are limited to 100 characters and can include
+    ///  only the following characters: `A-Z`, `a-z`, `0-9`, and the
+    ///  special characters `_-.,+!*',()%/`.  The forward-slash character
+    ///  (`/`) denotes a hierarchy of name pieces, and it cannot be the
+    ///  first character of the name.
+    ///
+    ///  The metric identifier in this field must not be
+    ///  [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding).
+    ///  However, when the metric identifier appears as the `[METRIC_ID]`
+    ///  part of a `metric_name` API parameter, then the metric identifier
+    ///  must be URL-encoded. Example:
+    ///  `"projects/my-project/metrics/nginx%2Frequests"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -152,7 +158,11 @@ namespace Google.Logging.V2 {
     private string filter_ = "";
     /// <summary>
     ///  Required. An [advanced logs filter](/logging/docs/view/advanced_filters).
-    ///  Example: `"resource.type=gae_app AND severity>=ERROR"`.
+    ///  Example:
+    ///
+    ///      "resource.type=gae_app AND severity>=ERROR"
+    ///
+    ///  The maximum length of the filter is 20000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -362,8 +372,9 @@ namespace Google.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The resource name containing the metrics.
-    ///  Example: `"projects/my-project-id"`.
+    ///  Required. The name of the project containing the metrics:
+    ///
+    ///      "projects/[PROJECT_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -699,8 +710,9 @@ namespace Google.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    ///  The resource name of the desired metric.
-    ///  Example: `"projects/my-project-id/metrics/my-metric-id"`.
+    ///  The resource name of the desired metric:
+    ///
+    ///      "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MetricName {
@@ -824,8 +836,9 @@ namespace Google.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  The resource name of the project in which to create the metric.
-    ///  Example: `"projects/my-project-id"`.
+    ///  The resource name of the project in which to create the metric:
+    ///
+    ///      "projects/[PROJECT_ID]"
     ///
     ///  The new metric must be provided in the request.
     /// </summary>
@@ -988,12 +1001,13 @@ namespace Google.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    ///  The resource name of the metric to update.
-    ///  Example: `"projects/my-project-id/metrics/my-metric-id"`.
+    ///  The resource name of the metric to update:
     ///
-    ///  The updated metric must be provided in the request and have the
-    ///  same identifier that is specified in `metricName`.
-    ///  If the metric does not exist, it is created.
+    ///      "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+    ///
+    ///  The updated metric must be provided in the request and it's
+    ///  `name` field must be the same as `[METRIC_ID]` If the metric
+    ///  does not exist in `[PROJECT_ID]`, then a new metric is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MetricName {
@@ -1007,9 +1021,7 @@ namespace Google.Logging.V2 {
     public const int MetricFieldNumber = 2;
     private global::Google.Logging.V2.LogMetric metric_;
     /// <summary>
-    ///  The updated metric, whose name must be the same as the
-    ///  metric identifier in `metricName`. If `metricName` does not
-    ///  exist, then a new metric is created.
+    ///  The updated metric.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Logging.V2.LogMetric Metric {
@@ -1154,8 +1166,9 @@ namespace Google.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    ///  The resource name of the metric to delete.
-    ///  Example: `"projects/my-project-id/metrics/my-metric-id"`.
+    ///  The resource name of the metric to delete:
+    ///
+    ///      "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MetricName {

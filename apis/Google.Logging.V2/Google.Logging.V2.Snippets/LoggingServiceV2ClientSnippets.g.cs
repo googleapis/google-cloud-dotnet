@@ -95,12 +95,12 @@ namespace Google.Logging.V2.Snippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            IEnumerable<string> projectIds = new List<string>();
+            IEnumerable<string> resourceNames = new List<string>();
             string filter = "";
             string orderBy = "";
             // Make the request
-            IPagedAsyncEnumerable<ListLogEntriesResponse,LogEntry> response =
-                loggingServiceV2Client.ListLogEntriesAsync(projectIds, filter, orderBy);
+            PagedAsyncEnumerable<ListLogEntriesResponse,LogEntry> response =
+                loggingServiceV2Client.ListLogEntriesAsync(resourceNames, filter, orderBy);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((LogEntry item) =>
@@ -109,10 +109,8 @@ namespace Google.Logging.V2.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<LogEntry>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<LogEntry> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLogEntriesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -121,6 +119,18 @@ namespace Google.Logging.V2.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogEntry item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -130,12 +140,12 @@ namespace Google.Logging.V2.Snippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            IEnumerable<string> projectIds = new List<string>();
+            IEnumerable<string> resourceNames = new List<string>();
             string filter = "";
             string orderBy = "";
             // Make the request
-            IPagedEnumerable<ListLogEntriesResponse,LogEntry> response =
-                loggingServiceV2Client.ListLogEntries(projectIds, filter, orderBy);
+            PagedEnumerable<ListLogEntriesResponse,LogEntry> response =
+                loggingServiceV2Client.ListLogEntries(resourceNames, filter, orderBy);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (LogEntry item in response)
@@ -144,9 +154,8 @@ namespace Google.Logging.V2.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<LogEntry> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLogEntriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -155,6 +164,18 @@ namespace Google.Logging.V2.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogEntry item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

@@ -17,7 +17,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Speech.V1Beta1;
-using Google.Longrunning;
+using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;

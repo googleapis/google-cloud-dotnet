@@ -17,7 +17,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -337,44 +336,6 @@ namespace Google.Logging.V2
         public static string FormatParentName(string projectId) => ParentTemplate.Expand(projectId);
 
         /// <summary>
-        /// Path template for a sink resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>sink</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate SinkTemplate { get; } = new PathTemplate("projects/{project}/sinks/{sink}");
-
-        /// <summary>
-        /// Creates a sink resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="sinkId">The sink ID.</param>
-        /// <returns>
-        /// The full sink resource name.
-        /// </returns>
-        public static string FormatSinkName(string projectId, string sinkId) => SinkTemplate.Expand(projectId, sinkId);
-
-        /// <summary>
-        /// Path template for a metric resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>metric</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate MetricTemplate { get; } = new PathTemplate("projects/{project}/metrics/{metric}");
-
-        /// <summary>
-        /// Creates a metric resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="metricId">The metric ID.</param>
-        /// <returns>
-        /// The full metric resource name.
-        /// </returns>
-        public static string FormatMetricName(string projectId, string metricId) => MetricTemplate.Expand(projectId, metricId);
-
-        /// <summary>
         /// Path template for a log resource. Parameters:
         /// <list type="bullet">
         /// <item><description>project</description></item>
@@ -461,12 +422,20 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a log and all its log entries.
-        /// The log will reappear if it receives new entries.
+        /// Deletes all the log entries in a log.
+        /// The log reappears if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        /// Required. The resource name of the log to delete.  Example:
-        /// `"projects/my-project/logs/syslog"`.
+        /// Required. The resource name of the log to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"`,
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -482,12 +451,20 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a log and all its log entries.
-        /// The log will reappear if it receives new entries.
+        /// Deletes all the log entries in a log.
+        /// The log reappears if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        /// Required. The resource name of the log to delete.  Example:
-        /// `"projects/my-project/logs/syslog"`.
+        /// Required. The resource name of the log to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"`,
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -502,12 +479,20 @@ namespace Google.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a log and all its log entries.
-        /// The log will reappear if it receives new entries.
+        /// Deletes all the log entries in a log.
+        /// The log reappears if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        /// Required. The resource name of the log to delete.  Example:
-        /// `"projects/my-project/logs/syslog"`.
+        /// Required. The resource name of the log to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"`,
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -528,8 +513,15 @@ namespace Google.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
-        /// in `entries` that do not specify a value for `log_name`.  Example:
-        /// `"projects/my-project/logs/syslog"`.  See
+        /// in `entries` that do not specify a value for `log_name`:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"` or
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
         /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
@@ -581,8 +573,15 @@ namespace Google.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
-        /// in `entries` that do not specify a value for `log_name`.  Example:
-        /// `"projects/my-project/logs/syslog"`.  See
+        /// in `entries` that do not specify a value for `log_name`:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"` or
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
         /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
@@ -636,8 +635,15 @@ namespace Google.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
-        /// in `entries` that do not specify a value for `log_name`.  Example:
-        /// `"projects/my-project/logs/syslog"`.  See
+        /// in `entries` that do not specify a value for `log_name`:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"` or
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
         /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
@@ -688,17 +694,20 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="projectIds">
-        /// Deprecated. One or more project identifiers or project numbers from which
-        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
-        /// present, these project identifiers are converted to resource format and
-        /// added to the list of resources in `resourceNames`. Callers should use
-        /// `resourceNames` rather than this parameter.
+        /// <param name="resourceNames">
+        /// Required. One or more cloud resources from which to retrieve log
+        /// entries:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///
+        /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
         /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries.
+        /// The maximum length of the filter is 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -722,8 +731,8 @@ namespace Google.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
-            IEnumerable<string> projectIds,
+        public virtual PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
+            IEnumerable<string> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
@@ -738,17 +747,20 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="projectIds">
-        /// Deprecated. One or more project identifiers or project numbers from which
-        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
-        /// present, these project identifiers are converted to resource format and
-        /// added to the list of resources in `resourceNames`. Callers should use
-        /// `resourceNames` rather than this parameter.
+        /// <param name="resourceNames">
+        /// Required. One or more cloud resources from which to retrieve log
+        /// entries:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///
+        /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
         /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries.
+        /// The maximum length of the filter is 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -772,8 +784,8 @@ namespace Google.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
-            IEnumerable<string> projectIds,
+        public virtual PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
+            IEnumerable<string> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
@@ -828,12 +840,20 @@ namespace Google.Logging.V2
         partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref CallSettings settings);
 
         /// <summary>
-        /// Deletes a log and all its log entries.
-        /// The log will reappear if it receives new entries.
+        /// Deletes all the log entries in a log.
+        /// The log reappears if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        /// Required. The resource name of the log to delete.  Example:
-        /// `"projects/my-project/logs/syslog"`.
+        /// Required. The resource name of the log to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"`,
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -854,12 +874,20 @@ namespace Google.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a log and all its log entries.
-        /// The log will reappear if it receives new entries.
+        /// Deletes all the log entries in a log.
+        /// The log reappears if it receives new entries.
         /// </summary>
         /// <param name="logName">
-        /// Required. The resource name of the log to delete.  Example:
-        /// `"projects/my-project/logs/syslog"`.
+        /// Required. The resource name of the log to delete:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"`,
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
+        /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -885,8 +913,15 @@ namespace Google.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
-        /// in `entries` that do not specify a value for `log_name`.  Example:
-        /// `"projects/my-project/logs/syslog"`.  See
+        /// in `entries` that do not specify a value for `log_name`:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"` or
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
         /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
@@ -946,8 +981,15 @@ namespace Google.Logging.V2
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
-        /// in `entries` that do not specify a value for `log_name`.  Example:
-        /// `"projects/my-project/logs/syslog"`.  See
+        /// in `entries` that do not specify a value for `log_name`:
+        ///
+        ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+        ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///
+        /// `[LOG_ID]` must be URL-encoded. For example,
+        /// `"projects/my-project-id/logs/syslog"` or
+        /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+        /// For more information about log names, see
         /// [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="resource">
@@ -1006,17 +1048,20 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="projectIds">
-        /// Deprecated. One or more project identifiers or project numbers from which
-        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
-        /// present, these project identifiers are converted to resource format and
-        /// added to the list of resources in `resourceNames`. Callers should use
-        /// `resourceNames` rather than this parameter.
+        /// <param name="resourceNames">
+        /// Required. One or more cloud resources from which to retrieve log
+        /// entries:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///
+        /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
         /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries.
+        /// The maximum length of the filter is 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1040,8 +1085,8 @@ namespace Google.Logging.V2
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
-            IEnumerable<string> projectIds,
+        public override PagedAsyncEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntriesAsync(
+            IEnumerable<string> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
@@ -1050,14 +1095,14 @@ namespace Google.Logging.V2
         {
             ListLogEntriesRequest request = new ListLogEntriesRequest
             {
-                ProjectIds = { projectIds },
+                ResourceNames = { resourceNames },
                 Filter = filter,
                 OrderBy = orderBy,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListLogEntriesRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
         }
 
         /// <summary>
@@ -1065,17 +1110,20 @@ namespace Google.Logging.V2
         /// Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
-        /// <param name="projectIds">
-        /// Deprecated. One or more project identifiers or project numbers from which
-        /// to retrieve log entries.  Examples: `"my-project-1A"`, `"1234567890"`. If
-        /// present, these project identifiers are converted to resource format and
-        /// added to the list of resources in `resourceNames`. Callers should use
-        /// `resourceNames` rather than this parameter.
+        /// <param name="resourceNames">
+        /// Required. One or more cloud resources from which to retrieve log
+        /// entries:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        ///
+        /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
         /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
         /// match the filter are returned.  An empty filter matches all log entries.
+        /// The maximum length of the filter is 20000 characters.
         /// </param>
         /// <param name="orderBy">
         /// Optional. How the results should be sorted.  Presently, the only permitted
@@ -1099,8 +1147,8 @@ namespace Google.Logging.V2
         /// <returns>
         /// A pageable sequence of <see cref="LogEntry"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
-            IEnumerable<string> projectIds,
+        public override PagedEnumerable<ListLogEntriesResponse, LogEntry> ListLogEntries(
+            IEnumerable<string> resourceNames,
             string filter,
             string orderBy,
             string pageToken = null,
@@ -1109,14 +1157,14 @@ namespace Google.Logging.V2
         {
             ListLogEntriesRequest request = new ListLogEntriesRequest
             {
-                ProjectIds = { projectIds },
+                ResourceNames = { resourceNames },
                 Filter = filter,
                 OrderBy = orderBy,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListLogEntriesRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
+            return new GrpcPagedEnumerable<ListLogEntriesRequest, ListLogEntriesResponse, LogEntry>(_callListLogEntries, request, callSettings);
         }
 
     }

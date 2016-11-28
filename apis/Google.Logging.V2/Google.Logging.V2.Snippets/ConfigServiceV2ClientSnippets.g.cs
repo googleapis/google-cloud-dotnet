@@ -40,7 +40,7 @@ namespace Google.Logging.V2.Snippets
             // Initialize request argument(s)
             string formattedParent = ConfigServiceV2Client.FormatParentName("[PROJECT]");
             // Make the request
-            IPagedAsyncEnumerable<ListSinksResponse,LogSink> response =
+            PagedAsyncEnumerable<ListSinksResponse,LogSink> response =
                 configServiceV2Client.ListSinksAsync(formattedParent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -50,10 +50,8 @@ namespace Google.Logging.V2.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<LogSink>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<LogSink> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSinksResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -62,6 +60,18 @@ namespace Google.Logging.V2.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogSink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogSink item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -73,7 +83,7 @@ namespace Google.Logging.V2.Snippets
             // Initialize request argument(s)
             string formattedParent = ConfigServiceV2Client.FormatParentName("[PROJECT]");
             // Make the request
-            IPagedEnumerable<ListSinksResponse,LogSink> response =
+            PagedEnumerable<ListSinksResponse,LogSink> response =
                 configServiceV2Client.ListSinks(formattedParent);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -83,9 +93,8 @@ namespace Google.Logging.V2.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<LogSink> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSinksResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -94,6 +103,18 @@ namespace Google.Logging.V2.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogSink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogSink item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
