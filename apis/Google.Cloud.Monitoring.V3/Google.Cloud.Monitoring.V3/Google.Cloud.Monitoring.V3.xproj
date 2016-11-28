@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>78bef984-45ba-4385-a8b4-468ae94e64d3</ProjectGuid>
-    <RootNamespace>Google.Monitoring.V3.Snippets</RootNamespace>
+    <ProjectGuid>e15626d3-88a8-483a-b51e-f728bf5502c3</ProjectGuid>
+    <RootNamespace>Google.Cloud.Monitoring.V3</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>
