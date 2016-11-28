@@ -61,7 +61,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Retrieves a cell value by field name.
         /// </summary>
-        public object this[string name] => this[GetFieldIndex(name)];
+        public object this[string name] => this[Schema.GetFieldIndex(name)];
 
         /// <summary>
         /// Retrieves a cell value by index.
@@ -186,18 +186,6 @@ namespace Google.Cloud.BigQuery.V2
                 ret[field.Name] = ConvertSingleValue(token.Type == JTokenType.String ? (string)token : (object)token, field);
             }
             return ret;
-        }
-
-        private int GetFieldIndex(string fieldName)
-        {
-            for (int i = 0; i < Schema.Fields.Count; i++)
-            {
-                if (Schema.Fields[i].Name == fieldName)
-                {
-                    return i;
-                }
-            }
-            throw new KeyNotFoundException($"No such field: '{fieldName}'");
         }
     }
 }
