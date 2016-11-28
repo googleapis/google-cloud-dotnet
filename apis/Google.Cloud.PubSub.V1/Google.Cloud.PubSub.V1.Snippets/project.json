@@ -1,12 +1,12 @@
 ﻿{
-  "description": "Snippets for the Google.Pubsub.V1 package",
+  "description": "Snippets for the Google.Cloud.Pubsub.V1 package",
 
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
 
   "dependencies": {
-    "Google.Pubsub.V1": { "target": "project" },
+    "Google.Cloud.PubSub.V1": { "target": "project" },
     "xunit": "2.2.0-beta2-build3300",
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },

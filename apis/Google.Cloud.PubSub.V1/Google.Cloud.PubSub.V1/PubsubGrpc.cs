@@ -27,7 +27,7 @@ namespace Google.Cloud.PubSub.V1 {
   ///  The service that an application uses to manipulate subscriptions and to
   ///  consume messages from a subscription via the `Pull` method.
   /// </summary>
-  public static class Subscriber
+  public static partial class Subscriber
   {
     static readonly string __ServiceName = "google.pubsub.v1.Subscriber";
 
@@ -203,7 +203,7 @@ namespace Google.Cloud.PubSub.V1 {
     }
 
     /// <summary>Client for Subscriber</summary>
-    public class SubscriberClient : ClientBase<SubscriberClient>
+    public partial class SubscriberClient : ClientBase<SubscriberClient>
     {
       /// <summary>Creates a new client for Subscriber</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -586,7 +586,7 @@ namespace Google.Cloud.PubSub.V1 {
   ///  The service that an application uses to manipulate topics, and to send
   ///  messages to a topic.
   /// </summary>
-  public static class Publisher
+  public static partial class Publisher
   {
     static readonly string __ServiceName = "google.pubsub.v1.Publisher";
 
@@ -709,7 +709,7 @@ namespace Google.Cloud.PubSub.V1 {
     }
 
     /// <summary>Client for Publisher</summary>
-    public class PublisherClient : ClientBase<PublisherClient>
+    public partial class PublisherClient : ClientBase<PublisherClient>
     {
       /// <summary>Creates a new client for Publisher</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>

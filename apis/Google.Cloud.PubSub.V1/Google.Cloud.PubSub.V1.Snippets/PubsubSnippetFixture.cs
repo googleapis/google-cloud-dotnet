@@ -19,7 +19,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Pubsub.V1.Snippets
+namespace Google.Cloud.PubSub.V1.Snippets
 {
     /// <summary>
     /// Fixture which is set up at the start of the test run, and torn down at the end.
@@ -58,21 +58,21 @@ namespace Google.Pubsub.V1.Snippets
         public void Dispose()
         {
             var subscriber = SubscriberClient.Create();
-            var subscriptions = subscriber.ListSubscriptions(SubscriberClient.FormatProjectName(ProjectId))
+            var subscriptions = subscriber.ListSubscriptions(new ProjectName(ProjectId))
                 .Where(sub => SubscriberClient.SubscriptionTemplate.ParseName(sub.Name)[1].StartsWith(TopicPrefix))
                 .ToList();
             foreach (var sub in subscriptions)
             {
-                subscriber.DeleteSubscription(sub.Name);
+                subscriber.DeleteSubscription(sub.SubscriptionName);
             }
 
             var publisher = PublisherClient.Create();
-            var topics = publisher.ListTopics(PublisherClient.FormatProjectName(ProjectId))
+            var topics = publisher.ListTopics(new ProjectName(ProjectId))
                 .Where(topic => PublisherClient.TopicTemplate.ParseName(topic.Name)[1].StartsWith(TopicPrefix))
                 .ToList();
             foreach (var topic in topics)
             {
-                publisher.DeleteTopic(topic.Name);
+                publisher.DeleteTopic(topic.TopicName);
             }
         }
     }

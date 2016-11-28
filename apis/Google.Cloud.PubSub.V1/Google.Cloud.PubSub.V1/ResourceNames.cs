@@ -650,7 +650,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class ListTopicSubscriptionsResponse
     {
         /// <summary>
-        /// A <see cref="IList<SubscriptionName>"/>-typed view over the <see cref="Subscriptions"/> resource name property.
+        /// A <see cref="IList{SubscriptionName}"/>-typed view over the <see cref="Subscriptions"/> resource name property.
         /// </summary>
         public IList<SubscriptionName> SubscriptionsAsSubscriptionNames =>
             new ResourceNameList<SubscriptionName>(Subscriptions,
