@@ -16,7 +16,7 @@ using Google.Protobuf.WellKnownTypes;
 using System;
 using Xunit;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
+namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
     [Collection(nameof(ErrorReportingFixture))]
     public class ReportErrorsServiceClientSnippets
@@ -35,7 +35,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
 
             // Snippet: ReportErrorEvent
             ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
-            string projectName = ReportErrorsServiceClient.FormatProjectName(projectId);
+            string projectName = new ProjectName(projectId).ToString();
             ReportedErrorEvent error = new ReportedErrorEvent
             {
                 Context = new ErrorContext

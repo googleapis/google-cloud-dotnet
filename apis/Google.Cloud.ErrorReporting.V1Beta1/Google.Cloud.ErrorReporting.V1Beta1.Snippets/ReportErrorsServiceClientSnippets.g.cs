@@ -39,7 +39,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ReportErrorsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             ReportedErrorEvent @event = new ReportedErrorEvent();
             // Make the request
             ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(formattedProjectName, @event);
@@ -52,7 +52,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ReportErrorsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             ReportedErrorEvent @event = new ReportedErrorEvent();
             // Make the request
             ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(formattedProjectName, @event);

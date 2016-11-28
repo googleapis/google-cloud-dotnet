@@ -259,7 +259,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
-        /// <param name="@event">
+        /// <param name="event">
         /// [Required] The error event to be reported.
         /// </param>
         /// <param name="callSettings">
@@ -292,7 +292,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
-        /// <param name="@event">
+        /// <param name="event">
         /// [Required] The error event to be reported.
         /// </param>
         /// <param name="cancellationToken">
@@ -325,7 +325,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
-        /// <param name="@event">
+        /// <param name="event">
         /// [Required] The error event to be reported.
         /// </param>
         /// <param name="callSettings">
@@ -390,7 +390,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
-        /// <param name="@event">
+        /// <param name="event">
         /// [Required] The error event to be reported.
         /// </param>
         /// <param name="callSettings">
@@ -429,7 +429,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
-        /// <param name="@event">
+        /// <param name="event">
         /// [Required] The error event to be reported.
         /// </param>
         /// <param name="callSettings">

@@ -39,7 +39,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedGroupName = ErrorGroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedGroupName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(formattedGroupName);
             // End snippet
@@ -51,7 +51,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedGroupName = ErrorGroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedGroupName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             ErrorGroup response = errorGroupServiceClient.GetGroup(formattedGroupName);
             // End snippet
