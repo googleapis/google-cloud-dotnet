@@ -83,7 +83,7 @@ So, for example, a complete configuration might look like this:
 ``` xml
 <?xml version="1.0" encoding="utf-8" ?>
 <log4net>
-  <appender name="CloudLogger" type="Google.Logging.Log4Net.GoogleStackdriverAppender">
+  <appender name="CloudLogger" type="Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Logging.Log4Net">
     <layout type="log4net.Layout.PatternLayout">
       <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message" />
     </layout>
