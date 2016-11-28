@@ -43,7 +43,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "b3RvUAGqAiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMWIG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser, new[]{ "GroupName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser, new[]{ "Group" }, null, null, null)
@@ -220,12 +220,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     /// <summary>Field number for the "group" field.</summary>
     public const int GroupFieldNumber = 1;
-    private global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup group_;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup group_;
     /// <summary>
     ///  [Required] The group which replaces the resource on the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup Group {
+    public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup Group {
       get { return group_; }
       set {
         group_ = value;
@@ -285,7 +285,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup();
+          group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
         }
         Group.MergeFrom(other.Group);
       }
@@ -301,7 +301,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             break;
           case 10: {
             if (group_ == null) {
-              group_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup();
+              group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
             }
             input.ReadMessage(group_);
             break;

@@ -17,7 +17,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.ErrorReporting.V1Beta1;
-using Google.Devtools.Clouderrorreporting.V1Beta1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;

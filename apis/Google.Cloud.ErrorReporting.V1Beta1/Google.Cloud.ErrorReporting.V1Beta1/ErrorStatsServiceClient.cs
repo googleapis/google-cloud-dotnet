@@ -16,7 +16,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Devtools.Clouderrorreporting.V1Beta1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -239,23 +238,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
-
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
