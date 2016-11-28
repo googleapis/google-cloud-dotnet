@@ -73,7 +73,7 @@ namespace Google.Devtools.AspNet.Tests
                 Task[] tasks = new Task[threads];
                 for (int i = 0; i < threads; i++)
                 {
-                    tasks[i] = Task.Run(() =>
+                    tasks[i] = Task.Run(async () =>
                     {
                         while (!source.IsCancellationRequested)
                         {
@@ -81,6 +81,7 @@ namespace Google.Devtools.AspNet.Tests
                             {
                                 Interlocked.Increment(ref canTraceCounter);
                             }
+                            await Task.Yield();
                         }
                     });
                 }
