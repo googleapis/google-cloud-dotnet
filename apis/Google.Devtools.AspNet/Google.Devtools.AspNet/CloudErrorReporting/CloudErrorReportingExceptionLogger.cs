@@ -55,18 +55,18 @@ namespace Google.Devtools.AspNet
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
         private readonly ServiceContext _serviceContext;
 
-        private readonly ReportErrorsServiceClient _client;
+        private readonly Task<ReportErrorsServiceClient> _clientTask;
 
         /// <summary>
         /// Creates an instance of <see cref="CloudErrorReportingExceptionLogger"/>
         /// </summary>
-        /// <param name="client">The Error Reporting client.</param>
+        /// <param name="clientTask">The Error Reporting client.</param>
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
         public static CloudErrorReportingExceptionLogger Create(
-            ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
-                new CloudErrorReportingExceptionLogger(client, projectId, serviceName, version);
+            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
+                new CloudErrorReportingExceptionLogger(clientTask, projectId, serviceName, version);
 
         /// <summary>
         /// Creates an instance of <see cref="CloudErrorReportingExceptionLogger"/> using credentials as
@@ -76,12 +76,12 @@ namespace Google.Devtools.AspNet
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
         public static CloudErrorReportingExceptionLogger Create(string projectId, string serviceName, string version) =>
-            new CloudErrorReportingExceptionLogger(ReportErrorsServiceClient.Create(), projectId, serviceName, version);
+            new CloudErrorReportingExceptionLogger(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
 
         private CloudErrorReportingExceptionLogger(
-            ReportErrorsServiceClient client, string projectId, string serviceName, string version) : base()
+            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) : base()
         {
-            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _clientTask = GaxPreconditions.CheckNotNull(clientTask, nameof(clientTask));
             _projectResourceName = ReportErrorsServiceClient.FormatProjectName(
                 GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
             _serviceContext = new ServiceContext
@@ -95,14 +95,21 @@ namespace Google.Devtools.AspNet
         public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
             ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            return _client.ReportErrorEventAsync(_projectResourceName, errorEvent);
+            return _clientTask.ContinueWith(clientTask =>
+            {
+                return clientTask.Result.ReportErrorEventAsync(_projectResourceName, errorEvent);
+            });
         }
 
         /// <inheritdoc />
         public override void Log(ExceptionLoggerContext context)
         {
             ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            _client.ReportErrorEvent(_projectResourceName, errorEvent);
+
+            _clientTask.ContinueWith(clientTask => 
+            {
+                return clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
+            });
         }
 
         /// <inheritdoc />
