@@ -1,5 +1,5 @@
 {
-  "description": "Unit tests for the Google Stackdriver Error Reporting ExceptionLogger library.",
+  "description": "Unit tests for the Google Stackdriver Insturmnetation Libraries",
 
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
