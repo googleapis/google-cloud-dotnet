@@ -6,12 +6,11 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>4ab959c8-953b-41ba-9c8f-392002f6a4f6</ProjectGuid>
+    <ProjectGuid>7408d53d-88e6-42bb-b79a-1b18b027633d</ProjectGuid>
     <RootNamespace>Google.Cloud.ErrorReporting.V1Beta1</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>

@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Grpc": "1.0.0-beta04",
+    "Google.Api.Gax.Grpc": "1.0.0-beta04-CI00109",
     "Google.Logging.Type": { "target": "project" }
   },
 
