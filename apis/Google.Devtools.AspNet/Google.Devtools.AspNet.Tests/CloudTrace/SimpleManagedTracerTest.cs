@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using Xunit;
 using Moq;
 using System;
@@ -20,7 +20,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Google.Protobuf.Collections;
 
-using Trace = Google.Devtools.Cloudtrace.V1.Trace;
+using Trace = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Devtools.AspNet.Tests
 {
