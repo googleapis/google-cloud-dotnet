@@ -32,9 +32,21 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         String,
         /// <summary>
-        /// A timestamp with up to microsecond precision.
+        /// A timestamp with microsecond precision.
         /// </summary>
         Timestamp,
+        /// <summary>
+        /// A civil date in the Gregorian calendar.
+        /// </summary>
+        Date,
+        /// <summary>
+        /// A civil time-of-day with microsecond precision.
+        /// </summary>
+        Time,
+        /// <summary>
+        /// A civil date and time with microsecond precision.
+        /// </summary>
+        DateTime,
         /// <summary>
         /// A 64-bit IEEE binary floating-point value.
         /// </summary>
@@ -46,6 +58,6 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// A record type with a nested schema.
         /// </summary>
-        Record
+        Record,
     }
 }
