@@ -40,7 +40,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = LoggingServiceV2Client.FormatLogName("[PROJECT]", "[LOG]");
+            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
             // Make the request
             await loggingServiceV2Client.DeleteLogAsync(formattedLogName);
             // End snippet
@@ -52,7 +52,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = LoggingServiceV2Client.FormatLogName("[PROJECT]", "[LOG]");
+            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
             // Make the request
             loggingServiceV2Client.DeleteLog(formattedLogName);
             // End snippet
@@ -65,7 +65,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = LoggingServiceV2Client.FormatLogName("[PROJECT]", "[LOG]");
+            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
             MonitoredResource resource = new MonitoredResource();
             IDictionary<string, string> labels = new Dictionary<string, string>();
             IEnumerable<LogEntry> entries = new List<LogEntry>();
@@ -80,7 +80,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = LoggingServiceV2Client.FormatLogName("[PROJECT]", "[LOG]");
+            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
             MonitoredResource resource = new MonitoredResource();
             IDictionary<string, string> labels = new Dictionary<string, string>();
             IEnumerable<LogEntry> entries = new List<LogEntry>();
