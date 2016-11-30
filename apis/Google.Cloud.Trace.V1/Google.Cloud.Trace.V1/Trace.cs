@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Devtools.Cloudtrace.V1 {
+namespace Google.Cloud.Trace.V1 {
 
   /// <summary>Holder for reflection information generated from google/devtools/cloudtrace/v1/trace.proto</summary>
   public static partial class TraceReflection {
@@ -62,19 +62,19 @@ namespace Google.Devtools.Cloudtrace.V1 {
             "cHJvamVjdF9pZH0vdHJhY2VzL3t0cmFjZV9pZH0SigEKC1BhdGNoVHJhY2Vz",
             "EjEuZ29vZ2xlLmRldnRvb2xzLmNsb3VkdHJhY2UudjEuUGF0Y2hUcmFjZXNS",
             "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjCC0+STAioyIC92MS9w",
-            "cm9qZWN0cy97cHJvamVjdF9pZH0vdHJhY2VzOgZ0cmFjZXNCMQohY29tLmdv",
-            "b2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYxQgpUcmFjZVByb3RvUAFiBnBy",
-            "b3RvMw=="));
+            "cm9qZWN0cy97cHJvamVjdF9pZH0vdHJhY2VzOgZ0cmFjZXNCSQohY29tLmdv",
+            "b2dsZS5kZXZ0b29scy5jbG91ZHRyYWNlLnYxQgpUcmFjZVByb3RvUAGqAhVH",
+            "b29nbGUuQ2xvdWQuVHJhY2UuVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Cloudtrace.V1.Trace), global::Google.Devtools.Cloudtrace.V1.Trace.Parser, new[]{ "ProjectId", "TraceId", "Spans" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Cloudtrace.V1.Traces), global::Google.Devtools.Cloudtrace.V1.Traces.Parser, new[]{ "Traces_" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Cloudtrace.V1.TraceSpan), global::Google.Devtools.Cloudtrace.V1.TraceSpan.Parser, new[]{ "SpanId", "Kind", "Name", "StartTime", "EndTime", "ParentSpanId", "Labels" }, null, new[]{ typeof(global::Google.Devtools.Cloudtrace.V1.TraceSpan.Types.SpanKind) }, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Cloudtrace.V1.ListTracesRequest), global::Google.Devtools.Cloudtrace.V1.ListTracesRequest.Parser, new[]{ "ProjectId", "View", "PageSize", "PageToken", "StartTime", "EndTime", "Filter", "OrderBy" }, null, new[]{ typeof(global::Google.Devtools.Cloudtrace.V1.ListTracesRequest.Types.ViewType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Cloudtrace.V1.ListTracesResponse), global::Google.Devtools.Cloudtrace.V1.ListTracesResponse.Parser, new[]{ "Traces", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Cloudtrace.V1.GetTraceRequest), global::Google.Devtools.Cloudtrace.V1.GetTraceRequest.Parser, new[]{ "ProjectId", "TraceId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest), global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest.Parser, new[]{ "ProjectId", "Traces" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Trace), global::Google.Cloud.Trace.V1.Trace.Parser, new[]{ "ProjectId", "TraceId", "Spans" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.Traces), global::Google.Cloud.Trace.V1.Traces.Parser, new[]{ "Traces_" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.TraceSpan), global::Google.Cloud.Trace.V1.TraceSpan.Parser, new[]{ "SpanId", "Kind", "Name", "StartTime", "EndTime", "ParentSpanId", "Labels" }, null, new[]{ typeof(global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind) }, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.ListTracesRequest), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser, new[]{ "ProjectId", "View", "PageSize", "PageToken", "StartTime", "EndTime", "Filter", "OrderBy" }, null, new[]{ typeof(global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.ListTracesResponse), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser, new[]{ "Traces", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.GetTraceRequest), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser, new[]{ "ProjectId", "TraceId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Trace.V1.PatchTracesRequest), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser, new[]{ "ProjectId", "Traces" }, null, null, null)
           }));
     }
     #endregion
@@ -93,7 +93,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,14 +151,14 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     /// <summary>Field number for the "spans" field.</summary>
     public const int SpansFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Devtools.Cloudtrace.V1.TraceSpan> _repeated_spans_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Devtools.Cloudtrace.V1.TraceSpan.Parser);
-    private readonly pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.TraceSpan> spans_ = new pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.TraceSpan>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Trace.V1.TraceSpan> _repeated_spans_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Trace.V1.TraceSpan.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V1.TraceSpan> spans_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V1.TraceSpan>();
     /// <summary>
     ///  Collection of spans in the trace.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.TraceSpan> Spans {
+    public pbc::RepeatedField<global::Google.Cloud.Trace.V1.TraceSpan> Spans {
       get { return spans_; }
     }
 
@@ -271,7 +271,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -298,14 +298,14 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     /// <summary>Field number for the "traces" field.</summary>
     public const int Traces_FieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Devtools.Cloudtrace.V1.Trace> _repeated_traces_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Devtools.Cloudtrace.V1.Trace.Parser);
-    private readonly pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.Trace> traces_ = new pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.Trace>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Trace.V1.Trace> _repeated_traces_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Trace.V1.Trace.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> traces_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace>();
     /// <summary>
     ///  List of traces.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.Trace> Traces_ {
+    public pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> Traces_ {
       get { return traces_; }
     }
 
@@ -390,7 +390,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -438,14 +438,14 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 2;
-    private global::Google.Devtools.Cloudtrace.V1.TraceSpan.Types.SpanKind kind_ = 0;
+    private global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind kind_ = 0;
     /// <summary>
     ///  Distinguishes between spans generated in a particular context. For example,
     ///  two spans with the same name may be distinguished using `RPC_CLIENT`
     ///  and `RPC_SERVER` to identify queueing latency associated with the span.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Cloudtrace.V1.TraceSpan.Types.SpanKind Kind {
+    public global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind Kind {
       get { return kind_; }
       set {
         kind_ = value;
@@ -666,7 +666,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
             break;
           }
           case 16: {
-            kind_ = (global::Google.Devtools.Cloudtrace.V1.TraceSpan.Types.SpanKind) input.ReadEnum();
+            kind_ = (global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind) input.ReadEnum();
             break;
           }
           case 26: {
@@ -740,7 +740,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -788,13 +788,13 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 2;
-    private global::Google.Devtools.Cloudtrace.V1.ListTracesRequest.Types.ViewType view_ = 0;
+    private global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType view_ = 0;
     /// <summary>
     ///  Type of data returned for traces in the list. Optional. Default is
     ///  `MINIMAL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Cloudtrace.V1.ListTracesRequest.Types.ViewType View {
+    public global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType View {
       get { return view_; }
       set {
         view_ = value;
@@ -1061,7 +1061,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
             break;
           }
           case 16: {
-            view_ = (global::Google.Devtools.Cloudtrace.V1.ListTracesRequest.Types.ViewType) input.ReadEnum();
+            view_ = (global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType) input.ReadEnum();
             break;
           }
           case 24: {
@@ -1143,7 +1143,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1171,14 +1171,14 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     /// <summary>Field number for the "traces" field.</summary>
     public const int TracesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Devtools.Cloudtrace.V1.Trace> _repeated_traces_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Devtools.Cloudtrace.V1.Trace.Parser);
-    private readonly pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.Trace> traces_ = new pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.Trace>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Trace.V1.Trace> _repeated_traces_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Trace.V1.Trace.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> traces_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace>();
     /// <summary>
     ///  List of trace records returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Devtools.Cloudtrace.V1.Trace> Traces {
+    public pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> Traces {
       get { return traces_; }
     }
 
@@ -1291,7 +1291,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1445,7 +1445,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1487,12 +1487,12 @@ namespace Google.Devtools.Cloudtrace.V1 {
 
     /// <summary>Field number for the "traces" field.</summary>
     public const int TracesFieldNumber = 2;
-    private global::Google.Devtools.Cloudtrace.V1.Traces traces_;
+    private global::Google.Cloud.Trace.V1.Traces traces_;
     /// <summary>
     ///  The body of the message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Cloudtrace.V1.Traces Traces {
+    public global::Google.Cloud.Trace.V1.Traces Traces {
       get { return traces_; }
       set {
         traces_ = value;
@@ -1564,7 +1564,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       }
       if (other.traces_ != null) {
         if (traces_ == null) {
-          traces_ = new global::Google.Devtools.Cloudtrace.V1.Traces();
+          traces_ = new global::Google.Cloud.Trace.V1.Traces();
         }
         Traces.MergeFrom(other.Traces);
       }
@@ -1584,7 +1584,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
           }
           case 18: {
             if (traces_ == null) {
-              traces_ = new global::Google.Devtools.Cloudtrace.V1.Traces();
+              traces_ = new global::Google.Cloud.Trace.V1.Traces();
             }
             input.ReadMessage(traces_);
             break;

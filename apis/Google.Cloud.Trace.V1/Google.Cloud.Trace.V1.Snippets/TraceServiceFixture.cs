@@ -14,7 +14,7 @@
 using System;
 using Xunit;
 
-namespace Google.Devtools.Cloudtrace.V1.Snippets
+namespace Google.Cloud.Trace.V1.Snippets
 {
     /// <summary>
     /// Fixture which is set up at the start of the test run, and torn down at the end.

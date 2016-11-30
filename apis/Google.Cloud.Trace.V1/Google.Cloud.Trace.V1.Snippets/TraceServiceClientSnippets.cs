@@ -17,7 +17,7 @@ using System;
 using System.Linq;
 using Xunit;
 
-namespace Google.Devtools.Cloudtrace.V1.Snippets
+namespace Google.Cloud.Trace.V1.Snippets
 {
     [Collection(nameof(TraceServiceFixture))]
     public class TraceServiceClientSnippets
@@ -35,7 +35,7 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
             string projectId = _fixture.ProjectId;
             // Snippet: ListTraces
             TraceServiceClient client = TraceServiceClient.Create();
-            IPagedEnumerable<ListTracesResponse, Trace> traces = client.ListTraces(projectId);
+            PagedEnumerable<ListTracesResponse, Trace> traces = client.ListTraces(projectId);
             foreach (Trace trace in traces.Take(10))
             {
                 Console.WriteLine($"{trace.TraceId}:");

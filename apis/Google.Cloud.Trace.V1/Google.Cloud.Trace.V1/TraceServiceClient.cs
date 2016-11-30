@@ -16,7 +16,6 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -26,7 +25,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Devtools.Cloudtrace.V1
+namespace Google.Cloud.Trace.V1
 {
     /// <summary>
     /// Settings for a <see cref="TraceServiceClient"/>.
@@ -481,7 +480,7 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
+        public virtual PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
             string projectId,
             string pageToken = null,
             int? pageSize = null,
@@ -510,7 +509,7 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <returns>
         /// A pageable sequence of <see cref="Trace"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListTracesResponse, Trace> ListTraces(
+        public virtual PagedEnumerable<ListTracesResponse, Trace> ListTraces(
             string projectId,
             string pageToken = null,
             int? pageSize = null,
@@ -703,7 +702,7 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
+        public override PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
             string projectId,
             string pageToken = null,
             int? pageSize = null,
@@ -716,7 +715,7 @@ namespace Google.Devtools.Cloudtrace.V1
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTracesRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
         }
 
         /// <summary>
@@ -739,7 +738,7 @@ namespace Google.Devtools.Cloudtrace.V1
         /// <returns>
         /// A pageable sequence of <see cref="Trace"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListTracesResponse, Trace> ListTraces(
+        public override PagedEnumerable<ListTracesResponse, Trace> ListTraces(
             string projectId,
             string pageToken = null,
             int? pageSize = null,
@@ -752,7 +751,7 @@ namespace Google.Devtools.Cloudtrace.V1
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTracesRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
+            return new GrpcPagedEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
         }
 
     }

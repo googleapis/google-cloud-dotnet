@@ -22,7 +22,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Grpc.Core;
 
-namespace Google.Devtools.Cloudtrace.V1 {
+namespace Google.Cloud.Trace.V1 {
   /// <summary>
   ///  This file describes an API for collecting and viewing traces and spans
   ///  within a trace.  A Trace is a collection of spans corresponding to a single
@@ -34,28 +34,28 @@ namespace Google.Devtools.Cloudtrace.V1 {
   {
     static readonly string __ServiceName = "google.devtools.cloudtrace.v1.TraceService";
 
-    static readonly Marshaller<global::Google.Devtools.Cloudtrace.V1.ListTracesRequest> __Marshaller_ListTracesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Cloudtrace.V1.ListTracesRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Devtools.Cloudtrace.V1.ListTracesResponse> __Marshaller_ListTracesResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Cloudtrace.V1.ListTracesResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Devtools.Cloudtrace.V1.GetTraceRequest> __Marshaller_GetTraceRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Cloudtrace.V1.GetTraceRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Devtools.Cloudtrace.V1.Trace> __Marshaller_Trace = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Cloudtrace.V1.Trace.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest> __Marshaller_PatchTracesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Trace.V1.ListTracesRequest> __Marshaller_ListTracesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Trace.V1.ListTracesResponse> __Marshaller_ListTracesResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Trace.V1.GetTraceRequest> __Marshaller_GetTraceRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Trace.V1.Trace> __Marshaller_Trace = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.Trace.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Trace.V1.PatchTracesRequest> __Marshaller_PatchTracesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Devtools.Cloudtrace.V1.ListTracesRequest, global::Google.Devtools.Cloudtrace.V1.ListTracesResponse> __Method_ListTraces = new Method<global::Google.Devtools.Cloudtrace.V1.ListTracesRequest, global::Google.Devtools.Cloudtrace.V1.ListTracesResponse>(
+    static readonly Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse> __Method_ListTraces = new Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse>(
         MethodType.Unary,
         __ServiceName,
         "ListTraces",
         __Marshaller_ListTracesRequest,
         __Marshaller_ListTracesResponse);
 
-    static readonly Method<global::Google.Devtools.Cloudtrace.V1.GetTraceRequest, global::Google.Devtools.Cloudtrace.V1.Trace> __Method_GetTrace = new Method<global::Google.Devtools.Cloudtrace.V1.GetTraceRequest, global::Google.Devtools.Cloudtrace.V1.Trace>(
+    static readonly Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace> __Method_GetTrace = new Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace>(
         MethodType.Unary,
         __ServiceName,
         "GetTrace",
         __Marshaller_GetTraceRequest,
         __Marshaller_Trace);
 
-    static readonly Method<global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PatchTraces = new Method<global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PatchTraces = new Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "PatchTraces",
@@ -65,7 +65,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Devtools.Cloudtrace.V1.TraceReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.Trace.V1.TraceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of TraceService</summary>
@@ -74,7 +74,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       /// <summary>
       ///  Returns of a list of traces that match the specified filter conditions.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Devtools.Cloudtrace.V1.ListTracesResponse> ListTraces(global::Google.Devtools.Cloudtrace.V1.ListTracesRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -82,7 +82,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       /// <summary>
       ///  Gets a single trace by its ID.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Devtools.Cloudtrace.V1.Trace> GetTrace(global::Google.Devtools.Cloudtrace.V1.GetTraceRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Trace.V1.Trace> GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -94,7 +94,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       ///  and any new fields provided are merged with the existing trace data. If the
       ///  ID does not match, a new trace is created.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PatchTraces(global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -127,56 +127,56 @@ namespace Google.Devtools.Cloudtrace.V1 {
       /// <summary>
       ///  Returns of a list of traces that match the specified filter conditions.
       /// </summary>
-      public virtual global::Google.Devtools.Cloudtrace.V1.ListTracesResponse ListTraces(global::Google.Devtools.Cloudtrace.V1.ListTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Trace.V1.ListTracesResponse ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListTraces(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Returns of a list of traces that match the specified filter conditions.
       /// </summary>
-      public virtual global::Google.Devtools.Cloudtrace.V1.ListTracesResponse ListTraces(global::Google.Devtools.Cloudtrace.V1.ListTracesRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Trace.V1.ListTracesResponse ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTraces, null, options, request);
       }
       /// <summary>
       ///  Returns of a list of traces that match the specified filter conditions.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Cloudtrace.V1.ListTracesResponse> ListTracesAsync(global::Google.Devtools.Cloudtrace.V1.ListTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTracesAsync(global::Google.Cloud.Trace.V1.ListTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListTracesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Returns of a list of traces that match the specified filter conditions.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Cloudtrace.V1.ListTracesResponse> ListTracesAsync(global::Google.Devtools.Cloudtrace.V1.ListTracesRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTracesAsync(global::Google.Cloud.Trace.V1.ListTracesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTraces, null, options, request);
       }
       /// <summary>
       ///  Gets a single trace by its ID.
       /// </summary>
-      public virtual global::Google.Devtools.Cloudtrace.V1.Trace GetTrace(global::Google.Devtools.Cloudtrace.V1.GetTraceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Trace.V1.Trace GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetTrace(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Gets a single trace by its ID.
       /// </summary>
-      public virtual global::Google.Devtools.Cloudtrace.V1.Trace GetTrace(global::Google.Devtools.Cloudtrace.V1.GetTraceRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Trace.V1.Trace GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTrace, null, options, request);
       }
       /// <summary>
       ///  Gets a single trace by its ID.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Cloudtrace.V1.Trace> GetTraceAsync(global::Google.Devtools.Cloudtrace.V1.GetTraceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.Trace> GetTraceAsync(global::Google.Cloud.Trace.V1.GetTraceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetTraceAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Gets a single trace by its ID.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Cloudtrace.V1.Trace> GetTraceAsync(global::Google.Devtools.Cloudtrace.V1.GetTraceRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.Trace> GetTraceAsync(global::Google.Cloud.Trace.V1.GetTraceRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTrace, null, options, request);
       }
@@ -187,7 +187,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       ///  and any new fields provided are merged with the existing trace data. If the
       ///  ID does not match, a new trace is created.
       /// </summary>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return PatchTraces(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -198,7 +198,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       ///  and any new fields provided are merged with the existing trace data. If the
       ///  ID does not match, a new trace is created.
       /// </summary>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest request, CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PatchTraces, null, options, request);
       }
@@ -209,7 +209,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       ///  and any new fields provided are merged with the existing trace data. If the
       ///  ID does not match, a new trace is created.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Cloud.Trace.V1.PatchTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return PatchTracesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -220,7 +220,7 @@ namespace Google.Devtools.Cloudtrace.V1 {
       ///  and any new fields provided are merged with the existing trace data. If the
       ///  ID does not match, a new trace is created.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Devtools.Cloudtrace.V1.PatchTracesRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Cloud.Trace.V1.PatchTracesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PatchTraces, null, options, request);
       }

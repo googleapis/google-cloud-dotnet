@@ -16,7 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -28,7 +28,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Devtools.Cloudtrace.V1.Snippets
+namespace Google.Cloud.Trace.V1.Snippets
 {
     public class GeneratedTraceServiceClientSnippets
     {
@@ -94,7 +94,7 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
             // Initialize request argument(s)
             string projectId = "";
             // Make the request
-            IPagedAsyncEnumerable<ListTracesResponse,Trace> response =
+            PagedAsyncEnumerable<ListTracesResponse,Trace> response =
                 traceServiceClient.ListTracesAsync(projectId);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -104,10 +104,8 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<Trace>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<Trace> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTracesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -116,6 +114,18 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Trace> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Trace item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -127,7 +137,7 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
             // Initialize request argument(s)
             string projectId = "";
             // Make the request
-            IPagedEnumerable<ListTracesResponse,Trace> response =
+            PagedEnumerable<ListTracesResponse,Trace> response =
                 traceServiceClient.ListTraces(projectId);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -137,9 +147,8 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<Trace> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTracesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -148,6 +157,18 @@ namespace Google.Devtools.Cloudtrace.V1.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Trace> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Trace item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
