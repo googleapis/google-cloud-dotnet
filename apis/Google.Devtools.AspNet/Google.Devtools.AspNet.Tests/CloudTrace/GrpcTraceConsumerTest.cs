@@ -13,7 +13,7 @@
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using Moq;
 using System.Threading.Tasks;
 using Xunit;

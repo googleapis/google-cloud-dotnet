@@ -19,9 +19,9 @@
 
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-beta04",
-    "Google.Api.Gax": "1.0.0-beta04",
-    "Google.Devtools.Clouderrorreporting.V1Beta1": { "target": "project" },
-    "Google.Devtools.Cloudtrace.V1": "0.3.0",
+    "Google.Api.Gax": "1.0.0-beta04-CI00109",
+    "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" },
+    "Google.Cloud.Trace.V1": { "target": "project" },
     "Microsoft.AspNet.WebApi.Core": "5.2.3"
   },
 

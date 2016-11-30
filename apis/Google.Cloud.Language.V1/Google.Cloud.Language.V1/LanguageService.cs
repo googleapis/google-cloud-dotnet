@@ -763,8 +763,8 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>
     ///  Metadata associated with the entity.
     ///
-    ///  Currently, only Wikipedia URLs are provided, if available.
-    ///  The associated key is "wikipedia_url".
+    ///  Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if
+    ///  available. The associated keys are "wikipedia_url" and "mid", respectively.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Metadata {
@@ -1057,8 +1057,7 @@ namespace Google.Cloud.Language.V1 {
     public const int LemmaFieldNumber = 4;
     private string lemma_ = "";
     /// <summary>
-    ///  [Lemma](https://en.wikipedia.org/wiki/Lemma_(morphology))
-    ///  of the token.
+    ///  [Lemma](https://en.wikipedia.org/wiki/Lemma_%28morphology%29) of the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Lemma {
@@ -1250,7 +1249,7 @@ namespace Google.Cloud.Language.V1 {
     private float magnitude_;
     /// <summary>
     ///  A non-negative number in the [0, +inf) range, which represents
-    ///  the absolute magnitude of sentiment regardless of polarity (positive or
+    ///  the absolute magnitude of sentiment regardless of score (positive or
     ///  negative).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1367,7 +1366,9 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents part of speech information for a token.
+  ///  Represents part of speech information for a token. Parts of speech
+  ///  are as defined in
+  ///  http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
   /// </summary>
   public sealed partial class PartOfSpeech : pb::IMessage<PartOfSpeech> {
     private static readonly pb::MessageParser<PartOfSpeech> _parser = new pb::MessageParser<PartOfSpeech>(() => new PartOfSpeech());
@@ -2245,7 +2246,9 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents dependency parse tree information for a token.
+  ///  Represents dependency parse tree information for a token. (For more
+  ///  information on dependency labels, see
+  ///  http://www.aclweb.org/anthology/P13-2017
   /// </summary>
   public sealed partial class DependencyEdge : pb::IMessage<DependencyEdge> {
     private static readonly pb::MessageParser<DependencyEdge> _parser = new pb::MessageParser<DependencyEdge>(() => new DependencyEdge());
