@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using System;
 using System.Threading.Tasks;
 using System.Web;
