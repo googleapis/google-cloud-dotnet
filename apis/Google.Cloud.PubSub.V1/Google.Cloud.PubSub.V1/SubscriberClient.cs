@@ -524,61 +524,6 @@ namespace Google.Cloud.PubSub.V1
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a subscription resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>subscription</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate SubscriptionTemplate { get; } = new PathTemplate("projects/{project}/subscriptions/{subscription}");
-
-        /// <summary>
-        /// Creates a subscription resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="subscriptionId">The subscription ID.</param>
-        /// <returns>
-        /// The full subscription resource name.
-        /// </returns>
-        public static string FormatSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
-
-        /// <summary>
-        /// Path template for a topic resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>topic</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate TopicTemplate { get; } = new PathTemplate("projects/{project}/topics/{topic}");
-
-        /// <summary>
-        /// Creates a topic resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="topicId">The topic ID.</param>
-        /// <returns>
-        /// The full topic resource name.
-        /// </returns>
-        public static string FormatTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:

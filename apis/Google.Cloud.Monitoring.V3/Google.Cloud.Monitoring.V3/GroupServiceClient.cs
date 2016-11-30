@@ -338,42 +338,6 @@ namespace Google.Cloud.Monitoring.V3
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a group resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>group</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate GroupTemplate { get; } = new PathTemplate("projects/{project}/groups/{group}");
-
-        /// <summary>
-        /// Creates a group resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="groupId">The group ID.</param>
-        /// <returns>
-        /// The full group resource name.
-        /// </returns>
-        public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:

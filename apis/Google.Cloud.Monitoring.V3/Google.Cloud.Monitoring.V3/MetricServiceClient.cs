@@ -399,61 +399,6 @@ namespace Google.Cloud.Monitoring.V3
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a metric_descriptor resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>metricDescriptor</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate MetricDescriptorTemplate { get; } = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
-
-        /// <summary>
-        /// Creates a metric_descriptor resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="metricDescriptorId">The metricDescriptor ID.</param>
-        /// <returns>
-        /// The full metric_descriptor resource name.
-        /// </returns>
-        public static string FormatMetricDescriptorName(string projectId, string metricDescriptorId) => MetricDescriptorTemplate.Expand(projectId, metricDescriptorId);
-
-        /// <summary>
-        /// Path template for a monitored_resource_descriptor resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>monitoredResourceDescriptor</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate MonitoredResourceDescriptorTemplate { get; } = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
-
-        /// <summary>
-        /// Creates a monitored_resource_descriptor resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID.</param>
-        /// <returns>
-        /// The full monitored_resource_descriptor resource name.
-        /// </returns>
-        public static string FormatMonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId) => MonitoredResourceDescriptorTemplate.Expand(projectId, monitoredResourceDescriptorId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
