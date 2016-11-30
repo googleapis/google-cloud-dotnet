@@ -15,6 +15,7 @@
 using Google.Devtools.Clouderrorreporting.V1Beta1;
 using Moq;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -136,7 +137,7 @@ namespace Google.Devtools.AspNet.Tests
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             logger.Log(CreateComplexContext());
 
-            Utils.WaitForSet(reset, "ReportErrorEvent was called");
+            Utils.WaitForSet(reset, "ReportErrorEvent wasn't called");
             mockClient.VerifyAll();
         }
 
@@ -151,7 +152,7 @@ namespace Google.Devtools.AspNet.Tests
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             logger.Log(SimpleContext);
 
-            Utils.WaitForSet(reset, "ReportErrorEvent was called");
+            Utils.WaitForSet(reset, "ReportErrorEvent wasn't called");
             mockClient.VerifyAll();
         }
 
@@ -165,6 +166,37 @@ namespace Google.Devtools.AspNet.Tests
             await logger.LogAsync(CreateComplexContext(), CancellationToken.None);
 
             mockClient.VerifyAll();
+        }
+
+        [Fact]
+        public async void LogAsync_TooManyPendingTasks()
+        {
+            int maxWaitingTasks = CloudErrorReportingExceptionLogger.MaxWaitingTasks;
+            Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
+            mockClient.Setup(client => client.ReportErrorEventAsync(It.IsAny<string>(), It.IsAny<ReportedErrorEvent>(), null));
+            Task<ReportErrorsServiceClient> taskClient = new Task<ReportErrorsServiceClient>(() => mockClient.Object);
+            CloudErrorReportingExceptionLogger logger = CloudErrorReportingExceptionLogger.Create(taskClient, ProjectId, ServiceName, Version);
+
+            // Start more tasks then we can handle.
+            List<Task> taskList = new List<Task>();
+            for (int i = 0; i < maxWaitingTasks * 3; i++)
+            {
+                taskList.Add(logger.LogAsync(CreateComplexContext(), CancellationToken.None));
+            }
+
+            // Ensure nothing has completed
+            mockClient.Verify(client => client.ReportErrorEventAsync(It.IsAny<string>(), It.IsAny<ReportedErrorEvent>(), null), Times.Never());
+
+            // Complete the client task, wait for tasks to complete and verify the calls
+            taskClient.RunSynchronously();
+            Task.WaitAll(taskList.ToArray());
+            mockClient.Verify(client => client.ReportErrorEventAsync(
+                It.IsAny<string>(), It.IsAny<ReportedErrorEvent>(), null), Times.Exactly(maxWaitingTasks));
+
+            // Ensure calls complete.
+            await logger.LogAsync(CreateComplexContext(), CancellationToken.None);
+            mockClient.Verify(client => client.ReportErrorEventAsync(
+                It.IsAny<string>(), It.IsAny<ReportedErrorEvent>(), null), Times.Exactly(maxWaitingTasks + 1));
         }
     }
 }

@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Devtools.Cloudtrace.V1;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Devtools.AspNet
@@ -23,7 +24,13 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class GrpcTraceConsumer : ITraceConsumer
     {
+        // The max number of tasks that will be allowed when waiting for the client task.
+        internal const int MaxWaitingTasks = 100;
+
         private readonly Task<TraceServiceClient> _clientTask;
+
+        // The number tasks that have been created while waiting for the client task.
+        private int taskCounter = 0;
 
         /// <param name="client">The trace client that will push traces to the Stackdriver Trace API.</param>
         internal GrpcTraceConsumer(Task<TraceServiceClient> client)
@@ -38,6 +45,12 @@ namespace Google.Devtools.AspNet
 
             // If their are no traces do not try to send them.
             if (traces.Traces_.Count == 0)
+            {
+                return;
+            }
+
+            // Ensure the client is complete or we haven't started too many tasks already.
+            if (!_clientTask.IsCompleted && Interlocked.Increment(ref taskCounter) > MaxWaitingTasks)
             {
                 return;
             }

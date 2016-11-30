@@ -48,6 +48,9 @@ namespace Google.Devtools.AspNet
     /// </remarks>
     public sealed class CloudErrorReportingExceptionLogger : ExceptionLogger
     {
+        // The max number of tasks that will be allowed when waiting for the client task.
+        internal const int MaxWaitingTasks = 100;
+
         // The formated Google Cloud Platform project id.
         private readonly string _projectResourceName;
 
@@ -56,6 +59,9 @@ namespace Google.Devtools.AspNet
         private readonly ServiceContext _serviceContext;
 
         private readonly Task<ReportErrorsServiceClient> _clientTask;
+
+        // The number tasks that have been created while waiting for the client task.
+        private int taskCounter = 0;
 
         /// <summary>
         /// Creates an instance of <see cref="CloudErrorReportingExceptionLogger"/>
@@ -94,6 +100,11 @@ namespace Google.Devtools.AspNet
         /// <inheritdoc />
         public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
+            if (IncompleteClientAndTooManyPendingTasks())
+            {
+                return Task.FromResult(false);
+            }
+
             ReportedErrorEvent errorEvent = CreateReportRequest(context);
             return _clientTask.ContinueWith(clientTask =>
             {
@@ -104,8 +115,12 @@ namespace Google.Devtools.AspNet
         /// <inheritdoc />
         public override void Log(ExceptionLoggerContext context)
         {
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
+            if (IncompleteClientAndTooManyPendingTasks())
+            {
+                return;
+            }
 
+            ReportedErrorEvent errorEvent = CreateReportRequest(context);
             _clientTask.ContinueWith(clientTask => 
             {
                 return clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
@@ -116,6 +131,12 @@ namespace Google.Devtools.AspNet
         public override bool ShouldLog(ExceptionLoggerContext context)
         {
             return context?.Exception != null;
+        }
+
+        /// <returns>True if the client is not ready and too many tasks have already been created.</returns>
+        private bool IncompleteClientAndTooManyPendingTasks()
+        {
+            return !_clientTask.IsCompleted && Interlocked.Increment(ref taskCounter) > MaxWaitingTasks;
         }
 
         /// <summary>

@@ -33,10 +33,7 @@ namespace Google.Devtools.AspNet.Tests
         ///     be called.  Defaults to <see cref="TimeoutMilliseconds"/></param>
         public static void WaitForSet(ManualResetEvent reset, string errorMessage, int timeout = TimeoutMilliseconds)
         {
-            if (!reset.WaitOne(TimeoutMilliseconds))
-            {
-                Assert.False(true, errorMessage);
-            }
+            Assert.True(reset.WaitOne(TimeoutMilliseconds), errorMessage);
         }
 
         /// <summary>
@@ -50,10 +47,7 @@ namespace Google.Devtools.AspNet.Tests
         ///     <see cref="EventWaitHandle.Set"/> wasn't called.  Defaults to <see cref="TimeoutMilliseconds"/></param>
         public static void EnsureNoSet(ManualResetEvent reset, string errorMessage, int timeout = TimeoutMilliseconds)
         {
-            if (reset.WaitOne(TimeoutMilliseconds))
-            {
-                Assert.False(true, errorMessage);
-            }
+            Assert.False(reset.WaitOne(TimeoutMilliseconds), errorMessage);
         }
     }
 }
