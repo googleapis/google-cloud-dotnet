@@ -27,7 +27,7 @@ using GrpcStatus = Grpc.Core.Status;
 using ProtoStatus = Google.Rpc.Status;
 using StatusCode = Grpc.Core.StatusCode;
 
-namespace Google.Longrunning.Tests
+namespace Google.LongRunning.Tests
 {
     public class OperationTest
     {

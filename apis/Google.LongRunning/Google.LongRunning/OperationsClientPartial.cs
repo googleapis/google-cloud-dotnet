@@ -15,7 +15,7 @@
 using Google.Api.Gax;
 using System;
 
-namespace Google.Longrunning
+namespace Google.LongRunning
 {
     public partial class OperationsClient
     {

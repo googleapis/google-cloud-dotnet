@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Longrunning {
+namespace Google.LongRunning {
 
   /// <summary>Holder for reflection information generated from google/longrunning/operations.proto</summary>
   public static partial class OperationsReflection {
@@ -48,17 +48,17 @@ namespace Google.Longrunning {
             "cGVyYXRpb25zLyoqfTpjYW5jZWw6ASoSdwoPRGVsZXRlT3BlcmF0aW9uEiou",
             "Z29vZ2xlLmxvbmdydW5uaW5nLkRlbGV0ZU9wZXJhdGlvblJlcXVlc3QaFi5n",
             "b29nbGUucHJvdG9idWYuRW1wdHkiIILT5JMCGioYL3YxL3tuYW1lPW9wZXJh",
-            "dGlvbnMvKip9QisKFmNvbS5nb29nbGUubG9uZ3J1bm5pbmdCD09wZXJhdGlv",
-            "bnNQcm90b1ABYgZwcm90bzM="));
+            "dGlvbnMvKip9QkAKFmNvbS5nb29nbGUubG9uZ3J1bm5pbmdCD09wZXJhdGlv",
+            "bnNQcm90b1ABqgISR29vZ2xlLkxvbmdSdW5uaW5nYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Longrunning.Operation), global::Google.Longrunning.Operation.Parser, new[]{ "Name", "Metadata", "Done", "Error", "Response" }, new[]{ "Result" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Longrunning.GetOperationRequest), global::Google.Longrunning.GetOperationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Longrunning.ListOperationsRequest), global::Google.Longrunning.ListOperationsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Longrunning.ListOperationsResponse), global::Google.Longrunning.ListOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Longrunning.CancelOperationRequest), global::Google.Longrunning.CancelOperationRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Longrunning.DeleteOperationRequest), global::Google.Longrunning.DeleteOperationRequest.Parser, new[]{ "Name" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.Operation), global::Google.LongRunning.Operation.Parser, new[]{ "Name", "Metadata", "Done", "Error", "Response" }, new[]{ "Result" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.GetOperationRequest), global::Google.LongRunning.GetOperationRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsRequest), global::Google.LongRunning.ListOperationsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.ListOperationsResponse), global::Google.LongRunning.ListOperationsResponse.Parser, new[]{ "Operations", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.CancelOperationRequest), global::Google.LongRunning.CancelOperationRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.LongRunning.DeleteOperationRequest), global::Google.LongRunning.DeleteOperationRequest.Parser, new[]{ "Name" }, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace Google.Longrunning {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Longrunning.OperationsReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -384,7 +384,7 @@ namespace Google.Longrunning {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Longrunning.OperationsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -507,7 +507,7 @@ namespace Google.Longrunning {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Longrunning.OperationsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -723,7 +723,7 @@ namespace Google.Longrunning {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Longrunning.OperationsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -751,14 +751,14 @@ namespace Google.Longrunning {
 
     /// <summary>Field number for the "operations" field.</summary>
     public const int OperationsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Longrunning.Operation> _repeated_operations_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Longrunning.Operation.Parser);
-    private readonly pbc::RepeatedField<global::Google.Longrunning.Operation> operations_ = new pbc::RepeatedField<global::Google.Longrunning.Operation>();
+    private static readonly pb::FieldCodec<global::Google.LongRunning.Operation> _repeated_operations_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.LongRunning.Operation.Parser);
+    private readonly pbc::RepeatedField<global::Google.LongRunning.Operation> operations_ = new pbc::RepeatedField<global::Google.LongRunning.Operation>();
     /// <summary>
     ///  A list of operations that matches the specified filter in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Longrunning.Operation> Operations {
+    public pbc::RepeatedField<global::Google.LongRunning.Operation> Operations {
       get { return operations_; }
     }
 
@@ -869,7 +869,7 @@ namespace Google.Longrunning {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Longrunning.OperationsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -992,7 +992,7 @@ namespace Google.Longrunning {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Longrunning.OperationsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.LongRunning.OperationsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
