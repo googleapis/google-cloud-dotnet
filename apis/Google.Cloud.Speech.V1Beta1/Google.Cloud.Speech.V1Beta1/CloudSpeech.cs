@@ -87,7 +87,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
             "Y29nbml6ZVJlc3BvbnNlKAEwAUIwCh9jb20uZ29vZ2xlLmNsb3VkLnNwZWVj",
             "aC52MWJldGExQgtTcGVlY2hQcm90b1ABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Longrunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest), global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
