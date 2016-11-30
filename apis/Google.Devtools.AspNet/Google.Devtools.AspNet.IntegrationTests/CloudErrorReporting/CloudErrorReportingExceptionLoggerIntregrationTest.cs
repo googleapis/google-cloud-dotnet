@@ -30,8 +30,8 @@ namespace Google.Devtools.AspNet.IntegrationTests
     public class CloudErrorReportingExceptionLoggerIntregrationTest
     {
         private const string ProjectEnvironmentVariable = "TEST_PROJECT";
-        public static string ProjectId;
-        public static string TestId;
+        private static string ProjectId;
+        private static string TestId;
 
         public CloudErrorReportingExceptionLoggerIntregrationTest()
         {
@@ -89,7 +89,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
         /// <summary>
         /// A simple <see cref="HttpApplication"/> that registers a <see cref="CloudErrorReportingExceptionLogger"/>
         /// </summary>
-        public class ErrorReportingApplication : HttpApplication
+        private class ErrorReportingApplication : HttpApplication
         {
             public void Configuration(IAppBuilder app)
             {
