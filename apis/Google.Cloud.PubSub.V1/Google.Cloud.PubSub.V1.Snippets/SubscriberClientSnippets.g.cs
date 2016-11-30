@@ -319,7 +319,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = await subscriberClient.SetIamPolicyAsync(formattedResource, policy);
@@ -332,7 +332,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = subscriberClient.SetIamPolicy(formattedResource, policy);
@@ -346,7 +346,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             // Make the request
             Policy response = await subscriberClient.GetIamPolicyAsync(formattedResource);
             // End snippet
@@ -358,7 +358,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             // Make the request
             Policy response = subscriberClient.GetIamPolicy(formattedResource);
             // End snippet
@@ -371,7 +371,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = await subscriberClient.TestIamPermissionsAsync(formattedResource, permissions);
@@ -384,7 +384,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = subscriberClient.TestIamPermissions(formattedResource, permissions);

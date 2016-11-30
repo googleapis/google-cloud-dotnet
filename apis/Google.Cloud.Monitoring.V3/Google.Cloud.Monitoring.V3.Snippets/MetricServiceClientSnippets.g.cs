@@ -39,7 +39,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
             PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptorsAsync(formattedName);
@@ -82,7 +82,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
             PagedEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptors(formattedName);
@@ -126,7 +126,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            string formattedName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]").ToString();
             // Make the request
             MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(formattedName);
             // End snippet
@@ -138,7 +138,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            string formattedName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]").ToString();
             // Make the request
             MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(formattedName);
             // End snippet
@@ -150,7 +150,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
             PagedAsyncEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptorsAsync(formattedName);
@@ -193,7 +193,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
             PagedEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptors(formattedName);
@@ -237,7 +237,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(formattedName);
             // End snippet
@@ -249,7 +249,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             MetricDescriptor response = metricServiceClient.GetMetricDescriptor(formattedName);
             // End snippet
@@ -262,7 +262,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             MetricDescriptor metricDescriptor = new MetricDescriptor();
             // Make the request
             MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(formattedName, metricDescriptor);
@@ -275,7 +275,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             MetricDescriptor metricDescriptor = new MetricDescriptor();
             // Make the request
             MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(formattedName, metricDescriptor);
@@ -289,7 +289,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             await metricServiceClient.DeleteMetricDescriptorAsync(formattedName);
             // End snippet
@@ -301,7 +301,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             metricServiceClient.DeleteMetricDescriptor(formattedName);
             // End snippet
@@ -313,7 +313,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             string filter = "";
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
@@ -359,7 +359,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             string filter = "";
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
@@ -406,7 +406,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
             // Make the request
             await metricServiceClient.CreateTimeSeriesAsync(formattedName, timeSeries);
@@ -419,7 +419,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
             // Make the request
             metricServiceClient.CreateTimeSeries(formattedName, timeSeries);

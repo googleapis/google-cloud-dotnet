@@ -12,11 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.PubSub.V1.Snippets
@@ -59,7 +56,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             var subscriber = SubscriberClient.Create();
             var subscriptions = subscriber.ListSubscriptions(new ProjectName(ProjectId))
-                .Where(sub => SubscriberClient.SubscriptionTemplate.ParseName(sub.Name)[1].StartsWith(TopicPrefix))
+                .Where(sub => sub.SubscriptionName.SubscriptionId.StartsWith(SubscriptionPrefix))
                 .ToList();
             foreach (var sub in subscriptions)
             {
@@ -68,7 +65,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             var publisher = PublisherClient.Create();
             var topics = publisher.ListTopics(new ProjectName(ProjectId))
-                .Where(topic => PublisherClient.TopicTemplate.ParseName(topic.Name)[1].StartsWith(TopicPrefix))
+                .Where(topic => topic.TopicName.TopicId.StartsWith(TopicPrefix))
                 .ToList();
             foreach (var topic in topics)
             {

@@ -42,7 +42,7 @@ namespace Google.Cloud.Tools.Snippets
         {
             var subscriber = SubscriberClient.Create();
             var subscriptions = subscriber.ListSubscriptions(new ProjectName(ProjectId))
-                .Where(sub => SubscriberClient.SubscriptionTemplate.ParseName(sub.Name)[1].StartsWith(TopicPrefix))
+                .Where(sub => sub.SubscriptionName.SubscriptionId.StartsWith(SubscriptionPrefix))
                 .ToList();
             foreach (var sub in subscriptions)
             {
@@ -51,7 +51,7 @@ namespace Google.Cloud.Tools.Snippets
 
             var publisher = PublisherClient.Create();
             var topics = publisher.ListTopics(new ProjectName(ProjectId))
-                .Where(topic => PublisherClient.TopicTemplate.ParseName(topic.Name)[1].StartsWith(TopicPrefix))
+                .Where(topic => topic.TopicName.TopicId.StartsWith(TopicPrefix))
                 .ToList();
             foreach (var topic in topics)
             {

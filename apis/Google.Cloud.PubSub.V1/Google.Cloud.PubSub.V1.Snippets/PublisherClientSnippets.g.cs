@@ -326,7 +326,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = await publisherClient.SetIamPolicyAsync(formattedResource, policy);
@@ -339,7 +339,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = publisherClient.SetIamPolicy(formattedResource, policy);
@@ -353,7 +353,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             // Make the request
             Policy response = await publisherClient.GetIamPolicyAsync(formattedResource);
             // End snippet
@@ -365,7 +365,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             // Make the request
             Policy response = publisherClient.GetIamPolicy(formattedResource);
             // End snippet
@@ -378,7 +378,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = await publisherClient.TestIamPermissionsAsync(formattedResource, permissions);
@@ -391,7 +391,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = publisherClient.TestIamPermissions(formattedResource, permissions);

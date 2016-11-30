@@ -40,7 +40,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             Group response = await groupServiceClient.GetGroupAsync(formattedName);
             // End snippet
@@ -52,7 +52,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             Group response = groupServiceClient.GetGroup(formattedName);
             // End snippet
@@ -65,7 +65,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             Group group = new Group();
             // Make the request
             Group response = await groupServiceClient.CreateGroupAsync(formattedName, group);
@@ -78,7 +78,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             Group group = new Group();
             // Make the request
             Group response = groupServiceClient.CreateGroup(formattedName, group);
@@ -117,7 +117,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             await groupServiceClient.DeleteGroupAsync(formattedName);
             // End snippet
@@ -129,7 +129,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             groupServiceClient.DeleteGroup(formattedName);
             // End snippet
@@ -141,7 +141,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             PagedAsyncEnumerable<ListGroupMembersResponse,MonitoredResource> response =
                 groupServiceClient.ListGroupMembersAsync(formattedName);
@@ -184,7 +184,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             PagedEnumerable<ListGroupMembersResponse,MonitoredResource> response =
                 groupServiceClient.ListGroupMembers(formattedName);

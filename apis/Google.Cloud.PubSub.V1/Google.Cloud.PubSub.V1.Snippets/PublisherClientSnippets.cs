@@ -198,7 +198,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             // Snippet: GetIamPolicy
             PublisherClient client = PublisherClient.Create();
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            string topicName = new TopicName(projectId, topicId).ToString();
             Policy policy = client.GetIamPolicy(topicName);
             Console.WriteLine($"Policy for {topicName}: {policy}");
             // End snippet
