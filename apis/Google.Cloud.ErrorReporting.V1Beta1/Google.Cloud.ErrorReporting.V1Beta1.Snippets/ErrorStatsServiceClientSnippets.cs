@@ -17,9 +17,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using static Google.Devtools.Clouderrorreporting.V1Beta1.QueryTimeRange.Types;
+using static Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
+namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
     [Collection(nameof(ErrorReportingFixture))]
     public class ErrorStatsServiceClientSnippets
@@ -38,8 +38,8 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
 
             // Snippet: ListGroupStats
             ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
-            string projectName = ErrorStatsServiceClient.FormatProjectName(projectId);
-            IPagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> groupStats = client.ListGroupStats(
+            string projectName = new ProjectName(projectId).ToString();
+            PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> groupStats = client.ListGroupStats(
                 projectName,
                 new QueryTimeRange { Period = Period._30Days });
             foreach (ErrorGroupStats item in groupStats)

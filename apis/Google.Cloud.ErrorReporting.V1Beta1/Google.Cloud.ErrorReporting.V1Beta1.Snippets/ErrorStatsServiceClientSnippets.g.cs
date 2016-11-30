@@ -16,7 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Devtools.Clouderrorreporting.V1Beta1;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -28,7 +28,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
+namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
     public class GeneratedErrorStatsServiceClientSnippets
     {
@@ -38,10 +38,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ErrorStatsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            IPagedAsyncEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
+            PagedAsyncEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
                 errorStatsServiceClient.ListGroupStatsAsync(formattedProjectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -51,10 +51,8 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<ErrorGroupStats>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<ErrorGroupStats> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGroupStatsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -63,6 +61,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorGroupStats> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorGroupStats item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -72,10 +82,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ErrorStatsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             QueryTimeRange timeRange = new QueryTimeRange();
             // Make the request
-            IPagedEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
+            PagedEnumerable<ListGroupStatsResponse,ErrorGroupStats> response =
                 errorStatsServiceClient.ListGroupStats(formattedProjectName, timeRange);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -85,9 +95,8 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<ErrorGroupStats> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGroupStatsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -96,6 +105,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorGroupStats> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorGroupStats item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -105,10 +126,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ErrorStatsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             string groupId = "";
             // Make the request
-            IPagedAsyncEnumerable<ListEventsResponse,ErrorEvent> response =
+            PagedAsyncEnumerable<ListEventsResponse,ErrorEvent> response =
                 errorStatsServiceClient.ListEventsAsync(formattedProjectName, groupId);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -118,10 +139,8 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<ErrorEvent>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<ErrorEvent> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListEventsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -130,6 +149,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorEvent> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorEvent item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -139,10 +170,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ErrorStatsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             string groupId = "";
             // Make the request
-            IPagedEnumerable<ListEventsResponse,ErrorEvent> response =
+            PagedEnumerable<ListEventsResponse,ErrorEvent> response =
                 errorStatsServiceClient.ListEvents(formattedProjectName, groupId);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -152,9 +183,8 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<ErrorEvent> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListEventsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -163,6 +193,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ErrorEvent> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ErrorEvent item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -173,7 +215,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ErrorStatsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             // Make the request
             DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(formattedProjectName);
             // End snippet
@@ -185,7 +227,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ErrorStatsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             // Make the request
             DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(formattedProjectName);
             // End snippet

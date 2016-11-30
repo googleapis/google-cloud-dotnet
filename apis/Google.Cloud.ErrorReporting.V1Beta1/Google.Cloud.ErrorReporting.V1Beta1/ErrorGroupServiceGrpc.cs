@@ -22,7 +22,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Grpc.Core;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
+namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   ///  Service for retrieving and updating individual error groups.
   /// </summary>
@@ -30,18 +30,18 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
   {
     static readonly string __ServiceName = "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService";
 
-    static readonly Marshaller<global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest> __Marshaller_GetGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> __Marshaller_ErrorGroup = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest> __Marshaller_UpdateGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest> __Marshaller_GetGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Marshaller_ErrorGroup = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest> __Marshaller_UpdateGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest, global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> __Method_GetGroup = new Method<global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest, global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup>(
+    static readonly Method<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Method_GetGroup = new Method<global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>(
         MethodType.Unary,
         __ServiceName,
         "GetGroup",
         __Marshaller_GetGroupRequest,
         __Marshaller_ErrorGroup);
 
-    static readonly Method<global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest, global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> __Method_UpdateGroup = new Method<global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest, global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup>(
+    static readonly Method<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> __Method_UpdateGroup = new Method<global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup>(
         MethodType.Unary,
         __ServiceName,
         "UpdateGroup",
@@ -51,7 +51,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupServiceReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of ErrorGroupService</summary>
@@ -60,7 +60,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       /// <summary>
       ///  Get the specified group.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> GetGroup(global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> GetGroup(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -69,7 +69,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  Replace the data for the specified group.
       ///  Fails if the group does not exist.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> UpdateGroup(global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> UpdateGroup(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -102,28 +102,28 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       /// <summary>
       ///  Get the specified group.
       /// </summary>
-      public virtual global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup GetGroup(global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup GetGroup(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Get the specified group.
       /// </summary>
-      public virtual global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup GetGroup(global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest request, CallOptions options)
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup GetGroup(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
       ///  Get the specified group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> GetGroupAsync(global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> GetGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Get the specified group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> GetGroupAsync(global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> GetGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGroup, null, options, request);
       }
@@ -131,7 +131,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  Replace the data for the specified group.
       ///  Fails if the group does not exist.
       /// </summary>
-      public virtual global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup UpdateGroup(global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup UpdateGroup(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -139,7 +139,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  Replace the data for the specified group.
       ///  Fails if the group does not exist.
       /// </summary>
-      public virtual global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup UpdateGroup(global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest request, CallOptions options)
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup UpdateGroup(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGroup, null, options, request);
       }
@@ -147,7 +147,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  Replace the data for the specified group.
       ///  Fails if the group does not exist.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> UpdateGroupAsync(global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> UpdateGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -155,7 +155,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  Replace the data for the specified group.
       ///  Fails if the group does not exist.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup> UpdateGroupAsync(global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> UpdateGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGroup, null, options, request);
       }

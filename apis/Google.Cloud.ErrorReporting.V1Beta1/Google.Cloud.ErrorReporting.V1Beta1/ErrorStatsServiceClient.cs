@@ -25,7 +25,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1
+namespace Google.Cloud.ErrorReporting.V1Beta1
 {
     /// <summary>
     /// Settings for a <see cref="ErrorStatsServiceClient"/>.
@@ -239,42 +239,6 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a group resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>group</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate GroupTemplate { get; } = new PathTemplate("projects/{project}/groups/{group}");
-
-        /// <summary>
-        /// Creates a group resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="groupId">The group ID.</param>
-        /// <returns>
-        /// The full group resource name.
-        /// </returns>
-        public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
-
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
@@ -374,7 +338,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
+        public virtual PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
             string projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
@@ -416,7 +380,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
+        public virtual PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
             string projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
@@ -452,7 +416,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
+        public virtual PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
             string projectName,
             string groupId,
             string pageToken = null,
@@ -488,7 +452,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
+        public virtual PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
             string projectName,
             string groupId,
             string pageToken = null,
@@ -635,7 +599,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
+        public override PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
             string projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
@@ -650,7 +614,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 PageSize = pageSize ?? 0,
             };
             Modify_ListGroupStatsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
         }
 
         /// <summary>
@@ -685,7 +649,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
+        public override PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
             string projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
@@ -700,7 +664,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 PageSize = pageSize ?? 0,
             };
             Modify_ListGroupStatsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
+            return new GrpcPagedEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
         }
 
         /// <summary>
@@ -729,7 +693,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
+        public override PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
             string projectName,
             string groupId,
             string pageToken = null,
@@ -744,7 +708,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 PageSize = pageSize ?? 0,
             };
             Modify_ListEventsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
         }
 
         /// <summary>
@@ -773,7 +737,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
         /// <returns>
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
+        public override PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
             string projectName,
             string groupId,
             string pageToken = null,
@@ -788,7 +752,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1
                 PageSize = pageSize ?? 0,
             };
             Modify_ListEventsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
+            return new GrpcPagedEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
         }
 
         /// <summary>

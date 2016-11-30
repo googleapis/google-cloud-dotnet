@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
+namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
   /// <summary>Holder for reflection information generated from google/devtools/clouderrorreporting/v1beta1/error_group_service.proto</summary>
   public static partial class ErrorGroupServiceReflection {
@@ -38,14 +38,15 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
             "b3JyZXBvcnRpbmcudjFiZXRhMS5VcGRhdGVHcm91cFJlcXVlc3QaNy5nb29n",
             "bGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkVycm9y",
             "R3JvdXAiOILT5JMCMhopL3YxYmV0YTEve2dyb3VwLm5hbWU9cHJvamVjdHMv",
-            "Ki9ncm91cHMvKn06BWdyb3VwQksKL2NvbS5nb29nbGUuZGV2dG9vbHMuY2xv",
+            "Ki9ncm91cHMvKn06BWdyb3VwQnEKL2NvbS5nb29nbGUuZGV2dG9vbHMuY2xv",
             "dWRlcnJvcnJlcG9ydGluZy52MWJldGExQhZFcnJvckdyb3VwU2VydmljZVBy",
-            "b3RvUAFiBnByb3RvMw=="));
+            "b3RvUAGqAiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest), global::Google.Devtools.Clouderrorreporting.V1Beta1.GetGroupRequest.Parser, new[]{ "GroupName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest), global::Google.Devtools.Clouderrorreporting.V1Beta1.UpdateGroupRequest.Parser, new[]{ "Group" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.Parser, new[]{ "GroupName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest), global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest.Parser, new[]{ "Group" }, null, null, null)
           }));
     }
     #endregion
@@ -62,7 +63,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -192,7 +193,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -219,12 +220,12 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     /// <summary>Field number for the "group" field.</summary>
     public const int GroupFieldNumber = 1;
-    private global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup group_;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup group_;
     /// <summary>
     ///  [Required] The group which replaces the resource on the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup Group {
+    public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup Group {
       get { return group_; }
       set {
         group_ = value;
@@ -284,7 +285,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup();
+          group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
         }
         Group.MergeFrom(other.Group);
       }
@@ -300,7 +301,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
             break;
           case 10: {
             if (group_ == null) {
-              group_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup();
+              group_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup();
             }
             input.ReadMessage(group_);
             break;

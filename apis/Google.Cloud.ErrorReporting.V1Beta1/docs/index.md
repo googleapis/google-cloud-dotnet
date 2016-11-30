@@ -1,12 +1,12 @@
-# Google.Devtools.Clouderrorreporting.V1Beta1
+# Google.Cloud.ErrorReporting.V1Beta1
 
-`Google.Devtools.Clouderrorreporting.V1Beta1` is a .NET client
+`Google.Cloud.ErrorReporting.V1Beta1` is a .NET client
 library for the [Stackdriver Error Reporting
 API](https://cloud.google.com/error-reporting/).
 
 # Installation
 
-Install the `Google.Devtools.Clouderrorreporting.V1Beta1` package from our
+Install the `Google.Cloud.ErrorReporting.V1Beta1` package from our
 [early access MyGet
 feed](https://www.myget.org/gallery/google-dotnet-public).
 First configure your environment to include the appropriate NuGet feed
@@ -35,9 +35,9 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 There are three client classes to be aware of:
 
-- [ErrorGroupServiceClient](obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroupServiceClient.yml)
-- [ErrorStatsServiceClient](obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorStatsServiceClient.yml)
-- [ReportErrorsServiceClient](obj/api/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.yml)
+- [ErrorGroupServiceClient](obj/api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.yml)
+- [ErrorStatsServiceClient](obj/api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.yml)
+- [ReportErrorsServiceClient](obj/api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.yml)
 
 In each case, create an instance using the static `Create` method,
 optionally specifying a service endpoint and settings.
@@ -46,8 +46,8 @@ optionally specifying a service endpoint and settings.
 
 ## Report an error
 
-[!code-cs[](obj/snippets/Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceClient.txt#ReportErrorEvent)]
+[!code-cs[](obj/snippets/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.txt#ReportErrorEvent)]
 
 ## List error groups with statistics
 
-[!code-cs[](obj/snippets/Google.Devtools.Clouderrorreporting.V1Beta1.ErrorStatsServiceClient.txt#ListGroupStats)]
+[!code-cs[](obj/snippets/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.txt#ListGroupStats)]

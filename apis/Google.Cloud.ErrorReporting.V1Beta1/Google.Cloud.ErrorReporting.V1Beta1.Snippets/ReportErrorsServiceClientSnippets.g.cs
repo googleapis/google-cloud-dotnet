@@ -16,7 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Devtools.Clouderrorreporting.V1Beta1;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -28,7 +28,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
+namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
     public class GeneratedReportErrorsServiceClientSnippets
     {
@@ -39,7 +39,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ReportErrorsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             ReportedErrorEvent @event = new ReportedErrorEvent();
             // Make the request
             ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(formattedProjectName, @event);
@@ -52,7 +52,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
             // Initialize request argument(s)
-            string formattedProjectName = ReportErrorsServiceClient.FormatProjectName("[PROJECT]");
+            string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             ReportedErrorEvent @event = new ReportedErrorEvent();
             // Make the request
             ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(formattedProjectName, @event);
