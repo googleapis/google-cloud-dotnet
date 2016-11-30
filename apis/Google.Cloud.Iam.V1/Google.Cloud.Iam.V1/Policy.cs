@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Iam.V1 {
+namespace Google.Cloud.Iam.V1 {
 
   /// <summary>Holder for reflection information generated from google/iam/v1/policy.proto</summary>
   public static partial class PolicyReflection {
@@ -25,13 +25,14 @@ namespace Google.Iam.V1 {
             "Chpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxINZ29vZ2xlLmlhbS52MSJR",
             "CgZQb2xpY3kSDwoHdmVyc2lvbhgBIAEoBRIoCghiaW5kaW5ncxgEIAMoCzIW",
             "Lmdvb2dsZS5pYW0udjEuQmluZGluZxIMCgRldGFnGAMgASgMIigKB0JpbmRp",
-            "bmcSDAoEcm9sZRgBIAEoCRIPCgdtZW1iZXJzGAIgAygJQiUKEWNvbS5nb29n",
-            "bGUuaWFtLnYxQgtQb2xpY3lQcm90b1AB+AEBYgZwcm90bzM="));
+            "bmcSDAoEcm9sZRgBIAEoCRIPCgdtZW1iZXJzGAIgAygJQjsKEWNvbS5nb29n",
+            "bGUuaWFtLnYxQgtQb2xpY3lQcm90b1AB+AEBqgITR29vZ2xlLkNsb3VkLklh",
+            "bS5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.Policy), global::Google.Iam.V1.Policy.Parser, new[]{ "Version", "Bindings", "Etag" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Iam.V1.Binding), global::Google.Iam.V1.Binding.Parser, new[]{ "Role", "Members" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Policy), global::Google.Cloud.Iam.V1.Policy.Parser, new[]{ "Version", "Bindings", "Etag" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Binding), global::Google.Cloud.Iam.V1.Binding.Parser, new[]{ "Role", "Members" }, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +78,7 @@ namespace Google.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Iam.V1.PolicyReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -120,16 +121,16 @@ namespace Google.Iam.V1 {
 
     /// <summary>Field number for the "bindings" field.</summary>
     public const int BindingsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Google.Iam.V1.Binding> _repeated_bindings_codec
-        = pb::FieldCodec.ForMessage(34, global::Google.Iam.V1.Binding.Parser);
-    private readonly pbc::RepeatedField<global::Google.Iam.V1.Binding> bindings_ = new pbc::RepeatedField<global::Google.Iam.V1.Binding>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Iam.V1.Binding> _repeated_bindings_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Iam.V1.Binding.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding> bindings_ = new pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding>();
     /// <summary>
     ///  Associates a list of `members` to a `role`.
     ///  Multiple `bindings` must not be specified for the same `role`.
     ///  `bindings` with no members will result in an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Iam.V1.Binding> Bindings {
+    public pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding> Bindings {
       get { return bindings_; }
     }
 
@@ -265,7 +266,7 @@ namespace Google.Iam.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Iam.V1.PolicyReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
