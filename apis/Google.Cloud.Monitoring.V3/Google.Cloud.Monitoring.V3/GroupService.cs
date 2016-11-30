@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Monitoring.V3 {
+namespace Google.Cloud.Monitoring.V3 {
 
   /// <summary>Holder for reflection information generated from google/monitoring/v3/group_service.proto</summary>
   public static partial class GroupServiceReflection {
@@ -63,19 +63,20 @@ namespace Google.Monitoring.V3 {
             "ZW1iZXJzEi0uZ29vZ2xlLm1vbml0b3JpbmcudjMuTGlzdEdyb3VwTWVtYmVy",
             "c1JlcXVlc3QaLi5nb29nbGUubW9uaXRvcmluZy52My5MaXN0R3JvdXBNZW1i",
             "ZXJzUmVzcG9uc2UiLoLT5JMCKBImL3YzL3tuYW1lPXByb2plY3RzLyovZ3Jv",
-            "dXBzLyp9L21lbWJlcnNCLwoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhFH",
-            "cm91cFNlcnZpY2VQcm90b1ABYgZwcm90bzM="));
+            "dXBzLyp9L21lbWJlcnNCTAoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQhFH",
+            "cm91cFNlcnZpY2VQcm90b1ABqgIaR29vZ2xlLkNsb3VkLk1vbml0b3Jpbmcu",
+            "VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Monitoring.V3.CommonReflection.Descriptor, global::Google.Monitoring.V3.GroupReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.GroupReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListGroupsRequest), global::Google.Monitoring.V3.ListGroupsRequest.Parser, new[]{ "Name", "ChildrenOfGroup", "AncestorsOfGroup", "DescendantsOfGroup", "PageSize", "PageToken" }, new[]{ "Filter" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListGroupsResponse), global::Google.Monitoring.V3.ListGroupsResponse.Parser, new[]{ "Group", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.GetGroupRequest), global::Google.Monitoring.V3.GetGroupRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.CreateGroupRequest), global::Google.Monitoring.V3.CreateGroupRequest.Parser, new[]{ "Name", "Group", "ValidateOnly" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.UpdateGroupRequest), global::Google.Monitoring.V3.UpdateGroupRequest.Parser, new[]{ "Group", "ValidateOnly" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.DeleteGroupRequest), global::Google.Monitoring.V3.DeleteGroupRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListGroupMembersRequest), global::Google.Monitoring.V3.ListGroupMembersRequest.Parser, new[]{ "Name", "PageSize", "PageToken", "Filter", "Interval" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListGroupMembersResponse), global::Google.Monitoring.V3.ListGroupMembersResponse.Parser, new[]{ "Members", "NextPageToken", "TotalSize" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupsRequest), global::Google.Cloud.Monitoring.V3.ListGroupsRequest.Parser, new[]{ "Name", "ChildrenOfGroup", "AncestorsOfGroup", "DescendantsOfGroup", "PageSize", "PageToken" }, new[]{ "Filter" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupsResponse), global::Google.Cloud.Monitoring.V3.ListGroupsResponse.Parser, new[]{ "Group", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetGroupRequest), global::Google.Cloud.Monitoring.V3.GetGroupRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateGroupRequest), global::Google.Cloud.Monitoring.V3.CreateGroupRequest.Parser, new[]{ "Name", "Group", "ValidateOnly" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest), global::Google.Cloud.Monitoring.V3.UpdateGroupRequest.Parser, new[]{ "Group", "ValidateOnly" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest), global::Google.Cloud.Monitoring.V3.DeleteGroupRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest), global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Parser, new[]{ "Name", "PageSize", "PageToken", "Filter", "Interval" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse), global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse.Parser, new[]{ "Members", "NextPageToken", "TotalSize" }, null, null, null)
           }));
     }
     #endregion
@@ -92,7 +93,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -416,7 +417,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -444,14 +445,14 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "group" field.</summary>
     public const int GroupFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Monitoring.V3.Group> _repeated_group_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Monitoring.V3.Group.Parser);
-    private readonly pbc::RepeatedField<global::Google.Monitoring.V3.Group> group_ = new pbc::RepeatedField<global::Google.Monitoring.V3.Group>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.Group> _repeated_group_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Monitoring.V3.Group.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Group> group_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Group>();
     /// <summary>
     ///  The groups that match the specified filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Monitoring.V3.Group> Group {
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Group> Group {
       get { return group_; }
     }
 
@@ -564,7 +565,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -688,7 +689,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -732,13 +733,13 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "group" field.</summary>
     public const int GroupFieldNumber = 2;
-    private global::Google.Monitoring.V3.Group group_;
+    private global::Google.Cloud.Monitoring.V3.Group group_;
     /// <summary>
     ///  A group definition. It is an error to define the `name` field because
     ///  the system assigns the name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.Group Group {
+    public global::Google.Cloud.Monitoring.V3.Group Group {
       get { return group_; }
       set {
         group_ = value;
@@ -833,7 +834,7 @@ namespace Google.Monitoring.V3 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Monitoring.V3.Group();
+          group_ = new global::Google.Cloud.Monitoring.V3.Group();
         }
         Group.MergeFrom(other.Group);
       }
@@ -852,7 +853,7 @@ namespace Google.Monitoring.V3 {
             break;
           case 18: {
             if (group_ == null) {
-              group_ = new global::Google.Monitoring.V3.Group();
+              group_ = new global::Google.Cloud.Monitoring.V3.Group();
             }
             input.ReadMessage(group_);
             break;
@@ -881,7 +882,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -909,13 +910,13 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "group" field.</summary>
     public const int GroupFieldNumber = 2;
-    private global::Google.Monitoring.V3.Group group_;
+    private global::Google.Cloud.Monitoring.V3.Group group_;
     /// <summary>
     ///  The new definition of the group.  All fields of the existing group,
     ///  excepting `name`, are replaced with the corresponding fields of this group.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.Group Group {
+    public global::Google.Cloud.Monitoring.V3.Group Group {
       get { return group_; }
       set {
         group_ = value;
@@ -998,7 +999,7 @@ namespace Google.Monitoring.V3 {
       }
       if (other.group_ != null) {
         if (group_ == null) {
-          group_ = new global::Google.Monitoring.V3.Group();
+          group_ = new global::Google.Cloud.Monitoring.V3.Group();
         }
         Group.MergeFrom(other.Group);
       }
@@ -1017,7 +1018,7 @@ namespace Google.Monitoring.V3 {
             break;
           case 18: {
             if (group_ == null) {
-              group_ = new global::Google.Monitoring.V3.Group();
+              group_ = new global::Google.Cloud.Monitoring.V3.Group();
             }
             input.ReadMessage(group_);
             break;
@@ -1042,7 +1043,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1166,7 +1167,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1262,7 +1263,7 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "interval" field.</summary>
     public const int IntervalFieldNumber = 6;
-    private global::Google.Monitoring.V3.TimeInterval interval_;
+    private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
     ///  An optional time interval for which results should be returned. Only
     ///  members that were part of the group during the specified interval are
@@ -1270,7 +1271,7 @@ namespace Google.Monitoring.V3 {
     ///  membership over the last minute is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TimeInterval Interval {
+    public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
       get { return interval_; }
       set {
         interval_ = value;
@@ -1378,7 +1379,7 @@ namespace Google.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Monitoring.V3.TimeInterval();
+          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
@@ -1406,7 +1407,7 @@ namespace Google.Monitoring.V3 {
           }
           case 50: {
             if (interval_ == null) {
-              interval_ = new global::Google.Monitoring.V3.TimeInterval();
+              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
             input.ReadMessage(interval_);
             break;
@@ -1431,7 +1432,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

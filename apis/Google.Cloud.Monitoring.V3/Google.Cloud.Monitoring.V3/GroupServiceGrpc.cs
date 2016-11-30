@@ -22,7 +22,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Grpc.Core;
 
-namespace Google.Monitoring.V3 {
+namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
   ///  The Group API lets you inspect and manage your
   ///  [groups](google.monitoring.v3.Group).
@@ -41,53 +41,53 @@ namespace Google.Monitoring.V3 {
   {
     static readonly string __ServiceName = "google.monitoring.v3.GroupService";
 
-    static readonly Marshaller<global::Google.Monitoring.V3.ListGroupsRequest> __Marshaller_ListGroupsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.ListGroupsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.ListGroupsResponse> __Marshaller_ListGroupsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.ListGroupsResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.GetGroupRequest> __Marshaller_GetGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.GetGroupRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.Group> __Marshaller_Group = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.Group.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.CreateGroupRequest> __Marshaller_CreateGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.CreateGroupRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.UpdateGroupRequest> __Marshaller_UpdateGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.UpdateGroupRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.DeleteGroupRequest> __Marshaller_DeleteGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.DeleteGroupRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupsRequest> __Marshaller_ListGroupsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupsRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> __Marshaller_ListGroupsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupsResponse.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.GetGroupRequest> __Marshaller_GetGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.GetGroupRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.Group> __Marshaller_Group = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.Group.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.CreateGroupRequest> __Marshaller_CreateGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.CreateGroupRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.UpdateGroupRequest> __Marshaller_UpdateGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.UpdateGroupRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.DeleteGroupRequest> __Marshaller_DeleteGroupRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.DeleteGroupRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.ListGroupMembersRequest> __Marshaller_ListGroupMembersRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.ListGroupMembersRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Monitoring.V3.ListGroupMembersResponse> __Marshaller_ListGroupMembersResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Monitoring.V3.ListGroupMembersResponse.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest> __Marshaller_ListGroupMembersRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> __Marshaller_ListGroupMembersResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Monitoring.V3.ListGroupsRequest, global::Google.Monitoring.V3.ListGroupsResponse> __Method_ListGroups = new Method<global::Google.Monitoring.V3.ListGroupsRequest, global::Google.Monitoring.V3.ListGroupsResponse>(
+    static readonly Method<global::Google.Cloud.Monitoring.V3.ListGroupsRequest, global::Google.Cloud.Monitoring.V3.ListGroupsResponse> __Method_ListGroups = new Method<global::Google.Cloud.Monitoring.V3.ListGroupsRequest, global::Google.Cloud.Monitoring.V3.ListGroupsResponse>(
         MethodType.Unary,
         __ServiceName,
         "ListGroups",
         __Marshaller_ListGroupsRequest,
         __Marshaller_ListGroupsResponse);
 
-    static readonly Method<global::Google.Monitoring.V3.GetGroupRequest, global::Google.Monitoring.V3.Group> __Method_GetGroup = new Method<global::Google.Monitoring.V3.GetGroupRequest, global::Google.Monitoring.V3.Group>(
+    static readonly Method<global::Google.Cloud.Monitoring.V3.GetGroupRequest, global::Google.Cloud.Monitoring.V3.Group> __Method_GetGroup = new Method<global::Google.Cloud.Monitoring.V3.GetGroupRequest, global::Google.Cloud.Monitoring.V3.Group>(
         MethodType.Unary,
         __ServiceName,
         "GetGroup",
         __Marshaller_GetGroupRequest,
         __Marshaller_Group);
 
-    static readonly Method<global::Google.Monitoring.V3.CreateGroupRequest, global::Google.Monitoring.V3.Group> __Method_CreateGroup = new Method<global::Google.Monitoring.V3.CreateGroupRequest, global::Google.Monitoring.V3.Group>(
+    static readonly Method<global::Google.Cloud.Monitoring.V3.CreateGroupRequest, global::Google.Cloud.Monitoring.V3.Group> __Method_CreateGroup = new Method<global::Google.Cloud.Monitoring.V3.CreateGroupRequest, global::Google.Cloud.Monitoring.V3.Group>(
         MethodType.Unary,
         __ServiceName,
         "CreateGroup",
         __Marshaller_CreateGroupRequest,
         __Marshaller_Group);
 
-    static readonly Method<global::Google.Monitoring.V3.UpdateGroupRequest, global::Google.Monitoring.V3.Group> __Method_UpdateGroup = new Method<global::Google.Monitoring.V3.UpdateGroupRequest, global::Google.Monitoring.V3.Group>(
+    static readonly Method<global::Google.Cloud.Monitoring.V3.UpdateGroupRequest, global::Google.Cloud.Monitoring.V3.Group> __Method_UpdateGroup = new Method<global::Google.Cloud.Monitoring.V3.UpdateGroupRequest, global::Google.Cloud.Monitoring.V3.Group>(
         MethodType.Unary,
         __ServiceName,
         "UpdateGroup",
         __Marshaller_UpdateGroupRequest,
         __Marshaller_Group);
 
-    static readonly Method<global::Google.Monitoring.V3.DeleteGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteGroup = new Method<global::Google.Monitoring.V3.DeleteGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly Method<global::Google.Cloud.Monitoring.V3.DeleteGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteGroup = new Method<global::Google.Cloud.Monitoring.V3.DeleteGroupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "DeleteGroup",
         __Marshaller_DeleteGroupRequest,
         __Marshaller_Empty);
 
-    static readonly Method<global::Google.Monitoring.V3.ListGroupMembersRequest, global::Google.Monitoring.V3.ListGroupMembersResponse> __Method_ListGroupMembers = new Method<global::Google.Monitoring.V3.ListGroupMembersRequest, global::Google.Monitoring.V3.ListGroupMembersResponse>(
+    static readonly Method<global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest, global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> __Method_ListGroupMembers = new Method<global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest, global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse>(
         MethodType.Unary,
         __ServiceName,
         "ListGroupMembers",
@@ -97,7 +97,7 @@ namespace Google.Monitoring.V3 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Monitoring.V3.GroupServiceReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.Monitoring.V3.GroupServiceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of GroupService</summary>
@@ -106,7 +106,7 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Lists the existing groups.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.ListGroupsResponse> ListGroups(global::Google.Monitoring.V3.ListGroupsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -114,7 +114,7 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Gets a single group.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.Group> GetGroup(global::Google.Monitoring.V3.GetGroupRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.Group> GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -122,7 +122,7 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Creates a new group.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.Group> CreateGroup(global::Google.Monitoring.V3.CreateGroupRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.Group> CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -131,7 +131,7 @@ namespace Google.Monitoring.V3 {
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.Group> UpdateGroup(global::Google.Monitoring.V3.UpdateGroupRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.Group> UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -139,7 +139,7 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Deletes an existing group.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroup(global::Google.Monitoring.V3.DeleteGroupRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -147,7 +147,7 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Lists the monitored resources that are members of a group.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Monitoring.V3.ListGroupMembersResponse> ListGroupMembers(global::Google.Monitoring.V3.ListGroupMembersRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -180,84 +180,84 @@ namespace Google.Monitoring.V3 {
       /// <summary>
       ///  Lists the existing groups.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroups(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Lists the existing groups.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Monitoring.V3.ListGroupsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGroups, null, options, request);
       }
       /// <summary>
       ///  Lists the existing groups.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Lists the existing groups.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Monitoring.V3.ListGroupsRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGroups, null, options, request);
       }
       /// <summary>
       ///  Gets a single group.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.Group GetGroup(global::Google.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.Group GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Gets a single group.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.Group GetGroup(global::Google.Monitoring.V3.GetGroupRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Monitoring.V3.Group GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
       ///  Gets a single group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> GetGroupAsync(global::Google.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> GetGroupAsync(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Gets a single group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> GetGroupAsync(global::Google.Monitoring.V3.GetGroupRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> GetGroupAsync(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
       ///  Creates a new group.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.Group CreateGroup(global::Google.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.Group CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Creates a new group.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.Group CreateGroup(global::Google.Monitoring.V3.CreateGroupRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Monitoring.V3.Group CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGroup, null, options, request);
       }
       /// <summary>
       ///  Creates a new group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> CreateGroupAsync(global::Google.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> CreateGroupAsync(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Creates a new group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> CreateGroupAsync(global::Google.Monitoring.V3.CreateGroupRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> CreateGroupAsync(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGroup, null, options, request);
       }
@@ -265,7 +265,7 @@ namespace Google.Monitoring.V3 {
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.Group UpdateGroup(global::Google.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.Group UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -273,7 +273,7 @@ namespace Google.Monitoring.V3 {
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.Group UpdateGroup(global::Google.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Monitoring.V3.Group UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGroup, null, options, request);
       }
@@ -281,7 +281,7 @@ namespace Google.Monitoring.V3 {
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -289,63 +289,63 @@ namespace Google.Monitoring.V3 {
       ///  Updates an existing group.
       ///  You can change any group attributes except `name`.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGroup, null, options, request);
       }
       /// <summary>
       ///  Deletes an existing group.
       /// </summary>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Deletes an existing group.
       /// </summary>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteGroup, null, options, request);
       }
       /// <summary>
       ///  Deletes an existing group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Deletes an existing group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGroup, null, options, request);
       }
       /// <summary>
       ///  Lists the monitored resources that are members of a group.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupMembers(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Lists the monitored resources that are members of a group.
       /// </summary>
-      public virtual global::Google.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGroupMembers, null, options, request);
       }
       /// <summary>
       ///  Lists the monitored resources that are members of a group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupMembersAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       ///  Lists the monitored resources that are members of a group.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGroupMembers, null, options, request);
       }

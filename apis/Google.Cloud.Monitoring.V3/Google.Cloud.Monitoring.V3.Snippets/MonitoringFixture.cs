@@ -14,7 +14,7 @@
 using System;
 using Xunit;
 
-namespace Google.Monitoring.V3
+namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Fixture which is set up at the start of the test run, and torn down at the end.

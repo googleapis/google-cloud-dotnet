@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Monitoring.V3 {
+namespace Google.Cloud.Monitoring.V3 {
 
   /// <summary>Holder for reflection information generated from google/monitoring/v3/common.proto</summary>
   public static partial class CommonReflection {
@@ -51,14 +51,14 @@ namespace Google.Monitoring.V3 {
             "X1RSVUUQBxIYChRSRURVQ0VfRlJBQ1RJT05fVFJVRRAIEhgKFFJFRFVDRV9Q",
             "RVJDRU5USUxFXzk5EAkSGAoUUkVEVUNFX1BFUkNFTlRJTEVfOTUQChIYChRS",
             "RURVQ0VfUEVSQ0VOVElMRV81MBALEhgKFFJFRFVDRV9QRVJDRU5USUxFXzA1",
-            "EAxCKQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtDb21tb25Qcm90b1AB",
-            "YgZwcm90bzM="));
+            "EAxCRgoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtDb21tb25Qcm90b1AB",
+            "qgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.TypedValue), global::Google.Monitoring.V3.TypedValue.Parser, new[]{ "BoolValue", "Int64Value", "DoubleValue", "StringValue", "DistributionValue" }, new[]{ "Value" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.TimeInterval), global::Google.Monitoring.V3.TimeInterval.Parser, new[]{ "EndTime", "StartTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.Aggregation), global::Google.Monitoring.V3.Aggregation.Parser, new[]{ "AlignmentPeriod", "PerSeriesAligner", "CrossSeriesReducer", "GroupByFields" }, null, new[]{ typeof(global::Google.Monitoring.V3.Aggregation.Types.Aligner), typeof(global::Google.Monitoring.V3.Aggregation.Types.Reducer) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TypedValue), global::Google.Cloud.Monitoring.V3.TypedValue.Parser, new[]{ "BoolValue", "Int64Value", "DoubleValue", "StringValue", "DistributionValue" }, new[]{ "Value" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeInterval), global::Google.Cloud.Monitoring.V3.TimeInterval.Parser, new[]{ "EndTime", "StartTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Aggregation), global::Google.Cloud.Monitoring.V3.Aggregation.Parser, new[]{ "AlignmentPeriod", "PerSeriesAligner", "CrossSeriesReducer", "GroupByFields" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner), typeof(global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) }, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.CommonReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -371,7 +371,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.CommonReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -541,7 +541,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.CommonReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -592,7 +592,7 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "per_series_aligner" field.</summary>
     public const int PerSeriesAlignerFieldNumber = 2;
-    private global::Google.Monitoring.V3.Aggregation.Types.Aligner perSeriesAligner_ = 0;
+    private global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner perSeriesAligner_ = 0;
     /// <summary>
     ///  The approach to be used to align individual time series. Not all
     ///  alignment functions may be applied to all time series, depending
@@ -607,7 +607,7 @@ namespace Google.Monitoring.V3 {
     ///  returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.Aggregation.Types.Aligner PerSeriesAligner {
+    public global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner PerSeriesAligner {
       get { return perSeriesAligner_; }
       set {
         perSeriesAligner_ = value;
@@ -616,7 +616,7 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "cross_series_reducer" field.</summary>
     public const int CrossSeriesReducerFieldNumber = 4;
-    private global::Google.Monitoring.V3.Aggregation.Types.Reducer crossSeriesReducer_ = 0;
+    private global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer crossSeriesReducer_ = 0;
     /// <summary>
     ///  The approach to be used to combine time series. Not all reducer
     ///  functions may be applied to all time series, depending on the
@@ -631,7 +631,7 @@ namespace Google.Monitoring.V3 {
     ///  returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.Aggregation.Types.Reducer CrossSeriesReducer {
+    public global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer CrossSeriesReducer {
       get { return crossSeriesReducer_; }
       set {
         crossSeriesReducer_ = value;
@@ -765,11 +765,11 @@ namespace Google.Monitoring.V3 {
             break;
           }
           case 16: {
-            perSeriesAligner_ = (global::Google.Monitoring.V3.Aggregation.Types.Aligner) input.ReadEnum();
+            perSeriesAligner_ = (global::Google.Cloud.Monitoring.V3.Aggregation.Types.Aligner) input.ReadEnum();
             break;
           }
           case 32: {
-            crossSeriesReducer_ = (global::Google.Monitoring.V3.Aggregation.Types.Reducer) input.ReadEnum();
+            crossSeriesReducer_ = (global::Google.Cloud.Monitoring.V3.Aggregation.Types.Reducer) input.ReadEnum();
             break;
           }
           case 42: {

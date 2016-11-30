@@ -17,7 +17,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -27,7 +26,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Monitoring.V3
+namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Settings for a <see cref="MetricServiceClient"/>.
@@ -400,80 +399,6 @@ namespace Google.Monitoring.V3
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a group resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>group</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate GroupTemplate { get; } = new PathTemplate("projects/{project}/groups/{group}");
-
-        /// <summary>
-        /// Creates a group resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="groupId">The group ID.</param>
-        /// <returns>
-        /// The full group resource name.
-        /// </returns>
-        public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
-
-        /// <summary>
-        /// Path template for a metric_descriptor resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>metricDescriptor</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate MetricDescriptorTemplate { get; } = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
-
-        /// <summary>
-        /// Creates a metric_descriptor resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="metricDescriptorId">The metricDescriptor ID.</param>
-        /// <returns>
-        /// The full metric_descriptor resource name.
-        /// </returns>
-        public static string FormatMetricDescriptorName(string projectId, string metricDescriptorId) => MetricDescriptorTemplate.Expand(projectId, metricDescriptorId);
-
-        /// <summary>
-        /// Path template for a monitored_resource_descriptor resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>monitoredResourceDescriptor</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate MonitoredResourceDescriptorTemplate { get; } = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
-
-        /// <summary>
-        /// Creates a monitored_resource_descriptor resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID.</param>
-        /// <returns>
-        /// The full monitored_resource_descriptor resource name.
-        /// </returns>
-        public static string FormatMonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId) => MonitoredResourceDescriptorTemplate.Expand(projectId, monitoredResourceDescriptorId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
@@ -562,7 +487,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public virtual PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -592,7 +517,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public virtual PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -687,7 +612,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public virtual PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -717,7 +642,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public virtual PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -978,7 +903,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+        public virtual PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
             string name,
             string filter,
             TimeInterval interval,
@@ -1028,7 +953,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+        public virtual PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
             string name,
             string filter,
             TimeInterval interval,
@@ -1214,7 +1139,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+        public override PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -1227,7 +1152,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1251,7 +1176,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+        public override PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -1264,7 +1189,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+            return new GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1342,7 +1267,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+        public override PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -1355,7 +1280,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1379,7 +1304,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+        public override PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -1392,7 +1317,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
+            return new GrpcPagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
 
         /// <summary>
@@ -1609,7 +1534,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+        public override PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
             string name,
             string filter,
             TimeInterval interval,
@@ -1628,7 +1553,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTimeSeriesRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
         }
 
         /// <summary>
@@ -1669,7 +1594,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+        public override PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
             string name,
             string filter,
             TimeInterval interval,
@@ -1688,7 +1613,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTimeSeriesRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
+            return new GrpcPagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
         }
 
         /// <summary>

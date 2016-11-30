@@ -17,7 +17,6 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -27,7 +26,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Monitoring.V3
+namespace Google.Cloud.Monitoring.V3
 {
     /// <summary>
     /// Settings for a <see cref="GroupServiceClient"/>.
@@ -338,80 +337,6 @@ namespace Google.Monitoring.V3
         });
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
-
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a group resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>group</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate GroupTemplate { get; } = new PathTemplate("projects/{project}/groups/{group}");
-
-        /// <summary>
-        /// Creates a group resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="groupId">The group ID.</param>
-        /// <returns>
-        /// The full group resource name.
-        /// </returns>
-        public static string FormatGroupName(string projectId, string groupId) => GroupTemplate.Expand(projectId, groupId);
-
-        /// <summary>
-        /// Path template for a metric_descriptor resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>metricDescriptor</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate MetricDescriptorTemplate { get; } = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
-
-        /// <summary>
-        /// Creates a metric_descriptor resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="metricDescriptorId">The metricDescriptor ID.</param>
-        /// <returns>
-        /// The full metric_descriptor resource name.
-        /// </returns>
-        public static string FormatMetricDescriptorName(string projectId, string metricDescriptorId) => MetricDescriptorTemplate.Expand(projectId, metricDescriptorId);
-
-        /// <summary>
-        /// Path template for a monitored_resource_descriptor resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>monitoredResourceDescriptor</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate MonitoredResourceDescriptorTemplate { get; } = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
-
-        /// <summary>
-        /// Creates a monitored_resource_descriptor resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID.</param>
-        /// <returns>
-        /// The full monitored_resource_descriptor resource name.
-        /// </returns>
-        public static string FormatMonitoredResourceDescriptorName(string projectId, string monitoredResourceDescriptorId) => MonitoredResourceDescriptorTemplate.Expand(projectId, monitoredResourceDescriptorId);
 
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
@@ -756,7 +681,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
+        public virtual PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -786,7 +711,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
+        public virtual PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -1082,7 +1007,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
+        public override PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -1095,7 +1020,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListGroupMembersRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
         }
 
         /// <summary>
@@ -1119,7 +1044,7 @@ namespace Google.Monitoring.V3
         /// <returns>
         /// A pageable sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
+        public override PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
             string name,
             string pageToken = null,
             int? pageSize = null,
@@ -1132,7 +1057,7 @@ namespace Google.Monitoring.V3
                 PageSize = pageSize ?? 0,
             };
             Modify_ListGroupMembersRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
+            return new GrpcPagedEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
         }
 
     }
