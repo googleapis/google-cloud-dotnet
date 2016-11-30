@@ -1,11 +1,11 @@
-# Google.Monitoring.V3
+# Google.Cloud.Monitoring.V3
 
-`Google.Monitoring.V3` is a .NET client library for the [Google
+`Google.Cloud.Monitoring.V3` is a .NET client library for the [Google
 Monitoring API](https://cloud.google.com/monitoring/api/v3/).
 
 # Installation
 
-Install the `Google.Monitoring.V3` package from our
+Install the `Google.Cloud.Monitoring.V3` package from our
 [early access MyGet
 feed](https://www.myget.org/gallery/google-dotnet-public).
 First configure your environment to include the appropriate NuGet feed
@@ -34,9 +34,9 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 There are three client classes to be aware of:
 
-- [AgentTranslationServiceClient](obj/api/Google.Monitoring.V3.AgentTranslationServiceClient.yml)
-- [GroupServiceClient](obj/api/Google.Monitoring.V3.GroupServiceClient.yml)
-- [MetricServiceClient](obj/api/Google.Monitoring.V3.MetricServiceClient.yml)
+- [AgentTranslationServiceClient](obj/api/Google.Cloud.Monitoring.V3.AgentTranslationServiceClient.yml)
+- [GroupServiceClient](obj/api/Google.Cloud.Monitoring.V3.GroupServiceClient.yml)
+- [MetricServiceClient](obj/api/Google.Cloud.Monitoring.V3.MetricServiceClient.yml)
 
 In each case, create an instance using the static `Create` method,
 optionally specifying a service endpoint and settings.
@@ -45,4 +45,4 @@ optionally specifying a service endpoint and settings.
 
 ## List metric descriptors
 
-[!code-cs[](obj/snippets/Google.Monitoring.V3.MetricServiceClient.txt#ListMetricDescriptors)]
+[!code-cs[](obj/snippets/Google.Cloud.Monitoring.V3.MetricServiceClient.txt#ListMetricDescriptors)]

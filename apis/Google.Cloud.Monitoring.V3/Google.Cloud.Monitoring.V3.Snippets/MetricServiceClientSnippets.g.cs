@@ -17,7 +17,7 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Monitoring.V3;
+using Google.Cloud.Monitoring.V3;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -29,7 +29,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Monitoring.V3.Snippets
+namespace Google.Cloud.Monitoring.V3.Snippets
 {
     public class GeneratedMetricServiceClientSnippets
     {
@@ -39,9 +39,9 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
-            IPagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptorsAsync(formattedName);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -51,10 +51,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<MonitoredResourceDescriptor>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<MonitoredResourceDescriptor> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -63,6 +61,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -72,9 +82,9 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
-            IPagedEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
                 metricServiceClient.ListMonitoredResourceDescriptors(formattedName);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -84,9 +94,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<MonitoredResourceDescriptor> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -95,6 +104,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -105,7 +126,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            string formattedName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]").ToString();
             // Make the request
             MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(formattedName);
             // End snippet
@@ -117,7 +138,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]");
+            string formattedName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]").ToString();
             // Make the request
             MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(formattedName);
             // End snippet
@@ -129,9 +150,9 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
-            IPagedAsyncEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
+            PagedAsyncEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptorsAsync(formattedName);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -141,10 +162,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<MetricDescriptor>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<MetricDescriptor> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMetricDescriptorsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -153,6 +172,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -162,9 +193,9 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
-            IPagedEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
+            PagedEnumerable<ListMetricDescriptorsResponse,MetricDescriptor> response =
                 metricServiceClient.ListMetricDescriptors(formattedName);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -174,9 +205,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<MetricDescriptor> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMetricDescriptorsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -185,6 +215,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MetricDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MetricDescriptor item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -195,7 +237,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(formattedName);
             // End snippet
@@ -207,7 +249,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             MetricDescriptor response = metricServiceClient.GetMetricDescriptor(formattedName);
             // End snippet
@@ -220,7 +262,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             MetricDescriptor metricDescriptor = new MetricDescriptor();
             // Make the request
             MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(formattedName, metricDescriptor);
@@ -233,7 +275,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             MetricDescriptor metricDescriptor = new MetricDescriptor();
             // Make the request
             MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(formattedName, metricDescriptor);
@@ -247,7 +289,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             await metricServiceClient.DeleteMetricDescriptorAsync(formattedName);
             // End snippet
@@ -259,7 +301,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatMetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]");
+            string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
             metricServiceClient.DeleteMetricDescriptor(formattedName);
             // End snippet
@@ -271,12 +313,12 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             string filter = "";
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            IPagedAsyncEnumerable<ListTimeSeriesResponse,TimeSeries> response =
+            PagedAsyncEnumerable<ListTimeSeriesResponse,TimeSeries> response =
                 metricServiceClient.ListTimeSeriesAsync(formattedName, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -286,10 +328,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<TimeSeries>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<TimeSeries> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTimeSeriesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -298,6 +338,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -307,12 +359,12 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             string filter = "";
             TimeInterval interval = new TimeInterval();
             ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
             // Make the request
-            IPagedEnumerable<ListTimeSeriesResponse,TimeSeries> response =
+            PagedEnumerable<ListTimeSeriesResponse,TimeSeries> response =
                 metricServiceClient.ListTimeSeries(formattedName, filter, interval, view);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -322,9 +374,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<TimeSeries> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTimeSeriesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -333,6 +384,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<TimeSeries> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (TimeSeries item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -343,7 +406,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
             // Make the request
             await metricServiceClient.CreateTimeSeriesAsync(formattedName, timeSeries);
@@ -356,7 +419,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             MetricServiceClient metricServiceClient = MetricServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = MetricServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
             // Make the request
             metricServiceClient.CreateTimeSeries(formattedName, timeSeries);

@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Monitoring.V3 {
+namespace Google.Cloud.Monitoring.V3 {
 
   /// <summary>Holder for reflection information generated from google/monitoring/v3/metric_service.proto</summary>
   public static partial class MetricServiceReflection {
@@ -89,24 +89,24 @@ namespace Google.Monitoring.V3 {
             "gtPkkwIiEiAvdjMve25hbWU9cHJvamVjdHMvKn0vdGltZVNlcmllcxKGAQoQ",
             "Q3JlYXRlVGltZVNlcmllcxItLmdvb2dsZS5tb25pdG9yaW5nLnYzLkNyZWF0",
             "ZVRpbWVTZXJpZXNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiuC",
-            "0+STAiUiIC92My97bmFtZT1wcm9qZWN0cy8qfS90aW1lU2VyaWVzOgEqQjAK",
+            "0+STAiUiIC92My97bmFtZT1wcm9qZWN0cy8qfS90aW1lU2VyaWVzOgEqQk0K",
             "GGNvbS5nb29nbGUubW9uaXRvcmluZy52M0ISTWV0cmljU2VydmljZVByb3Rv",
-            "UAFiBnByb3RvMw=="));
+            "UAGqAhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5WM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Monitoring.V3.CommonReflection.Descriptor, global::Google.Monitoring.V3.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsRequest), global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse), global::Google.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.GetMonitoredResourceDescriptorRequest), global::Google.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListMetricDescriptorsRequest), global::Google.Monitoring.V3.ListMetricDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListMetricDescriptorsResponse), global::Google.Monitoring.V3.ListMetricDescriptorsResponse.Parser, new[]{ "MetricDescriptors", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.GetMetricDescriptorRequest), global::Google.Monitoring.V3.GetMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.CreateMetricDescriptorRequest), global::Google.Monitoring.V3.CreateMetricDescriptorRequest.Parser, new[]{ "Name", "MetricDescriptor" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.DeleteMetricDescriptorRequest), global::Google.Monitoring.V3.DeleteMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListTimeSeriesRequest), global::Google.Monitoring.V3.ListTimeSeriesRequest.Parser, new[]{ "Name", "Filter", "Interval", "Aggregation", "OrderBy", "View", "PageSize", "PageToken" }, null, new[]{ typeof(global::Google.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.ListTimeSeriesResponse), global::Google.Monitoring.V3.ListTimeSeriesResponse.Parser, new[]{ "TimeSeries", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.CreateTimeSeriesRequest), global::Google.Monitoring.V3.CreateTimeSeriesRequest.Parser, new[]{ "Name", "TimeSeries" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.CreateTimeSeriesError), global::Google.Monitoring.V3.CreateTimeSeriesError.Parser, new[]{ "TimeSeries", "Status" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.Parser, new[]{ "Name", "Filter", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse), global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.Parser, new[]{ "MetricDescriptors", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Parser, new[]{ "Name", "MetricDescriptor" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest), global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Parser, new[]{ "Name", "Filter", "Interval", "Aggregation", "OrderBy", "View", "PageSize", "PageToken" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse), global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.Parser, new[]{ "TimeSeries", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Parser, new[]{ "Name", "TimeSeries" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError), global::Google.Cloud.Monitoring.V3.CreateTimeSeriesError.Parser, new[]{ "TimeSeries", "Status" }, null, null, null)
           }));
     }
     #endregion
@@ -123,7 +123,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -348,7 +348,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -497,7 +497,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -623,7 +623,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -849,7 +849,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -998,7 +998,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1124,7 +1124,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1286,7 +1286,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1412,7 +1412,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1481,14 +1481,14 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "interval" field.</summary>
     public const int IntervalFieldNumber = 4;
-    private global::Google.Monitoring.V3.TimeInterval interval_;
+    private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
     ///  The time interval for which results should be returned. Only time series
     ///  that contain data points in the specified interval are included
     ///  in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TimeInterval Interval {
+    public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
       get { return interval_; }
       set {
         interval_ = value;
@@ -1497,14 +1497,14 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "aggregation" field.</summary>
     public const int AggregationFieldNumber = 5;
-    private global::Google.Monitoring.V3.Aggregation aggregation_;
+    private global::Google.Cloud.Monitoring.V3.Aggregation aggregation_;
     /// <summary>
     ///  By default, the raw time series data is returned.
     ///  Use this field to combine multiple time series for different
     ///  views of the data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.Aggregation Aggregation {
+    public global::Google.Cloud.Monitoring.V3.Aggregation Aggregation {
       get { return aggregation_; }
       set {
         aggregation_ = value;
@@ -1529,12 +1529,12 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 7;
-    private global::Google.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView view_ = 0;
+    private global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView view_ = 0;
     /// <summary>
     ///  Specifies which information is returned about the time series.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView View {
+    public global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView View {
       get { return view_; }
       set {
         view_ = value;
@@ -1696,13 +1696,13 @@ namespace Google.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Monitoring.V3.TimeInterval();
+          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
       if (other.aggregation_ != null) {
         if (aggregation_ == null) {
-          aggregation_ = new global::Google.Monitoring.V3.Aggregation();
+          aggregation_ = new global::Google.Cloud.Monitoring.V3.Aggregation();
         }
         Aggregation.MergeFrom(other.Aggregation);
       }
@@ -1734,14 +1734,14 @@ namespace Google.Monitoring.V3 {
           }
           case 34: {
             if (interval_ == null) {
-              interval_ = new global::Google.Monitoring.V3.TimeInterval();
+              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
             input.ReadMessage(interval_);
             break;
           }
           case 42: {
             if (aggregation_ == null) {
-              aggregation_ = new global::Google.Monitoring.V3.Aggregation();
+              aggregation_ = new global::Google.Cloud.Monitoring.V3.Aggregation();
             }
             input.ReadMessage(aggregation_);
             break;
@@ -1751,7 +1751,7 @@ namespace Google.Monitoring.V3 {
             break;
           }
           case 56: {
-            view_ = (global::Google.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) input.ReadEnum();
+            view_ = (global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView) input.ReadEnum();
             break;
           }
           case 64: {
@@ -1805,7 +1805,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1833,14 +1833,14 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "time_series" field.</summary>
     public const int TimeSeriesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Monitoring.V3.TimeSeries> _repeated_timeSeries_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Monitoring.V3.TimeSeries.Parser);
-    private readonly pbc::RepeatedField<global::Google.Monitoring.V3.TimeSeries> timeSeries_ = new pbc::RepeatedField<global::Google.Monitoring.V3.TimeSeries>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.TimeSeries> _repeated_timeSeries_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Monitoring.V3.TimeSeries.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> timeSeries_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries>();
     /// <summary>
     ///  One or more time series that match the filter included in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Monitoring.V3.TimeSeries> TimeSeries {
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> TimeSeries {
       get { return timeSeries_; }
     }
 
@@ -1953,7 +1953,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1996,9 +1996,9 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "time_series" field.</summary>
     public const int TimeSeriesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Monitoring.V3.TimeSeries> _repeated_timeSeries_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Monitoring.V3.TimeSeries.Parser);
-    private readonly pbc::RepeatedField<global::Google.Monitoring.V3.TimeSeries> timeSeries_ = new pbc::RepeatedField<global::Google.Monitoring.V3.TimeSeries>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.TimeSeries> _repeated_timeSeries_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Monitoring.V3.TimeSeries.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> timeSeries_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries>();
     /// <summary>
     ///  The new data to be added to a list of time series.
     ///  Adds at most one data point to each of several time series.  The new data
@@ -2007,7 +2007,7 @@ namespace Google.Monitoring.V3 {
     ///  all label values for the metric and the monitored resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Monitoring.V3.TimeSeries> TimeSeries {
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> TimeSeries {
       get { return timeSeries_; }
     }
 
@@ -2104,7 +2104,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricServiceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2132,7 +2132,7 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "time_series" field.</summary>
     public const int TimeSeriesFieldNumber = 1;
-    private global::Google.Monitoring.V3.TimeSeries timeSeries_;
+    private global::Google.Cloud.Monitoring.V3.TimeSeries timeSeries_;
     /// <summary>
     ///  The time series, including the `Metric`, `MonitoredResource`,
     ///  and `Point`s (including timestamp and value) that resulted
@@ -2140,7 +2140,7 @@ namespace Google.Monitoring.V3 {
     ///  would be needed to retry the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TimeSeries TimeSeries {
+    public global::Google.Cloud.Monitoring.V3.TimeSeries TimeSeries {
       get { return timeSeries_; }
       set {
         timeSeries_ = value;
@@ -2223,7 +2223,7 @@ namespace Google.Monitoring.V3 {
       }
       if (other.timeSeries_ != null) {
         if (timeSeries_ == null) {
-          timeSeries_ = new global::Google.Monitoring.V3.TimeSeries();
+          timeSeries_ = new global::Google.Cloud.Monitoring.V3.TimeSeries();
         }
         TimeSeries.MergeFrom(other.TimeSeries);
       }
@@ -2245,7 +2245,7 @@ namespace Google.Monitoring.V3 {
             break;
           case 10: {
             if (timeSeries_ == null) {
-              timeSeries_ = new global::Google.Monitoring.V3.TimeSeries();
+              timeSeries_ = new global::Google.Cloud.Monitoring.V3.TimeSeries();
             }
             input.ReadMessage(timeSeries_);
             break;

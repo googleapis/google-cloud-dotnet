@@ -17,7 +17,7 @@
 using Google.Api;
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Monitoring.V3;
+using Google.Cloud.Monitoring.V3;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -29,7 +29,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Monitoring.V3.Snippets
+namespace Google.Cloud.Monitoring.V3.Snippets
 {
     public class GeneratedGroupServiceClientSnippets
     {
@@ -40,7 +40,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             Group response = await groupServiceClient.GetGroupAsync(formattedName);
             // End snippet
@@ -52,7 +52,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             Group response = groupServiceClient.GetGroup(formattedName);
             // End snippet
@@ -65,7 +65,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             Group group = new Group();
             // Make the request
             Group response = await groupServiceClient.CreateGroupAsync(formattedName, group);
@@ -78,7 +78,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatProjectName("[PROJECT]");
+            string formattedName = new ProjectName("[PROJECT]").ToString();
             Group group = new Group();
             // Make the request
             Group response = groupServiceClient.CreateGroup(formattedName, group);
@@ -117,7 +117,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             await groupServiceClient.DeleteGroupAsync(formattedName);
             // End snippet
@@ -129,7 +129,7 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             groupServiceClient.DeleteGroup(formattedName);
             // End snippet
@@ -141,9 +141,9 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
-            IPagedAsyncEnumerable<ListGroupMembersResponse,MonitoredResource> response =
+            PagedAsyncEnumerable<ListGroupMembersResponse,MonitoredResource> response =
                 groupServiceClient.ListGroupMembersAsync(formattedName);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -153,10 +153,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<MonitoredResource>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<MonitoredResource> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListGroupMembersResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -165,6 +163,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResource> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResource item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -174,9 +184,9 @@ namespace Google.Monitoring.V3.Snippets
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = GroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
-            IPagedEnumerable<ListGroupMembersResponse,MonitoredResource> response =
+            PagedEnumerable<ListGroupMembersResponse,MonitoredResource> response =
                 groupServiceClient.ListGroupMembers(formattedName);
 
             // Iterate over all response items, lazily performing RPCs as required
@@ -186,9 +196,8 @@ namespace Google.Monitoring.V3.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<MonitoredResource> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGroupMembersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -197,6 +206,18 @@ namespace Google.Monitoring.V3.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResource> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResource item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 

@@ -12,39 +12,39 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api;
 using Google.Api.Gax;
 using System;
 using System.Linq;
 using Xunit;
 
-namespace Google.Monitoring.V3
+namespace Google.Cloud.Monitoring.V3
 {
     [Collection(nameof(MonitoringFixture))]
-    public class MetricServiceClientSnippets
+    public class GroupServiceClientSnippets
     {
         private readonly MonitoringFixture _fixture;
 
-        public MetricServiceClientSnippets(MonitoringFixture fixture)
+        public GroupServiceClientSnippets(MonitoringFixture fixture)
         {
             _fixture = fixture;
         }
 
+        /* TODO: Reinstate when ListGroups is present again.
         [Fact]
-        public void ListMetricDescriptors()
+        public void ListGroups()
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListMetricDescriptors
-            MetricServiceClient client = MetricServiceClient.Create();
+            // FIXME:Snippet: ListGroups
+            GroupServiceClient client = GroupServiceClient.Create();
             string projectName = MetricServiceClient.FormatProjectName(projectId);
-            string filter = "";
-            IPagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> metrics = client.ListMetricDescriptors(projectName, filter);
-            foreach (MetricDescriptor metric in metrics.Take(10))
+            PagedEnumerable<ListGroupsResponse, Group> groups = client.ListGroups(projectName, "", "", "");
+            foreach (Group group in groups.Take(10))
             {
-                Console.WriteLine($"{metric.Name}: {metric.DisplayName}");
+                Console.WriteLine($"{group.Name}: {group.DisplayName}");
             }
-            // End snippet
+            // FIXME:End snippet
         }
+        */
     }
 }

@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Monitoring.V3 {
+namespace Google.Cloud.Monitoring.V3 {
 
   /// <summary>Holder for reflection information generated from google/monitoring/v3/metric.proto</summary>
   public static partial class MetricReflection {
@@ -33,13 +33,14 @@ namespace Google.Monitoring.V3 {
             "c291cmNlEjwKC21ldHJpY19raW5kGAMgASgOMicuZ29vZ2xlLmFwaS5NZXRy",
             "aWNEZXNjcmlwdG9yLk1ldHJpY0tpbmQSOgoKdmFsdWVfdHlwZRgEIAEoDjIm",
             "Lmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5cGUSKwoGcG9p",
-            "bnRzGAUgAygLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUG9pbnRCKQoYY29t",
-            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzQgtNZXRyaWNQcm90b1ABYgZwcm90bzM="));
+            "bnRzGAUgAygLMhsuZ29vZ2xlLm1vbml0b3JpbmcudjMuUG9pbnRCRgoYY29t",
+            "Lmdvb2dsZS5tb25pdG9yaW5nLnYzQgtNZXRyaWNQcm90b1ABqgIaR29vZ2xl",
+            "LkNsb3VkLk1vbml0b3JpbmcuVjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Monitoring.V3.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.MetricReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.Point), global::Google.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Monitoring.V3.TimeSeries), global::Google.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "MetricKind", "ValueType", "Points" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Point), global::Google.Cloud.Monitoring.V3.Point.Parser, new[]{ "Interval", "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.TimeSeries), global::Google.Cloud.Monitoring.V3.TimeSeries.Parser, new[]{ "Metric", "Resource", "MetricKind", "ValueType", "Points" }, null, null, null)
           }));
     }
     #endregion
@@ -56,7 +57,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -84,7 +85,7 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "interval" field.</summary>
     public const int IntervalFieldNumber = 1;
-    private global::Google.Monitoring.V3.TimeInterval interval_;
+    private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
     ///  The time interval to which the data point applies.  For GAUGE metrics, only
     ///  the end time of the interval is used.  For DELTA metrics, the start and end
@@ -96,7 +97,7 @@ namespace Google.Monitoring.V3 {
     ///  following points.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TimeInterval Interval {
+    public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
       get { return interval_; }
       set {
         interval_ = value;
@@ -105,12 +106,12 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
-    private global::Google.Monitoring.V3.TypedValue value_;
+    private global::Google.Cloud.Monitoring.V3.TypedValue value_;
     /// <summary>
     ///  The value of the data point.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Monitoring.V3.TypedValue Value {
+    public global::Google.Cloud.Monitoring.V3.TypedValue Value {
       get { return value_; }
       set {
         value_ = value;
@@ -179,13 +180,13 @@ namespace Google.Monitoring.V3 {
       }
       if (other.interval_ != null) {
         if (interval_ == null) {
-          interval_ = new global::Google.Monitoring.V3.TimeInterval();
+          interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
         }
         Interval.MergeFrom(other.Interval);
       }
       if (other.value_ != null) {
         if (value_ == null) {
-          value_ = new global::Google.Monitoring.V3.TypedValue();
+          value_ = new global::Google.Cloud.Monitoring.V3.TypedValue();
         }
         Value.MergeFrom(other.Value);
       }
@@ -201,14 +202,14 @@ namespace Google.Monitoring.V3 {
             break;
           case 10: {
             if (interval_ == null) {
-              interval_ = new global::Google.Monitoring.V3.TimeInterval();
+              interval_ = new global::Google.Cloud.Monitoring.V3.TimeInterval();
             }
             input.ReadMessage(interval_);
             break;
           }
           case 18: {
             if (value_ == null) {
-              value_ = new global::Google.Monitoring.V3.TypedValue();
+              value_ = new global::Google.Cloud.Monitoring.V3.TypedValue();
             }
             input.ReadMessage(value_);
             break;
@@ -232,7 +233,7 @@ namespace Google.Monitoring.V3 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -334,9 +335,9 @@ namespace Google.Monitoring.V3 {
 
     /// <summary>Field number for the "points" field.</summary>
     public const int PointsFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::Google.Monitoring.V3.Point> _repeated_points_codec
-        = pb::FieldCodec.ForMessage(42, global::Google.Monitoring.V3.Point.Parser);
-    private readonly pbc::RepeatedField<global::Google.Monitoring.V3.Point> points_ = new pbc::RepeatedField<global::Google.Monitoring.V3.Point>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Monitoring.V3.Point> _repeated_points_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Monitoring.V3.Point.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point> points_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point>();
     /// <summary>
     ///  The data points of this time series. When listing time series, the order of
     ///  the points is specified by the list method.
@@ -348,7 +349,7 @@ namespace Google.Monitoring.V3 {
     ///  must be `BOOL`, `INT64`, `DOUBLE`, or `DISTRIBUTION`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Monitoring.V3.Point> Points {
+    public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point> Points {
       get { return points_; }
     }
 
