@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using static Google.Iam.V1.IAMPolicy;
+using static Google.Cloud.Iam.V1.IAMPolicy;
 
-namespace Google.Pubsub.V1
+namespace Google.Cloud.PubSub.V1
 {
     // Partial classes for generated gRPC code, to allow us to create IAM clients on the same channel.
 

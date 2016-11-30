@@ -16,8 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Iam.V1;
-using Google.Protobuf;
+using Google.Cloud.Iam.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -27,7 +26,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Pubsub.V1
+namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
     /// Settings for a <see cref="SubscriberClient"/>.
@@ -525,61 +524,6 @@ namespace Google.Pubsub.V1
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a subscription resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>subscription</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate SubscriptionTemplate { get; } = new PathTemplate("projects/{project}/subscriptions/{subscription}");
-
-        /// <summary>
-        /// Creates a subscription resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="subscriptionId">The subscription ID.</param>
-        /// <returns>
-        /// The full subscription resource name.
-        /// </returns>
-        public static string FormatSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
-
-        /// <summary>
-        /// Path template for a topic resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>topic</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate TopicTemplate { get; } = new PathTemplate("projects/{project}/topics/{topic}");
-
-        /// <summary>
-        /// Creates a topic resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="topicId">The topic ID.</param>
-        /// <returns>
-        /// The full topic resource name.
-        /// </returns>
-        public static string FormatTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
@@ -702,8 +646,8 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Subscription> CreateSubscriptionAsync(
-            string name,
-            string topic,
+            SubscriptionName name,
+            TopicName topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
@@ -766,8 +710,8 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Subscription> CreateSubscriptionAsync(
-            string name,
-            string topic,
+            SubscriptionName name,
+            TopicName topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
             CancellationToken cancellationToken) => CreateSubscriptionAsync(
@@ -832,8 +776,8 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual Subscription CreateSubscription(
-            string name,
-            string topic,
+            SubscriptionName name,
+            TopicName topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
@@ -854,7 +798,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Subscription> GetSubscriptionAsync(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -873,7 +817,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Subscription> GetSubscriptionAsync(
-            string subscription,
+            SubscriptionName subscription,
             CancellationToken cancellationToken) => GetSubscriptionAsync(
                 subscription,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -891,7 +835,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual Subscription GetSubscription(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -917,8 +861,8 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Subscription"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
-            string project,
+        public virtual PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -946,8 +890,8 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable sequence of <see cref="Subscription"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
-            string project,
+        public virtual PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -972,7 +916,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSubscriptionAsync(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -995,7 +939,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSubscriptionAsync(
-            string subscription,
+            SubscriptionName subscription,
             CancellationToken cancellationToken) => DeleteSubscriptionAsync(
                 subscription,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -1017,7 +961,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual void DeleteSubscription(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1050,7 +994,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task ModifyAckDeadlineAsync(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
@@ -1085,7 +1029,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task ModifyAckDeadlineAsync(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
             CancellationToken cancellationToken) => ModifyAckDeadlineAsync(
@@ -1121,7 +1065,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual void ModifyAckDeadline(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
@@ -1152,7 +1096,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task AcknowledgeAsync(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             CallSettings callSettings = null)
         {
@@ -1182,7 +1126,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task AcknowledgeAsync(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             CancellationToken cancellationToken) => AcknowledgeAsync(
                 subscription,
@@ -1212,7 +1156,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual void Acknowledge(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             CallSettings callSettings = null)
         {
@@ -1246,7 +1190,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<PullResponse> PullAsync(
-            string subscription,
+            SubscriptionName subscription,
             bool returnImmediately,
             int maxMessages,
             CallSettings callSettings = null)
@@ -1281,7 +1225,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<PullResponse> PullAsync(
-            string subscription,
+            SubscriptionName subscription,
             bool returnImmediately,
             int maxMessages,
             CancellationToken cancellationToken) => PullAsync(
@@ -1317,7 +1261,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual PullResponse Pull(
-            string subscription,
+            SubscriptionName subscription,
             bool returnImmediately,
             int maxMessages,
             CallSettings callSettings = null)
@@ -1351,7 +1295,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task ModifyPushConfigAsync(
-            string subscription,
+            SubscriptionName subscription,
             PushConfig pushConfig,
             CallSettings callSettings = null)
         {
@@ -1384,7 +1328,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task ModifyPushConfigAsync(
-            string subscription,
+            SubscriptionName subscription,
             PushConfig pushConfig,
             CancellationToken cancellationToken) => ModifyPushConfigAsync(
                 subscription,
@@ -1417,7 +1361,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual void ModifyPushConfig(
-            string subscription,
+            SubscriptionName subscription,
             PushConfig pushConfig,
             CallSettings callSettings = null)
         {
@@ -1791,16 +1735,16 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Subscription> CreateSubscriptionAsync(
-            string name,
-            string topic,
+            SubscriptionName name,
+            TopicName topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
         {
             Subscription request = new Subscription
             {
-                Name = name,
-                Topic = topic,
+                SubscriptionName = name,
+                TopicAsTopicNameOneof = TopicNameOneof.From(topic),
                 PushConfig = pushConfig,
                 AckDeadlineSeconds = ackDeadlineSeconds,
             };
@@ -1863,16 +1807,16 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override Subscription CreateSubscription(
-            string name,
-            string topic,
+            SubscriptionName name,
+            TopicName topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
         {
             Subscription request = new Subscription
             {
-                Name = name,
-                Topic = topic,
+                SubscriptionName = name,
+                TopicAsTopicNameOneof = TopicNameOneof.From(topic),
                 PushConfig = pushConfig,
                 AckDeadlineSeconds = ackDeadlineSeconds,
             };
@@ -1893,12 +1837,12 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Subscription> GetSubscriptionAsync(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
             };
             Modify_GetSubscriptionRequest(ref request, ref callSettings);
             return _callGetSubscription.Async(request, callSettings);
@@ -1917,12 +1861,12 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override Subscription GetSubscription(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
             };
             Modify_GetSubscriptionRequest(ref request, ref callSettings);
             return _callGetSubscription.Sync(request, callSettings);
@@ -1948,20 +1892,20 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Subscription"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
-            string project,
+        public override PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
         {
             ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
-                Project = project,
+                ProjectAsProjectName = project,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListSubscriptionsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
         }
 
         /// <summary>
@@ -1984,20 +1928,20 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable sequence of <see cref="Subscription"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
-            string project,
+        public override PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
         {
             ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
-                Project = project,
+                ProjectAsProjectName = project,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListSubscriptionsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+            return new GrpcPagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
         }
 
         /// <summary>
@@ -2017,12 +1961,12 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteSubscriptionAsync(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
             };
             Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
             return _callDeleteSubscription.Async(request, callSettings);
@@ -2045,12 +1989,12 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override void DeleteSubscription(
-            string subscription,
+            SubscriptionName subscription,
             CallSettings callSettings = null)
         {
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
             };
             Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
             _callDeleteSubscription.Sync(request, callSettings);
@@ -2083,14 +2027,14 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task ModifyAckDeadlineAsync(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
         {
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 AckIds = { ackIds },
                 AckDeadlineSeconds = ackDeadlineSeconds,
             };
@@ -2125,14 +2069,14 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override void ModifyAckDeadline(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
             CallSettings callSettings = null)
         {
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 AckIds = { ackIds },
                 AckDeadlineSeconds = ackDeadlineSeconds,
             };
@@ -2163,13 +2107,13 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task AcknowledgeAsync(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             CallSettings callSettings = null)
         {
             AcknowledgeRequest request = new AcknowledgeRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 AckIds = { ackIds },
             };
             Modify_AcknowledgeRequest(ref request, ref callSettings);
@@ -2199,13 +2143,13 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override void Acknowledge(
-            string subscription,
+            SubscriptionName subscription,
             IEnumerable<string> ackIds,
             CallSettings callSettings = null)
         {
             AcknowledgeRequest request = new AcknowledgeRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 AckIds = { ackIds },
             };
             Modify_AcknowledgeRequest(ref request, ref callSettings);
@@ -2239,14 +2183,14 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<PullResponse> PullAsync(
-            string subscription,
+            SubscriptionName subscription,
             bool returnImmediately,
             int maxMessages,
             CallSettings callSettings = null)
         {
             PullRequest request = new PullRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 ReturnImmediately = returnImmediately,
                 MaxMessages = maxMessages,
             };
@@ -2281,14 +2225,14 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override PullResponse Pull(
-            string subscription,
+            SubscriptionName subscription,
             bool returnImmediately,
             int maxMessages,
             CallSettings callSettings = null)
         {
             PullRequest request = new PullRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 ReturnImmediately = returnImmediately,
                 MaxMessages = maxMessages,
             };
@@ -2322,13 +2266,13 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task ModifyPushConfigAsync(
-            string subscription,
+            SubscriptionName subscription,
             PushConfig pushConfig,
             CallSettings callSettings = null)
         {
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 PushConfig = pushConfig,
             };
             Modify_ModifyPushConfigRequest(ref request, ref callSettings);
@@ -2361,13 +2305,13 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override void ModifyPushConfig(
-            string subscription,
+            SubscriptionName subscription,
             PushConfig pushConfig,
             CallSettings callSettings = null)
         {
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
-                Subscription = subscription,
+                SubscriptionAsSubscriptionName = subscription,
                 PushConfig = pushConfig,
             };
             Modify_ModifyPushConfigRequest(ref request, ref callSettings);

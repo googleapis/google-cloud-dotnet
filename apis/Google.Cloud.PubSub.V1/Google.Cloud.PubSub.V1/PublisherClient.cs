@@ -16,8 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Iam.V1;
-using Google.Protobuf;
+using Google.Cloud.Iam.V1;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
@@ -27,7 +26,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Pubsub.V1
+namespace Google.Cloud.PubSub.V1
 {
     /// <summary>
     /// Settings for a <see cref="PublisherClient"/>.
@@ -481,61 +480,6 @@ namespace Google.Pubsub.V1
 
         private static readonly ChannelPool s_channelPool = new ChannelPool(DefaultScopes);
 
-        /// <summary>
-        /// Path template for a project resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate ProjectTemplate { get; } = new PathTemplate("projects/{project}");
-
-        /// <summary>
-        /// Creates a project resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <returns>
-        /// The full project resource name.
-        /// </returns>
-        public static string FormatProjectName(string projectId) => ProjectTemplate.Expand(projectId);
-
-        /// <summary>
-        /// Path template for a subscription resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>subscription</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate SubscriptionTemplate { get; } = new PathTemplate("projects/{project}/subscriptions/{subscription}");
-
-        /// <summary>
-        /// Creates a subscription resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="subscriptionId">The subscription ID.</param>
-        /// <returns>
-        /// The full subscription resource name.
-        /// </returns>
-        public static string FormatSubscriptionName(string projectId, string subscriptionId) => SubscriptionTemplate.Expand(projectId, subscriptionId);
-
-        /// <summary>
-        /// Path template for a topic resource. Parameters:
-        /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>topic</description></item>
-        /// </list>
-        /// </summary>
-        public static PathTemplate TopicTemplate { get; } = new PathTemplate("projects/{project}/topics/{topic}");
-
-        /// <summary>
-        /// Creates a topic resource name from its component IDs.
-        /// </summary>
-        /// <param name="projectId">The project ID.</param>
-        /// <param name="topicId">The topic ID.</param>
-        /// <returns>
-        /// The full topic resource name.
-        /// </returns>
-        public static string FormatTopicName(string projectId, string topicId) => TopicTemplate.Expand(projectId, topicId);
-
         // Note: we could have parameterless overloads of Create and CreateAsync,
         // documented to just use the default endpoint, settings and credentials.
         // Pros:
@@ -621,7 +565,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Topic> CreateTopicAsync(
-            string name,
+            TopicName name,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -645,7 +589,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Topic> CreateTopicAsync(
-            string name,
+            TopicName name,
             CancellationToken cancellationToken) => CreateTopicAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -668,7 +612,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual Topic CreateTopic(
-            string name,
+            TopicName name,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -692,7 +636,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<PublishResponse> PublishAsync(
-            string topic,
+            TopicName topic,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null)
         {
@@ -717,7 +661,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<PublishResponse> PublishAsync(
-            string topic,
+            TopicName topic,
             IEnumerable<PubsubMessage> messages,
             CancellationToken cancellationToken) => PublishAsync(
                 topic,
@@ -742,7 +686,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual PublishResponse Publish(
-            string topic,
+            TopicName topic,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null)
         {
@@ -762,7 +706,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Topic> GetTopicAsync(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -781,7 +725,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Topic> GetTopicAsync(
-            string topic,
+            TopicName topic,
             CancellationToken cancellationToken) => GetTopicAsync(
                 topic,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -799,7 +743,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual Topic GetTopic(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -825,8 +769,8 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            string project,
+        public virtual PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -854,8 +798,8 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable sequence of <see cref="Topic"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            string project,
+        public virtual PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -883,8 +827,8 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
-            string topic,
+        public virtual PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
+            TopicName topic,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -912,8 +856,8 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public virtual IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
-            string topic,
+        public virtual PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
+            TopicName topic,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
@@ -938,7 +882,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteTopicAsync(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -961,7 +905,7 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteTopicAsync(
-            string topic,
+            TopicName topic,
             CancellationToken cancellationToken) => DeleteTopicAsync(
                 topic,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -983,7 +927,7 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public virtual void DeleteTopic(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1311,12 +1255,12 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Topic> CreateTopicAsync(
-            string name,
+            TopicName name,
             CallSettings callSettings = null)
         {
             Topic request = new Topic
             {
-                Name = name,
+                TopicName = name,
             };
             Modify_Topic(ref request, ref callSettings);
             return _callCreateTopic.Async(request, callSettings);
@@ -1340,12 +1284,12 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override Topic CreateTopic(
-            string name,
+            TopicName name,
             CallSettings callSettings = null)
         {
             Topic request = new Topic
             {
-                Name = name,
+                TopicName = name,
             };
             Modify_Topic(ref request, ref callSettings);
             return _callCreateTopic.Sync(request, callSettings);
@@ -1369,13 +1313,13 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<PublishResponse> PublishAsync(
-            string topic,
+            TopicName topic,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null)
         {
             PublishRequest request = new PublishRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
                 Messages = { messages },
             };
             Modify_PublishRequest(ref request, ref callSettings);
@@ -1400,13 +1344,13 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override PublishResponse Publish(
-            string topic,
+            TopicName topic,
             IEnumerable<PubsubMessage> messages,
             CallSettings callSettings = null)
         {
             PublishRequest request = new PublishRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
                 Messages = { messages },
             };
             Modify_PublishRequest(ref request, ref callSettings);
@@ -1426,12 +1370,12 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Topic> GetTopicAsync(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             GetTopicRequest request = new GetTopicRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
             };
             Modify_GetTopicRequest(ref request, ref callSettings);
             return _callGetTopic.Async(request, callSettings);
@@ -1450,12 +1394,12 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override Topic GetTopic(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             GetTopicRequest request = new GetTopicRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
             };
             Modify_GetTopicRequest(ref request, ref callSettings);
             return _callGetTopic.Sync(request, callSettings);
@@ -1481,20 +1425,20 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            string project,
+        public override PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
         {
             ListTopicsRequest request = new ListTopicsRequest
             {
-                Project = project,
+                ProjectAsProjectName = project,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTopicsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
         }
 
         /// <summary>
@@ -1517,20 +1461,20 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable sequence of <see cref="Topic"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            string project,
+        public override PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
+            ProjectName project,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
         {
             ListTopicsRequest request = new ListTopicsRequest
             {
-                Project = project,
+                ProjectAsProjectName = project,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTopicsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
+            return new GrpcPagedEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
         }
 
         /// <summary>
@@ -1553,20 +1497,20 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
-        public override IPagedAsyncEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptionsAsync(
-            string topic,
+        public override PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
+            TopicName topic,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
         {
             ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
-            return new PagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(_callListTopicSubscriptions, request, callSettings);
+            return new GrpcPagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(_callListTopicSubscriptions, request, callSettings);
         }
 
         /// <summary>
@@ -1589,20 +1533,20 @@ namespace Google.Pubsub.V1
         /// <returns>
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
-        public override IPagedEnumerable<ListTopicSubscriptionsResponse, string> ListTopicSubscriptions(
-            string topic,
+        public override PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
+            TopicName topic,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null)
         {
             ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             };
             Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
-            return new PagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, string>(_callListTopicSubscriptions, request, callSettings);
+            return new GrpcPagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(_callListTopicSubscriptions, request, callSettings);
         }
 
         /// <summary>
@@ -1622,12 +1566,12 @@ namespace Google.Pubsub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteTopicAsync(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             DeleteTopicRequest request = new DeleteTopicRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
             };
             Modify_DeleteTopicRequest(ref request, ref callSettings);
             return _callDeleteTopic.Async(request, callSettings);
@@ -1650,12 +1594,12 @@ namespace Google.Pubsub.V1
         /// The RPC response.
         /// </returns>
         public override void DeleteTopic(
-            string topic,
+            TopicName topic,
             CallSettings callSettings = null)
         {
             DeleteTopicRequest request = new DeleteTopicRequest
             {
-                Topic = topic,
+                TopicAsTopicName = topic,
             };
             Modify_DeleteTopicRequest(ref request, ref callSettings);
             _callDeleteTopic.Sync(request, callSettings);
@@ -1872,12 +1816,12 @@ namespace Google.Pubsub.V1
     }
 
     public partial class ListTopicSubscriptionsRequest : IPageRequest { }
-    public partial class ListTopicSubscriptionsResponse : IPageResponse<string>
+    public partial class ListTopicSubscriptionsResponse : IPageResponse<SubscriptionName>
     {
         /// <summary>
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
-        public IEnumerator<string> GetEnumerator() => Subscriptions.GetEnumerator();
+        public IEnumerator<SubscriptionName> GetEnumerator() => SubscriptionsAsSubscriptionNames.GetEnumerator();
 
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

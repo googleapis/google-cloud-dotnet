@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Pubsub.V1 {
+namespace Google.Cloud.PubSub.V1 {
 
   /// <summary>Holder for reflection information generated from google/pubsub/v1/pubsub.proto</summary>
   public static partial class PubsubReflection {
@@ -111,33 +111,33 @@ namespace Google.Pubsub.V1 {
             "Ki90b3BpY3MvKn0vc3Vic2NyaXB0aW9ucxJ0CgtEZWxldGVUb3BpYxIkLmdv",
             "b2dsZS5wdWJzdWIudjEuRGVsZXRlVG9waWNSZXF1ZXN0GhYuZ29vZ2xlLnBy",
             "b3RvYnVmLkVtcHR5IieC0+STAiEqHy92MS97dG9waWM9cHJvamVjdHMvKi90",
-            "b3BpY3MvKn1CKAoUY29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3Rv",
-            "UAH4AQFiBnByb3RvMw=="));
+            "b3BpY3MvKn1CQQoUY29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3Rv",
+            "UAH4AQGqAhZHb29nbGUuQ2xvdWQuUHViU3ViLlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.Topic), global::Google.Pubsub.V1.Topic.Parser, new[]{ "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PubsubMessage), global::Google.Pubsub.V1.PubsubMessage.Parser, new[]{ "Data", "Attributes", "MessageId", "PublishTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.GetTopicRequest), global::Google.Pubsub.V1.GetTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PublishRequest), global::Google.Pubsub.V1.PublishRequest.Parser, new[]{ "Topic", "Messages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PublishResponse), global::Google.Pubsub.V1.PublishResponse.Parser, new[]{ "MessageIds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicsRequest), global::Google.Pubsub.V1.ListTopicsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicsResponse), global::Google.Pubsub.V1.ListTopicsResponse.Parser, new[]{ "Topics", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsRequest), global::Google.Pubsub.V1.ListTopicSubscriptionsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListTopicSubscriptionsResponse), global::Google.Pubsub.V1.ListTopicSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.DeleteTopicRequest), global::Google.Pubsub.V1.DeleteTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.Subscription), global::Google.Pubsub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PushConfig), global::Google.Pubsub.V1.PushConfig.Parser, new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ReceivedMessage), global::Google.Pubsub.V1.ReceivedMessage.Parser, new[]{ "AckId", "Message" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.GetSubscriptionRequest), global::Google.Pubsub.V1.GetSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsRequest), global::Google.Pubsub.V1.ListSubscriptionsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ListSubscriptionsResponse), global::Google.Pubsub.V1.ListSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.DeleteSubscriptionRequest), global::Google.Pubsub.V1.DeleteSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ModifyPushConfigRequest), global::Google.Pubsub.V1.ModifyPushConfigRequest.Parser, new[]{ "Subscription", "PushConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PullRequest), global::Google.Pubsub.V1.PullRequest.Parser, new[]{ "Subscription", "ReturnImmediately", "MaxMessages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.PullResponse), global::Google.Pubsub.V1.PullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.ModifyAckDeadlineRequest), global::Google.Pubsub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Pubsub.V1.AcknowledgeRequest), global::Google.Pubsub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Topic), global::Google.Cloud.PubSub.V1.Topic.Parser, new[]{ "Name" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PubsubMessage), global::Google.Cloud.PubSub.V1.PubsubMessage.Parser, new[]{ "Data", "Attributes", "MessageId", "PublishTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.GetTopicRequest), global::Google.Cloud.PubSub.V1.GetTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PublishRequest), global::Google.Cloud.PubSub.V1.PublishRequest.Parser, new[]{ "Topic", "Messages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PublishResponse), global::Google.Cloud.PubSub.V1.PublishResponse.Parser, new[]{ "MessageIds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicsRequest), global::Google.Cloud.PubSub.V1.ListTopicsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicsResponse), global::Google.Cloud.PubSub.V1.ListTopicsResponse.Parser, new[]{ "Topics", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.DeleteTopicRequest), global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Subscription), global::Google.Cloud.PubSub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PushConfig), global::Google.Cloud.PubSub.V1.PushConfig.Parser, new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ReceivedMessage), global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser, new[]{ "AckId", "Message" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.GetSubscriptionRequest), global::Google.Cloud.PubSub.V1.GetSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest), global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse), global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest), global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest), global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest.Parser, new[]{ "Subscription", "PushConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PullRequest), global::Google.Cloud.PubSub.V1.PullRequest.Parser, new[]{ "Subscription", "ReturnImmediately", "MaxMessages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PullResponse), global::Google.Cloud.PubSub.V1.PullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest), global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.AcknowledgeRequest), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null)
           }));
     }
     #endregion
@@ -154,7 +154,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -283,7 +283,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -503,7 +503,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -626,7 +626,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -668,14 +668,14 @@ namespace Google.Pubsub.V1 {
 
     /// <summary>Field number for the "messages" field.</summary>
     public const int MessagesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Pubsub.V1.PubsubMessage> _repeated_messages_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Pubsub.V1.PubsubMessage.Parser);
-    private readonly pbc::RepeatedField<global::Google.Pubsub.V1.PubsubMessage> messages_ = new pbc::RepeatedField<global::Google.Pubsub.V1.PubsubMessage>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.PubSub.V1.PubsubMessage> _repeated_messages_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.PubSub.V1.PubsubMessage.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.PubsubMessage> messages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.PubsubMessage>();
     /// <summary>
     ///  The messages to publish.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Pubsub.V1.PubsubMessage> Messages {
+    public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.PubsubMessage> Messages {
       get { return messages_; }
     }
 
@@ -772,7 +772,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -889,7 +889,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1076,7 +1076,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1104,14 +1104,14 @@ namespace Google.Pubsub.V1 {
 
     /// <summary>Field number for the "topics" field.</summary>
     public const int TopicsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Pubsub.V1.Topic> _repeated_topics_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Pubsub.V1.Topic.Parser);
-    private readonly pbc::RepeatedField<global::Google.Pubsub.V1.Topic> topics_ = new pbc::RepeatedField<global::Google.Pubsub.V1.Topic>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.PubSub.V1.Topic> _repeated_topics_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Topic.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic> topics_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic>();
     /// <summary>
     ///  The resulting topics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Pubsub.V1.Topic> Topics {
+    public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic> Topics {
       get { return topics_; }
     }
 
@@ -1223,7 +1223,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1410,7 +1410,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1558,7 +1558,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1681,7 +1681,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1746,14 +1746,14 @@ namespace Google.Pubsub.V1 {
 
     /// <summary>Field number for the "push_config" field.</summary>
     public const int PushConfigFieldNumber = 4;
-    private global::Google.Pubsub.V1.PushConfig pushConfig_;
+    private global::Google.Cloud.PubSub.V1.PushConfig pushConfig_;
     /// <summary>
     ///  If push delivery is used with this subscription, this field is
     ///  used to configure it. An empty `pushConfig` signifies that the subscriber
     ///  will pull and ack messages using API methods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Pubsub.V1.PushConfig PushConfig {
+    public global::Google.Cloud.PubSub.V1.PushConfig PushConfig {
       get { return pushConfig_; }
       set {
         pushConfig_ = value;
@@ -1878,7 +1878,7 @@ namespace Google.Pubsub.V1 {
       }
       if (other.pushConfig_ != null) {
         if (pushConfig_ == null) {
-          pushConfig_ = new global::Google.Pubsub.V1.PushConfig();
+          pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
         }
         PushConfig.MergeFrom(other.PushConfig);
       }
@@ -1905,7 +1905,7 @@ namespace Google.Pubsub.V1 {
           }
           case 34: {
             if (pushConfig_ == null) {
-              pushConfig_ = new global::Google.Pubsub.V1.PushConfig();
+              pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
             }
             input.ReadMessage(pushConfig_);
             break;
@@ -1930,7 +1930,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2098,7 +2098,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2140,12 +2140,12 @@ namespace Google.Pubsub.V1 {
 
     /// <summary>Field number for the "message" field.</summary>
     public const int MessageFieldNumber = 2;
-    private global::Google.Pubsub.V1.PubsubMessage message_;
+    private global::Google.Cloud.PubSub.V1.PubsubMessage message_;
     /// <summary>
     ///  The message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Pubsub.V1.PubsubMessage Message {
+    public global::Google.Cloud.PubSub.V1.PubsubMessage Message {
       get { return message_; }
       set {
         message_ = value;
@@ -2217,7 +2217,7 @@ namespace Google.Pubsub.V1 {
       }
       if (other.message_ != null) {
         if (message_ == null) {
-          message_ = new global::Google.Pubsub.V1.PubsubMessage();
+          message_ = new global::Google.Cloud.PubSub.V1.PubsubMessage();
         }
         Message.MergeFrom(other.Message);
       }
@@ -2237,7 +2237,7 @@ namespace Google.Pubsub.V1 {
           }
           case 18: {
             if (message_ == null) {
-              message_ = new global::Google.Pubsub.V1.PubsubMessage();
+              message_ = new global::Google.Cloud.PubSub.V1.PubsubMessage();
             }
             input.ReadMessage(message_);
             break;
@@ -2258,7 +2258,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2381,7 +2381,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2568,7 +2568,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2596,14 +2596,14 @@ namespace Google.Pubsub.V1 {
 
     /// <summary>Field number for the "subscriptions" field.</summary>
     public const int SubscriptionsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Pubsub.V1.Subscription> _repeated_subscriptions_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Pubsub.V1.Subscription.Parser);
-    private readonly pbc::RepeatedField<global::Google.Pubsub.V1.Subscription> subscriptions_ = new pbc::RepeatedField<global::Google.Pubsub.V1.Subscription>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.PubSub.V1.Subscription> _repeated_subscriptions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Subscription.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription> subscriptions_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription>();
     /// <summary>
     ///  The subscriptions that match the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Pubsub.V1.Subscription> Subscriptions {
+    public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription> Subscriptions {
       get { return subscriptions_; }
     }
 
@@ -2716,7 +2716,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2839,7 +2839,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2881,7 +2881,7 @@ namespace Google.Pubsub.V1 {
 
     /// <summary>Field number for the "push_config" field.</summary>
     public const int PushConfigFieldNumber = 2;
-    private global::Google.Pubsub.V1.PushConfig pushConfig_;
+    private global::Google.Cloud.PubSub.V1.PushConfig pushConfig_;
     /// <summary>
     ///  The push configuration for future deliveries.
     ///
@@ -2891,7 +2891,7 @@ namespace Google.Pubsub.V1 {
     ///  the subscription if `Pull` is not called.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Pubsub.V1.PushConfig PushConfig {
+    public global::Google.Cloud.PubSub.V1.PushConfig PushConfig {
       get { return pushConfig_; }
       set {
         pushConfig_ = value;
@@ -2963,7 +2963,7 @@ namespace Google.Pubsub.V1 {
       }
       if (other.pushConfig_ != null) {
         if (pushConfig_ == null) {
-          pushConfig_ = new global::Google.Pubsub.V1.PushConfig();
+          pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
         }
         PushConfig.MergeFrom(other.PushConfig);
       }
@@ -2983,7 +2983,7 @@ namespace Google.Pubsub.V1 {
           }
           case 18: {
             if (pushConfig_ == null) {
-              pushConfig_ = new global::Google.Pubsub.V1.PushConfig();
+              pushConfig_ = new global::Google.Cloud.PubSub.V1.PushConfig();
             }
             input.ReadMessage(pushConfig_);
             break;
@@ -3004,7 +3004,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3194,7 +3194,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3221,9 +3221,9 @@ namespace Google.Pubsub.V1 {
 
     /// <summary>Field number for the "received_messages" field.</summary>
     public const int ReceivedMessagesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Pubsub.V1.ReceivedMessage> _repeated_receivedMessages_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Pubsub.V1.ReceivedMessage.Parser);
-    private readonly pbc::RepeatedField<global::Google.Pubsub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Pubsub.V1.ReceivedMessage>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.PubSub.V1.ReceivedMessage> _repeated_receivedMessages_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage>();
     /// <summary>
     ///  Received Pub/Sub messages. The Pub/Sub system will return zero messages if
     ///  there are no more available in the backlog. The Pub/Sub system may return
@@ -3231,7 +3231,7 @@ namespace Google.Pubsub.V1 {
     ///  available in the backlog.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Pubsub.V1.ReceivedMessage> ReceivedMessages {
+    public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> ReceivedMessages {
       get { return receivedMessages_; }
     }
 
@@ -3312,7 +3312,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3493,7 +3493,7 @@ namespace Google.Pubsub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Pubsub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

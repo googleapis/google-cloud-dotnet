@@ -16,10 +16,10 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Iam.V1;
+using Google.Cloud.Iam.V1;
+using Google.Cloud.PubSub.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
-using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -29,43 +29,43 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Pubsub.V1.Snippets
+namespace Google.Cloud.PubSub.V1.Snippets
 {
     public class GeneratedPublisherClientSnippets
     {
         public async Task CreateTopicAsync()
         {
-            // Snippet: CreateTopicAsync(string,CallSettings)
-            // Additional: CreateTopicAsync(string,CancellationToken)
+            // Snippet: CreateTopicAsync(TopicName,CallSettings)
+            // Additional: CreateTopicAsync(TopicName,CancellationToken)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedName = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            Topic response = await publisherClient.CreateTopicAsync(formattedName);
+            Topic response = await publisherClient.CreateTopicAsync(name);
             // End snippet
         }
 
         public void CreateTopic()
         {
-            // Snippet: CreateTopic(string,CallSettings)
+            // Snippet: CreateTopic(TopicName,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedName = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName name = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            Topic response = publisherClient.CreateTopic(formattedName);
+            Topic response = publisherClient.CreateTopic(name);
             // End snippet
         }
 
         public async Task PublishAsync()
         {
-            // Snippet: PublishAsync(string,IEnumerable<PubsubMessage>,CallSettings)
-            // Additional: PublishAsync(string,IEnumerable<PubsubMessage>,CancellationToken)
+            // Snippet: PublishAsync(TopicName,IEnumerable<PubsubMessage>,CallSettings)
+            // Additional: PublishAsync(TopicName,IEnumerable<PubsubMessage>,CancellationToken)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             IEnumerable<PubsubMessage> messages = new[]
             {
                 new PubsubMessage
@@ -74,17 +74,17 @@ namespace Google.Pubsub.V1.Snippets
                 },
             };
             // Make the request
-            PublishResponse response = await publisherClient.PublishAsync(formattedTopic, messages);
+            PublishResponse response = await publisherClient.PublishAsync(topic, messages);
             // End snippet
         }
 
         public void Publish()
         {
-            // Snippet: Publish(string,IEnumerable<PubsubMessage>,CallSettings)
+            // Snippet: Publish(TopicName,IEnumerable<PubsubMessage>,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             IEnumerable<PubsubMessage> messages = new[]
             {
                 new PubsubMessage
@@ -93,45 +93,45 @@ namespace Google.Pubsub.V1.Snippets
                 },
             };
             // Make the request
-            PublishResponse response = publisherClient.Publish(formattedTopic, messages);
+            PublishResponse response = publisherClient.Publish(topic, messages);
             // End snippet
         }
 
         public async Task GetTopicAsync()
         {
-            // Snippet: GetTopicAsync(string,CallSettings)
-            // Additional: GetTopicAsync(string,CancellationToken)
+            // Snippet: GetTopicAsync(TopicName,CallSettings)
+            // Additional: GetTopicAsync(TopicName,CancellationToken)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            Topic response = await publisherClient.GetTopicAsync(formattedTopic);
+            Topic response = await publisherClient.GetTopicAsync(topic);
             // End snippet
         }
 
         public void GetTopic()
         {
-            // Snippet: GetTopic(string,CallSettings)
+            // Snippet: GetTopic(TopicName,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            Topic response = publisherClient.GetTopic(formattedTopic);
+            Topic response = publisherClient.GetTopic(topic);
             // End snippet
         }
 
         public async Task ListTopicsAsync()
         {
-            // Snippet: ListTopicsAsync(string,string,int?,CallSettings)
+            // Snippet: ListTopicsAsync(ProjectName,string,int?,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedProject = PublisherClient.FormatProjectName("[PROJECT]");
+            ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            IPagedAsyncEnumerable<ListTopicsResponse,Topic> response =
-                publisherClient.ListTopicsAsync(formattedProject);
+            PagedAsyncEnumerable<ListTopicsResponse,Topic> response =
+                publisherClient.ListTopicsAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Topic item) =>
@@ -140,10 +140,8 @@ namespace Google.Pubsub.V1.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<Topic>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<Topic> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTopicsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -152,19 +150,31 @@ namespace Google.Pubsub.V1.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Topic> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Topic item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         public void ListTopics()
         {
-            // Snippet: ListTopics(string,string,int?,CallSettings)
+            // Snippet: ListTopics(ProjectName,string,int?,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedProject = PublisherClient.FormatProjectName("[PROJECT]");
+            ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            IPagedEnumerable<ListTopicsResponse,Topic> response =
-                publisherClient.ListTopics(formattedProject);
+            PagedEnumerable<ListTopicsResponse,Topic> response =
+                publisherClient.ListTopics(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Topic item in response)
@@ -173,9 +183,8 @@ namespace Google.Pubsub.V1.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<Topic> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTopicsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -184,96 +193,129 @@ namespace Google.Pubsub.V1.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Topic> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Topic item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         public async Task ListTopicSubscriptionsAsync()
         {
-            // Snippet: ListTopicSubscriptionsAsync(string,string,int?,CallSettings)
+            // Snippet: ListTopicSubscriptionsAsync(TopicName,string,int?,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            IPagedAsyncEnumerable<ListTopicSubscriptionsResponse,string> response =
-                publisherClient.ListTopicSubscriptionsAsync(formattedTopic);
+            PagedAsyncEnumerable<ListTopicSubscriptionsResponse,SubscriptionName> response =
+                publisherClient.ListTopicSubscriptionsAsync(topic);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((string item) =>
+            await response.ForEachAsync((SubscriptionName item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<string>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<string> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTopicSubscriptionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (string item in page)
+                foreach (SubscriptionName item in page)
                 {
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubscriptionName> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubscriptionName item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         public void ListTopicSubscriptions()
         {
-            // Snippet: ListTopicSubscriptions(string,string,int?,CallSettings)
+            // Snippet: ListTopicSubscriptions(TopicName,string,int?,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            IPagedEnumerable<ListTopicSubscriptionsResponse,string> response =
-                publisherClient.ListTopicSubscriptions(formattedTopic);
+            PagedEnumerable<ListTopicSubscriptionsResponse,SubscriptionName> response =
+                publisherClient.ListTopicSubscriptions(topic);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (string item in response)
+            foreach (SubscriptionName item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<string> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTopicSubscriptionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (string item in page)
+                foreach (SubscriptionName item in page)
                 {
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubscriptionName> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubscriptionName item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         public async Task DeleteTopicAsync()
         {
-            // Snippet: DeleteTopicAsync(string,CallSettings)
-            // Additional: DeleteTopicAsync(string,CancellationToken)
+            // Snippet: DeleteTopicAsync(TopicName,CallSettings)
+            // Additional: DeleteTopicAsync(TopicName,CancellationToken)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            await publisherClient.DeleteTopicAsync(formattedTopic);
+            await publisherClient.DeleteTopicAsync(topic);
             // End snippet
         }
 
         public void DeleteTopic()
         {
-            // Snippet: DeleteTopic(string,CallSettings)
+            // Snippet: DeleteTopic(TopicName,CallSettings)
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedTopic = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
-            publisherClient.DeleteTopic(formattedTopic);
+            publisherClient.DeleteTopic(topic);
             // End snippet
         }
 
@@ -284,7 +326,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = await publisherClient.SetIamPolicyAsync(formattedResource, policy);
@@ -297,7 +339,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = publisherClient.SetIamPolicy(formattedResource, policy);
@@ -311,7 +353,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             // Make the request
             Policy response = await publisherClient.GetIamPolicyAsync(formattedResource);
             // End snippet
@@ -323,7 +365,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             // Make the request
             Policy response = publisherClient.GetIamPolicy(formattedResource);
             // End snippet
@@ -336,7 +378,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = await publisherClient.TestIamPermissionsAsync(formattedResource, permissions);
@@ -349,7 +391,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             PublisherClient publisherClient = PublisherClient.Create();
             // Initialize request argument(s)
-            string formattedResource = PublisherClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = publisherClient.TestIamPermissions(formattedResource, permissions);
