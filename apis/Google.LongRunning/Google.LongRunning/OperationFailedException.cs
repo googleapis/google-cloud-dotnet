@@ -16,7 +16,7 @@ using Google.Api.Gax;
 using Google.Rpc;
 using System;
 
-namespace Google.Longrunning
+namespace Google.LongRunning
 {
     /// <summary>
     /// An exception to indicate that a long-running operation failed.

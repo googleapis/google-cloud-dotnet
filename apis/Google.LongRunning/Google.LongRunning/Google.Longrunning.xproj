@@ -6,12 +6,11 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>df30e2ff-781a-4f5f-b60c-1c38291341e3</ProjectGuid>
-    <RootNamespace>Google.Longrunning.Tests</RootNamespace>
+    <ProjectGuid>2da31819-9094-49ec-96b6-744a481eb4f9</ProjectGuid>
+    <RootNamespace>Google.LongRunning</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>

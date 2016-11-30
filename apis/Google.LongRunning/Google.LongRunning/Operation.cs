@@ -19,7 +19,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Longrunning
+namespace Google.LongRunning
 {
     /// <summary>
     /// A long-running operation with an associated client, and which knows the expected response type.
