@@ -21,9 +21,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using Google.Iam.V1;
+using Google.Cloud.Iam.V1;
 
-namespace Google.Pubsub.V1.Snippets
+namespace Google.Cloud.PubSub.V1.Snippets
 {
     [Collection(nameof(PubsubSnippetFixture))]
     public class PublisherClientSnippets
@@ -43,9 +43,7 @@ namespace Google.Pubsub.V1.Snippets
             // Snippet: ListTopics
             PublisherClient client = PublisherClient.Create();
 
-            // Alternative: use a known project resource name:
-            // "projects/{PROJECT_ID}"
-            string projectName = PublisherClient.FormatProjectName(projectId);
+            ProjectName projectName = new ProjectName(projectId);
             foreach (Topic topic in client.ListTopics(projectName))
             {
                 Console.WriteLine(topic.Name);
@@ -61,9 +59,7 @@ namespace Google.Pubsub.V1.Snippets
             // Snippet: ListTopicsAsync
             PublisherClient client = PublisherClient.Create();
 
-            // Alternative: use a known project resource name:
-            // "projects/{PROJECT_ID}"
-            string projectName = PublisherClient.FormatProjectName(projectId);
+            ProjectName projectName = new ProjectName(projectId);
             IAsyncEnumerable<Topic> topics = client.ListTopicsAsync(projectName);
             await topics.ForEachAsync(topic =>
             {
@@ -81,9 +77,7 @@ namespace Google.Pubsub.V1.Snippets
             // Snippet: CreateTopic
             PublisherClient client = PublisherClient.Create();
 
-            // Alternative: use a known topic resource name
-            // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             Topic topic = client.CreateTopic(topicName);
             Console.WriteLine($"Created {topic.Name}");
             // End snippet
@@ -99,9 +93,7 @@ namespace Google.Pubsub.V1.Snippets
             // Additional: CreateTopicAsync(string,CancellationToken)
             PublisherClient client = PublisherClient.Create();
 
-            // Alternative: use a known topic resource name
-            // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             Topic topic = await client.CreateTopicAsync(topicName);
             Console.WriteLine($"Created {topic.Name}");
             // End snippet
@@ -116,7 +108,7 @@ namespace Google.Pubsub.V1.Snippets
             // Snippet: Publish
             PublisherClient client = PublisherClient.Create();
             // Make sure we have a topic to publish to
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             client.CreateTopic(topicName);
 
             PubsubMessage message = new PubsubMessage
@@ -144,7 +136,7 @@ namespace Google.Pubsub.V1.Snippets
             // Additional: PublishAsync(*,*,CancellationToken)
             PublisherClient client = PublisherClient.Create();
             // Make sure we have a topic to publish to
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             await client.CreateTopicAsync(topicName);
 
             PubsubMessage message = new PubsubMessage
@@ -167,14 +159,12 @@ namespace Google.Pubsub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            PublisherClient.Create().CreateTopic(PublisherClient.FormatTopicName(projectId, topicId));
+            PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
             // Snippet: DeleteTopic
             PublisherClient client = PublisherClient.Create();
 
-            // Alternative: use a known topic resource name
-            // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             client.DeleteTopic(topicName);
             Console.WriteLine($"Deleted {topicName}");
             // End snippet
@@ -186,15 +176,13 @@ namespace Google.Pubsub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            await PublisherClient.Create().CreateTopicAsync(PublisherClient.FormatTopicName(projectId, topicId));
+            await PublisherClient.Create().CreateTopicAsync(new TopicName(projectId, topicId));
 
             // Snippet: DeleteTopicAsync(string,CallSettings)
             // Additional: DeleteTopicAsync(string,CancellationToken)
             PublisherClient client = PublisherClient.Create();
 
-            // Alternative: use a known topic resource name
-            // "projects/{PROJECT_ID}/topics/{TOPIC_ID}"
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            TopicName topicName = new TopicName(projectId, topicId);
             await client.DeleteTopicAsync(topicName);
             Console.WriteLine($"Deleted {topicName}");
             // End snippet
@@ -206,11 +194,11 @@ namespace Google.Pubsub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            PublisherClient.Create().CreateTopic(PublisherClient.FormatTopicName(projectId, topicId));
+            PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
             // Snippet: GetIamPolicy
             PublisherClient client = PublisherClient.Create();
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+            string topicName = new TopicName(projectId, topicId).ToString();
             Policy policy = client.GetIamPolicy(topicName);
             Console.WriteLine($"Policy for {topicName}: {policy}");
             // End snippet

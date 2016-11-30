@@ -20,8 +20,8 @@
 
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-beta04",
-    "Google.Api.Gax.Grpc": "1.0.0-beta04",
-    "Google.Iam.V1": { "target": "project" }
+    "Google.Api.Gax.Grpc": "1.0.0-beta04-CI00109",
+    "Google.Cloud.Iam.V1": { "target": "project" }
   },
 
   "frameworks": {

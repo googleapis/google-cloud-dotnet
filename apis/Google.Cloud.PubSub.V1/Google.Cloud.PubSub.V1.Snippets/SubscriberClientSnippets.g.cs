@@ -16,10 +16,10 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Iam.V1;
+using Google.Cloud.Iam.V1;
+using Google.Cloud.PubSub.V1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
-using Google.Pubsub.V1;
 using Grpc.Core;
 using System;
 using System.Collections;
@@ -29,76 +29,76 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Pubsub.V1.Snippets
+namespace Google.Cloud.PubSub.V1.Snippets
 {
     public class GeneratedSubscriberClientSnippets
     {
         public async Task CreateSubscriptionAsync()
         {
-            // Snippet: CreateSubscriptionAsync(string,string,PushConfig,int,CallSettings)
-            // Additional: CreateSubscriptionAsync(string,string,PushConfig,int,CancellationToken)
+            // Snippet: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int,CallSettings)
+            // Additional: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedName = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
-            string formattedTopic = SubscriberClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            SubscriptionName name = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             PushConfig pushConfig = new PushConfig();
             int ackDeadlineSeconds = 0;
             // Make the request
-            Subscription response = await subscriberClient.CreateSubscriptionAsync(formattedName, formattedTopic, pushConfig, ackDeadlineSeconds);
+            Subscription response = await subscriberClient.CreateSubscriptionAsync(name, topic, pushConfig, ackDeadlineSeconds);
             // End snippet
         }
 
         public void CreateSubscription()
         {
-            // Snippet: CreateSubscription(string,string,PushConfig,int,CallSettings)
+            // Snippet: CreateSubscription(SubscriptionName,TopicName,PushConfig,int,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedName = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
-            string formattedTopic = SubscriberClient.FormatTopicName("[PROJECT]", "[TOPIC]");
+            SubscriptionName name = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             PushConfig pushConfig = new PushConfig();
             int ackDeadlineSeconds = 0;
             // Make the request
-            Subscription response = subscriberClient.CreateSubscription(formattedName, formattedTopic, pushConfig, ackDeadlineSeconds);
+            Subscription response = subscriberClient.CreateSubscription(name, topic, pushConfig, ackDeadlineSeconds);
             // End snippet
         }
 
         public async Task GetSubscriptionAsync()
         {
-            // Snippet: GetSubscriptionAsync(string,CallSettings)
-            // Additional: GetSubscriptionAsync(string,CancellationToken)
+            // Snippet: GetSubscriptionAsync(SubscriptionName,CallSettings)
+            // Additional: GetSubscriptionAsync(SubscriptionName,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
-            Subscription response = await subscriberClient.GetSubscriptionAsync(formattedSubscription);
+            Subscription response = await subscriberClient.GetSubscriptionAsync(subscription);
             // End snippet
         }
 
         public void GetSubscription()
         {
-            // Snippet: GetSubscription(string,CallSettings)
+            // Snippet: GetSubscription(SubscriptionName,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
-            Subscription response = subscriberClient.GetSubscription(formattedSubscription);
+            Subscription response = subscriberClient.GetSubscription(subscription);
             // End snippet
         }
 
         public async Task ListSubscriptionsAsync()
         {
-            // Snippet: ListSubscriptionsAsync(string,string,int?,CallSettings)
+            // Snippet: ListSubscriptionsAsync(ProjectName,string,int?,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedProject = SubscriberClient.FormatProjectName("[PROJECT]");
+            ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            IPagedAsyncEnumerable<ListSubscriptionsResponse,Subscription> response =
-                subscriberClient.ListSubscriptionsAsync(formattedProject);
+            PagedAsyncEnumerable<ListSubscriptionsResponse,Subscription> response =
+                subscriberClient.ListSubscriptionsAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Subscription item) =>
@@ -107,10 +107,8 @@ namespace Google.Pubsub.V1.Snippets
                 Console.WriteLine(item);
             });
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            IAsyncEnumerable<FixedSizePage<Subscription>> fixedSizePages = response.AsPages().WithFixedSize(pageSize);
-            await fixedSizePages.ForEachAsync((FixedSizePage<Subscription> page) =>
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubscriptionsResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -119,19 +117,31 @@ namespace Google.Pubsub.V1.Snippets
                     Console.WriteLine(item);
                 }
             });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         public void ListSubscriptions()
         {
-            // Snippet: ListSubscriptions(string,string,int?,CallSettings)
+            // Snippet: ListSubscriptions(ProjectName,string,int?,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedProject = SubscriberClient.FormatProjectName("[PROJECT]");
+            ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
-            IPagedEnumerable<ListSubscriptionsResponse,Subscription> response =
-                subscriberClient.ListSubscriptions(formattedProject);
+            PagedEnumerable<ListSubscriptionsResponse,Subscription> response =
+                subscriberClient.ListSubscriptions(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Subscription item in response)
@@ -140,9 +150,8 @@ namespace Google.Pubsub.V1.Snippets
                 Console.WriteLine(item);
             }
 
-            // Or iterate over fixed-sized pages, lazily performing RPCs as required
-            int pageSize = 10;
-            foreach (FixedSizePage<Subscription> page in response.AsPages().WithFixedSize(pageSize))
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscriptionsResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -151,143 +160,155 @@ namespace Google.Pubsub.V1.Snippets
                     Console.WriteLine(item);
                 }
             }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
         public async Task DeleteSubscriptionAsync()
         {
-            // Snippet: DeleteSubscriptionAsync(string,CallSettings)
-            // Additional: DeleteSubscriptionAsync(string,CancellationToken)
+            // Snippet: DeleteSubscriptionAsync(SubscriptionName,CallSettings)
+            // Additional: DeleteSubscriptionAsync(SubscriptionName,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
-            await subscriberClient.DeleteSubscriptionAsync(formattedSubscription);
+            await subscriberClient.DeleteSubscriptionAsync(subscription);
             // End snippet
         }
 
         public void DeleteSubscription()
         {
-            // Snippet: DeleteSubscription(string,CallSettings)
+            // Snippet: DeleteSubscription(SubscriptionName,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
-            subscriberClient.DeleteSubscription(formattedSubscription);
+            subscriberClient.DeleteSubscription(subscription);
             // End snippet
         }
 
         public async Task ModifyAckDeadlineAsync()
         {
-            // Snippet: ModifyAckDeadlineAsync(string,IEnumerable<string>,int,CallSettings)
-            // Additional: ModifyAckDeadlineAsync(string,IEnumerable<string>,int,CancellationToken)
+            // Snippet: ModifyAckDeadlineAsync(SubscriptionName,IEnumerable<string>,int,CallSettings)
+            // Additional: ModifyAckDeadlineAsync(SubscriptionName,IEnumerable<string>,int,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             IEnumerable<string> ackIds = new List<string>();
             int ackDeadlineSeconds = 0;
             // Make the request
-            await subscriberClient.ModifyAckDeadlineAsync(formattedSubscription, ackIds, ackDeadlineSeconds);
+            await subscriberClient.ModifyAckDeadlineAsync(subscription, ackIds, ackDeadlineSeconds);
             // End snippet
         }
 
         public void ModifyAckDeadline()
         {
-            // Snippet: ModifyAckDeadline(string,IEnumerable<string>,int,CallSettings)
+            // Snippet: ModifyAckDeadline(SubscriptionName,IEnumerable<string>,int,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             IEnumerable<string> ackIds = new List<string>();
             int ackDeadlineSeconds = 0;
             // Make the request
-            subscriberClient.ModifyAckDeadline(formattedSubscription, ackIds, ackDeadlineSeconds);
+            subscriberClient.ModifyAckDeadline(subscription, ackIds, ackDeadlineSeconds);
             // End snippet
         }
 
         public async Task AcknowledgeAsync()
         {
-            // Snippet: AcknowledgeAsync(string,IEnumerable<string>,CallSettings)
-            // Additional: AcknowledgeAsync(string,IEnumerable<string>,CancellationToken)
+            // Snippet: AcknowledgeAsync(SubscriptionName,IEnumerable<string>,CallSettings)
+            // Additional: AcknowledgeAsync(SubscriptionName,IEnumerable<string>,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             IEnumerable<string> ackIds = new List<string>();
             // Make the request
-            await subscriberClient.AcknowledgeAsync(formattedSubscription, ackIds);
+            await subscriberClient.AcknowledgeAsync(subscription, ackIds);
             // End snippet
         }
 
         public void Acknowledge()
         {
-            // Snippet: Acknowledge(string,IEnumerable<string>,CallSettings)
+            // Snippet: Acknowledge(SubscriptionName,IEnumerable<string>,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             IEnumerable<string> ackIds = new List<string>();
             // Make the request
-            subscriberClient.Acknowledge(formattedSubscription, ackIds);
+            subscriberClient.Acknowledge(subscription, ackIds);
             // End snippet
         }
 
         public async Task PullAsync()
         {
-            // Snippet: PullAsync(string,bool,int,CallSettings)
-            // Additional: PullAsync(string,bool,int,CancellationToken)
+            // Snippet: PullAsync(SubscriptionName,bool,int,CallSettings)
+            // Additional: PullAsync(SubscriptionName,bool,int,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             bool returnImmediately = false;
             int maxMessages = 0;
             // Make the request
-            PullResponse response = await subscriberClient.PullAsync(formattedSubscription, returnImmediately, maxMessages);
+            PullResponse response = await subscriberClient.PullAsync(subscription, returnImmediately, maxMessages);
             // End snippet
         }
 
         public void Pull()
         {
-            // Snippet: Pull(string,bool,int,CallSettings)
+            // Snippet: Pull(SubscriptionName,bool,int,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             bool returnImmediately = false;
             int maxMessages = 0;
             // Make the request
-            PullResponse response = subscriberClient.Pull(formattedSubscription, returnImmediately, maxMessages);
+            PullResponse response = subscriberClient.Pull(subscription, returnImmediately, maxMessages);
             // End snippet
         }
 
         public async Task ModifyPushConfigAsync()
         {
-            // Snippet: ModifyPushConfigAsync(string,PushConfig,CallSettings)
-            // Additional: ModifyPushConfigAsync(string,PushConfig,CancellationToken)
+            // Snippet: ModifyPushConfigAsync(SubscriptionName,PushConfig,CallSettings)
+            // Additional: ModifyPushConfigAsync(SubscriptionName,PushConfig,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             PushConfig pushConfig = new PushConfig();
             // Make the request
-            await subscriberClient.ModifyPushConfigAsync(formattedSubscription, pushConfig);
+            await subscriberClient.ModifyPushConfigAsync(subscription, pushConfig);
             // End snippet
         }
 
         public void ModifyPushConfig()
         {
-            // Snippet: ModifyPushConfig(string,PushConfig,CallSettings)
+            // Snippet: ModifyPushConfig(SubscriptionName,PushConfig,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSubscription = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             PushConfig pushConfig = new PushConfig();
             // Make the request
-            subscriberClient.ModifyPushConfig(formattedSubscription, pushConfig);
+            subscriberClient.ModifyPushConfig(subscription, pushConfig);
             // End snippet
         }
 
@@ -298,7 +319,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = await subscriberClient.SetIamPolicyAsync(formattedResource, policy);
@@ -311,7 +332,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             Policy policy = new Policy();
             // Make the request
             Policy response = subscriberClient.SetIamPolicy(formattedResource, policy);
@@ -325,7 +346,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             // Make the request
             Policy response = await subscriberClient.GetIamPolicyAsync(formattedResource);
             // End snippet
@@ -337,7 +358,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             // Make the request
             Policy response = subscriberClient.GetIamPolicy(formattedResource);
             // End snippet
@@ -350,7 +371,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = await subscriberClient.TestIamPermissionsAsync(formattedResource, permissions);
@@ -363,7 +384,7 @@ namespace Google.Pubsub.V1.Snippets
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedResource = SubscriberClient.FormatSubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
+            string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = subscriberClient.TestIamPermissions(formattedResource, permissions);
