@@ -14,7 +14,7 @@
 using System;
 using Xunit;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
+namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
     /// <summary>
     /// Fixture which is set up at the start of the test run, and torn down at the end.

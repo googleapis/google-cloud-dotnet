@@ -22,7 +22,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Grpc.Core;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
+namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
   ///  An API for reporting error events.
   /// </summary>
@@ -30,10 +30,10 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
   {
     static readonly string __ServiceName = "google.devtools.clouderrorreporting.v1beta1.ReportErrorsService";
 
-    static readonly Marshaller<global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest> __Marshaller_ReportErrorEventRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse> __Marshaller_ReportErrorEventResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest> __Marshaller_ReportErrorEventRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse> __Marshaller_ReportErrorEventResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest, global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse> __Method_ReportErrorEvent = new Method<global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest, global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse>(
+    static readonly Method<global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse> __Method_ReportErrorEvent = new Method<global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse>(
         MethodType.Unary,
         __ServiceName,
         "ReportErrorEvent",
@@ -43,7 +43,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorsServiceReflection.Descriptor.Services[0]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of ReportErrorsService</summary>
@@ -59,7 +59,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  a `key` parameter. For example:
       ///  &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse> ReportErrorEvent(global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse> ReportErrorEvent(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -99,7 +99,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  a `key` parameter. For example:
       ///  &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
-      public virtual global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse ReportErrorEvent(global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse ReportErrorEvent(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ReportErrorEvent(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -113,7 +113,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  a `key` parameter. For example:
       ///  &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
-      public virtual global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse ReportErrorEvent(global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest request, CallOptions options)
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse ReportErrorEvent(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReportErrorEvent, null, options, request);
       }
@@ -127,7 +127,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  a `key` parameter. For example:
       ///  &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse> ReportErrorEventAsync(global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse> ReportErrorEventAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ReportErrorEventAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -141,7 +141,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       ///  a `key` parameter. For example:
       ///  &lt;pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456&lt;/pre>
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventResponse> ReportErrorEventAsync(global::Google.Devtools.Clouderrorreporting.V1Beta1.ReportErrorEventRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse> ReportErrorEventAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReportErrorEvent, null, options, request);
       }

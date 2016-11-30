@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
+namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
   /// <summary>Holder for reflection information generated from google/devtools/clouderrorreporting/v1beta1/common.proto</summary>
   public static partial class CommonReflection {
@@ -45,18 +45,19 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
             "CghyZWZlcnJlchgEIAEoCRIcChRyZXNwb25zZV9zdGF0dXNfY29kZRgFIAEo",
             "BRIRCglyZW1vdGVfaXAYBiABKAkiTwoOU291cmNlTG9jYXRpb24SEQoJZmls",
             "ZV9wYXRoGAEgASgJEhMKC2xpbmVfbnVtYmVyGAIgASgFEhUKDWZ1bmN0aW9u",
-            "X25hbWUYBCABKAlCQAovY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
-            "cmVwb3J0aW5nLnYxYmV0YTFCC0NvbW1vblByb3RvUAFiBnByb3RvMw=="));
+            "X25hbWUYBCABKAlCZgovY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
+            "cmVwb3J0aW5nLnYxYmV0YTFCC0NvbW1vblByb3RvUAGqAiNHb29nbGUuQ2xv",
+            "dWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup), global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorGroup.Parser, new[]{ "Name", "GroupId", "TrackingIssues" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.TrackingIssue), global::Google.Devtools.Clouderrorreporting.V1Beta1.TrackingIssue.Parser, new[]{ "Url" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorEvent), global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext), global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext.Parser, new[]{ "Service", "Version" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext), global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext.Parser, new[]{ "HttpRequest", "User", "ReportLocation" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.HttpRequestContext), global::Google.Devtools.Clouderrorreporting.V1Beta1.HttpRequestContext.Parser, new[]{ "Method", "Url", "UserAgent", "Referrer", "ResponseStatusCode", "RemoteIp" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Devtools.Clouderrorreporting.V1Beta1.SourceLocation), global::Google.Devtools.Clouderrorreporting.V1Beta1.SourceLocation.Parser, new[]{ "FilePath", "LineNumber", "FunctionName" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser, new[]{ "Name", "GroupId", "TrackingIssues" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue), global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser, new[]{ "Url" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Parser, new[]{ "Service", "Version" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext.Parser, new[]{ "HttpRequest", "User", "ReportLocation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext), global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext.Parser, new[]{ "Method", "Url", "UserAgent", "Referrer", "ResponseStatusCode", "RemoteIp" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation), global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation.Parser, new[]{ "FilePath", "LineNumber", "FunctionName" }, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -132,14 +133,14 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     /// <summary>Field number for the "tracking_issues" field.</summary>
     public const int TrackingIssuesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Google.Devtools.Clouderrorreporting.V1Beta1.TrackingIssue> _repeated_trackingIssues_codec
-        = pb::FieldCodec.ForMessage(26, global::Google.Devtools.Clouderrorreporting.V1Beta1.TrackingIssue.Parser);
-    private readonly pbc::RepeatedField<global::Google.Devtools.Clouderrorreporting.V1Beta1.TrackingIssue> trackingIssues_ = new pbc::RepeatedField<global::Google.Devtools.Clouderrorreporting.V1Beta1.TrackingIssue>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue> _repeated_trackingIssues_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue> trackingIssues_ = new pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue>();
     /// <summary>
     ///  Associated tracking issues.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Devtools.Clouderrorreporting.V1Beta1.TrackingIssue> TrackingIssues {
+    public pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue> TrackingIssues {
       get { return trackingIssues_; }
     }
 
@@ -252,7 +253,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -376,7 +377,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -422,12 +423,12 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     /// <summary>Field number for the "service_context" field.</summary>
     public const int ServiceContextFieldNumber = 2;
-    private global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext serviceContext_;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext serviceContext_;
     /// <summary>
     ///  The `ServiceContext` for which this error was reported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext ServiceContext {
+    public global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext ServiceContext {
       get { return serviceContext_; }
       set {
         serviceContext_ = value;
@@ -450,12 +451,12 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     /// <summary>Field number for the "context" field.</summary>
     public const int ContextFieldNumber = 5;
-    private global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext context_;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext context_;
     /// <summary>
     ///  Data about the context in which the error occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext Context {
+    public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext Context {
       get { return context_; }
       set {
         context_ = value;
@@ -548,7 +549,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       }
       if (other.serviceContext_ != null) {
         if (serviceContext_ == null) {
-          serviceContext_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext();
+          serviceContext_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
         }
         ServiceContext.MergeFrom(other.ServiceContext);
       }
@@ -557,7 +558,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       }
       if (other.context_ != null) {
         if (context_ == null) {
-          context_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext();
+          context_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
         }
         Context.MergeFrom(other.Context);
       }
@@ -580,7 +581,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
           }
           case 18: {
             if (serviceContext_ == null) {
-              serviceContext_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ServiceContext();
+              serviceContext_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext();
             }
             input.ReadMessage(serviceContext_);
             break;
@@ -591,7 +592,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
           }
           case 42: {
             if (context_ == null) {
-              context_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.ErrorContext();
+              context_ = new global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext();
             }
             input.ReadMessage(context_);
             break;
@@ -613,7 +614,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -777,7 +778,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -806,13 +807,13 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     /// <summary>Field number for the "http_request" field.</summary>
     public const int HttpRequestFieldNumber = 1;
-    private global::Google.Devtools.Clouderrorreporting.V1Beta1.HttpRequestContext httpRequest_;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext httpRequest_;
     /// <summary>
     ///  The HTTP request which was processed when the error was
     ///  triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Clouderrorreporting.V1Beta1.HttpRequestContext HttpRequest {
+    public global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext HttpRequest {
       get { return httpRequest_; }
       set {
         httpRequest_ = value;
@@ -842,7 +843,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     /// <summary>Field number for the "report_location" field.</summary>
     public const int ReportLocationFieldNumber = 3;
-    private global::Google.Devtools.Clouderrorreporting.V1Beta1.SourceLocation reportLocation_;
+    private global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation reportLocation_;
     /// <summary>
     ///  The location in the source code where the decision was made to
     ///  report the error, usually the place where it was logged.
@@ -852,7 +853,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
     ///  which describes the source line where the exception was thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Devtools.Clouderrorreporting.V1Beta1.SourceLocation ReportLocation {
+    public global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation ReportLocation {
       get { return reportLocation_; }
       set {
         reportLocation_ = value;
@@ -930,7 +931,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       }
       if (other.httpRequest_ != null) {
         if (httpRequest_ == null) {
-          httpRequest_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.HttpRequestContext();
+          httpRequest_ = new global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext();
         }
         HttpRequest.MergeFrom(other.HttpRequest);
       }
@@ -939,7 +940,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
       }
       if (other.reportLocation_ != null) {
         if (reportLocation_ == null) {
-          reportLocation_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.SourceLocation();
+          reportLocation_ = new global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation();
         }
         ReportLocation.MergeFrom(other.ReportLocation);
       }
@@ -955,7 +956,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
             break;
           case 10: {
             if (httpRequest_ == null) {
-              httpRequest_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.HttpRequestContext();
+              httpRequest_ = new global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext();
             }
             input.ReadMessage(httpRequest_);
             break;
@@ -966,7 +967,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
           }
           case 26: {
             if (reportLocation_ == null) {
-              reportLocation_ = new global::Google.Devtools.Clouderrorreporting.V1Beta1.SourceLocation();
+              reportLocation_ = new global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation();
             }
             input.ReadMessage(reportLocation_);
             break;
@@ -990,7 +991,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1275,7 +1276,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Devtools.Clouderrorreporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

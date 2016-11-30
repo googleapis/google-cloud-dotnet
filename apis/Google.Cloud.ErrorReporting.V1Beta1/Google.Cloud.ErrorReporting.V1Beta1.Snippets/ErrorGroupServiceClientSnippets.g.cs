@@ -16,7 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Devtools.Clouderrorreporting.V1Beta1;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
@@ -28,7 +28,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
+namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
 {
     public class GeneratedErrorGroupServiceClientSnippets
     {
@@ -39,7 +39,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedGroupName = ErrorGroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedGroupName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             ErrorGroup response = await errorGroupServiceClient.GetGroupAsync(formattedGroupName);
             // End snippet
@@ -51,7 +51,7 @@ namespace Google.Devtools.Clouderrorreporting.V1Beta1.Snippets
             // Create client
             ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedGroupName = ErrorGroupServiceClient.FormatGroupName("[PROJECT]", "[GROUP]");
+            string formattedGroupName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
             ErrorGroup response = errorGroupServiceClient.GetGroup(formattedGroupName);
             // End snippet
