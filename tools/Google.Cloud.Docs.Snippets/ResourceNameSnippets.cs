@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Pubsub.V1;
+using Google.Cloud.PubSub.V1;
 using System;
 using Xunit;
 
@@ -26,7 +26,7 @@ namespace Google.Cloud.Tools.Snippets
         {
             // Sample: ListTopics
             var client = PublisherClient.Create();
-            var topics = client.ListTopics("projects/petstore");
+            var topics = client.ListTopics(new ProjectName("petstore"));
             foreach (Topic topic in topics)
             {
                 // Output would include projects/petstore/topics/offers
@@ -34,53 +34,5 @@ namespace Google.Cloud.Tools.Snippets
             }
             // End sample
         }
-
-        [Fact]
-        public void FormatResourceName()
-        {
-            // Sample: FormatResourceName
-            string projectId = "petstore";
-            string topicId = "offers";
-            string topicName = PublisherClient.FormatTopicName(projectId, topicId);
-            // The value of topicName is now "projects/petstore/topics/offers"
-            // End sample
-
-            Assert.Equal(topicName, "projects/petstore/topics/offers");
-        }
-
-        [Fact]
-        public void ParseResourceName_Index()
-        {
-            // Sample: ParseResourceName_Index
-            string topicName = "projects/petstore/topics/offers";
-            ResourceName parsedName = PublisherClient.TopicTemplate.ParseName(topicName);
-            string projectId = parsedName[0];
-            string topicId = parsedName[1];
-
-            // The value of projectId is now "petstore"
-            // The value of topicId is now "offers"
-            // End sample
-
-            Assert.Equal("petstore", projectId);
-            Assert.Equal("offers", topicId);
-        }
-
-        [Fact]
-        public void ParseResourceName_Name()
-        {
-            // Sample: ParseResourceName_Name
-            string topicName = "projects/petstore/topics/offers";
-            ResourceName parsedName = PublisherClient.TopicTemplate.ParseName(topicName);
-            string projectId = parsedName["project"];
-            string topicId = parsedName["topic"];
-
-            // The value of projectId is now "petstore"
-            // The value of topicId is now "offers"
-            // End sample
-
-            Assert.Equal("petstore", projectId);
-            Assert.Equal("offers", topicId);
-        }
-
     }
 }

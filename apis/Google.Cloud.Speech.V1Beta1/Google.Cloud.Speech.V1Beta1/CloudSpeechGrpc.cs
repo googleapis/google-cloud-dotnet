@@ -33,7 +33,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     static readonly Marshaller<global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest> __Marshaller_SyncRecognizeRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse> __Marshaller_SyncRecognizeResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest> __Marshaller_AsyncRecognizeRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Longrunning.Operation> __Marshaller_Operation = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Longrunning.Operation.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest> __Marshaller_StreamingRecognizeRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse> __Marshaller_StreamingRecognizeResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Parser.ParseFrom);
 
@@ -44,7 +44,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
         __Marshaller_SyncRecognizeRequest,
         __Marshaller_SyncRecognizeResponse);
 
-    static readonly Method<global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest, global::Google.Longrunning.Operation> __Method_AsyncRecognize = new Method<global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest, global::Google.Longrunning.Operation>(
+    static readonly Method<global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest, global::Google.LongRunning.Operation> __Method_AsyncRecognize = new Method<global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest, global::Google.LongRunning.Operation>(
         MethodType.Unary,
         __ServiceName,
         "AsyncRecognize",
@@ -82,7 +82,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
       ///  `Operation.error` or an `Operation.response` which contains
       ///  an `AsyncRecognizeResponse` message.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Longrunning.Operation> AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -159,7 +159,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
       ///  `Operation.error` or an `Operation.response` which contains
       ///  an `AsyncRecognizeResponse` message.
       /// </summary>
-      public virtual global::Google.Longrunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AsyncRecognize(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -169,7 +169,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
       ///  `Operation.error` or an `Operation.response` which contains
       ///  an `AsyncRecognizeResponse` message.
       /// </summary>
-      public virtual global::Google.Longrunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
+      public virtual global::Google.LongRunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AsyncRecognize, null, options, request);
       }
@@ -179,7 +179,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
       ///  `Operation.error` or an `Operation.response` which contains
       ///  an `AsyncRecognizeResponse` message.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Longrunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AsyncRecognizeAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
@@ -189,7 +189,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
       ///  `Operation.error` or an `Operation.response` which contains
       ///  an `AsyncRecognizeResponse` message.
       /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Longrunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
+      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AsyncRecognize, null, options, request);
       }

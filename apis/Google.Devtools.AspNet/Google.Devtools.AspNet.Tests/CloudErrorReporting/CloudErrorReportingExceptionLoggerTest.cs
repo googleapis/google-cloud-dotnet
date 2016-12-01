@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Google.Devtools.Clouderrorreporting.V1Beta1;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Moq;
 using System;
 using System.Net;
@@ -31,7 +31,7 @@ namespace Google.Devtools.AspNet.Tests
         private static readonly ProductInfoHeaderValue UserAgentValue = new ProductInfoHeaderValue("UserAgent", "1.0");
         private static readonly HttpStatusCode ConflictStatusCode = HttpStatusCode.Conflict;
         private static readonly string ProjectId = "pid";
-        private static readonly string FormattedProjectId = ReportErrorsServiceClient.FormatProjectName(ProjectId);
+        private static readonly string FormattedProjectId = new ProjectName(ProjectId).ToString();
         private static readonly string ServiceName = "SomeService";
         private static readonly string Version = "1.0.0";
         private static readonly Exception SimpleException = new Exception();
