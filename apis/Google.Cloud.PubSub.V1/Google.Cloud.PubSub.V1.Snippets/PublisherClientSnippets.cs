@@ -12,16 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
+using Google.Cloud.Iam.V1;
 using Google.Protobuf;
-using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-using Google.Cloud.Iam.V1;
 
 namespace Google.Cloud.PubSub.V1.Snippets
 {
@@ -89,8 +86,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            // Snippet: CreateTopicAsync(string,CallSettings)
-            // Additional: CreateTopicAsync(string,CancellationToken)
+            // Snippet: CreateTopicAsync(TopicName,CallSettings)
+            // Additional: CreateTopicAsync(TopicName,CancellationToken)
             PublisherClient client = PublisherClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);
@@ -178,8 +175,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             await PublisherClient.Create().CreateTopicAsync(new TopicName(projectId, topicId));
 
-            // Snippet: DeleteTopicAsync(string,CallSettings)
-            // Additional: DeleteTopicAsync(string,CancellationToken)
+            // Snippet: DeleteTopicAsync(TopicName,CallSettings)
+            // Additional: DeleteTopicAsync(TopicName,CancellationToken)
             PublisherClient client = PublisherClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);

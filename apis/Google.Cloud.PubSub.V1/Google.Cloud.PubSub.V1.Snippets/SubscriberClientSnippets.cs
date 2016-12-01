@@ -149,8 +149,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
-            // Snippet: CreateSubscriptionAsync(string,string,*,*,CallSettings)
-            // Additional: CreateSubscriptionAsync(string,string,*,*,CancellationToken)
+            // Snippet: CreateSubscriptionAsync(SubscriptionName,TopicName,*,*,CallSettings)
+            // Additional: CreateSubscriptionAsync(SubscriptionName,TopicName,*,*,CancellationToken)
             SubscriberClient client = SubscriberClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
@@ -211,8 +211,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
             SubscriberClient.Create().CreateSubscription(new SubscriptionName(projectId, subscriptionId), topicName, null, 60);
             publisher.Publish(topicName, new[] { newMessage });
 
-            // Snippet: PullAsync(string,*,*,CallSettings)
-            // Additional: PullAsync(string,*,*,CancellationToken)
+            // Snippet: PullAsync(SubscriptionName,*,*,CallSettings)
+            // Additional: PullAsync(SubscriptionName,*,*,CancellationToken)
             SubscriberClient client = SubscriberClient.Create();
 
             SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
