@@ -61,7 +61,7 @@ namespace Google.Devtools.AspNet
         private readonly Task<ReportErrorsServiceClient> _clientTask;
 
         // The number tasks that have been created while waiting for the client task.
-        private int taskCounter = 0;
+        private int _taskCounter = 0;
 
         /// <summary>
         /// Creates an instance of <see cref="CloudErrorReportingExceptionLogger"/>
@@ -100,43 +100,38 @@ namespace Google.Devtools.AspNet
         /// <inheritdoc />
         public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
-            if (IncompleteClientAndTooManyPendingTasks())
+            if (_clientTask.IsCompleted)
             {
-                return Task.FromResult(false);
+                ReportedErrorEvent errorEvent = CreateReportRequest(context);
+                return _clientTask.Result.ReportErrorEventAsync(_projectResourceName, errorEvent);
             }
 
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            return _clientTask.ContinueWith(clientTask =>
+            if (Interlocked.Increment(ref _taskCounter) <= MaxWaitingTasks)
             {
-                return clientTask.Result.ReportErrorEventAsync(_projectResourceName, errorEvent);
-            });
+                return _clientTask.ContinueWith(clientTask =>
+                {
+                    if (clientTask.IsFaulted)
+                    {
+                        throw new InvalidOperationException("The client task has faulted.");
+                    }
+                    ReportedErrorEvent errorEvent = CreateReportRequest(context);
+                    return clientTask.Result.ReportErrorEventAsync(_projectResourceName, errorEvent);
+                });
+            }
+
+            return Task.FromResult(false);
         }
 
         /// <inheritdoc />
         public override void Log(ExceptionLoggerContext context)
         {
-            if (IncompleteClientAndTooManyPendingTasks())
-            {
-                return;
-            }
-
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            _clientTask.ContinueWith(clientTask => 
-            {
-                return clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
-            });
+            LogAsync(context, CancellationToken.None).Wait();
         }
 
         /// <inheritdoc />
         public override bool ShouldLog(ExceptionLoggerContext context)
         {
             return context?.Exception != null;
-        }
-
-        /// <returns>True if the client is not ready and too many tasks have already been created.</returns>
-        private bool IncompleteClientAndTooManyPendingTasks()
-        {
-            return !_clientTask.IsCompleted && Interlocked.Increment(ref taskCounter) > MaxWaitingTasks;
         }
 
         /// <summary>
