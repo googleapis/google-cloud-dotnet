@@ -1,10 +1,10 @@
 {
   "version": "0.2.0-*",
-  "description": "Google Stackdriver Insturmnetation Libraries for ASP.NET.",
+  "description": "Google Stackdriver Instrumentation Libraries for ASP.NET.",
   "authors": [ "Google Inc." ],
 
   "packOptions": {
-    "summary": "Google Stackdriver Insturmnetation Libraries for ASP.NET.",
+    "summary": "Google Stackdriver Instrumentation Libraries for ASP.NET.",
     "owners": [ "google-cloud" ],
     "tags": [ "Google", "Cloud", "Error", "Reporting", "Stackdriver", "ExceptionLogger", "Trace" ],
     "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",

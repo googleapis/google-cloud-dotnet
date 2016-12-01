@@ -1,5 +1,5 @@
 {
-  "description": "Unit tests for the Google Stackdriver Insturmnetation Libraries",
+  "description": "Unit tests for the Google Stackdriver Instrumentation Libraries",
 
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
