@@ -35,13 +35,8 @@ namespace Google.Devtools.AspNet.IntegrationTests
 
         public CloudErrorReportingExceptionLoggerIntregrationTest()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
-            TestId = DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssFFF", CultureInfo.InvariantCulture);
+            ProjectId = Utils.GetProjectIdFromEnvironment();
+            TestId = Utils.GetTestId();
         }
 
         [Fact]
