@@ -24,13 +24,7 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class GrpcTraceConsumer : ITraceConsumer
     {
-        // The max number of tasks that will be allowed when waiting for the client task.
-        internal const int MaxWaitingTasks = 100;
-
         private readonly Task<TraceServiceClient> _clientTask;
-
-        // The number tasks that have been created while waiting for the client task.
-        private int taskCounter = 0;
 
         /// <param name="client">The trace client that will push traces to the Stackdriver Trace API.</param>
         internal GrpcTraceConsumer(Task<TraceServiceClient> client)
@@ -49,16 +43,8 @@ namespace Google.Devtools.AspNet
                 return;
             }
 
-            // Ensure the client is complete or we haven't started too many tasks already.
-            if (!_clientTask.IsCompleted && Interlocked.Increment(ref taskCounter) > MaxWaitingTasks)
-            {
-                return;
-            }
-
-            _clientTask.ContinueWith(clientTask =>
-            {
-                return clientTask.Result.PatchTracesAsync(traces.Traces_[0].ProjectId, traces);
-            });
+            // If the client task has faulted this will throw when accessing 'Result'
+            _clientTask.Result.PatchTracesAsync(traces.Traces_[0].ProjectId, traces);
         }
     }
 }
