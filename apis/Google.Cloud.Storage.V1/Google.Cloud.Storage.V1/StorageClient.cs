@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Storage.v1;
@@ -38,6 +39,9 @@ namespace Google.Cloud.Storage.V1
     /// </remarks>
     public abstract partial class StorageClient
     {
+        private static readonly ScopedCredentialProvider _credentialProvider = new ScopedCredentialProvider(
+            new[] { StorageService.Scope.DevstorageFullControl });
+
         /// <summary>
         /// The underlying storage service object used by this client.
         /// </summary>
@@ -59,9 +63,10 @@ namespace Google.Cloud.Storage.V1
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
         public static async Task<StorageClient> CreateAsync(GoogleCredential credential = null)
-            // If no credentials have been specified, we fetch them "properly asynchronously"
-            // to avoid the Task.Run in the synchronous call
-            => Create(credential ?? await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false));
+        {
+            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential);
+            return CreateImpl(scopedCredentials);
+        }
 
         /// <summary>
         /// Synchronously creates a <see cref="StorageClient"/>, using application default credentials if
@@ -74,24 +79,16 @@ namespace Google.Cloud.Storage.V1
         /// <returns>The created <see cref="StorageClient"/>.</returns>
         public static StorageClient Create(GoogleCredential credential = null)
         {
-            try
-            {
-                credential = credential ?? Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
-            }
-            catch (AggregateException e)
-            {
-                // Unwrap the first exception, a bit like await would.
-                // It's very unlikely that we'd ever see an AggregateException without an inner exceptions,
-                // but let's handle it relatively gracefully.
-                throw e.InnerExceptions.FirstOrDefault() ?? e;
-            }
-            if (credential.IsCreateScopedRequired)
-            {
-                credential = credential.CreateScoped(StorageService.Scope.DevstorageFullControl);
-            }
+            var scopedCredentials = _credentialProvider.GetCredentials(credential);
+            return CreateImpl(scopedCredentials);
+        }
+
+
+        private static StorageClient CreateImpl(GoogleCredential scopedCredentials)
+        {
             var service = new StorageService(new BaseClientService.Initializer
             {
-                HttpClientInitializer = credential,
+                HttpClientInitializer = scopedCredentials,
                 ApplicationName = StorageClientImpl.ApplicationName,
             });
 

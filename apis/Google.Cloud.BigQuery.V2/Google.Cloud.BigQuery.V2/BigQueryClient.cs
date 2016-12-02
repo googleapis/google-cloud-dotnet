@@ -40,6 +40,14 @@ namespace Google.Cloud.BigQuery.V2
     /// </remarks>
     public abstract partial class BigQueryClient
     {
+        private static readonly ScopedCredentialProvider _credentialProvider = new ScopedCredentialProvider(
+            new[] {
+                BigqueryService.Scope.Bigquery,
+                BigqueryService.Scope.BigqueryInsertdata,
+                BigqueryService.Scope.DevstorageFullControl,
+                BigqueryService.Scope.CloudPlatform
+            });
+
         /// <summary>
         /// The underlying BigQuery service object used by this client.
         /// </summary>
@@ -67,12 +75,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="projectId">The ID of the project containing the BigQuery data. Must not be null.</param>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
         /// <returns>The task representing the created <see cref="BigQueryClient"/>.</returns>
-        public static async Task<BigQueryClient> CreateAsync(string projectId, GoogleCredential credential = null) =>
-            // If no credentials have been specified, we fetch them "properly asynchronously"
-            // to avoid the Task.Run in the synchronous call
-            Create(
-                GaxPreconditions.CheckNotNull(projectId, nameof(projectId)),
-                credential ?? await GoogleCredential.GetApplicationDefaultAsync().ConfigureAwait(false));
+        public static async Task<BigQueryClient> CreateAsync(string projectId, GoogleCredential credential = null)
+        {
+            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential);
+            return CreateImpl(projectId, scopedCredentials);
+        }
 
         /// <summary>
         /// Synchronously creates a <see cref="BigQueryClient"/>, using application default credentials if
@@ -87,28 +95,15 @@ namespace Google.Cloud.BigQuery.V2
         public static BigQueryClient Create(string projectId, GoogleCredential credential = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            try
-            {
-                credential = credential ?? Task.Run(() => GoogleCredential.GetApplicationDefaultAsync()).Result;
-            }
-            catch (AggregateException e)
-            {
-                // Unwrap the first exception, a bit like await would.
-                // It's very unlikely that we'd ever see an AggregateException without an inner exceptions,
-                // but let's handle it relatively gracefully.
-                throw e.InnerExceptions.FirstOrDefault() ?? e;
-            }
-            if (credential.IsCreateScopedRequired)
-            {
-                credential = credential.CreateScoped(
-                    BigqueryService.Scope.Bigquery,
-                    BigqueryService.Scope.BigqueryInsertdata,
-                    BigqueryService.Scope.DevstorageFullControl,
-                    BigqueryService.Scope.CloudPlatform);
-            }
+            var scopedCredentials = _credentialProvider.GetCredentials(credential);
+            return CreateImpl(projectId, scopedCredentials);
+        }
+
+        private static BigQueryClient CreateImpl(string projectId, GoogleCredential scopedCredentials)
+        {
             var service = new BigqueryService(new BaseClientService.Initializer
             {
-                HttpClientInitializer = credential,
+                HttpClientInitializer = scopedCredentials,
                 ApplicationName = BigQueryClientImpl.ApplicationName,
             });
 
