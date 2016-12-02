@@ -15,7 +15,6 @@
 
 using Google.Devtools.Cloudtrace.V1;
 using Moq;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -31,78 +30,41 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void Receive()
         {
-            ManualResetEvent reset = new ManualResetEvent(false);
             Traces traces = GetTraces();
 
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(ProjectId, traces, null)).Callback(() => reset.Set());
+            mockClient.Setup(c => c.PatchTracesAsync(ProjectId, traces, null));
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
             consumer.Receive(traces);
-            Utils.WaitForSet(reset, "PatchTracesAsync wasn't called");
             mockClient.VerifyAll();
         }
 
         [Fact]
         public void Receive_EmptyTracesIgnored()
         {
-            ManualResetEvent reset = new ManualResetEvent(false);
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null))
-                .Callback(() => reset.Set());
+            mockClient.Setup(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null));
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
             consumer.Receive(new Traces());
-            Utils.EnsureNoSet(reset, "PatchTracesAsync was called");
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
 
         [Fact]
         public void Receive_ClientNotReady()
         {
-            ManualResetEvent reset = new ManualResetEvent(false);
             Traces traces = GetTraces();
 
-            Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null))
-                .Callback(() => reset.Set());
-            Task<TraceServiceClient> taskClient = new Task<TraceServiceClient>(() => mockClient.Object);
-            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
-
-            consumer.Receive(traces);
-            Utils.EnsureNoSet(reset, "PatchTracesAsync was called");
-            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
-        }
-
-        [Fact]
-        public void Receive_TooManyPendingTasks()
-        {
-            Traces traces = GetTraces();
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
             mockClient.Setup(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null));
             Task<TraceServiceClient> taskClient = new Task<TraceServiceClient>(() => mockClient.Object);
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
-            // Start more tasks then we can handle.
-            for (int i = 0; i < 250; i++)
-            {
-                consumer.Receive(traces);
-            }
-
-            // Ensure nothing has completed
-            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
-
-            // Complete the client task and verify the calls
-            taskClient.RunSynchronously();
-            // TODO(talarico): Look at a better way to test this without sleeping.
-            Thread.Sleep(1000);
-            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Exactly(GrpcTraceConsumer.MaxWaitingTasks));
-
-            // Ensure calls complete.
             consumer.Receive(traces);
-            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Exactly(GrpcTraceConsumer.MaxWaitingTasks + 1));
+            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
     }
 }
