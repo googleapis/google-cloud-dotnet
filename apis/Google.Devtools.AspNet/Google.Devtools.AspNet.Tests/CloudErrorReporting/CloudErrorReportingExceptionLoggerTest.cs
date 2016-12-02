@@ -153,7 +153,8 @@ namespace Google.Devtools.AspNet.Tests
         public async Task LogAsync()
         {
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null));
+            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null))
+                .Returns(Task.FromResult(new ReportErrorEventResponse()));
 
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             await logger.LogAsync(CreateComplexContext(), CancellationToken.None);
