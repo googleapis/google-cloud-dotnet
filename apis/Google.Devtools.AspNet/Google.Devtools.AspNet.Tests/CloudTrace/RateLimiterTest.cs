@@ -72,8 +72,7 @@ namespace Google.Devtools.AspNet.Tests
                 int threads = 10;
 
                 // Start a timer to get the total time from tasks starting to ending.
-                Stopwatch timer = new Stopwatch();
-                timer.Start();
+                Stopwatch timer = Stopwatch.StartNew();
 
                 // Start 10 threads to hit the rate limiter
                 Task[] tasks = new Task[threads];
@@ -96,7 +95,7 @@ namespace Google.Devtools.AspNet.Tests
                 // of the tasks does not return right away.  To ensure a proper trace count
                 // use the number of seconds to check the trace count.
                 await Task.Delay(2100);
-                var elapsedSeconds = Math.Floor(timer.ElapsedMilliseconds / 1000.0);
+                var elapsedSeconds = Math.Floor(timer.Elapsed.TotalSeconds);
 
                 // Allow for the trace count to be one lower than expected to account
                 // for the elapsed time being on the second mark or close and the
