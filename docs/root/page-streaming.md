@@ -19,44 +19,45 @@ The code required to iterate over all the results in a list is not
 difficult, but it is tedious and error-prone, so the C# client
 libraries have abstracted this away.
 
-Operations listing resources synchronously return an
-[IPagedEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.IPagedEnumerable-2.yml), and operations listing
-resources asynchronously return an
-[IPagedAsyncEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.IPagedAsyncEnumerable-2.yml).
+Operations listing resources synchronously return a
+[PagedEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.PagedEnumerable-2.yml), and operations listing
+resources asynchronously return a
+[PagedAsyncEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.PagedAsyncEnumerable-2.yml).
 These are equivalent other than their asynchrony, so
 this document focuses on the synchronous version for simplicity.
 
-## `IPagedEnumerable<TResponse, TResource>`
+## `PagedEnumerable<TResponse, TResource>`
 
 Let's look at the generic type parameters first. The `TResponse` is
 the API response type for the list operation, and the `TResource` is
 the type of the resource being listed. In the Pub/Sub API for
 example, the `ListTopics` operation accepts a `ListTopicsRequest`
 and returns a `ListTopicsResponse` containing a set of `Topic`
-resources - so the [PublisherClient.ListTopics](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
-method returns an `IPagedEnumerable<ListTopicsResponse, Topic>`.
+resources - so the [PublisherClient.ListTopics](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_)
+method returns a `PagedEnumerable<ListTopicsResponse, Topic>`.
 
-`IPagedEnumerable<TResponse, TResource>` implements
+`PagedEnumerable<TResponse, TResource>` implements
 `IEnumerable<TResource>`.  If you simply iterate over it, you will
 retrieve one resource at a time. The implementation will make API
 calls as it needs to, retrieving a page at a time and then returning
 the resources as the caller requests them.
 
-## `IResponseEnumerable<TResponse, TResource>`
+## `AsRawResponses`
 
 For more advanced scenarios, however, your application may need access
-to the pages returned by the API instead. The
-[IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()](obj/api/Google.Api.Gax.IPagedEnumerable-2.yml#Google_Api_Gax_IPagedEnumerable_2_AsPages)
-method returns an [IResponseEnumerable&lt;TResponse, TResource&gt;](obj/api/Google.Api.Gax.IResponseEnumerable-2.yml) which
-implements `IEnumerable<TResponse>`, so you can iterate over the responses easily. Each
+to the raw responses returned by the API instead. The
+[PagedEnumerable&lt;TResponse, TResource&gt;.AsRawResponses()](obj/api/Google.Api.Gax.PagedEnumerable-2.yml#Google_Api_Gax_PagedEnumerable_2_AsRawResponses)
+method returns an `IEnumerable<TResponse>`, so you can iterate over the responses easily. Each
 response provides access to the individual resources within the page, and some APIs may
 provide additional information such as the time taken for the request or the total number of
 results across all pages. As you iterate over the pages, API requests are made
 transparently, propagating the page token from one response to the next request.
 
-`IResponseEnumerable<TResponse, TResource>` provides one additional method, 
-[WithFixedSize()](obj/api/Google.Api.Gax.IResponseEnumerable-2.yml#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_)
-to cater for web applications which require precise page sizes.
+## `ReadPage`
+
+`PagedEnumerable<TResponse, TResource>` also has a 
+[ReadPage(int)](obj/api/Google.Api.Gax.PagedEnumerable-2.yml#Google_Api_Gax_PagedEnumerable_2_ReadPage_System_Int32_)
+method to cater for web applications which require precise page sizes.
 
 Although APIs generally allow the application to specify the page size to return, this
 is an upper limit rather than a hard requirement. It's possible for an API to return fewer results,
@@ -64,9 +65,9 @@ even if more are available - for example, if the server notices that it is close
 RPC deadline. While that's fine for many batch scenarios, it isn't ideal if the results are being presented to users,
 where typically you want to provide the exact same number of results per page.
 
-The `WithFixedSize` method makes multiple API requests if necessary, in order to "fill" each page
-until it reaches the end of the resources being listed. The return value is an `IEnumerable<FixedSizePage<TResource>>`, where
-[FixedSizePage&lt;TResource&gt;](obj/api/Google.Api.Gax.FixedSizePage-1.yml#Google_Api_Gax_FixedSizePage_1) provides the items
+The `ReadPage` method makes multiple API requests if necessary, in order to "fill" a page (of a specified size)
+until it reaches the end of the resources being listed. The return value is a
+[Page&lt;TResource&gt;](obj/api/Google.Api.Gax.Page-1.yml#Google_Api_Gax_Page_1) which provides the items
 within each page, along with the page token used to retrieve the next page. (This would typically be used in a "next page" link
 in the web results.)
 
@@ -76,32 +77,22 @@ in the web results.)
 
 [!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#AllResources)]
 
-### Iterate over all resources, remembering page tokens
+### Iterate over all responses, remembering page tokens
 
 [!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#Responses)]
 
-### Obtain a single page of results
+### Obtain a single "natural" page of results
 
 [!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#SingleResponse)]
 
-### Display results in fixed-sized pages
+### Display the next fixed-sized page of results
 
-This is typically used in web applications.
+This is typically used in web applications; it will only display a less-than-full
+page if it reaches the end of the data.
 
-[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#WithFixedSize)]
+[!code-cs[](obj/snippets/Google.Cloud.Docs.PageStreaming.txt#ReadPage)]
 
 ## Feedback
-
-We've already been through a number of iterations of the page-streaming API,
-but would very much welcome feedback on it. A few thoughts:
-
-- We could return a concrete class rather than having the `IPagedEnumerable<,>`
-  interface. This would give us greater room for expansion in the future, but
-  might make faking harder.
-- We could move the `WithFixedSize` method into the returned type, so that
-  instead of calling `topics.AsPages().WithFixedSize(10)` you'd call
-  `topics.WithFixedSizedPages(10)`, for example. This would allow us to remove
-  the `IResponseEnumerable<,>` interface.
 
 What other use cases should we consider? Does this meet your current needs?
 Please [raise an issue on github](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new)

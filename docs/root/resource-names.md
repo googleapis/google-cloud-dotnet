@@ -10,7 +10,7 @@ that resource within an API.
 A resource name is a path-like structure, typically alternating between fixed collection
 names and an identifier within that collection. Throughout this page, we will use
 the example of the [Google Cloud Pub/Sub API](https://cloud.google.com/pubsub/overview),
-which is exposed by the [Google.Pubsub.V1 NuGet package](https://www.nuget.org/packages/Google.Pubsub.V1).
+which is exposed by the [Google.Cloud.PubSub.V1 NuGet package](https://www.nuget.org/packages/Google.Cloud.PubSub.V1).
 
 In Cloud Pub/Sub, a publisher creates a *topic* within a *project*, and a subscriber creates
 a *subscription* to that topic, also within a project. (The topic and subscription may be in different projects.)
@@ -24,69 +24,73 @@ To make everything concrete, we'll consider three resources:
 
 (We've deliberately used a different project in the subscription to highlight that they don't have to be the same.)
 
-The names above are the ones you would see and use in the Pub/Sub API. For example, to list all the topics
-in the `projects/petstore` project, you would use the [PublisherClient.ListTopics](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
-
-[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ListTopics)]
-
-Using a single string as a resource name makes many things simple - such as referring to a resource in a logging or monitoring API.
-However, there are times when an application would more naturally consider *resource IDs* - the parts within an resource name that vary.
+Each resource name consistents of one or more *resource IDs* - the parts within an resource name that vary, and fixed
+parts of the name, typically collection names.
 
 For example, within our topic resource name (`projects/petstore/topics/offers`) there are two resource IDs:
 
 - The project ID (`petstore`)
 - The topic ID (`offers`)
 
+## Generated resource name types
+
+The full resource names above are the ones you would see and use in the underlying Pub/Sub API - just as strings. However, to
+make the client libraries easier to use correctly, a class is generated for each kind of resource name. The classes
+generated for the above resources are:
+
+- [ProjectName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.ProjectName.html)
+- [TopicName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicName.html)
+- [SubscriptionName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.SubscriptionName.html)
+
+Constructing an instance of a resource name type from its resource IDs is very simple: just call the constructor. Each
+resource name type has a constructor with one parameter for each resource ID within the name.
+
+Sometimes you may want to parse a resource name from its string form. Each resource name type has `Parse` and `TryParse`
+methods to allow this. Likewise, to obtain the string representation of a resource name (for example to save it to a database)
+you can just call `ToString`.
+
+The resource name types are also used to augment the Protocol Buffer messages representing requests, responses and resources. This
+takes the form of additional properties which automatically parse and format the underlying string representation. Where resources
+have a `Name` property representing the string resource name, the additional property is simply the name of the type. For other
+uses of resource names, the extra property is just the name of the string property with a suffix of `AsXyzName`, where `XyzName` is
+the name of the generated type.
+
+For example, [Subscription](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html) has
+a [SubscriptionName](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_SubscriptionName)
+property. When that property is fetched, it parses the value retrieved from the [Name](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_Name) property. Likewise, when the `SubscriptionName` property is
+set, the value is formatted and stored in `Name`.
+
+## API calls
+
+API calls where the request uses a resource name are typically mapped to use the corresponding class. For example, to list all the topics
+in the `projects/petstore` project, you would use the [PublisherClient.ListTopics](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_) method:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ListTopics)]
+
+Where API calls haven't been configured to use the resource name type, but instead accept a string, simply create the
+resource name instance anyway, and call `ToString()` to obtain the appropriate string representation.
+
 We can't tell you when your application will need to use resource IDs and when it will need to use resource names, but we'd recommend
 using the terms "name" and "ID" in a manner consistent with the API terminology. The more you can use resource names in your code, the
 less parsing and formatting you'll need to perform, of course.
 
-You should not perform the formatting and parsing yourself, as it is error-prone and tedious. Instead, use the functionality
-provided by the class libraries, as described below.
+## "One-of" resource name types
 
-## Formatting a resource name from resource IDs
+As well as the types representing individual resource names, sometimes a message property could represent one of multiple
+kinds of resource name. This could be due to multiple resource kinds being suitable for the property, or it could be due to "special"
+resource names being specified in the API for unusual circumstances.
 
-For each resource used by a particular API client, a static format method is generated. For example, the [PublisherClient](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html) class has two format methods:
+For example, a subscription refers to a topic resource name - but if the topic has been deleted, the name will be `_deleted-topic_`.
+Rather than just fail to parse this, a "one-of" resource name class is generated (in this case
+[TopicNameOneof](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicNameOneof.html)). That is then used as the type of the
+corresponding extra property ([TopicAsTopicNameOneof](Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_TopicAsTopicNameOneof)) in `Subscription`.
 
-- [FormatProjectName(string)](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_)
-- [FormatTopicName(string, string)](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatTopicName_System_String_System_String_)
+This kind of resource name can still be parsed from a string and still be formatted with `ToString`, but can also be created
+from the appropriate specific resource name types (`TopicName` and `DeletedTopicNameFixed` in this case). A nested enum and a property
+of that type (`Type`) allow you to easily switch on which type of resource is actually being represented.
 
-Likewise, the [SubscriberClient](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html) class has three methods:
-- [FormatProjectName(string)](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatProjectName_System_String_)
-- [FormatTopicName(string, string)](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_)
-- [FormatSubscriptionName(string, string)](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatSubscriptionName_System_String_System_String_)
-
-(A publisher never needs to format a subscription name, whereas a subscriber *does* need to format a topic name in order to
-create a subscription.)
-
-Each format method has one parameter for each resource ID present in the resource name, in the order in which they appear in the resource name.
-
-Here's an example of formatting the resource name for our `offers` topic:
-
-[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#FormatResourceName)]
-
-## Parsing resource IDs from a resource name
-
-As well as the format methods, a static property is provided for each resource, of type
-[PathTemplate](obj/api/Google.Api.Gax.PathTemplate.yml). This can be used to parse a resource name (as a string)
-into a [ResourceName](obj/api/Google.Api.Gax.ResourceName.yml) object. The resource IDs can then be extracted from
-that object either by index or by name. The names of the resource IDs match the names of the parameters in the corresponding
-`Format` methods.
-
-The [PublisherClient](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html) class has two template properties:
-
-- [ProjectTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ProjectTemplate)
-- [TopicTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TopicTemplate)
-
-Likewise, the [SubscriberClient](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html) class has three properties:
-- [ProjectTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ProjectTemplate)
-- [TopicTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_TopicTemplate)
-- [SubscriptionTemplate](Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate)
-
-Example of extracting resource IDs by index:
-
-[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ParseResourceName_Index)]
-
-Example of extracting resource IDs by name:
-
-[!code-cs[](obj/snippets/Google.Cloud.Docs.ResourceName.txt#ParseResourceName_Name)]
+One-of resource name types always have a possible type of "unknown" which is used to allow for API expansion. For example,
+if a resource name property can be either `projects/x` or `organizations/y` in version 1.0, a minor version update to 1.1
+could add `teams/z` as a valid value. In this case, the code generated against version 1.0 would still work, using "unknown"
+to represent any `teams/z` value received from the server. Code generated against version 1.1 would then have another strongly-typed
+resource name type for the `teams/z` type of resource.
