@@ -110,11 +110,8 @@ namespace Google.Devtools.AspNet
             {
                 return _clientTask.ContinueWith(clientTask =>
                 {
-                    if (clientTask.IsFaulted)
-                    {
-                        throw new InvalidOperationException("The client task has faulted.");
-                    }
                     ReportedErrorEvent errorEvent = CreateReportRequest(context);
+                    // If the client task has faulted this will throw when accessing 'Result'
                     return clientTask.Result.ReportErrorEventAsync(_projectResourceName, errorEvent);
                 });
             }
