@@ -65,6 +65,17 @@ namespace Google.Devtools.AspNet
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
         public static CloudErrorReportingExceptionLogger Create(
+            ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
+                new CloudErrorReportingExceptionLogger(Task.FromResult(client), projectId, serviceName, version);
+
+        /// <summary>
+        /// Creates an instance of <see cref="CloudErrorReportingExceptionLogger"/>
+        /// </summary>
+        /// <param name="clientTask">The Error Reporting client.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
+        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        public static CloudErrorReportingExceptionLogger Create(
             Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
                 new CloudErrorReportingExceptionLogger(clientTask, projectId, serviceName, version);
 

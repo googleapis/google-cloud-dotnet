@@ -45,7 +45,6 @@ namespace Google.Devtools.AspNet.Tests
         public void Receive_EmptyTracesIgnored()
         {
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null));
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
@@ -59,7 +58,6 @@ namespace Google.Devtools.AspNet.Tests
             Traces traces = GetTraces();
 
             Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null));
             Task<TraceServiceClient> taskClient = new Task<TraceServiceClient>(() => mockClient.Object);
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 

@@ -150,7 +150,7 @@ namespace Google.Devtools.AspNet.Tests
         }
 
         [Fact]
-        public async void LogAsync()
+        public async Task LogAsync()
         {
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
             mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null));
