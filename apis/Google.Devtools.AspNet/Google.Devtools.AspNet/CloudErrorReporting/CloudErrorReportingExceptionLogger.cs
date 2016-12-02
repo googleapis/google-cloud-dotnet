@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Devtools.Clouderrorreporting.V1Beta1;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using System;
 using System.Diagnostics;
 using System.Net.Http;
@@ -93,8 +93,8 @@ namespace Google.Devtools.AspNet
             Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) : base()
         {
             _clientTask = GaxPreconditions.CheckNotNull(clientTask, nameof(clientTask));
-            _projectResourceName = ReportErrorsServiceClient.FormatProjectName(
-                GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+            _projectResourceName = new ProjectName(GaxPreconditions.CheckNotNull(projectId, nameof(projectId))).ToString();
+
             _serviceContext = new ServiceContext
             {
                 Service = GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName)),

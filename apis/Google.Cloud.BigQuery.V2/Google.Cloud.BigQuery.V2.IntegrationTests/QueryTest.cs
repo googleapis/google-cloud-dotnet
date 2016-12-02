@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
@@ -196,5 +199,105 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var resultSet = queryJob.GetResultSet(10);
             Assert.Empty(resultSet.Rows);
         }
+
+        [Fact]
+        public void SimpleTypes()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var row = client.CreateQueryJob($@"SELECT
+                'Hello' AS String,
+                b'Hello' AS Bytes,
+                TRUE AS Boolean,
+                1234567890 AS Int64,
+                1.234567 AS Float64,
+                DATE '2016-11-29' AS Date,
+                TIME '12:34:56.123456' AS Time,
+                DATETIME '2016-11-29 12:34:56.123456' AS DateTime,
+                TIMESTAMP '2016-11-29 12:34:56.123456' AS Timestamp")
+                .PollQueryUntilCompleted()
+                .GetRows()
+                .Single();
+
+            Assert.Equal("Hello", row["String"]);
+            Assert.Equal(Encoding.UTF8.GetBytes("Hello"), row["Bytes"]);
+            Assert.Equal(true, row["Boolean"]);
+            Assert.Equal(1234567890L, row["Int64"]);
+            Assert.Equal(1.234567, row["Float64"]);
+            Assert.Equal(new DateTime(2016, 11, 29, 0, 0, 0, DateTimeKind.Unspecified), row["Date"]);
+            // There are 10 ticks per microsecond.
+            Assert.Equal(new TimeSpan(0, 12, 34, 56, 123) + TimeSpan.FromTicks(4560), row["Time"]);
+            Assert.Equal(new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Unspecified) + TimeSpan.FromTicks(4560), row["DateTime"]);
+            Assert.Equal(new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Utc) + TimeSpan.FromTicks(4560), row["Timestamp"]);
+
+            // Double-check the kinds here...
+            Assert.Equal(DateTimeKind.Unspecified, ((DateTime) row["DateTime"]).Kind);
+            Assert.Equal(DateTimeKind.Utc, ((DateTime) row["Timestamp"]).Kind);
+        }
+
+        [Fact]
+        public void ArrayTypes()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var row = client.CreateQueryJob($@"SELECT
+                ['Hello'] AS String,
+                [b'Hello'] AS Bytes,
+                [TRUE] AS Boolean,
+                [1234567890] AS Int64,
+                [1.234567] AS Float64,
+                [DATE '2016-11-29'] AS Date,
+                [TIME '12:34:56.123456'] AS Time,
+                [DATETIME '2016-11-29 12:34:56.123456'] AS DateTime,
+                [TIMESTAMP '2016-11-29 12:34:56.123456'] AS Timestamp")
+                .PollQueryUntilCompleted()
+                .GetRows()
+                .Single();
+
+            Assert.Equal(new[] { "Hello" }, row["String"]);
+            Assert.Equal(new[] { Encoding.UTF8.GetBytes("Hello") }, row["Bytes"]);
+            Assert.Equal(new[] { true }, row["Boolean"]);
+            Assert.Equal(new[] { 1234567890L }, row["Int64"]);
+            Assert.Equal(new[] { 1.234567 }, row["Float64"]);
+            Assert.Equal(new[] { new DateTime(2016, 11, 29, 0, 0, 0, DateTimeKind.Unspecified) }, row["Date"]);
+            // There are 10 ticks per microsecond.
+            Assert.Equal(new[] { new TimeSpan(0, 12, 34, 56, 123) + TimeSpan.FromTicks(4560) }, row["Time"]);
+            Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Unspecified) + TimeSpan.FromTicks(4560) }, row["DateTime"]);
+            Assert.Equal(new[] { new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Utc) + TimeSpan.FromTicks(4560) }, row["Timestamp"]);
+
+            // Double-check the kinds here...
+            Assert.Equal(DateTimeKind.Unspecified, ((DateTime[]) row["DateTime"])[0].Kind);
+            Assert.Equal(DateTimeKind.Utc, ((DateTime[]) row["Timestamp"])[0].Kind);
+        }
+
+        [Fact]
+        public void StructTypes()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var row = client.CreateQueryJob($@"
+                SELECT ('Hello', b'Hello', TRUE, 1234567890, 1.234567, DATE '2016-11-29',
+                        TIME '12:34:56.123456', DATETIME '2016-11-29 12:34:56.123456',
+                        TIMESTAMP '2016-11-29 12:34:56.123456') AS value")
+                .PollQueryUntilCompleted()
+                .GetRows()
+                .Single();
+
+            // Structs come back as dictionaries, as if they're records.
+            var values = (Dictionary<string, object>) row["value"];
+            Assert.Equal("Hello", values["_field_1"]);
+            Assert.Equal(Encoding.UTF8.GetBytes("Hello"), values["_field_2"]);
+            Assert.Equal(true, values["_field_3"]);
+            Assert.Equal(1234567890L, values["_field_4"]);
+            Assert.Equal(1.234567, values["_field_5"]);
+            Assert.Equal(new DateTime(2016, 11, 29, 0, 0, 0, DateTimeKind.Unspecified), values["_field_6"]);
+            // There are 10 ticks per microsecond.
+            Assert.Equal(new TimeSpan(0, 12, 34, 56, 123) + TimeSpan.FromTicks(4560), values["_field_7"]);
+            Assert.Equal(new DateTime(2016, 11, 29, 12, 34, 56, 123) + TimeSpan.FromTicks(4560), values["_field_8"]);
+            Assert.Equal(new DateTime(2016, 11, 29, 12, 34, 56, 123, DateTimeKind.Utc) + TimeSpan.FromTicks(4560), values["_field_9"]);
+
+            // Double-check the kinds here...
+            Assert.Equal(DateTimeKind.Unspecified, ((DateTime) values["_field_8"]).Kind);
+            Assert.Equal(DateTimeKind.Utc, ((DateTime) values["_field_9"]).Kind);
+        }
+
+        // TODO: Struct containing record or record containing struct.
     }
 }

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using Moq;
 using Xunit;
 
