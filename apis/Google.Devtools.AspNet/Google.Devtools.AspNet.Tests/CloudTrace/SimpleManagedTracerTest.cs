@@ -54,24 +54,6 @@ namespace Google.Devtools.AspNet.Tests
                 span.StartTime.ToDateTime() <= span.EndTime.ToDateTime();
         }
 
-        private static bool IsValidAnnotation(TraceSpan span, Dictionary<string, string> annotation)
-        {
-            MapField<string, string> labels = span.Labels;
-            if (labels.Count != annotation.Count)
-            {
-                return false;
-            }
-
-            foreach (KeyValuePair<string, string> label in labels)
-            {
-                if (annotation[label.Key] != label.Value)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-
         [Fact]
         public void SingleSpan()
         {
@@ -138,7 +120,7 @@ namespace Google.Devtools.AspNet.Tests
                     t => t.Traces_.Count == 1 &&
                         t.Traces_[0].Spans.Count == 1 &&
                         IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
-                        IsValidAnnotation(t.Traces_[0].Spans[0], annotation))));
+                        Utils.IsValidAnnotation(t.Traces_[0].Spans[0], annotation))));
 
             tracer.StartSpan("span-name");
             tracer.AnnotateSpan(annotation);
@@ -184,7 +166,7 @@ namespace Google.Devtools.AspNet.Tests
                         IsValidSpan(t.Traces_[0].Spans[0], "child-one", t.Traces_[0].Spans[4].SpanId) &&
                         IsValidSpan(t.Traces_[0].Spans[1], "grandchild-one", t.Traces_[0].Spans[3].SpanId, SpanKind.RpcClient) &&
                         IsValidSpan(t.Traces_[0].Spans[2], "grandchild-two", t.Traces_[0].Spans[3].SpanId) &&
-                        IsValidAnnotation(t.Traces_[0].Spans[2], annotation) &&
+                        Utils.IsValidAnnotation(t.Traces_[0].Spans[2], annotation) &&
                         IsValidSpan(t.Traces_[0].Spans[3], "child-two", t.Traces_[0].Spans[4].SpanId) &&
                         !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]) &&
                         IsValidSpan(t.Traces_[0].Spans[4], "root"))));

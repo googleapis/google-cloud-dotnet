@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Devtools.Cloudtrace.V1;
+using Google.Protobuf.Collections;
 using Moq;
 using System.Collections.Generic;
 
@@ -39,6 +41,25 @@ namespace Google.Devtools.AspNet.Tests
             Mock<ITimer> watch = new Mock<ITimer>();
             watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() => returnQueue.Dequeue());
             return new RateLimiter(qps, watch.Object);
+        }
+
+        // TODO(talarico): COMMENT ME
+        public static bool IsValidAnnotation(TraceSpan span, Dictionary<string, string> annotation)
+        {
+            MapField<string, string> labels = span.Labels;
+            if (labels.Count != annotation.Count)
+            {
+                return false;
+            }
+
+            foreach (KeyValuePair<string, string> label in labels)
+            {
+                if (annotation[label.Key] != label.Value)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

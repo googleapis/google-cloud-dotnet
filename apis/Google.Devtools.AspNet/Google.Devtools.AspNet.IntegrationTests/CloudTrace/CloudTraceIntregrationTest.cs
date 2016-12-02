@@ -12,14 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using Google.Devtools.AspNet.Tests;
 using Google.Devtools.Cloudtrace.V1;
+using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+
+using Trace = Google.Devtools.Cloudtrace.V1.Trace;
 
 namespace Google.Devtools.AspNet.IntegrationTests
 {
@@ -61,10 +66,14 @@ namespace Google.Devtools.AspNet.IntegrationTests
         private Task<List<Trace>> GetTraces(string spanName, int traceCount)
         {
             return Task.Run(() => {
+                List<Trace> traces = new List<Trace>();
                 int sleepTime = 0;
                 while (sleepTime < TimeoutMilliseconds)
                 {
+
+                    // TODO(Talarico): FIX THIS
                     sleepTime += SleepIntervalMilliseconds;
+                    sleepTime += TimeoutMilliseconds;
 
 
 
@@ -82,24 +91,20 @@ namespace Google.Devtools.AspNet.IntegrationTests
                         View = ListTracesRequest.Types.ViewType.Complete
                     };
                     ListTracesResponse response = GrpcClient.ListTraces(request);
-                    List<Trace> traces = response.Traces.Where(t => t.Spans.Any(s => s.Name.Equals(spanName))).ToList();
-                    if (traces.Count < traceCount)
+                    traces = response.Traces.Where(t => t.Spans.Any(s => s.Name.Equals(spanName))).ToList();
+                    if ((traceCount > 0 && traces.Count >= traceCount) || (traceCount <= 0 && traces.Count > 0))
                     {
-                        continue;
+                        break;
                     }
-                    return traces;
                 }
-                return null;
+                return traces;
             });
         }
 
-        private string CreateRootSpanName(string name)
-        {
-            return $"{TestId}-{name}";
-        }
+        private string CreateRootSpanName(string name) => $"{TestId}-{name}";
 
         [Fact]
-        public async void Trace_Simple()
+        public async Task Trace_Simple()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple));
             GrpcTraceConsumer consumer = CreateGrpcTraceConsumer();
@@ -110,18 +115,18 @@ namespace Google.Devtools.AspNet.IntegrationTests
             tracer.EndSpan();
 
             IList<Trace> traces = await GetTraces(rootSpanName, 1);
-            Assert.NotNull(traces);
-            Assert.Equal(1, traces[0].Spans.Count);
+            Assert.Single(traces);
+            Assert.Single(traces[0].Spans);
         }
 
         [Fact]
-        public async void Trace_Simple_Buffer()
+        public async Task Trace_Simple_Buffer()
         {
 
         }
 
         [Fact]
-        public async void Trace_Simple_BufferNoTrace()
+        public async Task Trace_Simple_BufferNoTrace()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple_BufferNoTrace));
             BufferingTraceConsumer consumer = BufferingTraceConsumer.Create(CreateGrpcTraceConsumer());
@@ -131,32 +136,78 @@ namespace Google.Devtools.AspNet.IntegrationTests
             Thread.Sleep(10);
             tracer.EndSpan();
 
-            // Wait for one so we keep looking as no results should ever be returned.
+            IList<Trace> traces = await GetTraces(rootSpanName, 0);
+            Assert.Empty(traces);
+        }
+
+        [Fact]
+        public async Task Trace_SimpleAnnotation()
+        {
+            string rootSpanName = CreateRootSpanName(nameof(Trace_SimpleAnnotation));
+            GrpcTraceConsumer consumer = CreateGrpcTraceConsumer();
+            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+
+            Dictionary<string, string> annotation = new Dictionary<string, string>
+            {
+                { "annotation-key", "annotation-value" },
+                { "some-key", "some-value" }
+            };
+
+            tracer.StartSpan(rootSpanName);
+            Thread.Sleep(10);
+            tracer.AnnotateSpan(annotation);
+            tracer.EndSpan();
+
             IList<Trace> traces = await GetTraces(rootSpanName, 1);
-            Assert.NotNull(traces);
-            Assert.Equal(0, traces.Count);
+            Assert.Single(traces);
+            Assert.Single(traces[0].Spans);
+            Assert.True(Tests.Utils.IsValidAnnotation(traces[0].Spans[0], annotation));
         }
 
-   
+        [Fact]
+        public async Task Trace_SimpleStacktrace()
+        {
+            string rootSpanName = CreateRootSpanName(nameof(Trace_SimpleStacktrace));
+            GrpcTraceConsumer consumer = CreateGrpcTraceConsumer();
+            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+
+            tracer.StartSpan(rootSpanName);
+            Thread.Sleep(10);
+            tracer.SetStackTrace(new StackTrace(true));
+            tracer.EndSpan();
+
+            IList<Trace> traces = await GetTraces(rootSpanName, 1);
+            Assert.Single(traces);
+            Assert.Single(traces[0].Spans);
+
+            MapField<string, string> labels = traces[0].Spans[0].Labels;
+            Assert.True(labels.ContainsKey(Labels.StackTrace));
+            Assert.Contains(nameof(Trace_SimpleStacktrace), labels[Labels.StackTrace]);
+            Assert.Contains(nameof(CloudTraceIntregrationTest), labels[Labels.StackTrace]);
+        }
 
         [Fact]
-        public async void Trace_SimpleAnnotation()
+        public async Task Trace_MultipleSpans()
         {
         }
 
         [Fact]
-        public async void Trace_SimpleStacktrace()
+        public async Task Trace_IncompleteSpans()
         {
-        }
+            string rootSpanName = CreateRootSpanName(nameof(Trace_IncompleteSpans));
+            GrpcTraceConsumer consumer = CreateGrpcTraceConsumer();
+            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
 
-        [Fact]
-        public async void Trace_MultipleSpans()
-        {
-        }
+            tracer.StartSpan(rootSpanName);
+            tracer.StartSpan("span-name-1");
+            Thread.Sleep(5);
+            tracer.StartSpan("span-name-2");
+            Thread.Sleep(10);
+            tracer.EndSpan();
+            tracer.EndSpan();
 
-        [Fact]
-        public async void Trace_IncompleteSpans()
-        {
+            IList<Trace> traces = await GetTraces(rootSpanName, 0);
+            Assert.Empty(traces);
         }
     }
 }

@@ -9,6 +9,7 @@
   "dependencies": {
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Devtools.AspNet": { "target": "project" },
+    "Google.Devtools.AspNet.Tests": { "target": "project" },
     "Microsoft.AspNet.WebApi.Owin": "5.2.3",
     "Microsoft.AspNet.WebApi.WebHost": "5.2.3",
     "Microsoft.Owin.Host.HttpListener": "3.0.1",

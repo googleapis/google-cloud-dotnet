@@ -38,7 +38,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
         /// <returns>An Id based on the date and time.</returns>
         public static string GetTestId()
         {
-            return DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssFFF", CultureInfo.InvariantCulture);
+            return DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
         }
     }
 }
