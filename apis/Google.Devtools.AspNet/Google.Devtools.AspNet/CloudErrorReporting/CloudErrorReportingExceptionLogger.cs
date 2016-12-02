@@ -48,9 +48,6 @@ namespace Google.Devtools.AspNet
     /// </remarks>
     public sealed class CloudErrorReportingExceptionLogger : ExceptionLogger
     {
-        // The max number of tasks that will be allowed when waiting for the client task.
-        internal const int MaxWaitingTasks = 100;
-
         // The formated Google Cloud Platform project id.
         private readonly string _projectResourceName;
 
@@ -59,9 +56,6 @@ namespace Google.Devtools.AspNet
         private readonly ServiceContext _serviceContext;
 
         private readonly Task<ReportErrorsServiceClient> _clientTask;
-
-        // The number tasks that have been created while waiting for the client task.
-        private int _taskCounter = 0;
 
         /// <summary>
         /// Creates an instance of <see cref="CloudErrorReportingExceptionLogger"/>
