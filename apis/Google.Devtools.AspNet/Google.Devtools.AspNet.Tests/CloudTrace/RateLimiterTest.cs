@@ -25,21 +25,21 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void CanTrace()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(1001);
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(1001);
             Assert.True(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_False()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(999);
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(999);
             Assert.False(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_DecimalQps()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
         }
@@ -47,7 +47,7 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void CanTrace_Multiple()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(
                 1, new long[] { 999, 1001, 1790, 1850, 2030, 2700, 5000 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());

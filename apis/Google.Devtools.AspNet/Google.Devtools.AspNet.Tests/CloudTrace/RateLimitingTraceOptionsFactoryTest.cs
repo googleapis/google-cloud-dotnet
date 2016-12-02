@@ -23,7 +23,7 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void CreateOptions_ShouldTrace()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(1001);
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(1001);
             RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
             Assert.True(factory.CreateOptions().ShouldTrace);
         }
@@ -31,7 +31,7 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void CreateOptions_ShouldNotTrace()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(999);
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(999);
             RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
             Assert.False(factory.CreateOptions().ShouldTrace);
         }

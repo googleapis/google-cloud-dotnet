@@ -19,6 +19,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
 using Xunit;
 
@@ -109,7 +110,8 @@ namespace Google.Devtools.AspNet.Tests
 
         private CloudErrorReportingExceptionLogger GetLogger(ReportErrorsServiceClient client)
         {
-            return CloudErrorReportingExceptionLogger.Create(client, ProjectId, ServiceName, Version);
+            return CloudErrorReportingExceptionLogger.Create(
+                Task.FromResult(client), ProjectId, ServiceName, Version);
         }
 
         [Fact]
@@ -148,13 +150,14 @@ namespace Google.Devtools.AspNet.Tests
         }
 
         [Fact]
-        public void LogAsync()
+        public async Task LogAsync()
         {
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null));
+            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null))
+                .Returns(Task.FromResult(new ReportErrorEventResponse()));
 
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
-            logger.LogAsync(CreateComplexContext(), CancellationToken.None);
+            await logger.LogAsync(CreateComplexContext(), CancellationToken.None);
 
             mockClient.VerifyAll();
         }

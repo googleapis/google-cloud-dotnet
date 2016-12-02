@@ -23,12 +23,12 @@ namespace Google.Devtools.AspNet
     /// </summary>
     internal sealed class GrpcTraceConsumer : ITraceConsumer
     {
-        private readonly Task<TraceServiceClient> _client;
+        private readonly Task<TraceServiceClient> _clientTask;
 
         /// <param name="client">The trace client that will push traces to the Stackdriver Trace API.</param>
         internal GrpcTraceConsumer(Task<TraceServiceClient> client)
         {
-            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _clientTask = GaxPreconditions.CheckNotNull(client, nameof(client));
         }
 
         /// <inheritdoc />
@@ -42,13 +42,8 @@ namespace Google.Devtools.AspNet
                 return;
             }
 
-            // If the client has not completed fail silently until it is.  This prevents us
-            // from having to wait for a client which cannot be done in all cases.
-            if (!_client.IsCompleted)
-            {
-                return;
-            }
-            _client.Result.PatchTracesAsync(traces.Traces_[0].ProjectId, traces);
+            // If the client task has faulted this will throw when accessing 'Result'
+            _clientTask.Result.PatchTracesAsync(traces.Traces_[0].ProjectId, traces);
         }
     }
 }

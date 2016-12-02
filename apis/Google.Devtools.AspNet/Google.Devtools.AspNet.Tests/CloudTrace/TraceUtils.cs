@@ -17,7 +17,7 @@ using System.Collections.Generic;
 
 namespace Google.Devtools.AspNet.Tests
 {
-    public static class Utils
+    internal static class TraceUtils
     {
         /// <summary>
         /// Creates a rate limiter that will allow 1 QPS with the elapsed milliseconds.
