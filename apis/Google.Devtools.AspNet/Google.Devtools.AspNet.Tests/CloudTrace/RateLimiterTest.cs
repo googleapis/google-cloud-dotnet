@@ -97,7 +97,11 @@ namespace Google.Devtools.AspNet.Tests
                 // use the number of seconds to check the trace count.
                 await Task.Delay(2100);
                 var elapsedSeconds = Math.Floor(timer.ElapsedMilliseconds / 1000.0);
-                Assert.Equal(elapsedSeconds, canTraceCounter);
+
+                // Allow for the trace count to be one lower than expected to account
+                // for the elapsed time being on the second mark or close and the
+                // limiter not getting a final request.
+                Assert.InRange(canTraceCounter, elapsedSeconds - 1, elapsedSeconds);
             }
             finally
             {
