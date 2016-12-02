@@ -98,31 +98,19 @@ namespace Google.Devtools.AspNet
         }
 
         /// <inheritdoc />
-        public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
+        public override async Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
-            if (_clientTask.IsCompleted)
-            {
-                ReportedErrorEvent errorEvent = CreateReportRequest(context);
-                return _clientTask.Result.ReportErrorEventAsync(_projectResourceName, errorEvent);
-            }
-
-            if (Interlocked.Increment(ref _taskCounter) <= MaxWaitingTasks)
-            {
-                return _clientTask.ContinueWith(clientTask =>
-                {
-                    ReportedErrorEvent errorEvent = CreateReportRequest(context);
-                    // If the client task has faulted this will throw when accessing 'Result'
-                    return clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
-                });
-            }
-
-            return Task.FromResult(false);
+            ReportedErrorEvent errorEvent = CreateReportRequest(context);
+            ReportErrorsServiceClient client = await _clientTask;
+            await client.ReportErrorEventAsync(_projectResourceName, errorEvent);
         }
 
         /// <inheritdoc />
         public override void Log(ExceptionLoggerContext context)
         {
-            LogAsync(context, CancellationToken.None).Wait();
+            ReportedErrorEvent errorEvent = CreateReportRequest(context);
+            // If the client task has faulted this will throw when accessing 'Result'
+            _clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
         }
 
         /// <inheritdoc />
