@@ -51,18 +51,5 @@ namespace Google.Devtools.AspNet.Tests
             consumer.Receive(new Traces());
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
-
-        [Fact]
-        public void Receive_ClientNotReady()
-        {
-            Traces traces = GetTraces();
-
-            Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            Task<TraceServiceClient> taskClient = new Task<TraceServiceClient>(() => mockClient.Object);
-            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
-
-            consumer.Receive(traces);
-            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
-        }
     }
 }
