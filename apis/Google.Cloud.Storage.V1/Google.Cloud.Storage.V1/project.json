@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-beta04-CI00109",
+    "Google.Api.Gax.Rest": "1.0.0-beta05",
     "Google.Apis.Storage.v1": "1.18.0.658"
   },
   "frameworks": {

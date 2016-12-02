@@ -19,6 +19,7 @@ using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.Log4Net
@@ -132,7 +133,7 @@ namespace Google.Cloud.Logging.Log4Net
                 catch (Exception)
                 {
                     // Always retry, regardless of error, as there's nothing much else to be done.
-                    await _scheduler.Delay(errorDelay);
+                    await _scheduler.Delay(errorDelay, CancellationToken.None);
                     errorDelay = new TimeSpan((long)(errorDelay.Ticks * _serverErrorBackoffSettings.DelayMultiplier));
                     if (errorDelay > _serverErrorBackoffSettings.MaxDelay)
                     {
