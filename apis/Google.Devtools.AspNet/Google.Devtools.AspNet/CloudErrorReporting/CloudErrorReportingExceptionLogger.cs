@@ -112,7 +112,7 @@ namespace Google.Devtools.AspNet
                 {
                     ReportedErrorEvent errorEvent = CreateReportRequest(context);
                     // If the client task has faulted this will throw when accessing 'Result'
-                    return clientTask.Result.ReportErrorEventAsync(_projectResourceName, errorEvent);
+                    return clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
                 });
             }
 
