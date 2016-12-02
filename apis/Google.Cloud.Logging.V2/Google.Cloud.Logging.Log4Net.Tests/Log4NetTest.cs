@@ -24,6 +24,7 @@ using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -68,18 +69,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         /// </summary>
         private class NoDelayScheduler : IScheduler
         {
-            public Task Delay(TimeSpan delay) => Task.FromResult(0);
-
-            public async Task Schedule(Action action, TimeSpan delay)
-            {
-                await Delay(delay);
-                action();
-            }
-
-            public void Sleep(TimeSpan delay)
-            {
-                // Do nothing
-            }
+            public Task Delay(TimeSpan delay, CancellationToken cancellationToken) => Task.FromResult(0);
         }
 
         private Task RunTest(

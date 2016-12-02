@@ -67,7 +67,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             return Polling.PollRepeatedly(ignoredDeadline => GetJob(jobReference, options),
                 job => job.State == JobState.Done,
-                Clock, Scheduler, pollSettings ?? s_defaultPollSettings);
+                Clock, Scheduler, pollSettings ?? s_defaultPollSettings, CancellationToken.None);
         }
 
         /// <inheritdoc />
@@ -109,7 +109,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             return Polling.PollRepeatedlyAsync(ignoredDeadline => GetJobAsync(jobReference, options, cancellationToken),
                 job => job.State == JobState.Done,
-                Clock, Scheduler, pollSettings ?? s_defaultPollSettings);
+                Clock, Scheduler, pollSettings ?? s_defaultPollSettings, cancellationToken);
         }
 
         /// <inheritdoc />
