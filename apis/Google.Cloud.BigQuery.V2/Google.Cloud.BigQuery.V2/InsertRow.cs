@@ -45,7 +45,7 @@ namespace Google.Cloud.BigQuery.V2
     ///   <item><description><c>System.String</c></description></item>
     ///   <item><description><c>System.DateTime</c></description></item>
     ///   <item><description><c>System.DateTimeOffset</c></description></item>
-    ///   <item><description>A <c>Google.Cloud.BigQuery.V2.InsertRow</c> (for record fields)</description></item>
+    ///   <item><description>A <c>Google.Cloud.BigQuery.V2.InsertRow</c> (for record/struct fields)</description></item>
     ///   <item><description>Any <c>IReadOnlyList&lt;T&gt;</c> of one of the above types (for repeated fields). This
     ///   includes arrays and <c>List&lt;T&gt;</c> values.</description></item>
     /// </list>
@@ -55,7 +55,7 @@ namespace Google.Cloud.BigQuery.V2
     /// as timestamps with precision of a microsecond.
     /// </para>
     /// <para>
-    /// <see cref="InsertRow"/> is used for record fields for convenience, but only the <see cref="InsertId"/>
+    /// <see cref="InsertRow"/> is used for record/struct fields for convenience, but only the <see cref="InsertId"/>
     /// of the top-level row is relevant.
     /// </para>
     /// <para>

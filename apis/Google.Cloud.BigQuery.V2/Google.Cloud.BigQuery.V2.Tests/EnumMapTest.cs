@@ -21,7 +21,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
     {
         [Theory]
         [InlineData(typeof(WriteDisposition), (int) WriteDisposition.WriteIfEmpty, "WRITE_EMPTY")]
-        [InlineData(typeof(BigQueryDbType), (int) BigQueryDbType.Float, "FLOAT")]
+        [InlineData(typeof(BigQueryDbType), (int) BigQueryDbType.Float64, "FLOAT")]
         public void ValidConversion(Type type, int value, string name)
         {
             // Note: this is pretty horrible in terms of how the values are specified, but xUnit

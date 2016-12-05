@@ -90,7 +90,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 { "player", BigQueryDbType.String },
                 { "gameStarted", BigQueryDbType.Timestamp },
-                { "score", BigQueryDbType.Integer }
+                { "score", BigQueryDbType.Int64 }
             }.Build());
 
             // Insert a single row. There are many other ways of inserting
@@ -638,8 +638,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
             // Note: could also use a collection initializer to populate the parameters.
-            command.Parameters.Add("level", BigQueryParameterType.Int64).Value = 2;
-            command.Parameters.Add("score", BigQueryParameterType.Int64).Value = 1500;
+            command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
+            command.Parameters.Add("score", BigQueryDbType.Int64).Value = 1500;
             IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
             foreach (BigQueryRow row in queryResults)
             {
@@ -668,8 +668,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");
             command.ParameterMode = BigQueryParameterMode.Positional;
-            command.Parameters.Add(BigQueryParameterType.Int64, 1500); // For score
-            command.Parameters.Add(BigQueryParameterType.Int64, 2); // For level
+            command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
+            command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
             IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
             foreach (BigQueryRow row in queryResults)
             {
@@ -747,7 +747,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 { "player", BigQueryDbType.String },
                 { "gameStarted", BigQueryDbType.Timestamp },
-                { "score", BigQueryDbType.Integer }
+                { "score", BigQueryDbType.Int64 }
             }.Build());
 
             // Insert a single row. There are many other ways of inserting
@@ -1296,8 +1296,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = await client.GetTableAsync(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
             // Note: could also use a collection initializer to populate the parameters.
-            command.Parameters.Add("level", BigQueryParameterType.Int64).Value = 2;
-            command.Parameters.Add("score", BigQueryParameterType.Int64).Value = 1500;
+            command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
+            command.Parameters.Add("score", BigQueryDbType.Int64).Value = 1500;
             BigQueryQueryJob queryJob = await client.ExecuteQueryAsync(command);
             queryJob = await queryJob.PollUntilCompletedAsync();
             IAsyncEnumerable<BigQueryRow> queryResults = queryJob.GetRowsAsync();
@@ -1316,8 +1316,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");
             command.ParameterMode = BigQueryParameterMode.Positional;
-            command.Parameters.Add(BigQueryParameterType.Int64, 1500); // For score
-            command.Parameters.Add(BigQueryParameterType.Int64, 2); // For level
+            command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
+            command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
             BigQueryQueryJob queryJob = await client.ExecuteQueryAsync(command);
             queryJob = await queryJob.PollUntilCompletedAsync();
             IAsyncEnumerable<BigQueryRow> queryResults = queryJob.GetRowsAsync();

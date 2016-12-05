@@ -53,13 +53,16 @@ namespace Google.Cloud.BigQuery.V2
         /// Creates a field with the specified details, and adds it to the schema being built.
         /// </summary>
         /// <param name="name">The name of the field. Must be a valid field name.</param>
-        /// <param name="type">The type of the field. Must be a defined member within <see cref="BigQueryDbType"/>, other than <c>Record</c>.</param>
+        /// <param name="type">The type of the field. Must be a defined member within <see cref="BigQueryDbType"/>, other than <c>Struct</c> or <c>Array</c>.</param>
         /// <param name="mode">The mode of the field. Must be a defined member within <see cref="FieldMode"/>.</param>
         /// <param name="description">The description of the field. May be null.</param>
         public void Add(string name, BigQueryDbType type, FieldMode mode = FieldMode.Nullable, string description = null)
         {
             ValidateFieldName(name, nameof(name));
-            GaxPreconditions.CheckArgument(type != BigQueryDbType.Record, nameof(type), "Record fields must be specified with their schema");
+            GaxPreconditions.CheckArgument(type != BigQueryDbType.Struct, nameof(type),
+                $"{nameof(BigQueryDbType.Struct)} fields must be specified with their schema");
+            GaxPreconditions.CheckArgument(type != BigQueryDbType.Array, nameof(type),
+                $"{nameof(BigQueryDbType.Array)} fields must be specified with by element type with a {nameof(FieldMode)} of {nameof(FieldMode.Repeated)}");
 
             Add(new TableFieldSchema
             {
@@ -92,7 +95,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 Name = name,
                 Fields = nestedSchema.Fields,
-                Type = EnumMap.ToApiValue(BigQueryDbType.Record),
+                Type = EnumMap.ToApiValue(BigQueryDbType.Struct),
                 Mode = EnumMap.ToApiValue(mode, nameof(mode)),
                 Description = description,
             });
