@@ -92,13 +92,13 @@ namespace Google.Cloud.BigQuery.V2
                 {
                     case BigQueryDbType.String:
                         return ConvertArray(array, StringConverter);
-                    case BigQueryDbType.Integer:
+                    case BigQueryDbType.Int64:
                         return ConvertArray(array, Int64Converter);
-                    case BigQueryDbType.Float:
+                    case BigQueryDbType.Float64:
                         return ConvertArray(array, DoubleConverter);
                     case BigQueryDbType.Bytes:
                         return ConvertArray(array, BytesConverter);
-                    case BigQueryDbType.Boolean:
+                    case BigQueryDbType.Bool:
                         return ConvertArray(array, BooleanConverter);
                     case BigQueryDbType.Timestamp:
                         return ConvertArray(array, TimestampConverter);
@@ -108,7 +108,7 @@ namespace Google.Cloud.BigQuery.V2
                         return ConvertArray(array, TimeConverter);
                     case BigQueryDbType.DateTime:
                         return ConvertArray(array, obj => (DateTime) obj);
-                    case BigQueryDbType.Record:
+                    case BigQueryDbType.Struct:
                         return ConvertRecordArray(array, field);
                     default:
                         throw new InvalidOperationException($"Unhandled field type {type} {rawValue.GetType()}");
@@ -118,13 +118,13 @@ namespace Google.Cloud.BigQuery.V2
             {
                 case BigQueryDbType.String:
                     return StringConverter((string)rawValue);
-                case BigQueryDbType.Integer:
+                case BigQueryDbType.Int64:
                     return Int64Converter((string)rawValue);
-                case BigQueryDbType.Float:
+                case BigQueryDbType.Float64:
                     return DoubleConverter((string)rawValue);
                 case BigQueryDbType.Bytes:
                     return BytesConverter((string)rawValue);
-                case BigQueryDbType.Boolean:
+                case BigQueryDbType.Bool:
                     return BooleanConverter((string)rawValue);
                 case BigQueryDbType.Timestamp:
                     return TimestampConverter((string)rawValue);
@@ -136,7 +136,7 @@ namespace Google.Cloud.BigQuery.V2
                     return rawValue is DateTime
                         ? (DateTime) rawValue
                         : (DateTime) (JValue) rawValue;
-                case BigQueryDbType.Record:
+                case BigQueryDbType.Struct:
                     return ConvertRecord((JObject)rawValue, field);
                 default:
                     throw new InvalidOperationException($"Unhandled field type {type} (Underlying type: {rawValue.GetType()})");

@@ -108,7 +108,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             table.Insert(row);
             var command = new BigQueryCommand($"SELECT guid, position.x, position.y FROM {table} WHERE guid=@guid")
             {
-                Parameters = { { "guid", BigQueryParameterType.String, guid } }
+                Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
             var queryResults = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], X = (long)r["x"], Y = (long)r["y"] })
@@ -136,7 +136,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             table.Insert(row);
             var command = new BigQueryCommand($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid=@guid ORDER BY tag")
             {
-                Parameters = { { "guid", BigQueryParameterType.String, guid } }
+                Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
             var queryResults = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tag"] })
@@ -167,7 +167,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             table.Insert(row);
             var command = new BigQueryCommand($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid=@guid ORDER BY name.first")
             {
-                Parameters = { { "guid", BigQueryParameterType.String, guid } }
+                Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
             var queryResults = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["first"], LastName = (string)r["last"] })

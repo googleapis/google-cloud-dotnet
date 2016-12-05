@@ -71,7 +71,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 {
                     { "player", BigQueryDbType.String },
                     { "gameStarted", BigQueryDbType.Timestamp },
-                    { "score", BigQueryDbType.Integer }
+                    { "score", BigQueryDbType.Int64 }
                 }.Build());
             table.Insert(new[]
             {
@@ -102,26 +102,26 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 { "name", BigQueryDbType.String },
                 { "fullName", BigQueryDbType.String, FieldMode.Required },
-                { "age", BigQueryDbType.Integer },
+                { "age", BigQueryDbType.Int64 },
                 { "gender", BigQueryDbType.String },
                 { "phoneNumber", new TableSchemaBuilder
                     {
-                        { "areaCode", BigQueryDbType.Integer },
-                        { "number", BigQueryDbType.Integer }
+                        { "areaCode", BigQueryDbType.Int64 },
+                        { "number", BigQueryDbType.Int64 }
                     }
                 },
                 { "children", new TableSchemaBuilder
                     {
                         { "name", BigQueryDbType.String },
                         { "gender", BigQueryDbType.String },
-                        { "age", BigQueryDbType.Integer },
+                        { "age", BigQueryDbType.Int64 },
                     },
                     FieldMode.Repeated
                 },
                 { "citiesLived", new TableSchemaBuilder
                     {
                         { "place", BigQueryDbType.String },
-                        { "yearsLived", BigQueryDbType.Integer, FieldMode.Repeated },
+                        { "yearsLived", BigQueryDbType.Int64, FieldMode.Repeated },
                     },
                     FieldMode.Repeated
                 }
@@ -145,8 +145,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "tags", BigQueryDbType.String, FieldMode.Repeated },
                 { "position", new TableSchemaBuilder
                     {
-                        { "x", BigQueryDbType.Integer },
-                        { "y", BigQueryDbType.Integer }
+                        { "x", BigQueryDbType.Int64 },
+                        { "y", BigQueryDbType.Int64 }
                     }
                 },
                 { "names", new TableSchemaBuilder

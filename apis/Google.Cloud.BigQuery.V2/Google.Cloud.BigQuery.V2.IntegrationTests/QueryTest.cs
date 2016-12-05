@@ -298,6 +298,6 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(DateTimeKind.Utc, ((DateTime) values["_field_9"]).Kind);
         }
 
-        // TODO: Struct containing record or record containing struct.
+        // TODO: Struct containing array or array containing struct.
     }
 }

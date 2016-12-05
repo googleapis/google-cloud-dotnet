@@ -56,9 +56,9 @@ namespace Google.Cloud.BigQuery.V2
     /// </list>
     /// <para>
     /// If the parameter type is null, it is inferred from the value. A <see cref="TimeSpan"/> value is
-    /// always assumed to be a <see cref="BigQueryParameterType.Time"/>, a <see cref="DateTimeOffset"/> value is
-    /// always assumed to be a <see cref="BigQueryParameterType.Timestamp"/>, and a <see cref="DateTime"/> value is assumed
-    /// to be <see cref="BigQueryParameterType.DateTime"/> regardless of its <see cref="DateTime.Kind"/>.
+    /// always assumed to be a <see cref="BigQueryDbType.Time"/>, a <see cref="DateTimeOffset"/> value is
+    /// always assumed to be a <see cref="BigQueryDbType.Timestamp"/>, and a <see cref="DateTime"/> value is assumed
+    /// to be <see cref="BigQueryDbType.DateTime"/> regardless of its <see cref="DateTime.Kind"/>.
     /// </para>
     /// <para>
     /// If an array parameter doesn't specify the array type, the type is inferred from the type of the value.
@@ -67,8 +67,11 @@ namespace Google.Cloud.BigQuery.V2
     /// Array parameters must not have a value of null, and all the elements must be non-null as well.
     /// </para>
     /// <para>
-    /// If a <see cref="DateTime"/> value is provided for a <see cref="BigQueryParameterType.Timestamp"/> parameter, the
+    /// If a <see cref="DateTime"/> value is provided for a <see cref="BigQueryDbType.Timestamp"/> parameter, the
     /// value must have a <see cref="DateTime.Kind"/> of <see cref="DateTimeKind.Utc"/>.
+    /// </para>
+    /// <para>
+    /// Struct parameters are currently not supported.
     /// </para>
     /// </remarks>
     public sealed class BigQueryParameter
@@ -91,22 +94,22 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Mapping of CLR type to BigQuery parameter type for simple cases.
         /// </summary>
-        private static Dictionary<Type, BigQueryParameterType> s_typeMapping = new Dictionary<Type, BigQueryParameterType>
+        private static Dictionary<Type, BigQueryDbType> s_typeMapping = new Dictionary<Type, BigQueryDbType>
         {
-            { typeof(short), BigQueryParameterType.Int64 },
-            { typeof(int), BigQueryParameterType.Int64 },
-            { typeof(long), BigQueryParameterType.Int64 },
-            { typeof(ushort), BigQueryParameterType.Int64 },
-            { typeof(uint), BigQueryParameterType.Int64 },
-            { typeof(ulong), BigQueryParameterType.Int64 },
-            { typeof(float), BigQueryParameterType.Float64 },
-            { typeof(double), BigQueryParameterType.Float64 },
-            { typeof(bool), BigQueryParameterType.Bool },
-            { typeof(string), BigQueryParameterType.String },
-            { typeof(byte[]), BigQueryParameterType.Bytes },
-            { typeof(DateTime), BigQueryParameterType.DateTime },
-            { typeof(DateTimeOffset), BigQueryParameterType.Timestamp },
-            { typeof(TimeSpan), BigQueryParameterType.Time },
+            { typeof(short), BigQueryDbType.Int64 },
+            { typeof(int), BigQueryDbType.Int64 },
+            { typeof(long), BigQueryDbType.Int64 },
+            { typeof(ushort), BigQueryDbType.Int64 },
+            { typeof(uint), BigQueryDbType.Int64 },
+            { typeof(ulong), BigQueryDbType.Int64 },
+            { typeof(float), BigQueryDbType.Float64 },
+            { typeof(double), BigQueryDbType.Float64 },
+            { typeof(bool), BigQueryDbType.Bool },
+            { typeof(string), BigQueryDbType.String },
+            { typeof(byte[]), BigQueryDbType.Bytes },
+            { typeof(DateTime), BigQueryDbType.DateTime },
+            { typeof(DateTimeOffset), BigQueryDbType.Timestamp },
+            { typeof(TimeSpan), BigQueryDbType.Time },
         };
 
         /// <summary>
@@ -114,26 +117,26 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public string Name { get; set; }
 
-        private BigQueryParameterType? _type;
+        private BigQueryDbType? _type;
         /// <summary>
         /// The type of the parameter. If this is null, the type of the parameter is inferred from the value.
         /// Otherwise, the value must be of one of the supported types for the parameter type. See the <see cref="BigQueryParameter">class documentation</see>
         /// for details.
         /// </summary>
-        public BigQueryParameterType? Type
+        public BigQueryDbType? Type
         {
             get { return _type; }
-            set { _type = value == null ? default(BigQueryParameterType?) : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
+            set { _type = value == null ? default(BigQueryDbType?) : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
         }
 
-        private BigQueryParameterType? _arrayType;
+        private BigQueryDbType? _arrayType;
         /// <summary>
         /// The type of the nested elements, for array parameters. If this is null, the type is inferred from the value.
         /// </summary>
-        public BigQueryParameterType? ArrayType
+        public BigQueryDbType? ArrayType
         {
             get { return _arrayType; }
-            set { _arrayType = value == null ? default(BigQueryParameterType?) : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
+            set { _arrayType = value == null ? default(BigQueryDbType?) : GaxPreconditions.CheckEnumValue(value.Value, nameof(value)); }
         }
 
         private object _value;
@@ -162,7 +165,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Constructs a parameter with no name, initial value or type.
         /// </summary>
         /// <param name="type">The initial type of the parameter.</param>
-        public BigQueryParameter(BigQueryParameterType type) : this(null, type, null)
+        public BigQueryParameter(BigQueryDbType type) : this(null, type, null)
         {
         }
 
@@ -171,7 +174,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="type">The initial type of the parameter.</param>
         /// <param name="value">The initial value of the parameter.</param>
-        public BigQueryParameter(BigQueryParameterType? type, object value) : this(null, type, value)
+        public BigQueryParameter(BigQueryDbType? type, object value) : this(null, type, value)
         {
         }
 
@@ -188,7 +191,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="name">The initial name of the parameter.</param>
         /// <param name="type">The initial type of the parameter.</param>
-        public BigQueryParameter(string name, BigQueryParameterType? type) : this(name, type, null)
+        public BigQueryParameter(string name, BigQueryDbType? type) : this(name, type, null)
         {
         }
 
@@ -198,7 +201,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="name">The initial name of the parameter.</param>
         /// <param name="type">The initial type of the parameter.</param>
         /// <param name="value">The initial value of the parameter.</param>
-        public BigQueryParameter(string name, BigQueryParameterType? type, object value)
+        public BigQueryParameter(string name, BigQueryDbType? type, object value)
         {
             Name = name;
             if (type != null)
@@ -228,46 +231,46 @@ namespace Google.Cloud.BigQuery.V2
             };
             switch (type)
             {
-                case BigQueryParameterType.Array:
+                case BigQueryDbType.Array:
                     return PopulateArrayParameter(parameter, value, ArrayType);
-                case BigQueryParameterType.Bool:
+                case BigQueryDbType.Bool:
                     return parameter.PopulateScalar<bool>(value, x => x ? "TRUE" : "FALSE")
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.Bytes:
+                case BigQueryDbType.Bytes:
                     return parameter.PopulateScalar<byte[]>(value, x => Convert.ToBase64String(x))
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.Date:
+                case BigQueryDbType.Date:
                     return parameter.PopulateScalar<DateTime>(value, x => x.ToString("yyyy-MM-dd", InvariantCulture))
                         ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd", InvariantCulture))
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.DateTime:
+                case BigQueryDbType.DateTime:
                     return parameter.PopulateScalar<DateTime>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF", InvariantCulture))
                         ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF", InvariantCulture))
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.Float64:
+                case BigQueryDbType.Float64:
                     return parameter.PopulateInteger(value)
                         ?? parameter.PopulateFloatingPoint(value)
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.Int64:
+                case BigQueryDbType.Int64:
                     return parameter.PopulateInteger(value)
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.String:
+                case BigQueryDbType.String:
                     return parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.Struct: throw new NotImplementedException("Struct parameters are not yet implemented");
-                case BigQueryParameterType.Time:
+                case BigQueryDbType.Struct: throw new NotImplementedException("Struct parameters are not yet implemented");
+                case BigQueryDbType.Time:
                     return parameter.PopulateScalar<TimeSpan>(value, FormatTimeSpan)
                         ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
                         ?? parameter.PopulateScalar<DateTime>(value, x => x.ToString("HH:mm:ss.FFFFFF", InvariantCulture))
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
-                case BigQueryParameterType.Timestamp:
+                case BigQueryDbType.Timestamp:
                     return parameter.PopulateScalar<DateTime>(value, x =>
                         {
                             if (x.Kind != DateTimeKind.Utc)
@@ -293,22 +296,22 @@ namespace Google.Cloud.BigQuery.V2
             return ts.ToString("hh':'mm':'ss'.'ffffff", InvariantCulture);
         }
 
-        private static BigQueryParameterType InferParameterType(object value)
+        private static BigQueryDbType InferParameterType(object value)
         {
-            BigQueryParameterType type;
+            BigQueryDbType type;
             if (s_typeMapping.TryGetValue(value.GetType(), out type))
             {
                 return type;
             }
             if (IsArrayValue(value))
             {
-                return BigQueryParameterType.Array;
+                return BigQueryDbType.Array;
             }
             // We should never get here, as we should have validated that the value is vaguely sensible on the Value setter.
             throw new InvalidOperationException($"Unsupported value type: {value.GetType()}");
         }
 
-        private static QueryParameter PopulateArrayParameter(QueryParameter parameter, object value, BigQueryParameterType? arrayType)
+        private static QueryParameter PopulateArrayParameter(QueryParameter parameter, object value, BigQueryDbType? arrayType)
         {
             if (value == null)
             {
@@ -323,10 +326,10 @@ namespace Google.Cloud.BigQuery.V2
             {
                 throw new InvalidOperationException("Array parameter values cannot contain null elements");
             }
-            BigQueryParameterType actualArrayType = arrayType ?? s_typeMapping[GetArrayElementType(value)];
+            BigQueryDbType actualArrayType = arrayType ?? s_typeMapping[GetArrayElementType(value)];
             parameter.ParameterType = new QueryParameterType
             {
-                Type = EnumMap.ToApiValue(BigQueryParameterType.Array),
+                Type = EnumMap.ToApiValue(BigQueryDbType.Array),
                 ArrayType = new QueryParameterType { Type = EnumMap.ToApiValue(actualArrayType) }
             };
             var parameterValues = values
@@ -428,7 +431,7 @@ namespace Google.Cloud.BigQuery.V2
                 parameter.ParameterValue = new QueryParameterValue();
                 return parameter;
             }
-            var clrEnum = EnumMap<BigQueryParameterType>.ToValue(parameter.ParameterType.Type);
+            var clrEnum = EnumMap<BigQueryDbType>.ToValue(parameter.ParameterType.Type);
             throw new InvalidOperationException($"Value of type {value.GetType()} cannot be used for a parameter of type {clrEnum}");
         }
     }

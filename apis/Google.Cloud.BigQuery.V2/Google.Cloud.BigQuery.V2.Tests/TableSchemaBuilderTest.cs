@@ -23,7 +23,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var builder = new TableSchemaBuilder
             {
-                { "field", BigQueryDbType.Integer, FieldMode.Repeated, "My field" }
+                { "field", BigQueryDbType.Int64, FieldMode.Repeated, "My field" }
             };
             var schema = builder.Build();
             var field = schema.Fields[0];
@@ -56,7 +56,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void Add_InvalidName()
         {
             var builder = new TableSchemaBuilder();
-            Assert.Throws<ArgumentException>(() => builder.Add("123", BigQueryDbType.Integer));
+            Assert.Throws<ArgumentException>(() => builder.Add("123", BigQueryDbType.Int64));
         }
 
         [Fact]

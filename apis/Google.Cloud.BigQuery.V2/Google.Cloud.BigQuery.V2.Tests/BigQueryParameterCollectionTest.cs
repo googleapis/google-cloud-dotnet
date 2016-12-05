@@ -33,10 +33,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void Add_NameAndType()
         {
             var collection = new BigQueryParameterCollection();
-            var parameter = collection.Add("name", BigQueryParameterType.Date);
+            var parameter = collection.Add("name", BigQueryDbType.Date);
             Assert.Same(parameter, collection[0]);
             Assert.Equal("name", parameter.Name);
-            Assert.Equal(BigQueryParameterType.Date, parameter.Type);
+            Assert.Equal(BigQueryDbType.Date, parameter.Type);
             Assert.Null(parameter.Value);
         }
 
@@ -45,10 +45,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var collection = new BigQueryParameterCollection();
             var value = DateTime.UtcNow;
-            var parameter = collection.Add("name", BigQueryParameterType.Date, value);
+            var parameter = collection.Add("name", BigQueryDbType.Date, value);
             Assert.Same(parameter, collection[0]);
             Assert.Equal("name", parameter.Name);
-            Assert.Equal(BigQueryParameterType.Date, parameter.Type);
+            Assert.Equal(BigQueryDbType.Date, parameter.Type);
             Assert.Equal(value, parameter.Value);
         }
 
@@ -57,10 +57,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var collection = new BigQueryParameterCollection();
             var value = DateTime.UtcNow;
-            var parameter = collection.Add(BigQueryParameterType.Date, value);
+            var parameter = collection.Add(BigQueryDbType.Date, value);
             Assert.Same(parameter, collection[0]);
             Assert.Null(parameter.Name);
-            Assert.Equal(BigQueryParameterType.Date, parameter.Type);
+            Assert.Equal(BigQueryDbType.Date, parameter.Type);
             Assert.Equal(value, parameter.Value);
         }
 

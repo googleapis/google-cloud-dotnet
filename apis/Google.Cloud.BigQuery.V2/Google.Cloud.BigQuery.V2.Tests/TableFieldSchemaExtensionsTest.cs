@@ -23,7 +23,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void GetFieldType()
         {
             var field = new TableFieldSchema { Type = "INTEGER" };
-            Assert.Equal(BigQueryDbType.Integer, field.GetFieldType());
+            Assert.Equal(BigQueryDbType.Int64, field.GetFieldType());
         }
 
         [Fact]
