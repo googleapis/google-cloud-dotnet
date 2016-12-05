@@ -40,74 +40,77 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASSwoFb3JkZXIYCSABKA4yPC5n",
             "b29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkVy",
             "cm9yR3JvdXBPcmRlchIRCglwYWdlX3NpemUYCyABKAUSEgoKcGFnZV90b2tl",
-            "bhgMIAEoCSKKAQoWTGlzdEdyb3VwU3RhdHNSZXNwb25zZRJXChFlcnJvcl9n",
+            "bhgMIAEoCSLAAQoWTGlzdEdyb3VwU3RhdHNSZXNwb25zZRJXChFlcnJvcl9n",
             "cm91cF9zdGF0cxgBIAMoCzI8Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
             "cmVwb3J0aW5nLnYxYmV0YTEuRXJyb3JHcm91cFN0YXRzEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSKGBAoPRXJyb3JHcm91cFN0YXRzEkYKBWdyb3VwGAEg",
-            "ASgLMjcuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFi",
-            "ZXRhMS5FcnJvckdyb3VwEg0KBWNvdW50GAIgASgDEhwKFGFmZmVjdGVkX3Vz",
-            "ZXJzX2NvdW50GAMgASgDEk0KDHRpbWVkX2NvdW50cxgEIAMoCzI3Lmdvb2ds",
-            "ZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuVGltZWRD",
-            "b3VudBIzCg9maXJzdF9zZWVuX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEjIKDmxhc3Rfc2Vlbl90aW1lGAYgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBJWChFhZmZlY3RlZF9zZXJ2aWNlcxgHIAMo",
-            "CzI7Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0",
-            "YTEuU2VydmljZUNvbnRleHQSHQoVbnVtX2FmZmVjdGVkX3NlcnZpY2VzGAgg",
-            "ASgFEk8KDnJlcHJlc2VudGF0aXZlGAkgASgLMjcuZ29vZ2xlLmRldnRvb2xz",
-            "LmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJvckV2ZW50InkKClRp",
-            "bWVkQ291bnQSDQoFY291bnQYASABKAMSLgoKc3RhcnRfdGltZRgCIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIo4CChFMaXN0RXZlbnRzUmVx",
-            "dWVzdBIUCgxwcm9qZWN0X25hbWUYASABKAkSEAoIZ3JvdXBfaWQYAiABKAkS",
-            "WQoOc2VydmljZV9maWx0ZXIYAyABKAsyQS5nb29nbGUuZGV2dG9vbHMuY2xv",
-            "dWRlcnJvcnJlcG9ydGluZy52MWJldGExLlNlcnZpY2VDb250ZXh0RmlsdGVy",
-            "Ek8KCnRpbWVfcmFuZ2UYBCABKAsyOy5nb29nbGUuZGV2dG9vbHMuY2xvdWRl",
-            "cnJvcnJlcG9ydGluZy52MWJldGExLlF1ZXJ5VGltZVJhbmdlEhEKCXBhZ2Vf",
-            "c2l6ZRgGIAEoBRISCgpwYWdlX3Rva2VuGAcgASgJInwKEkxpc3RFdmVudHNS",
-            "ZXNwb25zZRJNCgxlcnJvcl9ldmVudHMYASADKAsyNy5nb29nbGUuZGV2dG9v",
-            "bHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkVycm9yRXZlbnQSFwoP",
-            "bmV4dF9wYWdlX3Rva2VuGAIgASgJIucBCg5RdWVyeVRpbWVSYW5nZRJSCgZw",
-            "ZXJpb2QYASABKA4yQi5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9y",
-            "dGluZy52MWJldGExLlF1ZXJ5VGltZVJhbmdlLlBlcmlvZCKAAQoGUGVyaW9k",
-            "EhYKElBFUklPRF9VTlNQRUNJRklFRBAAEhEKDVBFUklPRF8xX0hPVVIQARIS",
-            "Cg5QRVJJT0RfNl9IT1VSUxACEhAKDFBFUklPRF8xX0RBWRADEhEKDVBFUklP",
-            "RF8xX1dFRUsQBBISCg5QRVJJT0RfMzBfREFZUxAFIjgKFFNlcnZpY2VDb250",
-            "ZXh0RmlsdGVyEg8KB3NlcnZpY2UYAiABKAkSDwoHdmVyc2lvbhgDIAEoCSIr",
-            "ChNEZWxldGVFdmVudHNSZXF1ZXN0EhQKDHByb2plY3RfbmFtZRgBIAEoCSIW",
-            "ChREZWxldGVFdmVudHNSZXNwb25zZSp1ChNUaW1lZENvdW50QWxpZ25tZW50",
-            "EiUKIUVSUk9SX0NPVU5UX0FMSUdOTUVOVF9VTlNQRUNJRklFRBAAEhsKF0FM",
-            "SUdOTUVOVF9FUVVBTF9ST1VOREVEEAESGgoWQUxJR05NRU5UX0VRVUFMX0FU",
-            "X0VORBACKn0KD0Vycm9yR3JvdXBPcmRlchIbChdHUk9VUF9PUkRFUl9VTlNQ",
-            "RUNJRklFRBAAEg4KCkNPVU5UX0RFU0MQARISCg5MQVNUX1NFRU5fREVTQxAC",
-            "EhAKDENSRUFURURfREVTQxADEhcKE0FGRkVDVEVEX1VTRVJTX0RFU0MQBDLy",
-            "BAoRRXJyb3JTdGF0c1NlcnZpY2US0AEKDkxpc3RHcm91cFN0YXRzEkIuZ29v",
-            "Z2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5MaXN0",
-            "R3JvdXBTdGF0c1JlcXVlc3QaQy5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJv",
-            "cnJlcG9ydGluZy52MWJldGExLkxpc3RHcm91cFN0YXRzUmVzcG9uc2UiNYLT",
-            "5JMCLxItL3YxYmV0YTEve3Byb2plY3RfbmFtZT1wcm9qZWN0cy8qfS9ncm91",
-            "cFN0YXRzEsABCgpMaXN0RXZlbnRzEj4uZ29vZ2xlLmRldnRvb2xzLmNsb3Vk",
-            "ZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5MaXN0RXZlbnRzUmVxdWVzdBo/Lmdv",
-            "b2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuTGlz",
-            "dEV2ZW50c1Jlc3BvbnNlIjGC0+STAisSKS92MWJldGExL3twcm9qZWN0X25h",
-            "bWU9cHJvamVjdHMvKn0vZXZlbnRzEsYBCgxEZWxldGVFdmVudHMSQC5nb29n",
-            "bGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkRlbGV0",
-            "ZUV2ZW50c1JlcXVlc3QaQS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJl",
-            "cG9ydGluZy52MWJldGExLkRlbGV0ZUV2ZW50c1Jlc3BvbnNlIjGC0+STAisq",
-            "KS92MWJldGExL3twcm9qZWN0X25hbWU9cHJvamVjdHMvKn0vZXZlbnRzQnEK",
-            "L2NvbS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJl",
-            "dGExQhZFcnJvclN0YXRzU2VydmljZVByb3RvUAGqAiNHb29nbGUuQ2xvdWQu",
-            "RXJyb3JSZXBvcnRpbmcuVjFCZXRhMWIGcHJvdG8z"));
+            "ZV90b2tlbhgCIAEoCRI0ChB0aW1lX3JhbmdlX2JlZ2luGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcCKGBAoPRXJyb3JHcm91cFN0YXRzEkYK",
+            "BWdyb3VwGAEgASgLMjcuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBv",
+            "cnRpbmcudjFiZXRhMS5FcnJvckdyb3VwEg0KBWNvdW50GAIgASgDEhwKFGFm",
+            "ZmVjdGVkX3VzZXJzX2NvdW50GAMgASgDEk0KDHRpbWVkX2NvdW50cxgEIAMo",
+            "CzI3Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0",
+            "YTEuVGltZWRDb3VudBIzCg9maXJzdF9zZWVuX3RpbWUYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEjIKDmxhc3Rfc2Vlbl90aW1lGAYgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJWChFhZmZlY3RlZF9zZXJ2",
+            "aWNlcxgHIAMoCzI7Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0",
+            "aW5nLnYxYmV0YTEuU2VydmljZUNvbnRleHQSHQoVbnVtX2FmZmVjdGVkX3Nl",
+            "cnZpY2VzGAggASgFEk8KDnJlcHJlc2VudGF0aXZlGAkgASgLMjcuZ29vZ2xl",
+            "LmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJvckV2",
+            "ZW50InkKClRpbWVkQ291bnQSDQoFY291bnQYASABKAMSLgoKc3RhcnRfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3Rp",
+            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIo4CChFMaXN0",
+            "RXZlbnRzUmVxdWVzdBIUCgxwcm9qZWN0X25hbWUYASABKAkSEAoIZ3JvdXBf",
+            "aWQYAiABKAkSWQoOc2VydmljZV9maWx0ZXIYAyABKAsyQS5nb29nbGUuZGV2",
+            "dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlNlcnZpY2VDb250",
+            "ZXh0RmlsdGVyEk8KCnRpbWVfcmFuZ2UYBCABKAsyOy5nb29nbGUuZGV2dG9v",
+            "bHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLlF1ZXJ5VGltZVJhbmdl",
+            "EhEKCXBhZ2Vfc2l6ZRgGIAEoBRISCgpwYWdlX3Rva2VuGAcgASgJIrIBChJM",
+            "aXN0RXZlbnRzUmVzcG9uc2USTQoMZXJyb3JfZXZlbnRzGAEgAygLMjcuZ29v",
+            "Z2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5FcnJv",
+            "ckV2ZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRI0ChB0aW1lX3Jhbmdl",
+            "X2JlZ2luGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLnAQoO",
+            "UXVlcnlUaW1lUmFuZ2USUgoGcGVyaW9kGAEgASgOMkIuZ29vZ2xlLmRldnRv",
+            "b2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5RdWVyeVRpbWVSYW5n",
+            "ZS5QZXJpb2QigAEKBlBlcmlvZBIWChJQRVJJT0RfVU5TUEVDSUZJRUQQABIR",
+            "Cg1QRVJJT0RfMV9IT1VSEAESEgoOUEVSSU9EXzZfSE9VUlMQAhIQCgxQRVJJ",
+            "T0RfMV9EQVkQAxIRCg1QRVJJT0RfMV9XRUVLEAQSEgoOUEVSSU9EXzMwX0RB",
+            "WVMQBSJPChRTZXJ2aWNlQ29udGV4dEZpbHRlchIPCgdzZXJ2aWNlGAIgASgJ",
+            "Eg8KB3ZlcnNpb24YAyABKAkSFQoNcmVzb3VyY2VfdHlwZRgEIAEoCSIrChNE",
+            "ZWxldGVFdmVudHNSZXF1ZXN0EhQKDHByb2plY3RfbmFtZRgBIAEoCSIWChRE",
+            "ZWxldGVFdmVudHNSZXNwb25zZSp1ChNUaW1lZENvdW50QWxpZ25tZW50EiUK",
+            "IUVSUk9SX0NPVU5UX0FMSUdOTUVOVF9VTlNQRUNJRklFRBAAEhsKF0FMSUdO",
+            "TUVOVF9FUVVBTF9ST1VOREVEEAESGgoWQUxJR05NRU5UX0VRVUFMX0FUX0VO",
+            "RBACKn0KD0Vycm9yR3JvdXBPcmRlchIbChdHUk9VUF9PUkRFUl9VTlNQRUNJ",
+            "RklFRBAAEg4KCkNPVU5UX0RFU0MQARISCg5MQVNUX1NFRU5fREVTQxACEhAK",
+            "DENSRUFURURfREVTQxADEhcKE0FGRkVDVEVEX1VTRVJTX0RFU0MQBDLyBAoR",
+            "RXJyb3JTdGF0c1NlcnZpY2US0AEKDkxpc3RHcm91cFN0YXRzEkIuZ29vZ2xl",
+            "LmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRhMS5MaXN0R3Jv",
+            "dXBTdGF0c1JlcXVlc3QaQy5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJl",
+            "cG9ydGluZy52MWJldGExLkxpc3RHcm91cFN0YXRzUmVzcG9uc2UiNYLT5JMC",
+            "LxItL3YxYmV0YTEve3Byb2plY3RfbmFtZT1wcm9qZWN0cy8qfS9ncm91cFN0",
+            "YXRzEsABCgpMaXN0RXZlbnRzEj4uZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJy",
+            "b3JyZXBvcnRpbmcudjFiZXRhMS5MaXN0RXZlbnRzUmVxdWVzdBo/Lmdvb2ds",
+            "ZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuTGlzdEV2",
+            "ZW50c1Jlc3BvbnNlIjGC0+STAisSKS92MWJldGExL3twcm9qZWN0X25hbWU9",
+            "cHJvamVjdHMvKn0vZXZlbnRzEsYBCgxEZWxldGVFdmVudHMSQC5nb29nbGUu",
+            "ZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGExLkRlbGV0ZUV2",
+            "ZW50c1JlcXVlc3QaQS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9y",
+            "dGluZy52MWJldGExLkRlbGV0ZUV2ZW50c1Jlc3BvbnNlIjGC0+STAisqKS92",
+            "MWJldGExL3twcm9qZWN0X25hbWU9cHJvamVjdHMvKn0vZXZlbnRzQnEKL2Nv",
+            "bS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52MWJldGEx",
+            "QhZFcnJvclN0YXRzU2VydmljZVByb3RvUAGqAiNHb29nbGUuQ2xvdWQuRXJy",
+            "b3JSZXBvcnRpbmcuVjFCZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ErrorReporting.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment), typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser, new[]{ "ProjectName", "GroupId", "ServiceFilter", "TimeRange", "TimedCountDuration", "Alignment", "AlignmentTime", "Order", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser, new[]{ "ErrorGroupStats", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser, new[]{ "ErrorGroupStats", "NextPageToken", "TimeRangeBegin" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats.Parser, new[]{ "Group", "Count", "AffectedUsersCount", "TimedCounts", "FirstSeenTime", "LastSeenTime", "AffectedServices", "NumAffectedServices", "Representative" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount), global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount.Parser, new[]{ "Count", "StartTime", "EndTime" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.Parser, new[]{ "ProjectName", "GroupId", "ServiceFilter", "TimeRange", "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser, new[]{ "ErrorEvents", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser, new[]{ "ErrorEvents", "NextPageToken", "TimeRangeBegin" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange), global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Parser, new[]{ "Period" }, null, new[]{ typeof(global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter.Parser, new[]{ "Service", "Version" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter.Parser, new[]{ "Service", "Version", "ResourceType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.Parser, new[]{ "ProjectName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.Parser, null, null, null, null)
           }));
@@ -270,7 +273,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimeRangeFieldNumber = 5;
     private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
-    ///  [Required] List data for the given time range.
+    ///  [Optional] List data for the given time range.
+    ///  If not set a default time range is used. The field time_range_begin
+    ///  in the response will specify the beginning of this time range.
     ///  Only &lt;code>ErrorGroupStats&lt;/code> with a non-zero count in the given time
     ///  range are returned, unless the request contains an explicit group_id list.
     ///  If a group_id list is given, also &lt;code>ErrorGroupStats&lt;/code> with zero
@@ -639,6 +644,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ListGroupStatsResponse(ListGroupStatsResponse other) : this() {
       errorGroupStats_ = other.errorGroupStats_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      TimeRangeBegin = other.timeRangeBegin_ != null ? other.TimeRangeBegin.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -675,6 +681,23 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "time_range_begin" field.</summary>
+    public const int TimeRangeBeginFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp timeRangeBegin_;
+    /// <summary>
+    ///  The timestamp specifies the start time to which the request was restricted.
+    ///  The start time is set based on the requested time range. It may be adjusted
+    ///  to a later time if a project has exceeded the storage quota and older data
+    ///  has been deleted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp TimeRangeBegin {
+      get { return timeRangeBegin_; }
+      set {
+        timeRangeBegin_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListGroupStatsResponse);
@@ -690,6 +713,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if(!errorGroupStats_.Equals(other.errorGroupStats_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if (!object.Equals(TimeRangeBegin, other.TimeRangeBegin)) return false;
       return true;
     }
 
@@ -698,6 +722,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       int hash = 1;
       hash ^= errorGroupStats_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (timeRangeBegin_ != null) hash ^= TimeRangeBegin.GetHashCode();
       return hash;
     }
 
@@ -713,6 +738,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      if (timeRangeBegin_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TimeRangeBegin);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -721,6 +750,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       size += errorGroupStats_.CalculateSize(_repeated_errorGroupStats_codec);
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (timeRangeBegin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeRangeBegin);
       }
       return size;
     }
@@ -733,6 +765,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       errorGroupStats_.Add(other.errorGroupStats_);
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
+      }
+      if (other.timeRangeBegin_ != null) {
+        if (timeRangeBegin_ == null) {
+          timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        TimeRangeBegin.MergeFrom(other.TimeRangeBegin);
       }
     }
 
@@ -750,6 +788,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (timeRangeBegin_ == null) {
+              timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(timeRangeBegin_);
             break;
           }
         }
@@ -1411,7 +1456,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// <summary>
     ///  [Required] The resource name of the Google Cloud Platform project. Written
     ///  as `projects/` plus the
-    ///  [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+    ///  [Google Cloud Platform project
+    ///  ID](https://support.google.com/cloud/answer/6158840).
     ///  Example: `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1457,6 +1503,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
     ///  [Optional] List only data for the given time range.
+    ///  If not set a default time range is used. The field time_range_begin
+    ///  in the response will specify the beginning of this time range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange TimeRange {
@@ -1689,6 +1737,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ListEventsResponse(ListEventsResponse other) : this() {
       errorEvents_ = other.errorEvents_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      TimeRangeBegin = other.timeRangeBegin_ != null ? other.TimeRangeBegin.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1725,6 +1774,20 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "time_range_begin" field.</summary>
+    public const int TimeRangeBeginFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp timeRangeBegin_;
+    /// <summary>
+    ///  The timestamp specifies the start time to which the request was restricted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp TimeRangeBegin {
+      get { return timeRangeBegin_; }
+      set {
+        timeRangeBegin_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ListEventsResponse);
@@ -1740,6 +1803,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if(!errorEvents_.Equals(other.errorEvents_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if (!object.Equals(TimeRangeBegin, other.TimeRangeBegin)) return false;
       return true;
     }
 
@@ -1748,6 +1812,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       int hash = 1;
       hash ^= errorEvents_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (timeRangeBegin_ != null) hash ^= TimeRangeBegin.GetHashCode();
       return hash;
     }
 
@@ -1763,6 +1828,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      if (timeRangeBegin_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TimeRangeBegin);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1771,6 +1840,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       size += errorEvents_.CalculateSize(_repeated_errorEvents_codec);
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (timeRangeBegin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeRangeBegin);
       }
       return size;
     }
@@ -1783,6 +1855,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       errorEvents_.Add(other.errorEvents_);
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
+      }
+      if (other.timeRangeBegin_ != null) {
+        if (timeRangeBegin_ == null) {
+          timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        TimeRangeBegin.MergeFrom(other.TimeRangeBegin);
       }
     }
 
@@ -1800,6 +1878,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (timeRangeBegin_ == null) {
+              timeRangeBegin_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(timeRangeBegin_);
             break;
           }
         }
@@ -2006,6 +2091,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ServiceContextFilter(ServiceContextFilter other) : this() {
       service_ = other.service_;
       version_ = other.version_;
+      resourceType_ = other.resourceType_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2043,6 +2129,21 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "resource_type" field.</summary>
+    public const int ResourceTypeFieldNumber = 4;
+    private string resourceType_ = "";
+    /// <summary>
+    ///  [Optional] The exact value to match against
+    ///  [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ResourceType {
+      get { return resourceType_; }
+      set {
+        resourceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ServiceContextFilter);
@@ -2058,6 +2159,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (Service != other.Service) return false;
       if (Version != other.Version) return false;
+      if (ResourceType != other.ResourceType) return false;
       return true;
     }
 
@@ -2066,6 +2168,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       int hash = 1;
       if (Service.Length != 0) hash ^= Service.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (ResourceType.Length != 0) hash ^= ResourceType.GetHashCode();
       return hash;
     }
 
@@ -2084,6 +2187,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(Version);
       }
+      if (ResourceType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ResourceType);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2094,6 +2201,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (Version.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (ResourceType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceType);
       }
       return size;
     }
@@ -2108,6 +2218,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.Version.Length != 0) {
         Version = other.Version;
+      }
+      if (other.ResourceType.Length != 0) {
+        ResourceType = other.ResourceType;
       }
     }
 
@@ -2125,6 +2238,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 26: {
             Version = input.ReadString();
+            break;
+          }
+          case 34: {
+            ResourceType = input.ReadString();
             break;
           }
         }
@@ -2174,7 +2291,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     /// <summary>
     ///  [Required] The resource name of the Google Cloud Platform project. Written
     ///  as `projects/` plus the
-    ///  [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+    ///  [Google Cloud Platform project
+    ///  ID](https://support.google.com/cloud/answer/6158840).
     ///  Example: `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

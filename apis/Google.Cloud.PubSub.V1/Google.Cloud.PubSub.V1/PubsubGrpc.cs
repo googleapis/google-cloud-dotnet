@@ -114,8 +114,11 @@ namespace Google.Cloud.PubSub.V1 {
       ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
       ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic. Note that
-      ///  for REST API requests, you must specify a name.
+      ///  name for this subscription on the same project as the topic, conforming
+      ///  to the
+      ///  [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      ///  The generated name is populated in the returned Subscription object.
+      ///  Note that for REST API requests, you must specify a name in the request.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.Subscription> CreateSubscription(global::Google.Cloud.PubSub.V1.Subscription request, ServerCallContext context)
       {
@@ -139,11 +142,11 @@ namespace Google.Cloud.PubSub.V1 {
       }
 
       /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
+      ///  Deletes an existing subscription. All messages retained in the subscription
       ///  are immediately dropped. Calls to `Pull` after deletion will return
       ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
       ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
+      ///  subscription or its topic unless the same topic is specified.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscription(global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest request, ServerCallContext context)
       {
@@ -231,8 +234,11 @@ namespace Google.Cloud.PubSub.V1 {
       ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
       ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic. Note that
-      ///  for REST API requests, you must specify a name.
+      ///  name for this subscription on the same project as the topic, conforming
+      ///  to the
+      ///  [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      ///  The generated name is populated in the returned Subscription object.
+      ///  Note that for REST API requests, you must specify a name in the request.
       /// </summary>
       public virtual global::Google.Cloud.PubSub.V1.Subscription CreateSubscription(global::Google.Cloud.PubSub.V1.Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -244,8 +250,11 @@ namespace Google.Cloud.PubSub.V1 {
       ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
       ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic. Note that
-      ///  for REST API requests, you must specify a name.
+      ///  name for this subscription on the same project as the topic, conforming
+      ///  to the
+      ///  [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      ///  The generated name is populated in the returned Subscription object.
+      ///  Note that for REST API requests, you must specify a name in the request.
       /// </summary>
       public virtual global::Google.Cloud.PubSub.V1.Subscription CreateSubscription(global::Google.Cloud.PubSub.V1.Subscription request, CallOptions options)
       {
@@ -257,8 +266,11 @@ namespace Google.Cloud.PubSub.V1 {
       ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
       ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic. Note that
-      ///  for REST API requests, you must specify a name.
+      ///  name for this subscription on the same project as the topic, conforming
+      ///  to the
+      ///  [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      ///  The generated name is populated in the returned Subscription object.
+      ///  Note that for REST API requests, you must specify a name in the request.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Subscription> CreateSubscriptionAsync(global::Google.Cloud.PubSub.V1.Subscription request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -270,8 +282,11 @@ namespace Google.Cloud.PubSub.V1 {
       ///  If the corresponding topic doesn't exist, returns `NOT_FOUND`.
       ///
       ///  If the name is not provided in the request, the server will assign a random
-      ///  name for this subscription on the same project as the topic. Note that
-      ///  for REST API requests, you must specify a name.
+      ///  name for this subscription on the same project as the topic, conforming
+      ///  to the
+      ///  [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+      ///  The generated name is populated in the returned Subscription object.
+      ///  Note that for REST API requests, you must specify a name in the request.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.PubSub.V1.Subscription> CreateSubscriptionAsync(global::Google.Cloud.PubSub.V1.Subscription request, CallOptions options)
       {
@@ -334,44 +349,44 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListSubscriptions, null, options, request);
       }
       /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
+      ///  Deletes an existing subscription. All messages retained in the subscription
       ///  are immediately dropped. Calls to `Pull` after deletion will return
       ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
       ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
+      ///  subscription or its topic unless the same topic is specified.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteSubscription(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
+      ///  Deletes an existing subscription. All messages retained in the subscription
       ///  are immediately dropped. Calls to `Pull` after deletion will return
       ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
       ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
+      ///  subscription or its topic unless the same topic is specified.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSubscription, null, options, request);
       }
       /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
+      ///  Deletes an existing subscription. All messages retained in the subscription
       ///  are immediately dropped. Calls to `Pull` after deletion will return
       ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
       ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
+      ///  subscription or its topic unless the same topic is specified.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteSubscriptionAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an existing subscription. All pending messages in the subscription
+      ///  Deletes an existing subscription. All messages retained in the subscription
       ///  are immediately dropped. Calls to `Pull` after deletion will return
       ///  `NOT_FOUND`. After a subscription is deleted, a new one may be created with
       ///  the same name, but the new one has no association with the old
-      ///  subscription, or its topic unless the same topic is specified.
+      ///  subscription or its topic unless the same topic is specified.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest request, CallOptions options)
       {

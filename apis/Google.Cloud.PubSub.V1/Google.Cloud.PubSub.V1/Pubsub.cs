@@ -315,8 +315,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
     /// <summary>
-    ///  The message payload. For JSON requests, the value of this field must be
-    ///  [base64-encoded](https://tools.ietf.org/html/rfc4648).
+    ///  The message payload.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
@@ -533,6 +532,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string topic_ = "";
     /// <summary>
     ///  The name of the topic to get.
+    ///  Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -657,6 +657,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string topic_ = "";
     /// <summary>
     ///  The messages in the request will be published on this topic.
+    ///  Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -921,6 +922,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string project_ = "";
     /// <summary>
     ///  The name of the cloud project that topics belong to.
+    ///  Format is `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Project {
@@ -1255,6 +1257,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string topic_ = "";
     /// <summary>
     ///  The name of the topic that subscriptions are attached to.
+    ///  Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -1588,6 +1591,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string topic_ = "";
     /// <summary>
     ///  Name of the topic to delete.
+    ///  Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -1733,6 +1737,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string topic_ = "";
     /// <summary>
     ///  The name of the topic from which this subscription is receiving messages.
+    ///  Format is `projects/{project}/topics/{topic}`.
     ///  The value of this field will be `_deleted-topic_` if the topic has been
     ///  deleted.
     /// </summary>
@@ -1774,15 +1779,15 @@ namespace Google.Cloud.PubSub.V1 {
     ///  deadline. To override this value for a given message, call
     ///  `ModifyAckDeadline` with the corresponding `ack_id` if using
     ///  pull.
+    ///  The minimum custom deadline you can specify is 10 seconds.
     ///  The maximum custom deadline you can specify is 600 seconds (10 minutes).
+    ///  If this parameter is 0, a default value of 10 seconds is used.
     ///
     ///  For push delivery, this value is also used to set the request timeout for
     ///  the call to the push endpoint.
     ///
     ///  If the subscriber never acknowledges the message, the Pub/Sub
     ///  system will eventually redeliver the message.
-    ///
-    ///  If this parameter is 0, a default value of 10 seconds is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AckDeadlineSeconds {
@@ -2288,6 +2293,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string subscription_ = "";
     /// <summary>
     ///  The name of the subscription to get.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -2413,6 +2419,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string project_ = "";
     /// <summary>
     ///  The name of the cloud project that subscriptions belong to.
+    ///  Format is `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Project {
@@ -2746,6 +2753,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string subscription_ = "";
     /// <summary>
     ///  The subscription to delete.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -2870,6 +2878,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string subscription_ = "";
     /// <summary>
     ///  The name of the subscription.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3036,6 +3045,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string subscription_ = "";
     /// <summary>
     ///  The subscription from which messages should be pulled.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3049,11 +3059,12 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ReturnImmediatelyFieldNumber = 2;
     private bool returnImmediately_;
     /// <summary>
-    ///  If this is specified as true the system will respond immediately even if
-    ///  it is not able to return a message in the `Pull` response. Otherwise the
-    ///  system is allowed to wait until at least one message is available rather
-    ///  than returning no messages. The client may cancel the request if it does
-    ///  not wish to wait any longer for the response.
+    ///  If this field set to true, the system will respond immediately even if
+    ///  it there are no messages available to return in the `Pull` response.
+    ///  Otherwise, the system may wait (for a bounded amount of time) until at
+    ///  least one message is available, rather than returning no messages. The
+    ///  client may cancel the request if it does not wish to wait any longer for
+    ///  the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ReturnImmediately {
@@ -3344,6 +3355,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string subscription_ = "";
     /// <summary>
     ///  The name of the subscription.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3371,10 +3383,12 @@ namespace Google.Cloud.PubSub.V1 {
     private int ackDeadlineSeconds_;
     /// <summary>
     ///  The new ack deadline with respect to the time this request was sent to
-    ///  the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
+    ///  the Pub/Sub system. For example, if the value is 10, the new
     ///  ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
     ///  was made. Specifying zero may immediately make the message available for
     ///  another pull request.
+    ///  The minimum deadline you can specify is 0 seconds.
+    ///  The maximum deadline you can specify is 600 seconds (10 minutes).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AckDeadlineSeconds {
@@ -3524,6 +3538,7 @@ namespace Google.Cloud.PubSub.V1 {
     private string subscription_ = "";
     /// <summary>
     ///  The subscription whose message is being acknowledged.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {

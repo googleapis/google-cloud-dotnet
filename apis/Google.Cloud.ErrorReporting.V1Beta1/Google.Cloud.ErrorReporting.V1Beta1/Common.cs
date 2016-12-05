@@ -24,37 +24,39 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           string.Concat(
             "Cjhnb29nbGUvZGV2dG9vbHMvY2xvdWRlcnJvcnJlcG9ydGluZy92MWJldGEx",
             "L2NvbW1vbi5wcm90bxIrZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBv",
-            "cnRpbmcudjFiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKBAQoKRXJyb3JHcm91",
-            "cBIMCgRuYW1lGAEgASgJEhAKCGdyb3VwX2lkGAIgASgJElMKD3RyYWNraW5n",
-            "X2lzc3VlcxgDIAMoCzI6Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVw",
-            "b3J0aW5nLnYxYmV0YTEuVHJhY2tpbmdJc3N1ZSIcCg1UcmFja2luZ0lzc3Vl",
-            "EgsKA3VybBgBIAEoCSLvAQoKRXJyb3JFdmVudBIuCgpldmVudF90aW1lGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJUCg9zZXJ2aWNlX2Nv",
-            "bnRleHQYAiABKAsyOy5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9y",
-            "dGluZy52MWJldGExLlNlcnZpY2VDb250ZXh0Eg8KB21lc3NhZ2UYAyABKAkS",
-            "SgoHY29udGV4dBgFIAEoCzI5Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
-            "cmVwb3J0aW5nLnYxYmV0YTEuRXJyb3JDb250ZXh0IjIKDlNlcnZpY2VDb250",
-            "ZXh0Eg8KB3NlcnZpY2UYAiABKAkSDwoHdmVyc2lvbhgDIAEoCSLJAQoMRXJy",
-            "b3JDb250ZXh0ElUKDGh0dHBfcmVxdWVzdBgBIAEoCzI/Lmdvb2dsZS5kZXZ0",
-            "b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTEuSHR0cFJlcXVlc3RD",
-            "b250ZXh0EgwKBHVzZXIYAiABKAkSVAoPcmVwb3J0X2xvY2F0aW9uGAMgASgL",
-            "MjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFiZXRh",
-            "MS5Tb3VyY2VMb2NhdGlvbiKIAQoSSHR0cFJlcXVlc3RDb250ZXh0Eg4KBm1l",
-            "dGhvZBgBIAEoCRILCgN1cmwYAiABKAkSEgoKdXNlcl9hZ2VudBgDIAEoCRIQ",
-            "CghyZWZlcnJlchgEIAEoCRIcChRyZXNwb25zZV9zdGF0dXNfY29kZRgFIAEo",
-            "BRIRCglyZW1vdGVfaXAYBiABKAkiTwoOU291cmNlTG9jYXRpb24SEQoJZmls",
-            "ZV9wYXRoGAEgASgJEhMKC2xpbmVfbnVtYmVyGAIgASgFEhUKDWZ1bmN0aW9u",
-            "X25hbWUYBCABKAlCZgovY29tLmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9y",
-            "cmVwb3J0aW5nLnYxYmV0YTFCC0NvbW1vblByb3RvUAGqAiNHb29nbGUuQ2xv",
-            "dWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMWIGcHJvdG8z"));
+            "cnRpbmcudjFiZXRhMRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoj",
+            "Z29vZ2xlL2FwaS9tb25pdG9yZWRfcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8igQEKCkVycm9yR3JvdXASDAoEbmFt",
+            "ZRgBIAEoCRIQCghncm91cF9pZBgCIAEoCRJTCg90cmFja2luZ19pc3N1ZXMY",
+            "AyADKAsyOi5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGluZy52",
+            "MWJldGExLlRyYWNraW5nSXNzdWUiHAoNVHJhY2tpbmdJc3N1ZRILCgN1cmwY",
+            "ASABKAki7wEKCkVycm9yRXZlbnQSLgoKZXZlbnRfdGltZRgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASVAoPc2VydmljZV9jb250ZXh0GAIg",
+            "ASgLMjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3JyZXBvcnRpbmcudjFi",
+            "ZXRhMS5TZXJ2aWNlQ29udGV4dBIPCgdtZXNzYWdlGAMgASgJEkoKB2NvbnRl",
+            "eHQYBSABKAsyOS5nb29nbGUuZGV2dG9vbHMuY2xvdWRlcnJvcnJlcG9ydGlu",
+            "Zy52MWJldGExLkVycm9yQ29udGV4dCJJCg5TZXJ2aWNlQ29udGV4dBIPCgdz",
+            "ZXJ2aWNlGAIgASgJEg8KB3ZlcnNpb24YAyABKAkSFQoNcmVzb3VyY2VfdHlw",
+            "ZRgEIAEoCSLJAQoMRXJyb3JDb250ZXh0ElUKDGh0dHBfcmVxdWVzdBgBIAEo",
+            "CzI/Lmdvb2dsZS5kZXZ0b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0",
+            "YTEuSHR0cFJlcXVlc3RDb250ZXh0EgwKBHVzZXIYAiABKAkSVAoPcmVwb3J0",
+            "X2xvY2F0aW9uGAMgASgLMjsuZ29vZ2xlLmRldnRvb2xzLmNsb3VkZXJyb3Jy",
+            "ZXBvcnRpbmcudjFiZXRhMS5Tb3VyY2VMb2NhdGlvbiKIAQoSSHR0cFJlcXVl",
+            "c3RDb250ZXh0Eg4KBm1ldGhvZBgBIAEoCRILCgN1cmwYAiABKAkSEgoKdXNl",
+            "cl9hZ2VudBgDIAEoCRIQCghyZWZlcnJlchgEIAEoCRIcChRyZXNwb25zZV9z",
+            "dGF0dXNfY29kZRgFIAEoBRIRCglyZW1vdGVfaXAYBiABKAkiTwoOU291cmNl",
+            "TG9jYXRpb24SEQoJZmlsZV9wYXRoGAEgASgJEhMKC2xpbmVfbnVtYmVyGAIg",
+            "ASgFEhUKDWZ1bmN0aW9uX25hbWUYBCABKAlCZgovY29tLmdvb2dsZS5kZXZ0",
+            "b29scy5jbG91ZGVycm9ycmVwb3J0aW5nLnYxYmV0YTFCC0NvbW1vblByb3Rv",
+            "UAGqAiNHb29nbGUuQ2xvdWQuRXJyb3JSZXBvcnRpbmcuVjFCZXRhMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Parser, new[]{ "Name", "GroupId", "TrackingIssues" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue), global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser, new[]{ "Url" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent.Parser, new[]{ "EventTime", "ServiceContext", "Message", "Context" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Parser, new[]{ "Service", "Version" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext), global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Parser, new[]{ "Service", "Version", "ResourceType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext), global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext.Parser, new[]{ "HttpRequest", "User", "ReportLocation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext), global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext.Parser, new[]{ "Method", "Url", "UserAgent", "Referrer", "ResponseStatusCode", "RemoteIp" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation), global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation.Parser, new[]{ "FilePath", "LineNumber", "FunctionName" }, null, null, null)
@@ -633,6 +635,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public ServiceContext(ServiceContext other) : this() {
       service_ = other.service_;
       version_ = other.version_;
+      resourceType_ = other.resourceType_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -675,6 +678,24 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "resource_type" field.</summary>
+    public const int ResourceTypeFieldNumber = 4;
+    private string resourceType_ = "";
+    /// <summary>
+    ///  Type of the MonitoredResource. List of possible values:
+    ///  https://cloud.google.com/monitoring/api/resources
+    ///
+    ///  Value is set automatically for incoming errors and must not be set when
+    ///  reporting errors.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ResourceType {
+      get { return resourceType_; }
+      set {
+        resourceType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ServiceContext);
@@ -690,6 +711,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (Service != other.Service) return false;
       if (Version != other.Version) return false;
+      if (ResourceType != other.ResourceType) return false;
       return true;
     }
 
@@ -698,6 +720,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       int hash = 1;
       if (Service.Length != 0) hash ^= Service.GetHashCode();
       if (Version.Length != 0) hash ^= Version.GetHashCode();
+      if (ResourceType.Length != 0) hash ^= ResourceType.GetHashCode();
       return hash;
     }
 
@@ -716,6 +739,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteString(Version);
       }
+      if (ResourceType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ResourceType);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -726,6 +753,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (Version.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+      }
+      if (ResourceType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceType);
       }
       return size;
     }
@@ -740,6 +770,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
       if (other.Version.Length != 0) {
         Version = other.Version;
+      }
+      if (other.ResourceType.Length != 0) {
+        ResourceType = other.ResourceType;
       }
     }
 
@@ -757,6 +790,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
           }
           case 26: {
             Version = input.ReadString();
+            break;
+          }
+          case 34: {
+            ResourceType = input.ReadString();
             break;
           }
         }

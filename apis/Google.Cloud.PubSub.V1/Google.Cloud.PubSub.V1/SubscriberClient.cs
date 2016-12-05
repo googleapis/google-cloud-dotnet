@@ -597,8 +597,11 @@ namespace Google.Cloud.PubSub.V1
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic. Note that
-        /// for REST API requests, you must specify a name.
+        /// name for this subscription on the same project as the topic, conforming
+        /// to the
+        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated name is populated in the returned Subscription object.
+        /// Note that for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -610,6 +613,7 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="topic">
         /// The name of the topic from which this subscription is receiving messages.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
@@ -629,15 +633,15 @@ namespace Google.Cloud.PubSub.V1
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
         /// pull.
+        /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
+        /// If this parameter is 0, a default value of 10 seconds is used.
         ///
         /// For push delivery, this value is also used to set the request timeout for
         /// the call to the push endpoint.
         ///
         /// If the subscriber never acknowledges the message, the Pub/Sub
         /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is 0, a default value of 10 seconds is used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -661,8 +665,11 @@ namespace Google.Cloud.PubSub.V1
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic. Note that
-        /// for REST API requests, you must specify a name.
+        /// name for this subscription on the same project as the topic, conforming
+        /// to the
+        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated name is populated in the returned Subscription object.
+        /// Note that for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -674,6 +681,7 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="topic">
         /// The name of the topic from which this subscription is receiving messages.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
@@ -693,15 +701,15 @@ namespace Google.Cloud.PubSub.V1
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
         /// pull.
+        /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
+        /// If this parameter is 0, a default value of 10 seconds is used.
         ///
         /// For push delivery, this value is also used to set the request timeout for
         /// the call to the push endpoint.
         ///
         /// If the subscriber never acknowledges the message, the Pub/Sub
         /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is 0, a default value of 10 seconds is used.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -727,8 +735,11 @@ namespace Google.Cloud.PubSub.V1
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic. Note that
-        /// for REST API requests, you must specify a name.
+        /// name for this subscription on the same project as the topic, conforming
+        /// to the
+        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated name is populated in the returned Subscription object.
+        /// Note that for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -740,6 +751,7 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="topic">
         /// The name of the topic from which this subscription is receiving messages.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
@@ -759,15 +771,15 @@ namespace Google.Cloud.PubSub.V1
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
         /// pull.
+        /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
+        /// If this parameter is 0, a default value of 10 seconds is used.
         ///
         /// For push delivery, this value is also used to set the request timeout for
         /// the call to the push endpoint.
         ///
         /// If the subscriber never acknowledges the message, the Pub/Sub
         /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is 0, a default value of 10 seconds is used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -790,6 +802,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription to get.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -809,6 +822,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription to get.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -827,6 +841,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription to get.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -846,6 +861,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that subscriptions belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -875,6 +891,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that subscriptions belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -900,14 +917,15 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
+        /// Deletes an existing subscription. All messages retained in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
         /// The subscription to delete.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -923,14 +941,15 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
+        /// Deletes an existing subscription. All messages retained in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
         /// The subscription to delete.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -945,14 +964,15 @@ namespace Google.Cloud.PubSub.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
+        /// Deletes an existing subscription. All messages retained in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
         /// The subscription to delete.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -976,16 +996,19 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// List of acknowledgment IDs.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
+        /// the Pub/Sub system. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
         /// was made. Specifying zero may immediately make the message available for
         /// another pull request.
+        /// The minimum deadline you can specify is 0 seconds.
+        /// The maximum deadline you can specify is 600 seconds (10 minutes).
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1011,16 +1034,19 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// List of acknowledgment IDs.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
+        /// the Pub/Sub system. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
         /// was made. Specifying zero may immediately make the message available for
         /// another pull request.
+        /// The minimum deadline you can specify is 0 seconds.
+        /// The maximum deadline you can specify is 600 seconds (10 minutes).
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -1047,16 +1073,19 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// List of acknowledgment IDs.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
+        /// the Pub/Sub system. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
         /// was made. Specifying zero may immediately make the message available for
         /// another pull request.
+        /// The minimum deadline you can specify is 0 seconds.
+        /// The maximum deadline you can specify is 600 seconds (10 minutes).
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1084,6 +1113,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription whose message is being acknowledged.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
@@ -1114,6 +1144,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription whose message is being acknowledged.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
@@ -1144,6 +1175,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription whose message is being acknowledged.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
@@ -1171,13 +1203,15 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// If this field set to true, the system will respond immediately even if
+        /// it there are no messages available to return in the `Pull` response.
+        /// Otherwise, the system may wait (for a bounded amount of time) until at
+        /// least one message is available, rather than returning no messages. The
+        /// client may cancel the request if it does not wish to wait any longer for
+        /// the response.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -1206,13 +1240,15 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// If this field set to true, the system will respond immediately even if
+        /// it there are no messages available to return in the `Pull` response.
+        /// Otherwise, the system may wait (for a bounded amount of time) until at
+        /// least one message is available, rather than returning no messages. The
+        /// client may cancel the request if it does not wish to wait any longer for
+        /// the response.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -1242,13 +1278,15 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// If this field set to true, the system will respond immediately even if
+        /// it there are no messages available to return in the `Pull` response.
+        /// Otherwise, the system may wait (for a bounded amount of time) until at
+        /// least one message is available, rather than returning no messages. The
+        /// client may cancel the request if it does not wish to wait any longer for
+        /// the response.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -1279,6 +1317,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="pushConfig">
         /// The push configuration for future deliveries.
@@ -1312,6 +1351,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="pushConfig">
         /// The push configuration for future deliveries.
@@ -1345,6 +1385,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="pushConfig">
         /// The push configuration for future deliveries.
@@ -1525,6 +1566,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1553,6 +1596,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1581,6 +1626,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1686,8 +1733,11 @@ namespace Google.Cloud.PubSub.V1
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic. Note that
-        /// for REST API requests, you must specify a name.
+        /// name for this subscription on the same project as the topic, conforming
+        /// to the
+        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated name is populated in the returned Subscription object.
+        /// Note that for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -1699,6 +1749,7 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="topic">
         /// The name of the topic from which this subscription is receiving messages.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
@@ -1718,15 +1769,15 @@ namespace Google.Cloud.PubSub.V1
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
         /// pull.
+        /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
+        /// If this parameter is 0, a default value of 10 seconds is used.
         ///
         /// For push delivery, this value is also used to set the request timeout for
         /// the call to the push endpoint.
         ///
         /// If the subscriber never acknowledges the message, the Pub/Sub
         /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is 0, a default value of 10 seconds is used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1758,8 +1809,11 @@ namespace Google.Cloud.PubSub.V1
         /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
         ///
         /// If the name is not provided in the request, the server will assign a random
-        /// name for this subscription on the same project as the topic. Note that
-        /// for REST API requests, you must specify a name.
+        /// name for this subscription on the same project as the topic, conforming
+        /// to the
+        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated name is populated in the returned Subscription object.
+        /// Note that for REST API requests, you must specify a name in the request.
         /// </summary>
         /// <param name="name">
         /// The name of the subscription. It must have the format
@@ -1771,6 +1825,7 @@ namespace Google.Cloud.PubSub.V1
         /// </param>
         /// <param name="topic">
         /// The name of the topic from which this subscription is receiving messages.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// The value of this field will be `_deleted-topic_` if the topic has been
         /// deleted.
         /// </param>
@@ -1790,15 +1845,15 @@ namespace Google.Cloud.PubSub.V1
         /// deadline. To override this value for a given message, call
         /// `ModifyAckDeadline` with the corresponding `ack_id` if using
         /// pull.
+        /// The minimum custom deadline you can specify is 10 seconds.
         /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
+        /// If this parameter is 0, a default value of 10 seconds is used.
         ///
         /// For push delivery, this value is also used to set the request timeout for
         /// the call to the push endpoint.
         ///
         /// If the subscriber never acknowledges the message, the Pub/Sub
         /// system will eventually redeliver the message.
-        ///
-        /// If this parameter is 0, a default value of 10 seconds is used.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1829,6 +1884,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription to get.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1853,6 +1909,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription to get.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1877,6 +1934,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that subscriptions belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1913,6 +1971,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that subscriptions belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1945,14 +2004,15 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
+        /// Deletes an existing subscription. All messages retained in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
         /// The subscription to delete.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1973,14 +2033,15 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Deletes an existing subscription. All pending messages in the subscription
+        /// Deletes an existing subscription. All messages retained in the subscription
         /// are immediately dropped. Calls to `Pull` after deletion will return
         /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
         /// the same name, but the new one has no association with the old
-        /// subscription, or its topic unless the same topic is specified.
+        /// subscription or its topic unless the same topic is specified.
         /// </summary>
         /// <param name="subscription">
         /// The subscription to delete.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2009,16 +2070,19 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// List of acknowledgment IDs.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
+        /// the Pub/Sub system. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
         /// was made. Specifying zero may immediately make the message available for
         /// another pull request.
+        /// The minimum deadline you can specify is 0 seconds.
+        /// The maximum deadline you can specify is 600 seconds (10 minutes).
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2051,16 +2115,19 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// List of acknowledgment IDs.
         /// </param>
         /// <param name="ackDeadlineSeconds">
         /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. Must be >= 0. For example, if the value is 10, the new
+        /// the Pub/Sub system. For example, if the value is 10, the new
         /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
         /// was made. Specifying zero may immediately make the message available for
         /// another pull request.
+        /// The minimum deadline you can specify is 0 seconds.
+        /// The maximum deadline you can specify is 600 seconds (10 minutes).
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2095,6 +2162,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription whose message is being acknowledged.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
@@ -2131,6 +2199,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription whose message is being acknowledged.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="ackIds">
         /// The acknowledgment ID for the messages being acknowledged that was returned
@@ -2164,13 +2233,15 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// If this field set to true, the system will respond immediately even if
+        /// it there are no messages available to return in the `Pull` response.
+        /// Otherwise, the system may wait (for a bounded amount of time) until at
+        /// least one message is available, rather than returning no messages. The
+        /// client may cancel the request if it does not wish to wait any longer for
+        /// the response.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -2206,13 +2277,15 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The subscription from which messages should be pulled.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="returnImmediately">
-        /// If this is specified as true the system will respond immediately even if
-        /// it is not able to return a message in the `Pull` response. Otherwise the
-        /// system is allowed to wait until at least one message is available rather
-        /// than returning no messages. The client may cancel the request if it does
-        /// not wish to wait any longer for the response.
+        /// If this field set to true, the system will respond immediately even if
+        /// it there are no messages available to return in the `Pull` response.
+        /// Otherwise, the system may wait (for a bounded amount of time) until at
+        /// least one message is available, rather than returning no messages. The
+        /// client may cancel the request if it does not wish to wait any longer for
+        /// the response.
         /// </param>
         /// <param name="maxMessages">
         /// The maximum number of messages returned for this request. The Pub/Sub
@@ -2250,6 +2323,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="pushConfig">
         /// The push configuration for future deliveries.
@@ -2289,6 +2363,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="subscription">
         /// The name of the subscription.
+        /// Format is `projects/{project}/subscriptions/{sub}`.
         /// </param>
         /// <param name="pushConfig">
         /// The push configuration for future deliveries.
@@ -2446,6 +2521,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -2480,6 +2557,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.

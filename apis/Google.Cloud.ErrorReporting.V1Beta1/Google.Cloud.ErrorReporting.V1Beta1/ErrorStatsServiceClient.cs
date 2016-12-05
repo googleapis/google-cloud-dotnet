@@ -318,7 +318,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        /// [Required] List data for the given time range.
+        /// [Optional] List data for the given time range.
+        /// If not set a default time range is used. The field time_range_begin
+        /// in the response will specify the beginning of this time range.
         /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
         /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
@@ -360,7 +362,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        /// [Required] List data for the given time range.
+        /// [Optional] List data for the given time range.
+        /// If not set a default time range is used. The field time_range_begin
+        /// in the response will specify the beginning of this time range.
         /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
         /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
@@ -396,7 +400,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -432,7 +437,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -468,7 +474,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
@@ -490,7 +497,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="cancellationToken">
@@ -511,7 +519,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
@@ -579,7 +588,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        /// [Required] List data for the given time range.
+        /// [Optional] List data for the given time range.
+        /// If not set a default time range is used. The field time_range_begin
+        /// in the response will specify the beginning of this time range.
         /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
         /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
@@ -629,7 +640,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Example: <code>projects/my-project-123</code>.
         /// </param>
         /// <param name="timeRange">
-        /// [Required] List data for the given time range.
+        /// [Optional] List data for the given time range.
+        /// If not set a default time range is used. The field time_range_begin
+        /// in the response will specify the beginning of this time range.
         /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
         /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
@@ -673,7 +686,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -717,7 +731,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="groupId">
@@ -761,7 +776,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
@@ -788,7 +804,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
         /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+        /// [Google Cloud Platform project
+        /// ID](https://support.google.com/cloud/answer/6158840).
         /// Example: `projects/my-project-123`.
         /// </param>
         /// <param name="callSettings">
