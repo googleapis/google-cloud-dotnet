@@ -15,6 +15,7 @@
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.Collections;
 using Moq;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Devtools.AspNet.Tests
@@ -56,7 +57,7 @@ namespace Google.Devtools.AspNet.Tests
 
             foreach (KeyValuePair<string, string> label in labels)
             {
-                if (label.Value.Equals(annotation[label.Key]))
+                if (String.Compare(label.Value, annotation[label.Key]) != 0)
                 {
                     return false;
                 }
