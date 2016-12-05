@@ -625,6 +625,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// The messages to publish.
@@ -650,6 +651,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// The messages to publish.
@@ -675,6 +677,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// The messages to publish.
@@ -698,6 +701,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -717,6 +721,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -735,6 +740,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -754,6 +760,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that topics belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -783,6 +790,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that topics belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -812,6 +820,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic that subscriptions are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -841,6 +850,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic that subscriptions are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -874,6 +884,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -897,6 +908,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -919,6 +931,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1090,6 +1103,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1118,6 +1133,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1146,6 +1163,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1302,6 +1321,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// The messages to publish.
@@ -1333,6 +1353,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The messages in the request will be published on this topic.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="messages">
         /// The messages to publish.
@@ -1362,6 +1383,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1386,6 +1408,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic to get.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1410,6 +1433,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that topics belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1446,6 +1470,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="project">
         /// The name of the cloud project that topics belong to.
+        /// Format is `projects/{project}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1482,6 +1507,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic that subscriptions are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1518,6 +1544,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// The name of the topic that subscriptions are attached to.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1558,6 +1585,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1586,6 +1614,7 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         /// <param name="topic">
         /// Name of the topic to delete.
+        /// Format is `projects/{project}/topics/{topic}`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1733,6 +1762,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.
@@ -1767,6 +1798,8 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
         /// </summary>
         /// <param name="resource">
         /// REQUIRED: The resource for which the policy detail is being requested.

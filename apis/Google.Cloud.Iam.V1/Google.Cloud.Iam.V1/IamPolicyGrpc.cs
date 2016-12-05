@@ -111,6 +111,8 @@ namespace Google.Cloud.Iam.V1 {
 
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
+      ///  If the resource does not exist, this will return an empty set of
+      ///  permissions, not a NOT_FOUND error.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
       {
@@ -212,6 +214,8 @@ namespace Google.Cloud.Iam.V1 {
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
+      ///  If the resource does not exist, this will return an empty set of
+      ///  permissions, not a NOT_FOUND error.
       /// </summary>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -219,6 +223,8 @@ namespace Google.Cloud.Iam.V1 {
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
+      ///  If the resource does not exist, this will return an empty set of
+      ///  permissions, not a NOT_FOUND error.
       /// </summary>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
@@ -226,6 +232,8 @@ namespace Google.Cloud.Iam.V1 {
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
+      ///  If the resource does not exist, this will return an empty set of
+      ///  permissions, not a NOT_FOUND error.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
@@ -233,6 +241,8 @@ namespace Google.Cloud.Iam.V1 {
       }
       /// <summary>
       ///  Returns permissions that a caller has on the specified resource.
+      ///  If the resource does not exist, this will return an empty set of
+      ///  permissions, not a NOT_FOUND error.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {

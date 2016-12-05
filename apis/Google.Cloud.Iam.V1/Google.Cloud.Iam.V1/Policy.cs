@@ -22,14 +22,14 @@ namespace Google.Cloud.Iam.V1 {
     static PolicyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxINZ29vZ2xlLmlhbS52MSJR",
-            "CgZQb2xpY3kSDwoHdmVyc2lvbhgBIAEoBRIoCghiaW5kaW5ncxgEIAMoCzIW",
-            "Lmdvb2dsZS5pYW0udjEuQmluZGluZxIMCgRldGFnGAMgASgMIigKB0JpbmRp",
-            "bmcSDAoEcm9sZRgBIAEoCRIPCgdtZW1iZXJzGAIgAygJQjsKEWNvbS5nb29n",
-            "bGUuaWFtLnYxQgtQb2xpY3lQcm90b1AB+AEBqgITR29vZ2xlLkNsb3VkLklh",
-            "bS5WMWIGcHJvdG8z"));
+            "Chpnb29nbGUvaWFtL3YxL3BvbGljeS5wcm90bxINZ29vZ2xlLmlhbS52MRoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byJRCgZQb2xpY3kSDwoHdmVy",
+            "c2lvbhgBIAEoBRIoCghiaW5kaW5ncxgEIAMoCzIWLmdvb2dsZS5pYW0udjEu",
+            "QmluZGluZxIMCgRldGFnGAMgASgMIigKB0JpbmRpbmcSDAoEcm9sZRgBIAEo",
+            "CRIPCgdtZW1iZXJzGAIgAygJQjsKEWNvbS5nb29nbGUuaWFtLnYxQgtQb2xp",
+            "Y3lQcm90b1AB+AEBqgITR29vZ2xlLkNsb3VkLklhbS5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Policy), global::Google.Cloud.Iam.V1.Policy.Parser, new[]{ "Version", "Bindings", "Etag" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Iam.V1.Binding), global::Google.Cloud.Iam.V1.Binding.Parser, new[]{ "Role", "Members" }, null, null, null)
