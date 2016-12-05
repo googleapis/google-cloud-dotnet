@@ -13,7 +13,9 @@
 // limitations under the License.
 
 using Moq;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -25,21 +27,21 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void CanTrace()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(1001);
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(1001);
             Assert.True(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_False()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(999);
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(999);
             Assert.False(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_DecimalQps()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
         }
@@ -47,7 +49,7 @@ namespace Google.Devtools.AspNet.Tests
         [Fact]
         public void CanTrace_Multiple()
         {
-            RateLimiter rateLimiter = Utils.GetRateLimiter(
+            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(
                 1, new long[] { 999, 1001, 1790, 1850, 2030, 2700, 5000 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
@@ -69,6 +71,9 @@ namespace Google.Devtools.AspNet.Tests
                 int canTraceCounter = 0;
                 int threads = 10;
 
+                // Start a timer to get the total time from tasks starting to ending.
+                Stopwatch timer = Stopwatch.StartNew();
+
                 // Start 10 threads to hit the rate limiter
                 Task[] tasks = new Task[threads];
                 for (int i = 0; i < threads; i++)
@@ -86,9 +91,16 @@ namespace Google.Devtools.AspNet.Tests
                     });
                 }
 
-                // Set a timeout of 2.1 seconds which should allow 2 traces.
+                // Set a timeout to 2.1 seconds which should allow 2 traces unless control
+                // of the tasks does not return right away.  To ensure a proper trace count
+                // use the number of seconds to check the trace count.
                 await Task.Delay(2100);
-                Assert.Equal(2, canTraceCounter);
+                var elapsedSeconds = Math.Floor(timer.Elapsed.TotalSeconds);
+
+                // Allow for the trace count to be one lower than expected to account
+                // for the elapsed time being on the second mark or close and the
+                // limiter not getting a final request.
+                Assert.InRange(canTraceCounter, elapsedSeconds - 1, elapsedSeconds);
             }
             finally
             {

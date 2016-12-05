@@ -12,13 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Google.Devtools.Clouderrorreporting.V1Beta1;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Moq;
 using System;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
 using Xunit;
 
@@ -31,7 +32,7 @@ namespace Google.Devtools.AspNet.Tests
         private static readonly ProductInfoHeaderValue UserAgentValue = new ProductInfoHeaderValue("UserAgent", "1.0");
         private static readonly HttpStatusCode ConflictStatusCode = HttpStatusCode.Conflict;
         private static readonly string ProjectId = "pid";
-        private static readonly string FormattedProjectId = ReportErrorsServiceClient.FormatProjectName(ProjectId);
+        private static readonly string FormattedProjectId = new ProjectName(ProjectId).ToString();
         private static readonly string ServiceName = "SomeService";
         private static readonly string Version = "1.0.0";
         private static readonly Exception SimpleException = new Exception();
@@ -109,7 +110,8 @@ namespace Google.Devtools.AspNet.Tests
 
         private CloudErrorReportingExceptionLogger GetLogger(ReportErrorsServiceClient client)
         {
-            return CloudErrorReportingExceptionLogger.Create(client, ProjectId, ServiceName, Version);
+            return CloudErrorReportingExceptionLogger.Create(
+                Task.FromResult(client), ProjectId, ServiceName, Version);
         }
 
         [Fact]
@@ -148,13 +150,14 @@ namespace Google.Devtools.AspNet.Tests
         }
 
         [Fact]
-        public void LogAsync()
+        public async Task LogAsync()
         {
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null));
+            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null))
+                .Returns(Task.FromResult(new ReportErrorEventResponse()));
 
             CloudErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
-            logger.LogAsync(CreateComplexContext(), CancellationToken.None);
+            await logger.LogAsync(CreateComplexContext(), CancellationToken.None);
 
             mockClient.VerifyAll();
         }

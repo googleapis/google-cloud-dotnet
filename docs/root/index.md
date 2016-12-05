@@ -14,15 +14,18 @@ supported here.
 
 ## APIs with supporting libraries
 
-Alpha and beta releases from NuGet.org:
+Releases approaching general availability ("late stage beta"):
 
 - [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
-- [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
+- [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
+- [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
+
+Alpha and beta releases from NuGet.org:
+
+- [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
-- [Google.Datastore.V1](Google.Datastore.V1/index.html)
-- [Google.Logging.V2](Google.Logging.V2/index.html)
-- [Google.Pubsub.V1](Google.Pubsub.V1/index.html)
+- [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 
 Alpha releases from
 [MyGet](https://www.myget.org/gallery/google-dotnet-public):
@@ -30,6 +33,6 @@ Alpha releases from
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
 - [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
 - [Google.Devtools.AspNet](Google.Devtools.AspNet/index.html)
-- [Google.Devtools.Clouderrorreporting.V1Beta1](Google.Devtools.Clouderrorreporting.V1Beta1/index.html)
-- [Google.Devtools.Cloudtrace.V1](Google.Devtools.Cloudtrace.V1/index.html)
-- [Google.Monitoring.V3](Google.Monitoring.V3/index.html)
+- [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
+- [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
+- [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)

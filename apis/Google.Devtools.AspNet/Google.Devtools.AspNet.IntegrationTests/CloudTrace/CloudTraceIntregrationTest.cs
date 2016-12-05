@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -23,7 +23,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-using Trace = Google.Devtools.Cloudtrace.V1.Trace;
+using Trace = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Devtools.AspNet.IntegrationTests
 {
@@ -185,7 +185,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
             Trace trace = await GetTrace(rootSpanName);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
-            Assert.True(Tests.Utils.IsValidAnnotation(trace.Spans[0], annotation));
+            Assert.True(Tests.TraceUtils.IsValidAnnotation(trace.Spans[0], annotation));
         }
 
         [Fact]
@@ -263,7 +263,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
 
             Assert.Equal(childTwo.SpanId, grandchildTwo.ParentSpanId);
             Assert.Equal(TraceSpan.Types.SpanKind.Unspecified, grandchildTwo.Kind);
-            Assert.True(Tests.Utils.IsValidAnnotation(grandchildTwo, annotation));
+            Assert.True(Tests.TraceUtils.IsValidAnnotation(grandchildTwo, annotation));
         }
 
         [Fact]

@@ -44,15 +44,24 @@ namespace Google.Cloud.BigQuery.V2
         private static readonly Func<string, string> StringConverter = v => v;
         private static readonly Func<string, long> Int64Converter = v => long.Parse(v, CultureInfo.InvariantCulture);
         private static readonly Func<string, double> DoubleConverter = v => double.Parse(v, CultureInfo.InvariantCulture);
-        private static readonly Func<string, DateTime> DateTimeConverter = v => new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(DoubleConverter(v));
+        // AddSeconds rounds to the nearest millisecond, for some reason.
+        // Instead, we work out the number of ticks and add that.
+        private static readonly Func<string, DateTime> TimestampConverter = v =>
+        {
+            double seconds = DoubleConverter(v);
+            long microseconds = (long) (seconds * 1e6);
+            long ticks = microseconds * 10;
+            return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddTicks(ticks);
+        };
+        private static readonly Func<string, DateTime> DateConverter = v => DateTime.ParseExact(v, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+        private static readonly Func<string, TimeSpan> TimeConverter = v => DateTime.ParseExact(v, "HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture).TimeOfDay;
         private static readonly Func<string, byte[]> BytesConverter = v => Convert.FromBase64String(v);
         private static readonly Func<string, bool> BooleanConverter = v => v == "true";
-
 
         /// <summary>
         /// Retrieves a cell value by field name.
         /// </summary>
-        public object this[string name] => this[GetFieldIndex(name)];
+        public object this[string name] => this[Schema.GetFieldIndex(name)];
 
         /// <summary>
         /// Retrieves a cell value by index.
@@ -92,7 +101,13 @@ namespace Google.Cloud.BigQuery.V2
                     case BigQueryDbType.Boolean:
                         return ConvertArray(array, BooleanConverter);
                     case BigQueryDbType.Timestamp:
-                        return ConvertArray(array, DateTimeConverter);
+                        return ConvertArray(array, TimestampConverter);
+                    case BigQueryDbType.Date:
+                        return ConvertArray(array, DateConverter);
+                    case BigQueryDbType.Time:
+                        return ConvertArray(array, TimeConverter);
+                    case BigQueryDbType.DateTime:
+                        return ConvertArray(array, obj => (DateTime) obj);
                     case BigQueryDbType.Record:
                         return ConvertRecordArray(array, field);
                     default:
@@ -112,23 +127,34 @@ namespace Google.Cloud.BigQuery.V2
                 case BigQueryDbType.Boolean:
                     return BooleanConverter((string)rawValue);
                 case BigQueryDbType.Timestamp:
-                    return DateTimeConverter((string)rawValue);
+                    return TimestampConverter((string)rawValue);
+                case BigQueryDbType.Date:
+                    return DateConverter((string) rawValue);
+                case BigQueryDbType.Time:
+                    return TimeConverter((string) rawValue);
+                case BigQueryDbType.DateTime:
+                    return rawValue is DateTime
+                        ? (DateTime) rawValue
+                        : (DateTime) (JValue) rawValue;
                 case BigQueryDbType.Record:
                     return ConvertRecord((JObject)rawValue, field);
                 default:
-                    throw new InvalidOperationException($"Unhandled field type {type} {rawValue.GetType()}");
+                    throw new InvalidOperationException($"Unhandled field type {type} (Underlying type: {rawValue.GetType()})");
             }
         }
 
         // TODO: GetString etc, like IDataReader etc. (Should we actually implement IDataReader?)
 
         private static T[] ConvertArray<T>(JArray array, Func<string, T> converter)
+            => ConvertArray(array, (object obj) => converter((string) obj));
+
+        private static T[] ConvertArray<T>(JArray array, Func<object, T> converter)
         {
             T[] ret = new T[array.Count];
             for (int i = 0; i < ret.Length; i++)
             {
-                JObject value = (JObject)array[i];
-                ret[i] = converter((string)value["v"]);
+                JValue value = (JValue) ((JObject) array[i])["v"];
+                ret[i] = converter(value.Value);
             }
             return ret;
         }
@@ -160,18 +186,6 @@ namespace Google.Cloud.BigQuery.V2
                 ret[field.Name] = ConvertSingleValue(token.Type == JTokenType.String ? (string)token : (object)token, field);
             }
             return ret;
-        }
-
-        private int GetFieldIndex(string fieldName)
-        {
-            for (int i = 0; i < Schema.Fields.Count; i++)
-            {
-                if (Schema.Fields[i].Name == fieldName)
-                {
-                    return i;
-                }
-            }
-            throw new KeyNotFoundException($"No such field: '{fieldName}'");
         }
     }
 }

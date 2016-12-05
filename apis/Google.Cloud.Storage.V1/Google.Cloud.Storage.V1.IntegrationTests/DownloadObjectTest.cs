@@ -47,11 +47,38 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
-        public async Task WrongName()
+        public void WrongObjectName()
         {
             using (var stream = new MemoryStream())
             {
-                await Assert.ThrowsAnyAsync<Exception>(() => _fixture.Client.DownloadObjectAsync(_fixture.BucketPrefix, "doesntexist", stream));
+                Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(_fixture.ReadBucket, "doesntexist", stream));
+            }
+        }
+
+        [Fact]
+        public async Task WrongObjectName_Async()
+        {
+            using (var stream = new MemoryStream())
+            {
+                await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.DownloadObjectAsync(_fixture.ReadBucket, "doesntexist", stream));
+            }
+        }
+
+        [Fact]
+        public void WrongBucketName()
+        {
+            using (var stream = new MemoryStream())
+            {
+                Assert.Throws<GoogleApiException>(() => _fixture.Client.DownloadObject(_fixture.BucketPrefix + "doesntexist", "doesntexist", stream));
+            }
+        }
+
+        [Fact]
+        public async Task WrongBucketName_Async()
+        {
+            using (var stream = new MemoryStream())
+            {
+                await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.DownloadObjectAsync(_fixture.BucketPrefix + "doesntexist", "doesntexist", stream));
             }
         }
 

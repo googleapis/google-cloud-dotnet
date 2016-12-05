@@ -12,15 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using Xunit;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Google.Protobuf.Collections;
 
-using Trace = Google.Devtools.Cloudtrace.V1.Trace;
+using Trace = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Devtools.AspNet.Tests
 {
@@ -120,7 +119,7 @@ namespace Google.Devtools.AspNet.Tests
                     t => t.Traces_.Count == 1 &&
                         t.Traces_[0].Spans.Count == 1 &&
                         IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
-                        Utils.IsValidAnnotation(t.Traces_[0].Spans[0], annotation))));
+                        TraceUtils.IsValidAnnotation(t.Traces_[0].Spans[0], annotation))));
 
             tracer.StartSpan("span-name");
             tracer.AnnotateSpan(annotation);
@@ -166,7 +165,7 @@ namespace Google.Devtools.AspNet.Tests
                         IsValidSpan(t.Traces_[0].Spans[0], "child-one", t.Traces_[0].Spans[4].SpanId) &&
                         IsValidSpan(t.Traces_[0].Spans[1], "grandchild-one", t.Traces_[0].Spans[3].SpanId, SpanKind.RpcClient) &&
                         IsValidSpan(t.Traces_[0].Spans[2], "grandchild-two", t.Traces_[0].Spans[3].SpanId) &&
-                        Utils.IsValidAnnotation(t.Traces_[0].Spans[2], annotation) &&
+                        TraceUtils.IsValidAnnotation(t.Traces_[0].Spans[2], annotation) &&
                         IsValidSpan(t.Traces_[0].Spans[3], "child-two", t.Traces_[0].Spans[4].SpanId) &&
                         !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]) &&
                         IsValidSpan(t.Traces_[0].Spans[4], "root"))));

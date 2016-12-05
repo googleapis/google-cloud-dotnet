@@ -13,7 +13,7 @@
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
-using Google.Devtools.Cloudtrace.V1;
+using Google.Cloud.Trace.V1;
 using Moq;
 using System.Threading.Tasks;
 using Xunit;
@@ -49,19 +49,6 @@ namespace Google.Devtools.AspNet.Tests
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
             consumer.Receive(new Traces());
-            mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
-        }
-
-        [Fact]
-        public void Receive_ClientNotReady()
-        {
-            Traces traces = GetTraces();
-
-            Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            Task<TraceServiceClient> taskClient = new Task<TraceServiceClient>(() => mockClient.Object);
-            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
-
-            consumer.Receive(traces);
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
     }

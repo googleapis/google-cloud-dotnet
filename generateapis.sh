@@ -122,15 +122,25 @@ $PROTOC \
 
 # Now the per-API codegen  
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision.yaml
-# generate_api Google.Cloud.Language.V1Beta1 google/cloud/language/v1beta1 language.yaml
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language.yaml
 generate_api Google.Cloud.Speech.V1Beta1 google/cloud/speech/v1beta1 cloud_speech.yaml
-generate_api Google.Logging.V2 google/logging/v2 logging.yaml google/logging/type
-generate_api Google.Devtools.Cloudtrace.V1 google/devtools/cloudtrace/v1 trace.yaml
-generate_api Google.Devtools.Clouderrorreporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
-generate_api Google.Longrunning google/longrunning longrunning/longrunning.yaml
-generate_api Google.Pubsub.V1 google/pubsub/v1 pubsub.yaml
-generate_api Google.Datastore.V1 google/datastore/v1 datastore.yaml
-generate_api Google.Monitoring.V3 google/monitoring/v3 monitoring.yaml
+generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
+generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 trace.yaml
+generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
+generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
+generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
+generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
 
-# TODO: Generate just the grpc/protos for IAM.
+# Generate LongRunning, after changing the license text (because we use
+# Apache for LRO where other languages use BSD)
+sed -i s/license-header-bsd-3-clause.txt/license-header-apache-2.0.txt/g googleapis/google/longrunning/longrunning_gapic.yaml
+generate_api Google.LongRunning google/longrunning longrunning/longrunning.yaml
+
+# IAM (just proto and grpc)
+$PROTOC \
+  --csharp_out=apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1 \
+  --grpc_out=apis/Google.Cloud.Iam.V1/Google.Cloud.Iam.V1 \
+  -I googleapis \
+  -I $CORE_PROTOS_ROOT \
+  --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
+  googleapis/google/iam/v1/*.proto

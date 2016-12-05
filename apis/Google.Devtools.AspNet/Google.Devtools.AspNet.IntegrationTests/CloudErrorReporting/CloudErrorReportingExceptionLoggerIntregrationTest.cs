@@ -16,7 +16,6 @@ using Google.Devtools.Clouderrorreporting.V1Beta1;
 using Microsoft.Owin.Testing;
 using Owin;
 using System;
-using System.Globalization;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -29,7 +28,6 @@ namespace Google.Devtools.AspNet.IntegrationTests
 {
     public class CloudErrorReportingExceptionLoggerIntregrationTest
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
         private static string ProjectId;
         private static string TestId;
 
