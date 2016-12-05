@@ -10,7 +10,10 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
-// limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
+// limitations under the License.
+
+using System;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 
@@ -27,6 +30,28 @@ namespace Google.Devtools.AspNet.Snippets
             // Add a catch all for the uncaught exceptions.
             config.Services.Add(typeof(IExceptionLogger),
                 CloudErrorReportingExceptionLogger.Create(projectId, serviceName, version));
+        }
+        // End sample
+
+        // Sample: InitializeTrace
+        public class Global : HttpApplication
+        {
+            void Application_Start(object sender, EventArgs e)
+            {
+                string projectId = "[Google Cloud Platform project ID]";
+                // Trace a sampling of incoming Http requests.
+                CloudTrace.Initialize(projectId, this);
+            }
+        }
+        // End sample
+
+        // Sample: UseTracer
+        public void TraceHelloWorld()
+        {
+            // Manually trace a specific operation.
+            CloudTrace.GetCurrentTracer().StartSpan("hello-world");
+            Console.Out.WriteLine("Hello, World!");
+            CloudTrace.GetCurrentTracer().EndSpan();
         }
         // End sample
     }
