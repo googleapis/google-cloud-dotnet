@@ -28,8 +28,8 @@ namespace Google.Cloud.BigQuery.V2
     /// the mean to retrieve result rows from the job.
     /// </summary>
     /// <remarks>
-    /// The methods to return data from the query (<see cref="GetResultSet(int, PollSettings)"/>,
-    /// <see cref="GetResultSetAsync(int, PollSettings, CancellationToken)"/>,
+    /// The methods to return data from the query (<see cref="ReadPage(int, PollSettings)"/>,
+    /// <see cref="ReadPageAsync(int, PollSettings, CancellationToken)"/>,
     /// <see cref="GetRows(PollSettings)"/> and <see cref="GetRowsAsync(PollSettings)"/>)
     /// all poll automatically if they are called
     /// on incomplete jobs. To poll manually, use <see cref="PollUntilCompleted(PollSettings)"/> or
@@ -128,36 +128,36 @@ namespace Google.Cloud.BigQuery.V2
         /// If the job is still incompleted, it is polled until it has completed.
         /// </summary>
         /// <remarks>
-        /// If <paramref name="maxRows"/> is smaller than the number of rows originally requested,
+        /// If <paramref name="pageSize"/> is smaller than the number of rows originally requested,
         /// this may require another server call to retrieve an appropriate page token. When working
         /// in pages, always specify a maximum per-request number of rows less than or equal to the
         /// page size you want.
         /// </remarks>
-        /// <param name="maxRows">The maximum number of rows to retrieve. Must be positive.</param>
+        /// <param name="pageSize">The maximum number of rows to retrieve. Must be positive.</param>
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
         /// May be null, in which case defaults will be supplied.</param>
         /// <returns>An in-memory result set of at most the given number of rows.</returns>
-        public BigQueryResultSet GetResultSet(int maxRows, PollSettings pollSettings = null)
+        public BigQueryPage ReadPage(int pageSize, PollSettings pollSettings = null)
         {
-            GaxPreconditions.CheckArgumentRange(maxRows, nameof(maxRows), 1, int.MaxValue);
-            return PollUntilCompleted(pollSettings).GetResultSetImpl(maxRows);
+            GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
+            return PollUntilCompleted(pollSettings).ReadPageImpl(pageSize);
         }
 
-        // Implementation of GetResultSet for an already-complete job.
-        private BigQueryResultSet GetResultSetImpl(int maxRows)
+        // Implementation of ReadPage for an already-complete job.
+        private BigQueryPage ReadPageImpl(int pageSize)
         {
             if (!Completed)
             {
-                throw new InvalidOperationException($"Cannot call {nameof(GetResultSet)} on an incomplete job");
+                throw new InvalidOperationException($"Cannot call {nameof(ReadPage)} on an incomplete job");
             }
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
-            List<BigQueryRow> rows = new List<BigQueryRow>(maxRows);
-            if ((clonedOptions.PageSize == null || clonedOptions.PageSize > maxRows) && _response.Rows?.Count > maxRows)
+            List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
+            if ((clonedOptions.PageSize == null || clonedOptions.PageSize > pageSize) && _response.Rows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 // Still, we know it's already completed, so we can skip straight to the Impl method again.
-                clonedOptions.PageSize = maxRows;
-                return _client.GetQueryResults(JobReference, clonedOptions).GetResultSetImpl(maxRows);
+                clonedOptions.PageSize = pageSize;
+                return _client.GetQueryResults(JobReference, clonedOptions).ReadPageImpl(pageSize);
             }
             // First add the rows from the first response which is part of the state
             // of the object.
@@ -165,16 +165,16 @@ namespace Google.Cloud.BigQuery.V2
             string pageToken = _response.PageToken;
             clonedOptions.StartIndex = null;
             // Now keep going until we've filled the result set or know there's no more data.
-            while (rows.Count > maxRows && pageToken != null)
+            while (rows.Count > pageSize && pageToken != null)
             {
                 clonedOptions.PageToken = pageToken;
-                clonedOptions.PageSize = maxRows - rows.Count;
+                clonedOptions.PageSize = pageSize - rows.Count;
                 var job = _client.GetQueryResults(JobReference, clonedOptions);
                 rows.AddRange(job.ResponseRows);
                 pageToken = job._response.PageToken;
 
             }
-            return new BigQueryResultSet(rows, Schema, JobReference, pageToken);
+            return new BigQueryPage(rows, Schema, JobReference, pageToken);
         }
 
         /// <summary>
@@ -236,36 +236,36 @@ namespace Google.Cloud.BigQuery.V2
         /// If the job is still incompleted, it is polled until it has completed.
         /// </summary>
         /// <remarks>
-        /// If <paramref name="maxRows"/> is smaller than the number of rows originally requested,
+        /// If <paramref name="pageSize"/> is smaller than the number of rows originally requested,
         /// this may require another server call to retrieve an appropriate page token. When working
         /// in pages, always specify a maximum per-request number of rows less than or equal to the
         /// page size you want.
         /// </remarks>
-        /// <param name="maxRows">The maximum number of rows to retrieve. Must be positive.</param>
+        /// <param name="pageSize">The maximum number of rows to retrieve. Must be positive.</param>
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
         /// May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// an in-memory result set of at most the given number of rows.</returns>
-        public async Task<BigQueryResultSet> GetResultSetAsync(int maxRows, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<BigQueryPage> ReadPageAsync(int pageSize, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
         {
-            GaxPreconditions.CheckArgumentRange(maxRows, nameof(maxRows), 1, int.MaxValue);
+            GaxPreconditions.CheckArgumentRange(pageSize, nameof(pageSize), 1, int.MaxValue);
             var job = await PollUntilCompletedAsync(pollSettings, cancellationToken);
-            return await job.GetResultSetAsyncImpl(maxRows, cancellationToken);
+            return await job.ReadPageAsyncImpl(pageSize, cancellationToken);
         }
 
-        // Implementation of GetResultSet for an already-complete job.
-        private async Task<BigQueryResultSet> GetResultSetAsyncImpl(int maxRows, CancellationToken cancellationToken)
+        // Implementation of ReadPageAsync for an already-complete job.
+        private async Task<BigQueryPage> ReadPageAsyncImpl(int pageSize, CancellationToken cancellationToken)
         {
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
-            List<BigQueryRow> rows = new List<BigQueryRow>(maxRows);
-            if ((clonedOptions.PageSize == null || clonedOptions.PageSize > maxRows) && _response.Rows?.Count > maxRows)
+            List<BigQueryRow> rows = new List<BigQueryRow>(pageSize);
+            if ((clonedOptions.PageSize == null || clonedOptions.PageSize > pageSize) && _response.Rows?.Count > pageSize)
             {
                 // Oops. Do it again from scratch, with a useful page size.
                 // Still, we know it's already completed, so we can skip straight to the Impl method again.
-                clonedOptions.PageSize = maxRows;
+                clonedOptions.PageSize = pageSize;
                 var newQueryJob = await _client.GetQueryResultsAsync(JobReference, clonedOptions, cancellationToken).ConfigureAwait(false);
-                return await newQueryJob.GetResultSetAsyncImpl(maxRows, cancellationToken).ConfigureAwait(false);
+                return await newQueryJob.ReadPageAsyncImpl(pageSize, cancellationToken).ConfigureAwait(false);
             }
             // First add the rows from the first response which is part of the state
             // of the object.
@@ -273,16 +273,16 @@ namespace Google.Cloud.BigQuery.V2
             string pageToken = _response.PageToken;
             clonedOptions.StartIndex = null;
             // Now keep going until we've filled the result set or know there's no more data.
-            while (rows.Count > maxRows && pageToken != null)
+            while (rows.Count > pageSize && pageToken != null)
             {
                 clonedOptions.PageToken = pageToken;
-                clonedOptions.PageSize = maxRows - rows.Count;
+                clonedOptions.PageSize = pageSize - rows.Count;
                 var job = await _client.GetQueryResultsAsync(JobReference, clonedOptions, cancellationToken).ConfigureAwait(false);
                 rows.AddRange(job.ResponseRows);
                 pageToken = job._response.PageToken;
 
             }
-            return new BigQueryResultSet(rows, Schema, JobReference, pageToken);
+            return new BigQueryPage(rows, Schema, JobReference, pageToken);
         }
 
         private static GetQueryResultsResponse ConvertQueryResponse(QueryResponse response) =>

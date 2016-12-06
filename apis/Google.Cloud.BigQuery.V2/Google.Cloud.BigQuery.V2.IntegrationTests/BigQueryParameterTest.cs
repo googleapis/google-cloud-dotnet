@@ -36,7 +36,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 Parameters = { { "value", BigQueryDbType.Int64, 2 } }
             };
-            var results = client.ExecuteQuery(command).GetResultSet(10);
+            var results = client.ExecuteQuery(command).ReadPage(10);
             Assert.Equal(new[] { 3L, 4L }, results.Rows.Select(r => (long) r["value"]));
         }
 
@@ -48,7 +48,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 Parameters = { { "p", BigQueryDbType.Array, new[] { 1, 3, 5 } } }
             };
-            var results = client.ExecuteQuery(command).GetResultSet(10);
+            var results = client.ExecuteQuery(command).ReadPage(10);
             Assert.Equal(new[] { 1L, 3L }, results.Rows.Select(r => (long)r["value"]));
         }
 
@@ -66,12 +66,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 }
             };
             // Find the value when we've provided a timestamp smaller than the actual value
-            var results = client.ExecuteQuery(command).GetResultSet(10);
+            var results = client.ExecuteQuery(command).ReadPage(10);
             Assert.Equal(1, results.Rows.Count);
 
             // We shouldn't find it now. (Angela's game started at 2002-01-01T00:00:00Z)
             command.Parameters[1].Value = new DateTime(2002, 1, 1, 0, 0, 1, DateTimeKind.Utc);
-            results = client.ExecuteQuery(command).GetResultSet(10);
+            results = client.ExecuteQuery(command).ReadPage(10);
             Assert.Equal(0, results.Rows.Count);
         }
 
@@ -82,18 +82,18 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             var parameter = new BigQueryParameter("player", BigQueryDbType.String, "Angela");
             var command = new BigQueryCommand($"SELECT score FROM {table} WHERE player=@player") { Parameters = { parameter } };
-            var resultSet = client.ExecuteQuery(command).GetResultSet(5);
+            var resultSet = client.ExecuteQuery(command).ReadPage(5);
             Assert.Equal(1, resultSet.Rows.Count);
             Assert.Equal(95, (long)resultSet.Rows[0]["score"]);
 
             // SQL rules: nothing equals null
             parameter.Value = null;
-            resultSet = client.ExecuteQuery(command).GetResultSet(5);
+            resultSet = client.ExecuteQuery(command).ReadPage(5);
             Assert.Equal(0, resultSet.Rows.Count);
 
             // But we should be able to find the null value this way.
             command.Sql = $"SELECT score FROM {table} WHERE player=@player OR (player IS NULL AND @player IS NULL)";
-            resultSet = client.ExecuteQuery(command).GetResultSet(5);
+            resultSet = client.ExecuteQuery(command).ReadPage(5);
             Assert.Equal(1, resultSet.Rows.Count);
             Assert.Equal(1, (long)resultSet.Rows[0]["score"]);
         }
@@ -112,7 +112,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         private BigQueryRow GetSingleRow(BigQueryCommand command)
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
-            var results = client.ExecuteQuery(command).GetResultSet(10);
+            var results = client.ExecuteQuery(command).ReadPage(10);
             Assert.Equal(1, results.Rows.Count);
             return results.Rows[0];
         }
