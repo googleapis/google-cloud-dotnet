@@ -13,6 +13,7 @@
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Google.Cloud.Trace.V1;
+using Google.Devtools.AspNet.Tests;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -24,7 +25,6 @@ using System.Threading.Tasks;
 using Xunit;
 
 using Trace = Google.Cloud.Trace.V1.Trace;
-using TraceUtils = Google.Devtools.AspNet.Tests.TraceUtils;
 
 namespace Google.Devtools.AspNet.IntegrationTests
 {
@@ -54,7 +54,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
         {
             _projectId = Utils.GetProjectIdFromEnvironment();
             _testId = Utils.GetTestId();
-            _startTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
+            _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
             _grpcClient = TraceServiceClient.Create().GrpcClient;
         }
 
@@ -79,8 +79,8 @@ namespace Google.Devtools.AspNet.IntegrationTests
         /// </summary>
         private void BlockUntilClockTick()
         {
-            DateTime now = DateTime.Now;
-            while (now >= DateTime.Now)
+            DateTime now = DateTime.UtcNow;
+            while (now >= DateTime.UtcNow)
             {
                 Thread.Sleep(1);
             }
