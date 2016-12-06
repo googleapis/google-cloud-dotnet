@@ -44,15 +44,16 @@ namespace Google.Devtools.AspNet.Snippets
             }
         }
         // End sample
-
-        // Sample: UseTracer
+        
         public void TraceHelloWorld()
         {
+            // Sample: UseTracer
             // Manually trace a specific operation.
             CloudTrace.GetCurrentTracer().StartSpan("hello-world");
             Console.Out.WriteLine("Hello, World!");
             CloudTrace.GetCurrentTracer().EndSpan();
+            // End sample
         }
-        // End sample
+
     }
 }

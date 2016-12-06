@@ -3,7 +3,7 @@
 `Google.Devtools.AspNet` is an ASP.NET instrumentation library for Google Stackdriver.
 It allows for simple integration of Stackdriver into ASP.NET applications with minimal code changes.
 
-`Google.Devtools.AspNet` currently supports Stackdriver Error Reporting and Stackdriver Tracing.
+`Google.Devtools.AspNet` currently supports Stackdriver Error Reporting and Stackdriver Trace.
 
 # Installation
 
