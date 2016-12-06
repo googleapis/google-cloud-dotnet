@@ -184,14 +184,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void EmptyQueryResults_GetResultSet()
+        public void EmptyQueryResults_ReadPage()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             // Deliberately overfetch
             var queryJob = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
                 .PollQueryUntilCompleted(new GetQueryResultsOptions { PageSize = 100 });
-            var resultSet = queryJob.GetResultSet(10);
+            var resultSet = queryJob.ReadPage(10);
             Assert.Empty(resultSet.Rows);
         }
 
