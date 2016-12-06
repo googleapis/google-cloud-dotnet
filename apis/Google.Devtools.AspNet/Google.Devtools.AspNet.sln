@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Devtools.AspNet", "Google.Devtools.AspNet\Google.Devtools.AspNet.xproj", "{D85333C3-F612-4D92-8ECD-E674A73AEC8F}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Devtools.AspNet.Tests", "Google.Devtools.AspNet.Tests\Google.Devtools.AspNet.Tests.xproj", "{575CD5C0-C69D-495E-90FD-028BE94178E4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Devtools.Clouderrorreporting.V1Beta1", "..\Google.Devtools.Clouderrorreporting.V1Beta1\Google.Devtools.Clouderrorreporting.V1Beta1\Google.Devtools.Clouderrorreporting.V1Beta1.xproj", "{4AB959C8-953B-41BA-9C8F-392002F6A4F6}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Devtools.AspNet.Snippets", "Google.Devtools.AspNet.Snippets\Google.Devtools.AspNet.Snippets.xproj", "{AAB65508-7A15-4F7D-B07E-091F98B39ADC}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Devtools.AspNet.IntegrationTests", "Google.Devtools.AspNet.IntegrationTests\Google.Devtools.AspNet.IntegrationTests.xproj", "{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ErrorReporting.V1Beta1", "..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.xproj", "{7408D53D-88E6-42BB-B79A-1B18B027633D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Trace.V1", "..\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.xproj", "{939FA175-86CE-4B80-98E8-EDE676FD7821}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D85333C3-F612-4D92-8ECD-E674A73AEC8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D85333C3-F612-4D92-8ECD-E674A73AEC8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D85333C3-F612-4D92-8ECD-E674A73AEC8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D85333C3-F612-4D92-8ECD-E674A73AEC8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575CD5C0-C69D-495E-90FD-028BE94178E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575CD5C0-C69D-495E-90FD-028BE94178E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575CD5C0-C69D-495E-90FD-028BE94178E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575CD5C0-C69D-495E-90FD-028BE94178E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB959C8-953B-41BA-9C8F-392002F6A4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB959C8-953B-41BA-9C8F-392002F6A4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB959C8-953B-41BA-9C8F-392002F6A4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB959C8-953B-41BA-9C8F-392002F6A4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB65508-7A15-4F7D-B07E-091F98B39ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB65508-7A15-4F7D-B07E-091F98B39ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB65508-7A15-4F7D-B07E-091F98B39ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB65508-7A15-4F7D-B07E-091F98B39ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939FA175-86CE-4B80-98E8-EDE676FD7821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939FA175-86CE-4B80-98E8-EDE676FD7821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939FA175-86CE-4B80-98E8-EDE676FD7821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939FA175-86CE-4B80-98E8-EDE676FD7821}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
