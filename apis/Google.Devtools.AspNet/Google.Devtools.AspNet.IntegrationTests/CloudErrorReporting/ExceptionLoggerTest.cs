@@ -16,7 +16,6 @@ using Google.Devtools.Clouderrorreporting.V1Beta1;
 using Microsoft.Owin.Testing;
 using Owin;
 using System;
-using System.Globalization;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -27,30 +26,26 @@ using Xunit;
 
 namespace Google.Devtools.AspNet.IntegrationTests
 {
-    public class CloudErrorReportingExceptionLoggerIntregrationTest
+    public class ExceptionLoggerTest
     {
-        private const string ProjectEnvironmentVariable = "TEST_PROJECT";
         private static string ProjectId;
         private static string TestId;
 
-        public CloudErrorReportingExceptionLoggerIntregrationTest()
+        public ExceptionLoggerTest()
         {
-            ProjectId = Environment.GetEnvironmentVariable(ProjectEnvironmentVariable);
-            if (string.IsNullOrEmpty(ProjectId))
-            {
-                throw new InvalidOperationException(
-                    $"Please set the {ProjectEnvironmentVariable} environment variable before running tests");
-            }
-            TestId = DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
+            ProjectId = Utils.GetProjectIdFromEnvironment();
+            TestId = Utils.GetTestId();
         }
 
         [Fact]
-        public void ErrorReportingTest()
+        public async Task ErrorReportingTest()
         {
-            // Create a test server and make an http request.
+            Task<ErrorStatsServiceClient> clientTask = ErrorStatsServiceClient.CreateAsync();
+
+            // Create a test server and make an http.
             using (TestServer server = TestServer.Create<ErrorReportingApplication>())
             {
-                server.HttpClient.GetAsync("").Wait();
+                await server.HttpClient.GetAsync("");
 
                 // Create a request that will filter on the TestId which is set to the service and version.
                 ListGroupStatsRequest request = new ListGroupStatsRequest
@@ -64,10 +59,10 @@ namespace Google.Devtools.AspNet.IntegrationTests
                 };
 
                 // Check that we have the proper results and the TestId shows up in the error.
-                ErrorStatsService.ErrorStatsServiceClient grpcClient = ErrorStatsServiceClient.Create().GrpcClient;
-                ListGroupStatsResponse listResponse = grpcClient.ListGroupStats(request);
-                Assert.NotEmpty(listResponse.ErrorGroupStats);
-                ErrorGroupStats stats = listResponse.ErrorGroupStats[0];
+                ErrorStatsService.ErrorStatsServiceClient grpcClient = (await clientTask).GrpcClient;
+                ListGroupStatsResponse listResposne = grpcClient.ListGroupStats(request);
+                Assert.True(listResposne.ErrorGroupStats.Count > 0);
+                ErrorGroupStats stats = listResposne.ErrorGroupStats[0];
                 Assert.True(stats.Count > 0);
                 Assert.Contains(TestId, stats.Representative.Message);
             }

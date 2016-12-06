@@ -12,7 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Trace.V1;
+using Google.Protobuf.Collections;
 using Moq;
+using System;
 using System.Collections.Generic;
 
 namespace Google.Devtools.AspNet.Tests
@@ -39,6 +42,27 @@ namespace Google.Devtools.AspNet.Tests
             Mock<ITimer> watch = new Mock<ITimer>();
             watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() => returnQueue.Dequeue());
             return new RateLimiter(qps, watch.Object);
+        }
+
+        /// <summary>
+        /// Checks if a span's labels are are equal to a dictionary strings.
+        /// </summary>
+        internal static bool IsValidAnnotation(TraceSpan span, Dictionary<string, string> annotation)
+        {
+            MapField<string, string> labels = span.Labels;
+            if (labels.Count != annotation.Count)
+            {
+                return false;
+            }
+
+            foreach (KeyValuePair<string, string> label in labels)
+            {
+                if (String.Compare(label.Value, annotation[label.Key]) != 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
