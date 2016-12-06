@@ -300,7 +300,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// The existing or new dataset.</returns>
+        /// the existing or new dataset.</returns>
         public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(string datasetId,
             GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             GetOrCreateDatasetAsync(GetDatasetReference(datasetId), getOptions, createOptions, cancellationToken);
@@ -315,7 +315,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// The existing or new dataset.</returns>
+        /// the existing or new dataset.</returns>
         public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(string projectId, string datasetId,
             GetDatasetOptions getOptions = null, CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             GetOrCreateDatasetAsync(GetDatasetReference(projectId, datasetId), getOptions, createOptions, cancellationToken);
@@ -328,7 +328,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="createOptions">The options for the "create" operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// The existing or new dataset.</returns>
+        /// the existing or new dataset.</returns>
         public virtual Task<BigQueryDataset> GetOrCreateDatasetAsync(DatasetReference datasetReference, GetDatasetOptions getOptions = null,
             CreateDatasetOptions createOptions = null, CancellationToken cancellationToken = default(CancellationToken))
         {

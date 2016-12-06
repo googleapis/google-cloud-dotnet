@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// A dataset within BigQuery.
+    /// An asynchronous job within BigQuery.
     /// </summary>
     /// <remarks>
     /// This class wraps the underlying REST API resource and retains a reference to the original

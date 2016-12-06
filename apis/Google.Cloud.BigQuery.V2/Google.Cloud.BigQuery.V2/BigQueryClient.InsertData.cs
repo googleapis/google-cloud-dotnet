@@ -390,7 +390,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// A data upload job.</returns>
+        /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadJsonAsync(string projectId, string datasetId, string tableId,
             TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             UploadJsonAsync(GetTableReference(projectId, datasetId, tableId), schema, rows, options, cancellationToken);
@@ -411,7 +411,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// A data upload job.</returns>
+        /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadJsonAsync(string datasetId, string tableId,
             TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             UploadJsonAsync(GetTableReference(datasetId, tableId), schema, rows, options, cancellationToken);
@@ -430,7 +430,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// A data upload job.</returns>
+        /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadJsonAsync(TableReference tableReference,
             TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
