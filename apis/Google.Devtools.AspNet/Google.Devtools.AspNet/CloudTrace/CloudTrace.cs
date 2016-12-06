@@ -48,7 +48,11 @@ namespace Google.Devtools.AspNet
     /// </example>
     /// 
     /// <remarks>
-    /// Handles tracing for ASP.NET applications and sends data to the Stackdriver Trace APIReporting.
+    /// Handles tracing for ASP.NET applications and sends data to the Stackdriver Trace API Reporting.
+    /// 
+    /// By default when initialized a small sampling of http requests will automatically be traced.  Additional
+    /// trace data can be collected manually.
+    /// 
     /// Docs: https://cloud.google.com/trace/docs/
     /// </remarks>
     public sealed class CloudTrace
