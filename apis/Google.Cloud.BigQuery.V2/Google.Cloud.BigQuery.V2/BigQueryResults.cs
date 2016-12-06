@@ -23,10 +23,9 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.BigQuery.V2
 {
-    // TODO: Rename this to avoid the double "query".
-
     /// <summary>
-    /// A job known to be running a query. The job may not have completed yet.
+    /// A job known to be running a query. The job may not have completed yet. This class provides
+    /// the mean to retrieve result rows from the job.
     /// </summary>
     /// <remarks>
     /// The methods to return data from the query (<see cref="GetResultSet(int, PollSettings)"/>,
@@ -36,7 +35,7 @@ namespace Google.Cloud.BigQuery.V2
     /// on incomplete jobs. To poll manually, use <see cref="PollUntilCompleted(PollSettings)"/> or
     /// <see cref="PollUntilCompletedAsync(PollSettings, CancellationToken)"/>.
     /// </remarks>
-    public sealed class BigQueryQueryJob
+    public sealed class BigQueryResults
     {
         private readonly GetQueryResultsResponse _response;
         private readonly BigQueryClient _client;
@@ -67,14 +66,14 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         private IEnumerable<BigQueryRow> ResponseRows => (_response.Rows ?? Enumerable.Empty<TableRow>()).Select(r => new BigQueryRow(r, Schema));
 
-        internal BigQueryQueryJob(BigQueryClient client, GetQueryResultsResponse response, GetQueryResultsOptions options)
+        internal BigQueryResults(BigQueryClient client, GetQueryResultsResponse response, GetQueryResultsOptions options)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
             _response = GaxPreconditions.CheckNotNull(response, nameof(response));
             _options = options;
         }
 
-        internal BigQueryQueryJob(BigQueryClient client, QueryResponse response, ExecuteQueryOptions options)
+        internal BigQueryResults(BigQueryClient client, QueryResponse response, ExecuteQueryOptions options)
             : this(client, ConvertQueryResponse(GaxPreconditions.CheckNotNull(response, nameof(response))), options?.ToGetQueryResultsOptions())
         {
         }
@@ -86,7 +85,7 @@ namespace Google.Cloud.BigQuery.V2
         /// May be null, in which case defaults will be supplied.</param>
         /// <returns>This object, if it has already completed, or the results of polling repeatedly until
         /// the job has completed.</returns>
-        public BigQueryQueryJob PollUntilCompleted(PollSettings pollSettings = null) =>
+        public BigQueryResults PollUntilCompleted(PollSettings pollSettings = null) =>
             Completed ? this : _client.PollQueryUntilCompleted(JobReference, _options, pollSettings);
 
         /// <summary>
@@ -185,7 +184,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <exception cref="GoogleApiException">The job has errors.</exception>
         /// <returns><c>this</c> if the job has no errors.</returns>
-        public BigQueryQueryJob ThrowOnAnyError()
+        public BigQueryResults ThrowOnAnyError()
         {
             var errors = _response.Errors;
             if (errors?.Count > 0)
@@ -216,7 +215,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// this object, if it has already completed, or the results of polling repeatedly until
         /// the job has completed.</returns>
-        public Task<BigQueryQueryJob> PollUntilCompletedAsync(PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryResults> PollUntilCompletedAsync(PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             Completed ? Task.FromResult(this) : _client.PollQueryUntilCompletedAsync(JobReference, _options, pollSettings, cancellationToken);
 
         /// <summary>
@@ -304,10 +303,10 @@ namespace Google.Cloud.BigQuery.V2
 
         private sealed class AsyncRowEnumerable : IAsyncEnumerable<BigQueryRow>
         {
-            private readonly BigQueryQueryJob _job;
+            private readonly BigQueryResults _job;
             private readonly PollSettings _pollSettings;
 
-            public AsyncRowEnumerable(BigQueryQueryJob job, PollSettings pollSettings)
+            public AsyncRowEnumerable(BigQueryResults job, PollSettings pollSettings)
             {
                 _job = job;
                 _pollSettings = pollSettings;
@@ -323,10 +322,10 @@ namespace Google.Cloud.BigQuery.V2
         {
             private readonly GetQueryResultsOptions _options;
             private readonly PollSettings _pollSettings;
-            private BigQueryQueryJob _job; // Not readonly as we may need to replace it with the completed one.
+            private BigQueryResults _job; // Not readonly as we may need to replace it with the completed one.
             private IEnumerator<BigQueryRow> _underlyingIterator;
 
-            public AsyncRowEnumerator(BigQueryQueryJob job, PollSettings pollSettings)
+            public AsyncRowEnumerator(BigQueryResults job, PollSettings pollSettings)
             {
                 _job = job;
                 _pollSettings = pollSettings;
