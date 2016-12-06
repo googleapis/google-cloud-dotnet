@@ -26,44 +26,46 @@ using Xunit;
 
 namespace Google.Devtools.AspNet.IntegrationTests
 {
-    public class CloudErrorReportingExceptionLoggerIntregrationTest
+    public class ExceptionLoggerTest
     {
         private static string ProjectId;
         private static string TestId;
 
-        public CloudErrorReportingExceptionLoggerIntregrationTest()
+        public ExceptionLoggerTest()
         {
             ProjectId = Utils.GetProjectIdFromEnvironment();
             TestId = Utils.GetTestId();
         }
 
         [Fact]
-        public async void ErrorReportingTest()
+        public async Task ErrorReportingTest()
         {
             Task<ErrorStatsServiceClient> clientTask = ErrorStatsServiceClient.CreateAsync();
 
             // Create a test server and make an http.
-            TestServer server = TestServer.Create<ErrorReportingApplication>();
-            await server.HttpClient.GetAsync("");
-
-            // Create a request that will filter on the TestId which is set to the service and version.
-            ListGroupStatsRequest request = new ListGroupStatsRequest
+            using (TestServer server = TestServer.Create<ErrorReportingApplication>())
             {
-                ProjectName = ErrorStatsServiceClient.FormatProjectName(ProjectId),
-                ServiceFilter = new ServiceContextFilter
-                {
-                    Service = TestId,
-                    Version = TestId
-                }
-            };
+                await server.HttpClient.GetAsync("");
 
-            // Check that we have the proper results and the TestId shows up in the error.
-            ErrorStatsService.ErrorStatsServiceClient grpcClient = (await clientTask).GrpcClient;
-            ListGroupStatsResponse listResposne = grpcClient.ListGroupStats(request);           
-            Assert.True(listResposne.ErrorGroupStats.Count > 0);
-            ErrorGroupStats stats = listResposne.ErrorGroupStats[0];
-            Assert.True(stats.Count > 0);
-            Assert.Contains(TestId, stats.Representative.Message);
+                // Create a request that will filter on the TestId which is set to the service and version.
+                ListGroupStatsRequest request = new ListGroupStatsRequest
+                {
+                    ProjectName = ErrorStatsServiceClient.FormatProjectName(ProjectId),
+                    ServiceFilter = new ServiceContextFilter
+                    {
+                        Service = TestId,
+                        Version = TestId
+                    }
+                };
+
+                // Check that we have the proper results and the TestId shows up in the error.
+                ErrorStatsService.ErrorStatsServiceClient grpcClient = (await clientTask).GrpcClient;
+                ListGroupStatsResponse listResposne = grpcClient.ListGroupStats(request);
+                Assert.True(listResposne.ErrorGroupStats.Count > 0);
+                ErrorGroupStats stats = listResposne.ErrorGroupStats[0];
+                Assert.True(stats.Count > 0);
+                Assert.Contains(TestId, stats.Representative.Message);
+            }
         }
 
         /// <summary>

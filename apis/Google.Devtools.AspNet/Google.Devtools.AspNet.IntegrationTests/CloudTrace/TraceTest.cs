@@ -24,35 +24,38 @@ using System.Threading.Tasks;
 using Xunit;
 
 using Trace = Google.Cloud.Trace.V1.Trace;
+using TraceUtils = Google.Devtools.AspNet.Tests.TraceUtils;
 
 namespace Google.Devtools.AspNet.IntegrationTests
 {
-    public class CloudTraceIntregrationTest
+    public class TraceTest
     {
+        private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create(); 
+
         /// <summary>Total time to spend sleeping when looking for a trace.</summary>
-        private const int TimeoutMilliseconds = 10000; // 10 seconds.
+        private readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
 
         /// <summary>Time to sleep between checks for a trace.</summary>
-        private const int SleepIntervalMilliseconds = 1000; // 1 second.
+        private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(1);
 
         /// <summary>Project id to run the test on.</summary>
-        private readonly string ProjectId;
+        private readonly string _projectId;
 
         /// <summary>Unique id of the test.</summary>
-        private readonly string TestId;
+        private readonly string _testId;
 
         /// <summary>Test start time to allow for easier querying of traces.</summary>
-        private readonly Timestamp StartTime;
+        private readonly Timestamp _startTime;
 
         /// <summary>Using the underlying grpc client so we can filter.</summary>
-        private readonly TraceService.TraceServiceClient GrpcClient;
+        private readonly TraceService.TraceServiceClient _grpcClient;
 
-        public CloudTraceIntregrationTest()
+        public TraceTest()
         {
-            ProjectId = Utils.GetProjectIdFromEnvironment();
-            TestId = Utils.GetTestId();
-            StartTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
-            GrpcClient = TraceServiceClient.Create().GrpcClient;
+            _projectId = Utils.GetProjectIdFromEnvironment();
+            _testId = Utils.GetTestId();
+            _startTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
+            _grpcClient = TraceServiceClient.Create().GrpcClient;
         }
 
         private GrpcTraceConsumer CreateGrpcTraceConsumer()
@@ -63,13 +66,24 @@ namespace Google.Devtools.AspNet.IntegrationTests
 
         private SimpleManagedTracer CreateSimpleManagedTracer(ITraceConsumer consumer)
         {
-            TraceIdFactory traceIdFactory = TraceIdFactory.Create();
-            Trace trace = new Trace()
+            Trace trace = new Trace
             {
-                ProjectId = ProjectId,
-                TraceId = traceIdFactory.NextId()
+                ProjectId = _projectId,
+                TraceId = _traceIdFactory.NextId()
             };
             return SimpleManagedTracer.Create(consumer, trace, null);
+        }
+
+        /// <summary>
+        /// Block until the time has changed.
+        /// </summary>
+        private void BlockUntilClockTick()
+        {
+            DateTime now = DateTime.Now;
+            while (now >= DateTime.Now)
+            {
+                Thread.Sleep(1);
+            }
         }
 
         /// <summary>
@@ -77,29 +91,29 @@ namespace Google.Devtools.AspNet.IntegrationTests
         /// </summary>
         private async Task<Trace> GetTrace(string spanName)
         {
-            int sleepTime = 0;
-            while (sleepTime < TimeoutMilliseconds)
+            double sleepTime = 0;
+            while (sleepTime < _timeout.TotalMilliseconds)
             {
-                sleepTime += SleepIntervalMilliseconds;
-                Thread.Sleep(SleepIntervalMilliseconds);
+                sleepTime += _sleepInterval.TotalMilliseconds;
+                Thread.Sleep(Convert.ToInt32(_sleepInterval.TotalMilliseconds));
 
                 ListTracesRequest request = new ListTracesRequest
                 {
-                    ProjectId = ProjectId,
-                    StartTime = StartTime,
+                    ProjectId = _projectId,
+                    StartTime = _startTime,
                     View = ListTracesRequest.Types.ViewType.Complete
                 };
-                ListTracesResponse response = await GrpcClient.ListTracesAsync(request);
-                List<Trace> traces = response.Traces.Where(t => t.Spans.Any(s => s.Name.Equals(spanName))).ToList();
-                if (traces.Count != 0)
+                ListTracesResponse response = await _grpcClient.ListTracesAsync(request);
+                Trace trace = response.Traces.FirstOrDefault(t => t.Spans.Any(s => s.Name.Equals(spanName)));
+                if (trace != null)
                 {
-                    return traces[0];
+                    return trace;
                 }
             }
             return null;
         }
 
-        private string CreateRootSpanName(string name) => $"{TestId}-{name}";
+        private string CreateRootSpanName(string name) => $"{_testId}-{name}";
 
         [Fact]
         public async Task Trace_Simple()
@@ -109,7 +123,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
             SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.EndSpan();
 
             Trace trace = await GetTrace(rootSpanName);
@@ -125,11 +139,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
             SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
 
             // Create annotations with very large labels to ensure the buffer is flushed.
-            string label = "1234567890";
-            while (label.Length < 20000)
-            {
-                label += label;
-            }
+            string label = string.Join("", Enumerable.Repeat("1234567890", 2000));
             Dictionary<string, string> annotation = new Dictionary<string, string>
             {
                 { "key-one", label },
@@ -140,7 +150,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
             };
 
             tracer.StartSpan(rootSpanName);
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
 
@@ -157,7 +167,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
             SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.EndSpan();
 
             Trace trace = await GetTrace(rootSpanName);
@@ -178,14 +188,14 @@ namespace Google.Devtools.AspNet.IntegrationTests
             };
 
             tracer.StartSpan(rootSpanName);
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
 
             Trace trace = await GetTrace(rootSpanName);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
-            Assert.True(Tests.TraceUtils.IsValidAnnotation(trace.Spans[0], annotation));
+            Assert.True(TraceUtils.IsValidAnnotation(trace.Spans[0], annotation));
         }
 
         [Fact]
@@ -196,7 +206,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
             SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.SetStackTrace(new StackTrace(true));
             tracer.EndSpan();
 
@@ -207,7 +217,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
             MapField<string, string> labels = trace.Spans[0].Labels;
             Assert.True(labels.ContainsKey(Labels.StackTrace));
             Assert.Contains(nameof(Trace_SimpleStacktrace), labels[Labels.StackTrace]);
-            Assert.Contains(nameof(CloudTraceIntregrationTest), labels[Labels.StackTrace]);
+            Assert.Contains(nameof(TraceTest), labels[Labels.StackTrace]);
         }
 
         [Fact]
@@ -223,18 +233,18 @@ namespace Google.Devtools.AspNet.IntegrationTests
             };
 
             tracer.StartSpan(rootSpanName);
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.StartSpan("child-one");
             tracer.SetStackTrace(new StackTrace(true));
-            Thread.Sleep(20);
+            BlockUntilClockTick();
             tracer.EndSpan();
             tracer.StartSpan("child-two");
-            Thread.Sleep(5);
+            BlockUntilClockTick();
             tracer.StartSpan("grandchild-one", StartSpanOptions.Create(SpanKind.RpcClient));
-            Thread.Sleep(50);
+            BlockUntilClockTick();
             tracer.EndSpan();
             tracer.StartSpan("grandchild-two");
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
             tracer.EndSpan();
@@ -244,17 +254,17 @@ namespace Google.Devtools.AspNet.IntegrationTests
             Assert.NotNull(trace);
             Assert.Equal(5, trace.Spans.Count);
 
-            TraceSpan root = trace.Spans.Where(s => s.Name.Equals(rootSpanName)).First();
-            TraceSpan childOne = trace.Spans.Where(s => s.Name.Equals("child-one")).First();
-            TraceSpan childTwo = trace.Spans.Where(s => s.Name.Equals("child-two")).First();
-            TraceSpan grandchildOne = trace.Spans.Where(s => s.Name.Equals("grandchild-one")).First();
-            TraceSpan grandchildTwo = trace.Spans.Where(s => s.Name.Equals("grandchild-two")).First();
+            TraceSpan root = trace.Spans.First(s => s.Name.Equals(rootSpanName));
+            TraceSpan childOne = trace.Spans.First(s => s.Name.Equals("child-one"));
+            TraceSpan childTwo = trace.Spans.First(s => s.Name.Equals("child-two"));
+            TraceSpan grandchildOne = trace.Spans.First(s => s.Name.Equals("grandchild-one"));
+            TraceSpan grandchildTwo = trace.Spans.First(s => s.Name.Equals("grandchild-two"));
 
             Assert.Equal(root.SpanId, childOne.ParentSpanId);
             MapField<string, string> labels = childOne.Labels;
             Assert.True(labels.ContainsKey(Labels.StackTrace));
             Assert.Contains(nameof(Trace_MultipleSpans), labels[Labels.StackTrace]);
-            Assert.Contains(nameof(CloudTraceIntregrationTest), labels[Labels.StackTrace]);
+            Assert.Contains(nameof(TraceTest), labels[Labels.StackTrace]);
 
             Assert.Equal(root.SpanId, childTwo.ParentSpanId);
 
@@ -263,7 +273,7 @@ namespace Google.Devtools.AspNet.IntegrationTests
 
             Assert.Equal(childTwo.SpanId, grandchildTwo.ParentSpanId);
             Assert.Equal(TraceSpan.Types.SpanKind.Unspecified, grandchildTwo.Kind);
-            Assert.True(Tests.TraceUtils.IsValidAnnotation(grandchildTwo, annotation));
+            Assert.True(TraceUtils.IsValidAnnotation(grandchildTwo, annotation));
         }
 
         [Fact]
@@ -275,9 +285,9 @@ namespace Google.Devtools.AspNet.IntegrationTests
 
             tracer.StartSpan(rootSpanName);
             tracer.StartSpan("span-name-1");
-            Thread.Sleep(5);
+            BlockUntilClockTick();
             tracer.StartSpan("span-name-2");
-            Thread.Sleep(10);
+            BlockUntilClockTick();
             tracer.EndSpan();
             tracer.EndSpan();
 

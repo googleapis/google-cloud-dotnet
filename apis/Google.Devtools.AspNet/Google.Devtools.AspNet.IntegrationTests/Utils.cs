@@ -35,10 +35,10 @@ namespace Google.Devtools.AspNet.IntegrationTests
             return projectId;
         }
 
-        /// <returns>An Id based on the date and time.</returns>
+        /// <returns>A unique test Id.</returns>
         public static string GetTestId()
         {
-            return DateTime.UtcNow.ToString("'test'_yyyyMMddTHHmmssfff", CultureInfo.InvariantCulture);
+            return Guid.NewGuid().ToString();
         }
     }
 }
