@@ -110,14 +110,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var queryResults = WaitForRows(client, command)
+            var resultRows = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], X = (long)r["x"], Y = (long)r["y"] })
                 .ToList();
             var expectedResults = new[]
             {
                 new { Guid = guid, X = 10L, Y = 20L }
             };
-            Assert.Equal(expectedResults, queryResults);
+            Assert.Equal(expectedResults, resultRows);
         }
 
         [Fact]
@@ -138,7 +138,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var queryResults = WaitForRows(client, command)
+            var resultRows = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], Tag = (string)r["tag"] })
                 .ToList();
             var expectedResults = new[]
@@ -146,7 +146,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new { Guid = guid, Tag = "a" },
                 new { Guid = guid, Tag = "b" }
             };
-            Assert.Equal(expectedResults, queryResults);
+            Assert.Equal(expectedResults, resultRows);
         }
 
         [Fact]
@@ -169,7 +169,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
             };
-            var queryResults = WaitForRows(client, command)
+            var resultRows = WaitForRows(client, command)
                 .Select(r => new { Guid = (string)r["guid"], FirstName = (string)r["first"], LastName = (string)r["last"] })
                 .ToList();
             var expectedResults = new[]
@@ -177,7 +177,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new { Guid = guid, FirstName = "a", LastName = "b" },
                 new { Guid = guid, FirstName = "x", LastName = "y" }
             };
-            Assert.Equal(expectedResults, queryResults);
+            Assert.Equal(expectedResults, resultRows);
         }
 
         /// <summary>

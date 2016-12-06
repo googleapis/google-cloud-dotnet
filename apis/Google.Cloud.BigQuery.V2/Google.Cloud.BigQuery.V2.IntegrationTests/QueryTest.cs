@@ -97,7 +97,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, ARRAY_LENGTH(children) AS childCount FROM {table} ORDER BY fullName")                
+            var resultRows = client.ExecuteQuery($"SELECT fullName, ARRAY_LENGTH(children) AS childCount FROM {table} ORDER BY fullName")                
                 .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], Count = (long)row["childCount"] })
                 .ToList();
@@ -107,7 +107,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new { Name = "John Doe", Count = 2L },
                 new { Name = "Mike Jones", Count = 3L },
             };
-            Assert.Equal(expectedResults, queryResults);
+            Assert.Equal(expectedResults, resultRows);
         }
 
         [Fact]
@@ -115,7 +115,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, child.name AS childName FROM {table} LEFT JOIN UNNEST(children) AS child ORDER BY fullName, childName")                
+            var resultRows = client.ExecuteQuery($"SELECT fullName, child.name AS childName FROM {table} LEFT JOIN UNNEST(children) AS child ORDER BY fullName, childName")                
                 .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], Child = (string)row["childName"] })
                 .ToList();
@@ -128,7 +128,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new { Name = "Mike Jones", Child = "Kit" },
                 new { Name = "Mike Jones", Child = "Sam" }
             };
-            Assert.Equal(expectedResults, queryResults);
+            Assert.Equal(expectedResults, resultRows);
         }
 
         [Fact]
@@ -136,7 +136,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.PeopleTableId);
-            var queryResults = client.ExecuteQuery($"SELECT fullName, phoneNumber.areaCode, phoneNumber.number FROM {table} ORDER BY fullName")                
+            var resultRows = client.ExecuteQuery($"SELECT fullName, phoneNumber.areaCode, phoneNumber.number FROM {table} ORDER BY fullName")                
                 .GetRows()
                 .Select(row => new { Name = (string)row["fullName"], AreaCode = (long)row["areaCode"], Number = (long)row["number"] })
                 .ToList();
@@ -146,7 +146,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new { Name = "John Doe", AreaCode = 206L, Number = 1234567L },
                 new { Name = "Mike Jones", AreaCode = 622L, Number = 1567845L }
             };
-            Assert.Equal(expectedResults, queryResults);
+            Assert.Equal(expectedResults, resultRows);
         }
 
         [Fact]
@@ -154,10 +154,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
-            var queryResults = client.ExecuteQuery($"SELECT * FROM {table}", new ExecuteQueryOptions { PageSize = 1 })                
+            var resultRows = client.ExecuteQuery($"SELECT * FROM {table}", new ExecuteQueryOptions { PageSize = 1 })                
                 .GetRows()
                 .ToList();
-            Assert.True(queryResults.Count >= 2);
+            Assert.True(resultRows.Count >= 2);
         }
 
         [Fact]
@@ -165,10 +165,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
-            var queryResults = client.ExecuteQuery($"SELECT * FROM {table} WHERE score < 0")                
+            var resultRows = client.ExecuteQuery($"SELECT * FROM {table} WHERE score < 0")                
                 .GetRows()
                 .ToList();
-            Assert.Empty(queryResults);
+            Assert.Empty(resultRows);
         }
 
         [Fact]
@@ -176,11 +176,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
-            var queryResults = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
+            var resultRows = client.CreateQueryJob($"SELECT * FROM {table} WHERE score < 0")
                 .PollQueryUntilCompleted()
                 .GetRows()
                 .ToList();
-            Assert.Empty(queryResults);
+            Assert.Empty(resultRows);
         }
 
         [Fact]

@@ -19,7 +19,7 @@ using System.Collections.Generic;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// A set of results loaded into memory from a <see cref="BigQueryQueryJob"/>, up to a given maximum count.
+    /// A set of results loaded into memory from a <see cref="BigQueryResults"/>, up to a given maximum count.
     /// A page token may be present to indicate that more results are available.
     /// </summary>
     public sealed class BigQueryResultSet
