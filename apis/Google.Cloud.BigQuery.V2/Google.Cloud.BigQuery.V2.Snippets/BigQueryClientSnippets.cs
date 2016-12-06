@@ -46,7 +46,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
-            BigQueryQueryJob query = client.ExecuteQuery(sql).PollUntilCompleted();
+            BigQueryQueryJob query = client.ExecuteQuery(sql);
 
             foreach (BigQueryRow row in query.GetRows())
             {
@@ -65,7 +65,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
-            BigQueryQueryJob query = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true }).PollUntilCompleted();
+            BigQueryQueryJob query = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true });
 
             foreach (BigQueryRow row in query.GetRows())
             {
@@ -118,7 +118,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 $@"SELECT player, MAX(score) AS score
                    FROM {table}
                    GROUP BY player
-                   ORDER BY score DESC").PollUntilCompleted();
+                   ORDER BY score DESC");
             foreach (BigQueryRow row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -640,7 +640,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Note: could also use a collection initializer to populate the parameters.
             command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
             command.Parameters.Add("score", BigQueryDbType.Int64).Value = 1500;
-            IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
+            IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).GetRows();
             foreach (BigQueryRow row in queryResults)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
@@ -648,7 +648,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // End sample
 
             var resultsList = client.ExecuteQuery(command)
-                 .PollUntilCompleted()
                  .GetRows()
                  .Select(row => new { Name = (string) row["player"], Score = (long) row["score"], Level = (long) row["level"] })
                  .ToList();
@@ -670,7 +669,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             command.ParameterMode = BigQueryParameterMode.Positional;
             command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
             command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
-            IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
+            IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).GetRows();
             foreach (BigQueryRow row in queryResults)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
@@ -679,7 +678,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Execute the same command again for validation.
             var resultsList = client.ExecuteQuery(command)
-                .PollUntilCompleted()
                 .GetRows()
                 .Select(row => new { Name = (string) row["player"], Score = (long) row["score"], Level = (long) row["level"] })
                 .ToList();
@@ -702,7 +700,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
             BigQueryQueryJob query = await client.ExecuteQueryAsync(sql);
-            query = await query.PollUntilCompletedAsync();
 
             await query.GetRowsAsync().ForEachAsync(row =>
             {
@@ -722,7 +719,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
             BigQueryQueryJob query = await client.ExecuteQueryAsync(sql, new ExecuteQueryOptions { UseLegacySql = true });
-            query = await query.PollUntilCompletedAsync();
 
             await query.GetRowsAsync().ForEachAsync(row =>
             {
@@ -776,7 +772,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                    FROM {table}
                    GROUP BY player
                    ORDER BY score DESC");
-            result = await result.PollUntilCompletedAsync();
             await result.GetRowsAsync().ForEachAsync(row =>
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -1299,7 +1294,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
             command.Parameters.Add("score", BigQueryDbType.Int64).Value = 1500;
             BigQueryQueryJob queryJob = await client.ExecuteQueryAsync(command);
-            queryJob = await queryJob.PollUntilCompletedAsync();
             IAsyncEnumerable<BigQueryRow> queryResults = queryJob.GetRowsAsync();
             await queryResults.ForEachAsync(row =>
             {
@@ -1319,7 +1313,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
             command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
             BigQueryQueryJob queryJob = await client.ExecuteQueryAsync(command);
-            queryJob = await queryJob.PollUntilCompletedAsync();
             IAsyncEnumerable<BigQueryRow> queryResults = queryJob.GetRowsAsync();
             await queryResults.ForEachAsync(row =>
             {

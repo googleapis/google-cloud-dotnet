@@ -28,6 +28,14 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// A job known to be running a query. The job may not have completed yet.
     /// </summary>
+    /// <remarks>
+    /// The methods to return data from the query (<see cref="GetResultSet(int, PollSettings)"/>,
+    /// <see cref="GetResultSetAsync(int, PollSettings, CancellationToken)"/>,
+    /// <see cref="GetRows(PollSettings)"/> and <see cref="GetRowsAsync(PollSettings)"/>)
+    /// all poll automatically if they are called
+    /// on incomplete jobs. To poll manually, use <see cref="PollUntilCompleted(PollSettings)"/> or
+    /// <see cref="PollUntilCompletedAsync(PollSettings, CancellationToken)"/>.
+    /// </remarks>
     public sealed class BigQueryQueryJob
     {
         private readonly GetQueryResultsResponse _response;
@@ -83,18 +91,19 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Returns a lazy enumeration of all the rows in the query (from any originally-specified page token onwards),
-        /// making server calls as required. The job must be completed before this method is called.
+        /// making server calls as required. If the job has not completed already, it is polled until it has completed
+        /// using <paramref name="pollSettings" />.
         /// </summary>
-        /// <exception cref="InvalidOperationException">This object does not represent a completed job.</exception>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
         /// <returns>A sequence of rows from the query results.</returns>
         /// <seealso cref="PollUntilCompleted(PollSettings)"/>
-        public IEnumerable<BigQueryRow> GetRows()
-        {
-            if (!Completed)
-            {
-                throw new InvalidOperationException($"Cannot call {nameof(GetRows)} on an incomplete job");
-            }
+        public IEnumerable<BigQueryRow> GetRows(PollSettings pollSettings = null) =>
+            PollUntilCompleted(pollSettings).GetRowsImpl();
 
+        // Implementation of GetRows for a completed job.
+        private IEnumerable<BigQueryRow> GetRowsImpl()
+        {
             foreach (var row in ResponseRows)
             {
                 yield return row;
@@ -113,11 +122,11 @@ namespace Google.Cloud.BigQuery.V2
             }
         }
 
-        // Note to readers: we should make it as easy as possible to do the work below, of course.
-        // Possibly BigQueryClient should have a GetResultSet(jobReference, pageSize, pageToken) call.
-
         /// <summary>
-        /// Eagerly fetches a set of rows, up to the specified count.
+        /// Eagerly fetches a set of rows, up to the specified count, providing a page of results with a next page token
+        /// if more results are available. This is typically used within web applications, where the next page token
+        /// is propagated to the client along with the results, so that the next page can be retrieved in another request.
+        /// If the job is still incompleted, it is polled until it has completed.
         /// </summary>
         /// <remarks>
         /// If <paramref name="maxRows"/> is smaller than the number of rows originally requested,
@@ -126,10 +135,18 @@ namespace Google.Cloud.BigQuery.V2
         /// page size you want.
         /// </remarks>
         /// <param name="maxRows">The maximum number of rows to retrieve. Must be positive.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
         /// <returns>An in-memory result set of at most the given number of rows.</returns>
-        public BigQueryResultSet GetResultSet(int maxRows)
+        public BigQueryResultSet GetResultSet(int maxRows, PollSettings pollSettings = null)
         {
             GaxPreconditions.CheckArgumentRange(maxRows, nameof(maxRows), 1, int.MaxValue);
+            return PollUntilCompleted(pollSettings).GetResultSetImpl(maxRows);
+        }
+
+        // Implementation of GetResultSet for an already-complete job.
+        private BigQueryResultSet GetResultSetImpl(int maxRows)
+        {
             if (!Completed)
             {
                 throw new InvalidOperationException($"Cannot call {nameof(GetResultSet)} on an incomplete job");
@@ -139,8 +156,9 @@ namespace Google.Cloud.BigQuery.V2
             if ((clonedOptions.PageSize == null || clonedOptions.PageSize > maxRows) && _response.Rows?.Count > maxRows)
             {
                 // Oops. Do it again from scratch, with a useful page size.
+                // Still, we know it's already completed, so we can skip straight to the Impl method again.
                 clonedOptions.PageSize = maxRows;
-                return _client.GetQueryResults(JobReference, clonedOptions).GetResultSet(maxRows);
+                return _client.GetQueryResults(JobReference, clonedOptions).GetResultSetImpl(maxRows);
             }
             // First add the rows from the first response which is part of the state
             // of the object.
@@ -203,26 +221,20 @@ namespace Google.Cloud.BigQuery.V2
 
         /// <summary>
         /// Returns a lazy asynchronous enumeration of all the rows in the query (from any originally-specified page token onwards),
-        /// making server calls as required. The job must be completed before this method is called.
+        /// making server calls as required. If the job is not already completed, it will be polled with the given <paramref name="pollSettings"/>.
         /// </summary>
-        /// <exception cref="InvalidOperationException">This object does not represent a completed job.</exception>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a sequence of rows from the query results.</returns>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
+        /// <returns>An asynchronous sequence of rows from the query results.</returns>
         /// <seealso cref="PollUntilCompletedAsync(PollSettings, CancellationToken)"/>
-        public IAsyncEnumerable<BigQueryRow> GetRowsAsync()
-        {
-            if (!Completed)
-            {
-                throw new InvalidOperationException($"Cannot call {nameof(GetRows)} on an incomplete job");
-            }
-            return new AsyncRowEnumerable(this);
-        }
-
-        // Note to readers: we should make it as easy as possible to do the work below, of course.
-        // Possibly BigQueryClient should have a GetResultSet(jobReference, pageSize, pageToken) call.
+        public IAsyncEnumerable<BigQueryRow> GetRowsAsync(PollSettings pollSettings = null)
+            => new AsyncRowEnumerable(this, pollSettings);
 
         /// <summary>
-        /// Asynchronously but eagerly fetches a set of rows, up to the specified count.
+        /// Asynchronously but eagerly fetches a set of rows, up to the specified count, providing a page of results with a next page token
+        /// if more results are available. This is typically used within web applications, where the next page token
+        /// is propagated to the client along with the results, so that the next page can be retrieved in another request.
+        /// If the job is still incompleted, it is polled until it has completed.
         /// </summary>
         /// <remarks>
         /// If <paramref name="maxRows"/> is smaller than the number of rows originally requested,
@@ -231,24 +243,30 @@ namespace Google.Cloud.BigQuery.V2
         /// page size you want.
         /// </remarks>
         /// <param name="maxRows">The maximum number of rows to retrieve. Must be positive.</param>
+        /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
+        /// May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// an in-memory result set of at most the given number of rows.</returns>
-        public async Task<BigQueryResultSet> GetResultSetAsync(int maxRows, CancellationToken cancellationToken = default(CancellationToken))
+        public async Task<BigQueryResultSet> GetResultSetAsync(int maxRows, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckArgumentRange(maxRows, nameof(maxRows), 1, int.MaxValue);
-            if (!Completed)
-            {
-                throw new InvalidOperationException($"Cannot call {nameof(GetResultSet)} on an incomplete job");
-            }
+            var job = await PollUntilCompletedAsync(pollSettings, cancellationToken);
+            return await job.GetResultSetAsyncImpl(maxRows, cancellationToken);
+        }
+
+        // Implementation of GetResultSet for an already-complete job.
+        private async Task<BigQueryResultSet> GetResultSetAsyncImpl(int maxRows, CancellationToken cancellationToken)
+        {
             GetQueryResultsOptions clonedOptions = _options?.Clone() ?? new GetQueryResultsOptions();
             List<BigQueryRow> rows = new List<BigQueryRow>(maxRows);
             if ((clonedOptions.PageSize == null || clonedOptions.PageSize > maxRows) && _response.Rows?.Count > maxRows)
             {
                 // Oops. Do it again from scratch, with a useful page size.
+                // Still, we know it's already completed, so we can skip straight to the Impl method again.
                 clonedOptions.PageSize = maxRows;
                 var newQueryJob = await _client.GetQueryResultsAsync(JobReference, clonedOptions, cancellationToken).ConfigureAwait(false);
-                return await newQueryJob.GetResultSetAsync(maxRows, cancellationToken).ConfigureAwait(false);
+                return await newQueryJob.GetResultSetAsyncImpl(maxRows, cancellationToken).ConfigureAwait(false);
             }
             // First add the rows from the first response which is part of the state
             // of the object.
@@ -287,31 +305,34 @@ namespace Google.Cloud.BigQuery.V2
         private sealed class AsyncRowEnumerable : IAsyncEnumerable<BigQueryRow>
         {
             private readonly BigQueryQueryJob _job;
+            private readonly PollSettings _pollSettings;
 
-            public AsyncRowEnumerable(BigQueryQueryJob job)
+            public AsyncRowEnumerable(BigQueryQueryJob job, PollSettings pollSettings)
             {
                 _job = job;
+                _pollSettings = pollSettings;
             }
 
             public IAsyncEnumerator<BigQueryRow> GetEnumerator()
             {
-                return new AsyncRowEnumerator(_job);
+                return new AsyncRowEnumerator(_job, _pollSettings);
             }
         }
 
         private sealed class AsyncRowEnumerator : IAsyncEnumerator<BigQueryRow>
         {
-            private readonly BigQueryQueryJob _job;
             private readonly GetQueryResultsOptions _options;
+            private readonly PollSettings _pollSettings;
+            private BigQueryQueryJob _job; // Not readonly as we may need to replace it with the completed one.
             private IEnumerator<BigQueryRow> _underlyingIterator;
 
-            public AsyncRowEnumerator(BigQueryQueryJob job)
+            public AsyncRowEnumerator(BigQueryQueryJob job, PollSettings pollSettings)
             {
                 _job = job;
+                _pollSettings = pollSettings;
                 _options = _job._options?.Clone() ?? new GetQueryResultsOptions();
                 _options.StartIndex = null;
                 _options.PageToken = _job._response.PageToken;
-                _underlyingIterator = _job.ResponseRows.GetEnumerator();
             }
 
             public BigQueryRow Current => _underlyingIterator.Current;
@@ -319,8 +340,16 @@ namespace Google.Cloud.BigQuery.V2
             public async Task<bool> MoveNext(CancellationToken cancellationToken)
             {
                 cancellationToken.ThrowIfCancellationRequested();
+                if (_underlyingIterator == null)
+                {
+                    if (!_job.Completed)
+                    {
+                        _job = await _job.PollUntilCompletedAsync(_pollSettings, cancellationToken);
+                    }
+                    _underlyingIterator = _job.ResponseRows.GetEnumerator();
+                }
                 // Keep asking for rows until we've got one, or we've run out of pages.
-                while(!_underlyingIterator.MoveNext())
+                while (!_underlyingIterator.MoveNext())
                 {
                     if (_options.PageToken == null)
                     {
