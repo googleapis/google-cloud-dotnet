@@ -58,6 +58,36 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task CreateTopicAsync_RequestObject()
+        {
+            // Snippet: CreateTopicAsync(Topic,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            Topic request = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            Topic response = await publisherClient.CreateTopicAsync(request);
+            // End snippet
+        }
+
+        public void CreateTopic_RequestObject()
+        {
+            // Snippet: CreateTopic(Topic,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            Topic request = new Topic
+            {
+                TopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            Topic response = publisherClient.CreateTopic(request);
+            // End snippet
+        }
+
         public async Task PublishAsync()
         {
             // Snippet: PublishAsync(TopicName,IEnumerable<PubsubMessage>,CallSettings)
@@ -97,6 +127,48 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task PublishAsync_RequestObject()
+        {
+            // Snippet: PublishAsync(PublishRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            PublishRequest request = new PublishRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                Messages = {
+                               new PubsubMessage
+                               {
+                                   Data = ByteString.CopyFromUtf8(""),
+                               },
+                           },
+            };
+            // Make the request
+            PublishResponse response = await publisherClient.PublishAsync(request);
+            // End snippet
+        }
+
+        public void Publish_RequestObject()
+        {
+            // Snippet: Publish(PublishRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            PublishRequest request = new PublishRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+                Messages = {
+                               new PubsubMessage
+                               {
+                                   Data = ByteString.CopyFromUtf8(""),
+                               },
+                           },
+            };
+            // Make the request
+            PublishResponse response = publisherClient.Publish(request);
+            // End snippet
+        }
+
         public async Task GetTopicAsync()
         {
             // Snippet: GetTopicAsync(TopicName,CallSettings)
@@ -119,6 +191,36 @@ namespace Google.Cloud.PubSub.V1.Snippets
             TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
             Topic response = publisherClient.GetTopic(topic);
+            // End snippet
+        }
+
+        public async Task GetTopicAsync_RequestObject()
+        {
+            // Snippet: GetTopicAsync(GetTopicRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            Topic response = await publisherClient.GetTopicAsync(request);
+            // End snippet
+        }
+
+        public void GetTopic_RequestObject()
+        {
+            // Snippet: GetTopic(GetTopicRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            GetTopicRequest request = new GetTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            Topic response = publisherClient.GetTopic(request);
             // End snippet
         }
 
@@ -175,6 +277,98 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Make the request
             PagedEnumerable<ListTopicsResponse,Topic> response =
                 publisherClient.ListTopics(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Topic item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTopicsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Topic item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Topic> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Topic item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task ListTopicsAsync_RequestObject()
+        {
+            // Snippet: ListTopicsAsync(ListTopicsRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            ListTopicsRequest request = new ListTopicsRequest
+            {
+                ProjectAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTopicsResponse,Topic> response =
+                publisherClient.ListTopicsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Topic item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTopicsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Topic item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Topic> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Topic item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListTopics_RequestObject()
+        {
+            // Snippet: ListTopics(ListTopicsRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            ListTopicsRequest request = new ListTopicsRequest
+            {
+                ProjectAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListTopicsResponse,Topic> response =
+                publisherClient.ListTopics(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Topic item in response)
@@ -294,6 +488,98 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task ListTopicSubscriptionsAsync_RequestObject()
+        {
+            // Snippet: ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTopicSubscriptionsResponse,SubscriptionName> response =
+                publisherClient.ListTopicSubscriptionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SubscriptionName item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTopicSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubscriptionName item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubscriptionName> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubscriptionName item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListTopicSubscriptions_RequestObject()
+        {
+            // Snippet: ListTopicSubscriptions(ListTopicSubscriptionsRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            PagedEnumerable<ListTopicSubscriptionsResponse,SubscriptionName> response =
+                publisherClient.ListTopicSubscriptions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SubscriptionName item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTopicSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SubscriptionName item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SubscriptionName> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SubscriptionName item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         public async Task DeleteTopicAsync()
         {
             // Snippet: DeleteTopicAsync(TopicName,CallSettings)
@@ -316,6 +602,36 @@ namespace Google.Cloud.PubSub.V1.Snippets
             TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
             // Make the request
             publisherClient.DeleteTopic(topic);
+            // End snippet
+        }
+
+        public async Task DeleteTopicAsync_RequestObject()
+        {
+            // Snippet: DeleteTopicAsync(DeleteTopicRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            await publisherClient.DeleteTopicAsync(request);
+            // End snippet
+        }
+
+        public void DeleteTopic_RequestObject()
+        {
+            // Snippet: DeleteTopic(DeleteTopicRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            DeleteTopicRequest request = new DeleteTopicRequest
+            {
+                TopicAsTopicName = new TopicName("[PROJECT]", "[TOPIC]"),
+            };
+            // Make the request
+            publisherClient.DeleteTopic(request);
             // End snippet
         }
 
@@ -346,6 +662,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task SetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = await publisherClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        public void SetIamPolicy_RequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = publisherClient.SetIamPolicy(request);
+            // End snippet
+        }
+
         public async Task GetIamPolicyAsync()
         {
             // Snippet: GetIamPolicyAsync(string,CallSettings)
@@ -368,6 +716,36 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string formattedResource = new TopicName("[PROJECT]", "[TOPIC]").ToString();
             // Make the request
             Policy response = publisherClient.GetIamPolicy(formattedResource);
+            // End snippet
+        }
+
+        public async Task GetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
+            };
+            // Make the request
+            Policy response = await publisherClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        public void GetIamPolicy_RequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
+            };
+            // Make the request
+            Policy response = publisherClient.GetIamPolicy(request);
             // End snippet
         }
 
@@ -395,6 +773,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = publisherClient.TestIamPermissions(formattedResource, permissions);
+            // End snippet
+        }
+
+        public async Task TestIamPermissionsAsync_RequestObject()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await publisherClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        public void TestIamPermissions_RequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)
+            // Create client
+            PublisherClient publisherClient = PublisherClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new TopicName("[PROJECT]", "[TOPIC]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = publisherClient.TestIamPermissions(request);
             // End snippet
         }
 

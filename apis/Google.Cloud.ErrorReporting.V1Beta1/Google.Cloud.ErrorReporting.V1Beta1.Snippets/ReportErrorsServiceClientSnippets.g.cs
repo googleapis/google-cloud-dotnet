@@ -59,5 +59,37 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // End snippet
         }
 
+        public async Task ReportErrorEventAsync_RequestObject()
+        {
+            // Snippet: ReportErrorEventAsync(ReportErrorEventRequest,CallSettings)
+            // Create client
+            ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
+            // Initialize request argument(s)
+            ReportErrorEventRequest request = new ReportErrorEventRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]").ToString(),
+                Event = new ReportedErrorEvent(),
+            };
+            // Make the request
+            ReportErrorEventResponse response = await reportErrorsServiceClient.ReportErrorEventAsync(request);
+            // End snippet
+        }
+
+        public void ReportErrorEvent_RequestObject()
+        {
+            // Snippet: ReportErrorEvent(ReportErrorEventRequest,CallSettings)
+            // Create client
+            ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
+            // Initialize request argument(s)
+            ReportErrorEventRequest request = new ReportErrorEventRequest
+            {
+                ProjectName = new ProjectName("[PROJECT]").ToString(),
+                Event = new ReportedErrorEvent(),
+            };
+            // Make the request
+            ReportErrorEventResponse response = reportErrorsServiceClient.ReportErrorEvent(request);
+            // End snippet
+        }
+
     }
 }

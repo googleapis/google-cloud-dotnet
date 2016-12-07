@@ -64,6 +64,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task CreateSubscriptionAsync_RequestObject()
+        {
+            // Snippet: CreateSubscriptionAsync(Subscription,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            Subscription request = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                TopicAsTopicNameOneof = TopicNameOneof.From(new TopicName("[PROJECT]", "[TOPIC]")),
+            };
+            // Make the request
+            Subscription response = await subscriberClient.CreateSubscriptionAsync(request);
+            // End snippet
+        }
+
+        public void CreateSubscription_RequestObject()
+        {
+            // Snippet: CreateSubscription(Subscription,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            Subscription request = new Subscription
+            {
+                SubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                TopicAsTopicNameOneof = TopicNameOneof.From(new TopicName("[PROJECT]", "[TOPIC]")),
+            };
+            // Make the request
+            Subscription response = subscriberClient.CreateSubscription(request);
+            // End snippet
+        }
+
         public async Task GetSubscriptionAsync()
         {
             // Snippet: GetSubscriptionAsync(SubscriptionName,CallSettings)
@@ -86,6 +118,36 @@ namespace Google.Cloud.PubSub.V1.Snippets
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
             Subscription response = subscriberClient.GetSubscription(subscription);
+            // End snippet
+        }
+
+        public async Task GetSubscriptionAsync_RequestObject()
+        {
+            // Snippet: GetSubscriptionAsync(GetSubscriptionRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            GetSubscriptionRequest request = new GetSubscriptionRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Subscription response = await subscriberClient.GetSubscriptionAsync(request);
+            // End snippet
+        }
+
+        public void GetSubscription_RequestObject()
+        {
+            // Snippet: GetSubscription(GetSubscriptionRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            GetSubscriptionRequest request = new GetSubscriptionRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            Subscription response = subscriberClient.GetSubscription(request);
             // End snippet
         }
 
@@ -175,6 +237,98 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task ListSubscriptionsAsync_RequestObject()
+        {
+            // Snippet: ListSubscriptionsAsync(ListSubscriptionsRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                ProjectAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSubscriptionsResponse,Subscription> response =
+                subscriberClient.ListSubscriptionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Subscription item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSubscriptionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListSubscriptions_RequestObject()
+        {
+            // Snippet: ListSubscriptions(ListSubscriptionsRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                ProjectAsProjectName = new ProjectName("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSubscriptionsResponse,Subscription> response =
+                subscriberClient.ListSubscriptions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscription item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscriptionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscription item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscription> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscription item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         public async Task DeleteSubscriptionAsync()
         {
             // Snippet: DeleteSubscriptionAsync(SubscriptionName,CallSettings)
@@ -197,6 +351,36 @@ namespace Google.Cloud.PubSub.V1.Snippets
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
             subscriberClient.DeleteSubscription(subscription);
+            // End snippet
+        }
+
+        public async Task DeleteSubscriptionAsync_RequestObject()
+        {
+            // Snippet: DeleteSubscriptionAsync(DeleteSubscriptionRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            await subscriberClient.DeleteSubscriptionAsync(request);
+            // End snippet
+        }
+
+        public void DeleteSubscription_RequestObject()
+        {
+            // Snippet: DeleteSubscription(DeleteSubscriptionRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+            };
+            // Make the request
+            subscriberClient.DeleteSubscription(request);
             // End snippet
         }
 
@@ -229,6 +413,40 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task ModifyAckDeadlineAsync_RequestObject()
+        {
+            // Snippet: ModifyAckDeadlineAsync(ModifyAckDeadlineRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                AckIds = { },
+                AckDeadlineSeconds = 0,
+            };
+            // Make the request
+            await subscriberClient.ModifyAckDeadlineAsync(request);
+            // End snippet
+        }
+
+        public void ModifyAckDeadline_RequestObject()
+        {
+            // Snippet: ModifyAckDeadline(ModifyAckDeadlineRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                AckIds = { },
+                AckDeadlineSeconds = 0,
+            };
+            // Make the request
+            subscriberClient.ModifyAckDeadline(request);
+            // End snippet
+        }
+
         public async Task AcknowledgeAsync()
         {
             // Snippet: AcknowledgeAsync(SubscriptionName,IEnumerable<string>,CallSettings)
@@ -253,6 +471,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             IEnumerable<string> ackIds = new List<string>();
             // Make the request
             subscriberClient.Acknowledge(subscription, ackIds);
+            // End snippet
+        }
+
+        public async Task AcknowledgeAsync_RequestObject()
+        {
+            // Snippet: AcknowledgeAsync(AcknowledgeRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            AcknowledgeRequest request = new AcknowledgeRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                AckIds = { },
+            };
+            // Make the request
+            await subscriberClient.AcknowledgeAsync(request);
+            // End snippet
+        }
+
+        public void Acknowledge_RequestObject()
+        {
+            // Snippet: Acknowledge(AcknowledgeRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            AcknowledgeRequest request = new AcknowledgeRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                AckIds = { },
+            };
+            // Make the request
+            subscriberClient.Acknowledge(request);
             // End snippet
         }
 
@@ -285,6 +535,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task PullAsync_RequestObject()
+        {
+            // Snippet: PullAsync(PullRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            PullRequest request = new PullRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                MaxMessages = 0,
+            };
+            // Make the request
+            PullResponse response = await subscriberClient.PullAsync(request);
+            // End snippet
+        }
+
+        public void Pull_RequestObject()
+        {
+            // Snippet: Pull(PullRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            PullRequest request = new PullRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                MaxMessages = 0,
+            };
+            // Make the request
+            PullResponse response = subscriberClient.Pull(request);
+            // End snippet
+        }
+
         public async Task ModifyPushConfigAsync()
         {
             // Snippet: ModifyPushConfigAsync(SubscriptionName,PushConfig,CallSettings)
@@ -309,6 +591,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             PushConfig pushConfig = new PushConfig();
             // Make the request
             subscriberClient.ModifyPushConfig(subscription, pushConfig);
+            // End snippet
+        }
+
+        public async Task ModifyPushConfigAsync_RequestObject()
+        {
+            // Snippet: ModifyPushConfigAsync(ModifyPushConfigRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            ModifyPushConfigRequest request = new ModifyPushConfigRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                PushConfig = new PushConfig(),
+            };
+            // Make the request
+            await subscriberClient.ModifyPushConfigAsync(request);
+            // End snippet
+        }
+
+        public void ModifyPushConfig_RequestObject()
+        {
+            // Snippet: ModifyPushConfig(ModifyPushConfigRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            ModifyPushConfigRequest request = new ModifyPushConfigRequest
+            {
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                PushConfig = new PushConfig(),
+            };
+            // Make the request
+            subscriberClient.ModifyPushConfig(request);
             // End snippet
         }
 
@@ -339,6 +653,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task SetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = await subscriberClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        public void SetIamPolicy_RequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                Resource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                Policy = new Policy(),
+            };
+            // Make the request
+            Policy response = subscriberClient.SetIamPolicy(request);
+            // End snippet
+        }
+
         public async Task GetIamPolicyAsync()
         {
             // Snippet: GetIamPolicyAsync(string,CallSettings)
@@ -361,6 +707,36 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             // Make the request
             Policy response = subscriberClient.GetIamPolicy(formattedResource);
+            // End snippet
+        }
+
+        public async Task GetIamPolicyAsync_RequestObject()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+            };
+            // Make the request
+            Policy response = await subscriberClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        public void GetIamPolicy_RequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                Resource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+            };
+            // Make the request
+            Policy response = subscriberClient.GetIamPolicy(request);
             // End snippet
         }
 
@@ -388,6 +764,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             IEnumerable<string> permissions = new List<string>();
             // Make the request
             TestIamPermissionsResponse response = subscriberClient.TestIamPermissions(formattedResource, permissions);
+            // End snippet
+        }
+
+        public async Task TestIamPermissionsAsync_RequestObject()
+        {
+            // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = await subscriberClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        public void TestIamPermissions_RequestObject()
+        {
+            // Snippet: TestIamPermissions(TestIamPermissionsRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            TestIamPermissionsRequest request = new TestIamPermissionsRequest
+            {
+                Resource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                Permissions = { },
+            };
+            // Make the request
+            TestIamPermissionsResponse response = subscriberClient.TestIamPermissions(request);
             // End snippet
         }
 

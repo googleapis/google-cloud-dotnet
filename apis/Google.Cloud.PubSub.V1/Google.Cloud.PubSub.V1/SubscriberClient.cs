@@ -654,10 +654,15 @@ namespace Google.Cloud.PubSub.V1
             TopicName topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CreateSubscriptionAsync(
+                new Subscription
+                {
+                    SubscriptionName = name,
+                    TopicAsTopicNameOneof = TopicNameOneof.From(topic),
+                    PushConfig = pushConfig,
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a subscription to a given topic.
@@ -792,6 +797,67 @@ namespace Google.Cloud.PubSub.V1
             TopicName topic,
             PushConfig pushConfig,
             int ackDeadlineSeconds,
+            CallSettings callSettings = null) => CreateSubscription(
+                new Subscription
+                {
+                    SubscriptionName = name,
+                    TopicAsTopicNameOneof = TopicNameOneof.From(topic),
+                    PushConfig = pushConfig,
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a subscription to a given topic.
+        /// If the subscription already exists, returns `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+        ///
+        /// If the name is not provided in the request, the server will assign a random
+        /// name for this subscription on the same project as the topic, conforming
+        /// to the
+        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated name is populated in the returned Subscription object.
+        /// Note that for REST API requests, you must specify a name in the request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Subscription> CreateSubscriptionAsync(
+            Subscription request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a subscription to a given topic.
+        /// If the subscription already exists, returns `ALREADY_EXISTS`.
+        /// If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+        ///
+        /// If the name is not provided in the request, the server will assign a random
+        /// name for this subscription on the same project as the topic, conforming
+        /// to the
+        /// [resource name format](https://cloud.google.com/pubsub/docs/overview#names).
+        /// The generated name is populated in the returned Subscription object.
+        /// Note that for REST API requests, you must specify a name in the request.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Subscription CreateSubscription(
+            Subscription request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -812,10 +878,12 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Subscription> GetSubscriptionAsync(
             SubscriptionName subscription,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetSubscriptionAsync(
+                new GetSubscriptionRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets the configuration details of a subscription.
@@ -851,6 +919,46 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Subscription GetSubscription(
             SubscriptionName subscription,
+            CallSettings callSettings = null) => GetSubscription(
+                new GetSubscriptionRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the configuration details of a subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Subscription> GetSubscriptionAsync(
+            GetSubscriptionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the configuration details of a subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Subscription GetSubscription(
+            GetSubscriptionRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -881,10 +989,14 @@ namespace Google.Cloud.PubSub.V1
             ProjectName project,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListSubscriptionsAsync(
+                new ListSubscriptionsRequest
+                {
+                    ProjectAsProjectName = project,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists matching subscriptions.
@@ -911,6 +1023,48 @@ namespace Google.Cloud.PubSub.V1
             ProjectName project,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListSubscriptions(
+                new ListSubscriptionsRequest
+                {
+                    ProjectAsProjectName = project,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists matching subscriptions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Subscription"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
+            ListSubscriptionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists matching subscriptions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Subscription"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
+            ListSubscriptionsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -935,10 +1089,12 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task DeleteSubscriptionAsync(
             SubscriptionName subscription,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => DeleteSubscriptionAsync(
+                new DeleteSubscriptionRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes an existing subscription. All messages retained in the subscription
@@ -982,6 +1138,54 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual void DeleteSubscription(
             SubscriptionName subscription,
+            CallSettings callSettings = null) => DeleteSubscription(
+                new DeleteSubscriptionRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an existing subscription. All messages retained in the subscription
+        /// are immediately dropped. Calls to `Pull` after deletion will return
+        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
+        /// the same name, but the new one has no association with the old
+        /// subscription or its topic unless the same topic is specified.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteSubscriptionAsync(
+            DeleteSubscriptionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an existing subscription. All messages retained in the subscription
+        /// are immediately dropped. Calls to `Pull` after deletion will return
+        /// `NOT_FOUND`. After a subscription is deleted, a new one may be created with
+        /// the same name, but the new one has no association with the old
+        /// subscription or its topic unless the same topic is specified.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteSubscription(
+            DeleteSubscriptionRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1020,10 +1224,14 @@ namespace Google.Cloud.PubSub.V1
             SubscriptionName subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ModifyAckDeadlineAsync(
+                new ModifyAckDeadlineRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    AckIds = { ackIds },
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
 
         /// <summary>
         /// Modifies the ack deadline for a specific message. This method is useful
@@ -1097,6 +1305,56 @@ namespace Google.Cloud.PubSub.V1
             SubscriptionName subscription,
             IEnumerable<string> ackIds,
             int ackDeadlineSeconds,
+            CallSettings callSettings = null) => ModifyAckDeadline(
+                new ModifyAckDeadlineRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    AckIds = { ackIds },
+                    AckDeadlineSeconds = ackDeadlineSeconds,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Modifies the ack deadline for a specific message. This method is useful
+        /// to indicate that more time is needed to process a message by the
+        /// subscriber, or to make the message available for redelivery if the
+        /// processing was interrupted. Note that this does not modify the
+        /// subscription-level `ackDeadlineSeconds` used for subsequent messages.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task ModifyAckDeadlineAsync(
+            ModifyAckDeadlineRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Modifies the ack deadline for a specific message. This method is useful
+        /// to indicate that more time is needed to process a message by the
+        /// subscriber, or to make the message available for redelivery if the
+        /// processing was interrupted. Note that this does not modify the
+        /// subscription-level `ackDeadlineSeconds` used for subsequent messages.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void ModifyAckDeadline(
+            ModifyAckDeadlineRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1128,10 +1386,13 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task AcknowledgeAsync(
             SubscriptionName subscription,
             IEnumerable<string> ackIds,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => AcknowledgeAsync(
+                new AcknowledgeRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    AckIds = { ackIds },
+                },
+                callSettings);
 
         /// <summary>
         /// Acknowledges the messages associated with the `ack_ids` in the
@@ -1190,6 +1451,59 @@ namespace Google.Cloud.PubSub.V1
         public virtual void Acknowledge(
             SubscriptionName subscription,
             IEnumerable<string> ackIds,
+            CallSettings callSettings = null) => Acknowledge(
+                new AcknowledgeRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    AckIds = { ackIds },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Acknowledges the messages associated with the `ack_ids` in the
+        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
+        /// from the subscription.
+        ///
+        /// Acknowledging a message whose ack deadline has expired may succeed,
+        /// but such a message may be redelivered later. Acknowledging a message more
+        /// than once will not result in an error.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task AcknowledgeAsync(
+            AcknowledgeRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Acknowledges the messages associated with the `ack_ids` in the
+        /// `AcknowledgeRequest`. The Pub/Sub system can remove the relevant messages
+        /// from the subscription.
+        ///
+        /// Acknowledging a message whose ack deadline has expired may succeed,
+        /// but such a message may be redelivered later. Acknowledging a message more
+        /// than once will not result in an error.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void Acknowledge(
+            AcknowledgeRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1227,10 +1541,14 @@ namespace Google.Cloud.PubSub.V1
             SubscriptionName subscription,
             bool returnImmediately,
             int maxMessages,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => PullAsync(
+                new PullRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    ReturnImmediately = returnImmediately,
+                    MaxMessages = maxMessages,
+                },
+                callSettings);
 
         /// <summary>
         /// Pulls messages from the server. Returns an empty list if there are no
@@ -1302,6 +1620,54 @@ namespace Google.Cloud.PubSub.V1
             SubscriptionName subscription,
             bool returnImmediately,
             int maxMessages,
+            CallSettings callSettings = null) => Pull(
+                new PullRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    ReturnImmediately = returnImmediately,
+                    MaxMessages = maxMessages,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Pulls messages from the server. Returns an empty list if there are no
+        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<PullResponse> PullAsync(
+            PullRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Pulls messages from the server. Returns an empty list if there are no
+        /// messages available in the backlog. The server may return `UNAVAILABLE` if
+        /// there are too many concurrent pull requests pending for the given
+        /// subscription.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual PullResponse Pull(
+            PullRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1336,10 +1702,13 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task ModifyPushConfigAsync(
             SubscriptionName subscription,
             PushConfig pushConfig,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ModifyPushConfigAsync(
+                new ModifyPushConfigRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    PushConfig = pushConfig,
+                },
+                callSettings);
 
         /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
@@ -1404,6 +1773,57 @@ namespace Google.Cloud.PubSub.V1
         public virtual void ModifyPushConfig(
             SubscriptionName subscription,
             PushConfig pushConfig,
+            CallSettings callSettings = null) => ModifyPushConfig(
+                new ModifyPushConfigRequest
+                {
+                    SubscriptionAsSubscriptionName = subscription,
+                    PushConfig = pushConfig,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Modifies the `PushConfig` for a specified subscription.
+        ///
+        /// This may be used to change a push subscription to a pull one (signified by
+        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
+        /// attributes of a push subscription. Messages will accumulate for delivery
+        /// continuously through the call regardless of changes to the `PushConfig`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task ModifyPushConfigAsync(
+            ModifyPushConfigRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Modifies the `PushConfig` for a specified subscription.
+        ///
+        /// This may be used to change a push subscription to a pull one (signified by
+        /// an empty `PushConfig`) or vice versa, or change the endpoint URL and other
+        /// attributes of a push subscription. Messages will accumulate for delivery
+        /// continuously through the call regardless of changes to the `PushConfig`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void ModifyPushConfig(
+            ModifyPushConfigRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1433,10 +1853,13 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task<Policy> SetIamPolicyAsync(
             string resource,
             Policy policy,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => SetIamPolicyAsync(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -1491,6 +1914,49 @@ namespace Google.Cloud.PubSub.V1
         public virtual Policy SetIamPolicy(
             string resource,
             Policy policy,
+            CallSettings callSettings = null) => SetIamPolicy(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy SetIamPolicy(
+            SetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1514,10 +1980,12 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Policy> GetIamPolicyAsync(
             string resource,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetIamPolicyAsync(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -1559,6 +2027,50 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Policy GetIamPolicy(
             string resource,
+            CallSettings callSettings = null) => GetIamPolicy(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy GetIamPolicy(
+            GetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1589,10 +2101,13 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
             IEnumerable<string> permissions,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
+                },
+                callSettings);
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -1649,6 +2164,51 @@ namespace Google.Cloud.PubSub.V1
         public virtual TestIamPermissionsResponse TestIamPermissions(
             string resource,
             IEnumerable<string> permissions,
+            CallSettings callSettings = null) => TestIamPermissions(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual TestIamPermissionsResponse TestIamPermissions(
+            TestIamPermissionsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1739,45 +2299,8 @@ namespace Google.Cloud.PubSub.V1
         /// The generated name is populated in the returned Subscription object.
         /// Note that for REST API requests, you must specify a name in the request.
         /// </summary>
-        /// <param name="name">
-        /// The name of the subscription. It must have the format
-        /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
-        /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
-        /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
-        /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
-        /// in length, and it must not start with `"goog"`.
-        /// </param>
-        /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
-        /// </param>
-        /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
-        /// </param>
-        /// <param name="ackDeadlineSeconds">
-        /// This value is the maximum time after a subscriber receives a message
-        /// before the subscriber should acknowledge the message. After message
-        /// delivery but before the ack deadline expires and before the message is
-        /// acknowledged, it is an outstanding message and will not be delivered
-        /// again during that time (on a best-effort basis).
-        ///
-        /// For pull subscriptions, this value is used as the initial value for the ack
-        /// deadline. To override this value for a given message, call
-        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
-        /// The minimum custom deadline you can specify is 10 seconds.
-        /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
-        /// If this parameter is 0, a default value of 10 seconds is used.
-        ///
-        /// For push delivery, this value is also used to set the request timeout for
-        /// the call to the push endpoint.
-        ///
-        /// If the subscriber never acknowledges the message, the Pub/Sub
-        /// system will eventually redeliver the message.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1786,19 +2309,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Subscription> CreateSubscriptionAsync(
-            SubscriptionName name,
-            TopicName topic,
-            PushConfig pushConfig,
-            int ackDeadlineSeconds,
+            Subscription request,
             CallSettings callSettings = null)
         {
-            Subscription request = new Subscription
-            {
-                SubscriptionName = name,
-                TopicAsTopicNameOneof = TopicNameOneof.From(topic),
-                PushConfig = pushConfig,
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
             Modify_Subscription(ref request, ref callSettings);
             return _callCreateSubscription.Async(request, callSettings);
         }
@@ -1815,45 +2328,8 @@ namespace Google.Cloud.PubSub.V1
         /// The generated name is populated in the returned Subscription object.
         /// Note that for REST API requests, you must specify a name in the request.
         /// </summary>
-        /// <param name="name">
-        /// The name of the subscription. It must have the format
-        /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
-        /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
-        /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
-        /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
-        /// in length, and it must not start with `"goog"`.
-        /// </param>
-        /// <param name="topic">
-        /// The name of the topic from which this subscription is receiving messages.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// The value of this field will be `_deleted-topic_` if the topic has been
-        /// deleted.
-        /// </param>
-        /// <param name="pushConfig">
-        /// If push delivery is used with this subscription, this field is
-        /// used to configure it. An empty `pushConfig` signifies that the subscriber
-        /// will pull and ack messages using API methods.
-        /// </param>
-        /// <param name="ackDeadlineSeconds">
-        /// This value is the maximum time after a subscriber receives a message
-        /// before the subscriber should acknowledge the message. After message
-        /// delivery but before the ack deadline expires and before the message is
-        /// acknowledged, it is an outstanding message and will not be delivered
-        /// again during that time (on a best-effort basis).
-        ///
-        /// For pull subscriptions, this value is used as the initial value for the ack
-        /// deadline. To override this value for a given message, call
-        /// `ModifyAckDeadline` with the corresponding `ack_id` if using
-        /// pull.
-        /// The minimum custom deadline you can specify is 10 seconds.
-        /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
-        /// If this parameter is 0, a default value of 10 seconds is used.
-        ///
-        /// For push delivery, this value is also used to set the request timeout for
-        /// the call to the push endpoint.
-        ///
-        /// If the subscriber never acknowledges the message, the Pub/Sub
-        /// system will eventually redeliver the message.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1862,19 +2338,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Subscription CreateSubscription(
-            SubscriptionName name,
-            TopicName topic,
-            PushConfig pushConfig,
-            int ackDeadlineSeconds,
+            Subscription request,
             CallSettings callSettings = null)
         {
-            Subscription request = new Subscription
-            {
-                SubscriptionName = name,
-                TopicAsTopicNameOneof = TopicNameOneof.From(topic),
-                PushConfig = pushConfig,
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
             Modify_Subscription(ref request, ref callSettings);
             return _callCreateSubscription.Sync(request, callSettings);
         }
@@ -1882,9 +2348,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Gets the configuration details of a subscription.
         /// </summary>
-        /// <param name="subscription">
-        /// The name of the subscription to get.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1893,13 +2358,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Subscription> GetSubscriptionAsync(
-            SubscriptionName subscription,
+            GetSubscriptionRequest request,
             CallSettings callSettings = null)
         {
-            GetSubscriptionRequest request = new GetSubscriptionRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-            };
             Modify_GetSubscriptionRequest(ref request, ref callSettings);
             return _callGetSubscription.Async(request, callSettings);
         }
@@ -1907,9 +2368,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Gets the configuration details of a subscription.
         /// </summary>
-        /// <param name="subscription">
-        /// The name of the subscription to get.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1918,13 +2378,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Subscription GetSubscription(
-            SubscriptionName subscription,
+            GetSubscriptionRequest request,
             CallSettings callSettings = null)
         {
-            GetSubscriptionRequest request = new GetSubscriptionRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-            };
             Modify_GetSubscriptionRequest(ref request, ref callSettings);
             return _callGetSubscription.Sync(request, callSettings);
         }
@@ -1932,17 +2388,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Lists matching subscriptions.
         /// </summary>
-        /// <param name="project">
-        /// The name of the cloud project that subscriptions belong to.
-        /// Format is `projects/{project}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1951,17 +2398,9 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable asynchronous sequence of <see cref="Subscription"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(
-            ProjectName project,
-            string pageToken = null,
-            int? pageSize = null,
+            ListSubscriptionsRequest request,
             CallSettings callSettings = null)
         {
-            ListSubscriptionsRequest request = new ListSubscriptionsRequest
-            {
-                ProjectAsProjectName = project,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListSubscriptionsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
         }
@@ -1969,17 +2408,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Lists matching subscriptions.
         /// </summary>
-        /// <param name="project">
-        /// The name of the cloud project that subscriptions belong to.
-        /// Format is `projects/{project}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1988,17 +2418,9 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable sequence of <see cref="Subscription"/> resources.
         /// </returns>
         public override PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(
-            ProjectName project,
-            string pageToken = null,
-            int? pageSize = null,
+            ListSubscriptionsRequest request,
             CallSettings callSettings = null)
         {
-            ListSubscriptionsRequest request = new ListSubscriptionsRequest
-            {
-                ProjectAsProjectName = project,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListSubscriptionsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
         }
@@ -2010,9 +2432,8 @@ namespace Google.Cloud.PubSub.V1
         /// the same name, but the new one has no association with the old
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
-        /// <param name="subscription">
-        /// The subscription to delete.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2021,13 +2442,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteSubscriptionAsync(
-            SubscriptionName subscription,
+            DeleteSubscriptionRequest request,
             CallSettings callSettings = null)
         {
-            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-            };
             Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
             return _callDeleteSubscription.Async(request, callSettings);
         }
@@ -2039,9 +2456,8 @@ namespace Google.Cloud.PubSub.V1
         /// the same name, but the new one has no association with the old
         /// subscription or its topic unless the same topic is specified.
         /// </summary>
-        /// <param name="subscription">
-        /// The subscription to delete.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2050,13 +2466,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override void DeleteSubscription(
-            SubscriptionName subscription,
+            DeleteSubscriptionRequest request,
             CallSettings callSettings = null)
         {
-            DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-            };
             Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
             _callDeleteSubscription.Sync(request, callSettings);
         }
@@ -2068,21 +2480,8 @@ namespace Google.Cloud.PubSub.V1
         /// processing was interrupted. Note that this does not modify the
         /// subscription-level `ackDeadlineSeconds` used for subsequent messages.
         /// </summary>
-        /// <param name="subscription">
-        /// The name of the subscription.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="ackIds">
-        /// List of acknowledgment IDs.
-        /// </param>
-        /// <param name="ackDeadlineSeconds">
-        /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. For example, if the value is 10, the new
-        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-        /// was made. Specifying zero may immediately make the message available for
-        /// another pull request.
-        /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2091,17 +2490,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task ModifyAckDeadlineAsync(
-            SubscriptionName subscription,
-            IEnumerable<string> ackIds,
-            int ackDeadlineSeconds,
+            ModifyAckDeadlineRequest request,
             CallSettings callSettings = null)
         {
-            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                AckIds = { ackIds },
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
             Modify_ModifyAckDeadlineRequest(ref request, ref callSettings);
             return _callModifyAckDeadline.Async(request, callSettings);
         }
@@ -2113,21 +2504,8 @@ namespace Google.Cloud.PubSub.V1
         /// processing was interrupted. Note that this does not modify the
         /// subscription-level `ackDeadlineSeconds` used for subsequent messages.
         /// </summary>
-        /// <param name="subscription">
-        /// The name of the subscription.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="ackIds">
-        /// List of acknowledgment IDs.
-        /// </param>
-        /// <param name="ackDeadlineSeconds">
-        /// The new ack deadline with respect to the time this request was sent to
-        /// the Pub/Sub system. For example, if the value is 10, the new
-        /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-        /// was made. Specifying zero may immediately make the message available for
-        /// another pull request.
-        /// The minimum deadline you can specify is 0 seconds.
-        /// The maximum deadline you can specify is 600 seconds (10 minutes).
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2136,17 +2514,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override void ModifyAckDeadline(
-            SubscriptionName subscription,
-            IEnumerable<string> ackIds,
-            int ackDeadlineSeconds,
+            ModifyAckDeadlineRequest request,
             CallSettings callSettings = null)
         {
-            ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                AckIds = { ackIds },
-                AckDeadlineSeconds = ackDeadlineSeconds,
-            };
             Modify_ModifyAckDeadlineRequest(ref request, ref callSettings);
             _callModifyAckDeadline.Sync(request, callSettings);
         }
@@ -2160,13 +2530,8 @@ namespace Google.Cloud.PubSub.V1
         /// but such a message may be redelivered later. Acknowledging a message more
         /// than once will not result in an error.
         /// </summary>
-        /// <param name="subscription">
-        /// The subscription whose message is being acknowledged.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="ackIds">
-        /// The acknowledgment ID for the messages being acknowledged that was returned
-        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2175,15 +2540,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task AcknowledgeAsync(
-            SubscriptionName subscription,
-            IEnumerable<string> ackIds,
+            AcknowledgeRequest request,
             CallSettings callSettings = null)
         {
-            AcknowledgeRequest request = new AcknowledgeRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                AckIds = { ackIds },
-            };
             Modify_AcknowledgeRequest(ref request, ref callSettings);
             return _callAcknowledge.Async(request, callSettings);
         }
@@ -2197,13 +2556,8 @@ namespace Google.Cloud.PubSub.V1
         /// but such a message may be redelivered later. Acknowledging a message more
         /// than once will not result in an error.
         /// </summary>
-        /// <param name="subscription">
-        /// The subscription whose message is being acknowledged.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="ackIds">
-        /// The acknowledgment ID for the messages being acknowledged that was returned
-        /// by the Pub/Sub system in the `Pull` response. Must not be empty.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2212,15 +2566,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override void Acknowledge(
-            SubscriptionName subscription,
-            IEnumerable<string> ackIds,
+            AcknowledgeRequest request,
             CallSettings callSettings = null)
         {
-            AcknowledgeRequest request = new AcknowledgeRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                AckIds = { ackIds },
-            };
             Modify_AcknowledgeRequest(ref request, ref callSettings);
             _callAcknowledge.Sync(request, callSettings);
         }
@@ -2231,21 +2579,8 @@ namespace Google.Cloud.PubSub.V1
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
-        /// <param name="subscription">
-        /// The subscription from which messages should be pulled.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="returnImmediately">
-        /// If this field set to true, the system will respond immediately even if
-        /// it there are no messages available to return in the `Pull` response.
-        /// Otherwise, the system may wait (for a bounded amount of time) until at
-        /// least one message is available, rather than returning no messages. The
-        /// client may cancel the request if it does not wish to wait any longer for
-        /// the response.
-        /// </param>
-        /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2254,17 +2589,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<PullResponse> PullAsync(
-            SubscriptionName subscription,
-            bool returnImmediately,
-            int maxMessages,
+            PullRequest request,
             CallSettings callSettings = null)
         {
-            PullRequest request = new PullRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                ReturnImmediately = returnImmediately,
-                MaxMessages = maxMessages,
-            };
             Modify_PullRequest(ref request, ref callSettings);
             return _callPull.Async(request, callSettings);
         }
@@ -2275,21 +2602,8 @@ namespace Google.Cloud.PubSub.V1
         /// there are too many concurrent pull requests pending for the given
         /// subscription.
         /// </summary>
-        /// <param name="subscription">
-        /// The subscription from which messages should be pulled.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="returnImmediately">
-        /// If this field set to true, the system will respond immediately even if
-        /// it there are no messages available to return in the `Pull` response.
-        /// Otherwise, the system may wait (for a bounded amount of time) until at
-        /// least one message is available, rather than returning no messages. The
-        /// client may cancel the request if it does not wish to wait any longer for
-        /// the response.
-        /// </param>
-        /// <param name="maxMessages">
-        /// The maximum number of messages returned for this request. The Pub/Sub
-        /// system may return fewer than the number specified.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2298,17 +2612,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override PullResponse Pull(
-            SubscriptionName subscription,
-            bool returnImmediately,
-            int maxMessages,
+            PullRequest request,
             CallSettings callSettings = null)
         {
-            PullRequest request = new PullRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                ReturnImmediately = returnImmediately,
-                MaxMessages = maxMessages,
-            };
             Modify_PullRequest(ref request, ref callSettings);
             return _callPull.Sync(request, callSettings);
         }
@@ -2321,17 +2627,8 @@ namespace Google.Cloud.PubSub.V1
         /// attributes of a push subscription. Messages will accumulate for delivery
         /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
-        /// <param name="subscription">
-        /// The name of the subscription.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="pushConfig">
-        /// The push configuration for future deliveries.
-        ///
-        /// An empty `pushConfig` indicates that the Pub/Sub system should
-        /// stop pushing messages from the given subscription and allow
-        /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2340,15 +2637,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task ModifyPushConfigAsync(
-            SubscriptionName subscription,
-            PushConfig pushConfig,
+            ModifyPushConfigRequest request,
             CallSettings callSettings = null)
         {
-            ModifyPushConfigRequest request = new ModifyPushConfigRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                PushConfig = pushConfig,
-            };
             Modify_ModifyPushConfigRequest(ref request, ref callSettings);
             return _callModifyPushConfig.Async(request, callSettings);
         }
@@ -2361,17 +2652,8 @@ namespace Google.Cloud.PubSub.V1
         /// attributes of a push subscription. Messages will accumulate for delivery
         /// continuously through the call regardless of changes to the `PushConfig`.
         /// </summary>
-        /// <param name="subscription">
-        /// The name of the subscription.
-        /// Format is `projects/{project}/subscriptions/{sub}`.
-        /// </param>
-        /// <param name="pushConfig">
-        /// The push configuration for future deliveries.
-        ///
-        /// An empty `pushConfig` indicates that the Pub/Sub system should
-        /// stop pushing messages from the given subscription and allow
-        /// messages to be pulled and acknowledged - effectively pausing
-        /// the subscription if `Pull` is not called.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2380,15 +2662,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override void ModifyPushConfig(
-            SubscriptionName subscription,
-            PushConfig pushConfig,
+            ModifyPushConfigRequest request,
             CallSettings callSettings = null)
         {
-            ModifyPushConfigRequest request = new ModifyPushConfigRequest
-            {
-                SubscriptionAsSubscriptionName = subscription,
-                PushConfig = pushConfig,
-            };
             Modify_ModifyPushConfigRequest(ref request, ref callSettings);
             _callModifyPushConfig.Sync(request, callSettings);
         }
@@ -2397,16 +2673,8 @@ namespace Google.Cloud.PubSub.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="policy">
-        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
-        /// the policy is limited to a few 10s of KB. An empty policy is a
-        /// valid policy but certain Cloud Platform services (such as Projects)
-        /// might reject them.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2415,15 +2683,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Policy> SetIamPolicyAsync(
-            string resource,
-            Policy policy,
+            SetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                Resource = resource,
-                Policy = policy,
-            };
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Async(request, callSettings);
         }
@@ -2432,16 +2694,8 @@ namespace Google.Cloud.PubSub.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="policy">
-        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
-        /// the policy is limited to a few 10s of KB. An empty policy is a
-        /// valid policy but certain Cloud Platform services (such as Projects)
-        /// might reject them.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2450,15 +2704,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Policy SetIamPolicy(
-            string resource,
-            Policy policy,
+            SetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                Resource = resource,
-                Policy = policy,
-            };
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Sync(request, callSettings);
         }
@@ -2468,10 +2716,8 @@ namespace Google.Cloud.PubSub.V1
         /// Returns an empty policy if the resource exists and does not have a policy
         /// set.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2480,13 +2726,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Policy> GetIamPolicyAsync(
-            string resource,
+            GetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                Resource = resource,
-            };
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Async(request, callSettings);
         }
@@ -2496,10 +2738,8 @@ namespace Google.Cloud.PubSub.V1
         /// Returns an empty policy if the resource exists and does not have a policy
         /// set.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2508,13 +2748,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Policy GetIamPolicy(
-            string resource,
+            GetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                Resource = resource,
-            };
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Sync(request, callSettings);
         }
@@ -2524,16 +2760,8 @@ namespace Google.Cloud.PubSub.V1
         /// If the resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="permissions">
-        /// The set of permissions to check for the `resource`. Permissions with
-        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
-        /// information see
-        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2542,15 +2770,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            string resource,
-            IEnumerable<string> permissions,
+            TestIamPermissionsRequest request,
             CallSettings callSettings = null)
         {
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                Resource = resource,
-                Permissions = { permissions },
-            };
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
@@ -2560,16 +2782,8 @@ namespace Google.Cloud.PubSub.V1
         /// If the resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="permissions">
-        /// The set of permissions to check for the `resource`. Permissions with
-        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
-        /// information see
-        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2578,15 +2792,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override TestIamPermissionsResponse TestIamPermissions(
-            string resource,
-            IEnumerable<string> permissions,
+            TestIamPermissionsRequest request,
             CallSettings callSettings = null)
         {
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                Resource = resource,
-                Permissions = { permissions },
-            };
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Sync(request, callSettings);
         }

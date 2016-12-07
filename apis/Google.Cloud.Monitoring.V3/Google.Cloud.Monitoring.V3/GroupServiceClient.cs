@@ -406,6 +406,44 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(
+            ListGroupsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListGroupsResponse, Group> ListGroups(
+            ListGroupsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Gets a single group.
         /// </summary>
         /// <param name="name">
@@ -420,10 +458,12 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Task<Group> GetGroupAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetGroupAsync(
+                new GetGroupRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a single group.
@@ -459,6 +499,46 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Group GetGroup(
             string name,
+            CallSettings callSettings = null) => GetGroup(
+                new GetGroupRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Group> GetGroupAsync(
+            GetGroupRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a single group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Group GetGroup(
+            GetGroupRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -484,10 +564,13 @@ namespace Google.Cloud.Monitoring.V3
         public virtual Task<Group> CreateGroupAsync(
             string name,
             Group group,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CreateGroupAsync(
+                new CreateGroupRequest
+                {
+                    Name = name,
+                    Group = group,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a new group.
@@ -534,6 +617,47 @@ namespace Google.Cloud.Monitoring.V3
         public virtual Group CreateGroup(
             string name,
             Group group,
+            CallSettings callSettings = null) => CreateGroup(
+                new CreateGroupRequest
+                {
+                    Name = name,
+                    Group = group,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Group> CreateGroupAsync(
+            CreateGroupRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a new group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Group CreateGroup(
+            CreateGroupRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -555,10 +679,12 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Task<Group> UpdateGroupAsync(
             Group group,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => UpdateGroupAsync(
+                new UpdateGroupRequest
+                {
+                    Group = group,
+                },
+                callSettings);
 
         /// <summary>
         /// Updates an existing group.
@@ -596,6 +722,48 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Group UpdateGroup(
             Group group,
+            CallSettings callSettings = null) => UpdateGroup(
+                new UpdateGroupRequest
+                {
+                    Group = group,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Group> UpdateGroupAsync(
+            UpdateGroupRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates an existing group.
+        /// You can change any group attributes except `name`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Group UpdateGroup(
+            UpdateGroupRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -616,10 +784,12 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Task DeleteGroupAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => DeleteGroupAsync(
+                new DeleteGroupRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes an existing group.
@@ -655,6 +825,46 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual void DeleteGroup(
             string name,
+            CallSettings callSettings = null) => DeleteGroup(
+                new DeleteGroupRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes an existing group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteGroupAsync(
+            DeleteGroupRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes an existing group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteGroup(
+            DeleteGroupRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -685,10 +895,14 @@ namespace Google.Cloud.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListGroupMembersAsync(
+                new ListGroupMembersRequest
+                {
+                    Name = name,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists the monitored resources that are members of a group.
@@ -715,6 +929,48 @@ namespace Google.Cloud.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListGroupMembers(
+                new ListGroupMembersRequest
+                {
+                    Name = name,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the monitored resources that are members of a group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
+            ListGroupMembersRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the monitored resources that are members of a group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="MonitoredResource"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
+            ListGroupMembersRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -773,11 +1029,50 @@ namespace Google.Cloud.Monitoring.V3
         partial void Modify_ListGroupMembersRequest(ref ListGroupMembersRequest request, ref CallSettings settings);
 
         /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public override PagedAsyncEnumerable<ListGroupsResponse, Group> ListGroupsAsync(
+            ListGroupsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListGroupsRequest(ref request, ref callSettings);
+            return new GrpcPagedAsyncEnumerable<ListGroupsRequest, ListGroupsResponse, Group>(_callListGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the existing groups.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Group"/> resources.
+        /// </returns>
+        public override PagedEnumerable<ListGroupsResponse, Group> ListGroups(
+            ListGroupsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListGroupsRequest(ref request, ref callSettings);
+            return new GrpcPagedEnumerable<ListGroupsRequest, ListGroupsResponse, Group>(_callListGroups, request, callSettings);
+        }
+
+        /// <summary>
         /// Gets a single group.
         /// </summary>
-        /// <param name="name">
-        /// The group to retrieve. The format is
-        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -786,13 +1081,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Group> GetGroupAsync(
-            string name,
+            GetGroupRequest request,
             CallSettings callSettings = null)
         {
-            GetGroupRequest request = new GetGroupRequest
-            {
-                Name = name,
-            };
             Modify_GetGroupRequest(ref request, ref callSettings);
             return _callGetGroup.Async(request, callSettings);
         }
@@ -800,9 +1091,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Gets a single group.
         /// </summary>
-        /// <param name="name">
-        /// The group to retrieve. The format is
-        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -811,13 +1101,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override Group GetGroup(
-            string name,
+            GetGroupRequest request,
             CallSettings callSettings = null)
         {
-            GetGroupRequest request = new GetGroupRequest
-            {
-                Name = name,
-            };
             Modify_GetGroupRequest(ref request, ref callSettings);
             return _callGetGroup.Sync(request, callSettings);
         }
@@ -825,13 +1111,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new group.
         /// </summary>
-        /// <param name="name">
-        /// The project in which to create the group. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -840,15 +1121,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Group> CreateGroupAsync(
-            string name,
-            Group group,
+            CreateGroupRequest request,
             CallSettings callSettings = null)
         {
-            CreateGroupRequest request = new CreateGroupRequest
-            {
-                Name = name,
-                Group = group,
-            };
             Modify_CreateGroupRequest(ref request, ref callSettings);
             return _callCreateGroup.Async(request, callSettings);
         }
@@ -856,13 +1131,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Creates a new group.
         /// </summary>
-        /// <param name="name">
-        /// The project in which to create the group. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="group">
-        /// A group definition. It is an error to define the `name` field because
-        /// the system assigns the name.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -871,15 +1141,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override Group CreateGroup(
-            string name,
-            Group group,
+            CreateGroupRequest request,
             CallSettings callSettings = null)
         {
-            CreateGroupRequest request = new CreateGroupRequest
-            {
-                Name = name,
-                Group = group,
-            };
             Modify_CreateGroupRequest(ref request, ref callSettings);
             return _callCreateGroup.Sync(request, callSettings);
         }
@@ -888,9 +1152,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Updates an existing group.
         /// You can change any group attributes except `name`.
         /// </summary>
-        /// <param name="group">
-        /// The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -899,13 +1162,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Group> UpdateGroupAsync(
-            Group group,
+            UpdateGroupRequest request,
             CallSettings callSettings = null)
         {
-            UpdateGroupRequest request = new UpdateGroupRequest
-            {
-                Group = group,
-            };
             Modify_UpdateGroupRequest(ref request, ref callSettings);
             return _callUpdateGroup.Async(request, callSettings);
         }
@@ -914,9 +1173,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Updates an existing group.
         /// You can change any group attributes except `name`.
         /// </summary>
-        /// <param name="group">
-        /// The new definition of the group.  All fields of the existing group,
-        /// excepting `name`, are replaced with the corresponding fields of this group.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -925,13 +1183,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override Group UpdateGroup(
-            Group group,
+            UpdateGroupRequest request,
             CallSettings callSettings = null)
         {
-            UpdateGroupRequest request = new UpdateGroupRequest
-            {
-                Group = group,
-            };
             Modify_UpdateGroupRequest(ref request, ref callSettings);
             return _callUpdateGroup.Sync(request, callSettings);
         }
@@ -939,9 +1193,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Deletes an existing group.
         /// </summary>
-        /// <param name="name">
-        /// The group to delete. The format is
-        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -950,13 +1203,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteGroupAsync(
-            string name,
+            DeleteGroupRequest request,
             CallSettings callSettings = null)
         {
-            DeleteGroupRequest request = new DeleteGroupRequest
-            {
-                Name = name,
-            };
             Modify_DeleteGroupRequest(ref request, ref callSettings);
             return _callDeleteGroup.Async(request, callSettings);
         }
@@ -964,9 +1213,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Deletes an existing group.
         /// </summary>
-        /// <param name="name">
-        /// The group to delete. The format is
-        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -975,13 +1223,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override void DeleteGroup(
-            string name,
+            DeleteGroupRequest request,
             CallSettings callSettings = null)
         {
-            DeleteGroupRequest request = new DeleteGroupRequest
-            {
-                Name = name,
-            };
             Modify_DeleteGroupRequest(ref request, ref callSettings);
             _callDeleteGroup.Sync(request, callSettings);
         }
@@ -989,17 +1233,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists the monitored resources that are members of a group.
         /// </summary>
-        /// <param name="name">
-        /// The group whose members are listed. The format is
-        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1008,17 +1243,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
-            string name,
-            string pageToken = null,
-            int? pageSize = null,
+            ListGroupMembersRequest request,
             CallSettings callSettings = null)
         {
-            ListGroupMembersRequest request = new ListGroupMembersRequest
-            {
-                Name = name,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListGroupMembersRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
         }
@@ -1026,17 +1253,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists the monitored resources that are members of a group.
         /// </summary>
-        /// <param name="name">
-        /// The group whose members are listed. The format is
-        /// `"projects/{project_id_or_number}/groups/{group_id}"`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1045,17 +1263,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
         public override PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
-            string name,
-            string pageToken = null,
-            int? pageSize = null,
+            ListGroupMembersRequest request,
             CallSettings callSettings = null)
         {
-            ListGroupMembersRequest request = new ListGroupMembersRequest
-            {
-                Name = name,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListGroupMembersRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListGroupMembersRequest, ListGroupMembersResponse, MonitoredResource>(_callListGroupMembers, request, callSettings);
         }
@@ -1063,6 +1273,18 @@ namespace Google.Cloud.Monitoring.V3
     }
 
     // Partial classes to enable page-streaming
+
+    public partial class ListGroupsRequest : IPageRequest { }
+    public partial class ListGroupsResponse : IPageResponse<Group>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public IEnumerator<Group> GetEnumerator() => Group.GetEnumerator();
+
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
 
     public partial class ListGroupMembersRequest : IPageRequest { }
     public partial class ListGroupMembersResponse : IPageResponse<MonitoredResource>

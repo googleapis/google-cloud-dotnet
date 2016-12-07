@@ -491,10 +491,14 @@ namespace Google.Cloud.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListMonitoredResourceDescriptorsAsync(
+                new ListMonitoredResourceDescriptorsRequest
+                {
+                    Name = name,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
@@ -521,6 +525,48 @@ namespace Google.Cloud.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListMonitoredResourceDescriptors(
+                new ListMonitoredResourceDescriptorsRequest
+                {
+                    Name = name,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
+            ListMonitoredResourceDescriptorsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
+            ListMonitoredResourceDescriptorsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -543,10 +589,12 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetMonitoredResourceDescriptorAsync(
+                new GetMonitoredResourceDescriptorRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
@@ -586,6 +634,46 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
             string name,
+            CallSettings callSettings = null) => GetMonitoredResourceDescriptor(
+                new GetMonitoredResourceDescriptorRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
+            GetMonitoredResourceDescriptorRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
+            GetMonitoredResourceDescriptorRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -616,10 +704,14 @@ namespace Google.Cloud.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListMetricDescriptorsAsync(
+                new ListMetricDescriptorsRequest
+                {
+                    Name = name,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
@@ -646,6 +738,48 @@ namespace Google.Cloud.Monitoring.V3
             string name,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListMetricDescriptors(
+                new ListMetricDescriptorsRequest
+                {
+                    Name = name,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
+            ListMetricDescriptorsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
+            ListMetricDescriptorsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -668,10 +802,12 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetMetricDescriptorAsync(
+                new GetMetricDescriptorRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
@@ -711,6 +847,46 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual MetricDescriptor GetMetricDescriptor(
             string name,
+            CallSettings callSettings = null) => GetMetricDescriptor(
+                new GetMetricDescriptorRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
+            GetMetricDescriptorRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a single metric descriptor. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual MetricDescriptor GetMetricDescriptor(
+            GetMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -738,10 +914,13 @@ namespace Google.Cloud.Monitoring.V3
         public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
             string name,
             MetricDescriptor metricDescriptor,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CreateMetricDescriptorAsync(
+                new CreateMetricDescriptorRequest
+                {
+                    Name = name,
+                    MetricDescriptor = metricDescriptor,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a new metric descriptor.
@@ -792,6 +971,51 @@ namespace Google.Cloud.Monitoring.V3
         public virtual MetricDescriptor CreateMetricDescriptor(
             string name,
             MetricDescriptor metricDescriptor,
+            CallSettings callSettings = null) => CreateMetricDescriptor(
+                new CreateMetricDescriptorRequest
+                {
+                    Name = name,
+                    MetricDescriptor = metricDescriptor,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
+            CreateMetricDescriptorRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a new metric descriptor.
+        /// User-created metric descriptors define
+        /// [custom metrics](/monitoring/custom-metrics).
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual MetricDescriptor CreateMetricDescriptor(
+            CreateMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -815,10 +1039,12 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => DeleteMetricDescriptorAsync(
+                new DeleteMetricDescriptorRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a metric descriptor. Only user-created
@@ -860,6 +1086,48 @@ namespace Google.Cloud.Monitoring.V3
         /// </returns>
         public virtual void DeleteMetricDescriptor(
             string name,
+            CallSettings callSettings = null) => DeleteMetricDescriptor(
+                new DeleteMetricDescriptorRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteMetricDescriptorAsync(
+            DeleteMetricDescriptorRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a metric descriptor. Only user-created
+        /// [custom metrics](/monitoring/custom-metrics) can be deleted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteMetricDescriptor(
+            DeleteMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -910,10 +1178,17 @@ namespace Google.Cloud.Monitoring.V3
             ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListTimeSeriesAsync(
+                new ListTimeSeriesRequest
+                {
+                    Name = name,
+                    Filter = filter,
+                    Interval = interval,
+                    View = view,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
@@ -960,6 +1235,51 @@ namespace Google.Cloud.Monitoring.V3
             ListTimeSeriesRequest.Types.TimeSeriesView view,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListTimeSeries(
+                new ListTimeSeriesRequest
+                {
+                    Name = name,
+                    Filter = filter,
+                    Interval = interval,
+                    View = view,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
+            ListTimeSeriesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists time series that match a filter. This method does not require a Stackdriver account.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="TimeSeries"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
+            ListTimeSeriesRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -991,10 +1311,13 @@ namespace Google.Cloud.Monitoring.V3
         public virtual Task CreateTimeSeriesAsync(
             string name,
             IEnumerable<TimeSeries> timeSeries,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CreateTimeSeriesAsync(
+                new CreateTimeSeriesRequest
+                {
+                    Name = name,
+                    TimeSeries = { timeSeries },
+                },
+                callSettings);
 
         /// <summary>
         /// Creates or adds data to one or more time series.
@@ -1053,6 +1376,53 @@ namespace Google.Cloud.Monitoring.V3
         public virtual void CreateTimeSeries(
             string name,
             IEnumerable<TimeSeries> timeSeries,
+            CallSettings callSettings = null) => CreateTimeSeries(
+                new CreateTimeSeriesRequest
+                {
+                    Name = name,
+                    TimeSeries = { timeSeries },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task CreateTimeSeriesAsync(
+            CreateTimeSeriesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates or adds data to one or more time series.
+        /// The response is empty if all time series in the request were written.
+        /// If any time series could not be written, a corresponding failure message is
+        /// included in the error response.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void CreateTimeSeries(
+            CreateTimeSeriesRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1121,17 +1491,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1140,17 +1501,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
-            string name,
-            string pageToken = null,
-            int? pageSize = null,
+            ListMonitoredResourceDescriptorsRequest request,
             CallSettings callSettings = null)
         {
-            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
-            {
-                Name = name,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
@@ -1158,17 +1511,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1177,17 +1521,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
         public override PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
-            string name,
-            string pageToken = null,
-            int? pageSize = null,
+            ListMonitoredResourceDescriptorsRequest request,
             CallSettings callSettings = null)
         {
-            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
-            {
-                Name = name,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
         }
@@ -1195,11 +1531,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
-        /// `cloudsql_database`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1208,13 +1541,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
-            string name,
+            GetMonitoredResourceDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
-            {
-                Name = name,
-            };
             Modify_GetMonitoredResourceDescriptorRequest(ref request, ref callSettings);
             return _callGetMonitoredResourceDescriptor.Async(request, callSettings);
         }
@@ -1222,11 +1551,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The monitored resource descriptor to get.  The format is
-        /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-        /// The `{resource_type}` is a predefined type, such as
-        /// `cloudsql_database`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1235,13 +1561,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
-            string name,
+            GetMonitoredResourceDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
-            {
-                Name = name,
-            };
             Modify_GetMonitoredResourceDescriptorRequest(ref request, ref callSettings);
             return _callGetMonitoredResourceDescriptor.Sync(request, callSettings);
         }
@@ -1249,17 +1571,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1268,17 +1581,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
-            string name,
-            string pageToken = null,
-            int? pageSize = null,
+            ListMetricDescriptorsRequest request,
             CallSettings callSettings = null)
         {
-            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
-            {
-                Name = name,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
@@ -1286,17 +1591,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1305,17 +1601,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
         public override PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
-            string name,
-            string pageToken = null,
-            int? pageSize = null,
+            ListMetricDescriptorsRequest request,
             CallSettings callSettings = null)
         {
-            ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
-            {
-                Name = name,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListMetricDescriptorsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse, MetricDescriptor>(_callListMetricDescriptors, request, callSettings);
         }
@@ -1323,11 +1611,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
-        /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1336,13 +1621,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<MetricDescriptor> GetMetricDescriptorAsync(
-            string name,
+            GetMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
-            {
-                Name = name,
-            };
             Modify_GetMetricDescriptorRequest(ref request, ref callSettings);
             return _callGetMetricDescriptor.Async(request, callSettings);
         }
@@ -1350,11 +1631,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Gets a single metric descriptor. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example value of `{metric_id}` is
-        /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1363,13 +1641,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override MetricDescriptor GetMetricDescriptor(
-            string name,
+            GetMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
-            {
-                Name = name,
-            };
             Modify_GetMetricDescriptorRequest(ref request, ref callSettings);
             return _callGetMetricDescriptor.Sync(request, callSettings);
         }
@@ -1379,13 +1653,8 @@ namespace Google.Cloud.Monitoring.V3
         /// User-created metric descriptors define
         /// [custom metrics](/monitoring/custom-metrics).
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="metricDescriptor">
-        /// The new [custom metric](/monitoring/custom-metrics)
-        /// descriptor.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1394,15 +1663,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<MetricDescriptor> CreateMetricDescriptorAsync(
-            string name,
-            MetricDescriptor metricDescriptor,
+            CreateMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
-            {
-                Name = name,
-                MetricDescriptor = metricDescriptor,
-            };
             Modify_CreateMetricDescriptorRequest(ref request, ref callSettings);
             return _callCreateMetricDescriptor.Async(request, callSettings);
         }
@@ -1412,13 +1675,8 @@ namespace Google.Cloud.Monitoring.V3
         /// User-created metric descriptors define
         /// [custom metrics](/monitoring/custom-metrics).
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="metricDescriptor">
-        /// The new [custom metric](/monitoring/custom-metrics)
-        /// descriptor.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1427,15 +1685,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override MetricDescriptor CreateMetricDescriptor(
-            string name,
-            MetricDescriptor metricDescriptor,
+            CreateMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
-            {
-                Name = name,
-                MetricDescriptor = metricDescriptor,
-            };
             Modify_CreateMetricDescriptorRequest(ref request, ref callSettings);
             return _callCreateMetricDescriptor.Sync(request, callSettings);
         }
@@ -1444,11 +1696,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a metric descriptor. Only user-created
         /// [custom metrics](/monitoring/custom-metrics) can be deleted.
         /// </summary>
-        /// <param name="name">
-        /// The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
-        /// `"custom.googleapis.com/my_test_metric"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1457,13 +1706,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteMetricDescriptorAsync(
-            string name,
+            DeleteMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
-            {
-                Name = name,
-            };
             Modify_DeleteMetricDescriptorRequest(ref request, ref callSettings);
             return _callDeleteMetricDescriptor.Async(request, callSettings);
         }
@@ -1472,11 +1717,8 @@ namespace Google.Cloud.Monitoring.V3
         /// Deletes a metric descriptor. Only user-created
         /// [custom metrics](/monitoring/custom-metrics) can be deleted.
         /// </summary>
-        /// <param name="name">
-        /// The metric descriptor on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-        /// An example of `{metric_id}` is:
-        /// `"custom.googleapis.com/my_test_metric"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1485,13 +1727,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override void DeleteMetricDescriptor(
-            string name,
+            DeleteMetricDescriptorRequest request,
             CallSettings callSettings = null)
         {
-            DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
-            {
-                Name = name,
-            };
             Modify_DeleteMetricDescriptorRequest(ref request, ref callSettings);
             _callDeleteMetricDescriptor.Sync(request, callSettings);
         }
@@ -1499,34 +1737,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// "projects/{project_id_or_number}".
-        /// </param>
-        /// <param name="filter">
-        /// A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-        /// series should be returned.  The filter must specify a single metric type,
-        /// and can additionally specify metric labels and other information. For
-        /// example:
-        ///
-        ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
-        ///         metric.label.instance_name = "my-instance-name"
-        /// </param>
-        /// <param name="interval">
-        /// The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
-        /// </param>
-        /// <param name="view">
-        /// Specifies which information is returned about the time series.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1535,23 +1747,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
-            string name,
-            string filter,
-            TimeInterval interval,
-            ListTimeSeriesRequest.Types.TimeSeriesView view,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTimeSeriesRequest request,
             CallSettings callSettings = null)
         {
-            ListTimeSeriesRequest request = new ListTimeSeriesRequest
-            {
-                Name = name,
-                Filter = filter,
-                Interval = interval,
-                View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTimeSeriesRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
         }
@@ -1559,34 +1757,8 @@ namespace Google.Cloud.Monitoring.V3
         /// <summary>
         /// Lists time series that match a filter. This method does not require a Stackdriver account.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// "projects/{project_id_or_number}".
-        /// </param>
-        /// <param name="filter">
-        /// A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-        /// series should be returned.  The filter must specify a single metric type,
-        /// and can additionally specify metric labels and other information. For
-        /// example:
-        ///
-        ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
-        ///         metric.label.instance_name = "my-instance-name"
-        /// </param>
-        /// <param name="interval">
-        /// The time interval for which results should be returned. Only time series
-        /// that contain data points in the specified interval are included
-        /// in the response.
-        /// </param>
-        /// <param name="view">
-        /// Specifies which information is returned about the time series.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1595,23 +1767,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
         public override PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
-            string name,
-            string filter,
-            TimeInterval interval,
-            ListTimeSeriesRequest.Types.TimeSeriesView view,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTimeSeriesRequest request,
             CallSettings callSettings = null)
         {
-            ListTimeSeriesRequest request = new ListTimeSeriesRequest
-            {
-                Name = name,
-                Filter = filter,
-                Interval = interval,
-                View = view,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTimeSeriesRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListTimeSeriesRequest, ListTimeSeriesResponse, TimeSeries>(_callListTimeSeries, request, callSettings);
         }
@@ -1622,16 +1780,8 @@ namespace Google.Cloud.Monitoring.V3
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="timeSeries">
-        /// The new data to be added to a list of time series.
-        /// Adds at most one data point to each of several time series.  The new data
-        /// point must be more recent than any other point in its time series.  Each
-        /// `TimeSeries` value must fully specify a unique time series by supplying
-        /// all label values for the metric and the monitored resource.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1640,15 +1790,9 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public override Task CreateTimeSeriesAsync(
-            string name,
-            IEnumerable<TimeSeries> timeSeries,
+            CreateTimeSeriesRequest request,
             CallSettings callSettings = null)
         {
-            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
-            {
-                Name = name,
-                TimeSeries = { timeSeries },
-            };
             Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
             return _callCreateTimeSeries.Async(request, callSettings);
         }
@@ -1659,16 +1803,8 @@ namespace Google.Cloud.Monitoring.V3
         /// If any time series could not be written, a corresponding failure message is
         /// included in the error response.
         /// </summary>
-        /// <param name="name">
-        /// The project on which to execute the request. The format is
-        /// `"projects/{project_id_or_number}"`.
-        /// </param>
-        /// <param name="timeSeries">
-        /// The new data to be added to a list of time series.
-        /// Adds at most one data point to each of several time series.  The new data
-        /// point must be more recent than any other point in its time series.  Each
-        /// `TimeSeries` value must fully specify a unique time series by supplying
-        /// all label values for the metric and the monitored resource.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1677,15 +1813,9 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public override void CreateTimeSeries(
-            string name,
-            IEnumerable<TimeSeries> timeSeries,
+            CreateTimeSeriesRequest request,
             CallSettings callSettings = null)
         {
-            CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
-            {
-                Name = name,
-                TimeSeries = { timeSeries },
-            };
             Modify_CreateTimeSeriesRequest(ref request, ref callSettings);
             _callCreateTimeSeries.Sync(request, callSettings);
         }

@@ -57,5 +57,35 @@ namespace Google.Cloud.Vision.V1.Snippets
             // End snippet
         }
 
+        public async Task BatchAnnotateImagesAsync_RequestObject()
+        {
+            // Snippet: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest,CallSettings)
+            // Create client
+            ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+            // Initialize request argument(s)
+            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+            {
+                Requests = { },
+            };
+            // Make the request
+            BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);
+            // End snippet
+        }
+
+        public void BatchAnnotateImages_RequestObject()
+        {
+            // Snippet: BatchAnnotateImages(BatchAnnotateImagesRequest,CallSettings)
+            // Create client
+            ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+            // Initialize request argument(s)
+            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+            {
+                Requests = { },
+            };
+            // Make the request
+            BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
+            // End snippet
+        }
+
     }
 }

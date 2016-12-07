@@ -296,10 +296,13 @@ namespace Google.Cloud.Speech.V1Beta1
         public virtual Task<SyncRecognizeResponse> SyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => SyncRecognizeAsync(
+                new SyncRecognizeRequest
+                {
+                    Config = config,
+                    Audio = audio,
+                },
+                callSettings);
 
         /// <summary>
         /// Perform synchronous speech-recognition: receive results after all audio
@@ -346,6 +349,49 @@ namespace Google.Cloud.Speech.V1Beta1
         public virtual SyncRecognizeResponse SyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
+            CallSettings callSettings = null) => SyncRecognize(
+                new SyncRecognizeRequest
+                {
+                    Config = config,
+                    Audio = audio,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Perform synchronous speech-recognition: receive results after all audio
+        /// has been sent and processed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<SyncRecognizeResponse> SyncRecognizeAsync(
+            SyncRecognizeRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Perform synchronous speech-recognition: receive results after all audio
+        /// has been sent and processed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual SyncRecognizeResponse SyncRecognize(
+            SyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -373,10 +419,13 @@ namespace Google.Cloud.Speech.V1Beta1
         public virtual Task<Operation> AsyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => AsyncRecognizeAsync(
+                new AsyncRecognizeRequest
+                {
+                    Config = config,
+                    Audio = audio,
+                },
+                callSettings);
 
         /// <summary>
         /// Perform asynchronous speech-recognition: receive results via the
@@ -427,6 +476,53 @@ namespace Google.Cloud.Speech.V1Beta1
         public virtual Operation AsyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
+            CallSettings callSettings = null) => AsyncRecognize(
+                new AsyncRecognizeRequest
+                {
+                    Config = config,
+                    Audio = audio,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Perform asynchronous speech-recognition: receive results via the
+        /// google.longrunning.Operations interface. Returns either an
+        /// `Operation.error` or an `Operation.response` which contains
+        /// an `AsyncRecognizeResponse` message.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> AsyncRecognizeAsync(
+            AsyncRecognizeRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Perform asynchronous speech-recognition: receive results via the
+        /// google.longrunning.Operations interface. Returns either an
+        /// `Operation.error` or an `Operation.response` which contains
+        /// an `AsyncRecognizeResponse` message.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation AsyncRecognize(
+            AsyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -472,12 +568,8 @@ namespace Google.Cloud.Speech.V1Beta1
         /// Perform synchronous speech-recognition: receive results after all audio
         /// has been sent and processed.
         /// </summary>
-        /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
-        /// </param>
-        /// <param name="audio">
-        /// [Required] The audio data to be recognized.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -486,15 +578,9 @@ namespace Google.Cloud.Speech.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<SyncRecognizeResponse> SyncRecognizeAsync(
-            RecognitionConfig config,
-            RecognitionAudio audio,
+            SyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
-            SyncRecognizeRequest request = new SyncRecognizeRequest
-            {
-                Config = config,
-                Audio = audio,
-            };
             Modify_SyncRecognizeRequest(ref request, ref callSettings);
             return _callSyncRecognize.Async(request, callSettings);
         }
@@ -503,12 +589,8 @@ namespace Google.Cloud.Speech.V1Beta1
         /// Perform synchronous speech-recognition: receive results after all audio
         /// has been sent and processed.
         /// </summary>
-        /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
-        /// </param>
-        /// <param name="audio">
-        /// [Required] The audio data to be recognized.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -517,15 +599,9 @@ namespace Google.Cloud.Speech.V1Beta1
         /// The RPC response.
         /// </returns>
         public override SyncRecognizeResponse SyncRecognize(
-            RecognitionConfig config,
-            RecognitionAudio audio,
+            SyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
-            SyncRecognizeRequest request = new SyncRecognizeRequest
-            {
-                Config = config,
-                Audio = audio,
-            };
             Modify_SyncRecognizeRequest(ref request, ref callSettings);
             return _callSyncRecognize.Sync(request, callSettings);
         }
@@ -536,12 +612,8 @@ namespace Google.Cloud.Speech.V1Beta1
         /// `Operation.error` or an `Operation.response` which contains
         /// an `AsyncRecognizeResponse` message.
         /// </summary>
-        /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
-        /// </param>
-        /// <param name="audio">
-        /// [Required] The audio data to be recognized.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -550,15 +622,9 @@ namespace Google.Cloud.Speech.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Operation> AsyncRecognizeAsync(
-            RecognitionConfig config,
-            RecognitionAudio audio,
+            AsyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
-            AsyncRecognizeRequest request = new AsyncRecognizeRequest
-            {
-                Config = config,
-                Audio = audio,
-            };
             Modify_AsyncRecognizeRequest(ref request, ref callSettings);
             return _callAsyncRecognize.Async(request, callSettings);
         }
@@ -569,12 +635,8 @@ namespace Google.Cloud.Speech.V1Beta1
         /// `Operation.error` or an `Operation.response` which contains
         /// an `AsyncRecognizeResponse` message.
         /// </summary>
-        /// <param name="config">
-        /// [Required] The `config` message provides information to the recognizer
-        /// that specifies how to process the request.
-        /// </param>
-        /// <param name="audio">
-        /// [Required] The audio data to be recognized.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -583,15 +645,9 @@ namespace Google.Cloud.Speech.V1Beta1
         /// The RPC response.
         /// </returns>
         public override Operation AsyncRecognize(
-            RecognitionConfig config,
-            RecognitionAudio audio,
+            AsyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
-            AsyncRecognizeRequest request = new AsyncRecognizeRequest
-            {
-                Config = config,
-                Audio = audio,
-            };
             Modify_AsyncRecognizeRequest(ref request, ref callSettings);
             return _callAsyncRecognize.Sync(request, callSettings);
         }
