@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Google.Devtools.Clouderrorreporting.V1Beta1;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.Owin.Testing;
 using Owin;
 using System;
@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 // Create a request that will filter on the TestId which is set to the service and version.
                 ListGroupStatsRequest request = new ListGroupStatsRequest
                 {
-                    ProjectName = ErrorStatsServiceClient.FormatProjectName(ProjectId),
+                    ProjectName = new ProjectName(ProjectId).ToString(),
                     ServiceFilter = new ServiceContextFilter
                     {
                         Service = TestId,
