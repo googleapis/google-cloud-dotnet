@@ -24,7 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-using CloudTrace = Google.Cloud.Trace.V1.Trace;
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
@@ -66,7 +66,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
         private SimpleManagedTracer CreateSimpleManagedTracer(ITraceConsumer consumer)
         {
-            CloudTrace trace = new CloudTrace
+            TraceProto trace = new TraceProto
             {
                 ProjectId = _projectId,
                 TraceId = _traceIdFactory.NextId()
@@ -89,7 +89,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// <summary>
         /// Gets a trace that contains a span with the given name.
         /// </summary>
-        private async Task<CloudTrace> GetTrace(string spanName)
+        private async Task<TraceProto> GetTrace(string spanName)
         {
             double sleepTime = 0;
             while (sleepTime < _timeout.TotalMilliseconds)
@@ -104,7 +104,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                     View = ListTracesRequest.Types.ViewType.Complete
                 };
                 ListTracesResponse response = await _grpcClient.ListTracesAsync(request);
-                CloudTrace trace = response.Traces.FirstOrDefault(t => t.Spans.Any(s => s.Name.Equals(spanName)));
+                TraceProto trace = response.Traces.FirstOrDefault(t => t.Spans.Any(s => s.Name.Equals(spanName)));
                 if (trace != null)
                 {
                     return trace;
@@ -126,7 +126,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             BlockUntilClockTick();
             tracer.EndSpan();
 
-            CloudTrace trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
         }
@@ -154,7 +154,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
 
-            CloudTrace trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
         }
@@ -170,7 +170,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             BlockUntilClockTick();
             tracer.EndSpan();
 
-            CloudTrace trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName);
             Assert.Null(trace);
         }
 
@@ -192,7 +192,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
 
-            CloudTrace trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
             Assert.True(TraceUtils.IsValidAnnotation(trace.Spans[0], annotation));
@@ -210,7 +210,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.SetStackTrace(new StackTrace(true));
             tracer.EndSpan();
 
-            CloudTrace trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
 
@@ -250,7 +250,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.EndSpan();
             tracer.EndSpan();
 
-            CloudTrace trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName);
             Assert.NotNull(trace);
             Assert.Equal(5, trace.Spans.Count);
 
@@ -291,7 +291,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.EndSpan();
             tracer.EndSpan();
 
-            CloudTrace trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName);
             Assert.Null(trace);
         }
     }

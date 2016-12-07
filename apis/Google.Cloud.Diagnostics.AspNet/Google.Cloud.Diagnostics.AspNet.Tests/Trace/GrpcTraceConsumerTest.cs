@@ -18,7 +18,7 @@ using Moq;
 using System.Threading.Tasks;
 using Xunit;
 
-using CloudTrace = Google.Cloud.Trace.V1.Trace;
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         private static readonly string ProjectId = "pid";
 
         private Traces GetTraces() => new Traces
-        { Traces_ = { new CloudTrace() { ProjectId = ProjectId } } };
+        { Traces_ = { new TraceProto() { ProjectId = ProjectId } } };
 
         [Fact]
         public void Receive()

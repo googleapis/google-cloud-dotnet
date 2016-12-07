@@ -19,7 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-using CloudTrace = Google.Cloud.Trace.V1.Trace;
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
@@ -32,8 +32,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         private static readonly Dictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
         private static readonly StackTrace EmptyStackTrace = new StackTrace();
 
-        private static CloudTrace CreateTrace(string projectId = ProjectId, string traceId = TraceId)
-            => new CloudTrace { ProjectId = ProjectId, TraceId = TraceId };
+        private static TraceProto CreateTrace(string projectId = ProjectId, string traceId = TraceId)
+            => new TraceProto { ProjectId = ProjectId, TraceId = TraceId };
         
 
         private static bool IsValidSpan(TraceSpan span, string name)

@@ -18,7 +18,7 @@ using System;
 using System.Threading.Tasks;
 using System.Web;
 
-using CloudTrace = Google.Cloud.Trace.V1.Trace;
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
@@ -32,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     ///  { 
     ///       void Application_Start(object sender, EventArgs e)
     ///       {
-    ///           Trace.Initialize("some-project-id", this);
+    ///           CloudTrace.Initialize("some-project-id", this);
     ///       }
     ///  }
     /// </code>
@@ -42,9 +42,9 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <code>
     /// public void DoSomething()
     /// {
-    ///     Trace.GetCurrentTracer().StartSpan("DoSomething");
+    ///     CloudTrace.GetCurrentTracer().StartSpan("DoSomething");
     ///     ...
-    ///     Trace.GetCurrentTracer().EndSpan();
+    ///     CloudTrace.GetCurrentTracer().EndSpan();
     /// }
     /// </code>
     /// </example>
@@ -57,7 +57,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// 
     /// Docs: https://cloud.google.com/trace/docs/
     /// </remarks>
-    public sealed class Trace
+    public sealed class CloudTrace
     {
         private readonly string _projectId;
         private readonly TraceIdFactory _traceIdfactory;
@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         private readonly RateLimitingTraceOptionsFactory _rateFactory;
         private readonly TraceHeaderTraceOptionsFactory _headerFactory;
 
-        private Trace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
+        private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
@@ -89,7 +89,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
-            Trace trace = new Trace(projectId, config, client);
+            CloudTrace trace = new CloudTrace(projectId, config, client);
 
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;
@@ -120,7 +120,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             }
 
             // Create and set the tracer for the request.
-            CloudTrace trace = new CloudTrace
+            TraceProto trace = new TraceProto
             {
                 ProjectId = _projectId,
                 TraceId = headerContext.TraceId ?? _traceIdfactory.NextId(),

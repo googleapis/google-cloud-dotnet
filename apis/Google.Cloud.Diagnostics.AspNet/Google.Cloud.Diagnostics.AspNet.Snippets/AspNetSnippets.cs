@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             {
                 string projectId = "[Google Cloud Platform project ID]";
                 // Trace a sampling of incoming Http requests.
-                Trace.Initialize(projectId, this);
+                CloudTrace.Initialize(projectId, this);
             }
         }
         // End sample
@@ -49,9 +49,9 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         {
             // Sample: UseTracer
             // Manually trace a specific operation.
-            Trace.GetCurrentTracer().StartSpan("hello-world");
+            CloudTrace.GetCurrentTracer().StartSpan("hello-world");
             Console.Out.WriteLine("Hello, World!");
-            Trace.GetCurrentTracer().EndSpan();
+            CloudTrace.GetCurrentTracer().EndSpan();
             // End sample
         }
 

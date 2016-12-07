@@ -16,13 +16,13 @@ using Google.Cloud.Trace.V1;
 using Moq;
 using Xunit;
 
-using CloudTrace = Google.Cloud.Trace.V1.Trace;
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class BufferingTraceConsumerTest
     {
-        private CloudTrace CreateTrace() => new CloudTrace
+        private TraceProto CreateTrace() => new TraceProto
         { ProjectId = "some-pid", TraceId = "f05445aa7843bc8bf206b12000100000" };
 
         [Fact]

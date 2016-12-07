@@ -15,7 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Trace.V1;
 
-using CloudTrace = Google.Cloud.Trace.V1.Trace;
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
             lock (_mutex)
             {
-                foreach (CloudTrace trace in traces.Traces_)
+                foreach (TraceProto trace in traces.Traces_)
                 {
                     _size += trace.CalculateSize();
                     _traces.Traces_.Add(trace);

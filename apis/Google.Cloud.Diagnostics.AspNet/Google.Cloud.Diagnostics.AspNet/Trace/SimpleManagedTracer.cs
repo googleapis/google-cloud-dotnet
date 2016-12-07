@@ -19,7 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-using CloudTrace = Google.Cloud.Trace.V1.Trace;
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         private readonly ITraceConsumer _consumer;
 
         /// <summary>The current trace.</summary>
-        private readonly CloudTrace _trace;
+        private readonly TraceProto _trace;
 
         /// <summary>A stack of trace spans.</summary>
         private readonly Stack<TraceSpan> _traceStack;
@@ -46,7 +46,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>The span id of the parent span of the root span of this trace.</summary>
         private readonly ulong? _rootSpanParentId;
 
-        private SimpleManagedTracer(ITraceConsumer consumer, CloudTrace trace, ulong? rootSpanParentId = null)
+        private SimpleManagedTracer(ITraceConsumer consumer, TraceProto trace, ulong? rootSpanParentId = null)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _trace = GaxPreconditions.CheckNotNull(trace, nameof(trace));
@@ -61,7 +61,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="consumer">The consumer to push finised traces to.</param>
         /// <param name="trace">The current trace.</param>
         /// <param name="rootSpanParentId">Optional, the parent span id of the root span of the passed in trace.</param>
-        public static SimpleManagedTracer Create(ITraceConsumer consumer, CloudTrace trace, ulong? rootSpanParentId = null)
+        public static SimpleManagedTracer Create(ITraceConsumer consumer, TraceProto trace, ulong? rootSpanParentId = null)
         {
             return new SimpleManagedTracer(consumer, trace, rootSpanParentId);
         }
