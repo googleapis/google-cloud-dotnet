@@ -55,14 +55,14 @@ namespace Google.Cloud.BigQuery.V2
     /// as timestamps with precision of a microsecond.
     /// </para>
     /// <para>
-    /// <see cref="InsertRow"/> is used for record/struct fields for convenience, but only the <see cref="InsertId"/>
+    /// <see cref="BigQueryInsertRow"/> is used for record/struct fields for convenience, but only the <see cref="InsertId"/>
     /// of the top-level row is relevant.
     /// </para>
     /// <para>
     /// Null elements within repeated fields are ignored by the server.
     /// </para>
     /// </remarks>
-    public sealed class InsertRow : IEnumerable
+    public sealed class BigQueryInsertRow : IEnumerable
     {
         private static HashSet<Type> ValidSingleTypes = new HashSet<Type>
         {
@@ -72,7 +72,7 @@ namespace Google.Cloud.BigQuery.V2
             typeof(string), typeof(byte[]),
             typeof(bool),
             typeof(DateTime), typeof(DateTimeOffset),
-            typeof(InsertRow)
+            typeof(BigQueryInsertRow)
         };
 
         private static List<TypeInfo> ValidRepeatedTypes = ValidSingleTypes
@@ -93,7 +93,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Constructs an empty row with the specified insert ID.
         /// </summary>
         /// <param name="insertId">Insert ID used for deduplication. May be null.</param>
-        public InsertRow(string insertId)
+        public BigQueryInsertRow(string insertId)
         {
             InsertId = insertId;
         }
@@ -101,7 +101,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// Constructs an empty row with no insert ID.
         /// </summary>
-        public InsertRow()
+        public BigQueryInsertRow()
         {
         }
 
@@ -193,9 +193,9 @@ namespace Google.Cloud.BigQuery.V2
                 DateTimeOffset dto = (DateTimeOffset)value;
                 return dto.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
             }
-            else if (value is InsertRow)
+            else if (value is BigQueryInsertRow)
             {
-                return ((InsertRow)value).GetJsonValues();
+                return ((BigQueryInsertRow)value).GetJsonValues();
             }
             else if (ValidSingleTypes.Contains(value.GetType()))
             {
@@ -223,7 +223,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 return;
             }
-            throw new ArgumentException($"Unable to use value of type {value.GetType()} in {nameof(InsertRow)}", paramName);
+            throw new ArgumentException($"Unable to use value of type {value.GetType()} in {nameof(BigQueryInsertRow)}", paramName);
         }
     }
 }

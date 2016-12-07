@@ -87,7 +87,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override void Insert(TableReference tableReference, IEnumerable<InsertRow> rows, InsertOptions options = null)
+        public override void Insert(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows, InsertOptions options = null)
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(rows, nameof(rows));
@@ -191,7 +191,7 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
-        public override async Task InsertAsync(TableReference tableReference, IEnumerable<InsertRow> rows,
+        public override async Task InsertAsync(TableReference tableReference, IEnumerable<BigQueryInsertRow> rows,
             InsertOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));

@@ -23,7 +23,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var builder = new TableSchemaBuilder
             {
-                { "field", BigQueryDbType.Int64, FieldMode.Repeated, "My field" }
+                { "field", BigQueryDbType.Int64, BigQueryFieldMode.Repeated, "My field" }
             };
             var schema = builder.Build();
             var field = schema.Fields[0];
@@ -38,7 +38,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var builder = new TableSchemaBuilder
             {
-                { "outer", new TableSchemaBuilder { { "inner", BigQueryDbType.String } }, FieldMode.Required, "Outer field" }
+                { "outer", new TableSchemaBuilder { { "inner", BigQueryDbType.String } }, BigQueryFieldMode.Required, "Outer field" }
             };
             var schema = builder.Build();
             var field = schema.Fields[0];

@@ -17,7 +17,7 @@ namespace Google.Cloud.BigQuery.V2
     /// <summary>
     /// The mode of a field within a schema.
     /// </summary>
-    public enum FieldMode
+    public enum BigQueryFieldMode
     {
         /// <summary>
         /// The field is optional.

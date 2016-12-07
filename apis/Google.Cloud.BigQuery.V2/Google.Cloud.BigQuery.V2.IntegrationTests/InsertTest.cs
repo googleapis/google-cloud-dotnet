@@ -79,7 +79,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
-            var row = new InsertRow { { "noSuchField", 10 } };
+            var row = new BigQueryInsertRow { { "noSuchField", 10 } };
             Assert.Throws<GoogleApiException>(() => table.Insert(row));
         }
 
@@ -89,7 +89,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
-            var row = new InsertRow { { "noSuchField", 10 } };
+            var row = new BigQueryInsertRow { { "noSuchField", 10 } };
             table.Insert(row, new InsertOptions { AllowUnknownFields = true });
         }
 
@@ -100,10 +100,10 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
             var guid = Guid.NewGuid().ToString();
-            var row = new InsertRow
+            var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
-                ["position"] = new InsertRow { ["x"] = 10L, ["y"] = 20L }
+                ["position"] = new BigQueryInsertRow { ["x"] = 10L, ["y"] = 20L }
             };
             table.Insert(row);
             var command = new BigQueryCommand($"SELECT guid, position.x, position.y FROM {table} WHERE guid=@guid")
@@ -127,7 +127,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
             var guid = Guid.NewGuid().ToString();
-            var row = new InsertRow
+            var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
                 // The null element will be ignored here (at the server side)
@@ -156,12 +156,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
             var guid = Guid.NewGuid().ToString();
-            var row = new InsertRow
+            var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
                 ["names"] = new[] {
-                    new InsertRow { ["first"] = "a", ["last"] = "b" },
-                    new InsertRow { ["first"] = "x", ["last"] = "y" }
+                    new BigQueryInsertRow { ["first"] = "a", ["last"] = "b" },
+                    new BigQueryInsertRow { ["first"] = "x", ["last"] = "y" }
                 }
             };
             table.Insert(row);
@@ -201,8 +201,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             throw new TimeoutException("Expected rows were not available after 5 seconds");
         }
 
-        private InsertRow BuildRow(string player, long score, DateTime gameStarted) =>
-            new InsertRow
+        private BigQueryInsertRow BuildRow(string player, long score, DateTime gameStarted) =>
+            new BigQueryInsertRow
             {
                 { "player", player },
                 { "score", score },

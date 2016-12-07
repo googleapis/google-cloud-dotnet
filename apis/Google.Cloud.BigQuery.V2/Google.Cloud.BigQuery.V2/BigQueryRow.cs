@@ -85,7 +85,7 @@ namespace Google.Cloud.BigQuery.V2
             }
             var type = field.GetFieldType();
 
-            if (field.GetFieldMode() == FieldMode.Repeated)
+            if (field.GetFieldMode() == BigQueryFieldMode.Repeated)
             {
                 JArray array = (JArray)rawValue;
                 switch (type)
