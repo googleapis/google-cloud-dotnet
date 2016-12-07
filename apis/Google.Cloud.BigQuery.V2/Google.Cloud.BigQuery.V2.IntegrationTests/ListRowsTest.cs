@@ -40,14 +40,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.ComplexTypesTableId);
             var guid = Guid.NewGuid().ToString();
-            var insertRow = new InsertRow
+            var insertRow = new BigQueryInsertRow
             {
                 ["guid"] = guid,
                 ["tags"] = new[] { "a", "b" },
-                ["position"] = new InsertRow { ["x"] = 10L, ["y"] = 20L },
+                ["position"] = new BigQueryInsertRow { ["x"] = 10L, ["y"] = 20L },
                 ["names"] = new[] {
-                    new InsertRow { ["first"] = "a", ["last"] = "b" },
-                    new InsertRow { ["first"] = "x", ["last"] = "y" }
+                    new BigQueryInsertRow { ["first"] = "a", ["last"] = "b" },
+                    new BigQueryInsertRow { ["first"] = "x", ["last"] = "y" }
                 }
             };
             table.Insert(insertRow);

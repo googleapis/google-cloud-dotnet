@@ -29,9 +29,9 @@ namespace Google.Cloud.BigQuery.V2
             EnumMap<BigQueryDbType>.ToValue(field.Type);
 
         /// <summary>
-        /// Returns the mode of a field as a <see cref="FieldMode"/>.
+        /// Returns the mode of a field as a <see cref="BigQueryFieldMode"/>.
         /// </summary>
-        internal static FieldMode GetFieldMode(this TableFieldSchema field) =>
-            EnumMap<FieldMode>.ToValue(field.Mode);
+        internal static BigQueryFieldMode GetFieldMode(this TableFieldSchema field) =>
+            EnumMap<BigQueryFieldMode>.ToValue(field.Mode);
     }
 }

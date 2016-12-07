@@ -67,9 +67,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         protected override object GetArgument(ParameterInfo parameter)
         {
-            if (parameter.ParameterType == typeof(InsertRow))
+            if (parameter.ParameterType == typeof(BigQueryInsertRow))
             {
-                return new InsertRow();
+                return new BigQueryInsertRow();
             }
             return base.GetArgument(parameter);
         }
@@ -405,7 +405,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var schema = new TableSchemaBuilder().Build();
             var options = new InsertOptions();
             var stream = new MemoryStream();
-            var row = new InsertRow();
+            var row = new BigQueryInsertRow();
             VerifyEquivalent(
                 client => client.Insert(MatchesWhenSerialized(reference), new[] { row }, options),
                 client => client.Insert(datasetId, tableId, row, options),
@@ -422,7 +422,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var schema = new TableSchemaBuilder().Build();
             var options = new InsertOptions();
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalent(
                 client => client.Insert(MatchesWhenSerialized(reference), rows, options),
                 client => client.Insert(datasetId, tableId, rows, options),
@@ -439,7 +439,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var schema = new TableSchemaBuilder().Build();
             var options = new InsertOptions();
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalent(
                 client => client.Insert(MatchesWhenSerialized(reference), rows, null),
                 client => client.Insert(datasetId, tableId, rows[0], rows[1]),
@@ -738,7 +738,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
-            var row = new InsertRow();
+            var row = new BigQueryInsertRow();
             VerifyEquivalentAsync(
                 client => client.InsertAsync(MatchesWhenSerialized(reference), new[] { row }, options, token),
                 client => client.InsertAsync(datasetId, tableId, row, options, token),
@@ -756,7 +756,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(
                 client => client.InsertAsync(MatchesWhenSerialized(reference), rows, options, token),
                 client => client.InsertAsync(datasetId, tableId, rows, options, token),
@@ -774,7 +774,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(
                 client => client.InsertAsync(MatchesWhenSerialized(reference), rows, null, default(CancellationToken)),
                 client => client.InsertAsync(datasetId, tableId, rows[0], rows[1]),

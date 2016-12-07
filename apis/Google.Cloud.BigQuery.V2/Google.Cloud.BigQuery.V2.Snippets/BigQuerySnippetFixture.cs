@@ -73,8 +73,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             return id;
         }
 
-        private InsertRow CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
-            new InsertRow
+        private BigQueryInsertRow CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
+            new BigQueryInsertRow
             {
                 ["player"] = player,
                 ["score"] = score,

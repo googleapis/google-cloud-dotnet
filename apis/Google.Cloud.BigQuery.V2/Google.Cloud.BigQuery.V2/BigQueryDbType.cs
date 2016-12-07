@@ -65,7 +65,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <remarks>
         /// This type cannot be used when creating tables; instead, create
-        /// a field with a mode of <see cref="FieldMode.Repeated"/>.
+        /// a field with a mode of <see cref="BigQueryFieldMode.Repeated"/>.
         /// </remarks>
         Array,
         /// <summary>

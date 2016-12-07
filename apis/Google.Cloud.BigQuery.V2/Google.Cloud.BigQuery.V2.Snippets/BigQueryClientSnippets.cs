@@ -95,7 +95,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Insert a single row. There are many other ways of inserting
             // data into a table.
-            table.Insert(new InsertRow
+            table.Insert(new BigQueryInsertRow
             {
                 { "player", "Bob" },
                 { "score", 85 },
@@ -247,14 +247,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryClient client = BigQueryClient.Create(projectId);
             // The insert ID is optional, but can avoid duplicate data
             // when retrying inserts.
-            InsertRow row1 = new InsertRow("row1")
+            BigQueryInsertRow row1 = new BigQueryInsertRow("row1")
             {
                 { "player", "Jane" },
                 { "level", 3 },
                 { "score", 3600 },
                 { "game_started", DateTime.UtcNow }
             };
-            InsertRow row2 = new InsertRow("row2")
+            BigQueryInsertRow row2 = new BigQueryInsertRow("row2")
             {
                 { "player", "Jeff" },
                 { "level", 2 },
@@ -748,7 +748,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Insert a single row. There are many other ways of inserting
             // data into a table.
-            await table.InsertAsync(new InsertRow
+            await table.InsertAsync(new BigQueryInsertRow
             {
                 { "player", "Bob" },
                 { "score", 85 },
@@ -900,14 +900,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             // The insert ID is optional, but can avoid duplicate data
             // when retrying inserts.
-            InsertRow row1 = new InsertRow("row1-async")
+            BigQueryInsertRow row1 = new BigQueryInsertRow("row1-async")
             {
                 { "player", "Jane" },
                 { "level", 3 },
                 { "score", 3600 },
                 { "game_started", DateTime.UtcNow }
             };
-            InsertRow row2 = new InsertRow("row2-async")
+            BigQueryInsertRow row2 = new BigQueryInsertRow("row2-async")
             {
                 { "player", "Jeff" },
                 { "level", 2 },

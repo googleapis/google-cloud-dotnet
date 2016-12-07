@@ -75,17 +75,17 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 }.Build());
             table.Insert(new[]
             {
-                new InsertRow {
+                new BigQueryInsertRow {
                     { "player", "Bob" },
                     { "score", 85 },
                     { "gameStarted", new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 },
-                new InsertRow {
+                new BigQueryInsertRow {
                     { "player", "Angela" },
                     { "score", 95 },
                     { "gameStarted", new DateTime(2002, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 },
-                new InsertRow {
+                new BigQueryInsertRow {
                     { "player", null }, // Unnamed player...
                     { "score", 1 },
                     { "gameStarted", new DateTime(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
@@ -101,7 +101,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = dataset.CreateTable(PeopleTableId, new TableSchemaBuilder
             {
                 { "name", BigQueryDbType.String },
-                { "fullName", BigQueryDbType.String, FieldMode.Required },
+                { "fullName", BigQueryDbType.String, BigQueryFieldMode.Required },
                 { "age", BigQueryDbType.Int64 },
                 { "gender", BigQueryDbType.String },
                 { "phoneNumber", new TableSchemaBuilder
@@ -116,14 +116,14 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                         { "gender", BigQueryDbType.String },
                         { "age", BigQueryDbType.Int64 },
                     },
-                    FieldMode.Repeated
+                    BigQueryFieldMode.Repeated
                 },
                 { "citiesLived", new TableSchemaBuilder
                     {
                         { "place", BigQueryDbType.String },
-                        { "yearsLived", BigQueryDbType.Int64, FieldMode.Repeated },
+                        { "yearsLived", BigQueryDbType.Int64, BigQueryFieldMode.Repeated },
                     },
-                    FieldMode.Repeated
+                    BigQueryFieldMode.Repeated
                 }
             }.Build());
             List<string> jsonRows = LoadTextResource("personsData.json");
@@ -142,7 +142,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             dataset.CreateTable(ComplexTypesTableId, new TableSchemaBuilder
             {
                 { "guid", BigQueryDbType.String },
-                { "tags", BigQueryDbType.String, FieldMode.Repeated },
+                { "tags", BigQueryDbType.String, BigQueryFieldMode.Repeated },
                 { "position", new TableSchemaBuilder
                     {
                         { "x", BigQueryDbType.Int64 },
@@ -154,7 +154,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                         { "first", BigQueryDbType.String },
                         { "last", BigQueryDbType.String }
                     },
-                    FieldMode.Repeated
+                    BigQueryFieldMode.Repeated
                 }
             }.Build());
         }
