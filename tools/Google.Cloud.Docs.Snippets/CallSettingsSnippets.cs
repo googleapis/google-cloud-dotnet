@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.PubSub.V1;
 using Grpc.Core;
@@ -127,6 +128,33 @@ namespace Google.Cloud.Tools.Snippets
             // * A Timing deadline of 'deadline' (*not* the overridden 5-second timeout).
             // * The CancellationToken 'cancellationToken' (*not* CancellationToken.None).
             Topic topic = client.CreateTopic(topicName, CallSettings.FromCancellationToken(cancellationToken));
+            // End sample
+        }
+
+        [Fact]
+        public void RetrySettingsTiming()
+        {
+            // Sample: RetrySettingsTiming
+            // The overall operation mustn't take more than 30 seconds.
+            Expiration totalExpiration = Expiration.FromTimeout(TimeSpan.FromSeconds(30));
+
+            // The delay between one RPC finishing and when we make the next one.
+            // Each delay is double the previous one, with a maximum of 5s.
+            // The first delay is 1s, then 2s, then 4s, then 5s, then 5s, etc.
+            BackoffSettings retryBackoff = new BackoffSettings(
+                delay: TimeSpan.FromSeconds(1),
+                maxDelay: TimeSpan.FromSeconds(5),
+                delayMultiplier: 2.0);
+
+            // How long each individual RPC is allowed to take.
+            // Each timeout is 1.5x the previous one, with a maximum of 10s.
+            // The first timeout is 4s, then 6s, then 9s, then 10s, then 10s etc.
+            BackoffSettings timeoutBackoff = new BackoffSettings(
+                delay: TimeSpan.FromSeconds(4),
+                maxDelay: TimeSpan.FromSeconds(10),
+                delayMultiplier: 1.5);
+
+            RetrySettings settings = new RetrySettings(retryBackoff, timeoutBackoff, totalExpiration);
             // End sample
         }
     }
