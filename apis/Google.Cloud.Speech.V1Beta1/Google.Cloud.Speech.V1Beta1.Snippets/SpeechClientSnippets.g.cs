@@ -60,6 +60,38 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // End snippet
         }
 
+        public async Task SyncRecognizeAsync_RequestObject()
+        {
+            // Snippet: SyncRecognizeAsync(SyncRecognizeRequest,CallSettings)
+            // Create client
+            SpeechClient speechClient = SpeechClient.Create();
+            // Initialize request argument(s)
+            SyncRecognizeRequest request = new SyncRecognizeRequest
+            {
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            // Make the request
+            SyncRecognizeResponse response = await speechClient.SyncRecognizeAsync(request);
+            // End snippet
+        }
+
+        public void SyncRecognize_RequestObject()
+        {
+            // Snippet: SyncRecognize(SyncRecognizeRequest,CallSettings)
+            // Create client
+            SpeechClient speechClient = SpeechClient.Create();
+            // Initialize request argument(s)
+            SyncRecognizeRequest request = new SyncRecognizeRequest
+            {
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            // Make the request
+            SyncRecognizeResponse response = speechClient.SyncRecognize(request);
+            // End snippet
+        }
+
         public async Task AsyncRecognizeAsync()
         {
             // Snippet: AsyncRecognizeAsync(RecognitionConfig,RecognitionAudio,CallSettings)
@@ -84,6 +116,38 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             RecognitionAudio audio = new RecognitionAudio();
             // Make the request
             Operation response = speechClient.AsyncRecognize(config, audio);
+            // End snippet
+        }
+
+        public async Task AsyncRecognizeAsync_RequestObject()
+        {
+            // Snippet: AsyncRecognizeAsync(AsyncRecognizeRequest,CallSettings)
+            // Create client
+            SpeechClient speechClient = SpeechClient.Create();
+            // Initialize request argument(s)
+            AsyncRecognizeRequest request = new AsyncRecognizeRequest
+            {
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            // Make the request
+            Operation response = await speechClient.AsyncRecognizeAsync(request);
+            // End snippet
+        }
+
+        public void AsyncRecognize_RequestObject()
+        {
+            // Snippet: AsyncRecognize(AsyncRecognizeRequest,CallSettings)
+            // Create client
+            SpeechClient speechClient = SpeechClient.Create();
+            // Initialize request argument(s)
+            AsyncRecognizeRequest request = new AsyncRecognizeRequest
+            {
+                Config = new RecognitionConfig(),
+                Audio = new RecognitionAudio(),
+            };
+            // Make the request
+            Operation response = speechClient.AsyncRecognize(request);
             // End snippet
         }
 

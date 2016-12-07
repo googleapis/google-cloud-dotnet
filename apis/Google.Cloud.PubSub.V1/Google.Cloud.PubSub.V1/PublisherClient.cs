@@ -566,10 +566,12 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Topic> CreateTopicAsync(
             TopicName name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CreateTopicAsync(
+                new Topic
+                {
+                    TopicName = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates the given topic with the given name.
@@ -613,6 +615,46 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Topic CreateTopic(
             TopicName name,
+            CallSettings callSettings = null) => CreateTopic(
+                new Topic
+                {
+                    TopicName = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Topic> CreateTopicAsync(
+            Topic request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates the given topic with the given name.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Topic CreateTopic(
+            Topic request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -639,10 +681,13 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task<PublishResponse> PublishAsync(
             TopicName topic,
             IEnumerable<PubsubMessage> messages,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => PublishAsync(
+                new PublishRequest
+                {
+                    TopicAsTopicName = topic,
+                    Messages = { messages },
+                },
+                callSettings);
 
         /// <summary>
         /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
@@ -691,6 +736,51 @@ namespace Google.Cloud.PubSub.V1
         public virtual PublishResponse Publish(
             TopicName topic,
             IEnumerable<PubsubMessage> messages,
+            CallSettings callSettings = null) => Publish(
+                new PublishRequest
+                {
+                    TopicAsTopicName = topic,
+                    Messages = { messages },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<PublishResponse> PublishAsync(
+            PublishRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic
+        /// does not exist. The message payload must not be empty; it must contain
+        ///  either a non-empty data field, or at least one attribute.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual PublishResponse Publish(
+            PublishRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -711,10 +801,12 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Topic> GetTopicAsync(
             TopicName topic,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetTopicAsync(
+                new GetTopicRequest
+                {
+                    TopicAsTopicName = topic,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets the configuration of a topic.
@@ -750,6 +842,46 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Topic GetTopic(
             TopicName topic,
+            CallSettings callSettings = null) => GetTopic(
+                new GetTopicRequest
+                {
+                    TopicAsTopicName = topic,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Topic> GetTopicAsync(
+            GetTopicRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the configuration of a topic.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Topic GetTopic(
+            GetTopicRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -780,10 +912,14 @@ namespace Google.Cloud.PubSub.V1
             ProjectName project,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListTopicsAsync(
+                new ListTopicsRequest
+                {
+                    ProjectAsProjectName = project,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists matching topics.
@@ -810,6 +946,48 @@ namespace Google.Cloud.PubSub.V1
             ProjectName project,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListTopics(
+                new ListTopicsRequest
+                {
+                    ProjectAsProjectName = project,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
+            ListTopicsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists matching topics.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Topic"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
+            ListTopicsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -840,10 +1018,14 @@ namespace Google.Cloud.PubSub.V1
             TopicName topic,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListTopicSubscriptionsAsync(
+                new ListTopicSubscriptionsRequest
+                {
+                    TopicAsTopicName = topic,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
@@ -870,6 +1052,48 @@ namespace Google.Cloud.PubSub.V1
             TopicName topic,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListTopicSubscriptions(
+                new ListTopicSubscriptionsRequest
+                {
+                    TopicAsTopicName = topic,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the name of the subscriptions for this topic.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
+            ListTopicSubscriptionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the name of the subscriptions for this topic.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
+            ListTopicSubscriptionsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -894,10 +1118,12 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task DeleteTopicAsync(
             TopicName topic,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => DeleteTopicAsync(
+                new DeleteTopicRequest
+                {
+                    TopicAsTopicName = topic,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
@@ -941,6 +1167,54 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual void DeleteTopic(
             TopicName topic,
+            CallSettings callSettings = null) => DeleteTopic(
+                new DeleteTopicRequest
+                {
+                    TopicAsTopicName = topic,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteTopicAsync(
+            DeleteTopicRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes the topic with the given name. Returns `NOT_FOUND` if the topic
+        /// does not exist. After a topic is deleted, a new topic may be created with
+        /// the same name; this is an entirely new topic with none of the old
+        /// configuration or subscriptions. Existing subscriptions to this topic are
+        /// not deleted, but their `topic` field is set to `_deleted-topic_`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteTopic(
+            DeleteTopicRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -970,10 +1244,13 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task<Policy> SetIamPolicyAsync(
             string resource,
             Policy policy,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => SetIamPolicyAsync(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
 
         /// <summary>
         /// Sets the access control policy on the specified resource. Replaces any
@@ -1028,6 +1305,49 @@ namespace Google.Cloud.PubSub.V1
         public virtual Policy SetIamPolicy(
             string resource,
             Policy policy,
+            CallSettings callSettings = null) => SetIamPolicy(
+                new SetIamPolicyRequest
+                {
+                    Resource = resource,
+                    Policy = policy,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> SetIamPolicyAsync(
+            SetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Sets the access control policy on the specified resource. Replaces any
+        /// existing policy.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy SetIamPolicy(
+            SetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1051,10 +1371,12 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Task<Policy> GetIamPolicyAsync(
             string resource,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetIamPolicyAsync(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets the access control policy for a resource.
@@ -1096,6 +1418,50 @@ namespace Google.Cloud.PubSub.V1
         /// </returns>
         public virtual Policy GetIamPolicy(
             string resource,
+            CallSettings callSettings = null) => GetIamPolicy(
+                new GetIamPolicyRequest
+                {
+                    Resource = resource,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Policy> GetIamPolicyAsync(
+            GetIamPolicyRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the access control policy for a resource.
+        /// Returns an empty policy if the resource exists and does not have a policy
+        /// set.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Policy GetIamPolicy(
+            GetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1126,10 +1492,13 @@ namespace Google.Cloud.PubSub.V1
         public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
             string resource,
             IEnumerable<string> permissions,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => TestIamPermissionsAsync(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
+                },
+                callSettings);
 
         /// <summary>
         /// Returns permissions that a caller has on the specified resource.
@@ -1186,6 +1555,51 @@ namespace Google.Cloud.PubSub.V1
         public virtual TestIamPermissionsResponse TestIamPermissions(
             string resource,
             IEnumerable<string> permissions,
+            CallSettings callSettings = null) => TestIamPermissions(
+                new TestIamPermissionsRequest
+                {
+                    Resource = resource,
+                    Permissions = { permissions },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
+            TestIamPermissionsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns permissions that a caller has on the specified resource.
+        /// If the resource does not exist, this will return an empty set of
+        /// permissions, not a NOT_FOUND error.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual TestIamPermissionsResponse TestIamPermissions(
+            TestIamPermissionsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1259,13 +1673,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
-        /// <param name="name">
-        /// The name of the topic. It must have the format
-        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
-        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
-        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-        /// signs (`%`). It must be between 3 and 255 characters in length, and it
-        /// must not start with `"goog"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1274,13 +1683,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Topic> CreateTopicAsync(
-            TopicName name,
+            Topic request,
             CallSettings callSettings = null)
         {
-            Topic request = new Topic
-            {
-                TopicName = name,
-            };
             Modify_Topic(ref request, ref callSettings);
             return _callCreateTopic.Async(request, callSettings);
         }
@@ -1288,13 +1693,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Creates the given topic with the given name.
         /// </summary>
-        /// <param name="name">
-        /// The name of the topic. It must have the format
-        /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
-        /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
-        /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-        /// signs (`%`). It must be between 3 and 255 characters in length, and it
-        /// must not start with `"goog"`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1303,13 +1703,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Topic CreateTopic(
-            TopicName name,
+            Topic request,
             CallSettings callSettings = null)
         {
-            Topic request = new Topic
-            {
-                TopicName = name,
-            };
             Modify_Topic(ref request, ref callSettings);
             return _callCreateTopic.Sync(request, callSettings);
         }
@@ -1319,12 +1715,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
-        /// <param name="topic">
-        /// The messages in the request will be published on this topic.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="messages">
-        /// The messages to publish.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1333,15 +1725,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<PublishResponse> PublishAsync(
-            TopicName topic,
-            IEnumerable<PubsubMessage> messages,
+            PublishRequest request,
             CallSettings callSettings = null)
         {
-            PublishRequest request = new PublishRequest
-            {
-                TopicAsTopicName = topic,
-                Messages = { messages },
-            };
             Modify_PublishRequest(ref request, ref callSettings);
             return _callPublish.Async(request, callSettings);
         }
@@ -1351,12 +1737,8 @@ namespace Google.Cloud.PubSub.V1
         /// does not exist. The message payload must not be empty; it must contain
         ///  either a non-empty data field, or at least one attribute.
         /// </summary>
-        /// <param name="topic">
-        /// The messages in the request will be published on this topic.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="messages">
-        /// The messages to publish.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1365,15 +1747,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override PublishResponse Publish(
-            TopicName topic,
-            IEnumerable<PubsubMessage> messages,
+            PublishRequest request,
             CallSettings callSettings = null)
         {
-            PublishRequest request = new PublishRequest
-            {
-                TopicAsTopicName = topic,
-                Messages = { messages },
-            };
             Modify_PublishRequest(ref request, ref callSettings);
             return _callPublish.Sync(request, callSettings);
         }
@@ -1381,9 +1757,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
-        /// <param name="topic">
-        /// The name of the topic to get.
-        /// Format is `projects/{project}/topics/{topic}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1392,13 +1767,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Topic> GetTopicAsync(
-            TopicName topic,
+            GetTopicRequest request,
             CallSettings callSettings = null)
         {
-            GetTopicRequest request = new GetTopicRequest
-            {
-                TopicAsTopicName = topic,
-            };
             Modify_GetTopicRequest(ref request, ref callSettings);
             return _callGetTopic.Async(request, callSettings);
         }
@@ -1406,9 +1777,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Gets the configuration of a topic.
         /// </summary>
-        /// <param name="topic">
-        /// The name of the topic to get.
-        /// Format is `projects/{project}/topics/{topic}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1417,13 +1787,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Topic GetTopic(
-            TopicName topic,
+            GetTopicRequest request,
             CallSettings callSettings = null)
         {
-            GetTopicRequest request = new GetTopicRequest
-            {
-                TopicAsTopicName = topic,
-            };
             Modify_GetTopicRequest(ref request, ref callSettings);
             return _callGetTopic.Sync(request, callSettings);
         }
@@ -1431,17 +1797,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Lists matching topics.
         /// </summary>
-        /// <param name="project">
-        /// The name of the cloud project that topics belong to.
-        /// Format is `projects/{project}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1450,17 +1807,9 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable asynchronous sequence of <see cref="Topic"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListTopicsResponse, Topic> ListTopicsAsync(
-            ProjectName project,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTopicsRequest request,
             CallSettings callSettings = null)
         {
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                ProjectAsProjectName = project,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTopicsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
         }
@@ -1468,17 +1817,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Lists matching topics.
         /// </summary>
-        /// <param name="project">
-        /// The name of the cloud project that topics belong to.
-        /// Format is `projects/{project}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1487,17 +1827,9 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable sequence of <see cref="Topic"/> resources.
         /// </returns>
         public override PagedEnumerable<ListTopicsResponse, Topic> ListTopics(
-            ProjectName project,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTopicsRequest request,
             CallSettings callSettings = null)
         {
-            ListTopicsRequest request = new ListTopicsRequest
-            {
-                ProjectAsProjectName = project,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTopicsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListTopicsRequest, ListTopicsResponse, Topic>(_callListTopics, request, callSettings);
         }
@@ -1505,17 +1837,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
-        /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1524,17 +1847,9 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable asynchronous sequence of <see cref="string"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptionsAsync(
-            TopicName topic,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTopicSubscriptionsRequest request,
             CallSettings callSettings = null)
         {
-            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
-            {
-                TopicAsTopicName = topic,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(_callListTopicSubscriptions, request, callSettings);
         }
@@ -1542,17 +1857,8 @@ namespace Google.Cloud.PubSub.V1
         /// <summary>
         /// Lists the name of the subscriptions for this topic.
         /// </summary>
-        /// <param name="topic">
-        /// The name of the topic that subscriptions are attached to.
-        /// Format is `projects/{project}/topics/{topic}`.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1561,17 +1867,9 @@ namespace Google.Cloud.PubSub.V1
         /// A pageable sequence of <see cref="string"/> resources.
         /// </returns>
         public override PagedEnumerable<ListTopicSubscriptionsResponse, SubscriptionName> ListTopicSubscriptions(
-            TopicName topic,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTopicSubscriptionsRequest request,
             CallSettings callSettings = null)
         {
-            ListTopicSubscriptionsRequest request = new ListTopicSubscriptionsRequest
-            {
-                TopicAsTopicName = topic,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTopicSubscriptionsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse, SubscriptionName>(_callListTopicSubscriptions, request, callSettings);
         }
@@ -1583,9 +1881,8 @@ namespace Google.Cloud.PubSub.V1
         /// configuration or subscriptions. Existing subscriptions to this topic are
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
-        /// <param name="topic">
-        /// Name of the topic to delete.
-        /// Format is `projects/{project}/topics/{topic}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1594,13 +1891,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteTopicAsync(
-            TopicName topic,
+            DeleteTopicRequest request,
             CallSettings callSettings = null)
         {
-            DeleteTopicRequest request = new DeleteTopicRequest
-            {
-                TopicAsTopicName = topic,
-            };
             Modify_DeleteTopicRequest(ref request, ref callSettings);
             return _callDeleteTopic.Async(request, callSettings);
         }
@@ -1612,9 +1905,8 @@ namespace Google.Cloud.PubSub.V1
         /// configuration or subscriptions. Existing subscriptions to this topic are
         /// not deleted, but their `topic` field is set to `_deleted-topic_`.
         /// </summary>
-        /// <param name="topic">
-        /// Name of the topic to delete.
-        /// Format is `projects/{project}/topics/{topic}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1623,13 +1915,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override void DeleteTopic(
-            TopicName topic,
+            DeleteTopicRequest request,
             CallSettings callSettings = null)
         {
-            DeleteTopicRequest request = new DeleteTopicRequest
-            {
-                TopicAsTopicName = topic,
-            };
             Modify_DeleteTopicRequest(ref request, ref callSettings);
             _callDeleteTopic.Sync(request, callSettings);
         }
@@ -1638,16 +1926,8 @@ namespace Google.Cloud.PubSub.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="policy">
-        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
-        /// the policy is limited to a few 10s of KB. An empty policy is a
-        /// valid policy but certain Cloud Platform services (such as Projects)
-        /// might reject them.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1656,15 +1936,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Policy> SetIamPolicyAsync(
-            string resource,
-            Policy policy,
+            SetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                Resource = resource,
-                Policy = policy,
-            };
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Async(request, callSettings);
         }
@@ -1673,16 +1947,8 @@ namespace Google.Cloud.PubSub.V1
         /// Sets the access control policy on the specified resource. Replaces any
         /// existing policy.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being specified.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="policy">
-        /// REQUIRED: The complete policy to be applied to the `resource`. The size of
-        /// the policy is limited to a few 10s of KB. An empty policy is a
-        /// valid policy but certain Cloud Platform services (such as Projects)
-        /// might reject them.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1691,15 +1957,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Policy SetIamPolicy(
-            string resource,
-            Policy policy,
+            SetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            SetIamPolicyRequest request = new SetIamPolicyRequest
-            {
-                Resource = resource,
-                Policy = policy,
-            };
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
             return _callSetIamPolicy.Sync(request, callSettings);
         }
@@ -1709,10 +1969,8 @@ namespace Google.Cloud.PubSub.V1
         /// Returns an empty policy if the resource exists and does not have a policy
         /// set.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1721,13 +1979,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Policy> GetIamPolicyAsync(
-            string resource,
+            GetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                Resource = resource,
-            };
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Async(request, callSettings);
         }
@@ -1737,10 +1991,8 @@ namespace Google.Cloud.PubSub.V1
         /// Returns an empty policy if the resource exists and does not have a policy
         /// set.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1749,13 +2001,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override Policy GetIamPolicy(
-            string resource,
+            GetIamPolicyRequest request,
             CallSettings callSettings = null)
         {
-            GetIamPolicyRequest request = new GetIamPolicyRequest
-            {
-                Resource = resource,
-            };
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
             return _callGetIamPolicy.Sync(request, callSettings);
         }
@@ -1765,16 +2013,8 @@ namespace Google.Cloud.PubSub.V1
         /// If the resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="permissions">
-        /// The set of permissions to check for the `resource`. Permissions with
-        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
-        /// information see
-        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1783,15 +2023,9 @@ namespace Google.Cloud.PubSub.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<TestIamPermissionsResponse> TestIamPermissionsAsync(
-            string resource,
-            IEnumerable<string> permissions,
+            TestIamPermissionsRequest request,
             CallSettings callSettings = null)
         {
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                Resource = resource,
-                Permissions = { permissions },
-            };
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
@@ -1801,16 +2035,8 @@ namespace Google.Cloud.PubSub.V1
         /// If the resource does not exist, this will return an empty set of
         /// permissions, not a NOT_FOUND error.
         /// </summary>
-        /// <param name="resource">
-        /// REQUIRED: The resource for which the policy detail is being requested.
-        /// `resource` is usually specified as a path. For example, a Project
-        /// resource is specified as `projects/{project}`.
-        /// </param>
-        /// <param name="permissions">
-        /// The set of permissions to check for the `resource`. Permissions with
-        /// wildcards (such as '*' or 'storage.*') are not allowed. For more
-        /// information see
-        /// [IAM Overview](https://cloud.google.com/iam/docs/overview#permissions).
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1819,15 +2045,9 @@ namespace Google.Cloud.PubSub.V1
         /// The RPC response.
         /// </returns>
         public override TestIamPermissionsResponse TestIamPermissions(
-            string resource,
-            IEnumerable<string> permissions,
+            TestIamPermissionsRequest request,
             CallSettings callSettings = null)
         {
-            TestIamPermissionsRequest request = new TestIamPermissionsRequest
-            {
-                Resource = resource,
-                Permissions = { permissions },
-            };
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Sync(request, callSettings);
         }

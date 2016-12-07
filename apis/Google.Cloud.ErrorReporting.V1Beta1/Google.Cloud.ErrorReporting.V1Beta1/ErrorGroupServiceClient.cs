@@ -296,10 +296,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual Task<ErrorGroup> GetGroupAsync(
             string groupName,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetGroupAsync(
+                new GetGroupRequest
+                {
+                    GroupName = groupName,
+                },
+                callSettings);
 
         /// <summary>
         /// Get the specified group.
@@ -347,6 +349,46 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual ErrorGroup GetGroup(
             string groupName,
+            CallSettings callSettings = null) => GetGroup(
+                new GetGroupRequest
+                {
+                    GroupName = groupName,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Get the specified group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ErrorGroup> GetGroupAsync(
+            GetGroupRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Get the specified group.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ErrorGroup GetGroup(
+            GetGroupRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -367,10 +409,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual Task<ErrorGroup> UpdateGroupAsync(
             ErrorGroup group,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => UpdateGroupAsync(
+                new UpdateGroupRequest
+                {
+                    Group = group,
+                },
+                callSettings);
 
         /// <summary>
         /// Replace the data for the specified group.
@@ -406,6 +450,48 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual ErrorGroup UpdateGroup(
             ErrorGroup group,
+            CallSettings callSettings = null) => UpdateGroup(
+                new UpdateGroupRequest
+                {
+                    Group = group,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ErrorGroup> UpdateGroupAsync(
+            UpdateGroupRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Replace the data for the specified group.
+        /// Fails if the group does not exist.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ErrorGroup UpdateGroup(
+            UpdateGroupRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -450,15 +536,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Get the specified group.
         /// </summary>
-        /// <param name="groupName">
-        /// [Required] The group resource name. Written as
-        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
-        /// Call
-        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
-        /// <code>groupStats.list</code></a> to return a list of groups belonging to
-        /// this project.
-        ///
-        /// Example: <code>projects/my-project-123/groups/my-group</code>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -467,13 +546,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<ErrorGroup> GetGroupAsync(
-            string groupName,
+            GetGroupRequest request,
             CallSettings callSettings = null)
         {
-            GetGroupRequest request = new GetGroupRequest
-            {
-                GroupName = groupName,
-            };
             Modify_GetGroupRequest(ref request, ref callSettings);
             return _callGetGroup.Async(request, callSettings);
         }
@@ -481,15 +556,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Get the specified group.
         /// </summary>
-        /// <param name="groupName">
-        /// [Required] The group resource name. Written as
-        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
-        /// Call
-        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
-        /// <code>groupStats.list</code></a> to return a list of groups belonging to
-        /// this project.
-        ///
-        /// Example: <code>projects/my-project-123/groups/my-group</code>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -498,13 +566,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public override ErrorGroup GetGroup(
-            string groupName,
+            GetGroupRequest request,
             CallSettings callSettings = null)
         {
-            GetGroupRequest request = new GetGroupRequest
-            {
-                GroupName = groupName,
-            };
             Modify_GetGroupRequest(ref request, ref callSettings);
             return _callGetGroup.Sync(request, callSettings);
         }
@@ -513,8 +577,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Replace the data for the specified group.
         /// Fails if the group does not exist.
         /// </summary>
-        /// <param name="group">
-        /// [Required] The group which replaces the resource on the server.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -523,13 +587,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<ErrorGroup> UpdateGroupAsync(
-            ErrorGroup group,
+            UpdateGroupRequest request,
             CallSettings callSettings = null)
         {
-            UpdateGroupRequest request = new UpdateGroupRequest
-            {
-                Group = group,
-            };
             Modify_UpdateGroupRequest(ref request, ref callSettings);
             return _callUpdateGroup.Async(request, callSettings);
         }
@@ -538,8 +598,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// Replace the data for the specified group.
         /// Fails if the group does not exist.
         /// </summary>
-        /// <param name="group">
-        /// [Required] The group which replaces the resource on the server.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -548,13 +608,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public override ErrorGroup UpdateGroup(
-            ErrorGroup group,
+            UpdateGroupRequest request,
             CallSettings callSettings = null)
         {
-            UpdateGroupRequest request = new UpdateGroupRequest
-            {
-                Group = group,
-            };
             Modify_UpdateGroupRequest(ref request, ref callSettings);
             return _callUpdateGroup.Sync(request, callSettings);
         }

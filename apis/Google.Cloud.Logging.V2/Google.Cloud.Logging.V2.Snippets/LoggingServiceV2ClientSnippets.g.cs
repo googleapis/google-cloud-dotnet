@@ -35,57 +35,117 @@ namespace Google.Cloud.Logging.V2.Snippets
     {
         public async Task DeleteLogAsync()
         {
-            // Snippet: DeleteLogAsync(string,CallSettings)
-            // Additional: DeleteLogAsync(string,CancellationToken)
+            // Snippet: DeleteLogAsync(LogNameOneof,CallSettings)
+            // Additional: DeleteLogAsync(LogNameOneof,CancellationToken)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
+            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
             // Make the request
-            await loggingServiceV2Client.DeleteLogAsync(formattedLogName);
+            await loggingServiceV2Client.DeleteLogAsync(logName);
             // End snippet
         }
 
         public void DeleteLog()
         {
-            // Snippet: DeleteLog(string,CallSettings)
+            // Snippet: DeleteLog(LogNameOneof,CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
+            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
             // Make the request
-            loggingServiceV2Client.DeleteLog(formattedLogName);
+            loggingServiceV2Client.DeleteLog(logName);
+            // End snippet
+        }
+
+        public async Task DeleteLogAsync_RequestObject()
+        {
+            // Snippet: DeleteLogAsync(DeleteLogRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
+            };
+            // Make the request
+            await loggingServiceV2Client.DeleteLogAsync(request);
+            // End snippet
+        }
+
+        public void DeleteLog_RequestObject()
+        {
+            // Snippet: DeleteLog(DeleteLogRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            DeleteLogRequest request = new DeleteLogRequest
+            {
+                LogNameAsLogNameOneof = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]")),
+            };
+            // Make the request
+            loggingServiceV2Client.DeleteLog(request);
             // End snippet
         }
 
         public async Task WriteLogEntriesAsync()
         {
-            // Snippet: WriteLogEntriesAsync(string,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CallSettings)
-            // Additional: WriteLogEntriesAsync(string,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CancellationToken)
+            // Snippet: WriteLogEntriesAsync(LogNameOneof,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CallSettings)
+            // Additional: WriteLogEntriesAsync(LogNameOneof,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CancellationToken)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
+            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
             MonitoredResource resource = new MonitoredResource();
             IDictionary<string, string> labels = new Dictionary<string, string>();
             IEnumerable<LogEntry> entries = new List<LogEntry>();
             // Make the request
-            WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(formattedLogName, resource, labels, entries);
+            WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(logName, resource, labels, entries);
             // End snippet
         }
 
         public void WriteLogEntries()
         {
-            // Snippet: WriteLogEntries(string,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CallSettings)
+            // Snippet: WriteLogEntries(LogNameOneof,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CallSettings)
             // Create client
             LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedLogName = new LogName("[PROJECT]", "[LOG]").ToString();
+            LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
             MonitoredResource resource = new MonitoredResource();
             IDictionary<string, string> labels = new Dictionary<string, string>();
             IEnumerable<LogEntry> entries = new List<LogEntry>();
             // Make the request
-            WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(formattedLogName, resource, labels, entries);
+            WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(logName, resource, labels, entries);
+            // End snippet
+        }
+
+        public async Task WriteLogEntriesAsync_RequestObject()
+        {
+            // Snippet: WriteLogEntriesAsync(WriteLogEntriesRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                Entries = { },
+            };
+            // Make the request
+            WriteLogEntriesResponse response = await loggingServiceV2Client.WriteLogEntriesAsync(request);
+            // End snippet
+        }
+
+        public void WriteLogEntries_RequestObject()
+        {
+            // Snippet: WriteLogEntries(WriteLogEntriesRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            WriteLogEntriesRequest request = new WriteLogEntriesRequest
+            {
+                Entries = { },
+            };
+            // Make the request
+            WriteLogEntriesResponse response = loggingServiceV2Client.WriteLogEntries(request);
             // End snippet
         }
 
@@ -171,6 +231,184 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (LogEntry item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task ListLogEntriesAsync_RequestObject()
+        {
+            // Snippet: ListLogEntriesAsync(ListLogEntriesRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListLogEntriesRequest request = new ListLogEntriesRequest
+            {
+                ResourceNames = { },
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLogEntriesResponse,LogEntry> response =
+                loggingServiceV2Client.ListLogEntriesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogEntry item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLogEntriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogEntry item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogEntry> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogEntry item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListLogEntries_RequestObject()
+        {
+            // Snippet: ListLogEntries(ListLogEntriesRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListLogEntriesRequest request = new ListLogEntriesRequest
+            {
+                ResourceNames = { },
+            };
+            // Make the request
+            PagedEnumerable<ListLogEntriesResponse,LogEntry> response =
+                loggingServiceV2Client.ListLogEntries(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogEntry item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLogEntriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogEntry item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogEntry> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogEntry item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task ListMonitoredResourceDescriptorsAsync_RequestObject()
+        {
+            // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
+            // Make the request
+            PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+                loggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MonitoredResourceDescriptor item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMonitoredResourceDescriptorsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListMonitoredResourceDescriptors_RequestObject()
+        {
+            // Snippet: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
+            // Make the request
+            PagedEnumerable<ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor> response =
+                loggingServiceV2Client.ListMonitoredResourceDescriptors(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MonitoredResourceDescriptor item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMonitoredResourceDescriptorsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MonitoredResourceDescriptor item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MonitoredResourceDescriptor> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MonitoredResourceDescriptor item in singlePage)
             {
                 Console.WriteLine(item);
             }

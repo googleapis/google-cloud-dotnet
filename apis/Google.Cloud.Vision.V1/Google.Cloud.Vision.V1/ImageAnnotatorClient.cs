@@ -258,10 +258,12 @@ namespace Google.Cloud.Vision.V1
         /// </returns>
         public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
             IEnumerable<AnnotateImageRequest> requests,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => BatchAnnotateImagesAsync(
+                new BatchAnnotateImagesRequest
+                {
+                    Requests = { requests },
+                },
+                callSettings);
 
         /// <summary>
         /// Run image detection and annotation for a batch of images.
@@ -295,6 +297,46 @@ namespace Google.Cloud.Vision.V1
         /// </returns>
         public virtual BatchAnnotateImagesResponse BatchAnnotateImages(
             IEnumerable<AnnotateImageRequest> requests,
+            CallSettings callSettings = null) => BatchAnnotateImages(
+                new BatchAnnotateImagesRequest
+                {
+                    Requests = { requests },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Run image detection and annotation for a batch of images.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
+            BatchAnnotateImagesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Run image detection and annotation for a batch of images.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual BatchAnnotateImagesResponse BatchAnnotateImages(
+            BatchAnnotateImagesRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -335,8 +377,8 @@ namespace Google.Cloud.Vision.V1
         /// <summary>
         /// Run image detection and annotation for a batch of images.
         /// </summary>
-        /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -345,13 +387,9 @@ namespace Google.Cloud.Vision.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<BatchAnnotateImagesResponse> BatchAnnotateImagesAsync(
-            IEnumerable<AnnotateImageRequest> requests,
+            BatchAnnotateImagesRequest request,
             CallSettings callSettings = null)
         {
-            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
-            {
-                Requests = { requests },
-            };
             Modify_BatchAnnotateImagesRequest(ref request, ref callSettings);
             return _callBatchAnnotateImages.Async(request, callSettings);
         }
@@ -359,8 +397,8 @@ namespace Google.Cloud.Vision.V1
         /// <summary>
         /// Run image detection and annotation for a batch of images.
         /// </summary>
-        /// <param name="requests">
-        /// Individual image annotation requests for this batch.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -369,13 +407,9 @@ namespace Google.Cloud.Vision.V1
         /// The RPC response.
         /// </returns>
         public override BatchAnnotateImagesResponse BatchAnnotateImages(
-            IEnumerable<AnnotateImageRequest> requests,
+            BatchAnnotateImagesRequest request,
             CallSettings callSettings = null)
         {
-            BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
-            {
-                Requests = { requests },
-            };
             Modify_BatchAnnotateImagesRequest(ref request, ref callSettings);
             return _callBatchAnnotateImages.Sync(request, callSettings);
         }
