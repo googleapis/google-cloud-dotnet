@@ -80,15 +80,16 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null)
         {
             var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-            fakeClient.Setup(x => x.WriteLogEntriesAsync("", null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), null))
-                .Returns<string, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CallSettings>((a, b, c, entries, d) => handlerFn(entries));
+            fakeClient.Setup(x => x.WriteLogEntriesAsync(LogNameOneof.From(new LogName(s_projectId, s_logId)),
+                null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), null))
+                .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CallSettings>((a, b, c, entries, d) => handlerFn(entries));
             var appender = new GoogleStackdriverAppender(fakeClient.Object,
                 scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock())
             {
                 ErrorHandler = new ThrowingErrorHandler(),
                 Layout = new PatternLayout { ConversionPattern = "%message" },
-                ProjectId = "projectID",
-                LogId = "logId",
+                ProjectId = s_projectId,
+                LogId = s_logId,
             };
             if (maxMemoryCount != null) appender.MaxMemoryCount = maxMemoryCount.Value;
             if (maxMemorySize != null) appender.MaxMemorySize = maxMemorySize.Value;
