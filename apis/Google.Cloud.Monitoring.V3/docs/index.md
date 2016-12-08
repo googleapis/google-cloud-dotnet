@@ -38,3 +38,7 @@ optionally specifying a service endpoint and settings.
 ## List metric descriptors
 
 [!code-cs[](obj/snippets/Google.Cloud.Monitoring.V3.MetricServiceClient.txt#ListMetricDescriptors)]
+
+## List groups
+
+[!code-cs[](obj/snippets/Google.Cloud.Monitoring.V3.GroupServiceClient.txt#ListGroups)]
