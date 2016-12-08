@@ -37,7 +37,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Snippet: ReportErrorEventAsync(string,ReportedErrorEvent,CallSettings)
             // Additional: ReportErrorEventAsync(string,ReportedErrorEvent,CancellationToken)
             // Create client
-            ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
+            ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedProjectName = new ProjectName("[PROJECT]").ToString();
             ReportedErrorEvent @event = new ReportedErrorEvent();
@@ -63,7 +63,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         {
             // Snippet: ReportErrorEventAsync(ReportErrorEventRequest,CallSettings)
             // Create client
-            ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.Create();
+            ReportErrorsServiceClient reportErrorsServiceClient = await ReportErrorsServiceClient.CreateAsync();
             // Initialize request argument(s)
             ReportErrorEventRequest request = new ReportErrorEventRequest
             {

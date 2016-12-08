@@ -37,7 +37,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(string,string,int?,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
@@ -123,7 +123,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
             {
@@ -216,7 +216,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: GetMonitoredResourceDescriptorAsync(string,CallSettings)
             // Additional: GetMonitoredResourceDescriptorAsync(string,CancellationToken)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new MonitoredResourceDescriptorName("[PROJECT]", "[MONITORED_RESOURCE_DESCRIPTOR]").ToString();
             // Make the request
@@ -240,7 +240,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
             {
@@ -270,7 +270,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListMetricDescriptorsAsync(string,string,int?,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new ProjectName("[PROJECT]").ToString();
             // Make the request
@@ -356,7 +356,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListMetricDescriptorsAsync(ListMetricDescriptorsRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
             {
@@ -449,7 +449,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: GetMetricDescriptorAsync(string,CallSettings)
             // Additional: GetMetricDescriptorAsync(string,CancellationToken)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
@@ -473,7 +473,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: GetMetricDescriptorAsync(GetMetricDescriptorRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
             {
@@ -504,7 +504,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: CreateMetricDescriptorAsync(string,MetricDescriptor,CallSettings)
             // Additional: CreateMetricDescriptorAsync(string,MetricDescriptor,CancellationToken)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new ProjectName("[PROJECT]").ToString();
             MetricDescriptor metricDescriptor = new MetricDescriptor();
@@ -530,7 +530,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: CreateMetricDescriptorAsync(CreateMetricDescriptorRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
             {
@@ -563,7 +563,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: DeleteMetricDescriptorAsync(string,CallSettings)
             // Additional: DeleteMetricDescriptorAsync(string,CancellationToken)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new MetricDescriptorName("[PROJECT]", "[METRIC_DESCRIPTOR]").ToString();
             // Make the request
@@ -587,7 +587,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
             {
@@ -617,7 +617,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListTimeSeriesAsync(string,string,TimeInterval,ListTimeSeriesRequest.Types.TimeSeriesView,string,int?,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new ProjectName("[PROJECT]").ToString();
             string filter = "";
@@ -709,7 +709,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListTimeSeriesAsync(ListTimeSeriesRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             ListTimeSeriesRequest request = new ListTimeSeriesRequest
             {
@@ -808,7 +808,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: CreateTimeSeriesAsync(string,IEnumerable<TimeSeries>,CallSettings)
             // Additional: CreateTimeSeriesAsync(string,IEnumerable<TimeSeries>,CancellationToken)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new ProjectName("[PROJECT]").ToString();
             IEnumerable<TimeSeries> timeSeries = new List<TimeSeries>();
@@ -834,7 +834,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: CreateTimeSeriesAsync(CreateTimeSeriesRequest,CallSettings)
             // Create client
-            MetricServiceClient metricServiceClient = MetricServiceClient.Create();
+            MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
             {

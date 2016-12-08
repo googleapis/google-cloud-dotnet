@@ -37,7 +37,7 @@ namespace Google.Cloud.Vision.V1.Snippets
             // Snippet: BatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>,CallSettings)
             // Additional: BatchAnnotateImagesAsync(IEnumerable<AnnotateImageRequest>,CancellationToken)
             // Create client
-            ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+            ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
             IEnumerable<AnnotateImageRequest> requests = new List<AnnotateImageRequest>();
             // Make the request
@@ -61,7 +61,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         {
             // Snippet: BatchAnnotateImagesAsync(BatchAnnotateImagesRequest,CallSettings)
             // Create client
-            ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+            ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
             // Initialize request argument(s)
             BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
             {

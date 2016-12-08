@@ -37,7 +37,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListGroupsAsync(ListGroupsRequest,CallSettings)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             ListGroupsRequest request = new ListGroupsRequest
             {
@@ -130,7 +130,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: GetGroupAsync(string,CallSettings)
             // Additional: GetGroupAsync(string,CancellationToken)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
@@ -154,7 +154,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: GetGroupAsync(GetGroupRequest,CallSettings)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
@@ -185,7 +185,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: CreateGroupAsync(string,Group,CallSettings)
             // Additional: CreateGroupAsync(string,Group,CancellationToken)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new ProjectName("[PROJECT]").ToString();
             Group group = new Group();
@@ -211,7 +211,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: CreateGroupAsync(CreateGroupRequest,CallSettings)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             CreateGroupRequest request = new CreateGroupRequest
             {
@@ -244,7 +244,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: UpdateGroupAsync(Group,CallSettings)
             // Additional: UpdateGroupAsync(Group,CancellationToken)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             Group group = new Group();
             // Make the request
@@ -268,7 +268,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: UpdateGroupAsync(UpdateGroupRequest,CallSettings)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             UpdateGroupRequest request = new UpdateGroupRequest
             {
@@ -299,7 +299,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Snippet: DeleteGroupAsync(string,CallSettings)
             // Additional: DeleteGroupAsync(string,CancellationToken)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
@@ -323,7 +323,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: DeleteGroupAsync(DeleteGroupRequest,CallSettings)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             DeleteGroupRequest request = new DeleteGroupRequest
             {
@@ -353,7 +353,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListGroupMembersAsync(string,string,int?,CallSettings)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
             // Make the request
@@ -439,7 +439,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
         {
             // Snippet: ListGroupMembersAsync(ListGroupMembersRequest,CallSettings)
             // Create client
-            GroupServiceClient groupServiceClient = GroupServiceClient.Create();
+            GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
             ListGroupMembersRequest request = new ListGroupMembersRequest
             {

@@ -37,7 +37,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // Snippet: PatchTracesAsync(string,Traces,CallSettings)
             // Additional: PatchTracesAsync(string,Traces,CancellationToken)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             Traces traces = new Traces();
@@ -63,7 +63,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         {
             // Snippet: PatchTracesAsync(PatchTracesRequest,CallSettings)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             PatchTracesRequest request = new PatchTracesRequest
             {
@@ -96,7 +96,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // Snippet: GetTraceAsync(string,string,CallSettings)
             // Additional: GetTraceAsync(string,string,CancellationToken)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string traceId = "";
@@ -122,7 +122,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         {
             // Snippet: GetTraceAsync(GetTraceRequest,CallSettings)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             GetTraceRequest request = new GetTraceRequest
             {
@@ -154,7 +154,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         {
             // Snippet: ListTracesAsync(string,string,int?,CallSettings)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             // Make the request
@@ -240,7 +240,7 @@ namespace Google.Cloud.Trace.V1.Snippets
         {
             // Snippet: ListTracesAsync(ListTracesRequest,CallSettings)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             ListTracesRequest request = new ListTracesRequest
             {

@@ -38,7 +38,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int,CallSettings)
             // Additional: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SubscriptionName name = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             TopicName topic = new TopicName("[PROJECT]", "[TOPIC]");
@@ -68,7 +68,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: CreateSubscriptionAsync(Subscription,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             Subscription request = new Subscription
             {
@@ -101,7 +101,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: GetSubscriptionAsync(SubscriptionName,CallSettings)
             // Additional: GetSubscriptionAsync(SubscriptionName,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
@@ -125,7 +125,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: GetSubscriptionAsync(GetSubscriptionRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
@@ -155,7 +155,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: ListSubscriptionsAsync(ProjectName,string,int?,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
@@ -241,7 +241,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: ListSubscriptionsAsync(ListSubscriptionsRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             ListSubscriptionsRequest request = new ListSubscriptionsRequest
             {
@@ -334,7 +334,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: DeleteSubscriptionAsync(SubscriptionName,CallSettings)
             // Additional: DeleteSubscriptionAsync(SubscriptionName,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
@@ -358,7 +358,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: DeleteSubscriptionAsync(DeleteSubscriptionRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
@@ -389,7 +389,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: ModifyAckDeadlineAsync(SubscriptionName,IEnumerable<string>,int,CallSettings)
             // Additional: ModifyAckDeadlineAsync(SubscriptionName,IEnumerable<string>,int,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             IEnumerable<string> ackIds = new List<string>();
@@ -417,7 +417,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: ModifyAckDeadlineAsync(ModifyAckDeadlineRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
@@ -452,7 +452,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: AcknowledgeAsync(SubscriptionName,IEnumerable<string>,CallSettings)
             // Additional: AcknowledgeAsync(SubscriptionName,IEnumerable<string>,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             IEnumerable<string> ackIds = new List<string>();
@@ -478,7 +478,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: AcknowledgeAsync(AcknowledgeRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             AcknowledgeRequest request = new AcknowledgeRequest
             {
@@ -511,7 +511,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: PullAsync(SubscriptionName,bool,int,CallSettings)
             // Additional: PullAsync(SubscriptionName,bool,int,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             bool returnImmediately = false;
@@ -539,7 +539,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: PullAsync(PullRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             PullRequest request = new PullRequest
             {
@@ -572,7 +572,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: ModifyPushConfigAsync(SubscriptionName,PushConfig,CallSettings)
             // Additional: ModifyPushConfigAsync(SubscriptionName,PushConfig,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             PushConfig pushConfig = new PushConfig();
@@ -598,7 +598,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: ModifyPushConfigAsync(ModifyPushConfigRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
@@ -631,7 +631,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: SetIamPolicyAsync(string,Policy,CallSettings)
             // Additional: SetIamPolicyAsync(string,Policy,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             Policy policy = new Policy();
@@ -657,7 +657,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -690,7 +690,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: GetIamPolicyAsync(string,CallSettings)
             // Additional: GetIamPolicyAsync(string,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             // Make the request
@@ -714,7 +714,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -745,7 +745,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Snippet: TestIamPermissionsAsync(string,IEnumerable<string>,CallSettings)
             // Additional: TestIamPermissionsAsync(string,IEnumerable<string>,CancellationToken)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             string formattedResource = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
             IEnumerable<string> permissions = new List<string>();
@@ -771,7 +771,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest,CallSettings)
             // Create client
-            SubscriberClient subscriberClient = SubscriberClient.Create();
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {

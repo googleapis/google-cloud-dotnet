@@ -37,7 +37,7 @@ namespace Google.Cloud.Language.V1.Snippets
             // Snippet: AnalyzeSentimentAsync(Document,CallSettings)
             // Additional: AnalyzeSentimentAsync(Document,CancellationToken)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             Document document = new Document();
             // Make the request
@@ -61,7 +61,7 @@ namespace Google.Cloud.Language.V1.Snippets
         {
             // Snippet: AnalyzeSentimentAsync(AnalyzeSentimentRequest,CallSettings)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
             {
@@ -92,7 +92,7 @@ namespace Google.Cloud.Language.V1.Snippets
             // Snippet: AnalyzeEntitiesAsync(Document,EncodingType,CallSettings)
             // Additional: AnalyzeEntitiesAsync(Document,EncodingType,CancellationToken)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             Document document = new Document();
             EncodingType encodingType = EncodingType.None;
@@ -118,7 +118,7 @@ namespace Google.Cloud.Language.V1.Snippets
         {
             // Snippet: AnalyzeEntitiesAsync(AnalyzeEntitiesRequest,CallSettings)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
             {
@@ -151,7 +151,7 @@ namespace Google.Cloud.Language.V1.Snippets
             // Snippet: AnalyzeSyntaxAsync(Document,EncodingType,CallSettings)
             // Additional: AnalyzeSyntaxAsync(Document,EncodingType,CancellationToken)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             Document document = new Document();
             EncodingType encodingType = EncodingType.None;
@@ -177,7 +177,7 @@ namespace Google.Cloud.Language.V1.Snippets
         {
             // Snippet: AnalyzeSyntaxAsync(AnalyzeSyntaxRequest,CallSettings)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             AnalyzeSyntaxRequest request = new AnalyzeSyntaxRequest
             {
@@ -210,7 +210,7 @@ namespace Google.Cloud.Language.V1.Snippets
             // Snippet: AnnotateTextAsync(Document,AnnotateTextRequest.Types.Features,EncodingType,CallSettings)
             // Additional: AnnotateTextAsync(Document,AnnotateTextRequest.Types.Features,EncodingType,CancellationToken)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             Document document = new Document();
             AnnotateTextRequest.Types.Features features = new AnnotateTextRequest.Types.Features();
@@ -238,7 +238,7 @@ namespace Google.Cloud.Language.V1.Snippets
         {
             // Snippet: AnnotateTextAsync(AnnotateTextRequest,CallSettings)
             // Create client
-            LanguageServiceClient languageServiceClient = LanguageServiceClient.Create();
+            LanguageServiceClient languageServiceClient = await LanguageServiceClient.CreateAsync();
             // Initialize request argument(s)
             AnnotateTextRequest request = new AnnotateTextRequest
             {

@@ -37,7 +37,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: LookupAsync(string,ReadOptions,IEnumerable<Key>,CallSettings)
             // Additional: LookupAsync(string,ReadOptions,IEnumerable<Key>,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             ReadOptions readOptions = new ReadOptions();
@@ -65,7 +65,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         {
             // Snippet: LookupAsync(LookupRequest,CallSettings)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             LookupRequest request = new LookupRequest
             {
@@ -100,7 +100,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: RunQueryAsync(string,PartitionId,ReadOptions,Query,CallSettings)
             // Additional: RunQueryAsync(string,PartitionId,ReadOptions,Query,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             PartitionId partitionId = new PartitionId();
@@ -131,7 +131,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: RunQueryAsync(string,PartitionId,ReadOptions,GqlQuery,CallSettings)
             // Additional: RunQueryAsync(string,PartitionId,ReadOptions,GqlQuery,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             PartitionId partitionId = new PartitionId();
@@ -161,7 +161,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         {
             // Snippet: RunQueryAsync(RunQueryRequest,CallSettings)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             RunQueryRequest request = new RunQueryRequest
             {
@@ -196,7 +196,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: BeginTransactionAsync(string,CallSettings)
             // Additional: BeginTransactionAsync(string,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             // Make the request
@@ -220,7 +220,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         {
             // Snippet: BeginTransactionAsync(BeginTransactionRequest,CallSettings)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             BeginTransactionRequest request = new BeginTransactionRequest
             {
@@ -251,7 +251,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: CommitAsync(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CallSettings)
             // Additional: CommitAsync(string,CommitRequest.Types.Mode,ByteString,IEnumerable<Mutation>,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
@@ -282,7 +282,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: CommitAsync(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CallSettings)
             // Additional: CommitAsync(string,CommitRequest.Types.Mode,IEnumerable<Mutation>,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             CommitRequest.Types.Mode mode = CommitRequest.Types.Mode.Unspecified;
@@ -310,7 +310,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         {
             // Snippet: CommitAsync(CommitRequest,CallSettings)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             CommitRequest request = new CommitRequest
             {
@@ -345,7 +345,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: RollbackAsync(string,ByteString,CallSettings)
             // Additional: RollbackAsync(string,ByteString,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             ByteString transaction = ByteString.CopyFromUtf8("");
@@ -371,7 +371,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         {
             // Snippet: RollbackAsync(RollbackRequest,CallSettings)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             RollbackRequest request = new RollbackRequest
             {
@@ -404,7 +404,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Snippet: AllocateIdsAsync(string,IEnumerable<Key>,CallSettings)
             // Additional: AllocateIdsAsync(string,IEnumerable<Key>,CancellationToken)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             IEnumerable<Key> keys = new List<Key>();
@@ -430,7 +430,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
         {
             // Snippet: AllocateIdsAsync(AllocateIdsRequest,CallSettings)
             // Create client
-            DatastoreClient datastoreClient = DatastoreClient.Create();
+            DatastoreClient datastoreClient = await DatastoreClient.CreateAsync();
             // Initialize request argument(s)
             AllocateIdsRequest request = new AllocateIdsRequest
             {
