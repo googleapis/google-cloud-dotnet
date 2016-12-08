@@ -16,6 +16,7 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.Owin.Testing;
 using Owin;
 using System;
+using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -59,10 +60,9 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                 };
 
                 // Check that we have the proper results and the TestId shows up in the error.
-                ErrorStatsService.ErrorStatsServiceClient grpcClient = (await clientTask).GrpcClient;
-                ListGroupStatsResponse listResposne = grpcClient.ListGroupStats(request);
-                Assert.True(listResposne.ErrorGroupStats.Count > 0);
-                ErrorGroupStats stats = listResposne.ErrorGroupStats[0];
+                ErrorStatsServiceClient client = await clientTask;
+                ErrorGroupStats stats = await client.ListGroupStatsAsync(request).FirstOrDefault();
+                Assert.NotNull(stats);
                 Assert.True(stats.Count > 0);
                 Assert.Contains(TestId, stats.Representative.Message);
             }
