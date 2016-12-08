@@ -1,0 +1,19 @@
+﻿{
+  "description": "Unit tests for the Google Stackdriver ASP.NET Core Instrumentation Libraries",
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0"
+  },
+  "testRunner": "xunit",
+
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
