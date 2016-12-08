@@ -47,15 +47,15 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// <summary>Test start time to allow for easier querying of traces.</summary>
         private readonly Timestamp _startTime;
 
-        /// <summary>Using the underlying grpc client so we can filter.</summary>
-        private readonly TraceService.TraceServiceClient _grpcClient;
+        /// <summary>Client to use to send RPCs.</summary>
+        private readonly TraceServiceClient _client;
 
         public TraceTest()
         {
             _projectId = Utils.GetProjectIdFromEnvironment();
             _testId = Utils.GetTestId();
             _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
-            _grpcClient = TraceServiceClient.Create().GrpcClient;
+            _client = TraceServiceClient.Create();
         }
 
         private GrpcTraceConsumer CreateGrpcTraceConsumer()
@@ -103,8 +103,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
                     StartTime = _startTime,
                     View = ListTracesRequest.Types.ViewType.Complete
                 };
-                ListTracesResponse response = await _grpcClient.ListTracesAsync(request);
-                TraceProto trace = response.Traces.FirstOrDefault(t => t.Spans.Any(s => s.Name.Equals(spanName)));
+                var traces = _client.ListTracesAsync(request);
+                TraceProto trace = await traces.FirstOrDefault(t => t.Spans.Any(s => s.Name.Equals(spanName)));
                 if (trace != null)
                 {
                     return trace;
