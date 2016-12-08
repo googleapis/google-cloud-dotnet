@@ -34,7 +34,8 @@ namespace Google.Cloud.Monitoring.V3
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListGroups(*,*)
+            // Sample: ListGroups
+            // Additional: ListGroups(*,*)
             GroupServiceClient client = GroupServiceClient.Create();
             ProjectName projectName = new ProjectName(projectId);
             ListGroupsRequest request = new ListGroupsRequest { Name = projectName.ToString() };
@@ -43,7 +44,7 @@ namespace Google.Cloud.Monitoring.V3
             {
                 Console.WriteLine($"{group.Name}: {group.DisplayName}");
             }
-            // End snippet
+            // End sample
         }
     }
 }

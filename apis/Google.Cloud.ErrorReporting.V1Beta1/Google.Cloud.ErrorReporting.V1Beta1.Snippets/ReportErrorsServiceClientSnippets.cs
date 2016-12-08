@@ -33,7 +33,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ReportErrorEvent(*,*,*)
+            // Sample: ReportErrorEvent
+            // Additional: ReportErrorEvent(*,*,*)
             ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
             string projectName = new ProjectName(projectId).ToString();
             ReportedErrorEvent error = new ReportedErrorEvent
@@ -60,7 +61,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 }
             };
             client.ReportErrorEvent(projectName, error);
-            // End snippet
+            // End sample
         }
     }
 }

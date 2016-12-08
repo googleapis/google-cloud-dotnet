@@ -36,7 +36,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListGroupStats(*,*,*,*,*)
+            // Sample: ListGroupStats
+            // Additional: ListGroupStats(*,*,*,*,*)
             ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
             string projectName = new ProjectName(projectId).ToString();
             PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> groupStats = client.ListGroupStats(
@@ -48,7 +49,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
                 IEnumerable<string> services = item.AffectedServices.Select(s => $"{s.Service}/{s.Version}");
                 Console.WriteLine($"Group: {item.Group.GroupId}; Count: {item.Count}; Services: {string.Join(", ", services)}");
             }            
-            // End snippet
+            // End sample
         }
     }
 }

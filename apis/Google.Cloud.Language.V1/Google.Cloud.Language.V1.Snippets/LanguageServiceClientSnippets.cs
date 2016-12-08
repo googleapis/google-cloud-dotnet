@@ -44,14 +44,15 @@ namespace Google.Cloud.Language.V1.Snippets
         [Fact]
         public void AnalyzeSentiment()
         {
-            // Snippet: AnalyzeSentiment(Document,*)
+            // Sample: AnalyzeSentiment
+            // Additional: AnalyzeSentiment(Document,*)
             LanguageServiceClient client = LanguageServiceClient.Create();
             Document document = Document.FromPlainText("You're simply the best - better than all the rest.");
             AnalyzeSentimentResponse response = client.AnalyzeSentiment(document);
             Console.WriteLine($"Detected language: {response.Language}");
             Console.WriteLine($"Sentiment score: {response.DocumentSentiment.Score}");
             Console.WriteLine($"Sentiment magnitude: {response.DocumentSentiment.Magnitude}");
-            // End snippet
+            // End sample
 
             // This is fairly positive...
             Assert.True(response.DocumentSentiment.Score > 0.5);
