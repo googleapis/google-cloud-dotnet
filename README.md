@@ -18,7 +18,7 @@ The following libraries are available at a [late beta](#versioning) quality leve
 The following libraries are available at a [beta](#versioning) quality level:
 
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
-* [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1Beta1/) (beta)
+* [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (beta)
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
