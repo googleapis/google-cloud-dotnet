@@ -99,6 +99,12 @@ address: calendar.example.com</li>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetType()</span>
                 </div>
                 <div>
@@ -111,41 +117,6 @@ address: calendar.example.com</li>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class Service : IMessage&lt;Service&gt;, IMessage, IEquatable&lt;Service&gt;, IDeepCloneable&lt;Service&gt;</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Api_Service__ctor_" data-uid="Google.Api.Service.#ctor*"></a>
-              <h4 id="Google_Api_Service__ctor" data-uid="Google.Api.Service.#ctor">Service()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Service()</code></pre>
-              </div>
-              <a id="Google_Api_Service__ctor_" data-uid="Google.Api.Service.#ctor*"></a>
-              <h4 id="Google_Api_Service__ctor_Google_Api_Service_" data-uid="Google.Api.Service.#ctor(Google.Api.Service)">Service(Service)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Service(Service other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Service.html#Google_Api_Service">Service</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <a id="Google_Api_Service_Apis_" data-uid="Google.Api.Service.Apis*"></a>
@@ -706,189 +677,6 @@ should be listed here by name. Example:</p>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Api_Service_CalculateSize_" data-uid="Google.Api.Service.CalculateSize*"></a>
-              <h4 id="Google_Api_Service_CalculateSize" data-uid="Google.Api.Service.CalculateSize">CalculateSize()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
-              <a id="Google_Api_Service_Clone_" data-uid="Google.Api.Service.Clone*"></a>
-              <h4 id="Google_Api_Service_Clone" data-uid="Google.Api.Service.Clone">Clone()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Service Clone()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Service.html#Google_Api_Service">Service</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
-              <a id="Google_Api_Service_GetHashCode_" data-uid="Google.Api.Service.GetHashCode*"></a>
-              <h4 id="Google_Api_Service_GetHashCode" data-uid="Google.Api.Service.GetHashCode">GetHashCode()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.GetHashCode()</span></div>
-              <a id="Google_Api_Service_MergeFrom_" data-uid="Google.Api.Service.MergeFrom*"></a>
-              <h4 id="Google_Api_Service_MergeFrom_Google_Api_Service_" data-uid="Google.Api.Service.MergeFrom(Google.Api.Service)">MergeFrom(Service)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(Service other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Service.html#Google_Api_Service">Service</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
-              <a id="Google_Api_Service_MergeFrom_" data-uid="Google.Api.Service.MergeFrom*"></a>
-              <h4 id="Google_Api_Service_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Service.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
-                    <td><em>input</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
-              <a id="Google_Api_Service_ToString_" data-uid="Google.Api.Service.ToString*"></a>
-              <h4 id="Google_Api_Service_ToString" data-uid="Google.Api.Service.ToString">ToString()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
-              <a id="Google_Api_Service_WriteTo_" data-uid="Google.Api.Service.WriteTo*"></a>
-              <h4 id="Google_Api_Service_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Service.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
-                    <td><em>output</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           

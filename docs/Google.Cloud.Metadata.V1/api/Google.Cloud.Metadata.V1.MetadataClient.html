@@ -955,21 +955,34 @@ Google App Engine Flexible Environment, but if an metadata server emulator is av
 Google App Engine Flexible Environment, but if an metadata server emulator is available, this will also return true.</p>
 </div>
               <a id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.WaitForChange*"></a>
-              <h4 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.TimeSpan)">WaitForChange(String, TimeSpan)</h4>
+              <h4 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.String,System.TimeSpan)">WaitForChange(String, String, TimeSpan)</h4>
               <div class="markdown level1 summary"><p>Waits for changes to the value or values specified by the relative URL synchronously.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
-string result = client.WaitForChange(&quot;instance/attributes&quot;, timeout: TimeSpan.FromSeconds(5));
-JObject currentCustomMetadata = JObject.Parse(result);
-foreach(JProperty customMetadata in currentCustomMetadata.Properties())
+
+// Get the original ETag so we know when the metadata changes.
+string lastETag = client.WaitForChange(&quot;instance/attributes&quot;, timeout: TimeSpan.FromMilliseconds(1)).ETag;
+
+WaitForChangeResult result;
+while (true)
 {
-    Console.WriteLine(customMetadata.Name + &quot; = &quot; + customMetadata.Value);
+    // Wait in 30 second blocks until the value actually changes.
+    result = client.WaitForChange(&quot;instance/attributes&quot;, lastETag, TimeSpan.FromSeconds(30));
+    if (result.ETag != lastETag)
+    {
+        JObject currentCustomMetadata = JObject.Parse(result.Content);
+        foreach (JProperty customMetadata in currentCustomMetadata.Properties())
+        {
+            Console.WriteLine(customMetadata.Name + &quot; = &quot; + customMetadata.Value);
+        }
+        break;
+    }
 }
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string WaitForChange(string key, TimeSpan timeout = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual WaitForChangeResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -985,6 +998,12 @@ foreach(JProperty customMetadata in currentCustomMetadata.Properties())
                     <td><span class="xref">System.String</span></td>
                     <td><em>key</em></td>
                     <td><p>The metadata key on which to wait for changes, such as &quot;instance/scheduling/automatic-restart&quot;</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>lastETag</em></td>
+                    <td><p>The ETag of the last known value. May be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -1005,17 +1024,21 @@ foreach(JProperty customMetadata in currentCustomMetadata.Properties())
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><p>The changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</p>
+                    <td><a class="xref" href="Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult">WaitForChangeResult</a></td>
+                    <td><p>The <a class="xref" href="Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult">WaitForChangeResult</a> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan__remarks">Remarks</h5>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
 If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
 If the key specified is a directory, a recursive request must be made and the result will be a JSON object containing all values in the directory.
 For example, to wait for changes on all instance metadata use a key of &quot;instance?recursive=true&quot;.
+</p>
+<p>
+If the <em>lastETag</em> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
+changed since the last known value as obtained, and the changed value will be returned immediately.
 </p>
 <p>
 If the <em>timeout</em> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
@@ -1041,7 +1064,8 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentException</span></td>
-                    <td><p><em>key</em> does not have the proper format for a metadata key, which is a relative URL, or <em>timeout</em> represents a negative duration.</p>
+                    <td><p><em>key</em> does not have the proper format for a metadata key, which is a relative URL, <em>timeout</em> represents a negative duration,
+or <em>lastETag</em> is invalid.</p>
 </td>
                   </tr>
                   <tr>
@@ -1051,19 +1075,19 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan__seealso">See Also</h5>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan__seealso">See Also</h5>
               <div class="seealso">
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged">InstanceMetadataChanged</a></div>
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged">ProjectMetadataChanged</a></div>
               </div>
               <a id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync*"></a>
-              <h4 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)">WaitForChangeAsync(String, TimeSpan, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)">WaitForChangeAsync(String, String, TimeSpan, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Waits for changes to the value or values specified by the relative URL asynchronously.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;string&gt; WaitForChangeAsync(string key, TimeSpan timeout = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;WaitForChangeResult&gt; WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1079,6 +1103,12 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
                     <td><span class="xref">System.String</span></td>
                     <td><em>key</em></td>
                     <td><p>The metadata key on which to wait for changes, such as &quot;instance/scheduling/automatic-restart&quot;</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>lastETag</em></td>
+                    <td><p>The ETag of the last known value. May be null.</p>
 </td>
                   </tr>
                   <tr>
@@ -1105,17 +1135,21 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td><p>A task containing the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult">WaitForChangeResult</a>&gt;</td>
+                    <td><p>A task containing the <a class="xref" href="Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult">WaitForChangeResult</a> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
 If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
 If the key specified is a directory, a recursive request must be made and the result will be a JSON object containing all values in the directory.
 For example, to wait for changes on all instance metadata use a key of &quot;instance?recursive=true&quot;.
+</p>
+<p>
+If the <em>lastETag</em> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
+changed since the last known value as obtained, and the changed value will be returned immediately.
 </p>
 <p>
 If the <em>timeout</em> expires before changes are made, the current value will be returned. If unspecified, half the length of the timeout in
@@ -1141,7 +1175,8 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
                 <tbody>
                   <tr>
                     <td><span class="xref">System.ArgumentException</span></td>
-                    <td><p><em>key</em> does not have the proper format for a metadata key, which is a relative URL, or <em>timeout</em> represents a negative duration.</p>
+                    <td><p><em>key</em> does not have the proper format for a metadata key, which is a relative URL, <em>timeout</em> represents a negative duration,
+or <em>lastETag</em> is invalid.</p>
 </td>
                   </tr>
                   <tr>
@@ -1151,7 +1186,7 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken__seealso">See Also</h5>
+              <h5 id="Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken__seealso">See Also</h5>
               <div class="seealso">
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged">InstanceMetadataChanged</a></div>
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged">ProjectMetadataChanged</a></div>
@@ -1164,7 +1199,7 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual event EventHandler InstanceMetadataChanged</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual event EventHandler&lt;InstanceMetadataChangedEventArgs&gt; InstanceMetadataChanged</code></pre>
               </div>
               <h5 class="eventType">Event Type</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1176,14 +1211,14 @@ Alternatively, use <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler</span></td>
+                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs">InstanceMetadataChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
-To wait on changes for individual parts of the metadata, see <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_">WaitForChange(String, TimeSpan)</a> or <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, TimeSpan, CancellationToken)</a>.
+To wait on changes for individual parts of the metadata, see <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_">WaitForChange(String, String, TimeSpan)</a> or <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, String, TimeSpan, CancellationToken)</a>.
 </p>
 <p>
 Note: the event may be fired on a different thread from the one used to add the handler.
@@ -1193,8 +1228,8 @@ Note: the event may be fired on a different thread from the one used to add the 
               <div class="seealso">
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadata">GetInstanceMetadata()</a></div>
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadataAsync_System_Threading_CancellationToken_">GetInstanceMetadataAsync(CancellationToken)</a></div>
-                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_">WaitForChange(String, TimeSpan)</a></div>
-                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, TimeSpan, CancellationToken)</a></div>
+                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_">WaitForChange(String, String, TimeSpan)</a></div>
+                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, String, TimeSpan, CancellationToken)</a></div>
               </div>
               <h4 id="Google_Cloud_Metadata_V1_MetadataClient_MaintenanceStatusChanged" data-uid="Google.Cloud.Metadata.V1.MetadataClient.MaintenanceStatusChanged">MaintenanceStatusChanged</h4>
               <div class="markdown level1 summary"><p>Occurs when the the instance&#39;s maintenance status has changed.</p>
@@ -1202,7 +1237,7 @@ Note: the event may be fired on a different thread from the one used to add the 
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual event EventHandler&lt;MaintenanceStatus&gt; MaintenanceStatusChanged</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual event EventHandler&lt;MaintenanceStatusChangedEventArgs&gt; MaintenanceStatusChanged</code></pre>
               </div>
               <h5 class="eventType">Event Type</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1214,7 +1249,7 @@ Note: the event may be fired on a different thread from the one used to add the 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus">MaintenanceStatus</a>&gt;</td>
+                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs">MaintenanceStatusChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1235,7 +1270,7 @@ Note: the event may be fired on a different thread from the one used to add the 
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual event EventHandler ProjectMetadataChanged</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual event EventHandler&lt;ProjectMetadataChangedEventArgs&gt; ProjectMetadataChanged</code></pre>
               </div>
               <h5 class="eventType">Event Type</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1247,14 +1282,14 @@ Note: the event may be fired on a different thread from the one used to add the 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler</span></td>
+                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs">ProjectMetadataChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
-To wait on changes for individual parts of the metadata, see <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_">WaitForChange(String, TimeSpan)</a> or <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, TimeSpan, CancellationToken)</a>.
+To wait on changes for individual parts of the metadata, see <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_">WaitForChange(String, String, TimeSpan)</a> or <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, String, TimeSpan, CancellationToken)</a>.
 </p>
 <p>
 Note: the event may be fired on a different thread from the one used to add the handler.
@@ -1264,8 +1299,8 @@ Note: the event may be fired on a different thread from the one used to add the 
               <div class="seealso">
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadata">GetProjectMetadata()</a></div>
                   <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadataAsync_System_Threading_CancellationToken_">GetProjectMetadataAsync(CancellationToken)</a></div>
-                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_">WaitForChange(String, TimeSpan)</a></div>
-                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, TimeSpan, CancellationToken)</a></div>
+                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_">WaitForChange(String, String, TimeSpan)</a></div>
+                  <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_">WaitForChangeAsync(String, String, TimeSpan, CancellationToken)</a></div>
               </div>
             </article>
           </div>

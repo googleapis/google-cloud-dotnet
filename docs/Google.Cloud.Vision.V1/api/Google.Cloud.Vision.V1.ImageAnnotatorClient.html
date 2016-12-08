@@ -422,6 +422,65 @@ by creating a batch with a single request, and returns the single response.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_Google_Cloud_Vision_V1_BatchAnnotateImagesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages(Google.Cloud.Vision.V1.BatchAnnotateImagesRequest,Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImages(BatchAnnotateImagesRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+// Initialize request argument(s)
+BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+{
+    Requests = { },
+};
+// Make the request
+BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(request);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BatchAnnotateImagesResponse BatchAnnotateImages(BatchAnnotateImagesRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html#Google_Cloud_Vision_V1_BatchAnnotateImagesRequest">BatchAnnotateImagesRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImages(System.Collections.Generic.IEnumerable{Google.Cloud.Vision.V1.AnnotateImageRequest},Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImages(IEnumerable&lt;AnnotateImageRequest&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
 </div>
@@ -500,12 +559,71 @@ foreach (Status error in response.Responses.Select(r =&gt; r.Error))
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_Google_Cloud_Vision_V1_BatchAnnotateImagesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync(Google.Cloud.Vision.V1.BatchAnnotateImagesRequest,Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImagesAsync(BatchAnnotateImagesRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
+// Initialize request argument(s)
+BatchAnnotateImagesRequest request = new BatchAnnotateImagesRequest
+{
+    Requests = { },
+};
+// Make the request
+BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateImagesAsync(request);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;BatchAnnotateImagesResponse&gt; BatchAnnotateImagesAsync(BatchAnnotateImagesRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html#Google_Cloud_Vision_V1_BatchAnnotateImagesRequest">BatchAnnotateImagesRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.BatchAnnotateImagesAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Vision.V1.AnnotateImageRequest},Google.Api.Gax.Grpc.CallSettings)">BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Run image detection and annotation for a batch of images.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
-ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
 // Initialize request argument(s)
 IEnumerable&lt;AnnotateImageRequest&gt; requests = new List&lt;AnnotateImageRequest&gt;();
 // Make the request
@@ -561,7 +679,7 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
-ImageAnnotatorClient imageAnnotatorClient = ImageAnnotatorClient.Create();
+ImageAnnotatorClient imageAnnotatorClient = await ImageAnnotatorClient.CreateAsync();
 // Initialize request argument(s)
 IEnumerable&lt;AnnotateImageRequest&gt; requests = new List&lt;AnnotateImageRequest&gt;();
 // Make the request

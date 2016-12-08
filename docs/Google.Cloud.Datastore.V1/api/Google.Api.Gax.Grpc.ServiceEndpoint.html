@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ServiceEndpoint
+   | Google.Cloud.Datastore.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ServiceEndpoint
+   | Google.Cloud.Datastore.V1 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Api_Gax_Grpc_ServiceEndpoint" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint">Class ServiceEndpoint
+              </h1>
+              <div class="markdown level0 summary"><p>Settings specifying a service endpoint in the form of a host name and port.
+This class is immutable and thread-safe.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">ServiceEndpoint</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Api.Gax.Grpc</h6>
+              <h6><strong>Assembly</strong>:Google.Api.Gax.Grpc.dll</h6>
+              <h5 id="Google_Api_Gax_Grpc_ServiceEndpoint_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class ServiceEndpoint : IEquatable&lt;ServiceEndpoint&gt;</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Api_Gax_Grpc_ServiceEndpoint__ctor_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.#ctor*"></a>
+              <h4 id="Google_Api_Gax_Grpc_ServiceEndpoint__ctor_System_String_System_Int32_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.#ctor(System.String,System.Int32)">ServiceEndpoint(String, Int32)</h4>
+              <div class="markdown level1 summary"><p>Creates a new endpoint with the given host and port.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ServiceEndpoint(string host, int port)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>host</em></td>
+                    <td><p>The host name to connect to. Must not be null or empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>port</em></td>
+                    <td><p>The port to connect to, in the range 1 to 65535 inclusive.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Api_Gax_Grpc_ServiceEndpoint_Host_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.Host*"></a>
+              <h4 id="Google_Api_Gax_Grpc_ServiceEndpoint_Host" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.Host">Host</h4>
+              <div class="markdown level1 summary"><p>The host name to connect to. Never null or empty.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Host { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Gax_Grpc_ServiceEndpoint_Port_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.Port*"></a>
+              <h4 id="Google_Api_Gax_Grpc_ServiceEndpoint_Port" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.Port">Port</h4>
+              <div class="markdown level1 summary"><p>The port to connect to, in the range 1 to 65535 inclusive.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int Port { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Api_Gax_Grpc_ServiceEndpoint_GetHashCode_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.GetHashCode*"></a>
+              <h4 id="Google_Api_Gax_Grpc_ServiceEndpoint_GetHashCode" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"><p>Returns a hash code for this object, consistent with <span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint.Equals(Google.Api.Gax.Grpc.ServiceEndpoint)</span>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><p>A hash code for this object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              <a id="Google_Api_Gax_Grpc_ServiceEndpoint_ToString_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.ToString*"></a>
+              <h4 id="Google_Api_Gax_Grpc_ServiceEndpoint_ToString" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.ToString">ToString()</h4>
+              <div class="markdown level1 summary"><p>Returns this endpoint&#39;s data in the format &quot;host:port&quot;.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><p>This endpoint&#39;s data in the format &quot;host:port&quot;.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              <a id="Google_Api_Gax_Grpc_ServiceEndpoint_WithHost_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.WithHost*"></a>
+              <h4 id="Google_Api_Gax_Grpc_ServiceEndpoint_WithHost_System_String_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.WithHost(System.String)">WithHost(String)</h4>
+              <div class="markdown level1 summary"><p>Creates a new endpoint with the same port but the given host.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ServiceEndpoint WithHost(string host)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>host</em></td>
+                    <td><p>The host name to connect to. Must not be null or empty.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
+                    <td><p>A new endpoint with the current port and the specified host.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Gax_Grpc_ServiceEndpoint_WithPort_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.WithPort*"></a>
+              <h4 id="Google_Api_Gax_Grpc_ServiceEndpoint_WithPort_System_Int32_" data-uid="Google.Api.Gax.Grpc.ServiceEndpoint.WithPort(System.Int32)">WithPort(Int32)</h4>
+              <div class="markdown level1 summary"><p>Creates a new endpoint with the same host but the given port.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ServiceEndpoint WithPort(int port)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>port</em></td>
+                    <td><p>The port to connect to, in the range 1 to 65535 inclusive.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
+                    <td><p>A new endpoint with the current host and the specified port.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

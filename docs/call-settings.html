@@ -93,8 +93,8 @@ for multiple RPC invocations.</p>
 <h3 id="per-rpc-highest-priority">Per-RPC (highest priority)</h3>
 <pre><code class="lang-cs">// Create a PublisherClient with default settings.
 PublisherClient client = PublisherClient.Create();
-// Format topicName from the projectId and topicId.
-string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+// Create a topic name from the projectId and topicId.
+TopicName topicName = new TopicName(projectId, topicId);
 // Create a CallSettings with a custom header.
 CallSettings callSettings = new CallSettings(null, null, null, metadata =&gt; metadata.Add(&quot;ClientVersion&quot;, &quot;1.0.0&quot;), null, null);
 // This will cause the custom &#39;ClientVersion&#39; header to be included in the RPC call.
@@ -106,8 +106,8 @@ PublisherSettings publisherSettings = new PublisherSettings
     CallSettings = new CallSettings(null, null, null, metadata =&gt; metadata.Add(&quot;ClientVersion&quot;, &quot;1.0.0&quot;), null, null)
 };
 PublisherClient client = PublisherClient.Create(settings: publisherSettings);
-// Format topicName from the projectId and topicId.
-string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+// Create a topic name from the projectId and topicId.
+TopicName topicName = new TopicName(projectId, topicId);
 // The custom &#39;ClientVersion&#39; header will be included in the RPC call, due to
 // the client being configured with &#39;publishersettings&#39; above.
 Topic topic = client.CreateTopic(topicName);
@@ -117,8 +117,8 @@ Topic topic = client.CreateTopic(topicName);
 PublisherSettings publisherSettings = new PublisherSettings();
 publisherSettings.CreateTopicSettings = publisherSettings.CreateTopicSettings.WithHeader(&quot;ClientVersion&quot;, &quot;1.0.0&quot;);
 PublisherClient client = PublisherClient.Create(settings: publisherSettings);
-// Format topicName from the projectId and topicId.
-string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+// Create a topic name from the projectId and topicId.
+TopicName topicName = new TopicName(projectId, topicId);
 // The custom &#39;ClientVersion&#39; header will be included in the RPC call, due to
 // the client being configured with &#39;publishersettings&#39; above.
 Topic topic = client.CreateTopic(topicName);
@@ -142,8 +142,8 @@ publisherSettings.CallSettings = CallSettings
 // Create the client with the configured publisherSettings
 PublisherClient client = PublisherClient.Create(settings: publisherSettings);
 
-// Format topicName from the projectId and topicId.
-string topicName = PublisherClient.FormatTopicName(projectId, topicId);
+// Create a topic name from the projectId and topicId.
+TopicName topicName = new TopicName(projectId, topicId);
 
 // Call CreateTopic(). Override only the CancellationToken, using a per-RPC-method CallSettings.
 // The CallSettings used during this RPC invocation is:
@@ -155,6 +155,87 @@ Topic topic = client.CreateTopic(topicName, CallSettings.FromCancellationToken(c
 <p>By default there is a per-RPC-method client configuration that specifies a sensible
 retry policy for every method. See, for example,
 <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherSettings.html#Google_Pubsub_V1_PublisherSettings_CreateTopicSettings">PublisherSettings.CreateTopicSettings</a></p>
+<h2 id="timing-settings">Timing settings</h2>
+<p>The timing settings for an RPC are specified using <a href="api/Google.Api.Gax.Grpc.CallTiming.html">CallTiming</a>.
+This is either a simple <a href="obj/api/Google.Api.Gax.Grpc.Expiration.yml">Expiration</a>,
+or a <a href="api/Google.Api.Gax.Grpc.RetrySettings.html">RetrySettings</a>. <code>RetrySettings</code> uses an <code>Expiration</code> as well,
+so let&#39;s look at <code>Expiration</code> first.</p>
+<h3 id="expiration">Expiration</h3>
+<p>An expiration specifies the latest point at which you&#39;re willing for an operation to complete. It can be either
+a <em>timeout</em> (relative to the start time, e.g. &quot;it can&#39;t take more than 5 seconds&quot;) or a <em>deadline</em> (which is
+absolute, e.g. &quot;it must finish by 2016-12-07 14:55:00Z&quot;). You create an <code>Expiration</code> by specifying that timeout
+or deadline, with the <code>Expiration.FromTimeout(TimeSpan)</code> and <code>Expiration.FromDeadline(DateTime)</code> methods.
+Alternatively, you can use <code>Expiration.None</code>, which is an infinite timeout. A timeout is always relative to the
+start of an operation, not the time the expiration is created. So for example, if you create an expiration of
+5 seconds, you can use that as often as you like, and it will always mean that the operation you&#39;re applying
+the expiration to has 5 seconds to complete.</p>
+<p>Note that deadline expirations are most commonly used when the same deadline is passed to multiple calls:
+if you have to perform 5 different RPCs, and you know your total work needs to finish at a particular
+point but you don&#39;t care how those 5 RPCs use up your time budget between them, passing in the same
+deadline to all 5 works well. This is restricted to one unit of work, however - you&#39;d need to calculate a new
+deadline for the next unit of work, whereas a relative timeout may be valid for all calls. You should think
+carefully about your own requirements - and please file a feature request if we don&#39;t provide enough functionality
+for you to meet them.</p>
+<h3 id="retrysettings">RetrySettings</h3>
+<p>Retry is inherently complicated. There will be potentially multiple RPCs made, each with its own expiration, some
+back-off between RPCs, and the situations under which it&#39;s reasonable to retry. The <a href="api/Google.Api.Gax.Grpc.RetrySettings.html">RetrySettings</a> exposes this via the following properties (all set by the constructor):</p>
+<ul>
+<li><code>TimeoutBackoff</code>: how the expiration for each individual RPC varies
+(for example, the first RPC might have a timeout
+of 1s, then the second RPC might have 2s etc)</li>
+<li><code>RetryBackoff</code>: how the <em>delay</em> between each failed RPC varies
+(for example, we might wait for 0.5s after the first RPC, then 0.75s after the second, etc)</li>
+<li><code>RetryFilter</code>: a predicate which is consulted after each failed RPC to see whether that failure
+suggests we should retry. For example, we might retry on timeouts but not on a &quot;resource not found&quot; failure.</li>
+<li><code>TotalExpiration</code>: the overall expiration for the whole operation. For example, we might allow multiple RPCs
+to attempt an operation, but the whole operation must have completed within 10 seconds or we&#39;ll fail with a timeout.</li>
+<li><p><code>DelayJitter</code>: This allows the precise amount of delay (broadly specified by <code>RetryBackoff</code>) to vary randomly
+a little. This avoids multiple clients accidentally synchronizing their retries and periodically hitting
+a service very hard. This is exposed for testability, but is unlikely to need tweaking in production use.</p>
+<p><code>TimeoutBackoff</code> and <code>RetryBackoff</code> are both expressed in terms of a <a href="api/Google.Api.Gax.Grpc.BackoffSettings.html">BackoffSettings</a>, which consists of an initial timeout, a maximum timeout, and a multiplier.
+The multiplier is applied to the &quot;current&quot; timeout to determine the &quot;next&quot; timeout, capped at the maximum.</p>
+<p>All of this is probably best demonstrated with a worked example. Consider the following settings:</p>
+<pre><code class="lang-cs">// The overall operation mustn&#39;t take more than 30 seconds.
+Expiration totalExpiration = Expiration.FromTimeout(TimeSpan.FromSeconds(30));
+
+// The delay between one RPC finishing and when we make the next one.
+// Each delay is double the previous one, with a maximum of 5s.
+// The first delay is 1s, then 2s, then 4s, then 5s, then 5s, etc.
+BackoffSettings retryBackoff = new BackoffSettings(
+    delay: TimeSpan.FromSeconds(1),
+    maxDelay: TimeSpan.FromSeconds(5),
+    delayMultiplier: 2.0);
+
+// How long each individual RPC is allowed to take.
+// Each timeout is 1.5x the previous one, with a maximum of 10s.
+// The first timeout is 4s, then 6s, then 9s, then 10s, then 10s etc.
+BackoffSettings timeoutBackoff = new BackoffSettings(
+    delay: TimeSpan.FromSeconds(4),
+    maxDelay: TimeSpan.FromSeconds(10),
+    delayMultiplier: 1.5);
+
+RetrySettings settings = new RetrySettings(retryBackoff, timeoutBackoff, totalExpiration);
+</code></pre><p>Here we&#39;re using the default RPC filter and jitter for simplicity. Suppose we have a server which returns a
+&quot;not found&quot; error (which is retriable) after 2 seconds each time we make an RPC. The timing with the above settings looks like this (assuming there&#39;s no actual jitter):</p>
+<ul>
+<li>t=0s: Send RPC 1, timeout=4s (the inital value in `timeoutBackoff)</li>
+<li>t=2s: RPC 1 completes with &quot;not found&quot;: we need to retry. Delay for 1s (the initial value in <code>retryBackoff</code>)</li>
+<li>t=3s: Send RPC 2, timeout=6s (1.5x the previous timeout backoff)</li>
+<li>t=5s: RPC 2 completes with &quot;not found&quot;: we need to retry. Delay for 2s (doubling the previous retry backoff)</li>
+<li>t=7s: Send RPC 3, timeout=9s (1.5x the previous timeout backoff)</li>
+<li>t=9s: RPC 3 completes with &quot;not found&quot;: we need to retry. Delay for 4s (doubling the previous retry backoff)</li>
+<li>t=13s: Send RPC 4, timeout=10s (1.5x the previous timeout backoff, but capped at 10s)</li>
+<li>t=15s: RPC 4 completes with &quot;not found&quot;: we need to retry. Delay for 5s (doubling the previous retry backoff, but capped at 5s)</li>
+<li>t=20s: Send RPC 5, timeout=10s (we&#39;ve hit the timeout backoff cap)</li>
+<li>t=22s: RPC 5 completes with &quot;not found&quot;: we need to retry. Delay for 5s (we&#39;ve hit the retry backoff cap)</li>
+<li>t=27s: Send RPC 6, timeout=<strong>3s</strong> (it would be 10s, but we know our overall expiration is 30s, so it&#39;s limited by that)</li>
+<li>t=29s: RPC 6 completes with &quot;not found&quot;: we <em>would</em> delay by 5s and retry, but with an overall expiration of 30s, we know
+we won&#39;t complete in time, so immediately throw an exception</li>
+</ul>
+<p>Currently there&#39;s no simple way of limiting to a <em>number</em> of retries - it&#39;s only governed by time. We&#39;ll consider adding
+a count limit in a future version.</p>
+</li>
+</ul>
 
             </article>
           </div>

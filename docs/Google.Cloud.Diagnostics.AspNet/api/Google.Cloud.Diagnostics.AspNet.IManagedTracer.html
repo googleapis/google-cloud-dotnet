@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IManagedTracer
+   | Google.Cloud.Diagnostics.AspNet </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IManagedTracer
+   | Google.Cloud.Diagnostics.AspNet ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Diagnostics_AspNet_IManagedTracer" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer">Interface IManagedTracer
+              </h1>
+              <div class="markdown level0 summary"><p>Manages creating spans for a trace as well as adding meta data to them.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Diagnostics.AspNet</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.AspNet.dll</h6>
+              <h5 id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public interface IManagedTracer</code></pre>
+              </div>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_AnnotateSpan_" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.AnnotateSpan*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_AnnotateSpan_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.AnnotateSpan(System.Collections.Generic.Dictionary{System.String,System.String})">AnnotateSpan(Dictionary&lt;String, String&gt;)</h4>
+              <div class="markdown level1 summary"><p>Annotates the current span with the given labels. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void AnnotateSpan(Dictionary&lt;string, string&gt; labels)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><em>labels</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_EndSpan_" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.EndSpan*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_EndSpan" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.EndSpan">EndSpan()</h4>
+              <div class="markdown level1 summary"><p>Ends the current span.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void EndSpan()</code></pre>
+              </div>
+              <a id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_GetCurrentTraceId_" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.GetCurrentTraceId*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_GetCurrentTraceId" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.GetCurrentTraceId">GetCurrentTraceId()</h4>
+              <div class="markdown level1 summary"><p>Gets the current trace id or null if none exists.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">string GetCurrentTraceId()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_SetStackTrace_" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.SetStackTrace*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_SetStackTrace_System_Diagnostics_StackTrace_" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.SetStackTrace(System.Diagnostics.StackTrace)">SetStackTrace(StackTrace)</h4>
+              <div class="markdown level1 summary"><p>Adds the given StackTrace to the current span.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void SetStackTrace(StackTrace stackTrace)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Diagnostics.StackTrace</span></td>
+                    <td><em>stackTrace</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_StartSpan_" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.StartSpan*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_IManagedTracer_StartSpan_System_String_Google_Cloud_Diagnostics_AspNet_StartSpanOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.IManagedTracer.StartSpan(System.String,Google.Cloud.Diagnostics.AspNet.StartSpanOptions)">StartSpan(String, StartSpanOptions)</h4>
+              <div class="markdown level1 summary"><p>Starts a new span using the most recent (if any) unfinished span as the parent.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">void StartSpan(string name, StartSpanOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>name</em></td>
+                    <td><p>The name of the span, cannot be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.StartSpanOptions.html#Google_Cloud_Diagnostics_AspNet_StartSpanOptions">StartSpanOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The span options to override default values.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

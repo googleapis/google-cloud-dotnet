@@ -87,6 +87,10 @@ syntactic aspects of the request.</p>
 project hasn&#39;t enabled the accessed service, this can contain a URL pointing
 directly to the right place in the developer console to flip the bit.</p>
 </section>
+                  <h4><a class="xref" href="Google.Rpc.LocalizedMessage.html#Google_Rpc_LocalizedMessage">LocalizedMessage</a></h4>
+                  <section><p>Provides a localized error message that is safe to return to the user
+which can be attached to an RPC error.</p>
+</section>
                   <h4><a class="xref" href="Google.Rpc.QuotaFailure.html#Google_Rpc_QuotaFailure">QuotaFailure</a></h4>
                   <section><p>Describes how a quota check failed.</p>
 <p>For example if a daily limit was exceeded for the calling project,
@@ -171,13 +175,7 @@ be used directly after any stripping needed for security/privacy reasons.</p>
                 <h3 id="enums">Enums
               </h3>
                   <h4><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></h4>
-                  <section><p>The canonical error codes for Google APIs.
-Warnings:</p>
-<ul>
-<li>Do not change any numeric assignments.</li>
-<li>Changes to this list should be made only if there is a compelling
-need that can&#39;t be satisfied in another way.</li>
-</ul>
+                  <section><p>The canonical error codes for Google APIs.</p>
 <p>Sometimes multiple error codes may apply.  Services should return
 the most specific error code that applies.  For example, prefer
 <code>OUT_OF_RANGE</code> over <code>FAILED_PRECONDITION</code> if both codes apply.

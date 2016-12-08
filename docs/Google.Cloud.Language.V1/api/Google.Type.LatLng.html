@@ -115,6 +115,12 @@ assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)</p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetType()</span>
                 </div>
                 <div>
@@ -127,41 +133,6 @@ assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class LatLng : IMessage&lt;LatLng&gt;, IMessage, IEquatable&lt;LatLng&gt;, IDeepCloneable&lt;LatLng&gt;</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Type_LatLng__ctor_" data-uid="Google.Type.LatLng.#ctor*"></a>
-              <h4 id="Google_Type_LatLng__ctor" data-uid="Google.Type.LatLng.#ctor">LatLng()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LatLng()</code></pre>
-              </div>
-              <a id="Google_Type_LatLng__ctor_" data-uid="Google.Type.LatLng.#ctor*"></a>
-              <h4 id="Google_Type_LatLng__ctor_Google_Type_LatLng_" data-uid="Google.Type.LatLng.#ctor(Google.Type.LatLng)">LatLng(LatLng)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LatLng(LatLng other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Type.LatLng.html#Google_Type_LatLng">LatLng</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <a id="Google_Type_LatLng_Latitude_" data-uid="Google.Type.LatLng.Latitude*"></a>
@@ -212,189 +183,6 @@ assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)</p>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Type_LatLng_CalculateSize_" data-uid="Google.Type.LatLng.CalculateSize*"></a>
-              <h4 id="Google_Type_LatLng_CalculateSize" data-uid="Google.Type.LatLng.CalculateSize">CalculateSize()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
-              <a id="Google_Type_LatLng_Clone_" data-uid="Google.Type.LatLng.Clone*"></a>
-              <h4 id="Google_Type_LatLng_Clone" data-uid="Google.Type.LatLng.Clone">Clone()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public LatLng Clone()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Type.LatLng.html#Google_Type_LatLng">LatLng</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
-              <a id="Google_Type_LatLng_GetHashCode_" data-uid="Google.Type.LatLng.GetHashCode*"></a>
-              <h4 id="Google_Type_LatLng_GetHashCode" data-uid="Google.Type.LatLng.GetHashCode">GetHashCode()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.GetHashCode()</span></div>
-              <a id="Google_Type_LatLng_MergeFrom_" data-uid="Google.Type.LatLng.MergeFrom*"></a>
-              <h4 id="Google_Type_LatLng_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Type.LatLng.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
-                    <td><em>input</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
-              <a id="Google_Type_LatLng_MergeFrom_" data-uid="Google.Type.LatLng.MergeFrom*"></a>
-              <h4 id="Google_Type_LatLng_MergeFrom_Google_Type_LatLng_" data-uid="Google.Type.LatLng.MergeFrom(Google.Type.LatLng)">MergeFrom(LatLng)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(LatLng other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Type.LatLng.html#Google_Type_LatLng">LatLng</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
-              <a id="Google_Type_LatLng_ToString_" data-uid="Google.Type.LatLng.ToString*"></a>
-              <h4 id="Google_Type_LatLng_ToString" data-uid="Google.Type.LatLng.ToString">ToString()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
-              <a id="Google_Type_LatLng_WriteTo_" data-uid="Google.Type.LatLng.WriteTo*"></a>
-              <h4 id="Google_Type_LatLng_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Type.LatLng.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
-                    <td><em>output</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           

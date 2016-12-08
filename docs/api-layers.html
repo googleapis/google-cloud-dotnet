@@ -76,7 +76,7 @@ bidirectional streaming and many other features. New APIs are now being provided
 either the REST-based HTTP 1.1 and JSON, or gRPC over HTTP 2.0 and
 <a href="https://developers.google.com/protocol-buffers/">Protocol Buffers</a>.</p>
 <p>The google-cloud-dotnet project provides client libraries for a mixture of these APIs. In particular,
-<code>Google.Storage.V1</code> and <code>Google.Bigquery.V2</code> are hand-written layers over the existing REST-based
+<code>Google.Cloud.Storage.V1</code> and <code>Google.Cloud.BigQuery.V2</code> are hand-written layers over the existing REST-based
 libraries for the <a href="https://cloud.google.com/storage">Google Cloud Storage</a> and
 <a href="https://cloud.google.com/bigquery">BigQuery</a> APIs, whereas other libraries target gRPC-based APIs.
 Where gRPC access to an API is available, our client libraries use it.</p>
@@ -145,14 +145,14 @@ This approach allows access to all the features of the API while higher level ab
 built incrementally based on feedback.</p>
 <h2 id="layers-of-rest-based-libraries">Layers of REST-based libraries</h2>
 <p>The REST-based libraries wrap existing generated code provided in other NuGet packages. For example,
-<code>Google.Storage.V1</code> depends on <code>Google.Apis.Storage.v1</code>. The wrapper libraries exist to provide
+<code>Google.Cloud.Storage.V1</code> depends on <code>Google.Apis.Storage.v1</code>. The wrapper libraries exist to provide
 a more idiomatic way of working with the APIs than is exposed by the auto-generated code.</p>
 <p>Where functionality hasn&#39;t been explicitly wrapped, application code can always access
 the underlying REST service.</p>
-<p>To show the layering involved, we&#39;ll use the Google.Storage.V1 client library as an example.
+<p>To show the layering involved, we&#39;ll use the Google.Cloud.Storage.V1 client library as an example.
 An application using this library will typically end up with the following assemblies:</p>
 <ul>
-<li>Google.Storage.V1: the wrapper library</li>
+<li>Google.Cloud.Storage.V1: the wrapper library</li>
 <li>Google.Apis.Storage.v1: the REST service library that the wrapper library uses to call the REST API</li>
 <li>Google.Api.Gax/Google.Api.Gax.Rest: support libraries providing functionality required across multiple
 REST-based wrapper libraries, such as <a href="page-streaming.html">page streaming</a>.</li>
@@ -164,9 +164,9 @@ REST service libraries and gRPC libraries for authentication</li>
 asynchronous sequences</li>
 </ul>
 <p>For simple use cases, you can simply use the
-<a href="Google.Storage.V1/api/Google.Storage.V1.StorageClient.html">Google.Storage.V1.StorageClient</a> class.
+<a href="Google.Cloud.Storage.V1/api/Google.Cloud.Storage.V1.StorageClient.html">Google.Cloud.Storage.V1.StorageClient</a> class.
 If your application code requires functionality which isn&#39;t wrapped, you can use the
-<a href="Google.Storage.V1/api/Google.Storage.V1.StorageClient.html##Google_Storage_V1_StorageClient_Service">StorageClient.Service</a> property
+<a href="Google.Cloud.Storage.V1/api/Google.Cloud.Storage.V1.StorageClient.html##Google_Storage_V1_StorageClient_Service">StorageClient.Service</a> property
 to obtain a reference to a <code>Google.Apis.Storage.v1.StorageService</code> which can be used
 for all other operations. This is the same <code>StorageService</code> object that the <code>StorageClient</code>
 uses for its API calls, with whatever authentication information you provided when creating

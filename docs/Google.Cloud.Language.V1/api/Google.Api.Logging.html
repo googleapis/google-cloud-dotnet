@@ -121,6 +121,12 @@ logs:<ul>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetType()</span>
                 </div>
                 <div>
@@ -133,41 +139,6 @@ logs:<ul>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class Logging : IMessage&lt;Logging&gt;, IMessage, IEquatable&lt;Logging&gt;, IDeepCloneable&lt;Logging&gt;</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Api_Logging__ctor_" data-uid="Google.Api.Logging.#ctor*"></a>
-              <h4 id="Google_Api_Logging__ctor" data-uid="Google.Api.Logging.#ctor">Logging()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Logging()</code></pre>
-              </div>
-              <a id="Google_Api_Logging__ctor_" data-uid="Google.Api.Logging.#ctor*"></a>
-              <h4 id="Google_Api_Logging__ctor_Google_Api_Logging_" data-uid="Google.Api.Logging.#ctor(Google.Api.Logging)">Logging(Logging)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Logging(Logging other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Logging.html#Google_Api_Logging">Logging</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <a id="Google_Api_Logging_ConsumerDestinations_" data-uid="Google.Api.Logging.ConsumerDestinations*"></a>
@@ -224,189 +195,6 @@ one producer destination.</p>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Api_Logging_CalculateSize_" data-uid="Google.Api.Logging.CalculateSize*"></a>
-              <h4 id="Google_Api_Logging_CalculateSize" data-uid="Google.Api.Logging.CalculateSize">CalculateSize()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
-              <a id="Google_Api_Logging_Clone_" data-uid="Google.Api.Logging.Clone*"></a>
-              <h4 id="Google_Api_Logging_Clone" data-uid="Google.Api.Logging.Clone">Clone()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Logging Clone()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Logging.html#Google_Api_Logging">Logging</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
-              <a id="Google_Api_Logging_GetHashCode_" data-uid="Google.Api.Logging.GetHashCode*"></a>
-              <h4 id="Google_Api_Logging_GetHashCode" data-uid="Google.Api.Logging.GetHashCode">GetHashCode()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.GetHashCode()</span></div>
-              <a id="Google_Api_Logging_MergeFrom_" data-uid="Google.Api.Logging.MergeFrom*"></a>
-              <h4 id="Google_Api_Logging_MergeFrom_Google_Api_Logging_" data-uid="Google.Api.Logging.MergeFrom(Google.Api.Logging)">MergeFrom(Logging)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(Logging other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.Logging.html#Google_Api_Logging">Logging</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
-              <a id="Google_Api_Logging_MergeFrom_" data-uid="Google.Api.Logging.MergeFrom*"></a>
-              <h4 id="Google_Api_Logging_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.Logging.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
-                    <td><em>input</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
-              <a id="Google_Api_Logging_ToString_" data-uid="Google.Api.Logging.ToString*"></a>
-              <h4 id="Google_Api_Logging_ToString" data-uid="Google.Api.Logging.ToString">ToString()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
-              <a id="Google_Api_Logging_WriteTo_" data-uid="Google.Api.Logging.WriteTo*"></a>
-              <h4 id="Google_Api_Logging_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.Logging.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
-                    <td><em>output</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           

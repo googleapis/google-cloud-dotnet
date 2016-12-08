@@ -713,12 +713,12 @@ create a default instance.</p>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailableAsync_System_Threading_CancellationToken_">MetadataClient.IsServerAvailableAsync(CancellationToken)</a></div>
               <a id="Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_" data-uid="Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange*"></a>
-              <h4 id="Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_System_String_System_TimeSpan_" data-uid="Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.TimeSpan)">WaitForChange(String, TimeSpan)</h4>
+              <h4 id="Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_System_String_System_String_System_TimeSpan_" data-uid="Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.String,System.TimeSpan)">WaitForChange(String, String, TimeSpan)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string WaitForChange(string key, TimeSpan timeout = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override WaitForChangeResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -733,6 +733,11 @@ create a default instance.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>lastETag</em></td>
                     <td></td>
                   </tr>
                   <tr>
@@ -752,20 +757,20 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult">WaitForChangeResult</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_">MetadataClient.WaitForChange(String, TimeSpan)</a></div>
+              <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_">MetadataClient.WaitForChange(String, String, TimeSpan)</a></div>
               <a id="Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_" data-uid="Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync*"></a>
-              <h4 id="Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)">WaitForChangeAsync(String, TimeSpan, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)">WaitForChangeAsync(String, String, TimeSpan, CancellationToken)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override Task&lt;string&gt; WaitForChangeAsync(string key, TimeSpan timeout = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public override Task&lt;WaitForChangeResult&gt; WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -780,6 +785,11 @@ create a default instance.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><em>key</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>lastETag</em></td>
                     <td></td>
                   </tr>
                   <tr>
@@ -804,13 +814,13 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult">WaitForChangeResult</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_">MetadataClient.WaitForChangeAsync(String, TimeSpan, CancellationToken)</a></div>
+              <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_">MetadataClient.WaitForChangeAsync(String, String, TimeSpan, CancellationToken)</a></div>
               <h3 id="events">Events
               </h3>
               <h4 id="Google_Cloud_Metadata_V1_MetadataClientImpl_InstanceMetadataChanged" data-uid="Google.Cloud.Metadata.V1.MetadataClientImpl.InstanceMetadataChanged">InstanceMetadataChanged</h4>
@@ -818,7 +828,7 @@ create a default instance.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override event EventHandler InstanceMetadataChanged</code></pre>
+                <pre><code class="lang-csharp hljs">public override event EventHandler&lt;InstanceMetadataChangedEventArgs&gt; InstanceMetadataChanged</code></pre>
               </div>
               <h5 class="eventType">Event Type</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -830,7 +840,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler</span></td>
+                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs">InstanceMetadataChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -842,7 +852,7 @@ create a default instance.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override event EventHandler&lt;MaintenanceStatus&gt; MaintenanceStatusChanged</code></pre>
+                <pre><code class="lang-csharp hljs">public override event EventHandler&lt;MaintenanceStatusChangedEventArgs&gt; MaintenanceStatusChanged</code></pre>
               </div>
               <h5 class="eventType">Event Type</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -854,7 +864,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus">MaintenanceStatus</a>&gt;</td>
+                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs">MaintenanceStatusChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -866,7 +876,7 @@ create a default instance.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override event EventHandler ProjectMetadataChanged</code></pre>
+                <pre><code class="lang-csharp hljs">public override event EventHandler&lt;ProjectMetadataChangedEventArgs&gt; ProjectMetadataChanged</code></pre>
               </div>
               <h5 class="eventType">Event Type</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -878,7 +888,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler</span></td>
+                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs">ProjectMetadataChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>

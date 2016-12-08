@@ -94,6 +94,12 @@ due to the backend requiring additional scopes or permissions.</p>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
                   <span class="xref">System.Object.GetType()</span>
                 </div>
                 <div>
@@ -106,41 +112,6 @@ due to the backend requiring additional scopes or permissions.</p>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public sealed class OAuthRequirements : IMessage&lt;OAuthRequirements&gt;, IMessage, IEquatable&lt;OAuthRequirements&gt;, IDeepCloneable&lt;OAuthRequirements&gt;</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <a id="Google_Api_OAuthRequirements__ctor_" data-uid="Google.Api.OAuthRequirements.#ctor*"></a>
-              <h4 id="Google_Api_OAuthRequirements__ctor" data-uid="Google.Api.OAuthRequirements.#ctor">OAuthRequirements()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public OAuthRequirements()</code></pre>
-              </div>
-              <a id="Google_Api_OAuthRequirements__ctor_" data-uid="Google.Api.OAuthRequirements.#ctor*"></a>
-              <h4 id="Google_Api_OAuthRequirements__ctor_Google_Api_OAuthRequirements_" data-uid="Google.Api.OAuthRequirements.#ctor(Google.Api.OAuthRequirements)">OAuthRequirements(OAuthRequirements)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public OAuthRequirements(OAuthRequirements other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.OAuthRequirements.html#Google_Api_OAuthRequirements">OAuthRequirements</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               <a id="Google_Api_OAuthRequirements_CanonicalScopes_" data-uid="Google.Api.OAuthRequirements.CanonicalScopes*"></a>
@@ -171,189 +142,6 @@ OAuth token containing any of these scopes will be accepted.</p>
                   </tr>
                 </tbody>
               </table>
-              <h3 id="methods">Methods
-              </h3>
-              <a id="Google_Api_OAuthRequirements_CalculateSize_" data-uid="Google.Api.OAuthRequirements.CalculateSize*"></a>
-              <h4 id="Google_Api_OAuthRequirements_CalculateSize" data-uid="Google.Api.OAuthRequirements.CalculateSize">CalculateSize()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int CalculateSize()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.CalculateSize()</span></div>
-              <a id="Google_Api_OAuthRequirements_Clone_" data-uid="Google.Api.OAuthRequirements.Clone*"></a>
-              <h4 id="Google_Api_OAuthRequirements_Clone" data-uid="Google.Api.OAuthRequirements.Clone">Clone()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public OAuthRequirements Clone()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.OAuthRequirements.html#Google_Api_OAuthRequirements">OAuthRequirements</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IDeepCloneable&lt;T&gt;.Clone()</span></div>
-              <a id="Google_Api_OAuthRequirements_GetHashCode_" data-uid="Google.Api.OAuthRequirements.GetHashCode*"></a>
-              <h4 id="Google_Api_OAuthRequirements_GetHashCode" data-uid="Google.Api.OAuthRequirements.GetHashCode">GetHashCode()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.GetHashCode()</span></div>
-              <a id="Google_Api_OAuthRequirements_MergeFrom_" data-uid="Google.Api.OAuthRequirements.MergeFrom*"></a>
-              <h4 id="Google_Api_OAuthRequirements_MergeFrom_Google_Api_OAuthRequirements_" data-uid="Google.Api.OAuthRequirements.MergeFrom(Google.Api.OAuthRequirements)">MergeFrom(OAuthRequirements)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(OAuthRequirements other)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Api.OAuthRequirements.html#Google_Api_OAuthRequirements">OAuthRequirements</a></td>
-                    <td><em>other</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage&lt;T&gt;.MergeFrom(T)</span></div>
-              <a id="Google_Api_OAuthRequirements_MergeFrom_" data-uid="Google.Api.OAuthRequirements.MergeFrom*"></a>
-              <h4 id="Google_Api_OAuthRequirements_MergeFrom_Google_Protobuf_CodedInputStream_" data-uid="Google.Api.OAuthRequirements.MergeFrom(Google.Protobuf.CodedInputStream)">MergeFrom(CodedInputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MergeFrom(CodedInputStream input)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedInputStream</span></td>
-                    <td><em>input</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.MergeFrom(Google.Protobuf.CodedInputStream)</span></div>
-              <a id="Google_Api_OAuthRequirements_ToString_" data-uid="Google.Api.OAuthRequirements.ToString*"></a>
-              <h4 id="Google_Api_OAuthRequirements_ToString" data-uid="Google.Api.OAuthRequirements.ToString">ToString()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
-              <a id="Google_Api_OAuthRequirements_WriteTo_" data-uid="Google.Api.OAuthRequirements.WriteTo*"></a>
-              <h4 id="Google_Api_OAuthRequirements_WriteTo_Google_Protobuf_CodedOutputStream_" data-uid="Google.Api.OAuthRequirements.WriteTo(Google.Protobuf.CodedOutputStream)">WriteTo(CodedOutputStream)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void WriteTo(CodedOutputStream output)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">Google.Protobuf.CodedOutputStream</span></td>
-                    <td><em>output</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">Google.Protobuf.IMessage.WriteTo(Google.Protobuf.CodedOutputStream)</span></div>
             </article>
           </div>
           

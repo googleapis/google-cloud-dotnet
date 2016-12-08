@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GoogleStackdriverAppender
+   | Google.Cloud.Logging.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GoogleStackdriverAppender
+   | Google.Cloud.Logging.V2 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender">Class GoogleStackdriverAppender
+              </h1>
+              <div class="markdown level0 summary"><p>Appends logging events to Google Stackdriver Logging.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">log4net.Appender.AppenderSkeleton</span></div>
+                  <div class="level2"><span class="xref">GoogleStackdriverAppender</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Close()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.DoAppend(log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.DoAppend(log4net.Core.LoggingEvent[])</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.FilterEvent(log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.AddFilter(log4net.Filter.IFilter)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.ClearFilters()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.IsAsSevereAsThreshold(log4net.Core.Level)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.OnClose()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.PreAppendCheck()</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.RenderLoggingEvent(log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.RenderLoggingEvent(System.IO.TextWriter, log4net.Core.LoggingEvent)</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Threshold</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.ErrorHandler</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.FilterHead</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Layout</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.Name</span>
+                </div>
+                <div>
+                  <span class="xref">log4net.Appender.AppenderSkeleton.RequiresLayout</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Logging.Log4Net</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Logging.Log4Net.dll</h6>
+              <h5 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class GoogleStackdriverAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler</code></pre>
+              </div>
+              <h5 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>Logging events are sent to Google Stackdriver Logging asychronously,
+via a local buffer. This  is to ensure that server errors or increased
+network/server latency don&#39;t cause slow-downs in the program being logged.
+TODO: Explain all the configuration options.</p>
+</div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender__ctor_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.#ctor*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender__ctor" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.#ctor">GoogleStackdriverAppender()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public GoogleStackdriverAppender()</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_File_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_File" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File">File</h4>
+              <div class="markdown level1 summary"><p>The path prefix to the files that logging will be written to.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string File { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_LocalQueueType_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.LocalQueueType*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_LocalQueueType" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.LocalQueueType">LocalQueueType</h4>
+              <div class="markdown level1 summary"><p>The local queuing mechanism, used before the log is sent to Google Logging.
+Defaults to <a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType_Memory">Memory</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LocalQueueType LocalQueueType { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType">LocalQueueType</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_LocalQueueType_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>All log entries are temporarily queued locally before being uploaded to Google Logging.
+This is usually for a very brief duration; but if there are problems connecting to Google Logging
+this local queue allows the application to continue functioning as normal, without blocking
+on log events or immediately throwing aware log entries.</p>
+<p>Two queue types are provided:
+<ul><li>
+<a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType_Memory">Memory</a>: Log entries are queued locally in memory. The maximum amount of memory and/or the maximum
+number of log entries to queue can be configured. If the application exits or crashes before in-memory log entries have
+been uploaded to Google Logging, then these log entries are permanently lost. If Google Logging becomes temporarily unavailable
+then the number of log entries queued until Google Logging becomes available again will be limited by the configure maximum sizes;
+log entries in excess of this configured maximum will cause the oldest queued log entries to be permanently lost.
+</li><li>
+<a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType_Disk">Disk</a>: Log entries are queued locally on disk. The maximum file size and file counts can be
+configured. If the application exits or crashes before on-disk entries have been uplaoded to Google Logging, then these log
+entries will be uploaded to Google Logging on program re-start (assuming the logging disk location is unchanged). If Google
+Logging becomes temporarily unavailable then the number of log entries queued until Google Logging becomes available again will
+be limited by the configured maximum file size and maxmimum file count. Log entries in excess of this configured maximum will
+cause the oldest queued log entries to be permanently lost.
+</li></ul>
+</p>
+</div>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_LogId_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.LogId*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_LogId" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.LogId">LogId</h4>
+              <div class="markdown level1 summary"><p>LogID for all log entries. Must be configured.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string LogId { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize">MaxFileSize</h4>
+              <div class="markdown level1 summary"><p>The maximum size in bytes that each log file is allowed to reach, before being rolled over. Defaults to 10Mb.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long MaxFileSize { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemoryCount_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemoryCount*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemoryCount" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemoryCount">MaxMemoryCount</h4>
+              <div class="markdown level1 summary"><p>The maximum count of log entries allowed in the in-memory logging queue. Defaults to 1,000
+Not used for file-based queueing.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int MaxMemoryCount { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemorySize_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemorySize*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemorySize" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemorySize">MaxMemorySize</h4>
+              <div class="markdown level1 summary"><p>The maximum bytes of memory used by in-memory logging queue. Defaults to unconfigured.
+Not used for file-based queuing.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public long MaxMemorySize { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int64</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups">MaxSizeRollBackups</h4>
+              <div class="markdown level1 summary"><p>The maximum number of backup files that are kept before the oldest is erased. Defaults to 10.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int MaxSizeRollBackups { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxUploadBatchSize_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxUploadBatchSize" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize">MaxUploadBatchSize</h4>
+              <div class="markdown level1 summary"><p>The maximum batch size when uploading to Google Cloud Logging. Defaults to 100.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int MaxUploadBatchSize { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ProjectId_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ProjectId*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ProjectId" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ProjectId">ProjectId</h4>
+              <div class="markdown level1 summary"><p>The project ID for all log entries. Must be configured.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ProjectId { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ResourceType_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ResourceType*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ResourceType" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ResourceType">ResourceType</h4>
+              <div class="markdown level1 summary"><p>The resource type of log entries. Defaults to &quot;global&quot;.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ResourceType { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds">ServerErrorBackoffDelaySeconds</h4>
+              <div class="markdown level1 summary"><p>On receiving a server error during log upload, the initial delay in seconds before retry.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int ServerErrorBackoffDelaySeconds { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMaxDelaySeconds_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMaxDelaySeconds*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMaxDelaySeconds" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMaxDelaySeconds">ServerErrorBackoffMaxDelaySeconds</h4>
+              <div class="markdown level1 summary"><p>The maxmimum retry delay when receiving multiple consecutive server errors during log upload.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int ServerErrorBackoffMaxDelaySeconds { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMultiplier_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMultiplier" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier">ServerErrorBackoffMultiplier</h4>
+              <div class="markdown level1 summary"><p>The multiplier applied to the retry delay when receiving multiple consecutive server errors during log upload.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public double ServerErrorBackoffMultiplier { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Double</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ActivateOptions_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ActivateOptions*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ActivateOptions" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ActivateOptions">ActivateOptions()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void ActivateOptions()</code></pre>
+              </div>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">log4net.Appender.AppenderSkeleton.ActivateOptions()</span></div>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddCustomLabel_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddCustomLabel*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddCustomLabel_Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Label_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddCustomLabel(Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label)">AddCustomLabel(GoogleStackdriverAppender.Label)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void AddCustomLabel(GoogleStackdriverAppender.Label label)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Label">GoogleStackdriverAppender.Label</a></td>
+                    <td><em>label</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddWithMetaData_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddWithMetaData_Google_Cloud_Logging_Log4Net_MetaDataType_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData(Google.Cloud.Logging.Log4Net.MetaDataType)">AddWithMetaData(MetaDataType)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void AddWithMetaData(MetaDataType enable)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.MetaDataType.html#Google_Cloud_Logging_Log4Net_MetaDataType">MetaDataType</a></td>
+                    <td><em>enable</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Append_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Append*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent)">Append(LoggingEvent)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent loggingEvent)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">log4net.Core.LoggingEvent</span></td>
+                    <td><em>loggingEvent</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent)</span></div>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Append_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Append*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Append_log4net_Core_LoggingEvent___" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent[])">Append(LoggingEvent[])</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void Append(LoggingEvent[] loggingEvents)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">log4net.Core.LoggingEvent</span>[]</td>
+                    <td><em>loggingEvents</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent[])</span></div>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_System_TimeSpan_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)">WaitUntilEmptyAsync(TimeSpan)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task WaitUntilEmptyAsync(TimeSpan timeout)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.TimeSpan</span></td>
+                    <td><em>timeout</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

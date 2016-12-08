@@ -86,7 +86,7 @@ with assigning tasks to threads rather than any sort of delay.</p>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Api_Gax_IScheduler_Delay_" data-uid="Google.Api.Gax.IScheduler.Delay*"></a>
-              <h4 id="Google_Api_Gax_IScheduler_Delay_System_TimeSpan_" data-uid="Google.Api.Gax.IScheduler.Delay(System.TimeSpan)">Delay(TimeSpan)</h4>
+              <h4 id="Google_Api_Gax_IScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.IScheduler.Delay(System.TimeSpan,System.Threading.CancellationToken)">Delay(TimeSpan, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Returns a task which will complete after the given delay. Whether the returned
 awaitable is configured to capture the current context or not is implementation-specific.
 (A test implementation may capture the current context to enable reliable testing.)</p>
@@ -94,7 +94,7 @@ awaitable is configured to capture the current context or not is implementation-
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">Task Delay(TimeSpan delay)</code></pre>
+                <pre><code class="lang-csharp hljs">Task Delay(TimeSpan delay, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -110,6 +110,12 @@ awaitable is configured to capture the current context or not is implementation-
                     <td><span class="xref">System.TimeSpan</span></td>
                     <td><em>delay</em></td>
                     <td><p>Time to delay for. Must not be negative.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The cancellation token that will be checked prior to completing the returned task.</p>
 </td>
                   </tr>
                 </tbody>
@@ -130,33 +136,10 @@ awaitable is configured to capture the current context or not is implementation-
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Api_Gax_IScheduler_Sleep_" data-uid="Google.Api.Gax.IScheduler.Sleep*"></a>
-              <h4 id="Google_Api_Gax_IScheduler_Sleep_System_TimeSpan_" data-uid="Google.Api.Gax.IScheduler.Sleep(System.TimeSpan)">Sleep(TimeSpan)</h4>
-              <div class="markdown level1 summary"><p>Synchronously sleeps for the given delay.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">void Sleep(TimeSpan delay)</code></pre>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Api.Gax.SchedulerExtensions.html#Google_Api_Gax_SchedulerExtensions_Sleep_Google_Api_Gax_IScheduler_System_TimeSpan_System_Threading_CancellationToken_">SchedulerExtensions.Sleep(IScheduler, TimeSpan, CancellationToken)</a>
               </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>delay</em></td>
-                    <td><p>Time to sleep for. Must not be negative.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
             </article>
           </div>
           

@@ -330,6 +330,36 @@ apis: google.example.library.v1.LibraryManager
 [HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method
 to one or more HTTP REST API methods.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.HttpBody.html#Google_Api_HttpBody">HttpBody</a></h4>
+                  <section><p>Message that represents an arbitrary HTTP body. It should only be used for
+payload formats that can&#39;t be represented as JSON, such as raw binary or
+an HTML page.</p>
+<p>This message can be used both in streaming and non-streaming API methods in
+the request as well as the response.</p>
+<p>It can be used as a top-level request field, which is convenient if one
+wants to extract parameters from either the URL or HTTP template into the
+request fields and also want access to the raw HTTP body.</p>
+<p>Example:</p>
+<p>message GetResourceRequest {
+ // A unique request id.
+ string request_id = 1;</p>
+<p> // The raw HTTP body is bound to this field.
+ google.api.HttpBody http_body = 2;
+}</p>
+<p>service ResourceService {
+ rpc GetResource(GetResourceRequest) returns (google.api.HttpBody);
+ rpc UpdateResource(google.api.HttpBody) returns (google.protobuf.Empty);
+}</p>
+<p>Example with streaming methods:</p>
+<p>service CaldavService {
+ rpc GetCalendar(stream google.api.HttpBody)
+   returns (stream google.api.HttpBody);
+ rpc UpdateCalendar(stream google.api.HttpBody)
+   returns (stream google.api.HttpBody);
+}</p>
+<p>Use of this type only changes how the request and response bodies are
+handled, all other features will continue to work unchanged.</p>
+</section>
                   <h4><a class="xref" href="Google.Api.HttpRule.html#Google_Api_HttpRule">HttpRule</a></h4>
                   <section><p><code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
 REST APIs.  The mapping determines what portions of the request

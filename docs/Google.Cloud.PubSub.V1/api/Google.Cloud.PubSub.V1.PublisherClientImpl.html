@@ -1,0 +1,1216 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PublisherClientImpl
+   | Google.Cloud.PubSub.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PublisherClientImpl
+   | Google.Cloud.PubSub.V1 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_PubSub_V1_PublisherClientImpl" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl">Class PublisherClientImpl
+              </h1>
+              <div class="markdown level0 summary"><p>Publisher client wrapper implementation, for convenient use.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient">PublisherClient</a></div>
+                  <div class="level2"><span class="xref">PublisherClientImpl</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_DefaultEndpoint">PublisherClient.DefaultEndpoint</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_DefaultScopes">PublisherClient.DefaultScopes</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_PubSub_V1_PublisherSettings_">PublisherClient.CreateAsync(ServiceEndpoint, PublisherSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_PubSub_V1_PublisherSettings_">PublisherClient.Create(ServiceEndpoint, PublisherSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_Create_Grpc_Core_Channel_Google_Cloud_PubSub_V1_PublisherSettings_">PublisherClient.Create(Channel, PublisherSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ShutdownDefaultChannelsAsync">PublisherClient.ShutdownDefaultChannelsAsync()</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_CreateTopicAsync_Google_Cloud_PubSub_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.CreateTopicAsync(TopicName, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_CreateTopicAsync_Google_Cloud_PubSub_V1_TopicName_System_Threading_CancellationToken_">PublisherClient.CreateTopicAsync(TopicName, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_CreateTopic_Google_Cloud_PubSub_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.CreateTopic(TopicName, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_PublishAsync_Google_Cloud_PubSub_V1_TopicName_System_Collections_Generic_IEnumerable_Google_Cloud_PubSub_V1_PubsubMessage__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.PublishAsync(TopicName, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_PublishAsync_Google_Cloud_PubSub_V1_TopicName_System_Collections_Generic_IEnumerable_Google_Cloud_PubSub_V1_PubsubMessage__System_Threading_CancellationToken_">PublisherClient.PublishAsync(TopicName, IEnumerable&lt;PubsubMessage&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_Publish_Google_Cloud_PubSub_V1_TopicName_System_Collections_Generic_IEnumerable_Google_Cloud_PubSub_V1_PubsubMessage__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.Publish(TopicName, IEnumerable&lt;PubsubMessage&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetTopicAsync_Google_Cloud_PubSub_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetTopicAsync(TopicName, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetTopicAsync_Google_Cloud_PubSub_V1_TopicName_System_Threading_CancellationToken_">PublisherClient.GetTopicAsync(TopicName, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetTopic_Google_Cloud_PubSub_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetTopic(TopicName, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopicsAsync_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicsAsync(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopics(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopicSubscriptionsAsync_Google_Cloud_PubSub_V1_TopicName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicSubscriptionsAsync(TopicName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopicSubscriptions_Google_Cloud_PubSub_V1_TopicName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicSubscriptions(TopicName, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_DeleteTopicAsync_Google_Cloud_PubSub_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.DeleteTopicAsync(TopicName, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_DeleteTopicAsync_Google_Cloud_PubSub_V1_TopicName_System_Threading_CancellationToken_">PublisherClient.DeleteTopicAsync(TopicName, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_DeleteTopic_Google_Cloud_PubSub_V1_TopicName_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.DeleteTopic(TopicName, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.SetIamPolicyAsync(String, Policy, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_SetIamPolicyAsync_System_String_Google_Cloud_Iam_V1_Policy_System_Threading_CancellationToken_">PublisherClient.SetIamPolicyAsync(String, Policy, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_SetIamPolicy_System_String_Google_Cloud_Iam_V1_Policy_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.SetIamPolicy(String, Policy, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetIamPolicyAsync_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetIamPolicyAsync(String, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetIamPolicyAsync_System_String_System_Threading_CancellationToken_">PublisherClient.GetIamPolicyAsync(String, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetIamPolicy_System_String_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetIamPolicy(String, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_TestIamPermissionsAsync_System_String_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_">PublisherClient.TestIamPermissionsAsync(String, IEnumerable&lt;String&gt;, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_TestIamPermissions_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Api_Gax_Grpc_CallSettings_">PublisherClient.TestIamPermissions(String, IEnumerable&lt;String&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.PubSub.V1</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.PubSub.V1.dll</h6>
+              <h5 id="Google_Cloud_PubSub_V1_PublisherClientImpl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class PublisherClientImpl : PublisherClient</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl__ctor_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.#ctor*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl__ctor_Google_Cloud_PubSub_V1_Publisher_PublisherClient_Google_Cloud_PubSub_V1_PublisherSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.#ctor(Google.Cloud.PubSub.V1.Publisher.PublisherClient,Google.Cloud.PubSub.V1.PublisherSettings)">PublisherClientImpl(Publisher.PublisherClient, PublisherSettings)</h4>
+              <div class="markdown level1 summary"><p>Constructs a client wrapper for the Publisher service, with the specified gRPC client and settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public PublisherClientImpl(Publisher.PublisherClient grpcClient, PublisherSettings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient">Publisher.PublisherClient</a></td>
+                    <td><em>grpcClient</em></td>
+                    <td><p>The underlying gRPC client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PublisherSettings.html#Google_Cloud_PubSub_V1_PublisherSettings">PublisherSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>The base <a class="xref" href="Google.Cloud.PubSub.V1.PublisherSettings.html#Google_Cloud_PubSub_V1_PublisherSettings">PublisherSettings</a> used within this client </p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_GrpcClient_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GrpcClient*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_GrpcClient" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GrpcClient">GrpcClient</h4>
+              <div class="markdown level1 summary"><p>The underlying gRPC Publisher client.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Publisher.PublisherClient GrpcClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Publisher.PublisherClient.html#Google_Cloud_PubSub_V1_Publisher_PublisherClient">Publisher.PublisherClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GrpcClient">PublisherClient.GrpcClient</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_CreateTopic_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.CreateTopic*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_CreateTopic_Google_Cloud_PubSub_V1_Topic_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.CreateTopic(Google.Cloud.PubSub.V1.Topic,Google.Api.Gax.Grpc.CallSettings)">CreateTopic(Topic, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Topic CreateTopic(Topic request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_CreateTopic_Google_Cloud_PubSub_V1_Topic_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.CreateTopic(Topic, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_CreateTopicAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.CreateTopicAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_CreateTopicAsync_Google_Cloud_PubSub_V1_Topic_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.CreateTopicAsync(Google.Cloud.PubSub.V1.Topic,Google.Api.Gax.Grpc.CallSettings)">CreateTopicAsync(Topic, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates the given topic with the given name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Topic&gt; CreateTopicAsync(Topic request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_CreateTopicAsync_Google_Cloud_PubSub_V1_Topic_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.CreateTopicAsync(Topic, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_DeleteTopic_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.DeleteTopic*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_DeleteTopic_Google_Cloud_PubSub_V1_DeleteTopicRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.DeleteTopic(Google.Cloud.PubSub.V1.DeleteTopicRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteTopic(DeleteTopicRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Returns <code>NOT_FOUND</code> if the topic
+does not exist. After a topic is deleted, a new topic may be created with
+the same name; this is an entirely new topic with none of the old
+configuration or subscriptions. Existing subscriptions to this topic are
+not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void DeleteTopic(DeleteTopicRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteTopicRequest.html#Google_Cloud_PubSub_V1_DeleteTopicRequest">DeleteTopicRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_DeleteTopic_Google_Cloud_PubSub_V1_DeleteTopicRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.DeleteTopic(DeleteTopicRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_DeleteTopicAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.DeleteTopicAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_DeleteTopicAsync_Google_Cloud_PubSub_V1_DeleteTopicRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.DeleteTopicAsync(Google.Cloud.PubSub.V1.DeleteTopicRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteTopicAsync(DeleteTopicRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes the topic with the given name. Returns <code>NOT_FOUND</code> if the topic
+does not exist. After a topic is deleted, a new topic may be created with
+the same name; this is an entirely new topic with none of the old
+configuration or subscriptions. Existing subscriptions to this topic are
+not deleted, but their <code>topic</code> field is set to <code>_deleted-topic_</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task DeleteTopicAsync(DeleteTopicRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteTopicRequest.html#Google_Cloud_PubSub_V1_DeleteTopicRequest">DeleteTopicRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_DeleteTopicAsync_Google_Cloud_PubSub_V1_DeleteTopicRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.DeleteTopicAsync(DeleteTopicRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetIamPolicy_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetIamPolicy*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetIamPolicy(Google.Cloud.Iam.V1.GetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicy(GetIamPolicyRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the access control policy for a resource.
+Returns an empty policy if the resource exists and does not have a policy
+set.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Policy GetIamPolicy(GetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html#Google_Cloud_Iam_V1_GetIamPolicyRequest">GetIamPolicyRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy">Policy</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetIamPolicy_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetIamPolicy(GetIamPolicyRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetIamPolicyAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetIamPolicyAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetIamPolicyAsync(Google.Cloud.Iam.V1.GetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the access control policy for a resource.
+Returns an empty policy if the resource exists and does not have a policy
+set.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; GetIamPolicyAsync(GetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.GetIamPolicyRequest.html#Google_Cloud_Iam_V1_GetIamPolicyRequest">GetIamPolicyRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy">Policy</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetIamPolicyAsync_Google_Cloud_Iam_V1_GetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetTopic_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetTopic*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetTopic_Google_Cloud_PubSub_V1_GetTopicRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetTopic(Google.Cloud.PubSub.V1.GetTopicRequest,Google.Api.Gax.Grpc.CallSettings)">GetTopic(GetTopicRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the configuration of a topic.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Topic GetTopic(GetTopicRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetTopicRequest.html#Google_Cloud_PubSub_V1_GetTopicRequest">GetTopicRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetTopic_Google_Cloud_PubSub_V1_GetTopicRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetTopic(GetTopicRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetTopicAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetTopicAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_GetTopicAsync_Google_Cloud_PubSub_V1_GetTopicRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.GetTopicAsync(Google.Cloud.PubSub.V1.GetTopicRequest,Google.Api.Gax.Grpc.CallSettings)">GetTopicAsync(GetTopicRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets the configuration of a topic.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Topic&gt; GetTopicAsync(GetTopicRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetTopicRequest.html#Google_Cloud_PubSub_V1_GetTopicRequest">GetTopicRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_GetTopicAsync_Google_Cloud_PubSub_V1_GetTopicRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.GetTopicAsync(GetTopicRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopics_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopics*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopics_Google_Cloud_PubSub_V1_ListTopicsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopics(Google.Cloud.PubSub.V1.ListTopicsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTopics(ListTopicsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists matching topics.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopics(ListTopicsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListTopicsRequest.html#Google_Cloud_PubSub_V1_ListTopicsRequest">ListTopicsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListTopicsResponse.html#Google_Cloud_PubSub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ListTopicsRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopics(ListTopicsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopicsAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopicsAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopicsAsync_Google_Cloud_PubSub_V1_ListTopicsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopicsAsync(Google.Cloud.PubSub.V1.ListTopicsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTopicsAsync(ListTopicsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists matching topics.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListTopicsResponse, Topic&gt; ListTopicsAsync(ListTopicsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListTopicsRequest.html#Google_Cloud_PubSub_V1_ListTopicsRequest">ListTopicsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListTopicsResponse.html#Google_Cloud_PubSub_V1_ListTopicsResponse">ListTopicsResponse</a>, <a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.PubSub.V1.Topic.html#Google_Cloud_PubSub_V1_Topic">Topic</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopicsAsync_Google_Cloud_PubSub_V1_ListTopicsRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicsAsync(ListTopicsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopicSubscriptions_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopicSubscriptions*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopicSubscriptions_Google_Cloud_PubSub_V1_ListTopicSubscriptionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopicSubscriptions(Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTopicSubscriptions(ListTopicSubscriptionsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListTopicSubscriptionsResponse, SubscriptionName&gt; ListTopicSubscriptions(ListTopicSubscriptionsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.html#Google_Cloud_PubSub_V1_ListTopicSubscriptionsRequest">ListTopicSubscriptionsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.html#Google_Cloud_PubSub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html#Google_Cloud_PubSub_V1_SubscriptionName">SubscriptionName</a>&gt;</td>
+                    <td><p>A pageable sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopicSubscriptions_Google_Cloud_PubSub_V1_ListTopicSubscriptionsRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicSubscriptions(ListTopicSubscriptionsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopicSubscriptionsAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopicSubscriptionsAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_ListTopicSubscriptionsAsync_Google_Cloud_PubSub_V1_ListTopicSubscriptionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.ListTopicSubscriptionsAsync(Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest,Google.Api.Gax.Grpc.CallSettings)">ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the name of the subscriptions for this topic.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListTopicSubscriptionsResponse, SubscriptionName&gt; ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.html#Google_Cloud_PubSub_V1_ListTopicSubscriptionsRequest">ListTopicSubscriptionsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.html#Google_Cloud_PubSub_V1_ListTopicSubscriptionsResponse">ListTopicSubscriptionsResponse</a>, <a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html#Google_Cloud_PubSub_V1_SubscriptionName">SubscriptionName</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_ListTopicSubscriptionsAsync_Google_Cloud_PubSub_V1_ListTopicSubscriptionsRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.ListTopicSubscriptionsAsync(ListTopicSubscriptionsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_Publish_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.Publish*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_Publish_Google_Cloud_PubSub_V1_PublishRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.Publish(Google.Cloud.PubSub.V1.PublishRequest,Google.Api.Gax.Grpc.CallSettings)">Publish(PublishRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Returns <code>NOT_FOUND</code> if the topic
+does not exist. The message payload must not be empty; it must contain
+either a non-empty data field, or at least one attribute.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PublishResponse Publish(PublishRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PublishRequest.html#Google_Cloud_PubSub_V1_PublishRequest">PublishRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PublishResponse.html#Google_Cloud_PubSub_V1_PublishResponse">PublishResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_Publish_Google_Cloud_PubSub_V1_PublishRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.Publish(PublishRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_PublishAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.PublishAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_PublishAsync_Google_Cloud_PubSub_V1_PublishRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.PublishAsync(Google.Cloud.PubSub.V1.PublishRequest,Google.Api.Gax.Grpc.CallSettings)">PublishAsync(PublishRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Adds one or more messages to the topic. Returns <code>NOT_FOUND</code> if the topic
+does not exist. The message payload must not be empty; it must contain
+either a non-empty data field, or at least one attribute.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;PublishResponse&gt; PublishAsync(PublishRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PublishRequest.html#Google_Cloud_PubSub_V1_PublishRequest">PublishRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.PublishResponse.html#Google_Cloud_PubSub_V1_PublishResponse">PublishResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_PublishAsync_Google_Cloud_PubSub_V1_PublishRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.PublishAsync(PublishRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_SetIamPolicy_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.SetIamPolicy*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.SetIamPolicy(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicy(SetIamPolicyRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sets the access control policy on the specified resource. Replaces any
+existing policy.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Policy SetIamPolicy(SetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html#Google_Cloud_Iam_V1_SetIamPolicyRequest">SetIamPolicyRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy">Policy</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_SetIamPolicy_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.SetIamPolicy(SetIamPolicyRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_SetIamPolicyAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.SetIamPolicyAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest,Google.Api.Gax.Grpc.CallSettings)">SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sets the access control policy on the specified resource. Replaces any
+existing policy.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;Policy&gt; SetIamPolicyAsync(SetIamPolicyRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.SetIamPolicyRequest.html#Google_Cloud_Iam_V1_SetIamPolicyRequest">SetIamPolicyRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.Policy.html#Google_Cloud_Iam_V1_Policy">Policy</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_TestIamPermissions_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.TestIamPermissions*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)">TestIamPermissions(TestIamPermissionsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns permissions that a caller has on the specified resource.
+If the resource does not exist, this will return an empty set of
+permissions, not a NOT_FOUND error.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override TestIamPermissionsResponse TestIamPermissions(TestIamPermissionsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html#Google_Cloud_Iam_V1_TestIamPermissionsRequest">TestIamPermissionsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html#Google_Cloud_Iam_V1_TestIamPermissionsResponse">TestIamPermissionsResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.TestIamPermissions(TestIamPermissionsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_PublisherClientImpl_TestIamPermissionsAsync_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.TestIamPermissionsAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_PublisherClientImpl_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.PublisherClientImpl.TestIamPermissionsAsync(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)">TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns permissions that a caller has on the specified resource.
+If the resource does not exist, this will return an empty set of
+permissions, not a NOT_FOUND error.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;TestIamPermissionsResponse&gt; TestIamPermissionsAsync(TestIamPermissionsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsRequest.html#Google_Cloud_Iam_V1_TestIamPermissionsRequest">TestIamPermissionsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Iam.V1.TestIamPermissionsResponse.html#Google_Cloud_Iam_V1_TestIamPermissionsResponse">TestIamPermissionsResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.PublisherClient.html#Google_Cloud_PubSub_V1_PublisherClient_TestIamPermissionsAsync_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_">PublisherClient.TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

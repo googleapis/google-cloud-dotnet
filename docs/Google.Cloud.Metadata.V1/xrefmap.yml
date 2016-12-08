@@ -201,6 +201,17 @@ references:
   commentId: E:Google.Apis.Download.MediaDownloader.ProgressChanged
   fullName: Google.Apis.Download.MediaDownloader.ProgressChanged
   nameWithType: MediaDownloader.ProgressChanged
+- uid: Google.Apis.Download.MediaDownloader.Range
+  name: Range
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_Range
+  commentId: P:Google.Apis.Download.MediaDownloader.Range
+  fullName: Google.Apis.Download.MediaDownloader.Range
+  nameWithType: MediaDownloader.Range
+- uid: Google.Apis.Download.MediaDownloader.Range*
+  href: api/Google.Apis.Download.MediaDownloader.html#Google_Apis_Download_MediaDownloader_Range_
+  commentId: Overload:Google.Apis.Download.MediaDownloader.Range
+  name: Range
+  fullName: Google.Apis.Download.MediaDownloader.Range
 - uid: Google.Apis.ETagAction
   name: ETagAction
   href: api/Google.Apis.ETagAction.html#Google_Apis_ETagAction
@@ -1675,6 +1686,23 @@ references:
   commentId: N:Google.Cloud.Metadata.V1
   fullName: Google.Cloud.Metadata.V1
   nameWithType: Google.Cloud.Metadata.V1
+- uid: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs
+  name: InstanceMetadataChangedEventArgs
+  href: api/Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs
+  commentId: T:Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs
+  nameWithType: InstanceMetadataChangedEventArgs
+- uid: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.#ctor(Google.Apis.Compute.v1.Data.Instance)
+  name: InstanceMetadataChangedEventArgs(Instance)
+  href: api/Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs__ctor_Google_Apis_Compute_v1_Data_Instance_
+  commentId: M:Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.#ctor(Google.Apis.Compute.v1.Data.Instance)
+  fullName: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Instance)
+  nameWithType: InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs(Instance)
+- uid: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.#ctor*
+  href: api/Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs__ctor_
+  commentId: Overload:Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.#ctor
+  name: InstanceMetadataChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Instance)
 - uid: Google.Cloud.Metadata.V1.MaintenanceStatus
   name: MaintenanceStatus
   href: api/Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus
@@ -1699,6 +1727,58 @@ references:
   commentId: F:Google.Cloud.Metadata.V1.MaintenanceStatus.Unknown
   fullName: Google.Cloud.Metadata.V1.MaintenanceStatus.Unknown
   nameWithType: MaintenanceStatus.Unknown
+- uid: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs
+  name: MaintenanceStatusChangedEventArgs
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs
+  commentId: T:Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs
+  nameWithType: MaintenanceStatusChangedEventArgs
+- uid: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.#ctor(Google.Cloud.Metadata.V1.MaintenanceStatus)
+  name: MaintenanceStatusChangedEventArgs(MaintenanceStatus)
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs__ctor_Google_Cloud_Metadata_V1_MaintenanceStatus_
+  commentId: M:Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.#ctor(Google.Cloud.Metadata.V1.MaintenanceStatus)
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs(Google.Cloud.Metadata.V1.MaintenanceStatus)
+  nameWithType: MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs(MaintenanceStatus)
+- uid: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.#ctor*
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs__ctor_
+  commentId: Overload:Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.#ctor
+  name: MaintenanceStatusChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs(Google.Cloud.Metadata.V1.MaintenanceStatus)
+- uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1
+  name: MetadataChangedEventArgs<T>
+  href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1
+  commentId: T:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1
+  name.vb: MetadataChangedEventArgs(Of T)
+  fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>
+  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs(Of T)
+  nameWithType: MetadataChangedEventArgs<T>
+  nameWithType.vb: MetadataChangedEventArgs(Of T)
+- uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.#ctor(`0)
+  name: MetadataChangedEventArgs(T)
+  href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1__ctor__0_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.#ctor(`0)
+  fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.MetadataChangedEventArgs(T)
+  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs(Of T).MetadataChangedEventArgs(T)
+  nameWithType: MetadataChangedEventArgs<T>.MetadataChangedEventArgs(T)
+- uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.#ctor*
+  href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1__ctor_
+  commentId: Overload:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.#ctor
+  name: MetadataChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.MetadataChangedEventArgs(T)
+  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs
+- uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.NewMetadata
+  name: NewMetadata
+  href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1_NewMetadata
+  commentId: P:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.NewMetadata
+  fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.NewMetadata
+  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs(Of T).NewMetadata
+  nameWithType: MetadataChangedEventArgs<T>.NewMetadata
+- uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.NewMetadata*
+  href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1_NewMetadata_
+  commentId: Overload:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.NewMetadata
+  name: NewMetadata
+  fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.NewMetadata
+  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs
 - uid: Google.Cloud.Metadata.V1.MetadataClient
   name: MetadataClient
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient
@@ -1905,28 +1985,28 @@ references:
   commentId: E:Google.Cloud.Metadata.V1.MetadataClient.ProjectMetadataChanged
   fullName: Google.Cloud.Metadata.V1.MetadataClient.ProjectMetadataChanged
   nameWithType: MetadataClient.ProjectMetadataChanged
-- uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.TimeSpan)
-  name: WaitForChange(String, TimeSpan)
-  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_TimeSpan_
-  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.TimeSpan)
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String, System.TimeSpan)
-  nameWithType: MetadataClient.WaitForChange(String, TimeSpan)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.String,System.TimeSpan)
+  name: WaitForChange(String, String, TimeSpan)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_System_String_System_String_System_TimeSpan_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String,System.String,System.TimeSpan)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String, System.String, System.TimeSpan)
+  nameWithType: MetadataClient.WaitForChange(String, String, TimeSpan)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange*
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.WaitForChange
   name: WaitForChange
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String, System.TimeSpan)
-- uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
-  name: WaitForChangeAsync(String, TimeSpan, CancellationToken)
-  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String, System.TimeSpan, System.Threading.CancellationToken)
-  nameWithType: MetadataClient.WaitForChangeAsync(String, TimeSpan, CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String, System.String, System.TimeSpan)
+- uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)
+  name: WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
+  nameWithType: MetadataClient.WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync*
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync
   name: WaitForChangeAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String, System.TimeSpan, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl
   name: MetadataClientImpl
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl
@@ -2133,25 +2213,70 @@ references:
   commentId: E:Google.Cloud.Metadata.V1.MetadataClientImpl.ProjectMetadataChanged
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.ProjectMetadataChanged
   nameWithType: MetadataClientImpl.ProjectMetadataChanged
-- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.TimeSpan)
-  name: WaitForChange(String, TimeSpan)
-  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_System_String_System_TimeSpan_
-  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.TimeSpan)
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String, System.TimeSpan)
-  nameWithType: MetadataClientImpl.WaitForChange(String, TimeSpan)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.String,System.TimeSpan)
+  name: WaitForChange(String, String, TimeSpan)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_System_String_System_String_System_TimeSpan_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String,System.String,System.TimeSpan)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String, System.String, System.TimeSpan)
+  nameWithType: MetadataClientImpl.WaitForChange(String, String, TimeSpan)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange*
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange
   name: WaitForChange
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String, System.TimeSpan)
-- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
-  name: WaitForChangeAsync(String, TimeSpan, CancellationToken)
-  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_System_String_System_TimeSpan_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String, System.TimeSpan, System.Threading.CancellationToken)
-  nameWithType: MetadataClientImpl.WaitForChangeAsync(String, TimeSpan, CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String, System.String, System.TimeSpan)
+- uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)
+  name: WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
+  nameWithType: MetadataClientImpl.WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync*
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync
   name: WaitForChangeAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String, System.TimeSpan, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
+- uid: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs
+  name: ProjectMetadataChangedEventArgs
+  href: api/Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs
+  commentId: T:Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs
+  nameWithType: ProjectMetadataChangedEventArgs
+- uid: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.#ctor(Google.Apis.Compute.v1.Data.Project)
+  name: ProjectMetadataChangedEventArgs(Project)
+  href: api/Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs__ctor_Google_Apis_Compute_v1_Data_Project_
+  commentId: M:Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.#ctor(Google.Apis.Compute.v1.Data.Project)
+  fullName: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Project)
+  nameWithType: ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs(Project)
+- uid: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.#ctor*
+  href: api/Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs__ctor_
+  commentId: Overload:Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.#ctor
+  name: ProjectMetadataChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Project)
+- uid: Google.Cloud.Metadata.V1.WaitForChangeResult
+  name: WaitForChangeResult
+  href: api/Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult
+  commentId: T:Google.Cloud.Metadata.V1.WaitForChangeResult
+  fullName: Google.Cloud.Metadata.V1.WaitForChangeResult
+  nameWithType: WaitForChangeResult
+- uid: Google.Cloud.Metadata.V1.WaitForChangeResult.Content
+  name: Content
+  href: api/Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult_Content
+  commentId: P:Google.Cloud.Metadata.V1.WaitForChangeResult.Content
+  fullName: Google.Cloud.Metadata.V1.WaitForChangeResult.Content
+  nameWithType: WaitForChangeResult.Content
+- uid: Google.Cloud.Metadata.V1.WaitForChangeResult.Content*
+  href: api/Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult_Content_
+  commentId: Overload:Google.Cloud.Metadata.V1.WaitForChangeResult.Content
+  name: Content
+  fullName: Google.Cloud.Metadata.V1.WaitForChangeResult.Content
+- uid: Google.Cloud.Metadata.V1.WaitForChangeResult.ETag
+  name: ETag
+  href: api/Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult_ETag
+  commentId: P:Google.Cloud.Metadata.V1.WaitForChangeResult.ETag
+  fullName: Google.Cloud.Metadata.V1.WaitForChangeResult.ETag
+  nameWithType: WaitForChangeResult.ETag
+- uid: Google.Cloud.Metadata.V1.WaitForChangeResult.ETag*
+  href: api/Google.Cloud.Metadata.V1.WaitForChangeResult.html#Google_Cloud_Metadata_V1_WaitForChangeResult_ETag_
+  commentId: Overload:Google.Cloud.Metadata.V1.WaitForChangeResult.ETag
+  name: ETag
+  fullName: Google.Cloud.Metadata.V1.WaitForChangeResult.ETag

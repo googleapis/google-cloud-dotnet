@@ -297,7 +297,7 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ResourceName ParseName(string name)</code></pre>
+                <pre><code class="lang-csharp hljs">public TemplatedResourceName ParseName(string name)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -327,8 +327,8 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName">ResourceName</a></td>
-                    <td><p>The parsed name as a <a class="xref" href="Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName">ResourceName</a>.</p>
+                    <td><a class="xref" href="Google.Api.Gax.TemplatedResourceName.html#Google_Api_Gax_TemplatedResourceName">TemplatedResourceName</a></td>
+                    <td><p>The parsed name as a <a class="xref" href="Google.Api.Gax.TemplatedResourceName.html#Google_Api_Gax_TemplatedResourceName">TemplatedResourceName</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -361,13 +361,13 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">System.Object.ToString()</span></div>
               <a id="Google_Api_Gax_PathTemplate_TryParseName_" data-uid="Google.Api.Gax.PathTemplate.TryParseName*"></a>
-              <h4 id="Google_Api_Gax_PathTemplate_TryParseName_System_String_Google_Api_Gax_ResourceName__" data-uid="Google.Api.Gax.PathTemplate.TryParseName(System.String,Google.Api.Gax.ResourceName@)">TryParseName(String, out ResourceName)</h4>
+              <h4 id="Google_Api_Gax_PathTemplate_TryParseName_System_String_Google_Api_Gax_TemplatedResourceName__" data-uid="Google.Api.Gax.PathTemplate.TryParseName(System.String,Google.Api.Gax.TemplatedResourceName@)">TryParseName(String, out TemplatedResourceName)</h4>
               <div class="markdown level1 summary"><p>Attempts to parse the given resource name against this template, returning <code>null</code> on failure.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public bool TryParseName(string name, out ResourceName result)</code></pre>
+                <pre><code class="lang-csharp hljs">public bool TryParseName(string name, out TemplatedResourceName result)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -386,7 +386,7 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.ResourceName.html#Google_Api_Gax_ResourceName">ResourceName</a></td>
+                    <td><a class="xref" href="Google.Api.Gax.TemplatedResourceName.html#Google_Api_Gax_TemplatedResourceName">TemplatedResourceName</a></td>
                     <td><em>result</em></td>
                     <td><p>When this method returns, the parsed resource name or <code>null</code> if parsing fails.</p>
 </td>
@@ -409,7 +409,7 @@ This method assumes no service name is required. Call <a class="xref" href="Goog
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Google_Api_Gax_PathTemplate_TryParseName_System_String_Google_Api_Gax_ResourceName___remarks">Remarks</h5>
+              <h5 id="Google_Api_Gax_PathTemplate_TryParseName_System_String_Google_Api_Gax_TemplatedResourceName___remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>Although this method returns <code>null</code> if a name is passed in which doesn&#39;t match the template,
 it still throws <span class="xref">System.ArgumentNullException</span> if <em>name</em> is null, as this would
 usually indicate a programming error rather than a data error.</p>

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Google.Cloud.ErrorReporting.V1Beta1 | Google.Cloud.ErrorReporting.V1Beta1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Google.Cloud.ErrorReporting.V1Beta1 | Google.Cloud.ErrorReporting.V1Beta1 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="googleclouderrorreportingv1beta1">Google.Cloud.ErrorReporting.V1Beta1</h1>
+              
+<p><code>Google.Cloud.ErrorReporting.V1Beta1</code> is a .NET client
+library for the <a href="https://cloud.google.com/error-reporting/">Stackdriver Error Reporting
+API</a>.</p>
+<h1 id="installation">Installation</h1>
+<p>Install the <code>Google.Cloud.ErrorReporting.V1Beta1</code> package from NuGet. Add it to
+your project in the normal way (for example by right-clicking on the
+project in Visual Studio and choosing &quot;Manage NuGet Packages...&quot;).
+Please ensure you enable pre-release packages (for example, in the
+Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
+box).</p>
+<h1 id="authentication">Authentication</h1>
+<p>To authenticate all your API calls, first install and setup the
+<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
+installed, run the following command in a Google Cloud SDK Shell:</p>
+<pre><code class="lang-sh">&gt; gcloud auth login
+</code></pre><h1 id="getting-started">Getting started</h1>
+<p>There are three client classes to be aware of:</p>
+<ul>
+<li><a href="api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html">ErrorGroupServiceClient</a></li>
+<li><a href="api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html">ErrorStatsServiceClient</a></li>
+<li><a href="api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html">ReportErrorsServiceClient</a></li>
+</ul>
+<p>In each case, create an instance using the static <code>Create</code> method,
+optionally specifying a service endpoint and settings.</p>
+<h1 id="sample-code">Sample code</h1>
+<h2 id="report-an-error">Report an error</h2>
+<pre><code class="lang-cs">ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
+string projectName = new ProjectName(projectId).ToString();
+ReportedErrorEvent error = new ReportedErrorEvent
+{
+    Context = new ErrorContext
+    {
+        ReportLocation = new SourceLocation
+        {
+            FilePath = &quot;SampleApp.BusinessLogic/ComplexLogic.cs&quot;,
+            FunctionName = &quot;ComputeTrickyAnswer&quot;,
+            LineNumber = 100
+        },
+        User = &quot;userid&quot;                    
+    },
+
+    // If this is a stack trace, the service will parse it.
+    Message = &quot;Computation failed&quot;,
+
+    EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
+    ServiceContext = new ServiceContext
+    {
+        Service = &quot;SampleApp&quot;,
+        Version = &quot;1.0.0&quot;
+    }
+};
+client.ReportErrorEvent(projectName, error);
+</code></pre><h2 id="list-error-groups-with-statistics">List error groups with statistics</h2>
+<pre><code class="lang-cs">ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
+string projectName = new ProjectName(projectId).ToString();
+PagedEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; groupStats = client.ListGroupStats(
+    projectName,
+    new QueryTimeRange { Period = Period._30Days });
+foreach (ErrorGroupStats item in groupStats)
+{
+    // Sample output: Group: 8002882452986879952; Count: 6; Services: SampleApp/1.0.0
+    IEnumerable&lt;string&gt; services = item.AffectedServices.Select(s =&gt; $&quot;{s.Service}/{s.Version}&quot;);
+    Console.WriteLine($&quot;Group: {item.Group.GroupId}; Count: {item.Count}; Services: {string.Join(&quot;, &quot;, services)}&quot;);
+}            
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

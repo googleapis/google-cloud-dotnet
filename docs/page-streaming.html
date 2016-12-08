@@ -73,120 +73,105 @@ or perhaps the cost of performing the query.</p>
 <p>The code required to iterate over all the results in a list is not
 difficult, but it is tedious and error-prone, so the C# client
 libraries have abstracted this away.</p>
-<p>Operations listing resources synchronously return an
-<a href="api/Google.Api.Gax.IPagedEnumerable-2.html">IPagedEnumerable&lt;TResponse, TResource&gt;</a>, and operations listing
-resources asynchronously return an
-<a href="api/Google.Api.Gax.IPagedAsyncEnumerable-2.html">IPagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>.
+<p>Operations listing resources synchronously return a
+<a href="api/Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable&lt;TResponse, TResource&gt;</a>, and operations listing
+resources asynchronously return a
+<a href="api/Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>.
 These are equivalent other than their asynchrony, so
 this document focuses on the synchronous version for simplicity.</p>
-<h2 id="ipagedenumerabletresponse-tresource"><code>IPagedEnumerable&lt;TResponse, TResource&gt;</code></h2>
+<h2 id="pagedenumerabletresponse-tresource"><code>PagedEnumerable&lt;TResponse, TResource&gt;</code></h2>
 <p>Let&#39;s look at the generic type parameters first. The <code>TResponse</code> is
 the API response type for the list operation, and the <code>TResource</code> is
 the type of the resource being listed. In the Pub/Sub API for
 example, the <code>ListTopics</code> operation accepts a <code>ListTopicsRequest</code>
 and returns a <code>ListTopicsResponse</code> containing a set of <code>Topic</code>
-resources - so the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">PublisherClient.ListTopics</a>
-method returns an <code>IPagedEnumerable&lt;ListTopicsResponse, Topic&gt;</code>.</p>
-<p><code>IPagedEnumerable&lt;TResponse, TResource&gt;</code> implements
+resources - so the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">PublisherClient.ListTopics</a>
+method returns a <code>PagedEnumerable&lt;ListTopicsResponse, Topic&gt;</code>.</p>
+<p><code>PagedEnumerable&lt;TResponse, TResource&gt;</code> implements
 <code>IEnumerable&lt;TResource&gt;</code>.  If you simply iterate over it, you will
 retrieve one resource at a time. The implementation will make API
 calls as it needs to, retrieving a page at a time and then returning
 the resources as the caller requests them.</p>
-<h2 id="iresponseenumerabletresponse-tresource"><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code></h2>
+<h2 id="asrawresponses"><code>AsRawResponses</code></h2>
 <p>For more advanced scenarios, however, your application may need access
-to the pages returned by the API instead. The
-<a href="api/Google.Api.Gax.IPagedEnumerable-2.html#Google_Api_Gax_IPagedEnumerable_2_AsPages">IPagedEnumerable&lt;TResponse, TResource&gt;.AsPages()</a>
-method returns an <a href="api/Google.Api.Gax.IResponseEnumerable-2.html">IResponseEnumerable&lt;TResponse, TResource&gt;</a> which
-implements <code>IEnumerable&lt;TResponse&gt;</code>, so you can iterate over the responses easily. Each
+to the raw responses returned by the API instead. The
+<a href="api/Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2_AsRawResponses">PagedEnumerable&lt;TResponse, TResource&gt;.AsRawResponses()</a>
+method returns an <code>IEnumerable&lt;TResponse&gt;</code>, so you can iterate over the responses easily. Each
 response provides access to the individual resources within the page, and some APIs may
 provide additional information such as the time taken for the request or the total number of
 results across all pages. As you iterate over the pages, API requests are made
 transparently, propagating the page token from one response to the next request.</p>
-<p><code>IResponseEnumerable&lt;TResponse, TResource&gt;</code> provides one additional method, 
-<a href="api/Google.Api.Gax.IResponseEnumerable-2.html#Google_Api_Gax_IResponseEnumerable_2_WithFixedSize_System_Int32_">WithFixedSize()</a>
-to cater for web applications which require precise page sizes.</p>
+<h2 id="readpage"><code>ReadPage</code></h2>
+<p><code>PagedEnumerable&lt;TResponse, TResource&gt;</code> also has a 
+<a href="api/Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2_ReadPage_System_Int32_">ReadPage(int)</a>
+method to cater for web applications which require precise page sizes.</p>
 <p>Although APIs generally allow the application to specify the page size to return, this
 is an upper limit rather than a hard requirement. It&#39;s possible for an API to return fewer results,
 even if more are available - for example, if the server notices that it is close to reaching the specified
 RPC deadline. While that&#39;s fine for many batch scenarios, it isn&#39;t ideal if the results are being presented to users,
 where typically you want to provide the exact same number of results per page.</p>
-<p>The <code>WithFixedSize</code> method makes multiple API requests if necessary, in order to &quot;fill&quot; each page
-until it reaches the end of the resources being listed. The return value is an <code>IEnumerable&lt;FixedSizePage&lt;TResource&gt;&gt;</code>, where
-<a href="api/Google.Api.Gax.FixedSizePage-1.html#Google_Api_Gax_FixedSizePage_1">FixedSizePage&lt;TResource&gt;</a> provides the items
+<p>The <code>ReadPage</code> method makes multiple API requests if necessary, in order to &quot;fill&quot; a page (of a specified size)
+until it reaches the end of the resources being listed. The return value is a
+<a href="api/Google.Api.Gax.Page-1.html#Google_Api_Gax_Page_1">Page&lt;TResource&gt;</a> which provides the items
 within each page, along with the page token used to retrieve the next page. (This would typically be used in a &quot;next page&quot; link
 in the web results.)</p>
 <h2 id="use-case-sample-code">Use case sample code</h2>
 <h3 id="iterate-over-all-resources-ignoring-pagination">Iterate over all resources, ignoring pagination</h3>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
-string projectName = PublisherClient.FormatProjectName(projectId);
-IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
+ProjectName projectName = new ProjectName(projectId);
+PagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
 foreach (Topic topic in topics)
 {
     Console.WriteLine(topic.Name);
 }
-</code></pre><h3 id="iterate-over-all-resources-remembering-page-tokens">Iterate over all resources, remembering page tokens</h3>
+</code></pre><h3 id="iterate-over-all-responses-remembering-page-tokens">Iterate over all responses, remembering page tokens</h3>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
-string projectName = PublisherClient.FormatProjectName(projectId);
-IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
-IResponseEnumerable&lt;ListTopicsResponse, Topic&gt; topicPages = topics.AsPages();
-foreach (ListTopicsResponse page in topicPages)
+ProjectName projectName = new ProjectName(projectId);
+PagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
+IEnumerable&lt;ListTopicsResponse&gt; topicResponses = topics.AsRawResponses();
+foreach (ListTopicsResponse response in topicResponses)
 {
     Console.WriteLine(&quot;Topics in response:&quot;);
-    foreach (Topic topic in page.Topics)
+    foreach (Topic topic in response.Topics)
     {
         Console.WriteLine($&quot;  {topic.Name}&quot;);
     }
     // If you were processing items in batches, you might wish to store this
     // in order to recover from failures. The page token can be passed into the ListTopics method.
-    Console.WriteLine($&quot;Next page token: {page.NextPageToken}&quot;);
+    Console.WriteLine($&quot;Next page token: {response.NextPageToken}&quot;);
 }
-</code></pre><h3 id="obtain-a-single-page-of-results">Obtain a single page of results</h3>
+</code></pre><h3 id="obtain-a-single-natural-page-of-results">Obtain a single &quot;natural&quot; page of results</h3>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
-string projectName = PublisherClient.FormatProjectName(projectId);
-IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
-IResponseEnumerable&lt;ListTopicsResponse, Topic&gt; topicPages = topics.AsPages();
+ProjectName projectName = new ProjectName(projectId);
+PagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageSize: 3);
+IEnumerable&lt;ListTopicsResponse&gt; topicResponses = topics.AsRawResponses();
 // This is just the regular LINQ First() method. The sequence of pages will never be empty,
 // but the page may have no resources.
-ListTopicsResponse firstPage = topicPages.First();
+ListTopicsResponse firstResponse = topicResponses.First();
 Console.WriteLine(&quot;Topics in response:&quot;);
-foreach (Topic topic in firstPage.Topics)
+foreach (Topic topic in firstResponse.Topics)
 {
     Console.WriteLine($&quot;  {topic.Name}&quot;);
 }
 // If you were processing items in batches, you might wish to store this
 // in order to recover from failures. The page token can be passed into the ListTopics method.
-Console.WriteLine($&quot;Next page token: {firstPage.NextPageToken}&quot;);
-</code></pre><h3 id="display-results-in-fixed-sized-pages">Display results in fixed-sized pages</h3>
-<p>This is typically used in web applications.</p>
+Console.WriteLine($&quot;Next page token: {firstResponse.NextPageToken}&quot;);
+</code></pre><h3 id="display-the-next-fixed-sized-page-of-results">Display the next fixed-sized page of results</h3>
+<p>This is typically used in web applications; it will only display a less-than-full
+page if it reaches the end of the data.</p>
 <pre><code class="lang-cs">PublisherClient client = PublisherClient.Create();
-string projectName = PublisherClient.FormatProjectName(projectId);
-IPagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageTokenFromRequest);
+ProjectName projectName = new ProjectName(projectId);
+PagedEnumerable&lt;ListTopicsResponse, Topic&gt; topics = client.ListTopics(projectName, pageTokenFromRequest);
 
-IEnumerable&lt;FixedSizePage&lt;Topic&gt;&gt; fixedSizePages = topics.AsPages().WithFixedSize(3);
-// With fixed size pages, if there are no more resources, there are no more pages.
-FixedSizePage&lt;Topic&gt; nextPage = fixedSizePages.FirstOrDefault();
-if (nextPage != null)
+Page&lt;Topic&gt; page = topics.ReadPage(3);
+// In a web application, this would be a matter of including the topics in the web page.
+foreach (Topic topic in page)
 {
-    // In a web application, this would be a matter of including the topics in the web page.
-    foreach (Topic topic in nextPage)
-    {
-        Console.WriteLine(topic.Name);
-    }
-    // ... and embedding the next page token into a &quot;next page&quot; link.
-    Console.WriteLine($&quot;Next page token: {nextPage.NextPageToken}&quot;);
+    Console.WriteLine(topic.Name);
 }
+// ... and embedding the next page token into a &quot;next page&quot; link.
+Console.WriteLine($&quot;Next page token: {page.NextPageToken}&quot;);
 </code></pre><h2 id="feedback">Feedback</h2>
-<p>We&#39;ve already been through a number of iterations of the page-streaming API,
-but would very much welcome feedback on it. A few thoughts:</p>
-<ul>
-<li>We could return a concrete class rather than having the <code>IPagedEnumerable&lt;,&gt;</code>
-interface. This would give us greater room for expansion in the future, but
-might make faking harder.</li>
-<li>We could move the <code>WithFixedSize</code> method into the returned type, so that
-instead of calling <code>topics.AsPages().WithFixedSize(10)</code> you&#39;d call
-<code>topics.WithFixedSizedPages(10)</code>, for example. This would allow us to remove
-the <code>IResponseEnumerable&lt;,&gt;</code> interface.</li>
-</ul>
 <p>What other use cases should we consider? Does this meet your current needs?
 Please <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new">raise an issue on github</a>
 to provide feedback.</p>

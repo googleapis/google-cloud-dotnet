@@ -111,14 +111,14 @@
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Api_Gax_Polling_PollRepeatedly_" data-uid="Google.Api.Gax.Polling.PollRepeatedly*"></a>
-              <h4 id="Google_Api_Gax_Polling_PollRepeatedly__1_System_Func_System_Nullable_System_DateTime____0__System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_" data-uid="Google.Api.Gax.Polling.PollRepeatedly``1(System.Func{System.Nullable{System.DateTime},``0},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)">PollRepeatedly&lt;TResponse&gt;(Func&lt;Nullable&lt;DateTime&gt;, TResponse&gt;, Predicate&lt;TResponse&gt;, IClock, IScheduler, PollSettings)</h4>
+              <h4 id="Google_Api_Gax_Polling_PollRepeatedly__1_System_Func_System_Nullable_System_DateTime____0__System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.Polling.PollRepeatedly``1(System.Func{System.Nullable{System.DateTime},``0},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)">PollRepeatedly&lt;TResponse&gt;(Func&lt;Nullable&lt;DateTime&gt;, TResponse&gt;, Predicate&lt;TResponse&gt;, IClock, IScheduler, PollSettings, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Repeatedly calls the specified polling action, delaying between calls,
 until a given condition is met in the response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static TResponse PollRepeatedly&lt;TResponse&gt;(Func&lt;DateTime? , TResponse&gt; pollAction, Predicate&lt;TResponse&gt; completionPredicate, IClock clock, IScheduler scheduler, PollSettings pollSettings)</code></pre>
+                <pre><code class="lang-csharp hljs">public static TResponse PollRepeatedly&lt;TResponse&gt;(Func&lt;DateTime? , TResponse&gt; pollAction, Predicate&lt;TResponse&gt; completionPredicate, IClock clock, IScheduler scheduler, PollSettings pollSettings, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -161,6 +161,12 @@ polling (<code>false</code>). Must not be null.</p>
                     <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
                     <td><em>pollSettings</em></td>
                     <td><p>The poll settings, controlling timeouts, call settings and delays.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The cancellation token used to cancel delays, if any.</p>
 </td>
                   </tr>
                 </tbody>
@@ -213,14 +219,14 @@ polling (<code>false</code>). Must not be null.</p>
                 </tbody>
               </table>
               <a id="Google_Api_Gax_Polling_PollRepeatedlyAsync_" data-uid="Google.Api.Gax.Polling.PollRepeatedlyAsync*"></a>
-              <h4 id="Google_Api_Gax_Polling_PollRepeatedlyAsync__1_System_Func_System_Nullable_System_DateTime__System_Threading_Tasks_Task___0___System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_" data-uid="Google.Api.Gax.Polling.PollRepeatedlyAsync``1(System.Func{System.Nullable{System.DateTime},System.Threading.Tasks.Task{``0}},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings)">PollRepeatedlyAsync&lt;TResponse&gt;(Func&lt;Nullable&lt;DateTime&gt;, Task&lt;TResponse&gt;&gt;, Predicate&lt;TResponse&gt;, IClock, IScheduler, PollSettings)</h4>
+              <h4 id="Google_Api_Gax_Polling_PollRepeatedlyAsync__1_System_Func_System_Nullable_System_DateTime__System_Threading_Tasks_Task___0___System_Predicate___0__Google_Api_Gax_IClock_Google_Api_Gax_IScheduler_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.Polling.PollRepeatedlyAsync``1(System.Func{System.Nullable{System.DateTime},System.Threading.Tasks.Task{``0}},System.Predicate{``0},Google.Api.Gax.IClock,Google.Api.Gax.IScheduler,Google.Api.Gax.PollSettings,System.Threading.CancellationToken)">PollRepeatedlyAsync&lt;TResponse&gt;(Func&lt;Nullable&lt;DateTime&gt;, Task&lt;TResponse&gt;&gt;, Predicate&lt;TResponse&gt;, IClock, IScheduler, PollSettings, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously repeatedly calls the specified polling action, delaying between calls,
 until a given condition is met in the response.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static Task&lt;TResponse&gt; PollRepeatedlyAsync&lt;TResponse&gt;(Func&lt;DateTime? , Task&lt;TResponse&gt;&gt; pollAction, Predicate&lt;TResponse&gt; completionPredicate, IClock clock, IScheduler scheduler, PollSettings pollSettings)</code></pre>
+                <pre><code class="lang-csharp hljs">public static Task&lt;TResponse&gt; PollRepeatedlyAsync&lt;TResponse&gt;(Func&lt;DateTime? , Task&lt;TResponse&gt;&gt; pollAction, Predicate&lt;TResponse&gt; completionPredicate, IClock clock, IScheduler scheduler, PollSettings pollSettings, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -263,6 +269,12 @@ polling (<code>false</code>). Must not be null.</p>
                     <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
                     <td><em>pollSettings</em></td>
                     <td><p>The poll settings, controlling timeouts, call settings and delays.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The cancellation token used to cancel delays, if any.</p>
 </td>
                   </tr>
                 </tbody>

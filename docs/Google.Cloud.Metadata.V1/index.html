@@ -100,11 +100,24 @@ if (status == MaintenanceStatus.Migrate)
 }
 </code></pre><h1 id="waiting-for-changes">Waiting for changes</h1>
 <pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
-string result = client.WaitForChange(&quot;instance/attributes&quot;, timeout: TimeSpan.FromSeconds(5));
-JObject currentCustomMetadata = JObject.Parse(result);
-foreach(JProperty customMetadata in currentCustomMetadata.Properties())
+
+// Get the original ETag so we know when the metadata changes.
+string lastETag = client.WaitForChange(&quot;instance/attributes&quot;, timeout: TimeSpan.FromMilliseconds(1)).ETag;
+
+WaitForChangeResult result;
+while (true)
 {
-    Console.WriteLine(customMetadata.Name + &quot; = &quot; + customMetadata.Value);
+    // Wait in 30 second blocks until the value actually changes.
+    result = client.WaitForChange(&quot;instance/attributes&quot;, lastETag, TimeSpan.FromSeconds(30));
+    if (result.ETag != lastETag)
+    {
+        JObject currentCustomMetadata = JObject.Parse(result.Content);
+        foreach (JProperty customMetadata in currentCustomMetadata.Properties())
+        {
+            Console.WriteLine(customMetadata.Name + &quot; = &quot; + customMetadata.Value);
+        }
+        break;
+    }
 }
 </code></pre>
             </article>

@@ -67,7 +67,7 @@ that resource within an API.</p>
 <p>A resource name is a path-like structure, typically alternating between fixed collection
 names and an identifier within that collection. Throughout this page, we will use
 the example of the <a href="https://cloud.google.com/pubsub/overview">Google Cloud Pub/Sub API</a>,
-which is exposed by the <a href="https://www.nuget.org/packages/Google.Pubsub.V1">Google.Pubsub.V1 NuGet package</a>.</p>
+which is exposed by the <a href="https://www.nuget.org/packages/Google.Cloud.PubSub.V1">Google.Cloud.PubSub.V1 NuGet package</a>.</p>
 <p>In Cloud Pub/Sub, a publisher creates a <em>topic</em> within a <em>project</em>, and a subscriber creates
 a <em>subscription</em> to that topic, also within a project. (The topic and subscription may be in different projects.)
 It is possible to list the topics or subscriptions within a project.</p>
@@ -78,81 +78,68 @@ It is possible to list the topics or subscriptions within a project.</p>
 <li>Subscription: <code>projects/petstore_web/subscriptions/pet_offers</code></li>
 </ul>
 <p>(We&#39;ve deliberately used a different project in the subscription to highlight that they don&#39;t have to be the same.)</p>
-<p>The names above are the ones you would see and use in the Pub/Sub API. For example, to list all the topics
-in the <code>projects/petstore</code> project, you would use the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">PublisherClient.ListTopics</a> method:</p>
-<pre><code class="lang-cs">var client = PublisherClient.Create();
-var topics = client.ListTopics(&quot;projects/petstore&quot;);
-foreach (Topic topic in topics)
-{
-    // Output would include projects/petstore/topics/offers
-    Console.WriteLine(topic.Name);
-}
-</code></pre><p>Using a single string as a resource name makes many things simple - such as referring to a resource in a logging or monitoring API.
-However, there are times when an application would more naturally consider <em>resource IDs</em> - the parts within an resource name that vary.</p>
+<p>Each resource name consistents of one or more <em>resource IDs</em> - the parts within an resource name that vary, and fixed
+parts of the name, typically collection names.</p>
 <p>For example, within our topic resource name (<code>projects/petstore/topics/offers</code>) there are two resource IDs:</p>
 <ul>
 <li>The project ID (<code>petstore</code>)</li>
 <li>The topic ID (<code>offers</code>)</li>
 </ul>
+<h2 id="generated-resource-name-types">Generated resource name types</h2>
+<p>The full resource names above are the ones you would see and use in the underlying Pub/Sub API - just as strings. However, to
+make the client libraries easier to use correctly, a class is generated for each kind of resource name. The classes
+generated for the above resources are:</p>
+<ul>
+<li><a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.ProjectName.html">ProjectName</a></li>
+<li><a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicName.html">TopicName</a></li>
+<li><a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></li>
+</ul>
+<p>Constructing an instance of a resource name type from its resource IDs is very simple: just call the constructor. Each
+resource name type has a constructor with one parameter for each resource ID within the name.</p>
+<p>Sometimes you may want to parse a resource name from its string form. Each resource name type has <code>Parse</code> and <code>TryParse</code>
+methods to allow this. Likewise, to obtain the string representation of a resource name (for example to save it to a database)
+you can just call <code>ToString</code>.</p>
+<p>The resource name types are also used to augment the Protocol Buffer messages representing requests, responses and resources. This
+takes the form of additional properties which automatically parse and format the underlying string representation. Where resources
+have a <code>Name</code> property representing the string resource name, the additional property is simply the name of the type. For other
+uses of resource names, the extra property is just the name of the string property with a suffix of <code>AsXyzName</code>, where <code>XyzName</code> is
+the name of the generated type.</p>
+<p>For example, <a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html">Subscription</a> has
+a <a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_SubscriptionName">SubscriptionName</a>
+property. When that property is fetched, it parses the value retrieved from the <a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_Name">Name</a> property. Likewise, when the <code>SubscriptionName</code> property is
+set, the value is formatted and stored in <code>Name</code>.</p>
+<h2 id="api-calls">API calls</h2>
+<p>API calls where the request uses a resource name are typically mapped to use the corresponding class. For example, to list all the topics
+in the <code>projects/petstore</code> project, you would use the <a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ListTopics_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_CallSettings_">PublisherClient.ListTopics</a> method:</p>
+<pre><code class="lang-cs">var client = PublisherClient.Create();
+var topics = client.ListTopics(new ProjectName(&quot;petstore&quot;));
+foreach (Topic topic in topics)
+{
+    // Output would include projects/petstore/topics/offers
+    Console.WriteLine(topic.Name);
+}
+</code></pre><p>Where API calls haven&#39;t been configured to use the resource name type, but instead accept a string, simply create the
+resource name instance anyway, and call <code>ToString()</code> to obtain the appropriate string representation.</p>
 <p>We can&#39;t tell you when your application will need to use resource IDs and when it will need to use resource names, but we&#39;d recommend
 using the terms &quot;name&quot; and &quot;ID&quot; in a manner consistent with the API terminology. The more you can use resource names in your code, the
 less parsing and formatting you&#39;ll need to perform, of course.</p>
-<p>You should not perform the formatting and parsing yourself, as it is error-prone and tedious. Instead, use the functionality
-provided by the class libraries, as described below.</p>
-<h2 id="formatting-a-resource-name-from-resource-ids">Formatting a resource name from resource IDs</h2>
-<p>For each resource used by a particular API client, a static format method is generated. For example, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> class has two format methods:</p>
-<ul>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatProjectName_System_String_">FormatProjectName(string)</a></li>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_FormatTopicName_System_String_System_String_">FormatTopicName(string, string)</a></li>
-</ul>
-<p>Likewise, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a> class has three methods:</p>
-<ul>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatProjectName_System_String_">FormatProjectName(string)</a></li>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatTopicName_System_String_System_String_">FormatTopicName(string, string)</a></li>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_FormatSubscriptionName_System_String_System_String_">FormatSubscriptionName(string, string)</a></li>
-</ul>
-<p>(A publisher never needs to format a subscription name, whereas a subscriber <em>does</em> need to format a topic name in order to
-create a subscription.)</p>
-<p>Each format method has one parameter for each resource ID present in the resource name, in the order in which they appear in the resource name.</p>
-<p>Here&#39;s an example of formatting the resource name for our <code>offers</code> topic:</p>
-<pre><code class="lang-cs">string projectId = &quot;petstore&quot;;
-string topicId = &quot;offers&quot;;
-string topicName = PublisherClient.FormatTopicName(projectId, topicId);
-// The value of topicName is now &quot;projects/petstore/topics/offers&quot;
-</code></pre><h2 id="parsing-resource-ids-from-a-resource-name">Parsing resource IDs from a resource name</h2>
-<p>As well as the format methods, a static property is provided for each resource, of type
-<a href="api/Google.Api.Gax.PathTemplate.html">PathTemplate</a>. This can be used to parse a resource name (as a string)
-into a <a href="api/Google.Api.Gax.ResourceName.html">ResourceName</a> object. The resource IDs can then be extracted from
-that object either by index or by name. The names of the resource IDs match the names of the parameters in the corresponding
-<code>Format</code> methods.</p>
-<p>The <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a> class has two template properties:</p>
-<ul>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_ProjectTemplate">ProjectTemplate</a></li>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html#Google_Pubsub_V1_PublisherClient_TopicTemplate">TopicTemplate</a></li>
-</ul>
-<p>Likewise, the <a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html">SubscriberClient</a> class has three properties:</p>
-<ul>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_ProjectTemplate">ProjectTemplate</a></li>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_TopicTemplate">TopicTemplate</a></li>
-<li><a href="Google.Pubsub.V1/api/Google.Pubsub.V1.SubscriberClient.html#Google_Pubsub_V1_SubscriberClient_SubscriptionTemplate">SubscriptionTemplate</a></li>
-</ul>
-<p>Example of extracting resource IDs by index:</p>
-<pre><code class="lang-cs">string topicName = &quot;projects/petstore/topics/offers&quot;;
-ResourceName parsedName = PublisherClient.TopicTemplate.ParseName(topicName);
-string projectId = parsedName[0];
-string topicId = parsedName[1];
+<h2 id="one-of-resource-name-types">&quot;One-of&quot; resource name types</h2>
+<p>As well as the types representing individual resource names, sometimes a message property could represent one of multiple
+kinds of resource name. This could be due to multiple resource kinds being suitable for the property, or it could be due to &quot;special&quot;
+resource names being specified in the API for unusual circumstances.</p>
+<p>For example, a subscription refers to a topic resource name - but if the topic has been deleted, the name will be <code>_deleted-topic_</code>.
+Rather than just fail to parse this, a &quot;one-of&quot; resource name class is generated (in this case
+<a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.TopicNameOneof.html">TopicNameOneof</a>). That is then used as the type of the
+corresponding extra property (<a href="Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1/api/Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription_TopicAsTopicNameOneof">TopicAsTopicNameOneof</a>) in <code>Subscription</code>.</p>
+<p>This kind of resource name can still be parsed from a string and still be formatted with <code>ToString</code>, but can also be created
+from the appropriate specific resource name types (<code>TopicName</code> and <code>DeletedTopicNameFixed</code> in this case). A nested enum and a property
+of that type (<code>Type</code>) allow you to easily switch on which type of resource is actually being represented.</p>
+<p>One-of resource name types always have a possible type of &quot;unknown&quot; which is used to allow for API expansion. For example,
+if a resource name property can be either <code>projects/x</code> or <code>organizations/y</code> in version 1.0, a minor version update to 1.1
+could add <code>teams/z</code> as a valid value. In this case, the code generated against version 1.0 would still work, using &quot;unknown&quot;
+to represent any <code>teams/z</code> value received from the server. Code generated against version 1.1 would then have another strongly-typed
+resource name type for the <code>teams/z</code> type of resource.</p>
 
-// The value of projectId is now &quot;petstore&quot;
-// The value of topicId is now &quot;offers&quot;
-</code></pre><p>Example of extracting resource IDs by name:</p>
-<pre><code class="lang-cs">string topicName = &quot;projects/petstore/topics/offers&quot;;
-ResourceName parsedName = PublisherClient.TopicTemplate.ParseName(topicName);
-string projectId = parsedName[&quot;project&quot;];
-string topicId = parsedName[&quot;topic&quot;];
-
-// The value of projectId is now &quot;petstore&quot;
-// The value of topicId is now &quot;offers&quot;
-</code></pre>
             </article>
           </div>
           

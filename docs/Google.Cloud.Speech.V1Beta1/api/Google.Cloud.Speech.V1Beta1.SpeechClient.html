@@ -180,6 +180,69 @@
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.AsyncRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognize_Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.AsyncRecognize(Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">AsyncRecognize(AsyncRecognizeRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Perform asynchronous speech-recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+an <code>AsyncRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+SpeechClient speechClient = SpeechClient.Create();
+// Initialize request argument(s)
+AsyncRecognizeRequest request = new AsyncRecognizeRequest
+{
+    Config = new RecognitionConfig(),
+    Audio = new RecognitionAudio(),
+};
+// Make the request
+Operation response = speechClient.AsyncRecognize(request);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Operation AsyncRecognize(AsyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest">AsyncRecognizeRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.AsyncRecognize*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognize_Google_Cloud_Speech_V1Beta1_RecognitionConfig_Google_Cloud_Speech_V1Beta1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.AsyncRecognize(Google.Cloud.Speech.V1Beta1.RecognitionConfig,Google.Cloud.Speech.V1Beta1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">AsyncRecognize(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Perform asynchronous speech-recognition: receive results via the
 google.longrunning.Operations interface. Returns either an
@@ -240,8 +303,71 @@ that specifies how to process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a></td>
+                    <td><a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a></td>
                     <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognizeAsync_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.AsyncRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognizeAsync_Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.AsyncRecognizeAsync(Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">AsyncRecognizeAsync(AsyncRecognizeRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Perform asynchronous speech-recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+an <code>AsyncRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+SpeechClient speechClient = await SpeechClient.CreateAsync();
+// Initialize request argument(s)
+AsyncRecognizeRequest request = new AsyncRecognizeRequest
+{
+    Config = new RecognitionConfig(),
+    Audio = new RecognitionAudio(),
+};
+// Make the request
+Operation response = await speechClient.AsyncRecognizeAsync(request);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; AsyncRecognizeAsync(AsyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest">AsyncRecognizeRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
                 </tbody>
@@ -255,7 +381,7 @@ an <code>AsyncRecognizeResponse</code> message.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
-SpeechClient speechClient = SpeechClient.Create();
+SpeechClient speechClient = await SpeechClient.CreateAsync();
 // Initialize request argument(s)
 RecognitionConfig config = new RecognitionConfig();
 RecognitionAudio audio = new RecognitionAudio();
@@ -307,7 +433,7 @@ that specifies how to process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -322,7 +448,7 @@ an <code>AsyncRecognizeResponse</code> message.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
-SpeechClient speechClient = SpeechClient.Create();
+SpeechClient speechClient = await SpeechClient.CreateAsync();
 // Initialize request argument(s)
 RecognitionConfig config = new RecognitionConfig();
 RecognitionAudio audio = new RecognitionAudio();
@@ -374,7 +500,7 @@ that specifies how to process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Longrunning.Operation.html#Google_Longrunning_Operation">Operation</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -625,6 +751,67 @@ that specifies how to process the request.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognize_Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognize(Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">SyncRecognize(SyncRecognizeRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Perform synchronous speech-recognition: receive results after all audio
+has been sent and processed.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+SpeechClient speechClient = SpeechClient.Create();
+// Initialize request argument(s)
+SyncRecognizeRequest request = new SyncRecognizeRequest
+{
+    Config = new RecognitionConfig(),
+    Audio = new RecognitionAudio(),
+};
+// Make the request
+SyncRecognizeResponse response = speechClient.SyncRecognize(request);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual SyncRecognizeResponse SyncRecognize(SyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest">SyncRecognizeRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_SyncRecognizeResponse">SyncRecognizeResponse</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognizeAsync_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognizeAsync*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognizeAsync_Google_Cloud_Speech_V1Beta1_RecognitionConfig_Google_Cloud_Speech_V1Beta1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognizeAsync(Google.Cloud.Speech.V1Beta1.RecognitionConfig,Google.Cloud.Speech.V1Beta1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">SyncRecognizeAsync(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Perform synchronous speech-recognition: receive results after all audio
@@ -632,7 +819,7 @@ has been sent and processed.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
-SpeechClient speechClient = SpeechClient.Create();
+SpeechClient speechClient = await SpeechClient.CreateAsync();
 // Initialize request argument(s)
 RecognitionConfig config = new RecognitionConfig();
 RecognitionAudio audio = new RecognitionAudio();
@@ -697,7 +884,7 @@ has been sent and processed.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
-SpeechClient speechClient = SpeechClient.Create();
+SpeechClient speechClient = await SpeechClient.CreateAsync();
 // Initialize request argument(s)
 RecognitionConfig config = new RecognitionConfig();
 RecognitionAudio audio = new RecognitionAudio();
@@ -735,6 +922,67 @@ that specifies how to process the request.</p>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><em>cancellationToken</em></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_SyncRecognizeResponse">SyncRecognizeResponse</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognizeAsync_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognizeAsync_Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognizeAsync(Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">SyncRecognizeAsync(SyncRecognizeRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Perform synchronous speech-recognition: receive results after all audio
+has been sent and processed.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+SpeechClient speechClient = await SpeechClient.CreateAsync();
+// Initialize request argument(s)
+SyncRecognizeRequest request = new SyncRecognizeRequest
+{
+    Config = new RecognitionConfig(),
+    Audio = new RecognitionAudio(),
+};
+// Make the request
+SyncRecognizeResponse response = await speechClient.SyncRecognizeAsync(request);
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;SyncRecognizeResponse&gt; SyncRecognizeAsync(SyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest">SyncRecognizeRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
                 </tbody>

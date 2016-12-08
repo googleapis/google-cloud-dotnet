@@ -1,0 +1,753 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MetricsServiceV2ClientImpl
+   | Google.Cloud.Logging.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MetricsServiceV2ClientImpl
+   | Google.Cloud.Logging.V2 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl">Class MetricsServiceV2ClientImpl
+              </h1>
+              <div class="markdown level0 summary"><p>MetricsServiceV2 client wrapper implementation, for convenient use.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client">MetricsServiceV2Client</a></div>
+                  <div class="level2"><span class="xref">MetricsServiceV2ClientImpl</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_DefaultEndpoint">MetricsServiceV2Client.DefaultEndpoint</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_DefaultScopes">MetricsServiceV2Client.DefaultScopes</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Logging_V2_MetricsServiceV2Settings_">MetricsServiceV2Client.CreateAsync(ServiceEndpoint, MetricsServiceV2Settings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Logging_V2_MetricsServiceV2Settings_">MetricsServiceV2Client.Create(ServiceEndpoint, MetricsServiceV2Settings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_Create_Grpc_Core_Channel_Google_Cloud_Logging_V2_MetricsServiceV2Settings_">MetricsServiceV2Client.Create(Channel, MetricsServiceV2Settings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_ShutdownDefaultChannelsAsync">MetricsServiceV2Client.ShutdownDefaultChannelsAsync()</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetricsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.ListLogMetricsAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetrics_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.ListLogMetrics(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.GetLogMetricAsync(MetricNameOneof, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_System_Threading_CancellationToken_">MetricsServiceV2Client.GetLogMetricAsync(MetricNameOneof, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetric_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.GetLogMetric(MetricNameOneof, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetricAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.CreateLogMetricAsync(ParentNameOneof, LogMetric, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetricAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogMetric_System_Threading_CancellationToken_">MetricsServiceV2Client.CreateLogMetricAsync(ParentNameOneof, LogMetric, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetric_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.CreateLogMetric(ParentNameOneof, LogMetric, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.UpdateLogMetricAsync(MetricNameOneof, LogMetric, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Cloud_Logging_V2_LogMetric_System_Threading_CancellationToken_">MetricsServiceV2Client.UpdateLogMetricAsync(MetricNameOneof, LogMetric, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetric_Google_Cloud_Logging_V2_MetricNameOneof_Google_Cloud_Logging_V2_LogMetric_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.UpdateLogMetric(MetricNameOneof, LogMetric, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.DeleteLogMetricAsync(MetricNameOneof, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetricAsync_Google_Cloud_Logging_V2_MetricNameOneof_System_Threading_CancellationToken_">MetricsServiceV2Client.DeleteLogMetricAsync(MetricNameOneof, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetric_Google_Cloud_Logging_V2_MetricNameOneof_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.DeleteLogMetric(MetricNameOneof, CallSettings)</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Logging.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Logging.V2.dll</h6>
+              <h5 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class MetricsServiceV2ClientImpl : MetricsServiceV2Client</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl__ctor_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.#ctor*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl__ctor_Google_Cloud_Logging_V2_MetricsServiceV2_MetricsServiceV2Client_Google_Cloud_Logging_V2_MetricsServiceV2Settings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.#ctor(Google.Cloud.Logging.V2.MetricsServiceV2.MetricsServiceV2Client,Google.Cloud.Logging.V2.MetricsServiceV2Settings)">MetricsServiceV2ClientImpl(MetricsServiceV2.MetricsServiceV2Client, MetricsServiceV2Settings)</h4>
+              <div class="markdown level1 summary"><p>Constructs a client wrapper for the MetricsServiceV2 service, with the specified gRPC client and settings.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MetricsServiceV2ClientImpl(MetricsServiceV2.MetricsServiceV2Client grpcClient, MetricsServiceV2Settings settings)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2_MetricsServiceV2Client">MetricsServiceV2.MetricsServiceV2Client</a></td>
+                    <td><em>grpcClient</em></td>
+                    <td><p>The underlying gRPC client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Settings.html#Google_Cloud_Logging_V2_MetricsServiceV2Settings">MetricsServiceV2Settings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>The base <a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Settings.html#Google_Cloud_Logging_V2_MetricsServiceV2Settings">MetricsServiceV2Settings</a> used within this client </p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_GrpcClient_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.GrpcClient*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_GrpcClient" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.GrpcClient">GrpcClient</h4>
+              <div class="markdown level1 summary"><p>The underlying gRPC MetricsServiceV2 client.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override MetricsServiceV2.MetricsServiceV2Client GrpcClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2_MetricsServiceV2Client">MetricsServiceV2.MetricsServiceV2Client</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_GrpcClient">MetricsServiceV2Client.GrpcClient</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetric_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetric*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetric_Google_Cloud_Logging_V2_CreateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetric(Google.Cloud.Logging.V2.CreateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetric(CreateLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override LogMetric CreateLogMetric(CreateLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.CreateLogMetricRequest.html#Google_Cloud_Logging_V2_CreateLogMetricRequest">CreateLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetric_Google_Cloud_Logging_V2_CreateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.CreateLogMetric(CreateLogMetricRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetricAsync_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetricAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_CreateLogMetricAsync_Google_Cloud_Logging_V2_CreateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.CreateLogMetricAsync(Google.Cloud.Logging.V2.CreateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">CreateLogMetricAsync(CreateLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;LogMetric&gt; CreateLogMetricAsync(CreateLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.CreateLogMetricRequest.html#Google_Cloud_Logging_V2_CreateLogMetricRequest">CreateLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_CreateLogMetricAsync_Google_Cloud_Logging_V2_CreateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.CreateLogMetricAsync(CreateLogMetricRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetric_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetric*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetric_Google_Cloud_Logging_V2_DeleteLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetric(Google.Cloud.Logging.V2.DeleteLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetric(DeleteLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override void DeleteLogMetric(DeleteLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteLogMetricRequest.html#Google_Cloud_Logging_V2_DeleteLogMetricRequest">DeleteLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetric_Google_Cloud_Logging_V2_DeleteLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.DeleteLogMetric(DeleteLogMetricRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetricAsync_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetricAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_DeleteLogMetricAsync_Google_Cloud_Logging_V2_DeleteLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.DeleteLogMetricAsync(Google.Cloud.Logging.V2.DeleteLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteLogMetricAsync(DeleteLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Deletes a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task DeleteLogMetricAsync(DeleteLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.DeleteLogMetricRequest.html#Google_Cloud_Logging_V2_DeleteLogMetricRequest">DeleteLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_DeleteLogMetricAsync_Google_Cloud_Logging_V2_DeleteLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.DeleteLogMetricAsync(DeleteLogMetricRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetric_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetric*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetric_Google_Cloud_Logging_V2_GetLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetric(Google.Cloud.Logging.V2.GetLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">GetLogMetric(GetLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override LogMetric GetLogMetric(GetLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.GetLogMetricRequest.html#Google_Cloud_Logging_V2_GetLogMetricRequest">GetLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetric_Google_Cloud_Logging_V2_GetLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.GetLogMetric(GetLogMetricRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetricAsync_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetricAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_GetLogMetricAsync_Google_Cloud_Logging_V2_GetLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.GetLogMetricAsync(Google.Cloud.Logging.V2.GetLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">GetLogMetricAsync(GetLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;LogMetric&gt; GetLogMetricAsync(GetLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.GetLogMetricRequest.html#Google_Cloud_Logging_V2_GetLogMetricRequest">GetLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_GetLogMetricAsync_Google_Cloud_Logging_V2_GetLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.GetLogMetricAsync(GetLogMetricRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetrics_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetrics*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetrics_Google_Cloud_Logging_V2_ListLogMetricsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetrics(Google.Cloud.Logging.V2.ListLogMetricsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogMetrics(ListLogMetricsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetrics(ListLogMetricsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogMetricsRequest.html#Google_Cloud_Logging_V2_ListLogMetricsRequest">ListLogMetricsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogMetricsResponse.html#Google_Cloud_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetrics_Google_Cloud_Logging_V2_ListLogMetricsRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.ListLogMetrics(ListLogMetricsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetricsAsync_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetricsAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_ListLogMetricsAsync_Google_Cloud_Logging_V2_ListLogMetricsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.ListLogMetricsAsync(Google.Cloud.Logging.V2.ListLogMetricsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogMetricsAsync(ListLogMetricsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists logs-based metrics.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListLogMetricsResponse, LogMetric&gt; ListLogMetricsAsync(ListLogMetricsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogMetricsRequest.html#Google_Cloud_Logging_V2_ListLogMetricsRequest">ListLogMetricsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogMetricsResponse.html#Google_Cloud_Logging_V2_ListLogMetricsResponse">ListLogMetricsResponse</a>, <a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_ListLogMetricsAsync_Google_Cloud_Logging_V2_ListLogMetricsRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.ListLogMetricsAsync(ListLogMetricsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetric_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetric*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetric_Google_Cloud_Logging_V2_UpdateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetric(Google.Cloud.Logging.V2.UpdateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetric(UpdateLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override LogMetric UpdateLogMetric(UpdateLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateLogMetricRequest.html#Google_Cloud_Logging_V2_UpdateLogMetricRequest">UpdateLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetric_Google_Cloud_Logging_V2_UpdateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.UpdateLogMetric(UpdateLogMetricRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetricAsync_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetricAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_MetricsServiceV2ClientImpl_UpdateLogMetricAsync_Google_Cloud_Logging_V2_UpdateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.MetricsServiceV2ClientImpl.UpdateLogMetricAsync(Google.Cloud.Logging.V2.UpdateLogMetricRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateLogMetricAsync(UpdateLogMetricRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates or updates a logs-based metric.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;LogMetric&gt; UpdateLogMetricAsync(UpdateLogMetricRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.UpdateLogMetricRequest.html#Google_Cloud_Logging_V2_UpdateLogMetricRequest">UpdateLogMetricRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogMetric.html#Google_Cloud_Logging_V2_LogMetric">LogMetric</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.MetricsServiceV2Client.html#Google_Cloud_Logging_V2_MetricsServiceV2Client_UpdateLogMetricAsync_Google_Cloud_Logging_V2_UpdateLogMetricRequest_Google_Api_Gax_Grpc_CallSettings_">MetricsServiceV2Client.UpdateLogMetricAsync(UpdateLogMetricRequest, CallSettings)</a></div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

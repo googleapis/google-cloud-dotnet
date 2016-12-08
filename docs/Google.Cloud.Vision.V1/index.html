@@ -69,11 +69,15 @@ Please ensure you enable pre-release packages (for example, in the
 Visual Studio NuGet user interface, check the &quot;Include prerelease&quot;
 box).</p>
 <h1 id="authentication">Authentication</h1>
-<p>To authenticate all your API calls, first install and setup the
-<a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
-installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth login
-</code></pre><h1 id="getting-started">Getting started</h1>
+<p>When running on Google Cloud Platform, no action needs to be taken to authenticate.</p>
+<p>Otherwise, the simplest way of authenticating your API calls is to
+<a href="https://developers.google.com/identity/protocols/OAuth2ServiceAccount">download a service account JSON file</a>,
+then set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to refer to it. The
+credentials will automatically be used to authenticate.</p>
+<p>Note that the default credentials obtained by running <code>gcloud auth login</code> from the Google Cloud SDK
+are not suitable for use with this API. (They will work initially, but implicitly have a very
+small request quota.)</p>
+<h1 id="getting-started">Getting started</h1>
 <p>All operations are performed through
 <a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>.</p>
 <p>The &quot;core&quot; method <a href="api/Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_CallSettings_">BatchAnnotateImages</a>

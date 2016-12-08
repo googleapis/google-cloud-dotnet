@@ -59,47 +59,61 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
               
-<h2 id="why-do-libraries-for-grpc-based-apis-fail-with-dotnet-cli">Why do libraries for gRPC-based APIs fail with dotnet cli?</h2>
-<p>The beta01 release of the libraries depends on gRPC 0.15. The
-C# implementation of gRPC uses native libraries (e.g.
-<code>grpc_csharp_ext.dll</code>), which are contained in the <code>Grpc.Core</code>
-NuGet package.</p>
-<p>The way in which these native libraries are copied at build time and
-discovered at execution time depends on the toolchain used to build
-the application, and gRPC 0.15 does not load these libraries correctly
-under <code>dotnet cli</code>.</p>
-<p>We hope to have a fix for this in time for the next beta release.</p>
-<h2 id="how-can-i-use-the-local-emulator-for-datastore-or-pubsub">How can I use the local emulator for Datastore or Pub/Sub?</h2>
-<p>Currently the libraries have no knowledge of the local emulators.
-However, when creating a client, you can configure the endpoint that the library
-connects to. If you set that endpoint to the port of an emulator, your
-application should be able to use the emulator with no issues.</p>
-<p>We hope to make this simpler to use in a future beta release.</p>
-<h2 id="why-do-the-libraries-not-support-net-core">Why do the libraries not support .NET Core?</h2>
-<p>Currently some of the dependencies have limited portability, which prevents
-us from targeting the <code>netstandard1.x</code> framework. We are working to resolve
-these restrictions, and hope to support <code>netstandard1.5</code> for gRPC-based APIs
-and <code>netstandard1.3</code> for REST-based APIs in the future. We expect this to be
-sufficient for most customers, but please
-<a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/new">let us know</a>
-if you have specific environments where you need support for lower versions,
-and we can see what options are available.</p>
-<h2 id="why-do-credentials-specified-with-googleapplicationcredentials-fail">Why do credentials specified with GOOGLE_APPLICATION_CREDENTIALS fail?</h2>
-<p>By default, if you don&#39;t have the <code>GOOGLE_APPLICATION_CREDENTIALS</code>
-environment variable set, the credentials will be obtained from the
-<code>gcloud</code> tool, and will work with no problems. When credentials are
-loaded from a file specified by the environment variable, they have
-no scopes attached, and our gRPC-based API code didn&#39;t attach the
-scopes required.</p>
-<p>See <a href="https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/294">issue
-294</a>
-for the details, but the upshot is that it&#39;s been fixed, but isn&#39;t
-in a public beta release yet.</p>
-<p>If you need to use credentials in this way, you can use our <a href="https://www.myget.org/gallery/google-dotnet-public">public
-myget feed</a> and
-fetch the latest version of the packages from there. (These are our
-continuous integration builds.) From CI00174 onwards, the problem
-should be fixed.</p>
+<h2 id="how-can-i-use-non-default-credentials-for-grpc-based-apis">How can I use non-default credentials for gRPC-based APIs?</h2>
+<p>The generated classes for gRPC-based APIs (such as
+<a href="Google.Pubsub.V1/api/Google.Pubsub.V1.PublisherClient.html">PublisherClient</a>)
+have <code>Create</code> overloads of this form:</p>
+<pre><code class="lang-csharp">public static PublisherClient Create(ServiceEndpoint endpoint = null, PublisherSettings settings = null)
+
+public static PublisherClient Create(Channel channel, PublisherSettings settings = null)
+</code></pre><p>(Equivalent asynchronous overloads exist as well.)</p>
+<p>The first of these uses the default credentials to create a channel
+which is shared by all instances created in the same way, and
+optionally shut down using the <code>ShutDownDefaultChannelsAsync</code> method.</p>
+<p>The second of these never creates a new channel, and the caller is
+responsible for explicit clean-up if required. See <a href="cleanup.html">&quot;Unmanaged
+resource clean-up&quot;</a> for more details on situations where
+this is important.</p>
+<p>To create a client with specific credentials, you have to create the
+channel yourself, as the client doesn&#39;t expose the channel it uses.
+Creating a channel is simple, once you have a <code>ChannelCredentials</code>
+object, typically created using the <code>ToChannelCredentials</code> extension
+method. For example, to create a channel for a specific user:</p>
+<pre><code class="lang-csharp">// Make the ToChannelCredentials extension method available
+using Grpc.Auth;
+
+...
+
+// Obtain a user&#39;s credentials in an appropriate manner for your
+// application. See
+// https://developers.google.com/api-client-library/dotnet/guide/aaa_oauth
+UserCredential userCredential = ...;
+ChannelCredentials channelCredentials = userCredential.ToChannelCredentials();
+Channel channel = new Channel(PublisherClient.DefaultEndpoint, channelCredentials);
+PublisherClient client = PublisherClient.Create(channel);
+// Now use client, and clean up channel if and when you need to.
+</code></pre><p>Note that it&#39;s also possible to specify credentials for an
+individual RPC call. For example, you can create a channel using the
+default application credentials, then specify a <code>CallCredentials</code> in
+the <code>CallSettings</code> passed to a single method call. The
+<code>ToCallCredentials()</code> method can be used to create a
+<code>CallCredentials</code>:</p>
+<pre><code class="lang-csharp">// Make the ToCallCredentials extension method available
+using Grpc.Auth;
+
+...
+
+// Obtain a user&#39;s credentials in an appropriate manner for your
+// application. See
+// https://developers.google.com/api-client-library/dotnet/guide/aaa_oauth
+UserCredential userCredential = ...;
+CallCredentials callCredentials = userCredential.ToCallCredentials();
+
+// Use the default application credentials for the channel.
+PublisherClient client = PublisherClient.Create();
+client.Publish(/* regular method arguments */,
+    CallSettings.FromCallCredentials(callCredentials));
+</code></pre><p>This approach means you don&#39;t need to worry about channel clean-up.</p>
 
             </article>
           </div>

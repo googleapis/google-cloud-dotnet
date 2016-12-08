@@ -70,13 +70,7 @@
               
               <h1 id="Google_Rpc_Code" data-uid="Google.Rpc.Code">Enum Code
               </h1>
-              <div class="markdown level0 summary"><p>The canonical error codes for Google APIs.
-Warnings:</p>
-<ul>
-<li>Do not change any numeric assignments.</li>
-<li>Changes to this list should be made only if there is a compelling
-need that can&#39;t be satisfied in another way.</li>
-</ul>
+              <div class="markdown level0 summary"><p>The canonical error codes for Google APIs.</p>
 <p>Sometimes multiple error codes may apply.  Services should return
 the most specific error code that applies.  For example, prefer
 <code>OUT_OF_RANGE</code> over <code>FAILED_PRECONDITION</code> if both codes apply.
@@ -152,16 +146,8 @@ between <code>FAILED_PRECONDITION</code>, <code>ABORTED</code>, and <code>UNAVAI
 the system state has been explicitly fixed.  E.g., if an &quot;rmdir&quot;
 fails because the directory is non-empty, <code>FAILED_PRECONDITION</code>
 should be returned since the client should not retry unless
-the files are deleted from the directory.
-(d) Use <code>FAILED_PRECONDITION</code> if the client performs conditional
-REST Get/Update/Delete on a resource and the resource on the
-server does not match the condition. E.g., conflicting
-read-modify-write on the same resource.</p>
+the files are deleted from the directory.</p>
 <p>HTTP Mapping: 400 Bad Request</p>
-<p>NOTE: HTTP spec says <code>412 Precondition Failed</code> should be used only if
-the request contains Etag-related headers. So if the server does see
-Etag-related headers in the request, it may choose to return 412
-instead of 400 for this error code.</p>
 </td>
                   </tr>
                   <tr>
@@ -184,8 +170,9 @@ that are problematic regardless of the state of the system
                   <tr>
                     <td id="Google_Rpc_Code_NotFound">NotFound</td>
                     <td><p>Some requested entity (e.g., file or directory) was not found.
-For privacy reasons, this code <em>might</em> be returned when the client
-does not have the access rights to the entity.</p>
+For privacy reasons, this code <em>may</em> be returned when the client
+does not have the access rights to the entity, though such usage is
+discouraged.</p>
 <p>HTTP Mapping: 404 Not Found</p>
 </td>
                   </tr>

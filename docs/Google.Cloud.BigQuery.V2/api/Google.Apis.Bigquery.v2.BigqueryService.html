@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BigqueryService
+   | Google.Cloud.BigQuery.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BigqueryService
+   | Google.Cloud.BigQuery.V2 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Apis_Bigquery_v2_BigqueryService" data-uid="Google.Apis.Bigquery.v2.BigqueryService">Class BigqueryService
+              </h1>
+              <div class="markdown level0 summary"><p>The Bigquery Service.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Google.Apis.Services.BaseClientService</span></div>
+                  <div class="level2"><span class="xref">BigqueryService</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.DefaultMaxUrlLength</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.CreateBackOffHandler()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.SetRequestSerailizedContent(System.Net.Http.HttpRequestMessage, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.SerializeObject(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.DeserializeResponse&lt;T&gt;(System.Net.Http.HttpResponseMessage)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.DeserializeError(System.Net.Http.HttpResponseMessage)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.Dispose()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.HttpClient</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.HttpClientInitializer</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.GZipEnabled</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.ApiKey</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.ApplicationName</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Services.BaseClientService.Serializer</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Apis.Bigquery.v2</h6>
+              <h6><strong>Assembly</strong>:Google.Apis.Bigquery.v2.dll</h6>
+              <h5 id="Google_Apis_Bigquery_v2_BigqueryService_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class BigqueryService : BaseClientService, IClientService, IDisposable</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService__ctor_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.#ctor*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService__ctor" data-uid="Google.Apis.Bigquery.v2.BigqueryService.#ctor">BigqueryService()</h4>
+              <div class="markdown level1 summary"><p>Constructs a new service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigqueryService()</code></pre>
+              </div>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService__ctor_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.#ctor*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService__ctor_Google_Apis_Services_BaseClientService_Initializer_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">BigqueryService(BaseClientService.Initializer)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigqueryService(BaseClientService.Initializer initializer)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Services.BaseClientService.Initializer</span></td>
+                    <td><em>initializer</em></td>
+                    <td><p>The service initializer.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields
+              </h3>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_DiscoveryVersionUsed" data-uid="Google.Apis.Bigquery.v2.BigqueryService.DiscoveryVersionUsed">DiscoveryVersionUsed</h4>
+              <div class="markdown level1 summary"><p>The discovery version used to generate this service.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DiscoveryVersion DiscoveryVersionUsed</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Discovery.DiscoveryVersion</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Version" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Version">Version</h4>
+              <div class="markdown level1 summary"><p>The API version.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public const string Version = &quot;v2&quot;</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_BasePath_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.BasePath*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_BasePath" data-uid="Google.Apis.Bigquery.v2.BigqueryService.BasePath">BasePath</h4>
+              <div class="markdown level1 summary"><p>Gets the service base path.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string BasePath { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Services.BaseClientService.BasePath</span></div>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_BaseUri_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.BaseUri*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_BaseUri" data-uid="Google.Apis.Bigquery.v2.BigqueryService.BaseUri">BaseUri</h4>
+              <div class="markdown level1 summary"><p>Gets the service base URI.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string BaseUri { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Services.BaseClientService.BaseUri</span></div>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_Datasets_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Datasets*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Datasets" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Datasets">Datasets</h4>
+              <div class="markdown level1 summary"><p>Gets the Datasets resource.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual DatasetsResource Datasets { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.DatasetsResource.html#Google_Apis_Bigquery_v2_DatasetsResource">DatasetsResource</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_Features_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Features*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Features" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Features">Features</h4>
+              <div class="markdown level1 summary"><p>Gets the service supported features.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override IList&lt;string&gt; Features { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Services.BaseClientService.Features</span></div>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_Jobs_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Jobs*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Jobs" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Jobs">Jobs</h4>
+              <div class="markdown level1 summary"><p>Gets the Jobs resource.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual JobsResource Jobs { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.JobsResource.html#Google_Apis_Bigquery_v2_JobsResource">JobsResource</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_Name_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Name*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Name" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Name">Name</h4>
+              <div class="markdown level1 summary"><p>Gets the service name.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string Name { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Services.BaseClientService.Name</span></div>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_Projects_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Projects*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Projects" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Projects">Projects</h4>
+              <div class="markdown level1 summary"><p>Gets the Projects resource.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ProjectsResource Projects { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.ProjectsResource.html#Google_Apis_Bigquery_v2_ProjectsResource">ProjectsResource</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_Tabledata_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Tabledata*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Tabledata" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Tabledata">Tabledata</h4>
+              <div class="markdown level1 summary"><p>Gets the Tabledata resource.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TabledataResource Tabledata { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.TabledataResource.html#Google_Apis_Bigquery_v2_TabledataResource">TabledataResource</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Bigquery_v2_BigqueryService_Tables_" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Tables*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_BigqueryService_Tables" data-uid="Google.Apis.Bigquery.v2.BigqueryService.Tables">Tables</h4>
+              <div class="markdown level1 summary"><p>Gets the Tables resource.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TablesResource Tables { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.TablesResource.html#Google_Apis_Bigquery_v2_TablesResource">TablesResource</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

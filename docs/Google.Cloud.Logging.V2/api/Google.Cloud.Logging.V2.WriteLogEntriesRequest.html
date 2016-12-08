@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class WriteLogEntriesRequest
+   | Google.Cloud.Logging.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class WriteLogEntriesRequest
+   | Google.Cloud.Logging.V2 ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest">Class WriteLogEntriesRequest
+              </h1>
+              <div class="markdown level0 summary"><p>The parameters to WriteLogEntries.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">WriteLogEntriesRequest</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Logging.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Logging.V2.dll</h6>
+              <h5 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class WriteLogEntriesRequest : IMessage&lt;WriteLogEntriesRequest&gt;, IMessage, IEquatable&lt;WriteLogEntriesRequest&gt;, IDeepCloneable&lt;WriteLogEntriesRequest&gt;</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries*"></a>
+              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
+              <div class="markdown level1 summary"><p>Required. The log entries to write. Values supplied for the fields
+<code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
+added to those log entries that do not provide their own values for the
+fields.</p>
+<p>To improve throughput and to avoid exceeding the
+<a href="/logging/quota-policy">quota limit</a> for calls to <code>entries.write</code>,
+you should write multiple log entries at once rather than
+calling this method for each individual log entry.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public RepeatedField&lt;LogEntry&gt; Entries { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry">LogEntry</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Labels_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Labels*"></a>
+              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Labels" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Labels">Labels</h4>
+              <div class="markdown level1 summary"><p>Optional. Default labels that are added to the <code>labels</code> field of all log
+entries in <code>entries</code>. If a log entry already has a label with the same key
+as a label in this parameter, then the log entry&#39;s label is not changed.
+See [LogEntry][google.logging.v2.LogEntry].</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogName*"></a>
+              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogName">LogName</h4>
+              <div class="markdown level1 summary"><p>Optional. A default log resource name that is assigned to all log entries
+in <code>entries</code> that do not specify a value for <code>log_name</code>:</p>
+<p>&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/logs/[LOG_ID]&quot;</p>
+<p><code>[LOG_ID]</code> must be URL-encoded. For example,
+<code>&quot;projects/my-project-id/logs/syslog&quot;</code> or
+<code>&quot;organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity&quot;</code>.
+For more information about log names, see
+[LogEntry][google.logging.v2.LogEntry].</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string LogName { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogNameAsLogNameOneof_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogNameAsLogNameOneof*"></a>
+              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogNameAsLogNameOneof" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.LogNameAsLogNameOneof">LogNameAsLogNameOneof</h4>
+              <div class="markdown level1 summary"><p>A <a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html#Google_Cloud_Logging_V2_LogNameOneof">LogNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.WriteLogEntriesRequest.html#Google_Cloud_Logging_V2_WriteLogEntriesRequest_LogName">LogName</a> resource name property.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogNameOneof LogNameAsLogNameOneof { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html#Google_Cloud_Logging_V2_LogNameOneof">LogNameOneof</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_PartialSuccess_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.PartialSuccess*"></a>
+              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_PartialSuccess" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.PartialSuccess">PartialSuccess</h4>
+              <div class="markdown level1 summary"><p>Optional. Whether valid entries should be written even if some other
+entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
+entry is not written, the response status will be the error associated
+with one of the failed entries and include error details in the form of
+WriteLogEntriesPartialErrors.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool PartialSuccess { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Resource_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Resource*"></a>
+              <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Resource" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Resource">Resource</h4>
+              <div class="markdown level1 summary"><p>Optional. A default monitored resource object that is assigned to all log
+entries in <code>entries</code> that do not specify a value for <code>resource</code>. Example:</p>
+<p>{ &quot;type&quot;: &quot;gce_instance&quot;,
+ &quot;labels&quot;: {
+   &quot;zone&quot;: &quot;us-central1-a&quot;, &quot;instance_id&quot;: &quot;00000000000000000000&quot; }}</p>
+<p>See [LogEntry][google.logging.v2.LogEntry].</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

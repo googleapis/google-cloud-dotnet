@@ -70,8 +70,7 @@
               
               <h1 id="Google_Api_Gax_SystemScheduler" data-uid="Google.Api.Gax.SystemScheduler">Class SystemScheduler
               </h1>
-              <div class="markdown level0 summary"><p>Singleton implementation of <a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a> which uses <span class="xref">System.Threading.Tasks.Task.Delay(System.TimeSpan)</span>
-and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> internally.</p>
+              <div class="markdown level0 summary"><p>Singleton implementation of <a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a> which uses <span class="xref">System.Threading.Tasks.Task.Delay(System.TimeSpan,System.Threading.CancellationToken)</span>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -138,12 +137,12 @@ and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> int
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Api_Gax_SystemScheduler_Delay_" data-uid="Google.Api.Gax.SystemScheduler.Delay*"></a>
-              <h4 id="Google_Api_Gax_SystemScheduler_Delay_System_TimeSpan_" data-uid="Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan)">Delay(TimeSpan)</h4>
+              <h4 id="Google_Api_Gax_SystemScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan,System.Threading.CancellationToken)">Delay(TimeSpan, CancellationToken)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task Delay(TimeSpan timeSpan)</code></pre>
+                <pre><code class="lang-csharp hljs">public Task Delay(TimeSpan timeSpan, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -158,6 +157,11 @@ and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> int
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
                     <td><em>timeSpan</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -178,34 +182,11 @@ and <span class="xref">System.Threading.Tasks.Task.Run(System.Action)</span> int
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Delay_System_TimeSpan_">IScheduler.Delay(TimeSpan)</a></div>
-              <a id="Google_Api_Gax_SystemScheduler_Sleep_" data-uid="Google.Api.Gax.SystemScheduler.Sleep*"></a>
-              <h4 id="Google_Api_Gax_SystemScheduler_Sleep_System_TimeSpan_" data-uid="Google.Api.Gax.SystemScheduler.Sleep(System.TimeSpan)">Sleep(TimeSpan)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Sleep(TimeSpan timeSpan)</code></pre>
+                  <div><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_">IScheduler.Delay(TimeSpan, CancellationToken)</a></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Google.Api.Gax.SchedulerExtensions.html#Google_Api_Gax_SchedulerExtensions_Sleep_Google_Api_Gax_IScheduler_System_TimeSpan_System_Threading_CancellationToken_">SchedulerExtensions.Sleep(IScheduler, TimeSpan, CancellationToken)</a>
               </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>timeSpan</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler_Sleep_System_TimeSpan_">IScheduler.Sleep(TimeSpan)</a></div>
             </article>
           </div>
           
