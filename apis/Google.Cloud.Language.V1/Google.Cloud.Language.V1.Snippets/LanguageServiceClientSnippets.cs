@@ -44,7 +44,7 @@ namespace Google.Cloud.Language.V1.Snippets
         [Fact]
         public void AnalyzeSentiment()
         {
-            // Snippet: AnalyzeSentiment
+            // Snippet: AnalyzeSentiment(Document,*)
             LanguageServiceClient client = LanguageServiceClient.Create();
             Document document = Document.FromPlainText("You're simply the best - better than all the rest.");
             AnalyzeSentimentResponse response = client.AnalyzeSentiment(document);

@@ -67,7 +67,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         {
             Image image1 = LoadResourceImage("SchmidtBrinPage.jpg");
             Image image2 = LoadResourceImage("Chrome.png");
-            // Snippet: BatchAnnotateImages
+            // Snippet: BatchAnnotateImages(IEnumerable<AnnotateImageRequest>,*)
             ImageAnnotatorClient client = ImageAnnotatorClient.Create();
             // Perform face recognition on one image, and logo recognition on another.
             AnnotateImageRequest request1 = new AnnotateImageRequest

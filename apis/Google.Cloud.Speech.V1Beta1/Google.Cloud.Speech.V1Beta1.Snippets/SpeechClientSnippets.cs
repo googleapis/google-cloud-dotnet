@@ -25,7 +25,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
         public void SyncRecognize()
         {
             var audio = LoadResourceAudio("speech.raw");
-            // Snippet: SyncRecognize
+            // Snippet: SyncRecognize(*,*,*)
             SpeechClient client = SpeechClient.Create();
             RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
             SyncRecognizeResponse response = client.SyncRecognize(config, audio);
