@@ -36,7 +36,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: ListLogMetricsAsync(ParentNameOneof,string,int?,CallSettings)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
@@ -122,7 +122,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: ListLogMetricsAsync(ListLogMetricsRequest,CallSettings)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ListLogMetricsRequest request = new ListLogMetricsRequest
             {
@@ -215,7 +215,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: GetLogMetricAsync(MetricNameOneof,CallSettings)
             // Additional: GetLogMetricAsync(MetricNameOneof,CancellationToken)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
             // Make the request
@@ -239,7 +239,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: GetLogMetricAsync(GetLogMetricRequest,CallSettings)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             GetLogMetricRequest request = new GetLogMetricRequest
             {
@@ -270,7 +270,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: CreateLogMetricAsync(ParentNameOneof,LogMetric,CallSettings)
             // Additional: CreateLogMetricAsync(ParentNameOneof,LogMetric,CancellationToken)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             LogMetric metric = new LogMetric();
@@ -296,7 +296,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: CreateLogMetricAsync(CreateLogMetricRequest,CallSettings)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             CreateLogMetricRequest request = new CreateLogMetricRequest
             {
@@ -329,7 +329,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: UpdateLogMetricAsync(MetricNameOneof,LogMetric,CallSettings)
             // Additional: UpdateLogMetricAsync(MetricNameOneof,LogMetric,CancellationToken)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
             LogMetric metric = new LogMetric();
@@ -355,7 +355,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: UpdateLogMetricAsync(UpdateLogMetricRequest,CallSettings)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             UpdateLogMetricRequest request = new UpdateLogMetricRequest
             {
@@ -388,7 +388,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: DeleteLogMetricAsync(MetricNameOneof,CallSettings)
             // Additional: DeleteLogMetricAsync(MetricNameOneof,CancellationToken)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             MetricNameOneof metricName = MetricNameOneof.From(new MetricName("[PROJECT]", "[METRIC]"));
             // Make the request
@@ -412,7 +412,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: DeleteLogMetricAsync(DeleteLogMetricRequest,CallSettings)
             // Create client
-            MetricsServiceV2Client metricsServiceV2Client = MetricsServiceV2Client.Create();
+            MetricsServiceV2Client metricsServiceV2Client = await MetricsServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             DeleteLogMetricRequest request = new DeleteLogMetricRequest
             {

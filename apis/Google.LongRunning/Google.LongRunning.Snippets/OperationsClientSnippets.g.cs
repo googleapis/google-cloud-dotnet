@@ -37,7 +37,7 @@ namespace Google.LongRunning.Snippets
             // Snippet: GetOperationAsync(string,CallSettings)
             // Additional: GetOperationAsync(string,CancellationToken)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -61,7 +61,7 @@ namespace Google.LongRunning.Snippets
         {
             // Snippet: GetOperationAsync(GetOperationRequest,CallSettings)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             GetOperationRequest request = new GetOperationRequest
             {
@@ -91,7 +91,7 @@ namespace Google.LongRunning.Snippets
         {
             // Snippet: ListOperationsAsync(string,string,string,int?,CallSettings)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             string filter = "";
@@ -179,7 +179,7 @@ namespace Google.LongRunning.Snippets
         {
             // Snippet: ListOperationsAsync(ListOperationsRequest,CallSettings)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             ListOperationsRequest request = new ListOperationsRequest
             {
@@ -274,7 +274,7 @@ namespace Google.LongRunning.Snippets
             // Snippet: CancelOperationAsync(string,CallSettings)
             // Additional: CancelOperationAsync(string,CancellationToken)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -298,7 +298,7 @@ namespace Google.LongRunning.Snippets
         {
             // Snippet: CancelOperationAsync(CancelOperationRequest,CallSettings)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             CancelOperationRequest request = new CancelOperationRequest
             {
@@ -329,7 +329,7 @@ namespace Google.LongRunning.Snippets
             // Snippet: DeleteOperationAsync(string,CallSettings)
             // Additional: DeleteOperationAsync(string,CancellationToken)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             string name = "";
             // Make the request
@@ -353,7 +353,7 @@ namespace Google.LongRunning.Snippets
         {
             // Snippet: DeleteOperationAsync(DeleteOperationRequest,CallSettings)
             // Create client
-            OperationsClient operationsClient = OperationsClient.Create();
+            OperationsClient operationsClient = await OperationsClient.CreateAsync();
             // Initialize request argument(s)
             DeleteOperationRequest request = new DeleteOperationRequest
             {

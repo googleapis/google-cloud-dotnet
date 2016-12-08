@@ -36,7 +36,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: ListSinksAsync(ParentNameOneof,string,int?,CallSettings)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
@@ -122,7 +122,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: ListSinksAsync(ListSinksRequest,CallSettings)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ListSinksRequest request = new ListSinksRequest
             {
@@ -215,7 +215,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: GetSinkAsync(SinkNameOneof,CallSettings)
             // Additional: GetSinkAsync(SinkNameOneof,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             // Make the request
@@ -239,7 +239,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: GetSinkAsync(GetSinkRequest,CallSettings)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             GetSinkRequest request = new GetSinkRequest
             {
@@ -270,7 +270,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: CreateSinkAsync(ParentNameOneof,LogSink,CallSettings)
             // Additional: CreateSinkAsync(ParentNameOneof,LogSink,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             LogSink sink = new LogSink();
@@ -296,7 +296,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: CreateSinkAsync(CreateSinkRequest,CallSettings)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             CreateSinkRequest request = new CreateSinkRequest
             {
@@ -329,7 +329,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: UpdateSinkAsync(SinkNameOneof,LogSink,CallSettings)
             // Additional: UpdateSinkAsync(SinkNameOneof,LogSink,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             LogSink sink = new LogSink();
@@ -355,7 +355,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: UpdateSinkAsync(UpdateSinkRequest,CallSettings)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             UpdateSinkRequest request = new UpdateSinkRequest
             {
@@ -388,7 +388,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: DeleteSinkAsync(SinkNameOneof,CallSettings)
             // Additional: DeleteSinkAsync(SinkNameOneof,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             // Make the request
@@ -412,7 +412,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: DeleteSinkAsync(DeleteSinkRequest,CallSettings)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             DeleteSinkRequest request = new DeleteSinkRequest
             {

@@ -38,7 +38,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Snippet: SyncRecognizeAsync(RecognitionConfig,RecognitionAudio,CallSettings)
             // Additional: SyncRecognizeAsync(RecognitionConfig,RecognitionAudio,CancellationToken)
             // Create client
-            SpeechClient speechClient = SpeechClient.Create();
+            SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
             RecognitionConfig config = new RecognitionConfig();
             RecognitionAudio audio = new RecognitionAudio();
@@ -64,7 +64,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
         {
             // Snippet: SyncRecognizeAsync(SyncRecognizeRequest,CallSettings)
             // Create client
-            SpeechClient speechClient = SpeechClient.Create();
+            SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
             SyncRecognizeRequest request = new SyncRecognizeRequest
             {
@@ -97,7 +97,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Snippet: AsyncRecognizeAsync(RecognitionConfig,RecognitionAudio,CallSettings)
             // Additional: AsyncRecognizeAsync(RecognitionConfig,RecognitionAudio,CancellationToken)
             // Create client
-            SpeechClient speechClient = SpeechClient.Create();
+            SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
             RecognitionConfig config = new RecognitionConfig();
             RecognitionAudio audio = new RecognitionAudio();
@@ -123,7 +123,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
         {
             // Snippet: AsyncRecognizeAsync(AsyncRecognizeRequest,CallSettings)
             // Create client
-            SpeechClient speechClient = SpeechClient.Create();
+            SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
             AsyncRecognizeRequest request = new AsyncRecognizeRequest
             {

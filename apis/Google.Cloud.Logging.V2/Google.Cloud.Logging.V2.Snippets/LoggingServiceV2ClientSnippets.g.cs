@@ -38,7 +38,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: DeleteLogAsync(LogNameOneof,CallSettings)
             // Additional: DeleteLogAsync(LogNameOneof,CancellationToken)
             // Create client
-            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
             // Make the request
@@ -62,7 +62,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: DeleteLogAsync(DeleteLogRequest,CallSettings)
             // Create client
-            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             DeleteLogRequest request = new DeleteLogRequest
             {
@@ -93,7 +93,7 @@ namespace Google.Cloud.Logging.V2.Snippets
             // Snippet: WriteLogEntriesAsync(LogNameOneof,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CallSettings)
             // Additional: WriteLogEntriesAsync(LogNameOneof,MonitoredResource,IDictionary<string, string>,IEnumerable<LogEntry>,CancellationToken)
             // Create client
-            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             LogNameOneof logName = LogNameOneof.From(new LogName("[PROJECT]", "[LOG]"));
             MonitoredResource resource = new MonitoredResource();
@@ -123,7 +123,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: WriteLogEntriesAsync(WriteLogEntriesRequest,CallSettings)
             // Create client
-            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             WriteLogEntriesRequest request = new WriteLogEntriesRequest
             {
@@ -153,7 +153,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: ListLogEntriesAsync(IEnumerable<string>,string,string,string,int?,CallSettings)
             // Create client
-            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             IEnumerable<string> resourceNames = new List<string>();
             string filter = "";
@@ -243,7 +243,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: ListLogEntriesAsync(ListLogEntriesRequest,CallSettings)
             // Create client
-            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ListLogEntriesRequest request = new ListLogEntriesRequest
             {
@@ -335,7 +335,7 @@ namespace Google.Cloud.Logging.V2.Snippets
         {
             // Snippet: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest,CallSettings)
             // Create client
-            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
             // Initialize request argument(s)
             ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest();
             // Make the request
