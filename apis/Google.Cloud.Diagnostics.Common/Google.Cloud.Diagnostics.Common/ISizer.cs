@@ -17,7 +17,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Used to get the size of an item in bytes.
     /// </summary>
-    public interface ISizer<T>
+    internal interface ISizer<T>
     {
         /// <summary>
         /// Gets the size of the given item in bytes.
