@@ -19,13 +19,13 @@ using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-    internal class GoogleLoggerProvider : ILoggerProvider
+    public class GoogleLoggerProvider : ILoggerProvider
     {
         private readonly IConsumer<LogEntry> _consumer;
         private readonly LogLevel _logLevel;
         private readonly string _projectId;
 
-        public GoogleLoggerProvider(IConsumer<LogEntry> consumer, string projectId, LogLevel logLevel)
+        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, string projectId, LogLevel logLevel)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));

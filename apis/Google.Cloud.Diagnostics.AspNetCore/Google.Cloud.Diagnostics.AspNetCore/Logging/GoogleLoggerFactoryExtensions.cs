@@ -22,15 +22,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     public static class GoogleLoggerFactoryExtensions
     {
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId,
-            LogLevel logLevel = LogLevel.Information, LoggingServiceV2Client client = null)
+            LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             client = client ?? LoggingServiceV2Client.Create();
+            options = options ?? LoggerOptions.Create();
 
             GrpcLogConsumer grpcConsumer = new GrpcLogConsumer(client);
-            SizedBufferingConsumer<LogEntry> bufferingConsumer =
-                SizedBufferingConsumer<LogEntry>.Create(grpcConsumer, LogEntrySizer.Instance);
-            GoogleLoggerProvider provider = new GoogleLoggerProvider(bufferingConsumer, projectId, logLevel);
+            IConsumer<LogEntry> consumer = ConsumerFactory<LogEntry>.GetConsumer(
+                grpcConsumer, LogEntrySizer.Instance, options.BufferOptions);
+            GoogleLoggerProvider provider = new GoogleLoggerProvider(consumer, projectId, options.LogLevel);
 
             factory.AddProvider(provider);
             return factory;

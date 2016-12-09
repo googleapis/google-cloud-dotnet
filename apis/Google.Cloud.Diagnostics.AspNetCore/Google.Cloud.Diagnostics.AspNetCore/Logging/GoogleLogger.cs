@@ -22,14 +22,14 @@ using Google.Api;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-    internal class GoogleLogger : ILogger
+    public class GoogleLogger : ILogger
     {
         private readonly IConsumer<LogEntry> _consumer;
         private readonly LogLevel _logLevel;
         private readonly string _logName;
         private readonly MonitoredResource _resource;
 
-        public GoogleLogger(IConsumer<LogEntry> consumer, LogLevel logLevel, string projectId, string logName)
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogLevel logLevel, string projectId, string logName)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNull(logName, nameof(logName));

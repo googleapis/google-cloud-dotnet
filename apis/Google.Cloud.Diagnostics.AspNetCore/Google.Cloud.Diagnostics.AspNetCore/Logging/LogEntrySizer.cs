@@ -17,7 +17,7 @@ using Google.Cloud.Logging.V2;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-    public class LogEntrySizer : ISizer<LogEntry>
+    internal class LogEntrySizer : ISizer<LogEntry>
     {
         internal static LogEntrySizer Instance = new LogEntrySizer();
 
