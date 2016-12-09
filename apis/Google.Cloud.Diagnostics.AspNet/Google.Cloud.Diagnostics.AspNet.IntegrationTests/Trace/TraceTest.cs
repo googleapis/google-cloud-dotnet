@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         private readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
 
         /// <summary>Time to sleep between checks for a trace.</summary>
-        private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(1);
+        private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
 
         /// <summary>Project id to run the test on.</summary>
         private readonly string _projectId;
@@ -89,13 +89,16 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// <summary>
         /// Gets a trace that contains a span with the given name.
         /// </summary>
-        private async Task<TraceProto> GetTrace(string spanName)
+        /// <param name="expectTrace">True if the trace is expected to exist.  This is used
+        ///     to minimize RPC calls.</param>
+        private async Task<TraceProto> GetTrace(string spanName, bool expectTrace = true)
         {
-            double sleepTime = 0;
-            while (sleepTime < _timeout.TotalMilliseconds)
+            TimeSpan totalSleepTime = TimeSpan.Zero;
+            while (totalSleepTime <= _timeout)
             {
-                sleepTime += _sleepInterval.TotalMilliseconds;
-                Thread.Sleep(Convert.ToInt32(_sleepInterval.TotalMilliseconds));
+                TimeSpan sleepTime = expectTrace ? _sleepInterval : _timeout;
+                totalSleepTime += sleepTime;
+                Thread.Sleep(sleepTime);
 
                 ListTracesRequest request = new ListTracesRequest
                 {
@@ -170,7 +173,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             BlockUntilClockTick();
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName, false);
             Assert.Null(trace);
         }
 
@@ -291,7 +294,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.EndSpan();
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName);
+            TraceProto trace = await GetTrace(rootSpanName, false);
             Assert.Null(trace);
         }
     }
