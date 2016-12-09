@@ -15,6 +15,8 @@
 using System.Collections.Generic;
 using Google.Cloud.Logging.V2;
 using Google.Cloud.Diagnostics.Common;
+using Google.Api.Gax;
+using System.Linq;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -31,19 +33,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="client">The logging client that will push logs to the Stackdriver Logging API.</param>
         public GrpcLogConsumer(LoggingServiceV2Client client)
         {
-            _client = client;
+            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
         }
 
         /// <inheritdoc />
         public void Receive(IEnumerable<LogEntry> logs)
         {
-            IEnumerator<LogEntry> enumerator = logs.GetEnumerator();
-            if (!enumerator.MoveNext())
+            LogEntry entry = logs.FirstOrDefault();
+            if (entry == null)
             {
                 return;
             }
 
-            LogNameOneof oneof = LogNameOneof.Parse(enumerator.Current.LogName, false);
+            LogNameOneof oneof = LogNameOneof.Parse(entry.LogName, false);
             _client.WriteLogEntriesAsync(oneof, null, EmptyDictionary, logs);
         }
     }

@@ -19,6 +19,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// Extensions to add <see cref="GoogleLoggerProvider"/>s to an <see cref="ILoggerFactory"/>.
+    /// </summary>
     public static class GoogleLoggerFactoryExtensions
     {
         /// <summary>
@@ -27,11 +30,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        /// <returns></returns>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             // Check params and set defaults if unset.
+            GaxPreconditions.CheckNotNull(factory, nameof(factory));
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             client = client ?? LoggingServiceV2Client.Create();
             options = options ?? LoggerOptions.Create();

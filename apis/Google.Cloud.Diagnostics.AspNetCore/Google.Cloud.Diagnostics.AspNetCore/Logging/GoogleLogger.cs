@@ -83,7 +83,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             {   
                 Resource = _globalResource,
                 LogName = _logName,
-                Severity = LogUtils.Convert(logLevel),
+                Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(DateTime.UtcNow),
                 TextPayload = message,
             };

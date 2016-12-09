@@ -33,9 +33,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Converts a <see cref="LogLevel"/> to a <see cref="LogSeverity"/>.
+        /// Extentions to get a <see cref="LogSeverity"/> for a <see cref="LogLevel"/>.
         /// </summary>
-        public static LogSeverity Convert(LogLevel logLevel)
+        public static LogSeverity ToLogSeverity(this LogLevel logLevel)
         {
             switch (logLevel)
             {

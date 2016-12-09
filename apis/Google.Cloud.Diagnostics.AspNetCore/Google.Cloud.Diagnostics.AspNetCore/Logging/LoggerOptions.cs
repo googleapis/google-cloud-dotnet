@@ -21,7 +21,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     // TODO(talarico): Add option for logging to other resources and organizations.
 
     /// <summary>
-    /// Options for the logger.
+    /// Options for a <see cref="GoogleLogger"/>.
     /// </summary>
     public class LoggerOptions
     {
@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         private LoggerOptions(LogLevel logLevel, BufferOptions bufferOptions)
         {
-            LogLevel = logLevel;
+            LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
             BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
         }
 
