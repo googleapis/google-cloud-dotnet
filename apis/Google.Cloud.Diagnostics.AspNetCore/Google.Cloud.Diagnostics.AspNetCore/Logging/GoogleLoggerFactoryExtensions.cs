@@ -21,18 +21,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 {
     public static class GoogleLoggerFactoryExtensions
     {
+        /// <summary>
+        /// Adds a <see cref="GoogleLoggerProvider"/> for <see cref="GoogleLogger"/>s.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID.</param>
+        /// <param name="options">Optional, options for the logger.</param>
+        /// <param name="client">Optional, logging client.</param>
+        /// <returns></returns>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
+            // Check params and set defaults if unset.
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             client = client ?? LoggingServiceV2Client.Create();
             options = options ?? LoggerOptions.Create();
 
+            // Get the proper consumer from the options and add a logger provider.
             GrpcLogConsumer grpcConsumer = new GrpcLogConsumer(client);
             IConsumer<LogEntry> consumer = ConsumerFactory<LogEntry>.GetConsumer(
                 grpcConsumer, LogEntrySizer.Instance, options.BufferOptions);
             GoogleLoggerProvider provider = new GoogleLoggerProvider(consumer, projectId, options.LogLevel);
-
             factory.AddProvider(provider);
             return factory;
         }

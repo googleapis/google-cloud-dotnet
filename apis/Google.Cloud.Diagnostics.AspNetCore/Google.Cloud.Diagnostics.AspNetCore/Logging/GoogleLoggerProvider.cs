@@ -19,12 +19,26 @@ using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// <see cref="ILoggerProvider"/> for Stackdriver Logging.
+    /// </summary>
     public class GoogleLoggerProvider : ILoggerProvider
     {
+        /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
+
+        /// <summary>The minimum log level.</summary>
         private readonly LogLevel _logLevel;
+
+        /// <summary>The Google Cloud Platform project ID.</summary>
         private readonly string _projectId;
 
+        /// <summary>
+        /// <see cref="ILoggerProvider"/> for Stackdriver Logging.
+        /// </summary>
+        /// <param name="consumer">The consumer to push logs to. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="logLevel">The minimum log level.</param>
         internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, string projectId, LogLevel logLevel)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
@@ -32,6 +46,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _logLevel = logLevel;
         }
 
+        /// <summary>
+        /// Creates a <see cref="GoogleLogger"/> with the given log name.
+        /// </summary>
         public ILogger CreateLogger(string logName)
         {
             return new GoogleLogger(_consumer, _logLevel, _projectId, logName);

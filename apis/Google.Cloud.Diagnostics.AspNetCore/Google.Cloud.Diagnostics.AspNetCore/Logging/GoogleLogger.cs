@@ -22,12 +22,22 @@ using Google.Api;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// <see cref="ILogger"/> for Stackdriver Logging.
+    /// </summary>
     public class GoogleLogger : ILogger
     {
+        /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
+
+        /// <summary>The minimum log level.</summary>
         private readonly LogLevel _logLevel;
+
+        /// <summary>The formatted log name for the project and log.</summary>
         private readonly string _logName;
-        private readonly MonitoredResource _resource;
+
+        /// <summary>The global resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
+        private static readonly MonitoredResource _globalResource = new MonitoredResource { Type = "global" };
 
         internal GoogleLogger(IConsumer<LogEntry> consumer, LogLevel logLevel, string projectId, string logName)
         {
@@ -36,22 +46,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _logLevel = logLevel;
             _logName = LogUtils.GetLogName(projectId, logName);
-
-            _resource = new MonitoredResource {
-                Type = "global"
-            };
         }
 
+        /// <summary>
+        /// Currently unsupported, always return null.
+        /// </summary>
         public IDisposable BeginScope<TState>(TState state)
         {
+            // TODO(talarico): Implement this.
             return null;
         }
 
+        /// <inheritdoc />
         public bool IsEnabled(LogLevel logLevel)
         {
             return logLevel >= _logLevel;
         }
 
+        /// <inheritdoc />
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             GaxPreconditions.CheckNotNull(formatter, nameof(formatter));
@@ -69,7 +81,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             LogEntry entry = new LogEntry
             {   
-                Resource = _resource,
+                Resource = _globalResource,
                 LogName = _logName,
                 Severity = LogUtils.Convert(logLevel),
                 Timestamp = Timestamp.FromDateTime(DateTime.UtcNow),

@@ -17,12 +17,17 @@ using Google.Cloud.Logging.V2;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// An <see cref="ISizer{T}"/> for <see cref="LogEntry"/>s.
+    /// </summary>
     internal class LogEntrySizer : ISizer<LogEntry>
     {
+        /// <summary>The single log entry sizer instance.</summary>
         internal static LogEntrySizer Instance = new LogEntrySizer();
 
         private LogEntrySizer() { }
 
+        /// <inheritdoc />
         public int GetSize(LogEntry item)
         {
             return item.CalculateSize();

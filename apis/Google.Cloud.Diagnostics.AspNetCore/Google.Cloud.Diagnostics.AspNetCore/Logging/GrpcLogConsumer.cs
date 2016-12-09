@@ -18,16 +18,23 @@ using Google.Cloud.Diagnostics.Common;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// An <see cref="IConsumer{T}"/> that will send received logs to the Stackdriver Logging API.
+    /// </summary>
     internal class GrpcLogConsumer : IConsumer<LogEntry>
     {
+        /// <summary>An empty dictionary used for labels.</summary>
         private static readonly IDictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
+
         private LoggingServiceV2Client _client;
 
+        /// <param name="client">The logging client that will push logs to the Stackdriver Logging API.</param>
         public GrpcLogConsumer(LoggingServiceV2Client client)
         {
             _client = client;
         }
 
+        /// <inheritdoc />
         public void Receive(IEnumerable<LogEntry> logs)
         {
             _client.WriteLogEntriesAsync("", null, EmptyDictionary, logs);
