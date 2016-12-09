@@ -79,11 +79,11 @@
                     <div class="col col-right">
                         <!-- TODO: Use nuget buttons as per https://github.com/prabirshrestha/nuget-button ? -->
                         <h2>Add NuGet pre-release packages to your project:</h2>
-			<pre class="package-list"><a href="docs/Google.Bigquery.V2/index.html">Google.Bigquery.V2</a>
-<a href="docs/Google.Datastore.V1/index.html">Google.Datastore.V1</a>
-<a href="docs/Google.Logging.V2/index.html">Google.Logging.V2</a>
-<a href="docs/Google.Pubsub.V1/index.html">Google.Pubsub.V1</a>
-<a href="docs/Google.Storage.V1/index.html">Google.Storage.V1</a></pre>
+			<pre class="package-list"><a href="docs/Google.Cloud.Bigquery.V2/index.html">Google.Cloud.Bigquery.V2</a>
+<a href="docs/Google.Cloud.Datastore.V1/index.html">Google.Cloud.Datastore.V1</a>
+<a href="docs/Google.Cloud.Logging.V2/index.html">Google.Cloud.Logging.V2</a>
+<a href="docs/Google.Cloud.PubSub.V1/index.html">Google.Cloud.PubSub.V1</a>
+<a href="docs/Google.Cloud.Storage.V1/index.html">Google.Cloud.Storage.V1</a></pre>
                     </div><!-- end of .col.col-right -->
                 </div><!-- end of .container -->
             </section><!-- end of .hero-banner -->
@@ -143,7 +143,7 @@
                 <div class="quote-box--supplementary">
                 <h4>Example: Retrieving Datastore Entities</h4>
                 <div hljs="" language="csharp" class="">
-                  <pre><code class="hljs csharp">using Google.Datastore.V1Beta3;
+                  <pre><code class="hljs csharp">using Google.Cloud.Datastore.V1;
 
 ...
 
@@ -152,7 +152,7 @@ Query query = new Query("Book")
 {
     Filter = Filter.Equal("author", "Jane Austen")
 };
-foreach (Entity entity in db.RunQuery(query))
+foreach (Entity entity in db.RunQueryLazily(query))
 {
     string title = (string) entity["title"];
     DateTime published = (DateTime) entity["published"];
