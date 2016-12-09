@@ -38,7 +38,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: Lookup
+            // Snippet: Lookup(*,*,*,*)
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "book");
             Key key1 = keyFactory.CreateKey("pride_and_prejudice");
             Key key2 = keyFactory.CreateKey("not_present");
@@ -162,7 +162,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: AllocateIds
+            // Snippet: AllocateIds(*,*,*)
             DatastoreClient client = DatastoreClient.Create();
             KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "message");
             AllocateIdsResponse response = client.AllocateIds(projectId,

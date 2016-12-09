@@ -37,7 +37,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             // Snippet: PatchTracesAsync(string,Traces,CallSettings)
             // Additional: PatchTracesAsync(string,Traces,CancellationToken)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             Traces traces = new Traces();
@@ -59,12 +59,44 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        public async Task PatchTracesAsync_RequestObject()
+        {
+            // Snippet: PatchTracesAsync(PatchTracesRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = "",
+                Traces = new Traces(),
+            };
+            // Make the request
+            await traceServiceClient.PatchTracesAsync(request);
+            // End snippet
+        }
+
+        public void PatchTraces_RequestObject()
+        {
+            // Snippet: PatchTraces(PatchTracesRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            PatchTracesRequest request = new PatchTracesRequest
+            {
+                ProjectId = "",
+                Traces = new Traces(),
+            };
+            // Make the request
+            traceServiceClient.PatchTraces(request);
+            // End snippet
+        }
+
         public async Task GetTraceAsync()
         {
             // Snippet: GetTraceAsync(string,string,CallSettings)
             // Additional: GetTraceAsync(string,string,CancellationToken)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             string traceId = "";
@@ -86,11 +118,43 @@ namespace Google.Cloud.Trace.V1.Snippets
             // End snippet
         }
 
+        public async Task GetTraceAsync_RequestObject()
+        {
+            // Snippet: GetTraceAsync(GetTraceRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = "",
+                TraceId = "",
+            };
+            // Make the request
+            Trace response = await traceServiceClient.GetTraceAsync(request);
+            // End snippet
+        }
+
+        public void GetTrace_RequestObject()
+        {
+            // Snippet: GetTrace(GetTraceRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            GetTraceRequest request = new GetTraceRequest
+            {
+                ProjectId = "",
+                TraceId = "",
+            };
+            // Make the request
+            Trace response = traceServiceClient.GetTrace(request);
+            // End snippet
+        }
+
         public async Task ListTracesAsync()
         {
             // Snippet: ListTracesAsync(string,string,int?,CallSettings)
             // Create client
-            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
             // Initialize request argument(s)
             string projectId = "";
             // Make the request
@@ -139,6 +203,98 @@ namespace Google.Cloud.Trace.V1.Snippets
             // Make the request
             PagedEnumerable<ListTracesResponse,Trace> response =
                 traceServiceClient.ListTraces(projectId);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Trace item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListTracesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Trace item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Trace> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Trace item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task ListTracesAsync_RequestObject()
+        {
+            // Snippet: ListTracesAsync(ListTracesRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = await TraceServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListTracesRequest request = new ListTracesRequest
+            {
+                ProjectId = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListTracesResponse,Trace> response =
+                traceServiceClient.ListTracesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Trace item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListTracesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Trace item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Trace> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Trace item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListTraces_RequestObject()
+        {
+            // Snippet: ListTraces(ListTracesRequest,CallSettings)
+            // Create client
+            TraceServiceClient traceServiceClient = TraceServiceClient.Create();
+            // Initialize request argument(s)
+            ListTracesRequest request = new ListTracesRequest
+            {
+                ProjectId = "",
+            };
+            // Make the request
+            PagedEnumerable<ListTracesResponse,Trace> response =
+                traceServiceClient.ListTraces(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Trace item in response)

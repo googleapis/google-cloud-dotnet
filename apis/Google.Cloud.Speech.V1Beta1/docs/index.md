@@ -5,20 +5,12 @@ Cloud Speech API](https://cloud.google.com/speech).
 
 # Installation
 
-Install the `Google.Cloud.Speech.V1Beta1` package from our
-[early access MyGet
-feed](https://www.myget.org/gallery/google-dotnet-public).
-First configure your environment to include the appropriate NuGet feed
-URL:
-
-- NuGet v2: `https://www.myget.org/F/google-dotnet-public/`
-- NuGet v3: `https://www.myget.org/F/google-dotnet-public/api/v3/index.json`
-
-Next, add the package to your project in the normal way (for example
-by right-clicking on the project in Visual Studio and choosing
-"Manage NuGet Packages..."). Please ensure you enable pre-release
-packages (for example, in the Visual Studio NuGet user interface,
-check the "Include prerelease" box).
+Install the `Google.Cloud.Speech.V1Beta1` package from NuGet. Add it to
+your project in the normal way (for example by right-clicking on the
+project in Visual Studio and choosing "Manage NuGet Packages...").
+Please ensure you enable pre-release packages (for example, in the
+Visual Studio NuGet user interface, check the "Include prerelease"
+box).
 
 # Authentication
 

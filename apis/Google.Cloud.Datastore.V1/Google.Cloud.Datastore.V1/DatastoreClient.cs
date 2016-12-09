@@ -420,10 +420,14 @@ namespace Google.Cloud.Datastore.V1
             string projectId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => LookupAsync(
+                new LookupRequest
+                {
+                    ProjectId = projectId,
+                    ReadOptions = readOptions,
+                    Keys = { keys },
+                },
+                callSettings);
 
         /// <summary>
         /// Looks up entities by key.
@@ -475,6 +479,48 @@ namespace Google.Cloud.Datastore.V1
             string projectId,
             ReadOptions readOptions,
             IEnumerable<Key> keys,
+            CallSettings callSettings = null) => Lookup(
+                new LookupRequest
+                {
+                    ProjectId = projectId,
+                    ReadOptions = readOptions,
+                    Keys = { keys },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Looks up entities by key.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LookupResponse> LookupAsync(
+            LookupRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Looks up entities by key.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LookupResponse Lookup(
+            LookupRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -509,10 +555,15 @@ namespace Google.Cloud.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             Query query,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => RunQueryAsync(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    Query = query,
+                },
+                callSettings);
 
         /// <summary>
         /// Queries for entities.
@@ -579,10 +630,15 @@ namespace Google.Cloud.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             Query query,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => RunQuery(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    Query = query,
+                },
+                callSettings);
 
         /// <summary>
         /// Queries for entities.
@@ -613,10 +669,15 @@ namespace Google.Cloud.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             GqlQuery gqlQuery,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => RunQueryAsync(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    GqlQuery = gqlQuery,
+                },
+                callSettings);
 
         /// <summary>
         /// Queries for entities.
@@ -683,6 +744,49 @@ namespace Google.Cloud.Datastore.V1
             PartitionId partitionId,
             ReadOptions readOptions,
             GqlQuery gqlQuery,
+            CallSettings callSettings = null) => RunQuery(
+                new RunQueryRequest
+                {
+                    ProjectId = projectId,
+                    PartitionId = partitionId,
+                    ReadOptions = readOptions,
+                    GqlQuery = gqlQuery,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RunQueryResponse> RunQueryAsync(
+            RunQueryRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Queries for entities.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual RunQueryResponse RunQuery(
+            RunQueryRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -702,10 +806,12 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
             string projectId,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => BeginTransactionAsync(
+                new BeginTransactionRequest
+                {
+                    ProjectId = projectId,
+                },
+                callSettings);
 
         /// <summary>
         /// Begins a new transaction.
@@ -739,6 +845,46 @@ namespace Google.Cloud.Datastore.V1
         /// </returns>
         public virtual BeginTransactionResponse BeginTransaction(
             string projectId,
+            CallSettings callSettings = null) => BeginTransaction(
+                new BeginTransactionRequest
+                {
+                    ProjectId = projectId,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<BeginTransactionResponse> BeginTransactionAsync(
+            BeginTransactionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Begins a new transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual BeginTransactionResponse BeginTransaction(
+            BeginTransactionRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -785,10 +931,15 @@ namespace Google.Cloud.Datastore.V1
             CommitRequest.Types.Mode mode,
             ByteString transaction,
             IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CommitAsync(
+                new CommitRequest
+                {
+                    ProjectId = projectId,
+                    Mode = mode,
+                    Transaction = transaction,
+                    Mutations = { mutations },
+                },
+                callSettings);
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -879,10 +1030,15 @@ namespace Google.Cloud.Datastore.V1
             CommitRequest.Types.Mode mode,
             ByteString transaction,
             IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => Commit(
+                new CommitRequest
+                {
+                    ProjectId = projectId,
+                    Mode = mode,
+                    Transaction = transaction,
+                    Mutations = { mutations },
+                },
+                callSettings);
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -919,10 +1075,14 @@ namespace Google.Cloud.Datastore.V1
             string projectId,
             CommitRequest.Types.Mode mode,
             IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CommitAsync(
+                new CommitRequest
+                {
+                    ProjectId = projectId,
+                    Mode = mode,
+                    Mutations = { mutations },
+                },
+                callSettings);
 
         /// <summary>
         /// Commits a transaction, optionally creating, deleting or modifying some
@@ -1000,6 +1160,50 @@ namespace Google.Cloud.Datastore.V1
             string projectId,
             CommitRequest.Types.Mode mode,
             IEnumerable<Mutation> mutations,
+            CallSettings callSettings = null) => Commit(
+                new CommitRequest
+                {
+                    ProjectId = projectId,
+                    Mode = mode,
+                    Mutations = { mutations },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<CommitResponse> CommitAsync(
+            CommitRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Commits a transaction, optionally creating, deleting or modifying some
+        /// entities.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual CommitResponse Commit(
+            CommitRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1024,10 +1228,13 @@ namespace Google.Cloud.Datastore.V1
         public virtual Task<RollbackResponse> RollbackAsync(
             string projectId,
             ByteString transaction,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => RollbackAsync(
+                new RollbackRequest
+                {
+                    ProjectId = projectId,
+                    Transaction = transaction,
+                },
+                callSettings);
 
         /// <summary>
         /// Rolls back a transaction.
@@ -1072,6 +1279,47 @@ namespace Google.Cloud.Datastore.V1
         public virtual RollbackResponse Rollback(
             string projectId,
             ByteString transaction,
+            CallSettings callSettings = null) => Rollback(
+                new RollbackRequest
+                {
+                    ProjectId = projectId,
+                    Transaction = transaction,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Rolls back a transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<RollbackResponse> RollbackAsync(
+            RollbackRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Rolls back a transaction.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual RollbackResponse Rollback(
+            RollbackRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1097,10 +1345,13 @@ namespace Google.Cloud.Datastore.V1
         public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
             string projectId,
             IEnumerable<Key> keys,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => AllocateIdsAsync(
+                new AllocateIdsRequest
+                {
+                    ProjectId = projectId,
+                    Keys = { keys },
+                },
+                callSettings);
 
         /// <summary>
         /// Allocates IDs for the given keys, which is useful for referencing an entity
@@ -1147,6 +1398,49 @@ namespace Google.Cloud.Datastore.V1
         public virtual AllocateIdsResponse AllocateIds(
             string projectId,
             IEnumerable<Key> keys,
+            CallSettings callSettings = null) => AllocateIds(
+                new AllocateIdsRequest
+                {
+                    ProjectId = projectId,
+                    Keys = { keys },
+                },
+                callSettings);
+
+        /// <summary>
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AllocateIdsResponse> AllocateIdsAsync(
+            AllocateIdsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Allocates IDs for the given keys, which is useful for referencing an entity
+        /// before it is inserted.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AllocateIdsResponse AllocateIds(
+            AllocateIdsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -1207,14 +1501,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Looks up entities by key.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this lookup request.
-        /// </param>
-        /// <param name="keys">
-        /// Keys of entities to look up.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1223,17 +1511,9 @@ namespace Google.Cloud.Datastore.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<LookupResponse> LookupAsync(
-            string projectId,
-            ReadOptions readOptions,
-            IEnumerable<Key> keys,
+            LookupRequest request,
             CallSettings callSettings = null)
         {
-            LookupRequest request = new LookupRequest
-            {
-                ProjectId = projectId,
-                ReadOptions = readOptions,
-                Keys = { keys },
-            };
             Modify_LookupRequest(ref request, ref callSettings);
             return _callLookup.Async(request, callSettings);
         }
@@ -1241,14 +1521,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Looks up entities by key.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this lookup request.
-        /// </param>
-        /// <param name="keys">
-        /// Keys of entities to look up.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1257,17 +1531,9 @@ namespace Google.Cloud.Datastore.V1
         /// The RPC response.
         /// </returns>
         public override LookupResponse Lookup(
-            string projectId,
-            ReadOptions readOptions,
-            IEnumerable<Key> keys,
+            LookupRequest request,
             CallSettings callSettings = null)
         {
-            LookupRequest request = new LookupRequest
-            {
-                ProjectId = projectId,
-                ReadOptions = readOptions,
-                Keys = { keys },
-            };
             Modify_LookupRequest(ref request, ref callSettings);
             return _callLookup.Sync(request, callSettings);
         }
@@ -1275,20 +1541,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Queries for entities.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="query">
-        /// The query to run.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1297,19 +1551,9 @@ namespace Google.Cloud.Datastore.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<RunQueryResponse> RunQueryAsync(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            Query query,
+            RunQueryRequest request,
             CallSettings callSettings = null)
         {
-            RunQueryRequest request = new RunQueryRequest
-            {
-                ProjectId = projectId,
-                PartitionId = partitionId,
-                ReadOptions = readOptions,
-                Query = query,
-            };
             Modify_RunQueryRequest(ref request, ref callSettings);
             return _callRunQuery.Async(request, callSettings);
         }
@@ -1317,20 +1561,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Queries for entities.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="query">
-        /// The query to run.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1339,103 +1571,9 @@ namespace Google.Cloud.Datastore.V1
         /// The RPC response.
         /// </returns>
         public override RunQueryResponse RunQuery(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            Query query,
+            RunQueryRequest request,
             CallSettings callSettings = null)
         {
-            RunQueryRequest request = new RunQueryRequest
-            {
-                ProjectId = projectId,
-                PartitionId = partitionId,
-                ReadOptions = readOptions,
-                Query = query,
-            };
-            Modify_RunQueryRequest(ref request, ref callSettings);
-            return _callRunQuery.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="gqlQuery">
-        /// The GQL query to run.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<RunQueryResponse> RunQueryAsync(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            GqlQuery gqlQuery,
-            CallSettings callSettings = null)
-        {
-            RunQueryRequest request = new RunQueryRequest
-            {
-                ProjectId = projectId,
-                PartitionId = partitionId,
-                ReadOptions = readOptions,
-                GqlQuery = gqlQuery,
-            };
-            Modify_RunQueryRequest(ref request, ref callSettings);
-            return _callRunQuery.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="gqlQuery">
-        /// The GQL query to run.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override RunQueryResponse RunQuery(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            GqlQuery gqlQuery,
-            CallSettings callSettings = null)
-        {
-            RunQueryRequest request = new RunQueryRequest
-            {
-                ProjectId = projectId,
-                PartitionId = partitionId,
-                ReadOptions = readOptions,
-                GqlQuery = gqlQuery,
-            };
             Modify_RunQueryRequest(ref request, ref callSettings);
             return _callRunQuery.Sync(request, callSettings);
         }
@@ -1443,8 +1581,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Begins a new transaction.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1453,13 +1591,9 @@ namespace Google.Cloud.Datastore.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<BeginTransactionResponse> BeginTransactionAsync(
-            string projectId,
+            BeginTransactionRequest request,
             CallSettings callSettings = null)
         {
-            BeginTransactionRequest request = new BeginTransactionRequest
-            {
-                ProjectId = projectId,
-            };
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Async(request, callSettings);
         }
@@ -1467,8 +1601,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Begins a new transaction.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1477,13 +1611,9 @@ namespace Google.Cloud.Datastore.V1
         /// The RPC response.
         /// </returns>
         public override BeginTransactionResponse BeginTransaction(
-            string projectId,
+            BeginTransactionRequest request,
             CallSettings callSettings = null)
         {
-            BeginTransactionRequest request = new BeginTransactionRequest
-            {
-                ProjectId = projectId,
-            };
             Modify_BeginTransactionRequest(ref request, ref callSettings);
             return _callBeginTransaction.Sync(request, callSettings);
         }
@@ -1492,31 +1622,8 @@ namespace Google.Cloud.Datastore.V1
         /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="mode">
-        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
-        /// </param>
-        /// <param name="transaction">
-        /// The identifier of the transaction associated with the commit. A
-        /// transaction identifier is returned by a call to
-        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
-        /// </param>
-        /// <param name="mutations">
-        /// The mutations to perform.
-        ///
-        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
-        /// applied in order. The following sequences of mutations affecting a single
-        /// entity are not permitted in a single `Commit` request:
-        ///
-        /// - `insert` followed by `insert`
-        /// - `update` followed by `insert`
-        /// - `upsert` followed by `insert`
-        /// - `delete` followed by `update`
-        ///
-        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
-        /// entity.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1525,19 +1632,9 @@ namespace Google.Cloud.Datastore.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<CommitResponse> CommitAsync(
-            string projectId,
-            CommitRequest.Types.Mode mode,
-            ByteString transaction,
-            IEnumerable<Mutation> mutations,
+            CommitRequest request,
             CallSettings callSettings = null)
         {
-            CommitRequest request = new CommitRequest
-            {
-                ProjectId = projectId,
-                Mode = mode,
-                Transaction = transaction,
-                Mutations = { mutations },
-            };
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Async(request, callSettings);
         }
@@ -1546,31 +1643,8 @@ namespace Google.Cloud.Datastore.V1
         /// Commits a transaction, optionally creating, deleting or modifying some
         /// entities.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="mode">
-        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
-        /// </param>
-        /// <param name="transaction">
-        /// The identifier of the transaction associated with the commit. A
-        /// transaction identifier is returned by a call to
-        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
-        /// </param>
-        /// <param name="mutations">
-        /// The mutations to perform.
-        ///
-        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
-        /// applied in order. The following sequences of mutations affecting a single
-        /// entity are not permitted in a single `Commit` request:
-        ///
-        /// - `insert` followed by `insert`
-        /// - `update` followed by `insert`
-        /// - `upsert` followed by `insert`
-        /// - `delete` followed by `update`
-        ///
-        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
-        /// entity.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1579,113 +1653,9 @@ namespace Google.Cloud.Datastore.V1
         /// The RPC response.
         /// </returns>
         public override CommitResponse Commit(
-            string projectId,
-            CommitRequest.Types.Mode mode,
-            ByteString transaction,
-            IEnumerable<Mutation> mutations,
+            CommitRequest request,
             CallSettings callSettings = null)
         {
-            CommitRequest request = new CommitRequest
-            {
-                ProjectId = projectId,
-                Mode = mode,
-                Transaction = transaction,
-                Mutations = { mutations },
-            };
-            Modify_CommitRequest(ref request, ref callSettings);
-            return _callCommit.Sync(request, callSettings);
-        }
-
-        /// <summary>
-        /// Commits a transaction, optionally creating, deleting or modifying some
-        /// entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="mode">
-        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
-        /// </param>
-        /// <param name="mutations">
-        /// The mutations to perform.
-        ///
-        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
-        /// applied in order. The following sequences of mutations affecting a single
-        /// entity are not permitted in a single `Commit` request:
-        ///
-        /// - `insert` followed by `insert`
-        /// - `update` followed by `insert`
-        /// - `upsert` followed by `insert`
-        /// - `delete` followed by `update`
-        ///
-        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
-        /// entity.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public override Task<CommitResponse> CommitAsync(
-            string projectId,
-            CommitRequest.Types.Mode mode,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null)
-        {
-            CommitRequest request = new CommitRequest
-            {
-                ProjectId = projectId,
-                Mode = mode,
-                Mutations = { mutations },
-            };
-            Modify_CommitRequest(ref request, ref callSettings);
-            return _callCommit.Async(request, callSettings);
-        }
-
-        /// <summary>
-        /// Commits a transaction, optionally creating, deleting or modifying some
-        /// entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="mode">
-        /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
-        /// </param>
-        /// <param name="mutations">
-        /// The mutations to perform.
-        ///
-        /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
-        /// applied in order. The following sequences of mutations affecting a single
-        /// entity are not permitted in a single `Commit` request:
-        ///
-        /// - `insert` followed by `insert`
-        /// - `update` followed by `insert`
-        /// - `upsert` followed by `insert`
-        /// - `delete` followed by `update`
-        ///
-        /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
-        /// entity.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public override CommitResponse Commit(
-            string projectId,
-            CommitRequest.Types.Mode mode,
-            IEnumerable<Mutation> mutations,
-            CallSettings callSettings = null)
-        {
-            CommitRequest request = new CommitRequest
-            {
-                ProjectId = projectId,
-                Mode = mode,
-                Mutations = { mutations },
-            };
             Modify_CommitRequest(ref request, ref callSettings);
             return _callCommit.Sync(request, callSettings);
         }
@@ -1693,12 +1663,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Rolls back a transaction.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="transaction">
-        /// The transaction identifier, returned by a call to
-        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1707,15 +1673,9 @@ namespace Google.Cloud.Datastore.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<RollbackResponse> RollbackAsync(
-            string projectId,
-            ByteString transaction,
+            RollbackRequest request,
             CallSettings callSettings = null)
         {
-            RollbackRequest request = new RollbackRequest
-            {
-                ProjectId = projectId,
-                Transaction = transaction,
-            };
             Modify_RollbackRequest(ref request, ref callSettings);
             return _callRollback.Async(request, callSettings);
         }
@@ -1723,12 +1683,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Rolls back a transaction.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="transaction">
-        /// The transaction identifier, returned by a call to
-        /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1737,15 +1693,9 @@ namespace Google.Cloud.Datastore.V1
         /// The RPC response.
         /// </returns>
         public override RollbackResponse Rollback(
-            string projectId,
-            ByteString transaction,
+            RollbackRequest request,
             CallSettings callSettings = null)
         {
-            RollbackRequest request = new RollbackRequest
-            {
-                ProjectId = projectId,
-                Transaction = transaction,
-            };
             Modify_RollbackRequest(ref request, ref callSettings);
             return _callRollback.Sync(request, callSettings);
         }
@@ -1754,12 +1704,8 @@ namespace Google.Cloud.Datastore.V1
         /// Allocates IDs for the given keys, which is useful for referencing an entity
         /// before it is inserted.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="keys">
-        /// A list of keys with incomplete key paths for which to allocate IDs.
-        /// No key may be reserved/read-only.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1768,15 +1714,9 @@ namespace Google.Cloud.Datastore.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<AllocateIdsResponse> AllocateIdsAsync(
-            string projectId,
-            IEnumerable<Key> keys,
+            AllocateIdsRequest request,
             CallSettings callSettings = null)
         {
-            AllocateIdsRequest request = new AllocateIdsRequest
-            {
-                ProjectId = projectId,
-                Keys = { keys },
-            };
             Modify_AllocateIdsRequest(ref request, ref callSettings);
             return _callAllocateIds.Async(request, callSettings);
         }
@@ -1785,12 +1725,8 @@ namespace Google.Cloud.Datastore.V1
         /// Allocates IDs for the given keys, which is useful for referencing an entity
         /// before it is inserted.
         /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="keys">
-        /// A list of keys with incomplete key paths for which to allocate IDs.
-        /// No key may be reserved/read-only.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1799,15 +1735,9 @@ namespace Google.Cloud.Datastore.V1
         /// The RPC response.
         /// </returns>
         public override AllocateIdsResponse AllocateIds(
-            string projectId,
-            IEnumerable<Key> keys,
+            AllocateIdsRequest request,
             CallSettings callSettings = null)
         {
-            AllocateIdsRequest request = new AllocateIdsRequest
-            {
-                ProjectId = projectId,
-                Keys = { keys },
-            };
             Modify_AllocateIdsRequest(ref request, ref callSettings);
             return _callAllocateIds.Sync(request, callSettings);
         }

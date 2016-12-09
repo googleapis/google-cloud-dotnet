@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0-*",
+  "version": "1.0.0-alpha01-*",
   "description": "Recommended Google client library to access the Stackdriver Monitoring API, which manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.",
   "authors": [ "Google Inc." ],
 

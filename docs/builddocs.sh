@@ -26,9 +26,11 @@ build_api_docs() {
     dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
   
-  docfx metadata -f output/$api/docfx.json
+  docfx metadata -f output/$api/docfx.json | tee errors.txt
+  (! grep --quiet 'Build failed.' errors.txt)
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api
-  docfx build output/$api/docfx.json
+  docfx build output/$api/docfx.json | tee errors.txt
+  (! grep --quiet 'Build failed.' errors.txt)
 
   # Special case root: that should end up in the root of the assembled
   # site.
@@ -41,6 +43,7 @@ build_api_docs() {
   else
     cp -r output/$api/site output/assembled/$api
   fi
+  echo Finished building docs for $api
 }
 
 if [ ! -d external ]

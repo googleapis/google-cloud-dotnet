@@ -25,7 +25,7 @@ namespace Google.Cloud.BigQuery.V2
     {
         private readonly List<BigQueryParameter> _parameters = new List<BigQueryParameter>();
 
-        // Note: no Add(string) or Add(BigQueryParameterType) overloads,
+        // Note: no Add(string) or Add(BigQueryDbType) overloads,
         // as that makes it too easy to accidentally add two or three parameters
         // with a collection initializer when we only want one.
 
@@ -41,7 +41,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="name">The initial name of the parameter.</param>
         /// <param name="type">The initial type of the parameter.</param>
         /// <returns>The parameter added.</returns>
-        public BigQueryParameter Add(string name, BigQueryParameterType? type)
+        public BigQueryParameter Add(string name, BigQueryDbType? type)
             => Add(new BigQueryParameter(name, type));
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="type">The initial type of the parameter.</param>
         /// <param name="value">The initial value of the parameter.</param>
         /// <returns>The parameter added.</returns>
-        public BigQueryParameter Add(string name, BigQueryParameterType? type, object value)
+        public BigQueryParameter Add(string name, BigQueryDbType? type, object value)
             => Add(new BigQueryParameter(name, type, value));
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="type">The initial type of the parameter.</param>
         /// <param name="value">The initial value of the parameter.</param>
-        public BigQueryParameter Add(BigQueryParameterType? type, object value)
+        public BigQueryParameter Add(BigQueryDbType? type, object value)
             => Add(new BigQueryParameter(type, value));
 
         /// <summary>

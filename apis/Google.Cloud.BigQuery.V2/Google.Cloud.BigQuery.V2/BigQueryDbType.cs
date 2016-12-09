@@ -15,49 +15,65 @@
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// The type of a field within a schema.
+    /// A BigQuery database type, used for schemas and parameters.
     /// </summary>
     public enum BigQueryDbType
     {
         /// <summary>
         /// An 64-bit signed integer value.
+        /// This is known as Integer in Legacy SQL data types.
         /// </summary>
-        Integer,
+        [ApiValue("INTEGER")]
+        Int64,
         /// <summary>
-        /// Binary data.
+        /// A 64-bit IEEE binary floating-point value.
+        /// This is known as Float in Legacy SQL data types.
         /// </summary>
-        Bytes,
+        [ApiValue("FLOAT")]
+        Float64,
+        /// <summary>
+        /// A Boolean value.
+        /// </summary>
+        [ApiValue("BOOLEAN")]
+        Bool,
         /// <summary>
         /// A text value, up to 2MB when encoded in UTF-8.
         /// </summary>
         String,
         /// <summary>
-        /// A timestamp with microsecond precision.
+        /// Binary data.
         /// </summary>
-        Timestamp,
+        Bytes,
         /// <summary>
         /// A civil date in the Gregorian calendar.
         /// </summary>
         Date,
         /// <summary>
-        /// A civil time-of-day with microsecond precision.
-        /// </summary>
-        Time,
-        /// <summary>
         /// A civil date and time with microsecond precision.
         /// </summary>
         DateTime,
         /// <summary>
-        /// A 64-bit IEEE binary floating-point value.
+        /// A civil time-of-day with microsecond precision.
         /// </summary>
-        Float,
+        Time,
         /// <summary>
-        /// A Boolean value.
+        /// A timestamp with microsecond precision.
         /// </summary>
-        Boolean,
+        Timestamp,
         /// <summary>
-        /// A record type with a nested schema.
+        /// An ordered list of zero or more elements of non-array values.
         /// </summary>
-        Record,
+        /// <remarks>
+        /// This type cannot be used when creating tables; instead, create
+        /// a field with a mode of <see cref="BigQueryFieldMode.Repeated"/>.
+        /// </remarks>
+        Array,
+        /// <summary>
+        /// An ordered collection of fields. Each field has a
+        /// type, and may optionally have a name. This is known
+        /// as a record in Legacy SQL data types.
+        /// </summary>
+        [ApiValue("RECORD")]
+        Struct
     }
 }

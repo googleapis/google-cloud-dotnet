@@ -56,8 +56,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             var historySchema = new TableSchemaBuilder
             {
                 { "player", BigQueryDbType.String },
-                { "score", BigQueryDbType.Integer },
-                { "level", BigQueryDbType.Integer },
+                { "score", BigQueryDbType.Int64 },
+                { "level", BigQueryDbType.Int64 },
                 { "game_started", BigQueryDbType.Timestamp }
             }.Build();
             var historyTable = game.CreateTable(HistoryTableId, historySchema);
@@ -73,8 +73,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             return id;
         }
 
-        private InsertRow CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
-            new InsertRow
+        private BigQueryInsertRow CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
+            new BigQueryInsertRow
             {
                 ["player"] = player,
                 ["score"] = score,

@@ -345,10 +345,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListGroupStatsAsync(
+                new ListGroupStatsRequest
+                {
+                    ProjectName = projectName,
+                    TimeRange = timeRange,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists the specified groups.
@@ -389,6 +394,49 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListGroupStats(
+                new ListGroupStatsRequest
+                {
+                    ProjectName = projectName,
+                    TimeRange = timeRange,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the specified groups.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
+            ListGroupStatsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the specified groups.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
+            ListGroupStatsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -426,10 +474,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             string groupId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListEventsAsync(
+                new ListEventsRequest
+                {
+                    ProjectName = projectName,
+                    GroupId = groupId,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists the specified events.
@@ -463,6 +516,49 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             string groupId,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListEvents(
+                new ListEventsRequest
+                {
+                    ProjectName = projectName,
+                    GroupId = groupId,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the specified events.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
+            ListEventsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the specified events.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="ErrorEvent"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
+            ListEventsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -486,10 +582,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
             string projectName,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => DeleteEventsAsync(
+                new DeleteEventsRequest
+                {
+                    ProjectName = projectName,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes all error events of a given project.
@@ -531,6 +629,46 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </returns>
         public virtual DeleteEventsResponse DeleteEvents(
             string projectName,
+            CallSettings callSettings = null) => DeleteEvents(
+                new DeleteEventsRequest
+                {
+                    ProjectName = projectName,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes all error events of a given project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
+            DeleteEventsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes all error events of a given project.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual DeleteEventsResponse DeleteEvents(
+            DeleteEventsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -579,30 +717,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Lists the specified groups.
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as <code>projects/</code> plus the
-        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-        /// Platform project ID</a>.
-        ///
-        /// Example: <code>projects/my-project-123</code>.
-        /// </param>
-        /// <param name="timeRange">
-        /// [Optional] List data for the given time range.
-        /// If not set a default time range is used. The field time_range_begin
-        /// in the response will specify the beginning of this time range.
-        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
-        /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
-        /// occurrences are returned.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -611,19 +727,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
-            string projectName,
-            QueryTimeRange timeRange,
-            string pageToken = null,
-            int? pageSize = null,
+            ListGroupStatsRequest request,
             CallSettings callSettings = null)
         {
-            ListGroupStatsRequest request = new ListGroupStatsRequest
-            {
-                ProjectName = projectName,
-                TimeRange = timeRange,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListGroupStatsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
         }
@@ -631,30 +737,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Lists the specified groups.
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as <code>projects/</code> plus the
-        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-        /// Platform project ID</a>.
-        ///
-        /// Example: <code>projects/my-project-123</code>.
-        /// </param>
-        /// <param name="timeRange">
-        /// [Optional] List data for the given time range.
-        /// If not set a default time range is used. The field time_range_begin
-        /// in the response will specify the beginning of this time range.
-        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
-        /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
-        /// occurrences are returned.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -663,19 +747,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public override PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
-            string projectName,
-            QueryTimeRange timeRange,
-            string pageToken = null,
-            int? pageSize = null,
+            ListGroupStatsRequest request,
             CallSettings callSettings = null)
         {
-            ListGroupStatsRequest request = new ListGroupStatsRequest
-            {
-                ProjectName = projectName,
-                TimeRange = timeRange,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListGroupStatsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListGroupStatsRequest, ListGroupStatsResponse, ErrorGroupStats>(_callListGroupStats, request, callSettings);
         }
@@ -683,23 +757,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Lists the specified events.
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
-        /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840).
-        /// Example: `projects/my-project-123`.
-        /// </param>
-        /// <param name="groupId">
-        /// [Required] The group for which events shall be returned.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -708,19 +767,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
-            string projectName,
-            string groupId,
-            string pageToken = null,
-            int? pageSize = null,
+            ListEventsRequest request,
             CallSettings callSettings = null)
         {
-            ListEventsRequest request = new ListEventsRequest
-            {
-                ProjectName = projectName,
-                GroupId = groupId,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListEventsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
         }
@@ -728,23 +777,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Lists the specified events.
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
-        /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840).
-        /// Example: `projects/my-project-123`.
-        /// </param>
-        /// <param name="groupId">
-        /// [Required] The group for which events shall be returned.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -753,19 +787,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public override PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
-            string projectName,
-            string groupId,
-            string pageToken = null,
-            int? pageSize = null,
+            ListEventsRequest request,
             CallSettings callSettings = null)
         {
-            ListEventsRequest request = new ListEventsRequest
-            {
-                ProjectName = projectName,
-                GroupId = groupId,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListEventsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListEventsRequest, ListEventsResponse, ErrorEvent>(_callListEvents, request, callSettings);
         }
@@ -773,12 +797,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Deletes all error events of a given project.
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
-        /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840).
-        /// Example: `projects/my-project-123`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -787,13 +807,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<DeleteEventsResponse> DeleteEventsAsync(
-            string projectName,
+            DeleteEventsRequest request,
             CallSettings callSettings = null)
         {
-            DeleteEventsRequest request = new DeleteEventsRequest
-            {
-                ProjectName = projectName,
-            };
             Modify_DeleteEventsRequest(ref request, ref callSettings);
             return _callDeleteEvents.Async(request, callSettings);
         }
@@ -801,12 +817,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// <summary>
         /// Deletes all error events of a given project.
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
-        /// [Google Cloud Platform project
-        /// ID](https://support.google.com/cloud/answer/6158840).
-        /// Example: `projects/my-project-123`.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -815,13 +827,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public override DeleteEventsResponse DeleteEvents(
-            string projectName,
+            DeleteEventsRequest request,
             CallSettings callSettings = null)
         {
-            DeleteEventsRequest request = new DeleteEventsRequest
-            {
-                ProjectName = projectName,
-            };
             Modify_DeleteEventsRequest(ref request, ref callSettings);
             return _callDeleteEvents.Sync(request, callSettings);
         }

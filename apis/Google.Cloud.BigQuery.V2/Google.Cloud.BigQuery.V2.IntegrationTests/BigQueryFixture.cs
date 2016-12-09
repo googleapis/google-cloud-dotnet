@@ -71,21 +71,21 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 {
                     { "player", BigQueryDbType.String },
                     { "gameStarted", BigQueryDbType.Timestamp },
-                    { "score", BigQueryDbType.Integer }
+                    { "score", BigQueryDbType.Int64 }
                 }.Build());
             table.Insert(new[]
             {
-                new InsertRow {
+                new BigQueryInsertRow {
                     { "player", "Bob" },
                     { "score", 85 },
                     { "gameStarted", new DateTime(2000, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 },
-                new InsertRow {
+                new BigQueryInsertRow {
                     { "player", "Angela" },
                     { "score", 95 },
                     { "gameStarted", new DateTime(2002, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
                 },
-                new InsertRow {
+                new BigQueryInsertRow {
                     { "player", null }, // Unnamed player...
                     { "score", 1 },
                     { "gameStarted", new DateTime(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc) }
@@ -101,29 +101,29 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var table = dataset.CreateTable(PeopleTableId, new TableSchemaBuilder
             {
                 { "name", BigQueryDbType.String },
-                { "fullName", BigQueryDbType.String, FieldMode.Required },
-                { "age", BigQueryDbType.Integer },
+                { "fullName", BigQueryDbType.String, BigQueryFieldMode.Required },
+                { "age", BigQueryDbType.Int64 },
                 { "gender", BigQueryDbType.String },
                 { "phoneNumber", new TableSchemaBuilder
                     {
-                        { "areaCode", BigQueryDbType.Integer },
-                        { "number", BigQueryDbType.Integer }
+                        { "areaCode", BigQueryDbType.Int64 },
+                        { "number", BigQueryDbType.Int64 }
                     }
                 },
                 { "children", new TableSchemaBuilder
                     {
                         { "name", BigQueryDbType.String },
                         { "gender", BigQueryDbType.String },
-                        { "age", BigQueryDbType.Integer },
+                        { "age", BigQueryDbType.Int64 },
                     },
-                    FieldMode.Repeated
+                    BigQueryFieldMode.Repeated
                 },
                 { "citiesLived", new TableSchemaBuilder
                     {
                         { "place", BigQueryDbType.String },
-                        { "yearsLived", BigQueryDbType.Integer, FieldMode.Repeated },
+                        { "yearsLived", BigQueryDbType.Int64, BigQueryFieldMode.Repeated },
                     },
-                    FieldMode.Repeated
+                    BigQueryFieldMode.Repeated
                 }
             }.Build());
             List<string> jsonRows = LoadTextResource("personsData.json");
@@ -142,11 +142,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             dataset.CreateTable(ComplexTypesTableId, new TableSchemaBuilder
             {
                 { "guid", BigQueryDbType.String },
-                { "tags", BigQueryDbType.String, FieldMode.Repeated },
+                { "tags", BigQueryDbType.String, BigQueryFieldMode.Repeated },
                 { "position", new TableSchemaBuilder
                     {
-                        { "x", BigQueryDbType.Integer },
-                        { "y", BigQueryDbType.Integer }
+                        { "x", BigQueryDbType.Int64 },
+                        { "y", BigQueryDbType.Int64 }
                     }
                 },
                 { "names", new TableSchemaBuilder
@@ -154,7 +154,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                         { "first", BigQueryDbType.String },
                         { "last", BigQueryDbType.String }
                     },
-                    FieldMode.Repeated
+                    BigQueryFieldMode.Repeated
                 }
             }.Build());
         }

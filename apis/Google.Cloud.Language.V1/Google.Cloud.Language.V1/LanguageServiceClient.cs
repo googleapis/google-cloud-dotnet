@@ -352,10 +352,12 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
             Document document,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => AnalyzeSentimentAsync(
+                new AnalyzeSentimentRequest
+                {
+                    Document = document,
+                },
+                callSettings);
 
         /// <summary>
         /// Analyzes the sentiment of the provided text.
@@ -391,6 +393,46 @@ namespace Google.Cloud.Language.V1
         /// </returns>
         public virtual AnalyzeSentimentResponse AnalyzeSentiment(
             Document document,
+            CallSettings callSettings = null) => AnalyzeSentiment(
+                new AnalyzeSentimentRequest
+                {
+                    Document = document,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Analyzes the sentiment of the provided text.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
+            AnalyzeSentimentRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Analyzes the sentiment of the provided text.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnalyzeSentimentResponse AnalyzeSentiment(
+            AnalyzeSentimentRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -415,10 +457,13 @@ namespace Google.Cloud.Language.V1
         public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
             Document document,
             EncodingType encodingType,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => AnalyzeEntitiesAsync(
+                new AnalyzeEntitiesRequest
+                {
+                    Document = document,
+                    EncodingType = encodingType,
+                },
+                callSettings);
 
         /// <summary>
         /// Finds named entities (currently finds proper names) in the text,
@@ -463,6 +508,49 @@ namespace Google.Cloud.Language.V1
         public virtual AnalyzeEntitiesResponse AnalyzeEntities(
             Document document,
             EncodingType encodingType,
+            CallSettings callSettings = null) => AnalyzeEntities(
+                new AnalyzeEntitiesRequest
+                {
+                    Document = document,
+                    EncodingType = encodingType,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Finds named entities (currently finds proper names) in the text,
+        /// entity types, salience, mentions for each entity, and other properties.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
+            AnalyzeEntitiesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Finds named entities (currently finds proper names) in the text,
+        /// entity types, salience, mentions for each entity, and other properties.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnalyzeEntitiesResponse AnalyzeEntities(
+            AnalyzeEntitiesRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -488,10 +576,13 @@ namespace Google.Cloud.Language.V1
         public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
             Document document,
             EncodingType encodingType,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => AnalyzeSyntaxAsync(
+                new AnalyzeSyntaxRequest
+                {
+                    Document = document,
+                    EncodingType = encodingType,
+                },
+                callSettings);
 
         /// <summary>
         /// Analyzes the syntax of the text and provides sentence boundaries and
@@ -538,6 +629,51 @@ namespace Google.Cloud.Language.V1
         public virtual AnalyzeSyntaxResponse AnalyzeSyntax(
             Document document,
             EncodingType encodingType,
+            CallSettings callSettings = null) => AnalyzeSyntax(
+                new AnalyzeSyntaxRequest
+                {
+                    Document = document,
+                    EncodingType = encodingType,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Analyzes the syntax of the text and provides sentence boundaries and
+        /// tokenization along with part of speech tags, dependency trees, and other
+        /// properties.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
+            AnalyzeSyntaxRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Analyzes the syntax of the text and provides sentence boundaries and
+        /// tokenization along with part of speech tags, dependency trees, and other
+        /// properties.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnalyzeSyntaxResponse AnalyzeSyntax(
+            AnalyzeSyntaxRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -566,10 +702,14 @@ namespace Google.Cloud.Language.V1
             Document document,
             AnnotateTextRequest.Types.Features features,
             EncodingType encodingType,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => AnnotateTextAsync(
+                new AnnotateTextRequest
+                {
+                    Document = document,
+                    Features = features,
+                    EncodingType = encodingType,
+                },
+                callSettings);
 
         /// <summary>
         /// A convenience method that provides all the features that analyzeSentiment,
@@ -623,6 +763,50 @@ namespace Google.Cloud.Language.V1
             Document document,
             AnnotateTextRequest.Types.Features features,
             EncodingType encodingType,
+            CallSettings callSettings = null) => AnnotateText(
+                new AnnotateTextRequest
+                {
+                    Document = document,
+                    Features = features,
+                    EncodingType = encodingType,
+                },
+                callSettings);
+
+        /// <summary>
+        /// A convenience method that provides all the features that analyzeSentiment,
+        /// analyzeEntities, and analyzeSyntax provide in one call.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<AnnotateTextResponse> AnnotateTextAsync(
+            AnnotateTextRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// A convenience method that provides all the features that analyzeSentiment,
+        /// analyzeEntities, and analyzeSyntax provide in one call.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual AnnotateTextResponse AnnotateText(
+            AnnotateTextRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -675,9 +859,8 @@ namespace Google.Cloud.Language.V1
         /// <summary>
         /// Analyzes the sentiment of the provided text.
         /// </summary>
-        /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -686,13 +869,9 @@ namespace Google.Cloud.Language.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<AnalyzeSentimentResponse> AnalyzeSentimentAsync(
-            Document document,
+            AnalyzeSentimentRequest request,
             CallSettings callSettings = null)
         {
-            AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
-            {
-                Document = document,
-            };
             Modify_AnalyzeSentimentRequest(ref request, ref callSettings);
             return _callAnalyzeSentiment.Async(request, callSettings);
         }
@@ -700,9 +879,8 @@ namespace Google.Cloud.Language.V1
         /// <summary>
         /// Analyzes the sentiment of the provided text.
         /// </summary>
-        /// <param name="document">
-        /// Input document. Currently, `analyzeSentiment` only supports English text
-        /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -711,13 +889,9 @@ namespace Google.Cloud.Language.V1
         /// The RPC response.
         /// </returns>
         public override AnalyzeSentimentResponse AnalyzeSentiment(
-            Document document,
+            AnalyzeSentimentRequest request,
             CallSettings callSettings = null)
         {
-            AnalyzeSentimentRequest request = new AnalyzeSentimentRequest
-            {
-                Document = document,
-            };
             Modify_AnalyzeSentimentRequest(ref request, ref callSettings);
             return _callAnalyzeSentiment.Sync(request, callSettings);
         }
@@ -726,11 +900,8 @@ namespace Google.Cloud.Language.V1
         /// Finds named entities (currently finds proper names) in the text,
         /// entity types, salience, mentions for each entity, and other properties.
         /// </summary>
-        /// <param name="document">
-        /// Input document.
-        /// </param>
-        /// <param name="encodingType">
-        /// The encoding type used by the API to calculate offsets.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -739,15 +910,9 @@ namespace Google.Cloud.Language.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(
-            Document document,
-            EncodingType encodingType,
+            AnalyzeEntitiesRequest request,
             CallSettings callSettings = null)
         {
-            AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
-            {
-                Document = document,
-                EncodingType = encodingType,
-            };
             Modify_AnalyzeEntitiesRequest(ref request, ref callSettings);
             return _callAnalyzeEntities.Async(request, callSettings);
         }
@@ -756,11 +921,8 @@ namespace Google.Cloud.Language.V1
         /// Finds named entities (currently finds proper names) in the text,
         /// entity types, salience, mentions for each entity, and other properties.
         /// </summary>
-        /// <param name="document">
-        /// Input document.
-        /// </param>
-        /// <param name="encodingType">
-        /// The encoding type used by the API to calculate offsets.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -769,15 +931,9 @@ namespace Google.Cloud.Language.V1
         /// The RPC response.
         /// </returns>
         public override AnalyzeEntitiesResponse AnalyzeEntities(
-            Document document,
-            EncodingType encodingType,
+            AnalyzeEntitiesRequest request,
             CallSettings callSettings = null)
         {
-            AnalyzeEntitiesRequest request = new AnalyzeEntitiesRequest
-            {
-                Document = document,
-                EncodingType = encodingType,
-            };
             Modify_AnalyzeEntitiesRequest(ref request, ref callSettings);
             return _callAnalyzeEntities.Sync(request, callSettings);
         }
@@ -787,11 +943,8 @@ namespace Google.Cloud.Language.V1
         /// tokenization along with part of speech tags, dependency trees, and other
         /// properties.
         /// </summary>
-        /// <param name="document">
-        /// Input document.
-        /// </param>
-        /// <param name="encodingType">
-        /// The encoding type used by the API to calculate offsets.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -800,15 +953,9 @@ namespace Google.Cloud.Language.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(
-            Document document,
-            EncodingType encodingType,
+            AnalyzeSyntaxRequest request,
             CallSettings callSettings = null)
         {
-            AnalyzeSyntaxRequest request = new AnalyzeSyntaxRequest
-            {
-                Document = document,
-                EncodingType = encodingType,
-            };
             Modify_AnalyzeSyntaxRequest(ref request, ref callSettings);
             return _callAnalyzeSyntax.Async(request, callSettings);
         }
@@ -818,11 +965,8 @@ namespace Google.Cloud.Language.V1
         /// tokenization along with part of speech tags, dependency trees, and other
         /// properties.
         /// </summary>
-        /// <param name="document">
-        /// Input document.
-        /// </param>
-        /// <param name="encodingType">
-        /// The encoding type used by the API to calculate offsets.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -831,15 +975,9 @@ namespace Google.Cloud.Language.V1
         /// The RPC response.
         /// </returns>
         public override AnalyzeSyntaxResponse AnalyzeSyntax(
-            Document document,
-            EncodingType encodingType,
+            AnalyzeSyntaxRequest request,
             CallSettings callSettings = null)
         {
-            AnalyzeSyntaxRequest request = new AnalyzeSyntaxRequest
-            {
-                Document = document,
-                EncodingType = encodingType,
-            };
             Modify_AnalyzeSyntaxRequest(ref request, ref callSettings);
             return _callAnalyzeSyntax.Sync(request, callSettings);
         }
@@ -848,14 +986,8 @@ namespace Google.Cloud.Language.V1
         /// A convenience method that provides all the features that analyzeSentiment,
         /// analyzeEntities, and analyzeSyntax provide in one call.
         /// </summary>
-        /// <param name="document">
-        /// Input document.
-        /// </param>
-        /// <param name="features">
-        /// The enabled features.
-        /// </param>
-        /// <param name="encodingType">
-        /// The encoding type used by the API to calculate offsets.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -864,17 +996,9 @@ namespace Google.Cloud.Language.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<AnnotateTextResponse> AnnotateTextAsync(
-            Document document,
-            AnnotateTextRequest.Types.Features features,
-            EncodingType encodingType,
+            AnnotateTextRequest request,
             CallSettings callSettings = null)
         {
-            AnnotateTextRequest request = new AnnotateTextRequest
-            {
-                Document = document,
-                Features = features,
-                EncodingType = encodingType,
-            };
             Modify_AnnotateTextRequest(ref request, ref callSettings);
             return _callAnnotateText.Async(request, callSettings);
         }
@@ -883,14 +1007,8 @@ namespace Google.Cloud.Language.V1
         /// A convenience method that provides all the features that analyzeSentiment,
         /// analyzeEntities, and analyzeSyntax provide in one call.
         /// </summary>
-        /// <param name="document">
-        /// Input document.
-        /// </param>
-        /// <param name="features">
-        /// The enabled features.
-        /// </param>
-        /// <param name="encodingType">
-        /// The encoding type used by the API to calculate offsets.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -899,17 +1017,9 @@ namespace Google.Cloud.Language.V1
         /// The RPC response.
         /// </returns>
         public override AnnotateTextResponse AnnotateText(
-            Document document,
-            AnnotateTextRequest.Types.Features features,
-            EncodingType encodingType,
+            AnnotateTextRequest request,
             CallSettings callSettings = null)
         {
-            AnnotateTextRequest request = new AnnotateTextRequest
-            {
-                Document = document,
-                Features = features,
-                EncodingType = encodingType,
-            };
             Modify_AnnotateTextRequest(ref request, ref callSettings);
             return _callAnnotateText.Sync(request, callSettings);
         }

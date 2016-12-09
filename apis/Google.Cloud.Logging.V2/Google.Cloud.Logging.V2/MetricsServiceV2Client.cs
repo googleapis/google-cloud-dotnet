@@ -397,13 +397,17 @@ namespace Google.Cloud.Logging.V2
         /// A pageable asynchronous sequence of <see cref="LogMetric"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsAsync(
-            string parent,
+            ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListLogMetricsAsync(
+                new ListLogMetricsRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists logs-based metrics.
@@ -428,9 +432,51 @@ namespace Google.Cloud.Logging.V2
         /// A pageable sequence of <see cref="LogMetric"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetrics(
-            string parent,
+            ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListLogMetrics(
+                new ListLogMetricsRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists logs-based metrics.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="LogMetric"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsAsync(
+            ListLogMetricsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists logs-based metrics.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="LogMetric"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetrics(
+            ListLogMetricsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -451,11 +497,13 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogMetric> GetLogMetricAsync(
-            string metricName,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            MetricNameOneof metricName,
+            CallSettings callSettings = null) => GetLogMetricAsync(
+                new GetLogMetricRequest
+                {
+                    MetricNameAsMetricNameOneof = metricName,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a logs-based metric.
@@ -472,7 +520,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogMetric> GetLogMetricAsync(
-            string metricName,
+            MetricNameOneof metricName,
             CancellationToken cancellationToken) => GetLogMetricAsync(
                 metricName,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -492,7 +540,47 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual LogMetric GetLogMetric(
-            string metricName,
+            MetricNameOneof metricName,
+            CallSettings callSettings = null) => GetLogMetric(
+                new GetLogMetricRequest
+                {
+                    MetricNameAsMetricNameOneof = metricName,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogMetric> GetLogMetricAsync(
+            GetLogMetricRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogMetric GetLogMetric(
+            GetLogMetricRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -519,12 +607,15 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogMetric> CreateLogMetricAsync(
-            string parent,
+            ParentNameOneof parent,
             LogMetric metric,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CreateLogMetricAsync(
+                new CreateLogMetricRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    Metric = metric,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a logs-based metric.
@@ -547,7 +638,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogMetric> CreateLogMetricAsync(
-            string parent,
+            ParentNameOneof parent,
             LogMetric metric,
             CancellationToken cancellationToken) => CreateLogMetricAsync(
                 parent,
@@ -575,8 +666,49 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual LogMetric CreateLogMetric(
-            string parent,
+            ParentNameOneof parent,
             LogMetric metric,
+            CallSettings callSettings = null) => CreateLogMetric(
+                new CreateLogMetricRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    Metric = metric,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogMetric> CreateLogMetricAsync(
+            CreateLogMetricRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogMetric CreateLogMetric(
+            CreateLogMetricRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -604,12 +736,15 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogMetric> UpdateLogMetricAsync(
-            string metricName,
+            MetricNameOneof metricName,
             LogMetric metric,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => UpdateLogMetricAsync(
+                new UpdateLogMetricRequest
+                {
+                    MetricNameAsMetricNameOneof = metricName,
+                    Metric = metric,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates or updates a logs-based metric.
@@ -633,7 +768,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogMetric> UpdateLogMetricAsync(
-            string metricName,
+            MetricNameOneof metricName,
             LogMetric metric,
             CancellationToken cancellationToken) => UpdateLogMetricAsync(
                 metricName,
@@ -662,8 +797,49 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual LogMetric UpdateLogMetric(
-            string metricName,
+            MetricNameOneof metricName,
             LogMetric metric,
+            CallSettings callSettings = null) => UpdateLogMetric(
+                new UpdateLogMetricRequest
+                {
+                    MetricNameAsMetricNameOneof = metricName,
+                    Metric = metric,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates or updates a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogMetric> UpdateLogMetricAsync(
+            UpdateLogMetricRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates or updates a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogMetric UpdateLogMetric(
+            UpdateLogMetricRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -684,11 +860,13 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteLogMetricAsync(
-            string metricName,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            MetricNameOneof metricName,
+            CallSettings callSettings = null) => DeleteLogMetricAsync(
+                new DeleteLogMetricRequest
+                {
+                    MetricNameAsMetricNameOneof = metricName,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a logs-based metric.
@@ -705,7 +883,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteLogMetricAsync(
-            string metricName,
+            MetricNameOneof metricName,
             CancellationToken cancellationToken) => DeleteLogMetricAsync(
                 metricName,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -725,7 +903,47 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual void DeleteLogMetric(
-            string metricName,
+            MetricNameOneof metricName,
+            CallSettings callSettings = null) => DeleteLogMetric(
+                new DeleteLogMetricRequest
+                {
+                    MetricNameAsMetricNameOneof = metricName,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteLogMetricAsync(
+            DeleteLogMetricRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a logs-based metric.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteLogMetric(
+            DeleteLogMetricRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -782,18 +1000,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists logs-based metrics.
         /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the project containing the metrics:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -802,17 +1010,9 @@ namespace Google.Cloud.Logging.V2
         /// A pageable asynchronous sequence of <see cref="LogMetric"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetricsAsync(
-            string parent,
-            string pageToken = null,
-            int? pageSize = null,
+            ListLogMetricsRequest request,
             CallSettings callSettings = null)
         {
-            ListLogMetricsRequest request = new ListLogMetricsRequest
-            {
-                Parent = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListLogMetricsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(_callListLogMetrics, request, callSettings);
         }
@@ -820,18 +1020,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists logs-based metrics.
         /// </summary>
-        /// <param name="parent">
-        /// Required. The name of the project containing the metrics:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -840,17 +1030,9 @@ namespace Google.Cloud.Logging.V2
         /// A pageable sequence of <see cref="LogMetric"/> resources.
         /// </returns>
         public override PagedEnumerable<ListLogMetricsResponse, LogMetric> ListLogMetrics(
-            string parent,
-            string pageToken = null,
-            int? pageSize = null,
+            ListLogMetricsRequest request,
             CallSettings callSettings = null)
         {
-            ListLogMetricsRequest request = new ListLogMetricsRequest
-            {
-                Parent = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListLogMetricsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListLogMetricsRequest, ListLogMetricsResponse, LogMetric>(_callListLogMetrics, request, callSettings);
         }
@@ -858,10 +1040,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
-        /// <param name="metricName">
-        /// The resource name of the desired metric:
-        ///
-        ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -870,13 +1050,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<LogMetric> GetLogMetricAsync(
-            string metricName,
+            GetLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            GetLogMetricRequest request = new GetLogMetricRequest
-            {
-                MetricName = metricName,
-            };
             Modify_GetLogMetricRequest(ref request, ref callSettings);
             return _callGetLogMetric.Async(request, callSettings);
         }
@@ -884,10 +1060,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Gets a logs-based metric.
         /// </summary>
-        /// <param name="metricName">
-        /// The resource name of the desired metric:
-        ///
-        ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -896,13 +1070,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override LogMetric GetLogMetric(
-            string metricName,
+            GetLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            GetLogMetricRequest request = new GetLogMetricRequest
-            {
-                MetricName = metricName,
-            };
             Modify_GetLogMetricRequest(ref request, ref callSettings);
             return _callGetLogMetric.Sync(request, callSettings);
         }
@@ -910,16 +1080,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
-        /// <param name="parent">
-        /// The resource name of the project in which to create the metric:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///
-        /// The new metric must be provided in the request.
-        /// </param>
-        /// <param name="metric">
-        /// The new logs-based metric, which must not have an identifier that
-        /// already exists.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -928,15 +1090,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<LogMetric> CreateLogMetricAsync(
-            string parent,
-            LogMetric metric,
+            CreateLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            CreateLogMetricRequest request = new CreateLogMetricRequest
-            {
-                Parent = parent,
-                Metric = metric,
-            };
             Modify_CreateLogMetricRequest(ref request, ref callSettings);
             return _callCreateLogMetric.Async(request, callSettings);
         }
@@ -944,16 +1100,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Creates a logs-based metric.
         /// </summary>
-        /// <param name="parent">
-        /// The resource name of the project in which to create the metric:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///
-        /// The new metric must be provided in the request.
-        /// </param>
-        /// <param name="metric">
-        /// The new logs-based metric, which must not have an identifier that
-        /// already exists.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -962,15 +1110,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override LogMetric CreateLogMetric(
-            string parent,
-            LogMetric metric,
+            CreateLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            CreateLogMetricRequest request = new CreateLogMetricRequest
-            {
-                Parent = parent,
-                Metric = metric,
-            };
             Modify_CreateLogMetricRequest(ref request, ref callSettings);
             return _callCreateLogMetric.Sync(request, callSettings);
         }
@@ -978,17 +1120,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
-        /// <param name="metricName">
-        /// The resource name of the metric to update:
-        ///
-        ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-        ///
-        /// The updated metric must be provided in the request and it's
-        /// `name` field must be the same as `[METRIC_ID]` If the metric
-        /// does not exist in `[PROJECT_ID]`, then a new metric is created.
-        /// </param>
-        /// <param name="metric">
-        /// The updated metric.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -997,15 +1130,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<LogMetric> UpdateLogMetricAsync(
-            string metricName,
-            LogMetric metric,
+            UpdateLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            UpdateLogMetricRequest request = new UpdateLogMetricRequest
-            {
-                MetricName = metricName,
-                Metric = metric,
-            };
             Modify_UpdateLogMetricRequest(ref request, ref callSettings);
             return _callUpdateLogMetric.Async(request, callSettings);
         }
@@ -1013,17 +1140,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Creates or updates a logs-based metric.
         /// </summary>
-        /// <param name="metricName">
-        /// The resource name of the metric to update:
-        ///
-        ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
-        ///
-        /// The updated metric must be provided in the request and it's
-        /// `name` field must be the same as `[METRIC_ID]` If the metric
-        /// does not exist in `[PROJECT_ID]`, then a new metric is created.
-        /// </param>
-        /// <param name="metric">
-        /// The updated metric.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1032,15 +1150,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override LogMetric UpdateLogMetric(
-            string metricName,
-            LogMetric metric,
+            UpdateLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            UpdateLogMetricRequest request = new UpdateLogMetricRequest
-            {
-                MetricName = metricName,
-                Metric = metric,
-            };
             Modify_UpdateLogMetricRequest(ref request, ref callSettings);
             return _callUpdateLogMetric.Sync(request, callSettings);
         }
@@ -1048,10 +1160,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
-        /// <param name="metricName">
-        /// The resource name of the metric to delete:
-        ///
-        ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1060,13 +1170,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteLogMetricAsync(
-            string metricName,
+            DeleteLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            DeleteLogMetricRequest request = new DeleteLogMetricRequest
-            {
-                MetricName = metricName,
-            };
             Modify_DeleteLogMetricRequest(ref request, ref callSettings);
             return _callDeleteLogMetric.Async(request, callSettings);
         }
@@ -1074,10 +1180,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes a logs-based metric.
         /// </summary>
-        /// <param name="metricName">
-        /// The resource name of the metric to delete:
-        ///
-        ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1086,13 +1190,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override void DeleteLogMetric(
-            string metricName,
+            DeleteLogMetricRequest request,
             CallSettings callSettings = null)
         {
-            DeleteLogMetricRequest request = new DeleteLogMetricRequest
-            {
-                MetricName = metricName,
-            };
             Modify_DeleteLogMetricRequest(ref request, ref callSettings);
             _callDeleteLogMetric.Sync(request, callSettings);
         }

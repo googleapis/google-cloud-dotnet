@@ -34,14 +34,14 @@ namespace Google.Cloud.Logging.V2.Snippets
     {
         public async Task ListSinksAsync()
         {
-            // Snippet: ListSinksAsync(string,string,int?,CallSettings)
+            // Snippet: ListSinksAsync(ParentNameOneof,string,int?,CallSettings)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]").ToString();
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
             PagedAsyncEnumerable<ListSinksResponse,LogSink> response =
-                configServiceV2Client.ListSinksAsync(formattedParent);
+                configServiceV2Client.ListSinksAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((LogSink item) =>
@@ -77,14 +77,106 @@ namespace Google.Cloud.Logging.V2.Snippets
 
         public void ListSinks()
         {
-            // Snippet: ListSinks(string,string,int?,CallSettings)
+            // Snippet: ListSinks(ParentNameOneof,string,int?,CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]").ToString();
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             // Make the request
             PagedEnumerable<ListSinksResponse,LogSink> response =
-                configServiceV2Client.ListSinks(formattedParent);
+                configServiceV2Client.ListSinks(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogSink item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSinksResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogSink item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogSink> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogSink item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task ListSinksAsync_RequestObject()
+        {
+            // Snippet: ListSinksAsync(ListSinksRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ListSinksRequest request = new ListSinksRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSinksResponse,LogSink> response =
+                configServiceV2Client.ListSinksAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogSink item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSinksResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogSink item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogSink> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogSink item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListSinks_RequestObject()
+        {
+            // Snippet: ListSinks(ListSinksRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListSinksRequest request = new ListSinksRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+            };
+            // Make the request
+            PagedEnumerable<ListSinksResponse,LogSink> response =
+                configServiceV2Client.ListSinks(request);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (LogSink item in response)
@@ -120,105 +212,229 @@ namespace Google.Cloud.Logging.V2.Snippets
 
         public async Task GetSinkAsync()
         {
-            // Snippet: GetSinkAsync(string,CallSettings)
-            // Additional: GetSinkAsync(string,CancellationToken)
+            // Snippet: GetSinkAsync(SinkNameOneof,CallSettings)
+            // Additional: GetSinkAsync(SinkNameOneof,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            string formattedSinkName = new SinkName("[PROJECT]", "[SINK]").ToString();
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             // Make the request
-            LogSink response = await configServiceV2Client.GetSinkAsync(formattedSinkName);
+            LogSink response = await configServiceV2Client.GetSinkAsync(sinkName);
             // End snippet
         }
 
         public void GetSink()
         {
-            // Snippet: GetSink(string,CallSettings)
+            // Snippet: GetSink(SinkNameOneof,CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedSinkName = new SinkName("[PROJECT]", "[SINK]").ToString();
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             // Make the request
-            LogSink response = configServiceV2Client.GetSink(formattedSinkName);
+            LogSink response = configServiceV2Client.GetSink(sinkName);
+            // End snippet
+        }
+
+        public async Task GetSinkAsync_RequestObject()
+        {
+            // Snippet: GetSinkAsync(GetSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            GetSinkRequest request = new GetSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+            };
+            // Make the request
+            LogSink response = await configServiceV2Client.GetSinkAsync(request);
+            // End snippet
+        }
+
+        public void GetSink_RequestObject()
+        {
+            // Snippet: GetSink(GetSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            GetSinkRequest request = new GetSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+            };
+            // Make the request
+            LogSink response = configServiceV2Client.GetSink(request);
             // End snippet
         }
 
         public async Task CreateSinkAsync()
         {
-            // Snippet: CreateSinkAsync(string,LogSink,CallSettings)
-            // Additional: CreateSinkAsync(string,LogSink,CancellationToken)
+            // Snippet: CreateSinkAsync(ParentNameOneof,LogSink,CallSettings)
+            // Additional: CreateSinkAsync(ParentNameOneof,LogSink,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]").ToString();
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             LogSink sink = new LogSink();
             // Make the request
-            LogSink response = await configServiceV2Client.CreateSinkAsync(formattedParent, sink);
+            LogSink response = await configServiceV2Client.CreateSinkAsync(parent, sink);
             // End snippet
         }
 
         public void CreateSink()
         {
-            // Snippet: CreateSink(string,LogSink,CallSettings)
+            // Snippet: CreateSink(ParentNameOneof,LogSink,CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedParent = new ParentName("[PROJECT]").ToString();
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
             LogSink sink = new LogSink();
             // Make the request
-            LogSink response = configServiceV2Client.CreateSink(formattedParent, sink);
+            LogSink response = configServiceV2Client.CreateSink(parent, sink);
+            // End snippet
+        }
+
+        public async Task CreateSinkAsync_RequestObject()
+        {
+            // Snippet: CreateSinkAsync(CreateSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                Sink = new LogSink(),
+            };
+            // Make the request
+            LogSink response = await configServiceV2Client.CreateSinkAsync(request);
+            // End snippet
+        }
+
+        public void CreateSink_RequestObject()
+        {
+            // Snippet: CreateSink(CreateSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            CreateSinkRequest request = new CreateSinkRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+                Sink = new LogSink(),
+            };
+            // Make the request
+            LogSink response = configServiceV2Client.CreateSink(request);
             // End snippet
         }
 
         public async Task UpdateSinkAsync()
         {
-            // Snippet: UpdateSinkAsync(string,LogSink,CallSettings)
-            // Additional: UpdateSinkAsync(string,LogSink,CancellationToken)
+            // Snippet: UpdateSinkAsync(SinkNameOneof,LogSink,CallSettings)
+            // Additional: UpdateSinkAsync(SinkNameOneof,LogSink,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            string formattedSinkName = new SinkName("[PROJECT]", "[SINK]").ToString();
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             LogSink sink = new LogSink();
             // Make the request
-            LogSink response = await configServiceV2Client.UpdateSinkAsync(formattedSinkName, sink);
+            LogSink response = await configServiceV2Client.UpdateSinkAsync(sinkName, sink);
             // End snippet
         }
 
         public void UpdateSink()
         {
-            // Snippet: UpdateSink(string,LogSink,CallSettings)
+            // Snippet: UpdateSink(SinkNameOneof,LogSink,CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedSinkName = new SinkName("[PROJECT]", "[SINK]").ToString();
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             LogSink sink = new LogSink();
             // Make the request
-            LogSink response = configServiceV2Client.UpdateSink(formattedSinkName, sink);
+            LogSink response = configServiceV2Client.UpdateSink(sinkName, sink);
+            // End snippet
+        }
+
+        public async Task UpdateSinkAsync_RequestObject()
+        {
+            // Snippet: UpdateSinkAsync(UpdateSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                Sink = new LogSink(),
+            };
+            // Make the request
+            LogSink response = await configServiceV2Client.UpdateSinkAsync(request);
+            // End snippet
+        }
+
+        public void UpdateSink_RequestObject()
+        {
+            // Snippet: UpdateSink(UpdateSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            UpdateSinkRequest request = new UpdateSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+                Sink = new LogSink(),
+            };
+            // Make the request
+            LogSink response = configServiceV2Client.UpdateSink(request);
             // End snippet
         }
 
         public async Task DeleteSinkAsync()
         {
-            // Snippet: DeleteSinkAsync(string,CallSettings)
-            // Additional: DeleteSinkAsync(string,CancellationToken)
+            // Snippet: DeleteSinkAsync(SinkNameOneof,CallSettings)
+            // Additional: DeleteSinkAsync(SinkNameOneof,CancellationToken)
             // Create client
-            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
             // Initialize request argument(s)
-            string formattedSinkName = new SinkName("[PROJECT]", "[SINK]").ToString();
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             // Make the request
-            await configServiceV2Client.DeleteSinkAsync(formattedSinkName);
+            await configServiceV2Client.DeleteSinkAsync(sinkName);
             // End snippet
         }
 
         public void DeleteSink()
         {
-            // Snippet: DeleteSink(string,CallSettings)
+            // Snippet: DeleteSink(SinkNameOneof,CallSettings)
             // Create client
             ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
             // Initialize request argument(s)
-            string formattedSinkName = new SinkName("[PROJECT]", "[SINK]").ToString();
+            SinkNameOneof sinkName = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]"));
             // Make the request
-            configServiceV2Client.DeleteSink(formattedSinkName);
+            configServiceV2Client.DeleteSink(sinkName);
+            // End snippet
+        }
+
+        public async Task DeleteSinkAsync_RequestObject()
+        {
+            // Snippet: DeleteSinkAsync(DeleteSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = await ConfigServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSinkRequest request = new DeleteSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+            };
+            // Make the request
+            await configServiceV2Client.DeleteSinkAsync(request);
+            // End snippet
+        }
+
+        public void DeleteSink_RequestObject()
+        {
+            // Snippet: DeleteSink(DeleteSinkRequest,CallSettings)
+            // Create client
+            ConfigServiceV2Client configServiceV2Client = ConfigServiceV2Client.Create();
+            // Initialize request argument(s)
+            DeleteSinkRequest request = new DeleteSinkRequest
+            {
+                SinkNameAsSinkNameOneof = SinkNameOneof.From(new SinkName("[PROJECT]", "[SINK]")),
+            };
+            // Make the request
+            configServiceV2Client.DeleteSink(request);
             // End snippet
         }
 

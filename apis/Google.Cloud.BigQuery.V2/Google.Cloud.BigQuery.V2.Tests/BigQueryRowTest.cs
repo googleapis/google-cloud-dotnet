@@ -25,10 +25,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var schema = new TableSchemaBuilder
             {
-                { "integer", BigQueryDbType.Integer },
-                { "bool", BigQueryDbType.Boolean },
+                { "integer", BigQueryDbType.Int64 },
+                { "bool", BigQueryDbType.Bool },
                 { "bytes", BigQueryDbType.Bytes },
-                { "float", BigQueryDbType.Float },
+                { "float", BigQueryDbType.Float64 },
                 { "string", BigQueryDbType.String },
                 { "timestamp", BigQueryDbType.Timestamp },
             }.Build();

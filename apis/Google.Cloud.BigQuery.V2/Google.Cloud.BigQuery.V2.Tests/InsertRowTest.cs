@@ -24,7 +24,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void InsertId()
         {
-            var row = new InsertRow("id");
+            var row = new BigQueryInsertRow("id");
             Assert.Equal("id", row.InsertId);
         }
 
@@ -36,7 +36,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         private void AssertInvalid(string name, object value)
         {
-            var row = new InsertRow();
+            var row = new BigQueryInsertRow();
             Assert.Throws<ArgumentException>(() => row.Add(name, value));
             Assert.Throws<ArgumentException>(() => row[name] = value);
             Assert.Throws<ArgumentException>(() => row.Add(new Dictionary<string, object> { { name, value } }));
@@ -45,7 +45,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void SimpleSuccess()
         {
-            var row = new InsertRow
+            var row = new BigQueryInsertRow
             {
                 { "field1", "value1" },
                 { "field2", null }
@@ -62,7 +62,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void AddDictionary()
         {
             var dictionary = new Dictionary<string, object> { { "field1", "value1" } };
-            var row = new InsertRow { dictionary };
+            var row = new BigQueryInsertRow { dictionary };
             Assert.Equal("value1", row["field1"]);
         }
 
@@ -89,7 +89,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void SupportedValueTypes_Passthrough(Type type)
         {
             object value = Activator.CreateInstance(type);
-            var row = new InsertRow { { "field", value } };
+            var row = new BigQueryInsertRow { { "field", value } };
             var rowData = row.ToRowsData();
             Assert.Equal(value, rowData.Json["field"]);
         }
@@ -97,7 +97,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void DateTimeOffsetFormatting()
         {
-            var row = new InsertRow
+            var row = new BigQueryInsertRow
             {
                 // 3am UTC
                 { "field", new DateTimeOffset(2000, 1, 1, 5, 0, 0, TimeSpan.FromHours(2)) },
@@ -109,7 +109,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void DateTimeFormatting()
         {
-            var row = new InsertRow
+            var row = new BigQueryInsertRow
             {
                 { "field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Utc) },
             };
@@ -120,8 +120,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void NestedRecordFormatting()
         {
-            var nested = new InsertRow { { "inner", "value" } };
-            var outer = new InsertRow { { "outer", nested } };
+            var nested = new BigQueryInsertRow { { "inner", "value" } };
+            var outer = new BigQueryInsertRow { { "outer", nested } };
             var rowData = outer.ToRowsData();
             var obj = (IDictionary<string, object>)rowData.Json["outer"];
             Assert.Equal("value", obj["inner"]);
@@ -130,7 +130,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         [Fact]
         public void RepeatedValue()
         {
-            var row = new InsertRow { { "numbers", new[] { 1, 2 } } };
+            var row = new BigQueryInsertRow { { "numbers", new[] { 1, 2 } } };
             var rowData = row.ToRowsData();
             Assert.Equal(new object[] { 1, 2 }, rowData.Json["numbers"]);
         }
