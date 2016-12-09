@@ -46,9 +46,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
-            BigQueryQueryJob query = client.ExecuteQuery(sql).PollUntilCompleted();
+            BigQueryResults results = client.ExecuteQuery(sql);
 
-            foreach (BigQueryRow row in query.GetRows())
+            foreach (BigQueryRow row in results.GetRows())
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -65,9 +65,9 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
-            BigQueryQueryJob query = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true }).PollUntilCompleted();
+            BigQueryResults results = client.ExecuteQuery(sql, new ExecuteQueryOptions { UseLegacySql = true });
 
-            foreach (BigQueryRow row in query.GetRows())
+            foreach (BigQueryRow row in results.GetRows())
             {
                 Console.WriteLine($"{row["title"]}: {row["unique_words"]}");
             }
@@ -90,12 +90,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 { "player", BigQueryDbType.String },
                 { "gameStarted", BigQueryDbType.Timestamp },
-                { "score", BigQueryDbType.Integer }
+                { "score", BigQueryDbType.Int64 }
             }.Build());
 
             // Insert a single row. There are many other ways of inserting
             // data into a table.
-            table.Insert(new InsertRow
+            table.Insert(new BigQueryInsertRow
             {
                 { "player", "Bob" },
                 { "score", 85 },
@@ -114,11 +114,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Snippet: ExecuteQuery(string,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
             BigQueryTable table = client.GetTable(datasetId, historyTableId);
-            BigQueryQueryJob result = client.ExecuteQuery(
+            BigQueryResults result = client.ExecuteQuery(
                 $@"SELECT player, MAX(score) AS score
                    FROM {table}
                    GROUP BY player
-                   ORDER BY score DESC").PollUntilCompleted();
+                   ORDER BY score DESC");
             foreach (BigQueryRow row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -247,14 +247,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryClient client = BigQueryClient.Create(projectId);
             // The insert ID is optional, but can avoid duplicate data
             // when retrying inserts.
-            InsertRow row1 = new InsertRow("row1")
+            BigQueryInsertRow row1 = new BigQueryInsertRow("row1")
             {
                 { "player", "Jane" },
                 { "level", 3 },
                 { "score", 3600 },
                 { "game_started", DateTime.UtcNow }
             };
-            InsertRow row2 = new InsertRow("row2")
+            BigQueryInsertRow row2 = new BigQueryInsertRow("row2")
             {
                 { "player", "Jeff" },
                 { "level", 2 },
@@ -432,7 +432,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigQueryQueryJob result = client.GetQueryResults(job.Reference);
+            BigQueryResults result = client.GetQueryResults(job.Reference);
             foreach (BigQueryRow row in result.GetRows())
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -638,17 +638,16 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
             // Note: could also use a collection initializer to populate the parameters.
-            command.Parameters.Add("level", BigQueryParameterType.Int64).Value = 2;
-            command.Parameters.Add("score", BigQueryParameterType.Int64).Value = 1500;
-            IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
-            foreach (BigQueryRow row in queryResults)
+            command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
+            command.Parameters.Add("score", BigQueryDbType.Int64).Value = 1500;
+            IEnumerable<BigQueryRow> resultRows = client.ExecuteQuery(command).GetRows();
+            foreach (BigQueryRow row in resultRows)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             }
             // End sample
 
             var resultsList = client.ExecuteQuery(command)
-                 .PollUntilCompleted()
                  .GetRows()
                  .Select(row => new { Name = (string) row["player"], Score = (long) row["score"], Level = (long) row["level"] })
                  .ToList();
@@ -668,10 +667,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");
             command.ParameterMode = BigQueryParameterMode.Positional;
-            command.Parameters.Add(BigQueryParameterType.Int64, 1500); // For score
-            command.Parameters.Add(BigQueryParameterType.Int64, 2); // For level
-            IEnumerable<BigQueryRow> queryResults = client.ExecuteQuery(command).PollUntilCompleted().GetRows();
-            foreach (BigQueryRow row in queryResults)
+            command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
+            command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
+            IEnumerable<BigQueryRow> resultRows = client.ExecuteQuery(command).GetRows();
+            foreach (BigQueryRow row in resultRows)
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             }
@@ -679,7 +678,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Execute the same command again for validation.
             var resultsList = client.ExecuteQuery(command)
-                .PollUntilCompleted()
                 .GetRows()
                 .Select(row => new { Name = (string) row["player"], Score = (long) row["score"], Level = (long) row["level"] })
                 .ToList();
@@ -701,8 +699,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = await client.GetTableAsync("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT corpus AS title, COUNT(word) AS unique_words FROM {table} GROUP BY title ORDER BY unique_words DESC LIMIT 10";
-            BigQueryQueryJob query = await client.ExecuteQueryAsync(sql);
-            query = await query.PollUntilCompletedAsync();
+            BigQueryResults query = await client.ExecuteQueryAsync(sql);
 
             await query.GetRowsAsync().ForEachAsync(row =>
             {
@@ -721,8 +718,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = await client.GetTableAsync("bigquery-public-data", "samples", "shakespeare");
 
             string sql = $"SELECT TOP(corpus, 10) AS title, COUNT(*) AS unique_words FROM {table:legacy}";
-            BigQueryQueryJob query = await client.ExecuteQueryAsync(sql, new ExecuteQueryOptions { UseLegacySql = true });
-            query = await query.PollUntilCompletedAsync();
+            BigQueryResults query = await client.ExecuteQueryAsync(sql, new ExecuteQueryOptions { UseLegacySql = true });
 
             await query.GetRowsAsync().ForEachAsync(row =>
             {
@@ -747,12 +743,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 { "player", BigQueryDbType.String },
                 { "gameStarted", BigQueryDbType.Timestamp },
-                { "score", BigQueryDbType.Integer }
+                { "score", BigQueryDbType.Int64 }
             }.Build());
 
             // Insert a single row. There are many other ways of inserting
             // data into a table.
-            await table.InsertAsync(new InsertRow
+            await table.InsertAsync(new BigQueryInsertRow
             {
                 { "player", "Bob" },
                 { "score", 85 },
@@ -771,12 +767,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // Snippet: ExecuteQueryAsync(string,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             BigQueryTable table = await client.GetTableAsync(datasetId, historyTableId);
-            BigQueryQueryJob result = await client.ExecuteQueryAsync(
+            BigQueryResults result = await client.ExecuteQueryAsync(
                 $@"SELECT player, MAX(score) AS score
                    FROM {table}
                    GROUP BY player
                    ORDER BY score DESC");
-            result = await result.PollUntilCompletedAsync();
             await result.GetRowsAsync().ForEachAsync(row =>
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -905,14 +900,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             // The insert ID is optional, but can avoid duplicate data
             // when retrying inserts.
-            InsertRow row1 = new InsertRow("row1-async")
+            BigQueryInsertRow row1 = new BigQueryInsertRow("row1-async")
             {
                 { "player", "Jane" },
                 { "level", 3 },
                 { "score", 3600 },
                 { "game_started", DateTime.UtcNow }
             };
-            InsertRow row2 = new InsertRow("row2-async")
+            BigQueryInsertRow row2 = new BigQueryInsertRow("row2-async")
             {
                 { "player", "Jeff" },
                 { "level", 2 },
@@ -1090,7 +1085,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Then we can fetch the results, either via the job or by accessing
             // the destination table.
-            BigQueryQueryJob result = await client.GetQueryResultsAsync(job.Reference);
+            BigQueryResults result = await client.GetQueryResultsAsync(job.Reference);
             await result.GetRowsAsync().ForEachAsync(row =>
             {
                 Console.WriteLine($"{row["player"]}: {row["score"]}");
@@ -1296,12 +1291,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = await client.GetTableAsync(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
             // Note: could also use a collection initializer to populate the parameters.
-            command.Parameters.Add("level", BigQueryParameterType.Int64).Value = 2;
-            command.Parameters.Add("score", BigQueryParameterType.Int64).Value = 1500;
-            BigQueryQueryJob queryJob = await client.ExecuteQueryAsync(command);
-            queryJob = await queryJob.PollUntilCompletedAsync();
-            IAsyncEnumerable<BigQueryRow> queryResults = queryJob.GetRowsAsync();
-            await queryResults.ForEachAsync(row =>
+            command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
+            command.Parameters.Add("score", BigQueryDbType.Int64).Value = 1500;
+            BigQueryResults queryJob = await client.ExecuteQueryAsync(command);
+            IAsyncEnumerable<BigQueryRow> resultRows = queryJob.GetRowsAsync();
+            await resultRows.ForEachAsync(row =>
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             });
@@ -1316,12 +1310,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");
             command.ParameterMode = BigQueryParameterMode.Positional;
-            command.Parameters.Add(BigQueryParameterType.Int64, 1500); // For score
-            command.Parameters.Add(BigQueryParameterType.Int64, 2); // For level
-            BigQueryQueryJob queryJob = await client.ExecuteQueryAsync(command);
-            queryJob = await queryJob.PollUntilCompletedAsync();
-            IAsyncEnumerable<BigQueryRow> queryResults = queryJob.GetRowsAsync();
-            await queryResults.ForEachAsync(row =>
+            command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
+            command.Parameters.Add(BigQueryDbType.Int64, 2); // For level
+            BigQueryResults queryJob = await client.ExecuteQueryAsync(command);
+            IAsyncEnumerable<BigQueryRow> resultRows = queryJob.GetRowsAsync();
+            await resultRows.ForEachAsync(row =>
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             });

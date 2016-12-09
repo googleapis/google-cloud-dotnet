@@ -67,9 +67,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
 
         protected override object GetArgument(ParameterInfo parameter)
         {
-            if (parameter.ParameterType == typeof(InsertRow))
+            if (parameter.ParameterType == typeof(BigQueryInsertRow))
             {
-                return new InsertRow();
+                return new BigQueryInsertRow();
             }
             return base.GetArgument(parameter);
         }
@@ -311,12 +311,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var getQueryResultsOptions = new GetQueryResultsOptions();
             var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
             VerifyEquivalent(
-                new BigQueryQueryJob(new DerivedBigQueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
+                new BigQueryResults(new DerivedBigQueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
                 client => client.PollQueryUntilCompleted(MatchesWhenSerialized(reference), getQueryResultsOptions, pollSettings),
                 client => client.PollQueryUntilCompleted(jobId, getQueryResultsOptions, pollSettings),
                 client => client.PollQueryUntilCompleted(ProjectId, jobId, getQueryResultsOptions, pollSettings),
                 client => new BigQueryJob(client, GetJob(reference)).PollQueryUntilCompleted(getQueryResultsOptions, pollSettings),
-                client => new BigQueryQueryJob(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompleted(pollSettings));
+                client => new BigQueryResults(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompleted(pollSettings));
         }
 
         [Fact]
@@ -405,7 +405,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var schema = new TableSchemaBuilder().Build();
             var options = new InsertOptions();
             var stream = new MemoryStream();
-            var row = new InsertRow();
+            var row = new BigQueryInsertRow();
             VerifyEquivalent(
                 client => client.Insert(MatchesWhenSerialized(reference), new[] { row }, options),
                 client => client.Insert(datasetId, tableId, row, options),
@@ -422,7 +422,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var schema = new TableSchemaBuilder().Build();
             var options = new InsertOptions();
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalent(
                 client => client.Insert(MatchesWhenSerialized(reference), rows, options),
                 client => client.Insert(datasetId, tableId, rows, options),
@@ -439,7 +439,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var schema = new TableSchemaBuilder().Build();
             var options = new InsertOptions();
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalent(
                 client => client.Insert(MatchesWhenSerialized(reference), rows, null),
                 client => client.Insert(datasetId, tableId, rows[0], rows[1]),
@@ -640,12 +640,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var pollSettings = new PollSettings(Expiration.None, TimeSpan.Zero);
             var token = new CancellationTokenSource().Token;
             VerifyEquivalentAsync(
-                new BigQueryQueryJob(new DerivedBigQueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
+                new BigQueryResults(new DerivedBigQueryClient(), new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions),
                 client => client.PollQueryUntilCompletedAsync(MatchesWhenSerialized(reference), getQueryResultsOptions, pollSettings, token),
                 client => client.PollQueryUntilCompletedAsync(jobId, getQueryResultsOptions, pollSettings, token),
                 client => client.PollQueryUntilCompletedAsync(ProjectId, jobId, getQueryResultsOptions, pollSettings, token),
                 client => new BigQueryJob(client, GetJob(reference)).PollQueryUntilCompletedAsync(getQueryResultsOptions, pollSettings, token),
-                client => new BigQueryQueryJob(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompletedAsync(pollSettings, token));
+                client => new BigQueryResults(client, new GetQueryResultsResponse { JobReference = reference }, getQueryResultsOptions).PollUntilCompletedAsync(pollSettings, token));
         }
 
         [Fact]
@@ -738,7 +738,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
-            var row = new InsertRow();
+            var row = new BigQueryInsertRow();
             VerifyEquivalentAsync(
                 client => client.InsertAsync(MatchesWhenSerialized(reference), new[] { row }, options, token),
                 client => client.InsertAsync(datasetId, tableId, row, options, token),
@@ -756,7 +756,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(
                 client => client.InsertAsync(MatchesWhenSerialized(reference), rows, options, token),
                 client => client.InsertAsync(datasetId, tableId, rows, options, token),
@@ -774,7 +774,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var options = new InsertOptions();
             var token = new CancellationTokenSource().Token;
             var stream = new MemoryStream();
-            var rows = new[] { new InsertRow(), new InsertRow() };
+            var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(
                 client => client.InsertAsync(MatchesWhenSerialized(reference), rows, null, default(CancellationToken)),
                 client => client.InsertAsync(datasetId, tableId, rows[0], rows[1]),

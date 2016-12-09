@@ -37,7 +37,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopics
+            // Snippet: ListTopics(*,*,*,*)
             PublisherClient client = PublisherClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
@@ -53,7 +53,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
         {
             string projectId = _fixture.ProjectId;
 
-            // Snippet: ListTopicsAsync
+            // Snippet: ListTopicsAsync(*,*,*,*)
             PublisherClient client = PublisherClient.Create();
 
             ProjectName projectName = new ProjectName(projectId);
@@ -71,7 +71,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            // Snippet: CreateTopic
+            // Snippet: CreateTopic(TopicName,*)
             PublisherClient client = PublisherClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);
@@ -102,7 +102,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             string projectId = _fixture.ProjectId;
             string topicId = _fixture.CreateTopicId();
 
-            // Snippet: Publish
+            // Snippet: Publish(*,*,*)
             PublisherClient client = PublisherClient.Create();
             // Make sure we have a topic to publish to
             TopicName topicName = new TopicName(projectId, topicId);
@@ -158,7 +158,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
-            // Snippet: DeleteTopic
+            // Snippet: DeleteTopic(TopicName,*)
             PublisherClient client = PublisherClient.Create();
 
             TopicName topicName = new TopicName(projectId, topicId);
@@ -193,7 +193,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             PublisherClient.Create().CreateTopic(new TopicName(projectId, topicId));
 
-            // Snippet: GetIamPolicy
+            // Snippet: GetIamPolicy(string,*)
             PublisherClient client = PublisherClient.Create();
             string topicName = new TopicName(projectId, topicId).ToString();
             Policy policy = client.GetIamPolicy(topicName);

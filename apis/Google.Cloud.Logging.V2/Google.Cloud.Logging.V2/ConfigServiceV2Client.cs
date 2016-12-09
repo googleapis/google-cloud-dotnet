@@ -398,13 +398,17 @@ namespace Google.Cloud.Logging.V2
         /// A pageable asynchronous sequence of <see cref="LogSink"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
-            string parent,
+            ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListSinksAsync(
+                new ListSinksRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists sinks.
@@ -430,9 +434,51 @@ namespace Google.Cloud.Logging.V2
         /// A pageable sequence of <see cref="LogSink"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
-            string parent,
+            ParentNameOneof parent,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListSinks(
+                new ListSinksRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists sinks.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="LogSink"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
+            ListSinksRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists sinks.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="LogSink"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
+            ListSinksRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -454,11 +500,13 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogSink> GetSinkAsync(
-            string sinkName,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            SinkNameOneof sinkName,
+            CallSettings callSettings = null) => GetSinkAsync(
+                new GetSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = sinkName,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a sink.
@@ -476,7 +524,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogSink> GetSinkAsync(
-            string sinkName,
+            SinkNameOneof sinkName,
             CancellationToken cancellationToken) => GetSinkAsync(
                 sinkName,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -497,7 +545,47 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual LogSink GetSink(
-            string sinkName,
+            SinkNameOneof sinkName,
+            CallSettings callSettings = null) => GetSink(
+                new GetSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = sinkName,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogSink> GetSinkAsync(
+            GetSinkRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogSink GetSink(
+            GetSinkRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -523,12 +611,15 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogSink> CreateSinkAsync(
-            string parent,
+            ParentNameOneof parent,
             LogSink sink,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CreateSinkAsync(
+                new CreateSinkRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    Sink = sink,
+                },
+                callSettings);
 
         /// <summary>
         /// Creates a sink.
@@ -550,7 +641,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogSink> CreateSinkAsync(
-            string parent,
+            ParentNameOneof parent,
             LogSink sink,
             CancellationToken cancellationToken) => CreateSinkAsync(
                 parent,
@@ -577,8 +668,49 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual LogSink CreateSink(
-            string parent,
+            ParentNameOneof parent,
             LogSink sink,
+            CallSettings callSettings = null) => CreateSink(
+                new CreateSinkRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    Sink = sink,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Creates a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogSink> CreateSinkAsync(
+            CreateSinkRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogSink CreateSink(
+            CreateSinkRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -608,12 +740,15 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogSink> UpdateSinkAsync(
-            string sinkName,
+            SinkNameOneof sinkName,
             LogSink sink,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => UpdateSinkAsync(
+                new UpdateSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = sinkName,
+                    Sink = sink,
+                },
+                callSettings);
 
         /// <summary>
         /// Updates or creates a sink.
@@ -639,7 +774,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<LogSink> UpdateSinkAsync(
-            string sinkName,
+            SinkNameOneof sinkName,
             LogSink sink,
             CancellationToken cancellationToken) => UpdateSinkAsync(
                 sinkName,
@@ -670,8 +805,49 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual LogSink UpdateSink(
-            string sinkName,
+            SinkNameOneof sinkName,
             LogSink sink,
+            CallSettings callSettings = null) => UpdateSink(
+                new UpdateSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = sinkName,
+                    Sink = sink,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Updates or creates a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<LogSink> UpdateSinkAsync(
+            UpdateSinkRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Updates or creates a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual LogSink UpdateSink(
+            UpdateSinkRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -696,11 +872,13 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSinkAsync(
-            string sinkName,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            SinkNameOneof sinkName,
+            CallSettings callSettings = null) => DeleteSinkAsync(
+                new DeleteSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = sinkName,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a sink.
@@ -721,7 +899,7 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSinkAsync(
-            string sinkName,
+            SinkNameOneof sinkName,
             CancellationToken cancellationToken) => DeleteSinkAsync(
                 sinkName,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -745,7 +923,47 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public virtual void DeleteSink(
-            string sinkName,
+            SinkNameOneof sinkName,
+            CallSettings callSettings = null) => DeleteSink(
+                new DeleteSinkRequest
+                {
+                    SinkNameAsSinkNameOneof = sinkName,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteSinkAsync(
+            DeleteSinkRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a sink.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteSink(
+            DeleteSinkRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -802,19 +1020,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists sinks.
         /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name where this sink was created:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///     "organizations/[ORGANIZATION_ID]"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -823,17 +1030,9 @@ namespace Google.Cloud.Logging.V2
         /// A pageable asynchronous sequence of <see cref="LogSink"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListSinksResponse, LogSink> ListSinksAsync(
-            string parent,
-            string pageToken = null,
-            int? pageSize = null,
+            ListSinksRequest request,
             CallSettings callSettings = null)
         {
-            ListSinksRequest request = new ListSinksRequest
-            {
-                Parent = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListSinksRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
         }
@@ -841,19 +1040,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Lists sinks.
         /// </summary>
-        /// <param name="parent">
-        /// Required. The resource name where this sink was created:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///     "organizations/[ORGANIZATION_ID]"
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -862,17 +1050,9 @@ namespace Google.Cloud.Logging.V2
         /// A pageable sequence of <see cref="LogSink"/> resources.
         /// </returns>
         public override PagedEnumerable<ListSinksResponse, LogSink> ListSinks(
-            string parent,
-            string pageToken = null,
-            int? pageSize = null,
+            ListSinksRequest request,
             CallSettings callSettings = null)
         {
-            ListSinksRequest request = new ListSinksRequest
-            {
-                Parent = parent,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListSinksRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListSinksRequest, ListSinksResponse, LogSink>(_callListSinks, request, callSettings);
         }
@@ -880,11 +1060,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Gets a sink.
         /// </summary>
-        /// <param name="sinkName">
-        /// Required. The resource name of the sink to return:
-        ///
-        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
-        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -893,13 +1070,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<LogSink> GetSinkAsync(
-            string sinkName,
+            GetSinkRequest request,
             CallSettings callSettings = null)
         {
-            GetSinkRequest request = new GetSinkRequest
-            {
-                SinkName = sinkName,
-            };
             Modify_GetSinkRequest(ref request, ref callSettings);
             return _callGetSink.Async(request, callSettings);
         }
@@ -907,11 +1080,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Gets a sink.
         /// </summary>
-        /// <param name="sinkName">
-        /// Required. The resource name of the sink to return:
-        ///
-        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
-        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -920,13 +1090,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override LogSink GetSink(
-            string sinkName,
+            GetSinkRequest request,
             CallSettings callSettings = null)
         {
-            GetSinkRequest request = new GetSinkRequest
-            {
-                SinkName = sinkName,
-            };
             Modify_GetSinkRequest(ref request, ref callSettings);
             return _callGetSink.Sync(request, callSettings);
         }
@@ -934,15 +1100,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Creates a sink.
         /// </summary>
-        /// <param name="parent">
-        /// Required. The resource in which to create the sink:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///     "organizations/[ORGANIZATION_ID]"
-        /// </param>
-        /// <param name="sink">
-        /// Required. The new sink, whose `name` parameter is a sink identifier that
-        /// is not already in use.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -951,15 +1110,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<LogSink> CreateSinkAsync(
-            string parent,
-            LogSink sink,
+            CreateSinkRequest request,
             CallSettings callSettings = null)
         {
-            CreateSinkRequest request = new CreateSinkRequest
-            {
-                Parent = parent,
-                Sink = sink,
-            };
             Modify_CreateSinkRequest(ref request, ref callSettings);
             return _callCreateSink.Async(request, callSettings);
         }
@@ -967,15 +1120,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Creates a sink.
         /// </summary>
-        /// <param name="parent">
-        /// Required. The resource in which to create the sink:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///     "organizations/[ORGANIZATION_ID]"
-        /// </param>
-        /// <param name="sink">
-        /// Required. The new sink, whose `name` parameter is a sink identifier that
-        /// is not already in use.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -984,15 +1130,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override LogSink CreateSink(
-            string parent,
-            LogSink sink,
+            CreateSinkRequest request,
             CallSettings callSettings = null)
         {
-            CreateSinkRequest request = new CreateSinkRequest
-            {
-                Parent = parent,
-                Sink = sink,
-            };
             Modify_CreateSinkRequest(ref request, ref callSettings);
             return _callCreateSink.Sync(request, callSettings);
         }
@@ -1000,19 +1140,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Updates or creates a sink.
         /// </summary>
-        /// <param name="sinkName">
-        /// Required. The resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
-        ///
-        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
-        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
-        ///
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
-        /// </param>
-        /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sinkName`.  If `sinkName` does not exist, then
-        /// this method creates a new sink.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1021,15 +1150,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<LogSink> UpdateSinkAsync(
-            string sinkName,
-            LogSink sink,
+            UpdateSinkRequest request,
             CallSettings callSettings = null)
         {
-            UpdateSinkRequest request = new UpdateSinkRequest
-            {
-                SinkName = sinkName,
-                Sink = sink,
-            };
             Modify_UpdateSinkRequest(ref request, ref callSettings);
             return _callUpdateSink.Async(request, callSettings);
         }
@@ -1037,19 +1160,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Updates or creates a sink.
         /// </summary>
-        /// <param name="sinkName">
-        /// Required. The resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
-        ///
-        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
-        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
-        ///
-        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
-        /// </param>
-        /// <param name="sink">
-        /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sinkName`.  If `sinkName` does not exist, then
-        /// this method creates a new sink.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1058,15 +1170,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override LogSink UpdateSink(
-            string sinkName,
-            LogSink sink,
+            UpdateSinkRequest request,
             CallSettings callSettings = null)
         {
-            UpdateSinkRequest request = new UpdateSinkRequest
-            {
-                SinkName = sinkName,
-                Sink = sink,
-            };
             Modify_UpdateSinkRequest(ref request, ref callSettings);
             return _callUpdateSink.Sync(request, callSettings);
         }
@@ -1074,14 +1180,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes a sink.
         /// </summary>
-        /// <param name="sinkName">
-        /// Required. The resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
-        ///
-        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
-        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
-        ///
-        /// It is an error if the sink does not exist.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1090,13 +1190,9 @@ namespace Google.Cloud.Logging.V2
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteSinkAsync(
-            string sinkName,
+            DeleteSinkRequest request,
             CallSettings callSettings = null)
         {
-            DeleteSinkRequest request = new DeleteSinkRequest
-            {
-                SinkName = sinkName,
-            };
             Modify_DeleteSinkRequest(ref request, ref callSettings);
             return _callDeleteSink.Async(request, callSettings);
         }
@@ -1104,14 +1200,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes a sink.
         /// </summary>
-        /// <param name="sinkName">
-        /// Required. The resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
-        ///
-        ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
-        ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
-        ///
-        /// It is an error if the sink does not exist.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1120,13 +1210,9 @@ namespace Google.Cloud.Logging.V2
         /// The RPC response.
         /// </returns>
         public override void DeleteSink(
-            string sinkName,
+            DeleteSinkRequest request,
             CallSettings callSettings = null)
         {
-            DeleteSinkRequest request = new DeleteSinkRequest
-            {
-                SinkName = sinkName,
-            };
             Modify_DeleteSinkRequest(ref request, ref callSettings);
             _callDeleteSink.Sync(request, callSettings);
         }

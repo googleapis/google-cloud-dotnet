@@ -332,10 +332,13 @@ namespace Google.Cloud.Trace.V1
         public virtual Task PatchTracesAsync(
             string projectId,
             Traces traces,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => PatchTracesAsync(
+                new PatchTracesRequest
+                {
+                    ProjectId = projectId,
+                    Traces = traces,
+                },
+                callSettings);
 
         /// <summary>
         /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -386,6 +389,55 @@ namespace Google.Cloud.Trace.V1
         public virtual void PatchTraces(
             string projectId,
             Traces traces,
+            CallSettings callSettings = null) => PatchTraces(
+                new PatchTracesRequest
+                {
+                    ProjectId = projectId,
+                    Traces = traces,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task PatchTracesAsync(
+            PatchTracesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+        /// of a trace that you send matches that of an existing trace, any fields
+        /// in the existing trace and its spans are overwritten by the provided values,
+        /// and any new fields provided are merged with the existing trace data. If the
+        /// ID does not match, a new trace is created.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void PatchTraces(
+            PatchTracesRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -409,10 +461,13 @@ namespace Google.Cloud.Trace.V1
         public virtual Task<Trace> GetTraceAsync(
             string projectId,
             string traceId,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetTraceAsync(
+                new GetTraceRequest
+                {
+                    ProjectId = projectId,
+                    TraceId = traceId,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets a single trace by its ID.
@@ -455,6 +510,47 @@ namespace Google.Cloud.Trace.V1
         public virtual Trace GetTrace(
             string projectId,
             string traceId,
+            CallSettings callSettings = null) => GetTrace(
+                new GetTraceRequest
+                {
+                    ProjectId = projectId,
+                    TraceId = traceId,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Trace> GetTraceAsync(
+            GetTraceRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets a single trace by its ID.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Trace GetTrace(
+            GetTraceRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -484,10 +580,14 @@ namespace Google.Cloud.Trace.V1
             string projectId,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListTracesAsync(
+                new ListTracesRequest
+                {
+                    ProjectId = projectId,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Returns of a list of traces that match the specified filter conditions.
@@ -513,6 +613,48 @@ namespace Google.Cloud.Trace.V1
             string projectId,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListTraces(
+                new ListTracesRequest
+                {
+                    ProjectId = projectId,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
+            ListTracesRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns of a list of traces that match the specified filter conditions.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Trace"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListTracesResponse, Trace> ListTraces(
+            ListTracesRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -565,11 +707,8 @@ namespace Google.Cloud.Trace.V1
         /// and any new fields provided are merged with the existing trace data. If the
         /// ID does not match, a new trace is created.
         /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="traces">
-        /// The body of the message.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -578,15 +717,9 @@ namespace Google.Cloud.Trace.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task PatchTracesAsync(
-            string projectId,
-            Traces traces,
+            PatchTracesRequest request,
             CallSettings callSettings = null)
         {
-            PatchTracesRequest request = new PatchTracesRequest
-            {
-                ProjectId = projectId,
-                Traces = traces,
-            };
             Modify_PatchTracesRequest(ref request, ref callSettings);
             return _callPatchTraces.Async(request, callSettings);
         }
@@ -598,11 +731,8 @@ namespace Google.Cloud.Trace.V1
         /// and any new fields provided are merged with the existing trace data. If the
         /// ID does not match, a new trace is created.
         /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="traces">
-        /// The body of the message.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -611,15 +741,9 @@ namespace Google.Cloud.Trace.V1
         /// The RPC response.
         /// </returns>
         public override void PatchTraces(
-            string projectId,
-            Traces traces,
+            PatchTracesRequest request,
             CallSettings callSettings = null)
         {
-            PatchTracesRequest request = new PatchTracesRequest
-            {
-                ProjectId = projectId,
-                Traces = traces,
-            };
             Modify_PatchTracesRequest(ref request, ref callSettings);
             _callPatchTraces.Sync(request, callSettings);
         }
@@ -627,11 +751,8 @@ namespace Google.Cloud.Trace.V1
         /// <summary>
         /// Gets a single trace by its ID.
         /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="traceId">
-        /// ID of the trace to return.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -640,15 +761,9 @@ namespace Google.Cloud.Trace.V1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Trace> GetTraceAsync(
-            string projectId,
-            string traceId,
+            GetTraceRequest request,
             CallSettings callSettings = null)
         {
-            GetTraceRequest request = new GetTraceRequest
-            {
-                ProjectId = projectId,
-                TraceId = traceId,
-            };
             Modify_GetTraceRequest(ref request, ref callSettings);
             return _callGetTrace.Async(request, callSettings);
         }
@@ -656,11 +771,8 @@ namespace Google.Cloud.Trace.V1
         /// <summary>
         /// Gets a single trace by its ID.
         /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="traceId">
-        /// ID of the trace to return.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -669,15 +781,9 @@ namespace Google.Cloud.Trace.V1
         /// The RPC response.
         /// </returns>
         public override Trace GetTrace(
-            string projectId,
-            string traceId,
+            GetTraceRequest request,
             CallSettings callSettings = null)
         {
-            GetTraceRequest request = new GetTraceRequest
-            {
-                ProjectId = projectId,
-                TraceId = traceId,
-            };
             Modify_GetTraceRequest(ref request, ref callSettings);
             return _callGetTrace.Sync(request, callSettings);
         }
@@ -685,16 +791,8 @@ namespace Google.Cloud.Trace.V1
         /// <summary>
         /// Returns of a list of traces that match the specified filter conditions.
         /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -703,17 +801,9 @@ namespace Google.Cloud.Trace.V1
         /// A pageable asynchronous sequence of <see cref="Trace"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListTracesResponse, Trace> ListTracesAsync(
-            string projectId,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTracesRequest request,
             CallSettings callSettings = null)
         {
-            ListTracesRequest request = new ListTracesRequest
-            {
-                ProjectId = projectId,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTracesRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
         }
@@ -721,16 +811,8 @@ namespace Google.Cloud.Trace.V1
         /// <summary>
         /// Returns of a list of traces that match the specified filter conditions.
         /// </summary>
-        /// <param name="projectId">
-        /// ID of the Cloud project where the trace data is stored.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -739,17 +821,9 @@ namespace Google.Cloud.Trace.V1
         /// A pageable sequence of <see cref="Trace"/> resources.
         /// </returns>
         public override PagedEnumerable<ListTracesResponse, Trace> ListTraces(
-            string projectId,
-            string pageToken = null,
-            int? pageSize = null,
+            ListTracesRequest request,
             CallSettings callSettings = null)
         {
-            ListTracesRequest request = new ListTracesRequest
-            {
-                ProjectId = projectId,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListTracesRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListTracesRequest, ListTracesResponse, Trace>(_callListTraces, request, callSettings);
         }

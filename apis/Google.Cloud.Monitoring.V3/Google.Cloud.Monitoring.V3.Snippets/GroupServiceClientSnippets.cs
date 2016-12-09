@@ -29,22 +29,22 @@ namespace Google.Cloud.Monitoring.V3
             _fixture = fixture;
         }
 
-        /* TODO: Reinstate when ListGroups is present again.
         [Fact]
         public void ListGroups()
         {
             string projectId = _fixture.ProjectId;
 
-            // FIXME:Snippet: ListGroups
+            // Sample: ListGroups
+            // Additional: ListGroups(*,*)
             GroupServiceClient client = GroupServiceClient.Create();
-            string projectName = MetricServiceClient.FormatProjectName(projectId);
-            PagedEnumerable<ListGroupsResponse, Group> groups = client.ListGroups(projectName, "", "", "");
+            ProjectName projectName = new ProjectName(projectId);
+            ListGroupsRequest request = new ListGroupsRequest { Name = projectName.ToString() };
+            PagedEnumerable<ListGroupsResponse, Group> groups = client.ListGroups(request);
             foreach (Group group in groups.Take(10))
             {
                 Console.WriteLine($"{group.Name}: {group.DisplayName}");
             }
-            // FIXME:End snippet
+            // End sample
         }
-        */
     }
 }

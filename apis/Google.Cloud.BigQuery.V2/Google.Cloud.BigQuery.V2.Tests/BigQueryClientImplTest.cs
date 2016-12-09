@@ -112,7 +112,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var service = new FakeBigqueryService();
             var client = new BigQueryClientImpl(projectId, service);
             var reference = client.GetTableReference(projectId, datasetId, tableId);
-            var schema = new TableSchemaBuilder { { "column", BigQueryDbType.Integer } }.Build();
+            var schema = new TableSchemaBuilder { { "column", BigQueryDbType.Int64 } }.Build();
             service.ExpectRequest(
                 service.Tables.Insert(new Table { TableReference = reference, Schema = schema }, projectId, datasetId),
                 new Table { TableReference = reference, Schema = schema });
@@ -294,7 +294,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var service = new FakeBigqueryService();
             var client = new BigQueryClientImpl(projectId, service);
             var reference = client.GetTableReference(projectId, datasetId, tableId);
-            var schema = new TableSchemaBuilder { { "column", BigQueryDbType.Integer } }.Build();
+            var schema = new TableSchemaBuilder { { "column", BigQueryDbType.Int64 } }.Build();
             service.ExpectRequest(
                 service.Tables.Insert(new Table { TableReference = reference, Schema = schema }, projectId, datasetId),
                 new Table { TableReference = reference, Schema = schema });

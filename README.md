@@ -8,21 +8,27 @@
 * [Homepage](https://cloud.google.com/dotnet/)
 * [API Documentation](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/)
 
+The following libraries are available at a [late beta](#versioning) quality level:
 
-The Google Cloud Libraries for .NET support the following Google Cloud Platform services:
+* [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/) (late beta)
+* [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.V2/) (late beta)
+* [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Datastore.V1/) (late beta)
+* [Google Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/) (late beta)
 
-* [Google BigQuery](https://cloud.google.com/bigquery/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.BigQuery.V2/)
-* [Google Cloud Datastore](https://cloud.google.com/datastore/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Datastore.V1/)
-* [Stackdriver Logging](https://cloud.google.com/logging/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Logging.V2/)
-* Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1)
-* [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/)
-* [Google Cloud Storage](https://cloud.google.com/storage/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Storage.V1/)
-* [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/)
-* [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1Beta1/)
-* [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1Beta1/)
-* [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/)
-* [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/)
-* [Stackdriver Trace](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/)
+The following libraries are available at a [beta](#versioning) quality level:
+
+* [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
+* [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (beta)
+
+The following libraries are available at an [alpha](#versioning) quality level:
+
+* Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
+* [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (alpha)
+* [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1Beta1/) (alpha)
+* [Google Cloud Diagnostics for ASP.NET] - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNet/) (alpha)
+* [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/) (alpha)
+* [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (alpha)
+* [Stackdriver Trace](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (alpha)
 
 See the [API documentation](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/) for details of the status
 of each library.
@@ -83,11 +89,27 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information on how to get star
 
 The Google Cloud Client Libraries for .NET follow [Semantic Versioning](http://semver.org/).
 
-Anything with a major version of zero (`0.y.z`) should not be
-considered stable - anything may change at any time.
+The version number in the package *name* (and .NET namespace)
+represents the version of the underlying API; the version number for
+the package itself indicates the status of the client library, according to
+the following quality levels:
 
-Anything with a suffix after the three numbers (such as `1.0.0-beta01`) is expected to work,
-but further API changes may occur before the next stable release.
+**Late Beta**: Libraries defined at a Late Beta quality level are
+expected to be mostly stable and we're working towards their release
+candidate. We will address issues and requests with a higher
+priority.
+
+**Beta**: Libraries defined at a Beta quality level are expected to
+be stable and working, but the API surface is still under active
+development. We encourage you to experiment with these libraries, but
+expect breaking changes in future versions. There may still be
+issues, but we have a fairly high degree of confidence.
+
+**Alpha**: Libraries defined at an Alpha quality level are still
+experimental. They may have significant issues, and the API surface
+will almost certainly change before a final release. We encourage
+experimentation with these libraries on test projects, but strongly
+discourage you from using them in a production environment.
 
 ## License
 

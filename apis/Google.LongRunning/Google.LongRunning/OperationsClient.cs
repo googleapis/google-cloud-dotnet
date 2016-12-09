@@ -351,10 +351,12 @@ namespace Google.LongRunning
         /// </returns>
         public virtual Task<Operation> GetOperationAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => GetOperationAsync(
+                new GetOperationRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Gets the latest state of a long-running operation.  Clients can use this
@@ -392,6 +394,50 @@ namespace Google.LongRunning
         /// </returns>
         public virtual Operation GetOperation(
             string name,
+            CallSettings callSettings = null) => GetOperation(
+                new GetOperationRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<Operation> GetOperationAsync(
+            GetOperationRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the latest state of a long-running operation.  Clients can use this
+        /// method to poll the operation result at intervals as recommended by the API
+        /// service.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual Operation GetOperation(
+            GetOperationRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -429,10 +475,15 @@ namespace Google.LongRunning
             string filter,
             string pageToken = null,
             int? pageSize = null,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ListOperationsAsync(
+                new ListOperationsRequest
+                {
+                    Name = name,
+                    Filter = filter,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
 
         /// <summary>
         /// Lists operations that match the specified filter in the request. If the
@@ -466,6 +517,57 @@ namespace Google.LongRunning
             string filter,
             string pageToken = null,
             int? pageSize = null,
+            CallSettings callSettings = null) => ListOperations(
+                new ListOperationsRequest
+                {
+                    Name = name,
+                    Filter = filter,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists operations that match the specified filter in the request. If the
+        /// server doesn't support this method, it returns `UNIMPLEMENTED`.
+        ///
+        /// NOTE: the `name` binding below allows API services to override the binding
+        /// to use different resource name schemes, such as `users/*/operations`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="Operation"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
+            ListOperationsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists operations that match the specified filter in the request. If the
+        /// server doesn't support this method, it returns `UNIMPLEMENTED`.
+        ///
+        /// NOTE: the `name` binding below allows API services to override the binding
+        /// to use different resource name schemes, such as `users/*/operations`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="Operation"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
+            ListOperationsRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -494,10 +596,12 @@ namespace Google.LongRunning
         /// </returns>
         public virtual Task CancelOperationAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => CancelOperationAsync(
+                new CancelOperationRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Starts asynchronous cancellation on a long-running operation.  The server
@@ -549,6 +653,64 @@ namespace Google.LongRunning
         /// </returns>
         public virtual void CancelOperation(
             string name,
+            CallSettings callSettings = null) => CancelOperation(
+                new CancelOperationRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task CancelOperationAsync(
+            CancelOperationRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Starts asynchronous cancellation on a long-running operation.  The server
+        /// makes a best effort to cancel the operation, but success is not
+        /// guaranteed.  If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.  Clients can use
+        /// [Operations.GetOperation][google.longrunning.Operations.GetOperation] or
+        /// other methods to check whether the cancellation succeeded or whether the
+        /// operation completed despite cancellation. On successful cancellation,
+        /// the operation is not deleted; instead, it becomes an operation with
+        /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+        /// corresponding to `Code.CANCELLED`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void CancelOperation(
+            CancelOperationRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -571,10 +733,12 @@ namespace Google.LongRunning
         /// </returns>
         public virtual Task DeleteOperationAsync(
             string name,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => DeleteOperationAsync(
+                new DeleteOperationRequest
+                {
+                    Name = name,
+                },
+                callSettings);
 
         /// <summary>
         /// Deletes a long-running operation. This method indicates that the client is
@@ -614,6 +778,52 @@ namespace Google.LongRunning
         /// </returns>
         public virtual void DeleteOperation(
             string name,
+            CallSettings callSettings = null) => DeleteOperation(
+                new DeleteOperationRequest
+                {
+                    Name = name,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task DeleteOperationAsync(
+            DeleteOperationRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Deletes a long-running operation. This method indicates that the client is
+        /// no longer interested in the operation result. It does not cancel the
+        /// operation. If the server doesn't support this method, it returns
+        /// `google.rpc.Code.UNIMPLEMENTED`.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual void DeleteOperation(
+            DeleteOperationRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -668,8 +878,8 @@ namespace Google.LongRunning
         /// method to poll the operation result at intervals as recommended by the API
         /// service.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation resource.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -678,13 +888,9 @@ namespace Google.LongRunning
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<Operation> GetOperationAsync(
-            string name,
+            GetOperationRequest request,
             CallSettings callSettings = null)
         {
-            GetOperationRequest request = new GetOperationRequest
-            {
-                Name = name,
-            };
             Modify_GetOperationRequest(ref request, ref callSettings);
             return _callGetOperation.Async(request, callSettings);
         }
@@ -694,8 +900,8 @@ namespace Google.LongRunning
         /// method to poll the operation result at intervals as recommended by the API
         /// service.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation resource.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -704,13 +910,9 @@ namespace Google.LongRunning
         /// The RPC response.
         /// </returns>
         public override Operation GetOperation(
-            string name,
+            GetOperationRequest request,
             CallSettings callSettings = null)
         {
-            GetOperationRequest request = new GetOperationRequest
-            {
-                Name = name,
-            };
             Modify_GetOperationRequest(ref request, ref callSettings);
             return _callGetOperation.Sync(request, callSettings);
         }
@@ -722,19 +924,8 @@ namespace Google.LongRunning
         /// NOTE: the `name` binding below allows API services to override the binding
         /// to use different resource name schemes, such as `users/*/operations`.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation collection.
-        /// </param>
-        /// <param name="filter">
-        /// The standard list filter.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -743,19 +934,9 @@ namespace Google.LongRunning
         /// A pageable asynchronous sequence of <see cref="Operation"/> resources.
         /// </returns>
         public override PagedAsyncEnumerable<ListOperationsResponse, Operation> ListOperationsAsync(
-            string name,
-            string filter,
-            string pageToken = null,
-            int? pageSize = null,
+            ListOperationsRequest request,
             CallSettings callSettings = null)
         {
-            ListOperationsRequest request = new ListOperationsRequest
-            {
-                Name = name,
-                Filter = filter,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListOperationsRequest(ref request, ref callSettings);
             return new GrpcPagedAsyncEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
         }
@@ -767,19 +948,8 @@ namespace Google.LongRunning
         /// NOTE: the `name` binding below allows API services to override the binding
         /// to use different resource name schemes, such as `users/*/operations`.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation collection.
-        /// </param>
-        /// <param name="filter">
-        /// The standard list filter.
-        /// </param>
-        /// <param name="pageToken">
-        /// The token returned from the previous request.
-        /// A value of <c>null</c> or an empty string retrieves the first page.
-        /// </param>
-        /// <param name="pageSize">
-        /// The size of page to request. The response will not be larger than this, but may be smaller.
-        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -788,19 +958,9 @@ namespace Google.LongRunning
         /// A pageable sequence of <see cref="Operation"/> resources.
         /// </returns>
         public override PagedEnumerable<ListOperationsResponse, Operation> ListOperations(
-            string name,
-            string filter,
-            string pageToken = null,
-            int? pageSize = null,
+            ListOperationsRequest request,
             CallSettings callSettings = null)
         {
-            ListOperationsRequest request = new ListOperationsRequest
-            {
-                Name = name,
-                Filter = filter,
-                PageToken = pageToken ?? "",
-                PageSize = pageSize ?? 0,
-            };
             Modify_ListOperationsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListOperationsRequest, ListOperationsResponse, Operation>(_callListOperations, request, callSettings);
         }
@@ -817,8 +977,8 @@ namespace Google.LongRunning
         /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
         /// corresponding to `Code.CANCELLED`.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation resource to be cancelled.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -827,13 +987,9 @@ namespace Google.LongRunning
         /// A Task containing the RPC response.
         /// </returns>
         public override Task CancelOperationAsync(
-            string name,
+            CancelOperationRequest request,
             CallSettings callSettings = null)
         {
-            CancelOperationRequest request = new CancelOperationRequest
-            {
-                Name = name,
-            };
             Modify_CancelOperationRequest(ref request, ref callSettings);
             return _callCancelOperation.Async(request, callSettings);
         }
@@ -850,8 +1006,8 @@ namespace Google.LongRunning
         /// an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
         /// corresponding to `Code.CANCELLED`.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation resource to be cancelled.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -860,13 +1016,9 @@ namespace Google.LongRunning
         /// The RPC response.
         /// </returns>
         public override void CancelOperation(
-            string name,
+            CancelOperationRequest request,
             CallSettings callSettings = null)
         {
-            CancelOperationRequest request = new CancelOperationRequest
-            {
-                Name = name,
-            };
             Modify_CancelOperationRequest(ref request, ref callSettings);
             _callCancelOperation.Sync(request, callSettings);
         }
@@ -877,8 +1029,8 @@ namespace Google.LongRunning
         /// operation. If the server doesn't support this method, it returns
         /// `google.rpc.Code.UNIMPLEMENTED`.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation resource to be deleted.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -887,13 +1039,9 @@ namespace Google.LongRunning
         /// A Task containing the RPC response.
         /// </returns>
         public override Task DeleteOperationAsync(
-            string name,
+            DeleteOperationRequest request,
             CallSettings callSettings = null)
         {
-            DeleteOperationRequest request = new DeleteOperationRequest
-            {
-                Name = name,
-            };
             Modify_DeleteOperationRequest(ref request, ref callSettings);
             return _callDeleteOperation.Async(request, callSettings);
         }
@@ -904,8 +1052,8 @@ namespace Google.LongRunning
         /// operation. If the server doesn't support this method, it returns
         /// `google.rpc.Code.UNIMPLEMENTED`.
         /// </summary>
-        /// <param name="name">
-        /// The name of the operation resource to be deleted.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -914,13 +1062,9 @@ namespace Google.LongRunning
         /// The RPC response.
         /// </returns>
         public override void DeleteOperation(
-            string name,
+            DeleteOperationRequest request,
             CallSettings callSettings = null)
         {
-            DeleteOperationRequest request = new DeleteOperationRequest
-            {
-                Name = name,
-            };
             Modify_DeleteOperationRequest(ref request, ref callSettings);
             _callDeleteOperation.Sync(request, callSettings);
         }

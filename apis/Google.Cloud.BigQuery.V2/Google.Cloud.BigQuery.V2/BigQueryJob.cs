@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// A dataset within BigQuery.
+    /// An asynchronous job within BigQuery.
     /// </summary>
     /// <remarks>
     /// This class wraps the underlying REST API resource and retains a reference to the original
@@ -134,7 +134,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="pollSettings">The settings to control how often and long the job is fetched before timing out if it is still incomplete.
         /// May be null, in which case defaults will be supplied.</param>
         /// <returns>The completed job.</returns>
-        public BigQueryQueryJob PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollSettings pollSettings = null) =>
+        public BigQueryResults PollQueryUntilCompleted(GetQueryResultsOptions options = null, PollSettings pollSettings = null) =>
             _client.PollQueryUntilCompleted(Reference, options, pollSettings);
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The result of the query.</returns>
-        public BigQueryQueryJob GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryResults(Reference, options);
+        public BigQueryResults GetQueryResults(GetQueryResultsOptions options = null) => _client.GetQueryResults(Reference, options);
 
         /// <summary>
         /// Cancels this job.
@@ -176,7 +176,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the completed job.</returns>
-        public Task<BigQueryQueryJob> PollQueryUntilCompletedAsync(GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        public Task<BigQueryResults> PollQueryUntilCompletedAsync(GetQueryResultsOptions options = null, PollSettings pollSettings = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.PollQueryUntilCompletedAsync(Reference, options, pollSettings, cancellationToken);
 
         /// <summary>
@@ -186,8 +186,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is
-        /// a <see cref="BigQueryQueryJob"/> representation of the query.</returns>
-        public Task<BigQueryQueryJob> GetQueryResultsAsync(GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+        /// a <see cref="BigQueryResults"/> representation of the query.</returns>
+        public Task<BigQueryResults> GetQueryResultsAsync(GetQueryResultsOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.GetQueryResultsAsync(Reference, options, cancellationToken);
 
         /// <summary>

@@ -271,10 +271,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
             string projectName,
             ReportedErrorEvent @event,
-            CallSettings callSettings = null)
-        {
-            throw new NotImplementedException();
-        }
+            CallSettings callSettings = null) => ReportErrorEventAsync(
+                new ReportErrorEventRequest
+                {
+                    ProjectName = projectName,
+                    Event = @event,
+                },
+                callSettings);
 
         /// <summary>
         /// Report an individual error event.
@@ -337,6 +340,61 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         public virtual ReportErrorEventResponse ReportErrorEvent(
             string projectName,
             ReportedErrorEvent @event,
+            CallSettings callSettings = null) => ReportErrorEvent(
+                new ReportErrorEventRequest
+                {
+                    ProjectName = projectName,
+                    Event = @event,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Report an individual error event.
+        ///
+        /// This endpoint accepts <strong>either</strong> an OAuth token,
+        /// <strong>or</strong> an
+        /// <a href="https://support.google.com/cloud/answer/6158862">API key</a>
+        /// for authentication. To use an API key, append it to the URL as the value of
+        /// a `key` parameter. For example:
+        /// <pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456</pre>
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
+            ReportErrorEventRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Report an individual error event.
+        ///
+        /// This endpoint accepts <strong>either</strong> an OAuth token,
+        /// <strong>or</strong> an
+        /// <a href="https://support.google.com/cloud/answer/6158862">API key</a>
+        /// for authentication. To use an API key, append it to the URL as the value of
+        /// a `key` parameter. For example:
+        /// <pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456</pre>
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ReportErrorEventResponse ReportErrorEvent(
+            ReportErrorEventRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -384,14 +442,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// <pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456</pre>
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
-        /// Example: `projects/my-project-123`.
-        /// </param>
-        /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -400,15 +452,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public override Task<ReportErrorEventResponse> ReportErrorEventAsync(
-            string projectName,
-            ReportedErrorEvent @event,
+            ReportErrorEventRequest request,
             CallSettings callSettings = null)
         {
-            ReportErrorEventRequest request = new ReportErrorEventRequest
-            {
-                ProjectName = projectName,
-                Event = @event,
-            };
             Modify_ReportErrorEventRequest(ref request, ref callSettings);
             return _callReportErrorEvent.Async(request, callSettings);
         }
@@ -423,14 +469,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// a `key` parameter. For example:
         /// <pre>POST https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456</pre>
         /// </summary>
-        /// <param name="projectName">
-        /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as `projects/` plus the
-        /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
-        /// Example: `projects/my-project-123`.
-        /// </param>
-        /// <param name="event">
-        /// [Required] The error event to be reported.
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -439,15 +479,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public override ReportErrorEventResponse ReportErrorEvent(
-            string projectName,
-            ReportedErrorEvent @event,
+            ReportErrorEventRequest request,
             CallSettings callSettings = null)
         {
-            ReportErrorEventRequest request = new ReportErrorEventRequest
-            {
-                ProjectName = projectName,
-                Event = @event,
-            };
             Modify_ReportErrorEventRequest(ref request, ref callSettings);
             return _callReportErrorEvent.Sync(request, callSettings);
         }

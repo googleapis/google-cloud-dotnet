@@ -23,14 +23,14 @@ namespace Google.Cloud.BigQuery.V2.Tests
         public void GetFieldType()
         {
             var field = new TableFieldSchema { Type = "INTEGER" };
-            Assert.Equal(BigQueryDbType.Integer, field.GetFieldType());
+            Assert.Equal(BigQueryDbType.Int64, field.GetFieldType());
         }
 
         [Fact]
         public void GetFieldMode()
         {
             var field = new TableFieldSchema { Mode = "REPEATED" };
-            Assert.Equal(FieldMode.Repeated, field.GetFieldMode());
+            Assert.Equal(BigQueryFieldMode.Repeated, field.GetFieldMode());
         }
     }
 }

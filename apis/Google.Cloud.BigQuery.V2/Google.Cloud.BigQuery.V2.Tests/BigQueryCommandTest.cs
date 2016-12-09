@@ -32,12 +32,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
         {
             var command = new BigQueryCommand("sql here")
             {
-                Parameters = { { BigQueryParameterType.Int64, 10 } }
+                Parameters = { { BigQueryDbType.Int64, 10 } }
             };
             Assert.Equal("sql here", command.Sql);
             Assert.Equal(1, command.Parameters.Count);
             Assert.Equal(10, command.Parameters[0].Value);
-            Assert.Equal(BigQueryParameterType.Int64, command.Parameters[0].Type);
+            Assert.Equal(BigQueryDbType.Int64, command.Parameters[0].Type);
         }
 
         [Fact]
@@ -46,7 +46,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var request = new QueryRequest();
             var command = new BigQueryCommand("sql here")
             {
-                Parameters = { { BigQueryParameterType.Int64, 10 } },
+                Parameters = { { BigQueryDbType.Int64, 10 } },
                 ParameterMode = BigQueryParameterMode.Positional
             };
             command.PopulateQueryRequest(request);
@@ -62,7 +62,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var jobConfig = new JobConfigurationQuery();
             var command = new BigQueryCommand("sql here")
             {
-                Parameters = { { BigQueryParameterType.Int64, 10 } },
+                Parameters = { { BigQueryDbType.Int64, 10 } },
                 ParameterMode = BigQueryParameterMode.Positional
             };
             command.PopulateJobConfigurationQuery(jobConfig);

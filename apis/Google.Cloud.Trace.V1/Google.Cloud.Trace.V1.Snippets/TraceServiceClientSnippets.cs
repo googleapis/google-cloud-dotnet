@@ -33,7 +33,8 @@ namespace Google.Cloud.Trace.V1.Snippets
         public void ListTraces()
         {
             string projectId = _fixture.ProjectId;
-            // Snippet: ListTraces
+            // Sample: ListTraces
+            // Additional: ListTraces(*,*,*,*)
             TraceServiceClient client = TraceServiceClient.Create();
             PagedEnumerable<ListTracesResponse, Trace> traces = client.ListTraces(projectId);
             foreach (Trace trace in traces.Take(10))
@@ -44,7 +45,7 @@ namespace Google.Cloud.Trace.V1.Snippets
                     Console.WriteLine($"  {span.StartTime}-{span.EndTime}: {span.Kind}");
                 }
             }
-            // End snippet
+            // End sample
         }
     }
 }

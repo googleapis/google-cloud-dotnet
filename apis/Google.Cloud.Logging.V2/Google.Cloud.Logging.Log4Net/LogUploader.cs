@@ -125,7 +125,9 @@ namespace Google.Cloud.Logging.Log4Net
                 // Upload entries to the Cloud Logging server
                 try
                 {
-                    await _client.WriteLogEntriesAsync("", null, s_emptyLabels, entries.Select(x => x.Entry));
+                    // TODO: We should be able to specify an empty log name here; all our log entries
+                    // have a log name. For now, take the log name from the first entry...
+                    await _client.WriteLogEntriesAsync(LogNameOneof.Parse(entries.First().Entry.LogName, false), null, s_emptyLabels, entries.Select(x => x.Entry));
                     await _logQ.RemoveUntilAsync(entries.Last().Id);
                     _emptyEvent.Set();
                     errorDelay = _serverErrorBackoffSettings.Delay;
