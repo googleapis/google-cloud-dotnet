@@ -93,12 +93,12 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         ///     to minimize RPC calls.</param>
         private async Task<TraceProto> GetTrace(string spanName, bool expectTrace = true)
         {
-            double totalSleepTime = 0;
-            while (totalSleepTime <= _timeout.TotalMilliseconds)
+            TimeSpan totalSleepTime = TimeSpan.Zero;
+            while (totalSleepTime <= _timeout)
             {
-                double sleepTime = expectTrace ? _sleepInterval.TotalMilliseconds : _timeout.TotalMilliseconds;
+                TimeSpan sleepTime = expectTrace ? _sleepInterval : _timeout;
                 totalSleepTime += sleepTime;
-                Thread.Sleep(Convert.ToInt32(sleepTime));
+                Thread.Sleep(sleepTime);
 
                 ListTracesRequest request = new ListTracesRequest
                 {
