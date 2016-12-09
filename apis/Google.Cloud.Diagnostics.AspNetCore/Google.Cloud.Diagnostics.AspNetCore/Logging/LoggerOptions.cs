@@ -18,6 +18,8 @@ using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    // TODO(talarico): Add option for logging to other resources and organizations.
+
     /// <summary>
     /// Options for the logger.
     /// </summary>

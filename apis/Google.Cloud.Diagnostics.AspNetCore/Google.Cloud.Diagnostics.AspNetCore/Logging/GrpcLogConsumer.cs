@@ -37,7 +37,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <inheritdoc />
         public void Receive(IEnumerable<LogEntry> logs)
         {
-            _client.WriteLogEntriesAsync("", null, EmptyDictionary, logs);
+            IEnumerator<LogEntry> enumerator = logs.GetEnumerator();
+            if (!enumerator.MoveNext())
+            {
+                return;
+            }
+
+            LogNameOneof oneof = LogNameOneof.Parse(enumerator.Current.LogName, false);
+            _client.WriteLogEntriesAsync(oneof, null, EmptyDictionary, logs);
         }
     }
 }

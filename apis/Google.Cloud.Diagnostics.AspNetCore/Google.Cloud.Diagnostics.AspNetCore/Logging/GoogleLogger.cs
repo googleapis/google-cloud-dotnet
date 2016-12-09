@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         public IDisposable BeginScope<TState>(TState state)
         {
-            // TODO(talarico): Implement this.
+            // TODO(talarico): Implement.
             return null;
         }
 
