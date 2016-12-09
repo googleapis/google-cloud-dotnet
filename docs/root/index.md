@@ -34,4 +34,4 @@ Alpha:
 - [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
-- [Google.Devtools.AspNet](Google.Devtools.AspNet/index.html)
+- [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
