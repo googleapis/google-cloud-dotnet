@@ -30,7 +30,7 @@ namespace Google.Cloud.Storage.V1
         /// <summary>
         /// The minimum chunk size for uploading.
         /// </summary>
-        public const int MinimumChunkSize = ResumableUpload<Object>.MinimumChunkSize;
+        public const int MinimumChunkSize = TmpResumableUpload<Object>.MinimumChunkSize;
 
         /// <summary>
         /// Precondition for upload: the object is only uploaded if the existing object's

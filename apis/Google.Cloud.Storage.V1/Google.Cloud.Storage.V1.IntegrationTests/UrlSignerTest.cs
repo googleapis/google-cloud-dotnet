@@ -12,7 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Upload;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -474,6 +476,179 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
                     var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
                     Assert.Null(obj);
+                });
+        }
+
+        [Fact]
+        public async Task ResumableUploadTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void ResumableUploadTest_InitDelayTest()
+        {
+            var bucket = _fixture.SingleVersionBucket;
+            var name = GenerateName();
+            var data = _fixture.SmallContent;
+            string url = null;
+
+            _fixture.RegisterDelayTest(_duration,
+                beforeDelay: async duration =>
+                {
+                    url = _fixture.UrlSigner.Sign(bucket, name, duration, UrlSigner.ResumableHttpMethod);
+
+                    // Verify that the URL works initially.
+                    var uploader = TmpResumableUpload.CreateFromSignedUrl(url, new MemoryStream(data));
+                    var progress = await uploader.UploadAsync();
+                    Assert.Equal(UploadStatus.Completed, progress.Status);
+
+                    var result = new MemoryStream();
+                    await _fixture.Client.DownloadObjectAsync(bucket, name, result);
+                    Assert.Equal(result.ToArray(), data);
+
+                    // Reset the state.
+                    await _fixture.Client.DeleteObjectAsync(bucket, name);
+                },
+                afterDelay: async () =>
+                {
+                    var uploader = TmpResumableUpload.CreateFromSignedUrl(url, new MemoryStream(data));
+
+                    // Verify that the URL no longer works.
+                    var progress = await uploader.UploadAsync();
+                    Assert.Equal(UploadStatus.Failed, progress.Status);
+                    Assert.IsType(typeof(GoogleApiException), progress.Exception);
+
+                    var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    Assert.Null(obj);
+                });
+        }
+
+        [Fact]
+        public async Task ResumableUploadResumeTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void ResumableUploadResumeTest_InitDelayTest()
+        {
+            var bucket = _fixture.SingleVersionBucket;
+            var name = GenerateName();
+            var data = _fixture.SmallContent;
+            string url = null;
+
+            _fixture.RegisterDelayTest(_duration,
+                beforeDelay: async duration =>
+                {
+                    url = _fixture.UrlSigner.Sign(bucket, name, duration, UrlSigner.ResumableHttpMethod);
+                    var sessionUri = await TmpResumableUpload.GetSessionUriAsync(url);
+
+                    // Verify that the URL works initially.
+                    var uploader = TmpResumableUpload.CreateFromSessionUri(sessionUri, new MemoryStream(data));
+                    await uploader.ResumeAsync(sessionUri);
+                    var result = new MemoryStream();
+                    await _fixture.Client.DownloadObjectAsync(bucket, name, result);
+                    Assert.Equal(result.ToArray(), data);
+
+                    // Reset the state.
+                    await _fixture.Client.DeleteObjectAsync(bucket, name);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    await Assert.ThrowsAsync<GoogleApiException>(() => TmpResumableUpload.GetSessionUriAsync(url));
+
+                    var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
+                    Assert.Null(obj);
+                });
+        }
+
+        [Fact]
+        public async Task ResumableUploadWithCustomerSuppliedEncryptionKeysTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void ResumableUploadWithCustomerSuppliedEncryptionKeysTest_InitDelayTest()
+        {
+            var bucket = _fixture.SingleVersionBucket;
+            var name = GenerateName();
+            var data = _fixture.SmallContent;
+            string url = null;
+
+            string key;
+            string hash;
+            using (var rand = RandomNumberGenerator.Create())
+            using (var sha256 = SHA256.Create())
+            {
+                var keyBytes = new byte[32];
+                rand.GetBytes(keyBytes);
+                key = Convert.ToBase64String(keyBytes);
+                hash = Convert.ToBase64String(sha256.ComputeHash(keyBytes));
+            }
+
+            _fixture.RegisterDelayTest(_duration,
+                beforeDelay: async duration =>
+                {
+                    url = _fixture.UrlSigner.Sign(
+                        bucket,
+                        name,
+                        duration,
+                        UrlSigner.ResumableHttpMethod,
+                        requestHeaders: new Dictionary<string, IEnumerable<string>> {
+                            { "x-goog-encryption-algorithm", new [] { "AES256" } },
+                            { "x-goog-encryption-key", new [] { key } },
+                            { "x-goog-encryption-key-sha256", new []{ hash } }
+                        });
+
+                    // Verify that the URL works initially.
+                    var uploader = TmpResumableUpload.CreateFromSignedUrl(
+                        url,
+                        new MemoryStream(data),
+                        new ResumableUploadSessionOptions
+                        {
+                            ModifySessionUriRequest = sessionUriRequest =>
+                            {
+                                sessionUriRequest.Headers.Add("x-goog-encryption-algorithm", "AES256");
+                                sessionUriRequest.Headers.Add("x-goog-encryption-key", key);
+                                sessionUriRequest.Headers.Add("x-goog-encryption-key-sha256", hash);
+                            }
+                        });
+                    var progress = await uploader.UploadAsync();
+                    Assert.Equal(UploadStatus.Completed, progress.Status);
+
+                    // Make sure the encryption succeeded.
+                    await Assert.ThrowsAsync<GoogleApiException>(
+                        () => _fixture.Client.DownloadObjectAsync(bucket, name, new MemoryStream()));
+
+                    // TODO: Replace this with a normal DownloadObjectAsync call when the storage client supports customer-supplied encryption keys.
+                    var request = new HttpRequestMessage()
+                    {
+                        Method = HttpMethod.Get,
+                        Headers = {
+                            { "x-goog-encryption-algorithm", "AES256" },
+                            { "x-goog-encryption-key", key },
+                            { "x-goog-encryption-key-sha256", hash }
+                        }
+                    };
+                    url = _fixture.UrlSigner.Sign(bucket, name, duration, request);
+                    request.RequestUri = new Uri(url);
+
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    Assert.True(response.IsSuccessStatusCode);
+                    var result = await response.Content.ReadAsByteArrayAsync();
+                    Assert.Equal(data, result);
+                },
+                afterDelay: async () =>
+                {
+                    var uploader = TmpResumableUpload.CreateFromSignedUrl(
+                        url,
+                        new MemoryStream(data),
+                        new ResumableUploadSessionOptions
+                        {
+                            ModifySessionUriRequest = sessionUriRequest =>
+                            {
+                                sessionUriRequest.Headers.Add("x-goog-encryption-algorithm", "AES256");
+                                sessionUriRequest.Headers.Add("x-goog-encryption-key", key);
+                                sessionUriRequest.Headers.Add("x-goog-encryption-key-sha256", hash);
+                            }
+                        });
+
+                    // Verify that the URL no longer works.
+                    var progress = await uploader.UploadAsync();
+                    Assert.Equal(UploadStatus.Failed, progress.Status);
+                    Assert.IsType(typeof(GoogleApiException), progress.Exception);
                 });
         }
     }

@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
+using Google.Apis.Http;
 using Google.Apis.Json;
 using System;
 using System.Collections.Generic;
@@ -22,13 +23,16 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
+using Google.Apis.Media;
 
 namespace Google.Cloud.Storage.V1
 {
+    // TODO: Add unit tests for this
+
     /// <summary>
     /// Class which helps create signed URLs which can be used to provide limited access to specific buckets and objects
     /// to anyone in possession of the URL, regardless of whether they have a Google account.
@@ -40,6 +44,9 @@ namespace Google.Cloud.Storage.V1
     {
         private const string GoogHeaderPrefix = "x-goog-";
         private const string StorageHost = "https://storage.googleapis.com";
+
+        public static HttpMethod ResumableHttpMethod { get; } = new HttpMethod("RESUMABLE");
+
         private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
 
         private readonly ServiceAccountCredential _credentials;
@@ -289,6 +296,17 @@ namespace Google.Cloud.Storage.V1
         {
             StorageClientImpl.ValidateBucketName(bucket);
 
+            bool isResumableUpload = false;
+            if (requestMethod == null)
+            {
+                requestMethod = HttpMethod.Get;
+            }
+            else if (requestMethod.Equals(ResumableHttpMethod))
+            {
+                isResumableUpload = true;
+                requestMethod = HttpMethod.Post;
+            }
+
             var expiryUnixSeconds = ((int?)((expiration - UnixEpoch)?.TotalSeconds))?.ToString(CultureInfo.InvariantCulture);
             var resourcePath = $"/{bucket}";
             if (objectName != null)
@@ -296,13 +314,17 @@ namespace Google.Cloud.Storage.V1
                 resourcePath += $"/{Uri.EscapeDataString(objectName)}";
             }
             var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
+            if (isResumableUpload)
+            {
+                extensionHeaders["x-goog-resumable"] = new StringBuilder("start");
+            }
 
             var contentMD5 = GetFirstHeaderValue(contentHeaders, "Content-MD5");
             var contentType = GetFirstHeaderValue(contentHeaders, "Content-Type");
 
             var signatureLines = new List<string>
             {
-                (requestMethod ?? HttpMethod.Get).ToString(),
+                requestMethod.ToString(),
                 contentMD5,
                 contentType,
                 expiryUnixSeconds
