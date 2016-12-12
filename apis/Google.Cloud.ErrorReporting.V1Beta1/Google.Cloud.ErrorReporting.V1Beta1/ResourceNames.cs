@@ -199,7 +199,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return ProjectName.Parse(ProjectName); }
+            get { return V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
         }
 
@@ -212,7 +212,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public GroupName GroupNameAsGroupName
         {
-            get { return GroupName.Parse(GroupName); }
+            get { return V1Beta1.GroupName.Parse(GroupName); }
             set { GroupName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
         }
 
@@ -225,7 +225,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return ProjectName.Parse(ProjectName); }
+            get { return V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
         }
 
@@ -238,7 +238,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return ProjectName.Parse(ProjectName); }
+            get { return V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
         }
 
@@ -251,7 +251,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return ProjectName.Parse(ProjectName); }
+            get { return V1Beta1.ProjectName.Parse(ProjectName); }
             set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
         }
 
