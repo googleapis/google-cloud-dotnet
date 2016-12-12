@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Singleton for a <see cref= "BufferOptions" /> instance that describes a 
         /// <see cref="BufferType.None"/> type of buffer.
         /// </summary>
-        private static readonly BufferOptions NoBufferInstance = new BufferOptions(BufferType.None);
+        private static readonly BufferOptions s_noBufferInstance = new BufferOptions(BufferType.None);
 
         /// <summary>The default buffer size in bytes. 2^16 = 65536.</summary>
         private const int DefaultBufferSize = 65536;
@@ -67,7 +67,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Create <see cref="BufferOptions"/> for <see cref="BufferType.None"/>
         /// </summary>
-        public static BufferOptions NoBuffer() => NoBufferInstance;
+        public static BufferOptions NoBuffer() => s_noBufferInstance;
 
         /// <summary>
         /// Create <see cref="BufferOptions"/> for <see cref="BufferType.Sized"/>
