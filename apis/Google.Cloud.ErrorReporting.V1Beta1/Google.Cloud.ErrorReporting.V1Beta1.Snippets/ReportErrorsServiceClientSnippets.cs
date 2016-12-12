@@ -36,7 +36,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Sample: ReportErrorEvent
             // Additional: ReportErrorEvent(*,*,*)
             ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
-            string projectName = new ProjectName(projectId).ToString();
+            ProjectName projectName = new ProjectName(projectId);
             ReportedErrorEvent error = new ReportedErrorEvent
             {
                 Context = new ErrorContext
