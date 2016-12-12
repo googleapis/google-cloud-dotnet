@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -27,17 +28,19 @@ namespace Google.Cloud.Diagnostics.Common
         internal static IConsumer<T> GetConsumer(IConsumer<T> consumer, ISizer<T> sizer, BufferOptions options)
         {
             GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            GaxPreconditions.CheckNotNull(consumer, nameof(options));
+            GaxPreconditions.CheckNotNull(options, nameof(options));
 
             switch (options.BufferType)
             {
                 case BufferType.Sized:
+                    GaxPreconditions.CheckNotNull(sizer, nameof(sizer));
                     return SizedBufferingConsumer<T>.Create(consumer, sizer, options.BufferSizeBytes);
                 case BufferType.Timed:
                     return TimedBufferingConsumer<T>.Create(consumer, options.BufferWaitTime);
                 case BufferType.None:
-                default:
                     return consumer;
+                default:
+                    throw new ArgumentException($"Invalid BufferType: {options.BufferType}");
             }
         }
     }

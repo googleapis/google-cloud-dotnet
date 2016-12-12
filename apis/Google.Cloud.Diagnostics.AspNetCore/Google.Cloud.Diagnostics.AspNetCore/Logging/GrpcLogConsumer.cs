@@ -23,7 +23,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// An <see cref="IConsumer{T}"/> that will send received logs to the Stackdriver Logging API.
     /// </summary>
-    internal class GrpcLogConsumer : IConsumer<LogEntry>
+    internal sealed class GrpcLogConsumer : IConsumer<LogEntry>
     {
         /// <summary>An empty dictionary used for labels.</summary>
         private static readonly IDictionary<string, string> EmptyDictionary = new Dictionary<string, string>();

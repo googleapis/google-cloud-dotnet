@@ -23,13 +23,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Options for a <see cref="GoogleLogger"/>.
     /// </summary>
-    public class LoggerOptions
+    public sealed class LoggerOptions
     {
         /// <summary>The minimum log level.</summary>
-        public LogLevel LogLevel { get; private set; }
+        public LogLevel LogLevel { get; }
 
         /// <summary>The buffer options for the logger.</summary>
-        public BufferOptions BufferOptions { get; private set; }
+        public BufferOptions BufferOptions { get; }
 
         private LoggerOptions(LogLevel logLevel, BufferOptions bufferOptions)
         {

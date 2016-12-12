@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// <see cref="ILoggerProvider"/> for Stackdriver Logging.
     /// </summary>
-    public class GoogleLoggerProvider : ILoggerProvider
+    public sealed class GoogleLoggerProvider : ILoggerProvider
     {
         /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
@@ -49,10 +49,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Creates a <see cref="GoogleLogger"/> with the given log name.
         /// </summary>
-        public ILogger CreateLogger(string logName)
-        {
-            return new GoogleLogger(_consumer, _logLevel, _projectId, logName);
-        }
+        /// <param name="logName">The name of the log.  This will be combined with the project Id to generate the 
+        /// resource name for the log.</param>
+        public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logLevel, _projectId, logName);
 
         public void Dispose() {}
     }

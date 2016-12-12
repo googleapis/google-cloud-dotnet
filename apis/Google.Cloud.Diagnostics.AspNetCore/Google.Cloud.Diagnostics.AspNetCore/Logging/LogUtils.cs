@@ -21,19 +21,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     internal static class LogUtils
     {
         /// <summary>
-        /// Gets a formated log name.
-        /// See: https://cloud.google.com/logging/docs/api/ref/rest/v1beta3/projects.logs.entries/write#LogEntry
-        /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="logName">The name of the log.</param>
-        public static string GetLogName(string projectId, string logName) {
-            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            GaxPreconditions.CheckNotNull(logName, nameof(logName));
-            return $"projects/{projectId}/logs/{logName}";
-        }
-
-        /// <summary>
-        /// Extentions to get a <see cref="LogSeverity"/> for a <see cref="LogLevel"/>.
+        /// Extensions to get a <see cref="LogSeverity"/> for a <see cref="LogLevel"/>.
         /// </summary>
         public static LogSeverity ToLogSeverity(this LogLevel logLevel)
         {

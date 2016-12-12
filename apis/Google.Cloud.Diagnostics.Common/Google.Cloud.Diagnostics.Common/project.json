@@ -24,6 +24,6 @@
 
   "frameworks": {
     "net45": {},
-    "netcoreapp1.5": {}
+    "netstandard1.5": {}
   }
 }

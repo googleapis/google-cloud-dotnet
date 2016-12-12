@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// <see cref="ILogger"/> for Stackdriver Logging.
     /// </summary>
-    public class GoogleLogger : ILogger
+    public sealed class GoogleLogger : ILogger
     {
         /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
@@ -36,16 +36,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The formatted log name for the project and log.</summary>
         private readonly string _logName;
 
+        /// <summary>A clock for getting the current timestamp.</summary>
+        private readonly IClock _clock;
+
         /// <summary>The global resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
         private static readonly MonitoredResource _globalResource = new MonitoredResource { Type = "global" };
 
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogLevel logLevel, string projectId, string logName)
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogLevel logLevel, string projectId, string logName, IClock clock = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNull(logName, nameof(logName));
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _logLevel = logLevel;
-            _logName = LogUtils.GetLogName(projectId, logName);
+            _logName = new LogName(projectId, logName).ToString();
+            _clock = clock ?? SystemClock.Instance;
         }
 
         /// <summary>
@@ -58,10 +62,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <inheritdoc />
-        public bool IsEnabled(LogLevel logLevel)
-        {
-            return logLevel >= _logLevel;
-        }
+        public bool IsEnabled(LogLevel logLevel) => logLevel >= _logLevel;
+        
 
         /// <inheritdoc />
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
@@ -84,11 +86,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Resource = _globalResource,
                 LogName = _logName,
                 Severity = logLevel.ToLogSeverity(),
-                Timestamp = Timestamp.FromDateTime(DateTime.UtcNow),
+                Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 TextPayload = message,
             };
 
-            _consumer.Receive(new LogEntry[] { entry });
+            _consumer.Receive(new [] { entry });
         }
     }
 }
