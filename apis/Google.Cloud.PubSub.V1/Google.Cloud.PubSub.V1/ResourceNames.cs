@@ -723,6 +723,19 @@ namespace Google.Cloud.PubSub.V1
 
     }
 
+    public partial class StreamingPullRequest
+    {
+        /// <summary>
+        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// </summary>
+        public SubscriptionName SubscriptionAsSubscriptionName
+        {
+            get { return SubscriptionName.Parse(Subscription); }
+            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+        }
+
+    }
+
     public partial class Subscription
     {
         /// <summary>

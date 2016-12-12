@@ -66,53 +66,62 @@ namespace Google.Cloud.PubSub.V1 {
             "aWZ5QWNrRGVhZGxpbmVSZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCRIP",
             "CgdhY2tfaWRzGAQgAygJEhwKFGFja19kZWFkbGluZV9zZWNvbmRzGAMgASgF",
             "IjsKEkFja25vd2xlZGdlUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkS",
-            "DwoHYWNrX2lkcxgCIAMoCTLACQoKU3Vic2NyaWJlchKGAQoSQ3JlYXRlU3Vi",
-            "c2NyaXB0aW9uEh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24aHi5n",
-            "b29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbiIwgtPkkwIqGiUvdjEve25h",
-            "bWU9cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OgEqEpIBCg9HZXRTdWJz",
-            "Y3JpcHRpb24SKC5nb29nbGUucHVic3ViLnYxLkdldFN1YnNjcmlwdGlvblJl",
-            "cXVlc3QaHi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbiI1gtPkkwIv",
-            "Ei0vdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMv",
-            "Kn0SnAEKEUxpc3RTdWJzY3JpcHRpb25zEiouZ29vZ2xlLnB1YnN1Yi52MS5M",
-            "aXN0U3Vic2NyaXB0aW9uc1JlcXVlc3QaKy5nb29nbGUucHVic3ViLnYxLkxp",
-            "c3RTdWJzY3JpcHRpb25zUmVzcG9uc2UiLoLT5JMCKBImL3YxL3twcm9qZWN0",
-            "PXByb2plY3RzLyp9L3N1YnNjcmlwdGlvbnMSkAEKEkRlbGV0ZVN1YnNjcmlw",
-            "dGlvbhIrLmdvb2dsZS5wdWJzdWIudjEuRGVsZXRlU3Vic2NyaXB0aW9uUmVx",
-            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI1gtPkkwIvKi0vdjEve3N1",
-            "YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn0SowEKEU1v",
-            "ZGlmeUFja0RlYWRsaW5lEiouZ29vZ2xlLnB1YnN1Yi52MS5Nb2RpZnlBY2tE",
-            "ZWFkbGluZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiSoLT5JMC",
-            "RCI/L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25z",
-            "Lyp9Om1vZGlmeUFja0RlYWRsaW5lOgEqEpEBCgtBY2tub3dsZWRnZRIkLmdv",
-            "b2dsZS5wdWJzdWIudjEuQWNrbm93bGVkZ2VSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IkSC0+STAj4iOS92MS97c3Vic2NyaXB0aW9uPXByb2pl",
-            "Y3RzLyovc3Vic2NyaXB0aW9ucy8qfTphY2tub3dsZWRnZToBKhKEAQoEUHVs",
-            "bBIdLmdvb2dsZS5wdWJzdWIudjEuUHVsbFJlcXVlc3QaHi5nb29nbGUucHVi",
-            "c3ViLnYxLlB1bGxSZXNwb25zZSI9gtPkkwI3IjIvdjEve3N1YnNjcmlwdGlv",
-            "bj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06cHVsbDoBKhKgAQoQTW9k",
-            "aWZ5UHVzaENvbmZpZxIpLmdvb2dsZS5wdWJzdWIudjEuTW9kaWZ5UHVzaENv",
-            "bmZpZ1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiSYLT5JMCQyI+",
-            "L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9",
-            "Om1vZGlmeVB1c2hDb25maWc6ASoymwYKCVB1Ymxpc2hlchJqCgtDcmVhdGVU",
-            "b3BpYxIXLmdvb2dsZS5wdWJzdWIudjEuVG9waWMaFy5nb29nbGUucHVic3Vi",
-            "LnYxLlRvcGljIimC0+STAiMaHi92MS97bmFtZT1wcm9qZWN0cy8qL3RvcGlj",
-            "cy8qfToBKhKCAQoHUHVibGlzaBIgLmdvb2dsZS5wdWJzdWIudjEuUHVibGlz",
-            "aFJlcXVlc3QaIS5nb29nbGUucHVic3ViLnYxLlB1Ymxpc2hSZXNwb25zZSIy",
-            "gtPkkwIsIicvdjEve3RvcGljPXByb2plY3RzLyovdG9waWNzLyp9OnB1Ymxp",
-            "c2g6ASoSbwoIR2V0VG9waWMSIS5nb29nbGUucHVic3ViLnYxLkdldFRvcGlj",
-            "UmVxdWVzdBoXLmdvb2dsZS5wdWJzdWIudjEuVG9waWMiJ4LT5JMCIRIfL3Yx",
-            "L3t0b3BpYz1wcm9qZWN0cy8qL3RvcGljcy8qfRKAAQoKTGlzdFRvcGljcxIj",
-            "Lmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljc1JlcXVlc3QaJC5nb29nbGUu",
-            "cHVic3ViLnYxLkxpc3RUb3BpY3NSZXNwb25zZSIngtPkkwIhEh8vdjEve3By",
-            "b2plY3Q9cHJvamVjdHMvKn0vdG9waWNzErIBChZMaXN0VG9waWNTdWJzY3Jp",
-            "cHRpb25zEi8uZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTdWJzY3JpcHRp",
-            "b25zUmVxdWVzdBowLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRvcGljU3Vic2Ny",
-            "aXB0aW9uc1Jlc3BvbnNlIjWC0+STAi8SLS92MS97dG9waWM9cHJvamVjdHMv",
-            "Ki90b3BpY3MvKn0vc3Vic2NyaXB0aW9ucxJ0CgtEZWxldGVUb3BpYxIkLmdv",
-            "b2dsZS5wdWJzdWIudjEuRGVsZXRlVG9waWNSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IieC0+STAiEqHy92MS97dG9waWM9cHJvamVjdHMvKi90",
-            "b3BpY3MvKn1CQQoUY29tLmdvb2dsZS5wdWJzdWIudjFCC1B1YnN1YlByb3Rv",
-            "UAH4AQGqAhZHb29nbGUuQ2xvdWQuUHViU3ViLlYxYgZwcm90bzM="));
+            "DwoHYWNrX2lkcxgCIAMoCSKkAQoUU3RyZWFtaW5nUHVsbFJlcXVlc3QSFAoM",
+            "c3Vic2NyaXB0aW9uGAEgASgJEg8KB2Fja19pZHMYAiADKAkSHwoXbW9kaWZ5",
+            "X2RlYWRsaW5lX3NlY29uZHMYAyADKAUSHwoXbW9kaWZ5X2RlYWRsaW5lX2Fj",
+            "a19pZHMYBCADKAkSIwobc3RyZWFtX2Fja19kZWFkbGluZV9zZWNvbmRzGAUg",
+            "ASgFIlUKFVN0cmVhbWluZ1B1bGxSZXNwb25zZRI8ChFyZWNlaXZlZF9tZXNz",
+            "YWdlcxgBIAMoCzIhLmdvb2dsZS5wdWJzdWIudjEuUmVjZWl2ZWRNZXNzYWdl",
+            "MqYKCgpTdWJzY3JpYmVyEoYBChJDcmVhdGVTdWJzY3JpcHRpb24SHi5nb29n",
+            "bGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbhoeLmdvb2dsZS5wdWJzdWIudjEu",
+            "U3Vic2NyaXB0aW9uIjCC0+STAioaJS92MS97bmFtZT1wcm9qZWN0cy8qL3N1",
+            "YnNjcmlwdGlvbnMvKn06ASoSkgEKD0dldFN1YnNjcmlwdGlvbhIoLmdvb2ds",
+            "ZS5wdWJzdWIudjEuR2V0U3Vic2NyaXB0aW9uUmVxdWVzdBoeLmdvb2dsZS5w",
+            "dWJzdWIudjEuU3Vic2NyaXB0aW9uIjWC0+STAi8SLS92MS97c3Vic2NyaXB0",
+            "aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfRKcAQoRTGlzdFN1YnNj",
+            "cmlwdGlvbnMSKi5nb29nbGUucHVic3ViLnYxLkxpc3RTdWJzY3JpcHRpb25z",
+            "UmVxdWVzdBorLmdvb2dsZS5wdWJzdWIudjEuTGlzdFN1YnNjcmlwdGlvbnNS",
+            "ZXNwb25zZSIugtPkkwIoEiYvdjEve3Byb2plY3Q9cHJvamVjdHMvKn0vc3Vi",
+            "c2NyaXB0aW9ucxKQAQoSRGVsZXRlU3Vic2NyaXB0aW9uEisuZ29vZ2xlLnB1",
+            "YnN1Yi52MS5EZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IjWC0+STAi8qLS92MS97c3Vic2NyaXB0aW9uPXByb2pl",
+            "Y3RzLyovc3Vic2NyaXB0aW9ucy8qfRKjAQoRTW9kaWZ5QWNrRGVhZGxpbmUS",
+            "Ki5nb29nbGUucHVic3ViLnYxLk1vZGlmeUFja0RlYWRsaW5lUmVxdWVzdBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJKgtPkkwJEIj8vdjEve3N1YnNjcmlw",
+            "dGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06bW9kaWZ5QWNrRGVh",
+            "ZGxpbmU6ASoSkQEKC0Fja25vd2xlZGdlEiQuZ29vZ2xlLnB1YnN1Yi52MS5B",
+            "Y2tub3dsZWRnZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRILT",
+            "5JMCPiI5L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRp",
+            "b25zLyp9OmFja25vd2xlZGdlOgEqEoQBCgRQdWxsEh0uZ29vZ2xlLnB1YnN1",
+            "Yi52MS5QdWxsUmVxdWVzdBoeLmdvb2dsZS5wdWJzdWIudjEuUHVsbFJlc3Bv",
+            "bnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vi",
+            "c2NyaXB0aW9ucy8qfTpwdWxsOgEqEmQKDVN0cmVhbWluZ1B1bGwSJi5nb29n",
+            "bGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXF1ZXN0GicuZ29vZ2xlLnB1",
+            "YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UoATABEqABChBNb2RpZnlQ",
+            "dXNoQ29uZmlnEikuZ29vZ2xlLnB1YnN1Yi52MS5Nb2RpZnlQdXNoQ29uZmln",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJJgtPkkwJDIj4vdjEv",
+            "e3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06bW9k",
+            "aWZ5UHVzaENvbmZpZzoBKjKbBgoJUHVibGlzaGVyEmoKC0NyZWF0ZVRvcGlj",
+            "EhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYxoXLmdvb2dsZS5wdWJzdWIudjEu",
+            "VG9waWMiKYLT5JMCIxoeL3YxL3tuYW1lPXByb2plY3RzLyovdG9waWNzLyp9",
+            "OgEqEoIBCgdQdWJsaXNoEiAuZ29vZ2xlLnB1YnN1Yi52MS5QdWJsaXNoUmVx",
+            "dWVzdBohLmdvb2dsZS5wdWJzdWIudjEuUHVibGlzaFJlc3BvbnNlIjKC0+ST",
+            "AiwiJy92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn06cHVibGlzaDoB",
+            "KhJvCghHZXRUb3BpYxIhLmdvb2dsZS5wdWJzdWIudjEuR2V0VG9waWNSZXF1",
+            "ZXN0GhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYyIngtPkkwIhEh8vdjEve3Rv",
+            "cGljPXByb2plY3RzLyovdG9waWNzLyp9EoABCgpMaXN0VG9waWNzEiMuZ29v",
+            "Z2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVxdWVzdBokLmdvb2dsZS5wdWJz",
+            "dWIudjEuTGlzdFRvcGljc1Jlc3BvbnNlIieC0+STAiESHy92MS97cHJvamVj",
+            "dD1wcm9qZWN0cy8qfS90b3BpY3MSsgEKFkxpc3RUb3BpY1N1YnNjcmlwdGlv",
+            "bnMSLy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1N1YnNjcmlwdGlvbnNS",
+            "ZXF1ZXN0GjAuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTdWJzY3JpcHRp",
+            "b25zUmVzcG9uc2UiNYLT5JMCLxItL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3Rv",
+            "cGljcy8qfS9zdWJzY3JpcHRpb25zEnQKC0RlbGV0ZVRvcGljEiQuZ29vZ2xl",
+            "LnB1YnN1Yi52MS5EZWxldGVUb3BpY1JlcXVlc3QaFi5nb29nbGUucHJvdG9i",
+            "dWYuRW1wdHkiJ4LT5JMCISofL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGlj",
+            "cy8qfUJ5ChRjb20uZ29vZ2xlLnB1YnN1Yi52MUILUHVic3ViUHJvdG9QAVo2",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9wdWJzdWIv",
+            "djE7cHVic3Vi+AEBqgIWR29vZ2xlLkNsb3VkLlB1YlN1Yi5WMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -137,7 +146,9 @@ namespace Google.Cloud.PubSub.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PullRequest), global::Google.Cloud.PubSub.V1.PullRequest.Parser, new[]{ "Subscription", "ReturnImmediately", "MaxMessages" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PullResponse), global::Google.Cloud.PubSub.V1.PullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest), global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.AcknowledgeRequest), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.AcknowledgeRequest), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullRequest), global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser, new[]{ "Subscription", "AckIds", "ModifyDeadlineSeconds", "ModifyDeadlineAckIds", "StreamAckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null)
           }));
     }
     #endregion
@@ -3637,6 +3648,372 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 18: {
             ackIds_.AddEntriesFrom(input, _repeated_ackIds_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Request for the `StreamingPull` streaming RPC method. This request is used to
+  ///  establish the initial stream as well as to stream acknowledgements and ack
+  ///  deadline modifications from the client to the server.
+  /// </summary>
+  public sealed partial class StreamingPullRequest : pb::IMessage<StreamingPullRequest> {
+    private static readonly pb::MessageParser<StreamingPullRequest> _parser = new pb::MessageParser<StreamingPullRequest>(() => new StreamingPullRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StreamingPullRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StreamingPullRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StreamingPullRequest(StreamingPullRequest other) : this() {
+      subscription_ = other.subscription_;
+      ackIds_ = other.ackIds_.Clone();
+      modifyDeadlineSeconds_ = other.modifyDeadlineSeconds_.Clone();
+      modifyDeadlineAckIds_ = other.modifyDeadlineAckIds_.Clone();
+      streamAckDeadlineSeconds_ = other.streamAckDeadlineSeconds_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StreamingPullRequest Clone() {
+      return new StreamingPullRequest(this);
+    }
+
+    /// <summary>Field number for the "subscription" field.</summary>
+    public const int SubscriptionFieldNumber = 1;
+    private string subscription_ = "";
+    /// <summary>
+    ///  The subscription for which to initialize the new stream. This must be
+    ///  provided in the first request on the stream, and must not be set in
+    ///  subsequent requests from client to server.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Subscription {
+      get { return subscription_; }
+      set {
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ack_ids" field.</summary>
+    public const int AckIdsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_ackIds_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  List of acknowledgement IDs for acknowledging previously received messages
+    ///  (received on this stream or a different stream). If an ack ID has expired,
+    ///  the corresponding message may be redelivered later. Acknowledging a message
+    ///  more than once will not result in an error. If the acknowledgement ID is
+    ///  malformed, the stream will be aborted with status `INVALID_ARGUMENT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> AckIds {
+      get { return ackIds_; }
+    }
+
+    /// <summary>Field number for the "modify_deadline_seconds" field.</summary>
+    public const int ModifyDeadlineSecondsFieldNumber = 3;
+    private static readonly pb::FieldCodec<int> _repeated_modifyDeadlineSeconds_codec
+        = pb::FieldCodec.ForInt32(26);
+    private readonly pbc::RepeatedField<int> modifyDeadlineSeconds_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    ///  The list of new ack deadlines for the IDs listed in
+    ///  `modify_deadline_ack_ids`. The size of this list must be the same as the
+    ///  size of `modify_deadline_ack_ids`. If it differs the stream will be aborted
+    ///  with `INVALID_ARGUMENT`. Each element in this list is applied to the
+    ///  element in the same position in `modify_deadline_ack_ids`. The new ack
+    ///  deadline is with respect to the time this request was sent to the Pub/Sub
+    ///  system. Must be >= 0. For example, if the value is 10, the new ack deadline
+    ///  will expire 10 seconds after this request is received. If the value is 0,
+    ///  the message is immediately made available for another streaming or
+    ///  non-streaming pull request. If the value is &lt; 0 (an error), the stream will
+    ///  be aborted with status `INVALID_ARGUMENT`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<int> ModifyDeadlineSeconds {
+      get { return modifyDeadlineSeconds_; }
+    }
+
+    /// <summary>Field number for the "modify_deadline_ack_ids" field.</summary>
+    public const int ModifyDeadlineAckIdsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_modifyDeadlineAckIds_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> modifyDeadlineAckIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  List of acknowledgement IDs whose deadline will be modified based on the
+    ///  corresponding element in `modify_deadline_seconds`. This field can be used
+    ///  to indicate that more time is needed to process a message by the
+    ///  subscriber, or to make the message available for redelivery if the
+    ///  processing was interrupted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> ModifyDeadlineAckIds {
+      get { return modifyDeadlineAckIds_; }
+    }
+
+    /// <summary>Field number for the "stream_ack_deadline_seconds" field.</summary>
+    public const int StreamAckDeadlineSecondsFieldNumber = 5;
+    private int streamAckDeadlineSeconds_;
+    /// <summary>
+    ///  The ack deadline to use for the stream. This must be provided in the
+    ///  first request on the stream, but it can also be updated on subsequent
+    ///  requests from client to server. The minimum deadline you can specify is 10
+    ///  seconds. The maximum deadline you can specify is 600 seconds (10 minutes).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int StreamAckDeadlineSeconds {
+      get { return streamAckDeadlineSeconds_; }
+      set {
+        streamAckDeadlineSeconds_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StreamingPullRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StreamingPullRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Subscription != other.Subscription) return false;
+      if(!ackIds_.Equals(other.ackIds_)) return false;
+      if(!modifyDeadlineSeconds_.Equals(other.modifyDeadlineSeconds_)) return false;
+      if(!modifyDeadlineAckIds_.Equals(other.modifyDeadlineAckIds_)) return false;
+      if (StreamAckDeadlineSeconds != other.StreamAckDeadlineSeconds) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
+      hash ^= ackIds_.GetHashCode();
+      hash ^= modifyDeadlineSeconds_.GetHashCode();
+      hash ^= modifyDeadlineAckIds_.GetHashCode();
+      if (StreamAckDeadlineSeconds != 0) hash ^= StreamAckDeadlineSeconds.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Subscription.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Subscription);
+      }
+      ackIds_.WriteTo(output, _repeated_ackIds_codec);
+      modifyDeadlineSeconds_.WriteTo(output, _repeated_modifyDeadlineSeconds_codec);
+      modifyDeadlineAckIds_.WriteTo(output, _repeated_modifyDeadlineAckIds_codec);
+      if (StreamAckDeadlineSeconds != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(StreamAckDeadlineSeconds);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Subscription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Subscription);
+      }
+      size += ackIds_.CalculateSize(_repeated_ackIds_codec);
+      size += modifyDeadlineSeconds_.CalculateSize(_repeated_modifyDeadlineSeconds_codec);
+      size += modifyDeadlineAckIds_.CalculateSize(_repeated_modifyDeadlineAckIds_codec);
+      if (StreamAckDeadlineSeconds != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StreamAckDeadlineSeconds);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StreamingPullRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Subscription.Length != 0) {
+        Subscription = other.Subscription;
+      }
+      ackIds_.Add(other.ackIds_);
+      modifyDeadlineSeconds_.Add(other.modifyDeadlineSeconds_);
+      modifyDeadlineAckIds_.Add(other.modifyDeadlineAckIds_);
+      if (other.StreamAckDeadlineSeconds != 0) {
+        StreamAckDeadlineSeconds = other.StreamAckDeadlineSeconds;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Subscription = input.ReadString();
+            break;
+          }
+          case 18: {
+            ackIds_.AddEntriesFrom(input, _repeated_ackIds_codec);
+            break;
+          }
+          case 26:
+          case 24: {
+            modifyDeadlineSeconds_.AddEntriesFrom(input, _repeated_modifyDeadlineSeconds_codec);
+            break;
+          }
+          case 34: {
+            modifyDeadlineAckIds_.AddEntriesFrom(input, _repeated_modifyDeadlineAckIds_codec);
+            break;
+          }
+          case 40: {
+            StreamAckDeadlineSeconds = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Response for the `StreamingPull` method. This response is used to stream
+  ///  messages from the server to the client.
+  /// </summary>
+  public sealed partial class StreamingPullResponse : pb::IMessage<StreamingPullResponse> {
+    private static readonly pb::MessageParser<StreamingPullResponse> _parser = new pb::MessageParser<StreamingPullResponse>(() => new StreamingPullResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<StreamingPullResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StreamingPullResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StreamingPullResponse(StreamingPullResponse other) : this() {
+      receivedMessages_ = other.receivedMessages_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public StreamingPullResponse Clone() {
+      return new StreamingPullResponse(this);
+    }
+
+    /// <summary>Field number for the "received_messages" field.</summary>
+    public const int ReceivedMessagesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.PubSub.V1.ReceivedMessage> _repeated_receivedMessages_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage>();
+    /// <summary>
+    ///  Received Pub/Sub messages. This will not be empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> ReceivedMessages {
+      get { return receivedMessages_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as StreamingPullResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(StreamingPullResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!receivedMessages_.Equals(other.receivedMessages_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= receivedMessages_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      receivedMessages_.WriteTo(output, _repeated_receivedMessages_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += receivedMessages_.CalculateSize(_repeated_receivedMessages_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(StreamingPullResponse other) {
+      if (other == null) {
+        return;
+      }
+      receivedMessages_.Add(other.receivedMessages_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            receivedMessages_.AddEntriesFrom(input, _repeated_receivedMessages_codec);
             break;
           }
         }

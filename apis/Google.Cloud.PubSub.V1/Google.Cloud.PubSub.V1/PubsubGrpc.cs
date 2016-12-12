@@ -41,6 +41,8 @@ namespace Google.Cloud.PubSub.V1 {
     static readonly Marshaller<global::Google.Cloud.PubSub.V1.AcknowledgeRequest> __Marshaller_AcknowledgeRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.PubSub.V1.PullRequest> __Marshaller_PullRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PullRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.PubSub.V1.PullResponse> __Marshaller_PullResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.PullResponse.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullRequest> __Marshaller_StreamingPullRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.PubSub.V1.StreamingPullResponse> __Marshaller_StreamingPullResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest> __Marshaller_ModifyPushConfigRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest.Parser.ParseFrom);
 
     static readonly Method<global::Google.Cloud.PubSub.V1.Subscription, global::Google.Cloud.PubSub.V1.Subscription> __Method_CreateSubscription = new Method<global::Google.Cloud.PubSub.V1.Subscription, global::Google.Cloud.PubSub.V1.Subscription>(
@@ -91,6 +93,13 @@ namespace Google.Cloud.PubSub.V1 {
         "Pull",
         __Marshaller_PullRequest,
         __Marshaller_PullResponse);
+
+    static readonly Method<global::Google.Cloud.PubSub.V1.StreamingPullRequest, global::Google.Cloud.PubSub.V1.StreamingPullResponse> __Method_StreamingPull = new Method<global::Google.Cloud.PubSub.V1.StreamingPullRequest, global::Google.Cloud.PubSub.V1.StreamingPullResponse>(
+        MethodType.DuplexStreaming,
+        __ServiceName,
+        "StreamingPull",
+        __Marshaller_StreamingPullRequest,
+        __Marshaller_StreamingPullResponse);
 
     static readonly Method<global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ModifyPushConfig = new Method<global::Google.Cloud.PubSub.V1.ModifyPushConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
@@ -186,6 +195,25 @@ namespace Google.Cloud.PubSub.V1 {
       ///  subscription.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.PubSub.V1.PullResponse> Pull(global::Google.Cloud.PubSub.V1.PullRequest request, ServerCallContext context)
+      {
+        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///  (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+      ///  respond with UNIMPLEMENTED errors unless you have been invited to test
+      ///  this feature. Contact cloud-pubsub@google.com with any questions.
+      ///
+      ///  Establishes a stream with the server, which sends messages down to the
+      ///  client. The client streams acknowledgements and ack deadline modifications
+      ///  back to the server. The server will close the stream and return the status
+      ///  on any error. The server may close the stream with status `OK` to reassign
+      ///  server-side resources, in which case, the client should re-establish the
+      ///  stream. `UNAVAILABLE` may also be returned in the case of a transient error
+      ///  (e.g., a server restart). These should also be retried by the client. Flow
+      ///  control can be achieved by configuring the underlying RPC channel.
+      /// </summary>
+      public virtual global::System.Threading.Tasks.Task StreamingPull(IAsyncStreamReader<global::Google.Cloud.PubSub.V1.StreamingPullRequest> requestStream, IServerStreamWriter<global::Google.Cloud.PubSub.V1.StreamingPullResponse> responseStream, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -529,6 +557,42 @@ namespace Google.Cloud.PubSub.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_Pull, null, options, request);
       }
       /// <summary>
+      ///  (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+      ///  respond with UNIMPLEMENTED errors unless you have been invited to test
+      ///  this feature. Contact cloud-pubsub@google.com with any questions.
+      ///
+      ///  Establishes a stream with the server, which sends messages down to the
+      ///  client. The client streams acknowledgements and ack deadline modifications
+      ///  back to the server. The server will close the stream and return the status
+      ///  on any error. The server may close the stream with status `OK` to reassign
+      ///  server-side resources, in which case, the client should re-establish the
+      ///  stream. `UNAVAILABLE` may also be returned in the case of a transient error
+      ///  (e.g., a server restart). These should also be retried by the client. Flow
+      ///  control can be achieved by configuring the underlying RPC channel.
+      /// </summary>
+      public virtual AsyncDuplexStreamingCall<global::Google.Cloud.PubSub.V1.StreamingPullRequest, global::Google.Cloud.PubSub.V1.StreamingPullResponse> StreamingPull(Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return StreamingPull(new CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///  (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+      ///  respond with UNIMPLEMENTED errors unless you have been invited to test
+      ///  this feature. Contact cloud-pubsub@google.com with any questions.
+      ///
+      ///  Establishes a stream with the server, which sends messages down to the
+      ///  client. The client streams acknowledgements and ack deadline modifications
+      ///  back to the server. The server will close the stream and return the status
+      ///  on any error. The server may close the stream with status `OK` to reassign
+      ///  server-side resources, in which case, the client should re-establish the
+      ///  stream. `UNAVAILABLE` may also be returned in the case of a transient error
+      ///  (e.g., a server restart). These should also be retried by the client. Flow
+      ///  control can be achieved by configuring the underlying RPC channel.
+      /// </summary>
+      public virtual AsyncDuplexStreamingCall<global::Google.Cloud.PubSub.V1.StreamingPullRequest, global::Google.Cloud.PubSub.V1.StreamingPullResponse> StreamingPull(CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingPull, null, options);
+      }
+      /// <summary>
       ///  Modifies the `PushConfig` for a specified subscription.
       ///
       ///  This may be used to change a push subscription to a pull one (signified by
@@ -593,6 +657,7 @@ namespace Google.Cloud.PubSub.V1 {
           .AddMethod(__Method_ModifyAckDeadline, serviceImpl.ModifyAckDeadline)
           .AddMethod(__Method_Acknowledge, serviceImpl.Acknowledge)
           .AddMethod(__Method_Pull, serviceImpl.Pull)
+          .AddMethod(__Method_StreamingPull, serviceImpl.StreamingPull)
           .AddMethod(__Method_ModifyPushConfig, serviceImpl.ModifyPushConfig).Build();
     }
 
