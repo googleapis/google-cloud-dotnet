@@ -48,8 +48,8 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public sealed class ErrorReportingExceptionLogger : ExceptionLogger
     {
-        // The formated Google Cloud Platform project id.
-        private readonly string _projectResourceName;
+        // The Google Cloud Platform project id as a resource name.
+        private readonly ProjectName _projectResourceName;
 
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
@@ -93,7 +93,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) : base()
         {
             _clientTask = GaxPreconditions.CheckNotNull(clientTask, nameof(clientTask));
-            _projectResourceName = new ProjectName(GaxPreconditions.CheckNotNull(projectId, nameof(projectId))).ToString();
+            _projectResourceName = new ProjectName(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
 
             _serviceContext = new ServiceContext
             {

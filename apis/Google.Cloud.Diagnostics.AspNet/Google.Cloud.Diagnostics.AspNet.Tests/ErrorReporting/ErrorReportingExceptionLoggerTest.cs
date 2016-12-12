@@ -32,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         private static readonly ProductInfoHeaderValue UserAgentValue = new ProductInfoHeaderValue("UserAgent", "1.0");
         private static readonly HttpStatusCode ConflictStatusCode = HttpStatusCode.Conflict;
         private static readonly string ProjectId = "pid";
-        private static readonly string FormattedProjectId = new ProjectName(ProjectId).ToString();
+        private static readonly ProjectName ProjectName = new ProjectName(ProjectId);
         private static readonly string ServiceName = "SomeService";
         private static readonly string Version = "1.0.0";
         private static readonly Exception SimpleException = new Exception();
@@ -129,7 +129,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         public void Log()
         {
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-            mockClient.Setup(client => client.ReportErrorEvent(FormattedProjectId, IsComplexContext(), null));
+            mockClient.Setup(client => client.ReportErrorEvent(ProjectName, IsComplexContext(), null));
 
             ErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             logger.Log(CreateComplexContext());
@@ -141,7 +141,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         public void Log_Simple()
         {
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-            mockClient.Setup(client => client.ReportErrorEvent(FormattedProjectId, IsSimpleContext(), null));
+            mockClient.Setup(client => client.ReportErrorEvent(ProjectName, IsSimpleContext(), null));
 
             ErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
             logger.Log(SimpleContext);
@@ -153,7 +153,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         public async Task LogAsync()
         {
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-            mockClient.Setup(client => client.ReportErrorEventAsync(FormattedProjectId, IsComplexContext(), null))
+            mockClient.Setup(client => client.ReportErrorEventAsync(ProjectName, IsComplexContext(), null))
                 .Returns(Task.FromResult(new ReportErrorEventResponse()));
 
             ErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
