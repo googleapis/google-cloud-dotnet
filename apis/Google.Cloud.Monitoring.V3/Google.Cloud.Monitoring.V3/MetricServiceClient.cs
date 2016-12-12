@@ -488,13 +488,13 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptorsAsync(
-            string name,
+            ProjectName name,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListMonitoredResourceDescriptorsAsync(
                 new ListMonitoredResourceDescriptorsRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -522,13 +522,13 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="MonitoredResourceDescriptor"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor> ListMonitoredResourceDescriptors(
-            string name,
+            ProjectName name,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListMonitoredResourceDescriptors(
                 new ListMonitoredResourceDescriptorsRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -588,11 +588,11 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
-            string name,
+            MonitoredResourceDescriptorName name,
             CallSettings callSettings = null) => GetMonitoredResourceDescriptorAsync(
                 new GetMonitoredResourceDescriptorRequest
                 {
-                    Name = name,
+                    MonitoredResourceDescriptorName = name,
                 },
                 callSettings);
 
@@ -612,7 +612,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(
-            string name,
+            MonitoredResourceDescriptorName name,
             CancellationToken cancellationToken) => GetMonitoredResourceDescriptorAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -633,11 +633,11 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(
-            string name,
+            MonitoredResourceDescriptorName name,
             CallSettings callSettings = null) => GetMonitoredResourceDescriptor(
                 new GetMonitoredResourceDescriptorRequest
                 {
-                    Name = name,
+                    MonitoredResourceDescriptorName = name,
                 },
                 callSettings);
 
@@ -701,13 +701,13 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptorsAsync(
-            string name,
+            ProjectName name,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListMetricDescriptorsAsync(
                 new ListMetricDescriptorsRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -735,13 +735,13 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="MetricDescriptor"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> ListMetricDescriptors(
-            string name,
+            ProjectName name,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListMetricDescriptors(
                 new ListMetricDescriptorsRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -801,11 +801,11 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
-            string name,
+            MetricDescriptorName name,
             CallSettings callSettings = null) => GetMetricDescriptorAsync(
                 new GetMetricDescriptorRequest
                 {
-                    Name = name,
+                    MetricDescriptorName = name,
                 },
                 callSettings);
 
@@ -825,7 +825,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MetricDescriptor> GetMetricDescriptorAsync(
-            string name,
+            MetricDescriptorName name,
             CancellationToken cancellationToken) => GetMetricDescriptorAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -846,11 +846,11 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual MetricDescriptor GetMetricDescriptor(
-            string name,
+            MetricDescriptorName name,
             CallSettings callSettings = null) => GetMetricDescriptor(
                 new GetMetricDescriptorRequest
                 {
-                    Name = name,
+                    MetricDescriptorName = name,
                 },
                 callSettings);
 
@@ -912,12 +912,12 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
-            string name,
+            ProjectName name,
             MetricDescriptor metricDescriptor,
             CallSettings callSettings = null) => CreateMetricDescriptorAsync(
                 new CreateMetricDescriptorRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     MetricDescriptor = metricDescriptor,
                 },
                 callSettings);
@@ -942,7 +942,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<MetricDescriptor> CreateMetricDescriptorAsync(
-            string name,
+            ProjectName name,
             MetricDescriptor metricDescriptor,
             CancellationToken cancellationToken) => CreateMetricDescriptorAsync(
                 name,
@@ -969,12 +969,12 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual MetricDescriptor CreateMetricDescriptor(
-            string name,
+            ProjectName name,
             MetricDescriptor metricDescriptor,
             CallSettings callSettings = null) => CreateMetricDescriptor(
                 new CreateMetricDescriptorRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     MetricDescriptor = metricDescriptor,
                 },
                 callSettings);
@@ -1038,11 +1038,11 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
-            string name,
+            MetricDescriptorName name,
             CallSettings callSettings = null) => DeleteMetricDescriptorAsync(
                 new DeleteMetricDescriptorRequest
                 {
-                    Name = name,
+                    MetricDescriptorName = name,
                 },
                 callSettings);
 
@@ -1063,7 +1063,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteMetricDescriptorAsync(
-            string name,
+            MetricDescriptorName name,
             CancellationToken cancellationToken) => DeleteMetricDescriptorAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -1085,11 +1085,11 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual void DeleteMetricDescriptor(
-            string name,
+            MetricDescriptorName name,
             CallSettings callSettings = null) => DeleteMetricDescriptor(
                 new DeleteMetricDescriptorRequest
                 {
-                    Name = name,
+                    MetricDescriptorName = name,
                 },
                 callSettings);
 
@@ -1172,7 +1172,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeriesAsync(
-            string name,
+            ProjectName name,
             string filter,
             TimeInterval interval,
             ListTimeSeriesRequest.Types.TimeSeriesView view,
@@ -1181,7 +1181,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListTimeSeriesAsync(
                 new ListTimeSeriesRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     Filter = filter,
                     Interval = interval,
                     View = view,
@@ -1229,7 +1229,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="TimeSeries"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListTimeSeriesResponse, TimeSeries> ListTimeSeries(
-            string name,
+            ProjectName name,
             string filter,
             TimeInterval interval,
             ListTimeSeriesRequest.Types.TimeSeriesView view,
@@ -1238,7 +1238,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListTimeSeries(
                 new ListTimeSeriesRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     Filter = filter,
                     Interval = interval,
                     View = view,
@@ -1309,12 +1309,12 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task CreateTimeSeriesAsync(
-            string name,
+            ProjectName name,
             IEnumerable<TimeSeries> timeSeries,
             CallSettings callSettings = null) => CreateTimeSeriesAsync(
                 new CreateTimeSeriesRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     TimeSeries = { timeSeries },
                 },
                 callSettings);
@@ -1343,7 +1343,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task CreateTimeSeriesAsync(
-            string name,
+            ProjectName name,
             IEnumerable<TimeSeries> timeSeries,
             CancellationToken cancellationToken) => CreateTimeSeriesAsync(
                 name,
@@ -1374,12 +1374,12 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual void CreateTimeSeries(
-            string name,
+            ProjectName name,
             IEnumerable<TimeSeries> timeSeries,
             CallSettings callSettings = null) => CreateTimeSeries(
                 new CreateTimeSeriesRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     TimeSeries = { timeSeries },
                 },
                 callSettings);
