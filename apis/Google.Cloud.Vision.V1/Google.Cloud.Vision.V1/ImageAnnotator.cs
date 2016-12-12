@@ -125,9 +125,9 @@ namespace Google.Cloud.Vision.V1 {
             "SW1hZ2VzEjIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90YXRl",
             "SW1hZ2VzUmVxdWVzdBozLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQmF0Y2hB",
             "bm5vdGF0ZUltYWdlc1Jlc3BvbnNlIh6C0+STAhgiEy92MS9pbWFnZXM6YW5u",
-            "b3RhdGU6ASpCbQoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCE0ltYWdl",
-            "QW5ub3RhdG9yUHJvdG9QAVo1Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9jbG91ZC92aXNpb24vdjH4AQFiBnByb3RvMw=="));
+            "b3RhdGU6ASpCdAoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCE0ltYWdl",
+            "QW5ub3RhdG9yUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
+            "Z29vZ2xlYXBpcy9jbG91ZC92aXNpb24vdjE7dmlzaW9u+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {

@@ -166,8 +166,10 @@ namespace Google.Cloud.Language.V1 {
             "bnRheDoBKhKUAQoMQW5ub3RhdGVUZXh0Ei0uZ29vZ2xlLmNsb3VkLmxhbmd1",
             "YWdlLnYxLkFubm90YXRlVGV4dFJlcXVlc3QaLi5nb29nbGUuY2xvdWQubGFu",
             "Z3VhZ2UudjEuQW5ub3RhdGVUZXh0UmVzcG9uc2UiJYLT5JMCHyIaL3YxL2Rv",
-            "Y3VtZW50czphbm5vdGF0ZVRleHQ6ASpCNgocY29tLmdvb2dsZS5jbG91ZC5s",
-            "YW5ndWFnZS52MUIUTGFuZ3VhZ2VTZXJ2aWNlUHJvdG9QAWIGcHJvdG8z"));
+            "Y3VtZW50czphbm5vdGF0ZVRleHQ6ASpCeAocY29tLmdvb2dsZS5jbG91ZC5s",
+            "YW5ndWFnZS52MUIUTGFuZ3VhZ2VTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9sYW5ndWFnZS92",
+            "MTtsYW5ndWFnZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Language.V1.EncodingType), }, new pbr::GeneratedClrTypeInfo[] {
