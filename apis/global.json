@@ -1,5 +1,8 @@
 ﻿{
   "projects": [
+    "Google.Cloud.Diagnostics.Common",
+    "Google.Cloud.Logging.Type",
+    "Google.Cloud.Logging.V2",
     "Google.Cloud.ErrorReporting.V1Beta1",
     "Google.Cloud.Trace.V1",
     "Google.Cloud.Iam.V1",
