@@ -295,11 +295,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ErrorGroup> GetGroupAsync(
-            string groupName,
+            GroupName groupName,
             CallSettings callSettings = null) => GetGroupAsync(
                 new GetGroupRequest
                 {
-                    GroupName = groupName,
+                    GroupNameAsGroupName = groupName,
                 },
                 callSettings);
 
@@ -323,7 +323,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ErrorGroup> GetGroupAsync(
-            string groupName,
+            GroupName groupName,
             CancellationToken cancellationToken) => GetGroupAsync(
                 groupName,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -348,11 +348,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual ErrorGroup GetGroup(
-            string groupName,
+            GroupName groupName,
             CallSettings callSettings = null) => GetGroup(
                 new GetGroupRequest
                 {
-                    GroupName = groupName,
+                    GroupNameAsGroupName = groupName,
                 },
                 callSettings);
 
