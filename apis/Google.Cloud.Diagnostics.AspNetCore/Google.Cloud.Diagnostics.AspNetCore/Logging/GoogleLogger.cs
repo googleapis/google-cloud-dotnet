@@ -90,7 +90,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 TextPayload = message,
             };
 
-            _consumer.Receive(new [] { entry });
+            _consumer.Receive(new[] { entry });
         }
     }
 }
