@@ -357,6 +357,26 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
+        public override MetadataResult GetMetadata(string key) => GetResult(token => GetMetadataAsync(key, token));
+
+        /// <inheritdoc/>
+        public override Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            ValidateMetadataKey(key);
+
+            // Always add recursive. It is ignored for values and required for directories when waiting for changes.
+            return GetMetadataCoreAsync(key + "?recursive=true", cancellationToken);
+        }
+
+        private async Task<MetadataResult> GetMetadataCoreAsync(string key, CancellationToken cancellationToken)
+        {
+            var response = await RequestMetadataAsync(key, cancellationToken).ConfigureAwait(false);
+            return new MetadataResult(
+                await response.Content.ReadAsStringAsync().ConfigureAwait(false),
+                GetETag(response));
+        }
+
+        /// <inheritdoc/>
         public override Project GetProjectMetadata() => GetResult(GetProjectMetadataAsync);
 
         /// <inheritdoc/>
@@ -472,11 +492,11 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override WaitForChangeResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan)) =>
+        public override MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan)) =>
             GetResult(token => WaitForChangeAsync(key, lastETag, timeout, token));
 
         /// <inheritdoc/>
-        public override async Task<WaitForChangeResult> WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
+        public override Task<MetadataResult> WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
         {
             ValidateMetadataKey(key);
             ValidateETag(lastETag, nameof(lastETag));
@@ -497,10 +517,7 @@ namespace Google.Cloud.Metadata.V1
             {
                 key += $"&last_etag={lastETag}";
             }
-            var response = await RequestMetadataAsync(key, cancellationToken).ConfigureAwait(false);
-            return new WaitForChangeResult(
-                await response.Content.ReadAsStringAsync().ConfigureAwait(false),
-                GetETag(response));
+            return GetMetadataCoreAsync(key, cancellationToken);
         }
 
         private class ValueWatcher
