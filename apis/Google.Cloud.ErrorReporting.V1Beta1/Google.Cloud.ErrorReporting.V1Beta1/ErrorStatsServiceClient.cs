@@ -341,14 +341,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStatsAsync(
-            string projectName,
+            ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListGroupStatsAsync(
                 new ListGroupStatsRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                     TimeRange = timeRange,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -390,14 +390,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorGroupStats"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> ListGroupStats(
-            string projectName,
+            ProjectName projectName,
             QueryTimeRange timeRange,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListGroupStats(
                 new ListGroupStatsRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                     TimeRange = timeRange,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -470,14 +470,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable asynchronous sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListEventsResponse, ErrorEvent> ListEventsAsync(
-            string projectName,
+            ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListEventsAsync(
                 new ListEventsRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                     GroupId = groupId,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -512,14 +512,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A pageable sequence of <see cref="ErrorEvent"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListEventsResponse, ErrorEvent> ListEvents(
-            string projectName,
+            ProjectName projectName,
             string groupId,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListEvents(
                 new ListEventsRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                     GroupId = groupId,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -581,11 +581,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
-            string projectName,
+            ProjectName projectName,
             CallSettings callSettings = null) => DeleteEventsAsync(
                 new DeleteEventsRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                 },
                 callSettings);
 
@@ -606,7 +606,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<DeleteEventsResponse> DeleteEventsAsync(
-            string projectName,
+            ProjectName projectName,
             CancellationToken cancellationToken) => DeleteEventsAsync(
                 projectName,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -628,11 +628,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual DeleteEventsResponse DeleteEvents(
-            string projectName,
+            ProjectName projectName,
             CallSettings callSettings = null) => DeleteEvents(
                 new DeleteEventsRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                 },
                 callSettings);
 
