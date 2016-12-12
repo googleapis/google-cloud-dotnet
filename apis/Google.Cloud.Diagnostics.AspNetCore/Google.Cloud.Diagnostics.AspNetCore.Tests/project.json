@@ -5,11 +5,21 @@
     "keyFile": "../../GoogleApis.snk"
   },
 
-  "dependencies": {},
+  "dependencies": {
+    "xunit": "2.2.0-beta2-build3300",
+    "Moq": "4.6.36-alpha",
+    "dotnet-test-xunit": "2.2.0-preview2-build1029"
+  },
   "testRunner": "xunit",
 
-
   "frameworks": {
-    "netcoreapp1.6": {}
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        },
+      }
+    }
   }
 }
