@@ -39,7 +39,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1.Snippets
             // Sample: ListGroupStats
             // Additional: ListGroupStats(*,*,*,*,*)
             ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
-            string projectName = new ProjectName(projectId).ToString();
+            ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListGroupStatsResponse, ErrorGroupStats> groupStats = client.ListGroupStats(
                 projectName,
                 new QueryTimeRange { Period = Period._30Days });
