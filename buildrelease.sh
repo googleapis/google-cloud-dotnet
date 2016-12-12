@@ -29,6 +29,8 @@ git clone https://github.com/GoogleCloudPlatform/google-cloud-dotnet.git release
 cd releasebuild
 git checkout $tag
 NOVERSIONSUFFIX=yes ./build.sh
+mkdir nuget
+cp `find . -name '*.nupkg'` nuget
 
 # TODO: Make builddocs.sh cope with being run from any directory.
 cd docs
