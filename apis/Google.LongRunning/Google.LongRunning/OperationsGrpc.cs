@@ -38,20 +38,13 @@ namespace Google.LongRunning {
   {
     static readonly string __ServiceName = "google.longrunning.Operations";
 
-    static readonly Marshaller<global::Google.LongRunning.GetOperationRequest> __Marshaller_GetOperationRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.GetOperationRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly Marshaller<global::Google.LongRunning.ListOperationsRequest> __Marshaller_ListOperationsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.ListOperationsRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.LongRunning.ListOperationsResponse> __Marshaller_ListOperationsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.ListOperationsResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.LongRunning.CancelOperationRequest> __Marshaller_CancelOperationRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.CancelOperationRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.LongRunning.GetOperationRequest> __Marshaller_GetOperationRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.GetOperationRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
     static readonly Marshaller<global::Google.LongRunning.DeleteOperationRequest> __Marshaller_DeleteOperationRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.DeleteOperationRequest.Parser.ParseFrom);
-
-    static readonly Method<global::Google.LongRunning.GetOperationRequest, global::Google.LongRunning.Operation> __Method_GetOperation = new Method<global::Google.LongRunning.GetOperationRequest, global::Google.LongRunning.Operation>(
-        MethodType.Unary,
-        __ServiceName,
-        "GetOperation",
-        __Marshaller_GetOperationRequest,
-        __Marshaller_Operation);
+    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.LongRunning.CancelOperationRequest> __Marshaller_CancelOperationRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.CancelOperationRequest.Parser.ParseFrom);
 
     static readonly Method<global::Google.LongRunning.ListOperationsRequest, global::Google.LongRunning.ListOperationsResponse> __Method_ListOperations = new Method<global::Google.LongRunning.ListOperationsRequest, global::Google.LongRunning.ListOperationsResponse>(
         MethodType.Unary,
@@ -60,18 +53,25 @@ namespace Google.LongRunning {
         __Marshaller_ListOperationsRequest,
         __Marshaller_ListOperationsResponse);
 
-    static readonly Method<global::Google.LongRunning.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelOperation = new Method<global::Google.LongRunning.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly Method<global::Google.LongRunning.GetOperationRequest, global::Google.LongRunning.Operation> __Method_GetOperation = new Method<global::Google.LongRunning.GetOperationRequest, global::Google.LongRunning.Operation>(
         MethodType.Unary,
         __ServiceName,
-        "CancelOperation",
-        __Marshaller_CancelOperationRequest,
-        __Marshaller_Empty);
+        "GetOperation",
+        __Marshaller_GetOperationRequest,
+        __Marshaller_Operation);
 
     static readonly Method<global::Google.LongRunning.DeleteOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteOperation = new Method<global::Google.LongRunning.DeleteOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
         __ServiceName,
         "DeleteOperation",
         __Marshaller_DeleteOperationRequest,
+        __Marshaller_Empty);
+
+    static readonly Method<global::Google.LongRunning.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelOperation = new Method<global::Google.LongRunning.CancelOperationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        MethodType.Unary,
+        __ServiceName,
+        "CancelOperation",
+        __Marshaller_CancelOperationRequest,
         __Marshaller_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -84,6 +84,18 @@ namespace Google.LongRunning {
     public abstract class OperationsBase
     {
       /// <summary>
+      ///  Lists operations that match the specified filter in the request. If the
+      ///  server doesn't support this method, it returns `UNIMPLEMENTED`.
+      ///
+      ///  NOTE: the `name` binding below allows API services to override the binding
+      ///  to use different resource name schemes, such as `users/*/operations`.
+      /// </summary>
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.ListOperationsResponse> ListOperations(global::Google.LongRunning.ListOperationsRequest request, ServerCallContext context)
+      {
+        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       ///  Gets the latest state of a long-running operation.  Clients can use this
       ///  method to poll the operation result at intervals as recommended by the API
       ///  service.
@@ -94,13 +106,12 @@ namespace Google.LongRunning {
       }
 
       /// <summary>
-      ///  Lists operations that match the specified filter in the request. If the
-      ///  server doesn't support this method, it returns `UNIMPLEMENTED`.
-      ///
-      ///  NOTE: the `name` binding below allows API services to override the binding
-      ///  to use different resource name schemes, such as `users/*/operations`.
+      ///  Deletes a long-running operation. This method indicates that the client is
+      ///  no longer interested in the operation result. It does not cancel the
+      ///  operation. If the server doesn't support this method, it returns
+      ///  `google.rpc.Code.UNIMPLEMENTED`.
       /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.ListOperationsResponse> ListOperations(global::Google.LongRunning.ListOperationsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOperation(global::Google.LongRunning.DeleteOperationRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -118,17 +129,6 @@ namespace Google.LongRunning {
       ///  corresponding to `Code.CANCELLED`.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelOperation(global::Google.LongRunning.CancelOperationRequest request, ServerCallContext context)
-      {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      ///  Deletes a long-running operation. This method indicates that the client is
-      ///  no longer interested in the operation result. It does not cancel the
-      ///  operation. If the server doesn't support this method, it returns
-      ///  `google.rpc.Code.UNIMPLEMENTED`.
-      /// </summary>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOperation(global::Google.LongRunning.DeleteOperationRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -158,42 +158,6 @@ namespace Google.LongRunning {
       {
       }
 
-      /// <summary>
-      ///  Gets the latest state of a long-running operation.  Clients can use this
-      ///  method to poll the operation result at intervals as recommended by the API
-      ///  service.
-      /// </summary>
-      public virtual global::Google.LongRunning.Operation GetOperation(global::Google.LongRunning.GetOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
-      {
-        return GetOperation(request, new CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      ///  Gets the latest state of a long-running operation.  Clients can use this
-      ///  method to poll the operation result at intervals as recommended by the API
-      ///  service.
-      /// </summary>
-      public virtual global::Google.LongRunning.Operation GetOperation(global::Google.LongRunning.GetOperationRequest request, CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetOperation, null, options, request);
-      }
-      /// <summary>
-      ///  Gets the latest state of a long-running operation.  Clients can use this
-      ///  method to poll the operation result at intervals as recommended by the API
-      ///  service.
-      /// </summary>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> GetOperationAsync(global::Google.LongRunning.GetOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
-      {
-        return GetOperationAsync(request, new CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      ///  Gets the latest state of a long-running operation.  Clients can use this
-      ///  method to poll the operation result at intervals as recommended by the API
-      ///  service.
-      /// </summary>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> GetOperationAsync(global::Google.LongRunning.GetOperationRequest request, CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetOperation, null, options, request);
-      }
       /// <summary>
       ///  Lists operations that match the specified filter in the request. If the
       ///  server doesn't support this method, it returns `UNIMPLEMENTED`.
@@ -237,6 +201,82 @@ namespace Google.LongRunning {
       public virtual AsyncUnaryCall<global::Google.LongRunning.ListOperationsResponse> ListOperationsAsync(global::Google.LongRunning.ListOperationsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListOperations, null, options, request);
+      }
+      /// <summary>
+      ///  Gets the latest state of a long-running operation.  Clients can use this
+      ///  method to poll the operation result at intervals as recommended by the API
+      ///  service.
+      /// </summary>
+      public virtual global::Google.LongRunning.Operation GetOperation(global::Google.LongRunning.GetOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetOperation(request, new CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///  Gets the latest state of a long-running operation.  Clients can use this
+      ///  method to poll the operation result at intervals as recommended by the API
+      ///  service.
+      /// </summary>
+      public virtual global::Google.LongRunning.Operation GetOperation(global::Google.LongRunning.GetOperationRequest request, CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetOperation, null, options, request);
+      }
+      /// <summary>
+      ///  Gets the latest state of a long-running operation.  Clients can use this
+      ///  method to poll the operation result at intervals as recommended by the API
+      ///  service.
+      /// </summary>
+      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> GetOperationAsync(global::Google.LongRunning.GetOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return GetOperationAsync(request, new CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///  Gets the latest state of a long-running operation.  Clients can use this
+      ///  method to poll the operation result at intervals as recommended by the API
+      ///  service.
+      /// </summary>
+      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> GetOperationAsync(global::Google.LongRunning.GetOperationRequest request, CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetOperation, null, options, request);
+      }
+      /// <summary>
+      ///  Deletes a long-running operation. This method indicates that the client is
+      ///  no longer interested in the operation result. It does not cancel the
+      ///  operation. If the server doesn't support this method, it returns
+      ///  `google.rpc.Code.UNIMPLEMENTED`.
+      /// </summary>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOperation(global::Google.LongRunning.DeleteOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteOperation(request, new CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///  Deletes a long-running operation. This method indicates that the client is
+      ///  no longer interested in the operation result. It does not cancel the
+      ///  operation. If the server doesn't support this method, it returns
+      ///  `google.rpc.Code.UNIMPLEMENTED`.
+      /// </summary>
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOperation(global::Google.LongRunning.DeleteOperationRequest request, CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteOperation, null, options, request);
+      }
+      /// <summary>
+      ///  Deletes a long-running operation. This method indicates that the client is
+      ///  no longer interested in the operation result. It does not cancel the
+      ///  operation. If the server doesn't support this method, it returns
+      ///  `google.rpc.Code.UNIMPLEMENTED`.
+      /// </summary>
+      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOperationAsync(global::Google.LongRunning.DeleteOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return DeleteOperationAsync(request, new CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///  Deletes a long-running operation. This method indicates that the client is
+      ///  no longer interested in the operation result. It does not cancel the
+      ///  operation. If the server doesn't support this method, it returns
+      ///  `google.rpc.Code.UNIMPLEMENTED`.
+      /// </summary>
+      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOperationAsync(global::Google.LongRunning.DeleteOperationRequest request, CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteOperation, null, options, request);
       }
       /// <summary>
       ///  Starts asynchronous cancellation on a long-running operation.  The server
@@ -302,46 +342,6 @@ namespace Google.LongRunning {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelOperation, null, options, request);
       }
-      /// <summary>
-      ///  Deletes a long-running operation. This method indicates that the client is
-      ///  no longer interested in the operation result. It does not cancel the
-      ///  operation. If the server doesn't support this method, it returns
-      ///  `google.rpc.Code.UNIMPLEMENTED`.
-      /// </summary>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOperation(global::Google.LongRunning.DeleteOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
-      {
-        return DeleteOperation(request, new CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      ///  Deletes a long-running operation. This method indicates that the client is
-      ///  no longer interested in the operation result. It does not cancel the
-      ///  operation. If the server doesn't support this method, it returns
-      ///  `google.rpc.Code.UNIMPLEMENTED`.
-      /// </summary>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteOperation(global::Google.LongRunning.DeleteOperationRequest request, CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_DeleteOperation, null, options, request);
-      }
-      /// <summary>
-      ///  Deletes a long-running operation. This method indicates that the client is
-      ///  no longer interested in the operation result. It does not cancel the
-      ///  operation. If the server doesn't support this method, it returns
-      ///  `google.rpc.Code.UNIMPLEMENTED`.
-      /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOperationAsync(global::Google.LongRunning.DeleteOperationRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
-      {
-        return DeleteOperationAsync(request, new CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      ///  Deletes a long-running operation. This method indicates that the client is
-      ///  no longer interested in the operation result. It does not cancel the
-      ///  operation. If the server doesn't support this method, it returns
-      ///  `google.rpc.Code.UNIMPLEMENTED`.
-      /// </summary>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteOperationAsync(global::Google.LongRunning.DeleteOperationRequest request, CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_DeleteOperation, null, options, request);
-      }
       protected override OperationsClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new OperationsClient(configuration);
@@ -352,10 +352,10 @@ namespace Google.LongRunning {
     public static ServerServiceDefinition BindService(OperationsBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetOperation, serviceImpl.GetOperation)
           .AddMethod(__Method_ListOperations, serviceImpl.ListOperations)
-          .AddMethod(__Method_CancelOperation, serviceImpl.CancelOperation)
-          .AddMethod(__Method_DeleteOperation, serviceImpl.DeleteOperation).Build();
+          .AddMethod(__Method_GetOperation, serviceImpl.GetOperation)
+          .AddMethod(__Method_DeleteOperation, serviceImpl.DeleteOperation)
+          .AddMethod(__Method_CancelOperation, serviceImpl.CancelOperation).Build();
     }
 
   }
