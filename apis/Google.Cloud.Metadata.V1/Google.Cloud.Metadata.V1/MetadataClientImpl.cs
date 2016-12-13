@@ -15,14 +15,13 @@
 using Google.Apis.Auth.OAuth2.Responses;
 using Google.Apis.Compute.v1.Data;
 using Google.Apis.Http;
-using Google.Apis.Json;
 using Google.Apis.Logging;
+using Google.Apis.Util;
 using Microsoft.CSharp.RuntimeBinder;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
@@ -282,35 +281,8 @@ namespace Google.Cloud.Metadata.V1
         /// <inheritdoc/>
         public override async Task<TokenResponse> GetAccessTokenAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
-            // TODO: Most of this is taken from Google.Apis.Auth.OAuth2.ComputeCredential.RequestAccessTokenAsync. Perhaps move that to a helper which can be shared.
             var response = await RequestMetadataAsync("instance/service-accounts/default/token", cancellationToken, requireMetadataFlavorHeader: false).ConfigureAwait(false);
-
-            // Read the response.
-            var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var typeName = "";
-            try
-            {
-                if (!response.IsSuccessStatusCode)
-                {
-                    typeName = nameof(TokenErrorResponse);
-                    var error = NewtonsoftJsonSerializer.Instance.Deserialize<TokenErrorResponse>(content);
-                    throw new TokenResponseException(error);
-                }
-
-                // Gets the token and sets its issued time.
-                typeName = nameof(TokenResponse);
-                var newToken = NewtonsoftJsonSerializer.Instance.Deserialize<TokenResponse>(content);
-                newToken.Issued = DateTime.UtcNow; // TODO: This was using an IClock before.
-                return newToken;
-            }
-            catch (JsonException ex)
-            {
-                Logger.Error(ex, $"Exception was caught when deserializing {typeName}. Content is: {content}");
-                throw new TokenResponseException(new TokenErrorResponse
-                {
-                    Error = "Server response does not contain a JSON object. Status code is: " + response.StatusCode
-                });
-            }
+            return await TokenResponse.FromHttpResponseAsync(response, SystemClock.Default, Logger).ConfigureAwait(false);
         }
 
         /// <inheritdoc/>
