@@ -168,6 +168,48 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
+        /// Uploads a stream of Avro data to a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public virtual BigQueryJob UploadAvro(string projectId, string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null) =>
+            UploadAvro(GetTableReference(projectId, datasetId, tableId), schema, input, options);
+
+        /// <summary>
+        /// Uploads a stream of Avro data to a table in this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public virtual BigQueryJob UploadAvro(string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null) =>
+            UploadAvro(GetTableReference(datasetId, tableId), schema, input, options);
+
+        /// <summary>
+        /// Uploads a stream of Avro data to a table.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public virtual BigQueryJob UploadAvro(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Inserts a single row of data into a table specified by project ID, dataset ID and table ID.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="Insert(TableReference, BigQueryInsertRow, InsertOptions)"/>.
         /// </summary>
@@ -320,6 +362,54 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// a data upload job.</returns>
         public virtual Task<BigQueryJob> UploadCsvAsync(TableReference tableReference, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Avro data to a table specified by project ID, dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadAvroAsync(string projectId, string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadAvroAsync(GetTableReference(projectId, datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Avro data to a table in this project specified by dataset ID and table ID.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions,CancellationToken)"/>.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadAvroAsync(string datasetId, string tableId,
+            TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            UploadAvroAsync(GetTableReference(datasetId, tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Avro data to a table.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public virtual Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
