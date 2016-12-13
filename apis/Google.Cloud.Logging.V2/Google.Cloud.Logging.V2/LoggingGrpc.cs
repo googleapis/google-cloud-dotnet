@@ -38,6 +38,8 @@ namespace Google.Cloud.Logging.V2 {
     static readonly Marshaller<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> __Marshaller_ListLogEntriesResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest> __Marshaller_ListMonitoredResourceDescriptorsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser.ParseFrom);
     static readonly Marshaller<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> __Marshaller_ListMonitoredResourceDescriptorsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Logging.V2.ListLogsRequest> __Marshaller_ListLogsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser.ParseFrom);
+    static readonly Marshaller<global::Google.Cloud.Logging.V2.ListLogsResponse> __Marshaller_ListLogsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser.ParseFrom);
 
     static readonly Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteLog = new Method<global::Google.Cloud.Logging.V2.DeleteLogRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         MethodType.Unary,
@@ -67,6 +69,13 @@ namespace Google.Cloud.Logging.V2 {
         __Marshaller_ListMonitoredResourceDescriptorsRequest,
         __Marshaller_ListMonitoredResourceDescriptorsResponse);
 
+    static readonly Method<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse> __Method_ListLogs = new Method<global::Google.Cloud.Logging.V2.ListLogsRequest, global::Google.Cloud.Logging.V2.ListLogsResponse>(
+        MethodType.Unary,
+        __ServiceName,
+        "ListLogs",
+        __Marshaller_ListLogsRequest,
+        __Marshaller_ListLogsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -95,8 +104,8 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
+      ///  Lists log entries.  Use this method to retrieve log entries from
+      ///  Stackdriver Logging.  For ways to export log entries, see
       ///  [Exporting Logs](/logging/docs/export).
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, ServerCallContext context)
@@ -105,9 +114,19 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
+      ///  Lists the descriptors for monitored resource types used by Stackdriver
+      ///  Logging.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, ServerCallContext context)
+      {
+        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      ///  Lists the logs in projects or organizations.
+      ///  Only logs that have entries are listed.
+      /// </summary>
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -202,8 +221,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_WriteLogEntries, null, options, request);
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
+      ///  Lists log entries.  Use this method to retrieve log entries from
+      ///  Stackdriver Logging.  For ways to export log entries, see
       ///  [Exporting Logs](/logging/docs/export).
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -211,8 +230,8 @@ namespace Google.Cloud.Logging.V2 {
         return ListLogEntries(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
+      ///  Lists log entries.  Use this method to retrieve log entries from
+      ///  Stackdriver Logging.  For ways to export log entries, see
       ///  [Exporting Logs](/logging/docs/export).
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, CallOptions options)
@@ -220,8 +239,8 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListLogEntries, null, options, request);
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
+      ///  Lists log entries.  Use this method to retrieve log entries from
+      ///  Stackdriver Logging.  For ways to export log entries, see
       ///  [Exporting Logs](/logging/docs/export).
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
@@ -229,8 +248,8 @@ namespace Google.Cloud.Logging.V2 {
         return ListLogEntriesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from Cloud
-      ///  Logging.  For ways to export log entries, see
+      ///  Lists log entries.  Use this method to retrieve log entries from
+      ///  Stackdriver Logging.  For ways to export log entries, see
       ///  [Exporting Logs](/logging/docs/export).
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, CallOptions options)
@@ -238,32 +257,68 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogEntries, null, options, request);
       }
       /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
+      ///  Lists the descriptors for monitored resource types used by Stackdriver
+      ///  Logging.
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
+      ///  Lists the descriptors for monitored resource types used by Stackdriver
+      ///  Logging.
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
+      ///  Lists the descriptors for monitored resource types used by Stackdriver
+      ///  Logging.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the monitored resource descriptors used by Stackdriver Logging.
+      ///  Lists the descriptors for monitored resource types used by Stackdriver
+      ///  Logging.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
+      }
+      /// <summary>
+      ///  Lists the logs in projects or organizations.
+      ///  Only logs that have entries are listed.
+      /// </summary>
+      public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListLogs(request, new CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///  Lists the logs in projects or organizations.
+      ///  Only logs that have entries are listed.
+      /// </summary>
+      public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListLogs, null, options, request);
+      }
+      /// <summary>
+      ///  Lists the logs in projects or organizations.
+      ///  Only logs that have entries are listed.
+      /// </summary>
+      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return ListLogsAsync(request, new CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      ///  Lists the logs in projects or organizations.
+      ///  Only logs that have entries are listed.
+      /// </summary>
+      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListLogs, null, options, request);
       }
       protected override LoggingServiceV2Client NewInstance(ClientBaseConfiguration configuration)
       {
@@ -278,7 +333,8 @@ namespace Google.Cloud.Logging.V2 {
           .AddMethod(__Method_DeleteLog, serviceImpl.DeleteLog)
           .AddMethod(__Method_WriteLogEntries, serviceImpl.WriteLogEntries)
           .AddMethod(__Method_ListLogEntries, serviceImpl.ListLogEntries)
-          .AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl.ListMonitoredResourceDescriptors).Build();
+          .AddMethod(__Method_ListMonitoredResourceDescriptors, serviceImpl.ListMonitoredResourceDescriptors)
+          .AddMethod(__Method_ListLogs, serviceImpl.ListLogs).Build();
     }
 
   }

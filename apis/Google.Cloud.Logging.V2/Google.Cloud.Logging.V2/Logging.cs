@@ -46,22 +46,29 @@ namespace Google.Cloud.Logging.V2 {
             "igEKKExpc3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2US",
             "RQoUcmVzb3VyY2VfZGVzY3JpcHRvcnMYASADKAsyJy5nb29nbGUuYXBpLk1v",
             "bml0b3JlZFJlc291cmNlRGVzY3JpcHRvchIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAky4QQKEExvZ2dpbmdTZXJ2aWNlVjISdwoJRGVsZXRlTG9nEiMuZ29v",
-            "Z2xlLmxvZ2dpbmcudjIuRGVsZXRlTG9nUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSItgtPkkwInKiUvdjJiZXRhMS97bG9nX25hbWU9cHJvamVj",
-            "dHMvKi9sb2dzLyp9EoYBCg9Xcml0ZUxvZ0VudHJpZXMSKS5nb29nbGUubG9n",
-            "Z2luZy52Mi5Xcml0ZUxvZ0VudHJpZXNSZXF1ZXN0GiouZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuV3JpdGVMb2dFbnRyaWVzUmVzcG9uc2UiHILT5JMCFiIRL3YyL2Vu",
-            "dHJpZXM6d3JpdGU6ASoSggEKDkxpc3RMb2dFbnRyaWVzEiguZ29vZ2xlLmxv",
-            "Z2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXF1ZXN0GikuZ29vZ2xlLmxvZ2dp",
-            "bmcudjIuTGlzdExvZ0VudHJpZXNSZXNwb25zZSIbgtPkkwIVIhAvdjIvZW50",
-            "cmllczpsaXN0OgEqEsUBCiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNjcmlw",
-            "dG9ycxI6Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNvdXJj",
-            "ZURlc2NyaXB0b3JzUmVxdWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RN",
-            "b25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2UiKILT5JMCIhIg",
-            "L3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnNCRAoVY29tLmdvb2ds",
-            "ZS5sb2dnaW5nLnYyQgxMb2dnaW5nUHJvdG9QAfgBAaoCF0dvb2dsZS5DbG91",
-            "ZC5Mb2dnaW5nLlYyYgZwcm90bzM="));
+            "AiABKAkiSAoPTGlzdExvZ3NSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglw",
+            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSI+ChBMaXN0TG9n",
+            "c1Jlc3BvbnNlEhEKCWxvZ19uYW1lcxgDIAMoCRIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAky3AUKEExvZ2dpbmdTZXJ2aWNlVjISdwoJRGVsZXRlTG9nEiMu",
+            "Z29vZ2xlLmxvZ2dpbmcudjIuRGVsZXRlTG9nUmVxdWVzdBoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSItgtPkkwInKiUvdjJiZXRhMS97bG9nX25hbWU9cHJv",
+            "amVjdHMvKi9sb2dzLyp9EoYBCg9Xcml0ZUxvZ0VudHJpZXMSKS5nb29nbGUu",
+            "bG9nZ2luZy52Mi5Xcml0ZUxvZ0VudHJpZXNSZXF1ZXN0GiouZ29vZ2xlLmxv",
+            "Z2dpbmcudjIuV3JpdGVMb2dFbnRyaWVzUmVzcG9uc2UiHILT5JMCFiIRL3Yy",
+            "L2VudHJpZXM6d3JpdGU6ASoSggEKDkxpc3RMb2dFbnRyaWVzEiguZ29vZ2xl",
+            "LmxvZ2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXF1ZXN0GikuZ29vZ2xlLmxv",
+            "Z2dpbmcudjIuTGlzdExvZ0VudHJpZXNSZXNwb25zZSIbgtPkkwIVIhAvdjIv",
+            "ZW50cmllczpsaXN0OgEqEsUBCiBMaXN0TW9uaXRvcmVkUmVzb3VyY2VEZXNj",
+            "cmlwdG9ycxI6Lmdvb2dsZS5sb2dnaW5nLnYyLkxpc3RNb25pdG9yZWRSZXNv",
+            "dXJjZURlc2NyaXB0b3JzUmVxdWVzdBo7Lmdvb2dsZS5sb2dnaW5nLnYyLkxp",
+            "c3RNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JzUmVzcG9uc2UiKILT5JMC",
+            "IhIgL3YyL21vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvcnMSeQoITGlzdExv",
+            "Z3MSIi5nb29nbGUubG9nZ2luZy52Mi5MaXN0TG9nc1JlcXVlc3QaIy5nb29n",
+            "bGUubG9nZ2luZy52Mi5MaXN0TG9nc1Jlc3BvbnNlIiSC0+STAh4SHC92Mi97",
+            "cGFyZW50PXByb2plY3RzLyp9L2xvZ3NCfgoVY29tLmdvb2dsZS5sb2dnaW5n",
+            "LnYyQgxMb2dnaW5nUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
+            "dG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmf4AQGqAhdHb29nbGUu",
+            "Q2xvdWQuTG9nZ2luZy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,7 +78,9 @@ namespace Google.Cloud.Logging.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesRequest), global::Google.Cloud.Logging.V2.ListLogEntriesRequest.Parser, new[]{ "ProjectIds", "ResourceNames", "Filter", "OrderBy", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogEntriesResponse), global::Google.Cloud.Logging.V2.ListLogEntriesResponse.Parser, new[]{ "Entries", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.Parser, new[]{ "PageSize", "PageToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse), global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse.Parser, new[]{ "ResourceDescriptors", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsRequest), global::Google.Cloud.Logging.V2.ListLogsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.ListLogsResponse), global::Google.Cloud.Logging.V2.ListLogsResponse.Parser, new[]{ "LogNames", "NextPageToken" }, null, null, null)
           }));
     }
     #endregion
@@ -618,11 +627,11 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> projectIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  Deprecated. One or more project identifiers or project numbers from which
-    ///  to retrieve log entries.  Example: `"my-project-1A"`. If
-    ///  present, these project identifiers are converted to resource format and
-    ///  added to the list of resources in `resourceNames`. Callers should use
-    ///  `resourceNames` rather than this parameter.
+    ///  Deprecated. Use `resource_names` instead.  One or more project identifiers
+    ///  or project numbers from which to retrieve log entries.  Example:
+    ///  `"my-project-1A"`. If present, these project identifiers are converted to
+    ///  resource name format and added to the list of resources in
+    ///  `resource_names`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ProjectIds {
@@ -635,7 +644,7 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> resourceNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  Required. One or more cloud resources from which to retrieve log
+    ///  Required. Names of one or more resources from which to retrieve log
     ///  entries:
     ///
     ///      "projects/[PROJECT_ID]"
@@ -654,7 +663,10 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>
     ///  Optional. A filter that chooses which log entries to return.  See [Advanced
     ///  Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
-    ///  match the filter are returned.  An empty filter matches all log entries.
+    ///  match the filter are returned.  An empty filter matches all log entries in
+    ///  the resources listed in `resource_names`. Referencing a parent resource
+    ///  that is not listed in `resource_names` will cause the filter to return no
+    ///  results.
     ///  The maximum length of the filter is 20000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -910,9 +922,16 @@ namespace Google.Cloud.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there might be more results than appear in this response, then
+    ///  If there might be more results than those appearing in this response, then
     ///  `nextPageToken` is included.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
+    ///
+    ///  If a value for `next_page_token` appears and the `entries` field is empty,
+    ///  it means that the search found no log entries so far but it did not have
+    ///  time to search all the possible log entries.  Retry the method with this
+    ///  value for `page_token` to continue the search.  Alternatively, consider
+    ///  speeding up the search by changing your filter to specify a single log name
+    ///  or resource type, or to narrow the time range of the search.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1217,7 +1236,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there might be more results than appear in this response, then
+    ///  If there might be more results than those appearing in this response, then
     ///  `nextPageToken` is included.  To get the next set of results, call this
     ///  method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
@@ -1304,6 +1323,349 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  The parameters to ListLogs.
+  /// </summary>
+  public sealed partial class ListLogsRequest : pb::IMessage<ListLogsRequest> {
+    private static readonly pb::MessageParser<ListLogsRequest> _parser = new pb::MessageParser<ListLogsRequest>(() => new ListLogsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListLogsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListLogsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListLogsRequest(ListLogsRequest other) : this() {
+      parent_ = other.parent_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListLogsRequest Clone() {
+      return new ListLogsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    ///  Required. The resource name that owns the logs:
+    ///
+    ///      "projects/[PROJECT_ID]"
+    ///      "organizations/[ORGANIZATION_ID]"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    ///  Optional. The maximum number of results to return from this request.
+    ///  Non-positive values are ignored.  The presence of `nextPageToken` in the
+    ///  response indicates that more results might be available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    ///  Optional. If present, then retrieve the next batch of results from the
+    ///  preceding call to this method.  `pageToken` must be the value of
+    ///  `nextPageToken` from the previous response.  The values of other method
+    ///  parameters should be identical to those in the previous call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListLogsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListLogsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListLogsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Result returned from ListLogs.
+  /// </summary>
+  public sealed partial class ListLogsResponse : pb::IMessage<ListLogsResponse> {
+    private static readonly pb::MessageParser<ListLogsResponse> _parser = new pb::MessageParser<ListLogsResponse>(() => new ListLogsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListLogsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LoggingReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListLogsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListLogsResponse(ListLogsResponse other) : this() {
+      logNames_ = other.logNames_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListLogsResponse Clone() {
+      return new ListLogsResponse(this);
+    }
+
+    /// <summary>Field number for the "log_names" field.</summary>
+    public const int LogNamesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_logNames_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> logNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    ///  A list of log names. For example,
+    ///  `"projects/my-project/syslog"` or
+    ///  `"organizations/123/cloudresourcemanager.googleapis.com%2Factivity"`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> LogNames {
+      get { return logNames_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    ///  If there might be more results than those appearing in this response, then
+    ///  `nextPageToken` is included.  To get the next set of results, call this
+    ///  method again using the value of `nextPageToken` as `pageToken`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListLogsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListLogsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!logNames_.Equals(other.logNames_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= logNames_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      logNames_.WriteTo(output, _repeated_logNames_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += logNames_.CalculateSize(_repeated_logNames_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListLogsResponse other) {
+      if (other == null) {
+        return;
+      }
+      logNames_.Add(other.logNames_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            logNames_.AddEntriesFrom(input, _repeated_logNames_codec);
             break;
           }
         }

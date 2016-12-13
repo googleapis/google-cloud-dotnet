@@ -54,8 +54,10 @@ namespace Google.Cloud.Logging.V2 {
             "fToGbWV0cmljEoQBCg9EZWxldGVMb2dNZXRyaWMSKS5nb29nbGUubG9nZ2lu",
             "Zy52Mi5EZWxldGVMb2dNZXRyaWNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
             "LkVtcHR5Ii6C0+STAigqJi92Mi97bWV0cmljX25hbWU9cHJvamVjdHMvKi9t",
-            "ZXRyaWNzLyp9QkMKFWNvbS5nb29nbGUubG9nZ2luZy52MkIOTG9nZ2luZ01l",
-            "dHJpY3NQAaoCF0dvb2dsZS5DbG91ZC5Mb2dnaW5nLlYyYgZwcm90bzM="));
+            "ZXRyaWNzLyp9QoIBChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJCE0xvZ2dpbmdN",
+            "ZXRyaWNzUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dpbmeqAhdHb29nbGUuQ2xvdWQuTG9n",
+            "Z2luZy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -74,7 +76,7 @@ namespace Google.Cloud.Logging.V2 {
   #region Messages
   /// <summary>
   ///  Describes a logs-based metric.  The value of the metric is the
-  ///  number of log entries that match a logs filter.
+  ///  number of log entries that match a logs filter in a given time interval.
   /// </summary>
   public sealed partial class LogMetric : pb::IMessage<LogMetric> {
     private static readonly pb::MessageParser<LogMetric> _parser = new pb::MessageParser<LogMetric>(() => new LogMetric());
@@ -157,7 +159,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    ///  Required. An [advanced logs filter](/logging/docs/view/advanced_filters).
+    ///  Required. An [advanced logs filter](/logging/docs/view/advanced_filters)
+    ///  which is used to match log entries.
     ///  Example:
     ///
     ///      "resource.type=gae_app AND severity>=ERROR"
