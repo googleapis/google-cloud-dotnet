@@ -46,6 +46,24 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <inheritdoc />
+        public override BigQueryJob UploadAvro(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null)
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
+            schema = schema ?? GetSchema(tableReference);
+
+            var configuration = new JobConfigurationLoad
+            {
+                DestinationTable = tableReference,
+                SourceFormat = "AVRO",
+                Schema = schema,
+            };
+            options?.ModifyConfiguration(configuration);
+
+            return UploadData(configuration, input, "application/vnd.apache.avro+binary");
+        }
+
+        /// <inheritdoc />
         public override BigQueryJob UploadJson(TableReference tableReference, TableSchema schema, IEnumerable<string> rows, UploadJsonOptions options = null)
             => UploadJson(tableReference, schema, CreateJsonStream(rows), options);
 
@@ -145,6 +163,24 @@ namespace Google.Cloud.BigQuery.V2
             options?.ModifyConfiguration(configuration);
 
             return await UploadDataAsync(configuration, input, "text/csv", cancellationToken).ConfigureAwait(false);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryJob> UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
+            GaxPreconditions.CheckNotNull(input, nameof(input));
+            schema = schema ?? await GetSchemaAsync(tableReference, cancellationToken).ConfigureAwait(false);
+
+            var configuration = new JobConfigurationLoad
+            {
+                DestinationTable = tableReference,
+                SourceFormat = "AVRO",
+                Schema = schema,
+            };
+            options?.ModifyConfiguration(configuration);
+
+            return await UploadDataAsync(configuration, input, "application/vnd.apache.avro+binary", cancellationToken).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
