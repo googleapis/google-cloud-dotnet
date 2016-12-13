@@ -15,6 +15,7 @@
 
 using Google.Cloud.Trace.V1;
 using Moq;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -39,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
-            consumer.Receive(traces);
+            consumer.Receive(new[] { traces.Traces_[0] });
             mockClient.VerifyAll();
         }
 
@@ -50,7 +51,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
             GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
 
-            consumer.Receive(new Traces());
+            consumer.Receive(new List<TraceProto>());
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
     }

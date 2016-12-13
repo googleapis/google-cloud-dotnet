@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         private static object _stackMutex = new object();
 
         /// <summary>The trace consumer to push the trace to when completed.</summary>
-        private readonly ITraceConsumer _consumer;
+        private readonly IConsumer<TraceProto> _consumer;
 
         /// <summary>The current trace.</summary>
         private readonly TraceProto _trace;
@@ -46,7 +47,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>The span id of the parent span of the root span of this trace.</summary>
         private readonly ulong? _rootSpanParentId;
 
-        private SimpleManagedTracer(ITraceConsumer consumer, TraceProto trace, ulong? rootSpanParentId = null)
+        private SimpleManagedTracer(IConsumer<TraceProto> consumer, TraceProto trace, ulong? rootSpanParentId = null)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _trace = GaxPreconditions.CheckNotNull(trace, nameof(trace));
@@ -61,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="consumer">The consumer to push finised traces to.</param>
         /// <param name="trace">The current trace.</param>
         /// <param name="rootSpanParentId">Optional, the parent span id of the root span of the passed in trace.</param>
-        public static SimpleManagedTracer Create(ITraceConsumer consumer, TraceProto trace, ulong? rootSpanParentId = null)
+        public static SimpleManagedTracer Create(IConsumer<TraceProto> consumer, TraceProto trace, ulong? rootSpanParentId = null)
         {
             return new SimpleManagedTracer(consumer, trace, rootSpanParentId);
         }
@@ -151,9 +152,7 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private void Flush()
         {
-            Traces traces = new Traces();
-            traces.Traces_.Add(_trace);
-            _consumer.Receive(traces);
+            _consumer.Receive(new[] { _trace  });
         }
     }
 }
