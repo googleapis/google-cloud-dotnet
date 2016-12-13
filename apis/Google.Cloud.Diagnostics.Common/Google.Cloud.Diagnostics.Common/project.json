@@ -18,7 +18,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax": "1.0.0-beta05",
+    "Google.Api.Gax": "1.0.0-beta06",
   },
 
 
