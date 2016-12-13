@@ -23,9 +23,6 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class SizedBufferingConsumer<T> : IFlushableConsumer<T>
     {
-        /// <summary>The default buffer size in bytes. 2^16 = 65536.</summary>
-        private const int DefaultBufferSize = 65536;
-
         /// <summary>A mutex to protect the buffer.</summary>
         private readonly object _mutex = new object();
 
@@ -62,8 +59,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// given <see cref="IConsumer{T}"/>. 
         /// </summary>
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
-        /// <param name="bufferSize">Optional, buffer size in bytes.</param>
-        public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize = DefaultBufferSize)
+        /// <param name="bufferSize">The buffer size in bytes.</param>
+        public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
         {
             return new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
         }
