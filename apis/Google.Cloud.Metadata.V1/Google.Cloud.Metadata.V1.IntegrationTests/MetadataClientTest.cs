@@ -136,6 +136,7 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
                 waitHandle.Set();
             };
 
+            await Task.Delay(TimeSpan.FromSeconds(1));
             await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", newValue);
             waitHandle.Wait(TimeSpan.FromSeconds(10));
             Assert.Equal(1, eventCount);
@@ -228,6 +229,7 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
                 waitHandle.Set();
             };
 
+            await Task.Delay(TimeSpan.FromSeconds(1));
             await _fixture.UpdateMetadataAsync($"project/attributes/{key}", newValue);
             waitHandle.Wait(TimeSpan.FromSeconds(10));
             Assert.Equal(1, eventCount);

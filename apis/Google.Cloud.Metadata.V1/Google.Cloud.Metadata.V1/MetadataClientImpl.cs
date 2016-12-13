@@ -528,7 +528,9 @@ namespace Google.Cloud.Metadata.V1
 
             private async Task WaitForChange()
             {
-                var response = await client.RequestMetadataAsync(path, cancellationTokenSource.Token).ConfigureAwait(false);
+                // Always add recursive. It is ignored for values and required for directories when waiting for changes and ETags differ between
+                // recursive and non-recursive requests for directories.
+                var response = await client.RequestMetadataAsync(path + "?recursive=true", cancellationTokenSource.Token).ConfigureAwait(false);
                 var lastETag = GetETag(response);
                 ready.Set();
 
