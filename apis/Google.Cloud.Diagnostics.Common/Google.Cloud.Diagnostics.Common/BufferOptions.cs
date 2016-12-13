@@ -19,7 +19,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Types of buffers.
     /// </summary>
-    internal enum BufferType
+    public enum BufferType
     {
         /// <summary>No buffer will be used and the base consumer will be returned.</summary>
         None,
@@ -34,14 +34,13 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Options that define a buffer.
     /// </summary>
-    public class BufferOptions
+    public sealed class BufferOptions
     {
         /// <summary>
         /// Singleton for a <see cref= "BufferOptions" /> instance that describes a 
         /// <see cref="BufferType.None"/> type of buffer.
         /// </summary>
-        private static readonly BufferOptions NoBufferInstance = 
-            new BufferOptions { BufferType = BufferType.None };
+        private static readonly BufferOptions s_noBufferInstance = new BufferOptions(BufferType.None);
 
         /// <summary>The default buffer size in bytes. 2^16 = 65536.</summary>
         private const int DefaultBufferSize = 65536;
@@ -50,45 +49,38 @@ namespace Google.Cloud.Diagnostics.Common
         private static readonly TimeSpan DefaultWaitTime = TimeSpan.FromSeconds(5);
 
         /// <summary>The type of buffer to be used.</summary>
-        internal BufferType BufferType { get; private set; }
+        public BufferType BufferType { get; }
 
         /// <summary>The size of the buffer in bytes, only used for <see cref="BufferType.Sized"/></summary>
-        internal int BufferSizeBytes { get; private set; }
+        public int BufferSizeBytes { get; }
 
         /// <summary>The time to wait before the buffer is flushed, only used for <see cref="BufferType.Timed"/></summary>
-        internal TimeSpan BufferWaitTime { get; private set; }
+        public TimeSpan BufferWaitTime { get; }
 
-        private BufferOptions() { }
+        private BufferOptions(BufferType bufferType, int? bufferSizeBytes = null, TimeSpan? bufferWaitTime = null)
+        {
+            BufferType = bufferType;
+            BufferSizeBytes = bufferSizeBytes ?? default(int);
+            BufferWaitTime = bufferWaitTime ?? default(TimeSpan);
+        }
 
         /// <summary>
-        /// Gets a <see cref= "BufferOptions" /> instance to describe no buffer.
+        /// Create <see cref="BufferOptions"/> for <see cref="BufferType.None"/>
         /// </summary>
-        public static BufferOptions NoBuffer() => NoBufferInstance;
+        public static BufferOptions NoBuffer() => s_noBufferInstance;
 
         /// <summary>
-        /// Gets a <see cref= "BufferOptions" /> instance to describe a sized buffer.
+        /// Create <see cref="BufferOptions"/> for <see cref="BufferType.Sized"/>
         /// </summary>
         /// <param name="bufferSizeBytes">Optional, The buffer size in bytes.</param>
         public static BufferOptions SizedBuffer(int bufferSizeBytes = DefaultBufferSize)
-        {
-            return new BufferOptions
-            {
-                BufferType = BufferType.Sized,
-                BufferSizeBytes = bufferSizeBytes,
-            };
-        }
+            => new BufferOptions(BufferType.Sized, bufferSizeBytes);
 
         /// <summary>
-        /// Gets a <see cref= "BufferOptions" /> instance to describe a timed buffer.
+        /// Create <see cref="BufferOptions"/> for <see cref="BufferType.Timed"/>
         /// </summary>
         /// <param name="bufferWaitTime">Optional, The minimum amount of time between flushes.</param>
         public static BufferOptions TimedBuffer(TimeSpan? bufferWaitTime = null)
-        {
-            return new BufferOptions
-            {
-                BufferType = BufferType.Timed,
-                BufferWaitTime = bufferWaitTime ?? DefaultWaitTime
-            };
-        }
+            => new BufferOptions(BufferType.Timed, null, bufferWaitTime ?? DefaultWaitTime);
     }
 }

@@ -11,6 +11,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.As
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.AspNet.IntegrationTests", "Google.Cloud.Diagnostics.AspNet.IntegrationTests\Google.Cloud.Diagnostics.AspNet.IntegrationTests.xproj", "{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.Common", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.xproj", "{4291BC6A-A0DA-423F-A88C-B9FF54BAF95A}"
+EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ErrorReporting.V1Beta1", "..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.xproj", "{7408D53D-88E6-42BB-B79A-1B18B027633D}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Trace.V1", "..\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1\Google.Cloud.Trace.V1.xproj", "{939FA175-86CE-4B80-98E8-EDE676FD7821}"
@@ -37,6 +39,10 @@ Global
 		{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D5FAFF6-2AE4-45EC-ABA0-FB697DD9BA9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4291BC6A-A0DA-423F-A88C-B9FF54BAF95A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4291BC6A-A0DA-423F-A88C-B9FF54BAF95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4291BC6A-A0DA-423F-A88C-B9FF54BAF95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4291BC6A-A0DA-423F-A88C-B9FF54BAF95A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Release|Any CPU.ActiveCfg = Release|Any CPU
