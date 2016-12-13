@@ -13,15 +13,20 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+
+using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// A <see cref="ITraceConsumer"/> that will send received traces to the Stackdriver Trace API.
+    /// A <see cref="IConsumer<TraceProto>"/> that will send received traces to the Stackdriver Trace API.
     /// </summary>
-    internal sealed class GrpcTraceConsumer : ITraceConsumer
+    internal sealed class GrpcTraceConsumer : IConsumer<TraceProto>
     {
         private readonly Task<TraceServiceClient> _clientTask;
 
@@ -32,18 +37,21 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public void Receive(Traces traces)
+        public void Receive(IEnumerable<TraceProto> traces)
         {
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
 
+            TraceProto trace = traces.FirstOrDefault();
             // If their are no traces do not try to send them.
-            if (traces.Traces_.Count == 0)
+            if (trace == null)
             {
                 return;
             }
 
+            Traces tracesObj = new Traces();
+            tracesObj.Traces_.AddRange(traces);
             // If the client task has faulted this will throw when accessing 'Result'
-            _clientTask.Result.PatchTracesAsync(traces.Traces_[0].ProjectId, traces);
+            _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj);
         }
     }
 }
