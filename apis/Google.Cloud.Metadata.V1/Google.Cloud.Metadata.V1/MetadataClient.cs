@@ -254,11 +254,11 @@ namespace Google.Cloud.Metadata.V1
         /// </para>
         /// </remarks>
         /// <param name="key">The metadata key of the value(s) to get, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <exception cref="ArgumentException">
         /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL.
         /// </exception>
         /// <returns>A task containing the <see cref="MetadataResult"/> with the current value(s) for an endpoint or a JSON object with the contents of the directory.</returns>
-        /// <returns>
         /// <seealso cref="WaitForChangeAsync"/>
         public virtual Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
         {
