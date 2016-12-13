@@ -44,6 +44,10 @@ or the [Google Cloud Console](https://console.cloud.google.com).
 
 [!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetMaintenanceStatus)]
 
+# Getting raw metadata values
+
+[!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#GetMetadata)]
+
 # Waiting for changes
 
 [!code-cs[](obj/snippets/Google.Cloud.Metadata.V1.MetadataClient.txt#WaitForChange)]

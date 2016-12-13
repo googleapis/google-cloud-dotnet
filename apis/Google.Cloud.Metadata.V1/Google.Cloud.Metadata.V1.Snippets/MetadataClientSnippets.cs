@@ -73,6 +73,21 @@ namespace Google.Cloud.Metadata.V1.Snippets
         }
 
         [Fact]
+        public void GetMetadata()
+        {
+            // Snippet: GetMetadata
+            MetadataClient client = MetadataClient.Create();
+
+            MetadataResult result = client.GetMetadata("instance/attributes");
+            JObject initialMetadata = JObject.Parse(result.Content);
+            foreach (JProperty property in initialMetadata.Properties())
+            {
+                Console.WriteLine(property.Name + " = " + property.Value);
+            }
+            // End snippet
+        }
+
+        [Fact]
         public async Task WaitForChange()
         {
             const string newValue = "foo";
@@ -86,32 +101,38 @@ namespace Google.Cloud.Metadata.V1.Snippets
                 await _fixture.UpdateMetadataAsync($"instance/attributes/{key}", newValue);
             });
 
-            // TODO: This pattern to get the original ETag seems messy. Maybe add something to get an ETag.
-
             // Snippet: WaitForChange
             MetadataClient client = MetadataClient.Create();
 
-            // Get the original ETag so we know when the metadata changes.
-            string lastETag = client.WaitForChange("instance/attributes", timeout: TimeSpan.FromMilliseconds(1)).ETag;
+            // Get the original metadata and its ETag so we know when the metadata changes.
+            MetadataResult initialResult = client.GetMetadata("instance/attributes");
+            Console.WriteLine("Initial Metadata:");
+            JObject initialMetadata = JObject.Parse(initialResult.Content);
+            foreach (JProperty property in initialMetadata.Properties())
+            {
+                Console.WriteLine(property.Name + " = " + property.Value);
+            }
+            string lastETag = initialResult.ETag;
 
-            WaitForChangeResult result;
+            MetadataResult changeResult;
             while (true)
             {
                 // Wait in 30 second blocks until the value actually changes.
-                result = client.WaitForChange("instance/attributes", lastETag, TimeSpan.FromSeconds(30));
-                if (result.ETag != lastETag)
+                changeResult = client.WaitForChange("instance/attributes", lastETag, TimeSpan.FromSeconds(30));
+                if (changeResult.ETag != lastETag)
                 {
-                    JObject currentCustomMetadata = JObject.Parse(result.Content);
-                    foreach (JProperty customMetadata in currentCustomMetadata.Properties())
+                    Console.WriteLine("Changed Metadata:");
+                    JObject currentMetadata = JObject.Parse(changeResult.Content);
+                    foreach (JProperty property in currentMetadata.Properties())
                     {
-                        Console.WriteLine(customMetadata.Name + " = " + customMetadata.Value);
+                        Console.WriteLine(property.Name + " = " + property.Value);
                     }
                     break;
                 }
             }
             // End snippet
 
-            dynamic obj = JsonConvert.DeserializeObject(result.Content);
+            dynamic obj = JsonConvert.DeserializeObject(changeResult.Content);
             Assert.Equal(newValue, obj[key].Value);
             await task;
         }
