@@ -15,11 +15,13 @@
 namespace Google.Cloud.Metadata.V1
 {
     /// <summary>
-    /// Contains the result from the wait for change operation.
+    /// Contains the result from a get or wait-for-change operation.
     /// </summary>
+    /// <seealso cref="MetadataClient.GetMetadata"/>
+    /// <seealso cref="MetadataClient.GetMetadataAsync"/>
     /// <seealso cref="MetadataClient.WaitForChange"/>
     /// <seealso cref="MetadataClient.WaitForChangeAsync"/>
-    public sealed class WaitForChangeResult
+    public sealed class MetadataResult
     {
         /// <summary>
         /// Gets the ETag header from the server response.
@@ -27,12 +29,11 @@ namespace Google.Cloud.Metadata.V1
         public string ETag { get; }
 
         /// <summary>
-        /// Gets the content of the server response, which may or may not be a changed value, depending on whether the
-        /// timeout expired.
+        /// Gets the content of the server response.
         /// </summary>
         public string Content { get; }
 
-        internal WaitForChangeResult(string content, string etag)
+        internal MetadataResult(string content, string etag)
         {
             Content = content;
             ETag = etag;

@@ -101,7 +101,11 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      ///  Creates a sink.
+      ///  Creates a sink that exports specified log entries to a destination.  The
+      ///  export of newly-ingested log entries begins immediately, unless the current
+      ///  time is outside the sink's start and end times or the sink's
+      ///  `writer_identity` is not permitted to write to the destination.  A sink can
+      ///  export log entries only from the resource owning the sink.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, ServerCallContext context)
       {
@@ -109,7 +113,14 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      ///  Updates or creates a sink.
+      ///  Updates a sink. If the named sink doesn't exist, then this method is
+      ///  identical to
+      ///  [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+      ///  If the named sink does exist, then this method replaces the following
+      ///  fields in the existing sink with values from the new sink: `destination`,
+      ///  `filter`, `output_version_format`, `start_time`, and `end_time`.
+      ///  The updated filter might also have a new `writer_identity`; see the
+      ///  `unique_writer_identity` field.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, ServerCallContext context)
       {
@@ -117,7 +128,8 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      ///  Deletes a sink.
+      ///  Deletes a sink. If the sink has a unique `writer_identity`, then that
+      ///  service account is also deleted.
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, ServerCallContext context)
       {
@@ -206,84 +218,132 @@ namespace Google.Cloud.Logging.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSink, null, options, request);
       }
       /// <summary>
-      ///  Creates a sink.
+      ///  Creates a sink that exports specified log entries to a destination.  The
+      ///  export of newly-ingested log entries begins immediately, unless the current
+      ///  time is outside the sink's start and end times or the sink's
+      ///  `writer_identity` is not permitted to write to the destination.  A sink can
+      ///  export log entries only from the resource owning the sink.
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateSink(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a sink.
+      ///  Creates a sink that exports specified log entries to a destination.  The
+      ///  export of newly-ingested log entries begins immediately, unless the current
+      ///  time is outside the sink's start and end times or the sink's
+      ///  `writer_identity` is not permitted to write to the destination.  A sink can
+      ///  export log entries only from the resource owning the sink.
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSink, null, options, request);
       }
       /// <summary>
-      ///  Creates a sink.
+      ///  Creates a sink that exports specified log entries to a destination.  The
+      ///  export of newly-ingested log entries begins immediately, unless the current
+      ///  time is outside the sink's start and end times or the sink's
+      ///  `writer_identity` is not permitted to write to the destination.  A sink can
+      ///  export log entries only from the resource owning the sink.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a sink.
+      ///  Creates a sink that exports specified log entries to a destination.  The
+      ///  export of newly-ingested log entries begins immediately, unless the current
+      ///  time is outside the sink's start and end times or the sink's
+      ///  `writer_identity` is not permitted to write to the destination.  A sink can
+      ///  export log entries only from the resource owning the sink.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSink, null, options, request);
       }
       /// <summary>
-      ///  Updates or creates a sink.
+      ///  Updates a sink. If the named sink doesn't exist, then this method is
+      ///  identical to
+      ///  [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+      ///  If the named sink does exist, then this method replaces the following
+      ///  fields in the existing sink with values from the new sink: `destination`,
+      ///  `filter`, `output_version_format`, `start_time`, and `end_time`.
+      ///  The updated filter might also have a new `writer_identity`; see the
+      ///  `unique_writer_identity` field.
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateSink(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates or creates a sink.
+      ///  Updates a sink. If the named sink doesn't exist, then this method is
+      ///  identical to
+      ///  [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+      ///  If the named sink does exist, then this method replaces the following
+      ///  fields in the existing sink with values from the new sink: `destination`,
+      ///  `filter`, `output_version_format`, `start_time`, and `end_time`.
+      ///  The updated filter might also have a new `writer_identity`; see the
+      ///  `unique_writer_identity` field.
       /// </summary>
       public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSink, null, options, request);
       }
       /// <summary>
-      ///  Updates or creates a sink.
+      ///  Updates a sink. If the named sink doesn't exist, then this method is
+      ///  identical to
+      ///  [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+      ///  If the named sink does exist, then this method replaces the following
+      ///  fields in the existing sink with values from the new sink: `destination`,
+      ///  `filter`, `output_version_format`, `start_time`, and `end_time`.
+      ///  The updated filter might also have a new `writer_identity`; see the
+      ///  `unique_writer_identity` field.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates or creates a sink.
+      ///  Updates a sink. If the named sink doesn't exist, then this method is
+      ///  identical to
+      ///  [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+      ///  If the named sink does exist, then this method replaces the following
+      ///  fields in the existing sink with values from the new sink: `destination`,
+      ///  `filter`, `output_version_format`, `start_time`, and `end_time`.
+      ///  The updated filter might also have a new `writer_identity`; see the
+      ///  `unique_writer_identity` field.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSink, null, options, request);
       }
       /// <summary>
-      ///  Deletes a sink.
+      ///  Deletes a sink. If the sink has a unique `writer_identity`, then that
+      ///  service account is also deleted.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteSink(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a sink.
+      ///  Deletes a sink. If the sink has a unique `writer_identity`, then that
+      ///  service account is also deleted.
       /// </summary>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSink, null, options, request);
       }
       /// <summary>
-      ///  Deletes a sink.
+      ///  Deletes a sink. If the sink has a unique `writer_identity`, then that
+      ///  service account is also deleted.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a sink.
+      ///  Deletes a sink. If the sink has a unique `writer_identity`, then that
+      ///  service account is also deleted.
       /// </summary>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, CallOptions options)
       {

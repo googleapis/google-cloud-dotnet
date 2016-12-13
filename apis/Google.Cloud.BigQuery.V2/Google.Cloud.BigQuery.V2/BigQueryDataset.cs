@@ -82,6 +82,18 @@ namespace Google.Cloud.BigQuery.V2
             _client.UploadCsv(GetTableReference(tableId), schema, input, options);
 
         /// <summary>
+        /// Uploads a stream of Avro data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>A data upload job.</returns>
+        public BigQueryJob UploadAvro(string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null) =>
+            _client.UploadAvro(GetTableReference(tableId), schema, input, options);
+
+        /// <summary>
         /// Uploads a stream of JSON data to a table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadJson(TableReference, TableSchema, Stream, UploadJsonOptions)"/>.
         /// </summary>
@@ -161,6 +173,20 @@ namespace Google.Cloud.BigQuery.V2
         /// a data upload job.</returns>
         public Task<BigQueryJob> UploadCsvAsync(string tableId, TableSchema schema, Stream input, UploadCsvOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.UploadCsvAsync(GetTableReference(tableId), schema, input, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously uploads a stream of Avro data to a table.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="schema">The schema of the data. May be null if the table already exists, in which case the table schema will be fetched and used.</param>
+        /// <param name="input">The stream of input data. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is
+        /// a data upload job.</returns>
+        public Task<BigQueryJob> UploadAvroAsync(string tableId, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.UploadAvroAsync(GetTableReference(tableId), schema, input, options, cancellationToken);
 
         /// <summary>
         /// Asynchronously uploads a stream of JSON data to a table.

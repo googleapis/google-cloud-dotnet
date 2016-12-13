@@ -269,12 +269,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
-            string projectName,
+            ProjectName projectName,
             ReportedErrorEvent @event,
             CallSettings callSettings = null) => ReportErrorEventAsync(
                 new ReportErrorEventRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                     Event = @event,
                 },
                 callSettings);
@@ -305,7 +305,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<ReportErrorEventResponse> ReportErrorEventAsync(
-            string projectName,
+            ProjectName projectName,
             ReportedErrorEvent @event,
             CancellationToken cancellationToken) => ReportErrorEventAsync(
                 projectName,
@@ -338,12 +338,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// The RPC response.
         /// </returns>
         public virtual ReportErrorEventResponse ReportErrorEvent(
-            string projectName,
+            ProjectName projectName,
             ReportedErrorEvent @event,
             CallSettings callSettings = null) => ReportErrorEvent(
                 new ReportErrorEventRequest
                 {
-                    ProjectName = projectName,
+                    ProjectNameAsProjectName = projectName,
                     Event = @event,
                 },
                 callSettings);

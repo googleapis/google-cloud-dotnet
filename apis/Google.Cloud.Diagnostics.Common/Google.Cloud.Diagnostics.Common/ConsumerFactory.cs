@@ -30,6 +30,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             GaxPreconditions.CheckNotNull(options, nameof(options));
 
+
             switch (options.BufferType)
             {
                 case BufferType.Sized:

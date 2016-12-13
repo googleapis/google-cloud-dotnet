@@ -84,8 +84,10 @@ namespace Google.Cloud.Speech.V1Beta1 {
             "bmNyZWNvZ25pemU6ASoSiQEKElN0cmVhbWluZ1JlY29nbml6ZRI2Lmdvb2ds",
             "ZS5jbG91ZC5zcGVlY2gudjFiZXRhMS5TdHJlYW1pbmdSZWNvZ25pemVSZXF1",
             "ZXN0GjcuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MWJldGExLlN0cmVhbWluZ1Jl",
-            "Y29nbml6ZVJlc3BvbnNlKAEwAUIwCh9jb20uZ29vZ2xlLmNsb3VkLnNwZWVj",
-            "aC52MWJldGExQgtTcGVlY2hQcm90b1ABYgZwcm90bzM="));
+            "Y29nbml6ZVJlc3BvbnNlKAEwAUJzCh9jb20uZ29vZ2xlLmNsb3VkLnNwZWVj",
+            "aC52MWJldGExQgtTcGVlY2hQcm90b1ABWkFnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NwZWVjaC92MWJldGExO3NwZWVj",
+            "aGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

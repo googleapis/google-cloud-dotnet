@@ -457,11 +457,11 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Group> GetGroupAsync(
-            string name,
+            GroupName name,
             CallSettings callSettings = null) => GetGroupAsync(
                 new GetGroupRequest
                 {
-                    Name = name,
+                    GroupName = name,
                 },
                 callSettings);
 
@@ -479,7 +479,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Group> GetGroupAsync(
-            string name,
+            GroupName name,
             CancellationToken cancellationToken) => GetGroupAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -498,11 +498,11 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual Group GetGroup(
-            string name,
+            GroupName name,
             CallSettings callSettings = null) => GetGroup(
                 new GetGroupRequest
                 {
-                    Name = name,
+                    GroupName = name,
                 },
                 callSettings);
 
@@ -562,12 +562,12 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Group> CreateGroupAsync(
-            string name,
+            ProjectName name,
             Group group,
             CallSettings callSettings = null) => CreateGroupAsync(
                 new CreateGroupRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     Group = group,
                 },
                 callSettings);
@@ -590,7 +590,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Group> CreateGroupAsync(
-            string name,
+            ProjectName name,
             Group group,
             CancellationToken cancellationToken) => CreateGroupAsync(
                 name,
@@ -615,12 +615,12 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual Group CreateGroup(
-            string name,
+            ProjectName name,
             Group group,
             CallSettings callSettings = null) => CreateGroup(
                 new CreateGroupRequest
                 {
-                    Name = name,
+                    ProjectName = name,
                     Group = group,
                 },
                 callSettings);
@@ -783,11 +783,11 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteGroupAsync(
-            string name,
+            GroupName name,
             CallSettings callSettings = null) => DeleteGroupAsync(
                 new DeleteGroupRequest
                 {
-                    Name = name,
+                    GroupName = name,
                 },
                 callSettings);
 
@@ -805,7 +805,7 @@ namespace Google.Cloud.Monitoring.V3
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteGroupAsync(
-            string name,
+            GroupName name,
             CancellationToken cancellationToken) => DeleteGroupAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -824,11 +824,11 @@ namespace Google.Cloud.Monitoring.V3
         /// The RPC response.
         /// </returns>
         public virtual void DeleteGroup(
-            string name,
+            GroupName name,
             CallSettings callSettings = null) => DeleteGroup(
                 new DeleteGroupRequest
                 {
-                    Name = name,
+                    GroupName = name,
                 },
                 callSettings);
 
@@ -892,13 +892,13 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable asynchronous sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembersAsync(
-            string name,
+            GroupName name,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListGroupMembersAsync(
                 new ListGroupMembersRequest
                 {
-                    Name = name,
+                    GroupName = name,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -926,13 +926,13 @@ namespace Google.Cloud.Monitoring.V3
         /// A pageable sequence of <see cref="MonitoredResource"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListGroupMembersResponse, MonitoredResource> ListGroupMembers(
-            string name,
+            GroupName name,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListGroupMembers(
                 new ListGroupMembersRequest
                 {
-                    Name = name,
+                    GroupName = name,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

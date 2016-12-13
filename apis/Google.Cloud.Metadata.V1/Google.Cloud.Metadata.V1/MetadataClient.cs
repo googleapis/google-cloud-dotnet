@@ -219,6 +219,53 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <summary>
+        /// Gets the metadata value(s) specified by the relative URL synchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
+        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata for more information on available keys.
+        /// </para>
+        /// </remarks>
+        /// <param name="key">The metadata key of the value(s) to get, such as "instance/scheduling/automatic-restart"</param>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL.
+        /// </exception>
+        /// <returns>The <see cref="MetadataResult"/> with the current value(s) for an endpoint or a JSON object with the contents of the directory.</returns>
+        /// <seealso cref="WaitForChange"/>
+        public virtual MetadataResult GetMetadata(string key)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Gets the metadata value(s) specified by the relative URL asynchronously.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
+        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
+        /// </para>
+        /// <para>
+        /// See https://cloud.google.com/compute/docs/storing-retrieving-metadata#project_and_instance_metadata for more information on available keys.
+        /// </para>
+        /// </remarks>
+        /// <param name="key">The metadata key of the value(s) to get, such as "instance/scheduling/automatic-restart"</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <exception cref="ArgumentException">
+        /// <paramref name="key"/> does not have the proper format for a metadata key, which is a relative URL.
+        /// </exception>
+        /// <returns>A task containing the <see cref="MetadataResult"/> with the current value(s) for an endpoint or a JSON object with the contents of the directory.</returns>
+        /// <seealso cref="WaitForChangeAsync"/>
+        public virtual Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Synchronously gets the metadata for the project of the VM currently running this code.
         /// </summary>
         /// <remarks>
@@ -338,8 +385,7 @@ namespace Google.Cloud.Metadata.V1
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
-        /// If the key specified is a directory, a recursive request must be made and the result will be a JSON object containing all values in the directory.
-        /// For example, to wait for changes on all instance metadata use a key of "instance?recursive=true".
+        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
         /// </para>
         /// <para>
         /// If the <paramref name="lastETag"/> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
@@ -368,10 +414,11 @@ namespace Google.Cloud.Metadata.V1
         /// <exception cref="TaskCanceledException">
         /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
         /// </exception>
-        /// <returns>The <see cref="WaitForChangeResult"/> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
+        /// <returns>The <see cref="MetadataResult"/> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.</returns>
         /// <seealso cref="InstanceMetadataChanged"/>
         /// <seealso cref="ProjectMetadataChanged"/>
-        public virtual WaitForChangeResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan))
+        /// <seealso cref="GetMetadata"/>
+        public virtual MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan))
         {
             throw new NotImplementedException();
         }
@@ -382,8 +429,7 @@ namespace Google.Cloud.Metadata.V1
         /// <remarks>
         /// <para>
         /// If the key specified is a metadata endpoint, the result will be the value, possibly separated by newlines if there are multiple values.
-        /// If the key specified is a directory, a recursive request must be made and the result will be a JSON object containing all values in the directory.
-        /// For example, to wait for changes on all instance metadata use a key of "instance?recursive=true".
+        /// If the key specified is a directory, a recursive request will be made and the result will be a JSON object containing all values in the directory.
         /// </para>
         /// <para>
         /// If the <paramref name="lastETag"/> is specified and it differs from the ETag of the value currently on the server, it indicates that the value has already
@@ -414,11 +460,12 @@ namespace Google.Cloud.Metadata.V1
         /// The timeout in the <see cref="HttpClient"/> elapses before the response comes back from the server.
         /// </exception>
         /// <returns>
-        /// A task containing the <see cref="WaitForChangeResult"/> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.
+        /// A task containing the <see cref="MetadataResult"/> with the changed value(s) for an endpoint or a JSON object with the changed contents of the directory.
         /// </returns>
         /// <seealso cref="InstanceMetadataChanged"/>
         /// <seealso cref="ProjectMetadataChanged"/>
-        public virtual Task<WaitForChangeResult> WaitForChangeAsync(
+        /// <seealso cref="GetMetadataAsync"/>
+        public virtual Task<MetadataResult> WaitForChangeAsync(
             string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();

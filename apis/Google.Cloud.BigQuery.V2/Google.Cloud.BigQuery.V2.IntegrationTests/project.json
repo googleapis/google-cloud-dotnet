@@ -4,7 +4,7 @@
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk",
     "embed": {
-      "include": [ "personsData.json" ]
+      "include": [ "personsData.json", "one_complex.avro" ]
     }
   },
 

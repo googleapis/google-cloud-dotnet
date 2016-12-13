@@ -57,8 +57,10 @@ namespace Google.Cloud.Logging.V2 {
             "cy8qL3NpbmtzLyp9OgRzaW5rEnYKCkRlbGV0ZVNpbmsSJC5nb29nbGUubG9n",
             "Z2luZy52Mi5EZWxldGVTaW5rUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
             "bXB0eSIqgtPkkwIkKiIvdjIve3NpbmtfbmFtZT1wcm9qZWN0cy8qL3Npbmtz",
-            "Lyp9QkIKFWNvbS5nb29nbGUubG9nZ2luZy52MkINTG9nZ2luZ0NvbmZpZ1AB",
-            "qgIXR29vZ2xlLkNsb3VkLkxvZ2dpbmcuVjJiBnByb3RvMw=="));
+            "Lyp9QoEBChVjb20uZ29vZ2xlLmxvZ2dpbmcudjJCEkxvZ2dpbmdDb25maWdQ",
+            "cm90b1ABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2xvZ2dpbmcvdjI7bG9nZ2luZ6oCF0dvb2dsZS5DbG91ZC5Mb2dnaW5nLlYy",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -76,11 +78,10 @@ namespace Google.Cloud.Logging.V2 {
   }
   #region Messages
   /// <summary>
-  ///  Describes a sink used to export log entries outside of Stackdriver Logging.
-  ///  A logs filter controls which log entries are exported.  Sinks can have a
-  ///  start time and an end time; these can be used to place log entries from an
-  ///  exact time range into a particular destination.  If both `start_time` and
-  ///  `end_time` are present, then `start_time` must be less than `end_time`.
+  ///  Describes a sink used to export log entries to one of the following
+  ///  destinations in any project: a Cloud Storage bucket, a BigQuery dataset, or a
+  ///  Cloud Pub/Sub topic.  A logs filter controls which log entries are
+  ///  exported. The sink must be created within a project or organization.
   /// </summary>
   public sealed partial class LogSink : pb::IMessage<LogSink> {
     private static readonly pb::MessageParser<LogSink> _parser = new pb::MessageParser<LogSink>(() => new LogSink());
@@ -148,7 +149,9 @@ namespace Google.Cloud.Logging.V2 {
     ///      "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
     ///      "pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]"
     ///
-    ///  For more information,  see
+    ///  The sink's `writer_identity`, set when the sink is created, must
+    ///  have permission to write to the destination or else the log
+    ///  entries are not exported.  For more information, see
     ///  [Exporting Logs With Sinks](/logging/docs/api/tasks/exporting-logs).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -163,12 +166,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 5;
     private string filter_ = "";
     /// <summary>
-    ///  Optional. An [advanced logs filter](/logging/docs/view/advanced_filters).
-    ///  Only log entries matching the filter are exported. The filter
-    ///  must be consistent with the log entry format specified by the
-    ///  `outputVersionFormat` parameter, regardless of the format of the
-    ///  log entry that was originally ingested by Stackdriver Logging.
-    ///  The following example uses field names in the v2 log entry format:
+    ///  Optional.
+    ///  An [advanced logs filter](/logging/docs/view/advanced_filters).  The only
+    ///  exported log entries are those that are in the resource owning the sink and
+    ///  that match the filter. The filter must use the log entry format specified
+    ///  by the `output_version_format` parameter.  For example, in the v2 format:
     ///
     ///      logName="projects/[PROJECT_ID]/logs/[LOG_ID]" AND severity>=ERROR
     /// </summary>
@@ -184,10 +186,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int OutputVersionFormatFieldNumber = 6;
     private global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat outputVersionFormat_ = 0;
     /// <summary>
-    ///  Optional. The log entry version to use for this sink's exported log
-    ///  entries.  This version does not have to correspond to the version of the
-    ///  log entry that was written to Stackdriver Logging. If omitted, the
-    ///  v2 format is used.
+    ///  Optional. The log entry format to use for this sink's exported log
+    ///  entries.  The v2 format is used by default.
+    ///  **The v1 format is deprecated** and should be used only as part of a
+    ///  migration effort to v2.
+    ///  See [Migration to the v2 API](/logging/docs/api/v2/migration-to-v2).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogSink.Types.VersionFormat OutputVersionFormat {
@@ -201,11 +204,20 @@ namespace Google.Cloud.Logging.V2 {
     public const int WriterIdentityFieldNumber = 8;
     private string writerIdentity_ = "";
     /// <summary>
-    ///  Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;that
-    ///  will write exported log entries to the destination on behalf of Stackdriver
-    ///  Logging. You must grant this identity write-access to the destination.
-    ///  Consult the destination service's documentation to determine the exact role
-    ///  that must be granted.
+    ///  Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;under
+    ///  which Stackdriver Logging writes the exported log entries to the sink's
+    ///  destination.  This field is set by
+    ///  [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create)
+    ///  and
+    ///  [sinks.update](/logging/docs/api/reference/rest/v2/projects.sinks/update),
+    ///  based on the setting of `unique_writer_identity` in those methods.
+    ///
+    ///  Until you grant this identity write-access to the destination, log entry
+    ///  exports from this sink will fail. For more information,
+    ///  see [Granting access for a
+    ///  resource](/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource).
+    ///  Consult the destination service's documentation to determine the
+    ///  appropriate IAM roles to assign to the identity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string WriterIdentity {
@@ -219,9 +231,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int StartTimeFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    ///  Optional. The time at which this sink will begin exporting log entries.  If
-    ///  this value is present, then log entries are exported only if `start_time`
-    ///  &lt;=`entry.timestamp`.
+    ///  Optional. The time at which this sink will begin exporting log entries.
+    ///  Log entries are exported only if their timestamp is not earlier than the
+    ///  start time.  The default value of this field is the time the sink is
+    ///  created or updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -235,9 +248,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int EndTimeFieldNumber = 11;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    ///  Optional. Time at which this sink will stop exporting log entries.  If this
-    ///  value is present, then log entries are exported only if `entry.timestamp` &lt;
-    ///  `end_time`.
+    ///  Optional. The time at which this sink will stop exporting log entries.  Log
+    ///  entries are exported only if their timestamp is earlier than the end time.
+    ///  If this field is not supplied, there is no end time.  If both a start time
+    ///  and an end time are provided, then the end time must be later than the
+    ///  start time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -438,7 +453,7 @@ namespace Google.Cloud.Logging.V2 {
       /// </summary>
       public enum VersionFormat {
         /// <summary>
-        ///  An unspecified version format will default to V2.
+        ///  An unspecified format version that will default to V2.
         /// </summary>
         [pbr::OriginalName("VERSION_FORMAT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -497,10 +512,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The resource name where this sink was created:
-    ///
-    ///      "projects/[PROJECT_ID]"
-    ///      "organizations/[ORGANIZATION_ID]"
+    ///  Required. The parent resource whose sinks are to be listed.
+    ///  Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -836,10 +849,12 @@ namespace Google.Cloud.Logging.V2 {
     public const int SinkNameFieldNumber = 1;
     private string sinkName_ = "";
     /// <summary>
-    ///  Required. The resource name of the sink to return:
+    ///  Required. The parent resource name of the sink:
     ///
     ///      "projects/[PROJECT_ID]/sinks/[SINK_ID]"
     ///      "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+    ///
+    ///  Example: `"projects/my-project-id/sinks/my-sink-id"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {
@@ -968,6 +983,8 @@ namespace Google.Cloud.Logging.V2 {
     ///
     ///      "projects/[PROJECT_ID]"
     ///      "organizations/[ORGANIZATION_ID]"
+    ///
+    ///  Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -996,11 +1013,17 @@ namespace Google.Cloud.Logging.V2 {
     public const int UniqueWriterIdentityFieldNumber = 3;
     private bool uniqueWriterIdentity_;
     /// <summary>
-    ///  Optional. Whether the sink will have a dedicated service account returned
-    ///  in the sink's writer_identity. Set this field to be true to export
-    ///  logs from one project to a different project. This field is ignored for
-    ///  non-project sinks (e.g. organization sinks) because those sinks are
-    ///  required to have dedicated service accounts.
+    ///  Optional. Determines the kind of IAM identity returned as `writer_identity`
+    ///  in the new sink.  If this value is omitted or set to false, and if the
+    ///  sink's parent is a project, then the value returned as `writer_identity` is
+    ///  `cloud-logs@google.com`, the same identity used before the addition of
+    ///  writer identities to this API. The sink's destination must be in the same
+    ///  project as the sink itself.
+    ///
+    ///  If this field is set to true, or if the sink is owned by a non-project
+    ///  resource such as an organization, then the value of `writer_identity` will
+    ///  be a unique service account used only for exports from the new sink.  For
+    ///  more information, see `writer_identity` in [LogSink][google.logging.v2.LogSink].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool UniqueWriterIdentity {
@@ -1163,8 +1186,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int SinkNameFieldNumber = 1;
     private string sinkName_ = "";
     /// <summary>
-    ///  Required. The resource name of the sink to update, including the parent
-    ///  resource and the sink identifier:
+    ///  Required. The full resource name of the sink to update, including the
+    ///  parent resource and the sink identifier:
     ///
     ///      "projects/[PROJECT_ID]/sinks/[SINK_ID]"
     ///      "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -1184,7 +1207,7 @@ namespace Google.Cloud.Logging.V2 {
     private global::Google.Cloud.Logging.V2.LogSink sink_;
     /// <summary>
     ///  Required. The updated sink, whose name is the same identifier that appears
-    ///  as part of `sinkName`.  If `sinkName` does not exist, then
+    ///  as part of `sink_name`.  If `sink_name` does not exist, then
     ///  this method creates a new sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1199,11 +1222,17 @@ namespace Google.Cloud.Logging.V2 {
     public const int UniqueWriterIdentityFieldNumber = 3;
     private bool uniqueWriterIdentity_;
     /// <summary>
-    ///  Optional. Whether the sink will have a dedicated service account returned
-    ///  in the sink's writer_identity. Set this field to be true to export
-    ///  logs from one project to a different project. This field is ignored for
-    ///  non-project sinks (e.g. organization sinks) because those sinks are
-    ///  required to have dedicated service accounts.
+    ///  Optional. See
+    ///  [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create)
+    ///  for a description of this field.  When updating a sink, the effect of this
+    ///  field on the value of `writer_identity` in the updated sink depends on both
+    ///  the old and new values of this field:
+    ///
+    ///  +   If the old and new values of this field are both false or both true,
+    ///      then there is no change to the sink's `writer_identity`.
+    ///  +   If the old value was false and the new value is true, then
+    ///      `writer_identity` is changed to a unique service account.
+    ///  +   It is an error if the old value was true and the new value is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool UniqueWriterIdentity {
@@ -1364,13 +1393,15 @@ namespace Google.Cloud.Logging.V2 {
     public const int SinkNameFieldNumber = 1;
     private string sinkName_ = "";
     /// <summary>
-    ///  Required. The resource name of the sink to delete, including the parent
-    ///  resource and the sink identifier:
+    ///  Required. The full resource name of the sink to delete, including the
+    ///  parent resource and the sink identifier:
     ///
     ///      "projects/[PROJECT_ID]/sinks/[SINK_ID]"
     ///      "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
     ///
-    ///  It is an error if the sink does not exist.
+    ///  It is an error if the sink does not exist.  Example:
+    ///  `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if
+    ///  the sink does not exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string SinkName {

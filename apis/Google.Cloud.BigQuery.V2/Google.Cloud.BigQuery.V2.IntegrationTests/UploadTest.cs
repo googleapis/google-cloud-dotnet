@@ -15,7 +15,9 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.IntegrationTests
@@ -60,6 +62,54 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(new DateTime(2014, 8, 19, 12, 41, 35, 220, DateTimeKind.Utc), (DateTime)ben["gameStarted"]);
         }
 
+        [Fact]
+        public void UploadAvro()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            var tableReference = client.GetTableReference(_fixture.DatasetId, tableId);
+            var schema = new TableSchemaBuilder
+            {
+                { "re", BigQueryDbType.Int64 },
+                { "im", BigQueryDbType.Int64 }
+            }.Build();
+            var typeInfo = typeof(UploadTest).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".one_complex.avro";
+            using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
+            {
+                var job = client.UploadAvro(tableReference, schema, stream);
+                job.PollUntilCompleted();
+            }
+            var rows = client.GetTable(tableReference).ListRows().ToList();
+            Assert.Equal(1, rows.Count);
+            Assert.Equal(100, (long) rows[0]["re"]);
+            Assert.Equal(200, (long) rows[0]["im"]);
+        }
+
+        [Fact]
+        public async Task UploadAvroAsync()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var tableId = _fixture.CreateTableId();
+            var tableReference = client.GetTableReference(_fixture.DatasetId, tableId);
+            var schema = new TableSchemaBuilder
+            {
+                { "re", BigQueryDbType.Int64 },
+                { "im", BigQueryDbType.Int64 }
+            }.Build();
+            var typeInfo = typeof(UploadTest).GetTypeInfo();
+            string resourceName = typeInfo.Namespace + ".one_complex.avro";
+            using (var stream = typeInfo.Assembly.GetManifestResourceStream(resourceName))
+            {
+                var job = await client.UploadAvroAsync(tableReference, schema, stream);
+                await job.PollUntilCompletedAsync();
+            }
+            var table = await client.GetTableAsync(tableReference);
+            var rows = await table.ListRowsAsync().ToList();
+            Assert.Equal(1, rows.Count);
+            Assert.Equal(100, (long) rows[0]["re"]);
+            Assert.Equal(200, (long) rows[0]["im"]);
+        }
         [Fact]
         public void UploadJson_Stream()
         {

@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta05-*",
+  "version": "1.0.0-beta06-*",
   "description": "Version-agnostic types for the Google Stackdriver Logging API.",
   "authors": [ "Google Inc." ],
 

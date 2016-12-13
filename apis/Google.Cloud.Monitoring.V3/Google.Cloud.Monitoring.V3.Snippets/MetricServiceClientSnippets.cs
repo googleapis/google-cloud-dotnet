@@ -38,7 +38,7 @@ namespace Google.Cloud.Monitoring.V3
             // Sample: ListMetricDescriptors
             // Additional: ListMetricDescriptors(*,*,*,*)
             MetricServiceClient client = MetricServiceClient.Create();
-            string projectName = new ProjectName(projectId).ToString();
+            ProjectName projectName = new ProjectName(projectId);
             PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> metrics = client.ListMetricDescriptors(projectName);
             foreach (MetricDescriptor metric in metrics.Take(10))
             {

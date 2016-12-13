@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0-alpha01-*",
+  "version": "1.0.0-alpha02-*",
   "description": "Google Compute Engine Metadata v1 client library",
   "authors": [ "Google Inc." ],
 
@@ -19,8 +19,9 @@
   },
 
   "dependencies": {
-    "Google.Apis": "1.18.0",
-    "Google.Apis.Compute.v1": "1.18.0.650"
+    "Google.Apis": "1.20.0",
+    "Google.Apis.Auth": "1.20.0",
+    "Google.Apis.Compute.v1": "1.19.0.692"
   },
 
   "frameworks": {

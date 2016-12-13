@@ -15,14 +15,13 @@
 using Google.Apis.Auth.OAuth2.Responses;
 using Google.Apis.Compute.v1.Data;
 using Google.Apis.Http;
-using Google.Apis.Json;
 using Google.Apis.Logging;
+using Google.Apis.Util;
 using Microsoft.CSharp.RuntimeBinder;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
@@ -282,35 +281,8 @@ namespace Google.Cloud.Metadata.V1
         /// <inheritdoc/>
         public override async Task<TokenResponse> GetAccessTokenAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
-            // TODO: Most of this is taken from Google.Apis.Auth.OAuth2.ComputeCredential.RequestAccessTokenAsync. Perhaps move that to a helper which can be shared.
             var response = await RequestMetadataAsync("instance/service-accounts/default/token", cancellationToken, requireMetadataFlavorHeader: false).ConfigureAwait(false);
-
-            // Read the response.
-            var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var typeName = "";
-            try
-            {
-                if (!response.IsSuccessStatusCode)
-                {
-                    typeName = nameof(TokenErrorResponse);
-                    var error = NewtonsoftJsonSerializer.Instance.Deserialize<TokenErrorResponse>(content);
-                    throw new TokenResponseException(error);
-                }
-
-                // Gets the token and sets its issued time.
-                typeName = nameof(TokenResponse);
-                var newToken = NewtonsoftJsonSerializer.Instance.Deserialize<TokenResponse>(content);
-                newToken.Issued = DateTime.UtcNow; // TODO: This was using an IClock before.
-                return newToken;
-            }
-            catch (JsonException ex)
-            {
-                Logger.Error(ex, $"Exception was caught when deserializing {typeName}. Content is: {content}");
-                throw new TokenResponseException(new TokenErrorResponse
-                {
-                    Error = "Server response does not contain a JSON object. Status code is: " + response.StatusCode
-                });
-            }
+            return await TokenResponse.FromHttpResponseAsync(response, SystemClock.Default, Logger).ConfigureAwait(false);
         }
 
         /// <inheritdoc/>
@@ -354,6 +326,26 @@ namespace Google.Cloud.Metadata.V1
         {
             var response = await RequestMetadataAsync("instance/maintenance-event", cancellationToken).ConfigureAwait(false);
             return ParseMaintenanceStatus(await response.Content.ReadAsStringAsync().ConfigureAwait(false));
+        }
+
+        /// <inheritdoc/>
+        public override MetadataResult GetMetadata(string key) => GetResult(token => GetMetadataAsync(key, token));
+
+        /// <inheritdoc/>
+        public override Task<MetadataResult> GetMetadataAsync(string key, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            ValidateMetadataKey(key);
+
+            // Always add recursive. It is ignored for values and required for directories when waiting for changes.
+            return GetMetadataCoreAsync(key + "?recursive=true", cancellationToken);
+        }
+
+        private async Task<MetadataResult> GetMetadataCoreAsync(string key, CancellationToken cancellationToken)
+        {
+            var response = await RequestMetadataAsync(key, cancellationToken).ConfigureAwait(false);
+            return new MetadataResult(
+                await response.Content.ReadAsStringAsync().ConfigureAwait(false),
+                GetETag(response));
         }
 
         /// <inheritdoc/>
@@ -472,11 +464,11 @@ namespace Google.Cloud.Metadata.V1
         }
 
         /// <inheritdoc/>
-        public override WaitForChangeResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan)) =>
+        public override MetadataResult WaitForChange(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan)) =>
             GetResult(token => WaitForChangeAsync(key, lastETag, timeout, token));
 
         /// <inheritdoc/>
-        public override async Task<WaitForChangeResult> WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
+        public override Task<MetadataResult> WaitForChangeAsync(string key, string lastETag = null, TimeSpan timeout = default(TimeSpan), CancellationToken cancellationToken = default(CancellationToken))
         {
             ValidateMetadataKey(key);
             ValidateETag(lastETag, nameof(lastETag));
@@ -497,10 +489,7 @@ namespace Google.Cloud.Metadata.V1
             {
                 key += $"&last_etag={lastETag}";
             }
-            var response = await RequestMetadataAsync(key, cancellationToken).ConfigureAwait(false);
-            return new WaitForChangeResult(
-                await response.Content.ReadAsStringAsync().ConfigureAwait(false),
-                GetETag(response));
+            return GetMetadataCoreAsync(key, cancellationToken);
         }
 
         private class ValueWatcher
@@ -539,7 +528,9 @@ namespace Google.Cloud.Metadata.V1
 
             private async Task WaitForChange()
             {
-                var response = await client.RequestMetadataAsync(path, cancellationTokenSource.Token).ConfigureAwait(false);
+                // Always add recursive. It is ignored for values and required for directories when waiting for changes and ETags differ between
+                // recursive and non-recursive requests for directories.
+                var response = await client.RequestMetadataAsync(path + "?recursive=true", cancellationTokenSource.Token).ConfigureAwait(false);
                 var lastETag = GetETag(response);
                 ready.Set();
 

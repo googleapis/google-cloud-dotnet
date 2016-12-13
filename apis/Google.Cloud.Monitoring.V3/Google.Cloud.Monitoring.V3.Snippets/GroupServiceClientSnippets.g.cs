@@ -41,7 +41,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ListGroupsRequest request = new ListGroupsRequest
             {
-                Name = new ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListGroupsResponse,Group> response =
@@ -87,7 +87,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ListGroupsRequest request = new ListGroupsRequest
             {
-                Name = new ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListGroupsResponse,Group> response =
@@ -127,26 +127,26 @@ namespace Google.Cloud.Monitoring.V3.Snippets
 
         public async Task GetGroupAsync()
         {
-            // Snippet: GetGroupAsync(string,CallSettings)
-            // Additional: GetGroupAsync(string,CancellationToken)
+            // Snippet: GetGroupAsync(GroupName,CallSettings)
+            // Additional: GetGroupAsync(GroupName,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
+            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
             // Make the request
-            Group response = await groupServiceClient.GetGroupAsync(formattedName);
+            Group response = await groupServiceClient.GetGroupAsync(name);
             // End snippet
         }
 
         public void GetGroup()
         {
-            // Snippet: GetGroup(string,CallSettings)
+            // Snippet: GetGroup(GroupName,CallSettings)
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
+            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
             // Make the request
-            Group response = groupServiceClient.GetGroup(formattedName);
+            Group response = groupServiceClient.GetGroup(name);
             // End snippet
         }
 
@@ -158,7 +158,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
-                Name = new GroupName("[PROJECT]", "[GROUP]").ToString(),
+                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             Group response = await groupServiceClient.GetGroupAsync(request);
@@ -173,7 +173,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             GetGroupRequest request = new GetGroupRequest
             {
-                Name = new GroupName("[PROJECT]", "[GROUP]").ToString(),
+                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             Group response = groupServiceClient.GetGroup(request);
@@ -182,28 +182,28 @@ namespace Google.Cloud.Monitoring.V3.Snippets
 
         public async Task CreateGroupAsync()
         {
-            // Snippet: CreateGroupAsync(string,Group,CallSettings)
-            // Additional: CreateGroupAsync(string,Group,CancellationToken)
+            // Snippet: CreateGroupAsync(ProjectName,Group,CallSettings)
+            // Additional: CreateGroupAsync(ProjectName,Group,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new ProjectName("[PROJECT]").ToString();
+            ProjectName name = new ProjectName("[PROJECT]");
             Group group = new Group();
             // Make the request
-            Group response = await groupServiceClient.CreateGroupAsync(formattedName, group);
+            Group response = await groupServiceClient.CreateGroupAsync(name, group);
             // End snippet
         }
 
         public void CreateGroup()
         {
-            // Snippet: CreateGroup(string,Group,CallSettings)
+            // Snippet: CreateGroup(ProjectName,Group,CallSettings)
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new ProjectName("[PROJECT]").ToString();
+            ProjectName name = new ProjectName("[PROJECT]");
             Group group = new Group();
             // Make the request
-            Group response = groupServiceClient.CreateGroup(formattedName, group);
+            Group response = groupServiceClient.CreateGroup(name, group);
             // End snippet
         }
 
@@ -215,7 +215,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             CreateGroupRequest request = new CreateGroupRequest
             {
-                Name = new ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
                 Group = new Group(),
             };
             // Make the request
@@ -231,7 +231,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             CreateGroupRequest request = new CreateGroupRequest
             {
-                Name = new ProjectName("[PROJECT]").ToString(),
+                ProjectName = new ProjectName("[PROJECT]"),
                 Group = new Group(),
             };
             // Make the request
@@ -296,26 +296,26 @@ namespace Google.Cloud.Monitoring.V3.Snippets
 
         public async Task DeleteGroupAsync()
         {
-            // Snippet: DeleteGroupAsync(string,CallSettings)
-            // Additional: DeleteGroupAsync(string,CancellationToken)
+            // Snippet: DeleteGroupAsync(GroupName,CallSettings)
+            // Additional: DeleteGroupAsync(GroupName,CancellationToken)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
+            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
             // Make the request
-            await groupServiceClient.DeleteGroupAsync(formattedName);
+            await groupServiceClient.DeleteGroupAsync(name);
             // End snippet
         }
 
         public void DeleteGroup()
         {
-            // Snippet: DeleteGroup(string,CallSettings)
+            // Snippet: DeleteGroup(GroupName,CallSettings)
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
+            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
             // Make the request
-            groupServiceClient.DeleteGroup(formattedName);
+            groupServiceClient.DeleteGroup(name);
             // End snippet
         }
 
@@ -327,7 +327,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             DeleteGroupRequest request = new DeleteGroupRequest
             {
-                Name = new GroupName("[PROJECT]", "[GROUP]").ToString(),
+                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             await groupServiceClient.DeleteGroupAsync(request);
@@ -342,7 +342,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             DeleteGroupRequest request = new DeleteGroupRequest
             {
-                Name = new GroupName("[PROJECT]", "[GROUP]").ToString(),
+                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             groupServiceClient.DeleteGroup(request);
@@ -351,14 +351,14 @@ namespace Google.Cloud.Monitoring.V3.Snippets
 
         public async Task ListGroupMembersAsync()
         {
-            // Snippet: ListGroupMembersAsync(string,string,int?,CallSettings)
+            // Snippet: ListGroupMembersAsync(GroupName,string,int?,CallSettings)
             // Create client
             GroupServiceClient groupServiceClient = await GroupServiceClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
+            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
             // Make the request
             PagedAsyncEnumerable<ListGroupMembersResponse,MonitoredResource> response =
-                groupServiceClient.ListGroupMembersAsync(formattedName);
+                groupServiceClient.ListGroupMembersAsync(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((MonitoredResource item) =>
@@ -394,14 +394,14 @@ namespace Google.Cloud.Monitoring.V3.Snippets
 
         public void ListGroupMembers()
         {
-            // Snippet: ListGroupMembers(string,string,int?,CallSettings)
+            // Snippet: ListGroupMembers(GroupName,string,int?,CallSettings)
             // Create client
             GroupServiceClient groupServiceClient = GroupServiceClient.Create();
             // Initialize request argument(s)
-            string formattedName = new GroupName("[PROJECT]", "[GROUP]").ToString();
+            GroupName name = new GroupName("[PROJECT]", "[GROUP]");
             // Make the request
             PagedEnumerable<ListGroupMembersResponse,MonitoredResource> response =
-                groupServiceClient.ListGroupMembers(formattedName);
+                groupServiceClient.ListGroupMembers(name);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (MonitoredResource item in response)
@@ -443,7 +443,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ListGroupMembersRequest request = new ListGroupMembersRequest
             {
-                Name = new GroupName("[PROJECT]", "[GROUP]").ToString(),
+                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListGroupMembersResponse,MonitoredResource> response =
@@ -489,7 +489,7 @@ namespace Google.Cloud.Monitoring.V3.Snippets
             // Initialize request argument(s)
             ListGroupMembersRequest request = new ListGroupMembersRequest
             {
-                Name = new GroupName("[PROJECT]", "[GROUP]").ToString(),
+                GroupName = new GroupName("[PROJECT]", "[GROUP]"),
             };
             // Make the request
             PagedEnumerable<ListGroupMembersResponse,MonitoredResource> response =

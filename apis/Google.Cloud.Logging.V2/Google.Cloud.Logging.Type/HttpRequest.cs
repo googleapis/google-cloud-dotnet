@@ -32,9 +32,10 @@ namespace Google.Cloud.Logging.Type {
             "CCABKAkSKgoHbGF0ZW5jeRgOIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
             "dGlvbhIUCgxjYWNoZV9sb29rdXAYCyABKAgSEQoJY2FjaGVfaGl0GAkgASgI",
             "EioKImNhY2hlX3ZhbGlkYXRlZF93aXRoX29yaWdpbl9zZXJ2ZXIYCiABKAgS",
-            "GAoQY2FjaGVfZmlsbF9ieXRlcxgMIAEoA0JJChdjb20uZ29vZ2xlLmxvZ2dp",
-            "bmcudHlwZUIQSHR0cFJlcXVlc3RQcm90b1ABqgIZR29vZ2xlLkNsb3VkLkxv",
-            "Z2dpbmcuVHlwZWIGcHJvdG8z"));
+            "GAoQY2FjaGVfZmlsbF9ieXRlcxgMIAEoA0KDAQoXY29tLmdvb2dsZS5sb2dn",
+            "aW5nLnR5cGVCEEh0dHBSZXF1ZXN0UHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3R5cGU7bHR5cGWqAhlH",
+            "b29nbGUuQ2xvdWQuTG9nZ2luZy5UeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

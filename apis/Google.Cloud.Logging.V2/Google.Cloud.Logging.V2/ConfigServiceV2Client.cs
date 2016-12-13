@@ -378,10 +378,8 @@ namespace Google.Cloud.Logging.V2
         /// Lists sinks.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name where this sink was created:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///     "organizations/[ORGANIZATION_ID]"
+        /// Required. The parent resource whose sinks are to be listed.
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -414,10 +412,8 @@ namespace Google.Cloud.Logging.V2
         /// Lists sinks.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name where this sink was created:
-        ///
-        ///     "projects/[PROJECT_ID]"
-        ///     "organizations/[ORGANIZATION_ID]"
+        /// Required. The parent resource whose sinks are to be listed.
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -488,10 +484,12 @@ namespace Google.Cloud.Logging.V2
         /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to return:
+        /// Required. The parent resource name of the sink:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -512,10 +510,12 @@ namespace Google.Cloud.Logging.V2
         /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to return:
+        /// Required. The parent resource name of the sink:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -533,10 +533,12 @@ namespace Google.Cloud.Logging.V2
         /// Gets a sink.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to return:
+        /// Required. The parent resource name of the sink:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
+        ///
+        /// Example: `"projects/my-project-id/sinks/my-sink-id"`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -592,13 +594,19 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink.
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the current
+        /// time is outside the sink's start and end times or the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource in which to create the sink:
         ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
+        ///
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -622,13 +630,19 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Creates a sink.
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the current
+        /// time is outside the sink's start and end times or the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource in which to create the sink:
         ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
+        ///
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -649,13 +663,19 @@ namespace Google.Cloud.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a sink.
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the current
+        /// time is outside the sink's start and end times or the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource in which to create the sink:
         ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
+        ///
+        /// Examples: `"projects/my-logging-project"`, `"organizations/123456789"`.
         /// </param>
         /// <param name="sink">
         /// Required. The new sink, whose `name` parameter is a sink identifier that
@@ -679,7 +699,11 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Creates a sink.
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the current
+        /// time is outside the sink's start and end times or the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -698,7 +722,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink.
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the current
+        /// time is outside the sink's start and end times or the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -717,11 +745,18 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates or creates a sink.
+        /// Updates a sink. If the named sink doesn't exist, then this method is
+        /// identical to
+        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+        /// If the named sink does exist, then this method replaces the following
+        /// fields in the existing sink with values from the new sink: `destination`,
+        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
+        /// The updated filter might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -730,7 +765,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// as part of `sink_name`.  If `sink_name` does not exist, then
         /// this method creates a new sink.
         /// </param>
         /// <param name="callSettings">
@@ -751,11 +786,18 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates or creates a sink.
+        /// Updates a sink. If the named sink doesn't exist, then this method is
+        /// identical to
+        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+        /// If the named sink does exist, then this method replaces the following
+        /// fields in the existing sink with values from the new sink: `destination`,
+        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
+        /// The updated filter might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -764,7 +806,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// as part of `sink_name`.  If `sink_name` does not exist, then
         /// this method creates a new sink.
         /// </param>
         /// <param name="cancellationToken">
@@ -782,11 +824,18 @@ namespace Google.Cloud.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates or creates a sink.
+        /// Updates a sink. If the named sink doesn't exist, then this method is
+        /// identical to
+        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+        /// If the named sink does exist, then this method replaces the following
+        /// fields in the existing sink with values from the new sink: `destination`,
+        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
+        /// The updated filter might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to update, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to update, including the
+        /// parent resource and the sink identifier:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
@@ -795,7 +844,7 @@ namespace Google.Cloud.Logging.V2
         /// </param>
         /// <param name="sink">
         /// Required. The updated sink, whose name is the same identifier that appears
-        /// as part of `sinkName`.  If `sinkName` does not exist, then
+        /// as part of `sink_name`.  If `sink_name` does not exist, then
         /// this method creates a new sink.
         /// </param>
         /// <param name="callSettings">
@@ -816,7 +865,14 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Updates or creates a sink.
+        /// Updates a sink. If the named sink doesn't exist, then this method is
+        /// identical to
+        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+        /// If the named sink does exist, then this method replaces the following
+        /// fields in the existing sink with values from the new sink: `destination`,
+        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
+        /// The updated filter might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -835,7 +891,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates or creates a sink.
+        /// Updates a sink. If the named sink doesn't exist, then this method is
+        /// identical to
+        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+        /// If the named sink does exist, then this method replaces the following
+        /// fields in the existing sink with values from the new sink: `destination`,
+        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
+        /// The updated filter might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -854,16 +917,19 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a sink.
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///
-        /// It is an error if the sink does not exist.
+        /// It is an error if the sink does not exist.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if
+        /// the sink does not exist.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -881,16 +947,19 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes a sink.
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///
-        /// It is an error if the sink does not exist.
+        /// It is an error if the sink does not exist.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if
+        /// the sink does not exist.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -905,16 +974,19 @@ namespace Google.Cloud.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a sink.
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
         /// </summary>
         /// <param name="sinkName">
-        /// Required. The resource name of the sink to delete, including the parent
-        /// resource and the sink identifier:
+        /// Required. The full resource name of the sink to delete, including the
+        /// parent resource and the sink identifier:
         ///
         ///     "projects/[PROJECT_ID]/sinks/[SINK_ID]"
         ///     "organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]"
         ///
-        /// It is an error if the sink does not exist.
+        /// It is an error if the sink does not exist.  Example:
+        /// `"projects/my-project-id/sinks/my-sink-id"`.  It is an error if
+        /// the sink does not exist.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -932,7 +1004,8 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Deletes a sink.
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -951,7 +1024,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a sink.
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1098,7 +1172,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink.
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the current
+        /// time is outside the sink's start and end times or the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1118,7 +1196,11 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Creates a sink.
+        /// Creates a sink that exports specified log entries to a destination.  The
+        /// export of newly-ingested log entries begins immediately, unless the current
+        /// time is outside the sink's start and end times or the sink's
+        /// `writer_identity` is not permitted to write to the destination.  A sink can
+        /// export log entries only from the resource owning the sink.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1138,7 +1220,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates or creates a sink.
+        /// Updates a sink. If the named sink doesn't exist, then this method is
+        /// identical to
+        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+        /// If the named sink does exist, then this method replaces the following
+        /// fields in the existing sink with values from the new sink: `destination`,
+        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
+        /// The updated filter might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1158,7 +1247,14 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Updates or creates a sink.
+        /// Updates a sink. If the named sink doesn't exist, then this method is
+        /// identical to
+        /// [sinks.create](/logging/docs/api/reference/rest/v2/projects.sinks/create).
+        /// If the named sink does exist, then this method replaces the following
+        /// fields in the existing sink with values from the new sink: `destination`,
+        /// `filter`, `output_version_format`, `start_time`, and `end_time`.
+        /// The updated filter might also have a new `writer_identity`; see the
+        /// `unique_writer_identity` field.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1178,7 +1274,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a sink.
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1198,7 +1295,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Deletes a sink.
+        /// Deletes a sink. If the sink has a unique `writer_identity`, then that
+        /// service account is also deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.

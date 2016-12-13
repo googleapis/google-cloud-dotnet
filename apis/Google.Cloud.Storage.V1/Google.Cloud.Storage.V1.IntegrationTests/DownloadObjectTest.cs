@@ -17,7 +17,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
+using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -270,6 +270,17 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 _fixture.ReadBucket, _fixture.SmallThenLargeObject, new MemoryStream(),
                 new DownloadObjectOptions { IfMetagenerationMatch = 1, IfMetagenerationNotMatch = 2 },
                 null));
+        }
+
+        [Fact]
+        public void DownloadObject_Range()
+        {
+            var stream = new MemoryStream();
+            _fixture.Client.DownloadObject(_fixture.ReadBucket, _fixture.LargeObject, stream,
+                new DownloadObjectOptions { Range = new RangeHeaderValue(2000, 2999) });
+            var expected = _fixture.LargeContent.Skip(2000).Take(1000).ToArray();
+            var actual = stream.ToArray();
+            Assert.Equal(expected, actual);
         }
 
         private Object GetLatestVersionOfMultiversionObject()
