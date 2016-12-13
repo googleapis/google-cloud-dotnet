@@ -4041,6 +4041,17 @@ references:
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectName
   name: ProjectName
   fullName: Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_DeleteEventsRequest_ProjectNameAsProjectName
+  commentId: P:Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectNameAsProjectName
+  nameWithType: DeleteEventsRequest.ProjectNameAsProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectNameAsProjectName*
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_DeleteEventsRequest_ProjectNameAsProjectName_
+  commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.ProjectNameAsProjectName
 - uid: Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse
   name: DeleteEventsResponse
   href: api/Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.html#Google_Cloud_ErrorReporting_V1Beta1_DeleteEventsResponse
@@ -4452,40 +4463,40 @@ references:
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorGroupServiceClient.GetGroup(GetGroupRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetGroup(String, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroup_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorGroupServiceClient.GetGroup(String, CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(Google.Cloud.ErrorReporting.V1Beta1.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetGroup(GroupName, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroup_Google_Cloud_ErrorReporting_V1Beta1_GroupName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(Google.Cloud.ErrorReporting.V1Beta1.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(Google.Cloud.ErrorReporting.V1Beta1.GroupName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorGroupServiceClient.GetGroup(GroupName, CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroup_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup
   name: GetGroup
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroup(Google.Cloud.ErrorReporting.V1Beta1.GroupName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetGroupAsync(GetGroupRequest, CallSettings)
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroupAsync_Google_Cloud_ErrorReporting_V1Beta1_GetGroupRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorGroupServiceClient.GetGroupAsync(GetGroupRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetGroupAsync(String, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorGroupServiceClient.GetGroupAsync(String, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(System.String,System.Threading.CancellationToken)
-  name: GetGroupAsync(String, CancellationToken)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroupAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: ErrorGroupServiceClient.GetGroupAsync(String, CancellationToken)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetGroupAsync(GroupName, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroupAsync_Google_Cloud_ErrorReporting_V1Beta1_GroupName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GroupName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorGroupServiceClient.GetGroupAsync(GroupName, CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GroupName,System.Threading.CancellationToken)
+  name: GetGroupAsync(GroupName, CancellationToken)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroupAsync_Google_Cloud_ErrorReporting_V1Beta1_GroupName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GroupName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GroupName, System.Threading.CancellationToken)
+  nameWithType: ErrorGroupServiceClient.GetGroupAsync(GroupName, CancellationToken)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GetGroupAsync_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync
   name: GetGroupAsync
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GetGroupAsync(Google.Cloud.ErrorReporting.V1Beta1.GroupName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.GrpcClient
   name: GrpcClient
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroupServiceClient_GrpcClient
@@ -5126,40 +5137,40 @@ references:
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorStatsServiceClient.DeleteEvents(DeleteEventsRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteEvents(String, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEvents_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorStatsServiceClient.DeleteEvents(String, CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteEvents(ProjectName, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEvents_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorStatsServiceClient.DeleteEvents(ProjectName, CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEvents_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents
   name: DeleteEvents
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DeleteEventsAsync(DeleteEventsRequest, CallSettings)
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_Google_Cloud_ErrorReporting_V1Beta1_DeleteEventsRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorStatsServiceClient.DeleteEventsAsync(DeleteEventsRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteEventsAsync(String, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorStatsServiceClient.DeleteEventsAsync(String, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String,System.Threading.CancellationToken)
-  name: DeleteEventsAsync(String, CancellationToken)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: ErrorStatsServiceClient.DeleteEventsAsync(String, CancellationToken)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteEventsAsync(ProjectName, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorStatsServiceClient.DeleteEventsAsync(ProjectName, CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.Threading.CancellationToken)
+  name: DeleteEventsAsync(ProjectName, CancellationToken)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, System.Threading.CancellationToken)
+  nameWithType: ErrorStatsServiceClient.DeleteEventsAsync(ProjectName, CancellationToken)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync
   name: DeleteEventsAsync
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.GrpcClient
   name: GrpcClient
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_GrpcClient
@@ -5177,21 +5188,21 @@ references:
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorStatsServiceClient.ListEvents(ListEventsRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListEvents(String, String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEvents_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListEvents(String, String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(System.String, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(System.String, System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorStatsServiceClient.ListEvents(String, String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListEvents(String, String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListEvents(ProjectName, String, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEvents_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListEvents(ProjectName, String, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorStatsServiceClient.ListEvents(ProjectName, String, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListEvents(ProjectName, String, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEvents_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents
   name: ListEvents
   name.vb: ListEvents
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(System.String, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListEventsAsync(ListEventsRequest, CallSettings)
@@ -5199,21 +5210,21 @@ references:
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorStatsServiceClient.ListEventsAsync(ListEventsRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListEventsAsync(String, String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEventsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListEventsAsync(String, String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(System.String, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(System.String, System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorStatsServiceClient.ListEventsAsync(String, String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListEventsAsync(String, String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListEventsAsync(ProjectName, String, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEventsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListEventsAsync(ProjectName, String, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorStatsServiceClient.ListEventsAsync(ProjectName, String, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListEventsAsync(ProjectName, String, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEventsAsync_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync
   name: ListEventsAsync
   name.vb: ListEventsAsync
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(System.String, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListGroupStats(ListGroupStatsRequest, CallSettings)
@@ -5221,21 +5232,21 @@ references:
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorStatsServiceClient.ListGroupStats(ListGroupStatsRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(System.String,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListGroupStats(String, QueryTimeRange, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStats_System_String_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(System.String,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListGroupStats(String, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(System.String, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(System.String, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorStatsServiceClient.ListGroupStats(String, QueryTimeRange, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListGroupStats(String, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListGroupStats(ProjectName, QueryTimeRange, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStats_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListGroupStats(ProjectName, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorStatsServiceClient.ListGroupStats(ProjectName, QueryTimeRange, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListGroupStats(ProjectName, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStats_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats
   name: ListGroupStats
   name.vb: ListGroupStats
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(System.String, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListGroupStatsAsync(ListGroupStatsRequest, CallSettings)
@@ -5243,21 +5254,21 @@ references:
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ErrorStatsServiceClient.ListGroupStatsAsync(ListGroupStatsRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(System.String,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListGroupStatsAsync(String, QueryTimeRange, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStatsAsync_System_String_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(System.String,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListGroupStatsAsync(String, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(System.String, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(System.String, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ErrorStatsServiceClient.ListGroupStatsAsync(String, QueryTimeRange, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListGroupStatsAsync(String, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListGroupStatsAsync(ProjectName, QueryTimeRange, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStatsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListGroupStatsAsync(ProjectName, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ErrorStatsServiceClient.ListGroupStatsAsync(ProjectName, QueryTimeRange, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListGroupStatsAsync(ProjectName, QueryTimeRange, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStatsAsync_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync
   name: ListGroupStatsAsync
   name.vb: ListGroupStatsAsync
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(System.String, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ShutdownDefaultChannelsAsync
   name: ShutdownDefaultChannelsAsync()
@@ -5497,6 +5508,17 @@ references:
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupName
   name: GroupName
   fullName: Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupNameAsGroupName
+  name: GroupNameAsGroupName
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.html#Google_Cloud_ErrorReporting_V1Beta1_GetGroupRequest_GroupNameAsGroupName
+  commentId: P:Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupNameAsGroupName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupNameAsGroupName
+  nameWithType: GetGroupRequest.GroupNameAsGroupName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupNameAsGroupName*
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.html#Google_Cloud_ErrorReporting_V1Beta1_GetGroupRequest_GroupNameAsGroupName_
+  commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupNameAsGroupName
+  name: GroupNameAsGroupName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest.GroupNameAsGroupName
 - uid: Google.Cloud.ErrorReporting.V1Beta1.GroupName
   name: GroupName
   href: api/Google.Cloud.ErrorReporting.V1Beta1.GroupName.html#Google_Cloud_ErrorReporting_V1Beta1_GroupName
@@ -5740,6 +5762,17 @@ references:
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectName
   name: ProjectName
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ListEventsRequest_ProjectNameAsProjectName
+  commentId: P:Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectNameAsProjectName
+  nameWithType: ListEventsRequest.ProjectNameAsProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectNameAsProjectName*
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ListEventsRequest_ProjectNameAsProjectName_
+  commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ProjectNameAsProjectName
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.ServiceFilter
   name: ServiceFilter
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ListEventsRequest_ServiceFilter
@@ -5909,6 +5942,17 @@ references:
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectName
   name: ProjectName
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ListGroupStatsRequest_ProjectNameAsProjectName
+  commentId: P:Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectNameAsProjectName
+  nameWithType: ListGroupStatsRequest.ProjectNameAsProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectNameAsProjectName*
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ListGroupStatsRequest_ProjectNameAsProjectName_
+  commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ProjectNameAsProjectName
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.ServiceFilter
   name: ServiceFilter
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ListGroupStatsRequest_ServiceFilter
@@ -6211,6 +6255,17 @@ references:
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectName
   name: ProjectName
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorEventRequest_ProjectNameAsProjectName
+  commentId: P:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectNameAsProjectName
+  nameWithType: ReportErrorEventRequest.ProjectNameAsProjectName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectNameAsProjectName*
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorEventRequest_ProjectNameAsProjectName_
+  commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectNameAsProjectName
+  name: ProjectNameAsProjectName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest.ProjectNameAsProjectName
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse
   name: ReportErrorEventResponse
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorEventResponse
@@ -6408,46 +6463,46 @@ references:
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.GrpcClient
   name: GrpcClient
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.GrpcClient
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
+  name: ReportErrorEvent(ProjectName, ReportedErrorEvent, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEvent_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Cloud_ErrorReporting_V1Beta1_ReportedErrorEvent_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ReportErrorsServiceClient.ReportErrorEvent(ProjectName, ReportedErrorEvent, CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ReportErrorEvent(ReportErrorEventRequest, CallSettings)
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEvent_Google_Cloud_ErrorReporting_V1Beta1_ReportErrorEventRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ReportErrorsServiceClient.ReportErrorEvent(ReportErrorEventRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
-  name: ReportErrorEvent(String, ReportedErrorEvent, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEvent_System_String_Google_Cloud_ErrorReporting_V1Beta1_ReportedErrorEvent_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(System.String, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ReportErrorsServiceClient.ReportErrorEvent(String, ReportedErrorEvent, CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEvent_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent
   name: ReportErrorEvent
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(System.String, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEvent(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
+  name: ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CallSettings)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEventAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Cloud_ErrorReporting_V1Beta1_ReportedErrorEvent_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: ReportErrorsServiceClient.ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CallSettings)
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,System.Threading.CancellationToken)
+  name: ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CancellationToken)
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEventAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Cloud_ErrorReporting_V1Beta1_ReportedErrorEvent_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,System.Threading.CancellationToken)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, System.Threading.CancellationToken)
+  nameWithType: ReportErrorsServiceClient.ReportErrorEventAsync(ProjectName, ReportedErrorEvent, CancellationToken)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ReportErrorEventAsync(ReportErrorEventRequest, CallSettings)
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEventAsync_Google_Cloud_ErrorReporting_V1Beta1_ReportErrorEventRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: ReportErrorsServiceClient.ReportErrorEventAsync(ReportErrorEventRequest, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
-  name: ReportErrorEventAsync(String, ReportedErrorEvent, CallSettings)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEventAsync_System_String_Google_Cloud_ErrorReporting_V1Beta1_ReportedErrorEvent_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(System.String, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: ReportErrorsServiceClient.ReportErrorEventAsync(String, ReportedErrorEvent, CallSettings)
-- uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,System.Threading.CancellationToken)
-  name: ReportErrorEventAsync(String, ReportedErrorEvent, CancellationToken)
-  href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEventAsync_System_String_Google_Cloud_ErrorReporting_V1Beta1_ReportedErrorEvent_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent,System.Threading.CancellationToken)
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(System.String, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, System.Threading.CancellationToken)
-  nameWithType: ReportErrorsServiceClient.ReportErrorEventAsync(String, ReportedErrorEvent, CancellationToken)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync*
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ReportErrorEventAsync_
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync
   name: ReportErrorEventAsync
-  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(System.String, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ReportErrorEventAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName, Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.ShutdownDefaultChannelsAsync
   name: ShutdownDefaultChannelsAsync()
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_ShutdownDefaultChannelsAsync

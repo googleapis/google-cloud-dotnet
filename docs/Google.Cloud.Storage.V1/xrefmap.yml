@@ -9740,6 +9740,17 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.IfMetagenerationNotMatch
   name: IfMetagenerationNotMatch
   fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.IfMetagenerationNotMatch
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.Range
+  name: Range
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Range
+  commentId: P:Google.Cloud.Storage.V1.DownloadObjectOptions.Range
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.Range
+  nameWithType: DownloadObjectOptions.Range
+- uid: Google.Cloud.Storage.V1.DownloadObjectOptions.Range*
+  href: api/Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Range_
+  commentId: Overload:Google.Cloud.Storage.V1.DownloadObjectOptions.Range
+  name: Range
+  fullName: Google.Cloud.Storage.V1.DownloadObjectOptions.Range
 - uid: Google.Cloud.Storage.V1.GetBucketOptions
   name: GetBucketOptions
   href: api/Google.Cloud.Storage.V1.GetBucketOptions.html#Google_Cloud_Storage_V1_GetBucketOptions

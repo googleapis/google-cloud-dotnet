@@ -85,7 +85,7 @@ optionally specifying a service endpoint and settings.</p>
 <h1 id="sample-code">Sample code</h1>
 <h2 id="list-metric-descriptors">List metric descriptors</h2>
 <pre><code class="lang-cs">MetricServiceClient client = MetricServiceClient.Create();
-string projectName = new ProjectName(projectId).ToString();
+ProjectName projectName = new ProjectName(projectId);
 PagedEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; metrics = client.ListMetricDescriptors(projectName);
 foreach (MetricDescriptor metric in metrics.Take(10))
 {

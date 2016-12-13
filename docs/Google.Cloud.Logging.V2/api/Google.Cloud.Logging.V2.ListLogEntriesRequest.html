@@ -105,7 +105,10 @@
               <h4 id="Google_Cloud_Logging_V2_ListLogEntriesRequest_Filter" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.Filter">Filter</h4>
               <div class="markdown level1 summary"><p>Optional. A filter that chooses which log entries to return.  See <a href="/logging/docs/view/advanced_filters">Advanced
 Logs Filters</a>.  Only log entries that
-match the filter are returned.  An empty filter matches all log entries.
+match the filter are returned.  An empty filter matches all log entries in
+the resources listed in <code>resource_names</code>. Referencing a parent resource
+that is not listed in <code>resource_names</code> will cause the filter to return no
+results.
 The maximum length of the filter is 20000 characters.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -216,11 +219,11 @@ parameters should be identical to those in the previous call.</p>
                   <div><a class="xref" href="Google.Api.Gax.Grpc.IPageRequest.html#Google_Api_Gax_Grpc_IPageRequest_PageToken">IPageRequest.PageToken</a></div>
               <a id="Google_Cloud_Logging_V2_ListLogEntriesRequest_ProjectIds_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.ProjectIds*"></a>
               <h4 id="Google_Cloud_Logging_V2_ListLogEntriesRequest_ProjectIds" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.ProjectIds">ProjectIds</h4>
-              <div class="markdown level1 summary"><p>Deprecated. One or more project identifiers or project numbers from which
-to retrieve log entries.  Example: <code>&quot;my-project-1A&quot;</code>. If
-present, these project identifiers are converted to resource format and
-added to the list of resources in <code>resourceNames</code>. Callers should use
-<code>resourceNames</code> rather than this parameter.</p>
+              <div class="markdown level1 summary"><p>Deprecated. Use <code>resource_names</code> instead.  One or more project identifiers
+or project numbers from which to retrieve log entries.  Example:
+<code>&quot;my-project-1A&quot;</code>. If present, these project identifiers are converted to
+resource name format and added to the list of resources in
+<code>resource_names</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -244,7 +247,7 @@ added to the list of resources in <code>resourceNames</code>. Callers should use
               </table>
               <a id="Google_Cloud_Logging_V2_ListLogEntriesRequest_ResourceNames_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.ResourceNames*"></a>
               <h4 id="Google_Cloud_Logging_V2_ListLogEntriesRequest_ResourceNames" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.ResourceNames">ResourceNames</h4>
-              <div class="markdown level1 summary"><p>Required. One or more cloud resources from which to retrieve log
+              <div class="markdown level1 summary"><p>Required. Names of one or more resources from which to retrieve log
 entries:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]&quot;</p>

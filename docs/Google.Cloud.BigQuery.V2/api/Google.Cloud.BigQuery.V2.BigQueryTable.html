@@ -777,6 +777,113 @@ interpolated string.
 var query = $"SELECT name, age from {table:legacy}";</code></pre>
 </example>
 </div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)">UploadAvro(Stream, UploadAvroOptions)</h4>
+              <div class="markdown level1 summary"><p>Uploads a stream of Avro data to this table.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_">UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigQueryJob UploadAvro(Stream input, UploadAvroOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions">UploadAvroOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob">BigQueryJob</a></td>
+                    <td><p>A data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvroAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvroAsync_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)">UploadAvroAsync(Stream, UploadAvroOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously uploads a stream of Avro data to this table.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_">UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; UploadAvroAsync(Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td><p>The stream of input data. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions">UploadAvroOptions</a></td>
+                    <td><em>options</em></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob">BigQueryJob</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. When complete, the result is
+a data upload job.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadCsv_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadCsv*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_UploadCsv_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.UploadCsv(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions)">UploadCsv(Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"><p>Uploads a stream of CSV data to this table.

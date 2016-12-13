@@ -411,8 +411,8 @@ The log reappears if it receives new entries.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntries_Google_Cloud_Logging_V2_ListLogEntriesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntries(Google.Cloud.Logging.V2.ListLogEntriesRequest,Grpc.Core.CallOptions)">ListLogEntries(ListLogEntriesRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
-Logging.  For ways to export log entries, see
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -459,8 +459,8 @@ Logging.  For ways to export log entries, see
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntries_Google_Cloud_Logging_V2_ListLogEntriesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntries(Google.Cloud.Logging.V2.ListLogEntriesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListLogEntries(ListLogEntriesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
-Logging.  For ways to export log entries, see
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -517,8 +517,8 @@ Logging.  For ways to export log entries, see
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntriesAsync(Google.Cloud.Logging.V2.ListLogEntriesRequest,Grpc.Core.CallOptions)">ListLogEntriesAsync(ListLogEntriesRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
-Logging.  For ways to export log entries, see
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -565,8 +565,8 @@ Logging.  For ways to export log entries, see
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntriesAsync(Google.Cloud.Logging.V2.ListLogEntriesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListLogEntriesAsync(ListLogEntriesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
-Logging.  For ways to export log entries, see
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -621,9 +621,218 @@ Logging.  For ways to export log entries, see
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)">ListLogs(ListLogsRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ListLogsResponse ListLogs(ListLogsRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest">ListLogsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse">ListLogsResponse</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListLogs(ListLogsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ListLogsResponse ListLogs(ListLogsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest">ListLogsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><em>headers</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><em>deadline</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse">ListLogsResponse</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)">ListLogsAsync(ListLogsRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListLogsResponse&gt; ListLogsAsync(ListLogsRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest">ListLogsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse">ListLogsResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListLogsAsync(ListLogsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListLogsResponse&gt; ListLogsAsync(ListLogsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest">ListLogsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><em>headers</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><em>deadline</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse">ListLogsResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptors*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.CallOptions)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resource descriptors used by Stackdriver Logging.</p>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -669,7 +878,8 @@ Logging.  For ways to export log entries, see
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptors*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resource descriptors used by Stackdriver Logging.</p>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -725,7 +935,8 @@ Logging.  For ways to export log entries, see
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.CallOptions)">ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resource descriptors used by Stackdriver Logging.</p>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -771,7 +982,8 @@ Logging.  For ways to export log entries, see
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resource descriptors used by Stackdriver Logging.</p>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

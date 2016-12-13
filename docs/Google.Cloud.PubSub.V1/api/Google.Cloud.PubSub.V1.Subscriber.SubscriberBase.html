@@ -497,6 +497,67 @@ subscription.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_StreamingPull_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_StreamingPull_Grpc_Core_IAsyncStreamReader_Google_Cloud_PubSub_V1_StreamingPullRequest__Grpc_Core_IServerStreamWriter_Google_Cloud_PubSub_V1_StreamingPullResponse__Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull(Grpc.Core.IAsyncStreamReader{Google.Cloud.PubSub.V1.StreamingPullRequest},Grpc.Core.IServerStreamWriter{Google.Cloud.PubSub.V1.StreamingPullResponse},Grpc.Core.ServerCallContext)">StreamingPull(IAsyncStreamReader&lt;StreamingPullRequest&gt;, IServerStreamWriter&lt;StreamingPullResponse&gt;, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>(EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+respond with UNIMPLEMENTED errors unless you have been invited to test
+this feature. Contact cloud-pubsub@google.com with any questions.</p>
+<p>Establishes a stream with the server, which sends messages down to the
+client. The client streams acknowledgements and ack deadline modifications
+back to the server. The server will close the stream and return the status
+on any error. The server may close the stream with status <code>OK</code> to reassign
+server-side resources, in which case, the client should re-establish the
+stream. <code>UNAVAILABLE</code> may also be returned in the case of a transient error
+(e.g., a server restart). These should also be retried by the client. Flow
+control can be achieved by configuring the underlying RPC channel.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task StreamingPull(IAsyncStreamReader&lt;StreamingPullRequest&gt; requestStream, IServerStreamWriter&lt;StreamingPullResponse&gt; responseStream, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.IAsyncStreamReader&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest">StreamingPullRequest</a>&gt;</td>
+                    <td><em>requestStream</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.IServerStreamWriter&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse">StreamingPullResponse</a>&gt;</td>
+                    <td><em>responseStream</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><em>context</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
             </article>
           </div>
           

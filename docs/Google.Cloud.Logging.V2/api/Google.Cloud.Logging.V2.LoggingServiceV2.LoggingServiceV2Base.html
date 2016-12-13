@@ -150,8 +150,8 @@ The log reappears if it receives new entries.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListLogEntries_Google_Cloud_Logging_V2_ListLogEntriesRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogEntries(Google.Cloud.Logging.V2.ListLogEntriesRequest,Grpc.Core.ServerCallContext)">ListLogEntries(ListLogEntriesRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
-Logging.  For ways to export log entries, see
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -196,9 +196,57 @@ Logging.  For ways to export log entries, see
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.ServerCallContext)">ListLogs(ListLogsRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;ListLogsResponse&gt; ListLogs(ListLogsRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest">ListLogsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><em>context</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse">ListLogsResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListMonitoredResourceDescriptors*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.ServerCallContext)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, ServerCallContext)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resource descriptors used by Stackdriver Logging.</p>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

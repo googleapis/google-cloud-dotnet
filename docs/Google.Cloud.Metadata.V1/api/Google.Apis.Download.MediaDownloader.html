@@ -356,6 +356,81 @@ of the requested media.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="Google.Apis.Download.IMediaDownloader.html#Google_Apis_Download_IMediaDownloader_DownloadAsync_System_String_System_IO_Stream_System_Threading_CancellationToken_">IMediaDownloader.DownloadAsync(String, Stream, CancellationToken)</a></div>
+              <a id="Google_Apis_Download_MediaDownloader_OnDataReceived_" data-uid="Google.Apis.Download.MediaDownloader.OnDataReceived*"></a>
+              <h4 id="Google_Apis_Download_MediaDownloader_OnDataReceived_System_Byte___System_Int32_" data-uid="Google.Apis.Download.MediaDownloader.OnDataReceived(System.Byte[],System.Int32)">OnDataReceived(Byte[], Int32)</h4>
+              <div class="markdown level1 summary"><p>Called when an HTTP response is received, allowing subclasses to examine data before it&#39;s
+written to the client stream.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnDataReceived(byte[] data, int length)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref"></span>[]</td>
+                    <td><em>data</em></td>
+                    <td><p>Byte array containing the data downloaded.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><em>length</em></td>
+                    <td><p>Length of data downloaded in this chunk, in bytes.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Download_MediaDownloader_OnDownloadCompleted_" data-uid="Google.Apis.Download.MediaDownloader.OnDownloadCompleted*"></a>
+              <h4 id="Google_Apis_Download_MediaDownloader_OnDownloadCompleted" data-uid="Google.Apis.Download.MediaDownloader.OnDownloadCompleted">OnDownloadCompleted()</h4>
+              <div class="markdown level1 summary"><p>Called when a download has completed, allowing subclasses to perform any final validation
+or transformation.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnDownloadCompleted()</code></pre>
+              </div>
+              <a id="Google_Apis_Download_MediaDownloader_OnResponseReceived_" data-uid="Google.Apis.Download.MediaDownloader.OnResponseReceived*"></a>
+              <h4 id="Google_Apis_Download_MediaDownloader_OnResponseReceived_System_Net_Http_HttpResponseMessage_" data-uid="Google.Apis.Download.MediaDownloader.OnResponseReceived(System.Net.Http.HttpResponseMessage)">OnResponseReceived(HttpResponseMessage)</h4>
+              <div class="markdown level1 summary"><p>Called when a successful HTTP response is received, allowing subclasses to examine headers.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected virtual void OnResponseReceived(HttpResponseMessage response)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Net.Http.HttpResponseMessage</span></td>
+                    <td><em>response</em></td>
+                    <td><p>HTTP response received.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Apis_Download_MediaDownloader_OnResponseReceived_System_Net_Http_HttpResponseMessage__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>For unsuccessful responses, an appropriate exception is thrown immediately, without this method
+being called.</p>
+</div>
               <h3 id="events">Events
               </h3>
               <h4 id="Google_Apis_Download_MediaDownloader_ProgressChanged" data-uid="Google.Apis.Download.MediaDownloader.ProgressChanged">ProgressChanged</h4>

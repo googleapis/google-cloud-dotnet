@@ -9654,6 +9654,52 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.Service
   name: Service
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Service
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  name: UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  nameWithType: BigQueryClient.UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  name: UploadAvro(String, String, TableSchema, Stream, UploadAvroOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(System.String, System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  nameWithType: BigQueryClient.UploadAvro(String, String, TableSchema, Stream, UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  name: UploadAvro(String, String, String, TableSchema, Stream, UploadAvroOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(System.String, System.String, System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  nameWithType: BigQueryClient.UploadAvro(String, String, String, TableSchema, Stream, UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro
+  name: UploadAvro
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvro(System.String, System.String, System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  name: UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  name: UploadAvroAsync(String, String, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(System.String, System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.UploadAvroAsync(String, String, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  name: UploadAvroAsync(String, String, String, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(System.String,System.String,System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(System.String, System.String, System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.UploadAvroAsync(String, String, String, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync
+  name: UploadAvroAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.UploadAvroAsync(System.String, System.String, System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.UploadCsv(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions)
   name: UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_
@@ -10352,6 +10398,28 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.Service
   name: Service
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Service
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  name: UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvro_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  nameWithType: BigQueryClientImpl.UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvro_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro
+  name: UploadAvro
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  name: UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvroAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvroAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync
+  name: UploadAvroAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadCsv(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions)
   name: UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_
@@ -10634,6 +10702,28 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.Resource
   name: Resource
   fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.Resource
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  name: UploadAvro(String, TableSchema, Stream, UploadAvroOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UploadAvro_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro(System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  nameWithType: BigQueryDataset.UploadAvro(String, TableSchema, Stream, UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UploadAvro_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro
+  name: UploadAvro
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvro(System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvroAsync(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  name: UploadAvroAsync(String, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UploadAvroAsync_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvroAsync(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvroAsync(System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryDataset.UploadAvroAsync(String, TableSchema, Stream, UploadAvroOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvroAsync*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UploadAvroAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvroAsync
+  name: UploadAvroAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadAvroAsync(System.String, Google.Apis.Bigquery.v2.Data.TableSchema, System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryDataset.UploadCsv(System.String,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions)
   name: UploadCsv(String, TableSchema, Stream, UploadCsvOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryDataset.html#Google_Cloud_BigQuery_V2_BigQueryDataset_UploadCsv_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_
@@ -11677,6 +11767,28 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.ToString
   name: ToString
   fullName: Google.Cloud.BigQuery.V2.BigQueryTable.ToString()
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  name: UploadAvro(Stream, UploadAvroOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro(System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+  nameWithType: BigQueryTable.UploadAvro(Stream, UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvro_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro
+  name: UploadAvro
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvro(System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  name: UploadAvroAsync(Stream, UploadAvroOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvroAsync_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync(System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryTable.UploadAvroAsync(Stream, UploadAvroOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync*
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_UploadAvroAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync
+  name: UploadAvroAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.UploadAvroAsync(System.IO.Stream, Google.Cloud.BigQuery.V2.UploadAvroOptions, System.Threading.CancellationToken)
 - uid: Google.Cloud.BigQuery.V2.BigQueryTable.UploadCsv(System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions)
   name: UploadCsv(Stream, UploadCsvOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_UploadCsv_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_
@@ -12404,6 +12516,56 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.TableSchemaExtensions.GetFieldIndex
   name: GetFieldIndex
   fullName: Google.Cloud.BigQuery.V2.TableSchemaExtensions.GetFieldIndex(Google.Apis.Bigquery.v2.Data.TableSchema, System.String)
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions
+  name: UploadAvroOptions
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions
+  commentId: T:Google.Cloud.BigQuery.V2.UploadAvroOptions
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions
+  nameWithType: UploadAvroOptions
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.AllowUnknownFields
+  name: AllowUnknownFields
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_AllowUnknownFields
+  commentId: P:Google.Cloud.BigQuery.V2.UploadAvroOptions.AllowUnknownFields
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.AllowUnknownFields
+  nameWithType: UploadAvroOptions.AllowUnknownFields
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.AllowUnknownFields*
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_AllowUnknownFields_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadAvroOptions.AllowUnknownFields
+  name: AllowUnknownFields
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.AllowUnknownFields
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_CreateDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.UploadAvroOptions.CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.CreateDisposition
+  nameWithType: UploadAvroOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.CreateDisposition*
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_CreateDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadAvroOptions.CreateDisposition
+  name: CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords
+  name: MaxBadRecords
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_MaxBadRecords
+  commentId: P:Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords
+  nameWithType: UploadAvroOptions.MaxBadRecords
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords*
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_MaxBadRecords_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords
+  name: MaxBadRecords
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.MaxBadRecords
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_WriteDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.UploadAvroOptions.WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.WriteDisposition
+  nameWithType: UploadAvroOptions.WriteDisposition
+- uid: Google.Cloud.BigQuery.V2.UploadAvroOptions.WriteDisposition*
+  href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions_WriteDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.UploadAvroOptions.WriteDisposition
+  name: WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.UploadAvroOptions.WriteDisposition
 - uid: Google.Cloud.BigQuery.V2.UploadCsvOptions
   name: UploadCsvOptions
   href: api/Google.Cloud.BigQuery.V2.UploadCsvOptions.html#Google_Cloud_BigQuery_V2_UploadCsvOptions

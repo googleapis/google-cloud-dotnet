@@ -86,7 +86,7 @@ optionally specifying a service endpoint and settings.</p>
 <h1 id="sample-code">Sample code</h1>
 <h2 id="report-an-error">Report an error</h2>
 <pre><code class="lang-cs">ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
-string projectName = new ProjectName(projectId).ToString();
+ProjectName projectName = new ProjectName(projectId);
 ReportedErrorEvent error = new ReportedErrorEvent
 {
     Context = new ErrorContext
@@ -113,7 +113,7 @@ ReportedErrorEvent error = new ReportedErrorEvent
 client.ReportErrorEvent(projectName, error);
 </code></pre><h2 id="list-error-groups-with-statistics">List error groups with statistics</h2>
 <pre><code class="lang-cs">ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
-string projectName = new ProjectName(projectId).ToString();
+ProjectName projectName = new ProjectName(projectId);
 PagedEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; groupStats = client.ListGroupStats(
     projectName,
     new QueryTimeRange { Period = Period._30Days });

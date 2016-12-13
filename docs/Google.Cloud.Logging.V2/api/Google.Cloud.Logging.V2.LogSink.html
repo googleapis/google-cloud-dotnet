@@ -70,11 +70,10 @@
               
               <h1 id="Google_Cloud_Logging_V2_LogSink" data-uid="Google.Cloud.Logging.V2.LogSink">Class LogSink
               </h1>
-              <div class="markdown level0 summary"><p>Describes a sink used to export log entries outside of Stackdriver Logging.
-A logs filter controls which log entries are exported.  Sinks can have a
-start time and an end time; these can be used to place log entries from an
-exact time range into a particular destination.  If both <code>start_time</code> and
-<code>end_time</code> are present, then <code>start_time</code> must be less than <code>end_time</code>.</p>
+              <div class="markdown level0 summary"><p>Describes a sink used to export log entries to one of the following
+destinations in any project: a Cloud Storage bucket, a BigQuery dataset, or a
+Cloud Pub/Sub topic.  A logs filter controls which log entries are
+exported. The sink must be created within a project or organization.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -111,7 +110,9 @@ exact time range into a particular destination.  If both <code>start_time</code>
 <p>&quot;storage.googleapis.com/[GCS_BUCKET]&quot;
 &quot;bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]&quot;
 &quot;pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]&quot;</p>
-<p>For more information,  see
+<p>The sink&#39;s <code>writer_identity</code>, set when the sink is created, must
+have permission to write to the destination or else the log
+entries are not exported.  For more information, see
 <a href="/logging/docs/api/tasks/exporting-logs">Exporting Logs With Sinks</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -160,9 +161,11 @@ exact time range into a particular destination.  If both <code>start_time</code>
               </table>
               <a id="Google_Cloud_Logging_V2_LogSink_EndTime_" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime*"></a>
               <h4 id="Google_Cloud_Logging_V2_LogSink_EndTime" data-uid="Google.Cloud.Logging.V2.LogSink.EndTime">EndTime</h4>
-              <div class="markdown level1 summary"><p>Optional. Time at which this sink will stop exporting log entries.  If this
-value is present, then log entries are exported only if <code>entry.timestamp</code> &lt;
-<code>end_time</code>.</p>
+              <div class="markdown level1 summary"><p>Optional. The time at which this sink will stop exporting log entries.  Log
+entries are exported only if their timestamp is earlier than the end time.
+If this field is not supplied, there is no end time.  If both a start time
+and an end time are provided, then the end time must be later than the
+start time.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -186,12 +189,11 @@ value is present, then log entries are exported only if <code>entry.timestamp</c
               </table>
               <a id="Google_Cloud_Logging_V2_LogSink_Filter_" data-uid="Google.Cloud.Logging.V2.LogSink.Filter*"></a>
               <h4 id="Google_Cloud_Logging_V2_LogSink_Filter" data-uid="Google.Cloud.Logging.V2.LogSink.Filter">Filter</h4>
-              <div class="markdown level1 summary"><p>Optional. An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>.
-Only log entries matching the filter are exported. The filter
-must be consistent with the log entry format specified by the
-<code>outputVersionFormat</code> parameter, regardless of the format of the
-log entry that was originally ingested by Stackdriver Logging.
-The following example uses field names in the v2 log entry format:</p>
+              <div class="markdown level1 summary"><p>Optional.
+An <a href="/logging/docs/view/advanced_filters">advanced logs filter</a>.  The only
+exported log entries are those that are in the resource owning the sink and
+that match the filter. The filter must use the log entry format specified
+by the <code>output_version_format</code> parameter.  For example, in the v2 format:</p>
 <p>logName=&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot; AND severity&gt;=ERROR</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -244,10 +246,11 @@ periods.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat_" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat*"></a>
               <h4 id="Google_Cloud_Logging_V2_LogSink_OutputVersionFormat" data-uid="Google.Cloud.Logging.V2.LogSink.OutputVersionFormat">OutputVersionFormat</h4>
-              <div class="markdown level1 summary"><p>Optional. The log entry version to use for this sink&#39;s exported log
-entries.  This version does not have to correspond to the version of the
-log entry that was written to Stackdriver Logging. If omitted, the
-v2 format is used.</p>
+              <div class="markdown level1 summary"><p>Optional. The log entry format to use for this sink&#39;s exported log
+entries.  The v2 format is used by default.
+<strong>The v1 format is deprecated</strong> and should be used only as part of a
+migration effort to v2.
+See <a href="/logging/docs/api/v2/migration-to-v2">Migration to the v2 API</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -271,9 +274,10 @@ v2 format is used.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LogSink_StartTime_" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime*"></a>
               <h4 id="Google_Cloud_Logging_V2_LogSink_StartTime" data-uid="Google.Cloud.Logging.V2.LogSink.StartTime">StartTime</h4>
-              <div class="markdown level1 summary"><p>Optional. The time at which this sink will begin exporting log entries.  If
-this value is present, then log entries are exported only if <code>start_time</code>
-&lt;=<code>entry.timestamp</code>.</p>
+              <div class="markdown level1 summary"><p>Optional. The time at which this sink will begin exporting log entries.
+Log entries are exported only if their timestamp is not earlier than the
+start time.  The default value of this field is the time the sink is
+created or updated.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -297,11 +301,19 @@ this value is present, then log entries are exported only if <code>start_time</c
               </table>
               <a id="Google_Cloud_Logging_V2_LogSink_WriterIdentity_" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity*"></a>
               <h4 id="Google_Cloud_Logging_V2_LogSink_WriterIdentity" data-uid="Google.Cloud.Logging.V2.LogSink.WriterIdentity">WriterIdentity</h4>
-              <div class="markdown level1 summary"><p>Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;that
-will write exported log entries to the destination on behalf of Stackdriver
-Logging. You must grant this identity write-access to the destination.
-Consult the destination service&#39;s documentation to determine the exact role
-that must be granted.</p>
+              <div class="markdown level1 summary"><p>Output only. An IAM identity&amp;mdash;a service account or group&amp;mdash;under
+which Stackdriver Logging writes the exported log entries to the sink&#39;s
+destination.  This field is set by
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>
+and
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/update">sinks.update</a>,
+based on the setting of <code>unique_writer_identity</code> in those methods.</p>
+<p>Until you grant this identity write-access to the destination, log entry
+exports from this sink will fail. For more information,
+see <a href="/iam/docs/granting-roles-to-service-accounts#granting_access_to_a_service_account_for_a_resource">Granting access for a
+resource</a>.
+Consult the destination service&#39;s documentation to determine the
+appropriate IAM roles to assign to the identity.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

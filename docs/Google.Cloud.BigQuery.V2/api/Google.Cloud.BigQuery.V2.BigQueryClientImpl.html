@@ -187,6 +187,12 @@
                   <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJson_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_UploadJsonOptions_">BigQueryClient.UploadJson(String, String, TableSchema, IEnumerable&lt;String&gt;, UploadJsonOptions)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_">BigQueryClient.UploadAvro(String, String, String, TableSchema, Stream, UploadAvroOptions)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_">BigQueryClient.UploadAvro(String, String, TableSchema, Stream, UploadAvroOptions)</a>
+                </div>
+                <div>
                   <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_">BigQueryClient.Insert(String, String, String, BigQueryInsertRow, InsertOptions)</a>
                 </div>
                 <div>
@@ -215,6 +221,12 @@
                 </div>
                 <div>
                   <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadCsvAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_System_Threading_CancellationToken_">BigQueryClient.UploadCsvAsync(String, String, TableSchema, Stream, UploadCsvOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_">BigQueryClient.UploadAvroAsync(String, String, String, TableSchema, Stream, UploadAvroOptions, CancellationToken)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_">BigQueryClient.UploadAvroAsync(String, String, TableSchema, Stream, UploadAvroOptions, CancellationToken)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadJsonAsync_System_String_System_String_System_String_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadJsonOptions_System_Threading_CancellationToken_">BigQueryClient.UploadJsonAsync(String, String, String, TableSchema, Stream, UploadJsonOptions, CancellationToken)</a>
@@ -2850,6 +2862,125 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_PollQueryUntilCompletedAsync_Google_Apis_Bigquery_v2_Data_JobReference_Google_Cloud_BigQuery_V2_GetQueryResultsOptions_Google_Api_Gax_PollSettings_System_Threading_CancellationToken_">BigQueryClient.PollQueryUntilCompletedAsync(JobReference, GetQueryResultsOptions, PollSettings, CancellationToken)</a></div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvro_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvro_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvro(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions)">UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override BigQueryJob UploadAvro(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions">UploadAvroOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob">BigQueryJob</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvro_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_">BigQueryClient.UploadAvro(TableReference, TableSchema, Stream, UploadAvroOptions)</a></div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvroAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadAvroAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadAvroAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadAvroOptions,System.Threading.CancellationToken)">UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Task&lt;BigQueryJob&gt; UploadAvroAsync(TableReference tableReference, TableSchema schema, Stream input, UploadAvroOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a></td>
+                    <td><em>tableReference</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><em>schema</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><em>input</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions">UploadAvroOptions</a></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html#Google_Cloud_BigQuery_V2_BigQueryJob">BigQueryJob</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_UploadAvroAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadAvroOptions_System_Threading_CancellationToken_">BigQueryClient.UploadAvroAsync(TableReference, TableSchema, Stream, UploadAvroOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadCsv_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadCsv*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryClientImpl_UploadCsv_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_System_IO_Stream_Google_Cloud_BigQuery_V2_UploadCsvOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryClientImpl.UploadCsv(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,System.IO.Stream,Google.Cloud.BigQuery.V2.UploadCsvOptions)">UploadCsv(TableReference, TableSchema, Stream, UploadCsvOptions)</h4>
               <div class="markdown level1 summary"></div>

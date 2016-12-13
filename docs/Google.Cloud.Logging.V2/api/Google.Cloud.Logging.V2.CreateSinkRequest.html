@@ -106,6 +106,7 @@
               <div class="markdown level1 summary"><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]&quot;</p>
+<p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -178,11 +179,16 @@ is not already in use.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_CreateSinkRequest_UniqueWriterIdentity_" data-uid="Google.Cloud.Logging.V2.CreateSinkRequest.UniqueWriterIdentity*"></a>
               <h4 id="Google_Cloud_Logging_V2_CreateSinkRequest_UniqueWriterIdentity" data-uid="Google.Cloud.Logging.V2.CreateSinkRequest.UniqueWriterIdentity">UniqueWriterIdentity</h4>
-              <div class="markdown level1 summary"><p>Optional. Whether the sink will have a dedicated service account returned
-in the sink&#39;s writer_identity. Set this field to be true to export
-logs from one project to a different project. This field is ignored for
-non-project sinks (e.g. organization sinks) because those sinks are
-required to have dedicated service accounts.</p>
+              <div class="markdown level1 summary"><p>Optional. Determines the kind of IAM identity returned as <code>writer_identity</code>
+in the new sink.  If this value is omitted or set to false, and if the
+sink&#39;s parent is a project, then the value returned as <code>writer_identity</code> is
+<code>cloud-logs@google.com</code>, the same identity used before the addition of
+writer identities to this API. The sink&#39;s destination must be in the same
+project as the sink itself.</p>
+<p>If this field is set to true, or if the sink is owned by a non-project
+resource such as an organization, then the value of <code>writer_identity</code> will
+be a unique service account used only for exports from the new sink.  For
+more information, see <code>writer_identity</code> in [LogSink][google.logging.v2.LogSink].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

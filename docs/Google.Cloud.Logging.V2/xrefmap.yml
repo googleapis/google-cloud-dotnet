@@ -6637,6 +6637,109 @@ references:
   name: IEnumerable.GetEnumerator
   name.vb: System.Collections.IEnumerable.GetEnumerator
   fullName: Google.Cloud.Logging.V2.ListLogMetricsResponse.System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Cloud.Logging.V2.ListLogsRequest
+  name: ListLogsRequest
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest
+  commentId: T:Google.Cloud.Logging.V2.ListLogsRequest
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest
+  nameWithType: ListLogsRequest
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.PageSize
+  name: PageSize
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_PageSize
+  commentId: P:Google.Cloud.Logging.V2.ListLogsRequest.PageSize
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.PageSize
+  nameWithType: ListLogsRequest.PageSize
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.PageSize*
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_PageSize_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsRequest.PageSize
+  name: PageSize
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.PageSize
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.PageToken
+  name: PageToken
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_PageToken
+  commentId: P:Google.Cloud.Logging.V2.ListLogsRequest.PageToken
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.PageToken
+  nameWithType: ListLogsRequest.PageToken
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.PageToken*
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_PageToken_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsRequest.PageToken
+  name: PageToken
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.PageToken
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.Parent
+  name: Parent
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_Parent
+  commentId: P:Google.Cloud.Logging.V2.ListLogsRequest.Parent
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.Parent
+  nameWithType: ListLogsRequest.Parent
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.Parent*
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_Parent_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsRequest.Parent
+  name: Parent
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.Parent
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.ParentAsParentNameOneof
+  name: ParentAsParentNameOneof
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_ParentAsParentNameOneof
+  commentId: P:Google.Cloud.Logging.V2.ListLogsRequest.ParentAsParentNameOneof
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.ParentAsParentNameOneof
+  nameWithType: ListLogsRequest.ParentAsParentNameOneof
+- uid: Google.Cloud.Logging.V2.ListLogsRequest.ParentAsParentNameOneof*
+  href: api/Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest_ParentAsParentNameOneof_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsRequest.ParentAsParentNameOneof
+  name: ParentAsParentNameOneof
+  fullName: Google.Cloud.Logging.V2.ListLogsRequest.ParentAsParentNameOneof
+- uid: Google.Cloud.Logging.V2.ListLogsResponse
+  name: ListLogsResponse
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse
+  commentId: T:Google.Cloud.Logging.V2.ListLogsResponse
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse
+  nameWithType: ListLogsResponse
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.GetEnumerator
+  name: GetEnumerator()
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_GetEnumerator
+  commentId: M:Google.Cloud.Logging.V2.ListLogsResponse.GetEnumerator
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.GetEnumerator()
+  nameWithType: ListLogsResponse.GetEnumerator()
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.GetEnumerator*
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_GetEnumerator_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsResponse.GetEnumerator
+  name: GetEnumerator
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.GetEnumerator()
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.LogNames
+  name: LogNames
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_LogNames
+  commentId: P:Google.Cloud.Logging.V2.ListLogsResponse.LogNames
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.LogNames
+  nameWithType: ListLogsResponse.LogNames
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.LogNames*
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_LogNames_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsResponse.LogNames
+  name: LogNames
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.LogNames
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.NextPageToken
+  name: NextPageToken
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_NextPageToken
+  commentId: P:Google.Cloud.Logging.V2.ListLogsResponse.NextPageToken
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.NextPageToken
+  nameWithType: ListLogsResponse.NextPageToken
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.NextPageToken*
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_NextPageToken_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsResponse.NextPageToken
+  name: NextPageToken
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.NextPageToken
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Google.Cloud.Logging.V2.ListLogsResponse.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: ListLogsResponse.IEnumerable.GetEnumerator()
+  nameWithType.vb: System.Collections.IEnumerable.GetEnumerator()
+- uid: Google.Cloud.Logging.V2.ListLogsResponse.System#Collections#IEnumerable#GetEnumerator*
+  href: api/Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Google.Cloud.Logging.V2.ListLogsResponse.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Google.Cloud.Logging.V2.ListLogsResponse.System.Collections.IEnumerable.GetEnumerator()
 - uid: Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest
   name: ListMonitoredResourceDescriptorsRequest
   href: api/Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest.html#Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest
@@ -6967,6 +7070,17 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LogEntry.Severity
   name: Severity
   fullName: Google.Cloud.Logging.V2.LogEntry.Severity
+- uid: Google.Cloud.Logging.V2.LogEntry.SourceLocation
+  name: SourceLocation
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_SourceLocation
+  commentId: P:Google.Cloud.Logging.V2.LogEntry.SourceLocation
+  fullName: Google.Cloud.Logging.V2.LogEntry.SourceLocation
+  nameWithType: LogEntry.SourceLocation
+- uid: Google.Cloud.Logging.V2.LogEntry.SourceLocation*
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_SourceLocation_
+  commentId: Overload:Google.Cloud.Logging.V2.LogEntry.SourceLocation
+  name: SourceLocation
+  fullName: Google.Cloud.Logging.V2.LogEntry.SourceLocation
 - uid: Google.Cloud.Logging.V2.LogEntry.TextPayload
   name: TextPayload
   href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_TextPayload
@@ -6989,6 +7103,17 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LogEntry.Timestamp
   name: Timestamp
   fullName: Google.Cloud.Logging.V2.LogEntry.Timestamp
+- uid: Google.Cloud.Logging.V2.LogEntry.Trace
+  name: Trace
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_Trace
+  commentId: P:Google.Cloud.Logging.V2.LogEntry.Trace
+  fullName: Google.Cloud.Logging.V2.LogEntry.Trace
+  nameWithType: LogEntry.Trace
+- uid: Google.Cloud.Logging.V2.LogEntry.Trace*
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_Trace_
+  commentId: Overload:Google.Cloud.Logging.V2.LogEntry.Trace
+  name: Trace
+  fullName: Google.Cloud.Logging.V2.LogEntry.Trace
 - uid: Google.Cloud.Logging.V2.LogEntryOperation
   name: LogEntryOperation
   href: api/Google.Cloud.Logging.V2.LogEntryOperation.html#Google_Cloud_Logging_V2_LogEntryOperation
@@ -7039,6 +7164,45 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LogEntryOperation.Producer
   name: Producer
   fullName: Google.Cloud.Logging.V2.LogEntryOperation.Producer
+- uid: Google.Cloud.Logging.V2.LogEntrySourceLocation
+  name: LogEntrySourceLocation
+  href: api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation
+  commentId: T:Google.Cloud.Logging.V2.LogEntrySourceLocation
+  fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation
+  nameWithType: LogEntrySourceLocation
+- uid: Google.Cloud.Logging.V2.LogEntrySourceLocation.File
+  name: File
+  href: api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation_File
+  commentId: P:Google.Cloud.Logging.V2.LogEntrySourceLocation.File
+  fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation.File
+  nameWithType: LogEntrySourceLocation.File
+- uid: Google.Cloud.Logging.V2.LogEntrySourceLocation.File*
+  href: api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation_File_
+  commentId: Overload:Google.Cloud.Logging.V2.LogEntrySourceLocation.File
+  name: File
+  fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation.File
+- uid: Google.Cloud.Logging.V2.LogEntrySourceLocation.Function
+  name: Function
+  href: api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation_Function
+  commentId: P:Google.Cloud.Logging.V2.LogEntrySourceLocation.Function
+  fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation.Function
+  nameWithType: LogEntrySourceLocation.Function
+- uid: Google.Cloud.Logging.V2.LogEntrySourceLocation.Function*
+  href: api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation_Function_
+  commentId: Overload:Google.Cloud.Logging.V2.LogEntrySourceLocation.Function
+  name: Function
+  fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation.Function
+- uid: Google.Cloud.Logging.V2.LogEntrySourceLocation.Line
+  name: Line
+  href: api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation_Line
+  commentId: P:Google.Cloud.Logging.V2.LogEntrySourceLocation.Line
+  fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation.Line
+  nameWithType: LogEntrySourceLocation.Line
+- uid: Google.Cloud.Logging.V2.LogEntrySourceLocation.Line*
+  href: api/Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation_Line_
+  commentId: Overload:Google.Cloud.Logging.V2.LogEntrySourceLocation.Line
+  name: Line
+  fullName: Google.Cloud.Logging.V2.LogEntrySourceLocation.Line
 - uid: Google.Cloud.Logging.V2.LoggingServiceV2
   name: LoggingServiceV2
   href: api/Google.Cloud.Logging.V2.LoggingServiceV2.html#Google_Cloud_Logging_V2_LoggingServiceV2
@@ -7084,6 +7248,17 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogEntries
   name: ListLogEntries
   fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogEntries(Google.Cloud.Logging.V2.ListLogEntriesRequest, Grpc.Core.ServerCallContext)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.ServerCallContext)
+  name: ListLogs(ListLogsRequest, ServerCallContext)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.ServerCallContext)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.ServerCallContext)
+  nameWithType: LoggingServiceV2.LoggingServiceV2Base.ListLogs(ListLogsRequest, ServerCallContext)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListLogs_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs
+  name: ListLogs
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.ServerCallContext)
 - uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.ServerCallContext)
   name: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, ServerCallContext)
   href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Base.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Base_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_ServerCallContext_
@@ -7229,6 +7404,50 @@ references:
   name.vb: ListLogEntriesAsync
   fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntriesAsync(Google.Cloud.Logging.V2.ListLogEntriesRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
   fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogEntriesAsync
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)
+  name: ListLogs(ListLogsRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.CallOptions)
+  nameWithType: LoggingServiceV2.LoggingServiceV2Client.ListLogs(ListLogsRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ListLogs(ListLogsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ListLogs(ListLogsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: LoggingServiceV2.LoggingServiceV2Client.ListLogs(ListLogsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ListLogs(ListLogsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs
+  name: ListLogs
+  name.vb: ListLogs
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)
+  name: ListLogsAsync(ListLogsRequest, CallOptions)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.CallOptions)
+  nameWithType: LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(ListLogsRequest, CallOptions)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: ListLogsAsync(ListLogsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: ListLogsAsync(ListLogsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(ListLogsRequest, Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: ListLogsAsync(ListLogsRequest, Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync
+  name: ListLogsAsync
+  name.vb: ListLogsAsync
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync
 - uid: Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Grpc.Core.CallOptions)
   name: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallOptions)
   href: api/Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Grpc_Core_CallOptions_
@@ -7479,6 +7698,50 @@ references:
   name.vb: ListLogEntriesAsync
   fullName: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync(System.Collections.Generic.IEnumerable<System.String>, System.String, System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogEntriesAsync
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListLogs(ListLogsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LoggingServiceV2Client.ListLogs(ListLogsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListLogs(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListLogs(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LoggingServiceV2Client.ListLogs(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListLogs(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs
+  name: ListLogs
+  name.vb: ListLogs
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogs
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListLogsAsync(ListLogsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LoggingServiceV2Client.ListLogsAsync(ListLogsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListLogsAsync(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ParentNameOneof,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListLogsAsync(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LoggingServiceV2Client.ListLogsAsync(ParentNameOneof, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListLogsAsync(ParentNameOneof, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync
+  name: ListLogsAsync
+  name.vb: ListLogsAsync
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ParentNameOneof, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListLogsAsync
 - uid: Google.Cloud.Logging.V2.LoggingServiceV2Client.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -7637,6 +7900,28 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntriesAsync
   name: ListLogEntriesAsync
   fullName: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntriesAsync(Google.Cloud.Logging.V2.ListLogEntriesRequest, Google.Api.Gax.Grpc.CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListLogs(ListLogsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.html#Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LoggingServiceV2ClientImpl.ListLogs(ListLogsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.html#Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogs_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs
+  name: ListLogs
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest, Google.Api.Gax.Grpc.CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  name: ListLogsAsync(ListLogsRequest, CallSettings)
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.html#Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: LoggingServiceV2ClientImpl.ListLogsAsync(ListLogsRequest, CallSettings)
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.html#Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogsAsync_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync
+  name: ListLogsAsync
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)
   href: api/Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.html#Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -7797,6 +8082,17 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogEntriesSettings
   name: ListLogEntriesSettings
   fullName: Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogEntriesSettings
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogsSettings
+  name: ListLogsSettings
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Settings.html#Google_Cloud_Logging_V2_LoggingServiceV2Settings_ListLogsSettings
+  commentId: P:Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogsSettings
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogsSettings
+  nameWithType: LoggingServiceV2Settings.ListLogsSettings
+- uid: Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogsSettings*
+  href: api/Google.Cloud.Logging.V2.LoggingServiceV2Settings.html#Google_Cloud_Logging_V2_LoggingServiceV2Settings_ListLogsSettings_
+  commentId: Overload:Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogsSettings
+  name: ListLogsSettings
+  fullName: Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListLogsSettings
 - uid: Google.Cloud.Logging.V2.LoggingServiceV2Settings.ListMonitoredResourceDescriptorsSettings
   name: ListMonitoredResourceDescriptorsSettings
   href: api/Google.Cloud.Logging.V2.LoggingServiceV2Settings.html#Google_Cloud_Logging_V2_LoggingServiceV2Settings_ListMonitoredResourceDescriptorsSettings

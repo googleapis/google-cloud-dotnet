@@ -342,7 +342,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     MetricDescriptor = new MetricDescriptor(),
 };
 // Make the request
@@ -393,7 +393,7 @@ MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptor_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)">CreateMetricDescriptor(String, MetricDescriptor, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptor_Google_Cloud_Monitoring_V3_ProjectName_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)">CreateMetricDescriptor(ProjectName, MetricDescriptor, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a new metric descriptor.
 User-created metric descriptors define
 <a href="/monitoring/custom-metrics">custom metrics</a>.</p>
@@ -402,14 +402,14 @@ User-created metric descriptors define
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 MetricDescriptor metricDescriptor = new MetricDescriptor();
 // Make the request
-MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(formattedName, metricDescriptor);
+MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(name, metricDescriptor);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual MetricDescriptor CreateMetricDescriptor(string name, MetricDescriptor metricDescriptor, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual MetricDescriptor CreateMetricDescriptor(ProjectName name, MetricDescriptor metricDescriptor, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -422,7 +422,7 @@ MetricDescriptor response = metricServiceClient.CreateMetricDescriptor(formatted
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -471,7 +471,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 CreateMetricDescriptorRequest request = new CreateMetricDescriptorRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     MetricDescriptor = new MetricDescriptor(),
 };
 // Make the request
@@ -522,7 +522,7 @@ MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsyn
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)">CreateMetricDescriptorAsync(String, MetricDescriptor, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)">CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a new metric descriptor.
 User-created metric descriptors define
 <a href="/monitoring/custom-metrics">custom metrics</a>.</p>
@@ -531,14 +531,14 @@ User-created metric descriptors define
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 MetricDescriptor metricDescriptor = new MetricDescriptor();
 // Make the request
-MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(formattedName, metricDescriptor);
+MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; CreateMetricDescriptorAsync(string name, MetricDescriptor metricDescriptor, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; CreateMetricDescriptorAsync(ProjectName name, MetricDescriptor metricDescriptor, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -551,7 +551,7 @@ MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsyn
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -589,7 +589,7 @@ descriptor.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_System_String_Google_Api_MetricDescriptor_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String,Google.Api.MetricDescriptor,System.Threading.CancellationToken)">CreateMetricDescriptorAsync(String, MetricDescriptor, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Api_MetricDescriptor_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,System.Threading.CancellationToken)">CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a new metric descriptor.
 User-created metric descriptors define
 <a href="/monitoring/custom-metrics">custom metrics</a>.</p>
@@ -598,14 +598,14 @@ User-created metric descriptors define
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 MetricDescriptor metricDescriptor = new MetricDescriptor();
 // Make the request
-MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(formattedName, metricDescriptor);
+MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsync(name, metricDescriptor);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; CreateMetricDescriptorAsync(string name, MetricDescriptor metricDescriptor, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; CreateMetricDescriptorAsync(ProjectName name, MetricDescriptor metricDescriptor, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -618,7 +618,7 @@ MetricDescriptor response = await metricServiceClient.CreateMetricDescriptorAsyn
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -668,7 +668,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     TimeSeries = { },
 };
 // Make the request
@@ -703,7 +703,7 @@ metricServiceClient.CreateTimeSeries(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeries_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeries_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)">CreateTimeSeries(String, IEnumerable&lt;TimeSeries&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeries_Google_Cloud_Monitoring_V3_ProjectName_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)">CreateTimeSeries(ProjectName, IEnumerable&lt;TimeSeries&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates or adds data to one or more time series.
 The response is empty if all time series in the request were written.
 If any time series could not be written, a corresponding failure message is
@@ -713,14 +713,14 @@ included in the error response.</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 IEnumerable&lt;TimeSeries&gt; timeSeries = new List&lt;TimeSeries&gt;();
 // Make the request
-metricServiceClient.CreateTimeSeries(formattedName, timeSeries);
+metricServiceClient.CreateTimeSeries(name, timeSeries);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual void CreateTimeSeries(string name, IEnumerable&lt;TimeSeries&gt; timeSeries, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void CreateTimeSeries(ProjectName name, IEnumerable&lt;TimeSeries&gt; timeSeries, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -733,7 +733,7 @@ metricServiceClient.CreateTimeSeries(formattedName, timeSeries);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -770,7 +770,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 CreateTimeSeriesRequest request = new CreateTimeSeriesRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     TimeSeries = { },
 };
 // Make the request
@@ -821,7 +821,7 @@ await metricServiceClient.CreateTimeSeriesAsync(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)">CreateTimeSeriesAsync(String, IEnumerable&lt;TimeSeries&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_Google_Cloud_Monitoring_V3_ProjectName_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)">CreateTimeSeriesAsync(ProjectName, IEnumerable&lt;TimeSeries&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates or adds data to one or more time series.
 The response is empty if all time series in the request were written.
 If any time series could not be written, a corresponding failure message is
@@ -831,14 +831,14 @@ included in the error response.</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 IEnumerable&lt;TimeSeries&gt; timeSeries = new List&lt;TimeSeries&gt;();
 // Make the request
-await metricServiceClient.CreateTimeSeriesAsync(formattedName, timeSeries);
+await metricServiceClient.CreateTimeSeriesAsync(name, timeSeries);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task CreateTimeSeriesAsync(string name, IEnumerable&lt;TimeSeries&gt; timeSeries, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task CreateTimeSeriesAsync(ProjectName name, IEnumerable&lt;TimeSeries&gt; timeSeries, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -851,7 +851,7 @@ await metricServiceClient.CreateTimeSeriesAsync(formattedName, timeSeries);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -892,7 +892,7 @@ all label values for the metric and the monitored resource.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},System.Threading.CancellationToken)">CreateTimeSeriesAsync(String, IEnumerable&lt;TimeSeries&gt;, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_Google_Cloud_Monitoring_V3_ProjectName_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},System.Threading.CancellationToken)">CreateTimeSeriesAsync(ProjectName, IEnumerable&lt;TimeSeries&gt;, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates or adds data to one or more time series.
 The response is empty if all time series in the request were written.
 If any time series could not be written, a corresponding failure message is
@@ -902,14 +902,14 @@ included in the error response.</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 IEnumerable&lt;TimeSeries&gt; timeSeries = new List&lt;TimeSeries&gt;();
 // Make the request
-await metricServiceClient.CreateTimeSeriesAsync(formattedName, timeSeries);
+await metricServiceClient.CreateTimeSeriesAsync(name, timeSeries);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task CreateTimeSeriesAsync(string name, IEnumerable&lt;TimeSeries&gt; timeSeries, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task CreateTimeSeriesAsync(ProjectName name, IEnumerable&lt;TimeSeries&gt; timeSeries, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -922,7 +922,7 @@ await metricServiceClient.CreateTimeSeriesAsync(formattedName, timeSeries);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -973,7 +973,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
 {
-    Name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString(),
+    MetricDescriptorName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;),
 };
 // Make the request
 metricServiceClient.DeleteMetricDescriptor(request);
@@ -1007,7 +1007,7 @@ metricServiceClient.DeleteMetricDescriptor(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptor_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteMetricDescriptor(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptor_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)">DeleteMetricDescriptor(MetricDescriptorName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a metric descriptor. Only user-created
 <a href="/monitoring/custom-metrics">custom metrics</a> can be deleted.</p>
 </div>
@@ -1015,13 +1015,13 @@ metricServiceClient.DeleteMetricDescriptor(request);
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString();
+MetricDescriptorName name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;);
 // Make the request
-metricServiceClient.DeleteMetricDescriptor(formattedName);
+metricServiceClient.DeleteMetricDescriptor(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual void DeleteMetricDescriptor(string name, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DeleteMetricDescriptor(MetricDescriptorName name, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1034,7 +1034,7 @@ metricServiceClient.DeleteMetricDescriptor(formattedName);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricDescriptorName.html#Google_Cloud_Monitoring_V3_MetricDescriptorName">MetricDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The metric descriptor on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}/metricDescriptors/{metric_id}&quot;</code>.
@@ -1061,7 +1061,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 DeleteMetricDescriptorRequest request = new DeleteMetricDescriptorRequest
 {
-    Name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString(),
+    MetricDescriptorName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;),
 };
 // Make the request
 await metricServiceClient.DeleteMetricDescriptorAsync(request);
@@ -1111,7 +1111,7 @@ await metricServiceClient.DeleteMetricDescriptorAsync(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteMetricDescriptorAsync(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)">DeleteMetricDescriptorAsync(MetricDescriptorName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a metric descriptor. Only user-created
 <a href="/monitoring/custom-metrics">custom metrics</a> can be deleted.</p>
 </div>
@@ -1119,13 +1119,13 @@ await metricServiceClient.DeleteMetricDescriptorAsync(request);
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString();
+MetricDescriptorName name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;);
 // Make the request
-await metricServiceClient.DeleteMetricDescriptorAsync(formattedName);
+await metricServiceClient.DeleteMetricDescriptorAsync(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task DeleteMetricDescriptorAsync(string name, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteMetricDescriptorAsync(MetricDescriptorName name, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1138,7 +1138,7 @@ await metricServiceClient.DeleteMetricDescriptorAsync(formattedName);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricDescriptorName.html#Google_Cloud_Monitoring_V3_MetricDescriptorName">MetricDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The metric descriptor on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}/metricDescriptors/{metric_id}&quot;</code>.
@@ -1171,7 +1171,7 @@ An example of <code>{metric_id}</code> is:
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String,System.Threading.CancellationToken)">DeleteMetricDescriptorAsync(String, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,System.Threading.CancellationToken)">DeleteMetricDescriptorAsync(MetricDescriptorName, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes a metric descriptor. Only user-created
 <a href="/monitoring/custom-metrics">custom metrics</a> can be deleted.</p>
 </div>
@@ -1179,13 +1179,13 @@ An example of <code>{metric_id}</code> is:
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString();
+MetricDescriptorName name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;);
 // Make the request
-await metricServiceClient.DeleteMetricDescriptorAsync(formattedName);
+await metricServiceClient.DeleteMetricDescriptorAsync(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task DeleteMetricDescriptorAsync(string name, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteMetricDescriptorAsync(MetricDescriptorName name, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1198,7 +1198,7 @@ await metricServiceClient.DeleteMetricDescriptorAsync(formattedName);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricDescriptorName.html#Google_Cloud_Monitoring_V3_MetricDescriptorName">MetricDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The metric descriptor on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}/metricDescriptors/{metric_id}&quot;</code>.
@@ -1240,7 +1240,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
 {
-    Name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString(),
+    MetricDescriptorName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;),
 };
 // Make the request
 MetricDescriptor response = metricServiceClient.GetMetricDescriptor(request);
@@ -1290,20 +1290,20 @@ MetricDescriptor response = metricServiceClient.GetMetricDescriptor(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)">GetMetricDescriptor(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)">GetMetricDescriptor(MetricDescriptorName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single metric descriptor. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString();
+MetricDescriptorName name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;);
 // Make the request
-MetricDescriptor response = metricServiceClient.GetMetricDescriptor(formattedName);
+MetricDescriptor response = metricServiceClient.GetMetricDescriptor(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual MetricDescriptor GetMetricDescriptor(string name, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual MetricDescriptor GetMetricDescriptor(MetricDescriptorName name, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1316,7 +1316,7 @@ MetricDescriptor response = metricServiceClient.GetMetricDescriptor(formattedNam
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricDescriptorName.html#Google_Cloud_Monitoring_V3_MetricDescriptorName">MetricDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The metric descriptor on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}/metricDescriptors/{metric_id}&quot;</code>.
@@ -1358,7 +1358,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 GetMetricDescriptorRequest request = new GetMetricDescriptorRequest
 {
-    Name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString(),
+    MetricDescriptorName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;),
 };
 // Make the request
 MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(request);
@@ -1408,20 +1408,20 @@ MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(r
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetMetricDescriptorAsync(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)">GetMetricDescriptorAsync(MetricDescriptorName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single metric descriptor. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString();
+MetricDescriptorName name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;);
 // Make the request
-MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(formattedName);
+MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; GetMetricDescriptorAsync(string name, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; GetMetricDescriptorAsync(MetricDescriptorName name, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1434,7 +1434,7 @@ MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(f
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricDescriptorName.html#Google_Cloud_Monitoring_V3_MetricDescriptorName">MetricDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The metric descriptor on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}/metricDescriptors/{metric_id}&quot;</code>.
@@ -1467,20 +1467,20 @@ An example value of <code>{metric_id}</code> is
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String,System.Threading.CancellationToken)">GetMetricDescriptorAsync(String, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,System.Threading.CancellationToken)">GetMetricDescriptorAsync(MetricDescriptorName, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Gets a single metric descriptor. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;).ToString();
+MetricDescriptorName name = new MetricDescriptorName(&quot;[PROJECT]&quot;, &quot;[METRIC_DESCRIPTOR]&quot;);
 // Make the request
-MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(formattedName);
+MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; GetMetricDescriptorAsync(string name, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;MetricDescriptor&gt; GetMetricDescriptorAsync(MetricDescriptorName name, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1493,7 +1493,7 @@ MetricDescriptor response = await metricServiceClient.GetMetricDescriptorAsync(f
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricDescriptorName.html#Google_Cloud_Monitoring_V3_MetricDescriptorName">MetricDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The metric descriptor on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}/metricDescriptors/{metric_id}&quot;</code>.
@@ -1535,7 +1535,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
 {
-    Name = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;).ToString(),
+    MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;),
 };
 // Make the request
 MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(request);
@@ -1585,20 +1585,20 @@ MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceD
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)">GetMonitoredResourceDescriptor(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,Google.Api.Gax.Grpc.CallSettings)">GetMonitoredResourceDescriptor(MonitoredResourceDescriptorName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single monitored resource descriptor. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;).ToString();
+MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;);
 // Make the request
-MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(formattedName);
+MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceDescriptor(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(string name, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual MonitoredResourceDescriptor GetMonitoredResourceDescriptor(MonitoredResourceDescriptorName name, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1611,7 +1611,7 @@ MonitoredResourceDescriptor response = metricServiceClient.GetMonitoredResourceD
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName.html#Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName">MonitoredResourceDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The monitored resource descriptor to get.  The format is
 <code>&quot;projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}&quot;</code>.
@@ -1653,7 +1653,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 GetMonitoredResourceDescriptorRequest request = new GetMonitoredResourceDescriptorRequest
 {
-    Name = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;).ToString(),
+    MonitoredResourceDescriptorName = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;),
 };
 // Make the request
 MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(request);
@@ -1703,20 +1703,20 @@ MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredRes
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">GetMonitoredResourceDescriptorAsync(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,Google.Api.Gax.Grpc.CallSettings)">GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets a single monitored resource descriptor. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;).ToString();
+MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;);
 // Make the request
-MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(formattedName);
+MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MonitoredResourceDescriptor&gt; GetMonitoredResourceDescriptorAsync(string name, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;MonitoredResourceDescriptor&gt; GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName name, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1729,7 +1729,7 @@ MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredRes
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName.html#Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName">MonitoredResourceDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The monitored resource descriptor to get.  The format is
 <code>&quot;projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}&quot;</code>.
@@ -1762,20 +1762,20 @@ The <code>{resource_type}</code> is a predefined type, such as
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String,System.Threading.CancellationToken)">GetMonitoredResourceDescriptorAsync(String, CancellationToken)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName_System_Threading_CancellationToken_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,System.Threading.CancellationToken)">GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Gets a single monitored resource descriptor. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;).ToString();
+MonitoredResourceDescriptorName name = new MonitoredResourceDescriptorName(&quot;[PROJECT]&quot;, &quot;[MONITORED_RESOURCE_DESCRIPTOR]&quot;);
 // Make the request
-MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(formattedName);
+MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredResourceDescriptorAsync(name);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;MonitoredResourceDescriptor&gt; GetMonitoredResourceDescriptorAsync(string name, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;MonitoredResourceDescriptor&gt; GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName name, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1788,7 +1788,7 @@ MonitoredResourceDescriptor response = await metricServiceClient.GetMonitoredRes
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName.html#Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName">MonitoredResourceDescriptorName</a></td>
                     <td><em>name</em></td>
                     <td><p>The monitored resource descriptor to get.  The format is
 <code>&quot;projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}&quot;</code>.
@@ -1830,7 +1830,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 PagedEnumerable&lt;ListMetricDescriptorsResponse,MetricDescriptor&gt; response =
@@ -1911,12 +1911,12 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptors_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptors_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMetricDescriptors(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptors_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMetricDescriptors(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists metric descriptors that match a filter. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">MetricServiceClient client = MetricServiceClient.Create();
-string projectName = new ProjectName(projectId).ToString();
+ProjectName projectName = new ProjectName(projectId);
 PagedEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; metrics = client.ListMetricDescriptors(projectName);
 foreach (MetricDescriptor metric in metrics.Take(10))
 {
@@ -1925,7 +1925,7 @@ foreach (MetricDescriptor metric in metrics.Take(10))
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; ListMetricDescriptors(string name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; ListMetricDescriptors(ProjectName name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1938,7 +1938,7 @@ foreach (MetricDescriptor metric in metrics.Take(10))
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -1992,7 +1992,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 ListMetricDescriptorsRequest request = new ListMetricDescriptorsRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse,MetricDescriptor&gt; response =
@@ -2073,17 +2073,17 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptorsAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptorsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMetricDescriptorsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptorsAsync_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMetricDescriptorsAsync(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists metric descriptors that match a filter. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
 PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse,MetricDescriptor&gt; response =
-    metricServiceClient.ListMetricDescriptorsAsync(formattedName);
+    metricServiceClient.ListMetricDescriptorsAsync(name);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((MetricDescriptor item) =&gt;
@@ -2117,7 +2117,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; ListMetricDescriptorsAsync(string name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListMetricDescriptorsResponse, MetricDescriptor&gt; ListMetricDescriptorsAsync(ProjectName name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2130,7 +2130,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -2184,7 +2184,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
@@ -2265,17 +2265,17 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptors_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptors(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptors_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptors(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
 PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
-    metricServiceClient.ListMonitoredResourceDescriptors(formattedName);
+    metricServiceClient.ListMonitoredResourceDescriptors(name);
 
 // Iterate over all response items, lazily performing RPCs as required
 foreach (MonitoredResourceDescriptor item in response)
@@ -2309,7 +2309,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptors(string name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptors(ProjectName name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2322,7 +2322,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -2376,7 +2376,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 ListMonitoredResourceDescriptorsRequest request = new ListMonitoredResourceDescriptorsRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
@@ -2457,17 +2457,17 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptorsAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptorsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptorsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptorsAsync(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
 PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse,MonitoredResourceDescriptor&gt; response =
-    metricServiceClient.ListMonitoredResourceDescriptorsAsync(formattedName);
+    metricServiceClient.ListMonitoredResourceDescriptorsAsync(name);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((MonitoredResourceDescriptor item) =&gt;
@@ -2501,7 +2501,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptorsAsync(string name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor&gt; ListMonitoredResourceDescriptorsAsync(ProjectName name, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2514,7 +2514,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 <code>&quot;projects/{project_id_or_number}&quot;</code>.</p>
@@ -2568,7 +2568,7 @@ MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
 ListTimeSeriesRequest request = new ListTimeSeriesRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     Filter = &quot;&quot;,
     Interval = new TimeInterval(),
     View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
@@ -2652,20 +2652,20 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeries_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeries_System_String_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(System.String,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTimeSeries(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeries_Google_Cloud_Monitoring_V3_ProjectName_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ProjectName,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTimeSeries(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists time series that match a filter. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = MetricServiceClient.Create();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 string filter = &quot;&quot;;
 TimeInterval interval = new TimeInterval();
 ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
 // Make the request
 PagedEnumerable&lt;ListTimeSeriesResponse,TimeSeries&gt; response =
-    metricServiceClient.ListTimeSeries(formattedName, filter, interval, view);
+    metricServiceClient.ListTimeSeries(name, filter, interval, view);
 
 // Iterate over all response items, lazily performing RPCs as required
 foreach (TimeSeries item in response)
@@ -2699,7 +2699,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; ListTimeSeries(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; ListTimeSeries(ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2712,7 +2712,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 &quot;projects/{project_id_or_number}&quot;.</p>
@@ -2791,7 +2791,7 @@ MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync(
 // Initialize request argument(s)
 ListTimeSeriesRequest request = new ListTimeSeriesRequest
 {
-    Name = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     Filter = &quot;&quot;,
     Interval = new TimeInterval(),
     View = ListTimeSeriesRequest.Types.TimeSeriesView.Full,
@@ -2875,20 +2875,20 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeriesAsync_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync*"></a>
-              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeriesAsync_System_String_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(System.String,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTimeSeriesAsync(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeriesAsync_Google_Cloud_Monitoring_V3_ProjectName_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTimeSeriesAsync(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists time series that match a filter. This method does not require a Stackdriver account.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 MetricServiceClient metricServiceClient = await MetricServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName name = new ProjectName(&quot;[PROJECT]&quot;);
 string filter = &quot;&quot;;
 TimeInterval interval = new TimeInterval();
 ListTimeSeriesRequest.Types.TimeSeriesView view = ListTimeSeriesRequest.Types.TimeSeriesView.Full;
 // Make the request
 PagedAsyncEnumerable&lt;ListTimeSeriesResponse,TimeSeries&gt; response =
-    metricServiceClient.ListTimeSeriesAsync(formattedName, filter, interval, view);
+    metricServiceClient.ListTimeSeriesAsync(name, filter, interval, view);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((TimeSeries item) =&gt;
@@ -2922,7 +2922,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; ListTimeSeriesAsync(string name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListTimeSeriesResponse, TimeSeries&gt; ListTimeSeriesAsync(ProjectName name, string filter, TimeInterval interval, ListTimeSeriesRequest.Types.TimeSeriesView view, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2935,7 +2935,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ProjectName.html#Google_Cloud_Monitoring_V3_ProjectName">ProjectName</a></td>
                     <td><em>name</em></td>
                     <td><p>The project on which to execute the request. The format is
 &quot;projects/{project_id_or_number}&quot;.</p>

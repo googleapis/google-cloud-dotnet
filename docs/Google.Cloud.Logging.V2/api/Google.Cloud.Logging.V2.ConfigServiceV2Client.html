@@ -332,7 +332,11 @@ necessary.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSink(CreateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a sink.</p>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -381,7 +385,11 @@ necessary.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSink(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">CreateSink(ParentNameOneof, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a sink.</p>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -404,6 +412,7 @@ necessary.</p>
                     <td><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]&quot;</p>
+<p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -439,7 +448,11 @@ is not already in use.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSinkAsync(CreateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a sink.</p>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -488,7 +501,11 @@ is not already in use.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">CreateSinkAsync(ParentNameOneof, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a sink.</p>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -511,6 +528,7 @@ is not already in use.</p>
                     <td><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]&quot;</p>
+<p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -546,7 +564,11 @@ is not already in use.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_ParentNameOneof_Google_Cloud_Logging_V2_LogSink_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.CreateSinkAsync(Google.Cloud.Logging.V2.ParentNameOneof,Google.Cloud.Logging.V2.LogSink,System.Threading.CancellationToken)">CreateSinkAsync(ParentNameOneof, LogSink, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Creates a sink.</p>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -569,6 +591,7 @@ is not already in use.</p>
                     <td><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]&quot;</p>
+<p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -604,7 +627,8 @@ is not already in use.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink(Google.Cloud.Logging.V2.DeleteSinkRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteSink(DeleteSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -637,7 +661,8 @@ is not already in use.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSink_Google_Cloud_Logging_V2_SinkNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSink(Google.Cloud.Logging.V2.SinkNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteSink(SinkNameOneof, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -657,11 +682,13 @@ is not already in use.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to delete, including the parent
-resource and the sink identifier:</p>
+                    <td><p>Required. The full resource name of the sink to delete, including the
+parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
-<p>It is an error if the sink does not exist.</p>
+<p>It is an error if the sink does not exist.  Example:
+<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if
+the sink does not exist.</p>
 </td>
                   </tr>
                   <tr>
@@ -674,7 +701,8 @@ resource and the sink identifier:</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_Google_Cloud_Logging_V2_DeleteSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync(Google.Cloud.Logging.V2.DeleteSinkRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteSinkAsync(DeleteSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -723,7 +751,8 @@ resource and the sink identifier:</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,Google.Api.Gax.Grpc.CallSettings)">DeleteSinkAsync(SinkNameOneof, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -743,11 +772,13 @@ resource and the sink identifier:</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to delete, including the parent
-resource and the sink identifier:</p>
+                    <td><p>Required. The full resource name of the sink to delete, including the
+parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
-<p>It is an error if the sink does not exist.</p>
+<p>It is an error if the sink does not exist.  Example:
+<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if
+the sink does not exist.</p>
 </td>
                   </tr>
                   <tr>
@@ -776,7 +807,8 @@ resource and the sink identifier:</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.DeleteSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,System.Threading.CancellationToken)">DeleteSinkAsync(SinkNameOneof, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -796,11 +828,13 @@ resource and the sink identifier:</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to delete, including the parent
-resource and the sink identifier:</p>
+                    <td><p>Required. The full resource name of the sink to delete, including the
+parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
-<p>It is an error if the sink does not exist.</p>
+<p>It is an error if the sink does not exist.  Example:
+<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if
+the sink does not exist.</p>
 </td>
                   </tr>
                   <tr>
@@ -898,9 +932,10 @@ resource and the sink identifier:</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to return:</p>
+                    <td><p>Required. The parent resource name of the sink:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+<p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -998,9 +1033,10 @@ resource and the sink identifier:</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to return:</p>
+                    <td><p>Required. The parent resource name of the sink:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+<p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1049,9 +1085,10 @@ resource and the sink identifier:</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to return:</p>
+                    <td><p>Required. The parent resource name of the sink:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+<p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1149,9 +1186,8 @@ resource and the sink identifier:</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html#Google_Cloud_Logging_V2_ParentNameOneof">ParentNameOneof</a></td>
                     <td><em>parent</em></td>
-                    <td><p>Required. The resource name where this sink was created:</p>
-<p>&quot;projects/[PROJECT_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]&quot;</p>
+                    <td><p>Required. The parent resource whose sinks are to be listed.
+Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1263,9 +1299,8 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html#Google_Cloud_Logging_V2_ParentNameOneof">ParentNameOneof</a></td>
                     <td><em>parent</em></td>
-                    <td><p>Required. The resource name where this sink was created:</p>
-<p>&quot;projects/[PROJECT_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]&quot;</p>
+                    <td><p>Required. The parent resource whose sinks are to be listed.
+Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -1340,7 +1375,14 @@ in turn be shut down by another call to this method.</p>
 </div>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_SinkNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.SinkNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">UpdateSink(SinkNameOneof, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1360,8 +1402,8 @@ in turn be shut down by another call to this method.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to update, including the parent
-resource and the sink identifier:</p>
+                    <td><p>Required. The full resource name of the sink to update, including the
+parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
@@ -1371,7 +1413,7 @@ resource and the sink identifier:</p>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.html#Google_Cloud_Logging_V2_LogSink">LogSink</a></td>
                     <td><em>sink</em></td>
                     <td><p>Required. The updated sink, whose name is the same identifier that appears
-as part of <code>sinkName</code>.  If <code>sinkName</code> does not exist, then
+as part of <code>sink_name</code>.  If <code>sink_name</code> does not exist, then
 this method creates a new sink.</p>
 </td>
                   </tr>
@@ -1401,7 +1443,14 @@ this method creates a new sink.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSink(UpdateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1450,7 +1499,14 @@ this method creates a new sink.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_Google_Cloud_Logging_V2_LogSink_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,Google.Cloud.Logging.V2.LogSink,Google.Api.Gax.Grpc.CallSettings)">UpdateSinkAsync(SinkNameOneof, LogSink, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1470,8 +1526,8 @@ this method creates a new sink.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to update, including the parent
-resource and the sink identifier:</p>
+                    <td><p>Required. The full resource name of the sink to update, including the
+parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
@@ -1481,7 +1537,7 @@ resource and the sink identifier:</p>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.html#Google_Cloud_Logging_V2_LogSink">LogSink</a></td>
                     <td><em>sink</em></td>
                     <td><p>Required. The updated sink, whose name is the same identifier that appears
-as part of <code>sinkName</code>.  If <code>sinkName</code> does not exist, then
+as part of <code>sink_name</code>.  If <code>sink_name</code> does not exist, then
 this method creates a new sink.</p>
 </td>
                   </tr>
@@ -1511,7 +1567,14 @@ this method creates a new sink.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_SinkNameOneof_Google_Cloud_Logging_V2_LogSink_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.SinkNameOneof,Google.Cloud.Logging.V2.LogSink,System.Threading.CancellationToken)">UpdateSinkAsync(SinkNameOneof, LogSink, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1531,8 +1594,8 @@ this method creates a new sink.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html#Google_Cloud_Logging_V2_SinkNameOneof">SinkNameOneof</a></td>
                     <td><em>sinkName</em></td>
-                    <td><p>Required. The resource name of the sink to update, including the parent
-resource and the sink identifier:</p>
+                    <td><p>Required. The full resource name of the sink to update, including the
+parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
 &quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
@@ -1542,7 +1605,7 @@ resource and the sink identifier:</p>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.LogSink.html#Google_Cloud_Logging_V2_LogSink">LogSink</a></td>
                     <td><em>sink</em></td>
                     <td><p>Required. The updated sink, whose name is the same identifier that appears
-as part of <code>sinkName</code>.  If <code>sinkName</code> does not exist, then
+as part of <code>sink_name</code>.  If <code>sink_name</code> does not exist, then
 this method creates a new sink.</p>
 </td>
                   </tr>
@@ -1572,7 +1635,14 @@ this method creates a new sink.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSinkAsync_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2Client.UpdateSinkAsync(Google.Cloud.Logging.V2.UpdateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSinkAsync(UpdateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

@@ -2013,6 +2013,118 @@ subscription.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_StreamingPull_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_StreamingPull_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.CallOptions)">StreamingPull(CallOptions)</h4>
+              <div class="markdown level1 summary"><p>(EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+respond with UNIMPLEMENTED errors unless you have been invited to test
+this feature. Contact cloud-pubsub@google.com with any questions.</p>
+<p>Establishes a stream with the server, which sends messages down to the
+client. The client streams acknowledgements and ack deadline modifications
+back to the server. The server will close the stream and return the status
+on any error. The server may close the stream with status <code>OK</code> to reassign
+server-side resources, in which case, the client should re-establish the
+stream. <code>UNAVAILABLE</code> may also be returned in the case of a transient error
+(e.g., a server restart). These should also be retried by the client. Flow
+control can be achieved by configuring the underlying RPC channel.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;StreamingPullRequest, StreamingPullResponse&gt; StreamingPull(CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><em>options</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall&lt;TRequest, TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest">StreamingPullRequest</a>, <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse">StreamingPullResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_StreamingPull_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_StreamingPull_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">StreamingPull(Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>(EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+respond with UNIMPLEMENTED errors unless you have been invited to test
+this feature. Contact cloud-pubsub@google.com with any questions.</p>
+<p>Establishes a stream with the server, which sends messages down to the
+client. The client streams acknowledgements and ack deadline modifications
+back to the server. The server will close the stream and return the status
+on any error. The server may close the stream with status <code>OK</code> to reassign
+server-side resources, in which case, the client should re-establish the
+stream. <code>UNAVAILABLE</code> may also be returned in the case of a transient error
+(e.g., a server restart). These should also be retried by the client. Flow
+control can be achieved by configuring the underlying RPC channel.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;StreamingPullRequest, StreamingPullResponse&gt; StreamingPull(Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><em>headers</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><em>deadline</em></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall&lt;TRequest, TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest">StreamingPullRequest</a>, <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse">StreamingPullResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
             </article>
           </div>
           

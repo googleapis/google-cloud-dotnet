@@ -98,23 +98,40 @@ if (status == MaintenanceStatus.Migrate)
 {
     // Backup data
 }
+</code></pre><h1 id="getting-raw-metadata-values">Getting raw metadata values</h1>
+<pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
+
+MetadataResult result = client.GetMetadata(&quot;instance/attributes&quot;);
+JObject initialMetadata = JObject.Parse(result.Content);
+foreach (JProperty property in initialMetadata.Properties())
+{
+    Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
+}
 </code></pre><h1 id="waiting-for-changes">Waiting for changes</h1>
 <pre><code class="lang-cs">MetadataClient client = MetadataClient.Create();
 
-// Get the original ETag so we know when the metadata changes.
-string lastETag = client.WaitForChange(&quot;instance/attributes&quot;, timeout: TimeSpan.FromMilliseconds(1)).ETag;
+// Get the original metadata and its ETag so we know when the metadata changes.
+MetadataResult initialResult = client.GetMetadata(&quot;instance/attributes&quot;);
+Console.WriteLine(&quot;Initial Metadata:&quot;);
+JObject initialMetadata = JObject.Parse(initialResult.Content);
+foreach (JProperty property in initialMetadata.Properties())
+{
+    Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
+}
+string lastETag = initialResult.ETag;
 
-WaitForChangeResult result;
+MetadataResult changeResult;
 while (true)
 {
     // Wait in 30 second blocks until the value actually changes.
-    result = client.WaitForChange(&quot;instance/attributes&quot;, lastETag, TimeSpan.FromSeconds(30));
-    if (result.ETag != lastETag)
+    changeResult = client.WaitForChange(&quot;instance/attributes&quot;, lastETag, TimeSpan.FromSeconds(30));
+    if (changeResult.ETag != lastETag)
     {
-        JObject currentCustomMetadata = JObject.Parse(result.Content);
-        foreach (JProperty customMetadata in currentCustomMetadata.Properties())
+        Console.WriteLine(&quot;Changed Metadata:&quot;);
+        JObject currentMetadata = JObject.Parse(changeResult.Content);
+        foreach (JProperty property in currentMetadata.Properties())
         {
-            Console.WriteLine(customMetadata.Name + &quot; = &quot; + customMetadata.Value);
+            Console.WriteLine(property.Name + &quot; = &quot; + property.Value);
         }
         break;
     }

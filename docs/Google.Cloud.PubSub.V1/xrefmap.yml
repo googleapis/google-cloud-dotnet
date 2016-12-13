@@ -6748,6 +6748,95 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.ReceivedMessage.Message
   name: Message
   fullName: Google.Cloud.PubSub.V1.ReceivedMessage.Message
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest
+  name: StreamingPullRequest
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest
+  commentId: T:Google.Cloud.PubSub.V1.StreamingPullRequest
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest
+  nameWithType: StreamingPullRequest
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds
+  name: AckIds
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_AckIds
+  commentId: P:Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds
+  nameWithType: StreamingPullRequest.AckIds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds*
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_AckIds_
+  commentId: Overload:Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds
+  name: AckIds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.AckIds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds
+  name: ModifyDeadlineAckIds
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineAckIds
+  commentId: P:Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds
+  nameWithType: StreamingPullRequest.ModifyDeadlineAckIds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds*
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineAckIds_
+  commentId: Overload:Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds
+  name: ModifyDeadlineAckIds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineAckIds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds
+  name: ModifyDeadlineSeconds
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineSeconds
+  commentId: P:Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds
+  nameWithType: StreamingPullRequest.ModifyDeadlineSeconds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds*
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_ModifyDeadlineSeconds_
+  commentId: Overload:Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds
+  name: ModifyDeadlineSeconds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.ModifyDeadlineSeconds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds
+  name: StreamAckDeadlineSeconds
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_StreamAckDeadlineSeconds
+  commentId: P:Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds
+  nameWithType: StreamingPullRequest.StreamAckDeadlineSeconds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds*
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_StreamAckDeadlineSeconds_
+  commentId: Overload:Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds
+  name: StreamAckDeadlineSeconds
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.StreamAckDeadlineSeconds
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription
+  name: Subscription
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription
+  commentId: P:Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription
+  nameWithType: StreamingPullRequest.Subscription
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription*
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_Subscription_
+  commentId: Overload:Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription
+  name: Subscription
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.Subscription
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName
+  name: SubscriptionAsSubscriptionName
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_SubscriptionAsSubscriptionName
+  commentId: P:Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName
+  nameWithType: StreamingPullRequest.SubscriptionAsSubscriptionName
+- uid: Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName*
+  href: api/Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest_SubscriptionAsSubscriptionName_
+  commentId: Overload:Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName
+  name: SubscriptionAsSubscriptionName
+  fullName: Google.Cloud.PubSub.V1.StreamingPullRequest.SubscriptionAsSubscriptionName
+- uid: Google.Cloud.PubSub.V1.StreamingPullResponse
+  name: StreamingPullResponse
+  href: api/Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse
+  commentId: T:Google.Cloud.PubSub.V1.StreamingPullResponse
+  fullName: Google.Cloud.PubSub.V1.StreamingPullResponse
+  nameWithType: StreamingPullResponse
+- uid: Google.Cloud.PubSub.V1.StreamingPullResponse.ReceivedMessages
+  name: ReceivedMessages
+  href: api/Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse_ReceivedMessages
+  commentId: P:Google.Cloud.PubSub.V1.StreamingPullResponse.ReceivedMessages
+  fullName: Google.Cloud.PubSub.V1.StreamingPullResponse.ReceivedMessages
+  nameWithType: StreamingPullResponse.ReceivedMessages
+- uid: Google.Cloud.PubSub.V1.StreamingPullResponse.ReceivedMessages*
+  href: api/Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse_ReceivedMessages_
+  commentId: Overload:Google.Cloud.PubSub.V1.StreamingPullResponse.ReceivedMessages
+  name: ReceivedMessages
+  fullName: Google.Cloud.PubSub.V1.StreamingPullResponse.ReceivedMessages
 - uid: Google.Cloud.PubSub.V1.Subscriber
   name: Subscriber
   href: api/Google.Cloud.PubSub.V1.Subscriber.html#Google_Cloud_PubSub_V1_Subscriber
@@ -6859,6 +6948,22 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.Pull
   name: Pull
   fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.Pull(Google.Cloud.PubSub.V1.PullRequest, Grpc.Core.ServerCallContext)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull(Grpc.Core.IAsyncStreamReader{Google.Cloud.PubSub.V1.StreamingPullRequest},Grpc.Core.IServerStreamWriter{Google.Cloud.PubSub.V1.StreamingPullResponse},Grpc.Core.ServerCallContext)
+  name: StreamingPull(IAsyncStreamReader<StreamingPullRequest>, IServerStreamWriter<StreamingPullResponse>, ServerCallContext)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_StreamingPull_Grpc_Core_IAsyncStreamReader_Google_Cloud_PubSub_V1_StreamingPullRequest__Grpc_Core_IServerStreamWriter_Google_Cloud_PubSub_V1_StreamingPullResponse__Grpc_Core_ServerCallContext_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull(Grpc.Core.IAsyncStreamReader{Google.Cloud.PubSub.V1.StreamingPullRequest},Grpc.Core.IServerStreamWriter{Google.Cloud.PubSub.V1.StreamingPullResponse},Grpc.Core.ServerCallContext)
+  name.vb: StreamingPull(IAsyncStreamReader(Of StreamingPullRequest), IServerStreamWriter(Of StreamingPullResponse), ServerCallContext)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull(Grpc.Core.IAsyncStreamReader<Google.Cloud.PubSub.V1.StreamingPullRequest>, Grpc.Core.IServerStreamWriter<Google.Cloud.PubSub.V1.StreamingPullResponse>, Grpc.Core.ServerCallContext)
+  fullName.vb: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull(Grpc.Core.IAsyncStreamReader(Of Google.Cloud.PubSub.V1.StreamingPullRequest), Grpc.Core.IServerStreamWriter(Of Google.Cloud.PubSub.V1.StreamingPullResponse), Grpc.Core.ServerCallContext)
+  nameWithType: Subscriber.SubscriberBase.StreamingPull(IAsyncStreamReader<StreamingPullRequest>, IServerStreamWriter<StreamingPullResponse>, ServerCallContext)
+  nameWithType.vb: StreamingPull(IAsyncStreamReader(Of StreamingPullRequest), IServerStreamWriter(Of StreamingPullResponse), ServerCallContext)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull*
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_StreamingPull_
+  commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull
+  name: StreamingPull
+  name.vb: StreamingPull
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull(Grpc.Core.IAsyncStreamReader<Google.Cloud.PubSub.V1.StreamingPullRequest>, Grpc.Core.IServerStreamWriter<Google.Cloud.PubSub.V1.StreamingPullResponse>, Grpc.Core.ServerCallContext)
+  fullName.vb: Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.StreamingPull
 - uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient
   name: Subscriber.SubscriberClient
   href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient
@@ -7268,6 +7373,28 @@ references:
   name.vb: PullAsync
   fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.PullRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
   fullName.vb: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.PullAsync
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.CallOptions)
+  name: StreamingPull(CallOptions)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_StreamingPull_Grpc_Core_CallOptions_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.CallOptions)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.CallOptions)
+  nameWithType: Subscriber.SubscriberClient.StreamingPull(CallOptions)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name: StreamingPull(Metadata, Nullable<DateTime>, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_StreamingPull_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)
+  name.vb: StreamingPull(Metadata, Nullable(Of DateTime), CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.Metadata, System.Nullable(Of System.DateTime), System.Threading.CancellationToken)
+  nameWithType: Subscriber.SubscriberClient.StreamingPull(Metadata, Nullable<DateTime>, CancellationToken)
+  nameWithType.vb: StreamingPull(Metadata, Nullable(Of DateTime), CancellationToken)
+- uid: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull*
+  href: api/Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_StreamingPull_
+  commentId: Overload:Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull
+  name: StreamingPull
+  name.vb: StreamingPull
+  fullName: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull(Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.StreamingPull
 - uid: Google.Cloud.PubSub.V1.SubscriberClient
   name: SubscriberClient
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient

@@ -4102,6 +4102,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.CreateGroupRequest.Name
   name: Name
   fullName: Google.Cloud.Monitoring.V3.CreateGroupRequest.Name
+- uid: Google.Cloud.Monitoring.V3.CreateGroupRequest.ProjectName
+  name: ProjectName
+  href: api/Google.Cloud.Monitoring.V3.CreateGroupRequest.html#Google_Cloud_Monitoring_V3_CreateGroupRequest_ProjectName
+  commentId: P:Google.Cloud.Monitoring.V3.CreateGroupRequest.ProjectName
+  fullName: Google.Cloud.Monitoring.V3.CreateGroupRequest.ProjectName
+  nameWithType: CreateGroupRequest.ProjectName
+- uid: Google.Cloud.Monitoring.V3.CreateGroupRequest.ProjectName*
+  href: api/Google.Cloud.Monitoring.V3.CreateGroupRequest.html#Google_Cloud_Monitoring_V3_CreateGroupRequest_ProjectName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.CreateGroupRequest.ProjectName
+  name: ProjectName
+  fullName: Google.Cloud.Monitoring.V3.CreateGroupRequest.ProjectName
 - uid: Google.Cloud.Monitoring.V3.CreateGroupRequest.ValidateOnly
   name: ValidateOnly
   href: api/Google.Cloud.Monitoring.V3.CreateGroupRequest.html#Google_Cloud_Monitoring_V3_CreateGroupRequest_ValidateOnly
@@ -4130,6 +4141,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Name
   name: Name
   fullName: Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.Name
+- uid: Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.ProjectName
+  name: ProjectName
+  href: api/Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest_ProjectName
+  commentId: P:Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.ProjectName
+  fullName: Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.ProjectName
+  nameWithType: CreateMetricDescriptorRequest.ProjectName
+- uid: Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.ProjectName*
+  href: api/Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest_ProjectName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.ProjectName
+  name: ProjectName
+  fullName: Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.ProjectName
 - uid: Google.Cloud.Monitoring.V3.CreateTimeSeriesError
   name: CreateTimeSeriesError
   href: api/Google.Cloud.Monitoring.V3.CreateTimeSeriesError.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesError
@@ -4175,6 +4197,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Name
   name: Name
   fullName: Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.Name
+- uid: Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.ProjectName
+  name: ProjectName
+  href: api/Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest_ProjectName
+  commentId: P:Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.ProjectName
+  fullName: Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.ProjectName
+  nameWithType: CreateTimeSeriesRequest.ProjectName
+- uid: Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.ProjectName*
+  href: api/Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest_ProjectName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.ProjectName
+  name: ProjectName
+  fullName: Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.ProjectName
 - uid: Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.TimeSeries
   name: TimeSeries
   href: api/Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest_TimeSeries
@@ -4192,6 +4225,17 @@ references:
   commentId: T:Google.Cloud.Monitoring.V3.DeleteGroupRequest
   fullName: Google.Cloud.Monitoring.V3.DeleteGroupRequest
   nameWithType: DeleteGroupRequest
+- uid: Google.Cloud.Monitoring.V3.DeleteGroupRequest.GroupName
+  name: GroupName
+  href: api/Google.Cloud.Monitoring.V3.DeleteGroupRequest.html#Google_Cloud_Monitoring_V3_DeleteGroupRequest_GroupName
+  commentId: P:Google.Cloud.Monitoring.V3.DeleteGroupRequest.GroupName
+  fullName: Google.Cloud.Monitoring.V3.DeleteGroupRequest.GroupName
+  nameWithType: DeleteGroupRequest.GroupName
+- uid: Google.Cloud.Monitoring.V3.DeleteGroupRequest.GroupName*
+  href: api/Google.Cloud.Monitoring.V3.DeleteGroupRequest.html#Google_Cloud_Monitoring_V3_DeleteGroupRequest_GroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.DeleteGroupRequest.GroupName
+  name: GroupName
+  fullName: Google.Cloud.Monitoring.V3.DeleteGroupRequest.GroupName
 - uid: Google.Cloud.Monitoring.V3.DeleteGroupRequest.Name
   name: Name
   href: api/Google.Cloud.Monitoring.V3.DeleteGroupRequest.html#Google_Cloud_Monitoring_V3_DeleteGroupRequest_Name
@@ -4209,6 +4253,17 @@ references:
   commentId: T:Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest
   fullName: Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest
   nameWithType: DeleteMetricDescriptorRequest
+- uid: Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.MetricDescriptorName
+  name: MetricDescriptorName
+  href: api/Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest_MetricDescriptorName
+  commentId: P:Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.MetricDescriptorName
+  fullName: Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.MetricDescriptorName
+  nameWithType: DeleteMetricDescriptorRequest.MetricDescriptorName
+- uid: Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.MetricDescriptorName*
+  href: api/Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest_MetricDescriptorName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.MetricDescriptorName
+  name: MetricDescriptorName
+  fullName: Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.MetricDescriptorName
 - uid: Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.Name
   name: Name
   href: api/Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest_Name
@@ -4226,6 +4281,17 @@ references:
   commentId: T:Google.Cloud.Monitoring.V3.GetGroupRequest
   fullName: Google.Cloud.Monitoring.V3.GetGroupRequest
   nameWithType: GetGroupRequest
+- uid: Google.Cloud.Monitoring.V3.GetGroupRequest.GroupName
+  name: GroupName
+  href: api/Google.Cloud.Monitoring.V3.GetGroupRequest.html#Google_Cloud_Monitoring_V3_GetGroupRequest_GroupName
+  commentId: P:Google.Cloud.Monitoring.V3.GetGroupRequest.GroupName
+  fullName: Google.Cloud.Monitoring.V3.GetGroupRequest.GroupName
+  nameWithType: GetGroupRequest.GroupName
+- uid: Google.Cloud.Monitoring.V3.GetGroupRequest.GroupName*
+  href: api/Google.Cloud.Monitoring.V3.GetGroupRequest.html#Google_Cloud_Monitoring_V3_GetGroupRequest_GroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.GetGroupRequest.GroupName
+  name: GroupName
+  fullName: Google.Cloud.Monitoring.V3.GetGroupRequest.GroupName
 - uid: Google.Cloud.Monitoring.V3.GetGroupRequest.Name
   name: Name
   href: api/Google.Cloud.Monitoring.V3.GetGroupRequest.html#Google_Cloud_Monitoring_V3_GetGroupRequest_Name
@@ -4243,6 +4309,17 @@ references:
   commentId: T:Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest
   fullName: Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest
   nameWithType: GetMetricDescriptorRequest
+- uid: Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.MetricDescriptorName
+  name: MetricDescriptorName
+  href: api/Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest_MetricDescriptorName
+  commentId: P:Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.MetricDescriptorName
+  fullName: Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.MetricDescriptorName
+  nameWithType: GetMetricDescriptorRequest.MetricDescriptorName
+- uid: Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.MetricDescriptorName*
+  href: api/Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest_MetricDescriptorName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.MetricDescriptorName
+  name: MetricDescriptorName
+  fullName: Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.MetricDescriptorName
 - uid: Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.Name
   name: Name
   href: api/Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest_Name
@@ -4260,6 +4337,17 @@ references:
   commentId: T:Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest
   fullName: Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest
   nameWithType: GetMonitoredResourceDescriptorRequest
+- uid: Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.MonitoredResourceDescriptorName
+  name: MonitoredResourceDescriptorName
+  href: api/Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest_MonitoredResourceDescriptorName
+  commentId: P:Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.MonitoredResourceDescriptorName
+  fullName: Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.MonitoredResourceDescriptorName
+  nameWithType: GetMonitoredResourceDescriptorRequest.MonitoredResourceDescriptorName
+- uid: Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.MonitoredResourceDescriptorName*
+  href: api/Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest_MonitoredResourceDescriptorName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.MonitoredResourceDescriptorName
+  name: MonitoredResourceDescriptorName
+  fullName: Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.MonitoredResourceDescriptorName
 - uid: Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.Name
   name: Name
   href: api/Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest_Name
@@ -4892,40 +4980,40 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.CreateGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.CreateGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.CreateGroup(CreateGroupRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(System.String,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateGroup(String, Group, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_System_String_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(System.String,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(System.String, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.CreateGroup(String, Group, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateGroup(ProjectName, Group, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.ProjectName, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.CreateGroup(ProjectName, Group, CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroup_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup
   name: CreateGroup
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(System.String, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroup(Google.Cloud.Monitoring.V3.ProjectName, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.CreateGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   name: CreateGroupAsync(CreateGroupRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_CreateGroupRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.CreateGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.CreateGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.CreateGroupAsync(CreateGroupRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(System.String,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateGroupAsync(String, Group, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_System_String_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(System.String,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(System.String, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.CreateGroupAsync(String, Group, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(System.String,Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)
-  name: CreateGroupAsync(String, Group, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_System_String_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(System.String,Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(System.String, Google.Cloud.Monitoring.V3.Group, System.Threading.CancellationToken)
-  nameWithType: GroupServiceClient.CreateGroupAsync(String, Group, CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateGroupAsync(ProjectName, Group, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.CreateGroupAsync(ProjectName, Group, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)
+  name: CreateGroupAsync(ProjectName, Group, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Cloud_Monitoring_V3_Group_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Cloud.Monitoring.V3.Group,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName, Google.Cloud.Monitoring.V3.Group, System.Threading.CancellationToken)
+  nameWithType: GroupServiceClient.CreateGroupAsync(ProjectName, Group, CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_CreateGroupAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync
   name: CreateGroupAsync
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(System.String, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.CreateGroupAsync(Google.Cloud.Monitoring.V3.ProjectName, Google.Cloud.Monitoring.V3.Group, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DefaultEndpoint
   name: DefaultEndpoint
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DefaultEndpoint
@@ -4954,80 +5042,80 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.DeleteGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.DeleteGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.DeleteGroup(DeleteGroupRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteGroup(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.DeleteGroup(String, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteGroup(GroupName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.DeleteGroup(GroupName, CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroup_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup
   name: DeleteGroup
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroup(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.DeleteGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DeleteGroupAsync(DeleteGroupRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_DeleteGroupRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.DeleteGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.DeleteGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.DeleteGroupAsync(DeleteGroupRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteGroupAsync(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.DeleteGroupAsync(String, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(System.String,System.Threading.CancellationToken)
-  name: DeleteGroupAsync(String, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: GroupServiceClient.DeleteGroupAsync(String, CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteGroupAsync(GroupName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.DeleteGroupAsync(GroupName, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)
+  name: DeleteGroupAsync(GroupName, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName, System.Threading.CancellationToken)
+  nameWithType: GroupServiceClient.DeleteGroupAsync(GroupName, CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_DeleteGroupAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync
   name: DeleteGroupAsync
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.DeleteGroupAsync(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetGroup(GetGroupRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_Google_Cloud_Monitoring_V3_GetGroupRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GetGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.GetGroup(GetGroupRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetGroup(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.GetGroup(String, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetGroup(GroupName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.GetGroup(GroupName, CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroup_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup
   name: GetGroup
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroup(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetGroupAsync(GetGroupRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GetGroupRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GetGroupRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GetGroupRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.GetGroupAsync(GetGroupRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetGroupAsync(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.GetGroupAsync(String, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(System.String,System.Threading.CancellationToken)
-  name: GetGroupAsync(String, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: GroupServiceClient.GetGroupAsync(String, CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetGroupAsync(GroupName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GroupName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.GetGroupAsync(GroupName, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)
+  name: GetGroupAsync(GroupName, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_Google_Cloud_Monitoring_V3_GroupName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName, System.Threading.CancellationToken)
+  nameWithType: GroupServiceClient.GetGroupAsync(GroupName, CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GetGroupAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync
   name: GetGroupAsync
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GetGroupAsync(Google.Cloud.Monitoring.V3.GroupName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.GrpcClient
   name: GrpcClient
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_GrpcClient
@@ -5039,49 +5127,49 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.GrpcClient
   name: GrpcClient
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.GrpcClient
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.GroupName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListGroupMembers(GroupName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_Google_Cloud_Monitoring_V3_GroupName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.GroupName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListGroupMembers(GroupName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.GroupName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.GroupName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.ListGroupMembers(GroupName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListGroupMembers(GroupName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListGroupMembers(ListGroupMembersRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.ListGroupMembersRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.ListGroupMembers(ListGroupMembersRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListGroupMembers(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListGroupMembers(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.ListGroupMembers(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListGroupMembers(String, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembers_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers
   name: ListGroupMembers
   name.vb: ListGroupMembers
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers(Google.Cloud.Monitoring.V3.GroupName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembers
+- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.GroupName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListGroupMembersAsync(GroupName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_GroupName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.GroupName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListGroupMembersAsync(GroupName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.GroupName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.GroupName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: GroupServiceClient.ListGroupMembersAsync(GroupName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListGroupMembersAsync(GroupName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListGroupMembersAsync(ListGroupMembersRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.ListGroupMembersRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.ListGroupMembersRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: GroupServiceClient.ListGroupMembersAsync(ListGroupMembersRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListGroupMembersAsync(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListGroupMembersAsync(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: GroupServiceClient.ListGroupMembersAsync(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListGroupMembersAsync(String, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync*
   href: api/Google.Cloud.Monitoring.V3.GroupServiceClient.html#Google_Cloud_Monitoring_V3_GroupServiceClient_ListGroupMembersAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync
   name: ListGroupMembersAsync
   name.vb: ListGroupMembersAsync
-  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync(Google.Cloud.Monitoring.V3.GroupName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroupMembersAsync
 - uid: Google.Cloud.Monitoring.V3.GroupServiceClient.ListGroups(Google.Cloud.Monitoring.V3.ListGroupsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListGroups(ListGroupsRequest, CallSettings)
@@ -5482,6 +5570,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Filter
   name: Filter
   fullName: Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Filter
+- uid: Google.Cloud.Monitoring.V3.ListGroupMembersRequest.GroupName
+  name: GroupName
+  href: api/Google.Cloud.Monitoring.V3.ListGroupMembersRequest.html#Google_Cloud_Monitoring_V3_ListGroupMembersRequest_GroupName
+  commentId: P:Google.Cloud.Monitoring.V3.ListGroupMembersRequest.GroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupMembersRequest.GroupName
+  nameWithType: ListGroupMembersRequest.GroupName
+- uid: Google.Cloud.Monitoring.V3.ListGroupMembersRequest.GroupName*
+  href: api/Google.Cloud.Monitoring.V3.ListGroupMembersRequest.html#Google_Cloud_Monitoring_V3_ListGroupMembersRequest_GroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupMembersRequest.GroupName
+  name: GroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupMembersRequest.GroupName
 - uid: Google.Cloud.Monitoring.V3.ListGroupMembersRequest.Interval
   name: Interval
   href: api/Google.Cloud.Monitoring.V3.ListGroupMembersRequest.html#Google_Cloud_Monitoring_V3_ListGroupMembersRequest_Interval
@@ -5607,6 +5706,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroup
   name: AncestorsOfGroup
   fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroup
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroupAsGroupName
+  name: AncestorsOfGroupAsGroupName
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_AncestorsOfGroupAsGroupName
+  commentId: P:Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroupAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroupAsGroupName
+  nameWithType: ListGroupsRequest.AncestorsOfGroupAsGroupName
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroupAsGroupName*
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_AncestorsOfGroupAsGroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroupAsGroupName
+  name: AncestorsOfGroupAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.AncestorsOfGroupAsGroupName
 - uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroup
   name: ChildrenOfGroup
   href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_ChildrenOfGroup
@@ -5618,6 +5728,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroup
   name: ChildrenOfGroup
   fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroup
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroupAsGroupName
+  name: ChildrenOfGroupAsGroupName
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_ChildrenOfGroupAsGroupName
+  commentId: P:Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroupAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroupAsGroupName
+  nameWithType: ListGroupsRequest.ChildrenOfGroupAsGroupName
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroupAsGroupName*
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_ChildrenOfGroupAsGroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroupAsGroupName
+  name: ChildrenOfGroupAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.ChildrenOfGroupAsGroupName
 - uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroup
   name: DescendantsOfGroup
   href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_DescendantsOfGroup
@@ -5629,6 +5750,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroup
   name: DescendantsOfGroup
   fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroup
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroupAsGroupName
+  name: DescendantsOfGroupAsGroupName
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_DescendantsOfGroupAsGroupName
+  commentId: P:Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroupAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroupAsGroupName
+  nameWithType: ListGroupsRequest.DescendantsOfGroupAsGroupName
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroupAsGroupName*
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_DescendantsOfGroupAsGroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroupAsGroupName
+  name: DescendantsOfGroupAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.DescendantsOfGroupAsGroupName
 - uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.FilterCase
   name: FilterCase
   href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_FilterCase
@@ -5703,6 +5835,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.PageToken
   name: PageToken
   fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.PageToken
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.ProjectName
+  name: ProjectName
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_ProjectName
+  commentId: P:Google.Cloud.Monitoring.V3.ListGroupsRequest.ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.ProjectName
+  nameWithType: ListGroupsRequest.ProjectName
+- uid: Google.Cloud.Monitoring.V3.ListGroupsRequest.ProjectName*
+  href: api/Google.Cloud.Monitoring.V3.ListGroupsRequest.html#Google_Cloud_Monitoring_V3_ListGroupsRequest_ProjectName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListGroupsRequest.ProjectName
+  name: ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListGroupsRequest.ProjectName
 - uid: Google.Cloud.Monitoring.V3.ListGroupsResponse
   name: ListGroupsResponse
   href: api/Google.Cloud.Monitoring.V3.ListGroupsResponse.html#Google_Cloud_Monitoring_V3_ListGroupsResponse
@@ -5806,6 +5949,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.PageToken
   name: PageToken
   fullName: Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.PageToken
+- uid: Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.ProjectName
+  name: ProjectName
+  href: api/Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest_ProjectName
+  commentId: P:Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.ProjectName
+  nameWithType: ListMetricDescriptorsRequest.ProjectName
+- uid: Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.ProjectName*
+  href: api/Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest_ProjectName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.ProjectName
+  name: ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.ProjectName
 - uid: Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse
   name: ListMetricDescriptorsResponse
   href: api/Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsResponse
@@ -5909,6 +6063,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.PageToken
   name: PageToken
   fullName: Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.PageToken
+- uid: Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.ProjectName
+  name: ProjectName
+  href: api/Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest_ProjectName
+  commentId: P:Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.ProjectName
+  nameWithType: ListMonitoredResourceDescriptorsRequest.ProjectName
+- uid: Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.ProjectName*
+  href: api/Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest_ProjectName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.ProjectName
+  name: ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.ProjectName
 - uid: Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse
   name: ListMonitoredResourceDescriptorsResponse
   href: api/Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsResponse
@@ -6045,6 +6210,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.PageToken
   name: PageToken
   fullName: Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.PageToken
+- uid: Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.ProjectName
+  name: ProjectName
+  href: api/Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_ProjectName
+  commentId: P:Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.ProjectName
+  nameWithType: ListTimeSeriesRequest.ProjectName
+- uid: Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.ProjectName*
+  href: api/Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_ProjectName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.ProjectName
+  name: ProjectName
+  fullName: Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.ProjectName
 - uid: Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.View
   name: View
   href: api/Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_View
@@ -6779,61 +6955,61 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.CreateMetricDescriptor(CreateMetricDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateMetricDescriptor(String, MetricDescriptor, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptor_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(System.String, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.CreateMetricDescriptor(String, MetricDescriptor, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateMetricDescriptor(ProjectName, MetricDescriptor, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptor_Google_Cloud_Monitoring_V3_ProjectName_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.ProjectName, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.CreateMetricDescriptor(ProjectName, MetricDescriptor, CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptor_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor
   name: CreateMetricDescriptor
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(System.String, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptor(Google.Cloud.Monitoring.V3.ProjectName, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   name: CreateMetricDescriptorAsync(CreateMetricDescriptorRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.CreateMetricDescriptorAsync(CreateMetricDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateMetricDescriptorAsync(String, MetricDescriptor, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_System_String_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.CreateMetricDescriptorAsync(String, MetricDescriptor, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String,Google.Api.MetricDescriptor,System.Threading.CancellationToken)
-  name: CreateMetricDescriptorAsync(String, MetricDescriptor, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_System_String_Google_Api_MetricDescriptor_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String,Google.Api.MetricDescriptor,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String, Google.Api.MetricDescriptor, System.Threading.CancellationToken)
-  nameWithType: MetricServiceClient.CreateMetricDescriptorAsync(String, MetricDescriptor, CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Api_MetricDescriptor_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,System.Threading.CancellationToken)
+  name: CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_Google_Cloud_Monitoring_V3_ProjectName_Google_Api_MetricDescriptor_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName,Google.Api.MetricDescriptor,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName, Google.Api.MetricDescriptor, System.Threading.CancellationToken)
+  nameWithType: MetricServiceClient.CreateMetricDescriptorAsync(ProjectName, MetricDescriptor, CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateMetricDescriptorAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync
   name: CreateMetricDescriptorAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(System.String, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateMetricDescriptorAsync(Google.Cloud.Monitoring.V3.ProjectName, Google.Api.MetricDescriptor, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   name: CreateTimeSeries(CreateTimeSeriesRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeries_Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.CreateTimeSeries(CreateTimeSeriesRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
-  name: CreateTimeSeries(String, IEnumerable<TimeSeries>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeries_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: CreateTimeSeries(String, IEnumerable(Of TimeSeries), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.Monitoring.V3.TimeSeries), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.CreateTimeSeries(String, IEnumerable<TimeSeries>, CallSettings)
-  nameWithType.vb: CreateTimeSeries(String, IEnumerable(Of TimeSeries), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
+  name: CreateTimeSeries(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeries_Google_Cloud_Monitoring_V3_ProjectName_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: CreateTimeSeries(ProjectName, IEnumerable(Of TimeSeries), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable(Of Google.Cloud.Monitoring.V3.TimeSeries), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.CreateTimeSeries(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+  nameWithType.vb: CreateTimeSeries(ProjectName, IEnumerable(Of TimeSeries), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeries_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries
   name: CreateTimeSeries
   name.vb: CreateTimeSeries
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeries
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   name: CreateTimeSeriesAsync(CreateTimeSeriesRequest, CallSettings)
@@ -6841,30 +7017,30 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.CreateTimeSeriesAsync(CreateTimeSeriesRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
-  name: CreateTimeSeriesAsync(String, IEnumerable<TimeSeries>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: CreateTimeSeriesAsync(String, IEnumerable(Of TimeSeries), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.Monitoring.V3.TimeSeries), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.CreateTimeSeriesAsync(String, IEnumerable<TimeSeries>, CallSettings)
-  nameWithType.vb: CreateTimeSeriesAsync(String, IEnumerable(Of TimeSeries), CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},System.Threading.CancellationToken)
-  name: CreateTimeSeriesAsync(String, IEnumerable<TimeSeries>, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},System.Threading.CancellationToken)
-  name.vb: CreateTimeSeriesAsync(String, IEnumerable(Of TimeSeries), CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, System.Threading.CancellationToken)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.Monitoring.V3.TimeSeries), System.Threading.CancellationToken)
-  nameWithType: MetricServiceClient.CreateTimeSeriesAsync(String, IEnumerable<TimeSeries>, CancellationToken)
-  nameWithType.vb: CreateTimeSeriesAsync(String, IEnumerable(Of TimeSeries), CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
+  name: CreateTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_Google_Cloud_Monitoring_V3_ProjectName_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: CreateTimeSeriesAsync(ProjectName, IEnumerable(Of TimeSeries), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable(Of Google.Cloud.Monitoring.V3.TimeSeries), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.CreateTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CallSettings)
+  nameWithType.vb: CreateTimeSeriesAsync(ProjectName, IEnumerable(Of TimeSeries), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},System.Threading.CancellationToken)
+  name: CreateTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_Google_Cloud_Monitoring_V3_ProjectName_System_Collections_Generic_IEnumerable_Google_Cloud_Monitoring_V3_TimeSeries__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.Collections.Generic.IEnumerable{Google.Cloud.Monitoring.V3.TimeSeries},System.Threading.CancellationToken)
+  name.vb: CreateTimeSeriesAsync(ProjectName, IEnumerable(Of TimeSeries), CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable(Of Google.Cloud.Monitoring.V3.TimeSeries), System.Threading.CancellationToken)
+  nameWithType: MetricServiceClient.CreateTimeSeriesAsync(ProjectName, IEnumerable<TimeSeries>, CancellationToken)
+  nameWithType.vb: CreateTimeSeriesAsync(ProjectName, IEnumerable(Of TimeSeries), CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_CreateTimeSeriesAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync
   name: CreateTimeSeriesAsync
   name.vb: CreateTimeSeriesAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(System.String, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.Collections.Generic.IEnumerable<Google.Cloud.Monitoring.V3.TimeSeries>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.CreateTimeSeriesAsync
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DefaultEndpoint
   name: DefaultEndpoint
@@ -6894,120 +7070,120 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.DeleteMetricDescriptor(DeleteMetricDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteMetricDescriptor(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptor_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.DeleteMetricDescriptor(String, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteMetricDescriptor(MetricDescriptorName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptor_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.DeleteMetricDescriptor(MetricDescriptorName, CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptor_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor
   name: DeleteMetricDescriptor
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   name: DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.DeleteMetricDescriptorAsync(DeleteMetricDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteMetricDescriptorAsync(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.DeleteMetricDescriptorAsync(String, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String,System.Threading.CancellationToken)
-  name: DeleteMetricDescriptorAsync(String, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: MetricServiceClient.DeleteMetricDescriptorAsync(String, CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteMetricDescriptorAsync(MetricDescriptorName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.DeleteMetricDescriptorAsync(MetricDescriptorName, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,System.Threading.CancellationToken)
+  name: DeleteMetricDescriptorAsync(MetricDescriptorName, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName, System.Threading.CancellationToken)
+  nameWithType: MetricServiceClient.DeleteMetricDescriptorAsync(MetricDescriptorName, CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_DeleteMetricDescriptorAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync
   name: DeleteMetricDescriptorAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.DeleteMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetMetricDescriptor(GetMetricDescriptorRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.GetMetricDescriptor(GetMetricDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetMetricDescriptor(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.GetMetricDescriptor(String, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetMetricDescriptor(MetricDescriptorName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.GetMetricDescriptor(MetricDescriptorName, CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptor_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor
   name: GetMetricDescriptor
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptor(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetMetricDescriptorAsync(GetMetricDescriptorRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.GetMetricDescriptorAsync(GetMetricDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetMetricDescriptorAsync(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.GetMetricDescriptorAsync(String, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String,System.Threading.CancellationToken)
-  name: GetMetricDescriptorAsync(String, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: MetricServiceClient.GetMetricDescriptorAsync(String, CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetMetricDescriptorAsync(MetricDescriptorName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.GetMetricDescriptorAsync(MetricDescriptorName, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,System.Threading.CancellationToken)
+  name: GetMetricDescriptorAsync(MetricDescriptorName, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_Google_Cloud_Monitoring_V3_MetricDescriptorName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName, System.Threading.CancellationToken)
+  nameWithType: MetricServiceClient.GetMetricDescriptorAsync(MetricDescriptorName, CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMetricDescriptorAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync
   name: GetMetricDescriptorAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMetricDescriptorAsync(Google.Cloud.Monitoring.V3.MetricDescriptorName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.GetMonitoredResourceDescriptor(GetMonitoredResourceDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetMonitoredResourceDescriptor(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.GetMonitoredResourceDescriptor(String, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetMonitoredResourceDescriptor(MonitoredResourceDescriptorName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.GetMonitoredResourceDescriptor(MonitoredResourceDescriptorName, CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptor_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor
   name: GetMonitoredResourceDescriptor
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptor(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   name: GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest, CallSettings)
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest_Google_Api_Gax_Grpc_CallSettings_
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.GetMonitoredResourceDescriptorAsync(GetMonitoredResourceDescriptorRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: GetMonitoredResourceDescriptorAsync(String, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.GetMonitoredResourceDescriptorAsync(String, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String,System.Threading.CancellationToken)
-  name: GetMonitoredResourceDescriptorAsync(String, CancellationToken)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: MetricServiceClient.GetMonitoredResourceDescriptorAsync(String, CancellationToken)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  name: GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,System.Threading.CancellationToken)
+  name: GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CancellationToken)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_Google_Cloud_Monitoring_V3_MonitoredResourceDescriptorName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName, System.Threading.CancellationToken)
+  nameWithType: MetricServiceClient.GetMonitoredResourceDescriptorAsync(MonitoredResourceDescriptorName, CancellationToken)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GetMonitoredResourceDescriptorAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync
   name: GetMonitoredResourceDescriptorAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.GetMonitoredResourceDescriptorAsync(Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.GrpcClient
   name: GrpcClient
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_GrpcClient
@@ -7025,21 +7201,21 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.ListMetricDescriptors(ListMetricDescriptorsRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListMetricDescriptors(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptors_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListMetricDescriptors(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.ListMetricDescriptors(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListMetricDescriptors(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListMetricDescriptors(ProjectName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptors_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListMetricDescriptors(ProjectName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.ListMetricDescriptors(ProjectName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListMetricDescriptors(ProjectName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptors_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors
   name: ListMetricDescriptors
   name.vb: ListMetricDescriptors
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptors
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListMetricDescriptorsAsync(ListMetricDescriptorsRequest, CallSettings)
@@ -7047,21 +7223,21 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.ListMetricDescriptorsAsync(ListMetricDescriptorsRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListMetricDescriptorsAsync(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptorsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListMetricDescriptorsAsync(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.ListMetricDescriptorsAsync(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListMetricDescriptorsAsync(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListMetricDescriptorsAsync(ProjectName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptorsAsync_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListMetricDescriptorsAsync(ProjectName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.ListMetricDescriptorsAsync(ProjectName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListMetricDescriptorsAsync(ProjectName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMetricDescriptorsAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync
   name: ListMetricDescriptorsAsync
   name.vb: ListMetricDescriptorsAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMetricDescriptorsAsync
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)
@@ -7069,21 +7245,21 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListMonitoredResourceDescriptors(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptors_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListMonitoredResourceDescriptors(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.ListMonitoredResourceDescriptors(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListMonitoredResourceDescriptors(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListMonitoredResourceDescriptors(ProjectName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptors_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListMonitoredResourceDescriptors(ProjectName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.ListMonitoredResourceDescriptors(ProjectName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListMonitoredResourceDescriptors(ProjectName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptors_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors
   name: ListMonitoredResourceDescriptors
   name.vb: ListMonitoredResourceDescriptors
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptors
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)
@@ -7091,21 +7267,21 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListMonitoredResourceDescriptorsAsync(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptorsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListMonitoredResourceDescriptorsAsync(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.ListMonitoredResourceDescriptorsAsync(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListMonitoredResourceDescriptorsAsync(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListMonitoredResourceDescriptorsAsync(ProjectName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Monitoring_V3_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListMonitoredResourceDescriptorsAsync(ProjectName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.ListMonitoredResourceDescriptorsAsync(ProjectName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListMonitoredResourceDescriptorsAsync(ProjectName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListMonitoredResourceDescriptorsAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync
   name: ListMonitoredResourceDescriptorsAsync
   name.vb: ListMonitoredResourceDescriptorsAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListMonitoredResourceDescriptorsAsync
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListTimeSeries(ListTimeSeriesRequest, CallSettings)
@@ -7113,21 +7289,21 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.ListTimeSeries(ListTimeSeriesRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(System.String,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListTimeSeries(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeries_System_String_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(System.String,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListTimeSeries(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(System.String, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(System.String, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.ListTimeSeries(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListTimeSeries(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ProjectName,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListTimeSeries(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeries_Google_Cloud_Monitoring_V3_ProjectName_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ProjectName,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListTimeSeries(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ProjectName, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ProjectName, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.ListTimeSeries(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListTimeSeries(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeries_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries
   name: ListTimeSeries
   name.vb: ListTimeSeries
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(System.String, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries(Google.Cloud.Monitoring.V3.ProjectName, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeries
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   name: ListTimeSeriesAsync(ListTimeSeriesRequest, CallSettings)
@@ -7135,21 +7311,21 @@ references:
   commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ListTimeSeriesRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: MetricServiceClient.ListTimeSeriesAsync(ListTimeSeriesRequest, CallSettings)
-- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(System.String,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListTimeSeriesAsync(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeriesAsync_System_String_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(System.String,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListTimeSeriesAsync(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(System.String, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(System.String, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: MetricServiceClient.ListTimeSeriesAsync(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: ListTimeSeriesAsync(String, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListTimeSeriesAsync(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeriesAsync_Google_Cloud_Monitoring_V3_ProjectName_System_String_Google_Cloud_Monitoring_V3_TimeInterval_Google_Cloud_Monitoring_V3_ListTimeSeriesRequest_Types_TimeSeriesView_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName,System.String,Google.Cloud.Monitoring.V3.TimeInterval,Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListTimeSeriesAsync(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: MetricServiceClient.ListTimeSeriesAsync(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: ListTimeSeriesAsync(ProjectName, String, TimeInterval, ListTimeSeriesRequest.Types.TimeSeriesView, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync*
   href: api/Google.Cloud.Monitoring.V3.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricServiceClient_ListTimeSeriesAsync_
   commentId: Overload:Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync
   name: ListTimeSeriesAsync
   name.vb: ListTimeSeriesAsync
-  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(System.String, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync(Google.Cloud.Monitoring.V3.ProjectName, System.String, Google.Cloud.Monitoring.V3.TimeInterval, Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
   fullName.vb: Google.Cloud.Monitoring.V3.MetricServiceClient.ListTimeSeriesAsync
 - uid: Google.Cloud.Monitoring.V3.MetricServiceClient.ShutdownDefaultChannelsAsync
   name: ShutdownDefaultChannelsAsync()

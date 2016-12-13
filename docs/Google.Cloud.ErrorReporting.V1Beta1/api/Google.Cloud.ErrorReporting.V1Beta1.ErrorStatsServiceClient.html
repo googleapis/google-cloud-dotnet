@@ -340,7 +340,7 @@ ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create
 // Initialize request argument(s)
 DeleteEventsRequest request = new DeleteEventsRequest
 {
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectNameAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(request);
@@ -390,20 +390,20 @@ DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEvents_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEvents_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteEvents(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEvents_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Api.Gax.Grpc.CallSettings)">DeleteEvents(ProjectName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes all error events of a given project.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
 // Initialize request argument(s)
-string formattedProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(formattedProjectName);
+DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(projectName);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual DeleteEventsResponse DeleteEvents(string projectName, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual DeleteEventsResponse DeleteEvents(ProjectName projectName, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -416,7 +416,7 @@ DeleteEventsResponse response = errorStatsServiceClient.DeleteEvents(formattedPr
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ProjectName.html#Google_Cloud_ErrorReporting_V1Beta1_ProjectName">ProjectName</a></td>
                     <td><em>projectName</em></td>
                     <td><p>[Required] The resource name of the Google Cloud Platform project. Written
 as <code>projects/</code> plus the
@@ -459,7 +459,7 @@ ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.
 // Initialize request argument(s)
 DeleteEventsRequest request = new DeleteEventsRequest
 {
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectNameAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(request);
@@ -509,20 +509,20 @@ DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(
                 </tbody>
               </table>
               <a id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteEventsAsync(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Api.Gax.Grpc.CallSettings)">DeleteEventsAsync(ProjectName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes all error events of a given project.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(formattedProjectName);
+DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(projectName);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;DeleteEventsResponse&gt; DeleteEventsAsync(string projectName, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;DeleteEventsResponse&gt; DeleteEventsAsync(ProjectName projectName, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -535,7 +535,7 @@ DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ProjectName.html#Google_Cloud_ErrorReporting_V1Beta1_ProjectName">ProjectName</a></td>
                     <td><em>projectName</em></td>
                     <td><p>[Required] The resource name of the Google Cloud Platform project. Written
 as <code>projects/</code> plus the
@@ -569,20 +569,20 @@ Example: <code>projects/my-project-123</code>.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(System.String,System.Threading.CancellationToken)">DeleteEventsAsync(String, CancellationToken)</h4>
+              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_DeleteEventsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_System_Threading_CancellationToken_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.DeleteEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.Threading.CancellationToken)">DeleteEventsAsync(ProjectName, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes all error events of a given project.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
-DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(formattedProjectName);
+DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(projectName);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;DeleteEventsResponse&gt; DeleteEventsAsync(string projectName, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;DeleteEventsResponse&gt; DeleteEventsAsync(ProjectName projectName, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -595,7 +595,7 @@ DeleteEventsResponse response = await errorStatsServiceClient.DeleteEventsAsync(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ProjectName.html#Google_Cloud_ErrorReporting_V1Beta1_ProjectName">ProjectName</a></td>
                     <td><em>projectName</em></td>
                     <td><p>[Required] The resource name of the Google Cloud Platform project. Written
 as <code>projects/</code> plus the
@@ -638,7 +638,7 @@ ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create
 // Initialize request argument(s)
 ListEventsRequest request = new ListEventsRequest
 {
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectNameAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     GroupId = &quot;&quot;,
 };
 // Make the request
@@ -720,18 +720,18 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEvents_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEvents_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListEvents(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEvents_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEvents(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListEvents(ProjectName, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the specified events.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create();
 // Initialize request argument(s)
-string formattedProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 string groupId = &quot;&quot;;
 // Make the request
 PagedEnumerable&lt;ListEventsResponse,ErrorEvent&gt; response =
-    errorStatsServiceClient.ListEvents(formattedProjectName, groupId);
+    errorStatsServiceClient.ListEvents(projectName, groupId);
 
 // Iterate over all response items, lazily performing RPCs as required
 foreach (ErrorEvent item in response)
@@ -765,7 +765,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListEventsResponse, ErrorEvent&gt; ListEvents(string projectName, string groupId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListEventsResponse, ErrorEvent&gt; ListEvents(ProjectName projectName, string groupId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -778,7 +778,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ProjectName.html#Google_Cloud_ErrorReporting_V1Beta1_ProjectName">ProjectName</a></td>
                     <td><em>projectName</em></td>
                     <td><p>[Required] The resource name of the Google Cloud Platform project. Written
 as <code>projects/</code> plus the
@@ -841,7 +841,7 @@ ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.
 // Initialize request argument(s)
 ListEventsRequest request = new ListEventsRequest
 {
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectNameAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     GroupId = &quot;&quot;,
 };
 // Make the request
@@ -923,18 +923,18 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEventsAsync_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEventsAsync_System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(System.String,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListEventsAsync(String, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListEventsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListEventsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListEventsAsync(ProjectName, String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the specified events.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 string groupId = &quot;&quot;;
 // Make the request
 PagedAsyncEnumerable&lt;ListEventsResponse,ErrorEvent&gt; response =
-    errorStatsServiceClient.ListEventsAsync(formattedProjectName, groupId);
+    errorStatsServiceClient.ListEventsAsync(projectName, groupId);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((ErrorEvent item) =&gt;
@@ -968,7 +968,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListEventsResponse, ErrorEvent&gt; ListEventsAsync(string projectName, string groupId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListEventsResponse, ErrorEvent&gt; ListEventsAsync(ProjectName projectName, string groupId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -981,7 +981,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ProjectName.html#Google_Cloud_ErrorReporting_V1Beta1_ProjectName">ProjectName</a></td>
                     <td><em>projectName</em></td>
                     <td><p>[Required] The resource name of the Google Cloud Platform project. Written
 as <code>projects/</code> plus the
@@ -1044,7 +1044,7 @@ ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.Create
 // Initialize request argument(s)
 ListGroupStatsRequest request = new ListGroupStatsRequest
 {
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectNameAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     TimeRange = new QueryTimeRange(),
 };
 // Make the request
@@ -1126,12 +1126,12 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStats_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStats_System_String_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(System.String,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupStats(String, QueryTimeRange, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStats_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStats(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupStats(ProjectName, QueryTimeRange, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the specified groups.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">ErrorStatsServiceClient client = ErrorStatsServiceClient.Create();
-string projectName = new ProjectName(projectId).ToString();
+ProjectName projectName = new ProjectName(projectId);
 PagedEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; groupStats = client.ListGroupStats(
     projectName,
     new QueryTimeRange { Period = Period._30Days });
@@ -1144,7 +1144,7 @@ foreach (ErrorGroupStats item in groupStats)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; ListGroupStats(string projectName, QueryTimeRange timeRange, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; ListGroupStats(ProjectName projectName, QueryTimeRange timeRange, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1157,7 +1157,7 @@ foreach (ErrorGroupStats item in groupStats)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ProjectName.html#Google_Cloud_ErrorReporting_V1Beta1_ProjectName">ProjectName</a></td>
                     <td><em>projectName</em></td>
                     <td><p>[Required] The resource name of the Google Cloud Platform project. Written
 as <pre><code>projects/</code></pre> plus the
@@ -1226,7 +1226,7 @@ ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.
 // Initialize request argument(s)
 ListGroupStatsRequest request = new ListGroupStatsRequest
 {
-    ProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectNameAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
     TimeRange = new QueryTimeRange(),
 };
 // Make the request
@@ -1308,18 +1308,18 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStatsAsync_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync*"></a>
-              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStatsAsync_System_String_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(System.String,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupStatsAsync(String, QueryTimeRange, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_ErrorReporting_V1Beta1_ErrorStatsServiceClient_ListGroupStatsAsync_Google_Cloud_ErrorReporting_V1Beta1_ProjectName_Google_Cloud_ErrorReporting_V1Beta1_QueryTimeRange_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.ListGroupStatsAsync(Google.Cloud.ErrorReporting.V1Beta1.ProjectName,Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListGroupStatsAsync(ProjectName, QueryTimeRange, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the specified groups.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 ErrorStatsServiceClient errorStatsServiceClient = await ErrorStatsServiceClient.CreateAsync();
 // Initialize request argument(s)
-string formattedProjectName = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName projectName = new ProjectName(&quot;[PROJECT]&quot;);
 QueryTimeRange timeRange = new QueryTimeRange();
 // Make the request
 PagedAsyncEnumerable&lt;ListGroupStatsResponse,ErrorGroupStats&gt; response =
-    errorStatsServiceClient.ListGroupStatsAsync(formattedProjectName, timeRange);
+    errorStatsServiceClient.ListGroupStatsAsync(projectName, timeRange);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((ErrorGroupStats item) =&gt;
@@ -1353,7 +1353,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; ListGroupStatsAsync(string projectName, QueryTimeRange timeRange, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListGroupStatsResponse, ErrorGroupStats&gt; ListGroupStatsAsync(ProjectName projectName, QueryTimeRange timeRange, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1366,7 +1366,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ProjectName.html#Google_Cloud_ErrorReporting_V1Beta1_ProjectName">ProjectName</a></td>
                     <td><em>projectName</em></td>
                     <td><p>[Required] The resource name of the Google Cloud Platform project. Written
 as <pre><code>projects/</code></pre> plus the

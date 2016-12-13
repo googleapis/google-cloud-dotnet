@@ -124,6 +124,12 @@
                   <a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogEntries(IEnumerable&lt;String&gt;, String, String, String, Nullable&lt;Int32&gt;, CallSettings)</a>
                 </div>
                 <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogsAsync(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ParentNameOneof_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogs(ParentNameOneof, String, Nullable&lt;Int32&gt;, CallSettings)</a>
+                </div>
+                <div>
                   <span class="xref">System.Object.ToString()</span>
                 </div>
                 <div>
@@ -297,8 +303,8 @@ The log reappears if it receives new entries.</p>
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_DeleteLogRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.DeleteLogAsync(DeleteLogRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntries_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntries(Google.Cloud.Logging.V2.ListLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogEntries(ListLogEntriesRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
-Logging.  For ways to export log entries, see
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -350,8 +356,8 @@ Logging.  For ways to export log entries, see
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntries_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogEntries(ListLogEntriesRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogEntriesAsync(Google.Cloud.Logging.V2.ListLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogEntriesAsync(ListLogEntriesRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from Cloud
-Logging.  For ways to export log entries, see
+              <div class="markdown level1 summary"><p>Lists log entries.  Use this method to retrieve log entries from
+Stackdriver Logging.  For ways to export log entries, see
 <a href="/logging/docs/export">Exporting Logs</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -401,9 +407,114 @@ Logging.  For ways to export log entries, see
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogEntriesAsync(ListLogEntriesRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogs(ListLogsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedEnumerable&lt;ListLogsResponse, string&gt; ListLogs(ListLogsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest">ListLogsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse">ListLogsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A pageable sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogs(ListLogsRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogsAsync(ListLogsRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+Only logs that have entries are listed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PagedAsyncEnumerable&lt;ListLogsResponse, string&gt; ListLogsAsync(ListLogsRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.ListLogsRequest.html#Google_Cloud_Logging_V2_ListLogsRequest">ListLogsRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Logging.V2.ListLogsResponse.html#Google_Cloud_Logging_V2_ListLogsResponse">ListLogsResponse</a>, <span class="xref">System.String</span>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <span class="xref">System.String</span> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogsAsync(ListLogsRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListMonitoredResourceDescriptors_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListMonitoredResourceDescriptors*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListMonitoredResourceDescriptors(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resource descriptors used by Stackdriver Logging.</p>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -454,7 +565,8 @@ Logging.  For ways to export log entries, see
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptors_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListMonitoredResourceDescriptors(ListMonitoredResourceDescriptorsRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListMonitoredResourceDescriptorsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListMonitoredResourceDescriptorsAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListMonitoredResourceDescriptorsAsync(Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest,Google.Api.Gax.Grpc.CallSettings)">ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the monitored resource descriptors used by Stackdriver Logging.</p>
+              <div class="markdown level1 summary"><p>Lists the descriptors for monitored resource types used by Stackdriver
+Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

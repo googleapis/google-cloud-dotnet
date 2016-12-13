@@ -227,7 +227,11 @@
               </h3>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateSink(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSink(CreateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a sink.</p>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -278,7 +282,11 @@
               <div><a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSink_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.CreateSink(CreateSinkRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.CreateSinkAsync(Google.Cloud.Logging.V2.CreateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">CreateSinkAsync(CreateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a sink.</p>
+              <div class="markdown level1 summary"><p>Creates a sink that exports specified log entries to a destination.  The
+export of newly-ingested log entries begins immediately, unless the current
+time is outside the sink&#39;s start and end times or the sink&#39;s
+<code>writer_identity</code> is not permitted to write to the destination.  A sink can
+export log entries only from the resource owning the sink.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -329,7 +337,8 @@
               <div><a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_CreateSinkAsync_Google_Cloud_Logging_V2_CreateSinkRequest_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.CreateSinkAsync(CreateSinkRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteSink(Google.Cloud.Logging.V2.DeleteSinkRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteSink(DeleteSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -364,7 +373,8 @@
               <div><a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_DeleteSink_Google_Cloud_Logging_V2_DeleteSinkRequest_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.DeleteSink(DeleteSinkRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_DeleteSinkAsync_Google_Cloud_Logging_V2_DeleteSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.DeleteSinkAsync(Google.Cloud.Logging.V2.DeleteSinkRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteSinkAsync(DeleteSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Deletes a sink.</p>
+              <div class="markdown level1 summary"><p>Deletes a sink. If the sink has a unique <code>writer_identity</code>, then that
+service account is also deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -619,7 +629,14 @@
               <div><a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_ListSinksAsync_Google_Cloud_Logging_V2_ListSinksRequest_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.ListSinksAsync(ListSinksRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateSink_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateSink*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateSink(Google.Cloud.Logging.V2.UpdateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSink(UpdateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -670,7 +687,14 @@
               <div><a class="xref" href="Google.Cloud.Logging.V2.ConfigServiceV2Client.html#Google_Cloud_Logging_V2_ConfigServiceV2Client_UpdateSink_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_">ConfigServiceV2Client.UpdateSink(UpdateSinkRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateSinkAsync_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateSinkAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_ConfigServiceV2ClientImpl_UpdateSinkAsync_Google_Cloud_Logging_V2_UpdateSinkRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.ConfigServiceV2ClientImpl.UpdateSinkAsync(Google.Cloud.Logging.V2.UpdateSinkRequest,Google.Api.Gax.Grpc.CallSettings)">UpdateSinkAsync(UpdateSinkRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Updates or creates a sink.</p>
+              <div class="markdown level1 summary"><p>Updates a sink. If the named sink doesn&#39;t exist, then this method is
+identical to
+<a href="/logging/docs/api/reference/rest/v2/projects.sinks/create">sinks.create</a>.
+If the named sink does exist, then this method replaces the following
+fields in the existing sink with values from the new sink: <code>destination</code>,
+<code>filter</code>, <code>output_version_format</code>, <code>start_time</code>, and <code>end_time</code>.
+The updated filter might also have a new <code>writer_identity</code>; see the
+<code>unique_writer_identity</code> field.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
