@@ -24,9 +24,6 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class TimedBufferingConsumer<T> : IFlushableConsumer<T>
     {
-        /// <summary>The default amount of time to wait before a flush is automatically made.</summary>
-        private static readonly TimeSpan DefaultWaitTime = TimeSpan.FromSeconds(5);
-
         /// <summary>A mutex to protect the buffer.</summary>
         private readonly object _mutex = new object();
 
@@ -56,10 +53,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// the preset wait time since the last flush has passed.
         /// </summary>
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
-        /// <param name="waitTime">Optional, the minimum amount of time between automatic flushes.</param>
-        public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan? waitTime = null)
+        /// <param name="waitTime">The minimum amount of time between automatic flushes.</param>
+        public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime)
         {
-            return new TimedBufferingConsumer<T>(consumer, waitTime ?? DefaultWaitTime);
+            return new TimedBufferingConsumer<T>(consumer, waitTime);
         }
 
         /// <inheritdoc />

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using System;
 using System.Threading.Tasks;
@@ -61,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     {
         private readonly string _projectId;
         private readonly TraceIdFactory _traceIdfactory;
-        private readonly BufferingTraceConsumer _bufferingConsumer;
+        private readonly IConsumer<TraceProto> _iConsumer;
         private readonly RateLimitingTraceOptionsFactory _rateFactory;
         private readonly TraceHeaderTraceOptionsFactory _headerFactory;
 
@@ -74,7 +75,8 @@ namespace Google.Cloud.Diagnostics.AspNet
             config = config ?? TraceConfiguration.Create();
 
             _traceIdfactory = TraceIdFactory.Create();
-            _bufferingConsumer = BufferingTraceConsumer.Create(new GrpcTraceConsumer(client));
+            _iConsumer = ConsumerFactory<TraceProto>.GetConsumer(
+                new GrpcTraceConsumer(client), TraceSizer.Instance, config.BufferOptions);
             _rateFactory = RateLimitingTraceOptionsFactory.Create(config);
             _headerFactory = TraceHeaderTraceOptionsFactory.Create();
         }
@@ -125,7 +127,7 @@ namespace Google.Cloud.Diagnostics.AspNet
                 ProjectId = _projectId,
                 TraceId = headerContext.TraceId ?? _traceIdfactory.NextId(),
             };
-            IManagedTracer tracer = SimpleManagedTracer.Create(_bufferingConsumer, trace, headerContext.SpanId);
+            IManagedTracer tracer = SimpleManagedTracer.Create(_iConsumer, trace, headerContext.SpanId);
             TracerManager.SetCurrentTracer(tracer);
 
             // Start the span and annotate it with information from the current request.

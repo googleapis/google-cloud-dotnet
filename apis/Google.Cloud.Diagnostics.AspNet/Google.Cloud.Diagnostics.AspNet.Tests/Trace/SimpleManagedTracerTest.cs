@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Xunit;
 using Moq;
@@ -20,6 +21,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
+using System.Linq;
 
 namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
@@ -28,7 +30,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         private const string TraceId = "trace-id";
         private const string ProjectId = "project-id";
 
-        private static readonly ITraceConsumer UnusedConsumer = (new Mock<ITraceConsumer>()).Object;
+        private static readonly IConsumer<TraceProto> UnusedConsumer = (new Mock<IConsumer<TraceProto>>()).Object;
         private static readonly Dictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
         private static readonly StackTrace EmptyStackTrace = new StackTrace();
 
@@ -56,14 +58,14 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void SingleSpan()
         {
-            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            Mock<IConsumer<TraceProto>> mockConsumer = new Mock<IConsumer<TraceProto>>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
             mockConsumer.Setup(c => c.Receive(
-                Match.Create<Traces>(
-                    t => t.Traces_.Count == 1 &&
-                        t.Traces_[0].Spans.Count == 1 &&
-                        IsValidSpan(t.Traces_[0].Spans[0], "span-name"))));
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => t.Count() == 1 &&
+                        t.ElementAt(0).Spans.Count == 1 &&
+                        IsValidSpan(t.ElementAt(0).Spans[0], "span-name"))));
 
             tracer.StartSpan("span-name");
             tracer.EndSpan();
@@ -73,14 +75,14 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void SingleSpan_ParentId()
         {
-            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            Mock<IConsumer<TraceProto>> mockConsumer = new Mock<IConsumer<TraceProto>>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace(), 123);
 
             mockConsumer.Setup(c => c.Receive(
-                Match.Create<Traces>(
-                    t => t.Traces_.Count == 1 &&
-                        t.Traces_[0].Spans.Count == 1 &&
-                        IsValidSpan(t.Traces_[0].Spans[0], "span-name", 123))));
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => t.Count() == 1 &&
+                        t.ElementAt(0).Spans.Count == 1 &&
+                        IsValidSpan(t.ElementAt(0).Spans[0], "span-name", 123))));
 
             tracer.StartSpan("span-name");
             tracer.EndSpan();
@@ -90,14 +92,14 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void SingleSpan_Options()
         {
-            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            Mock<IConsumer<TraceProto>> mockConsumer = new Mock<IConsumer<TraceProto>>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
             mockConsumer.Setup(c => c.Receive(
-                Match.Create<Traces>(
-                    t => t.Traces_.Count == 1 &&
-                        t.Traces_[0].Spans.Count == 1 &&
-                        IsValidSpan(t.Traces_[0].Spans[0], "span-name", 0, SpanKind.RpcClient))));
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => t.Count() == 1 &&
+                        t.ElementAt(0).Spans.Count == 1 &&
+                        IsValidSpan(t.ElementAt(0).Spans[0], "span-name", 0, SpanKind.RpcClient))));
 
             StartSpanOptions options = StartSpanOptions.Create(SpanKind.RpcClient);
             tracer.StartSpan("span-name", options);
@@ -108,18 +110,18 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void SingleSpan_Annotation()
         {
-            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            Mock<IConsumer<TraceProto>> mockConsumer = new Mock<IConsumer<TraceProto>>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
             Dictionary<string, string> annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
             mockConsumer.Setup(c => c.Receive(
-                Match.Create<Traces>(
-                    t => t.Traces_.Count == 1 &&
-                        t.Traces_[0].Spans.Count == 1 &&
-                        IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
-                        TraceUtils.IsValidAnnotation(t.Traces_[0].Spans[0], annotation))));
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => t.Count() == 1 &&
+                        t.ElementAt(0).Spans.Count == 1 &&
+                        IsValidSpan(t.ElementAt(0).Spans[0], "span-name") &&
+                        TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
 
             tracer.StartSpan("span-name");
             tracer.AnnotateSpan(annotation);
@@ -130,18 +132,18 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void SingleSpan_Stacktrace()
         {
-            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            Mock<IConsumer<TraceProto>> mockConsumer = new Mock<IConsumer<TraceProto>>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
             Dictionary<string, string> annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
             mockConsumer.Setup(c => c.Receive(
-                Match.Create<Traces>(
-                    t => t.Traces_.Count == 1 &&
-                        t.Traces_[0].Spans.Count == 1 &&
-                        IsValidSpan(t.Traces_[0].Spans[0], "span-name") &&
-                        !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]))));
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => t.Count() == 1 &&
+                        t.ElementAt(0).Spans.Count == 1 &&
+                        IsValidSpan(t.ElementAt(0).Spans[0], "span-name") &&
+                        !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[Labels.StackTrace]))));
 
             tracer.StartSpan("span-name");
             tracer.SetStackTrace(EmptyStackTrace);
@@ -152,23 +154,23 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void MultipleSpans()
         {
-            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            Mock<IConsumer<TraceProto>> mockConsumer = new Mock<IConsumer<TraceProto>>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
             Dictionary<string, string> annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
             mockConsumer.Setup(c => c.Receive(
-                Match.Create<Traces>(
-                    t => t.Traces_.Count == 1 &&
-                        t.Traces_[0].Spans.Count == 5 &&
-                        IsValidSpan(t.Traces_[0].Spans[0], "child-one", t.Traces_[0].Spans[4].SpanId) &&
-                        IsValidSpan(t.Traces_[0].Spans[1], "grandchild-one", t.Traces_[0].Spans[3].SpanId, SpanKind.RpcClient) &&
-                        IsValidSpan(t.Traces_[0].Spans[2], "grandchild-two", t.Traces_[0].Spans[3].SpanId) &&
-                        TraceUtils.IsValidAnnotation(t.Traces_[0].Spans[2], annotation) &&
-                        IsValidSpan(t.Traces_[0].Spans[3], "child-two", t.Traces_[0].Spans[4].SpanId) &&
-                        !string.IsNullOrWhiteSpace(t.Traces_[0].Spans[0].Labels[Labels.StackTrace]) &&
-                        IsValidSpan(t.Traces_[0].Spans[4], "root"))));
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => t.Count() == 1 &&
+                        t.ElementAt(0).Spans.Count == 5 &&
+                        IsValidSpan(t.ElementAt(0).Spans[0], "child-one", t.ElementAt(0).Spans[4].SpanId) &&
+                        IsValidSpan(t.ElementAt(0).Spans[1], "grandchild-one", t.ElementAt(0).Spans[3].SpanId, SpanKind.RpcClient) &&
+                        IsValidSpan(t.ElementAt(0).Spans[2], "grandchild-two", t.ElementAt(0).Spans[3].SpanId) &&
+                        TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[2], annotation) &&
+                        IsValidSpan(t.ElementAt(0).Spans[3], "child-two", t.ElementAt(0).Spans[4].SpanId) &&
+                        !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[Labels.StackTrace]) &&
+                        IsValidSpan(t.ElementAt(0).Spans[4], "root"))));
 
             tracer.StartSpan("root");
             tracer.StartSpan("child-one");
@@ -188,7 +190,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void IncompleteSpans()
         {
-            Mock<ITraceConsumer> mockConsumer = new Mock<ITraceConsumer>();
+            Mock<IConsumer<TraceProto>> mockConsumer = new Mock<IConsumer<TraceProto>>();
             IManagedTracer tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
             tracer.StartSpan("span-name-0");
@@ -196,7 +198,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             tracer.StartSpan("span-name-2");
             tracer.EndSpan();
             tracer.EndSpan();
-            mockConsumer.Verify(c => c.Receive(It.IsAny<Traces>()), Times.Never());
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<TraceProto>>()), Times.Never());
         }
 
         [Fact]
