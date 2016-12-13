@@ -21,7 +21,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.BigQuery.V2.Tests
+namespace Google.Cloud.ClientTesting
 {
     /// <summary>
     /// Test helper class effectively acting as an HTTP mock.
