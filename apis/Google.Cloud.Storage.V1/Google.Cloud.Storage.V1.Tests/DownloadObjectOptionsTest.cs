@@ -23,7 +23,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void ModifyDownloader_DefaultOptions()
         {
-            var downloader = new MediaDownloader(null);
+            var downloader = new TmpMediaDownloader(null);
             var options = new DownloadObjectOptions();
             options.ModifyDownloader(downloader);
             Assert.Equal(MediaDownloader.MaximumChunkSize, downloader.ChunkSize);
@@ -32,7 +32,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void ModifyDownloader_WithChunkSize()
         {
-            var downloader = new MediaDownloader(null);
+            var downloader = new TmpMediaDownloader(null);
             var options = new DownloadObjectOptions { ChunkSize = 2048 };
             options.ModifyDownloader(downloader);
             Assert.Equal(2048, downloader.ChunkSize);

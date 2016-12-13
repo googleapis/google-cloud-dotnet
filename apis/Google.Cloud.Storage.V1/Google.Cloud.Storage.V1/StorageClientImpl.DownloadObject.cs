@@ -103,7 +103,7 @@ namespace Google.Cloud.Storage.V1
         {
             // URI will definitely not be null; that's constructed internally.
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            var downloader = new MediaDownloader(Service);
+            var downloader = new HashValidatingDownloader(Service);
             options?.ModifyDownloader(downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)
@@ -126,7 +126,7 @@ namespace Google.Cloud.Storage.V1
             IProgress<IDownloadProgress> progress)
         {
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            var downloader = new MediaDownloader(Service);
+            var downloader = new HashValidatingDownloader(Service);
             options?.ModifyDownloader(downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)

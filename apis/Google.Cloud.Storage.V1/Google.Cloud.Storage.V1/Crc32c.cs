@@ -11,7 +11,6 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using System.Security.Cryptography;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -19,8 +18,11 @@ namespace Google.Cloud.Storage.V1
     /// Implementation of CRC32c for checking data integrity.
     /// At some point we may want to move this into GoogleApis.
     /// </summary>
-    internal sealed class Crc32c : HashAlgorithm
+    internal sealed class Crc32c
     {
+        internal const string HashHeaderName = "x-goog-hash";
+        internal const string HashName = "crc32c";
+
         private static readonly uint[] s_crcTable = {
           0x00000000, 0xf26b8303, 0xe13b70f7, 0x1350f3f4,
           0xc79a971f, 0x35f1141c, 0x26a1e7e8, 0xd4ca64eb,
@@ -90,35 +92,26 @@ namespace Google.Cloud.Storage.V1
 
         private uint crc = 0;
 
-        public Crc32c()
+        /// <summary>
+        /// Updates the hash with the given data.
+        /// </summary>
+        /// <param name="data">Array containing the data to hash</param>
+        /// <param name="offset">First offset of data to hash</param>
+        /// <param name="length">Number of bytes to hash</param>
+        internal void UpdateHash(byte[] data, int offset, int length)
         {
-#if !NETSTANDARD1_3
-            HashSizeValue = 32;
-#endif
-        }
-
-        /// <inheritdoc />
-        public override void Initialize()
-        {
-            crc = 0;
-        }
-
-        /// <inheritdoc />
-        public override int HashSize => 32;
-
-        /// <inheritdoc />
-        protected override void HashCore(byte[] array, int ibStart, int cbSize)
-        {
-            for (int i = ibStart; i < ibStart + cbSize; i++)
+            for (int i = 0; i < length; i++)
             {
                 crc ^= 0xffffffff;
                 // See Hacker's Delight 2nd Edition, Figure 14-7.
-                crc = ~((crc >> 8) ^ s_crcTable[(crc ^ array[i]) & 0xff]);
+                crc = ~((crc >> 8) ^ s_crcTable[(crc ^ data[i + offset]) & 0xff]);
             }
         }
 
-        /// <inheritdoc />
-        protected override byte[] HashFinal() =>
+        /// <summary>
+        /// Returns the current hash.
+        /// </summary>
+        internal byte[] GetHash() =>
             new byte[]
             {
                 (byte) ((crc >> 24) & 0xff),

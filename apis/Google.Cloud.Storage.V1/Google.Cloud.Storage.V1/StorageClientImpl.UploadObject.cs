@@ -65,7 +65,7 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateObject(destination, nameof(destination));
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
+            var mediaUpload = new HashProvidingUpload(Service, destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
             if (progress != null)
             {
@@ -89,7 +89,7 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateObject(destination, nameof(destination));
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
+            var mediaUpload = new HashProvidingUpload(Service, destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
             if (progress != null)
             {
