@@ -28,7 +28,7 @@ namespace Google.Cloud.Logging.V2 {
             "bmcvdHlwZS9odHRwX3JlcXVlc3QucHJvdG8aJmdvb2dsZS9sb2dnaW5nL3R5",
             "cGUvbG9nX3NldmVyaXR5LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnBy",
             "b3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvIp8ECghMb2dFbnRyeRIQCghsb2dfbmFt",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIvIECghMb2dFbnRyeRIQCghsb2dfbmFt",
             "ZRgMIAEoCRIvCghyZXNvdXJjZRgIIAEoCzIdLmdvb2dsZS5hcGkuTW9uaXRv",
             "cmVkUmVzb3VyY2USLQoNcHJvdG9fcGF5bG9hZBgCIAEoCzIULmdvb2dsZS5w",
             "cm90b2J1Zi5BbnlIABIWCgx0ZXh0X3BheWxvYWQYAyABKAlIABIvCgxqc29u",
@@ -39,17 +39,22 @@ namespace Google.Cloud.Logging.V2 {
             "CzIgLmdvb2dsZS5sb2dnaW5nLnR5cGUuSHR0cFJlcXVlc3QSNwoGbGFiZWxz",
             "GAsgAygLMicuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnkuTGFiZWxzRW50",
             "cnkSNwoJb3BlcmF0aW9uGA8gASgLMiQuZ29vZ2xlLmxvZ2dpbmcudjIuTG9n",
-            "RW50cnlPcGVyYXRpb24aLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4AUIJCgdwYXlsb2FkIk4KEUxvZ0VudHJ5T3BlcmF0",
-            "aW9uEgoKAmlkGAEgASgJEhAKCHByb2R1Y2VyGAIgASgJEg0KBWZpcnN0GAMg",
-            "ASgIEgwKBGxhc3QYBCABKAhCRQoVY29tLmdvb2dsZS5sb2dnaW5nLnYyQg1M",
-            "b2dFbnRyeVByb3RvUAH4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMmIG",
-            "cHJvdG8z"));
+            "RW50cnlPcGVyYXRpb24SDQoFdHJhY2UYFiABKAkSQgoPc291cmNlX2xvY2F0",
+            "aW9uGBcgASgLMikuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nRW50cnlTb3VyY2VM",
+            "b2NhdGlvbhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBQgkKB3BheWxvYWQiTgoRTG9nRW50cnlPcGVyYXRpb24SCgoC",
+            "aWQYASABKAkSEAoIcHJvZHVjZXIYAiABKAkSDQoFZmlyc3QYAyABKAgSDAoE",
+            "bGFzdBgEIAEoCCJGChZMb2dFbnRyeVNvdXJjZUxvY2F0aW9uEgwKBGZpbGUY",
+            "ASABKAkSDAoEbGluZRgCIAEoAxIQCghmdW5jdGlvbhgDIAEoCUJ/ChVjb20u",
+            "Z29vZ2xlLmxvZ2dpbmcudjJCDUxvZ0VudHJ5UHJvdG9QAVo4Z29vZ2xlLmdv",
+            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9sb2dnaW5nL3YyO2xvZ2dp",
+            "bmf4AQGqAhdHb29nbGUuQ2xvdWQuTG9nZ2luZy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.MonitoredResourceReflection.Descriptor, global::Google.Cloud.Logging.Type.HttpRequestReflection.Descriptor, global::Google.Cloud.Logging.Type.LogSeverityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntry), global::Google.Cloud.Logging.V2.LogEntry.Parser, new[]{ "LogName", "Resource", "ProtoPayload", "TextPayload", "JsonPayload", "Timestamp", "Severity", "InsertId", "HttpRequest", "Labels", "Operation", "Trace", "SourceLocation" }, new[]{ "Payload" }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntryOperation), global::Google.Cloud.Logging.V2.LogEntryOperation.Parser, new[]{ "Id", "Producer", "First", "Last" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Logging.V2.LogEntrySourceLocation), global::Google.Cloud.Logging.V2.LogEntrySourceLocation.Parser, new[]{ "File", "Line", "Function" }, null, null, null)
           }));
     }
     #endregion
@@ -91,6 +96,8 @@ namespace Google.Cloud.Logging.V2 {
       HttpRequest = other.httpRequest_ != null ? other.HttpRequest.Clone() : null;
       labels_ = other.labels_.Clone();
       Operation = other.operation_ != null ? other.Operation.Clone() : null;
+      trace_ = other.trace_;
+      SourceLocation = other.sourceLocation_ != null ? other.SourceLocation.Clone() : null;
       switch (other.PayloadCase) {
         case PayloadOneofCase.ProtoPayload:
           ProtoPayload = other.ProtoPayload.Clone();
@@ -293,6 +300,38 @@ namespace Google.Cloud.Logging.V2 {
       }
     }
 
+    /// <summary>Field number for the "trace" field.</summary>
+    public const int TraceFieldNumber = 22;
+    private string trace_ = "";
+    /// <summary>
+    ///  Optional. Resource name of the trace associated with the log entry, if any.
+    ///  If it contains a relative resource name, the name is assumed to be relative
+    ///  to `//tracing.googleapis.com`. Example:
+    ///  `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Trace {
+      get { return trace_; }
+      set {
+        trace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_location" field.</summary>
+    public const int SourceLocationFieldNumber = 23;
+    private global::Google.Cloud.Logging.V2.LogEntrySourceLocation sourceLocation_;
+    /// <summary>
+    ///  Optional. Source code location information associated with the log entry,
+    ///  if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Logging.V2.LogEntrySourceLocation SourceLocation {
+      get { return sourceLocation_; }
+      set {
+        sourceLocation_ = value;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
@@ -337,6 +376,8 @@ namespace Google.Cloud.Logging.V2 {
       if (!object.Equals(HttpRequest, other.HttpRequest)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(Operation, other.Operation)) return false;
+      if (Trace != other.Trace) return false;
+      if (!object.Equals(SourceLocation, other.SourceLocation)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return true;
     }
@@ -355,6 +396,8 @@ namespace Google.Cloud.Logging.V2 {
       if (httpRequest_ != null) hash ^= HttpRequest.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (operation_ != null) hash ^= Operation.GetHashCode();
+      if (Trace.Length != 0) hash ^= Trace.GetHashCode();
+      if (sourceLocation_ != null) hash ^= SourceLocation.GetHashCode();
       hash ^= (int) payloadCase_;
       return hash;
     }
@@ -407,6 +450,14 @@ namespace Google.Cloud.Logging.V2 {
         output.WriteRawTag(122);
         output.WriteMessage(Operation);
       }
+      if (Trace.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(Trace);
+      }
+      if (sourceLocation_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(SourceLocation);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -442,6 +493,12 @@ namespace Google.Cloud.Logging.V2 {
       size += labels_.CalculateSize(_map_labels_codec);
       if (operation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Operation);
+      }
+      if (Trace.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Trace);
+      }
+      if (sourceLocation_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SourceLocation);
       }
       return size;
     }
@@ -484,6 +541,15 @@ namespace Google.Cloud.Logging.V2 {
           operation_ = new global::Google.Cloud.Logging.V2.LogEntryOperation();
         }
         Operation.MergeFrom(other.Operation);
+      }
+      if (other.Trace.Length != 0) {
+        Trace = other.Trace;
+      }
+      if (other.sourceLocation_ != null) {
+        if (sourceLocation_ == null) {
+          sourceLocation_ = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
+        }
+        SourceLocation.MergeFrom(other.SourceLocation);
       }
       switch (other.PayloadCase) {
         case PayloadOneofCase.ProtoPayload:
@@ -571,6 +637,17 @@ namespace Google.Cloud.Logging.V2 {
               operation_ = new global::Google.Cloud.Logging.V2.LogEntryOperation();
             }
             input.ReadMessage(operation_);
+            break;
+          }
+          case 178: {
+            Trace = input.ReadString();
+            break;
+          }
+          case 186: {
+            if (sourceLocation_ == null) {
+              sourceLocation_ = new global::Google.Cloud.Logging.V2.LogEntrySourceLocation();
+            }
+            input.ReadMessage(sourceLocation_);
             break;
           }
         }
@@ -791,6 +868,199 @@ namespace Google.Cloud.Logging.V2 {
           }
           case 32: {
             Last = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Additional information about the source code location that produced the log
+  ///  entry.
+  /// </summary>
+  public sealed partial class LogEntrySourceLocation : pb::IMessage<LogEntrySourceLocation> {
+    private static readonly pb::MessageParser<LogEntrySourceLocation> _parser = new pb::MessageParser<LogEntrySourceLocation>(() => new LogEntrySourceLocation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LogEntrySourceLocation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LogEntrySourceLocation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LogEntrySourceLocation(LogEntrySourceLocation other) : this() {
+      file_ = other.file_;
+      line_ = other.line_;
+      function_ = other.function_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LogEntrySourceLocation Clone() {
+      return new LogEntrySourceLocation(this);
+    }
+
+    /// <summary>Field number for the "file" field.</summary>
+    public const int FileFieldNumber = 1;
+    private string file_ = "";
+    /// <summary>
+    ///  Optional. Source file name. Depending on the runtime environment, this
+    ///  might be a simple name or a fully-qualified name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string File {
+      get { return file_; }
+      set {
+        file_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "line" field.</summary>
+    public const int LineFieldNumber = 2;
+    private long line_;
+    /// <summary>
+    ///  Optional. Line within the source file. 1-based; 0 indicates no line number
+    ///  available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Line {
+      get { return line_; }
+      set {
+        line_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "function" field.</summary>
+    public const int FunctionFieldNumber = 3;
+    private string function_ = "";
+    /// <summary>
+    ///  Optional. Human-readable name of the function or method being invoked, with
+    ///  optional context such as the class or package name. This information may be
+    ///  used in contexts such as the logs viewer, where a file and line number are
+    ///  less meaningful. The format can vary by language. For example:
+    ///  `qual.if.ied.Class.method` (Java), `dir/package.func` (Go), `function`
+    ///  (Python).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Function {
+      get { return function_; }
+      set {
+        function_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LogEntrySourceLocation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LogEntrySourceLocation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (File != other.File) return false;
+      if (Line != other.Line) return false;
+      if (Function != other.Function) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (File.Length != 0) hash ^= File.GetHashCode();
+      if (Line != 0L) hash ^= Line.GetHashCode();
+      if (Function.Length != 0) hash ^= Function.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (File.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(File);
+      }
+      if (Line != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(Line);
+      }
+      if (Function.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Function);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (File.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(File);
+      }
+      if (Line != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Line);
+      }
+      if (Function.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Function);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LogEntrySourceLocation other) {
+      if (other == null) {
+        return;
+      }
+      if (other.File.Length != 0) {
+        File = other.File;
+      }
+      if (other.Line != 0L) {
+        Line = other.Line;
+      }
+      if (other.Function.Length != 0) {
+        Function = other.Function;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            File = input.ReadString();
+            break;
+          }
+          case 16: {
+            Line = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            Function = input.ReadString();
             break;
           }
         }

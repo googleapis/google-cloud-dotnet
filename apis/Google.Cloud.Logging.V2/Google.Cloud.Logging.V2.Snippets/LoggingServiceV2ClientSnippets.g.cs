@@ -417,5 +417,183 @@ namespace Google.Cloud.Logging.V2.Snippets
             // End snippet
         }
 
+        public async Task ListLogsAsync()
+        {
+            // Snippet: ListLogsAsync(ParentNameOneof,string,int?,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            // Make the request
+            PagedAsyncEnumerable<ListLogsResponse,string> response =
+                loggingServiceV2Client.ListLogsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLogsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListLogs()
+        {
+            // Snippet: ListLogs(ParentNameOneof,string,int?,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            ParentNameOneof parent = ParentNameOneof.From(new ProjectName("[PROJECT]"));
+            // Make the request
+            PagedEnumerable<ListLogsResponse,string> response =
+                loggingServiceV2Client.ListLogs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLogsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task ListLogsAsync_RequestObject()
+        {
+            // Snippet: ListLogsAsync(ListLogsRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = await LoggingServiceV2Client.CreateAsync();
+            // Initialize request argument(s)
+            ListLogsRequest request = new ListLogsRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLogsResponse,string> response =
+                loggingServiceV2Client.ListLogsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((string item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLogsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListLogs_RequestObject()
+        {
+            // Snippet: ListLogs(ListLogsRequest,CallSettings)
+            // Create client
+            LoggingServiceV2Client loggingServiceV2Client = LoggingServiceV2Client.Create();
+            // Initialize request argument(s)
+            ListLogsRequest request = new ListLogsRequest
+            {
+                ParentAsParentNameOneof = ParentNameOneof.From(new ProjectName("[PROJECT]")),
+            };
+            // Make the request
+            PagedEnumerable<ListLogsResponse,string> response =
+                loggingServiceV2Client.ListLogs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (string item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLogsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (string item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<string> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (string item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
     }
 }

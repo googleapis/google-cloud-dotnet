@@ -53,6 +53,7 @@ namespace Google.Cloud.Logging.V2
             WriteLogEntriesSettings = existing.WriteLogEntriesSettings;
             ListLogEntriesSettings = existing.ListLogEntriesSettings;
             ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings;
+            ListLogsSettings = existing.ListLogsSettings;
         }
 
         /// <summary>
@@ -271,6 +272,36 @@ namespace Google.Cloud.Logging.V2
         /// Default RPC expiration is 45000 milliseconds.
         /// </remarks>
         public CallSettings ListMonitoredResourceDescriptorsSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(45000)),
+                retryFilter: IdempotentRetryFilter
+            )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LoggingServiceV2Client.ListLogs</c> and <c>LoggingServiceV2Client.ListLogsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default <c>LoggingServiceV2Client.ListLogs</c> and
+        /// <c>LoggingServiceV2Client.ListLogsAsync</c> <see cref="RetrySettings"/> are:
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds</description></item>
+        /// <item><description>Retry delay multiplier: 1.2</description></item>
+        /// <item><description>Retry maximum delay: 1000 milliseconds</description></item>
+        /// <item><description>Initial timeout: 2000 milliseconds</description></item>
+        /// <item><description>Timeout multiplier: 1.5</description></item>
+        /// <item><description>Timeout maximum delay: 30000 milliseconds</description></item>
+        /// </list>
+        /// Retry will be attempted on the following response status codes:
+        /// <list>
+        /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
+        /// Default RPC expiration is 45000 milliseconds.
+        /// </remarks>
+        public CallSettings ListLogsSettings { get; set; } = CallSettings.FromCallTiming(
             CallTiming.FromRetry(new RetrySettings(
                 retryBackoff: GetDefaultRetryBackoff(),
                 timeoutBackoff: GetDefaultTimeoutBackoff(),
@@ -748,12 +779,12 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from Cloud
-        /// Logging.  For ways to export log entries, see
+        /// Lists log entries.  Use this method to retrieve log entries from
+        /// Stackdriver Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
-        /// Required. One or more cloud resources from which to retrieve log
+        /// Required. Names of one or more resources from which to retrieve log
         /// entries:
         ///
         ///     "projects/[PROJECT_ID]"
@@ -764,7 +795,10 @@ namespace Google.Cloud.Logging.V2
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
         /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries.
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
         /// The maximum length of the filter is 20000 characters.
         /// </param>
         /// <param name="orderBy">
@@ -807,12 +841,12 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from Cloud
-        /// Logging.  For ways to export log entries, see
+        /// Lists log entries.  Use this method to retrieve log entries from
+        /// Stackdriver Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
-        /// Required. One or more cloud resources from which to retrieve log
+        /// Required. Names of one or more resources from which to retrieve log
         /// entries:
         ///
         ///     "projects/[PROJECT_ID]"
@@ -823,7 +857,10 @@ namespace Google.Cloud.Logging.V2
         /// <param name="filter">
         /// Optional. A filter that chooses which log entries to return.  See [Advanced
         /// Logs Filters](/logging/docs/view/advanced_filters).  Only log entries that
-        /// match the filter are returned.  An empty filter matches all log entries.
+        /// match the filter are returned.  An empty filter matches all log entries in
+        /// the resources listed in `resource_names`. Referencing a parent resource
+        /// that is not listed in `resource_names` will cause the filter to return no
+        /// results.
         /// The maximum length of the filter is 20000 characters.
         /// </param>
         /// <param name="orderBy">
@@ -866,8 +903,8 @@ namespace Google.Cloud.Logging.V2
                 callSettings);
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from Cloud
-        /// Logging.  For ways to export log entries, see
+        /// Lists log entries.  Use this method to retrieve log entries from
+        /// Stackdriver Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -887,8 +924,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from Cloud
-        /// Logging.  For ways to export log entries, see
+        /// Lists log entries.  Use this method to retrieve log entries from
+        /// Stackdriver Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -908,7 +945,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the monitored resource descriptors used by Stackdriver Logging.
+        /// Lists the descriptors for monitored resource types used by Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -927,7 +965,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the monitored resource descriptors used by Stackdriver Logging.
+        /// Lists the descriptors for monitored resource types used by Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -945,6 +984,120 @@ namespace Google.Cloud.Logging.V2
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Lists the logs in projects or organizations.
+        /// Only logs that have entries are listed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name that owns the logs:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
+            ParentNameOneof parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListLogsAsync(
+                new ListLogsRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the logs in projects or organizations.
+        /// Only logs that have entries are listed.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name that owns the logs:
+        ///
+        ///     "projects/[PROJECT_ID]"
+        ///     "organizations/[ORGANIZATION_ID]"
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request.
+        /// A value of <c>null</c> or an empty string retrieves the first page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller.
+        /// A value of <c>null</c> or 0 uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListLogsResponse, string> ListLogs(
+            ParentNameOneof parent,
+            string pageToken = null,
+            int? pageSize = null,
+            CallSettings callSettings = null) => ListLogs(
+                new ListLogsRequest
+                {
+                    ParentAsParentNameOneof = parent,
+                    PageToken = pageToken ?? "",
+                    PageSize = pageSize ?? 0,
+                },
+                callSettings);
+
+        /// <summary>
+        /// Lists the logs in projects or organizations.
+        /// Only logs that have entries are listed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
+            ListLogsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lists the logs in projects or organizations.
+        /// Only logs that have entries are listed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="string"/> resources.
+        /// </returns>
+        public virtual PagedEnumerable<ListLogsResponse, string> ListLogs(
+            ListLogsRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 
     /// <summary>
@@ -957,6 +1110,7 @@ namespace Google.Cloud.Logging.V2
         private readonly ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> _callWriteLogEntries;
         private readonly ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> _callListLogEntries;
         private readonly ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
+        private readonly ApiCall<ListLogsRequest, ListLogsResponse> _callListLogs;
 
         /// <summary>
         /// Constructs a client wrapper for the LoggingServiceV2 service, with the specified gRPC client and settings.
@@ -976,6 +1130,8 @@ namespace Google.Cloud.Logging.V2
                 GrpcClient.ListLogEntriesAsync, GrpcClient.ListLogEntries, effectiveSettings.ListLogEntriesSettings);
             _callListMonitoredResourceDescriptors = _clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
+            _callListLogs = _clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>(
+                GrpcClient.ListLogsAsync, GrpcClient.ListLogs, effectiveSettings.ListLogsSettings);
         }
 
         /// <summary>
@@ -988,6 +1144,7 @@ namespace Google.Cloud.Logging.V2
         partial void Modify_WriteLogEntriesRequest(ref WriteLogEntriesRequest request, ref CallSettings settings);
         partial void Modify_ListLogEntriesRequest(ref ListLogEntriesRequest request, ref CallSettings settings);
         partial void Modify_ListMonitoredResourceDescriptorsRequest(ref ListMonitoredResourceDescriptorsRequest request, ref CallSettings settings);
+        partial void Modify_ListLogsRequest(ref ListLogsRequest request, ref CallSettings settings);
 
         /// <summary>
         /// Deletes all the log entries in a log.
@@ -1074,8 +1231,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from Cloud
-        /// Logging.  For ways to export log entries, see
+        /// Lists log entries.  Use this method to retrieve log entries from
+        /// Stackdriver Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -1096,8 +1253,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists log entries.  Use this method to retrieve log entries from Cloud
-        /// Logging.  For ways to export log entries, see
+        /// Lists log entries.  Use this method to retrieve log entries from
+        /// Stackdriver Logging.  For ways to export log entries, see
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="request">
@@ -1118,7 +1275,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the monitored resource descriptors used by Stackdriver Logging.
+        /// Lists the descriptors for monitored resource types used by Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1138,7 +1296,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the monitored resource descriptors used by Stackdriver Logging.
+        /// Lists the descriptors for monitored resource types used by Stackdriver
+        /// Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1155,6 +1314,48 @@ namespace Google.Cloud.Logging.V2
         {
             Modify_ListMonitoredResourceDescriptorsRequest(ref request, ref callSettings);
             return new GrpcPagedEnumerable<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse, MonitoredResourceDescriptor>(_callListMonitoredResourceDescriptors, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the logs in projects or organizations.
+        /// Only logs that have entries are listed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="string"/> resources.
+        /// </returns>
+        public override PagedAsyncEnumerable<ListLogsResponse, string> ListLogsAsync(
+            ListLogsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListLogsRequest(ref request, ref callSettings);
+            return new GrpcPagedAsyncEnumerable<ListLogsRequest, ListLogsResponse, string>(_callListLogs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the logs in projects or organizations.
+        /// Only logs that have entries are listed.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A pageable sequence of <see cref="string"/> resources.
+        /// </returns>
+        public override PagedEnumerable<ListLogsResponse, string> ListLogs(
+            ListLogsRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ListLogsRequest(ref request, ref callSettings);
+            return new GrpcPagedEnumerable<ListLogsRequest, ListLogsResponse, string>(_callListLogs, request, callSettings);
         }
 
     }
@@ -1180,6 +1381,18 @@ namespace Google.Cloud.Logging.V2
         /// Returns an enumerator that iterates through the resources in this response.
         /// </summary>
         public IEnumerator<MonitoredResourceDescriptor> GetEnumerator() => ResourceDescriptors.GetEnumerator();
+
+        /// <inheritdoc/>
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListLogsRequest : IPageRequest { }
+    public partial class ListLogsResponse : IPageResponse<string>
+    {
+        /// <summary>
+        /// Returns an enumerator that iterates through the resources in this response.
+        /// </summary>
+        public IEnumerator<string> GetEnumerator() => LogNames.GetEnumerator();
 
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

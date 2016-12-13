@@ -2222,6 +2222,19 @@ namespace Google.Cloud.Logging.V2
 
     }
 
+    public partial class ListLogsRequest
+    {
+        /// <summary>
+        /// A <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ParentNameOneof ParentAsParentNameOneof
+        {
+            get { return ParentNameOneof.Parse(Parent, true); }
+            set { Parent = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+        }
+
+    }
+
     public partial class ListSinksRequest
     {
         /// <summary>
