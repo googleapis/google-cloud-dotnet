@@ -20,7 +20,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class ConsumerFactoryTest
     {
-
         [Fact]
         public void GetConsumer_None()
         {

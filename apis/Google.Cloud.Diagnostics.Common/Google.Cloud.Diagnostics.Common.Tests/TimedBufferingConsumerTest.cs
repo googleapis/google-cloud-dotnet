@@ -31,34 +31,43 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             return TimedBufferingConsumer<int>.Create(consumer, _waitTime, clock);
         }
 
+        /// <summary>
+        /// Creates an <see cref="IClock"/> that returns the given times in order.
+        /// </summary>
+        private IClock GetClock(DateTime[] times) {
+            var returnQueue = new Queue<DateTime>(times);
+            var mockClock = new Mock<IClock>();
+            mockClock.Setup(w => w.GetCurrentDateTimeUtc()).Returns(() => returnQueue.Dequeue());
+            return mockClock.Object;
+        }
+        
         [Fact]
         public void Receive()
         {
-            Mock<IClock> mockClock = new Mock<IClock>();
-            mockClock.Setup(c => c.GetCurrentDateTimeUtc()).Returns(_start);
-            Mock<IConsumer<int>> mockConsumer = new Mock<IConsumer<int>>();
-            TimedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object, mockClock.Object);
+            var clock = GetClock(new[] { _start, _start, _start.AddSeconds(_waitTime.TotalSeconds + 1) });
+            var mockConsumer = new Mock<IConsumer<int>>();
+            var consumer = GetConsumer(mockConsumer.Object, clock);
             consumer.Receive(new[] { 1, 2 });
 
-            // Ensure ints have not been sent as they are not bigger then the buffer.
+            // Ensure ints have not been sent as the wait time hasn't been passed.
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
 
             // Add the initial ints the list.  This ensures we verify the right 
             // values where received.
             mockConsumer.Setup(c => c.Receive(new[] { 1, 2, 3, 4, 5 }));
-
-            // Fill the buffer so it will be flushed.
             consumer.Receive(new[] { 3, 4, 5 });
             mockConsumer.VerifyAll();
         }
+        
 
         [Fact]
         public void Flush()
         {
+            var clock = GetClock(new[] { _start, _start });
             int[] intArray = { 1, 2, 3, 4 };
-            Mock<IConsumer<int>> mockConsumer = new Mock<IConsumer<int>>();
+            var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.Receive(intArray));
-            TimedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object);
+            TimedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object, clock);
 
             consumer.Receive(intArray);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
@@ -70,9 +79,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Flush_NoTraces()
         {
-            Mock<IConsumer<int>> mockConsumer = new Mock<IConsumer<int>>();
+            var clock = GetClock(new[] { _start, _start });
+            var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.Receive(new int[] { }));
-            TimedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object);
+            TimedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object, clock);
 
             consumer.Receive(new int[] { });
             consumer.Flush();
