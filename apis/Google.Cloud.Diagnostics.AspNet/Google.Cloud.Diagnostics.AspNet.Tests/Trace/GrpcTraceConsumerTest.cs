@@ -35,21 +35,21 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         {
             Traces traces = GetTraces();
 
-            Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
+            var mockClient = new Mock<TraceServiceClient>();
             mockClient.Setup(c => c.PatchTracesAsync(ProjectId, traces, null));
-            Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
-            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
+            var taskClient = Task.FromResult(mockClient.Object);
+            var consumer = new GrpcTraceConsumer(taskClient);
 
-            consumer.Receive(new[] { traces.Traces_[0] });
+            consumer.Receive(traces.Traces_);
             mockClient.VerifyAll();
         }
 
         [Fact]
         public void Receive_EmptyTracesIgnored()
         {
-            Mock<TraceServiceClient> mockClient = new Mock<TraceServiceClient>();
-            Task<TraceServiceClient> taskClient = Task.FromResult(mockClient.Object);
-            GrpcTraceConsumer consumer = new GrpcTraceConsumer(taskClient);
+            var mockClient = new Mock<TraceServiceClient>();
+            var taskClient = Task.FromResult(mockClient.Object);
+            var consumer = new GrpcTraceConsumer(taskClient);
 
             consumer.Receive(new List<TraceProto>());
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());

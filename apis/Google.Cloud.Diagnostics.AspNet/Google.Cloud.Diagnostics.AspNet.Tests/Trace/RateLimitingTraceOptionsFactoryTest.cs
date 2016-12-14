@@ -23,16 +23,16 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void CreateOptions_ShouldTrace()
         {
-            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(1001);
-            RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
+            var rateLimiter = TraceUtils.GetRateLimiter(1001);
+            var factory = new RateLimitingTraceOptionsFactory(rateLimiter);
             Assert.True(factory.CreateOptions().ShouldTrace);
         }
 
         [Fact]
         public void CreateOptions_ShouldNotTrace()
         {
-            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(999);
-            RateLimitingTraceOptionsFactory factory = new RateLimitingTraceOptionsFactory(rateLimiter);
+            var rateLimiter = TraceUtils.GetRateLimiter(999);
+            var factory = new RateLimitingTraceOptionsFactory(rateLimiter);
             Assert.False(factory.CreateOptions().ShouldTrace);
         }
     }

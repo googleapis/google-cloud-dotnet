@@ -24,7 +24,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     internal sealed class TraceSizer : ISizer<TraceProto>
     {
         /// <summary>The single trace sizer instance.</summary>
-        internal static TraceSizer Instance = new TraceSizer();
+        internal static readonly TraceSizer Instance = new TraceSizer();
 
         private TraceSizer() { }
 

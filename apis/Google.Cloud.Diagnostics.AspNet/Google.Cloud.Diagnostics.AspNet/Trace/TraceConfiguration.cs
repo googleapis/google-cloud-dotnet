@@ -48,8 +48,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static TraceConfiguration Create(
             double qpsSampleRate = DefaultQpsSampleRate, BufferOptions bufferOptions = null)
         {
-            bufferOptions = bufferOptions ?? BufferOptions.SizedBuffer();
-            return new TraceConfiguration(qpsSampleRate, bufferOptions);
+            return new TraceConfiguration(qpsSampleRate, bufferOptions ?? BufferOptions.SizedBuffer());
         }
     }
 }

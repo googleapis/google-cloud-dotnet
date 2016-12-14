@@ -42,14 +42,13 @@ namespace Google.Cloud.Diagnostics.AspNet
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
 
             TraceProto trace = traces.FirstOrDefault();
-            // If their are no traces do not try to send them.
+            // If there are no traces do not try to send them.
             if (trace == null)
             {
                 return;
             }
 
-            Traces tracesObj = new Traces();
-            tracesObj.Traces_.AddRange(traces);
+            Traces tracesObj = new Traces { Traces_ = { traces } };
             // If the client task has faulted this will throw when accessing 'Result'
             _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj);
         }

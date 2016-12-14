@@ -123,8 +123,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public async Task Trace_Simple()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple));
-            IConsumer<TraceProto> consumer = CreateGrpcTraceConsumer();
-            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+            var consumer = CreateGrpcTraceConsumer();
+            var tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
@@ -139,13 +139,13 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public async Task Trace_Simple_Buffer()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple_Buffer));
-            SizedBufferingConsumer<TraceProto> consumer = SizedBufferingConsumer<TraceProto>.Create(
+            var consumer = SizedBufferingConsumer<TraceProto>.Create(
                 CreateGrpcTraceConsumer(), TraceSizer.Instance, BufferOptions.DefaultBufferSize);
-            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+            var tracer = CreateSimpleManagedTracer(consumer);
 
             // Create annotations with very large labels to ensure the buffer is flushed.
             string label = string.Join("", Enumerable.Repeat("1234567890", 2000));
-            Dictionary<string, string> annotation = new Dictionary<string, string>
+            var annotation = new Dictionary<string, string>
             {
                 { "key-one", label },
                 { "key-two", label },
@@ -168,9 +168,9 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public async Task Trace_Simple_BufferNoTrace()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple_BufferNoTrace));
-            SizedBufferingConsumer<TraceProto> consumer = SizedBufferingConsumer<TraceProto>.Create(
+            var consumer = SizedBufferingConsumer<TraceProto>.Create(
                 CreateGrpcTraceConsumer(), TraceSizer.Instance, BufferOptions.DefaultBufferSize);
-            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+            var tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
@@ -184,10 +184,10 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public async Task Trace_SimpleAnnotation()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_SimpleAnnotation));
-            IConsumer<TraceProto> consumer = CreateGrpcTraceConsumer();
-            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+            var consumer = CreateGrpcTraceConsumer();
+            var tracer = CreateSimpleManagedTracer(consumer);
 
-            Dictionary<string, string> annotation = new Dictionary<string, string>
+            var annotation = new Dictionary<string, string>
             {
                 { "annotation-key", "annotation-value" },
                 { "some-key", "some-value" }
@@ -208,8 +208,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public async Task Trace_SimpleStacktrace()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_SimpleStacktrace));
-            IConsumer<TraceProto> consumer = CreateGrpcTraceConsumer();
-            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+            var consumer = CreateGrpcTraceConsumer();
+            var tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
@@ -220,7 +220,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
 
-            MapField<string, string> labels = trace.Spans[0].Labels;
+            var labels = trace.Spans[0].Labels;
             Assert.True(labels.ContainsKey(Labels.StackTrace));
             Assert.Contains(nameof(Trace_SimpleStacktrace), labels[Labels.StackTrace]);
             Assert.Contains(nameof(TraceTest), labels[Labels.StackTrace]);
@@ -230,10 +230,10 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public async Task Trace_MultipleSpans()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_MultipleSpans));
-            IConsumer<TraceProto> consumer = CreateGrpcTraceConsumer();
-            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+            var consumer = CreateGrpcTraceConsumer();
+            var tracer = CreateSimpleManagedTracer(consumer);
 
-            Dictionary<string, string> annotation = new Dictionary<string, string>
+            var annotation = new Dictionary<string, string>
             {
                 { "annotation-key", "annotation-value" }
             };
@@ -267,7 +267,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             TraceSpan grandchildTwo = trace.Spans.First(s => s.Name.Equals("grandchild-two"));
 
             Assert.Equal(root.SpanId, childOne.ParentSpanId);
-            MapField<string, string> labels = childOne.Labels;
+            var labels = childOne.Labels;
             Assert.True(labels.ContainsKey(Labels.StackTrace));
             Assert.Contains(nameof(Trace_MultipleSpans), labels[Labels.StackTrace]);
             Assert.Contains(nameof(TraceTest), labels[Labels.StackTrace]);
@@ -286,8 +286,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         public async Task Trace_IncompleteSpans()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_IncompleteSpans));
-            IConsumer<TraceProto> consumer = CreateGrpcTraceConsumer();
-            SimpleManagedTracer tracer = CreateSimpleManagedTracer(consumer);
+            var consumer = CreateGrpcTraceConsumer();
+            var tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
             tracer.StartSpan("span-name-1");

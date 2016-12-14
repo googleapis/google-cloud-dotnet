@@ -43,9 +43,9 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         /// </summary>
         private HttpRequestWrapper CreateWrapperWithTraceHeader(string header)
         {
-            NameValueCollection headers = new NameValueCollection();
+            var headers = new NameValueCollection();
             headers.Add(TraceHeaderContext.TraceHeader, header);
-            Mock<HttpRequestWrapper> mockWrapper = new Mock<HttpRequestWrapper>(Request);
+            var mockWrapper = new Mock<HttpRequestWrapper>(Request);
             mockWrapper.Setup(w => w.Headers).Returns(headers);
             return mockWrapper.Object;
         }
@@ -70,15 +70,15 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromRequest_InvalidHeader()
         {
-            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader("1234=0");
+            var wrapper = CreateWrapperWithTraceHeader("1234=0");
             CheckInvalid(TraceHeaderContext.FromWrapper(wrapper));
         }
 
         [Fact]
         public void FromRequest_Valid()
         {
-            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue());
-            TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
+            var wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue());
+            var context = TraceHeaderContext.FromWrapper(wrapper);
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
@@ -89,8 +89,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromRequest_ValidNoTrace()
         {
-            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(0));
-            TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
+            var wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(0));
+            var context = TraceHeaderContext.FromWrapper(wrapper);
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
@@ -100,8 +100,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromRequest_ValidTrace()
         {
-            HttpRequestWrapper wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(1));
-            TraceHeaderContext context = TraceHeaderContext.FromWrapper(wrapper);
+            var wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(1));
+            var context = TraceHeaderContext.FromWrapper(wrapper);
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
