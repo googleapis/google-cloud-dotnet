@@ -52,7 +52,7 @@ install_dependencies() {
   if [ -d "googleapis" ]
   then
     pushd googleapis > /dev/null
-    # git pull
+    git pull
     popd > /dev/null
   else
     git clone --recursive  https://github.com/googleapis/googleapis
@@ -135,6 +135,7 @@ generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
 # Apache for LRO where other languages use BSD)
 sed -i s/license-header-bsd-3-clause.txt/license-header-apache-2.0.txt/g googleapis/google/longrunning/longrunning_gapic.yaml
 generate_api Google.LongRunning google/longrunning longrunning/longrunning.yaml
+git checkout googleapis/google/longrunning/longrunning_gapic.yaml
 
 # IAM (just proto and grpc)
 $PROTOC \
