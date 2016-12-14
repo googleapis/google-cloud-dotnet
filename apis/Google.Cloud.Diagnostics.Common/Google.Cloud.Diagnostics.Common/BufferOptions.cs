@@ -57,7 +57,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The time to wait before the buffer is flushed, only used for <see cref="BufferType.Timed"/></summary>
         public TimeSpan BufferWaitTime { get; }
 
-        private BufferOptions(BufferType bufferType, int? bufferSizeBytes = null, TimeSpan? bufferWaitTime = null)
+        internal BufferOptions(BufferType bufferType, int? bufferSizeBytes = null, TimeSpan? bufferWaitTime = null)
         {
             BufferType = bufferType;
             BufferSizeBytes = bufferSizeBytes ?? default(int);

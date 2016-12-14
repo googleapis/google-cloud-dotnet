@@ -30,21 +30,26 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
-        /// <summary>The buffered items.</summary>
-        private List<T> _items;
-
         /// <summary>The minimum amount of time to wait between automatically flushing the buffer.</summary>
         private readonly TimeSpan _waitTime;
+
+        /// <summary>A clock for getting the current timestamp.</summary>
+        private readonly IClock _clock;
+
+        /// <summary>The buffered items.</summary>
+        private List<T> _items;
 
         /// <summary>The earliest time of the next automatica flush.</summary>
         private DateTime _nextFlush;
 
-        private TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime)
+        private TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IClock clock)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _waitTime = waitTime;
+            _clock = GaxPreconditions.CheckNotNull(clock, nameof(clock));
             _items = new List<T>();
-            _nextFlush = DateTime.UtcNow.Add(_waitTime);
+            _nextFlush = _clock.GetCurrentDateTimeUtc().Add(_waitTime);
+
         }
 
         /// <summary>
@@ -54,9 +59,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
         /// <param name="waitTime">The minimum amount of time between automatic flushes.</param>
-        public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime)
+        /// <param name="clock">A clock for getting the current timestamp.</param>
+        public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime, IClock clock = null)
         {
-            return new TimedBufferingConsumer<T>(consumer, waitTime);
+            return new TimedBufferingConsumer<T>(consumer, waitTime, clock ?? SystemClock.Instance);
         }
 
         /// <inheritdoc />
@@ -66,7 +72,7 @@ namespace Google.Cloud.Diagnostics.Common
             lock (_mutex)
             {
                 _items.AddRange(items);
-                if (DateTime.UtcNow >= _nextFlush) { 
+                if (_clock.GetCurrentDateTimeUtc() >= _nextFlush) { 
                   Flush();
                 }
             }
