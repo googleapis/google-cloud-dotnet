@@ -199,8 +199,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return V1Beta1.ProjectName.Parse(ProjectName); }
-            set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
+            set { ProjectName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -212,8 +212,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public GroupName GroupNameAsGroupName
         {
-            get { return V1Beta1.GroupName.Parse(GroupName); }
-            set { GroupName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(GroupName) ? null : Google.Cloud.ErrorReporting.V1Beta1.GroupName.Parse(GroupName); }
+            set { GroupName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -225,8 +225,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return V1Beta1.ProjectName.Parse(ProjectName); }
-            set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
+            set { ProjectName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -238,8 +238,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return V1Beta1.ProjectName.Parse(ProjectName); }
-            set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
+            set { ProjectName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -251,8 +251,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
-            get { return V1Beta1.ProjectName.Parse(ProjectName); }
-            set { ProjectName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(ProjectName) ? null : Google.Cloud.ErrorReporting.V1Beta1.ProjectName.Parse(ProjectName); }
+            set { ProjectName = value != null ? value.ToString() : ""; }
         }
 
     }
