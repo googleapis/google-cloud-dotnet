@@ -21,20 +21,20 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void CreateOptions_Trace()
         {
-            TraceHeaderTraceOptionsFactory factory = TraceHeaderTraceOptionsFactory.Create();
+            var factory = TraceHeaderTraceOptionsFactory.Create();
 
-            TraceHeaderContext contextTrace = new TraceHeaderContext(null, null, true);
-            TraceOptions optionsTrace = factory.CreateOptions(contextTrace);
+            var contextTrace = new TraceHeaderContext(null, null, true);
+            var optionsTrace = factory.CreateOptions(contextTrace);
             Assert.True(optionsTrace.ShouldTrace);
         }
 
         [Fact]
         public void CreateOptions_NoTrace()
         {
-            TraceHeaderTraceOptionsFactory factory = TraceHeaderTraceOptionsFactory.Create();
+            var factory = TraceHeaderTraceOptionsFactory.Create();
 
-            TraceHeaderContext contextNoTrace = new TraceHeaderContext(null, null, false);
-            TraceOptions optionsNoTrace = factory.CreateOptions(contextNoTrace);
+            var contextNoTrace = new TraceHeaderContext(null, null, false);
+            var optionsNoTrace = factory.CreateOptions(contextNoTrace);
             Assert.False(optionsNoTrace.ShouldTrace);
         }
     }

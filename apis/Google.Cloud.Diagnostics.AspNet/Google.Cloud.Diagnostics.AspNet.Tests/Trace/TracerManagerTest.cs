@@ -23,8 +23,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void CurrentTracer()
         {
-            HttpRequest request = new HttpRequest("file_name", "https://www.google.com", "");
-            HttpResponse response = new HttpResponse(new StringWriter());
+            var request = new HttpRequest("file_name", "https://www.google.com", "");
+            var response = new HttpResponse(new StringWriter());
             HttpContext.Current = new HttpContext(request, response);
 
             Assert.Null(TracerManager.GetCurrentTracer());

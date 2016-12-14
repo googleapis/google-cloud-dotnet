@@ -28,13 +28,13 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromHttpRequestWrapper()
         {
-            HttpRequest request = new HttpRequest("name", "https://google.com", "");
-            Mock<HttpRequestWrapper> mockWrapper = new Mock<HttpRequestWrapper>(request);
+            var request = new HttpRequest("name", "https://google.com", "");
+            var mockWrapper = new Mock<HttpRequestWrapper>(request);
             mockWrapper.Setup(w => w.ContentLength).Returns(123);
             mockWrapper.Setup(w => w.UserHostName).Returns("google.com");
             mockWrapper.Setup(w => w.HttpMethod).Returns("PUT");
 
-            Dictionary<string, string> labels = Labels.FromHttpRequestWrapper(mockWrapper.Object);
+            var labels = Labels.FromHttpRequestWrapper(mockWrapper.Object);
             Assert.Equal(3, labels.Count);
             Assert.Equal("123", labels[Labels.HttpRequestSize]);
             Assert.Equal("google.com", labels[Labels.HttpHost]);
@@ -44,11 +44,11 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromHttpResponseWrapper()
         {
-            HttpResponse response = new HttpResponse(new StringWriter());
-            Mock<HttpResponseWrapper> mockWrapper = new Mock<HttpResponseWrapper>(response);
+            var response = new HttpResponse(new StringWriter());
+            var mockWrapper = new Mock<HttpResponseWrapper>(response);
             mockWrapper.Setup(w => w.StatusCode).Returns(404);
 
-            Dictionary<string, string> labels = Labels.FromHttpResponseWrapper(mockWrapper.Object);
+            var labels = Labels.FromHttpResponseWrapper(mockWrapper.Object);
             Assert.Equal(1, labels.Count);
             Assert.Equal("404", labels[Labels.HttpStatusCode]);
         }
@@ -56,33 +56,33 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromStackTrace()
         {
-            Mock<StackFrame> frameRequest = new Mock<StackFrame>("compare_file", 22);
-            Mock<MethodBase> methodBaseRequest = new Mock<MethodBase>();
+            var frameRequest = new Mock<StackFrame>("compare_file", 22);
+            var methodBaseRequest = new Mock<MethodBase>();
             methodBaseRequest.Setup(m => m.DeclaringType).Returns(typeof(FakeClass));
             methodBaseRequest.Setup(m => m.Name).Returns("SpecialMethod");
             frameRequest.Setup(r => r.GetMethod()).Returns(methodBaseRequest.Object);
             frameRequest.CallBase = true;
 
-            Mock<StackFrame> frameResponse = new Mock<StackFrame>();
-            Mock<MethodBase> methodBaseResponse = new Mock<MethodBase>();
+            var frameResponse = new Mock<StackFrame>();
+            var methodBaseResponse = new Mock<MethodBase>();
             methodBaseResponse.Setup(m => m.DeclaringType).Returns(typeof(FakeClass));
             methodBaseResponse.Setup(m => m.Name).Returns("UniqueMethod");
             frameResponse.Setup(r => r.GetMethod()).Returns(methodBaseResponse.Object);
             frameResponse.CallBase = true;
 
-            Mock<StackFrame> frameStack = new Mock<StackFrame>("concat_file", 33);
-            Mock<MethodBase> methodBaseStack = new Mock<MethodBase>();
+            var frameStack = new Mock<StackFrame>("concat_file", 33);
+            var methodBaseStack = new Mock<MethodBase>();
             methodBaseStack.Setup(m => m.DeclaringType).Returns(typeof(FakeClass));
             methodBaseStack.Setup(m => m.Name).Returns("ThisIsAMethod");
             frameStack.Setup(s => s.GetMethod()).Returns(methodBaseStack.Object);
             frameStack.CallBase = true;
 
-            Mock<StackTrace> stackTraceMock = new Mock<StackTrace>();
+            var stackTraceMock = new Mock<StackTrace>();
             stackTraceMock.Setup(t => t.FrameCount).Returns(3);
             stackTraceMock.Setup(t => t.GetFrames()).Returns(new StackFrame[] {
                 frameRequest.Object, frameResponse.Object, frameStack.Object });
 
-            Dictionary<string, string> labels = Labels.FromStackTrace(stackTraceMock.Object);
+            var labels = Labels.FromStackTrace(stackTraceMock.Object);
             Assert.Equal(1, labels.Count);
             string jsonTrace = labels[Labels.StackTrace];
 
@@ -104,10 +104,10 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromStackTrace_Empty()
         {
-            Mock<StackTrace> stackTraceMock = new Mock<StackTrace>();
+            var stackTraceMock = new Mock<StackTrace>();
             stackTraceMock.Setup(t => t.FrameCount).Returns(0);
 
-            Dictionary<string, string> labels = Labels.FromStackTrace(stackTraceMock.Object);
+            var labels = Labels.FromStackTrace(stackTraceMock.Object);
             Assert.Equal(1, labels.Count);
             Assert.Equal(string.Empty, labels[Labels.StackTrace]);
         }

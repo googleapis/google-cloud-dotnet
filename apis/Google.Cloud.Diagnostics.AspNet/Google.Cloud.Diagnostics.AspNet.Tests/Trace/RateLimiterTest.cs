@@ -27,21 +27,21 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void CanTrace()
         {
-            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(1001);
+            var rateLimiter = TraceUtils.GetRateLimiter(1001);
             Assert.True(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_False()
         {
-            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(999);
+            var rateLimiter = TraceUtils.GetRateLimiter(999);
             Assert.False(rateLimiter.CanTrace());
         }
 
         [Fact]
         public void CanTrace_DecimalQps()
         {
-            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
+            var rateLimiter = TraceUtils.GetRateLimiter(0.1, new long[] { 9999, 10001 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
         }
@@ -49,7 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void CanTrace_Multiple()
         {
-            RateLimiter rateLimiter = TraceUtils.GetRateLimiter(
+            var rateLimiter = TraceUtils.GetRateLimiter(
                 1, new long[] { 999, 1001, 1790, 1850, 2030, 2700, 5000 });
             Assert.False(rateLimiter.CanTrace());
             Assert.True(rateLimiter.CanTrace());
@@ -63,11 +63,11 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public async Task CanTrace_StressTest()
         {
-            CancellationTokenSource source = new CancellationTokenSource();
+            var source = new CancellationTokenSource();
             try
             {
                 // Create a rate limiter that allows 1 QPS
-                RateLimiter rateLimiter = RateLimiter.GetInstance(1);
+                var rateLimiter = RateLimiter.GetInstance(1);
                 int canTraceCounter = 0;
                 int threads = 10;
 
