@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _logLevel = logLevel;
+            _logLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
         }
 
         /// <summary>
