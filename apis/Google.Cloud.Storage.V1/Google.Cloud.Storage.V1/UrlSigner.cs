@@ -44,9 +44,9 @@ namespace Google.Cloud.Storage.V1
         private const string StorageHost = "https://storage.googleapis.com";
         private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
 
-        private readonly ServiceAccountCredential.Initializer _credentials;
+        private readonly ServiceAccountCredential _credentials;
 
-        private UrlSigner(ServiceAccountCredential.Initializer credentials)
+        private UrlSigner(ServiceAccountCredential credentials)
         {
             _credentials = credentials;
         }
@@ -77,7 +77,17 @@ namespace Google.Cloud.Storage.V1
         public static UrlSigner FromServiceAccountData(Stream credentialData)
         {
             GaxPreconditions.CheckNotNull(credentialData, nameof(credentialData));
-            return new UrlSigner(ParseCredentials(credentialData));
+            return UrlSigner.FromServiceAccountCredential(ServiceAccountCredential.FromServiceAccountData(credentialData));
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="UrlSigner"/> instance for a service account.
+        /// </summary>
+        /// <param name="credential">The credential for the a service account. Must not be null.</param>
+        public static UrlSigner FromServiceAccountCredential(ServiceAccountCredential credential)
+        {
+            GaxPreconditions.CheckNotNull(credential, nameof(credential));
+            return new UrlSigner(credential);
         }
 
         /// <summary>
@@ -303,31 +313,15 @@ namespace Google.Cloud.Storage.V1
                 header => $"{header.Key}:{string.Join(", ", header.Value)}"));
             signatureLines.Add(resourcePath);
 
-            var signature = CreateSignature(string.Join("\n", signatureLines), _credentials);
+            var signature = _credentials.CreateSignature(Encoding.UTF8.GetBytes(string.Join("\n", signatureLines)));
 
             var queryParameters = new List<string> { $"GoogleAccessId={_credentials.Id}" };
             if (expiryUnixSeconds != null)
             {
                 queryParameters.Add($"Expires={expiryUnixSeconds}");
             }
-            queryParameters.Add($"Signature={signature}");
+            queryParameters.Add($"Signature={WebUtility.UrlEncode(signature)}");
             return $"{StorageHost}{resourcePath}?{string.Join("&", queryParameters)}";
-        }
-
-        private static string CreateSignature(string data, ServiceAccountCredential.Initializer initializer)
-        {
-            // TODO: This is taken from ServiceAccountCredential. Expose this somehow so we don't need to duplicate logic.
-            using (var hashAlg = SHA256.Create())
-            {
-                byte[] assertionHash = hashAlg.ComputeHash(Encoding.UTF8.GetBytes(data));
-#if NETSTANDARD1_3
-            var sigBytes = initializer.Key.SignHash(assertionHash, HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
-#else
-                const string Sha256Oig = "2.16.840.1.101.3.4.2.1";
-                var sigBytes = initializer.Key.SignHash(assertionHash, Sha256Oig);
-#endif
-                return WebUtility.UrlEncode(Convert.ToBase64String(sigBytes));
-            }
         }
 
         private static SortedDictionary<string, StringBuilder> GetExtensionHeaders(
@@ -400,36 +394,6 @@ namespace Google.Cloud.Storage.V1
                 return values.FirstOrDefault();
             }
             return null;
-        }
-
-        private static ServiceAccountCredential.Initializer ParseCredentials(Stream credentialData)
-        {
-            var credentialParameters = ParseCredentialParameters(credentialData);
-            return new ServiceAccountCredential.Initializer(credentialParameters.ClientEmail)
-                .FromPrivateKey(credentialParameters.PrivateKey);
-        }
-
-        private static JsonCredentialParameters ParseCredentialParameters(Stream credentialData)
-        {
-            // TODO: This is taken from two places in DefaultCredentialProvider. Expose those pieces so we don't need to duplicate logic.
-            JsonCredentialParameters credentialParameters;
-            try
-            {
-                credentialParameters = NewtonsoftJsonSerializer.Instance.Deserialize<JsonCredentialParameters>(credentialData);
-            }
-            catch (Exception e)
-            {
-                throw new InvalidOperationException("Error deserializing JSON credential data.", e);
-            }
-
-            if (credentialParameters.Type != JsonCredentialParameters.ServiceAccountCredentialType ||
-                string.IsNullOrEmpty(credentialParameters.ClientEmail) ||
-                string.IsNullOrEmpty(credentialParameters.PrivateKey))
-            {
-                throw new InvalidOperationException("JSON data does not represent a valid service account credential.");
-            }
-
-            return credentialParameters;
         }
     }
 }
