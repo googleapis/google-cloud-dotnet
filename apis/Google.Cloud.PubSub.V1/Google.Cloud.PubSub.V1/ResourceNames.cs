@@ -563,8 +563,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get { return SubscriptionName.Parse(Subscription); }
-            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -576,8 +576,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get { return SubscriptionName.Parse(Subscription); }
-            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -589,8 +589,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public TopicName TopicAsTopicName
         {
-            get { return TopicName.Parse(Topic); }
-            set { Topic = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Topic) ? null : Google.Cloud.PubSub.V1.TopicName.Parse(Topic); }
+            set { Topic = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -602,8 +602,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get { return SubscriptionName.Parse(Subscription); }
-            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -615,8 +615,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public TopicName TopicAsTopicName
         {
-            get { return TopicName.Parse(Topic); }
-            set { Topic = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Topic) ? null : Google.Cloud.PubSub.V1.TopicName.Parse(Topic); }
+            set { Topic = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -628,8 +628,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public ProjectName ProjectAsProjectName
         {
-            get { return ProjectName.Parse(Project); }
-            set { Project = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Project) ? null : Google.Cloud.PubSub.V1.ProjectName.Parse(Project); }
+            set { Project = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -641,8 +641,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public TopicName TopicAsTopicName
         {
-            get { return TopicName.Parse(Topic); }
-            set { Topic = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Topic) ? null : Google.Cloud.PubSub.V1.TopicName.Parse(Topic); }
+            set { Topic = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -665,8 +665,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public ProjectName ProjectAsProjectName
         {
-            get { return ProjectName.Parse(Project); }
-            set { Project = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Project) ? null : Google.Cloud.PubSub.V1.ProjectName.Parse(Project); }
+            set { Project = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -678,8 +678,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get { return SubscriptionName.Parse(Subscription); }
-            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -691,8 +691,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get { return SubscriptionName.Parse(Subscription); }
-            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -704,8 +704,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public TopicName TopicAsTopicName
         {
-            get { return TopicName.Parse(Topic); }
-            set { Topic = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Topic) ? null : Google.Cloud.PubSub.V1.TopicName.Parse(Topic); }
+            set { Topic = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -717,8 +717,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get { return SubscriptionName.Parse(Subscription); }
-            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -730,8 +730,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
-            get { return SubscriptionName.Parse(Subscription); }
-            set { Subscription = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -743,8 +743,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public SubscriptionName SubscriptionName
         {
-            get { return SubscriptionName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
@@ -752,8 +752,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public TopicNameOneof TopicAsTopicNameOneof
         {
-            get { return TopicNameOneof.Parse(Topic, true); }
-            set { Topic = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Topic) ? null : Google.Cloud.PubSub.V1.TopicNameOneof.Parse(Topic, true); }
+            set { Topic = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -765,8 +765,8 @@ namespace Google.Cloud.PubSub.V1
         /// </summary>
         public TopicName TopicName
         {
-            get { return TopicName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.PubSub.V1.TopicName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }

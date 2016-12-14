@@ -2125,8 +2125,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
-            get { return ParentNameOneof.Parse(Parent, true); }
-            set { Parent = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2138,8 +2138,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
-            get { return ParentNameOneof.Parse(Parent, true); }
-            set { Parent = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2151,8 +2151,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public MetricNameOneof MetricNameAsMetricNameOneof
         {
-            get { return MetricNameOneof.Parse(MetricName, true); }
-            set { MetricName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(MetricName) ? null : Google.Cloud.Logging.V2.MetricNameOneof.Parse(MetricName, true); }
+            set { MetricName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2164,8 +2164,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public LogNameOneof LogNameAsLogNameOneof
         {
-            get { return LogNameOneof.Parse(LogName, true); }
-            set { LogName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(LogName) ? null : Google.Cloud.Logging.V2.LogNameOneof.Parse(LogName, true); }
+            set { LogName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2177,8 +2177,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public SinkNameOneof SinkNameAsSinkNameOneof
         {
-            get { return SinkNameOneof.Parse(SinkName, true); }
-            set { SinkName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(SinkName) ? null : Google.Cloud.Logging.V2.SinkNameOneof.Parse(SinkName, true); }
+            set { SinkName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2190,8 +2190,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public MetricNameOneof MetricNameAsMetricNameOneof
         {
-            get { return MetricNameOneof.Parse(MetricName, true); }
-            set { MetricName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(MetricName) ? null : Google.Cloud.Logging.V2.MetricNameOneof.Parse(MetricName, true); }
+            set { MetricName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2203,8 +2203,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public SinkNameOneof SinkNameAsSinkNameOneof
         {
-            get { return SinkNameOneof.Parse(SinkName, true); }
-            set { SinkName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(SinkName) ? null : Google.Cloud.Logging.V2.SinkNameOneof.Parse(SinkName, true); }
+            set { SinkName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2216,8 +2216,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
-            get { return ParentNameOneof.Parse(Parent, true); }
-            set { Parent = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2229,8 +2229,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
-            get { return ParentNameOneof.Parse(Parent, true); }
-            set { Parent = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2242,8 +2242,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
-            get { return ParentNameOneof.Parse(Parent, true); }
-            set { Parent = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Logging.V2.ParentNameOneof.Parse(Parent, true); }
+            set { Parent = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2255,8 +2255,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public IResourceName DestinationAsResourceName
         {
-            get { return UnknownResourceName.Parse(Destination); }
-            set { Destination = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Destination) ? null : UnknownResourceName.Parse(Destination); }
+            set { Destination = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2268,8 +2268,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public MetricNameOneof MetricNameAsMetricNameOneof
         {
-            get { return MetricNameOneof.Parse(MetricName, true); }
-            set { MetricName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(MetricName) ? null : Google.Cloud.Logging.V2.MetricNameOneof.Parse(MetricName, true); }
+            set { MetricName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2281,8 +2281,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public SinkNameOneof SinkNameAsSinkNameOneof
         {
-            get { return SinkNameOneof.Parse(SinkName, true); }
-            set { SinkName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(SinkName) ? null : Google.Cloud.Logging.V2.SinkNameOneof.Parse(SinkName, true); }
+            set { SinkName = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -2294,8 +2294,8 @@ namespace Google.Cloud.Logging.V2
         /// </summary>
         public LogNameOneof LogNameAsLogNameOneof
         {
-            get { return LogNameOneof.Parse(LogName, true); }
-            set { LogName = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(LogName) ? null : Google.Cloud.Logging.V2.LogNameOneof.Parse(LogName, true); }
+            set { LogName = value != null ? value.ToString() : ""; }
         }
 
     }

@@ -30,8 +30,16 @@ cd releasebuild
 git checkout $tag
 NOVERSIONSUFFIX=yes ./build.sh
 mkdir nuget
-cp `find . -name '*.nupkg'` nuget
+cp `find . -name 'Google.*.nupkg'` nuget
 
 # TODO: Make builddocs.sh cope with being run from any directory.
 cd docs
 ./builddocs.sh
+
+echo "Release build complete. Next steps:"
+echo "- Upload new docs to gh-pages branch"
+echo "- Push packages to nuget:"
+echo "  - cd releasebuild/nuget"
+echo "  - Remove any packages you don't want to push"
+echo "  - for pkg in *[^s].nupkg; do nuget push -Source https://api.nuget.org/v3/index.json -ApiKey API_KEY_HERE \$pkg; done"
+echo "    (The [^s] avoids matching the symbols packages)"

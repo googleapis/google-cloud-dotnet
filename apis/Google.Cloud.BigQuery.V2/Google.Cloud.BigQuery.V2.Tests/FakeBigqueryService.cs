@@ -13,8 +13,8 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2;
-using Google.Apis.Http;
 using Google.Apis.Requests;
+using Google.Cloud.ClientTesting;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
@@ -33,7 +33,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
         })
         {
             handler = (ReplayingMessageHandler) HttpClient.MessageHandler;
-            var client = new ConfigurableHttpClient(handler);
         }
 
         public void ExpectRequest<TResponse>(ClientServiceRequest<TResponse> request, TResponse response)
@@ -42,23 +41,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var httpRequest = request.CreateRequest();
             string responseContent = SerializeObject(response);            
             handler.ExpectRequest(httpRequest.RequestUri, httpRequest.Content?.ReadAsStringAsync()?.Result, responseContent);
-        }
-
-        /// <summary>
-        /// HTTP client factory which gets a specific message handler (for mocking) and use for creating the HTTP
-        /// client.
-        /// </summary>
-        private class FakeHttpClientFactory : IHttpClientFactory
-        {
-            private readonly ConfigurableMessageHandler _handler;
-
-            public FakeHttpClientFactory(ConfigurableMessageHandler handler)
-            {
-                _handler = handler;
-            }
-
-            public ConfigurableHttpClient CreateHttpClient(CreateHttpClientArgs args) =>
-                new ConfigurableHttpClient(_handler);
         }
     }
 }

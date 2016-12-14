@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
@@ -26,11 +27,15 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>Gets the QPS sample rate.</summary>
         public double QpsSampleRate { get; }
 
-        private TraceConfiguration(double qpsSampleRate)
+        /// <summary>The buffer options for the tracer.</summary>
+        public BufferOptions BufferOptions { get; }
+
+        private TraceConfiguration(double qpsSampleRate, BufferOptions bufferOptions)
         {
             GaxPreconditions.CheckArgument(
                 qpsSampleRate > 0, nameof(qpsSampleRate), "qpsSampleRate must be greater than 0.");
             QpsSampleRate = qpsSampleRate;
+            BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
         }
 
         /// <summary>
@@ -39,7 +44,11 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="qpsSampleRate">Optional, the qps sample rate.  The sample rate determines
         ///     how often requests are automatically traced. Defaults to <see cref="DefaultQpsSampleRate"/>
         /// </param>
-        public static TraceConfiguration Create(double qpsSampleRate = DefaultQpsSampleRate)
-            => new TraceConfiguration(qpsSampleRate);
+        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Sized"/></param>
+        public static TraceConfiguration Create(
+            double qpsSampleRate = DefaultQpsSampleRate, BufferOptions bufferOptions = null)
+        {
+            return new TraceConfiguration(qpsSampleRate, bufferOptions ?? BufferOptions.SizedBuffer());
+        }
     }
 }

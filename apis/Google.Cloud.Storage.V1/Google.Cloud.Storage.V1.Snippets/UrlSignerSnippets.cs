@@ -38,16 +38,16 @@ namespace Google.Cloud.Storage.V1.Snippets
         }
 
         [Fact]
-        public async void SignedURLGet()
+        public async Task SignedURLGet()
         {
             var bucketName = _fixture.BucketName;
             var objectName = _fixture.HelloStorageObjectName;
-            var credentialsFilePath = GetCredentialsFilePath();
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
             var httpClient = new HttpClient();
 
             // Sample: SignedURLGet
             // Create a signed URL which can be used to get a specific object for one hour.
-            UrlSigner urlSigner = UrlSigner.FromServiceAccountPath(credentialsFilePath);
+            UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
             string url = urlSigner.Sign(
                 bucketName,
                 objectName,
@@ -63,15 +63,15 @@ namespace Google.Cloud.Storage.V1.Snippets
         }
 
         [Fact]
-        public async void SignedURLPut()
+        public async Task SignedURLPut()
         {
             var bucketName = _fixture.BucketName;
-            var credentialsFilePath = GetCredentialsFilePath();
+            var credential = (await GoogleCredential.GetApplicationDefaultAsync()).UnderlyingCredential as ServiceAccountCredential;
             var httpClient = new HttpClient();
 
             // Sample: SignedURLPut
             // Create a signed URL which allows the requester to PUT data with the text/plain content-type.
-            UrlSigner urlSigner = UrlSigner.FromServiceAccountPath(credentialsFilePath);
+            UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
             var destination = "places/world.txt";
             string url = urlSigner.Sign(
                 bucketName,
@@ -112,69 +112,6 @@ namespace Google.Cloud.Storage.V1.Snippets
             }
 
             await client.DeleteObjectAsync(bucketName, destination);
-        }
-
-        private static string GetCredentialsFilePath()
-        {
-            // TODO: This is taken and changed slightly from DefaultCredentialProvider. Expose the pieces necessary so we don't need to duplicate logic.
-            var credentialFilePath = Environment.GetEnvironmentVariable(CredentialEnvironmentVariable) ?? GetWellKnownCredentialFilePath();
-            if (!string.IsNullOrEmpty(credentialFilePath) && File.Exists(credentialFilePath))
-            {
-                try
-                {
-                    using (var credentialStream = File.OpenRead(credentialFilePath))
-                    {
-                        var credentialParameters = NewtonsoftJsonSerializer.Instance.Deserialize<JsonCredentialParameters>(credentialStream);
-                        if (credentialParameters.Type == JsonCredentialParameters.ServiceAccountCredentialType)
-                        {
-                            return credentialFilePath;
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    throw new InvalidOperationException("Error deserializing JSON credential data.", e);
-                }
-            }
-
-            throw new InvalidOperationException($"Set the {CredentialEnvironmentVariable} environment variable to a service account credentials JSON file");
-        }
-
-        // TODO: Everything below is taking from DefaultCredentialProvider. Try to expose it somehow to we don't need to duplicate logic.
-
-        /// <summary>
-        /// Environment variable override which stores the default application credentials file path.
-        /// </summary>
-        private const string CredentialEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
-
-        /// <summary>Well known file which stores the default application credentials.</summary>
-        private const string WellKnownCredentialsFile = "application_default_credentials.json";
-
-        /// <summary>Environment variable which contains the Application Data settings.</summary>
-        private const string AppdataEnvironmentVariable = "APPDATA";
-
-        /// <summary>Environment variable which contains the location of home directory on UNIX systems.</summary>
-        private const string HomeEnvironmentVariable = "HOME";
-
-        /// <summary>GCloud configuration directory in Windows, relative to %APPDATA%.</summary>
-        private const string CloudSDKConfigDirectoryWindows = "gcloud";
-
-        /// <summary>GCloud configuration directory on Linux/Mac, relative to $HOME.</summary>
-        private static readonly string CloudSDKConfigDirectoryUnix = Path.Combine(".config", "gcloud");
-
-        private static string GetWellKnownCredentialFilePath()
-        {
-            var appData = Environment.GetEnvironmentVariable(AppdataEnvironmentVariable);
-            if (appData != null)
-            {
-                return Path.Combine(appData, CloudSDKConfigDirectoryWindows, WellKnownCredentialsFile);
-            }
-            var unixHome = Environment.GetEnvironmentVariable(HomeEnvironmentVariable);
-            if (unixHome != null)
-            {
-                return Path.Combine(unixHome, CloudSDKConfigDirectoryUnix, WellKnownCredentialsFile);
-            }
-            return Path.Combine(CloudSDKConfigDirectoryWindows, WellKnownCredentialsFile);
         }
     }
 }

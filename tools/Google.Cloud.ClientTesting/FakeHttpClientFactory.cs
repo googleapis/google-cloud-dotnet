@@ -12,18 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Trace.V1;
+using Google.Apis.Http;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.ClientTesting
 {
     /// <summary>
-    /// A trace consumer that takes Stackdriver Trace traces.
+    /// HTTP client factory which gets a specific message handler (for mocking) and use for creating the HTTP
+    /// client.
     /// </summary>
-    internal interface ITraceConsumer
+    public class FakeHttpClientFactory : IHttpClientFactory
     {
-        /// <summary>
-        /// Accepts Stackdriver Trace traces.
-        /// </summary>
-        void Receive(Traces traces);
+        private readonly ConfigurableMessageHandler _handler;
+
+        public FakeHttpClientFactory(ConfigurableMessageHandler handler)
+        {
+            _handler = handler;
+        }
+
+        public ConfigurableHttpClient CreateHttpClient(CreateHttpClientArgs args) => new ConfigurableHttpClient(_handler);
     }
 }

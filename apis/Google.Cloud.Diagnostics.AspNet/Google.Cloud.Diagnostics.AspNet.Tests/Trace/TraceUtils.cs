@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         /// </summary>
         internal static RateLimiter GetRateLimiter(long elapsedMilliseconds)
         {
-            Mock<ITimer> watch = new Mock<ITimer>();
+            var watch = new Mock<ITimer>();
             watch.Setup(w => w.GetElapsedMilliseconds()).Returns(elapsedMilliseconds);
             return new RateLimiter(1, watch.Object);
         }
@@ -38,8 +38,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         /// </summary>
         internal static RateLimiter GetRateLimiter(double qps, long[] elapsedMilliseconds)
         {
-            Queue<long> returnQueue = new Queue<long>(elapsedMilliseconds);
-            Mock<ITimer> watch = new Mock<ITimer>();
+            var returnQueue = new Queue<long>(elapsedMilliseconds);
+            var watch = new Mock<ITimer>();
             watch.Setup(w => w.GetElapsedMilliseconds()).Returns(() => returnQueue.Dequeue());
             return new RateLimiter(qps, watch.Object);
         }
@@ -49,7 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         /// </summary>
         internal static bool IsValidAnnotation(TraceSpan span, Dictionary<string, string> annotation)
         {
-            MapField<string, string> labels = span.Labels;
+            var labels = span.Labels;
             if (labels.Count != annotation.Count)
             {
                 return false;

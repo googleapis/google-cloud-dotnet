@@ -12,16 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
+
+using TraceProto = Google.Cloud.Trace.V1.Trace;
+
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// A flushable trace consumer that takes Stackdriver Trace traces.
+    /// An <see cref="ISizer{T}"/> for <see cref="TraceProto"/>s.
     /// </summary>
-    internal interface IFlushableTraceConsumer : ITraceConsumer
+    internal sealed class TraceSizer : ISizer<TraceProto>
     {
-        /// <summary>
-        /// Flush the trace consumer.
-        /// </summary>
-        void Flush();
+        /// <summary>The single trace sizer instance.</summary>
+        internal static readonly TraceSizer Instance = new TraceSizer();
+
+        private TraceSizer() { }
+
+        /// <inheritdoc />
+        public int GetSize(TraceProto item) => item.CalculateSize();
     }
 }

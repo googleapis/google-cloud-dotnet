@@ -377,8 +377,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public ProjectName ProjectName
         {
-            get { return ProjectName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -390,8 +390,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public ProjectName ProjectName
         {
-            get { return ProjectName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -403,8 +403,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public ProjectName ProjectName
         {
-            get { return ProjectName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -416,8 +416,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public GroupName GroupName
         {
-            get { return GroupName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -429,8 +429,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public MetricDescriptorName MetricDescriptorName
         {
-            get { return MetricDescriptorName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.MetricDescriptorName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -442,8 +442,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public GroupName GroupName
         {
-            get { return GroupName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -455,8 +455,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public MetricDescriptorName MetricDescriptorName
         {
-            get { return MetricDescriptorName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.MetricDescriptorName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -468,8 +468,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public MonitoredResourceDescriptorName MonitoredResourceDescriptorName
         {
-            get { return MonitoredResourceDescriptorName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.MonitoredResourceDescriptorName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -481,8 +481,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public GroupName GroupName
         {
-            get { return GroupName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -494,8 +494,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public ProjectName ProjectName
         {
-            get { return ProjectName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
@@ -503,8 +503,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public GroupName ChildrenOfGroupAsGroupName
         {
-            get { return GroupName.Parse(ChildrenOfGroup); }
-            set { ChildrenOfGroup = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(ChildrenOfGroup) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(ChildrenOfGroup); }
+            set { ChildrenOfGroup = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
@@ -512,8 +512,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public GroupName AncestorsOfGroupAsGroupName
         {
-            get { return GroupName.Parse(AncestorsOfGroup); }
-            set { AncestorsOfGroup = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(AncestorsOfGroup) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(AncestorsOfGroup); }
+            set { AncestorsOfGroup = value != null ? value.ToString() : ""; }
         }
 
         /// <summary>
@@ -521,8 +521,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public GroupName DescendantsOfGroupAsGroupName
         {
-            get { return GroupName.Parse(DescendantsOfGroup); }
-            set { DescendantsOfGroup = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(DescendantsOfGroup) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(DescendantsOfGroup); }
+            set { DescendantsOfGroup = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -534,8 +534,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public ProjectName ProjectName
         {
-            get { return ProjectName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -547,8 +547,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public ProjectName ProjectName
         {
-            get { return ProjectName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -560,8 +560,8 @@ namespace Google.Cloud.Monitoring.V3
         /// </summary>
         public ProjectName ProjectName
         {
-            get { return ProjectName.Parse(Name); }
-            set { Name = GaxPreconditions.CheckNotNull(value, nameof(value)).ToString(); }
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.ProjectName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
         }
 
     }
