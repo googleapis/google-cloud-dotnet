@@ -59,7 +59,7 @@ api_json=`cat << EndOfJson
 {
   "tag_name": "$package-$version",
   "target_commitish": "$commit",
-  "name": "$version release of $apackage",
+  "name": "$version release of $package",
   "body": "",
   "draft": false,
   "prerelease": $prerelease
