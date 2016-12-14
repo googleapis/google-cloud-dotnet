@@ -80,8 +80,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null)
         {
             var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-            fakeClient.Setup(x => x.WriteLogEntriesAsync(LogNameOneof.From(new LogName(s_projectId, s_logId)),
-                null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), null))
+            fakeClient.Setup(x => x.WriteLogEntriesAsync(null, null,
+                It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), null))
                 .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CallSettings>((a, b, c, entries, d) => handlerFn(entries));
             var appender = new GoogleStackdriverAppender(fakeClient.Object,
                 scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock())
