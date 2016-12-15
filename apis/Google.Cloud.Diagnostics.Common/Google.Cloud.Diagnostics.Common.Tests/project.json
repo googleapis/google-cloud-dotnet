@@ -1,0 +1,31 @@
+﻿{
+  "version": "1.0.0-alpha01",
+  "description": "Unit tests for the  Google Stackdriver Instrumentation Libraries Common Components.",
+  "authors": [ "Google Inc." ],
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk"
+  },
+
+  "dependencies": {
+    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    "Google.Api.Gax.Testing": "1.0.0-beta06",
+    "Google.Cloud.Diagnostics.Common": { "target": "project" },
+    "Moq": "4.6.38-alpha",
+    "xunit": "2.2.0-beta3-build3402"
+  },
+  "testRunner": "xunit",
+
+  "frameworks": {
+    "net451": {},
+    "netcoreapp1.0": {
+      "imports": "netcore50",
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0",
+          "type": "platform"
+        }
+      }
+    }
+  }
+}
