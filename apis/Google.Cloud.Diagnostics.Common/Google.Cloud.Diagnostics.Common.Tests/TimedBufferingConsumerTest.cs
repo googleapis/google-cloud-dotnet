@@ -67,7 +67,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             int[] intArray = { 1, 2, 3, 4 };
             var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.Receive(intArray));
-            TimedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object, clock);
+            var consumer = GetConsumer(mockConsumer.Object, clock);
 
             consumer.Receive(intArray);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
@@ -82,7 +82,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var clock = GetClock(new[] { _start, _start });
             var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.Receive(new int[] { }));
-            TimedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object, clock);
+            var consumer = GetConsumer(mockConsumer.Object, clock);
 
             consumer.Receive(new int[] { });
             consumer.Flush();

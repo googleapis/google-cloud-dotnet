@@ -20,7 +20,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class SizedBufferingConsumerTest
     {
-        private static int _bufferSize = 10;
+        private const int _bufferSize = 10;
 
         private SizedBufferingConsumer<int> GetConsumer(IConsumer<int> consumer)
         {
@@ -30,8 +30,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Receive()
         {
-            Mock<IConsumer<int>> mockConsumer = new Mock<IConsumer<int>>();
-            SizedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object);
+            var mockConsumer = new Mock<IConsumer<int>>();
+            var consumer = GetConsumer(mockConsumer.Object);
             consumer.Receive(new[] { 1, 2 });
 
             // Ensure ints have not been sent as they are not bigger then the buffer.
@@ -50,13 +50,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Flush()
         {
             int[] intArray = { 1, 2, 3, 4 };
-            Mock<IConsumer<int>> mockConsumer = new Mock<IConsumer<int>>();
-            mockConsumer.Setup(c => c.Receive(intArray));
-            SizedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object);
+            var mockConsumer = new Mock<IConsumer<int>>();
+            var consumer = GetConsumer(mockConsumer.Object);
 
             consumer.Receive(intArray);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
 
+            mockConsumer.Setup(c => c.Receive(intArray));
             consumer.Flush();
             mockConsumer.VerifyAll();
         }
@@ -64,9 +64,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Flush_NoTraces()
         {
-            Mock<IConsumer<int>> mockConsumer = new Mock<IConsumer<int>>();
+            var mockConsumer = new Mock<IConsumer<int>>();
             mockConsumer.Setup(c => c.Receive(new int[] { }));
-            SizedBufferingConsumer<int> consumer = GetConsumer(mockConsumer.Object);
+            var consumer = GetConsumer(mockConsumer.Object);
 
             consumer.Receive(new int[] { });
             consumer.Flush();

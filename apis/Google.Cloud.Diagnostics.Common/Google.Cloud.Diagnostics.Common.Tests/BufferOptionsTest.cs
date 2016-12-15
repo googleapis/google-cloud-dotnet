@@ -24,6 +24,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             BufferOptions options = BufferOptions.NoBuffer();
             Assert.Equal(BufferType.None, options.BufferType);
+            Assert.Equal(default(int), options.BufferSizeBytes);
+            Assert.Equal(default(TimeSpan), options.BufferWaitTime);
         }
 
         [Fact]
@@ -33,6 +35,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             BufferOptions options = BufferOptions.SizedBuffer(size);
             Assert.Equal(BufferType.Sized, options.BufferType);
             Assert.Equal(size, options.BufferSizeBytes);
+            Assert.Equal(default(TimeSpan), options.BufferWaitTime);
         }
 
         [Fact]
@@ -42,6 +45,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             BufferOptions options = BufferOptions.TimedBuffer(waitTime);
             Assert.Equal(BufferType.Timed, options.BufferType);
             Assert.Equal(waitTime, options.BufferWaitTime);
+            Assert.Equal(default(int), options.BufferSizeBytes);
         }
     }
 }
