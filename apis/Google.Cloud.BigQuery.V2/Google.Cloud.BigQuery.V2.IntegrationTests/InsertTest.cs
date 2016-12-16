@@ -165,6 +165,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 }
             };
             table.Insert(row);
+            // Fetch flattened fields
             var command = new BigQueryCommand($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid=@guid ORDER BY name.first")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
@@ -178,6 +179,39 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new { Guid = guid, FirstName = "x", LastName = "y" }
             };
             Assert.Equal(expectedResults, resultRows);
+            // Fetch unflattened
+            command = new BigQueryCommand($"SELECT names FROM {table} WHERE guid=@guid")
+            {
+                Parameters = { { "guid", BigQueryDbType.String, guid } }
+            };
+            var resultRow = WaitForRows(client, command).Single();
+            var fetchedNames = (Dictionary<string, object>[]) resultRow["names"];
+            Assert.Equal(2, fetchedNames.Length);
+            Assert.True(fetchedNames.Any(d => (string) d["first"] == "a" && (string) d["last"] == "b"));
+            Assert.True(fetchedNames.Any(d => (string) d["first"] == "x" && (string) d["last"] == "y"));
+        }
+
+        [Fact]
+        public void Insert_RecordRepeatedField()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var dataset = client.GetDataset(_fixture.DatasetId);
+            var table = dataset.GetTable(_fixture.ComplexTypesTableId);
+            var guid = Guid.NewGuid().ToString();
+            var row = new BigQueryInsertRow
+            {
+                ["guid"] = guid,
+                ["job"] = new BigQueryInsertRow { ["company"] = "Pet Store", ["roles"] = new[] { "cashier", "manager" } },
+            };
+            table.Insert(row);
+            var command = new BigQueryCommand($"SELECT job FROM {table} WHERE guid=@guid")
+            {
+                Parameters = { { "guid", BigQueryDbType.String, guid } }
+            };
+            var fetchedRow = WaitForRows(client, command).Single();
+            var job = (Dictionary<string, object>) fetchedRow["job"];
+            Assert.Equal("Pet Store", (string) job["company"]);
+            Assert.Equal(new[] { "cashier", "manager" }, (string[]) job["roles"]);
         }
 
         /// <summary>
