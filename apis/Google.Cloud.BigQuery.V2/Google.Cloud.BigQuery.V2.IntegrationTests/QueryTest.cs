@@ -293,6 +293,15 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(DateTimeKind.Utc, ((DateTime) values["_field_9"]).Kind);
         }
 
+        [Fact]
+        public void NullStructValue()
+        {
+            var client = BigQueryClient.Create(_fixture.ProjectId);
+            var row = client.ExecuteQuery("SELECT STRUCT<x string>(NULL) AS s").GetRows().Single();
+            var s = (Dictionary <string, object>) row["s"];
+            Assert.Null(s["x"]);
+        }
+
         // TODO: Struct containing array or array containing struct.
     }
 }
