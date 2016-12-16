@@ -79,7 +79,7 @@ namespace Google.Cloud.BigQuery.V2
 
         private static object ConvertSingleValue(object rawValue, TableFieldSchema field)
         {
-            if (rawValue == null)
+            if (rawValue == null || (rawValue as JToken)?.Type == JTokenType.Null)
             {
                 return null;
             }
@@ -183,8 +183,7 @@ namespace Google.Cloud.BigQuery.V2
             {
                 var field = fields[i];
                 var token = values[i]["v"];
-                ret[field.Name] = token.Type == JTokenType.Null ? null
-                    : ConvertSingleValue(token.Type == JTokenType.String ? (string)token : (object)token, field);
+                ret[field.Name] = ConvertSingleValue(token.Type == JTokenType.String ? (string)token : (object)token, field);
             }
             return ret;
         }
