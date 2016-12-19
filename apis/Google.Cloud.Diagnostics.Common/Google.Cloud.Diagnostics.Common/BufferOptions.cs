@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common
         private static readonly BufferOptions s_noBufferInstance = new BufferOptions(BufferType.None);
 
         /// <summary>The default buffer size in bytes. 2^16 = 65536.</summary>
-        internal const int DefaultBufferSize = 65536;
+        internal const int DefaultBufferSize = 2;
 
         /// <summary>The default amount of time to wait before a flush is automatically made.</summary>
         private static readonly TimeSpan DefaultWaitTime = TimeSpan.FromSeconds(5);

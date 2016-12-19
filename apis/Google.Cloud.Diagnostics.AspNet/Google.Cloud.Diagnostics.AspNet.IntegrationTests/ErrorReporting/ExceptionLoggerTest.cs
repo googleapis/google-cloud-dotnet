@@ -13,6 +13,7 @@
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Cloud.Diagnostics.Common.Tests;
 using Microsoft.Owin.Testing;
 using Owin;
 using System;
