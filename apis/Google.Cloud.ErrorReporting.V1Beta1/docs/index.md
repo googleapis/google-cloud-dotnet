@@ -40,6 +40,12 @@ optionally specifying a service endpoint and settings.
 
 [!code-cs[](obj/snippets/Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient.txt#ReportErrorEvent)]
 
+## Automatic Error Reporting for ASP.NET
+Using [`Google.Cloud.Diagnostics.AspNet`'s ExceptionLogger](Google.Cloud.Diagnostics.AspNet/index.html)
+uncaught exceptions in ASP.NET applications can be automatically reported to the Stackdriver Error Reporting API.
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLogger)]
+
 ## List error groups with statistics
 
 [!code-cs[](obj/snippets/Google.Cloud.ErrorReporting.V1Beta1.ErrorStatsServiceClient.txt#ListGroupStats)]
