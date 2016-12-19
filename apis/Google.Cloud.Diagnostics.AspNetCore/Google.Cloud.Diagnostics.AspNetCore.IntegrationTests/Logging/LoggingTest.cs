@@ -196,7 +196,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
-    /// A simple web application to test Stackdriver Logging.
+    /// A simple web application to test the <see cref="GoogleLogger"/> and associated classes.
     /// </summary>
     public class LoggerTestApplication
     {
