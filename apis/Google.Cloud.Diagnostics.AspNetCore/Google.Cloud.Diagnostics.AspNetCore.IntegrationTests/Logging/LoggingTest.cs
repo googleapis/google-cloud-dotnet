@@ -34,10 +34,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class LoggingTest
     {
-        /// <summary>Total time to spend sleeping when looking for logs.</summary>
+        /// <summary>Total time to spend sleeping when looking for log entries.</summary>
         private readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
 
-        /// <summary>Time to sleep between checks for logs.</summary>
+        /// <summary>Time to sleep between checks for log entries.</summary>
         private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
 
         /// <summary>Project id to run the test on.</summary>
@@ -53,8 +53,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         /// <summary>
-        /// Gets log entries that contain a the passed in testId in the log message.  Will poll
-        /// and wait for them to appear.
+        /// Gets log entries that contain the passed in testId in the log message.  Will poll
+        /// and wait for the entries to appear.
         /// </summary>
         /// <param name="startTime">The earliest log entry time that will be looked at.</param>
         /// <param name="testId">The test id to filter log entries on.</param>
@@ -123,6 +123,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Critical/{testId}");
             }
 
+            // NoBufferLoggerTestApplication does not support debug or info logs.
             var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
@@ -152,7 +153,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             // Just check that a large portion of logs entires were pushed.  Not all
-            // will be pushed as the buffer may not flush them all.
+            // will be pushed as some may be in the buffer.
             var results = GetEntries(startTime, testId, 500);
             Assert.NotNull(results);
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Debug));
@@ -185,7 +186,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Critical/{testId}");
             }
 
-            // The 4th entry is not pushed as it is buffered waiting for the waiting period.
+            // The fourth entry is not pushed as it is buffered after the last push.
             var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
@@ -223,7 +224,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
-    /// An application that has a <see cref="GoogleLogger"/> with no buffer. 
+    /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
+    /// of level warning or above.
     /// </summary>
     public class NoBufferLoggerTestApplication : LoggerTestApplication
     {
@@ -237,7 +239,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> with a <see cref="BufferType.Sized"/>
-    /// buffer.
+    /// buffer that will accept all logs of level error or above.
     /// </summary>
     public class SizedBufferLoggerTestApplication : LoggerTestApplication
     {
@@ -251,7 +253,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     /// <summary>
     /// An application that has a <see cref="GoogleLogger"/> with a <see cref="BufferType.Timed"/>
-    /// buffer, that will be able to flush after one minute.
+    /// buffer, that will be able to flush after one minute that will accept all logs of level
+    /// warning or above.
     /// </summary>
     public class TimedBufferLoggerTestApplication : LoggerTestApplication
     {
@@ -265,7 +268,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     }
 
     /// <summary>
-    /// A controller for the <see cref="LoggerTestApplication"/> 
+    /// A controller for the <see cref="LoggerTestApplication"/> used to generate simple log entries.
     /// </summary>
     public class MainController : Controller
     {
@@ -329,6 +332,4 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private string GetMessage(string message, string id) => $"{message} - {id}";
     }
-
-
 }
