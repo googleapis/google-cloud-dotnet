@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         private readonly IClock _clock;
 
         /// <summary>The global resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
-        private static readonly MonitoredResource _globalResource = new MonitoredResource { Type = "global" };
+        internal static readonly MonitoredResource _globalResource = new MonitoredResource { Type = "global" };
 
         internal GoogleLogger(IConsumer<LogEntry> consumer, LogLevel logLevel, string projectId, string logName, IClock clock = null)
         {
