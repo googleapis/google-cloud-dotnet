@@ -32,9 +32,9 @@ namespace Google.Cloud.Logging.Log4Net
             }
         }
 
-        public Task WaitAsync()
+        public Task WaitAsync(CancellationToken cancellationToken)
         {
-            return _sem.WaitAsync();
+            return _sem.WaitAsync(cancellationToken);
         }
     }
 }
