@@ -128,8 +128,6 @@ namespace Google.Cloud.Logging.Log4Net
                 // Upload entries to the Cloud Logging server
                 try
                 {
-                    // TODO: We should be able to specify an empty log name here; all our log entries
-                    // have a log name. For now, take the log name from the first entry...
                     await _client.WriteLogEntriesAsync(null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken);
                     await _logQ.RemoveUntilAsync(entries.Last().Id, cancellationToken);
                     lock (_lockObj)
@@ -155,7 +153,7 @@ namespace Google.Cloud.Logging.Log4Net
             }
         }
 
-        public async Task<bool> FlushAsync(long untilId, TimeSpan timeout)
+        public async Task<bool> FlushAsync(long untilId, TimeSpan timeout, CancellationToken cancellationToken)
         {
             // Record the most recently sent id, and attempt to flush until that point.
             var timeoutTask = Task.Delay(timeout);
@@ -169,7 +167,8 @@ namespace Google.Cloud.Logging.Log4Net
                     }
                 }
                 // Include waiting on the _uploaderTask so an exception can be thrown if it fails during the flush.
-                Task completed = await Task.WhenAny(_uploaderTask, _uploadCompleteEvent.WaitAsync(CancellationToken.None), timeoutTask);
+                Task completed = await Task.WhenAny(_uploaderTask, _uploadCompleteEvent.WaitAsync(cancellationToken), timeoutTask);
+                cancellationToken.ThrowIfCancellationRequested();
                 if (completed.Exception != null)
                 {
                     throw completed.Exception;

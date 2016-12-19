@@ -24,14 +24,20 @@ namespace Google.Cloud.Logging.Log4Net
         /// <summary>
         /// Get the latest ID used in a possible previous execution.
         /// </summary>
-        /// <returns>The latest ID froma previous exeuction, or <c>null</c> if not relevant.</returns>
+        /// <returns>The latest ID from a previous exeuction, or <c>null</c> if not relevant.</returns>
         Task<long?> GetPreviousExecutionIdAsync();
 
         /// <summary>
-        /// Enqueue the given log entries
+        /// Enqueue the given log entries.
         /// </summary>
         /// <param name="logEntries"></param>
-        /// <returns>The daterange lost, or null if nothing lost.</returns>
+        /// <returns>The date/time range lost, or null if nothing lost.</returns>
+        /// <remarks>
+        /// This enqueues log entries in a local buffer, which are then asynchronously uploaded to Google
+        /// Stackdriver. If the local buffer is full, then the oldest locally buffered log entries will
+        /// be purged to allow these newer entries to be buffered. In this case the date/time range of the
+        /// purged log entries will be returned.
+        /// </remarks>
         DateTimeRange Enqueue(IEnumerable<LogEntryExtra> logEntries);
 
         /// <summary>
@@ -43,9 +49,9 @@ namespace Google.Cloud.Logging.Log4Net
         Task<List<LogEntryExtra>> PeekAsync(int maximumCount, CancellationToken cancellationToken);
 
         /// <summary>
-        /// Remove items up to and including the specified ID.
+        /// Remove items up to and including the specified internal sequential ID.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">The internal sequential ID to remove until.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task that completes when the removal operation is complete.</returns>
         Task RemoveUntilAsync(long id, CancellationToken cancellationToken);

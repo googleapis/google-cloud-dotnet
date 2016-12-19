@@ -22,6 +22,7 @@ using log4net.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.Log4Net
@@ -30,10 +31,28 @@ namespace Google.Cloud.Logging.Log4Net
     /// Appends logging events to Google Stackdriver Logging.
     /// </summary>
     /// <remarks>
+    /// <para>
     /// Logging events are sent to Google Stackdriver Logging asychronously,
     /// via a local buffer. This  is to ensure that server errors or increased
     /// network/server latency don't cause slow-downs in the program being logged.
-    /// TODO: Explain all the configuration options.
+    /// </para>
+    /// <para>
+    /// <c>GoogleStackdriverAppender</c> provides two methods of flushing this local buffer.
+    /// <list type="bullet">
+    /// <item><description>
+    /// The <see cref="Flush(TimeSpan, CancellationToken)"/> and <see cref="FlushAsync(TimeSpan, CancellationToken)"/>
+    /// flush local buffer entries to Google Stackdriver, waiting a maximum of the specified
+    /// <see cref="TimeSpan"/>. These methods return <c>true</c> if all locally buffered
+    /// entries were successfully flushed, or <c>false</c> otherwise.
+    /// </description></item>
+    /// <item><description>
+    /// <c>GoogleStackdriverAppender</c> implements <see cref="IDisposable"/>. This calls
+    /// <see cref="Flush(TimeSpan, CancellationToken)"/> with the timeout configured in
+    /// <see cref="DisposeTimeoutSeconds"/>, then closes the appender so no further logging
+    /// can be performed. It is not generally necessary to call <see cref="Dispose"/>.
+    /// </description></item>
+    /// </list>
+    /// </para>
     /// </remarks>
     public sealed partial class GoogleStackdriverAppender : AppenderSkeleton, IDisposable
     {
@@ -46,7 +65,7 @@ namespace Google.Cloud.Logging.Log4Net
         internal const string s_lostDateTimeFmt = "yyyy-MM-dd' 'HH:mm:ss'Z'";
 
         /// <summary>
-        /// Construct a Google stackdriver appender.
+        /// Construct a Google Stackdriver appender.
         /// </summary>
         public GoogleStackdriverAppender() { }
 
@@ -93,7 +112,7 @@ namespace Google.Cloud.Logging.Log4Net
         private ILogQueue _logQ;
         private LogUploader _logUploader;
         private Task<long?> _initIdTask;
-        private long _currentId;
+        private long _currentId = -1; // Initialised here, in case Flush() is called before any log entries written.
 
         private List<Label> _customLabels = new List<Label>();
         private HashSet<MetaDataType> _withMetaData = new HashSet<MetaDataType>();
@@ -233,7 +252,6 @@ namespace Google.Cloud.Logging.Log4Net
                 if (_initIdTask != null)
                 {
                     _currentId = _initIdTask.Result ?? -1;
-                    _initIdTask.Dispose();
                     _initIdTask = null;
                 }
                 var logEntriesExtra = logEntries
@@ -267,23 +285,28 @@ namespace Google.Cloud.Logging.Log4Net
         /// Flush locally buffered log entries to the server.
         /// </summary>
         /// <param name="timeout">The maxmimum time to spend waiting for the flush to complete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.
+        /// The default value is <see cref="CancellationToken.None"/>.</param>
         /// <returns>A task representing whether the flush completed within the timeout.</returns>
-        public Task<bool> FlushAsync(TimeSpan timeout)
+        public Task<bool> FlushAsync(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken))
         {
             long untilId;
             lock (_enqueueLock)
             {
                 untilId = _currentId;
             }
-            return _logUploader.FlushAsync(untilId, timeout);
+            return _logUploader.FlushAsync(untilId, timeout, cancellationToken);
         }
 
         /// <summary>
         /// Flush locally buffered log entries to the server.
         /// </summary>
         /// <param name="timeout">The maxmimum time to spend waiting for the flush to complete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.
+        /// The default value is <see cref="CancellationToken.None"/>.</param>
         /// <returns>Whether the flush completed within the timeout.</returns>
-        public bool Flush(TimeSpan timeout) => Task.Run(async () => await FlushAsync(timeout).ConfigureAwait(false)).Result;
+        public bool Flush(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken)) =>
+            Task.Run(async () => await FlushAsync(timeout, cancellationToken).ConfigureAwait(false)).Result;
 
         /// <summary>
         /// Dispose of this appender, by flushing locally buffer entries then closing the appender.

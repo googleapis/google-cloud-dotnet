@@ -179,7 +179,7 @@ namespace Google.Cloud.Logging.Log4Net
 
         /// <summary>
         /// The maximum size in bytes that each log file is allowed to reach, before being rolled over.
-        /// Default value is 10Mb.
+        /// Default value is 10MB.
         /// </summary>
         public long MaxFileSize { get; set; } = 10 * 1024 * 1024;
 

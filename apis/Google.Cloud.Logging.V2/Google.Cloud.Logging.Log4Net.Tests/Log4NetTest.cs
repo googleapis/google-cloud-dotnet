@@ -268,5 +268,50 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Assert.Equal(5, uploadedEntries.Count);
             Assert.Equal(logs.Select(x => x.RenderedMessage), uploadedEntries.Select(x => x.TextPayload.Trim()));
         }
+
+        [Fact]
+        public async Task ErrorAfterDispose_NoLogEntries()
+        {
+            var uploadedEntries = await RunTestWorkingServer(appender =>
+            {
+                appender.Dispose();
+                Assert.Throws<LoggingErrorException>(() => appender.DoAppend(CreateLog(Level.Info, "Won't work, already disposed.")));
+                return Task.FromResult(0);
+            });
+            Assert.Empty(uploadedEntries);
+        }
+
+        [Fact]
+        public async Task ErrorAfterDispose_WithLogEntry()
+        {
+            var uploadedEntries = await RunTestWorkingServer(appender =>
+            {
+                appender.DoAppend(CreateLog(Level.Info, "0"));
+                appender.Dispose();
+                Assert.Throws<LoggingErrorException>(() => appender.DoAppend(CreateLog(Level.Info, "Won't work, already disposed.")));
+                return Task.FromResult(0);
+            });
+            Assert.NotEmpty(uploadedEntries);
+        }
+
+        [Fact]
+        public async Task FlushCancellation()
+        {
+            var t0 = DateTime.UtcNow;
+            var tcs = new CancellationTokenSource(TimeSpan.FromSeconds(0.1));
+            var task = RunTest(async entries =>
+            {
+                await Task.Delay(TimeSpan.FromSeconds(60));
+                return new WriteLogEntriesResponse();
+            },
+            async appender =>
+            {
+                appender.DoAppend(CreateLog(Level.Info, "0"));
+                Assert.False(await appender.FlushAsync(TimeSpan.FromSeconds(60), tcs.Token));
+                var t1 = DateTime.UtcNow;
+                Assert.InRange(t1 - t0, TimeSpan.FromSeconds(0.0), TimeSpan.FromSeconds(1.0));
+            });
+            await Assert.ThrowsAsync<OperationCanceledException>(() => task);
+        }
     }
 }
