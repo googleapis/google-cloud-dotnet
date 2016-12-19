@@ -12,34 +12,36 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.Tests;
+using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-using Xunit;
 using Microsoft.Extensions.DependencyInjection;
-using Google.Cloud.Diagnostics.Common;
-using Microsoft.Extensions.Options;
-using Microsoft.Extensions.Configuration;
-using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 using System;
-using Google.Protobuf.WellKnownTypes;
-using System.Xml;
-using System.Threading;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Xml;
+using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class LoggingTest
     {
+        /// <summary>Total time to spend sleeping when looking for logs.</summary>
+        private readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
+
+        /// <summary>Time to sleep between checks for logs.</summary>
+        private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
+
         /// <summary>Project id to run the test on.</summary>
         private readonly string _projectId;
-
 
         /// <summary>Client to use to send RPCs.</summary>
         private readonly LoggingServiceV2Client _client;
@@ -50,40 +52,70 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             _client = LoggingServiceV2Client.Create();
         }
 
-        private TestServer GetServer()
+        /// <summary>
+        /// Gets log entries that contain a the passed in testId in the log message.  Will poll
+        /// and wait for them to appear.
+        /// </summary>
+        /// <param name="startTime">The earliest log entry time that will be looked at.</param>
+        /// <param name="testId">The test id to filter log entries on.</param>
+        /// <param name="minEntries">The minimum number of logs entries that should be waited for.</param>
+        private IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries)
         {
-            return new TestServer(new WebHostBuilder().
-                UseStartup<LoggerTestApplication>());
-        }
+            TimeSpan totalSleepTime = TimeSpan.Zero;
+            while (totalSleepTime <= _timeout)
+            {
+                TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : _timeout;
+                totalSleepTime += sleepTime;
+                Thread.Sleep(sleepTime);
 
-        private ListLogEntriesRequest GetRequest(DateTime dateTime)
-        {
-            
-            string time = XmlConvert.ToString(dateTime, XmlDateTimeSerializationMode.Utc);
+                // Conver the time to RFC3339 UTC format.
+                string time = XmlConvert.ToString(startTime, XmlDateTimeSerializationMode.Utc);
+                var request =  new ListLogEntriesRequest
+                {
+                    ResourceNames = { $"projects/{_projectId}" },
+                    Filter = $"timestamp >= \"{time}\""
+                };
 
-            return new ListLogEntriesRequest {
-                ResourceNames = { $"projects/{_projectId}" },
-                Filter = $"timestamp >= \"{time}\""
-            };
-        }
-
-        private IEnumerable<LogEntry> GetEntries(DateTime datetime, int minEntries)
-        {
-            var results = _client.ListLogEntries(GetRequest(startTime));
-            var entries = results.Where(p => p.TextPayload.Contains(testId));
+                var results = _client.ListLogEntries(request);
+                var entries = results.Where(p => p.TextPayload.Contains(testId));
+                if (minEntries != 0 && entries.Count() >= minEntries)
+                {
+                    return entries;
+                }
+            }
+            return null;
         }
 
         [Fact]
-        public async Task Test()
+        public async Task Logging_SizedBufferNoLogs()
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<SmallSizedBufferLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<SizedBufferLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
+                await client.GetAsync($"/Main/Warning/{testId}");
+                await client.GetAsync($"/Main/Error/{testId}");
+                await client.GetAsync($"/Main/Critical/{testId}");
+            }
 
+            // No entries should be found as not enough entries were created to
+            // flush the buffer.
+            Assert.Null(GetEntries(startTime, testId, 0));
+        }
+
+        [Fact]
+        public async Task Logging_NoBuffer()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferLoggerTestApplication>();
+            using (TestServer server = new TestServer(builder))
+            {
+                var client = server.CreateClient();
                 await client.GetAsync($"/Main/Debug/{testId}");
                 await client.GetAsync($"/Main/Info/{testId}");
                 await client.GetAsync($"/Main/Warning/{testId}");
@@ -91,17 +123,80 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Critical/{testId}");
             }
 
-            Thread.Sleep(10000);
-            var results = _client.ListLogEntries(GetRequest(startTime));
-            var entries = results.Where(p => p.TextPayload.Contains(testId));
-            foreach (var entry in entries)
+            var results = GetEntries(startTime, testId, 3);
+            Assert.Equal(3, results.Count());
+            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
+            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
+            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
+        }
+
+        [Fact]
+        public async Task Logging_SizedBuffer()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<SizedBufferLoggerTestApplication>();
+            using (TestServer server = new TestServer(builder))
             {
-                var temp = entry;
+                var client = server.CreateClient();
+                for (int i = 0; i < 250; i++)
+                {
+                    await client.GetAsync($"/Main/Debug/{testId}");
+                    await client.GetAsync($"/Main/Info/{testId}");
+                    await client.GetAsync($"/Main/Warning/{testId}");
+                    await client.GetAsync($"/Main/Error/{testId}");
+                    await client.GetAsync($"/Main/Critical/{testId}");
+                    await client.GetAsync($"/Main/Exception/{testId}");
+                }
             }
 
+            // Just check that a large portion of logs entires were pushed.  Not all
+            // will be pushed as the buffer may not flush them all.
+            var results = GetEntries(startTime, testId, 500);
+            Assert.NotNull(results);
+            Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Debug));
+            Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Info));
+            Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
+            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
+            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
+        }
+
+
+        [Fact]
+        public async Task Logging_TimedBuffer()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<TimedBufferLoggerTestApplication>();
+            using (TestServer server = new TestServer(builder))
+            {
+                var client = server.CreateClient();
+
+                await client.GetAsync($"/Main/Warning/{testId}");
+                await client.GetAsync($"/Main/Error/{testId}");
+
+                var noResults = GetEntries(startTime, testId, 0);
+                Assert.Null(noResults);
+                Thread.Sleep(TimeSpan.FromSeconds(70));
+
+                await client.GetAsync($"/Main/Error/{testId}");
+                await client.GetAsync($"/Main/Critical/{testId}");
+            }
+
+            // The 4th entry is not pushed as it is buffered waiting for the waiting period.
+            var results = GetEntries(startTime, testId, 3);
+            Assert.Equal(3, results.Count());
+            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
+            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
+            Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
         }
     }
 
+    /// <summary>
+    /// A simple web application to test Stackdriver Logging.
+    /// </summary>
     public class LoggerTestApplication
     {
         protected string ProjectId;
@@ -127,19 +222,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
     }
 
-    public class SmallSizedBufferLoggerTestApplication : LoggerTestApplication
+    /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> with no buffer. 
+    /// </summary>
+    public class NoBufferLoggerTestApplication : LoggerTestApplication
     {
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, BufferOptions.SizedBuffer(1));
+            LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }
 
+    /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> with a <see cref="BufferType.Sized"/>
+    /// buffer.
+    /// </summary>
     public class SizedBufferLoggerTestApplication : LoggerTestApplication
     {
-        public void ConfigureLogging(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Error);
@@ -147,6 +249,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
     }
 
+    /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> with a <see cref="BufferType.Timed"/>
+    /// buffer, that will be able to flush after one minute.
+    /// </summary>
+    public class TimedBufferLoggerTestApplication : LoggerTestApplication
+    {
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            SetupRoutes(app);
+            var options = BufferOptions.TimedBuffer(TimeSpan.FromMinutes(1));
+            LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, options);
+            loggerFactory.AddGoogle(ProjectId, loggerOptions);
+        }
+    }
+
+    /// <summary>
+    /// A controller for the <see cref="LoggerTestApplication"/> 
+    /// </summary>
     public class MainController : Controller
     {
         private readonly ILogger _logger;        
@@ -190,6 +310,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string message = GetMessage(nameof(Critical), id);
             _logger.LogCritical(message);
+            return message;
+        }
+
+        public string Exception(string id)
+        {
+            string message = GetMessage(nameof(Exception), id);
+            try
+            {
+                throw new Exception("Exception to throw.");
+            }
+            catch (Exception e)
+            {
+                _logger.LogCritical(message, e);
+            } 
             return message;
         }
 
