@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Testing;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
@@ -32,29 +33,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
         private static readonly string _projectId = "pid";
         private static readonly DateTime _dateTime = DateTime.UtcNow;
         private static readonly Exception _exception = new Exception("some message");
-        private static readonly IClock _clock = GetClock();
-
-        /// <summary>
-        /// Creates an <see cref="IClock"/> that always returns the same <see cref="DateTime"/>.
-        /// </summary>
-        private static IClock GetClock()
-        {
-            var mockClock = new Mock<IClock>();
-            mockClock.Setup(c => c.GetCurrentDateTimeUtc()).Returns(_dateTime);
-            return mockClock.Object;
-        }
+        private static readonly IClock _clock = new FakeClock(_dateTime);
 
         /// <summary>
         /// Function to format a string and exception.  Used to test logging.
         /// </summary>
         private string Formatter(string message, Exception ex)
-        {
-            if (ex != null)
-            {
-                return $"{message} - {ex.Message}";
-            }
-            return message;
-        }
+            => ex == null ? message : $"{message} - {ex.Message}";
 
         private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
         {
@@ -65,6 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
         public void BeginScope()
         {
             var logger = GetLogger(new Mock<IConsumer<LogEntry>>().Object);
+            // This will return null as the function is not implemented yet.
             Assert.Null(logger.BeginScope("state"));
         }
 
@@ -82,7 +68,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
         }
 
         [Fact]
-        public void Log_NullFormater()
+        public void Log_NullFormatter()
         {
             var logger = GetLogger(new Mock<IConsumer<LogEntry>>().Object);
             Assert.Throws<ArgumentNullException>(
@@ -93,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
         public void Log_NotEnabled()
         {
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
-            var logger = GetLogger(mockConsumer.Object);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information);
             logger.Log(LogLevel.Debug, 0, _logMessage, _exception, Formatter);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never());
         }
