@@ -73,16 +73,15 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         }
 
         private Task RunTest(
-            Func<IEnumerable<LogEntry>,
-            Task<WriteLogEntriesResponse>> handlerFn,
+            Func<IEnumerable<LogEntry>, Task<WriteLogEntriesResponse>> handlerFn,
             Func<GoogleStackdriverAppender, Task> testFn,
             IClock clock = null, IScheduler scheduler = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null)
         {
             var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-            fakeClient.Setup(x => x.WriteLogEntriesAsync(null, null,
-                It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), null))
-                .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CallSettings>((a, b, c, entries, d) => handlerFn(entries));
+            fakeClient.Setup(x => x.WriteLogEntriesAsync(
+                null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
+                .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
             var appender = new GoogleStackdriverAppender(fakeClient.Object,
                 scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock())
             {
@@ -136,7 +135,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     var log = CreateLog(Level.Info, "Message0");
                     appender.DoAppend(log);
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                 });
             Assert.Equal(1, uploadedEntries.Count);
             Assert.Equal("Message0", uploadedEntries[0].TextPayload.Trim());
@@ -150,9 +149,9 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 async appender =>
                 {
                     appender.DoAppend(logs.Take(2).ToArray());
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                     appender.DoAppend(logs.Skip(2).ToArray());
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                 });
             Assert.Equal(5, uploadedEntries.Count);
             Assert.Equal(logs.Select(x => x.RenderedMessage), uploadedEntries.Select(x => x.TextPayload.Trim()));
@@ -166,7 +165,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     var logs = Enumerable.Range(0, 5).Select(i => CreateLog(Level.Info, $"Message{i}", i)).ToArray();
                     appender.DoAppend(logs);
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                 }, maxMemoryCount: 1);
             // Expect logs-loss warning, and the last log entry
             Assert.Equal(2, uploadedEntries.Count);
@@ -182,7 +181,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     var logs = Enumerable.Range(0, 5).Select(i => CreateLog(Level.Info, $"Message{i}", i)).ToArray();
                     appender.DoAppend(logs);
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                 }, maxMemorySize: 1);
             // Expect logs-loss warning, and various log entries
             Assert.Equal(2, uploadedEntries.Count);
@@ -198,11 +197,11 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     var logs = Enumerable.Range(0, 5).Select(i => CreateLog(Level.Info, $"Message{i}", i)).ToArray();
                     appender.DoAppend(logs.Take(1).ToArray());
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                     appender.DoAppend(logs.Skip(1).Take(3).ToArray());
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                     appender.DoAppend(logs.Skip(4).Take(1).ToArray());
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                 }, maxMemoryCount: 1);
             // Expect logs-loss warning, and various log entries
             Assert.Equal(4, uploadedEntries.Count);
@@ -221,7 +220,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     var logs = Enumerable.Range(0, 5).Select(i => CreateLog(Level.Info, $"Message{i}", i)).ToArray();
                     appender.DoAppend(logs);
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                 },
                 clock: fakeClock,
                 maxMemoryCount: 1);
@@ -261,7 +260,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 async appender =>
                 {
                     appender.DoAppend(logs);
-                    await appender.WaitUntilEmptyAsync(s_testTimeout);
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
                 },
                 maxUploadBatchSize: 1);
             Assert.Equal(10, uploadCount);

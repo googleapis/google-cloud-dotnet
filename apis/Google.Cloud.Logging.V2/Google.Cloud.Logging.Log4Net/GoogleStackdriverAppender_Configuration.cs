@@ -24,12 +24,47 @@ namespace Google.Cloud.Logging.Log4Net
     /// </summary>
     public enum MetaDataType
     {
+        /// <summary>
+        /// The code location of the log entry.
+        /// </summary>
+        /// <remarks>
+        /// This will add the following to labels to every log entry (if available):
+        /// <list type="bullet">
+        /// <item><description>Location.FileName</description></item>
+        /// <item><description>Location.ClassName</description></item>
+        /// <item><description>Location.LineNumber</description></item>
+        /// </list>
+        /// </remarks>
         Location,
+
+        /// <summary>
+        /// The string name of the identity of the current thread principal; with the label "Identity".
+        /// </summary>
         Identity,
+
+        /// <summary>
+        /// The name of the current thread, or the thread ID when the name is not avaible; with the label "ThreadName".
+        /// </summary>
         ThreadName,
+
+        /// <summary>
+        /// The name of the current user, or "NOT AVAILABLE"; with the label "UserName".
+        /// </summary>
         UserName,
+
+        /// <summary>
+        /// The AppDomain friendly name; with the label "Domain".
+        /// </summary>
         Domain,
+
+        /// <summary>
+        /// The name of the logger that logged the event; with the label "LoggerName".
+        /// </summary>
         LoggerName,
+
+        /// <summary>
+        /// The Level of the logging event; with the label "Level".
+        /// </summary>
         Level,
     }
 
@@ -59,12 +94,20 @@ namespace Google.Cloud.Logging.Log4Net
         /// </summary>
         public class Label
         {
+            /// <summary>
+            /// Label key.
+            /// </summary>
             public string Key { get; set; }
+
+            /// <summary>
+            /// Label value.
+            /// </summary>
             public string Value { get; set; }
         }
 
         /// <summary>
-        /// The resource type of log entries. Defaults to "global".
+        /// The resource type of log entries.
+        /// Default value is "global".
         /// </summary>
         public string ResourceType { get; set; } = "global";
 
@@ -79,7 +122,8 @@ namespace Google.Cloud.Logging.Log4Net
         public string LogId { get; set; }
 
         /// <summary>
-        /// The maximum batch size when uploading to Google Cloud Logging. Defaults to 100.
+        /// The maximum batch size when uploading to Google Cloud Logging.
+        /// Default value is 100.
         /// </summary>
         public int MaxUploadBatchSize { get; set; } = 100;
 
@@ -115,13 +159,15 @@ namespace Google.Cloud.Logging.Log4Net
         public LocalQueueType LocalQueueType { get; set; } = LocalQueueType.Memory;
 
         /// <summary>
-        /// The maximum bytes of memory used by in-memory logging queue. Defaults to unconfigured.
+        /// The maximum bytes of memory used by in-memory logging queue.
+        /// Default value is 0 (unconfigured).
         /// Not used for file-based queuing.
         /// </summary>
-        public long MaxMemorySize { get; set; }
+        public long MaxMemorySize { get; set; } = 0;
 
         /// <summary>
-        /// The maximum count of log entries allowed in the in-memory logging queue. Defaults to 1,000
+        /// The maximum count of log entries allowed in the in-memory logging queue.
+        /// Default value is 1,000
         /// Not used for file-based queueing.
         /// </summary>
         public int MaxMemoryCount { get; set; } = 1000;
@@ -132,20 +178,30 @@ namespace Google.Cloud.Logging.Log4Net
         public string File { get; set; }
 
         /// <summary>
-        /// The maximum size in bytes that each log file is allowed to reach, before being rolled over. Defaults to 10Mb.
+        /// The maximum size in bytes that each log file is allowed to reach, before being rolled over.
+        /// Default value is 10Mb.
         /// </summary>
         public long MaxFileSize { get; set; } = 10 * 1024 * 1024;
 
         /// <summary>
-        /// The maximum number of backup files that are kept before the oldest is erased. Defaults to 10.
+        /// The maximum number of backup files that are kept before the oldest is erased.
+        /// Default value is 10.
         /// </summary>
         public int MaxSizeRollBackups { get; set; } = 10;
 
+        /// <summary>
+        /// Specify custom labels for all log entries.
+        /// </summary>
+        /// <param name="label">The custom label.</param>
         public void AddCustomLabel(Label label)
         {
             _customLabels.Add(label);
         }
 
+        /// <summary>
+        /// Specify additional metadata to include in all log entries.
+        /// </summary>
+        /// <param name="enable">The additional metadata to enable.</param>
         public void AddWithMetaData(MetaDataType enable)
         {
             _withMetaData.Add(enable);
@@ -153,17 +209,26 @@ namespace Google.Cloud.Logging.Log4Net
 
         /// <summary>
         /// On receiving a server error during log upload, the initial delay in seconds before retry.
+        /// Defaults value is 1 second.
         /// </summary>
         public int ServerErrorBackoffDelaySeconds { get; set; } = 1;
 
         /// <summary>
         /// The multiplier applied to the retry delay when receiving multiple consecutive server errors during log upload.
+        /// Default value is 1.5
         /// </summary>
         public double ServerErrorBackoffMultiplier { get; set; } = 1.5;
 
         /// <summary>
         /// The maxmimum retry delay when receiving multiple consecutive server errors during log upload.
+        /// Default value is 60 seconds.
         /// </summary>
         public int ServerErrorBackoffMaxDelaySeconds { get; set; } = 60;
+
+        /// <summary>
+        /// The maximum time the <c>Dispose()</c> call of <see cref="GoogleStackdriverAppender"/> may take. 
+        /// Default value is 30 seconds.
+        /// </summary>
+        public int DisposeTimeoutSeconds { get; set; } = 30;
     }
 }
