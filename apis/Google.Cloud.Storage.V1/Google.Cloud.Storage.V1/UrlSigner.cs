@@ -295,7 +295,7 @@ namespace Google.Cloud.Storage.V1
             var resourcePath = $"/{bucket}";
             if (objectName != null)
             {
-                resourcePath += $"/{objectName}";
+                resourcePath += $"/{Uri.EscapeDataString(objectName)}";
             }
             var extensionHeaders = GetExtensionHeaders(requestHeaders, contentHeaders);
 
