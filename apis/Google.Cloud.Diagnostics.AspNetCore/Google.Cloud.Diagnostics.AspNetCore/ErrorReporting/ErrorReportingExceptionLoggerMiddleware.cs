@@ -19,17 +19,35 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// Middleware that will, when invoked, call the next <see cref="RequestDelegate"/>,
+    /// catch any exception that it may throw, send that exception to the
+    /// Stackdriver Error Reporting API and rethrow the given exception.
+    /// </summary>
     public sealed class ErrorReportingExceptionLoggerMiddleware
     {
         private readonly RequestDelegate _next;
-        Task<ErrorReportingExceptionLogger> _loggerTask;
+        private readonly ErrorReportingExceptionLogger _logger;
 
-        public ErrorReportingExceptionLoggerMiddleware(RequestDelegate next, Task<ErrorReportingExceptionLogger> loggerTask)
+        /// <summary>
+        /// Create a new instance of <see cref="ErrorReportingExceptionLoggerMiddleware"/>.
+        /// </summary>
+        /// <param name="next">The next request delegate.</param>
+        /// <param name="logger">A logger that will report exceptions to the Stackdriver
+        ///     Error Reporting API.</param>
+        public ErrorReportingExceptionLoggerMiddleware(RequestDelegate next, ErrorReportingExceptionLogger logger)
         {
             _next = next;
-            _loggerTask = GaxPreconditions.CheckNotNull(loggerTask, nameof(loggerTask));
+            _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }
 
+        /// <summary>
+        /// Invokes the next <see cref="RequestDelegate"/>, catches any exception thrown,
+        /// reports the exception to the  Stackdriver Error Reporting API and rethrows
+        /// the exception.
+        /// </summary>
+        /// <param name="httpContext"></param>
+        /// <returns></returns>
         public async Task Invoke(HttpContext httpContext)
         {
             try
@@ -38,8 +56,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
             catch (Exception exception)
             {
-                ErrorReportingExceptionLogger handler = await _loggerTask;
-                await handler.Report(httpContext);
+                await _logger.ReportAsync(httpContext, exception);
                 throw;
             }
         }

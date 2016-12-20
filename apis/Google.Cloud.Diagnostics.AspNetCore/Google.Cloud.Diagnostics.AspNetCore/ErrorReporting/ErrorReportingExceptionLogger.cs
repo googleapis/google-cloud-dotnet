@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using System;
@@ -23,6 +22,14 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    ///  Google Cloud Error Reporting Exception Logger.
+    /// </summary>
+    /// 
+    /// <remarks>
+    /// Reports unhandled exceptions to Google Cloud Error Reporting.
+    /// Docs: https://cloud.google.com/error-reporting/docs/
+    /// </remarks>
     public sealed class ErrorReportingExceptionLogger
     {
         /// <summary> The Google Cloud Platform project id.</summary>
@@ -34,7 +41,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         private readonly ServiceContext _serviceContext;
 
-        private readonly ReportErrorsServiceClient _client;
+        /// <summary>The client to report errors with.</summary>
+        private readonly Task<ReportErrorsServiceClient> _clientTask;
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
@@ -43,9 +51,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
-        public static async Task<ErrorReportingExceptionLogger> Create(
+        public static ErrorReportingExceptionLogger Create(
+            ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
+            Create(Task.FromResult(client), projectId, serviceName, version);
+
+        /// <summary>
+        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
+        /// </summary>
+        /// <param name="clientTask">The Error Reporting client.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
+        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        public static ErrorReportingExceptionLogger Create(
             Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
-            new ErrorReportingExceptionLogger(await clientTask, projectId, serviceName, version);
+            new ErrorReportingExceptionLogger(clientTask, projectId, serviceName, version);
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/> using credentials as
@@ -54,15 +73,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
-        public static async Task<ErrorReportingExceptionLogger> Create(
+        public static ErrorReportingExceptionLogger Create(
             string projectId, string serviceName, string version) =>
-            await Create(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
+            Create(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
 
         private ErrorReportingExceptionLogger(
-           ReportErrorsServiceClient client, string projectId, string serviceName, string version)
+           Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _clientTask = GaxPreconditions.CheckNotNull(clientTask, nameof(clientTask));
             _projectName = new ProjectName(projectId);
             _serviceContext = new ServiceContext
             {
@@ -71,10 +90,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             };
         }
 
-        public async Task<ReportErrorEventResponse> Report(HttpContext context)
+        /// <summary>
+        /// Asyncronously reports an exception that occured to the Stackdriver Error Reporting API.
+        /// </summary>
+        public async Task<ReportErrorEventResponse> ReportAsync(HttpContext context, Exception exception)
         {
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            return await _client.ReportErrorEventAsync(_projectName, errorEvent);
+            var errorEvent = CreateReportRequest(context, exception);
+            var client = await _clientTask;
+            return await client.ReportErrorEventAsync(_projectName, errorEvent);
+        }
+
+        /// <summary>
+        /// Reports an exception that occured to the Stackdriver Error Reporting API.
+        /// </summary>
+        public ReportErrorEventResponse Report(HttpContext context, Exception exception)
+        {
+            var errorEvent = CreateReportRequest(context, exception);
+            // If the client task has faulted this will throw when accessing 'Result'
+            return _clientTask.Result.ReportErrorEvent(_projectName, errorEvent);
         }
 
         /// <summary>
@@ -126,11 +159,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Gets infromation about the exception that occured and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
-        private ReportedErrorEvent CreateReportRequest(HttpContext context)
+        private ReportedErrorEvent CreateReportRequest(HttpContext context, Exception exception)
         {
-            IExceptionHandlerFeature error = context?.Features.Get<IExceptionHandlerFeature>();
-            Exception exception = error?.Error;
-
             ErrorContext errorContext = new ErrorContext()
             {
                 HttpRequest = CreateHttpRequestContext(context),
