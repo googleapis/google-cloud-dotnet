@@ -31,6 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     ///     string serviceName = "[Name of service]";
     ///     string version = "[Version of service]";
     ///     app.ReportExceptionsToGoogle(projectId, serviceName, version);
+    ///     ...
     /// }
     /// </code>
     /// </example>
