@@ -1,5 +1,5 @@
 ﻿{
-  "description": "Integration tests for the Google Stackdriver Insturmnetation Core Libraries.",
+  "description": "Integration tests for the Google Stackdriver Instrumentation Core Libraries.",
 
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"

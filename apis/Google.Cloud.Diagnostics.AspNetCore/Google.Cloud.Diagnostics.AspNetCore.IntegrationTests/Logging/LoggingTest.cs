@@ -58,17 +58,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// </summary>
         /// <param name="startTime">The earliest log entry time that will be looked at.</param>
         /// <param name="testId">The test id to filter log entries on.</param>
-        /// <param name="minEntries">The minimum number of logs entries that should be waited for.</param>
+        /// <param name="minEntries">The minimum number of logs entries that should be waited for.
+        ///     If minEntries is zero this method will wait the full timeout before checking for the
+        ///     values to ensure they have not appeared.</param>
         private IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries)
         {
             TimeSpan totalSleepTime = TimeSpan.Zero;
-            while (totalSleepTime <= _timeout)
+            while (totalSleepTime < _timeout)
             {
                 TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : _timeout;
                 totalSleepTime += sleepTime;
                 Thread.Sleep(sleepTime);
 
-                // Conver the time to RFC3339 UTC format.
+                // Convert the time to RFC3339 UTC format.
                 string time = XmlConvert.ToString(startTime, XmlDateTimeSerializationMode.Utc);
                 var request =  new ListLogEntriesRequest
                 {
@@ -156,6 +158,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // will be pushed as some may be in the buffer.
             var results = GetEntries(startTime, testId, 500);
             Assert.NotNull(results);
+            Assert.True(results.Count() >= 500);
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Debug));
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Info));
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
@@ -180,7 +183,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 var noResults = GetEntries(startTime, testId, 0);
                 Assert.Null(noResults);
-                Thread.Sleep(TimeSpan.FromSeconds(70));
+                Thread.Sleep(TimeSpan.FromSeconds(25));
 
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
@@ -190,7 +193,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
-            Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
+            Assert.Equal(2, results.Where(l => l.Severity == LogSeverity.Error).Count());
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
         }
     }
@@ -261,7 +264,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            var options = BufferOptions.TimedBuffer(TimeSpan.FromMinutes(1));
+            var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(20));
             LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, options);
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
