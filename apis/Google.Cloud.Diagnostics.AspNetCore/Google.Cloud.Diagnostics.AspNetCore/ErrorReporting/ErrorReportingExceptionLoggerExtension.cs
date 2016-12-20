@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <code>
     /// public void Configure(IApplicationBuilder app)
     /// {
-    ///     // Use first To ensure all unhandled exceptions are reported.
+    ///     // Use first to ensure all unhandled exceptions are reported.
     ///     string projectId = "[Google Cloud Platform project ID]";
     ///     string serviceName = "[Name of service]";
     ///     string version = "[Version of service]";

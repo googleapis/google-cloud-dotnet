@@ -26,6 +26,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     ///  Google Cloud Error Reporting Exception Logger.
     /// </summary>
     /// 
+    /// See <see cref="ErrorReportingExceptionLoggerExtension"/>.
+    /// <example>
+    /// <code>
+    /// public void Configure(IApplicationBuilder app)
+    /// {
+    ///     // Use first to ensure all unhandled exceptions are reported.
+    ///     string projectId = "[Google Cloud Platform project ID]";
+    ///     string serviceName = "[Name of service]";
+    ///     string version = "[Version of service]";
+    ///     app.ReportExceptionsToGoogle(projectId, serviceName, version);
+    ///     ...
+    /// }
+    /// </code>
+    /// </example>
+    /// 
     /// <remarks>
     /// Reports unhandled exceptions to Google Cloud Error Reporting.
     /// Docs: https://cloud.google.com/error-reporting/docs/
@@ -45,12 +60,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         private readonly Task<ReportErrorsServiceClient> _clientTask;
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
+        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>.
         /// </summary>
-        /// <param name="client">The Error Reporting client.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
-        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        /// <param name="client">The Error Reporting client. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the 
+        ///     executable or job. Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer
+        ///     provided. Cannot be null.</param> 
         public static ErrorReportingExceptionLogger Create(
             ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
             Create(Task.FromResult(client), projectId, serviceName, version);
@@ -58,10 +75,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
         /// </summary>
-        /// <param name="clientTask">The Error Reporting client.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
-        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        /// <param name="clientTask">The Error Reporting client. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the 
+        ///     executable or job. Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer
+        ///     provided. Cannot be null.</param> 
         public static ErrorReportingExceptionLogger Create(
             Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
             new ErrorReportingExceptionLogger(clientTask, projectId, serviceName, version);
@@ -70,9 +89,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/> using credentials as
         /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
-        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the 
+        ///     executable or job. Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer
+        ///     provided. Cannot be null.</param> 
         public static ErrorReportingExceptionLogger Create(
             string projectId, string serviceName, string version) =>
             Create(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
@@ -93,6 +114,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Asynchronously reports an exception that occurred to the Stackdriver Error Reporting API.
         /// </summary>
+        /// <returns>An empty response on success.</returns>
         public async Task<ReportErrorEventResponse> ReportAsync(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
@@ -103,6 +125,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Reports an exception that occurred to the Stackdriver Error Reporting API.
         /// </summary>
+        /// <returns>An empty response on success.</returns>
         public ReportErrorEventResponse Report(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
