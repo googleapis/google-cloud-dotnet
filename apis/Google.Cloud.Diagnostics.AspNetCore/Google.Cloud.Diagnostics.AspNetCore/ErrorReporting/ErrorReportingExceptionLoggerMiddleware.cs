@@ -46,8 +46,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// reports the exception to the  Stackdriver Error Reporting API and rethrows
         /// the exception.
         /// </summary>
-        /// <param name="httpContext"></param>
-        /// <returns></returns>
         public async Task Invoke(HttpContext httpContext)
         {
             try

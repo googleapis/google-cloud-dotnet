@@ -17,8 +17,8 @@ using Microsoft.AspNetCore.Builder;
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
-    ///  Use Google Cloud Error Reporting Exception Logger Middleware.
-    ///  To ensure all unhandled exceptions are reported this should be
+    ///  Uses the Google Cloud Error Reporting Exception Logger Middleware.
+    ///  To ensure all unhandled exceptions are reported, this should be
     ///  the first piece of middleware used.
     /// </summary>
     /// 
@@ -26,8 +26,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <code>
     /// public void Configure(IApplicationBuilder app)
     /// {
-    ///     // To ensure all unhandled exceptions are reported this should be
-    ///     // the first piece of middleware used.
+    ///     // Use first To ensure all unhandled exceptions are reported.
     ///     string projectId = "[Google Cloud Platform project ID]";
     ///     string serviceName = "[Name of service]";
     ///     string version = "[Version of service]";
@@ -43,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     public static class ErrorReportingExceptionLoggerExtension
     {
         /// <summary>
-        /// Register middleware that will report all uncaught exceptions to the Stackdriver
+        /// Uses middleware that will report all uncaught exceptions to the Stackdriver
         /// Error Reporting API.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID.</param>

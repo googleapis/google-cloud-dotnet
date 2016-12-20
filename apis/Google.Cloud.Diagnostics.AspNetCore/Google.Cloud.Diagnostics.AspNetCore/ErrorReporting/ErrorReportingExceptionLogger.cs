@@ -91,7 +91,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Asyncronously reports an exception that occured to the Stackdriver Error Reporting API.
+        /// Asynchronously reports an exception that occurred to the Stackdriver Error Reporting API.
         /// </summary>
         public async Task<ReportErrorEventResponse> ReportAsync(HttpContext context, Exception exception)
         {
@@ -101,7 +101,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Reports an exception that occured to the Stackdriver Error Reporting API.
+        /// Reports an exception that occurred to the Stackdriver Error Reporting API.
         /// </summary>
         public ReportErrorEventResponse Report(HttpContext context, Exception exception)
         {
@@ -111,7 +111,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Gets information about the HTTP request and response when the exception occured 
+        /// Gets information about the HTTP request and response when the exception occurred 
         /// and populates a <see cref="HttpRequestContext"/> object.
         /// </summary>
         private HttpRequestContext CreateHttpRequestContext(HttpContext context)
@@ -129,7 +129,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Gets information about the source location where the exception occured 
+        /// Gets information about the source location where the exception occurred 
         /// and populates a <see cref="SourceLocation"/> object.
         /// </summary>
         private SourceLocation CreateSourceLocation(Exception exception)
@@ -156,7 +156,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Gets infromation about the exception that occured and populates
+        /// Gets information about the exception that occurred and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
         private ReportedErrorEvent CreateReportRequest(HttpContext context, Exception exception)
