@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Logging.Type;
+using Microsoft.Extensions.Logging;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
@@ -19,10 +21,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
     public class LogUtilsTest
     {
         [Fact]
-        public void Test()
+        public void ToLogSeverity()
         {
-            // TODO(talarico): Implement tests.
-            Assert.True(true);
+            Assert.Equal(LogSeverity.Debug, LogLevel.Trace.ToLogSeverity());
+            Assert.Equal(LogSeverity.Debug, LogLevel.Debug.ToLogSeverity());
+            Assert.Equal(LogSeverity.Info, LogLevel.Information.ToLogSeverity());
+            Assert.Equal(LogSeverity.Warning, LogLevel.Warning.ToLogSeverity());
+            Assert.Equal(LogSeverity.Error, LogLevel.Error.ToLogSeverity());
+            Assert.Equal(LogSeverity.Critical, LogLevel.Critical.ToLogSeverity());
+            Assert.Equal(LogSeverity.Default, LogLevel.None.ToLogSeverity());
+            Assert.Equal(LogSeverity.Default, ((LogLevel)20).ToLogSeverity());
         }
     }
 }

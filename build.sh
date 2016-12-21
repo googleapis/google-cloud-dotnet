@@ -80,7 +80,10 @@ do
   api=`echo $testdir | cut -d/ -f1`
   # The full framework test is different under Windows and Linux, and
   # we only do coverage tests on Windows.
-  if [ $OS == "Windows" ]
+  if [[ "$testdir" =~ (AspNetCore) ]]
+  then
+    echo "Skipping $testdir, it will not run on .NET 4.5.1"
+  elif [ $OS == "Windows" ]
   then
     dotnet test --no-build  -f net451 $DOTNET_TEST_ARGS $testdir
     if [ -n "$OPENCOVER" ]
@@ -112,7 +115,7 @@ do
   fi
   
   # Other than log4net and aspnet, everything can be tested under .NET Core.
-  if [[ "$testdir" =~ (AspNet|Log4Net) ]]
+  if [[ "$testdir" =~ (AspNet\.|Log4Net) ]]
   then
     echo "Skipping $testdir, it will not run on .NET Core"
   else

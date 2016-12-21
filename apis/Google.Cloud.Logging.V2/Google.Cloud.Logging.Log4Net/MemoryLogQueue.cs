@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.Log4Net
@@ -44,9 +46,8 @@ namespace Google.Cloud.Logging.Log4Net
 
         private readonly Queue<LogEntryExtraSize> _q = new Queue<LogEntryExtraSize>();
         private long _currentMemorySize = 0;
-        private long _maxIdSeen = -1;
 
-        public DateTimeRange EnqueueAsync(IEnumerable<LogEntryExtra> logEntries)
+        public DateTimeRange Enqueue(IEnumerable<LogEntryExtra> logEntries)
         {
             lock (_lockObj)
             {
@@ -68,42 +69,23 @@ namespace Google.Cloud.Logging.Log4Net
                     }
                     var sizedEntry = new LogEntryExtraSize(entry, _maxMemorySize > 0 ? entry.Entry.CalculateSize() : 0);
                     _q.Enqueue(sizedEntry);
-                    if (entry.Id > _maxIdSeen)
-                    {
-                        _maxIdSeen = entry.Id;
-                    }
                     _currentMemorySize += sizedEntry.Size;
                 }
                 return lostRange;
             }
         }
 
-        public Task<long> GetNextIdAsync()
+        public Task<long?> GetPreviousExecutionIdAsync() => Task.FromResult<long?>(null);
+
+        public Task<List<LogEntryExtra>> PeekAsync(int maximumCount, CancellationToken cancellationToken)
         {
             lock (_lockObj)
             {
-                return Task.FromResult(_maxIdSeen + 1);
+                return Task.FromResult(_q.Take(maximumCount).Select(x => x.LogEntryExtra).ToList());
             }
         }
 
-        public bool IsEmpty()
-        {
-            lock (_lockObj)
-            {
-                return _q.Count == 0;
-            }
-        }
-
-        public Task<IEnumerable<LogEntryExtra>> PeekAsync(int maximumCount)
-        {
-            lock (_lockObj)
-            {
-                return Task.FromResult<IEnumerable<LogEntryExtra>>(
-                    _q.Take(maximumCount).Select(x => x.LogEntryExtra).ToList());
-            }
-        }
-
-        public Task RemoveUntilAsync(long id)
+        public Task RemoveUntilAsync(long id, CancellationToken cancellationToken)
         {
             lock (_lockObj)
             {

@@ -149,6 +149,12 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                         { "y", BigQueryDbType.Int64 }
                     }
                 },
+                { "job", new TableSchemaBuilder
+                    {
+                        { "company", BigQueryDbType.String },
+                        { "roles", BigQueryDbType.String, BigQueryFieldMode.Repeated }
+                    }
+                },
                 { "names", new TableSchemaBuilder
                     {
                         { "first", BigQueryDbType.String },

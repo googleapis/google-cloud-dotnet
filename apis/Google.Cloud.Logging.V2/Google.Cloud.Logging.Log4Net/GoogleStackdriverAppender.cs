@@ -22,6 +22,7 @@ using log4net.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Logging.Log4Net
@@ -30,12 +31,30 @@ namespace Google.Cloud.Logging.Log4Net
     /// Appends logging events to Google Stackdriver Logging.
     /// </summary>
     /// <remarks>
+    /// <para>
     /// Logging events are sent to Google Stackdriver Logging asychronously,
     /// via a local buffer. This  is to ensure that server errors or increased
     /// network/server latency don't cause slow-downs in the program being logged.
-    /// TODO: Explain all the configuration options.
+    /// </para>
+    /// <para>
+    /// <c>GoogleStackdriverAppender</c> provides two methods of flushing this local buffer.
+    /// <list type="bullet">
+    /// <item><description>
+    /// The <see cref="Flush(TimeSpan, CancellationToken)"/> and <see cref="FlushAsync(TimeSpan, CancellationToken)"/>
+    /// flush local buffer entries to Google Stackdriver, waiting a maximum of the specified
+    /// <see cref="TimeSpan"/>. These methods return <c>true</c> if all locally buffered
+    /// entries were successfully flushed, or <c>false</c> otherwise.
+    /// </description></item>
+    /// <item><description>
+    /// <c>GoogleStackdriverAppender</c> implements <see cref="IDisposable"/>. This calls
+    /// <see cref="Flush(TimeSpan, CancellationToken)"/> with the timeout configured in
+    /// <see cref="DisposeTimeoutSeconds"/>, then closes the appender so no further logging
+    /// can be performed. It is not generally necessary to call <see cref="Dispose"/>.
+    /// </description></item>
+    /// </list>
+    /// </para>
     /// </remarks>
-    public sealed partial class GoogleStackdriverAppender : AppenderSkeleton
+    public sealed partial class GoogleStackdriverAppender : AppenderSkeleton, IDisposable
     {
         // TODO:
         // * Various argument validations
@@ -45,6 +64,9 @@ namespace Google.Cloud.Logging.Log4Net
         internal const string s_logsLostWarningMessage = "Logs lost due to insufficient process-local storage: {0} -> {1}";
         internal const string s_lostDateTimeFmt = "yyyy-MM-dd' 'HH:mm:ss'Z'";
 
+        /// <summary>
+        /// Construct a Google Stackdriver appender.
+        /// </summary>
         public GoogleStackdriverAppender() { }
 
         // For testing only.
@@ -89,12 +111,13 @@ namespace Google.Cloud.Logging.Log4Net
         private string _logName;
         private ILogQueue _logQ;
         private LogUploader _logUploader;
-        private Task _initNextIdTask;
-        private long _nextId;
+        private Task<long?> _initIdTask;
+        private long _currentId = -1; // Initialised here, in case Flush() is called before any log entries written.
 
         private List<Label> _customLabels = new List<Label>();
         private HashSet<MetaDataType> _withMetaData = new HashSet<MetaDataType>();
 
+        /// <inheritdoc/>
         public override void ActivateOptions()
         {
             base.ActivateOptions();
@@ -147,7 +170,7 @@ namespace Google.Cloud.Logging.Log4Net
                 default:
                     throw new InvalidOperationException("Inconceivable!");
             }
-            _initNextIdTask = Task.Run(InitNextId);
+            _initIdTask = Task.Run(_logQ.GetPreviousExecutionIdAsync);
             var labels = new Dictionary<string, string>();
             foreach (var customLabel in _customLabels)
             {
@@ -172,44 +195,39 @@ namespace Google.Cloud.Logging.Log4Net
                 serverErrorBackoffSettings);
         }
 
-        private async Task InitNextId()
-        {
-            _nextId = await _logQ.GetNextIdAsync();
-        }
-
         private LogEntry BuildLogEntry(LoggingEvent loggingEvent)
         {
+            const string unknown = "[unknown]";
             var labels = new Dictionary<string, string>();
             if (_withMetaData.Contains(MetaDataType.Location))
             {
-                if(loggingEvent.LocationInformation.FileName != null)
-                    labels.Add(nameof(MetaDataType.Location) + ".FileName", loggingEvent.LocationInformation.FileName);
-                labels.Add(nameof(MetaDataType.Location) + ".ClassName", loggingEvent.LocationInformation.ClassName);
-                labels.Add(nameof(MetaDataType.Location) + ".LineNumber", loggingEvent.LocationInformation.LineNumber);
+                labels.Add(nameof(MetaDataType.Location) + ".FileName", loggingEvent.LocationInformation?.FileName ?? unknown);
+                labels.Add(nameof(MetaDataType.Location) + ".ClassName", loggingEvent.LocationInformation?.ClassName ?? unknown);
+                labels.Add(nameof(MetaDataType.Location) + ".LineNumber", loggingEvent.LocationInformation?.LineNumber ?? unknown);
             }
             if (_withMetaData.Contains(MetaDataType.Identity))
             {
-                labels.Add(nameof(MetaDataType.Identity), loggingEvent.Identity);
+                labels.Add(nameof(MetaDataType.Identity), loggingEvent.Identity ?? unknown);
             }
             if (_withMetaData.Contains(MetaDataType.ThreadName))
             {
-                labels.Add(nameof(MetaDataType.ThreadName), loggingEvent.ThreadName);
+                labels.Add(nameof(MetaDataType.ThreadName), loggingEvent.ThreadName ?? unknown);
             }
             if (_withMetaData.Contains(MetaDataType.UserName))
             {
-                labels.Add(nameof(MetaDataType.UserName), loggingEvent.UserName);
+                labels.Add(nameof(MetaDataType.UserName), loggingEvent.UserName ?? unknown);
             }
             if (_withMetaData.Contains(MetaDataType.Domain))
             {
-                labels.Add(nameof(MetaDataType.Domain), loggingEvent.Domain);
+                labels.Add(nameof(MetaDataType.Domain), loggingEvent.Domain ?? unknown);
             }
             if (_withMetaData.Contains(MetaDataType.LoggerName))
             {
-                labels.Add(nameof(MetaDataType.LoggerName), loggingEvent.LoggerName);
+                labels.Add(nameof(MetaDataType.LoggerName), loggingEvent.LoggerName ?? unknown);
             }
             if (_withMetaData.Contains(MetaDataType.Level))
             {
-                labels.Add(nameof(MetaDataType.Level), loggingEvent.Level.Name);
+                labels.Add(nameof(MetaDataType.Level), loggingEvent.Level?.Name ?? unknown);
             }
             foreach (var customLabel in _customLabels)
             {
@@ -231,37 +249,87 @@ namespace Google.Cloud.Logging.Log4Net
             DateTimeRange logEntriesLost;
             lock (_enqueueLock)
             {
-                if (_initNextIdTask != null)
+                if (_initIdTask != null)
                 {
-                    _initNextIdTask.Wait();
-                    _initNextIdTask.Dispose();
-                    _initNextIdTask = null;
+                    _currentId = _initIdTask.Result ?? -1;
+                    _initIdTask = null;
                 }
                 var logEntriesExtra = logEntries
                     .Select(entry =>
                     {
-                        long id = _nextId++;
+                        long id = ++_currentId;
                         entry.InsertId = $"{_instanceId}:{id}";
                         return new LogEntryExtra(id, entry);
                     })
                     .ToList();
-                logEntriesLost = _logQ.EnqueueAsync(logEntriesExtra);
+                logEntriesLost = _logQ.Enqueue(logEntriesExtra);
             }
             _logUploader.TriggerUpload(logEntriesLost);
         }
 
+        /// <inheritdoc/>
         protected override void Append(LoggingEvent loggingEvent)
         {
             var entries = new[] { BuildLogEntry(loggingEvent) };
             Write(entries);
         }
 
+        /// <inheritdoc/>
         protected override void Append(LoggingEvent[] loggingEvents)
         {
             var entries = loggingEvents.Select(x => BuildLogEntry(x)).ToList();
             Write(entries);
         }
 
-        public Task WaitUntilEmptyAsync(TimeSpan timeout) => _logUploader.WaitUntilEmptyAsync(timeout);
+        /// <summary>
+        /// Flush locally buffered log entries to the server.
+        /// </summary>
+        /// <param name="timeout">The maxmimum time to spend waiting for the flush to complete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.
+        /// The default value is <see cref="CancellationToken.None"/>.</param>
+        /// <returns>A task representing whether the flush completed within the timeout.</returns>
+        public Task<bool> FlushAsync(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            long untilId;
+            lock (_enqueueLock)
+            {
+                untilId = _currentId;
+            }
+            return _logUploader.FlushAsync(untilId, timeout, cancellationToken);
+        }
+
+        /// <summary>
+        /// Flush locally buffered log entries to the server.
+        /// </summary>
+        /// <param name="timeout">The maxmimum time to spend waiting for the flush to complete.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.
+        /// The default value is <see cref="CancellationToken.None"/>.</param>
+        /// <returns>Whether the flush completed within the timeout.</returns>
+        public bool Flush(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken)) =>
+            Task.Run(async () => await FlushAsync(timeout, cancellationToken).ConfigureAwait(false)).Result;
+
+        /// <summary>
+        /// Dispose of this appender, by flushing locally buffer entries then closing the appender.
+        /// </summary>
+        /// <remarks>
+        /// The flush timeout is configured using the <c>DisposeTimeoutSeconds</c> configuration option.
+        /// This defaults to 30 seconds if not set.
+        /// </remarks>
+        public void Dispose()
+        {
+            bool flushSucceeded = Flush(TimeSpan.FromSeconds(DisposeTimeoutSeconds));
+            if (!flushSucceeded)
+            {
+                log4net.Util.LogLog.Warn(typeof(LogUploader), "Dispose() failed to flush log.");
+            }
+            Close();
+        }
+
+        /// <inheritdoc/>
+        protected override void OnClose()
+        {
+            base.OnClose();
+            _logUploader.Close();
+        }
     }
 }

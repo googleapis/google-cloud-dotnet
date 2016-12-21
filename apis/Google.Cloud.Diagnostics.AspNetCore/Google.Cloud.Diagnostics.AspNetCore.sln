@@ -17,6 +17,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Logging.Type",
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.AspNetCore.IntegrationTests", "Google.Cloud.Diagnostics.AspNetCore.IntegrationTests\Google.Cloud.Diagnostics.AspNetCore.IntegrationTests.xproj", "{CB080F6C-FD87-4A1E-B3B0-A81DB8DBDE7D}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.ErrorReporting.V1Beta1", "..\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1\Google.Cloud.ErrorReporting.V1Beta1.xproj", "{7408D53D-88E6-42BB-B79A-1B18B027633D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{CB080F6C-FD87-4A1E-B3B0-A81DB8DBDE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB080F6C-FD87-4A1E-B3B0-A81DB8DBDE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB080F6C-FD87-4A1E-B3B0-A81DB8DBDE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7408D53D-88E6-42BB-B79A-1B18B027633D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

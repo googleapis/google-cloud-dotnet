@@ -54,7 +54,8 @@ namespace Google.Cloud.Logging.Log4Net
             _logsLostWarningTemplate = logsLostWarningTemplate;
             _maxUploadBatchSize = maxUploadBatchSize;
             _serverErrorBackoffSettings = serverErrorBackoffSettings;
-            _uploaderTask = Task.Run(RunUploader);
+            _uploaderTaskCancellation = new CancellationTokenSource();
+            _uploaderTask = Task.Run(() => RunUploader(_uploaderTaskCancellation.Token));
         }
 
         private readonly object _lockObj = new object();
@@ -67,11 +68,15 @@ namespace Google.Cloud.Logging.Log4Net
         private readonly BackoffSettings _serverErrorBackoffSettings;
 
         private readonly Task _uploaderTask;
+        private readonly CancellationTokenSource _uploaderTaskCancellation;
 
+        // Set whenever new data is available for upload.
         private readonly AsyncAutoResetEvent _uploadReadyEvent = new AsyncAutoResetEvent();
-        private readonly AsyncAutoResetEvent _emptyEvent = new AsyncAutoResetEvent();
+        // Set whenever data has just been uploaded and locally removed.
+        private readonly AsyncAutoResetEvent _uploadCompleteEvent = new AsyncAutoResetEvent();
 
         private DateTimeRange _logEntriesLost = null;
+        private long _maxConfirmedSentId = -1;
 
         public void TriggerUpload(DateTimeRange logEntriesLost)
         {
@@ -92,15 +97,13 @@ namespace Google.Cloud.Logging.Log4Net
             return lostEntry;
         }
 
-        private async Task RunUploader()
+        private async Task RunUploader(CancellationToken cancellationToken)
         {
             TimeSpan errorDelay = _serverErrorBackoffSettings.Delay;
             while (true)
             {
-                IEnumerable<LogEntryExtra> entries;
+                List<LogEntryExtra> entries;
                 // Wait/loop until there are some log entries that need uploading.
-                // TODO: See if log4net can be shutdown. If so, then this loop needs to terminate after
-                // all log entries have been uploaded.
                 while (true)
                 {
                     DateTimeRange logEntriesLost;
@@ -109,60 +112,77 @@ namespace Google.Cloud.Logging.Log4Net
                         logEntriesLost = _logEntriesLost;
                         _logEntriesLost = null;
                     }
-                    entries = await _logQ.PeekAsync(_maxUploadBatchSize - (logEntriesLost != null ? 1 : 0));
+                    entries = await _logQ.PeekAsync(_maxUploadBatchSize - (logEntriesLost != null ? 1 : 0), cancellationToken);
                     if (logEntriesLost != null)
                     {
                         var lostEntryExtra = new LogEntryExtra(-1, MakeLostEntry(logEntriesLost));
-                        entries = (new[] { lostEntryExtra }).Concat(entries ?? Enumerable.Empty<LogEntryExtra>());
+                        entries = (new[] { lostEntryExtra }).Concat(entries ?? Enumerable.Empty<LogEntryExtra>()).ToList();
                     }
                     if (entries != null && entries.Count() > 0)
                     {
                         // There are log entries that need uploading, so do that now.
                         break;
                     }
-                    await _uploadReadyEvent.WaitAsync();
+                    await _uploadReadyEvent.WaitAsync(cancellationToken);
                 }
                 // Upload entries to the Cloud Logging server
                 try
                 {
-                    await _client.WriteLogEntriesAsync(null, null, s_emptyLabels, entries.Select(x => x.Entry));
-                    await _logQ.RemoveUntilAsync(entries.Last().Id);
-                    _emptyEvent.Set();
+                    await _client.WriteLogEntriesAsync(null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken);
+                    await _logQ.RemoveUntilAsync(entries.Last().Id, cancellationToken);
+                    lock (_lockObj)
+                    {
+                        _maxConfirmedSentId = entries.Last().Id;
+                    }
+                    _uploadCompleteEvent.Set();
                     errorDelay = _serverErrorBackoffSettings.Delay;
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
                     // Always retry, regardless of error, as there's nothing much else to be done.
-                    await _scheduler.Delay(errorDelay, CancellationToken.None);
+                    await _scheduler.Delay(errorDelay, cancellationToken);
                     errorDelay = new TimeSpan((long)(errorDelay.Ticks * _serverErrorBackoffSettings.DelayMultiplier));
                     if (errorDelay > _serverErrorBackoffSettings.MaxDelay)
                     {
                         errorDelay = _serverErrorBackoffSettings.MaxDelay;
                     }
+                    // Use log4net internal logging to warn user of upload error.
+                    // Internal logging can be enabled as described in the "Troubleshooting" section of the log4net FAQ.
+                    log4net.Util.LogLog.Warn(typeof(LogUploader), "Error uploading log messages to server.", e);
                 }
             }
         }
 
-        // For testing only.
-        public async Task WaitUntilEmptyAsync(TimeSpan timeout)
+        public async Task<bool> FlushAsync(long untilId, TimeSpan timeout, CancellationToken cancellationToken)
         {
+            // Record the most recently sent id, and attempt to flush until that point.
             var timeoutTask = Task.Delay(timeout);
             while (true)
             {
-                if (_logQ.IsEmpty())
+                lock (_lockObj)
                 {
-                    return;
+                    if (_maxConfirmedSentId >= untilId)
+                    {
+                        return true;
+                    }
                 }
-                Task completed = await Task.WhenAny(_uploaderTask, _emptyEvent.WaitAsync(), timeoutTask);
+                // Include waiting on the _uploaderTask so an exception can be thrown if it fails during the flush.
+                Task completed = await Task.WhenAny(_uploaderTask, _uploadCompleteEvent.WaitAsync(cancellationToken), timeoutTask);
+                cancellationToken.ThrowIfCancellationRequested();
                 if (completed.Exception != null)
                 {
                     throw completed.Exception;
                 }
                 if (timeoutTask.IsCompleted)
                 {
-                    throw new TimeoutException("Timed-out waiting for log queue to empty.");
+                    return false;
                 }
             }
+        }
+
+        internal void Close()
+        {
+            _uploaderTaskCancellation.Cancel();
         }
     }
 }

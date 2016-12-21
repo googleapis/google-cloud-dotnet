@@ -79,7 +79,7 @@ namespace Google.Cloud.BigQuery.V2
 
         private static object ConvertSingleValue(object rawValue, TableFieldSchema field)
         {
-            if (rawValue == null)
+            if (rawValue == null || (rawValue as JToken)?.Type == JTokenType.Null)
             {
                 return null;
             }

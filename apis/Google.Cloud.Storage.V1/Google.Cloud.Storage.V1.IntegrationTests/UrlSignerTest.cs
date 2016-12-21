@@ -140,6 +140,36 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
+        public async Task GetObjectWithSpacesTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void GetObjectWithSpacesTest_InitDelayTest()
+        {
+            var bucket = _fixture.SingleVersionBucket;
+            var name = GenerateName() + " with spaces";
+            var content = _fixture.SmallContent;
+            string url = null;
+
+            _fixture.RegisterDelayTest(_duration,
+                beforeDelay: async duration =>
+                {
+                    _fixture.Client.UploadObject(bucket, name, null, new MemoryStream(content));
+                    url = _fixture.UrlSigner.Sign(bucket, name, duration);
+
+                    // Verify that the URL works initially.
+                    var response = await _fixture.HttpClient.GetAsync(url);
+                    Assert.True(response.IsSuccessStatusCode);
+                    var result = await response.Content.ReadAsByteArrayAsync();
+                    Assert.Equal(content, result);
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var response = await _fixture.HttpClient.GetAsync(url);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+                });
+        }
+
+        [Fact]
         public async Task GetWithCustomerSuppliedEncryptionKeysTest() => await _fixture.FinishDelayTest(GetTestName());
 
         private void GetWithCustomerSuppliedEncryptionKeysTest_InitDelayTest()
