@@ -32,12 +32,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Create a new instance of <see cref="ErrorReportingExceptionLoggerMiddleware"/>.
         /// </summary>
-        /// <param name="next">The next request delegate.</param>
+        /// <param name="next">The next request delegate. Cannot be null.</param>
         /// <param name="logger">A logger that will report exceptions to the Stackdriver
-        ///     Error Reporting API.</param>
+        ///     Error Reporting API. Cannot be null.</param>
         public ErrorReportingExceptionLoggerMiddleware(RequestDelegate next, ErrorReportingExceptionLogger logger)
         {
-            _next = next;
+            _next = GaxPreconditions.CheckNotNull(next, nameof(next));
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }
 
