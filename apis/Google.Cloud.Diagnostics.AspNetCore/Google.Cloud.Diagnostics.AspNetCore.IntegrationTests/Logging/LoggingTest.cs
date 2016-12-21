@@ -60,7 +60,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <param name="testId">The test id to filter log entries on.</param>
         /// <param name="minEntries">The minimum number of logs entries that should be waited for.
         ///     If minEntries is zero this method will wait the full timeout before checking for the
-        ///     values to ensure they have not appeared.</param>
+        ///     entries.</param>
         private IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries)
         {
             TimeSpan totalSleepTime = TimeSpan.Zero;
@@ -78,14 +78,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     Filter = $"timestamp >= \"{time}\""
                 };
 
-                var results = _client.ListLogEntries(request);
+                var results = _client.ListLogEntries(request).ToList();
                 var entries = results.Where(p => p.TextPayload.Contains(testId));
-                if (minEntries != 0 && entries.Count() >= minEntries)
+                if (minEntries == 0 || entries.Count() >= minEntries)
                 {
                     return entries;
                 }
             }
-            return null;
+            return new List<LogEntry>();
         }
 
         [Fact]
@@ -94,7 +94,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<SizedBufferLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
@@ -105,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             // No entries should be found as not enough entries were created to
             // flush the buffer.
-            Assert.Null(GetEntries(startTime, testId, 0));
+            Assert.Empty(GetEntries(startTime, testId, 0));
         }
 
         [Fact]
@@ -114,7 +114,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<NoBufferLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<NoBufferWarningLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
@@ -139,7 +139,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<SizedBufferLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<SizedBufferErrorLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
@@ -157,7 +157,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // Just check that a large portion of logs entires were pushed.  Not all
             // will be pushed as some may be in the buffer.
             var results = GetEntries(startTime, testId, 500);
-            Assert.NotNull(results);
             Assert.True(results.Count() >= 500);
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Debug));
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Info));
@@ -173,7 +172,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
-            var builder = new WebHostBuilder().UseStartup<TimedBufferLoggerTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<TimedBufferWarningLoggerTestApplication>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
@@ -182,8 +181,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Error/{testId}");
 
                 var noResults = GetEntries(startTime, testId, 0);
-                Assert.Null(noResults);
-                Thread.Sleep(TimeSpan.FromSeconds(25));
+                Assert.Empty(noResults);
+                Thread.Sleep(TimeSpan.FromSeconds(35));
 
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
@@ -193,7 +192,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
-            Assert.Equal(2, results.Where(l => l.Severity == LogSeverity.Error).Count());
+            Assert.Equal(2, results.Count(l => l.Severity == LogSeverity.Error));
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
         }
     }
@@ -230,7 +229,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
     /// of level warning or above.
     /// </summary>
-    public class NoBufferLoggerTestApplication : LoggerTestApplication
+    public class NoBufferWarningLoggerTestApplication : LoggerTestApplication
     {
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
@@ -244,7 +243,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// An application that has a <see cref="GoogleLogger"/> with a <see cref="BufferType.Sized"/>
     /// buffer that will accept all logs of level error or above.
     /// </summary>
-    public class SizedBufferLoggerTestApplication : LoggerTestApplication
+    public class SizedBufferErrorLoggerTestApplication : LoggerTestApplication
     {
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
@@ -259,7 +258,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// buffer, that will be able to flush after one minute that will accept all logs of level
     /// warning or above.
     /// </summary>
-    public class TimedBufferLoggerTestApplication : LoggerTestApplication
+    public class TimedBufferWarningLoggerTestApplication : LoggerTestApplication
     {
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {

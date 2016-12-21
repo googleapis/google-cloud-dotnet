@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             return projectId;
         }
 
-        /// <returns>A unique test Id.</returns>
+        /// <summary>A unique test Id.</summary>
         public static string GetTestId()
         {
             return Guid.NewGuid().ToString();
