@@ -26,7 +26,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     ///  Google Cloud Error Reporting Exception Logger.
     /// </summary>
     /// 
-    /// See <see cref="ErrorReportingExceptionLoggerExtension"/>.
     /// <example>
     /// <code>
     /// public void Configure(IApplicationBuilder app)
@@ -43,6 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// 
     /// <remarks>
     /// Reports unhandled exceptions to Google Cloud Error Reporting.
+    /// See <see cref="ErrorReportingExceptionLoggerExtension"/>.
     /// Docs: https://cloud.google.com/error-reporting/docs/
     /// </remarks>
     public sealed class ErrorReportingExceptionLogger
@@ -114,7 +114,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Asynchronously reports an exception that occurred to the Stackdriver Error Reporting API.
         /// </summary>
-        /// <returns>An empty response on success.</returns>
+        /// <returns>A task containing an empty response on success.</returns>
         public async Task<ReportErrorEventResponse> ReportAsync(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
