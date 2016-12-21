@@ -78,8 +78,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     Filter = $"timestamp >= \"{time}\""
                 };
 
-                var results = _client.ListLogEntries(request).ToList();
-                var entries = results.Where(p => p.TextPayload.Contains(testId));
+                var results = _client.ListLogEntries(request);
+                var entries = results.Where(p => p.TextPayload.Contains(testId)).ToList();
                 if (minEntries == 0 || entries.Count() >= minEntries)
                 {
                     return entries;
@@ -182,7 +182,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 var noResults = GetEntries(startTime, testId, 0);
                 Assert.Empty(noResults);
-                Thread.Sleep(TimeSpan.FromSeconds(35));
+                Thread.Sleep(TimeSpan.FromSeconds(10));
 
                 await client.GetAsync($"/Main/Error/{testId}");
                 await client.GetAsync($"/Main/Critical/{testId}");
@@ -263,7 +263,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(20));
+            var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(5));
             LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, options);
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
