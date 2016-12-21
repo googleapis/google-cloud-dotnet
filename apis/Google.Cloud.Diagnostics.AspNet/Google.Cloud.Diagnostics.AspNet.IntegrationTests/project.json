@@ -10,6 +10,7 @@
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Cloud.Diagnostics.AspNet": { "target": "project" },
     "Google.Cloud.Diagnostics.AspNet.Tests": { "target": "project" },
+    "Google.Cloud.Diagnostics.Common.Tests": { "target": "project" },
     "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" },
     "Microsoft.AspNet.WebApi.Owin": "5.2.3",
     "Microsoft.AspNet.WebApi.WebHost": "5.2.3",
