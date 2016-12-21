@@ -23,7 +23,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
 {
     public class ErrorReportingExceptionLoggerMiddlewareTest
     {
-
         [Fact]
         public async Task Invoke_NoLogs()
         {
