@@ -25,15 +25,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
 {
     public class ErrorReportingExceptionLoggerTest
     {
-        private static readonly string _projectId = "pid";
-        private static readonly string _serviceName = "SomeService";
-        private static readonly string _version = "1.0.0";
-        private static readonly string _googleHost = "www.google.com";
-        private static readonly string _userAgentValue = "user-agent-1.0";
-        private static readonly string _deleteMethod = HttpMethod.Delete.ToString();
-        private static readonly string _exceptionMessage = "some exception message";
-        private static readonly ProjectName _projectName = new ProjectName(_projectId);
-        private static readonly int _conflictStatusCode = StatusCodes.Status409Conflict;
+        private const string _projectId = "pid";
+        private const string _serviceName = "SomeService";
+        private const string _version = "1.0.0";
+        private const string _googleHost = "www.google.com";
+        private const string _userAgentValue = "user-agent-1.0";
+        private static readonly string s_deleteMethod = HttpMethod.Delete.ToString();
+        private static readonly string s_exceptionMessage = "some exception message";
+        private static readonly ProjectName s_projectName = new ProjectName(_projectId);
+        private const int _conflictStatusCode = StatusCodes.Status409Conflict;
 
         /// <summary>
         /// Matcher to check if a <see cref="ReportedErrorEvent"/> matches a 
@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
         private ReportedErrorEvent IsSimpleContext()
         {
             return Match.Create<ReportedErrorEvent>(e =>
-                e.Message.Contains(_exceptionMessage) &&
+                e.Message.Contains(s_exceptionMessage) &&
                 string.IsNullOrEmpty(e.Context.HttpRequest.Method) &&
                 e.Context.HttpRequest.Url.Contains(_googleHost) &&
                 string.IsNullOrEmpty(e.Context.HttpRequest.UserAgent) &&
@@ -63,8 +63,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
         {
             bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
             return Match.Create<ReportedErrorEvent>(e =>
-                e.Message.Contains(_exceptionMessage) &&
-                e.Context.HttpRequest.Method.Equals(_deleteMethod) &&
+                e.Message.Contains(s_exceptionMessage) &&
+                e.Context.HttpRequest.Method.Equals(s_deleteMethod) &&
                 e.Context.HttpRequest.Url.Contains(_googleHost) &&
                 e.Context.HttpRequest.UserAgent.Equals(_userAgentValue) &&
                 e.Context.HttpRequest.ResponseStatusCode == _conflictStatusCode &&
@@ -79,12 +79,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
         /// <summary>
         /// Create a thrown exception.
         /// </summary>
-        /// <returns></returns>
         private Exception CreateException()
         {
             try
             {
-                throw new Exception(_exceptionMessage);
+                throw new Exception(s_exceptionMessage);
             }
             catch (Exception e)
             {
@@ -99,7 +98,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
         {
             var context = new DefaultHttpContext();
             var request = context.Request;
-            request.Method = _deleteMethod;
+            request.Method = s_deleteMethod;
             request.Host = new HostString(_googleHost);
             request.Headers["User-Agent"] = _userAgentValue;
 
@@ -119,31 +118,31 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
             var context = new DefaultHttpContext();
             context.Request.Host = new HostString(_googleHost);
 
-            mockClient.Setup(client => client.ReportErrorEvent(_projectName, IsSimpleContext(), null));
-            logger.Report(context, new Exception(_exceptionMessage));
+            mockClient.Setup(client => client.ReportErrorEvent(s_projectName, IsSimpleContext(), null));
+            logger.Report(context, new Exception(s_exceptionMessage));
             mockClient.VerifyAll();
         }
 
         [Fact]
-        public void Report()
+        public void Report_Complex()
         {
             var mockClient = new Mock<ReportErrorsServiceClient>();
             var logger = ErrorReportingExceptionLogger.Create(
                 Task.FromResult(mockClient.Object), _projectId, _serviceName, _version);
 
-            mockClient.Setup(client => client.ReportErrorEvent(_projectName, IsComplexContext(), null));
+            mockClient.Setup(client => client.ReportErrorEvent(s_projectName, IsComplexContext(), null));
             logger.Report(CreateComplexContext(), CreateException());
             mockClient.VerifyAll();
         }
 
         [Fact]
-        public async Task ReportAsync()
+        public async Task ReportAsync_Complex()
         {
             var mockClient = new Mock<ReportErrorsServiceClient>();
             var logger = ErrorReportingExceptionLogger.Create(
                 Task.FromResult(mockClient.Object), _projectId, _serviceName, _version);
 
-            mockClient.Setup(client => client.ReportErrorEventAsync(_projectName, IsComplexContext(), null))
+            mockClient.Setup(client => client.ReportErrorEventAsync(s_projectName, IsComplexContext(), null))
                 .Returns(Task.FromResult(new ReportErrorEventResponse()));
             await logger.ReportAsync(CreateComplexContext(), CreateException());
             mockClient.VerifyAll();

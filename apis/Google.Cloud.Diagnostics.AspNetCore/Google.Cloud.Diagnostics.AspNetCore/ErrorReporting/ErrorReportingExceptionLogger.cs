@@ -146,8 +146,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             {
                 Method = request?.Method?.ToString() ?? "",
                 Url = request?.GetDisplayUrl() ?? "",
-                UserAgent = string.IsNullOrEmpty(request?.Headers["User-Agent"]) ?
-                        "" : request.Headers["User-Agent"].ToString(),
+                UserAgent = request?.Headers["User-Agent"].ToString() ?? "",
                 ResponseStatusCode = response?.StatusCode ?? 0,
             };
         }
@@ -164,7 +163,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
 
             StackTrace stackTrace = new StackTrace(exception, true);
-            StackFrame[] frames = stackTrace?.GetFrames();
+            StackFrame[] frames = stackTrace.GetFrames();
             if (frames == null || frames.Length == 0)
             {
                 return new SourceLocation();
