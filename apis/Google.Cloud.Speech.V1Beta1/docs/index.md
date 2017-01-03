@@ -21,7 +21,7 @@ Otherwise, the simplest way of authenticating your API calls is to
 then set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to refer to it. The
 credentials will automatically be used to authenticate.
 
-Note that the default credentials obtained by running `gcloud auth applicatoin-default login` from the Google Cloud SDK
+Note that the default credentials obtained by running `gcloud auth application-default login` from the Google Cloud SDK
 are not suitable for use with this API. (They will work initially, but implicitly have a very
 small request quota.)
 
