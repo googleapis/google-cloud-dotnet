@@ -19,7 +19,7 @@ To authenticate all your API calls, first install and setup the
 installed, run the following command in a Google Cloud SDK Shell:
 
 ```sh
-> gcloud auth login
+> gcloud auth application-default login
 ```
 
 # Getting started
