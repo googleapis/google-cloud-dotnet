@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
         public async Task Invoke_NoLogs()
         {
             var mockLogger = new Mock<IExceptionLogger<ReportErrorEventResponse>>();
-            RequestDelegate requestDelegate = delegate (HttpContext context) { return Task.CompletedTask; };
+            RequestDelegate requestDelegate = context => Task.CompletedTask;
             var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, mockLogger.Object);
 
             await middleware.Invoke(new DefaultHttpContext());
@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
         public async Task Invoke_LogsAndThrows()
         {
             var mockLogger = new Mock<IExceptionLogger<ReportErrorEventResponse>>();
-            RequestDelegate requestDelegate = delegate (HttpContext context) { throw new Exception(); };
+            RequestDelegate requestDelegate = context => { throw new Exception(); };
             var middleware = new ErrorReportingExceptionLoggerMiddleware(requestDelegate, mockLogger.Object);
 
             await Assert.ThrowsAsync<Exception>(() => middleware.Invoke(new DefaultHttpContext()));
