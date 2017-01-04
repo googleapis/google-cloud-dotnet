@@ -144,9 +144,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             return new HttpRequestContext()
             {
-                Method = request?.Method?.ToString() ?? "",
-                Url = request?.GetDisplayUrl() ?? "",
-                UserAgent = request?.Headers["User-Agent"].ToString() ?? "",
+                Method = request?.Method?.ToString(),
+                Url = request?.GetDisplayUrl(),
+                UserAgent = request?.Headers["User-Agent"].ToString(),
                 ResponseStatusCode = response?.StatusCode ?? 0,
             };
         }
@@ -172,9 +172,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             StackFrame frame = frames[0];
             return new SourceLocation()
             {
-                FilePath = frame.GetFileName() ?? "",
+                FilePath = frame.GetFileName(),
                 LineNumber = frame.GetFileLineNumber(),
-                FunctionName = frame.GetMethod()?.Name ?? "",
+                FunctionName = frame.GetMethod()?.Name,
             };
         }
 
