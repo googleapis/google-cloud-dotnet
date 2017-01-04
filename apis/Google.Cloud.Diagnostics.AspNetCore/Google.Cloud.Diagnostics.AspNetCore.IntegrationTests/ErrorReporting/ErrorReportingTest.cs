@@ -131,7 +131,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
         }
 
         [Fact]
-        public async Task LogsMultipleException()
+        public async Task LogsMultipleExceptions()
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
