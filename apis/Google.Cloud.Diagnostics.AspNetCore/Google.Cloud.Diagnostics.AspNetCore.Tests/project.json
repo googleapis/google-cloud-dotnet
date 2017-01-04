@@ -12,7 +12,7 @@
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Cloud.Diagnostics.AspNetCore": { "target": "project" },
     "Google.Api.Gax.Testing": "1.0.0-beta06",
-    "Microsoft.AspNetCore.Http": "1.1.0"
+    "Microsoft.AspNetCore.Http": "1.1.0",
   },
   "testRunner": "xunit",
 
