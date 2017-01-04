@@ -45,7 +45,7 @@ optionally specifying a service endpoint and settings.
 Using [`Google.Cloud.Diagnostics.AspNet`'s ExceptionLogger](Google.Cloud.Diagnostics.AspNet/index.html)
 uncaught exceptions in ASP.NET applications can be automatically reported to the Stackdriver Error Reporting API.
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLogger)]
+[!code-cs[](../Google.Cloud.Diagnostics.AspNet/obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLogger)]
 
 ## Report an error
 
