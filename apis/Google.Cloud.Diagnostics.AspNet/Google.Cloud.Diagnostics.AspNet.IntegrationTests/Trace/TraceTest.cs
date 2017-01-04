@@ -15,6 +15,7 @@
 using Google.Cloud.Trace.V1;
 using Google.Cloud.Diagnostics.AspNet.Tests;
 using Google.Cloud.Diagnostics.Common;
+using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using System;

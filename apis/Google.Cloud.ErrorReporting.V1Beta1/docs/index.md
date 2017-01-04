@@ -4,6 +4,10 @@
 library for the [Stackdriver Error Reporting
 API](https://cloud.google.com/error-reporting/).
 
+Support for automatic error reporting can be found in the
+[`Google.Cloud.Diagnostics.AspNet`](Google.Cloud.Diagnostics.AspNet/index.html)
+NuGet package.
+
 # Installation
 
 Install the `Google.Cloud.ErrorReporting.V1Beta1` package from NuGet. Add it to
@@ -20,7 +24,7 @@ To authenticate all your API calls, first install and setup the
 installed, run the following command in a Google Cloud SDK Shell:
 
 ```sh
-> gcloud auth login
+> gcloud auth application-default login
 ```
 
 # Getting started
@@ -35,6 +39,13 @@ In each case, create an instance using the static `Create` method,
 optionally specifying a service endpoint and settings.
 
 # Sample code
+
+## Automatic Error Reporting for ASP.NET
+
+Using [`Google.Cloud.Diagnostics.AspNet`'s ExceptionLogger](Google.Cloud.Diagnostics.AspNet/index.html)
+uncaught exceptions in ASP.NET applications can be automatically reported to the Stackdriver Error Reporting API.
+
+[!code-cs[](../Google.Cloud.Diagnostics.AspNet/obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLogger)]
 
 ## Report an error
 

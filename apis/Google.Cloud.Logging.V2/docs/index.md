@@ -24,7 +24,7 @@ To authenticate all your API calls, first install and setup the
 installed, run the following command in a Google Cloud SDK Shell:
 
 ```sh
-> gcloud auth login
+> gcloud auth application-default login
 ```
 
 # Getting started (log4net)
@@ -44,6 +44,14 @@ See the
 for details on all the configuration options.
 
 (Depends on `Google.Cloud.Logging.Type` for version-agnostic types.)
+
+# Support from third party libraries
+
+The [Logary](github.com/logary/logary) logging library has a target
+supporting Google Stackdriver logging. Install the [NuGet
+package](https://www.nuget.org/packages/Logary.Targets.Stackdriver)
+and follow the [instructions on the project
+homepage](https://github.com/logary/logary#stackdriver-target-alpha-level).
 
 # Raw RPC API
 
