@@ -119,7 +119,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
             context.Request.Host = new HostString(_googleHost);
 
             mockClient.Setup(client => client.ReportErrorEvent(s_projectName, IsSimpleContext(), null));
-            logger.Report(context, new Exception(s_exceptionMessage));
+            logger.Log(context, new Exception(s_exceptionMessage));
             mockClient.VerifyAll();
         }
 
@@ -131,7 +131,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
                 Task.FromResult(mockClient.Object), _projectId, _serviceName, _version);
 
             mockClient.Setup(client => client.ReportErrorEvent(s_projectName, IsComplexContext(), null));
-            logger.Report(CreateComplexContext(), CreateException());
+            logger.Log(CreateComplexContext(), CreateException());
             mockClient.VerifyAll();
         }
 
@@ -144,7 +144,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
 
             mockClient.Setup(client => client.ReportErrorEventAsync(s_projectName, IsComplexContext(), null))
                 .Returns(Task.FromResult(new ReportErrorEventResponse()));
-            await logger.ReportAsync(CreateComplexContext(), CreateException());
+            await logger.LogAsync(CreateComplexContext(), CreateException());
             mockClient.VerifyAll();
         }
     }
