@@ -146,7 +146,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             {
                 Method = request?.Method?.ToString() ?? "",
                 Url = UriHelper.GetDisplayUrl(request) ?? "",
-                UserAgent = request?.Headers["User-Agent"] ?? "",
+                UserAgent = request?.Headers?["User-Agent"].ToString() ?? "",
                 ResponseStatusCode = response?.StatusCode ?? 0,
             };
         }
