@@ -4094,6 +4094,28 @@ references:
   commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Append
   name: Append
   fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Append(log4net.Core.LoggingEvent)
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose
+  name: Dispose()
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Dispose
+  commentId: M:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose()
+  nameWithType: GoogleStackdriverAppender.Dispose()
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose*
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Dispose_
+  commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose
+  name: Dispose
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose()
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds
+  name: DisposeTimeoutSeconds
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisposeTimeoutSeconds
+  commentId: P:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds
+  nameWithType: GoogleStackdriverAppender.DisposeTimeoutSeconds
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds*
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisposeTimeoutSeconds_
+  commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds
+  name: DisposeTimeoutSeconds
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds
 - uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File
   name: File
   href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_File
@@ -4105,6 +4127,28 @@ references:
   commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File
   name: File
   fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush(System.TimeSpan,System.Threading.CancellationToken)
+  name: Flush(TimeSpan, CancellationToken)
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Flush_System_TimeSpan_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush(System.TimeSpan,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush(System.TimeSpan, System.Threading.CancellationToken)
+  nameWithType: GoogleStackdriverAppender.Flush(TimeSpan, CancellationToken)
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush*
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Flush_
+  commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush
+  name: Flush
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush(System.TimeSpan, System.Threading.CancellationToken)
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync(System.TimeSpan,System.Threading.CancellationToken)
+  name: FlushAsync(TimeSpan, CancellationToken)
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_FlushAsync_System_TimeSpan_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync(System.TimeSpan,System.Threading.CancellationToken)
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync(System.TimeSpan, System.Threading.CancellationToken)
+  nameWithType: GoogleStackdriverAppender.FlushAsync(TimeSpan, CancellationToken)
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync*
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_FlushAsync_
+  commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync
+  name: FlushAsync
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync(System.TimeSpan, System.Threading.CancellationToken)
 - uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label
   name: GoogleStackdriverAppender.Label
   href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Label
@@ -4210,6 +4254,17 @@ references:
   commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize
   name: MaxUploadBatchSize
   fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose
+  name: OnClose()
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_OnClose
+  commentId: M:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose()
+  nameWithType: GoogleStackdriverAppender.OnClose()
+- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose*
+  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_OnClose_
+  commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose
+  name: OnClose
+  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose()
 - uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ProjectId
   name: ProjectId
   href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ProjectId
@@ -4265,17 +4320,6 @@ references:
   commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier
   name: ServerErrorBackoffMultiplier
   fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier
-- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)
-  name: WaitUntilEmptyAsync(TimeSpan)
-  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_System_TimeSpan_
-  commentId: M:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)
-  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)
-  nameWithType: GoogleStackdriverAppender.WaitUntilEmptyAsync(TimeSpan)
-- uid: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync*
-  href: api/Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_
-  commentId: Overload:Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync
-  name: WaitUntilEmptyAsync
-  fullName: Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)
 - uid: Google.Cloud.Logging.Log4Net.LocalQueueType
   name: LocalQueueType
   href: api/Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType

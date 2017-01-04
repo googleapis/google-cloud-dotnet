@@ -11330,6 +11330,17 @@ references:
   commentId: T:Google.Cloud.Storage.V1.UrlSigner
   fullName: Google.Cloud.Storage.V1.UrlSigner
   nameWithType: UrlSigner
+- uid: Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential(Google.Apis.Auth.OAuth2.ServiceAccountCredential)
+  name: FromServiceAccountCredential(ServiceAccountCredential)
+  href: api/Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_Google_Apis_Auth_OAuth2_ServiceAccountCredential_
+  commentId: M:Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential(Google.Apis.Auth.OAuth2.ServiceAccountCredential)
+  fullName: Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential(Google.Apis.Auth.OAuth2.ServiceAccountCredential)
+  nameWithType: UrlSigner.FromServiceAccountCredential(ServiceAccountCredential)
+- uid: Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential*
+  href: api/Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_
+  commentId: Overload:Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential
+  name: FromServiceAccountCredential
+  fullName: Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential(Google.Apis.Auth.OAuth2.ServiceAccountCredential)
 - uid: Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountData(System.IO.Stream)
   name: FromServiceAccountData(Stream)
   href: api/Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountData_System_IO_Stream_

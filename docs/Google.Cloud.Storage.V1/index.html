@@ -74,7 +74,7 @@ box).</p>
 <p>To authenticate all your API calls, first install and setup the
 <a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth login
+<pre><code class="lang-sh">&gt; gcloud auth application-default login
 </code></pre><h1 id="getting-started">Getting started</h1>
 <p>Common operations are exposed via the
 <a href="api/Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a> class.</p>
@@ -108,7 +108,7 @@ a Google account.</p>
 <p>For example, Signed URLs can be created to provide read-only access to
 existing objects:</p>
 <pre><code class="lang-cs">// Create a signed URL which can be used to get a specific object for one hour.
-UrlSigner urlSigner = UrlSigner.FromServiceAccountPath(credentialsFilePath);
+UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
 string url = urlSigner.Sign(
     bucketName,
     objectName,
@@ -120,7 +120,7 @@ HttpResponseMessage response = await httpClient.GetAsync(url);
 string content = await response.Content.ReadAsStringAsync();
 </code></pre><p>Or write-only access to put specific object content into a bucket:</p>
 <pre><code class="lang-cs">// Create a signed URL which allows the requester to PUT data with the text/plain content-type.
-UrlSigner urlSigner = UrlSigner.FromServiceAccountPath(credentialsFilePath);
+UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
 var destination = &quot;places/world.txt&quot;;
 string url = urlSigner.Sign(
     bucketName,

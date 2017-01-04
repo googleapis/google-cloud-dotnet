@@ -62,6 +62,9 @@
 <p><code>Google.Cloud.ErrorReporting.V1Beta1</code> is a .NET client
 library for the <a href="https://cloud.google.com/error-reporting/">Stackdriver Error Reporting
 API</a>.</p>
+<p>Support for automatic error reporting can be found in the
+<a href="Google.Cloud.Diagnostics.AspNet/index.html"><code>Google.Cloud.Diagnostics.AspNet</code></a>
+NuGet package.</p>
 <h1 id="installation">Installation</h1>
 <p>Install the <code>Google.Cloud.ErrorReporting.V1Beta1</code> package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
@@ -73,7 +76,7 @@ box).</p>
 <p>To authenticate all your API calls, first install and setup the
 <a href="https://cloud.google.com/sdk/">Google Cloud SDK</a>. After that is
 installed, run the following command in a Google Cloud SDK Shell:</p>
-<pre><code class="lang-sh">&gt; gcloud auth login
+<pre><code class="lang-sh">&gt; gcloud auth application-default login
 </code></pre><h1 id="getting-started">Getting started</h1>
 <p>There are three client classes to be aware of:</p>
 <ul>
@@ -84,7 +87,19 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
 <p>In each case, create an instance using the static <code>Create</code> method,
 optionally specifying a service endpoint and settings.</p>
 <h1 id="sample-code">Sample code</h1>
-<h2 id="report-an-error">Report an error</h2>
+<h2 id="automatic-error-reporting-for-aspnet">Automatic Error Reporting for ASP.NET</h2>
+<p>Using <a href="Google.Cloud.Diagnostics.AspNet/index.html"><code>Google.Cloud.Diagnostics.AspNet</code>&#39;s ExceptionLogger</a>
+uncaught exceptions in ASP.NET applications can be automatically reported to the Stackdriver Error Reporting API.</p>
+<pre><code class="lang-cs">public static void Register(HttpConfiguration config)
+{
+    string projectId = &quot;[Google Cloud Platform project ID]&quot;;
+    string serviceName = &quot;[Name of service]&quot;;
+    string version = &quot;[Version of service]&quot;;
+    // Add a catch all for the uncaught exceptions.
+    config.Services.Add(typeof(IExceptionLogger),
+        ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
+}
+</code></pre><h2 id="report-an-error">Report an error</h2>
 <pre><code class="lang-cs">ReportErrorsServiceClient client = ReportErrorsServiceClient.Create();
 ProjectName projectName = new ProjectName(projectId);
 ReportedErrorEvent error = new ReportedErrorEvent

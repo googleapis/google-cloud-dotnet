@@ -2727,6 +2727,17 @@ references:
   name.vb: AsyncRecognizeAsync
   fullName: Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.AsyncRecognizeAsync(Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest, Grpc.Core.Metadata, System.Nullable<System.DateTime>, System.Threading.CancellationToken)
   fullName.vb: Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.AsyncRecognizeAsync
+- uid: Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.CreateOperationsClient
+  name: CreateOperationsClient()
+  href: api/Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.html#Google_Cloud_Speech_V1Beta1_Speech_SpeechClient_CreateOperationsClient
+  commentId: M:Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.CreateOperationsClient
+  fullName: Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.CreateOperationsClient()
+  nameWithType: Speech.SpeechClient.CreateOperationsClient()
+- uid: Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.CreateOperationsClient*
+  href: api/Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.html#Google_Cloud_Speech_V1Beta1_Speech_SpeechClient_CreateOperationsClient_
+  commentId: Overload:Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.CreateOperationsClient
+  name: CreateOperationsClient
+  fullName: Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.CreateOperationsClient()
 - uid: Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)
   name: NewInstance(ClientBase.ClientBaseConfiguration)
   href: api/Google.Cloud.Speech.V1Beta1.Speech.SpeechClient.html#Google_Cloud_Speech_V1Beta1_Speech_SpeechClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_

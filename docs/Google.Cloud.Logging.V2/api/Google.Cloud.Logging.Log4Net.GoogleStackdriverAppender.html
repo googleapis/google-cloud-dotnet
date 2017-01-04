@@ -103,9 +103,6 @@
                   <span class="xref">log4net.Appender.AppenderSkeleton.IsAsSevereAsThreshold(log4net.Core.Level)</span>
                 </div>
                 <div>
-                  <span class="xref">log4net.Appender.AppenderSkeleton.OnClose()</span>
-                </div>
-                <div>
                   <span class="xref">log4net.Appender.AppenderSkeleton.PreAppendCheck()</span>
                 </div>
                 <div>
@@ -149,19 +146,35 @@
               <h6><strong>Assembly</strong>:Google.Cloud.Logging.Log4Net.dll</h6>
               <h5 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class GoogleStackdriverAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class GoogleStackdriverAppender : AppenderSkeleton, IBulkAppender, IAppender, IOptionHandler, IDisposable</code></pre>
               </div>
               <h5 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>Logging events are sent to Google Stackdriver Logging asychronously,
+              <div class="markdown level0 remarks"><p>
+Logging events are sent to Google Stackdriver Logging asychronously,
 via a local buffer. This  is to ensure that server errors or increased
 network/server latency don&#39;t cause slow-downs in the program being logged.
-TODO: Explain all the configuration options.</p>
+</p>
+<p>
+<code>GoogleStackdriverAppender</code> provides two methods of flushing this local buffer.
+<ul><li>
+The <a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Flush_System_TimeSpan_System_Threading_CancellationToken_">Flush(TimeSpan, CancellationToken)</a> and <a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_FlushAsync_System_TimeSpan_System_Threading_CancellationToken_">FlushAsync(TimeSpan, CancellationToken)</a>
+flush local buffer entries to Google Stackdriver, waiting a maximum of the specified
+<span class="xref">System.TimeSpan</span>. These methods return <code>true</code> if all locally buffered
+entries were successfully flushed, or <code>false</code> otherwise.
+</li><li>
+<code>GoogleStackdriverAppender</code> implements <span class="xref">System.IDisposable</span>. This calls
+<a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Flush_System_TimeSpan_System_Threading_CancellationToken_">Flush(TimeSpan, CancellationToken)</a> with the timeout configured in
+<a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisposeTimeoutSeconds">DisposeTimeoutSeconds</a>, then closes the appender so no further logging
+can be performed. It is not generally necessary to call <a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Dispose">Dispose()</a>.
+</li></ul>
+</p>
 </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender__ctor_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.#ctor*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender__ctor" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.#ctor">GoogleStackdriverAppender()</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Construct a Google Stackdriver appender.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -169,6 +182,31 @@ TODO: Explain all the configuration options.</p>
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisposeTimeoutSeconds_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisposeTimeoutSeconds" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds">DisposeTimeoutSeconds</h4>
+              <div class="markdown level1 summary"><p>The maximum time the <code>Dispose()</code> call of <a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender">GoogleStackdriverAppender</a> may take. 
+Default value is 30 seconds.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int DisposeTimeoutSeconds { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_File_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_File" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File">File</h4>
               <div class="markdown level1 summary"><p>The path prefix to the files that logging will be written to.</p>
@@ -266,7 +304,8 @@ cause the oldest queued log entries to be permanently lost.
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize">MaxFileSize</h4>
-              <div class="markdown level1 summary"><p>The maximum size in bytes that each log file is allowed to reach, before being rolled over. Defaults to 10Mb.</p>
+              <div class="markdown level1 summary"><p>The maximum size in bytes that each log file is allowed to reach, before being rolled over.
+Default value is 10MB.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -290,7 +329,8 @@ cause the oldest queued log entries to be permanently lost.
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemoryCount_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemoryCount*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemoryCount" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemoryCount">MaxMemoryCount</h4>
-              <div class="markdown level1 summary"><p>The maximum count of log entries allowed in the in-memory logging queue. Defaults to 1,000
+              <div class="markdown level1 summary"><p>The maximum count of log entries allowed in the in-memory logging queue.
+Default value is 1,000
 Not used for file-based queueing.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -315,7 +355,8 @@ Not used for file-based queueing.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemorySize_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemorySize*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxMemorySize" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxMemorySize">MaxMemorySize</h4>
-              <div class="markdown level1 summary"><p>The maximum bytes of memory used by in-memory logging queue. Defaults to unconfigured.
+              <div class="markdown level1 summary"><p>The maximum bytes of memory used by in-memory logging queue.
+Default value is 0 (unconfigured).
 Not used for file-based queuing.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -340,7 +381,8 @@ Not used for file-based queuing.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups">MaxSizeRollBackups</h4>
-              <div class="markdown level1 summary"><p>The maximum number of backup files that are kept before the oldest is erased. Defaults to 10.</p>
+              <div class="markdown level1 summary"><p>The maximum number of backup files that are kept before the oldest is erased.
+Default value is 10.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -364,7 +406,8 @@ Not used for file-based queuing.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxUploadBatchSize_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxUploadBatchSize" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxUploadBatchSize">MaxUploadBatchSize</h4>
-              <div class="markdown level1 summary"><p>The maximum batch size when uploading to Google Cloud Logging. Defaults to 100.</p>
+              <div class="markdown level1 summary"><p>The maximum batch size when uploading to Google Cloud Logging.
+Default value is 100.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -412,7 +455,8 @@ Not used for file-based queuing.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ResourceType_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ResourceType*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ResourceType" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ResourceType">ResourceType</h4>
-              <div class="markdown level1 summary"><p>The resource type of log entries. Defaults to &quot;global&quot;.</p>
+              <div class="markdown level1 summary"><p>The resource type of log entries.
+Default value is &quot;global&quot;.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -436,7 +480,8 @@ Not used for file-based queuing.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds">ServerErrorBackoffDelaySeconds</h4>
-              <div class="markdown level1 summary"><p>On receiving a server error during log upload, the initial delay in seconds before retry.</p>
+              <div class="markdown level1 summary"><p>On receiving a server error during log upload, the initial delay in seconds before retry.
+Defaults value is 1 second.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -460,7 +505,8 @@ Not used for file-based queuing.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMaxDelaySeconds_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMaxDelaySeconds*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMaxDelaySeconds" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMaxDelaySeconds">ServerErrorBackoffMaxDelaySeconds</h4>
-              <div class="markdown level1 summary"><p>The maxmimum retry delay when receiving multiple consecutive server errors during log upload.</p>
+              <div class="markdown level1 summary"><p>The maxmimum retry delay when receiving multiple consecutive server errors during log upload.
+Default value is 60 seconds.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -484,7 +530,8 @@ Not used for file-based queuing.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMultiplier_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffMultiplier" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffMultiplier">ServerErrorBackoffMultiplier</h4>
-              <div class="markdown level1 summary"><p>The multiplier applied to the retry delay when receiving multiple consecutive server errors during log upload.</p>
+              <div class="markdown level1 summary"><p>The multiplier applied to the retry delay when receiving multiple consecutive server errors during log upload.
+Default value is 1.5</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -520,7 +567,8 @@ Not used for file-based queuing.</p>
               <div><span class="xref">log4net.Appender.AppenderSkeleton.ActivateOptions()</span></div>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddCustomLabel_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddCustomLabel*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddCustomLabel_Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Label_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddCustomLabel(Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label)">AddCustomLabel(GoogleStackdriverAppender.Label)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Specify custom labels for all log entries.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -539,13 +587,15 @@ Not used for file-based queuing.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Label">GoogleStackdriverAppender.Label</a></td>
                     <td><em>label</em></td>
-                    <td></td>
+                    <td><p>The custom label.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddWithMetaData_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddWithMetaData_Google_Cloud_Logging_Log4Net_MetaDataType_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddWithMetaData(Google.Cloud.Logging.Log4Net.MetaDataType)">AddWithMetaData(MetaDataType)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Specify additional metadata to include in all log entries.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -564,7 +614,8 @@ Not used for file-based queuing.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.Log4Net.MetaDataType.html#Google_Cloud_Logging_Log4Net_MetaDataType">MetaDataType</a></td>
                     <td><em>enable</em></td>
-                    <td></td>
+                    <td><p>The additional metadata to enable.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -622,13 +673,29 @@ Not used for file-based queuing.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">log4net.Appender.AppenderSkeleton.Append(log4net.Core.LoggingEvent[])</span></div>
-              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync*"></a>
-              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_WaitUntilEmptyAsync_System_TimeSpan_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.WaitUntilEmptyAsync(System.TimeSpan)">WaitUntilEmptyAsync(TimeSpan)</h4>
-              <div class="markdown level1 summary"></div>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Dispose_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Dispose" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Dispose">Dispose()</h4>
+              <div class="markdown level1 summary"><p>Dispose of this appender, by flushing locally buffer entries then closing the appender.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task WaitUntilEmptyAsync(TimeSpan timeout)</code></pre>
+                <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IDisposable.Dispose()</span></div>
+              <h5 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Dispose_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The flush timeout is configured using the <code>DisposeTimeoutSeconds</code> configuration option.
+This defaults to 30 seconds if not set.</p>
+</div>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Flush_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Flush_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Flush(System.TimeSpan,System.Threading.CancellationToken)">Flush(TimeSpan, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Flush locally buffered log entries to the server.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Flush(TimeSpan timeout, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -643,7 +710,15 @@ Not used for file-based queuing.</p>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
                     <td><em>timeout</em></td>
-                    <td></td>
+                    <td><p>The maxmimum time to spend waiting for the flush to complete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.
+The default value is <span class="xref">System.Threading.CancellationToken.None</span>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -657,11 +732,72 @@ Not used for file-based queuing.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>Whether the flush completed within the timeout.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_FlushAsync_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_FlushAsync_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.FlushAsync(System.TimeSpan,System.Threading.CancellationToken)">FlushAsync(TimeSpan, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Flush locally buffered log entries to the server.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;bool&gt; FlushAsync(TimeSpan timeout, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.TimeSpan</span></td>
+                    <td><em>timeout</em></td>
+                    <td><p>The maxmimum time to spend waiting for the flush to complete.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>The token to monitor for cancellation requests.
+The default value is <span class="xref">System.Threading.CancellationToken.None</span>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><p>A task representing whether the flush completed within the timeout.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_OnClose_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_OnClose" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.OnClose">OnClose()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void OnClose()</code></pre>
+              </div>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">log4net.Appender.AppenderSkeleton.OnClose()</span></div>
             </article>
           </div>
           

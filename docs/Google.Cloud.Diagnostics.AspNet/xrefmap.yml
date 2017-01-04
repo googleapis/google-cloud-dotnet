@@ -3270,17 +3270,28 @@ references:
   commentId: T:Google.Cloud.Diagnostics.AspNet.TraceConfiguration
   fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration
   nameWithType: TraceConfiguration
-- uid: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double)
-  name: Create(Double)
-  href: api/Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration_Create_System_Double_
-  commentId: M:Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double)
-  fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double)
-  nameWithType: TraceConfiguration.Create(Double)
+- uid: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions
+  name: BufferOptions
+  href: api/Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration_BufferOptions
+  commentId: P:Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions
+  fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions
+  nameWithType: TraceConfiguration.BufferOptions
+- uid: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions*
+  href: api/Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration_BufferOptions_
+  commentId: Overload:Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions
+  name: BufferOptions
+  fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions
+- uid: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
+  name: Create(Double, BufferOptions)
+  href: api/Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration_Create_System_Double_Google_Cloud_Diagnostics_Common_BufferOptions_
+  commentId: M:Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)
+  fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double, Google.Cloud.Diagnostics.Common.BufferOptions)
+  nameWithType: TraceConfiguration.Create(Double, BufferOptions)
 - uid: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create*
   href: api/Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration_Create_
   commentId: Overload:Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create
   name: Create
-  fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double)
+  fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double, Google.Cloud.Diagnostics.Common.BufferOptions)
 - uid: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.QpsSampleRate
   name: QpsSampleRate
   href: api/Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration_QpsSampleRate
@@ -3292,6 +3303,113 @@ references:
   commentId: Overload:Google.Cloud.Diagnostics.AspNet.TraceConfiguration.QpsSampleRate
   name: QpsSampleRate
   fullName: Google.Cloud.Diagnostics.AspNet.TraceConfiguration.QpsSampleRate
+- uid: Google.Cloud.Diagnostics.Common
+  name: Google.Cloud.Diagnostics.Common
+  href: api/Google.Cloud.Diagnostics.Common.html#Google_Cloud_Diagnostics_Common
+  commentId: N:Google.Cloud.Diagnostics.Common
+  fullName: Google.Cloud.Diagnostics.Common
+  nameWithType: Google.Cloud.Diagnostics.Common
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions
+  name: BufferOptions
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions
+  commentId: T:Google.Cloud.Diagnostics.Common.BufferOptions
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions
+  nameWithType: BufferOptions
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.BufferSizeBytes
+  name: BufferSizeBytes
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_BufferSizeBytes
+  commentId: P:Google.Cloud.Diagnostics.Common.BufferOptions.BufferSizeBytes
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.BufferSizeBytes
+  nameWithType: BufferOptions.BufferSizeBytes
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.BufferSizeBytes*
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_BufferSizeBytes_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.BufferOptions.BufferSizeBytes
+  name: BufferSizeBytes
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.BufferSizeBytes
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.BufferType
+  name: BufferType
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_BufferType
+  commentId: P:Google.Cloud.Diagnostics.Common.BufferOptions.BufferType
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.BufferType
+  nameWithType: BufferOptions.BufferType
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.BufferType*
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_BufferType_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.BufferOptions.BufferType
+  name: BufferType
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.BufferType
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.BufferWaitTime
+  name: BufferWaitTime
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_BufferWaitTime
+  commentId: P:Google.Cloud.Diagnostics.Common.BufferOptions.BufferWaitTime
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.BufferWaitTime
+  nameWithType: BufferOptions.BufferWaitTime
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.BufferWaitTime*
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_BufferWaitTime_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.BufferOptions.BufferWaitTime
+  name: BufferWaitTime
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.BufferWaitTime
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.NoBuffer
+  name: NoBuffer()
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_NoBuffer
+  commentId: M:Google.Cloud.Diagnostics.Common.BufferOptions.NoBuffer
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.NoBuffer()
+  nameWithType: BufferOptions.NoBuffer()
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.NoBuffer*
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_NoBuffer_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.BufferOptions.NoBuffer
+  name: NoBuffer
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.NoBuffer()
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.SizedBuffer(System.Int32)
+  name: SizedBuffer(Int32)
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_SizedBuffer_System_Int32_
+  commentId: M:Google.Cloud.Diagnostics.Common.BufferOptions.SizedBuffer(System.Int32)
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.SizedBuffer(System.Int32)
+  nameWithType: BufferOptions.SizedBuffer(Int32)
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.SizedBuffer*
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_SizedBuffer_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.BufferOptions.SizedBuffer
+  name: SizedBuffer
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.SizedBuffer(System.Int32)
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer(System.Nullable{System.TimeSpan})
+  name: TimedBuffer(Nullable<TimeSpan>)
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_TimedBuffer_System_Nullable_System_TimeSpan__
+  commentId: M:Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer(System.Nullable{System.TimeSpan})
+  name.vb: TimedBuffer(Nullable(Of TimeSpan))
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer(System.Nullable<System.TimeSpan>)
+  fullName.vb: Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer(System.Nullable(Of System.TimeSpan))
+  nameWithType: BufferOptions.TimedBuffer(Nullable<TimeSpan>)
+  nameWithType.vb: TimedBuffer(Nullable(Of TimeSpan))
+- uid: Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer*
+  href: api/Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions_TimedBuffer_
+  commentId: Overload:Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer
+  name: TimedBuffer
+  name.vb: TimedBuffer
+  fullName: Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer(System.Nullable<System.TimeSpan>)
+  fullName.vb: Google.Cloud.Diagnostics.Common.BufferOptions.TimedBuffer
+- uid: Google.Cloud.Diagnostics.Common.BufferType
+  name: BufferType
+  href: api/Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType
+  commentId: T:Google.Cloud.Diagnostics.Common.BufferType
+  fullName: Google.Cloud.Diagnostics.Common.BufferType
+  nameWithType: BufferType
+- uid: Google.Cloud.Diagnostics.Common.BufferType.None
+  name: None
+  href: api/Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType_None
+  commentId: F:Google.Cloud.Diagnostics.Common.BufferType.None
+  fullName: Google.Cloud.Diagnostics.Common.BufferType.None
+  nameWithType: BufferType.None
+- uid: Google.Cloud.Diagnostics.Common.BufferType.Sized
+  name: Sized
+  href: api/Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType_Sized
+  commentId: F:Google.Cloud.Diagnostics.Common.BufferType.Sized
+  fullName: Google.Cloud.Diagnostics.Common.BufferType.Sized
+  nameWithType: BufferType.Sized
+- uid: Google.Cloud.Diagnostics.Common.BufferType.Timed
+  name: Timed
+  href: api/Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType_Timed
+  commentId: F:Google.Cloud.Diagnostics.Common.BufferType.Timed
+  fullName: Google.Cloud.Diagnostics.Common.BufferType.Timed
+  nameWithType: BufferType.Timed
 - uid: Google.Cloud.ErrorReporting.V1Beta1
   name: Google.Cloud.ErrorReporting.V1Beta1
   href: api/Google.Cloud.ErrorReporting.V1Beta1.html#Google_Cloud_ErrorReporting_V1Beta1

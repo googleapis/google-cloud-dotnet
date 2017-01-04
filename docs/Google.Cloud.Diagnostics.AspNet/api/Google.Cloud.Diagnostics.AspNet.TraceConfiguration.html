@@ -101,6 +101,30 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Diagnostics_AspNet_TraceConfiguration_BufferOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_TraceConfiguration_BufferOptions" data-uid="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.BufferOptions">BufferOptions</h4>
+              <div class="markdown level1 summary"><p>The buffer options for the tracer.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BufferOptions BufferOptions { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions">BufferOptions</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Diagnostics_AspNet_TraceConfiguration_QpsSampleRate_" data-uid="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.QpsSampleRate*"></a>
               <h4 id="Google_Cloud_Diagnostics_AspNet_TraceConfiguration_QpsSampleRate" data-uid="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.QpsSampleRate">QpsSampleRate</h4>
               <div class="markdown level1 summary"><p>Gets the QPS sample rate.</p>
@@ -128,13 +152,13 @@
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNet_TraceConfiguration_Create_" data-uid="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_TraceConfiguration_Create_System_Double_" data-uid="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double)">Create(Double)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_TraceConfiguration_Create_System_Double_Google_Cloud_Diagnostics_Common_BufferOptions_" data-uid="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.Create(System.Double,Google.Cloud.Diagnostics.Common.BufferOptions)">Create(Double, BufferOptions)</h4>
               <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration">TraceConfiguration</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static TraceConfiguration Create(double qpsSampleRate = 1)</code></pre>
+                <pre><code class="lang-csharp hljs">public static TraceConfiguration Create(double qpsSampleRate = 1, BufferOptions bufferOptions = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -151,6 +175,12 @@
                     <td><em>qpsSampleRate</em></td>
                     <td><p>Optional, the qps sample rate.  The sample rate determines
     how often requests are automatically traced. Defaults to <span class="xref">Google.Cloud.Diagnostics.AspNet.TraceConfiguration.DefaultQpsSampleRate</span></p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOptions.html#Google_Cloud_Diagnostics_Common_BufferOptions">BufferOptions</a></td>
+                    <td><em>bufferOptions</em></td>
+                    <td><p>Optional, the buffer options.  Defaults to a <a class="xref" href="Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType_Sized">Sized</a></p>
 </td>
                   </tr>
                 </tbody>
