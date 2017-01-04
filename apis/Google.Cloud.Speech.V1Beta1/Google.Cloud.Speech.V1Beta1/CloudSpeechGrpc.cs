@@ -26,7 +26,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
   /// <summary>
   ///  Service that implements Google Cloud Speech API.
   /// </summary>
-  public static class Speech
+  public static partial class Speech
   {
     static readonly string __ServiceName = "google.cloud.speech.v1beta1.Speech";
 
@@ -99,7 +99,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     }
 
     /// <summary>Client for Speech</summary>
-    public class SpeechClient : ClientBase<SpeechClient>
+    public partial class SpeechClient : ClientBase<SpeechClient>
     {
       /// <summary>Creates a new client for Speech</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>

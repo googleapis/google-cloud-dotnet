@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// See <see cref="ErrorReportingExceptionLoggerExtension"/>.
     /// Docs: https://cloud.google.com/error-reporting/docs/
     /// </remarks>
-    public sealed class ErrorReportingExceptionLogger
+    public sealed class ErrorReportingExceptionLogger : IExceptionLogger<ReportErrorEventResponse>
     {
         /// <summary> The Google Cloud Platform project id.</summary>
         private readonly ProjectName _projectName;
@@ -112,10 +112,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Asynchronously reports an exception that occurred to the Stackdriver Error Reporting API.
+        /// Asynchronously logs an exception that occurred to the Stackdriver Error Reporting API.
         /// </summary>
         /// <returns>A task containing an empty response on success.</returns>
-        public async Task<ReportErrorEventResponse> ReportAsync(HttpContext context, Exception exception)
+        public async Task<ReportErrorEventResponse> LogAsync(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
             var client = await _clientTask;
@@ -123,10 +123,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Reports an exception that occurred to the Stackdriver Error Reporting API.
+        /// Logs an exception that occurred to the Stackdriver Error Reporting API.
         /// </summary>
         /// <returns>An empty response on success.</returns>
-        public ReportErrorEventResponse Report(HttpContext context, Exception exception)
+        public ReportErrorEventResponse Log(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
             // If the client task has faulted this will throw when accessing 'Result'
@@ -145,8 +145,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             return new HttpRequestContext()
             {
                 Method = request?.Method?.ToString() ?? "",
-                Url = UriHelper.GetDisplayUrl(request) ?? "",
-                UserAgent = request?.Headers?["User-Agent"].ToString() ?? "",
+                Url = request?.GetDisplayUrl() ?? "",
+                UserAgent = request?.Headers["User-Agent"].ToString() ?? "",
                 ResponseStatusCode = response?.StatusCode ?? 0,
             };
         }
@@ -164,7 +164,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             StackTrace stackTrace = new StackTrace(exception, true);
             StackFrame[] frames = stackTrace.GetFrames();
-            if (frames.Length == 0)
+            if (frames == null || frames.Length == 0)
             {
                 return new SourceLocation();
             }
