@@ -155,7 +155,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
 
             var exceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsException"));
             Assert.Equal(3, exceptionEvents.Count());
-            foreach (var errorEvent in errorEvents)
+            foreach (var errorEvent in exceptionEvents)
             {
                 VerifyErrorEvent(errorEvent, testId, "ThrowsException");
             }
@@ -165,6 +165,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
             VerifyErrorEvent(argumentExceptionEvents.First(), testId, "ThrowsArgumentException");
         }
 
+        /// <summary>
+        /// Checks that an <see cref="ErrorEvent"/> contains valid data.
+        /// </summary>
+        /// <param name="errorEvent">The event to check.</param>
+        /// <param name="testId">The id of the test.</param>
+        /// <param name="functionName">The name of the function the error occured in.</param>
         private void VerifyErrorEvent(ErrorEvent errorEvent, string testId, string functionName)
         {
             Assert.Equal(ErrorReportingTestApplication.Service, errorEvent.ServiceContext.Service);
@@ -181,7 +187,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
             Assert.Equal(functionName, errorEvent.Context.ReportLocation.FunctionName);
             Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
         }
-
     }
 
     /// <summary>
@@ -190,9 +195,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
     public class ErrorReportingTestApplication
     {
         public const string Service = "service-name";
-
         public const string Version = "version-id";
-
         private readonly string _projectId;
 
         public ErrorReportingTestApplication()
@@ -225,6 +228,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
     {
         public ErrorReportingController() {}
 
+        /// <summary>Cathces and handles a thrown <see cref="Exception"/>.</summary>
         public string Index(string id) {
             var message = GetMessage(nameof(Index), id);
             try
@@ -238,20 +242,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
             return message;
         }
 
+        /// <summary>Throws an <see cref="Exception"/>.</summary>
         public string ThrowsException(string id)
         {
             string message = GetMessage(nameof(ThrowsException), id);
             throw new Exception(message);
         }
 
+        /// <summary>Throws an <see cref="ArgumentException"/>.</summary>
         public string ThrowsArgumentException(string id)
         {
-            string message = GetMessage(nameof(ThrowsException), id);
-            return ThrowArgumentException(message);
-        }
-
-        private string ThrowArgumentException(string message)
-        {
+            string message = GetMessage(nameof(ThrowsArgumentException), id);
             throw new ArgumentException(message);
         }
 
