@@ -45,6 +45,14 @@ for details on all the configuration options.
 
 (Depends on `Google.Cloud.Logging.Type` for version-agnostic types.)
 
+# Support from third party libraries
+
+The [Logary](github.com/logary/logary) logging library has a target
+supporting Google Stackdriver logging. Install the [NuGet
+package](https://www.nuget.org/packages/Logary.Targets.Stackdriver)
+and follow the [instructions on the project
+homepage](https://github.com/logary/logary#stackdriver-target-alpha-level).
+
 # Raw RPC API
 
 If required,
