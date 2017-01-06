@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Web;
 
@@ -27,6 +28,16 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </summary>
     internal static class Labels
     {
+        /// <summary>The version of the trace agent.</summary>
+        internal static readonly string AgentVersion = typeof(Labels)
+            .GetTypeInfo()
+            .Assembly
+            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+            .InformationalVersion;
+
+        /// <summary>The name of the trace agent.</summary>
+        internal const string AgentName = "google-cloud-c-sharp-trace";
+
         ///<summary>The label to denote the size of a request.</summary> 
         internal const string HttpRequestSize = "trace.cloud.google.com/http/request/size";
 
@@ -41,6 +52,20 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         ///<summary>The label to denote a stack trace.</summary> 
         internal const string StackTrace = "trace.cloud.google.com/stacktrace";
+
+        ///<summary>The label to denote an agent.</summary> 
+        internal const string Agent = " /agent";
+
+        /// <summary>
+        /// Gets a map with the label for the agent which contains the agent's name and version.
+        /// </summary>
+        internal static Dictionary<string, string> AgentLabel()
+        {
+            return new Dictionary<string, string>()
+            {
+                { Agent, $"{AgentName} {AgentVersion}"}
+            };
+        }
 
         /// <summary>
         /// Gets a map of labels for a span from an <see cref="HttpRequest"/>, such as request size, method, ect.

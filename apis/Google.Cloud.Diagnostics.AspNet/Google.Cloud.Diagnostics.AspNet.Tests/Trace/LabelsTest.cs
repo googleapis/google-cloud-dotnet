@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Moq;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -25,6 +24,16 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class LabelsTest
     {
+
+        [Fact]
+        public void AgentLabel()
+        {
+            var labels = Labels.AgentLabel();
+            Assert.Single(labels);
+            Assert.Contains(Labels.AgentName, labels[Labels.Agent]);
+            Assert.Contains(Labels.AgentVersion, labels[Labels.Agent]);
+        }
+
         [Fact]
         public void FromHttpRequestWrapper()
         {
