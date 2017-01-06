@@ -102,7 +102,26 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             RecognitionConfig config = new RecognitionConfig();
             RecognitionAudio audio = new RecognitionAudio();
             // Make the request
-            Operation response = await speechClient.AsyncRecognizeAsync(config, audio);
+            Operation<AsyncRecognizeResponse> response =
+                await speechClient.AsyncRecognizeAsync(config, audio);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRecognizeResponse> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AsyncRecognizeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRecognizeResponse> retrievedResponse =
+                await speechClient.PollOnceAsyncRecognizeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -115,7 +134,26 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             RecognitionConfig config = new RecognitionConfig();
             RecognitionAudio audio = new RecognitionAudio();
             // Make the request
-            Operation response = speechClient.AsyncRecognize(config, audio);
+            Operation<AsyncRecognizeResponse> response =
+                speechClient.AsyncRecognize(config, audio);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRecognizeResponse> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            AsyncRecognizeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRecognizeResponse> retrievedResponse =
+                speechClient.PollOnceAsyncRecognize(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -131,7 +169,26 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
                 Audio = new RecognitionAudio(),
             };
             // Make the request
-            Operation response = await speechClient.AsyncRecognizeAsync(request);
+            Operation<AsyncRecognizeResponse> response =
+                await speechClient.AsyncRecognizeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRecognizeResponse> completedResponse =
+                await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AsyncRecognizeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRecognizeResponse> retrievedResponse =
+                await speechClient.PollOnceAsyncRecognizeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
@@ -147,7 +204,26 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
                 Audio = new RecognitionAudio(),
             };
             // Make the request
-            Operation response = speechClient.AsyncRecognize(request);
+            Operation<AsyncRecognizeResponse> response =
+                speechClient.AsyncRecognize(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AsyncRecognizeResponse> completedResponse =
+                response.PollUntilCompleted();
+            // Retrieve the operation result
+            AsyncRecognizeResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AsyncRecognizeResponse> retrievedResponse =
+                speechClient.PollOnceAsyncRecognize(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
 
