@@ -177,6 +177,30 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_LongRunningOperationsClient_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_LongRunningOperationsClient" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient">LongRunningOperationsClient</h4>
+              <div class="markdown level1 summary"><p>The client for long-running operations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual OperationsClient LongRunningOperationsClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient">OperationsClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.AsyncRecognize*"></a>
@@ -196,11 +220,30 @@ AsyncRecognizeRequest request = new AsyncRecognizeRequest
     Audio = new RecognitionAudio(),
 };
 // Make the request
-Operation response = speechClient.AsyncRecognize(request);
+Operation&lt;AsyncRecognizeResponse&gt; response =
+    speechClient.AsyncRecognize(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;AsyncRecognizeResponse&gt; completedResponse =
+    response.PollUntilCompleted();
+// Retrieve the operation result
+AsyncRecognizeResponse result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;AsyncRecognizeResponse&gt; retrievedResponse =
+    speechClient.PollOnceAsyncRecognize(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Operation AsyncRecognize(AsyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Operation&lt;AsyncRecognizeResponse&gt; AsyncRecognize(AsyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -236,7 +279,7 @@ Operation response = speechClient.AsyncRecognize(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a></td>
+                    <td><a class="xref" href="Google.LongRunning.Operation-1.html#Google_LongRunning_Operation_1">Operation&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse">AsyncRecognizeResponse</a>&gt;</td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -256,11 +299,30 @@ SpeechClient speechClient = SpeechClient.Create();
 RecognitionConfig config = new RecognitionConfig();
 RecognitionAudio audio = new RecognitionAudio();
 // Make the request
-Operation response = speechClient.AsyncRecognize(config, audio);
+Operation&lt;AsyncRecognizeResponse&gt; response =
+    speechClient.AsyncRecognize(config, audio);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;AsyncRecognizeResponse&gt; completedResponse =
+    response.PollUntilCompleted();
+// Retrieve the operation result
+AsyncRecognizeResponse result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;AsyncRecognizeResponse&gt; retrievedResponse =
+    speechClient.PollOnceAsyncRecognize(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Operation AsyncRecognize(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Operation&lt;AsyncRecognizeResponse&gt; AsyncRecognize(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -303,7 +365,7 @@ that specifies how to process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a></td>
+                    <td><a class="xref" href="Google.LongRunning.Operation-1.html#Google_LongRunning_Operation_1">Operation&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse">AsyncRecognizeResponse</a>&gt;</td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -326,11 +388,30 @@ AsyncRecognizeRequest request = new AsyncRecognizeRequest
     Audio = new RecognitionAudio(),
 };
 // Make the request
-Operation response = await speechClient.AsyncRecognizeAsync(request);
+Operation&lt;AsyncRecognizeResponse&gt; response =
+    await speechClient.AsyncRecognizeAsync(request);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;AsyncRecognizeResponse&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+AsyncRecognizeResponse result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;AsyncRecognizeResponse&gt; retrievedResponse =
+    await speechClient.PollOnceAsyncRecognizeAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; AsyncRecognizeAsync(AsyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;AsyncRecognizeResponse&gt;&gt; AsyncRecognizeAsync(AsyncRecognizeRequest request, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -366,7 +447,7 @@ Operation response = await speechClient.AsyncRecognizeAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html#Google_LongRunning_Operation_1">Operation&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse">AsyncRecognizeResponse</a>&gt;&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -386,11 +467,30 @@ SpeechClient speechClient = await SpeechClient.CreateAsync();
 RecognitionConfig config = new RecognitionConfig();
 RecognitionAudio audio = new RecognitionAudio();
 // Make the request
-Operation response = await speechClient.AsyncRecognizeAsync(config, audio);
+Operation&lt;AsyncRecognizeResponse&gt; response =
+    await speechClient.AsyncRecognizeAsync(config, audio);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;AsyncRecognizeResponse&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+AsyncRecognizeResponse result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;AsyncRecognizeResponse&gt; retrievedResponse =
+    await speechClient.PollOnceAsyncRecognizeAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; AsyncRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;AsyncRecognizeResponse&gt;&gt; AsyncRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -433,7 +533,7 @@ that specifies how to process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html#Google_LongRunning_Operation_1">Operation&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse">AsyncRecognizeResponse</a>&gt;&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -453,11 +553,30 @@ SpeechClient speechClient = await SpeechClient.CreateAsync();
 RecognitionConfig config = new RecognitionConfig();
 RecognitionAudio audio = new RecognitionAudio();
 // Make the request
-Operation response = await speechClient.AsyncRecognizeAsync(config, audio);
+Operation&lt;AsyncRecognizeResponse&gt; response =
+    await speechClient.AsyncRecognizeAsync(config, audio);
+
+// Poll until the returned long-running operation is complete
+Operation&lt;AsyncRecognizeResponse&gt; completedResponse =
+    await response.PollUntilCompletedAsync();
+// Retrieve the operation result
+AsyncRecognizeResponse result = completedResponse.Result;
+
+// Or get the name of the operation
+string operationName = response.Name;
+// This name can be stored, then the long-running operation retrieved later by name
+Operation&lt;AsyncRecognizeResponse&gt; retrievedResponse =
+    await speechClient.PollOnceAsyncRecognizeAsync(operationName);
+// Check if the retrieved long-running operation has completed
+if (retrievedResponse.IsCompleted)
+{
+    // If it has completed, then access the result
+    AsyncRecognizeResponse retrievedResult = retrievedResponse.Result;
+}
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&gt; AsyncRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;AsyncRecognizeResponse&gt;&gt; AsyncRecognizeAsync(RecognitionConfig config, RecognitionAudio audio, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -500,7 +619,7 @@ that specifies how to process the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html#Google_LongRunning_Operation_1">Operation&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse">AsyncRecognizeResponse</a>&gt;&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -653,6 +772,104 @@ necessary.</p>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient">SpeechClient</a>&gt;</td>
                     <td><p>The task representing the created <a class="xref" href="Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient">SpeechClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognize_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceAsyncRecognize(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Poll an operation once, using an <code>operationName</code> from a previous invocation of <code>AsyncRecognize</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Operation&lt;AsyncRecognizeResponse&gt; PollOnceAsyncRecognize(string operationName, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>operationName</em></td>
+                    <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.LongRunning.Operation-1.html#Google_LongRunning_Operation_1">Operation&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse">AsyncRecognizeResponse</a>&gt;</td>
+                    <td><p>The result of polling the operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognizeAsync_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognizeAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">PollOnceAsyncRecognizeAsync(String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously poll an operation once, using an <code>operationName</code> from a previous invocation of <code>AsyncRecognizeAsync</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Operation&lt;AsyncRecognizeResponse&gt;&gt; PollOnceAsyncRecognizeAsync(string operationName, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>operationName</em></td>
+                    <td><p>The name of a previously invoked operation. Must not be <code>null</code> or empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation-1.html#Google_LongRunning_Operation_1">Operation&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeResponse">AsyncRecognizeResponse</a>&gt;&gt;</td>
+                    <td><p>A task representing the result of polling the operation.</p>
 </td>
                   </tr>
                 </tbody>

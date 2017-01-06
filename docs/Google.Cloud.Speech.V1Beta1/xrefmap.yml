@@ -2922,6 +2922,39 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechClient.GrpcClient
   name: GrpcClient
   fullName: Google.Cloud.Speech.V1Beta1.SpeechClient.GrpcClient
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient
+  name: LongRunningOperationsClient
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_LongRunningOperationsClient
+  commentId: P:Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient
+  nameWithType: SpeechClient.LongRunningOperationsClient
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient*
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_LongRunningOperationsClient_
+  commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient
+  name: LongRunningOperationsClient
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClient.LongRunningOperationsClient
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize(System.String,Google.Api.Gax.Grpc.CallSettings)
+  name: PollOnceAsyncRecognize(String, CallSettings)
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognize_System_String_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize(System.String,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize(System.String, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpeechClient.PollOnceAsyncRecognize(String, CallSettings)
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize*
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognize_
+  commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize
+  name: PollOnceAsyncRecognize
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognize(System.String, Google.Api.Gax.Grpc.CallSettings)
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
+  name: PollOnceAsyncRecognizeAsync(String, CallSettings)
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognizeAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SpeechClient.PollOnceAsyncRecognizeAsync(String, CallSettings)
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync*
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_PollOnceAsyncRecognizeAsync_
+  commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync
+  name: PollOnceAsyncRecognizeAsync
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClient.PollOnceAsyncRecognizeAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
 - uid: Google.Cloud.Speech.V1Beta1.SpeechClient.ShutdownDefaultChannelsAsync
   name: ShutdownDefaultChannelsAsync()
   href: api/Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_ShutdownDefaultChannelsAsync
@@ -3023,6 +3056,17 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechClientImpl.GrpcClient
   name: GrpcClient
   fullName: Google.Cloud.Speech.V1Beta1.SpeechClientImpl.GrpcClient
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClientImpl.LongRunningOperationsClient
+  name: LongRunningOperationsClient
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClientImpl.html#Google_Cloud_Speech_V1Beta1_SpeechClientImpl_LongRunningOperationsClient
+  commentId: P:Google.Cloud.Speech.V1Beta1.SpeechClientImpl.LongRunningOperationsClient
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClientImpl.LongRunningOperationsClient
+  nameWithType: SpeechClientImpl.LongRunningOperationsClient
+- uid: Google.Cloud.Speech.V1Beta1.SpeechClientImpl.LongRunningOperationsClient*
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechClientImpl.html#Google_Cloud_Speech_V1Beta1_SpeechClientImpl_LongRunningOperationsClient_
+  commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechClientImpl.LongRunningOperationsClient
+  name: LongRunningOperationsClient
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechClientImpl.LongRunningOperationsClient
 - uid: Google.Cloud.Speech.V1Beta1.SpeechClientImpl.SyncRecognize(Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)
   name: SyncRecognize(SyncRecognizeRequest, CallSettings)
   href: api/Google.Cloud.Speech.V1Beta1.SpeechClientImpl.html#Google_Cloud_Speech_V1Beta1_SpeechClientImpl_SyncRecognize_Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -3190,6 +3234,17 @@ references:
   commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechSettings.IdempotentRetryFilter
   name: IdempotentRetryFilter
   fullName: Google.Cloud.Speech.V1Beta1.SpeechSettings.IdempotentRetryFilter
+- uid: Google.Cloud.Speech.V1Beta1.SpeechSettings.LongRunningOperationsSettings
+  name: LongRunningOperationsSettings
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechSettings.html#Google_Cloud_Speech_V1Beta1_SpeechSettings_LongRunningOperationsSettings
+  commentId: P:Google.Cloud.Speech.V1Beta1.SpeechSettings.LongRunningOperationsSettings
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechSettings.LongRunningOperationsSettings
+  nameWithType: SpeechSettings.LongRunningOperationsSettings
+- uid: Google.Cloud.Speech.V1Beta1.SpeechSettings.LongRunningOperationsSettings*
+  href: api/Google.Cloud.Speech.V1Beta1.SpeechSettings.html#Google_Cloud_Speech_V1Beta1_SpeechSettings_LongRunningOperationsSettings_
+  commentId: Overload:Google.Cloud.Speech.V1Beta1.SpeechSettings.LongRunningOperationsSettings
+  name: LongRunningOperationsSettings
+  fullName: Google.Cloud.Speech.V1Beta1.SpeechSettings.LongRunningOperationsSettings
 - uid: Google.Cloud.Speech.V1Beta1.SpeechSettings.NonIdempotentRetryFilter
   name: NonIdempotentRetryFilter
   href: api/Google.Cloud.Speech.V1Beta1.SpeechSettings.html#Google_Cloud_Speech_V1Beta1_SpeechSettings_NonIdempotentRetryFilter
