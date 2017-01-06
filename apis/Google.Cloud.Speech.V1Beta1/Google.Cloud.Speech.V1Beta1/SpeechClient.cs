@@ -178,6 +178,11 @@ namespace Google.Cloud.Speech.V1Beta1
             )));
 
         /// <summary>
+        /// Settings used for long running operations.
+        /// </summary>
+        public OperationsSettings LongRunningOperationsSettings { get; set; }
+
+        /// <summary>
         /// Creates a deep clone of this object, with all the same property values.
         /// </summary>
         /// <returns>A deep clone of this <see cref="SpeechSettings"/> object.</returns>
@@ -272,6 +277,14 @@ namespace Google.Cloud.Speech.V1Beta1
         /// The underlying gRPC Speech client.
         /// </summary>
         public virtual Speech.SpeechClient GrpcClient
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        /// <summary>
+        /// The client for long-running operations.
+        /// </summary>
+        public virtual OperationsClient LongRunningOperationsClient
         {
             get { throw new NotImplementedException(); }
         }
@@ -416,7 +429,7 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> AsyncRecognizeAsync(
+        public virtual Task<Operation<AsyncRecognizeResponse>> AsyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
             CallSettings callSettings = null) => AsyncRecognizeAsync(
@@ -446,12 +459,15 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> AsyncRecognizeAsync(
+        public virtual Task<Operation<AsyncRecognizeResponse>> AsyncRecognizeAsync(
             RecognitionConfig config,
             RecognitionAudio audio,
             CancellationToken cancellationToken) => AsyncRecognizeAsync(
-                config,
-                audio,
+                new AsyncRecognizeRequest
+                {
+                    Config = config,
+                    Audio = audio,
+                },
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -473,7 +489,7 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation AsyncRecognize(
+        public virtual Operation<AsyncRecognizeResponse> AsyncRecognize(
             RecognitionConfig config,
             RecognitionAudio audio,
             CallSettings callSettings = null) => AsyncRecognize(
@@ -499,12 +515,25 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public virtual Task<Operation> AsyncRecognizeAsync(
+        public virtual Task<Operation<AsyncRecognizeResponse>> AsyncRecognizeAsync(
             AsyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AsyncRecognizeAsync</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual Task<Operation<AsyncRecognizeResponse>> PollOnceAsyncRecognizeAsync(
+            string operationName,
+            CallSettings callSettings = null) => Operation<AsyncRecognizeResponse>.PollOnceFromNameAsync(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                LongRunningOperationsClient,
+                callSettings);
 
         /// <summary>
         /// Perform asynchronous speech-recognition: receive results via the
@@ -521,12 +550,25 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public virtual Operation AsyncRecognize(
+        public virtual Operation<AsyncRecognizeResponse> AsyncRecognize(
             AsyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AsyncRecognize</c>.
+        /// </summary>
+        /// <param name="operationName">The name of a previously invoked operation. Must not be <c>null</c> or empty.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual Operation<AsyncRecognizeResponse> PollOnceAsyncRecognize(
+            string operationName,
+            CallSettings callSettings = null) => Operation<AsyncRecognizeResponse>.PollOnceFromName(
+                GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)),
+                LongRunningOperationsClient,
+                callSettings);
 
     }
 
@@ -548,6 +590,8 @@ namespace Google.Cloud.Speech.V1Beta1
         {
             this.GrpcClient = grpcClient;
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
+            LongRunningOperationsClient = new OperationsClientImpl(
+                grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
             _clientHelper = new ClientHelper(effectiveSettings);
             _callSyncRecognize = _clientHelper.BuildApiCall<SyncRecognizeRequest, SyncRecognizeResponse>(
                 GrpcClient.SyncRecognizeAsync, GrpcClient.SyncRecognize, effectiveSettings.SyncRecognizeSettings);
@@ -559,6 +603,11 @@ namespace Google.Cloud.Speech.V1Beta1
         /// The underlying gRPC Speech client.
         /// </summary>
         public override Speech.SpeechClient GrpcClient { get; }
+
+        /// <summary>
+        /// The client for long-running operations.
+        /// </summary>
+        public override OperationsClient LongRunningOperationsClient { get; }
 
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_SyncRecognizeRequest(ref SyncRecognizeRequest request, ref CallSettings settings);
@@ -621,12 +670,13 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <returns>
         /// A Task containing the RPC response.
         /// </returns>
-        public override Task<Operation> AsyncRecognizeAsync(
+        public override async Task<Operation<AsyncRecognizeResponse>> AsyncRecognizeAsync(
             AsyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
             Modify_AsyncRecognizeRequest(ref request, ref callSettings);
-            return _callAsyncRecognize.Async(request, callSettings);
+            return new Operation<AsyncRecognizeResponse>(
+                await _callAsyncRecognize.Async(request, callSettings), LongRunningOperationsClient);
         }
 
         /// <summary>
@@ -644,12 +694,13 @@ namespace Google.Cloud.Speech.V1Beta1
         /// <returns>
         /// The RPC response.
         /// </returns>
-        public override Operation AsyncRecognize(
+        public override Operation<AsyncRecognizeResponse> AsyncRecognize(
             AsyncRecognizeRequest request,
             CallSettings callSettings = null)
         {
             Modify_AsyncRecognizeRequest(ref request, ref callSettings);
-            return _callAsyncRecognize.Sync(request, callSettings);
+            return new Operation<AsyncRecognizeResponse>(
+                _callAsyncRecognize.Sync(request, callSettings), LongRunningOperationsClient);
         }
 
     }
