@@ -33,13 +33,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
     public class ErrorReportingTest
     {
         /// <summary>Total time to spend sleeping when looking for error events.</summary>
-        private readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
+        private static readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
 
         /// <summary>Time to sleep between checks for error events.</summary>
-        private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
+        private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
 
         /// <summary>A query time range of one hour.</summary>
-        private readonly QueryTimeRange s_oneHour = new QueryTimeRange { Period = Period._1Hour };
+        private static readonly QueryTimeRange s_oneHour = new QueryTimeRange { Period = Period._1Hour };
 
         /// <summary>Project to run the test on.</summary>
         private readonly ProjectName _projectName;
@@ -83,7 +83,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
                     };
 
                     var events = _client.ListEvents(request);
-                   errorEvents.AddRange(events.Where(e => e.Message.Contains(testId)));
+                    errorEvents.AddRange(events.Where(e => e.Message.Contains(testId)));
                 }
 
                 if (minEntries == 0 || errorEvents.Count() >= minEntries)
