@@ -145,6 +145,23 @@ namespace Google.Cloud.Diagnostics.AspNet
             return _trace.TraceId;
         }
 
+        /// <inheritdoc />
+        public ulong? GetCurrentSpanId()
+        {
+            lock (_stackMutex)
+            {
+                if (_traceStack.Count != 0)
+                {
+                    return _traceStack.Peek().SpanId;
+                }
+                else if (_rootSpanParentId != null)
+                {
+                    return _rootSpanParentId;
+                }
+                return null;
+            }
+        }
+
         private void CheckStackNotEmpty()
         {
             GaxPreconditions.CheckState(_traceStack.Count != 0, "No available span.");

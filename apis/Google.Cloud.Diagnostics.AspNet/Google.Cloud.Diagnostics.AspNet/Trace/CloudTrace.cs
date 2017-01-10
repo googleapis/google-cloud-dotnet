@@ -31,11 +31,24 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <code>
     ///  public class Global : HttpApplication
     ///  { 
-    ///       void Application_Start(object sender, EventArgs e)
+    ///       public override void Init()
     ///       {
     ///           CloudTrace.Initialize("some-project-id", this);
     ///       }
     ///  }
+    /// </code>
+    /// </example>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void DoSomething()
+    /// {
+    ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
+    ///     using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
+    ///     {
+    ///         ...
+    ///     }
+    /// }
     /// </code>
     /// </example>
     /// 
@@ -104,6 +117,14 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static IManagedTracer GetCurrentTracer()
         {
             return TracerManager.GetCurrentTracer() ?? DoNothingTracer.Instance;
+        }
+
+        /// <summary>
+        /// True if tracing should occur for the current request.
+        /// </summary>
+        public static bool ShouldTrace()
+        {
+            return TracerManager.GetCurrentTracer() != null;
         }
 
         private void BeginRequest(object sender, EventArgs e)

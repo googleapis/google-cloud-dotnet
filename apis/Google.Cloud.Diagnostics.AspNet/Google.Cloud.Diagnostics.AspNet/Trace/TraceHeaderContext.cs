@@ -56,6 +56,13 @@ namespace Google.Cloud.Diagnostics.AspNet
         public bool ShouldTrace { get; }
 
         /// <summary>
+        /// Create a <see cref="TraceHeaderContext"/> from a trace and span id.
+        /// </summary>
+        public static TraceHeaderContext Create(string traceId, ulong? spanId, bool shouldTrace) =>
+            new TraceHeaderContext(traceId, spanId, shouldTrace);
+        
+
+        /// <summary>
         /// Create a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
         /// </summary>
         public static TraceHeaderContext FromRequest(HttpRequest request)
@@ -97,6 +104,17 @@ namespace Google.Cloud.Diagnostics.AspNet
             TraceId = traceId;
             SpanId = spanId;
             ShouldTrace = shouldTrace;
+        }
+
+        /// <summary>
+        /// Gets the <see cref="TraceHeaderContext"/> as a string.
+        /// Formated as "[trace-id]/[span-id];o=[should-trace]" with not brackets and
+        /// where should-trace is 1 to trace and 0 to not.
+        /// </summary>
+        public override string ToString()
+        {
+            var traceMask = ShouldTrace ? 1 : 0;
+            return $"{TraceId}/{SpanId};o={traceMask}";
         }
     }
 }

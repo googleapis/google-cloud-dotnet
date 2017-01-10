@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
@@ -36,7 +38,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         // Sample: InitializeTrace
         public class Global : HttpApplication
         {
-            void Application_Start(object sender, EventArgs e)
+            public override void Init()
             {
                 string projectId = "[Google Cloud Platform project ID]";
                 // Trace a sampling of incoming Http requests.
@@ -52,6 +54,18 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             CloudTrace.GetCurrentTracer().StartSpan("hello-world");
             Console.Out.WriteLine("Hello, World!");
             CloudTrace.GetCurrentTracer().EndSpan();
+            // End sample
+        }
+
+        public async Task<HttpResponseMessage> AddTraceHeader()
+        {
+            // Sample: AddTraceHeader
+            // Add a handler to trace outgoing requests and to propigate the trace header.
+            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
+            using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
+            {
+                return await httpClient.GetAsync("https://cloud.google.com/trace/");
+            }
             // End sample
         }
 

@@ -108,5 +108,26 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Assert.True(context.ShouldTrace);
         }
 
+        [Fact]
+        public void Create()
+        {
+            var context = TraceHeaderContext.Create(TraceId, SpanId, true);
+            Assert.True(SpanId == context.SpanId);
+            Assert.Equal(TraceId, context.TraceId);
+            Assert.True(context.ShouldTrace);
+        }
+
+        [Fact]
+        public void ToStringTest()
+        {
+            var context = TraceHeaderContext.Create(TraceId, SpanId, true);
+            Assert.Equal($"{TraceId}/{SpanId};o=1", context.ToString());
+
+            context = TraceHeaderContext.Create(TraceId, SpanId, false);
+            Assert.Equal($"{TraceId}/{SpanId};o=0", context.ToString());
+
+            context = TraceHeaderContext.Create(null, null, false);
+            Assert.Equal("/;o=0", context.ToString());
+        }
     }
 }
