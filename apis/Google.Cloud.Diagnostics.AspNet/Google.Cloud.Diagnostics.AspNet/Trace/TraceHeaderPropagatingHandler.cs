@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// Traces outgoing http requests and propigates the trace header.
+    /// Traces outgoing http requests and propagates the trace header.
     /// </summary>
     ///
     /// <example>
@@ -35,15 +35,10 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </code>
     /// </example>
     /// <remarks>
-    /// Ensures the tracer header is propagated along in the http headers for outgoing http requests and 
+    /// Ensures the trace header is propagated in the headers for outgoing http requests and 
     /// traces the total time of the outgoing http request.  This is only done if tracing is initialized
     /// (See <see cref="CloudTrace.Initialize"/>) and tracing is enabled for the request current request
     /// (See <see cref="CloudTrace.ShouldTrace"/>).
-    /// 
-    /// By default when initialized a small sampling of http requests will automatically be traced.  Additional
-    /// trace data can be collected manually.
-    /// 
-    /// Docs: https://cloud.google.com/trace/docs/
     /// </remarks>
     public class TraceHeaderPropagatingHandler : DelegatingHandler
     {

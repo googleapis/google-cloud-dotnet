@@ -57,9 +57,9 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             // End sample
         }
 
-        public async Task<HttpResponseMessage> AddTraceHeader()
+        public async Task<HttpResponseMessage> TraceOutgoing()
         {
-            // Sample: AddTraceHeader
+            // Sample: TraceOutgoing
             // Add a handler to trace outgoing requests and to propigate the trace header.
             var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
             using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))

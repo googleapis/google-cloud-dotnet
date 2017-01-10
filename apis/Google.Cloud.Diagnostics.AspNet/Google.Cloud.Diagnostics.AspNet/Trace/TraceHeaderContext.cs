@@ -108,8 +108,8 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         /// <summary>
         /// Gets the <see cref="TraceHeaderContext"/> as a string.
-        /// Formated as "[trace-id]/[span-id];o=[should-trace]" with not brackets and
-        /// where should-trace is 1 to trace and 0 to not.
+        /// Formatted as "[trace-id]/[span-id];o=[should-trace]"
+        /// where "should-trace" is 1 to trace and 0 otherwise.
         /// </summary>
         public override string ToString()
         {
