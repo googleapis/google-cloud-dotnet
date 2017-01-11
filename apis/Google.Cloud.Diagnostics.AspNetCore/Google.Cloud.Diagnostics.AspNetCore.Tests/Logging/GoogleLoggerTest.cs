@@ -42,8 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
         private string Formatter(string message, Exception ex)
             => ex == null ? message : $"{message} - {ex.Message}";
 
-        private GoogleLogger GetLogger(
-            IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
+        private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
         {
             LoggerOptions options = LoggerOptions.Create(logLevel);
             return new GoogleLogger(consumer, s_logToProject, options, _logName, s_clock);

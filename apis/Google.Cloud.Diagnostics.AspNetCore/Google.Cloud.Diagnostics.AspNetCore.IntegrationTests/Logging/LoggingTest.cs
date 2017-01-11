@@ -273,8 +273,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Type = "build",
             Labels =
             {
-                { "project_id", "" },
-                { "build_id", "" }
+                { "project_id", "some-pid" },
+                { "build_id", "some-build-id" }
             }
         };
 
