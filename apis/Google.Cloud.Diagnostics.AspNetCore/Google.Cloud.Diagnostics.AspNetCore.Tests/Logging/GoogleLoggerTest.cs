@@ -28,12 +28,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
 {
     public class GoogleLoggerTest
     {
-        private static readonly string _logMessage = "a log message";
-        private static readonly string _logName = "log-name";
-        private static readonly string _projectId = "pid";
-        private static readonly DateTime _dateTime = DateTime.UtcNow;
-        private static readonly Exception _exception = new Exception("some message");
-        private static readonly IClock _clock = new FakeClock(_dateTime);
+        private const string _logMessage = "a log message";
+        private const string _logName = "log-name";
+        private const string _projectId = "pid";
+        private static readonly DateTime s_dateTime = DateTime.UtcNow;
+        private static readonly Exception s_exception = new Exception("some message");
+        private static readonly IClock s_clock = new FakeClock(s_dateTime);
+        private static readonly LogTo s_logToProject = LogTo.Project(_projectId);
 
         /// <summary>
         /// Function to format a string and exception.  Used to test logging.
@@ -41,9 +42,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
         private string Formatter(string message, Exception ex)
             => ex == null ? message : $"{message} - {ex.Message}";
 
-        private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
+        private GoogleLogger GetLogger(
+            IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
         {
-            return new GoogleLogger(consumer, logLevel, _projectId, _logName, _clock);
+            LoggerOptions options = LoggerOptions.Create(logLevel);
+            return new GoogleLogger(consumer, s_logToProject, options, _logName, s_clock);
         }
 
         [Fact]
@@ -72,15 +75,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
         {
             var logger = GetLogger(new Mock<IConsumer<LogEntry>>().Object);
             Assert.Throws<ArgumentNullException>(
-                () => logger.Log(LogLevel.Information, 0, _logMessage, _exception, null));
+                () => logger.Log(LogLevel.Information, 0, _logMessage, s_exception, null));
         }
 
         [Fact]
         public void Log_NotEnabled()
         {
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
-            var logger = GetLogger(mockConsumer.Object, LogLevel.Information);
-            logger.Log(LogLevel.Debug, 0, _logMessage, _exception, Formatter);
+            var logger = GetLogger(mockConsumer.Object);
+            logger.Log(LogLevel.Debug, 0, _logMessage, s_exception, Formatter);
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<LogEntry>>()), Times.Never());
         }
 
@@ -101,16 +104,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
                 LogEntry entry = l.Single();
                 return entry.LogName == new LogName(_projectId, _logName).ToString() &&
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
-                    entry.Timestamp.Equals(Timestamp.FromDateTime(_dateTime)) &&
-                    entry.TextPayload == Formatter(_logMessage, _exception) &&
-                    entry.Resource == GoogleLogger._globalResource;
+                    entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
+                    entry.TextPayload == Formatter(_logMessage, s_exception) &&
+                    entry.Resource == LoggerOptions.s_globalResource;
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
             var logger = GetLogger(mockConsumer.Object);
-            logger.Log(LogLevel.Error, 0, _logMessage, _exception, Formatter);
-            mockConsumer.VerifyAll(); ;
+            logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
+            mockConsumer.VerifyAll();
         }
     }
 }

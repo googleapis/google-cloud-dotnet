@@ -30,25 +30,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
 
-        /// <summary>The minimum log level.</summary>
-        private readonly LogLevel _logLevel;
+        /// <summary>The logger options.</summary>
+        private readonly LoggerOptions _loggerOptions;
 
-        /// <summary>The formatted log name for the project and log.</summary>
+        /// <summary>The formatted log name.</summary>
         private readonly string _logName;
 
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        /// <summary>The global resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
-        internal static readonly MonitoredResource _globalResource = new MonitoredResource { Type = "global" };
-
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogLevel logLevel, string projectId, string logName, IClock clock = null)
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTo logTo, LoggerOptions loggerOptions, 
+            string logName, IClock clock = null)
         {
-            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            GaxPreconditions.CheckNotNull(logName, nameof(logName));
+            GaxPreconditions.CheckNotNull(logTo, nameof(logTo));
+            GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _logLevel = logLevel;
-            _logName = new LogName(projectId, logName).ToString();
+            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
+            _logName = logTo.GetFullLogName(logName);
             _clock = clock ?? SystemClock.Instance;
         }
 
@@ -62,8 +60,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <inheritdoc />
-        public bool IsEnabled(LogLevel logLevel) => logLevel >= _logLevel;
-        
+        public bool IsEnabled(LogLevel logLevel) => logLevel >= _loggerOptions.LogLevel;
 
         /// <inheritdoc />
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
@@ -83,7 +80,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             LogEntry entry = new LogEntry
             {   
-                Resource = _globalResource,
+                Resource = _loggerOptions.MonitoredResource,
                 LogName = _logName,
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
