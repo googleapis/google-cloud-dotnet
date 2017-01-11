@@ -22,6 +22,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// Extensions to add <see cref="GoogleLoggerProvider"/>s to an <see cref="ILoggerFactory"/>.
     /// </summary>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void Configure(ILoggerFactory loggerFactory)
+    /// {
+    ///     string projectId = "[Google Cloud Platform project ID]";
+    ///     loggerFactory.AddGoogle(projectId);
+    ///     ...
+    /// }
+    /// </code>
+    /// </example>
+    /// 
+    /// <remarks>
+    /// Logs to Google Stackdriver Cloud Logging. See <see cref="GoogleLogger"/>.
+    /// Docs: https://cloud.google.com/logging/docs/
+    /// </remarks>
     public static class GoogleLoggerFactoryExtensions
     {
         /// <summary>

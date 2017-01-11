@@ -23,8 +23,24 @@ using Google.Api;
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
-    /// <see cref="ILogger"/> for Stackdriver Logging.
+    /// <see cref="ILogger"/> for Google Stackdriver Logging.
     /// </summary>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void Configure(ILoggerFactory loggerFactory)
+    /// {
+    ///     string projectId = "[Google Cloud Platform project ID]";
+    ///     loggerFactory.AddGoogle(projectId);
+    ///     ...
+    /// }
+    /// </code>
+    /// </example>
+    /// 
+    /// <remarks>
+    /// Logs to Google Stackdriver Cloud Logging. See <see cref="GoogleLoggerFactoryExtensions"/>.
+    /// Docs: https://cloud.google.com/logging/docs/
+    /// </remarks>
     public sealed class GoogleLogger : ILogger
     {
         /// <summary>The consumer to push logs to.</summary>
