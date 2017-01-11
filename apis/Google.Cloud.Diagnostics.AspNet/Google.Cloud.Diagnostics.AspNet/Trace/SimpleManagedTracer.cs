@@ -30,7 +30,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     internal sealed class SimpleManagedTracer : IManagedTracer
     {
         /// <summary>A mutex to protect the rate limiter instance.</summary>
-        private static object _stackMutex = new object();
+        private static object _stackLock = new object();
 
         /// <summary>The trace consumer to push the trace to when completed.</summary>
         private readonly IConsumer<TraceProto> _consumer;
@@ -59,7 +59,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Creates a <see cref="SimpleManagedTracer"/>>
         /// </summary>
-        /// <param name="consumer">The consumer to push finised traces to.</param>
+        /// <param name="consumer">The consumer to push finished traces to.</param>
         /// <param name="trace">The current trace.</param>
         /// <param name="rootSpanParentId">Optional, the parent span id of the root span of the passed in trace.</param>
         public static SimpleManagedTracer Create(IConsumer<TraceProto> consumer, TraceProto trace, ulong? rootSpanParentId = null)
@@ -79,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             span.Name = name;
             span.StartTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
 
-            lock (_stackMutex)
+            lock (_stackLock)
             {
                 if (_traceStack.Count != 0)
                 {
@@ -97,7 +97,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <inheritdoc />
         public void EndSpan()
         {
-            lock (_stackMutex)
+            lock (_stackLock)
             {
                 CheckStackNotEmpty();
 
@@ -118,7 +118,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         {
             GaxPreconditions.CheckNotNull(labels, nameof(labels));
 
-            lock (_stackMutex)
+            lock (_stackLock)
             {
                 CheckStackNotEmpty();
 
@@ -143,6 +143,23 @@ namespace Google.Cloud.Diagnostics.AspNet
         public string GetCurrentTraceId()
         {
             return _trace.TraceId;
+        }
+
+        /// <inheritdoc />
+        public ulong? GetCurrentSpanId()
+        {
+            lock (_stackLock)
+            {
+                if (_traceStack.Count != 0)
+                {
+                    return _traceStack.Peek().SpanId;
+                }
+                else if (_rootSpanParentId != null)
+                {
+                    return _rootSpanParentId;
+                }
+                return null;
+            }
         }
 
         private void CheckStackNotEmpty()

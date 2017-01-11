@@ -48,5 +48,10 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// Gets the current trace id or null if none exists.
         /// </summary>
         string GetCurrentTraceId();
+
+        /// <summary>
+        /// Gets the current span id or null if none exists.
+        /// </summary>
+        ulong? GetCurrentSpanId();
     }
 }

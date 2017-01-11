@@ -220,5 +220,28 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
             Assert.Equal(tracer.GetCurrentTraceId(), TraceId);
         }
+
+        [Fact]
+        public void GetCurrentSpanId_NoSpan()
+        {
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            Assert.Null(tracer.GetCurrentSpanId());
+        }
+
+        [Fact]
+        public void GetCurrentSpanId_Span()
+        {
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            tracer.StartSpan("span-name");
+            Assert.NotNull(tracer.GetCurrentSpanId());
+        }
+
+        [Fact]
+        public void GetCurrentSpanId_ParentSpan()
+        {
+            ulong parentSpanId = 54321;
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace(), parentSpanId);
+            Assert.Equal(tracer.GetCurrentSpanId(), parentSpanId);
+        }
     }
 }

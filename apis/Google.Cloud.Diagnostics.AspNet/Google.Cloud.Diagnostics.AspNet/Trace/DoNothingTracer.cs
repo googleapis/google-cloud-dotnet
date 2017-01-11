@@ -29,5 +29,6 @@ namespace Google.Cloud.Diagnostics.AspNet
         public void AnnotateSpan(Dictionary<string, string> labels) { }
         public void SetStackTrace(StackTrace stackTrace) { }
         public string GetCurrentTraceId() => null;
+        public ulong? GetCurrentSpanId() => null;
     }
 }

@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Moq;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
