@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// Traces outgoing http requests and propagates the trace header.
+    /// Traces outgoing HTTP requests and propagates the trace header.
     /// </summary>
     ///
     /// <example>
@@ -35,8 +35,8 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </code>
     /// </example>
     /// <remarks>
-    /// Ensures the trace header is propagated in the headers for outgoing http requests and 
-    /// traces the total time of the outgoing http request.  This is only done if tracing is initialized
+    /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
+    /// traces the total time of the outgoing HTTP request.  This is only done if tracing is initialized
     /// (See <see cref="CloudTrace.Initialize"/>) and tracing is enabled for the request current request
     /// (See <see cref="CloudTrace.ShouldTrace"/>).
     /// </remarks>
@@ -54,18 +54,18 @@ namespace Google.Cloud.Diagnostics.AspNet
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken cancellationToken)
         { 
-            if (!CloudTrace.ShouldTrace())
+            if (!CloudTrace.ShouldTrace)
             {
                 return await base.SendAsync(request, cancellationToken);
             }
 
-            var tracer = CloudTrace.GetCurrentTracer();
+            var tracer = CloudTrace.CurrentTracer;
 
             var traceHeader = TraceHeaderContext.Create(
                 tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
             request.Headers.Add(TraceHeaderContext.TraceHeader, traceHeader.ToString());
             
-            tracer.StartSpan(request.RequestUri.AbsoluteUri);
+            tracer.StartSpan(request.RequestUri.ToString());
             var tracedRequest = await base.SendAsync(request, cancellationToken);
             tracer.EndSpan();
 

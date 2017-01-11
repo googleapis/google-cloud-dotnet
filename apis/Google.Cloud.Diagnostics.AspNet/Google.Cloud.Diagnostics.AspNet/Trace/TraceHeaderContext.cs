@@ -56,14 +56,14 @@ namespace Google.Cloud.Diagnostics.AspNet
         public bool ShouldTrace { get; }
 
         /// <summary>
-        /// Create a <see cref="TraceHeaderContext"/> from a trace and span id.
+        /// Creates a <see cref="TraceHeaderContext"/> from a trace and span id.
         /// </summary>
         public static TraceHeaderContext Create(string traceId, ulong? spanId, bool shouldTrace) =>
             new TraceHeaderContext(traceId, spanId, shouldTrace);
         
 
         /// <summary>
-        /// Create a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
+        /// Creates a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
         /// </summary>
         public static TraceHeaderContext FromRequest(HttpRequest request)
         {

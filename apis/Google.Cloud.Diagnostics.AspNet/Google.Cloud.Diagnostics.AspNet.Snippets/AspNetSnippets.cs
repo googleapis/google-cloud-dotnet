@@ -40,6 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         {
             public override void Init()
             {
+                base.Init();
                 string projectId = "[Google Cloud Platform project ID]";
                 // Trace a sampling of incoming Http requests.
                 CloudTrace.Initialize(projectId, this);
@@ -51,20 +52,20 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         {
             // Sample: UseTracer
             // Manually trace a specific operation.
-            CloudTrace.GetCurrentTracer().StartSpan("hello-world");
+            CloudTrace.CurrentTracer.StartSpan("hello-world");
             Console.Out.WriteLine("Hello, World!");
-            CloudTrace.GetCurrentTracer().EndSpan();
+            CloudTrace.CurrentTracer.EndSpan();
             // End sample
         }
 
         public async Task<HttpResponseMessage> TraceOutgoing()
         {
             // Sample: TraceOutgoing
-            // Add a handler to trace outgoing requests and to propigate the trace header.
+            // Add a handler to trace outgoing requests and to propagate the trace header.
             var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
             using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
             {
-                return await httpClient.GetAsync("https://cloud.google.com/trace/");
+                return await httpClient.GetAsync("https://weather.com/");
             }
             // End sample
         }

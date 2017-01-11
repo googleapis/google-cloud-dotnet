@@ -33,6 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     ///  { 
     ///       public override void Init()
     ///       {
+    ///           base.Init();
     ///           CloudTrace.Initialize("some-project-id", this);
     ///       }
     ///  }
@@ -41,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// 
     /// <example>
     /// <code>
-    /// public void DoSomething()
+    /// public void MakeHttpRequest()
     /// {
     ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
     ///     using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
@@ -79,6 +80,14 @@ namespace Google.Cloud.Diagnostics.AspNet
         private readonly RateLimitingTraceOptionsFactory _rateFactory;
         private readonly TraceHeaderTraceOptionsFactory _headerFactory;
 
+        /// <summary>Gets the current <see cref="IManagedTracer"/> for the given request.</summary>
+        public static IManagedTracer CurrentTracer =>
+            TracerManager.GetCurrentTracer() ?? DoNothingTracer.Instance;
+
+        /// <summary>True if tracing should occur for the current request.</summary>
+        internal static bool ShouldTrace => TracerManager.GetCurrentTracer() != null;
+
+
         private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
@@ -109,22 +118,6 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;
             application.EndRequest += trace.EndRequest;
-        }
-
-        /// <summary>
-        /// Gets the current <see cref="IManagedTracer"/> for the given request.
-        /// </summary>
-        public static IManagedTracer GetCurrentTracer()
-        {
-            return TracerManager.GetCurrentTracer() ?? DoNothingTracer.Instance;
-        }
-
-        /// <summary>
-        /// True if tracing should occur for the current request.
-        /// </summary>
-        public static bool ShouldTrace()
-        {
-            return TracerManager.GetCurrentTracer() != null;
         }
 
         private void BeginRequest(object sender, EventArgs e)

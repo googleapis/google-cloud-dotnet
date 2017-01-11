@@ -112,7 +112,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         public void Create()
         {
             var context = TraceHeaderContext.Create(TraceId, SpanId, true);
-            Assert.True(SpanId == context.SpanId);
+            Assert.Equal(SpanId, context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
             Assert.True(context.ShouldTrace);
         }

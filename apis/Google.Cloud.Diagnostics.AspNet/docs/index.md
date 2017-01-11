@@ -42,7 +42,7 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#InitializeTrace)]
 
-## Trace Outgoing Http Requests
+## Trace Outgoing HTTP Requests
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#TraceOutgoing)]
 
