@@ -20,38 +20,38 @@ using Microsoft.Extensions.Logging;
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
-    /// <see cref="ILoggerProvider"/> for Stackdriver Logging.
+    /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
     /// </summary>
     public sealed class GoogleLoggerProvider : ILoggerProvider
     {
         /// <summary>The consumer to push logs to.</summary>
         private readonly IConsumer<LogEntry> _consumer;
 
-        /// <summary>The minimum log level.</summary>
-        private readonly LogLevel _logLevel;
+        /// <summary>The logger options.</summary>
+        private readonly LoggerOptions _loggerOptions;
 
-        /// <summary>The Google Cloud Platform project ID.</summary>
-        private readonly string _projectId;
+        /// <summary>Where to log to.</summary>
+        private readonly LogTo _logTo;
 
         /// <summary>
-        /// <see cref="ILoggerProvider"/> for Stackdriver Logging.
+        /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
         /// <param name="consumer">The consumer to push logs to. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="logLevel">The minimum log level.</param>
-        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, string projectId, LogLevel logLevel)
+        /// <param name="logTo">Where to log to. Cannot be null.</param>
+        /// <param name="loggerOptions">The logger options. Cannot be null.</param>
+        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTo logTo, LoggerOptions loggerOptions)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            _logLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
+            _logTo = GaxPreconditions.CheckNotNull(logTo, nameof(logTo));
+            _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
         }
 
         /// <summary>
         /// Creates a <see cref="GoogleLogger"/> with the given log name.
         /// </summary>
-        /// <param name="logName">The name of the log.  This will be combined with the project Id to generate the 
-        /// resource name for the log.</param>
-        public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logLevel, _projectId, logName);
+        /// <param name="logName">The name of the log.  This will be combined with the log location
+        ///     (<see cref="LogTo"/>) to generate the resource name for the log.</param>
+        public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logTo, _loggerOptions, logName);
 
         public void Dispose() {}
     }

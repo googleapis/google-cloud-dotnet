@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.Type;
@@ -195,6 +196,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(2, results.Count(l => l.Severity == LogSeverity.Error));
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Critical));
         }
+
+        [Fact]
+        public async Task Logging_MonitoredResource()
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<NoBufferResourceLoggerTestApplication>();
+            using (TestServer server = new TestServer(builder))
+            {
+                var client = server.CreateClient();
+                await client.GetAsync($"/Main/Warning/{testId}");
+                await client.GetAsync($"/Main/Error/{testId}");
+                await client.GetAsync($"/Main/Critical/{testId}");
+            }
+
+            var results = GetEntries(startTime, testId, 3);
+            Assert.Equal(3, results.Count());
+            var resourceType = NoBufferResourceLoggerTestApplication.Resource.Type;
+            var buildResources = results.Where(e => e.Resource.Type.Equals(resourceType));
+            Assert.Equal(3, buildResources.Count());
+        }
     }
 
     /// <summary>
@@ -234,7 +257,32 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
             SetupRoutes(app);
-            LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, BufferOptions.NoBuffer());
+            LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, null, BufferOptions.NoBuffer());
+            loggerFactory.AddGoogle(ProjectId, loggerOptions);
+        }
+    }
+
+    /// <summary>
+    /// An application that has a <see cref="GoogleLogger"/> with no buffer that will accept all logs
+    /// of level warning or above and has a <see cref="MonitoredResource"/> of 'build'.
+    /// </summary>
+    public class NoBufferResourceLoggerTestApplication : LoggerTestApplication
+    {
+        public static readonly MonitoredResource Resource = new MonitoredResource
+        {
+            Type = "build",
+            Labels =
+            {
+                { "project_id", "some-pid" },
+                { "build_id", "some-build-id" }
+            }
+        };
+
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
+        {
+            SetupRoutes(app);
+            LoggerOptions loggerOptions = LoggerOptions.Create(
+                LogLevel.Warning, Resource, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }
@@ -264,7 +312,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             SetupRoutes(app);
             var options = BufferOptions.TimedBuffer(TimeSpan.FromSeconds(5));
-            LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, options);
+            LoggerOptions loggerOptions = LoggerOptions.Create(LogLevel.Warning, null, options);
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }

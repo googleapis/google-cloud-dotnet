@@ -12,40 +12,50 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api;
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.Extensions.Logging;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-    // TODO(talarico): Add option for logging to other resources and organizations.
-
     /// <summary>
     /// Options for a <see cref="GoogleLogger"/>.
     /// </summary>
     public sealed class LoggerOptions
     {
+        /// <summary>The global resource.</summary>
+        internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
+
         /// <summary>The minimum log level.</summary>
         public LogLevel LogLevel { get; }
+
+        /// <summary>The monitored resource. See: https://cloud.google.com/logging/docs/api/v2/resource-list </summary>
+        public MonitoredResource MonitoredResource { get; }
 
         /// <summary>The buffer options for the logger.</summary>
         public BufferOptions BufferOptions { get; }
 
-        private LoggerOptions(LogLevel logLevel, BufferOptions bufferOptions)
+        private LoggerOptions(LogLevel logLevel, MonitoredResource monitoredResource, BufferOptions bufferOptions)
         {
             LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
-            BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
+            MonitoredResource = monitoredResource;
+            BufferOptions = bufferOptions;
         }
 
         /// <summary>
         /// Create a new instance of <see cref="LoggerOptions"/>.
         /// </summary>
         /// <param name="logLevel">Optional, the minimum log level.  Defaults to <see cref="LogLevel.Information"/></param>
-        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Sized"/> </param>
-        public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information, BufferOptions bufferOptions = null)
+        /// <param name="monitoredResource">Optional, the monitored resource.  Defaults to the global resource.
+        ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
+        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Sized"/></param>
+        public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
+            MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
         {
+            monitoredResource = monitoredResource ?? GlobalResource;
             bufferOptions = bufferOptions ?? BufferOptions.SizedBuffer();
-            return new LoggerOptions(logLevel, bufferOptions);
+            return new LoggerOptions(logLevel, monitoredResource, bufferOptions);
         }
     }
 }
