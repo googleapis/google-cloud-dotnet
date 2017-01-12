@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// /// Creates a <see cref="LogTo"/> instance for sending log entries to a <see cref="LogToLocation.Project"/>.
+        /// Creates a <see cref="LogTo"/> instance for sending log entries to a <see cref="LogToLocation.Project"/>.
         /// </summary>
         public static LogTo Project(string projectId)
         {
@@ -62,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// /// Creates a <see cref="LogTo"/> instance for sending log entries to an <see cref="LogToLocation.Organization"/>.
+        /// Creates a <see cref="LogTo"/> instance for sending log entries to an <see cref="LogToLocation.Organization"/>.
         /// </summary>
         public static LogTo Organization(string organizationId)
         {
