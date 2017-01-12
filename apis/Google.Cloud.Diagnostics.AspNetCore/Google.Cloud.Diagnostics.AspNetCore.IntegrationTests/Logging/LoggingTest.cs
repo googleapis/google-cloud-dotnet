@@ -214,7 +214,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
-            var resourceType = NoBufferResourceLoggerTestApplication.s_resource.Type;
+            var resourceType = NoBufferResourceLoggerTestApplication.Resource.Type;
             var buildResources = results.Where(e => e.Resource.Type.Equals(resourceType));
             Assert.Equal(3, buildResources.Count());
         }
@@ -268,7 +268,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class NoBufferResourceLoggerTestApplication : LoggerTestApplication
     {
-        public static readonly MonitoredResource s_resource = new MonitoredResource
+        public static readonly MonitoredResource Resource = new MonitoredResource
         {
             Type = "build",
             Labels =
@@ -282,7 +282,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             SetupRoutes(app);
             LoggerOptions loggerOptions = LoggerOptions.Create(
-                LogLevel.Warning, s_resource, BufferOptions.NoBuffer());
+                LogLevel.Warning, Resource, BufferOptions.NoBuffer());
             loggerFactory.AddGoogle(ProjectId, loggerOptions);
         }
     }

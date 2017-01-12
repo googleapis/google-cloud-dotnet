@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     public sealed class LoggerOptions
     {
         /// <summary>The global resource.</summary>
-        internal static readonly MonitoredResource s_globalResource = new MonitoredResource { Type = "global" };
+        internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
 
         /// <summary>The minimum log level.</summary>
         public LogLevel LogLevel { get; }
@@ -39,8 +39,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         private LoggerOptions(LogLevel logLevel, MonitoredResource monitoredResource, BufferOptions bufferOptions)
         {
             LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
-            MonitoredResource = GaxPreconditions.CheckNotNull(monitoredResource, nameof(monitoredResource));
-            BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
+            MonitoredResource = monitoredResource;
+            BufferOptions = bufferOptions;
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
             MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
         {
-            monitoredResource = monitoredResource ?? s_globalResource;
+            monitoredResource = monitoredResource ?? GlobalResource;
             bufferOptions = bufferOptions ?? BufferOptions.SizedBuffer();
             return new LoggerOptions(logLevel, monitoredResource, bufferOptions);
         }

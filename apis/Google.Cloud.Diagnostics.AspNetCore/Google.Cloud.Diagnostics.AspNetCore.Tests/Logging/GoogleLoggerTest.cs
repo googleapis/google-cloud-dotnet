@@ -105,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     entry.TextPayload == Formatter(_logMessage, s_exception) &&
-                    entry.Resource == LoggerOptions.s_globalResource;
+                    entry.Resource == LoggerOptions.GlobalResource;
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();

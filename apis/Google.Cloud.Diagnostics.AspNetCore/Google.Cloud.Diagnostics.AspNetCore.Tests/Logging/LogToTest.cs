@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
             LogTo logTo = LogTo.Project(projectId);
             Assert.Equal(LogToLocation.Project, logTo.Location);
             Assert.Equal(projectId, logTo.ProjectId);
-            Assert.Equal(default(string), logTo.OrganizationId);
+            Assert.Null(logTo.OrganizationId);
         }
 
         [Fact]
@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
             LogTo logTo = LogTo.Organization(organizationId);
             Assert.Equal(LogToLocation.Organization, logTo.Location);
             Assert.Equal(organizationId, logTo.OrganizationId);
-            Assert.Equal(default(string), logTo.ProjectId);
+            Assert.Null(logTo.ProjectId);
         }
 
         [Fact]

@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Logging.V2;
 using System;
+using System.Diagnostics;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -31,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     }
 
     /// <summary>
-    /// Options for log entries will be logged, such as a project or organization.
+    /// Represents the location log entries will be sent, such as a project or organization.
     /// </summary>
     public sealed class LogTo
     {
@@ -44,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The Google Cloud Platform organization Id.</summary>
         public string OrganizationId { get; }
 
-        internal LogTo(LogToLocation location, string projectId = null, string organizationId = null)
+        private LogTo(LogToLocation location, string projectId, string organizationId)
         {
             Location = GaxPreconditions.CheckEnumValue(location, nameof(location));
             ProjectId = projectId;
@@ -52,16 +53,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Creates a <see cref="LogTo"/> for <see cref="LogToLocation.Project"/>
+        /// /// Creates a <see cref="LogTo"/> instance for sending log entries to a <see cref="LogToLocation.Project"/>.
         /// </summary>
         public static LogTo Project(string projectId)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            return new LogTo(LogToLocation.Project, projectId);
+            return new LogTo(LogToLocation.Project, projectId, null);
         }
 
         /// <summary>
-        /// Creates a <see cref="LogTo"/> for <see cref="LogToLocation.Organization"/>
+        /// /// Creates a <see cref="LogTo"/> instance for sending log entries to an <see cref="LogToLocation.Organization"/>.
         /// </summary>
         public static LogTo Organization(string organizationId)
         {
@@ -73,19 +74,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Gets the full log name.
         /// See: https://cloud.google.com/logging/docs/api/reference/rest/v2/LogEntry.
         /// </summary>
+        /// <param name="name">The name of the log which will be used with the project or organization
+        ///     to create a full log name.</param>
         public string GetFullLogName(string name)
         {
             GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
             switch (Location)
             {
                 case LogToLocation.Project:
-                    GaxPreconditions.CheckNotNullOrEmpty(ProjectId, nameof(ProjectId));
                     return new LogName(ProjectId, name).ToString();
                 case LogToLocation.Organization:
-                    GaxPreconditions.CheckNotNullOrEmpty(OrganizationId, nameof(OrganizationId));
                     return new OrganizationLogName(OrganizationId, name).ToString();
                 default:
-                    throw new InvalidOperationException($"Unsupported location {Location}");
+                    Debug.Assert(false, $"Unsupported location {Location}");
+                    return null;
             }
         }
     }
