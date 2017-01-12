@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         // Sample: ReportUnandledExceptions
         public void Configure(IApplicationBuilder app)
         {
-            // Use first to ensure all unhandled exceptions are reported.
+            // Use before handling any requests to ensure all unhandled exceptions are reported.
             string projectId = "[Google Cloud Platform project ID]";
             string serviceName = "[Name of service]";
             string version = "[Version of service]";

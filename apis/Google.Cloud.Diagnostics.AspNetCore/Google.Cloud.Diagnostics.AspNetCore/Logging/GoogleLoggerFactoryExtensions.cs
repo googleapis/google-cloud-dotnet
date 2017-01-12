@@ -35,9 +35,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </example>
     /// 
     /// <remarks>
-    /// Logs to Google Stackdriver Cloud Logging. See <see cref="GoogleLogger"/>.
+    /// Logs to Google Stackdriver Cloud Logging.
     /// Docs: https://cloud.google.com/logging/docs/
     /// </remarks>
+    /// <seealso cref="GoogleLogger"/>
     public static class GoogleLoggerFactoryExtensions
     {
         /// <summary>
