@@ -6,7 +6,7 @@
   "packOptions": {
     "summary": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
     "owners": [ "google-cloud" ],
-    "tags": [ "Google", "Cloud", "Stackdriver", "Log" ],
+    "tags": [ "Google", "Cloud", "Stackdriver", "Log", "Error", "Reporting"],
     "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
     "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
