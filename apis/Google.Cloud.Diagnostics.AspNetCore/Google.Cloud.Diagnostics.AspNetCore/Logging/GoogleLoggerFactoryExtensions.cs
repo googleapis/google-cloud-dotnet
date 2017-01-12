@@ -33,7 +33,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
-            GaxPreconditions.CheckNotNull(factory, nameof(factory));
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             return factory.AddGoogle(LogTo.Project(projectId), options, client);
         }
