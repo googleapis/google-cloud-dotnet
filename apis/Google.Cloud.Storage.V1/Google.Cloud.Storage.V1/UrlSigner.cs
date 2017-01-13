@@ -14,8 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
-using Google.Apis.Http;
-using Google.Apis.Json;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -23,11 +21,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
-using Google.Apis.Media;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -45,6 +39,15 @@ namespace Google.Cloud.Storage.V1
         private const string GoogHeaderPrefix = "x-goog-";
         private const string StorageHost = "https://storage.googleapis.com";
 
+        /// <summary>
+        /// Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.
+        /// See https://cloud.google.com/storage/docs/access-control/signed-urls#signing-resumable for more information.
+        /// </summary>
+        /// <remarks>
+        /// Note: When using the RESUMABLE method to create a signed URL, a URL will actually be signed for the POST method with a header of
+        /// 'x-goog-resumable:start'. The caller must perform a POST request with this URL and specify the 'x-goog-resumable:start' header as
+        /// well or signature validation will fail.
+        /// </remarks>
         public static HttpMethod ResumableHttpMethod { get; } = new HttpMethod("RESUMABLE");
 
         private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
