@@ -12,18 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Xunit;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-
-using TraceProto = Google.Cloud.Trace.V1.Trace;
 using System.Linq;
 
-namespace Google.Cloud.Diagnostics.AspNet.Tests
+using TraceProto = Google.Cloud.Trace.V1.Trace;
+
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class SimpleManagedTracerTest
     {
@@ -32,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 
         private static readonly IConsumer<TraceProto> UnusedConsumer = (new Mock<IConsumer<TraceProto>>()).Object;
         private static readonly Dictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
-        private static readonly StackTrace EmptyStackTrace = new StackTrace();
+        private static readonly StackTrace EmptyStackTrace = new StackTrace(new Exception(), false);
 
         private static TraceProto CreateTrace(string projectId = ProjectId, string traceId = TraceId)
             => new TraceProto { ProjectId = ProjectId, TraceId = TraceId };
@@ -113,7 +112,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name") &&
-                        TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
+                    Google.Cloud.Diagnostics.Common.Tests.TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
 
             tracer.StartSpan("span-name");
             tracer.AnnotateSpan(annotation);

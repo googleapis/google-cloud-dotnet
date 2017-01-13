@@ -15,7 +15,7 @@
 using System.Threading;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNet.Tests
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class StopwatchTimerTest
     {

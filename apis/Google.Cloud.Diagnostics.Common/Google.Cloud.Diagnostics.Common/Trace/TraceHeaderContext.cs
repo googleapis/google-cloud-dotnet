@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using System;
 using System.Text.RegularExpressions;
-using System.Web;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// Context from the Cloud Trace Header.
@@ -60,22 +58,12 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// </summary>
         public static TraceHeaderContext Create(string traceId, ulong? spanId, bool shouldTrace) =>
             new TraceHeaderContext(traceId, spanId, shouldTrace);
-        
 
         /// <summary>
-        /// Creates a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
+        /// Creates a <see cref="TraceHeaderContext"/> from a header. 
         /// </summary>
-        public static TraceHeaderContext FromRequest(HttpRequest request)
+        public static TraceHeaderContext FromHeader(string header)
         {
-            GaxPreconditions.CheckNotNull(request, nameof(request));
-            return FromWrapper(new HttpRequestWrapper(request));
-        }
-
-        internal static TraceHeaderContext FromWrapper(HttpRequestWrapper wrapper)
-        {
-            GaxPreconditions.CheckNotNull(wrapper, nameof(wrapper));
-            string header = wrapper.Headers.Get(TraceHeader);
-
             if (header == null)
             {
                 return InvalidTraceHeaderContext;

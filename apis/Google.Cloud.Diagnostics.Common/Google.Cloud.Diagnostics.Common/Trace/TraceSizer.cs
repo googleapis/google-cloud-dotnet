@@ -12,16 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Diagnostics.AspNet
+using Google.Cloud.Diagnostics.Common;
+
+using TraceProto = Google.Cloud.Trace.V1.Trace;
+
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A factory to generate trace options such as if the current request should be traced.
+    /// An <see cref="ISizer{T}"/> for <see cref="TraceProto"/>s.
     /// </summary>
-    internal interface ITraceOptionsFactory
+    internal sealed class TraceSizer : ISizer<TraceProto>
     {
-        /// <summary>
-        /// Creates a new <see cref="TraceOptions"/>.
-        /// </summary>
-        TraceOptions CreateOptions();
+        /// <summary>The single trace sizer instance.</summary>
+        internal static readonly TraceSizer Instance = new TraceSizer();
+
+        private TraceSizer() { }
+
+        /// <inheritdoc />
+        public int GetSize(TraceProto item) => item.CalculateSize();
     }
 }

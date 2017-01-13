@@ -13,12 +13,11 @@
 // limitations under the License.
 
 using Google.Cloud.Trace.V1;
-using Google.Protobuf.Collections;
 using Moq;
 using System;
 using System.Collections.Generic;
 
-namespace Google.Cloud.Diagnostics.AspNet.Tests
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     internal static class TraceUtils
     {

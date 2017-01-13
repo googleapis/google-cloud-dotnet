@@ -10,6 +10,7 @@
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Cloud.Diagnostics.AspNet": { "target": "project" },
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
+    "Google.Cloud.Diagnostics.Common.Tests": { "target": "project" },
     "xunit": "2.2.0-beta3-build3402",
     "Moq": "4.6.36-alpha"
   },

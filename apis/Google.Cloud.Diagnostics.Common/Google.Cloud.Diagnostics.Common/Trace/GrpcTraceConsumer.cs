@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A <see cref="IConsumer<TraceProto>"/> that will send received traces to the Stackdriver Trace API.

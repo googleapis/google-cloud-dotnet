@@ -12,23 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
-using System.Diagnostics;
+using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
+using System.Web;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// A managed tracer that does nothing.
+    /// Utilities for <see cref="TraceHeaderContext"/>.
     /// </summary>
-    internal sealed class DoNothingTracer : IManagedTracer
+    internal sealed class TraceHeaderContextUtils
     {
-        public static DoNothingTracer Instance = new DoNothingTracer();
-        private DoNothingTracer() { }
-        public void StartSpan(string name, StartSpanOptions options = null) { }
-        public void EndSpan() { }
-        public void AnnotateSpan(Dictionary<string, string> labels) { }
-        public void SetStackTrace(StackTrace stackTrace) { }
-        public string GetCurrentTraceId() => null;
-        public ulong? GetCurrentSpanId() => null;
+        /// <summary>
+        /// Creates a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
+        /// </summary>
+        public static TraceHeaderContext FromRequest(HttpRequest request)
+        {
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            string header = request.Headers.Get(TraceHeaderContext.TraceHeader);
+            return TraceHeaderContext.FromHeader(header);
+        }
     }
 }

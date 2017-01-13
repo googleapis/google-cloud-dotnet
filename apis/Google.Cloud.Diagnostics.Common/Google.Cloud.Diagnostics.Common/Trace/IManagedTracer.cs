@@ -15,7 +15,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// Manages creating spans for a trace as well as adding meta data to them.

@@ -14,7 +14,7 @@
 
 using Google.Cloud.Trace.V1;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// An enum value representing span kinds.

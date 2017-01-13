@@ -12,25 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
-
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A factory to create random trace ids.
+    /// Optional configuration to be used when starting a span.
     /// </summary>
-    internal sealed class TraceIdFactory
+    public sealed class StartSpanOptions
     {
-        private TraceIdFactory() { }
+        /// <summary>Gets the span kind.</summary>
+        public SpanKind SpanKind { get; }
+
+        private StartSpanOptions(SpanKind spanKind)
+        {
+            SpanKind = spanKind;
+        }
 
         /// <summary>
-        /// Create a new <see cref="TraceIdFactory"/>.
+        /// Creates a <see cref="StartSpanOptions"/>.
         /// </summary>
-        public static TraceIdFactory Create() => new TraceIdFactory();
-
-        /// <summary>
-        /// Gets a random trace id.
-        /// </summary>
-        public string NextId() => Guid.NewGuid().ToString("N");
+        /// <param name="spanKind">Optional, the span kind.  Defaults to <see cref="SpanKind.Unspecified"/></param>
+        public static StartSpanOptions Create(SpanKind spanKind = SpanKind.Unspecified)
+            => new StartSpanOptions(spanKind);
     }
 }

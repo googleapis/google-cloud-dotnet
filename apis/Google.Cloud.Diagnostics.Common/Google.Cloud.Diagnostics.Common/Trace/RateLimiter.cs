@@ -16,7 +16,7 @@ using Google.Api.Gax;
 using System;
 using System.Threading;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A simple rate limiter that will allow tracing based on a given QPS.

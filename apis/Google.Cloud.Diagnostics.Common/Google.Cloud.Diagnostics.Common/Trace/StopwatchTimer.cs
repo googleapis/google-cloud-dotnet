@@ -14,7 +14,7 @@
 
 using System.Diagnostics;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A <see cref="ITimer"/> based on a <see cref="Stopwatch"/>.

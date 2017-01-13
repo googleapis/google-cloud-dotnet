@@ -21,6 +21,7 @@
     "netcoreapp1.0": {
       "imports": "netcore50",
       "dependencies": {
+        "System.Diagnostics.StackTrace": "4.3.0",
         "Microsoft.NETCore.App": {
           "version": "1.0.0",
           "type": "platform"
