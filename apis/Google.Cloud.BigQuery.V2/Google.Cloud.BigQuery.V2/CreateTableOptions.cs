@@ -43,6 +43,17 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public DateTimeOffset? Expiration { get; set; }
 
+        /// <summary>
+        /// The expiration duration for each partition in a table.
+        /// </summary>
+        public TimeSpan? TimePartitionExpiration { get; set; }
+
+        /// <summary>
+        /// The time partition type for the table, if the table should be created with
+        /// time-based partitioning.
+        /// </summary>
+        public TimePartitionType? TimePartitionType { get; set; }
+
         internal void ModifyRequest(Table table, InsertRequest request)
         {
             if (Description != null)
@@ -56,6 +67,25 @@ namespace Google.Cloud.BigQuery.V2
             if (Expiration != null)
             {
                 table.ExpirationTime = (long) (Expiration.Value - UnixEpoch).TotalMilliseconds;
+            }
+            if (TimePartitionType != null)
+            {
+                if (TimePartitionType.Value == V2.TimePartitionType.None)
+                {
+                    table.TimePartitioning = null;
+                }
+                else
+                {
+                    table.TimePartitioning = new TimePartitioning { Type = EnumMap.ToApiValue(TimePartitionType.Value) };
+                }
+            }
+            if (TimePartitionExpiration != null)
+            {
+                if (table.TimePartitioning == null)
+                {
+                    throw new ArgumentException($"Cannot specify {nameof(TimePartitionExpiration)} when not using time partitioning.");
+                }
+                table.TimePartitioning.ExpirationMs = (long) TimePartitionExpiration.Value.TotalMilliseconds;
             }
         }
     }
