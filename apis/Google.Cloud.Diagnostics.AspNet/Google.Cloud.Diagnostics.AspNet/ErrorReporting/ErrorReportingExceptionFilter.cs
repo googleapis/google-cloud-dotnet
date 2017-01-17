@@ -14,37 +14,38 @@
 
 using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
-using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Web.Http.ExceptionHandling;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    ///  Google Cloud Error Reporting <see cref="ExceptionLogger"/>.
+    ///  Google Cloud Error Reporting <see cref="IExceptionFilter"/>.
     /// </summary>
     /// 
     /// <example>
     /// <code>
-    /// public static void Register(HttpConfiguration config)
+    /// public static void RegisterGlobalFilters(GlobalFilterCollection filters)
     /// {
     ///   // Add a catch all for the uncaught exceptions.
     ///   string projectId = "[Google Cloud Platform project ID]";
     ///   string serviceName = "[Name of service]";
     ///   string version = "[Version of service]";
     ///   // Add a catch all for the uncaught exceptions.
-    ///   config.Services.Add(typeof(IExceptionLogger),
-    ///       ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
+    ///   filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
     /// }
     /// </code>
     /// </example>
     /// 
     /// <remarks>
     /// Reports unhandled exceptions to Google Cloud Error Reporting.
+    /// The filter should be registered first in ASP.NET MVC versions 1 and 2 and last
+    /// in ASP.NET MVC versions 3 and higher. See:
+    /// https://msdn.microsoft.com/en-us/library/system.web.mvc.iexceptionfilter.onexception(v=vs.118).aspx
     /// Docs: https://cloud.google.com/error-reporting/docs/
     /// </remarks>
-    public sealed class ErrorReportingExceptionLogger : ExceptionLogger
+    public class ErrorReportingExceptionFilter : IExceptionFilter
     {
         // The Google Cloud Platform project id as a resource name.
         private readonly ProjectName _projectResourceName;
@@ -56,39 +57,39 @@ namespace Google.Cloud.Diagnostics.AspNet
         private readonly Task<ReportErrorsServiceClient> _clientTask;
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
+        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>
         /// </summary>
         /// <param name="clientTask">The Error Reporting client.</param>
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
-        public static ErrorReportingExceptionLogger Create(
+        public static ErrorReportingExceptionFilter Create(
             ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
-                new ErrorReportingExceptionLogger(Task.FromResult(client), projectId, serviceName, version);
+                new ErrorReportingExceptionFilter(Task.FromResult(client), projectId, serviceName, version);
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
+        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>
         /// </summary>
         /// <param name="clientTask">The Error Reporting client.</param>
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
-        public static ErrorReportingExceptionLogger Create(
+        public static ErrorReportingExceptionFilter Create(
             Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
-                new ErrorReportingExceptionLogger(clientTask, projectId, serviceName, version);
+                new ErrorReportingExceptionFilter(clientTask, projectId, serviceName, version);
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/> using credentials as
+        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
         /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
-        public static ErrorReportingExceptionLogger Create(string projectId, string serviceName, string version) =>
-            new ErrorReportingExceptionLogger(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
+        public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version) => 
+            new ErrorReportingExceptionFilter(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
 
-        private ErrorReportingExceptionLogger(
-            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) : base()
+        internal ErrorReportingExceptionFilter(
+            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version)
         {
             _clientTask = GaxPreconditions.CheckNotNull(clientTask, nameof(clientTask));
             _projectResourceName = new ProjectName(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
@@ -101,43 +102,28 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public override async Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
-        {
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            ReportErrorsServiceClient client = await _clientTask;
-            await client.ReportErrorEventAsync(_projectResourceName, errorEvent);
-        }
-
-        /// <inheritdoc />
-        public override void Log(ExceptionLoggerContext context)
+        public void OnException(ExceptionContext context)
         {
             ReportedErrorEvent errorEvent = CreateReportRequest(context);
             // If the client task has faulted this will throw when accessing 'Result'
             _clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
         }
 
-        /// <inheritdoc />
-        public override bool ShouldLog(ExceptionLoggerContext context)
-        {
-            return context?.Exception != null;
-        }
-
         /// <summary>
         /// Gets information about the HTTP request and response when the exception occured 
         /// and populates a <see cref="HttpRequestContext"/> object.
         /// </summary>
-        private HttpRequestContext CreateHttpRequestContext(ExceptionLoggerContext exceptionLoggerContext)
+        private HttpRequestContext CreateHttpRequestContext(ExceptionContext context)
         {
-            ExceptionContext exceptionContext = exceptionLoggerContext.ExceptionContext;
-            HttpRequestMessage requestMessage = exceptionContext?.Request;
-            HttpResponseMessage responseMessage = exceptionContext?.Response;
+            HttpRequestBase requestMessage = context?.HttpContext?.Request;
+            HttpResponseBase responseMessage = context?.HttpContext?.Response;
 
             return new HttpRequestContext()
             {
-                Method = requestMessage?.Method?.ToString() ?? "",
-                Url = requestMessage?.RequestUri?.ToString() ?? "",
-                UserAgent = requestMessage?.Headers?.UserAgent?.ToString() ?? "",
-                ResponseStatusCode = (int) (responseMessage?.StatusCode ?? 0),
+                Method = requestMessage?.HttpMethod ?? "",
+                Url = requestMessage?.Url?.ToString() ?? "",
+                UserAgent = requestMessage?.UserAgent ?? "",
+                ResponseStatusCode = responseMessage?.StatusCode ?? 0,
             };
         }
 
@@ -145,7 +131,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// Gets infromation about the exception that occured and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
-        private ReportedErrorEvent CreateReportRequest(ExceptionLoggerContext context)
+        private ReportedErrorEvent CreateReportRequest(ExceptionContext context)
         {
             ErrorContext errorContext = new ErrorContext()
             {

@@ -10,47 +10,72 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
-// limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
+// limitations under the License.
 
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Moq;
 using System;
 using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Web.Http.ExceptionHandling;
+using System.Web;
+using System.Web.Mvc;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
-    public class ErrorReportingExceptionLoggerTest
+    public class ErrorReportingExceptionFilterTest
     {
+        private const string UserAgent = "UserAgent 1.0";
+        private const HttpStatusCode ConflictStatusCode = HttpStatusCode.Conflict;
+        private const string ProjectId = "pid";
+        private const string ServiceName = "SomeService";
+        private const string Version = "1.0.0";
         private static readonly HttpMethod DeleteMethod = HttpMethod.Delete;
-        private static readonly Uri GoogleUri = new Uri("https://www.google.com");
-        private static readonly ProductInfoHeaderValue UserAgentValue = new ProductInfoHeaderValue("UserAgent", "1.0");
-        private static readonly HttpStatusCode ConflictStatusCode = HttpStatusCode.Conflict;
-        private static readonly string ProjectId = "pid";
-        private static readonly ProjectName ProjectName = new ProjectName(ProjectId);
-        private static readonly string ServiceName = "SomeService";
-        private static readonly string Version = "1.0.0";
         private static readonly Exception SimpleException = new Exception();
-        private static readonly ExceptionLoggerContext SimpleContext =
-            new ExceptionLoggerContext(new ExceptionContext(new Exception(), ExceptionCatchBlocks.HttpServer));
+        private static readonly ProjectName ProjectName = new ProjectName(ProjectId);
+        private static readonly Uri GoogleUri = new Uri("https://www.google.com");
 
         /// <summary>
-        /// Create a filled <see cref="ExceptionLoggerContext"/>
+        /// Create a simple <see cref="ExceptionContext"/>
         /// </summary>
-        private ExceptionLoggerContext CreateComplexContext()
+        private ExceptionContext CreateSimpleContext()
         {
-            HttpRequestMessage requestMessage = new HttpRequestMessage();
-            requestMessage.Method = DeleteMethod;
-            requestMessage.RequestUri = GoogleUri;
-            requestMessage.Headers.UserAgent.Add(UserAgentValue);
+            var mockRequest = new Mock<HttpRequestBase>();
+            mockRequest.Setup(r => r.HttpMethod).Returns(DeleteMethod.Method);
+            mockRequest.Setup(r => r.Url).Returns(GoogleUri);
+            mockRequest.Setup(r => r.UserAgent).Returns(UserAgent);
 
-            HttpResponseMessage responseMessage = new HttpResponseMessage();
-            responseMessage.StatusCode = ConflictStatusCode;
+            var mockResponse = new Mock<HttpResponseBase>();
+            mockResponse.Setup(r => r.StatusCode).Returns((int)ConflictStatusCode);
+
+            var mockContext = new Mock<HttpContextBase>();
+            mockContext.Setup(c => c.Request);
+            mockContext.Setup(c => c.Response);
+
+            return new ExceptionContext
+            {
+                HttpContext = mockContext.Object,
+                Exception = new Exception()
+            };
+        }
+
+        /// <summary>
+        /// Create a filled <see cref="ExceptionContext"/>
+        /// </summary>
+        private ExceptionContext CreateComplexContext()
+        {
+            var mockRequest = new Mock<HttpRequestBase>();
+            mockRequest.Setup(r => r.HttpMethod).Returns(DeleteMethod.Method);
+            mockRequest.Setup(r => r.Url).Returns(GoogleUri);
+            mockRequest.Setup(r => r.UserAgent).Returns(UserAgent);
+
+            var mockResponse = new Mock<HttpResponseBase>();
+            mockResponse.Setup(r => r.StatusCode).Returns((int)ConflictStatusCode);
+
+            var mockContext = new Mock<HttpContextBase>();
+            mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
+            mockContext.Setup(c => c.Response).Returns(mockResponse.Object);
 
             Exception exception;
             try
@@ -62,9 +87,11 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
                 exception = e;
             }
 
-            ExceptionContext exceptionContext = new ExceptionContext(
-                exception, ExceptionCatchBlocks.HttpServer, requestMessage, responseMessage);
-            return new ExceptionLoggerContext(exceptionContext);
+            return new ExceptionContext
+            {
+                HttpContext = mockContext.Object,
+                Exception = exception
+            };
         }
 
         /// <summary>
@@ -76,13 +103,13 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             bool isWindows = ErrorReportingUtils.IsWindows();
             return Match.Create<ReportedErrorEvent>(e =>
                 e.Message.Contains(SimpleException.Message) &&
-                e.Context.HttpRequest.Method.Equals(DeleteMethod.ToString()) &&
+                e.Context.HttpRequest.Method.Equals(DeleteMethod.Method) &&
                 e.Context.HttpRequest.Url.Equals(GoogleUri.ToString()) &&
-                e.Context.HttpRequest.UserAgent.Equals(UserAgentValue.ToString()) &&
+                e.Context.HttpRequest.UserAgent.Equals(UserAgent) &&
                 e.Context.HttpRequest.ResponseStatusCode == (int)ConflictStatusCode &&
                 (!isWindows || e.Context.ReportLocation.LineNumber > 0) &&
                 (!isWindows || !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath)) &&
-                e.Context.ReportLocation.FunctionName.Equals("CreateComplexContext") &&
+                e.Context.ReportLocation.FunctionName.Equals(nameof(CreateComplexContext)) &&
                 e.ServiceContext.Service.Equals(ServiceName) &&
                 e.ServiceContext.Version.Equals(Version)
             );
@@ -90,7 +117,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 
         /// <summary>
         /// Matcher to check if a <see cref="ReportedErrorEvent"/> matches
-        /// the <see cref="SimpleContext"/>
+        /// generated by <see cref="CreateSimpleContext"/>
         /// </summary>
         private ReportedErrorEvent IsSimpleContext()
         {
@@ -108,21 +135,10 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             );
         }
 
-        private ErrorReportingExceptionLogger GetLogger(ReportErrorsServiceClient client)
+        private ErrorReportingExceptionFilter GetFilter(ReportErrorsServiceClient client)
         {
-            return ErrorReportingExceptionLogger.Create(
+            return ErrorReportingExceptionFilter.Create(
                 Task.FromResult(client), ProjectId, ServiceName, Version);
-        }
-
-        [Fact]
-        public void ShouldLog()
-        {
-            Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-
-            ErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
-
-            Assert.True(logger.ShouldLog(SimpleContext));
-            Assert.False(logger.ShouldLog(null));
         }
 
         [Fact]
@@ -131,8 +147,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
             mockClient.Setup(client => client.ReportErrorEvent(ProjectName, IsComplexContext(), null));
 
-            ErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
-            logger.Log(CreateComplexContext());
+            ErrorReportingExceptionFilter filter = GetFilter(mockClient.Object);
+            filter.OnException(CreateComplexContext());
 
             mockClient.VerifyAll();
         }
@@ -143,21 +159,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
             mockClient.Setup(client => client.ReportErrorEvent(ProjectName, IsSimpleContext(), null));
 
-            ErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
-            logger.Log(SimpleContext);
-
-            mockClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task LogAsync()
-        {
-            Mock<ReportErrorsServiceClient> mockClient = new Mock<ReportErrorsServiceClient>();
-            mockClient.Setup(client => client.ReportErrorEventAsync(ProjectName, IsComplexContext(), null))
-                .Returns(Task.FromResult(new ReportErrorEventResponse()));
-
-            ErrorReportingExceptionLogger logger = GetLogger(mockClient.Object);
-            await logger.LogAsync(CreateComplexContext(), CancellationToken.None);
+            ErrorReportingExceptionFilter filter = GetFilter(mockClient.Object);
+            filter.OnException(CreateSimpleContext());
 
             mockClient.VerifyAll();
         }
