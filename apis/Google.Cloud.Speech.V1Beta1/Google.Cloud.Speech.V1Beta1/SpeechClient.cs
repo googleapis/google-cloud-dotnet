@@ -51,6 +51,7 @@ namespace Google.Cloud.Speech.V1Beta1
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             SyncRecognizeSettings = existing.SyncRecognizeSettings;
             AsyncRecognizeSettings = existing.AsyncRecognizeSettings;
+            StreamingRecognizeSettings = existing.StreamingRecognizeSettings;
         }
 
         /// <summary>
@@ -176,6 +177,17 @@ namespace Google.Cloud.Speech.V1Beta1
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: IdempotentRetryFilter
             )));
+
+        // This is as defined in cloud_speech_gapic.yaml
+        public CallSettings StreamingRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromRetry(new RetrySettings(
+                retryBackoff: GetDefaultRetryBackoff(),
+                timeoutBackoff: GetDefaultTimeoutBackoff(),
+                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(190000)),
+                retryFilter: NonIdempotentRetryFilter
+            )));
+
+        public BidirectionalStreamingSettings StreamingRecognizeStreamingSettings { get; set; } = BidirectionalStreamingSettings.FromBufferCapacity(100);
 
         /// <summary>
         /// Settings used for long running operations.
@@ -570,6 +582,16 @@ namespace Google.Cloud.Speech.V1Beta1
                 LongRunningOperationsClient,
                 callSettings);
 
+        public abstract class StreamingRecognizeStream : BidirectionalStreamingBase<StreamingRecognizeRequest, StreamingRecognizeResponse>
+        {
+        }
+
+        public virtual StreamingRecognizeStream StreamingRecognize(
+            CallSettings callSettings = null,
+            BidirectionalStreamingSettings streamingSettings = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     /// <summary>
@@ -577,9 +599,10 @@ namespace Google.Cloud.Speech.V1Beta1
     /// </summary>
     public sealed partial class SpeechClientImpl : SpeechClient
     {
-        private readonly ClientHelper _clientHelper;
+        private readonly ClientHelper2 _clientHelper;
         private readonly ApiCall<SyncRecognizeRequest, SyncRecognizeResponse> _callSyncRecognize;
         private readonly ApiCall<AsyncRecognizeRequest, Operation> _callAsyncRecognize;
+        private readonly ApiBidirectionalStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> _callStreamingRecognize;
 
         /// <summary>
         /// Constructs a client wrapper for the Speech service, with the specified gRPC client and settings.
@@ -592,11 +615,13 @@ namespace Google.Cloud.Speech.V1Beta1
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
             LongRunningOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
-            _clientHelper = new ClientHelper(effectiveSettings);
+            _clientHelper = new ClientHelper2(effectiveSettings);
             _callSyncRecognize = _clientHelper.BuildApiCall<SyncRecognizeRequest, SyncRecognizeResponse>(
                 GrpcClient.SyncRecognizeAsync, GrpcClient.SyncRecognize, effectiveSettings.SyncRecognizeSettings);
             _callAsyncRecognize = _clientHelper.BuildApiCall<AsyncRecognizeRequest, Operation>(
                 GrpcClient.AsyncRecognizeAsync, GrpcClient.AsyncRecognize, effectiveSettings.AsyncRecognizeSettings);
+            _callStreamingRecognize = _clientHelper.BuildApiCall<StreamingRecognizeRequest, StreamingRecognizeResponse>(
+                GrpcClient.StreamingRecognize, effectiveSettings.StreamingRecognizeSettings, effectiveSettings.StreamingRecognizeStreamingSettings); 
         }
 
         /// <summary>
@@ -612,6 +637,8 @@ namespace Google.Cloud.Speech.V1Beta1
         // Partial modifier methods contain '_' to ensure no name conflicts with RPC methods.
         partial void Modify_SyncRecognizeRequest(ref SyncRecognizeRequest request, ref CallSettings settings);
         partial void Modify_AsyncRecognizeRequest(ref AsyncRecognizeRequest request, ref CallSettings settings);
+        partial void Modify_StreamingRecognizeRequest(ref StreamingRecognizeRequest request);
+        partial void Modify_StreamingRecognizeCallSettings(ref CallSettings settings);
 
         /// <summary>
         /// Perform synchronous speech-recognition: receive results after all audio
@@ -703,6 +730,62 @@ namespace Google.Cloud.Speech.V1Beta1
                 _callAsyncRecognize.Sync(request, callSettings), LongRunningOperationsClient);
         }
 
+        public sealed class StreamingRecognizeStreamImpl : StreamingRecognizeStream
+        {
+            public StreamingRecognizeStreamImpl(
+                SpeechClientImpl service,
+                AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call,
+                BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private SpeechClientImpl _service;
+            private BufferedClientStreamWriter<StreamingRecognizeRequest> _writeBuffer;
+
+            // TODO: Heavy warning in doc to not mix using this and the Write methods.
+            public override AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> GrpcCall { get; }
+
+            private StreamingRecognizeRequest ModifyRequest(StreamingRecognizeRequest request)
+            {
+                _service.Modify_StreamingRecognizeRequest(ref request); // TODO: What to do here?
+                return request;
+            }
+
+            public override Task TryWriteAsync(StreamingRecognizeRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override Task WriteAsync(StreamingRecognizeRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override Task TryWriteAsync(StreamingRecognizeRequest message, WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override Task WriteAsync(StreamingRecognizeRequest message, WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override Task WriteCompleteAsync() => _writeBuffer.CompleteAsync();
+
+            public override IAsyncEnumerator<StreamingRecognizeResponse> ResponseStream =>
+                GrpcCall.ResponseStream;
+        }
+
+        public override StreamingRecognizeStream StreamingRecognize(
+            CallSettings callSettings = null,
+            BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_StreamingRecognizeCallSettings(ref callSettings); // TODO: What to do here?
+            BidirectionalStreamingSettings effectiveStreamingSettings =
+                streamingSettings ?? _callStreamingRecognize.StreamingSettings;
+            AsyncDuplexStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> call =
+                _callStreamingRecognize.Call(callSettings);
+            BufferedClientStreamWriter<StreamingRecognizeRequest> writeBuffer =
+                new BufferedClientStreamWriter<StreamingRecognizeRequest>(
+                    call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamingRecognizeStreamImpl(this, call, writeBuffer);
+        }
     }
 
     // Partial classes to enable page-streaming
