@@ -35,8 +35,12 @@ namespace Google.Cloud.Diagnostics.AspNet
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
             .InformationalVersion;
 
+        /// <summary>A dictionary with the agent label populated.</summary>
+        internal static readonly Dictionary<string, string> AgentLabelDictionary =
+            new Dictionary<string, string> { { Agent, $"{AgentName} {AgentVersion}" } };
+
         /// <summary>The name of the trace agent.</summary>
-        internal const string AgentName = "google-cloud-c-sharp-trace";
+        internal const string AgentName = "google-cloud-csharp-trace";
 
         ///<summary>The label to denote the size of a request.</summary> 
         internal const string HttpRequestSize = "trace.cloud.google.com/http/request/size";
@@ -54,18 +58,12 @@ namespace Google.Cloud.Diagnostics.AspNet
         internal const string StackTrace = "trace.cloud.google.com/stacktrace";
 
         ///<summary>The label to denote an agent.</summary> 
-        internal const string Agent = " /agent";
+        internal const string Agent = "/agent";
 
         /// <summary>
         /// Gets a map with the label for the agent which contains the agent's name and version.
         /// </summary>
-        internal static Dictionary<string, string> AgentLabel()
-        {
-            return new Dictionary<string, string>()
-            {
-                { Agent, $"{AgentName} {AgentVersion}"}
-            };
-        }
+        internal static Dictionary<string, string> AgentLabel() => AgentLabelDictionary;
 
         /// <summary>
         /// Gets a map of labels for a span from an <see cref="HttpRequest"/>, such as request size, method, ect.
