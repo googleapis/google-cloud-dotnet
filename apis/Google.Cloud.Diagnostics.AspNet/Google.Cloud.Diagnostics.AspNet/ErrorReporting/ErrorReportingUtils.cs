@@ -18,13 +18,13 @@ using System.Diagnostics;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
-    public static class ErrorReportingUtils
+    internal static class ErrorReportingUtils
     {
         /// <summary>
         /// Gets information about the source location where the exception occured 
         /// and populates a <see cref="SourceLocation"/> object.
         /// </summary>
-        internal static SourceLocation CreateSourceLocation(Exception exception)
+        public static SourceLocation CreateSourceLocation(Exception exception)
         {
             if (exception == null)
             {
