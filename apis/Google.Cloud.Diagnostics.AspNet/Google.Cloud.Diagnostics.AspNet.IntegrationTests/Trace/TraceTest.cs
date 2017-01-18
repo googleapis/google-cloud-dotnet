@@ -13,7 +13,6 @@
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Google.Cloud.Trace.V1;
-using Google.Cloud.Diagnostics.AspNet.Tests;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Protobuf.WellKnownTypes;
@@ -25,6 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
+using LabelsCommon = Google.Cloud.Diagnostics.Common.Labels;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
@@ -221,9 +221,9 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.Single(trace.Spans);
 
             var labels = trace.Spans[0].Labels;
-            Assert.True(labels.ContainsKey(Labels.StackTrace));
-            Assert.Contains(nameof(Trace_SimpleStacktrace), labels[Labels.StackTrace]);
-            Assert.Contains(nameof(TraceTest), labels[Labels.StackTrace]);
+            Assert.True(labels.ContainsKey(LabelsCommon.StackTrace));
+            Assert.Contains(nameof(Trace_SimpleStacktrace), labels[LabelsCommon.StackTrace]);
+            Assert.Contains(nameof(TraceTest), labels[LabelsCommon.StackTrace]);
         }
 
         [Fact]
@@ -268,9 +268,9 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             Assert.Equal(root.SpanId, childOne.ParentSpanId);
             var labels = childOne.Labels;
-            Assert.True(labels.ContainsKey(Labels.StackTrace));
-            Assert.Contains(nameof(Trace_MultipleSpans), labels[Labels.StackTrace]);
-            Assert.Contains(nameof(TraceTest), labels[Labels.StackTrace]);
+            Assert.True(labels.ContainsKey(LabelsCommon.StackTrace));
+            Assert.Contains(nameof(Trace_MultipleSpans), labels[LabelsCommon.StackTrace]);
+            Assert.Contains(nameof(TraceTest), labels[LabelsCommon.StackTrace]);
 
             Assert.Equal(root.SpanId, childTwo.ParentSpanId);
 

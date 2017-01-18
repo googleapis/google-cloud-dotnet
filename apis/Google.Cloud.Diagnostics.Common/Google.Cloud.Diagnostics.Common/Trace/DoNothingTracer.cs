@@ -12,23 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
+using System.Collections.Generic;
+using System.Diagnostics;
 
-using TraceProto = Google.Cloud.Trace.V1.Trace;
-
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// An <see cref="ISizer{T}"/> for <see cref="TraceProto"/>s.
+    /// A managed tracer that does nothing.
     /// </summary>
-    internal sealed class TraceSizer : ISizer<TraceProto>
+    internal sealed class DoNothingTracer : IManagedTracer
     {
-        /// <summary>The single trace sizer instance.</summary>
-        internal static readonly TraceSizer Instance = new TraceSizer();
-
-        private TraceSizer() { }
-
-        /// <inheritdoc />
-        public int GetSize(TraceProto item) => item.CalculateSize();
+        public static DoNothingTracer Instance = new DoNothingTracer();
+        private DoNothingTracer() { }
+        public void StartSpan(string name, StartSpanOptions options = null) { }
+        public void EndSpan() { }
+        public void AnnotateSpan(Dictionary<string, string> labels) { }
+        public void SetStackTrace(StackTrace stackTrace) { }
+        public string GetCurrentTraceId() => null;
+        public ulong? GetCurrentSpanId() => null;
     }
 }

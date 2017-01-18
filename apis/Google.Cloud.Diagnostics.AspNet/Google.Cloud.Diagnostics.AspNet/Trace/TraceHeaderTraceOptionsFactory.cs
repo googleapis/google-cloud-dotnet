@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using System.Web;
 
 namespace Google.Cloud.Diagnostics.AspNet
@@ -29,7 +30,8 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Create a new <see cref="TraceHeaderTraceOptionsFactory"/>.
         /// </summary>
-        public TraceOptions CreateOptions() => CreateOptions(TraceHeaderContext.FromRequest(HttpContext.Current.Request));
+        public TraceOptions CreateOptions() => 
+            CreateOptions(TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request));
 
         /// <summary>
         /// Create a new <see cref="TraceHeaderTraceOptionsFactory"/> from a <see cref="TraceHeaderContext"/>

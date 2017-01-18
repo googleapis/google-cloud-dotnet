@@ -12,16 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Moq;
-using System.Collections.Specialized;
-using System.Web;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNet.Tests
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class TraceHeaderContextTest
     {
-        private static readonly HttpRequest Request = new HttpRequest("file_name", "https://www.google.com", "");
         private static readonly string TraceId = "105445aa7843bc8bf206b12000100f00";
         private static readonly ulong SpanId = 81237123;
 
@@ -39,18 +35,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         }
 
         /// <summary>
-        /// Create a <see cref="NameValueCollection"/> with the trace header set.
-        /// </summary>
-        private HttpRequestWrapper CreateWrapperWithTraceHeader(string header)
-        {
-            var headers = new NameValueCollection();
-            headers.Add(TraceHeaderContext.TraceHeader, header);
-            var mockWrapper = new Mock<HttpRequestWrapper>(Request);
-            mockWrapper.Setup(w => w.Headers).Returns(headers);
-            return mockWrapper.Object;
-        }
-
-        /// <summary>
         /// Checks that a <see cref="TraceHeaderContext"/> has no span or trace id and
         /// should not trace.
         /// </summary>
@@ -64,21 +48,19 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromRequest_NoHeader()
         {
-            CheckInvalid(TraceHeaderContext.FromRequest(Request));
+            CheckInvalid(TraceHeaderContext.FromHeader(null));
         }
 
         [Fact]
         public void FromRequest_InvalidHeader()
         {
-            var wrapper = CreateWrapperWithTraceHeader("1234=0");
-            CheckInvalid(TraceHeaderContext.FromWrapper(wrapper));
+            CheckInvalid(TraceHeaderContext.FromHeader("1234=0"));
         }
 
         [Fact]
         public void FromRequest_Valid()
         {
-            var wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue());
-            var context = TraceHeaderContext.FromWrapper(wrapper);
+            var context = TraceHeaderContext.FromHeader(CreateTraceHeaderValue());
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
@@ -89,8 +71,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromRequest_ValidNoTrace()
         {
-            var wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(0));
-            var context = TraceHeaderContext.FromWrapper(wrapper);
+            var context = TraceHeaderContext.FromHeader(CreateTraceHeaderValue(0));
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
@@ -100,8 +81,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void FromRequest_ValidTrace()
         {
-            var wrapper = CreateWrapperWithTraceHeader(CreateTraceHeaderValue(1));
-            var context = TraceHeaderContext.FromWrapper(wrapper);
+            var context = TraceHeaderContext.FromHeader(CreateTraceHeaderValue(1));
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);

@@ -20,7 +20,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNet.Tests
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class RateLimiterTest
     {

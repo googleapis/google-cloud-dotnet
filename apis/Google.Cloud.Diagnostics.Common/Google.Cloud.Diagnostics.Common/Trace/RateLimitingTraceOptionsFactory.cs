@@ -14,7 +14,7 @@
 
 using Google.Api.Gax;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A factory to generate trace options based on a rate limiter.

@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -22,7 +21,7 @@ using System.Diagnostics;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A simple implementation of the <see cref="IManagedTracer"/> that handles spans in a stack.

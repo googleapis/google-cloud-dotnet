@@ -21,7 +21,7 @@ using Xunit;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.AspNet.Tests
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class GrpcTraceConsumerTest
     {

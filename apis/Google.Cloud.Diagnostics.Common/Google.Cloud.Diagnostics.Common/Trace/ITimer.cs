@@ -12,23 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
-using System.Diagnostics;
-
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A managed tracer that does nothing.
+    /// A simple interface for a timer.
     /// </summary>
-    internal sealed class DoNothingTracer : IManagedTracer
+    internal interface ITimer
     {
-        public static DoNothingTracer Instance = new DoNothingTracer();
-        private DoNothingTracer() { }
-        public void StartSpan(string name, StartSpanOptions options = null) { }
-        public void EndSpan() { }
-        public void AnnotateSpan(Dictionary<string, string> labels) { }
-        public void SetStackTrace(StackTrace stackTrace) { }
-        public string GetCurrentTraceId() => null;
-        public ulong? GetCurrentSpanId() => null;
+        /// <summary>
+        /// Starts the timer.
+        /// </summary>
+        void Start();
+
+        /// <summary>
+        /// Gets the elapsed milliseconds since the timer has started.
+        /// </summary>
+        long GetElapsedMilliseconds();
     }
 }

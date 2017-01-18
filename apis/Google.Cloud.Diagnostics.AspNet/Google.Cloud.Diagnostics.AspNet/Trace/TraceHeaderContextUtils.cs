@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,21 +12,25 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
+using System.Web;
+
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// A simple interface for a timer.
+    /// Utilities for <see cref="TraceHeaderContext"/>.
     /// </summary>
-    internal interface ITimer
+    internal sealed class TraceHeaderContextUtils
     {
         /// <summary>
-        /// Starts the timer.
+        /// Creates a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
         /// </summary>
-        void Start();
-
-        /// <summary>
-        /// Gets the elapsed milliseconds since the timer has started.
-        /// </summary>
-        long GetElapsedMilliseconds();
+        public static TraceHeaderContext CreateContext(HttpRequest request)
+        {
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            string header = request.Headers.Get(TraceHeaderContext.TraceHeader);
+            return TraceHeaderContext.FromHeader(header);
+        }
     }
 }

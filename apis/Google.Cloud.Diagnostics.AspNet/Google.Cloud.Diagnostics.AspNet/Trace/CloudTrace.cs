@@ -122,7 +122,7 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private void BeginRequest(object sender, EventArgs e)
         {
-            TraceHeaderContext headerContext = TraceHeaderContext.FromRequest(HttpContext.Current.Request);
+            TraceHeaderContext headerContext = TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request);
             TraceOptions headerOptions = _headerFactory.CreateOptions(headerContext);
 
             // If the trace header says to trace or if the rate limiter allows tracing continue.

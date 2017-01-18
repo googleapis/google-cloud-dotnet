@@ -15,7 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// Optional configuration to be used when initializing tracing.

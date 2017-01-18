@@ -12,25 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Options about a trace, such as if tracing should occur.
+    /// A factory to generate trace options such as if the current request should be traced.
     /// </summary>
-    internal sealed class TraceOptions
+    internal interface ITraceOptionsFactory
     {
-        /// <summary>True if the request should be traced.</summary>
-        public bool ShouldTrace { get; }
-
-        private TraceOptions(bool shouldTrace)
-        {
-            ShouldTrace = shouldTrace;
-        }
-
         /// <summary>
-        /// Creates a <see cref="TraceOptions"/>.
+        /// Creates a new <see cref="TraceOptions"/>.
         /// </summary>
-        /// <param name="shouldTrace">True if the tracing should occur.</param>
-        public static TraceOptions Create(bool shouldTrace) => new TraceOptions(shouldTrace);
+        TraceOptions CreateOptions();
     }
 }

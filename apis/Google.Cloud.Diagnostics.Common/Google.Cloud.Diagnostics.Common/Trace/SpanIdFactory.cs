@@ -14,7 +14,7 @@
 
 using System;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A factory to create random span ids.
