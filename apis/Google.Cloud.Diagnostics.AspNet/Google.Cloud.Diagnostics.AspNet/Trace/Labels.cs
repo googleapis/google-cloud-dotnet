@@ -35,8 +35,10 @@ namespace Google.Cloud.Diagnostics.AspNet
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
             .InformationalVersion;
 
-        /// <summary>A dictionary with the agent label populated.</summary>
-        internal static readonly Dictionary<string, string> AgentLabelDictionary =
+        /// <summary>
+        /// Gets a map with the label for the agent which contains the agent's name and version.
+        /// </summary>
+        internal static Dictionary<string, string> AgentLabel { get; } =
             new Dictionary<string, string> { { Agent, $"{AgentName} {AgentVersion}" } };
 
         /// <summary>The name of the trace agent.</summary>
@@ -59,11 +61,6 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         ///<summary>The label to denote an agent.</summary> 
         internal const string Agent = "/agent";
-
-        /// <summary>
-        /// Gets a map with the label for the agent which contains the agent's name and version.
-        /// </summary>
-        internal static Dictionary<string, string> AgentLabel() => AgentLabelDictionary;
 
         /// <summary>
         /// Gets a map of labels for a span from an <see cref="HttpRequest"/>, such as request size, method, ect.
