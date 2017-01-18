@@ -632,10 +632,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public void ParameterizedQuery_NamedParameters()
         {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
             // Sample: ParameterizedQueryNamedParameters
             // Additional: ExecuteQuery(BigQueryCommand,*)
-            BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
-            BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryTable table = client.GetTable(datasetId, tableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
             // Note: could also use a collection initializer to populate the parameters.
             command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
@@ -662,9 +666,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public void ParameterizedQuery_PositionalParameters()
         {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
             /// Sample: ParameterizedQueryPositionalParameters
-            BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
-            BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryTable table = client.GetTable(datasetId, tableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");
             command.ParameterMode = BigQueryParameterMode.Positional;
             command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
@@ -674,7 +682,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             }
-            /// End snippet
+            /// End sample
 
             // Execute the same command again for validation.
             var resultsList = client.ExecuteQuery(command)
@@ -1285,10 +1293,14 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public async Task ParameterizedQueryAsync_NamedParameters()
         {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
             // Sample: ParameterizedQueryNamedParametersAsync
             // Additional: ExecuteQueryAsync(BigQueryCommand,*,*)
-            BigQueryClient client = await BigQueryClient.CreateAsync(_fixture.ProjectId);
-            BigQueryTable table = await client.GetTableAsync(_fixture.GameDatasetId, _fixture.HistoryTableId);
+            BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+            BigQueryTable table = await client.GetTableAsync(datasetId, tableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= @score AND level >= @level");
             // Note: could also use a collection initializer to populate the parameters.
             command.Parameters.Add("level", BigQueryDbType.Int64).Value = 2;
@@ -1305,9 +1317,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public async Task ParameterizedQueryAsync_PositionalParameters()
         {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
             /// Sample: ParameterizedQueryPositionalParametersAsync
-            BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
-            BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+            BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+            BigQueryTable table = await client.GetTableAsync(datasetId, tableId);
             BigQueryCommand command = new BigQueryCommand($"SELECT player, score, level FROM {table} WHERE score >= ? AND level >= ?");
             command.ParameterMode = BigQueryParameterMode.Positional;
             command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
@@ -1318,7 +1334,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             {
                 Console.WriteLine($"Name: {row["player"]}; Score: {row["score"]}; Level: {row["level"]}");
             });
-            /// End snippet
+            /// End sample
         }
 
         private bool WaitForStreamingBufferToEmpty(string tableId)

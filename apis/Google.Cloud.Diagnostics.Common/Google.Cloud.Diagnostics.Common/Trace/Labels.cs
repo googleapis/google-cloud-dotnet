@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -26,6 +27,9 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal static class Labels
     {
+        /// <summary>The name of the trace agent.</summary>
+        internal const string AgentName = "google-cloud-csharp-trace";
+
         ///<summary>The label to denote the size of a request.</summary> 
         internal const string HttpRequestSize = "trace.cloud.google.com/http/request/size";
 
@@ -41,6 +45,9 @@ namespace Google.Cloud.Diagnostics.Common
         ///<summary>The label to denote a stack trace.</summary> 
         internal const string StackTrace = "trace.cloud.google.com/stacktrace";
 
+        ///<summary>The label to denote an agent.</summary> 
+        internal const string Agent = "/agent";
+
         /// <summary>
         /// Creates a a map of labels to represent a <see cref="StackTrace"/> for a span.
         /// </summary>
@@ -51,6 +58,21 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 { StackTrace, GenerateJsonStringStackTrace(stackTrace) }
             };
+        }
+
+        /// <summary>
+        /// Gets a map with the label for the agent which contains the agent's name and version.
+        /// </summary
+        internal static Dictionary<string, string> GetAgentLabel(System.Type type) =>
+            new Dictionary<string, string> { { Agent, $"{AgentName} {GetAgentVersion(type)}" } };
+
+        /// <summary>Gets the version of the current library using reflection.</summary>
+        internal static string GetAgentVersion(System.Type type)
+        {
+            return type.GetTypeInfo()
+                .Assembly
+                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                .InformationalVersion;
         }
 
         /// <summary>

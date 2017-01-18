@@ -27,6 +27,12 @@ namespace Google.Cloud.Diagnostics.AspNet
     internal static class Labels
     { 
         /// <summary>
+        /// /// Gets a map with the label for the agent which contains the agent's name and version.
+        /// /// </summary>
+        internal static Dictionary<string, string> AgentLabel { get; } =
+            LabelsCommon.GetAgentLabel(typeof(Labels));
+        
+        /// <summary>
         /// Gets a map of labels for a span from an <see cref="HttpRequest"/>, such as request size, method, ect.
         /// </summary>
         public static Dictionary<string, string> FromHttpRequest(HttpRequest request)

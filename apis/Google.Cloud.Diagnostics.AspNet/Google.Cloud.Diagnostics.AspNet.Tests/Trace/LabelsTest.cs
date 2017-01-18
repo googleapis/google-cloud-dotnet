@@ -23,6 +23,16 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class LabelsTest
     {
+
+        [Fact]
+        public void AgentLabel()
+        {
+            var labels = Labels.AgentLabel;
+            Assert.Single(labels);
+            Assert.Contains(LabelsCommon.AgentName, labels[LabelsCommon.Agent]);
+            Assert.Contains(LabelsCommon.GetAgentVersion(typeof(Labels)), labels[LabelsCommon.Agent]);
+        }
+
         [Fact]
         public void FromHttpRequestWrapper()
         {
