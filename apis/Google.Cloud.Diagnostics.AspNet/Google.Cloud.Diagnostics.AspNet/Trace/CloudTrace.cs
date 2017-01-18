@@ -147,6 +147,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Start the span and annotate it with information from the current request.
             tracer.StartSpan(HttpContext.Current.Request.Path);
             tracer.AnnotateSpan(Labels.FromHttpRequest(HttpContext.Current.Request));
+            tracer.AnnotateSpan(Labels.AgentLabel);
         }
 
         private void EndRequest(object sender, EventArgs e)
