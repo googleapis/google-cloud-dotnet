@@ -23,12 +23,15 @@
     "Google.Cloud.ErrorReporting.V1Beta1": "1.0.0-beta01",
     "Google.Cloud.Logging.Type": { "target": "project" },
     "Google.Cloud.Logging.V2": { "target": "project" },
+    "Google.Cloud.Trace.V1": { "target": "project" },
     "Microsoft.AspNetCore.Diagnostics.Abstractions": "1.0.0",
+    "Microsoft.AspNetCore.Http": "1.1.0",
     "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
     "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
     "Microsoft.Extensions.Logging": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
-    "System.Diagnostics.StackTrace": "4.3.0"
+    "System.Diagnostics.StackTrace": "4.3.0",
+    "System.Linq": "4.3.0"
   },
 
   "frameworks": {
