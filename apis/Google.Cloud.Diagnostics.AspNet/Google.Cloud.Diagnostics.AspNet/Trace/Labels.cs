@@ -27,8 +27,8 @@ namespace Google.Cloud.Diagnostics.AspNet
     internal static class Labels
     { 
         /// <summary>
-        /// /// Gets a map with the label for the agent which contains the agent's name and version.
-        /// /// </summary>
+        /// Gets a map with the label for the agent which contains the agent's name and version.
+        /// </summary>
         internal static Dictionary<string, string> AgentLabel { get; } =
             LabelsCommon.GetAgentLabel(typeof(Labels));
         
