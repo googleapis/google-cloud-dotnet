@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             }
 
             var location = ERUtils.CreateSourceLocation(exception);
-            if (!ErrorReportingUtils.IsWindows())
+            if (!ErrorReportingUtils.IsWindows)
             {
                 Assert.NotEmpty(location.FilePath);
                 Assert.True(location.LineNumber > 0);

@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,23 +57,25 @@ namespace Google.Cloud.Diagnostics.AspNet
         private readonly Task<ReportErrorsServiceClient> _clientTask;
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>
+        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>.
         /// </summary>
-        /// <param name="clientTask">The Error Reporting client.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
-        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        /// <param name="clientTask">The Error Reporting client. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
+        ///     Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
         public static ErrorReportingExceptionFilter Create(
             ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
                 new ErrorReportingExceptionFilter(Task.FromResult(client), projectId, serviceName, version);
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>
+        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>.
         /// </summary>
-        /// <param name="clientTask">The Error Reporting client.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
-        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        /// <param name="clientTask">A task which produces the Error Reporting client. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
+        ///     Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
         public static ErrorReportingExceptionFilter Create(
             Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
                 new ErrorReportingExceptionFilter(clientTask, projectId, serviceName, version);
@@ -82,9 +84,10 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
         /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
-        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
+        ///     Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
         public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version) => 
             new ErrorReportingExceptionFilter(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
 
@@ -118,7 +121,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             HttpRequestBase requestMessage = context?.HttpContext?.Request;
             HttpResponseBase responseMessage = context?.HttpContext?.Response;
 
-            return new HttpRequestContext()
+            return new HttpRequestContext
             {
                 Method = requestMessage?.HttpMethod ?? "",
                 Url = requestMessage?.Url?.ToString() ?? "",
@@ -133,13 +136,13 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// </summary>
         private ReportedErrorEvent CreateReportRequest(ExceptionContext context)
         {
-            ErrorContext errorContext = new ErrorContext()
+            ErrorContext errorContext = new ErrorContext
             {
                 HttpRequest = CreateHttpRequestContext(context),
                 ReportLocation = ErrorReportingUtils.CreateSourceLocation(context.Exception)
             };
 
-            return new ReportedErrorEvent()
+            return new ReportedErrorEvent
             {
                 Message = context.Exception.ToString() ?? "",
                 Context = errorContext,
