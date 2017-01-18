@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,12 +18,13 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
+using System.Web.Mvc;
 
 namespace Google.Cloud.Diagnostics.AspNet.Snippets
 {
     public class AspNetSnippets
     {
-        // Sample: RegisterExceptionLogger
+        // Sample: RegisterExceptionLoggerWebApi
         public static void Register(HttpConfiguration config)
         {
             string projectId = "[Google Cloud Platform project ID]";
@@ -32,6 +33,17 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             // Add a catch all for the uncaught exceptions.
             config.Services.Add(typeof(IExceptionLogger),
                 ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
+        }
+        // End sample
+
+        // Sample: RegisterExceptionLoggerMvc
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        {
+            string projectId = "[Google Cloud Platform project ID]";
+            string serviceName = "[Name of service]";
+            string version = "[Version of service]";
+            // Add a catch all for the uncaught exceptions.
+            filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
         }
         // End sample
 
@@ -69,6 +81,5 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             }
             // End sample
         }
-
     }
 }
