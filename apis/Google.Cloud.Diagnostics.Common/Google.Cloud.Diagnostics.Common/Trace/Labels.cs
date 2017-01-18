@@ -81,7 +81,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private static string GenerateJsonStringStackTrace(StackTrace stackTrace)
         {
-            if (stackTrace.GetFrames().Length == 0)
+            if (stackTrace.GetFrames() == null || stackTrace.GetFrames().Length == 0)
             {
                 return string.Empty;
             }

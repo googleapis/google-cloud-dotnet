@@ -32,16 +32,28 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private static readonly IConsumer<TraceProto> UnusedConsumer = (new Mock<IConsumer<TraceProto>>()).Object;
         private static readonly Dictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
         private static readonly StackTrace EmptyStackTrace = new StackTrace(new Exception(), false);
+        private static readonly StackTrace FilledStackTrace = CreateStackTrace();
 
         private static TraceProto CreateTrace(string projectId = ProjectId, string traceId = TraceId)
             => new TraceProto { ProjectId = ProjectId, TraceId = TraceId };
-
 
         private static bool IsValidSpan(TraceSpan span, string name)
             => IsValidSpan(span, name, 0);
 
         private static bool IsValidSpan(TraceSpan span, string name, ulong parentId)
             => IsValidSpan(span, name, parentId, SpanKind.Unspecified);
+
+        private static StackTrace CreateStackTrace()
+        {
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception e)
+            {
+                return new StackTrace(e, true);
+            }
+        }
 
         private static bool IsValidSpan(TraceSpan span, string name, ulong parentId, SpanKind kind)
         {
@@ -135,7 +147,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                         !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[Labels.StackTrace]))));
 
             tracer.StartSpan("span-name");
-            tracer.SetStackTrace(EmptyStackTrace);
+            tracer.SetStackTrace(FilledStackTrace);
             tracer.EndSpan();
             mockConsumer.VerifyAll();
         }
@@ -165,7 +177,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             tracer.StartSpan("root");
             tracer.StartSpan("child-one");
-            tracer.SetStackTrace(EmptyStackTrace);
+            tracer.SetStackTrace(FilledStackTrace);
             tracer.EndSpan();
             tracer.StartSpan("child-two");
             tracer.StartSpan("grandchild-one", StartSpanOptions.Create(SpanKind.RpcClient));

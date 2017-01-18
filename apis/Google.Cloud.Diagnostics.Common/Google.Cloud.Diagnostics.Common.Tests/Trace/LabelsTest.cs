@@ -48,7 +48,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             frameStack.CallBase = true;
 
             var stackTraceMock = new Mock<StackTrace>();
-            stackTraceMock.Setup(t => t.GetFrames().Length).Returns(3);
             stackTraceMock.Setup(t => t.GetFrames()).Returns(new StackFrame[] {
                 frameRequest.Object, frameResponse.Object, frameStack.Object });
 
@@ -75,7 +74,18 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void FromStackTrace_Empty()
         {
             var stackTraceMock = new Mock<StackTrace>();
-            stackTraceMock.Setup(t => t.GetFrames().Length).Returns(0);
+            stackTraceMock.Setup(t => t.GetFrames()).Returns(new StackFrame[] { });
+
+            var labels = Labels.FromStackTrace(stackTraceMock.Object);
+            Assert.Equal(1, labels.Count);
+            Assert.Equal(string.Empty, labels[Labels.StackTrace]);
+        }
+
+        [Fact]
+        public void FromStackTrace_Null()
+        {
+            var stackTraceMock = new Mock<StackTrace>();
+            stackTraceMock.Setup(t => t.GetFrames()).Returns((StackFrame[]) null);
 
             var labels = Labels.FromStackTrace(stackTraceMock.Object);
             Assert.Equal(1, labels.Count);
