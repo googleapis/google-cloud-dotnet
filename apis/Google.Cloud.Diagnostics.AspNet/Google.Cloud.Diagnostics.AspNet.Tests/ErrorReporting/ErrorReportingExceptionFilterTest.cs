@@ -42,13 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         private ExceptionContext CreateSimpleContext()
         {
             var mockRequest = new Mock<HttpRequestBase>();
-            mockRequest.Setup(r => r.HttpMethod).Returns(DeleteMethod);
-            mockRequest.Setup(r => r.Url).Returns(GoogleUri);
-            mockRequest.Setup(r => r.UserAgent).Returns(UserAgent);
-
             var mockResponse = new Mock<HttpResponseBase>();
-            mockResponse.Setup(r => r.StatusCode).Returns(ConflictStatusCode);
-
             var mockContext = new Mock<HttpContextBase>();
             mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
             mockContext.Setup(c => c.Response).Returns(mockResponse.Object);

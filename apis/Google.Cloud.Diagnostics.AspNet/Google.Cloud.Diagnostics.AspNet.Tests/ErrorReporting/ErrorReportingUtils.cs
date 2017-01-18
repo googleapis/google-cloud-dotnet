@@ -20,6 +20,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
     internal static class ErrorReportingUtils
     {
         /// <summary>Returns true if the current OS is Windows.</summary>
-        public static bool IsWindows { get;  } = Environment.OSVersion.ToString().Contains("Windows");
+        public static bool IsWindows { get; } = Environment.OSVersion.ToString().Contains("Windows");
     }
 }
