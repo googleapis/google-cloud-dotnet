@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             }
 
             var location = ERUtils.CreateSourceLocation(exception);
-            if (!ErrorReportingUtils.IsWindows)
+            if (ErrorReportingUtils.IsWindows)
             {
                 Assert.NotEmpty(location.FilePath);
                 Assert.True(location.LineNumber > 0);
