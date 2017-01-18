@@ -62,6 +62,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a <see cref="TraceHeaderContext"/> from a header. 
         /// </summary>
+        /// <param name="header">The string value of the trace header.
+        ///     See: https://cloud.google.com/trace/docs/faq </param>
         public static TraceHeaderContext FromHeader(string header)
         {
             if (header == null)

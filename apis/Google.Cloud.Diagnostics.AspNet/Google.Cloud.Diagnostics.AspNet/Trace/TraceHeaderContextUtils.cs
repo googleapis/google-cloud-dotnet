@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Creates a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
         /// </summary>
-        public static TraceHeaderContext FromRequest(HttpRequest request)
+        public static TraceHeaderContext CreateContext(HttpRequest request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
             string header = request.Headers.Get(TraceHeaderContext.TraceHeader);

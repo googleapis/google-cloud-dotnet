@@ -86,41 +86,41 @@ namespace Google.Cloud.Diagnostics.Common
                 return string.Empty;
             }
 
-            StringBuilder sb = new StringBuilder();
-            StringWriter sw = new StringWriter(sb);
-
-            JsonWriter writer = new JsonTextWriter(sw);
-            writer.WriteStartObject();
-            writer.WritePropertyName("stack_frame");
-            writer.WriteStartArray();
-
-            foreach (StackFrame stackFrame in stackTrace.GetFrames())
+            using (StringWriter sw = new StringWriter())
             {
+                JsonWriter writer = new JsonTextWriter(sw);
                 writer.WriteStartObject();
-                writer.WritePropertyName("class_name");
-                writer.WriteValue(stackFrame.GetMethod().DeclaringType.Name);
-                writer.WritePropertyName("method_name");
-                writer.WriteValue(stackFrame.GetMethod().Name);
+                writer.WritePropertyName("stack_frame");
+                writer.WriteStartArray();
 
-                if (stackFrame.GetFileName() != null)
+                foreach (StackFrame stackFrame in stackTrace.GetFrames())
                 {
-                    writer.WritePropertyName("file_name");
-                    writer.WriteValue(stackFrame.GetFileName());
+                    writer.WriteStartObject();
+                    writer.WritePropertyName("class_name");
+                    writer.WriteValue(stackFrame.GetMethod().DeclaringType.Name);
+                    writer.WritePropertyName("method_name");
+                    writer.WriteValue(stackFrame.GetMethod().Name);
+
+                    if (stackFrame.GetFileName() != null)
+                    {
+                        writer.WritePropertyName("file_name");
+                        writer.WriteValue(stackFrame.GetFileName());
+                    }
+
+                    if (stackFrame.GetFileLineNumber() != 0)
+                    {
+                        writer.WritePropertyName("line_number");
+                        writer.WriteValue(stackFrame.GetFileLineNumber());
+                    }
+                    writer.WriteEndObject();
                 }
 
-                if (stackFrame.GetFileLineNumber() != 0)
-                {
-                    writer.WritePropertyName("line_number");
-                    writer.WriteValue(stackFrame.GetFileLineNumber());
-                }
+                writer.WriteEndArray();
                 writer.WriteEndObject();
+                writer.Close();
+
+                return sw.GetStringBuilder().ToString();
             }
-
-            writer.WriteEndArray();
-            writer.WriteEndObject();
-            writer.Close();
-
-            return sb.ToString();
         }
 
     }
