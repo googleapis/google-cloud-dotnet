@@ -25,22 +25,86 @@ using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    ///  Uses the Google Cloud Trace Middleware.
+    ///  Traces the time taken for all subsequent delegates to run.  The time taken
+    ///  and metadata will be sent to the Stackdriver Trace API.  Also allows for more
+    ///  finely grained manual tracing.
+    /// </summary>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void ConfigureServices(IServiceCollection services)
+    /// {
+    ///     string projectId = "[Google Cloud Platform project ID]";
+    ///     services.AddGoogleTrace(projectId);
+    ///     ...
+    /// }
+    /// </code>
+    /// </example>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void Configure(IApplicationBuilder app)
+    /// {
+    ///     // Use at the start of the request pipeline to ensure the entire
+    ///     // request is traced.
+    ///     app.UseGoogleTrace();
+    ///     ...
+    /// }
+    /// </code>
+    /// </example>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void SomeFunction(IManagedTracer tracer)
+    /// {
+    ///     tracer.StartSpan(nameof(SomeFunction));
+    ///     ...
+    ///     // Do work.
+    ///     ...
+    ///     tracer.EndSpan();
+    /// }
+    /// </code>
+    /// </example>
+    /// 
+    /// <remarks>
+    /// Traces requests and reports them to Google Cloud Trace.
+    /// Docs: https://cloud.google.com/trace/docs/
+    /// </remarks>
     public static class CloudTraceExtension
     {
+        /// <summary>
+        /// Class used to allow dependency injection of a project id.
+        /// </summary>
         internal class ProjectId
         {
             public string Id;
         }
 
+        /// <summary>
+        /// Uses middleware that will trace time taken for all subsequent delegates to run.
+        /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
+        /// used with <see cref="AddGoogleTrace"/>,
+        /// </summary>
         public static void UseGoogleTrace(this IApplicationBuilder app)
         {
+            GaxPreconditions.CheckNotNull(app, nameof(app));
             app.UseMiddleware<CloudTraceMiddleware>();
         }
 
+        /// <summary>
+        /// Adds the needed services for Google Cloud Tracing. Used with <see cref="UseGoogleTrace"/>.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
+        /// <param name="clientTask">Optional a task which produces the Trace client, if 
+        ///     unset the default will be used.</param>
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId,
             TraceConfiguration config = null, Task<TraceServiceClient> clientTask = null)
         {
+            GaxPreconditions.CheckNotNull(services, nameof(services));
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             clientTask = clientTask ?? TraceServiceClient.CreateAsync();
@@ -58,7 +122,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddScoped(CreateManagedTracer);
         }
 
-
+        /// <summary>
+        /// Creates a <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>.
+        /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
             HttpContext context = provider.GetService<HttpContext>();
@@ -66,9 +132,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             return TraceHeaderContext.FromHeader(headerString);
         }
 
-
+        /// <summary>
+        /// Creates a <see cref="IManagedTracer"/> based on the <see cref="TraceHeaderContext"/> and
+        /// the rate limiter.
+        /// </summary>
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
+            // If the trace header says to trace or if the rate limiter allows tracing continue.
             var headerContext = provider.GetService<TraceHeaderContext>();
             if (!headerContext.ShouldTrace)
             {
@@ -80,6 +150,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 }
             }
 
+            // Create the tracer.
             ProjectId projectId = provider.GetService<ProjectId>();
             TraceIdFactory traceIdFactory = provider.GetService<TraceIdFactory>();
             IConsumer<TraceProto> consumer = provider.GetService<IConsumer<TraceProto>>();

@@ -19,15 +19,29 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// Middleware that will, when invoked, call the next <see cref="RequestDelegate"/>,
+    /// and trace the time taken for the next delegate to run.  The time taken and metadata
+    /// will be sent to the Stackdriver Trace API.
+    /// </summary>
     public sealed class CloudTraceMiddleware
     {
         private readonly RequestDelegate _next;
 
+        /// <summary>
+        /// Create a new instance of <see cref="CloudTraceMiddleware"/>.
+        /// </summary>
+        /// <param name="next">The next request delegate. Cannot be null.</param>
         public CloudTraceMiddleware(RequestDelegate next)
         {
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
         }
 
+        /// <summary>
+        /// Invokes the next <see cref="RequestDelegate"/> and trace the time 
+        /// taken for the next delegate to run, reporting the results to the
+        /// Stackdriver Trace API.
+        /// </summary>
         public async Task Invoke(HttpContext httpContext, IManagedTracer tracer)
         {
             GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
@@ -38,6 +52,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
             else
             {
+                // Trace the delegate and annotate it with information from the current
+                // http context.
                 tracer.StartSpan(httpContext.Request.Path);
                 await _next(httpContext);
                 tracer.AnnotateSpan(Labels.AgentLabel);
