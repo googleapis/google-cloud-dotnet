@@ -179,13 +179,9 @@ namespace Google.Cloud.Speech.V1Beta1
             )));
 
         // This is as defined in cloud_speech_gapic.yaml
+        // But retry isn't possible here, so just do it as a timeout
         public CallSettings StreamingRecognizeSettings { get; set; } = CallSettings.FromCallTiming(
-            CallTiming.FromRetry(new RetrySettings(
-                retryBackoff: GetDefaultRetryBackoff(),
-                timeoutBackoff: GetDefaultTimeoutBackoff(),
-                totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(190000)),
-                retryFilter: NonIdempotentRetryFilter
-            )));
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(190000)));
 
         public BidirectionalStreamingSettings StreamingRecognizeStreamingSettings { get; set; } = BidirectionalStreamingSettings.FromBufferCapacity(100);
 
