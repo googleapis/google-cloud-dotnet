@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -45,5 +48,36 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             logger.LogInformation("This is a log message.");
         }
         // End sample
+
+        
+        private class Trace
+        {
+            // Sample: RegisterGoogleTracer
+            public void ConfigureServices(IServiceCollection services)
+            {
+                string projectId = "[Google Cloud Platform project ID]";
+                services.AddGoogleTrace(projectId);
+            }
+
+            public void Configure(IApplicationBuilder app)
+            {
+                // Use at the start of the request pipeline to ensure the entire
+                // request is traced.
+                app.UseGoogleTrace();
+            }
+            // End sample
+
+            // Sample: UseTracer
+            /// <param name="tracer">Populated by dependency injection.</param>
+            public void TraceHelloWorld(IManagedTracer tracer)
+            {
+                // Manually trace a specific operation.
+                tracer.StartSpan(nameof(TraceHelloWorld));
+                Console.Out.WriteLine("Hello, World!");
+                tracer.EndSpan();
+            }
+            // End sample
+        }
+
     }
 }
