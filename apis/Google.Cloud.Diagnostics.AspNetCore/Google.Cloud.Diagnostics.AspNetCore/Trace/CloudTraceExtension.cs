@@ -23,16 +23,21 @@ using System.Threading.Tasks;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Trace
+namespace Google.Cloud.Diagnostics.AspNetCore
 {
     public static class CloudTraceExtension
     {
-        public static void UseCloudTrace(this IApplicationBuilder app)
+        internal class ProjectId
+        {
+            public string Id;
+        }
+
+        public static void UseGoogleTrace(this IApplicationBuilder app)
         {
             app.UseMiddleware<CloudTraceMiddleware>();
         }
 
-        public static void AddCloudTrace(
+        public static void AddGoogleTrace(
             this IServiceCollection services, string projectId,
             TraceConfiguration config = null, Task<TraceServiceClient> clientTask = null)
         {
@@ -42,27 +47,27 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Trace
             config = config ?? TraceConfiguration.Create();
 
             IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                new GrpcTraceConsumer(clientTask), TraceSizer.Instance, config.BufferOptions);
+                 new GrpcTraceConsumer(clientTask), TraceSizer.Instance, config.BufferOptions);
 
-            services.AddSingleton(new ProjectId(projectId));
+            services.AddSingleton(new ProjectId { Id = projectId });
             services.AddSingleton(consumer);
             services.AddSingleton(TraceIdFactory.Create());
             services.AddSingleton(RateLimitingTraceOptionsFactory.Create(config));
 
-            services.AddScoped(GetTraceHeaderContext);
-            services.AddScoped<IManagedTracer>();
+            services.AddScoped(CreateTraceHeaderContext);
+            services.AddScoped(CreateManagedTracer);
         }
 
 
-        internal static TraceHeaderContext GetTraceHeaderContext(IServiceProvider provider)
+        internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
             HttpContext context = provider.GetService<HttpContext>();
-            string headerString = context.Request.Headers[TraceHeaderContext.TraceHeader];
+            string headerString = context?.Request?.Headers[TraceHeaderContext.TraceHeader];
             return TraceHeaderContext.FromHeader(headerString);
         }
 
 
-        internal static IManagedTracer GetManagedTracer(IServiceProvider provider)
+        internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
             var headerContext = provider.GetService<TraceHeaderContext>();
             if (!headerContext.ShouldTrace)
@@ -85,16 +90,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Trace
                 TraceId = headerContext.TraceId ?? traceIdFactory.NextId(),
             };
             return SimpleManagedTracer.Create(consumer, trace, headerContext.SpanId);
-        }
-    }
-
-    internal class ProjectId
-    {
-        internal string Id { get; }
-
-        public ProjectId(string id)
-        {
-            id = GaxPreconditions.CheckNotNullOrEmpty(id, nameof(id));
         }
     }
 }
