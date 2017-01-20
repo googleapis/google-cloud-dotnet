@@ -63,9 +63,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
             var context = new DefaultHttpContext();
             var request = new DefaultHttpRequest(context);
             request.Headers[TraceHeaderContext.TraceHeader] = header;
-
+            var accessor = new HttpContextAccessor();
+            accessor.HttpContext = context;
+            
             Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
-            mockProvider.Setup(p => p.GetService(typeof(HttpContext))).Returns(context);
+            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
 
             var headerContext = CloudTraceExtension.CreateTraceHeaderContext(mockProvider.Object);
             Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
