@@ -78,13 +78,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = GetSetUpTracer();
             var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object);
-            traceHandler.InnerHandler = new FakeDelegatingHandler(headerContext, true);
+            traceHandler.InnerHandler = new FakeDelegatingHandler(headerContext, throwException: true);
 
             var requestUri = new Uri("https://www.google.com");
 
             using (var httpClient = new HttpClient(traceHandler))
             {
-                await Assert.ThrowsAsync<Exception>(() => httpClient.GetAsync(requestUri));
+                await Assert.ThrowsAsync<DivideByZeroException>(() => httpClient.GetAsync(requestUri));
             }
 
             mockTracer.Verify(t => t.StartSpan(requestUri.ToString(), null), Times.Once());
@@ -119,7 +119,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 }
                 if (_throwException)
                 {
-                    throw new Exception();
+                    throw new DivideByZeroException();
                 }
                 return Task.FromResult(new HttpResponseMessage());
             }
