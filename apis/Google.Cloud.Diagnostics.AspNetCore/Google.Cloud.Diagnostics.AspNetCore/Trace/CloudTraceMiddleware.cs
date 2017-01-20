@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
+using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -55,10 +57,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 // Trace the delegate and annotate it with information from the current
                 // http context.
                 tracer.StartSpan(httpContext.Request.Path);
-                await _next(httpContext);
-                tracer.AnnotateSpan(Labels.AgentLabel);
-                tracer.AnnotateSpan(Labels.FromHttpContext(httpContext));
-                tracer.EndSpan();
+                try
+                {
+                    await _next(httpContext);
+                }
+                catch (Exception e)
+                {
+                    StackTrace stackTrace = new StackTrace(e, true);
+                    tracer.SetStackTrace(stackTrace);
+                    throw;
+                }
+                finally
+                {
+                    tracer.AnnotateSpan(Labels.AgentLabel);
+                    tracer.AnnotateSpan(Labels.FromHttpContext(httpContext));
+                    tracer.EndSpan();
+                }
             }
         }
     }

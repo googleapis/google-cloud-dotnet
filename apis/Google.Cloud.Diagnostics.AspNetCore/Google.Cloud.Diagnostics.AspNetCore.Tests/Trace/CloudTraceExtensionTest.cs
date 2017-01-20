@@ -20,7 +20,7 @@ using Moq;
 using System;
 using Xunit;
 
-using ProjectId =  Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.ProjectId;
+using ProjectId = Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.ProjectId;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace

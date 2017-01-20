@@ -99,7 +99,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
-        /// <param name="clientTask">Optional a task which produces the Trace client, if 
+        /// <param name="clientTask">Optional task which produces the Trace client, if 
         ///     unset the default will be used.</param>
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId,
@@ -125,7 +125,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Creates a <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>.
+        /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>.
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
@@ -140,11 +140,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
-            // If the trace header says to trace or if the rate limiter allows tracing continue.
             var headerContext = provider.GetService<TraceHeaderContext>();
+            var rateLimitingFactory = provider.GetService<RateLimitingTraceOptionsFactory>();
+            var projectId = provider.GetService<ProjectId>();
+            var traceIdFactory = provider.GetService<TraceIdFactory>();
+            var consumer = provider.GetService<IConsumer<TraceProto>>();
+
+            // Check that we have all the needed services.
+            if (headerContext == null || rateLimitingFactory == null ||
+                projectId == null || traceIdFactory == null || consumer == null) {
+                throw new InvalidOperationException("Ensure Google Cloud Trace is properly set up.");
+            }
+
+            // If the trace header says to trace or if the rate limiter allows tracing continue.
             if (!headerContext.ShouldTrace)
             {
-                var rateLimitingFactory = provider.GetService<RateLimitingTraceOptionsFactory>();
                 TraceOptions options = rateLimitingFactory.CreateOptions();
                 if (!options.ShouldTrace)
                 {
@@ -153,10 +163,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
 
             // Create the tracer.
-            ProjectId projectId = provider.GetService<ProjectId>();
-            TraceIdFactory traceIdFactory = provider.GetService<TraceIdFactory>();
-            IConsumer<TraceProto> consumer = provider.GetService<IConsumer<TraceProto>>();
-
             TraceProto trace = new TraceProto
             {
                 ProjectId = projectId.Id,

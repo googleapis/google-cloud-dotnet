@@ -16,7 +16,9 @@ using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Moq;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -42,6 +44,31 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
 
             var middleware = new CloudTraceMiddleware(delegateMock.Object);
             await middleware.Invoke(context, tracerMock.Object);
+
+            delegateMock.VerifyAll();
+            tracerMock.VerifyAll();
+        }
+
+        [Fact]
+        public async Task Invoke_TraceException()
+        {
+            var context = new DefaultHttpContext();
+            var request = new DefaultHttpRequest(context);
+            request.Path = new PathString("/api/trace");
+
+            var delegateMock = new Mock<RequestDelegate>();
+            delegateMock.Setup(d => d(context)).Throws(new Exception());
+
+            var tracerMock = new Mock<IManagedTracer>();
+            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns("trace-id");
+            tracerMock.Setup(t => t.StartSpan(request.Path, null));
+            tracerMock.Setup(t => t.AnnotateSpan(It.IsAny<Dictionary<string, string>>()));
+            tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()));
+            tracerMock.Setup(t => t.EndSpan());
+
+            var middleware = new CloudTraceMiddleware(delegateMock.Object);
+            await Assert.ThrowsAsync<Exception>(
+                () => middleware.Invoke(context, tracerMock.Object));
 
             delegateMock.VerifyAll();
             tracerMock.VerifyAll();
