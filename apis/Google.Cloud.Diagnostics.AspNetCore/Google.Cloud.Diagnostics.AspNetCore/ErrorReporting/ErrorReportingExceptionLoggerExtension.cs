@@ -49,7 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
-        public static void ReportExceptionsToGoogle(
+        public static void UseGoogleExceptionLogging(
             this IApplicationBuilder app, string projectId, string serviceName, string version)
         {
             var logger = ErrorReportingExceptionLogger.Create(projectId, serviceName, version);
