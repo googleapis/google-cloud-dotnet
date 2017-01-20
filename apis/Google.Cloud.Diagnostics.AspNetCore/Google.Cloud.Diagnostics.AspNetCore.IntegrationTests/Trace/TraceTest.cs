@@ -18,7 +18,6 @@ using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +28,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
@@ -46,7 +46,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
         /// <summary>Client to use to send RPCs.</summary>
         private readonly TraceServiceClient _client;
-
 
         public TraceTest()
         {
@@ -102,7 +101,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
             Assert.NotNull(trace);
             Assert.Equal(2, trace.Spans.Count);
-
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
             Assert.NotEmpty(span.Labels);
             Assert.Equal(span.Labels[Common.Labels.HttpMethod], "GET");
@@ -127,7 +125,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
             Assert.NotNull(trace);
             Assert.Equal(2, trace.Spans.Count);
-
             var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
             Assert.Single(span.Labels);
             Assert.Equal(span.Labels[TraceController.Label], TraceController.LabelValue);
@@ -151,7 +148,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
             Assert.NotNull(trace);
             Assert.Equal(2, trace.Spans.Count);
-
             var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
             Assert.Single(span.Labels);
             Assert.Contains(nameof(TraceController), span.Labels[Common.Labels.StackTrace]);
@@ -163,7 +159,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
         {
             var traceIdFactory = TraceIdFactory.Create();
             var spanIdFactory = SpanIdFactory.Create();
-
             string traceId = traceIdFactory.NextId();
             ulong spanId = spanIdFactory.NextId();
 
@@ -185,7 +180,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             Assert.NotNull(trace);
             Assert.Equal(traceId, trace.TraceId);
             Assert.Equal(2, trace.Spans.Count);
-
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace"));
             Assert.Equal(spanId, span.ParentSpanId);
         }
@@ -211,7 +205,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
             var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
             var spanNameLabels = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
-
             Assert.Null(await GetTrace(spanNameLabels, startTime, expectTrace: false));
             Assert.NotNull(await GetTrace(spanNameTrace, startTime));
         }
@@ -238,7 +231,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
             var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
             var spanNameStack = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
-
             Assert.NotNull(await GetTrace(spanNameTrace, startTime));
             Assert.NotNull(await GetTrace(spanNameStack, startTime));
         }
@@ -265,9 +257,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
             var spanName = TraceController.GetMessage(nameof(TraceController.ThrowException), testId);
             var trace = await GetTrace(spanName, startTime);
+
             Assert.NotNull(trace);
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));
-
             Assert.Contains(nameof(TraceController), span.Labels[Common.Labels.StackTrace]);
             Assert.Contains(nameof(TraceController.ThrowException), span.Labels[Common.Labels.StackTrace]);
         }
@@ -412,6 +404,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             throw new DivideByZeroException();
         }
 
+        /// <summary>Creates a stack trace.</summary>
         internal StackTrace CreateStackTrace()
         {
             try
