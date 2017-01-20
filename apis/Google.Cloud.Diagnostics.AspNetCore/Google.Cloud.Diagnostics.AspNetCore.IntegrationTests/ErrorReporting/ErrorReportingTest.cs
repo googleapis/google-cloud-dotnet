@@ -210,7 +210,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
 
         public void Configure(IApplicationBuilder app)
         {
-            app.ReportExceptionsToGoogle(_projectId, Service, Version);
+            app.UseGoogleExceptionLogging(_projectId, Service, Version);
 
             app.UseMvc(routes =>
             {
