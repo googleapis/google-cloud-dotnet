@@ -85,6 +85,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return string.Empty;
             }
+
             using (StringWriter sw = new StringWriter())
             {
                 JsonWriter writer = new JsonTextWriter(sw);
