@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         internal static Dictionary<string, string> FromHttpRequestWrapper(HttpRequestWrapper request)
         {
             GaxPreconditions.CheckNotNull(request, nameof(request));
-            return new Dictionary<string, string>()
+            return new Dictionary<string, string>
             {
                 { LabelsCommon.HttpRequestSize, request.ContentLength.ToString() },
                 { LabelsCommon.HttpHost, request.UserHostName },
@@ -64,14 +64,14 @@ namespace Google.Cloud.Diagnostics.AspNet
         internal static Dictionary<string, string> FromHttpResponseWrapper(HttpResponseWrapper response)
         {
             GaxPreconditions.CheckNotNull(response, nameof(response));
-            return new Dictionary<string, string>()
+            return new Dictionary<string, string>
             {
                 { LabelsCommon.HttpStatusCode, response.StatusCode.ToString() }
             };
         }
 
         /// <summary>
-        /// Creates a a map of labels to represent a <see cref="StackTrace"/> for a span.
+        /// Creates a map of labels to represent a <see cref="StackTrace"/> for a span.
         /// </summary>
         public static Dictionary<string, string> FromStackTrace(StackTrace stackTrace) => 
             LabelsCommon.FromStackTrace(stackTrace);

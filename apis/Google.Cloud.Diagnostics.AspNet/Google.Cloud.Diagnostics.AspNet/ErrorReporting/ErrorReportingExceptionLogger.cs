@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,8 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
-using System;
-using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -144,33 +142,6 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <summary>
-        /// Gets information about the source location where the exception occured 
-        /// and populates a <see cref="SourceLocation"/> object.
-        /// </summary>
-        private SourceLocation CreateSourceLocation(ExceptionLoggerContext exceptionLoggerContext)
-        {
-            Exception ex = exceptionLoggerContext?.Exception;
-            if (ex == null)
-            {
-                return new SourceLocation();
-            }
-
-            StackTrace stackTrace = new StackTrace(ex, true);
-            if (stackTrace.FrameCount == 0)
-            {
-                return new SourceLocation();
-            }
-
-            StackFrame frame = stackTrace.GetFrame(0);
-            return new SourceLocation()
-            {
-                FilePath = frame.GetFileName() ?? "",
-                LineNumber = frame.GetFileLineNumber(),
-                FunctionName = frame.GetMethod()?.Name ?? "",
-            };
-        }
-
-        /// <summary>
         /// Gets infromation about the exception that occured and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
@@ -179,7 +150,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             ErrorContext errorContext = new ErrorContext()
             {
                 HttpRequest = CreateHttpRequestContext(context),
-                ReportLocation = CreateSourceLocation(context)
+                ReportLocation = ErrorReportingUtils.CreateSourceLocation(context.Exception)
             };
 
             return new ReportedErrorEvent()

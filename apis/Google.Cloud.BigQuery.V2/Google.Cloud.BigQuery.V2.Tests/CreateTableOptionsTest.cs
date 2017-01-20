@@ -29,7 +29,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 Expiration = new DateTimeOffset(1970, 1, 1, 0, 0, 5, 0, TimeSpan.Zero),
                 Description = "A description",
-                FriendlyName = "A friendly name"                
+                FriendlyName = "A friendly name",
+                TimePartitionType = TimePartitionType.Day,
+                TimePartitionExpiration = TimeSpan.FromDays(10)
             };
             Table table = new Table();
             InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
@@ -37,6 +39,32 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(5 * 1000, table.ExpirationTime);
             Assert.Equal("A description", table.Description);
             Assert.Equal("A friendly name", table.FriendlyName);
+            Assert.Equal("DAY", table.TimePartitioning.Type);
+            Assert.Equal(10 * 24 * 60 * 60 * 1000L, table.TimePartitioning.ExpirationMs);
+        }
+
+        [Fact]
+        public void InvalidTimePartitioningType()
+        {
+            var options = new CreateTableOptions
+            {
+                TimePartitionType = (TimePartitionType) 2
+            };
+            Table table = new Table();
+            InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(table, request));
+        }
+
+        [Fact]
+        public void TimePartitioningExpirationWithoutTimePartitioningType()
+        {
+            var options = new CreateTableOptions
+            {
+                TimePartitionExpiration = TimeSpan.FromDays(1)
+            };
+            Table table = new Table();
+            InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(table, request));
         }
     }
 }

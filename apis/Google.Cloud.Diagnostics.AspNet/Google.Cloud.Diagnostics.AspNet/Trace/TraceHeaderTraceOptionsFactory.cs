@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// Create a new <see cref="TraceHeaderTraceOptionsFactory"/>.
         /// </summary>
         public TraceOptions CreateOptions() => 
-            CreateOptions(TraceHeaderContextUtils.FromRequest(HttpContext.Current.Request));
+            CreateOptions(TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request));
 
         /// <summary>
         /// Create a new <see cref="TraceHeaderTraceOptionsFactory"/> from a <see cref="TraceHeaderContext"/>

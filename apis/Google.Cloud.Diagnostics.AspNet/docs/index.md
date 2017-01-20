@@ -34,9 +34,13 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 # Getting started
 
-## Registering Error Reporting
+## Registering Error Reporting (Web Api)
 
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLogger)]
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerWebApi)]
+
+## Registering Error Reporting (MVC)
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerMvc)]
 
 ## Initializing Tracing
 

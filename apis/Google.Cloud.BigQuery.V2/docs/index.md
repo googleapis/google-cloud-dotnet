@@ -62,3 +62,7 @@ below.
 ## Data insertion
 
 [!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#InsertOverview)]
+
+## Creating a table partitioned by time
+
+[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#CreatePartitionedTable)]

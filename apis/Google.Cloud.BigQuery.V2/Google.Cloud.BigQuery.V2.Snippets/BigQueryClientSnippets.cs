@@ -1337,6 +1337,39 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             /// End sample
         }
 
+        [Fact]
+        public void CreatePartitionedTable()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+
+            // Sample: CreatePartitionedTable
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "message", BigQueryDbType.String }
+            }.Build();
+            CreateTableOptions options = new CreateTableOptions { TimePartitionType = TimePartitionType.Day };
+            BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
+            // Upload a single row to the table, using JSON rather than the streaming buffer, as
+            // the _PARTITIONTIME column will be null while it's being served from the streaming buffer.
+            // This code assumes the upload succeeds; normally, you should check the job results.
+            table.UploadJson(new[] { "{ \"message\": \"Sample message\" }" }).PollUntilCompleted();
+            
+            BigQueryResults results = client.ExecuteQuery($"SELECT message, _PARTITIONTIME AS pt FROM {table}");
+            List<BigQueryRow> rows = results.GetRows().ToList();
+            foreach (BigQueryRow row in rows)
+            {
+                string message = (string) row["message"];
+                DateTime partition = (DateTime) row["pt"];
+                Console.WriteLine($"Message: {message}; partition: {partition:yyyy-MM-dd}");
+            }
+            // End sample
+
+            Assert.Equal(1, rows.Count);
+        }
+
         private bool WaitForStreamingBufferToEmpty(string tableId)
         {
             BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);

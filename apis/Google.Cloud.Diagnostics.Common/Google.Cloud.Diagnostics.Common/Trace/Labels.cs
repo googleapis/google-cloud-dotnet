@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,46 +81,45 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private static string GenerateJsonStringStackTrace(StackTrace stackTrace)
         {
-            if (stackTrace.GetFrames().Length == 0)
+            if (stackTrace.GetFrames() == null || stackTrace.GetFrames().Length == 0)
             {
                 return string.Empty;
             }
-
-            StringBuilder sb = new StringBuilder();
-            StringWriter sw = new StringWriter(sb);
-
-            JsonWriter writer = new JsonTextWriter(sw);
-            writer.WriteStartObject();
-            writer.WritePropertyName("stack_frame");
-            writer.WriteStartArray();
-
-            foreach (StackFrame stackFrame in stackTrace.GetFrames())
+            using (StringWriter sw = new StringWriter())
             {
+                JsonWriter writer = new JsonTextWriter(sw);
                 writer.WriteStartObject();
-                writer.WritePropertyName("class_name");
-                writer.WriteValue(stackFrame.GetMethod().DeclaringType.Name);
-                writer.WritePropertyName("method_name");
-                writer.WriteValue(stackFrame.GetMethod().Name);
+                writer.WritePropertyName("stack_frame");
+                writer.WriteStartArray();
 
-                if (stackFrame.GetFileName() != null)
+                foreach (StackFrame stackFrame in stackTrace.GetFrames())
                 {
-                    writer.WritePropertyName("file_name");
-                    writer.WriteValue(stackFrame.GetFileName());
+                    writer.WriteStartObject();
+                    writer.WritePropertyName("class_name");
+                    writer.WriteValue(stackFrame.GetMethod().DeclaringType.Name);
+                    writer.WritePropertyName("method_name");
+                    writer.WriteValue(stackFrame.GetMethod().Name);
+
+                    if (stackFrame.GetFileName() != null)
+                    {
+                        writer.WritePropertyName("file_name");
+                        writer.WriteValue(stackFrame.GetFileName());
+                    }
+
+                    if (stackFrame.GetFileLineNumber() != 0)
+                    {
+                        writer.WritePropertyName("line_number");
+                        writer.WriteValue(stackFrame.GetFileLineNumber());
+                    }
+                    writer.WriteEndObject();
                 }
 
-                if (stackFrame.GetFileLineNumber() != 0)
-                {
-                    writer.WritePropertyName("line_number");
-                    writer.WriteValue(stackFrame.GetFileLineNumber());
-                }
+                writer.WriteEndArray();
                 writer.WriteEndObject();
+                writer.Close();
+
+                return sw.ToString();
             }
-
-            writer.WriteEndArray();
-            writer.WriteEndObject();
-            writer.Close();
-
-            return sb.ToString();
         }
 
     }

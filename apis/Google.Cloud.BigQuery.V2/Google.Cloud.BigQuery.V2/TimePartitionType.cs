@@ -12,25 +12,26 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
-using Google.Cloud.Diagnostics.Common;
-using System.Web;
-
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// Utilities for <see cref="TraceHeaderContext"/>.
+    /// The partitioning type used for tables which are partitioned
+    /// based on time. Currently only "day" is supported, but this enum
+    /// exists to allow for future expansion. See
+    /// https://cloud.google.com/bigquery/docs/creating-partitioned-tables for
+    /// more details on partitioned tables.
     /// </summary>
-    internal sealed class TraceHeaderContextUtils
+    public enum TimePartitionType
     {
         /// <summary>
-        /// Creates a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
+        /// The table is not partitioned by time.
         /// </summary>
-        public static TraceHeaderContext CreateContext(HttpRequest request)
-        {
-            GaxPreconditions.CheckNotNull(request, nameof(request));
-            string header = request.Headers.Get(TraceHeaderContext.TraceHeader);
-            return TraceHeaderContext.FromHeader(header);
-        }
+        None = 0,
+
+        /// <summary>
+        /// The table is partitioned by day; each day's data resides
+        /// in a different table.
+        /// </summary>
+        Day = 1
     }
 }
