@@ -67,8 +67,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             }
             // End sample
 
-            // Sample: UseTracer
-            /// <param name="tracer">Populated by dependency injection.</param>
+            // Sample: UseTracer 
+            /// <summary>
+            /// The <see cref="IManagedTracer"/> is populated by dependency injection.
+            /// </summary>
             public void TraceHelloWorld(IManagedTracer tracer)
             {
                 // Manually trace a specific operation.
