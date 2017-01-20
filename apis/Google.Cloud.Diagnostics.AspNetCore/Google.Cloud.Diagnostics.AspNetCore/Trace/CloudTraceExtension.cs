@@ -118,6 +118,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddSingleton(consumer);
             services.AddSingleton(TraceIdFactory.Create());
             services.AddSingleton(RateLimitingTraceOptionsFactory.Create(config));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped(CreateTraceHeaderContext);
             services.AddScoped(CreateManagedTracer);
