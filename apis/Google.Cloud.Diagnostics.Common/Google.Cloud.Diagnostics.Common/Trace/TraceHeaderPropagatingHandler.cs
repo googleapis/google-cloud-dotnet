@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -73,10 +75,20 @@ namespace Google.Cloud.Diagnostics.Common
             request.Headers.Add(TraceHeaderContext.TraceHeader, traceHeader.ToString());
 
             _tracer.StartSpan(request.RequestUri.ToString());
-            var tracedRequest = await base.SendAsync(request, cancellationToken);
-            _tracer.EndSpan();
-
-            return tracedRequest;
+            try
+            {
+                return await base.SendAsync(request, cancellationToken);
+            }
+            catch (Exception e)
+            {
+                StackTrace stackTrace = new StackTrace(e, true);
+                _tracer.SetStackTrace(stackTrace);
+                throw;
+            }
+            finally
+            {
+                _tracer.EndSpan();
+            }
         }
     }
 }

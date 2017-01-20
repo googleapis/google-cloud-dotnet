@@ -14,6 +14,7 @@
 
 using Moq;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading;
@@ -24,12 +25,25 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class TraceHeaderPropagatingHandlerTest
     {
+        private const string traceId = "105445aa7843bc8bf206b12000100f00";
+        private const ulong spanId = 81237123;
+        private readonly TraceHeaderContext headerContext = 
+            TraceHeaderContext.Create(traceId, spanId, true);
+
+        private Mock<IManagedTracer> GetSetUpTracer()
+        {
+            var mockTracer = new Mock<IManagedTracer>();
+            mockTracer.Setup(t => t.GetCurrentTraceId()).Returns(traceId);
+            mockTracer.Setup(t => t.GetCurrentSpanId()).Returns(spanId);
+            return mockTracer;
+        }
+
         [Fact]
         public async Task SendAsync_NoTrace()
         {
             var mockTracer = new Mock<IManagedTracer>();
             var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object);
-            traceHandler.InnerHandler = new FakeDelegatingHandler(null);
+            traceHandler.InnerHandler = new FakeDelegatingHandler();
 
             using (var httpClient = new HttpClient(traceHandler))
             {
@@ -43,14 +57,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public async Task SendAsync_Trace()
         {
-            string traceId = "105445aa7843bc8bf206b12000100f00";
-            ulong spanId = 81237123;
-            var headerContext = TraceHeaderContext.Create(traceId, spanId, true);
 
-            var mockTracer = new Mock<IManagedTracer>();
-            mockTracer.Setup(t => t.GetCurrentTraceId()).Returns(traceId);
-            mockTracer.Setup(t => t.GetCurrentSpanId()).Returns(spanId);
-
+            var mockTracer = GetSetUpTracer();
             var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object);
             traceHandler.InnerHandler = new FakeDelegatingHandler(headerContext);
 
@@ -65,16 +73,37 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockTracer.Verify(t => t.EndSpan(), Times.Once());
         }
 
+        [Fact]
+        public async Task SendAsync_TraceException()
+        {
+            var mockTracer = GetSetUpTracer();
+            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object);
+            traceHandler.InnerHandler = new FakeDelegatingHandler(headerContext, true);
+
+            var requestUri = new Uri("https://www.google.com");
+
+            using (var httpClient = new HttpClient(traceHandler))
+            {
+                await Assert.ThrowsAsync<Exception>(() => httpClient.GetAsync(requestUri));
+            }
+
+            mockTracer.Verify(t => t.StartSpan(requestUri.ToString(), null), Times.Once());
+            mockTracer.Verify(t => t.SetStackTrace(It.IsAny<StackTrace>()), Times.Once());
+            mockTracer.Verify(t => t.EndSpan(), Times.Once());
+        }
+
         /// <summary>
         /// Fake <see cref="DelegatingHandler"/> to verify added trace headers.
         /// </summary>
         private class FakeDelegatingHandler : DelegatingHandler
         {
-            TraceHeaderContext _context;
+            private readonly TraceHeaderContext _context;
+            private readonly bool _throwException;
 
-            public FakeDelegatingHandler(TraceHeaderContext context)
+            public FakeDelegatingHandler(TraceHeaderContext context = null, bool throwException = false)
             {
                 _context = context;
+                _throwException = throwException;
             }
 
             protected override Task<HttpResponseMessage> SendAsync(
@@ -87,6 +116,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     Assert.Equal(_context.TraceId, currentContext.TraceId);
                     Assert.Equal(_context.SpanId, currentContext.SpanId);
                     Assert.Equal(_context.ShouldTrace, currentContext.ShouldTrace);
+                }
+                if (_throwException)
+                {
+                    throw new Exception();
                 }
                 return Task.FromResult(new HttpResponseMessage());
             }
