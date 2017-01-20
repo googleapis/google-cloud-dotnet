@@ -17,6 +17,7 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
@@ -127,9 +128,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
-            HttpContext context = provider.GetService<HttpContext>();
-            string headerString = context?.Request?.Headers[TraceHeaderContext.TraceHeader];
-            return TraceHeaderContext.FromHeader(headerString);
+            var accessor = provider.GetService<IHttpContextAccessor>();
+            string header = accessor?.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
+            return TraceHeaderContext.FromHeader(header);
         }
 
         /// <summary>
