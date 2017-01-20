@@ -241,11 +241,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
         }
 
 
+        [Fact]
+        public async Task Trace_Exception()
+        {
 
-
-        // TODO(talarico): Add test for thrown middleware
-
-
+        }
     }
 
     /// <summary>
