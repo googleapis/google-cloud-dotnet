@@ -124,7 +124,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name") &&
-                    TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
+                        TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
 
             tracer.StartSpan("span-name");
             tracer.AnnotateSpan(annotation);
