@@ -97,9 +97,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
                 await client.GetAsync($"/Trace/Trace/{testId}");
             }
 
-            var trace = await GetTrace(nameof(TraceController.Trace), startTime);
+            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+            var trace = await GetTrace(spanName, startTime);
 
-            // TODO(talarico): Check values 
+            Assert.NotNull(trace);
+            Assert.Equal(2, trace.Spans.Count);
+
+            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
+            Assert.NotEmpty(span.Labels);
+            Assert.Equal(span.Labels[Common.Labels.HttpMethod], "GET");
+            Assert.Equal(span.Labels[Common.Labels.HttpStatusCode], "200");
         }
 
         [Fact]
@@ -118,7 +125,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             var spanName = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
             var trace = await GetTrace(spanName, startTime);
 
-            // TODO(talarico): Check values 
+            Assert.NotNull(trace);
+            Assert.Equal(2, trace.Spans.Count);
+
+            var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
+            Assert.Single(span.Labels);
+            Assert.Equal(span.Labels[TraceController.Label], TraceController.LabelValue);
         }
 
         [Fact]
@@ -137,23 +149,32 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             var spanName = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
             var trace = await GetTrace(spanName, startTime);
 
-            // TODO(talarico): Check values 
+            Assert.NotNull(trace);
+            Assert.Equal(2, trace.Spans.Count);
+
+            var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
+            Assert.Single(span.Labels);
+            Assert.Contains(nameof(TraceController), span.Labels[Common.Labels.StackTrace]);
+            Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[Common.Labels.StackTrace]);   
         }
 
         [Fact]
         public async Task Trace_Header()
         {
-            string testId = Utils.GetTestId();
-            var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            var traceIdFactory = TraceIdFactory.Create();
+            var spanIdFactory = SpanIdFactory.Create();
 
+            string traceId = traceIdFactory.NextId();
+            ulong spanId = spanIdFactory.NextId();
+
+            string testId = Utils.GetTestId();           
+            var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
             var builder = new WebHostBuilder().UseStartup<TraceTestNoBufferLowQpsApplication>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
-                var traceIdFactory = TraceIdFactory.Create();
-                var spanIdFactory = SpanIdFactory.Create();
-                var header = TraceHeaderContext.Create(
-                    traceIdFactory.NextId(), spanIdFactory.NextId(), true);
+                
+                var header = TraceHeaderContext.Create(traceId, spanId, true);
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader, header.ToString());
                 await client.GetAsync($"/Trace/Trace/{testId}");
             }
@@ -161,7 +182,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
             var trace = await GetTrace(spanName, startTime);
 
-            // TODO(talarico): Check values 
+            Assert.NotNull(trace);
+            Assert.Equal(traceId, trace.TraceId);
+            Assert.Equal(2, trace.Spans.Count);
+
+            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace"));
+            Assert.Equal(spanId, span.ParentSpanId);
         }
 
         [Fact]
@@ -213,6 +239,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 
             // TODO(talarico): Check values  GET TRACES, should have about 8 traces 
         }
+
+
+
+
+        // TODO(talarico): Add test for thrown middleware
+
+
     }
 
     /// <summary>
@@ -343,7 +376,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             return message;
         }
 
-        private StackTrace CreateStackTrace()
+        internal StackTrace CreateStackTrace()
         {
             try
             {
