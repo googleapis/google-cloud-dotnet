@@ -200,19 +200,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
-                List<Task> taskList = new List<Task>();
-                for (int i = 0; i < 20; i++)
-                {
-                    taskList.Add(client.GetAsync($"/Trace/Trace/{testId}"));
-                    Thread.Sleep(250); // Sleep for 1/4 of a second. 
-                }
-                Task.WaitAll(taskList.ToArray());
+
+                // The first request is not traced, sleep long enough 
+                // for the rate limiter to allow a request, then the second
+                // request is traced.
+                await client.GetAsync($"/Trace/TraceLabels/{testId}");
+                Thread.Sleep(TimeSpan.FromSeconds(2));
+                await client.GetAsync($"/Trace/Trace/{testId}");                
             }
 
-            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-            var trace = await GetTrace(spanName, startTime);
+            var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+            var spanNameLabels = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
 
-            // TODO(talarico): Check values  GET TRACE*S*. Should have ~5 traces?
+            Assert.Null(await GetTrace(spanNameLabels, startTime, expectTrace: false));
+            Assert.NotNull(await GetTrace(spanNameTrace, startTime));
         }
 
         [Fact]
@@ -221,42 +222,66 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             string testId = Utils.GetTestId();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
-            var builder = new WebHostBuilder().UseStartup<TraceTestApplication>();
+            var builder = new WebHostBuilder().UseStartup<TraceTestBufferHighQpsApplication>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
-                List<Task> taskList = new List<Task>();
-                for (int i = 0; i < 12; i++)
-                {
-                    taskList.Add(client.GetAsync($"/Trace/Trace/{testId}"));
-                    Thread.Sleep(500); // Sleep for 1/4 of a second. 
-                }
-                Task.WaitAll(taskList.ToArray());
+
+                // Make a trace with a small span that will not cause the buffer to flush.
+                await client.GetAsync($"/Trace/Trace/{testId}");
+                var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+                Assert.Null(await GetTrace(spanName, startTime, expectTrace: false));
+
+                // Make a large trace that will flush the buffer.
+                await client.GetAsync($"/Trace/TraceStackTrace/{testId}");
             }
 
-            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-            var trace = await GetTrace(spanName, startTime);
+            var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+            var spanNameStack = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
 
-            // TODO(talarico): Check values  GET TRACES, should have about 8 traces 
+            Assert.NotNull(await GetTrace(spanNameTrace, startTime));
+            Assert.NotNull(await GetTrace(spanNameStack, startTime));
         }
-
 
         [Fact]
         public async Task Trace_Exception()
         {
+            string testId = Utils.GetTestId();
+            var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
+            var builder = new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>();
+            using (TestServer server = new TestServer(builder))
+            {
+                var client = server.CreateClient();
+                try
+                {
+                    await client.GetAsync($"/Trace/ThrowException/{testId}");
+                }
+                catch (Exception e)
+                {
+                    // This will throw as the task faults.
+                }
+            }
+
+            var spanName = TraceController.GetMessage(nameof(TraceController.ThrowException), testId);
+            var trace = await GetTrace(spanName, startTime);
+            Assert.NotNull(trace);
+            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));
+
+            Assert.Contains(nameof(TraceController), span.Labels[Common.Labels.StackTrace]);
+            Assert.Contains(nameof(TraceController.ThrowException), span.Labels[Common.Labels.StackTrace]);
         }
     }
 
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
-    /// This app uses a timed buffer and will sample 1 QPS.
+    /// This app uses a size buffer (1,000 bytes) and will sample 1000000 QPS.
     /// </summary>
-    public class TraceTestApplication : AbstractTraceTestApplication
+    public class TraceTestBufferHighQpsApplication : AbstractTraceTestApplication
     {
-        public override double GetSampleRate() => 1;
+        public override double GetSampleRate() => 1000000;
         public override BufferOptions GetBufferOptions() =>
-            BufferOptions.TimedBuffer(TimeSpan.FromSeconds(4));
+            BufferOptions.SizedBuffer(1000);
     }
 
     /// <summary>
@@ -345,7 +370,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
         }
 
         /// <summary>Traces a 10ms sleep.</summary>
-        public string Trace(string id, [FromServices]IManagedTracer tracer)
+        public string Trace(string id, [FromServices] IManagedTracer tracer)
         {
             string message = GetMessage(nameof(Trace), id);
             tracer.StartSpan(message);
@@ -355,7 +380,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
         }
 
         /// <summary>Traces a 10ms sleep and adds an annotation.</summary>
-        public string TraceLabels(string id, [FromServices]IManagedTracer tracer)
+        public string TraceLabels(string id, [FromServices] IManagedTracer tracer)
         {
             string message = GetMessage(nameof(TraceLabels), id);
             tracer.StartSpan(message);
@@ -366,7 +391,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
         }
 
         /// <summary>Traces a 10ms sleep and adds a stacktrace.</summary>
-        public string TraceStackTrace(string id, [FromServices]IManagedTracer tracer)
+        public string TraceStackTrace(string id, [FromServices] IManagedTracer tracer)
         {
             string message = GetMessage(nameof(TraceStackTrace), id);
             tracer.StartSpan(message);
@@ -374,6 +399,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
             tracer.SetStackTrace(CreateStackTrace());
             tracer.EndSpan();
             return message;
+        }
+
+        /// <summary>Traces a 10ms sleep and throws an exception.</summary>
+        public string ThrowException(string id, [FromServices] IManagedTracer tracer)
+        {
+            // Add a span with the test id to allow for the trace to be found.
+            string message = GetMessage(nameof(ThrowException), id);
+            tracer.StartSpan(message);
+            Thread.Sleep(10);
+            tracer.EndSpan();
+            throw new DivideByZeroException();
         }
 
         internal StackTrace CreateStackTrace()
