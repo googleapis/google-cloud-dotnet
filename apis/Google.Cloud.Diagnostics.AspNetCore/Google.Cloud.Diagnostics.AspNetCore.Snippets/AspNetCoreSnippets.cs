@@ -12,8 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Logging;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -43,6 +46,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             var logger = loggerFactory.CreateLogger("[My Logger Name]");
             logger.LogInformation("This is a log message.");
+        }
+        // End sample
+
+        // Sample: TraceOutgoing
+        public async Task<HttpResponseMessage> TraceOutgoing(IManagedTracer tracer)
+        {
+            // Add a handler to trace outgoing requests and to propagate the trace header.
+            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
+            using (var httpClient = new HttpClient(traceHeaderHandler))
+            {
+                return await httpClient.GetAsync("https://weather.com/");
+            }
         }
         // End sample
     }

@@ -12,12 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
+using Google.Api.Gax;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// Traces outgoing HTTP requests and propagates the trace header.
@@ -25,9 +25,9 @@ namespace Google.Cloud.Diagnostics.AspNet
     ///
     /// <example>
     /// <code>
-    /// public void DoSomething()
+    /// public void DoSomething(IManagedTracer tracer)
     /// {
-    ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
+    ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
     ///     using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
     ///     {
     ///         ...
@@ -38,15 +38,23 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <remarks>
     /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
     /// traces the total time of the outgoing HTTP request.  This is only done if tracing is initialized
-    /// (See <see cref="CloudTrace.Initialize"/>) and tracing is enabled for the request current request
-    /// (See <see cref="CloudTrace.ShouldTrace"/>).
+    /// and tracing is enabled for the request current request.
     /// </remarks>
     public class TraceHeaderPropagatingHandler : DelegatingHandler
     {
-        private TraceHeaderPropagatingHandler() { }
+        private readonly IManagedTracer _tracer;
 
-        /// <summary>Gets a <see cref="TraceHeaderPropagatingHandler"/>.</summary>
-        public static TraceHeaderPropagatingHandler Create() => new TraceHeaderPropagatingHandler();
+        private TraceHeaderPropagatingHandler(IManagedTracer tracer)
+        {
+            _tracer = GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
+        }
+
+        /// <summary>
+        /// Gets a <see cref="TraceHeaderPropagatingHandler"/>.
+        /// </summary>
+        /// <param name="tracer">The tracer to trace with. Cannot be null.</param>
+        public static TraceHeaderPropagatingHandler Create(IManagedTracer tracer) =>
+            new TraceHeaderPropagatingHandler(tracer);
 
         /// <summary>
         /// Sends the given request.  If tracing is initialized and enabled the outgoing request is
@@ -54,21 +62,19 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// </summary>
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken cancellationToken)
-        { 
-            if (!CloudTrace.ShouldTrace)
+        {
+            if (_tracer.GetCurrentTraceId() == null)
             {
                 return await base.SendAsync(request, cancellationToken);
             }
 
-            var tracer = CloudTrace.CurrentTracer;
-
             var traceHeader = TraceHeaderContext.Create(
-                tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
+                _tracer.GetCurrentTraceId(), _tracer.GetCurrentSpanId() ?? 0, true);
             request.Headers.Add(TraceHeaderContext.TraceHeader, traceHeader.ToString());
-            
-            tracer.StartSpan(request.RequestUri.ToString());
+
+            _tracer.StartSpan(request.RequestUri.ToString());
             var tracedRequest = await base.SendAsync(request, cancellationToken);
-            tracer.EndSpan();
+            _tracer.EndSpan();
 
             return tracedRequest;
         }
