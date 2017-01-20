@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -70,16 +71,16 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             // End sample
         }
 
-        public async Task<HttpResponseMessage> TraceOutgoing()
+        // Sample: TraceOutgoing
+        public async Task<HttpResponseMessage> TraceOutgoing(IManagedTracer tracer)
         {
-            // Sample: TraceOutgoing
             // Add a handler to trace outgoing requests and to propagate the trace header.
-            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
+            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
             using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
             {
                 return await httpClient.GetAsync("https://weather.com/");
             }
-            // End sample
         }
+        // End sample
     }
 }

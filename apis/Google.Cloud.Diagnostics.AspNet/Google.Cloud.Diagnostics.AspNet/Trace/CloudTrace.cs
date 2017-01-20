@@ -84,10 +84,6 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static IManagedTracer CurrentTracer =>
             TracerManager.GetCurrentTracer() ?? DoNothingTracer.Instance;
 
-        /// <summary>True if tracing should occur for the current request.</summary>
-        internal static bool ShouldTrace => TracerManager.GetCurrentTracer() != null;
-
-
         private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
