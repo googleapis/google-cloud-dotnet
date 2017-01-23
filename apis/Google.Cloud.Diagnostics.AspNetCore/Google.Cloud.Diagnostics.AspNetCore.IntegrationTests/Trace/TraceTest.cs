@@ -35,10 +35,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
 {
     public class TraceTest
     {
-        /// <summary>Total time to spend sleeping when looking for error events.</summary>
+        /// <summary>Total time to spend sleeping when looking for traces.</summary>
         private static readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
 
-        /// <summary>Time to sleep between checks for error events.</summary>
+        /// <summary>Time to sleep between checks for traces.</summary>
         private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
 
         /// <summary>Project id to run the test on.</summary>
@@ -157,10 +157,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
         [Fact]
         public async Task Trace_Header()
         {
-            var traceIdFactory = TraceIdFactory.Create();
-            var spanIdFactory = SpanIdFactory.Create();
-            string traceId = traceIdFactory.NextId();
-            ulong spanId = spanIdFactory.NextId();
+            string traceId = TraceIdFactory.Create().NextId();
+            ulong spanId = SpanIdFactory.Create().NextId();
 
             string testId = Utils.GetTestId();           
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
