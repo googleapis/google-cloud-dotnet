@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using System.Collections.Generic;
 using System.Linq;

@@ -14,7 +14,9 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -48,17 +50,48 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             logger.LogInformation("This is a log message.");
         }
         // End sample
-
-        // Sample: TraceOutgoing
-        public async Task<HttpResponseMessage> TraceOutgoing(IManagedTracer tracer)
+        
+        private class Trace
         {
-            // Add a handler to trace outgoing requests and to propagate the trace header.
-            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
-            using (var httpClient = new HttpClient(traceHeaderHandler))
+            // Sample: RegisterGoogleTracer
+            public void ConfigureServices(IServiceCollection services)
             {
-                return await httpClient.GetAsync("https://weather.com/");
+                string projectId = "[Google Cloud Platform project ID]";
+                services.AddGoogleTrace(projectId);
             }
+
+            public void Configure(IApplicationBuilder app)
+            {
+                // Use at the start of the request pipeline to ensure the entire
+                // request is traced.
+                app.UseGoogleTrace();
+            }
+            // End sample
+
+            // Sample: UseTracer 
+            /// <summary>
+            /// The <see cref="IManagedTracer"/> is populated by dependency injection.
+            /// </summary>
+            public void TraceHelloWorld(IManagedTracer tracer)
+            {
+                // Manually trace a specific operation.
+                tracer.StartSpan(nameof(TraceHelloWorld));
+                Console.Out.WriteLine("Hello, World!");
+                tracer.EndSpan();
+            }
+            // End sample
+
+            // Sample: TraceOutgoing
+            public async Task<HttpResponseMessage> TraceOutgoing(IManagedTracer tracer)
+            {
+                // Add a handler to trace outgoing requests and to propagate the trace header.
+                var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
+                using (var httpClient = new HttpClient(traceHeaderHandler))
+                {
+                    return await httpClient.GetAsync("https://weather.com/");
+                }
+            }
+            // End sample
         }
-        // End sample
     }
 }

@@ -3,7 +3,8 @@
 `Google.Cloud.Diagnostics.AspNetCore` is an ASP.NET Core instrumentation library for Google Stackdriver.
 It allows for simple integration of Stackdriver into ASP.NET applications with minimal code changes.
 
-`Google.Cloud.Diagnostics.AspNetCore` currently supports Stackdriver Error Reporting and Stackdriver Logging.
+`Google.Cloud.Diagnostics.AspNetCore` currently supports Stackdriver Error Reporting, Stackdriver Logging
+and Stackdriver Trace.
 
 # Authentication
 
@@ -28,6 +29,14 @@ installed, run the following command in a Google Cloud SDK Shell:
 ## Log
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#UseGoogleLogger)]
+
+## Initializing Tracing
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#RegisterGoogleTracer)]
+
+## Manual Tracing
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#UseTracer)]
 
 ## Trace Outgoing HTTP Requests
 
