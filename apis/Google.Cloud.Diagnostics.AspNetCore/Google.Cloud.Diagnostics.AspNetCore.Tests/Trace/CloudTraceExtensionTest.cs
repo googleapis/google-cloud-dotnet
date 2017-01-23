@@ -96,7 +96,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
         [Fact]
         public void CreateManagedTracer_SimpleTracer()
         {
-            var context = TraceHeaderContext.Create(null, null, false);
+            var context = TraceHeaderContext.Create(null, null, null);
             var mockProvider = CreateProviderForCreateManagedTracer(context, true);
 
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);

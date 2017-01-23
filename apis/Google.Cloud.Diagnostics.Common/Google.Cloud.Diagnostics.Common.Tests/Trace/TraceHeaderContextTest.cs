@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             Assert.Null(context.SpanId);
             Assert.Null(context.TraceId);
-            Assert.False(context.ShouldTrace);
+            Assert.Null(context.ShouldTrace);
         }
 
         [Fact]
@@ -64,7 +64,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
-            Assert.False(context.ShouldTrace);
+            Assert.Null(context.ShouldTrace);
 
         }
 
@@ -75,7 +75,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
-            Assert.False(context.ShouldTrace);
+            Assert.Null(context.ShouldTrace);
         }
 
         [Fact]
@@ -102,6 +102,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var context = TraceHeaderContext.Create(TraceId, SpanId, true);
             Assert.Equal($"{TraceId}/{SpanId};o=1", context.ToString());
+
+            context = TraceHeaderContext.Create(TraceId, SpanId, null);
+            Assert.Equal($"{TraceId}/{SpanId};", context.ToString());
 
             context = TraceHeaderContext.Create(TraceId, SpanId, false);
             Assert.Equal($"{TraceId}/{SpanId};o=0", context.ToString());
