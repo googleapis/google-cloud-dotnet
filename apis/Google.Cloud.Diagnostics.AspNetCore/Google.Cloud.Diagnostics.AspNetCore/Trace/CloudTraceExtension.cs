@@ -158,14 +158,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             GaxPreconditions.CheckState(consumer != null, 
                 string.Format(message, typeof(TraceProto).GetType()));
 
+
+            // TODO(talarico): Update this to allow header to not allow tracing.
             // If the trace header and rate limiter say not to trace, return a no-op tracer.
-            if (!headerContext.ShouldTrace)
+            if (!headerContext.ShouldTrace && !rateLimitingFactory.CreateOptions().ShouldTrace)                
             {
-                TraceOptions options = rateLimitingFactory.CreateOptions();
-                if (!options.ShouldTrace)
-                {
-                    return DoNothingTracer.Instance;
-                }
+                return DoNothingTracer.Instance;
             }
 
             // Create the tracer.
