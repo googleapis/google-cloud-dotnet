@@ -20,7 +20,8 @@
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-beta05",
     "Google.Api.Gax": "1.0.0-beta06",
-    "Google.Cloud.Trace.V1": { "target": "project" }
+    "Google.Cloud.Trace.V1": { "target": "project" },
+    "System.Net.Http": "4.3.0"
   },
 
 
