@@ -146,13 +146,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var traceIdFactory = provider.GetService<TraceIdFactory>();
             var consumer = provider.GetService<IConsumer<TraceProto>>();
 
-            // Check that we have all the needed services.
-            if (headerContext == null || rateLimitingFactory == null ||
-                projectId == null || traceIdFactory == null || consumer == null) {
-                throw new InvalidOperationException("Ensure Google Cloud Trace is properly set up.");
-            }
+            var message = "No {0} service found. Ensure Google Cloud Trace is properly set up.";
+            GaxPreconditions.CheckState(headerContext != null, 
+                string.Format(message, typeof(TraceHeaderContext).GetType()));
+            GaxPreconditions.CheckState(rateLimitingFactory != null,
+                string.Format(message, typeof(RateLimitingTraceOptionsFactory).GetType()));
+            GaxPreconditions.CheckState(projectId != null, 
+                string.Format(message, typeof(ProjectId).GetType()));
+            GaxPreconditions.CheckState(traceIdFactory != null, 
+                string.Format(message, typeof(TraceIdFactory).GetType()));
+            GaxPreconditions.CheckState(consumer != null, 
+                string.Format(message, typeof(TraceProto).GetType()));
 
-            // If the trace header says to trace or if the rate limiter allows tracing continue.
+            // If the trace header and rate limiter say not to trace, return a no-op tracer.
             if (!headerContext.ShouldTrace)
             {
                 TraceOptions options = rateLimitingFactory.CreateOptions();
