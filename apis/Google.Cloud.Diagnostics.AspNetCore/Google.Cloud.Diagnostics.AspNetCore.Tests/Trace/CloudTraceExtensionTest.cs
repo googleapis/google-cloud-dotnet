@@ -27,9 +27,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
 {
     public class CloudTraceExtensionTest
     {
-        private const string ProjectId = "pid";
-        private const string TraceId = "105445aa7843bc8bf206b12000100f00";
-        private const ulong SpanId = 81237123;
+        private const string projectId = "pid";
+        private const string traceId = "105445aa7843bc8bf206b12000100f00";
+        private const ulong spanId = 81237123;
 
         /// <summary>
         /// Creates an <see cref="IServiceProvider"/> with all the needed dependencies to
@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
             Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
 
             mockProvider.Setup(p => p.GetService(typeof(TraceHeaderContext))).Returns(context);
-            mockProvider.Setup(p => p.GetService(typeof(ProjectId))).Returns(new ProjectId { Id = ProjectId });
+            mockProvider.Setup(p => p.GetService(typeof(ProjectId))).Returns(new ProjectId { Id = projectId });
             mockProvider.Setup(p => p.GetService(typeof(TraceIdFactory))).Returns(TraceIdFactory.Create());
             mockProvider.Setup(p => p.GetService(typeof(IConsumer<TraceProto>))).Returns(mockConsumer.Object);
 
@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
         [Fact]
         public void CreateTraceHeaderContext()
         {
-            string header = $"{TraceId}/{SpanId};o=1";
+            string header = $"{traceId}/{spanId};o=1";
 
             var context = new DefaultHttpContext();
             var request = new DefaultHttpRequest(context);
@@ -108,13 +108,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
         [Fact]
         public void CreateManagedTracer_SimpleTracer_FromHeaderContext()
         {
-            var context = TraceHeaderContext.Create(TraceId, SpanId, true);
+            var context = TraceHeaderContext.Create(traceId, spanId, true);
             var mockProvider = CreateProviderForCreateManagedTracer(context, true);
 
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
             Assert.IsType(typeof(SimpleManagedTracer), tracer);
-            Assert.Equal(tracer.GetCurrentTraceId(), TraceId);
-            Assert.Equal(tracer.GetCurrentSpanId(), SpanId);
+            Assert.Equal(tracer.GetCurrentTraceId(), traceId);
+            Assert.Equal(tracer.GetCurrentSpanId(), spanId);
         }
     }
 }

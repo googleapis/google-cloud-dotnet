@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// and trace the time taken for the next delegate to run.  The time taken and metadata
     /// will be sent to the Stackdriver Trace API.
     /// </summary>
-    public sealed class CloudTraceMiddleware
+    internal sealed class CloudTraceMiddleware
     {
         private readonly RequestDelegate _next;
 
