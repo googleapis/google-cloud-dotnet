@@ -17,6 +17,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -29,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             string projectId = "[Google Cloud Platform project ID]";
             string serviceName = "[Name of service]";
             string version = "[Version of service]";
-            app.ReportExceptionsToGoogle(projectId, serviceName, version);
+            app.UseGoogleExceptionLogging(projectId, serviceName, version);
         }
         // End sample
         
@@ -48,7 +50,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             logger.LogInformation("This is a log message.");
         }
         // End sample
-
         
         private class Trace
         {
@@ -79,7 +80,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 tracer.EndSpan();
             }
             // End sample
-        }
 
+            // Sample: TraceOutgoing
+            public async Task<HttpResponseMessage> TraceOutgoing(IManagedTracer tracer)
+            {
+                // Add a handler to trace outgoing requests and to propagate the trace header.
+                var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
+                using (var httpClient = new HttpClient(traceHeaderHandler))
+                {
+                    return await httpClient.GetAsync("https://weather.com/");
+                }
+            }
+            // End sample
+        }
     }
 }

@@ -16,7 +16,6 @@ using Google.Api.Gax;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
 using LabelsCommon = Google.Cloud.Diagnostics.Common.Labels;
@@ -38,7 +37,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Gets a map of labels for a span from an <see cref="HttpContext"/>, such as request size,
         /// method, status code, ect.
         /// </summary>
-        public static Dictionary<string, string> FromHttpContext(HttpContext httpContext)
+        internal static Dictionary<string, string> FromHttpContext(HttpContext httpContext)
         {
             GaxPreconditions.CheckNotNull(httpContext, nameof(httpContext));
             var requestHeaders = FromDefaultHttpRequest(new DefaultHttpRequest(httpContext));
@@ -65,11 +64,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 { LabelsCommon.HttpStatusCode, response.StatusCode.ToString() }
             };
         }
-
-        /// <summary>
-        /// Creates a map of labels to represent a <see cref="StackTrace"/> for a span.
-        /// </summary>
-        public static Dictionary<string, string> FromStackTrace(StackTrace stackTrace) =>
-            LabelsCommon.FromStackTrace(stackTrace);
     }
 }
