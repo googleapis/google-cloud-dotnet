@@ -474,6 +474,28 @@ namespace Google.Cloud.Monitoring.V3
 
     }
 
+    public partial class Group
+    {
+        /// <summary>
+        /// A <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public GroupName GroupName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// A <see cref="GroupName"/>-typed view over the <see cref="ParentName"/> resource name property.
+        /// </summary>
+        public GroupName ParentNameAsGroupName
+        {
+            get { return string.IsNullOrEmpty(ParentName) ? null : Google.Cloud.Monitoring.V3.GroupName.Parse(ParentName); }
+            set { ParentName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class ListGroupMembersRequest
     {
         /// <summary>

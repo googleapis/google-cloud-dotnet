@@ -205,6 +205,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
 
     }
 
+    public partial class ErrorGroup
+    {
+        /// <summary>
+        /// A <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public GroupName GroupName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.ErrorReporting.V1Beta1.GroupName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class GetGroupRequest
     {
         /// <summary>
