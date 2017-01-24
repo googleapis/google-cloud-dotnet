@@ -23,7 +23,7 @@ namespace Google.Cloud.Vision.V1.Snippets
         {
             // Sample: FactoryMethods
             Image image1 = Image.FromFile("Pictures/LocalImage.jpg");
-            Image image2 = Image.FromUri("https://cloud.google.com/images/devtools-icon-64x64.png");
+            Image image2 = Image.FetchFromUri("https://cloud.google.com/images/devtools-icon-64x64.png");
             Image image3 = Image.FromStorageUri("gs://my-bucket/my-file");
 
             byte[] bytes = ReadImageData(); // For example, from a database
