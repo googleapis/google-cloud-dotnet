@@ -97,9 +97,9 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     writer.WriteStartObject();
                     writer.WritePropertyName("class_name");
-                    writer.WriteValue(stackFrame.GetMethod().DeclaringType.Name);
+                    writer.WriteValue(stackFrame.GetMethod()?.DeclaringType?.Name);
                     writer.WritePropertyName("method_name");
-                    writer.WriteValue(stackFrame.GetMethod().Name);
+                    writer.WriteValue(stackFrame.GetMethod()?.Name);
 
                     if (stackFrame.GetFileName() != null)
                     {

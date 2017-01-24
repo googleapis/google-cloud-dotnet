@@ -14,7 +14,6 @@
 
 using Moq;
 using System.Diagnostics;
-using System.IO;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using Xunit;
@@ -27,24 +26,15 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void FromStackTrace()
         {
             var frameRequest = new Mock<StackFrame>("compare_file", 22);
-            var methodBaseRequest = new Mock<MethodBase>();
-            methodBaseRequest.Setup(m => m.DeclaringType).Returns(typeof(FakeClass));
-            methodBaseRequest.Setup(m => m.Name).Returns("SpecialMethod");
-            frameRequest.Setup(r => r.GetMethod()).Returns(methodBaseRequest.Object);
+            frameRequest.Setup(r => r.GetMethod()).Returns(typeof(FakeClass).GetMethod("SpecialMethod"));
             frameRequest.CallBase = true;
 
             var frameResponse = new Mock<StackFrame>();
-            var methodBaseResponse = new Mock<MethodBase>();
-            methodBaseResponse.Setup(m => m.DeclaringType).Returns(typeof(FakeClass));
-            methodBaseResponse.Setup(m => m.Name).Returns("UniqueMethod");
-            frameResponse.Setup(r => r.GetMethod()).Returns(methodBaseResponse.Object);
+            frameResponse.Setup(r => r.GetMethod()).Returns(typeof(FakeClass).GetMethod("UniqueMethod"));
             frameResponse.CallBase = true;
 
             var frameStack = new Mock<StackFrame>("concat_file", 33);
-            var methodBaseStack = new Mock<MethodBase>();
-            methodBaseStack.Setup(m => m.DeclaringType).Returns(typeof(FakeClass));
-            methodBaseStack.Setup(m => m.Name).Returns("ThisIsAMethod");
-            frameStack.Setup(s => s.GetMethod()).Returns(methodBaseStack.Object);
+            frameStack.Setup(s => s.GetMethod()).Returns(typeof(FakeClass).GetMethod("ThisIsAMethod"));
             frameStack.CallBase = true;
 
             var stackTraceMock = new Mock<StackTrace>();
@@ -95,11 +85,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// <summary>
         /// A simple fake class to test stack traces on.
         /// </summary>
-        private class FakeClass
+        public class FakeClass
         {
-            void SpecialMethod() { }
-            void UniqueMethod() { }
-            void ThisIsAMethod() { }
+            public void SpecialMethod() { }
+            public void UniqueMethod() { }
+            public void ThisIsAMethod() { }
         }
     }
 }

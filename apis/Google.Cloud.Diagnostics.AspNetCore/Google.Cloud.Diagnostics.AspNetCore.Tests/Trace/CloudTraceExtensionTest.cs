@@ -63,6 +63,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
             var context = new DefaultHttpContext();
             var request = new DefaultHttpRequest(context);
             request.Headers[TraceHeaderContext.TraceHeader] = header;
+
             var accessor = new HttpContextAccessor();
             accessor.HttpContext = context;
             
