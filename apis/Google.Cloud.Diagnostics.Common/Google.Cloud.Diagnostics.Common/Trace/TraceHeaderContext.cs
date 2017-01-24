@@ -108,8 +108,7 @@ namespace Google.Cloud.Diagnostics.Common
             var header = $"{TraceId}/{SpanId};";
             if (ShouldTrace != null)
             {
-                var traceMask = (bool)ShouldTrace ? 1 : 0;
-                header += $"o={traceMask}";
+                header += ShouldTrace.Value ? "o=1" : "o=0";
             }
             return header;
         }

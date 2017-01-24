@@ -160,7 +160,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
 
             // If the trace header and rate limiter say not to trace, return a no-op tracer.
-            if (headerContext.ShouldTrace != true || !rateLimitingFactory.CreateOptions().ShouldTrace)                
+            if (headerContext.ShouldTrace == false || (headerContext.ShouldTrace == null && 
+                !rateLimitingFactory.CreateOptions().ShouldTrace))                
             {
                 return DoNothingTracer.Instance;
             }
