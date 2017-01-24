@@ -567,6 +567,49 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task StreamingPull()
+        {
+            // Snippet: StreamingPull(CallSettings,BidirectionalStreamingSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            SubscriberClient.StreamingPullStream duplexStream = subscriberClient.StreamingPull();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved.
+            // Exact sequence will depend on client/server behavior.
+
+            // Create task to do something with responses from server
+            Task.Run(async () =>
+            {
+                IAsyncEnumerator<StreamingPullResponse> responseStream = duplexStream.ResponseStream;
+                while (await responseStream.MoveNext())
+                {
+                    StreamingPullResponse response = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                StreamingPullRequest request = new StreamingPullRequest
+                {
+                    SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
+                    StreamAckDeadlineSeconds = 0,
+                };
+                // Stream a request to the server
+                await duplexStream.WriteAsync(request);
+
+                // Set "done" to true when sending requests is complete
+            }
+            // Complete writing requests to the stream
+            await duplexStream.WriteCompleteAsync();
+            // End snippet
+        }
+
         public async Task ModifyPushConfigAsync()
         {
             // Snippet: ModifyPushConfigAsync(SubscriptionName,PushConfig,CallSettings)
