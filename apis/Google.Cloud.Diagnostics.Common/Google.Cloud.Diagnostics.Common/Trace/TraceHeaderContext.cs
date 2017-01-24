@@ -51,7 +51,7 @@ namespace Google.Cloud.Diagnostics.Common
         public ulong? SpanId { get; }
 
         /// <summary>
-        /// True if the request should be traced.
+        /// True if the request should be traced, false if it should not be.
         /// Null if the trace header did not indicate whether or not it should be traced.
         /// </summary>
         public bool? ShouldTrace { get; }
