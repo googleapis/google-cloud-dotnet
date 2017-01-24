@@ -56,6 +56,8 @@ namespace Google.Cloud.PubSub.V1
             ModifyAckDeadlineSettings = existing.ModifyAckDeadlineSettings;
             AcknowledgeSettings = existing.AcknowledgeSettings;
             PullSettings = existing.PullSettings;
+            StreamingPullSettings = existing.StreamingPullSettings;
+            StreamingPullStreamingSettings = existing.StreamingPullStreamingSettings;
             ModifyPushConfigSettings = existing.ModifyPushConfigSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
@@ -372,6 +374,25 @@ namespace Google.Cloud.PubSub.V1
                 totalExpiration: Expiration.FromTimeout(TimeSpan.FromMilliseconds(600000)),
                 retryFilter: NonIdempotentRetryFilter
             )));
+
+        /// <summary>
+        /// <see cref="CallSettings"/> for calls to <c>SubscriberClient.StreamingPull</c>.
+        /// </summary>
+        /// <remarks>
+        /// Default RPC expiration is 600000 milliseconds.
+        /// </remarks>
+        public CallSettings StreamingPullSettings { get; set; } = CallSettings.FromCallTiming(
+            CallTiming.FromTimeout(TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="BidirectionalStreamingSettings"/> for calls to
+        /// <c>SubscriberClient.StreamingPull</c>.
+        /// </summary>
+        /// <remarks>
+        /// The default local send queue size is 100.
+        /// </remarks>
+        public BidirectionalStreamingSettings StreamingPullStreamingSettings { get; set; } =
+            new BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// <see cref="CallSettings"/> for synchronous and asynchronous calls to
@@ -1674,6 +1695,43 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
+        /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+        /// respond with UNIMPLEMENTED errors unless you have been invited to test
+        /// this feature. Contact cloud-pubsub@google.com with any questions.
+        ///
+        /// Establishes a stream with the server, which sends messages down to the
+        /// client. The client streams acknowledgements and ack deadline modifications
+        /// back to the server. The server will close the stream and return the status
+        /// on any error. The server may close the stream with status `OK` to reassign
+        /// server-side resources, in which case, the client should re-establish the
+        /// stream. `UNAVAILABLE` may also be returned in the case of a transient error
+        /// (e.g., a server restart). These should also be retried by the client. Flow
+        /// control can be achieved by configuring the underlying RPC channel.
+        /// </summary>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <param name="streamingSettings">
+        /// If not null, applies streaming overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The client-server stream.
+        /// </returns>
+        public virtual StreamingPullStream StreamingPull(
+            CallSettings callSettings = null,
+            BidirectionalStreamingSettings streamingSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Bidirectional streaming methods for <c>StreamingPull</c>.
+        /// </summary>
+        public abstract class StreamingPullStream : BidirectionalStreamingBase<StreamingPullRequest, StreamingPullResponse>
+        {
+        }
+
+        /// <summary>
         /// Modifies the `PushConfig` for a specified subscription.
         ///
         /// This may be used to change a push subscription to a pull one (signified by
@@ -2229,6 +2287,7 @@ namespace Google.Cloud.PubSub.V1
         private readonly ApiCall<ModifyAckDeadlineRequest, Empty> _callModifyAckDeadline;
         private readonly ApiCall<AcknowledgeRequest, Empty> _callAcknowledge;
         private readonly ApiCall<PullRequest, PullResponse> _callPull;
+        private readonly ApiBidirectionalStreamingCall<StreamingPullRequest, StreamingPullResponse> _callStreamingPull;
         private readonly ApiCall<ModifyPushConfigRequest, Empty> _callModifyPushConfig;
         private readonly ApiCall<SetIamPolicyRequest, Policy> _callSetIamPolicy;
         private readonly ApiCall<GetIamPolicyRequest, Policy> _callGetIamPolicy;
@@ -2259,6 +2318,8 @@ namespace Google.Cloud.PubSub.V1
                 GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge, effectiveSettings.AcknowledgeSettings);
             _callPull = _clientHelper.BuildApiCall<PullRequest, PullResponse>(
                 GrpcClient.PullAsync, GrpcClient.Pull, effectiveSettings.PullSettings);
+            _callStreamingPull = _clientHelper.BuildApiCall<StreamingPullRequest, StreamingPullResponse>(
+                GrpcClient.StreamingPull, effectiveSettings.StreamingPullSettings, effectiveSettings.StreamingPullStreamingSettings);
             _callModifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(
                 GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings);
             _callSetIamPolicy = _clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
@@ -2282,6 +2343,8 @@ namespace Google.Cloud.PubSub.V1
         partial void Modify_ModifyAckDeadlineRequest(ref ModifyAckDeadlineRequest request, ref CallSettings settings);
         partial void Modify_AcknowledgeRequest(ref AcknowledgeRequest request, ref CallSettings settings);
         partial void Modify_PullRequest(ref PullRequest request, ref CallSettings settings);
+        partial void Modify_StreamingPullRequestCallSettings(ref CallSettings settings);
+        partial void Modify_StreamingPullRequestRequest(ref StreamingPullRequest request);
         partial void Modify_ModifyPushConfigRequest(ref ModifyPushConfigRequest request, ref CallSettings settings);
         partial void Modify_SetIamPolicyRequest(ref SetIamPolicyRequest request, ref CallSettings settings);
         partial void Modify_GetIamPolicyRequest(ref GetIamPolicyRequest request, ref CallSettings settings);
@@ -2617,6 +2680,107 @@ namespace Google.Cloud.PubSub.V1
         {
             Modify_PullRequest(ref request, ref callSettings);
             return _callPull.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// (EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+        /// respond with UNIMPLEMENTED errors unless you have been invited to test
+        /// this feature. Contact cloud-pubsub@google.com with any questions.
+        ///
+        /// Establishes a stream with the server, which sends messages down to the
+        /// client. The client streams acknowledgements and ack deadline modifications
+        /// back to the server. The server will close the stream and return the status
+        /// on any error. The server may close the stream with status `OK` to reassign
+        /// server-side resources, in which case, the client should re-establish the
+        /// stream. `UNAVAILABLE` may also be returned in the case of a transient error
+        /// (e.g., a server restart). These should also be retried by the client. Flow
+        /// control can be achieved by configuring the underlying RPC channel.
+        /// </summary>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <param name="streamingSettings">
+        /// If not null, applies streaming overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The client-server stream.
+        /// </returns>
+        public override StreamingPullStream StreamingPull(
+            CallSettings callSettings = null,
+            BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_StreamingPullRequestCallSettings(ref callSettings);
+            BidirectionalStreamingSettings effectiveStreamingSettings =
+                streamingSettings ?? _callStreamingPull.StreamingSettings;
+            AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> call =
+                _callStreamingPull.Call(callSettings);
+            BufferedClientStreamWriter<StreamingPullRequest> writeBuffer =
+                new BufferedClientStreamWriter<StreamingPullRequest>(
+                    call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new StreamingPullStreamImpl(this, call, writeBuffer);
+        }
+
+        /// <summary>
+        /// Bidirectional streaming methods for <c>StreamingPull</c>.
+        /// </summary>
+        public sealed class StreamingPullStreamImpl : StreamingPullStream
+        {
+            /// <summary>
+            /// Construct the bidirectional streaming method for <c>StreamingPull</c>.
+            /// </summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">The <see cref="BufferedClientStreamWriter{StreamingPullRequest}"/>
+            /// instance associated with this streaming call.</param>
+            public StreamingPullStreamImpl(
+                SubscriberClientImpl service,
+                AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> call,
+                BufferedClientStreamWriter<StreamingPullRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private SubscriberClientImpl _service;
+            private BufferedClientStreamWriter<StreamingPullRequest> _writeBuffer;
+
+            private StreamingPullRequest ModifyRequest(StreamingPullRequest request)
+            {
+                _service.Modify_StreamingPullRequestRequest(ref request);
+                return request;
+            }
+
+            /// <inheritdoc/>
+            public override AsyncDuplexStreamingCall<StreamingPullRequest,StreamingPullResponse> GrpcCall { get; }
+
+            /// <inheritdoc/>
+            public override Task TryWriteAsync(StreamingPullRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            /// <inheritdoc/>
+            public override Task WriteAsync(StreamingPullRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            /// <inheritdoc/>
+            public override Task TryWriteAsync(StreamingPullRequest message, WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            /// <inheritdoc/>
+            public override Task WriteAsync(StreamingPullRequest message, WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            /// <inheritdoc/>
+            public override Task TryWriteCompleteAsync() =>
+                _writeBuffer.TryWriteCompleteAsync();
+
+            /// <inheritdoc/>
+            public override Task WriteCompleteAsync() =>
+                _writeBuffer.WriteCompleteAsync();
+
+            /// <inheritdoc/>
+            public override IAsyncEnumerator<StreamingPullResponse> ResponseStream =>
+                GrpcCall.ResponseStream;
         }
 
         /// <summary>
