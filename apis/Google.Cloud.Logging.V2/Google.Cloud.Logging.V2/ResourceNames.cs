@@ -2248,6 +2248,19 @@ namespace Google.Cloud.Logging.V2
 
     }
 
+    public partial class LogEntry
+    {
+        /// <summary>
+        /// A <see cref="LogNameOneof"/>-typed view over the <see cref="LogName"/> resource name property.
+        /// </summary>
+        public LogNameOneof LogNameAsLogNameOneof
+        {
+            get { return string.IsNullOrEmpty(LogName) ? null : Google.Cloud.Logging.V2.LogNameOneof.Parse(LogName, true); }
+            set { LogName = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class LogSink
     {
         /// <summary>

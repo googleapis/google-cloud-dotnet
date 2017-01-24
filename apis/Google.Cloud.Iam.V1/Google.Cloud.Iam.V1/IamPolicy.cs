@@ -38,9 +38,10 @@ namespace Google.Cloud.Iam.V1 {
             "bVBvbGljeToBKhKaAQoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlh",
             "bS52MS5UZXN0SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52",
             "MS5UZXN0SWFtUGVybWlzc2lvbnNSZXNwb25zZSIvgtPkkwIpIiQvdjEve3Jl",
-            "c291cmNlPSoqfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpCPgoRY29tLmdvb2ds",
-            "ZS5pYW0udjFCDklhbVBvbGljeVByb3RvUAH4AQGqAhNHb29nbGUuQ2xvdWQu",
-            "SWFtLlYxYgZwcm90bzM="));
+            "c291cmNlPSoqfTp0ZXN0SWFtUGVybWlzc2lvbnM6ASpCcAoRY29tLmdvb2ds",
+            "ZS5pYW0udjFCDklhbVBvbGljeVByb3RvUAFaMGdvb2dsZS5nb2xhbmcub3Jn",
+            "L2dlbnByb3RvL2dvb2dsZWFwaXMvaWFtL3YxO2lhbfgBAaoCE0dvb2dsZS5D",
+            "bG91ZC5JYW0uVjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
