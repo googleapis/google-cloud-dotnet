@@ -30,7 +30,7 @@ namespace Google.Cloud.Diagnostics.Common
     {
         /// <summary>An TraceHeaderContext representing no information or invalid information from a header.</summary>
         private static readonly TraceHeaderContext InvalidTraceHeaderContext =
-            new TraceHeaderContext(null, null, false);
+            new TraceHeaderContext(null, null, null);
 
         /// <summary>The trace header.</summary>
         internal const string TraceHeader = "X-Cloud-Trace-Context";
@@ -50,13 +50,16 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>Gets the span id or null if none is available.</summary>
         public ulong? SpanId { get; }
 
-        /// <summary>True if the request should be traced.</summary>
-        public bool ShouldTrace { get; }
+        /// <summary>
+        /// True if the request should be traced, false if it should not be.
+        /// Null if the trace header does not indicate whether or not it should be traced.
+        /// </summary>
+        public bool? ShouldTrace { get; }
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderContext"/> from a trace and span id.
         /// </summary>
-        public static TraceHeaderContext Create(string traceId, ulong? spanId, bool shouldTrace) =>
+        public static TraceHeaderContext Create(string traceId, ulong? spanId, bool? shouldTrace) =>
             new TraceHeaderContext(traceId, spanId, shouldTrace);
 
         /// <summary>
@@ -84,12 +87,11 @@ namespace Google.Cloud.Diagnostics.Common
                 return InvalidTraceHeaderContext;
             }
             bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
-            int traceMask = hasMask ? Convert.ToInt32(match.Groups[4].Value) : 0;
-            bool shouldTrace = traceMask > 0;
+            bool? shouldTrace = hasMask ? Convert.ToInt32(match.Groups[4].Value) > 0 : (bool?) null;
             return new TraceHeaderContext(traceId, spanId, shouldTrace);
         }
 
-        internal TraceHeaderContext(string traceId, ulong? spanId, bool shouldTrace)
+        internal TraceHeaderContext(string traceId, ulong? spanId, bool? shouldTrace)
         {
             TraceId = traceId;
             SpanId = spanId;
@@ -103,8 +105,12 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         public override string ToString()
         {
-            var traceMask = ShouldTrace ? 1 : 0;
-            return $"{TraceId}/{SpanId};o={traceMask}";
+            var header = $"{TraceId}/{SpanId};";
+            if (ShouldTrace != null)
+            {
+                header += ShouldTrace.Value ? "o=1" : "o=0";
+            }
+            return header;
         }
     }
 }

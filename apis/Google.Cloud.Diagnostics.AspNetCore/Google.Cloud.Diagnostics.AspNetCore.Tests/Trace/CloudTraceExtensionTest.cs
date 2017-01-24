@@ -74,30 +74,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
         }
 
         [Fact]
-        public void CreateTraceHeaderContext_NoHeader()
-        {
-            Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
-            mockProvider.Setup(p => p.GetService(typeof(HttpContext))).Returns(null);
-
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(mockProvider.Object);
-            Assert.Equal(TraceHeaderContext.FromHeader(null), headerContext);
-        }
-
-        [Fact]
-        public void CreateManagedTracer_DoNothingTracer()
+        public void CreateManagedTracer_FalseHeaderTrueRateLimiter()
         {
             var context = TraceHeaderContext.Create(null, null, false);
-            var mockProvider = CreateProviderForCreateManagedTracer(context, false);
+            var mockProvider = CreateProviderForCreateManagedTracer(
+                context, rateLimiterShouldTrace: true);
 
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
             Assert.IsType(typeof(DoNothingTracer), tracer);
         }
 
         [Fact]
-        public void CreateManagedTracer_SimpleTracer()
+        public void CreateManagedTracer_NoHeaderTrueRateLimiter()
         {
-            var context = TraceHeaderContext.Create(null, null, false);
-            var mockProvider = CreateProviderForCreateManagedTracer(context, true);
+            var context = TraceHeaderContext.Create(null, null, null);
+            var mockProvider = CreateProviderForCreateManagedTracer(context,
+                rateLimiterShouldTrace: true);
 
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
             Assert.IsType(typeof(SimpleManagedTracer), tracer);
@@ -106,10 +98,46 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
         }
 
         [Fact]
-        public void CreateManagedTracer_SimpleTracer_FromHeaderContext()
+        public void CreateManagedTracer_TrueHeaderTrueRateLimiter()
         {
             var context = TraceHeaderContext.Create(TraceId, SpanId, true);
-            var mockProvider = CreateProviderForCreateManagedTracer(context, true);
+            var mockProvider = CreateProviderForCreateManagedTracer(context, 
+                rateLimiterShouldTrace: true);
+
+            var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
+            Assert.IsType(typeof(SimpleManagedTracer), tracer);
+            Assert.Equal(tracer.GetCurrentTraceId(), TraceId);
+            Assert.Equal(tracer.GetCurrentSpanId(), SpanId);
+        }
+
+        [Fact]
+        public void CreateManagedTracer_FalseHeaderFalseRateLimiter()
+        {
+            var context = TraceHeaderContext.Create(null, null, false);
+            var mockProvider = CreateProviderForCreateManagedTracer(
+                context, rateLimiterShouldTrace: false);
+
+            var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
+            Assert.IsType(typeof(DoNothingTracer), tracer);
+        }
+
+        [Fact]
+        public void CreateManagedTracer_NoHeaderFalseRateLimiter()
+        {
+            var context = TraceHeaderContext.Create(null, null, null);
+            var mockProvider = CreateProviderForCreateManagedTracer(context,
+                rateLimiterShouldTrace: false);
+
+            var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
+            Assert.IsType(typeof(DoNothingTracer), tracer);
+        }
+
+        [Fact]
+        public void CreateManagedTracer_TrueHeaderFalseRateLimiter()
+        {
+            var context = TraceHeaderContext.Create(TraceId, SpanId, true);
+            var mockProvider = CreateProviderForCreateManagedTracer(context,
+                rateLimiterShouldTrace: false);
 
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
             Assert.IsType(typeof(SimpleManagedTracer), tracer);

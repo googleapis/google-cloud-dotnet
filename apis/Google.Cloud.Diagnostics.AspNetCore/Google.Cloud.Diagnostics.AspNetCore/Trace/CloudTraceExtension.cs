@@ -159,9 +159,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 string.Format(message, typeof(TraceProto).GetType()));
 
 
-            // TODO(talarico): Update this to allow header to not allow tracing.
             // If the trace header and rate limiter say not to trace, return a no-op tracer.
-            if (!headerContext.ShouldTrace && !rateLimitingFactory.CreateOptions().ShouldTrace)                
+            if (headerContext.ShouldTrace == false || (headerContext.ShouldTrace == null && 
+                !rateLimitingFactory.CreateOptions().ShouldTrace))                
             {
                 return DoNothingTracer.Instance;
             }

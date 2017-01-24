@@ -78,7 +78,6 @@ namespace Google.Cloud.Diagnostics.AspNet
         private readonly TraceIdFactory _traceIdfactory;
         private readonly IConsumer<TraceProto> _consumer;
         private readonly RateLimitingTraceOptionsFactory _rateFactory;
-        private readonly TraceHeaderTraceOptionsFactory _headerFactory;
 
         /// <summary>Gets the current <see cref="IManagedTracer"/> for the given request.</summary>
         public static IManagedTracer CurrentTracer =>
@@ -96,7 +95,6 @@ namespace Google.Cloud.Diagnostics.AspNet
             _consumer = ConsumerFactory<TraceProto>.GetConsumer(
                 new GrpcTraceConsumer(client), TraceSizer.Instance, config.BufferOptions);
             _rateFactory = RateLimitingTraceOptionsFactory.Create(config);
-            _headerFactory = TraceHeaderTraceOptionsFactory.Create();
         }
 
         /// <summary>
@@ -119,16 +117,11 @@ namespace Google.Cloud.Diagnostics.AspNet
         private void BeginRequest(object sender, EventArgs e)
         {
             TraceHeaderContext headerContext = TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request);
-            TraceOptions headerOptions = _headerFactory.CreateOptions(headerContext);
-
             // If the trace header says to trace or if the rate limiter allows tracing continue.
-            if (!headerOptions.ShouldTrace)
+            if (headerContext.ShouldTrace == false || (headerContext.ShouldTrace == null &&
+                !_rateFactory.CreateOptions().ShouldTrace))
             {
-                TraceOptions options = _rateFactory.CreateOptions();
-                if (!options.ShouldTrace)
-                {
-                    return;
-                }
+                return;
             }
 
             // Create and set the tracer for the request.
