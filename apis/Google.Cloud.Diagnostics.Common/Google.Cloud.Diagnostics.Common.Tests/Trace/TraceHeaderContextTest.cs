@@ -75,7 +75,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             Assert.True(SpanId == context.SpanId);
             Assert.Equal(TraceId, context.TraceId);
-            Assert.Null(context.ShouldTrace);
+            Assert.False(context.ShouldTrace);
         }
 
         [Fact]
