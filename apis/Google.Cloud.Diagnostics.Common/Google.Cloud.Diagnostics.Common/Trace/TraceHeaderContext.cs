@@ -50,7 +50,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>Gets the span id or null if none is available.</summary>
         public ulong? SpanId { get; }
 
-        /// <summary>True if the request should be traced or null if it is not available.</summary>
+        /// <summary>
+        /// True if the request should be traced.
+        /// Null if the trace header did not indicate whether or not it should be traced.
+        /// </summary>
         public bool? ShouldTrace { get; }
 
         /// <summary>

@@ -118,7 +118,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         {
             TraceHeaderContext headerContext = TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request);
             // If the trace header says to trace or if the rate limiter allows tracing continue.
-            if (!headerContext.ShouldTrace ?? false || !_rateFactory.CreateOptions().ShouldTrace)
+            if (headerContext.ShouldTrace != true || !_rateFactory.CreateOptions().ShouldTrace)
             {
                 return;
             }
