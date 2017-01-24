@@ -52,7 +52,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// True if the request should be traced, false if it should not be.
-        /// Null if the trace header did not indicate whether or not it should be traced.
+        /// Null if the trace header does not indicate whether or not it should be traced.
         /// </summary>
         public bool? ShouldTrace { get; }
 
