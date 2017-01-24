@@ -23,7 +23,7 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
         {
             // Sample: FactoryMethods
             RecognitionAudio audio1 = RecognitionAudio.FromFile("Sound/SpeechSample.flac");
-            RecognitionAudio audio2 = RecognitionAudio.FromUri("https://.../HostedSpeech.flac");
+            RecognitionAudio audio2 = RecognitionAudio.FetchFromUri("https://.../HostedSpeech.flac");
             RecognitionAudio audio3 = RecognitionAudio.FromStorageUri("gs://my-bucket/my-file");
 
             byte[] bytes = ReadAudioData(); // For example, from a database

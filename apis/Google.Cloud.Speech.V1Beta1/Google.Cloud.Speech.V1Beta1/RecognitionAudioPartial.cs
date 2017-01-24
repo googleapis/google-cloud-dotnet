@@ -23,6 +23,8 @@ namespace Google.Cloud.Speech.V1Beta1
 {
     public partial class RecognitionAudio
     {
+        private static readonly HttpClient s_defaultHttpClient = new HttpClient();
+
         /// <summary>
         /// Constructs a <see cref="RecognitionAudio"/> with a <see cref="Uri"/> property referring to a Google Cloud
         /// Storage URI.
@@ -40,30 +42,30 @@ namespace Google.Cloud.Speech.V1Beta1
         /// Asynchronously constructs a <see cref="RecognitionAudio"/> by downloading data from the given URI.
         /// </summary>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
+        /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
+        /// <c>null</c> to use a default client.</param>
         /// <returns>A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</returns>
-        public async static Task<RecognitionAudio> FromUriAsync(Uri uri)
+        public async static Task<RecognitionAudio> FetchFromUriAsync(Uri uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
-            using (var client = new HttpClient())
-            {
-                var bytes = await client.GetByteArrayAsync(uri).ConfigureAwait(false);
-                return FromBytes(bytes);
-            }
+            httpClient = httpClient ?? s_defaultHttpClient;
+            var bytes = await httpClient.GetByteArrayAsync(uri).ConfigureAwait(false);
+            return FromBytes(bytes);
         }
 
         /// <summary>
         /// Asynchronously constructs a <see cref="RecognitionAudio"/> by downloading data from the given URI.
         /// </summary>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
+        /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
+        /// <c>null</c> to use a default client.</param>
         /// <returns>A task representing the asynchronous operation. The result will be the newly created RecognitionAudio.</returns>
-        public async static Task<RecognitionAudio> FromUriAsync(string uri)
+        public async static Task<RecognitionAudio> FetchFromUriAsync(string uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
-            using (var client = new HttpClient())
-            {
-                var bytes = await client.GetByteArrayAsync(uri).ConfigureAwait(false);
-                return FromBytes(bytes);
-            }
+            httpClient = httpClient ?? s_defaultHttpClient;
+            var bytes = await httpClient.GetByteArrayAsync(uri).ConfigureAwait(false);
+            return FromBytes(bytes);
         }
 
         // TODO: Find better synchronous HTTP fetching?
@@ -72,22 +74,28 @@ namespace Google.Cloud.Speech.V1Beta1
         /// Constructs a <see cref="RecognitionAudio"/> by downloading data from the given URI.
         /// </summary>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
+        /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
+        /// <c>null</c> to use a default client.</param>
         /// <returns>The newly created RecognitionAudio.</returns>
-        public static RecognitionAudio FromUri(string uri)
+        public static RecognitionAudio FetchFromUri(string uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
-            return Task.Run(() => FromUriAsync(uri)).Result;
+            // TODO: Use ResultWithUnwrappedExceptions when it's public in GAX.
+            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).Result;
         }
 
         /// <summary>
         /// Constructs a <see cref="RecognitionAudio"/> by downloading data from the given URI.
         /// </summary>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
+        /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
+        /// <c>null</c> to use a default client.</param>
         /// <returns>The newly created RecognitionAudio.</returns>
-        public static RecognitionAudio FromUri(Uri uri)
+        public static RecognitionAudio FetchFromUri(Uri uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
-            return Task.Run(() => FromUriAsync(uri)).Result;
+            // TODO: Use ResultWithUnwrappedExceptions when it's public in GAX.
+            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).Result;
         }
 
         /// <summary>
