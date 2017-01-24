@@ -6,7 +6,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Testing": "1.0.0-beta06",
+    "Google.Api.Gax.Testing": "1.0.0-beta07",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Cloud.Diagnostics.AspNet": { "target": "project" },
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
