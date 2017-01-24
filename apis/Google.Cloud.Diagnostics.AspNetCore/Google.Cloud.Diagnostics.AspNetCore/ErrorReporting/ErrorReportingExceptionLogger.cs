@@ -119,6 +119,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             var errorEvent = CreateReportRequest(context, exception);
             var client = await _clientTask;
+            var temp = errorEvent.ToJsonString();
             return await client.ReportErrorEventAsync(_projectName, errorEvent);
         }
 
@@ -129,6 +130,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public ReportErrorEventResponse Log(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
+            var temp = errorEvent.ToJsonString();
             // If the client task has faulted this will throw when accessing 'Result'
             return _clientTask.Result.ReportErrorEvent(_projectName, errorEvent);
         }
