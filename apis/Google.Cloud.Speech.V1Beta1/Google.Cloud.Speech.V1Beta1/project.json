@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Grpc": "1.0.0-beta06",
+    "Google.Api.Gax.Grpc": "1.0.0-beta07",
     "Google.LongRunning": { "target": "project" }
   },
 
