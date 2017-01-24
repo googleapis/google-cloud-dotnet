@@ -80,8 +80,7 @@ namespace Google.Cloud.Speech.V1Beta1
         public static RecognitionAudio FetchFromUri(string uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
-            // TODO: Use ResultWithUnwrappedExceptions when it's public in GAX.
-            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).Result;
+            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).ResultWithUnwrappedExceptions();
         }
 
         /// <summary>
@@ -94,8 +93,7 @@ namespace Google.Cloud.Speech.V1Beta1
         public static RecognitionAudio FetchFromUri(Uri uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
-            // TODO: Use ResultWithUnwrappedExceptions when it's public in GAX.
-            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).Result;
+            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).ResultWithUnwrappedExceptions();
         }
 
         /// <summary>
