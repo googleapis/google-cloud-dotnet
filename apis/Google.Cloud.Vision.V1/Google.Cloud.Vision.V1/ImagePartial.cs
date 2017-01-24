@@ -80,8 +80,7 @@ namespace Google.Cloud.Vision.V1
         public static Image FetchFromUri(string uri, HttpClient httpClient = null)
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
-            // TODO: Use ResultWithUnwrappedExceptions when it's public in GAX.
-            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).Result;
+            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).ResultWithUnwrappedExceptions();
         }
 
         /// <summary>
@@ -95,7 +94,7 @@ namespace Google.Cloud.Vision.V1
         {
             GaxPreconditions.CheckNotNull(uri, nameof(uri));
             // TODO: Use ResultWithUnwrappedExceptions when it's public in GAX.
-            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).Result;
+            return Task.Run(() => FetchFromUriAsync(uri, httpClient)).ResultWithUnwrappedExceptions();
         }
 
         /// <summary>
