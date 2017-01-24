@@ -227,5 +227,44 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // End snippet
         }
 
+        public async Task StreamingRecognize()
+        {
+            // Snippet: StreamingRecognize(CallSettings,BidirectionalStreamingSettings)
+            // Create client
+            SpeechClient speechClient = SpeechClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            SpeechClient.StreamingRecognizeStream duplexStream = speechClient.StreamingRecognize();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved.
+            // Exact sequence will depend on client/server behavior.
+
+            // Create task to do something with responses from server
+            Task.Run(async () =>
+            {
+                IAsyncEnumerator<StreamingRecognizeResponse> responseStream = duplexStream.ResponseStream;
+                while (await responseStream.MoveNext())
+                {
+                    StreamingRecognizeResponse response = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                StreamingRecognizeRequest request = new StreamingRecognizeRequest();
+                // Stream a request to the server
+                await duplexStream.WriteAsync(request);
+
+                // Set "done" to true when sending requests is complete
+            }
+            // Complete writing requests to the stream
+            await duplexStream.WriteCompleteAsync();
+            // End snippet
+        }
+
     }
 }
