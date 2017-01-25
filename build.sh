@@ -58,7 +58,7 @@ echo CLI args: $DOTNET_BUILD_ARGS
 
 echo Restoring
 
-dotnet restore -v Warning tools apis/Google.Cloud.Datastore.V1
+dotnet restore -v Warning tools apis
 
 echo Building tools
 
