@@ -89,7 +89,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             config = config ?? TraceConfiguration.Create();
 
             var consumer = ConsumerFactory<TraceProto>.GetConsumer(
-               new GrpcTraceConsumer(client), TraceSizer.Instance, config.BufferOptions);
+                new GrpcTraceConsumer(client), TraceSizer.Instance, config.BufferOptions);
 
             _tracerFactory = new ManagedTracerFactory(projectId, consumer,
                 RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());

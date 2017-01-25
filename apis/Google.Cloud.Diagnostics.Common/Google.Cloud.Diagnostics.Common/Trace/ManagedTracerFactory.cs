@@ -19,8 +19,8 @@ using TraceProto = Google.Cloud.Trace.V1.Trace;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A factory <see cref="ManagedTracerFactory"/> that will generate <see cref="IManagedTracer"/>s 
-    /// from <see cref="TraceHeaderContext"/>s.  If the <see cref="TraceHeaderContext"/> does not provide
+    /// A factory that will generate <see cref="IManagedTracer"/>s from 
+    /// <see cref="TraceHeaderContext"/>s.  If the <see cref="TraceHeaderContext"/> does not provide
     /// the needed context to determine the proper <see cref="IManagedTracer"/> then the given
     /// <see cref="ITraceOptionsFactory"/> will decide.
     /// </summary>
@@ -31,6 +31,9 @@ namespace Google.Cloud.Diagnostics.Common
         private readonly ITraceOptionsFactory _optionsFactory;
         private readonly TraceIdFactory _traceIdFactory;
 
+        /// <summary>
+        /// Creates a new <see cref="ManagedTracerFactory"/>.
+        /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="consumer">A trace consumer for the tracer. Cannot be null.</param>
         /// <param name="optionsFactory">An options factory to fall back to if the 
@@ -67,7 +70,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// True if the tracing should occur. Decision b ased on a <see cref="TraceHeaderContext"/>
+        /// True if the tracing should occur. Decision based on a <see cref="TraceHeaderContext"/>
         /// and an <see cref="ITraceOptionsFactory"/>.
         /// </summary>
         internal bool ShouldTrace(TraceHeaderContext headerContext) => 

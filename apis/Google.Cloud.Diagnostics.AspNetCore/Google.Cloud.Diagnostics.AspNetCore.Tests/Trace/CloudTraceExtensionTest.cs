@@ -23,10 +23,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class CloudTraceExtensionTest
     {
+        private const string TraceId = "105445aa7843bc8bf206b12000100f00";
+        private const ulong SpanId = 81237123;
+
         [Fact]
         public void CreateTraceHeaderContext()
         {
-            string header = $"105445aa7843bc8bf206b12000100f00/81237123;o=1";
+            string header = $"{TraceId}/{SpanId};o=1";
 
             var context = new DefaultHttpContext();
             var request = new DefaultHttpRequest(context);
