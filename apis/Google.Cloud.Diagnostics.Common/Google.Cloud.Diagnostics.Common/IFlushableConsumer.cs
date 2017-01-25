@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Threading.Tasks;
+
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
@@ -23,5 +25,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// Flush the consumer.
         /// </summary>
         void Flush();
+
+        /// <summary>
+        /// Flush the consumer asynchronously.
+        /// </summary>
+        Task FlushAsync();
     }
 }
