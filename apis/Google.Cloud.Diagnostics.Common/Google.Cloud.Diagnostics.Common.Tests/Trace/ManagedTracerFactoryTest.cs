@@ -116,6 +116,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             public TraceOptionsFactory(bool shouldTrace)
             {
                 _options = TraceOptions.Create(shouldTrace);
+            }
             
             public TraceOptions CreateOptions() => _options;
         }
