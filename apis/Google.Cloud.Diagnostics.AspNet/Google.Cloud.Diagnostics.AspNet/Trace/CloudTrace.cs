@@ -74,10 +74,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public sealed class CloudTrace
     {
-        private readonly string _projectId;
-        private readonly TraceIdFactory _traceIdfactory;
-        private readonly IConsumer<TraceProto> _consumer;
-        private readonly RateLimitingTraceOptionsFactory _rateFactory;
+        private readonly IManagedTracerFactory _tracerFactory;
 
         /// <summary>Gets the current <see cref="IManagedTracer"/> for the given request.</summary>
         public static IManagedTracer CurrentTracer =>
@@ -85,16 +82,17 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
-            _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             // Create the default values if not set.
             client = client ?? TraceServiceClient.CreateAsync();
             config = config ?? TraceConfiguration.Create();
 
-            _traceIdfactory = TraceIdFactory.Create();
-            _consumer = ConsumerFactory<TraceProto>.GetConsumer(
+            var consumer = ConsumerFactory<TraceProto>.GetConsumer(
                 new GrpcTraceConsumer(client), TraceSizer.Instance, config.BufferOptions);
-            _rateFactory = RateLimitingTraceOptionsFactory.Create(config);
+
+            _tracerFactory = new ManagedTracerFactory(projectId, consumer,
+                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
         }
 
         /// <summary>
@@ -116,21 +114,13 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private void BeginRequest(object sender, EventArgs e)
         {
-            TraceHeaderContext headerContext = TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request);
-            // If the trace header says to trace or if the rate limiter allows tracing continue.
-            if (headerContext.ShouldTrace == false || (headerContext.ShouldTrace == null &&
-                !_rateFactory.CreateOptions().ShouldTrace))
+            var headerContext = TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request);
+            var tracer = _tracerFactory.CreateTracer(headerContext);
+            if (tracer.GetCurrentTraceId() == null)
             {
                 return;
             }
 
-            // Create and set the tracer for the request.
-            TraceProto trace = new TraceProto
-            {
-                ProjectId = _projectId,
-                TraceId = headerContext.TraceId ?? _traceIdfactory.NextId(),
-            };
-            IManagedTracer tracer = SimpleManagedTracer.Create(_consumer, trace, headerContext.SpanId);
             TracerManager.SetCurrentTracer(tracer);
 
             // Start the span and annotate it with information from the current request.
@@ -141,8 +131,8 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private void EndRequest(object sender, EventArgs e)
         {
-            IManagedTracer tracer = TracerManager.GetCurrentTracer();
-            if (tracer == null)
+            IManagedTracer tracer = CurrentTracer;
+            if (tracer.GetCurrentTraceId() == null)
             {
                 return;
             }
