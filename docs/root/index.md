@@ -32,6 +32,7 @@ Beta:
 
 Alpha:
 
+- [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
 - [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
