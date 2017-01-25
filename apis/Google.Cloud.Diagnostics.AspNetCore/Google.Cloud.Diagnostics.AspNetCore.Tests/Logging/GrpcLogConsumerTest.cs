@@ -17,7 +17,7 @@ using Moq;
 using System.Collections.Generic;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class GrpcLogConsumerTest
     {

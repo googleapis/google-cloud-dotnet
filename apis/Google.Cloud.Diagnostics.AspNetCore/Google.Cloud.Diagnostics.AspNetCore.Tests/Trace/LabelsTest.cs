@@ -18,7 +18,7 @@ using Xunit;
 
 using LabelsCommon = Google.Cloud.Diagnostics.Common.Labels;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class LabelsTest
     {
