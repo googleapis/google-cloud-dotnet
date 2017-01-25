@@ -31,7 +31,7 @@ using Xunit;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest.Trace
+namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
 {
     public class TraceTest
     {
