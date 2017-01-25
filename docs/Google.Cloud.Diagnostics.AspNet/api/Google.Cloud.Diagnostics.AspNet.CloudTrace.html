@@ -109,11 +109,22 @@ trace data can be collected manually.</p>
               
 <pre><code> public class Global : HttpApplication
  { 
-      void Application_Start(object sender, EventArgs e)
+      public override void Init()
       {
+          base.Init();
           CloudTrace.Initialize("some-project-id", this);
       }
  }</code></pre>
+
+              
+<pre><code>public void MakeHttpRequest()
+{
+    var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
+    using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
+    {
+        ...
+    }
+}</code></pre>
 
               
 <pre><code>public void DoSomething()
@@ -123,18 +134,18 @@ trace data can be collected manually.</p>
     CloudTrace.GetCurrentTracer().EndSpan();
 }</code></pre>
 
-              <h3 id="methods">Methods
+              <h3 id="properties">Properties
               </h3>
-              <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_GetCurrentTracer_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.GetCurrentTracer*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_GetCurrentTracer" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.GetCurrentTracer">GetCurrentTracer()</h4>
-              <div class="markdown level1 summary"><p>Gets the current <a class="xref" href="Google.Cloud.Diagnostics.AspNet.IManagedTracer.html#Google_Cloud_Diagnostics_AspNet_IManagedTracer">IManagedTracer</a> for the given request.</p>
+              <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CurrentTracer_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CurrentTracer*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CurrentTracer" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CurrentTracer">CurrentTracer</h4>
+              <div class="markdown level1 summary"><p>Gets the current <a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer">IManagedTracer</a> for the given request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static IManagedTracer GetCurrentTracer()</code></pre>
+                <pre><code class="lang-csharp hljs">public static IManagedTracer CurrentTracer { get; }</code></pre>
               </div>
-              <h5 class="returns">Returns</h5>
+              <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
@@ -144,13 +155,15 @@ trace data can be collected manually.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.IManagedTracer.html#Google_Cloud_Diagnostics_AspNet_IManagedTracer">IManagedTracer</a></td>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html#Google_Cloud_Diagnostics_Common_IManagedTracer">IManagedTracer</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
+              <h3 id="methods">Methods
+              </h3>
               <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_String_System_Web_HttpApplication_Google_Cloud_Diagnostics_AspNet_TraceConfiguration_System_Threading_Tasks_Task_Google_Cloud_Trace_V1_TraceServiceClient__" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.String,System.Web.HttpApplication,Google.Cloud.Diagnostics.AspNet.TraceConfiguration,System.Threading.Tasks.Task{Google.Cloud.Trace.V1.TraceServiceClient})">Initialize(String, HttpApplication, TraceConfiguration, Task&lt;TraceServiceClient&gt;)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_String_System_Web_HttpApplication_Google_Cloud_Diagnostics_Common_TraceConfiguration_System_Threading_Tasks_Task_Google_Cloud_Trace_V1_TraceServiceClient__" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.String,System.Web.HttpApplication,Google.Cloud.Diagnostics.Common.TraceConfiguration,System.Threading.Tasks.Task{Google.Cloud.Trace.V1.TraceServiceClient})">Initialize(String, HttpApplication, TraceConfiguration, Task&lt;TraceServiceClient&gt;)</h4>
               <div class="markdown level1 summary"><p>Initialize tracing for this application.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -181,7 +194,7 @@ trace data can be collected manually.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNet.TraceConfiguration.html#Google_Cloud_Diagnostics_AspNet_TraceConfiguration">TraceConfiguration</a></td>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceConfiguration.html#Google_Cloud_Diagnostics_Common_TraceConfiguration">TraceConfiguration</a></td>
                     <td><em>config</em></td>
                     <td><p>Optional trace configuration, if unset the default will be used.</p>
 </td>

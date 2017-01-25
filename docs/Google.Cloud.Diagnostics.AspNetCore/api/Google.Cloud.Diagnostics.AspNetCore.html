@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Google.Cloud.Diagnostics.AspNetCore
+   | Google.Cloud.Diagnostics.AspNetCore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Google.Cloud.Diagnostics.AspNetCore
+   | Google.Cloud.Diagnostics.AspNetCore ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Google_Cloud_Diagnostics_AspNetCore" data-uid="Google.Cloud.Diagnostics.AspNetCore">Namespace Google.Cloud.Diagnostics.AspNetCore
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension">CloudTraceExtension</a></h4>
+                  <section><p>Uses the Google Cloud Trace Middleware.
+Traces the time taken for all subsequent delegates to run.  The time taken
+and metadata will be sent to the Stackdriver Trace API.  Also allows for more
+finely grained manual tracing.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLogger.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLogger">ErrorReportingExceptionLogger</a></h4>
+                  <section><p>Google Cloud Error Reporting Exception Logger.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerExtension.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerExtension">ErrorReportingExceptionLoggerExtension</a></h4>
+                  <section><p>Uses the Google Cloud Error Reporting Exception Logger Middleware.
+To ensure all unhandled exceptions are reported, this should be
+the first piece of middleware used.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware">ErrorReportingExceptionLoggerMiddleware</a></h4>
+                  <section><p>Middleware that will, when invoked, call the next <span class="xref">Microsoft.AspNetCore.Http.RequestDelegate</span>,
+catch any exception that it may throw, send that exception to the
+Stackdriver Error Reporting API and rethrow the given exception.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger">GoogleLogger</a></h4>
+                  <section><p><span class="xref">Microsoft.Extensions.Logging.ILogger</span> for Google Stackdriver Logging.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions">GoogleLoggerFactoryExtensions</a></h4>
+                  <section><p>Extensions to add <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerProvider">GoogleLoggerProvider</a>s to an <span class="xref">Microsoft.Extensions.Logging.ILoggerFactory</span>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerProvider">GoogleLoggerProvider</a></h4>
+                  <section><p><span class="xref">Microsoft.Extensions.Logging.ILoggerProvider</span> for Google Stackdriver Logging.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html#Google_Cloud_Diagnostics_AspNetCore_LoggerOptions">LoggerOptions</a></h4>
+                  <section><p>Options for a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger">GoogleLogger</a>.</p>
+</section>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LogTo.html#Google_Cloud_Diagnostics_AspNetCore_LogTo">LogTo</a></h4>
+                  <section><p>Represents the location log entries will be sent, such as a project or organization.</p>
+</section>
+                <h3 id="interfaces">Interfaces
+              </h3>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.IExceptionLogger-1.html#Google_Cloud_Diagnostics_AspNetCore_IExceptionLogger_1">IExceptionLogger&lt;T&gt;</a></h4>
+                  <section><p>A generic exception logger.</p>
+</section>
+                <h3 id="enums">Enums
+              </h3>
+                  <h4><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LogToLocation.html#Google_Cloud_Diagnostics_AspNetCore_LogToLocation">LogToLocation</a></h4>
+                  <section><p>The location log entries will be logged to.</p>
+</section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

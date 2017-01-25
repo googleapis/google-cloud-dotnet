@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LogEntry
+   | Google.Cloud.Diagnostics.AspNetCore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LogEntry
+   | Google.Cloud.Diagnostics.AspNetCore ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Logging_V2_LogEntry" data-uid="Google.Cloud.Logging.V2.LogEntry">Class LogEntry
+              </h1>
+              <div class="markdown level0 summary"><p>An individual entry in a log.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">LogEntry</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Logging.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Logging.V2.dll</h6>
+              <h5 id="Google_Cloud_Logging_V2_LogEntry_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class LogEntry : IMessage&lt;LogEntry&gt;, IMessage, IEquatable&lt;LogEntry&gt;, IDeepCloneable&lt;LogEntry&gt;</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_Logging_V2_LogEntry_HttpRequest_" data-uid="Google.Cloud.Logging.V2.LogEntry.HttpRequest*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_HttpRequest" data-uid="Google.Cloud.Logging.V2.LogEntry.HttpRequest">HttpRequest</h4>
+              <div class="markdown level1 summary"><p>Optional. Information about the HTTP request associated with this
+log entry, if applicable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public HttpRequest HttpRequest { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref"></span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_InsertId_" data-uid="Google.Cloud.Logging.V2.LogEntry.InsertId*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_InsertId" data-uid="Google.Cloud.Logging.V2.LogEntry.InsertId">InsertId</h4>
+              <div class="markdown level1 summary"><p>Optional. A unique ID for the log entry. If you provide this
+field, the logging service considers other log entries in the
+same project with the same ID as duplicates which can be removed.  If
+omitted, Stackdriver Logging will generate a unique ID for this
+log entry.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string InsertId { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_JsonPayload_" data-uid="Google.Cloud.Logging.V2.LogEntry.JsonPayload*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_JsonPayload" data-uid="Google.Cloud.Logging.V2.LogEntry.JsonPayload">JsonPayload</h4>
+              <div class="markdown level1 summary"><p>The log entry payload, represented as a structure that is
+expressed as a JSON object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Struct JsonPayload { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Struct</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_Labels_" data-uid="Google.Cloud.Logging.V2.LogEntry.Labels*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_Labels" data-uid="Google.Cloud.Logging.V2.LogEntry.Labels">Labels</h4>
+              <div class="markdown level1 summary"><p>Optional. A set of user-defined (key, value) data that provides additional
+information about the log entry.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MapField&lt;string, string&gt; Labels { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_LogName_" data-uid="Google.Cloud.Logging.V2.LogEntry.LogName*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_LogName" data-uid="Google.Cloud.Logging.V2.LogEntry.LogName">LogName</h4>
+              <div class="markdown level1 summary"><p>Required. The resource name of the log to which this log entry belongs:</p>
+<p>&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]/logs/[LOG_ID]&quot;</p>
+<p><code>[LOG_ID]</code> must be URL-encoded within <code>log_name</code>. Example:
+<code>&quot;organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity&quot;</code>.
+<code>[LOG_ID]</code> must be less than 512 characters long and can only include the
+following characters: upper and lower case alphanumeric characters,
+forward-slash, underscore, hyphen, and period.</p>
+<p>For backward compatibility, if <code>log_name</code> begins with a forward-slash, such
+as <code>/projects/...</code>, then the log entry is ingested as usual but the
+forward-slash is removed. Listing the log entry will not show the leading
+slash and filtering for a log name with a leading slash will never return
+any results.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string LogName { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_LogNameAsLogNameOneof_" data-uid="Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_LogNameAsLogNameOneof" data-uid="Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof">LogNameAsLogNameOneof</h4>
+              <div class="markdown level1 summary"><p>A <a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html#Google_Cloud_Logging_V2_LogNameOneof">LogNameOneof</a>-typed view over the <a class="xref" href="Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_LogName">LogName</a> resource name property.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogNameOneof LogNameAsLogNameOneof { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogNameOneof.html#Google_Cloud_Logging_V2_LogNameOneof">LogNameOneof</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_Operation_" data-uid="Google.Cloud.Logging.V2.LogEntry.Operation*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_Operation" data-uid="Google.Cloud.Logging.V2.LogEntry.Operation">Operation</h4>
+              <div class="markdown level1 summary"><p>Optional. Information about an operation associated with the log entry, if
+applicable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogEntryOperation Operation { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogEntryOperation.html#Google_Cloud_Logging_V2_LogEntryOperation">LogEntryOperation</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_PayloadCase_" data-uid="Google.Cloud.Logging.V2.LogEntry.PayloadCase*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_PayloadCase" data-uid="Google.Cloud.Logging.V2.LogEntry.PayloadCase">PayloadCase</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogEntry.PayloadOneofCase PayloadCase { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogEntry.PayloadOneofCase.html#Google_Cloud_Logging_V2_LogEntry_PayloadOneofCase">LogEntry.PayloadOneofCase</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_ProtoPayload_" data-uid="Google.Cloud.Logging.V2.LogEntry.ProtoPayload*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_ProtoPayload" data-uid="Google.Cloud.Logging.V2.LogEntry.ProtoPayload">ProtoPayload</h4>
+              <div class="markdown level1 summary"><p>The log entry payload, represented as a protocol buffer.  Some
+Google Cloud Platform services use this field for their log
+entry payloads.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Any ProtoPayload { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Any</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_Resource_" data-uid="Google.Cloud.Logging.V2.LogEntry.Resource*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_Resource" data-uid="Google.Cloud.Logging.V2.LogEntry.Resource">Resource</h4>
+              <div class="markdown level1 summary"><p>Required. The monitored resource associated with this log entry.
+Example: a log entry that reports a database error would be
+associated with the monitored resource designating the particular
+database that reported the error.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public MonitoredResource Resource { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.MonitoredResource</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_Severity_" data-uid="Google.Cloud.Logging.V2.LogEntry.Severity*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_Severity" data-uid="Google.Cloud.Logging.V2.LogEntry.Severity">Severity</h4>
+              <div class="markdown level1 summary"><p>Optional. The severity of the log entry. The default value is
+<code>LogSeverity.DEFAULT</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogSeverity Severity { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref"></span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_SourceLocation_" data-uid="Google.Cloud.Logging.V2.LogEntry.SourceLocation*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_SourceLocation" data-uid="Google.Cloud.Logging.V2.LogEntry.SourceLocation">SourceLocation</h4>
+              <div class="markdown level1 summary"><p>Optional. Source code location information associated with the log entry,
+if any.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public LogEntrySourceLocation SourceLocation { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LogEntrySourceLocation.html#Google_Cloud_Logging_V2_LogEntrySourceLocation">LogEntrySourceLocation</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_TextPayload_" data-uid="Google.Cloud.Logging.V2.LogEntry.TextPayload*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_TextPayload" data-uid="Google.Cloud.Logging.V2.LogEntry.TextPayload">TextPayload</h4>
+              <div class="markdown level1 summary"><p>The log entry payload, represented as a Unicode string (UTF-8).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string TextPayload { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_Timestamp_" data-uid="Google.Cloud.Logging.V2.LogEntry.Timestamp*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_Timestamp" data-uid="Google.Cloud.Logging.V2.LogEntry.Timestamp">Timestamp</h4>
+              <div class="markdown level1 summary"><p>Optional. The time the event described by the log entry occurred.  If
+omitted, Stackdriver Logging will use the time the log entry is received.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Timestamp Timestamp { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Timestamp</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_V2_LogEntry_Trace_" data-uid="Google.Cloud.Logging.V2.LogEntry.Trace*"></a>
+              <h4 id="Google_Cloud_Logging_V2_LogEntry_Trace" data-uid="Google.Cloud.Logging.V2.LogEntry.Trace">Trace</h4>
+              <div class="markdown level1 summary"><p>Optional. Resource name of the trace associated with the log entry, if any.
+If it contains a relative resource name, the name is assumed to be relative
+to <code>//tracing.googleapis.com</code>. Example:
+<code>projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824</code></p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Trace { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

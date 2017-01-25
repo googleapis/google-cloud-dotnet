@@ -12143,6 +12143,28 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.CreateTableOptions.FriendlyName
   name: FriendlyName
   fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.FriendlyName
+- uid: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration
+  name: TimePartitionExpiration
+  href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html#Google_Cloud_BigQuery_V2_CreateTableOptions_TimePartitionExpiration
+  commentId: P:Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration
+  fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration
+  nameWithType: CreateTableOptions.TimePartitionExpiration
+- uid: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration*
+  href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html#Google_Cloud_BigQuery_V2_CreateTableOptions_TimePartitionExpiration_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration
+  name: TimePartitionExpiration
+  fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionExpiration
+- uid: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionType
+  name: TimePartitionType
+  href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html#Google_Cloud_BigQuery_V2_CreateTableOptions_TimePartitionType
+  commentId: P:Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionType
+  fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionType
+  nameWithType: CreateTableOptions.TimePartitionType
+- uid: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionType*
+  href: api/Google.Cloud.BigQuery.V2.CreateTableOptions.html#Google_Cloud_BigQuery_V2_CreateTableOptions_TimePartitionType_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionType
+  name: TimePartitionType
+  fullName: Google.Cloud.BigQuery.V2.CreateTableOptions.TimePartitionType
 - uid: Google.Cloud.BigQuery.V2.DeleteDatasetOptions
   name: DeleteDatasetOptions
   href: api/Google.Cloud.BigQuery.V2.DeleteDatasetOptions.html#Google_Cloud_BigQuery_V2_DeleteDatasetOptions
@@ -12516,6 +12538,24 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.TableSchemaExtensions.GetFieldIndex
   name: GetFieldIndex
   fullName: Google.Cloud.BigQuery.V2.TableSchemaExtensions.GetFieldIndex(Google.Apis.Bigquery.v2.Data.TableSchema, System.String)
+- uid: Google.Cloud.BigQuery.V2.TimePartitionType
+  name: TimePartitionType
+  href: api/Google.Cloud.BigQuery.V2.TimePartitionType.html#Google_Cloud_BigQuery_V2_TimePartitionType
+  commentId: T:Google.Cloud.BigQuery.V2.TimePartitionType
+  fullName: Google.Cloud.BigQuery.V2.TimePartitionType
+  nameWithType: TimePartitionType
+- uid: Google.Cloud.BigQuery.V2.TimePartitionType.Day
+  name: Day
+  href: api/Google.Cloud.BigQuery.V2.TimePartitionType.html#Google_Cloud_BigQuery_V2_TimePartitionType_Day
+  commentId: F:Google.Cloud.BigQuery.V2.TimePartitionType.Day
+  fullName: Google.Cloud.BigQuery.V2.TimePartitionType.Day
+  nameWithType: TimePartitionType.Day
+- uid: Google.Cloud.BigQuery.V2.TimePartitionType.None
+  name: None
+  href: api/Google.Cloud.BigQuery.V2.TimePartitionType.html#Google_Cloud_BigQuery_V2_TimePartitionType_None
+  commentId: F:Google.Cloud.BigQuery.V2.TimePartitionType.None
+  fullName: Google.Cloud.BigQuery.V2.TimePartitionType.None
+  nameWithType: TimePartitionType.None
 - uid: Google.Cloud.BigQuery.V2.UploadAvroOptions
   name: UploadAvroOptions
   href: api/Google.Cloud.BigQuery.V2.UploadAvroOptions.html#Google_Cloud_BigQuery_V2_UploadAvroOptions

@@ -4052,6 +4052,45 @@ references:
   commentId: Overload:Google.Cloud.Iam.V1.Binding.Role
   name: Role
   fullName: Google.Cloud.Iam.V1.Binding.Role
+- uid: Google.Cloud.Iam.V1.BindingDelta
+  name: BindingDelta
+  href: api/Google.Cloud.Iam.V1.BindingDelta.html#Google_Cloud_Iam_V1_BindingDelta
+  commentId: T:Google.Cloud.Iam.V1.BindingDelta
+  fullName: Google.Cloud.Iam.V1.BindingDelta
+  nameWithType: BindingDelta
+- uid: Google.Cloud.Iam.V1.BindingDelta.Action
+  name: Action
+  href: api/Google.Cloud.Iam.V1.BindingDelta.html#Google_Cloud_Iam_V1_BindingDelta_Action
+  commentId: P:Google.Cloud.Iam.V1.BindingDelta.Action
+  fullName: Google.Cloud.Iam.V1.BindingDelta.Action
+  nameWithType: BindingDelta.Action
+- uid: Google.Cloud.Iam.V1.BindingDelta.Action*
+  href: api/Google.Cloud.Iam.V1.BindingDelta.html#Google_Cloud_Iam_V1_BindingDelta_Action_
+  commentId: Overload:Google.Cloud.Iam.V1.BindingDelta.Action
+  name: Action
+  fullName: Google.Cloud.Iam.V1.BindingDelta.Action
+- uid: Google.Cloud.Iam.V1.BindingDelta.Member
+  name: Member
+  href: api/Google.Cloud.Iam.V1.BindingDelta.html#Google_Cloud_Iam_V1_BindingDelta_Member
+  commentId: P:Google.Cloud.Iam.V1.BindingDelta.Member
+  fullName: Google.Cloud.Iam.V1.BindingDelta.Member
+  nameWithType: BindingDelta.Member
+- uid: Google.Cloud.Iam.V1.BindingDelta.Member*
+  href: api/Google.Cloud.Iam.V1.BindingDelta.html#Google_Cloud_Iam_V1_BindingDelta_Member_
+  commentId: Overload:Google.Cloud.Iam.V1.BindingDelta.Member
+  name: Member
+  fullName: Google.Cloud.Iam.V1.BindingDelta.Member
+- uid: Google.Cloud.Iam.V1.BindingDelta.Role
+  name: Role
+  href: api/Google.Cloud.Iam.V1.BindingDelta.html#Google_Cloud_Iam_V1_BindingDelta_Role
+  commentId: P:Google.Cloud.Iam.V1.BindingDelta.Role
+  fullName: Google.Cloud.Iam.V1.BindingDelta.Role
+  nameWithType: BindingDelta.Role
+- uid: Google.Cloud.Iam.V1.BindingDelta.Role*
+  href: api/Google.Cloud.Iam.V1.BindingDelta.html#Google_Cloud_Iam_V1_BindingDelta_Role_
+  commentId: Overload:Google.Cloud.Iam.V1.BindingDelta.Role
+  name: Role
+  fullName: Google.Cloud.Iam.V1.BindingDelta.Role
 - uid: Google.Cloud.Iam.V1.GetIamPolicyRequest
   name: GetIamPolicyRequest
   href: api/Google.Cloud.Iam.V1.GetIamPolicyRequest.html#Google_Cloud_Iam_V1_GetIamPolicyRequest
@@ -4342,6 +4381,23 @@ references:
   commentId: Overload:Google.Cloud.Iam.V1.Policy.Version
   name: Version
   fullName: Google.Cloud.Iam.V1.Policy.Version
+- uid: Google.Cloud.Iam.V1.PolicyDelta
+  name: PolicyDelta
+  href: api/Google.Cloud.Iam.V1.PolicyDelta.html#Google_Cloud_Iam_V1_PolicyDelta
+  commentId: T:Google.Cloud.Iam.V1.PolicyDelta
+  fullName: Google.Cloud.Iam.V1.PolicyDelta
+  nameWithType: PolicyDelta
+- uid: Google.Cloud.Iam.V1.PolicyDelta.BindingDeltas
+  name: BindingDeltas
+  href: api/Google.Cloud.Iam.V1.PolicyDelta.html#Google_Cloud_Iam_V1_PolicyDelta_BindingDeltas
+  commentId: P:Google.Cloud.Iam.V1.PolicyDelta.BindingDeltas
+  fullName: Google.Cloud.Iam.V1.PolicyDelta.BindingDeltas
+  nameWithType: PolicyDelta.BindingDeltas
+- uid: Google.Cloud.Iam.V1.PolicyDelta.BindingDeltas*
+  href: api/Google.Cloud.Iam.V1.PolicyDelta.html#Google_Cloud_Iam_V1_PolicyDelta_BindingDeltas_
+  commentId: Overload:Google.Cloud.Iam.V1.PolicyDelta.BindingDeltas
+  name: BindingDeltas
+  fullName: Google.Cloud.Iam.V1.PolicyDelta.BindingDeltas
 - uid: Google.Cloud.Iam.V1.SetIamPolicyRequest
   name: SetIamPolicyRequest
   href: api/Google.Cloud.Iam.V1.SetIamPolicyRequest.html#Google_Cloud_Iam_V1_SetIamPolicyRequest
@@ -7903,6 +7959,23 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClient.ShutdownDefaultChannelsAsync
   name: ShutdownDefaultChannelsAsync
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.ShutdownDefaultChannelsAsync()
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.StreamingPull(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+  name: StreamingPull(CallSettings, BidirectionalStreamingSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_StreamingPull_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.StreamingPull(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.StreamingPull(Google.Api.Gax.Grpc.CallSettings, Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+  nameWithType: SubscriberClient.StreamingPull(CallSettings, BidirectionalStreamingSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.StreamingPull*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_StreamingPull_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClient.StreamingPull
+  name: StreamingPull
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.StreamingPull(Google.Api.Gax.Grpc.CallSettings, Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.StreamingPullStream
+  name: SubscriberClient.StreamingPullStream
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.StreamingPullStream.html#Google_Cloud_PubSub_V1_SubscriberClient_StreamingPullStream
+  commentId: T:Google.Cloud.PubSub.V1.SubscriberClient.StreamingPullStream
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.StreamingPullStream
+  nameWithType: SubscriberClient.StreamingPullStream
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -8204,6 +8277,117 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.SetIamPolicyAsync
   name: SetIamPolicyAsync
   fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.SetIamPolicyAsync(Google.Cloud.Iam.V1.SetIamPolicyRequest, Google.Api.Gax.Grpc.CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+  name: StreamingPull(CallSettings, BidirectionalStreamingSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPull_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull(Google.Api.Gax.Grpc.CallSettings, Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+  nameWithType: SubscriberClientImpl.StreamingPull(CallSettings, BidirectionalStreamingSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPull_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull
+  name: StreamingPull
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull(Google.Api.Gax.Grpc.CallSettings, Google.Api.Gax.Grpc.BidirectionalStreamingSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl
+  name: SubscriberClientImpl.StreamingPullStreamImpl
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl
+  commentId: T:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor(Google.Cloud.PubSub.V1.SubscriberClientImpl,Grpc.Core.AsyncDuplexStreamingCall{Google.Cloud.PubSub.V1.StreamingPullRequest,Google.Cloud.PubSub.V1.StreamingPullResponse},Google.Api.Gax.Grpc.BufferedClientStreamWriter{Google.Cloud.PubSub.V1.StreamingPullRequest})
+  name: StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>, BufferedClientStreamWriter<StreamingPullRequest>)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl__ctor_Google_Cloud_PubSub_V1_SubscriberClientImpl_Grpc_Core_AsyncDuplexStreamingCall_Google_Cloud_PubSub_V1_StreamingPullRequest_Google_Cloud_PubSub_V1_StreamingPullResponse__Google_Api_Gax_Grpc_BufferedClientStreamWriter_Google_Cloud_PubSub_V1_StreamingPullRequest__
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor(Google.Cloud.PubSub.V1.SubscriberClientImpl,Grpc.Core.AsyncDuplexStreamingCall{Google.Cloud.PubSub.V1.StreamingPullRequest,Google.Cloud.PubSub.V1.StreamingPullResponse},Google.Api.Gax.Grpc.BufferedClientStreamWriter{Google.Cloud.PubSub.V1.StreamingPullRequest})
+  name.vb: StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall(Of StreamingPullRequest, StreamingPullResponse), BufferedClientStreamWriter(Of StreamingPullRequest))
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(Google.Cloud.PubSub.V1.SubscriberClientImpl, Grpc.Core.AsyncDuplexStreamingCall<Google.Cloud.PubSub.V1.StreamingPullRequest, Google.Cloud.PubSub.V1.StreamingPullResponse>, Google.Api.Gax.Grpc.BufferedClientStreamWriter<Google.Cloud.PubSub.V1.StreamingPullRequest>)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(Google.Cloud.PubSub.V1.SubscriberClientImpl, Grpc.Core.AsyncDuplexStreamingCall(Of Google.Cloud.PubSub.V1.StreamingPullRequest, Google.Cloud.PubSub.V1.StreamingPullResponse), Google.Api.Gax.Grpc.BufferedClientStreamWriter(Of Google.Cloud.PubSub.V1.StreamingPullRequest))
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>, BufferedClientStreamWriter<StreamingPullRequest>)
+  nameWithType.vb: StreamingPullStreamImpl(SubscriberClientImpl, AsyncDuplexStreamingCall(Of StreamingPullRequest, StreamingPullResponse), BufferedClientStreamWriter(Of StreamingPullRequest))
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl__ctor_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.#ctor
+  name: StreamingPullStreamImpl
+  name.vb: StreamingPullStreamImpl
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl(Google.Cloud.PubSub.V1.SubscriberClientImpl, Grpc.Core.AsyncDuplexStreamingCall<Google.Cloud.PubSub.V1.StreamingPullRequest, Google.Cloud.PubSub.V1.StreamingPullResponse>, Google.Api.Gax.Grpc.BufferedClientStreamWriter<Google.Cloud.PubSub.V1.StreamingPullRequest>)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.StreamingPullStreamImpl
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
+  name: GrpcCall
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_GrpcCall
+  commentId: P:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_GrpcCall_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
+  name: GrpcCall
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.GrpcCall
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
+  name: ResponseStream
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_ResponseStream
+  commentId: P:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_ResponseStream_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
+  name: ResponseStream
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.ResponseStream
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+  name: TryWriteAsync(StreamingPullRequest)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(StreamingPullRequest)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
+  name: TryWriteAsync(StreamingPullRequest, WriteOptions)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_Grpc_Core_WriteOptions_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest, Grpc.Core.WriteOptions)
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(StreamingPullRequest, WriteOptions)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync
+  name: TryWriteAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
+  name: TryWriteCompleteAsync()
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteCompleteAsync
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync()
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync()
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_TryWriteCompleteAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync
+  name: TryWriteCompleteAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.TryWriteCompleteAsync()
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+  name: WriteAsync(StreamingPullRequest)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(StreamingPullRequest)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
+  name: WriteAsync(StreamingPullRequest, WriteOptions)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteAsync_Google_Cloud_PubSub_V1_StreamingPullRequest_Grpc_Core_WriteOptions_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest,Grpc.Core.WriteOptions)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest, Grpc.Core.WriteOptions)
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(StreamingPullRequest, WriteOptions)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync
+  name: WriteAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteAsync(Google.Cloud.PubSub.V1.StreamingPullRequest)
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
+  name: WriteCompleteAsync()
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteCompleteAsync
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync()
+  nameWithType: SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync()
+- uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync*
+  href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPullStreamImpl_WriteCompleteAsync_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync
+  name: WriteCompleteAsync
+  fullName: Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPullStreamImpl.WriteCompleteAsync()
 - uid: Google.Cloud.PubSub.V1.SubscriberClientImpl.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)
   name: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
   href: api/Google.Cloud.PubSub.V1.SubscriberClientImpl.html#Google_Cloud_PubSub_V1_SubscriberClientImpl_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_
@@ -8441,6 +8625,28 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.SetIamPolicySettings
   name: SetIamPolicySettings
   fullName: Google.Cloud.PubSub.V1.SubscriberSettings.SetIamPolicySettings
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullSettings
+  name: StreamingPullSettings
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_StreamingPullSettings
+  commentId: P:Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullSettings
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullSettings
+  nameWithType: SubscriberSettings.StreamingPullSettings
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullSettings*
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_StreamingPullSettings_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullSettings
+  name: StreamingPullSettings
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullSettings
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullStreamingSettings
+  name: StreamingPullStreamingSettings
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_StreamingPullStreamingSettings
+  commentId: P:Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullStreamingSettings
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullStreamingSettings
+  nameWithType: SubscriberSettings.StreamingPullStreamingSettings
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullStreamingSettings*
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_StreamingPullStreamingSettings_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullStreamingSettings
+  name: StreamingPullStreamingSettings
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.StreamingPullStreamingSettings
 - uid: Google.Cloud.PubSub.V1.SubscriberSettings.TestIamPermissionsSettings
   name: TestIamPermissionsSettings
   href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_TestIamPermissionsSettings

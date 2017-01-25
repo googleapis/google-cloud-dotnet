@@ -2225,8 +2225,8 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
 <p><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQuery_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_">ExecuteQuery(String, ExecuteQueryOptions)</a> when values need to be passed in.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
-BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryTable table = client.GetTable(datasetId, tableId);
 BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
 // Note: could also use a collection initializer to populate the parameters.
 command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
@@ -2348,8 +2348,8 @@ foreach (BigQueryRow row in result.GetRows())
 <p><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ExecuteQueryAsync_System_String_Google_Cloud_BigQuery_V2_ExecuteQueryOptions_System_Threading_CancellationToken_">ExecuteQueryAsync(String, ExecuteQueryOptions, CancellationToken)</a> when values need to be passed in.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(_fixture.ProjectId);
-BigQueryTable table = await client.GetTableAsync(_fixture.GameDatasetId, _fixture.HistoryTableId);
+<pre><code class="lang-cs">BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+BigQueryTable table = await client.GetTableAsync(datasetId, tableId);
 BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
 // Note: could also use a collection initializer to populate the parameters.
 command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;

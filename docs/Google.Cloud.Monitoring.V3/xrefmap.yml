@@ -4387,6 +4387,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.Group.Filter
   name: Filter
   fullName: Google.Cloud.Monitoring.V3.Group.Filter
+- uid: Google.Cloud.Monitoring.V3.Group.GroupName
+  name: GroupName
+  href: api/Google.Cloud.Monitoring.V3.Group.html#Google_Cloud_Monitoring_V3_Group_GroupName
+  commentId: P:Google.Cloud.Monitoring.V3.Group.GroupName
+  fullName: Google.Cloud.Monitoring.V3.Group.GroupName
+  nameWithType: Group.GroupName
+- uid: Google.Cloud.Monitoring.V3.Group.GroupName*
+  href: api/Google.Cloud.Monitoring.V3.Group.html#Google_Cloud_Monitoring_V3_Group_GroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.Group.GroupName
+  name: GroupName
+  fullName: Google.Cloud.Monitoring.V3.Group.GroupName
 - uid: Google.Cloud.Monitoring.V3.Group.IsCluster
   name: IsCluster
   href: api/Google.Cloud.Monitoring.V3.Group.html#Google_Cloud_Monitoring_V3_Group_IsCluster
@@ -4420,6 +4431,17 @@ references:
   commentId: Overload:Google.Cloud.Monitoring.V3.Group.ParentName
   name: ParentName
   fullName: Google.Cloud.Monitoring.V3.Group.ParentName
+- uid: Google.Cloud.Monitoring.V3.Group.ParentNameAsGroupName
+  name: ParentNameAsGroupName
+  href: api/Google.Cloud.Monitoring.V3.Group.html#Google_Cloud_Monitoring_V3_Group_ParentNameAsGroupName
+  commentId: P:Google.Cloud.Monitoring.V3.Group.ParentNameAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.Group.ParentNameAsGroupName
+  nameWithType: Group.ParentNameAsGroupName
+- uid: Google.Cloud.Monitoring.V3.Group.ParentNameAsGroupName*
+  href: api/Google.Cloud.Monitoring.V3.Group.html#Google_Cloud_Monitoring_V3_Group_ParentNameAsGroupName_
+  commentId: Overload:Google.Cloud.Monitoring.V3.Group.ParentNameAsGroupName
+  name: ParentNameAsGroupName
+  fullName: Google.Cloud.Monitoring.V3.Group.ParentNameAsGroupName
 - uid: Google.Cloud.Monitoring.V3.GroupName
   name: GroupName
   href: api/Google.Cloud.Monitoring.V3.GroupName.html#Google_Cloud_Monitoring_V3_GroupName

@@ -90,6 +90,16 @@ optionally specifying a service endpoint and settings.</p>
 <h2 id="automatic-error-reporting-for-aspnet">Automatic Error Reporting for ASP.NET</h2>
 <p>Using <a href="Google.Cloud.Diagnostics.AspNet/index.html"><code>Google.Cloud.Diagnostics.AspNet</code>&#39;s ExceptionLogger</a>
 uncaught exceptions in ASP.NET applications can be automatically reported to the Stackdriver Error Reporting API.</p>
+<p>In ASP.NET MVC:</p>
+<pre><code class="lang-cs">public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+{
+    string projectId = &quot;[Google Cloud Platform project ID]&quot;;
+    string serviceName = &quot;[Name of service]&quot;;
+    string version = &quot;[Version of service]&quot;;
+    // Add a catch all for the uncaught exceptions.
+    filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
+}
+</code></pre><p>In Web API:</p>
 <pre><code class="lang-cs">public static void Register(HttpConfiguration config)
 {
     string projectId = &quot;[Google Cloud Platform project ID]&quot;;

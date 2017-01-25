@@ -1,0 +1,1134 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TraceServiceClient
+   | Google.Cloud.Diagnostics.AspNetCore </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TraceServiceClient
+   | Google.Cloud.Diagnostics.AspNetCore ">
+    <meta name="generator" content="docfx 2.7.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Trace_V1_TraceServiceClient" data-uid="Google.Cloud.Trace.V1.TraceServiceClient">Class TraceServiceClient
+              </h1>
+              <div class="markdown level0 summary"><p>TraceService client wrapper, for convenient use.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">TraceServiceClient</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Trace.V1</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Trace.V1.dll</h6>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class TraceServiceClient</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_DefaultEndpoint_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.DefaultEndpoint*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_DefaultEndpoint" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.DefaultEndpoint">DefaultEndpoint</h4>
+              <div class="markdown level1 summary"><p>The default endpoint for the TraceService service, which is a host of &quot;cloudtrace.googleapis.com&quot; and a port of 443.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static ServiceEndpoint DefaultEndpoint { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_DefaultScopes_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.DefaultScopes*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_DefaultScopes" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.DefaultScopes">DefaultScopes</h4>
+              <div class="markdown level1 summary"><p>The default TraceService scopes.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;string&gt; DefaultScopes { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_DefaultScopes_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The default TraceService scopes are:</p>
+<ul><li>&quot;<a href="https://www.googleapis.com/auth/cloud-platform">https://www.googleapis.com/auth/cloud-platform</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/trace.append">https://www.googleapis.com/auth/trace.append</a>&quot;</li><li>&quot;<a href="https://www.googleapis.com/auth/trace.readonly">https://www.googleapis.com/auth/trace.readonly</a>&quot;</li></ul>
+</div>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GrpcClient_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GrpcClient*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GrpcClient" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GrpcClient">GrpcClient</h4>
+              <div class="markdown level1 summary"><p>The underlying gRPC TraceService client.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TraceService.TraceServiceClient GrpcClient { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.TraceService.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceService_TraceServiceClient">TraceService.TraceServiceClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_Create_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.Create*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Trace_V1_TraceServiceSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Trace.V1.TraceServiceSettings)">Create(ServiceEndpoint, TraceServiceSettings)</h4>
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TraceServiceClient Create(ServiceEndpoint endpoint = null, TraceServiceSettings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span></td>
+                    <td><em>endpoint</em></td>
+                    <td><p>Optional <span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.TraceServiceSettings.html#Google_Cloud_Trace_V1_TraceServiceSettings">TraceServiceSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceSettings.html#Google_Cloud_Trace_V1_TraceServiceSettings">TraceServiceSettings</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_Create_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.Create*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_Create_Grpc_Core_Channel_Google_Cloud_Trace_V1_TraceServiceSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.Create(Grpc.Core.Channel,Google.Cloud.Trace.V1.TraceServiceSettings)">Create(Channel, TraceServiceSettings)</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a> which uses the specified channel for remote operations.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TraceServiceClient Create(Channel channel, TraceServiceSettings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Channel</span></td>
+                    <td><em>channel</em></td>
+                    <td><p>The <span class="xref">Grpc.Core.Channel</span> for remote operations. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.TraceServiceSettings.html#Google_Cloud_Trace_V1_TraceServiceSettings">TraceServiceSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceSettings.html#Google_Cloud_Trace_V1_TraceServiceSettings">TraceServiceSettings</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_CreateAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.CreateAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Trace_V1_TraceServiceSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Trace.V1.TraceServiceSettings)">CreateAsync(ServiceEndpoint, TraceServiceSettings)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a>, applying defaults for all unspecified settings,
+and creating a channel connecting to the given endpoint with application default credentials where
+necessary.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;TraceServiceClient&gt; CreateAsync(ServiceEndpoint endpoint = null, TraceServiceSettings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span></td>
+                    <td><em>endpoint</em></td>
+                    <td><p>Optional <span class="xref">Google.Api.Gax.Grpc.ServiceEndpoint</span>.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.TraceServiceSettings.html#Google_Cloud_Trace_V1_TraceServiceSettings">TraceServiceSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceSettings.html#Google_Cloud_Trace_V1_TraceServiceSettings">TraceServiceSettings</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a>&gt;</td>
+                    <td><p>The task representing the created <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient">TraceServiceClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTrace*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_Google_Cloud_Trace_V1_GetTraceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTrace(Google.Cloud.Trace.V1.GetTraceRequest,Google.Api.Gax.Grpc.CallSettings)">GetTrace(GetTraceRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Trace GetTrace(GetTraceRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.GetTraceRequest.html#Google_Cloud_Trace_V1_GetTraceRequest">GetTraceRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTrace*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTrace_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTrace(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)">GetTrace(String, String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Trace GetTrace(string projectId, string traceId, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>traceId</em></td>
+                    <td><p>ID of the trace to return.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a></td>
+                    <td><p>The RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_Google_Cloud_Trace_V1_GetTraceRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync(Google.Cloud.Trace.V1.GetTraceRequest,Google.Api.Gax.Grpc.CallSettings)">GetTraceAsync(GetTraceRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Trace&gt; GetTraceAsync(GetTraceRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.GetTraceRequest.html#Google_Cloud_Trace_V1_GetTraceRequest">GetTraceRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)">GetTraceAsync(String, String, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Trace&gt; GetTraceAsync(string projectId, string traceId, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>traceId</em></td>
+                    <td><p>ID of the trace to return.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_GetTraceAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync(System.String,System.String,System.Threading.CancellationToken)">GetTraceAsync(String, String, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Gets a single trace by its ID.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Trace&gt; GetTraceAsync(string projectId, string traceId, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>traceId</em></td>
+                    <td><p>ID of the trace to return.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a>&gt;</td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_Google_Cloud_Trace_V1_ListTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces(Google.Cloud.Trace.V1.ListTracesRequest,Google.Api.Gax.Grpc.CallSettings)">ListTraces(ListTracesRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListTracesResponse, Trace&gt; ListTraces(ListTracesRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.ListTracesRequest.html#Google_Cloud_Trace_V1_ListTracesRequest">ListTracesRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Trace.V1.ListTracesResponse.html#Google_Cloud_Trace_V1_ListTracesResponse">ListTracesResponse</a>, <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTraces_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTraces(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTraces(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListTracesResponse, Trace&gt; ListTraces(string projectId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Trace.V1.ListTracesResponse.html#Google_Cloud_Trace_V1_ListTracesResponse">ListTracesResponse</a>, <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a>&gt;</td>
+                    <td><p>A pageable sequence of <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_Google_Cloud_Trace_V1_ListTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync(Google.Cloud.Trace.V1.ListTracesRequest,Google.Api.Gax.Grpc.CallSettings)">ListTracesAsync(ListTracesRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; ListTracesAsync(ListTracesRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.ListTracesRequest.html#Google_Cloud_Trace_V1_ListTracesRequest">ListTracesRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Trace.V1.ListTracesResponse.html#Google_Cloud_Trace_V1_ListTracesResponse">ListTracesResponse</a>, <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ListTracesAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListTracesAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Returns of a list of traces that match the specified filter conditions.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListTracesResponse, Trace&gt; ListTracesAsync(string projectId, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>pageToken</em></td>
+                    <td><p>The token returned from the previous request.
+A value of <code>null</code> or an empty string retrieves the first page.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>pageSize</em></td>
+                    <td><p>The size of page to request. The response will not be larger than this, but may be smaller.
+A value of <code>null</code> or 0 uses a server-defined page size.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Cloud.Trace.V1.ListTracesResponse.html#Google_Cloud_Trace_V1_ListTracesResponse">ListTracesResponse</a>, <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a>&gt;</td>
+                    <td><p>A pageable asynchronous sequence of <a class="xref" href="Google.Cloud.Trace.V1.Trace.html#Google_Cloud_Trace_V1_Trace">Trace</a> resources.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_Google_Cloud_Trace_V1_PatchTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces(Google.Cloud.Trace.V1.PatchTracesRequest,Google.Api.Gax.Grpc.CallSettings)">PatchTraces(PatchTracesRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+of a trace that you send matches that of an existing trace, any fields
+in the existing trace and its spans are overwritten by the provided values,
+and any new fields provided are merged with the existing trace data. If the
+ID does not match, a new trace is created.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void PatchTraces(PatchTracesRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.PatchTracesRequest.html#Google_Cloud_Trace_V1_PatchTracesRequest">PatchTracesRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTraces_System_String_Google_Cloud_Trace_V1_Traces_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces(System.String,Google.Cloud.Trace.V1.Traces,Google.Api.Gax.Grpc.CallSettings)">PatchTraces(String, Traces, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+of a trace that you send matches that of an existing trace, any fields
+in the existing trace and its spans are overwritten by the provided values,
+and any new fields provided are merged with the existing trace data. If the
+ID does not match, a new trace is created.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual void PatchTraces(string projectId, Traces traces, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.Traces.html#Google_Cloud_Trace_V1_Traces">Traces</a></td>
+                    <td><em>traces</em></td>
+                    <td><p>The body of the message.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_Google_Cloud_Trace_V1_PatchTracesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync(Google.Cloud.Trace.V1.PatchTracesRequest,Google.Api.Gax.Grpc.CallSettings)">PatchTracesAsync(PatchTracesRequest, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+of a trace that you send matches that of an existing trace, any fields
+in the existing trace and its spans are overwritten by the provided values,
+and any new fields provided are merged with the existing trace data. If the
+ID does not match, a new trace is created.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task PatchTracesAsync(PatchTracesRequest request, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.PatchTracesRequest.html#Google_Cloud_Trace_V1_PatchTracesRequest">PatchTracesRequest</a></td>
+                    <td><em>request</em></td>
+                    <td><p>The request object containing all of the parameters for the API call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_System_String_Google_Cloud_Trace_V1_Traces_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync(System.String,Google.Cloud.Trace.V1.Traces,Google.Api.Gax.Grpc.CallSettings)">PatchTracesAsync(String, Traces, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+of a trace that you send matches that of an existing trace, any fields
+in the existing trace and its spans are overwritten by the provided values,
+and any new fields provided are merged with the existing trace data. If the
+ID does not match, a new trace is created.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task PatchTracesAsync(string projectId, Traces traces, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.Traces.html#Google_Cloud_Trace_V1_Traces">Traces</a></td>
+                    <td><em>traces</em></td>
+                    <td><p>The body of the message.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.CallSettings</span></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_PatchTracesAsync_System_String_Google_Cloud_Trace_V1_Traces_System_Threading_CancellationToken_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync(System.String,Google.Cloud.Trace.V1.Traces,System.Threading.CancellationToken)">PatchTracesAsync(String, Traces, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Sends new traces to Stackdriver Trace or updates existing traces. If the ID
+of a trace that you send matches that of an existing trace, any fields
+in the existing trace and its spans are overwritten by the provided values,
+and any new fields provided are merged with the existing trace data. If the
+ID does not match, a new trace is created.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task PatchTracesAsync(string projectId, Traces traces, CancellationToken cancellationToken)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>projectId</em></td>
+                    <td><p>ID of the Cloud project where the trace data is stored.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Trace.V1.Traces.html#Google_Cloud_Trace_V1_Traces">Traces</a></td>
+                    <td><em>traces</em></td>
+                    <td><p>The body of the message.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><em>cancellationToken</em></td>
+                    <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A Task containing the RPC response.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Trace_V1_TraceServiceClient_ShutdownDefaultChannelsAsync_" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ShutdownDefaultChannelsAsync*"></a>
+              <h4 id="Google_Cloud_Trace_V1_TraceServiceClient_ShutdownDefaultChannelsAsync" data-uid="Google.Cloud.Trace.V1.TraceServiceClient.ShutdownDefaultChannelsAsync">ShutdownDefaultChannelsAsync()</h4>
+              <div class="markdown level1 summary"><p>Shuts down any channels automatically created by <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Trace_V1_TraceServiceSettings_">Create(ServiceEndpoint, TraceServiceSettings)</a>
+and <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Trace_V1_TraceServiceSettings_">CreateAsync(ServiceEndpoint, TraceServiceSettings)</a>. Channels which weren&#39;t automatically
+created are not affected.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task ShutdownDefaultChannelsAsync()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span></td>
+                    <td><p>A task representing the asynchronous shutdown operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Trace_V1_TraceServiceClient_ShutdownDefaultChannelsAsync_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>After calling this method, further calls to <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Trace_V1_TraceServiceSettings_">Create(ServiceEndpoint, TraceServiceSettings)</a>
+and <a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html#Google_Cloud_Trace_V1_TraceServiceClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Trace_V1_TraceServiceSettings_">CreateAsync(ServiceEndpoint, TraceServiceSettings)</a> will create new channels, which could
+in turn be shut down by another call to this method.</p>
+</div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -95,8 +95,8 @@ foreach (BigQueryRow row in results.GetRows())
 </code></pre><h2 id="parameterized-queries">Parameterized queries</h2>
 <p>Queries can be provided with parameters, either using names (the
 default):</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
-BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryTable table = client.GetTable(datasetId, tableId);
 BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= @score AND level &gt;= @level&quot;);
 // Note: could also use a collection initializer to populate the parameters.
 command.Parameters.Add(&quot;level&quot;, BigQueryDbType.Int64).Value = 2;
@@ -107,8 +107,8 @@ foreach (BigQueryRow row in resultRows)
     Console.WriteLine($&quot;Name: {row[&quot;player&quot;]}; Score: {row[&quot;score&quot;]}; Level: {row[&quot;level&quot;]}&quot;);
 }
 </code></pre><p>Or using positional parameters:</p>
-<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
-BigQueryTable table = client.GetTable(_fixture.GameDatasetId, _fixture.HistoryTableId);
+<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+BigQueryTable table = client.GetTable(datasetId, tableId);
 BigQueryCommand command = new BigQueryCommand($&quot;SELECT player, score, level FROM {table} WHERE score &gt;= ? AND level &gt;= ?&quot;);
 command.ParameterMode = BigQueryParameterMode.Positional;
 command.Parameters.Add(BigQueryDbType.Int64, 1500); // For score
@@ -157,6 +157,27 @@ table.Insert(new BigQueryInsertRow
     { &quot;score&quot;, 85 },
     { &quot;gameStarted&quot;, new DateTime(2000, 1, 14, 10, 30, 0, DateTimeKind.Utc) }
 });
+</code></pre><h2 id="creating-a-table-partitioned-by-time">Creating a table partitioned by time</h2>
+<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+TableSchema schema = new TableSchemaBuilder
+{
+    { &quot;message&quot;, BigQueryDbType.String }
+}.Build();
+CreateTableOptions options = new CreateTableOptions { TimePartitionType = TimePartitionType.Day };
+BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
+// Upload a single row to the table, using JSON rather than the streaming buffer, as
+// the _PARTITIONTIME column will be null while it&#39;s being served from the streaming buffer.
+// This code assumes the upload succeeds; normally, you should check the job results.
+table.UploadJson(new[] { &quot;{ \&quot;message\&quot;: \&quot;Sample message\&quot; }&quot; }).PollUntilCompleted();
+
+BigQueryResults results = client.ExecuteQuery($&quot;SELECT message, _PARTITIONTIME AS pt FROM {table}&quot;);
+List&lt;BigQueryRow&gt; rows = results.GetRows().ToList();
+foreach (BigQueryRow row in rows)
+{
+    string message = (string) row[&quot;message&quot;];
+    DateTime partition = (DateTime) row[&quot;pt&quot;];
+    Console.WriteLine($&quot;Message: {message}; partition: {partition:yyyy-MM-dd}&quot;);
+}
 </code></pre>
             </article>
           </div>

@@ -906,6 +906,90 @@ created are not affected.</p>
 and <a class="xref" href="Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Speech_V1Beta1_SpeechSettings_">CreateAsync(ServiceEndpoint, SpeechSettings)</a> will create new channels, which could
 in turn be shut down by another call to this method.</p>
 </div>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_StreamingRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.StreamingRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_StreamingRecognize_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.StreamingRecognize(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)">StreamingRecognize(CallSettings, BidirectionalStreamingSettings)</h4>
+              <div class="markdown level1 summary"><p>Perform bidirectional streaming speech-recognition: receive results while
+sending audio. This method is only available via the gRPC API (not REST).</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create client
+SpeechClient speechClient = SpeechClient.Create();
+// Initialize streaming call, retrieving the stream object
+SpeechClient.StreamingRecognizeStream duplexStream = speechClient.StreamingRecognize();
+
+// Sending requests and retrieving responses can be arbitrarily interleaved.
+// Exact sequence will depend on client/server behavior.
+
+// Create task to do something with responses from server
+Task.Run(async () =&gt;
+{
+    IAsyncEnumerator&lt;StreamingRecognizeResponse&gt; responseStream = duplexStream.ResponseStream;
+    while (await responseStream.MoveNext())
+    {
+        StreamingRecognizeResponse response = responseStream.Current;
+        // Do something with streamed response
+    }
+    // The response stream has completed
+});
+
+// Send requests to the server
+bool done = false;
+while (!done)
+{
+    // Initialize a request
+    StreamingRecognizeRequest request = new StreamingRecognizeRequest();
+    // Stream a request to the server
+    await duplexStream.WriteAsync(request);
+
+    // Set &quot;done&quot; to true when sending requests is complete
+}
+// Complete writing requests to the stream
+await duplexStream.WriteCompleteAsync();
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual SpeechClient.StreamingRecognizeStream StreamingRecognize(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.BidirectionalStreamingSettings</span></td>
+                    <td><em>streamingSettings</em></td>
+                    <td><p>If not null, applies streaming overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.SpeechClient.StreamingRecognizeStream.html#Google_Cloud_Speech_V1Beta1_SpeechClient_StreamingRecognizeStream">SpeechClient.StreamingRecognizeStream</a></td>
+                    <td><p>The client-server stream.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognize*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClient_SyncRecognize_Google_Cloud_Speech_V1Beta1_RecognitionConfig_Google_Cloud_Speech_V1Beta1_RecognitionAudio_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClient.SyncRecognize(Google.Cloud.Speech.V1Beta1.RecognitionConfig,Google.Cloud.Speech.V1Beta1.RecognitionAudio,Google.Api.Gax.Grpc.CallSettings)">SyncRecognize(RecognitionConfig, RecognitionAudio, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Perform synchronous speech-recognition: receive results after all audio

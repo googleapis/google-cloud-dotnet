@@ -7029,6 +7029,17 @@ references:
   commentId: Overload:Google.Cloud.Logging.V2.LogEntry.LogName
   name: LogName
   fullName: Google.Cloud.Logging.V2.LogEntry.LogName
+- uid: Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof
+  name: LogNameAsLogNameOneof
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_LogNameAsLogNameOneof
+  commentId: P:Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof
+  fullName: Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof
+  nameWithType: LogEntry.LogNameAsLogNameOneof
+- uid: Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof*
+  href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_LogNameAsLogNameOneof_
+  commentId: Overload:Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof
+  name: LogNameAsLogNameOneof
+  fullName: Google.Cloud.Logging.V2.LogEntry.LogNameAsLogNameOneof
 - uid: Google.Cloud.Logging.V2.LogEntry.Operation
   name: Operation
   href: api/Google.Cloud.Logging.V2.LogEntry.html#Google_Cloud_Logging_V2_LogEntry_Operation

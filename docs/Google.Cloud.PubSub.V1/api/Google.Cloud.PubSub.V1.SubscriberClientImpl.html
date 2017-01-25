@@ -1297,6 +1297,67 @@ existing policy.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_SetIamPolicyAsync_Google_Cloud_Iam_V1_SetIamPolicyRequest_Google_Api_Gax_Grpc_CallSettings_">SubscriberClient.SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPull_" data-uid="Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClientImpl_StreamingPull_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClientImpl.StreamingPull(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)">StreamingPull(CallSettings, BidirectionalStreamingSettings)</h4>
+              <div class="markdown level1 summary"><p>(EXPERIMENTAL) StreamingPull is an experimental feature. This RPC will
+respond with UNIMPLEMENTED errors unless you have been invited to test
+this feature. Contact cloud-pubsub@google.com with any questions.</p>
+<p>Establishes a stream with the server, which sends messages down to the
+client. The client streams acknowledgements and ack deadline modifications
+back to the server. The server will close the stream and return the status
+on any error. The server may close the stream with status <code>OK</code> to reassign
+server-side resources, in which case, the client should re-establish the
+stream. <code>UNAVAILABLE</code> may also be returned in the case of a transient error
+(e.g., a server restart). These should also be retried by the client. Flow
+control can be achieved by configuring the underlying RPC channel.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override SubscriberClient.StreamingPullStream StreamingPull(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.BidirectionalStreamingSettings</span></td>
+                    <td><em>streamingSettings</em></td>
+                    <td><p>If not null, applies streaming overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.StreamingPullStream.html#Google_Cloud_PubSub_V1_SubscriberClient_StreamingPullStream">SubscriberClient.StreamingPullStream</a></td>
+                    <td><p>The client-server stream.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_StreamingPull_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_">SubscriberClient.StreamingPull(CallSettings, BidirectionalStreamingSettings)</a></div>
               <a id="Google_Cloud_PubSub_V1_SubscriberClientImpl_TestIamPermissions_" data-uid="Google.Cloud.PubSub.V1.SubscriberClientImpl.TestIamPermissions*"></a>
               <h4 id="Google_Cloud_PubSub_V1_SubscriberClientImpl_TestIamPermissions_Google_Cloud_Iam_V1_TestIamPermissionsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClientImpl.TestIamPermissions(Google.Cloud.Iam.V1.TestIamPermissionsRequest,Google.Api.Gax.Grpc.CallSettings)">TestIamPermissions(TestIamPermissionsRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Returns permissions that a caller has on the specified resource.

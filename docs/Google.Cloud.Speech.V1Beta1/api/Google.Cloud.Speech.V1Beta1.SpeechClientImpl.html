@@ -341,6 +341,58 @@ an <code>AsyncRecognizeResponse</code> message.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_AsyncRecognizeAsync_Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_">SpeechClient.AsyncRecognizeAsync(AsyncRecognizeRequest, CallSettings)</a></div>
+              <a id="Google_Cloud_Speech_V1Beta1_SpeechClientImpl_StreamingRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClientImpl.StreamingRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClientImpl_StreamingRecognize_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClientImpl.StreamingRecognize(Google.Api.Gax.Grpc.CallSettings,Google.Api.Gax.Grpc.BidirectionalStreamingSettings)">StreamingRecognize(CallSettings, BidirectionalStreamingSettings)</h4>
+              <div class="markdown level1 summary"><p>Perform bidirectional streaming speech-recognition: receive results while
+sending audio. This method is only available via the gRPC API (not REST).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override SpeechClient.StreamingRecognizeStream StreamingRecognize(CallSettings callSettings = null, BidirectionalStreamingSettings streamingSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
+                    <td><em>callSettings</em></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Api.Gax.Grpc.BidirectionalStreamingSettings</span></td>
+                    <td><em>streamingSettings</em></td>
+                    <td><p>If not null, applies streaming overrides to this RPC call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.SpeechClient.StreamingRecognizeStream.html#Google_Cloud_Speech_V1Beta1_SpeechClient_StreamingRecognizeStream">SpeechClient.StreamingRecognizeStream</a></td>
+                    <td><p>The client-server stream.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Speech.V1Beta1.SpeechClient.html#Google_Cloud_Speech_V1Beta1_SpeechClient_StreamingRecognize_Google_Api_Gax_Grpc_CallSettings_Google_Api_Gax_Grpc_BidirectionalStreamingSettings_">SpeechClient.StreamingRecognize(CallSettings, BidirectionalStreamingSettings)</a></div>
               <a id="Google_Cloud_Speech_V1Beta1_SpeechClientImpl_SyncRecognize_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClientImpl.SyncRecognize*"></a>
               <h4 id="Google_Cloud_Speech_V1Beta1_SpeechClientImpl_SyncRecognize_Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Speech.V1Beta1.SpeechClientImpl.SyncRecognize(Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest,Google.Api.Gax.Grpc.CallSettings)">SyncRecognize(SyncRecognizeRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Perform synchronous speech-recognition: receive results after all audio

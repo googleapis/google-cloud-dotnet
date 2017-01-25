@@ -91,7 +91,7 @@ operation on a single image.</p>
 <a href="api/Google.Cloud.Vision.V1.Image.html">Image</a> class to allow
 instances to be constructed from files, streams, byte arrays and URIs.</p>
 <pre><code class="lang-cs">Image image1 = Image.FromFile(&quot;Pictures/LocalImage.jpg&quot;);
-Image image2 = Image.FromUri(&quot;https://cloud.google.com/images/devtools-icon-64x64.png&quot;);
+Image image2 = Image.FetchFromUri(&quot;https://cloud.google.com/images/devtools-icon-64x64.png&quot;);
 Image image3 = Image.FromStorageUri(&quot;gs://my-bucket/my-file&quot;);
 
 byte[] bytes = ReadImageData(); // For example, from a database

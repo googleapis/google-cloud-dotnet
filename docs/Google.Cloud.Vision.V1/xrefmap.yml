@@ -4635,6 +4635,40 @@ references:
   commentId: Overload:Google.Cloud.Vision.V1.Image.Content
   name: Content
   fullName: Google.Cloud.Vision.V1.Image.Content
+- uid: Google.Cloud.Vision.V1.Image.FetchFromUri(System.String,System.Net.Http.HttpClient)
+  name: FetchFromUri(String, HttpClient)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FetchFromUri_System_String_System_Net_Http_HttpClient_
+  commentId: M:Google.Cloud.Vision.V1.Image.FetchFromUri(System.String,System.Net.Http.HttpClient)
+  fullName: Google.Cloud.Vision.V1.Image.FetchFromUri(System.String, System.Net.Http.HttpClient)
+  nameWithType: Image.FetchFromUri(String, HttpClient)
+- uid: Google.Cloud.Vision.V1.Image.FetchFromUri(System.Uri,System.Net.Http.HttpClient)
+  name: FetchFromUri(Uri, HttpClient)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FetchFromUri_System_Uri_System_Net_Http_HttpClient_
+  commentId: M:Google.Cloud.Vision.V1.Image.FetchFromUri(System.Uri,System.Net.Http.HttpClient)
+  fullName: Google.Cloud.Vision.V1.Image.FetchFromUri(System.Uri, System.Net.Http.HttpClient)
+  nameWithType: Image.FetchFromUri(Uri, HttpClient)
+- uid: Google.Cloud.Vision.V1.Image.FetchFromUri*
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FetchFromUri_
+  commentId: Overload:Google.Cloud.Vision.V1.Image.FetchFromUri
+  name: FetchFromUri
+  fullName: Google.Cloud.Vision.V1.Image.FetchFromUri(System.String, System.Net.Http.HttpClient)
+- uid: Google.Cloud.Vision.V1.Image.FetchFromUriAsync(System.String,System.Net.Http.HttpClient)
+  name: FetchFromUriAsync(String, HttpClient)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FetchFromUriAsync_System_String_System_Net_Http_HttpClient_
+  commentId: M:Google.Cloud.Vision.V1.Image.FetchFromUriAsync(System.String,System.Net.Http.HttpClient)
+  fullName: Google.Cloud.Vision.V1.Image.FetchFromUriAsync(System.String, System.Net.Http.HttpClient)
+  nameWithType: Image.FetchFromUriAsync(String, HttpClient)
+- uid: Google.Cloud.Vision.V1.Image.FetchFromUriAsync(System.Uri,System.Net.Http.HttpClient)
+  name: FetchFromUriAsync(Uri, HttpClient)
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FetchFromUriAsync_System_Uri_System_Net_Http_HttpClient_
+  commentId: M:Google.Cloud.Vision.V1.Image.FetchFromUriAsync(System.Uri,System.Net.Http.HttpClient)
+  fullName: Google.Cloud.Vision.V1.Image.FetchFromUriAsync(System.Uri, System.Net.Http.HttpClient)
+  nameWithType: Image.FetchFromUriAsync(Uri, HttpClient)
+- uid: Google.Cloud.Vision.V1.Image.FetchFromUriAsync*
+  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FetchFromUriAsync_
+  commentId: Overload:Google.Cloud.Vision.V1.Image.FetchFromUriAsync
+  name: FetchFromUriAsync
+  fullName: Google.Cloud.Vision.V1.Image.FetchFromUriAsync(System.Uri, System.Net.Http.HttpClient)
 - uid: Google.Cloud.Vision.V1.Image.FromBytes(System.Byte[])
   name: FromBytes(Byte[])
   href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromBytes_System_Byte___
@@ -4715,40 +4749,6 @@ references:
   commentId: Overload:Google.Cloud.Vision.V1.Image.FromStreamAsync
   name: FromStreamAsync
   fullName: Google.Cloud.Vision.V1.Image.FromStreamAsync(System.IO.Stream)
-- uid: Google.Cloud.Vision.V1.Image.FromUri(System.String)
-  name: FromUri(String)
-  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUri_System_String_
-  commentId: M:Google.Cloud.Vision.V1.Image.FromUri(System.String)
-  fullName: Google.Cloud.Vision.V1.Image.FromUri(System.String)
-  nameWithType: Image.FromUri(String)
-- uid: Google.Cloud.Vision.V1.Image.FromUri(System.Uri)
-  name: FromUri(Uri)
-  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUri_System_Uri_
-  commentId: M:Google.Cloud.Vision.V1.Image.FromUri(System.Uri)
-  fullName: Google.Cloud.Vision.V1.Image.FromUri(System.Uri)
-  nameWithType: Image.FromUri(Uri)
-- uid: Google.Cloud.Vision.V1.Image.FromUri*
-  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUri_
-  commentId: Overload:Google.Cloud.Vision.V1.Image.FromUri
-  name: FromUri
-  fullName: Google.Cloud.Vision.V1.Image.FromUri(System.String)
-- uid: Google.Cloud.Vision.V1.Image.FromUriAsync(System.String)
-  name: FromUriAsync(String)
-  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUriAsync_System_String_
-  commentId: M:Google.Cloud.Vision.V1.Image.FromUriAsync(System.String)
-  fullName: Google.Cloud.Vision.V1.Image.FromUriAsync(System.String)
-  nameWithType: Image.FromUriAsync(String)
-- uid: Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)
-  name: FromUriAsync(Uri)
-  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUriAsync_System_Uri_
-  commentId: M:Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)
-  fullName: Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)
-  nameWithType: Image.FromUriAsync(Uri)
-- uid: Google.Cloud.Vision.V1.Image.FromUriAsync*
-  href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_FromUriAsync_
-  commentId: Overload:Google.Cloud.Vision.V1.Image.FromUriAsync
-  name: FromUriAsync
-  fullName: Google.Cloud.Vision.V1.Image.FromUriAsync(System.Uri)
 - uid: Google.Cloud.Vision.V1.Image.Source
   name: Source
   href: api/Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image_Source

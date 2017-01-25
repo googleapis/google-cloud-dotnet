@@ -4164,6 +4164,17 @@ references:
   commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupId
   name: GroupId
   fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupId
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupName
+  name: GroupName
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroup_GroupName
+  commentId: P:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupName
+  nameWithType: ErrorGroup.GroupName
+- uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupName*
+  href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroup_GroupName_
+  commentId: Overload:Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupName
+  name: GroupName
+  fullName: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.GroupName
 - uid: Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.Name
   name: Name
   href: api/Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup.html#Google_Cloud_ErrorReporting_V1Beta1_ErrorGroup_Name

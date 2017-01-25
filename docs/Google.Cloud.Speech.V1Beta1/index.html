@@ -88,7 +88,7 @@ format needs to be explicitly specified in the request.</p>
 <a href="api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.html">RecognitionAudio</a> class to allow
 instances to be constructed from files, streams, byte arrays and URIs.</p>
 <pre><code class="lang-cs">RecognitionAudio audio1 = RecognitionAudio.FromFile(&quot;Sound/SpeechSample.flac&quot;);
-RecognitionAudio audio2 = RecognitionAudio.FromUri(&quot;https://.../HostedSpeech.flac&quot;);
+RecognitionAudio audio2 = RecognitionAudio.FetchFromUri(&quot;https://.../HostedSpeech.flac&quot;);
 RecognitionAudio audio3 = RecognitionAudio.FromStorageUri(&quot;gs://my-bucket/my-file&quot;);
 
 byte[] bytes = ReadAudioData(); // For example, from a database
