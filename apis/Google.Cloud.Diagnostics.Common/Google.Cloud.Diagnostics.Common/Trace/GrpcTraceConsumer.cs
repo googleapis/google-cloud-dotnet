@@ -49,7 +49,24 @@ namespace Google.Cloud.Diagnostics.Common
 
             Traces tracesObj = new Traces { Traces_ = { traces } };
             // If the client task has faulted this will throw when accessing 'Result'
-            _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj);
+            _clientTask.Result.PatchTraces(trace.ProjectId, tracesObj);
+        }
+
+        /// <inheritdoc />
+        public async Task ReceiveAsync(IEnumerable<TraceProto> traces)
+        {
+            GaxPreconditions.CheckNotNull(traces, nameof(traces));
+
+            TraceProto trace = traces.FirstOrDefault();
+            // If there are no traces do not try to send them.
+            if (trace == null)
+            {
+                return;
+            }
+
+            Traces tracesObj = new Traces { Traces_ = { traces } };
+            // If the client task has faulted this will throw when accessing 'Result'
+            await _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj);
         }
     }
 }

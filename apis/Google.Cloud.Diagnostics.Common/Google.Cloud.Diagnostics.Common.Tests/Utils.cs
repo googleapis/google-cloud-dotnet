@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
@@ -60,6 +61,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             /// <summary>Does nothing with the passed in items.</summary>
             public void Receive(IEnumerable<int> items) {}
+
+            /// <summary>Does nothing with the passed in items.</summary>
+            public Task ReceiveAsync(IEnumerable<int> items) { return Task.CompletedTask; }
         }
     }
 }

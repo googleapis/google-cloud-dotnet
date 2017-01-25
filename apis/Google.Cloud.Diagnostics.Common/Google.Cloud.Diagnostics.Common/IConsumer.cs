@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -25,5 +26,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// Accepts an enumerable of items.
         /// </summary>
         void Receive(IEnumerable<T> items);
+
+        /// <summary>
+        /// Accepts an enumerable of items asynchronously.
+        /// </summary>
+        Task ReceiveAsync(IEnumerable<T> items);
     }
 }

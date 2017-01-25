@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -23,8 +25,8 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class SizedBufferingConsumer<T> : IFlushableConsumer<T>
     {
-        /// <summary>A mutex to protect the buffer.</summary>
-        private readonly object _mutex = new object();
+        /// <summary>A semaphore to protect the buffer.</summary>
+        private readonly SemaphoreSlim semaphore = new SemaphoreSlim(1);
 
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
@@ -61,42 +63,83 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
         /// <param name="bufferSize">The buffer size in bytes.</param>
         public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
-        {
-            return new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
-        }
+            => new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
 
         /// <inheritdoc />
         public void Receive(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            lock (_mutex)
+            semaphore.Wait();
+            foreach (T item in items)
             {
-                foreach (T item in items)
+                _size += _sizer.GetSize(item);
+                _items.Add(item);
+                if (_size >= _bufferSize)
                 {
-                    _size += _sizer.GetSize(item);
-                    _items.Add(item);
-                    if (_size >= _bufferSize)
-                    {
-                        Flush();
-                    }
+                    Flush(waitForSemaphore: false);
                 }
             }
+            semaphore.Release();
         }
 
         /// <inheritdoc />
-        public void Flush()
+        public async Task ReceiveAsync(IEnumerable<T> items)
+        {
+            GaxPreconditions.CheckNotNull(items, nameof(items));
+            await semaphore.WaitAsync();
+            foreach (T item in items)
+            {
+                _size += _sizer.GetSize(item);
+                _items.Add(item);
+                if (_size >= _bufferSize)
+                {
+                    await FlushAsync(waitForSemaphore: false);
+                }
+            }
+            semaphore.Release();
+        }
+
+        /// <inheritdoc />
+        public void Flush() => Flush(waitForSemaphore: true);
+
+        /// <inheritdoc />
+        public async Task FlushAsync() => await FlushAsync(waitForSemaphore: true);
+
+        /// <summary>
+        /// Flush the buffer.
+        /// </summary>
+        /// <param name="waitForSemaphore">If true the flush will wait for the semaphore.</param>
+        private void Flush(bool waitForSemaphore)
         {
             IList<T> old;
-            lock (_mutex)
-            {
-                old = _items;
-                _items = new List<T>();
-                _size = 0;
-            }
+            if (waitForSemaphore) semaphore.Wait();
+            old = _items;
+            _items = new List<T>();
+            _size = 0;
+            if (waitForSemaphore) semaphore.Release();
 
             if (old.Count != 0)
             {
                 _consumer.Receive(old);
+            }
+        }
+
+        /// <summary>
+        /// Flush the buffer asynchronously.
+        /// </summary>
+        /// <param name="waitForSemaphore">If true the flush will wait for the semaphore.</param>
+        private async Task FlushAsync(bool waitForSemaphore)
+        {
+            IList<T> old;
+            if (waitForSemaphore) await semaphore.WaitAsync();
+            old = _items;
+            _items = new List<T>();
+            _size = 0;
+            if (waitForSemaphore) semaphore.Release();
+
+            if (old.Count != 0)
+            {
+                await _consumer.ReceiveAsync(old);
             }
         }
     }

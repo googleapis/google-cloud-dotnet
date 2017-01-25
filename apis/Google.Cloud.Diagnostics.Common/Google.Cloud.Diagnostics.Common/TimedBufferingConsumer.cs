@@ -15,6 +15,8 @@
 using Google.Api.Gax;
 using System.Collections.Generic;
 using System;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -24,8 +26,8 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class TimedBufferingConsumer<T> : IFlushableConsumer<T>
     {
-        /// <summary>A mutex to protect the buffer.</summary>
-        private readonly object _mutex = new object();
+        /// <summary>A semaphore to protect the buffer.</summary>
+        private readonly SemaphoreSlim semaphore = new SemaphoreSlim(1); 
 
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
@@ -61,37 +63,75 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="waitTime">The minimum amount of time between automatic flushes.</param>
         /// <param name="clock">A clock for getting the current timestamp.</param>
         public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime, IClock clock = null)
-        {
-            return new TimedBufferingConsumer<T>(consumer, waitTime, clock ?? SystemClock.Instance);
-        }
+            => new TimedBufferingConsumer<T>(consumer, waitTime, clock ?? SystemClock.Instance);
 
         /// <inheritdoc />
         public void Receive(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            lock (_mutex)
-            {
-                _items.AddRange(items);
-                if (_clock.GetCurrentDateTimeUtc() >= _nextFlush) { 
-                  Flush();
-                }
+            semaphore.Wait();
+            _items.AddRange(items);
+            if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
+            { 
+                Flush(waitForSemaphore: false);
             }
+            semaphore.Release();
         }
 
         /// <inheritdoc />
-        public void Flush()
+        public async Task ReceiveAsync(IEnumerable<T> items)
+        {
+            GaxPreconditions.CheckNotNull(items, nameof(items));
+            await semaphore.WaitAsync();
+            _items.AddRange(items);
+            if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
+            {
+                await FlushAsync(waitForSemaphore: false);
+            }
+            semaphore.Release();
+        }
+
+        /// <inheritdoc />
+        public void Flush() => Flush(waitForSemaphore: true);
+
+        /// <inheritdoc />
+        public async Task FlushAsync() => await FlushAsync(waitForSemaphore: true);
+
+        /// <summary>
+        /// Flush the buffer.
+        /// </summary>
+        /// <param name="waitForSemaphore">If true the flush will wait for the semaphore.</param>
+        private void Flush(bool waitForSemaphore)
         {
             IList<T> old;
-            lock (_mutex)
-            {
-                old = _items;
-                _items = new List<T>();
-                _nextFlush = DateTime.UtcNow.Add(_waitTime);
-            }
+            if (waitForSemaphore) semaphore.Wait();
+            old = _items;
+            _items = new List<T>();
+            _nextFlush = DateTime.UtcNow.Add(_waitTime);
+            if (waitForSemaphore) semaphore.Release();
 
             if (old.Count != 0)
             {
                 _consumer.Receive(old);
+            }
+        }
+
+        /// <summary>
+        /// Flush the buffer asynchronously.
+        /// </summary>
+        /// <param name="waitForSemaphore">If true the flush will wait for the semaphore.</param>
+        private async Task FlushAsync(bool waitForSemaphore)
+        {
+            IList<T> old;
+            if (waitForSemaphore) await semaphore.WaitAsync();
+            old = _items;
+            _items = new List<T>();
+            _nextFlush = DateTime.UtcNow.Add(_waitTime);
+            if (waitForSemaphore) semaphore.Release();
+
+            if (old.Count != 0)
+            {
+                await _consumer.ReceiveAsync(old);
             }
         }
     }
