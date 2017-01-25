@@ -12,10 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.AspNetCore.Builder;
-using Newtonsoft.Json;
-using System.IO;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -57,62 +54,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             var logger = ErrorReportingExceptionLogger.Create(projectId, serviceName, version);
             app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
-        }
-
-        public static string ToJsonString(this ReportedErrorEvent errorEvent)
-        {
-
-
-            using (var sw = new StringWriter())
-            using (var writer = new JsonTextWriter(sw))
-            {
-                writer.WriteStartObject();
-                writer.WritePropertyName("serviceContext");
-                writer.WriteStartObject();
-                writer.WritePropertyName("service");
-                writer.WriteValue(errorEvent.ServiceContext.Service);
-                writer.WritePropertyName("version");
-                writer.WriteValue(errorEvent.ServiceContext.Version);
-                writer.WriteEndObject();
-
-                writer.WritePropertyName("message");
-                writer.WriteValue(errorEvent.Message);
-
-                writer.WritePropertyName("context");
-                writer.WriteStartObject();
-
-
-                writer.WritePropertyName("httpRequest");
-                writer.WriteStartObject();
-                writer.WritePropertyName("method");
-                writer.WriteValue(errorEvent.Context.HttpRequest.Method);
-                writer.WritePropertyName("url");
-                writer.WriteValue(errorEvent.Context.HttpRequest.Url);
-                writer.WritePropertyName("userAgent");
-                writer.WriteValue(errorEvent.Context.HttpRequest.UserAgent);
-                writer.WritePropertyName("responseStatusCode");
-                writer.WriteValue(errorEvent.Context.HttpRequest.ResponseStatusCode);
-                writer.WriteEndObject();
-
-                writer.WritePropertyName("reportLocation");
-                writer.WriteStartObject();
-                writer.WritePropertyName("filePath");
-                writer.WriteValue(errorEvent.Context.ReportLocation.FilePath);
-                writer.WritePropertyName("lineNumber");
-                writer.WriteValue(errorEvent.Context.ReportLocation.LineNumber);
-                writer.WritePropertyName("functionName");
-                writer.WriteValue(errorEvent.Context.ReportLocation.FunctionName);
-                writer.WriteEndObject();
-
-
-                writer.WriteEndObject();
-
-
-
-                writer.WriteEndObject();
-                writer.Close();
-                return sw.ToString();
-            }
         }
     }
 }
