@@ -20,7 +20,7 @@ namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A factory <see cref="ManagedTracerFactory"/> that will generate <see cref="IManagedTracer"/>s 
-    /// from a <see cref="TraceHeaderContext"/>.  If the <see cref="TraceHeaderContext"/> does not provide
+    /// from <see cref="TraceHeaderContext"/>s.  If the <see cref="TraceHeaderContext"/> does not provide
     /// the needed context to determine the proper <see cref="IManagedTracer"/> then the given
     /// <see cref="ITraceOptionsFactory"/> will decide.
     /// </summary>
@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="consumer">A trace consumer for the tracer. Cannot be null.</param>
         /// <param name="optionsFactory">An options factory to fall back to if the 
-        ///     <see cref="TraceHeaderContext"/> coes not provide enough context. Cannot be null.</param>
+        ///     <see cref="TraceHeaderContext"/> does not provide enough context. Cannot be null.</param>
         /// <param name="traceIdFactory">A trace Id factory. Cannot be null.</param>
         internal ManagedTracerFactory(
             string projectId,
@@ -67,8 +67,8 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// True if the tracing should occur based on a <see cref="TraceHeaderContext"/>
-        /// and an <see cref="ITraceOptionsFactory"/>
+        /// True if the tracing should occur. Decision b ased on a <see cref="TraceHeaderContext"/>
+        /// and an <see cref="ITraceOptionsFactory"/>.
         /// </summary>
         internal bool ShouldTrace(TraceHeaderContext headerContext) => 
             headerContext.ShouldTrace ?? _optionsFactory.CreateOptions().ShouldTrace;

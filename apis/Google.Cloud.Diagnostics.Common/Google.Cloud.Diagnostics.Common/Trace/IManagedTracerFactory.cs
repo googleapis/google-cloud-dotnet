@@ -15,7 +15,7 @@
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A factory to generate <see cref="IManagedTracer"/>s from <see cref="TraceHeaderContext"/>.
+    /// A factory to generate <see cref="IManagedTracer"/>s from <see cref="TraceHeaderContext"/>s.
     /// </summary>
     internal interface IManagedTracerFactory
     {
