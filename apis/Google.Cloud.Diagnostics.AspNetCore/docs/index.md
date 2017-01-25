@@ -6,6 +6,13 @@ It allows for simple integration of Stackdriver into ASP.NET applications with m
 `Google.Cloud.Diagnostics.AspNetCore` currently supports Stackdriver Error Reporting, Stackdriver Logging
 and Stackdriver Trace.
 
+# Installation
+
+Install the `Google.Cloud.Diagnostics.AspNetCore` package from NuGet. Add it to your project in the normal way
+(for example by right-clicking on the project in Visual Studio and choosing "Manage NuGet Packages...").
+Please ensure you enable pre-release packages (for example, in the Visual Studio NuGet user interface,
+check the "Include prerelease" box).
+
 # Authentication
 
 To authenticate all your API calls, first install and setup the
