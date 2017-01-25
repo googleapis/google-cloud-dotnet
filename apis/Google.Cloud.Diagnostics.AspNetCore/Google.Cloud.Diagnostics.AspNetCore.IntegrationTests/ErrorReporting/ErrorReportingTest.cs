@@ -235,7 +235,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
             {
                 throw new Exception(message);
             }
-            catch (Exception e)
+            catch
             {
                 // Do nothing.
             }

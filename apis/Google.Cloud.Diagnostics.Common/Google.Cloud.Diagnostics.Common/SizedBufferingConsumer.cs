@@ -60,6 +60,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
         /// <param name="bufferSize">The buffer size in bytes.</param>
+        /// <param name="sizer">The sizer for the given type. Cannot be null.</param>
         public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
         {
             return new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);

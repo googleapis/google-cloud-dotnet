@@ -88,6 +88,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Adds the needed services for Google Cloud Tracing. Used with <see cref="UseGoogleTrace"/>.
         /// </summary>
+        /// <param name="services">The service collection. Cannot be null.</param>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="clientTask">Optional task which produces the Trace client, if 

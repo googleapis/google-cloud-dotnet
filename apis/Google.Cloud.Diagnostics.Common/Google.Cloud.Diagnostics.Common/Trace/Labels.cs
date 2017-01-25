@@ -62,7 +62,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Gets a map with the label for the agent which contains the agent's name and version.
-        /// </summary
+        /// </summary>
         internal static Dictionary<string, string> GetAgentLabel(System.Type type) =>
             new Dictionary<string, string> { { Agent, $"{AgentName} {GetAgentVersion(type)}" } };
 

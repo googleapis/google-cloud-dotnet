@@ -53,6 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     (<see cref="LogTo"/>) to generate the resource name for the log.</param>
         public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logTo, _loggerOptions, logName);
 
+        /// <inheritdoc />
         public void Dispose() {}
     }
 }

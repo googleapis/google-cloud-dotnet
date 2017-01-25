@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using System.Threading.Tasks;
 using System.Web;
@@ -59,7 +60,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>.
         /// </summary>
-        /// <param name="clientTask">The Error Reporting client. Cannot be null.</param>
+        /// <param name="client">The Error Reporting client. Cannot be null.</param>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
         ///     Cannot be null.</param>
