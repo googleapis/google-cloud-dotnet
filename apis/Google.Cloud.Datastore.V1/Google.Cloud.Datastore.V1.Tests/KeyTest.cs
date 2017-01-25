@@ -21,6 +21,12 @@ namespace Google.Cloud.Datastore.V1.Tests
     public class KeyTest
     {
         [Fact]
+        public void GoBang()
+        {
+            Assert.False(true);
+        }
+
+        [Fact]
         public void ToDelete()
         {
             // Not actually a valid key, as there are no path elements, but we're not doing full
