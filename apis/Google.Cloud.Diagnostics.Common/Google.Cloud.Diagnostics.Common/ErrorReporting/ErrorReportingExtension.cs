@@ -17,7 +17,7 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace Google.Cloud.Diagnostics.Common.ErrorReporting
+namespace Google.Cloud.Diagnostics.Common
 {
     public static class ErrorReportingExtension
     {

@@ -12,23 +12,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.ErrorReporting.V1Beta1;
-using Google.Cloud.Logging.V2;
+using Google.Api.Gax;
 
-namespace Google.Cloud.Diagnostics.AspNetCore
+namespace Google.Cloud.Diagnostics.Common
 {
-    public enum ReportEventsTo
-    {
-        ErrorReporting,
-        Logging
-    }
-
     public sealed class ErrorReportingOptions
     {
+        public ReportEventsTo ReportEventsTo { get; }
 
-        internal ErrorReportingOptions(ReportEventsTo reportEventsTo, 
-            ReportErrorsServiceClient errorClient = null, LoggingServiceV2Client logClient = null)
+        public BufferOptions BufferOptions { get; }
+
+        internal ErrorReportingOptions(ReportEventsTo reportEventsTo, BufferOptions bufferOptions)
         {
+            ReportEventsTo = GaxPreconditions.CheckNotNull(reportEventsTo, nameof(reportEventsTo));
+            BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
+        }
+
+        public static ErrorReportingOptions Create(
+            ReportEventsTo reportEventsTo = null, BufferOptions bufferOptions = null)
+        {
+            return new ErrorReportingOptions(
+                reportEventsTo ?? ReportEventsTo.Logging(), bufferOptions ?? BufferOptions.NoBuffer());
         }
     }
 }
