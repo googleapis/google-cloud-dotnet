@@ -25,6 +25,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class GrpcTraceConsumerTest
     {
+        private static readonly Task s_completedTask = Task.FromResult(1);
+
         private static readonly string ProjectId = "pid";
 
         private Traces GetTraces() => new Traces
@@ -61,7 +63,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Traces traces = GetTraces();
 
             var mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(ProjectId, traces, null)).Returns(Task.CompletedTask);
+            mockClient.Setup(c => c.PatchTracesAsync(ProjectId, traces, null)).Returns(s_completedTask);
             var taskClient = Task.FromResult(mockClient.Object);
             var consumer = new GrpcTraceConsumer(taskClient);
 

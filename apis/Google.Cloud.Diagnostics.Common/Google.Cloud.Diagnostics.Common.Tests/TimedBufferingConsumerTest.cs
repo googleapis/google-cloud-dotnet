@@ -23,6 +23,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class TimedBufferingConsumerTest
     {
+        private static readonly Task s_completedTask = Task.FromResult(1);
+
         private static TimeSpan _waitTime = TimeSpan.FromSeconds(5);
 
         private DateTime _start = DateTime.UtcNow;
@@ -103,7 +105,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             // Add the initial ints the list.  This ensures we verify the right 
             // values where received.
-            mockConsumer.Setup(c => c.ReceiveAsync(new[] { 1, 2, 3, 4, 5 })).Returns(Task.CompletedTask);
+            mockConsumer.Setup(c => c.ReceiveAsync(new[] { 1, 2, 3, 4, 5 })).Returns(s_completedTask);
             await consumer.ReceiveAsync(new[] { 3, 4, 5 });
             mockConsumer.VerifyAll();
         }
@@ -115,7 +117,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var clock = GetClock(new[] { _start, _start });
             int[] intArray = { 1, 2, 3, 4 };
             var mockConsumer = new Mock<IConsumer<int>>();
-            mockConsumer.Setup(c => c.ReceiveAsync(intArray)).Returns(Task.CompletedTask);
+            mockConsumer.Setup(c => c.ReceiveAsync(intArray)).Returns(s_completedTask);
             var consumer = GetConsumer(mockConsumer.Object, clock);
 
             await consumer.ReceiveAsync(intArray);

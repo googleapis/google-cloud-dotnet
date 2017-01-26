@@ -22,6 +22,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         private const string _projectEnvironmentVariable = "TEST_PROJECT";
 
+        private static readonly Task s_completedTask = Task.FromResult(1);
+
         /// <returns>The test project Id.</returns>
         /// <exception cref="InvalidOperationException">If the 'TEST_PROJECT' environment
         /// variable is not set or empty</exception>
@@ -63,7 +65,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             public void Receive(IEnumerable<int> items) {}
 
             /// <summary>Does nothing with the passed in items.</summary>
-            public Task ReceiveAsync(IEnumerable<int> items) { return Task.CompletedTask; }
+            public Task ReceiveAsync(IEnumerable<int> items) { return s_completedTask; }
         }
     }
 }
