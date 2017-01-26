@@ -28,7 +28,12 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Sample: SyncRecognize
             // Additional: SyncRecognize(*,*,*)
             SpeechClient client = SpeechClient.Create();
-            RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
+            RecognitionConfig config = new RecognitionConfig
+            {
+                Encoding = AudioEncoding.Linear16,
+                SampleRate = 16000,
+                LanguageCode = LanguageCodes.English.UnitedStates
+            };
             SyncRecognizeResponse response = client.SyncRecognize(config, audio);
             Console.WriteLine(response);
             // End sample
