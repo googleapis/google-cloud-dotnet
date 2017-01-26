@@ -14,6 +14,7 @@
 
 using Moq;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -79,17 +80,19 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockConsumer = new Mock<IConsumer<int>>();
             var consumer = GetConsumer(mockConsumer.Object);
-            await consumer.ReceiveAsync(new[] { 1, 2 });
+            await consumer.ReceiveAsync(new[] { 1, 2 }, CancellationToken.None);
 
             // Ensure ints have not been sent as they are not bigger then the buffer.
-            mockConsumer.Verify(c => c.ReceiveAsync(It.IsAny<IEnumerable<int>>()), Times.Never());
+            mockConsumer.Verify(c => c.ReceiveAsync(
+                It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
 
             // Add the initial ints the list.  This ensures we verify the right 
             // values where received.
-            mockConsumer.Setup(c => c.ReceiveAsync(new[] { 1, 2, 3, 4, 5 })).Returns(s_completedTask);
+            mockConsumer.Setup(c => c.ReceiveAsync(
+                new[] { 1, 2, 3, 4, 5 }, CancellationToken.None)).Returns(s_completedTask);
 
             // Fill the buffer so it will be flushed.
-            await consumer.ReceiveAsync(new[] { 3, 4, 5 });
+            await consumer.ReceiveAsync(new[] { 3, 4, 5 }, CancellationToken.None);
             mockConsumer.VerifyAll();
         }
 
@@ -101,9 +104,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var consumer = GetConsumer(mockConsumer.Object);
 
             await consumer.ReceiveAsync(intArray);
-            mockConsumer.Verify(c => c.ReceiveAsync(It.IsAny<IEnumerable<int>>()), Times.Never());
+            mockConsumer.Verify(c => c.ReceiveAsync(
+                It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
 
-            mockConsumer.Setup(c => c.ReceiveAsync(intArray)).Returns(s_completedTask); ;
+            mockConsumer.Setup(c => c.ReceiveAsync(
+                intArray, CancellationToken.None)).Returns(s_completedTask);
             await consumer.FlushAsync();
             mockConsumer.VerifyAll();
         }
@@ -112,12 +117,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task FlushAsync_NoTraces()
         {
             var mockConsumer = new Mock<IConsumer<int>>();
-            mockConsumer.Setup(c => c.ReceiveAsync(new int[] { }));
+            mockConsumer.Setup(c => c.ReceiveAsync(new int[] { }, CancellationToken.None));
             var consumer = GetConsumer(mockConsumer.Object);
 
             await consumer.ReceiveAsync(new int[] { });
             consumer.Flush();
-            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
+            mockConsumer.Verify(c => c.ReceiveAsync(
+                It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
         }
     }
 }

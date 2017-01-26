@@ -15,6 +15,7 @@
 using Google.Cloud.Logging.V2;
 using Moq;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -54,11 +55,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
             var mockClient = new Mock<LoggingServiceV2Client>();
             var task = Task.FromResult(new WriteLogEntriesRequest());
             mockClient.Setup(c => c.WriteLogEntriesAsync(
-                null, null, It.IsAny<IDictionary<string, string>>(), logs, null))
+                null, null, It.IsAny<IDictionary<string, string>>(), logs, CancellationToken.None))
                 .Returns(Task.FromResult(new WriteLogEntriesResponse()));
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
-            await consumer.ReceiveAsync(logs);
+            await consumer.ReceiveAsync(logs, CancellationToken.None);
             mockClient.VerifyAll();
         }
 
@@ -68,10 +69,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
             var mockClient = new Mock<LoggingServiceV2Client>();
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
-            await consumer.ReceiveAsync(new LogEntry[] { });
+            await consumer.ReceiveAsync(new LogEntry[] { }, CancellationToken.None);
             mockClient.Verify(c => c.WriteLogEntriesAsync(
                 null, null, It.IsAny<IDictionary<string, string>>(),
-                It.IsAny<IEnumerable<LogEntry>>(), null), Times.Never());
+                It.IsAny<IEnumerable<LogEntry>>(), CancellationToken.None), Times.Never());
         }
     }
 }

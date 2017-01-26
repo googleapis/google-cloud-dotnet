@@ -27,7 +27,7 @@ namespace Google.Cloud.Diagnostics.Common
     internal class TimedBufferingConsumer<T> : IFlushableConsumer<T>
     {
         /// <summary>A semaphore to protect the buffer.</summary>
-        private readonly SemaphoreSlim semaphore = new SemaphoreSlim(1); 
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1); 
 
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
@@ -69,33 +69,40 @@ namespace Google.Cloud.Diagnostics.Common
         public void Receive(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            semaphore.Wait();
+            _semaphore.Wait();
             _items.AddRange(items);
             if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
             { 
                 Flush(waitForSemaphore: false);
             }
-            semaphore.Release();
+            _semaphore.Release();
         }
 
         /// <inheritdoc />
-        public async Task ReceiveAsync(IEnumerable<T> items)
+        public async Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            await semaphore.WaitAsync();
-            _items.AddRange(items);
-            if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
+            try
             {
-                await FlushAsync(waitForSemaphore: false);
+                await _semaphore.WaitAsync(cancellationToken);
+                _items.AddRange(items);
+                if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
+                {
+                    await FlushAsync(cancellationToken, waitForSemaphore: false);
+                }
             }
-            semaphore.Release();
+            finally
+            {
+                _semaphore.Release();
+            }
         }
 
         /// <inheritdoc />
         public void Flush() => Flush(waitForSemaphore: true);
 
         /// <inheritdoc />
-        public async Task FlushAsync() => await FlushAsync(waitForSemaphore: true);
+        public async Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken)) => 
+            await FlushAsync(cancellationToken, waitForSemaphore: true);
 
         /// <summary>
         /// Flush the buffer.
@@ -104,11 +111,11 @@ namespace Google.Cloud.Diagnostics.Common
         private void Flush(bool waitForSemaphore)
         {
             IList<T> old;
-            if (waitForSemaphore) semaphore.Wait();
+            if (waitForSemaphore) _semaphore.Wait();
             old = _items;
             _items = new List<T>();
             _nextFlush = DateTime.UtcNow.Add(_waitTime);
-            if (waitForSemaphore) semaphore.Release();
+            if (waitForSemaphore) _semaphore.Release();
 
             if (old.Count != 0)
             {
@@ -120,18 +127,24 @@ namespace Google.Cloud.Diagnostics.Common
         /// Flush the buffer asynchronously.
         /// </summary>
         /// <param name="waitForSemaphore">If true the flush will wait for the semaphore.</param>
-        private async Task FlushAsync(bool waitForSemaphore)
+        private async Task FlushAsync(CancellationToken cancellationToken, bool waitForSemaphore)
         {
             IList<T> old;
-            if (waitForSemaphore) await semaphore.WaitAsync();
-            old = _items;
-            _items = new List<T>();
-            _nextFlush = DateTime.UtcNow.Add(_waitTime);
-            if (waitForSemaphore) semaphore.Release();
+            try
+            {
+                if (waitForSemaphore) await _semaphore.WaitAsync(cancellationToken);
+                old = _items;
+                _items = new List<T>();
+                _nextFlush = DateTime.UtcNow.Add(_waitTime);
+            }
+            finally
+            {
+                if (waitForSemaphore) _semaphore.Release();
+            }
 
             if (old.Count != 0)
             {
-                await _consumer.ReceiveAsync(old);
+                await _consumer.ReceiveAsync(old, cancellationToken);
             }
         }
     }
