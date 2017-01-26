@@ -23,13 +23,15 @@ namespace Google.Cloud.Diagnostics.Common
     internal interface IFlushableConsumer<T> : IConsumer<T> 
     {
         /// <summary>
-        /// Flush the consumer.
+        /// Flushes the consumer.
         /// </summary>
-        void Flush();
+        void Flushes();
 
         /// <summary>
-        /// Flush the consumer asynchronously.
+        /// Flushes the consumer asynchronously.
         /// </summary>
-        Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken));
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        Task FlushesAsync(CancellationToken cancellationToken = default(CancellationToken));
     }
 }
