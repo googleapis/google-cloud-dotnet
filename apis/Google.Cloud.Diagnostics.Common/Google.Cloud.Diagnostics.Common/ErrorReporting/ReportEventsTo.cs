@@ -38,21 +38,35 @@ namespace Google.Cloud.Diagnostics.Common
 
         public LoggingServiceV2Client LoggingClient { get; private set; }
 
-        public LogToLocation LogToLocation { get; private set; }
+        public LogTo LogTo { get; private set; }
 
         public string LogName { get; private set; }
 
         public MonitoredResource MonitoredResource { get; private set; }
 
-        public static ReportEventsTo Logging(
-            string logName = LogNameDefault, LogToLocation logToLocation = LogToLocation.Project,
+        public static ReportEventsTo Logging(string projectId, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
+
             return new ReportEventsTo
             {
                 ReportEventsToLocation = ReportEventsToLocation.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
-                LogToLocation = GaxPreconditions.CheckEnumValue(logToLocation, nameof(logToLocation)),
+                LogTo = LogTo.Project(GaxPreconditions.CheckNotNull(projectId, nameof(projectId))),
+                LogName = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
+                MonitoredResource = monitoredResource ?? GlobalResource,
+            };
+        }
+
+        public static ReportEventsTo Logging(LogTo logTo, string logName = LogNameDefault,
+            LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
+        {
+            
+            return new ReportEventsTo
+            {
+                ReportEventsToLocation = ReportEventsToLocation.Logging,
+                LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
+                LogTo = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)),
                 LogName = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? GlobalResource,
             };

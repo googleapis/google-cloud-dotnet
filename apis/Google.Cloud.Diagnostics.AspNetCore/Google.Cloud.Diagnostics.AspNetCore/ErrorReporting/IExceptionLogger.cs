@@ -21,23 +21,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// A generic exception logger.
     /// </summary>
-    /// <typeparam name="T">The return type of the log calls.</typeparam>
-    public interface IExceptionLogger<T>
+    internal interface IExceptionLogger
     {
-        /// <summary>
-        /// Asynchronously logs an exception that occurred.
-        /// </summary>
-        /// <param name="context">The current http context.  Cannot be null.</param>
-        /// <param name="exception">The exception to log.  Cannot be null.</param>
-        /// <returns>The result of the log operation.</returns>
-        T Log(HttpContext context, Exception exception);
-
         /// <summary>
         /// Logs an exception that occurred.
         /// </summary>
         /// <param name="context">The current http context.  Cannot be null.</param>
         /// <param name="exception">The exception to log.  Cannot be null.</param>
-        /// <returns>A task containing the result of the log operation.</returns>
-        Task<T> LogAsync(HttpContext context, Exception exception);
+        /// <returns>A task representing the asynchronous operation.</returns>
+        Task LogAsync(HttpContext context, Exception exception);
     }
 }

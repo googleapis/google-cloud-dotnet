@@ -22,17 +22,25 @@ namespace Google.Cloud.Diagnostics.Common
 
         public BufferOptions BufferOptions { get; }
 
-        internal ErrorReportingOptions(ReportEventsTo reportEventsTo, BufferOptions bufferOptions)
+        private ErrorReportingOptions(ReportEventsTo reportEventsTo, BufferOptions bufferOptions)
         {
             ReportEventsTo = GaxPreconditions.CheckNotNull(reportEventsTo, nameof(reportEventsTo));
             BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
         }
 
         public static ErrorReportingOptions Create(
-            ReportEventsTo reportEventsTo = null, BufferOptions bufferOptions = null)
+            ReportEventsTo reportEventsTo, BufferOptions bufferOptions = null)
         {
             return new ErrorReportingOptions(
-                reportEventsTo ?? ReportEventsTo.Logging(), bufferOptions ?? BufferOptions.NoBuffer());
+                reportEventsTo, bufferOptions ?? BufferOptions.NoBuffer());
+        }
+
+        public static ErrorReportingOptions Create(
+            string projectId, BufferOptions bufferOptions = null)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            return new ErrorReportingOptions(
+                ReportEventsTo.Logging(projectId), bufferOptions ?? BufferOptions.NoBuffer());
         }
     }
 }

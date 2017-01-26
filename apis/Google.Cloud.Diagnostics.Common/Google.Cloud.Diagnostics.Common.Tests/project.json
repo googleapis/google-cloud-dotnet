@@ -17,7 +17,7 @@
   "testRunner": "xunit",
 
   "frameworks": {
-    //"net451": {},
+    "net451": {},
     "netcoreapp1.0": {
       "imports": "netcore50",
       "dependencies": {

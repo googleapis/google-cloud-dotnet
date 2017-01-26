@@ -129,6 +129,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             );
         }
 
+        /*
         private ErrorReportingExceptionFilter CreateFilter(ReportErrorsServiceClient client)
             => ErrorReportingExceptionFilter.Create(client, ProjectId, ServiceName, Version);
 
@@ -155,5 +156,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 
             mockClient.VerifyAll();
         }
+        */
     }
 }

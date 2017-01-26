@@ -23,7 +23,7 @@ using Google.Api;
 using Google.Protobuf.WellKnownTypes;
 using Google.Cloud.Logging.Type;
 
-namespace Google.Cloud.Diagnostics.Common.ErrorReporting
+namespace Google.Cloud.Diagnostics.Common
 {
     internal class ErrorEventToLogEntryConsumer : IConsumer<ReportedErrorEvent>
     {
@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.Common.ErrorReporting
         private readonly IConsumer<LogEntry> _logConsumer;
         private readonly MonitoredResource _monitoredResource;
 
-        public ErrorEventToLogEntryConsumer(LogTo logTo, string logName,
+        public ErrorEventToLogEntryConsumer(string logName, LogTo logTo,
             IConsumer<LogEntry> logConsumer, MonitoredResource monitoredResource)
         {
             _logName = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)).GetFullLogName(logName);
@@ -39,21 +39,13 @@ namespace Google.Cloud.Diagnostics.Common.ErrorReporting
             _monitoredResource = GaxPreconditions.CheckNotNull(monitoredResource, nameof(monitoredResource));
         }
 
-       
+        public void Receive(IEnumerable<ReportedErrorEvent> items) =>
+            _logConsumer.Receive(ConvertErrorEvents(items));
 
-        
-
-        public void Receive(IEnumerable<ReportedErrorEvent> items)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task ReceiveAsync(
-            IEnumerable<ReportedErrorEvent> items, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            throw new NotImplementedException();
-        }
-
+        public async Task ReceiveAsync(IEnumerable<ReportedErrorEvent> items,
+            CancellationToken cancellationToken = default(CancellationToken)) => 
+                await _logConsumer.ReceiveAsync(ConvertErrorEvents(items), cancellationToken);
+    
         internal IEnumerable<LogEntry> ConvertErrorEvents(IEnumerable<ReportedErrorEvent> items)
         {
             List<LogEntry> logEntries = new List<LogEntry>();
@@ -65,7 +57,7 @@ namespace Google.Cloud.Diagnostics.Common.ErrorReporting
                     LogName = _logName,
                     Severity = LogSeverity.Error,
                     Timestamp = Timestamp.FromDateTime(DateTime.UtcNow),
-                    JsonPayload = errorEvent.ToJsonString(),
+                    JsonPayload = errorEvent.ToStruct(),
                 };
                 logEntries.Add(logEntry);
             }

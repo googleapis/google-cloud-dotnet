@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -46,14 +48,27 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Uses middleware that will report all uncaught exceptions to the Stackdriver
         /// Error Reporting API.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
-        /// <param name="version">Represents the source code version that the developer provided.</param> 
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the
+        ///     executable or job.  Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer
+        ///     provided. Cannot be null.</param> 
         public static void UseGoogleExceptionLogging(
-            this IApplicationBuilder app, string projectId, string serviceName, string version)
+            this IApplicationBuilder app, string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
         {
-            var logger = ErrorReportingExceptionLogger.Create(projectId, serviceName, version);
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = ReportedErrorEventConsumerFactory.Create(projectId, options);
+            var logger = ErrorReportingExceptionLogger.Create(consumer, serviceName, version);
             app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
         }
     }
 }
+
+
+
+// TODO(talarico): ADD OPTIONS PARAM

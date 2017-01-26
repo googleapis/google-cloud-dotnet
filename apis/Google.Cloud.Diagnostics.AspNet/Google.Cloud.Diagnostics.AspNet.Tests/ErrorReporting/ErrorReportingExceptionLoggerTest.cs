@@ -107,7 +107,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
                 e.ServiceContext.Version.Equals(Version)
             );
         }
-
+        /*
         private ErrorReportingExceptionLogger GetLogger(ReportErrorsServiceClient client)
         {
             return ErrorReportingExceptionLogger.Create(
@@ -161,5 +161,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 
             mockClient.VerifyAll();
         }
+        */
     }
 }

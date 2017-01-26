@@ -13,69 +13,84 @@
 // limitations under the License.
 
 
+using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
-using Newtonsoft.Json;
-using System.IO;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     public static class ErrorReportingExtension
     {
-        public static string ToJsonString(this ReportedErrorEvent errorEvent)
+        public static Struct ToStruct(this ReportedErrorEvent errorEvent)
         {
+            GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
+            var jsonFormatter = new JsonFormatter(JsonFormatter.Settings.Default);
+            return Struct.Parser.ParseJson(jsonFormatter.Format(errorEvent));
 
-            using (var sw = new StringWriter())
-            using (var writer = new JsonTextWriter(sw))
+            /*
+            GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
+
+            
+
+            return new Struct
             {
-                writer.WriteStartObject();
-                writer.WritePropertyName("serviceContext");
-                writer.WriteStartObject();
-                writer.WritePropertyName("service");
-                writer.WriteValue(errorEvent.ServiceContext.Service);
-                writer.WritePropertyName("version");
-                writer.WriteValue(errorEvent.ServiceContext.Version);
-                writer.WriteEndObject();
-
-                writer.WritePropertyName("message");
-                writer.WriteValue(errorEvent.Message);
-
-                writer.WritePropertyName("context");
-                writer.WriteStartObject();
-
-
-                writer.WritePropertyName("httpRequest");
-                writer.WriteStartObject();
-                writer.WritePropertyName("method");
-                writer.WriteValue(errorEvent.Context.HttpRequest.Method);
-                writer.WritePropertyName("url");
-                writer.WriteValue(errorEvent.Context.HttpRequest.Url);
-                writer.WritePropertyName("userAgent");
-                writer.WriteValue(errorEvent.Context.HttpRequest.UserAgent);
-                writer.WritePropertyName("responseStatusCode");
-                writer.WriteValue(errorEvent.Context.HttpRequest.ResponseStatusCode);
-                writer.WriteEndObject();
-
-                writer.WritePropertyName("reportLocation");
-                writer.WriteStartObject();
-                writer.WritePropertyName("filePath");
-                writer.WriteValue(errorEvent.Context.ReportLocation.FilePath);
-                writer.WritePropertyName("lineNumber");
-                writer.WriteValue(errorEvent.Context.ReportLocation.LineNumber);
-                writer.WritePropertyName("functionName");
-                writer.WriteValue(errorEvent.Context.ReportLocation.FunctionName);
-                writer.WriteEndObject();
-
-
-                writer.WriteEndObject();
-
-
-
-                writer.WriteEndObject();
-                writer.Close();
-                
-                return sw.ToString();
-            }
+                Fields = {
+                    { "message", new Value { StringValue = errorEvent.Message }  },
+                    { "context", new Value { StructValue = context } },
+                    { "serviceContext", new Value { StructValue = serviceContext } },
+                }
+            };*/
         }
+
+        public static Struct ToStruct(this ServiceContext serviceContext)
+        {
+            return new Struct
+            {
+                Fields = {
+                    { "service", new Value { StringValue = serviceContext?.Service } },
+                    { "version", new Value { StringValue = serviceContext?.Version } },
+                },
+            };
+        }
+
+        public static Struct ToStruct(this HttpRequestContext httpRequestContext)
+        {
+            return new Struct
+            {
+                Fields = {
+                    { "method", new Value { StringValue = httpRequestContext?.Method } },
+                    { "url", new Value { StringValue = httpRequestContext?.Url } },
+                    { "userAgent", new Value { StringValue = httpRequestContext?.UserAgent } },
+                    { "responseStatusCode", new Value {  NumberValue = httpRequestContext?.ResponseStatusCode ?? 0 } },
+                }
+            };
+        }
+
+        public static Struct ToStruct(this SourceLocation sourceLocation)
+        {
+            return new Struct
+            {
+                Fields = {
+                    { "filePath", new Value { StringValue = sourceLocation?.FilePath } },
+                    { "lineNumber", new Value {  NumberValue = sourceLocation?.LineNumber ?? 0} },
+                    { "functionName", new Value { StringValue = sourceLocation?.FunctionName } },
+                }
+            };
+        }
+/*
+        public static Struct ToStruct(this ErrorContext errorContext)
+        {
+            return new Struct
+            {
+                Fields = {
+                    { "httpRequest", new Value { StructValue = httpRequest } },
+                    { "reportLocation", new Value { StructValue = reportLocation } },
+                }
+            };
+        }
+        */
+
     }
 }
+
