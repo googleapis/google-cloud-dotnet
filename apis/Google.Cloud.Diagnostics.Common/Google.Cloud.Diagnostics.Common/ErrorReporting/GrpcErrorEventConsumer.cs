@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -52,7 +52,8 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public async Task ReceiveAsync(IEnumerable<ReportedErrorEvent> events)
+        public async Task ReceiveAsync(
+            IEnumerable<ReportedErrorEvent> events, CancellationToken cancellationToken = default(CancellationToken))
         {
             if (!events.Any())
             {
@@ -61,7 +62,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             foreach (var errorEvent in events)
             {
-                await _client.ReportErrorEventAsync(_projectName, errorEvent);
+                await _client.ReportErrorEventAsync(_projectName, errorEvent, cancellationToken);
             }
         }
     }

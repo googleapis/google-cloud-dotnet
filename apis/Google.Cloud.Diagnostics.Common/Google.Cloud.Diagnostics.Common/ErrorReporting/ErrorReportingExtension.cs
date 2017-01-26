@@ -14,6 +14,7 @@
 
 
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf.WellKnownTypes;
 using Newtonsoft.Json;
 using System.IO;
 
@@ -24,7 +25,6 @@ namespace Google.Cloud.Diagnostics.Common
         public static string ToJsonString(this ReportedErrorEvent errorEvent)
         {
 
-            
             using (var sw = new StringWriter())
             using (var writer = new JsonTextWriter(sw))
             {
@@ -73,6 +73,7 @@ namespace Google.Cloud.Diagnostics.Common
 
                 writer.WriteEndObject();
                 writer.Close();
+                
                 return sw.ToString();
             }
         }

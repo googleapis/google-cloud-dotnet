@@ -14,13 +14,12 @@
 
 using System.Collections.Generic;
 using Google.Cloud.Logging.V2;
-using Google.Cloud.Diagnostics.Common;
 using Google.Api.Gax;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Google.Cloud.Diagnostics.AspNetCore
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// An <see cref="IConsumer{T}"/> that will send received logs to the Stackdriver Logging API.

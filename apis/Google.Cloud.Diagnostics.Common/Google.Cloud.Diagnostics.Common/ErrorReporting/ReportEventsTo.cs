@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api;
+using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
 
@@ -26,6 +27,8 @@ namespace Google.Cloud.Diagnostics.Common
 
     public sealed class ReportEventsTo
     {
+        internal const string LogNameDefault = "err-log";
+
         /// <summary>The global resource.</summary>
         internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
 
@@ -35,16 +38,22 @@ namespace Google.Cloud.Diagnostics.Common
 
         public LoggingServiceV2Client LoggingClient { get; private set; }
 
+        public LogToLocation LogToLocation { get; private set; }
+
+        public string LogName { get; private set; }
+
         public MonitoredResource MonitoredResource { get; private set; }
 
-
         public static ReportEventsTo Logging(
+            string logName = LogNameDefault, LogToLocation logToLocation = LogToLocation.Project,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
             return new ReportEventsTo
             {
                 ReportEventsToLocation = ReportEventsToLocation.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
+                LogToLocation = GaxPreconditions.CheckEnumValue(logToLocation, nameof(logToLocation)),
+                LogName = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? GlobalResource,
             };
         }
