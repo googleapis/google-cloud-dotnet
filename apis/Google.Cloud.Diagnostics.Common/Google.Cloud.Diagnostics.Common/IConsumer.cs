@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -30,6 +31,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Accepts an enumerable of items asynchronously.
         /// </summary>
-        Task ReceiveAsync(IEnumerable<T> items);
+        Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken));
     }
 }
