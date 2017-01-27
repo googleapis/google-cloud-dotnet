@@ -137,12 +137,13 @@ namespace Google.LongRunning
             {
                 return this;
             }
-            // TODO: Use the deadline and get a cancellation token from the effective call settings.
-            Func<DateTime?, Operation<T>> pollAction = deadline => PollOnce(callSettings);
+            callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
+
+            Func<DateTime?, Operation<T>> pollAction = deadline => PollOnce(callSettings.WithEarlierDeadline(deadline, Client.Clock));
             return Polling.PollRepeatedly(
                 pollAction, o => o.IsCompleted,
                 Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
-                CancellationToken.None);
+                callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
         /// <summary>
@@ -162,12 +163,12 @@ namespace Google.LongRunning
             {
                 return Task.FromResult(this);
             }
-            // TODO: Use the deadline and get a cancellation token from the effective call settings.
-            Func<DateTime?, Task<Operation<T>>> pollAction = deadline => PollOnceAsync(callSettings);
+            callSettings = Client.GetEffectiveCallSettingsForGetOperation(callSettings);
+            Func<DateTime?, Task<Operation<T>>> pollAction = deadline => PollOnceAsync(callSettings.WithEarlierDeadline(deadline, Client.Clock));
             return Polling.PollRepeatedlyAsync(
                 pollAction, o => o.IsCompleted,
                 Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
-                CancellationToken.None);
+                callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
         /// <summary>

@@ -164,6 +164,27 @@ namespace Google.LongRunning.Tests
         }
 
         [Fact]
+        public void PollUntilCompleted_BaseSettingsCancellationToken()
+        {
+            var cts = new CancellationTokenSource();
+            cts.Cancel();
+            var client = new FakeOperationsClient(new FakeScheduler(), CallSettings.FromCancellationToken(cts.Token));
+            var operation = ForIncomplete("op", client);
+            Assert.Throws<OperationCanceledException>(() => operation.PollUntilCompleted());
+        }
+
+        [Fact]
+        public void PollUntilCompleted_PerCallSettingsCancellationToken()
+        {
+            var cts = new CancellationTokenSource();
+            cts.Cancel();
+            var client = new FakeOperationsClient();
+            var operation = ForIncomplete("op", client);
+            var callSettings = CallSettings.FromCancellationToken(cts.Token);
+            Assert.Throws<OperationCanceledException>(() => operation.PollUntilCompleted(callSettings: callSettings));
+        }
+
+        [Fact]
         public async Task PollUntilCompletedAsync_Timeout()
         {
             var client = new FakeOperationsClient();
@@ -213,6 +234,7 @@ namespace Google.LongRunning.Tests
         // We may want to make this public in a testing package at some point... and possibly the helper methods above.
         class FakeOperationsClient : OperationsClient
         {
+            private readonly CallSettings _baseCallSettings;
             public override IClock Clock => FakeScheduler.Clock;
             public override IScheduler Scheduler => FakeScheduler;
             public FakeClock FakeClock => FakeScheduler.Clock;
@@ -221,13 +243,14 @@ namespace Google.LongRunning.Tests
 
             private readonly Dictionary<string, Tuple<DateTime, Operation>> operations;
 
-            public FakeOperationsClient() : this(new FakeScheduler())
+            public FakeOperationsClient() : this(new FakeScheduler(), null)
             {
             }
 
-            public FakeOperationsClient(FakeScheduler scheduler)
+            public FakeOperationsClient(FakeScheduler scheduler, CallSettings baseCallSettings)
             {
                 FakeScheduler = scheduler;
+                _baseCallSettings = baseCallSettings;
                 operations = new Dictionary<string, Tuple<DateTime, Operation>>();
             }
 
@@ -255,6 +278,7 @@ namespace Google.LongRunning.Tests
 
             public override Operation GetOperation(string name, CallSettings callSettings = null)
             {
+                callSettings?.CancellationToken?.ThrowIfCancellationRequested();
                 RequestCount++;
                 Tuple<DateTime, Operation> tuple;
                 if (!operations.TryGetValue(name, out tuple))
@@ -276,6 +300,9 @@ namespace Google.LongRunning.Tests
                 RequestCount++;
                 throw new RpcException(new GrpcStatus(StatusCode.Unimplemented, "Deletion not implemented yet"));
             }
+
+            protected override CallSettings GetEffectiveCallSettingsForGetOperation(CallSettings callSettings)
+                => _baseCallSettings.MergedWith(callSettings);
 
             // Async overrides that just delegate to the sync calls...
 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
