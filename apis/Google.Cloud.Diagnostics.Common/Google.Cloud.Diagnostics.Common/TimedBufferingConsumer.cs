@@ -24,34 +24,22 @@ namespace Google.Cloud.Diagnostics.Common
     /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush after
     /// a given span of time.
     /// </summary>
-    internal class TimedBufferingConsumer<T> : IFlushableConsumer<T>
+    internal class TimedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>A semaphore to protect the buffer.</summary>
-        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1); 
-
-        /// <summary>The consumer to flush to.</summary>
-        private readonly IConsumer<T> _consumer;
-
         /// <summary>The minimum amount of time to wait between automatically flushing the buffer.</summary>
         private readonly TimeSpan _waitTime;
 
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        /// <summary>The buffered items.</summary>
-        private List<T> _items;
-
         /// <summary>The earliest time of the next automatica flush.</summary>
         private DateTime _nextFlush;
 
-        private TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IClock clock)
+        private TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IClock clock) : base(consumer)
         {
-            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _waitTime = waitTime;
             _clock = GaxPreconditions.CheckNotNull(clock, nameof(clock));
-            _items = new List<T>();
             _nextFlush = _clock.GetCurrentDateTimeUtc().Add(_waitTime);
-
         }
 
         /// <summary>
@@ -66,103 +54,55 @@ namespace Google.Cloud.Diagnostics.Common
             => new TimedBufferingConsumer<T>(consumer, waitTime, clock ?? SystemClock.Instance);
 
         /// <inheritdoc />
-        public void Receive(IEnumerable<T> items)
+        public override void Receive(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
+            Semaphore.Wait();
             try
             {
-                _semaphore.Wait();
-                _items.AddRange(items);
+                Items.AddRange(items);
                 if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
                 {
-                    FlushesWithSemaphoreHeld();
+                    FlushWithSemaphoreHeld();
                 }
             }
             finally
             {
-                _semaphore.Release();
+                Semaphore.Release();
             }
         }
 
         /// <inheritdoc />
-        public async Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
+        public override async Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
+            await Semaphore.WaitAsync(cancellationToken);
             try
             {
-                await _semaphore.WaitAsync(cancellationToken);
-                _items.AddRange(items);
+                Items.AddRange(items);
                 if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
                 {
-                    await FlushesAsyncWithSemaphoreHeld(cancellationToken);
+                    await FlushAsyncWithSemaphoreHeld(cancellationToken);
                 }
             }
             finally
             {
-                _semaphore.Release();
+                Semaphore.Release();
             }
         }
 
         /// <inheritdoc />
-        public void Flushes()
+        protected override void FlushWithSemaphoreHeld()
         {
-            try
-            {
-                _semaphore.Wait();
-                FlushesWithSemaphoreHeld();
-            }
-            finally
-            {
-                _semaphore.Release();
-            }
-        }
-
-        /// <inheritdoc />
-        public async Task FlushesAsync(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            try
-            {
-                await _semaphore.WaitAsync();
-                await FlushesAsyncWithSemaphoreHeld(cancellationToken);
-            }
-            finally
-            {
-                _semaphore.Release();
-            }
-        }
-
-        /// <summary>
-        /// Flushes the buffer. The caller is responsible for ensuring the semaphore is held.
-        /// </summary>
-        private void FlushesWithSemaphoreHeld()
-        {
-            IList<T> old;
-            old = _items;
-            _items = new List<T>();
             _nextFlush = DateTime.UtcNow.Add(_waitTime);
-
-            if (old.Count != 0)
-            {
-                _consumer.Receive(old);
-            }
+            base.FlushWithSemaphoreHeld();
         }
 
-        /// <summary>
-        /// Flushes the buffer asynchronously. The caller is responsible for ensuring the semaphore is held.
-        /// </summary>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        private async Task FlushesAsyncWithSemaphoreHeld(CancellationToken cancellationToken)
+        /// <inheritdoc />
+        protected override async Task FlushAsyncWithSemaphoreHeld(CancellationToken cancellationToken)
         {
-            IList<T> old;
-            old = _items;
-            _items = new List<T>();
-            _nextFlush = DateTime.UtcNow + _waitTime;
-
-            if (old.Count != 0)
-            {
-                await _consumer.ReceiveAsync(old, cancellationToken);
-            }
+            _nextFlush = DateTime.UtcNow.Add(_waitTime);
+            await base.FlushAsyncWithSemaphoreHeld(cancellationToken);
         }
     }
 }

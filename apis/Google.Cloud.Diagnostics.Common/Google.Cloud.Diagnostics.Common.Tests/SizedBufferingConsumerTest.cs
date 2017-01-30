@@ -59,7 +59,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
 
             mockConsumer.Setup(c => c.Receive(intArray));
-            consumer.Flushes();
+            consumer.Flush();
             mockConsumer.VerifyAll();
         }
 
@@ -71,7 +71,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var consumer = GetConsumer(mockConsumer.Object);
 
             consumer.Receive(new int[] { });
-            consumer.Flushes();
+            consumer.Flush();
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
         }
 
@@ -109,7 +109,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.ReceiveAsync(
                 intArray, CancellationToken.None)).Returns(s_completedTask);
-            await consumer.FlushesAsync();
+            await consumer.FlushAsync();
             mockConsumer.VerifyAll();
         }
 
@@ -121,7 +121,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var consumer = GetConsumer(mockConsumer.Object);
 
             await consumer.ReceiveAsync(new int[] { });
-            consumer.Flushes();
+            consumer.Flush();
             mockConsumer.Verify(c => c.ReceiveAsync(
                 It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
         }

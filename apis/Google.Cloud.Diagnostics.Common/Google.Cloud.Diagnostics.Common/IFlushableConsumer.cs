@@ -25,13 +25,13 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Flushes the consumer.
         /// </summary>
-        void Flushes();
+        void Flush();
 
         /// <summary>
         /// Flushes the consumer asynchronously.
         /// </summary>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        Task FlushesAsync(CancellationToken cancellationToken = default(CancellationToken));
+        Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken));
     }
 }
