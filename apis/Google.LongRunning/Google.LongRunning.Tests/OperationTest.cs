@@ -270,6 +270,7 @@ namespace Google.LongRunning.Tests
             private readonly CallSettings _baseCallSettings;
             public override IClock Clock => FakeScheduler.Clock;
             public override IScheduler Scheduler => FakeScheduler;
+            public override PollSettings DefaultPollSettings => null;
             public FakeClock FakeClock => FakeScheduler.Clock;
             public FakeScheduler FakeScheduler { get; }
             public int RequestCount { get; private set; }

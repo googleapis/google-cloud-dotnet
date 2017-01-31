@@ -34,6 +34,9 @@ namespace Google.LongRunning
         where TResponse : IMessage<TResponse>, new()
         where TMetadata : class, IMessage<TMetadata>, new()
     {
+        /// <summary>
+        /// The poll settings to use if the neither the OperationsClient nor the caller provides anything.
+        /// </summary>
         private static readonly PollSettings s_defaultPollSettings = new PollSettings(Expiration.None, TimeSpan.FromSeconds(10));
 
         /// <summary>
@@ -175,7 +178,7 @@ namespace Google.LongRunning
 
             return Polling.PollRepeatedly(
                 pollAction, o => o.IsCompleted,
-                Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
+                Client.Clock, Client.Scheduler, pollSettings ?? Client.DefaultPollSettings ?? s_defaultPollSettings,
                 callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
@@ -211,7 +214,7 @@ namespace Google.LongRunning
                 };
             return Polling.PollRepeatedlyAsync(
                 pollAction, o => o.IsCompleted,
-                Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
+                Client.Clock, Client.Scheduler, pollSettings ?? Client.DefaultPollSettings ?? s_defaultPollSettings,
                 callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
