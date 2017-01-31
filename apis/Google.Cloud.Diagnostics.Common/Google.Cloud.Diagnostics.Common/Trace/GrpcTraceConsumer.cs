@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public async Task ReceiveAsync(IEnumerable<TraceProto> traces, CancellationToken cancellationToken = default(CancellationToken))
+        public Task ReceiveAsync(IEnumerable<TraceProto> traces, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(traces, nameof(traces));
 
@@ -62,12 +62,12 @@ namespace Google.Cloud.Diagnostics.Common
             // If there are no traces do not try to send them.
             if (trace == null)
             {
-                return;
+                return CommonUtils.CompletedTask;
             }
 
             Traces tracesObj = new Traces { Traces_ = { traces } };
             // If the client task has faulted this will throw when accessing 'Result'
-            await _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj, cancellationToken);
+            return _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj, cancellationToken);
         }
     }
 }

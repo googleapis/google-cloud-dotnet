@@ -41,6 +41,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <inheritdoc />
         public void Receive(IEnumerable<LogEntry> logs)
         {
+            GaxPreconditions.CheckNotNull(logs, nameof(logs));
             if (!logs.Any())
             {
                 return;
@@ -49,14 +50,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <inheritdoc />
-        public async Task ReceiveAsync(
+        public Task ReceiveAsync(
             IEnumerable<LogEntry> logs, CancellationToken cancellationToken = default(CancellationToken))
         {
+            GaxPreconditions.CheckNotNull(logs, nameof(logs));
             if (!logs.Any())
             {
-                return;
+                return Task.CompletedTask;
             }
-            await _client.WriteLogEntriesAsync(null, null, EmptyDictionary, logs, cancellationToken);
+            return _client.WriteLogEntriesAsync(null, null, EmptyDictionary, logs, cancellationToken);
         }
     }
 }

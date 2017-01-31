@@ -20,87 +20,95 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// Base class for the <see cref="IFlushableConsumer{T}"/> that exposes a <see cref="SemaphoreSlim"/> to
-    /// protect the buffer.
+    /// Base class for the <see cref="IFlushableConsumer{T}"/> that uses a <see cref="SemaphoreSlim"/> to
+    /// protect the flush and receive calls.
     /// </summary>
     internal abstract class FlushableConsumerBase<T> : IFlushableConsumer<T>
     {
         /// <summary>A semaphore to protect the buffer.</summary>
-        protected readonly SemaphoreSlim Semaphore = new SemaphoreSlim(1);
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1);
 
-        /// <summary>The consumer to flush to.</summary>
-        protected readonly IConsumer<T> Consumer;
+        /// <summary>
+        /// Accepts an enumerable of items while the semaphore is held.
+        /// </summary>
+        /// <param name="items">The items to receive. Cannot be null.</param>
+        protected abstract void ReceiveWithSemaphoreHeld(IEnumerable<T> items);
 
-        /// <summary>The buffered items.</summary>
-        protected List<T> Items = new List<T>();
+        /// <summary>
+        /// Accepts an enumerable of items asynchronously while the semaphore is held.
+        /// </summary>
+        /// <param name="items">The items to receive. Cannot be null.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        protected abstract Task ReceiveAsyncWithSemaphoreHeld(
+            IEnumerable<T> items, CancellationToken cancellationToken);
 
-        public FlushableConsumerBase(IConsumer<T> consumer)
+        /// <summary>
+        /// Flushes the consumer while the semaphore is held.
+        /// </summary>
+        protected abstract void FlushWithSemaphoreHeld();
+
+        /// <summary>
+        /// Flushes the consumer asynchronously while the semaphore is held.
+        /// </summary>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation.</returns>
+        protected abstract Task FlushAsyncWithSemaphoreHeld(CancellationToken cancellationToken);
+
+        /// <inheritdoc />
+        public void Receive(IEnumerable<T> items)
         {
-            Consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
+            _semaphore.Wait();
+            try
+            {
+                ReceiveWithSemaphoreHeld(items);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
         }
 
         /// <inheritdoc />
-        public abstract void Receive(IEnumerable<T> items);
-
-        /// <inheritdoc />
-        public abstract Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken);
+        public Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken)
+        {
+            _semaphore.Wait();
+            try
+            {
+                return ReceiveAsyncWithSemaphoreHeld(items, cancellationToken);
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
 
         /// <inheritdoc />
         public void Flush()
         {
-            Semaphore.Wait();
+            _semaphore.Wait();
             try
             {
                 FlushWithSemaphoreHeld();
             }
             finally
             {
-                Semaphore.Release();
+                _semaphore.Release();
             }
         }
 
         /// <inheritdoc />
         public async Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
-            await Semaphore.WaitAsync(cancellationToken);
+            await _semaphore.WaitAsync(cancellationToken);
             try
             {
                 await FlushAsyncWithSemaphoreHeld(cancellationToken);
             }
             finally
             {
-                Semaphore.Release();
+                _semaphore.Release();
             }
-        }
-
-        /// <summary>
-        /// Flushes the buffer. The caller is responsible for ensuring the semaphore is held.
-        /// </summary>
-        protected virtual void FlushWithSemaphoreHeld()
-        {
-            if (Items.Count == 0)
-            {
-                return;
-            }
-
-            Consumer.Receive(Items);
-            Items = new List<T>();
-        }
-
-        /// <summary>
-        /// Flushes the buffer asynchronously. The caller is responsible for ensuring the semaphore is held.
-        /// </summary>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        protected virtual async Task FlushAsyncWithSemaphoreHeld(CancellationToken cancellationToken)
-        {
-            if (Items.Count == 0)
-            {
-                return;
-            }
-
-            await Consumer.ReceiveAsync(Items, cancellationToken);
-            Items = new List<T>();
         }
     }
 }
