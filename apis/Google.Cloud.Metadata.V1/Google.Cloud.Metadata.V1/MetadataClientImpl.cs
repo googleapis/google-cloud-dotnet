@@ -51,7 +51,6 @@ namespace Google.Cloud.Metadata.V1
         private static readonly CreateHttpClientArgs HttpClientArgs = new CreateHttpClientArgs();
         private static readonly Regex CustomKeyRegex = new Regex(@"\A[a-zA-Z0-9-_]{1,127}\Z", RegexOptions.Compiled);
         private static readonly Regex ETagRegex = new Regex(@"\A[a-zA-Z0-9]{16}\Z", RegexOptions.Compiled);
-        // TODO: Should this be created with a MetadataClient instead?
         private static readonly ILogger Logger = ApplicationContext.Logger.ForType<MetadataClientImpl>();
         private static readonly Lazy<string> MetadataHost = new Lazy<string>(() =>
         {
@@ -115,12 +114,11 @@ namespace Google.Cloud.Metadata.V1
             try
             {
                 dynamic obj = JObject.Parse(content);
-                // TODO: Detect when format is missing keys here
                 return new Instance
                 {
                     CpuPlatform = obj.cpuPlatform,
                     Description = obj.description,
-                    Disks = ((JArray)obj.disks).ToList(disk => new AttachedDisk
+                    Disks = ((JArray)obj.disks)?.ToList(disk => new AttachedDisk
                     {
                         DeviceName = disk.deviceName,
                         Index = disk.index,
@@ -131,16 +129,16 @@ namespace Google.Cloud.Metadata.V1
                     MachineType = obj.machineType,
                     Metadata = new Apis.Compute.v1.Data.Metadata()
                     {
-                        Items = ((JObject)obj.attributes).ToList(attribute => new ItemsData
+                        Items = ((JObject)obj.attributes)?.ToList(attribute => new ItemsData
                         {
                             Key = attribute.Name,
                             Value = attribute.Value
                         })
                     },
                     Name = obj.hostname,
-                    NetworkInterfaces = ((JArray)obj.networkInterfaces).ToList(networkInterface => new NetworkInterface
+                    NetworkInterfaces = ((JArray)obj.networkInterfaces)?.ToList(networkInterface => new NetworkInterface
                     {
-                        AccessConfigs = ((JArray)networkInterface.accessConfigs).ToList(accessConfig => new AccessConfig
+                        AccessConfigs = ((JArray)networkInterface.accessConfigs)?.ToList(accessConfig => new AccessConfig
                         {
                             NatIP = accessConfig.externalIp,
                             Type = accessConfig.type
@@ -150,18 +148,18 @@ namespace Google.Cloud.Metadata.V1
                     }),
                     Scheduling = new Scheduling
                     {
-                        AutomaticRestart = obj.scheduling.automaticRestart,
-                        OnHostMaintenance = obj.scheduling.onHostMaintenance,
-                        Preemptible = obj.scheduling.preemptible
+                        AutomaticRestart = obj.scheduling?.automaticRestart,
+                        OnHostMaintenance = obj.scheduling?.onHostMaintenance,
+                        Preemptible = obj.scheduling?.preemptible
                     },
-                    ServiceAccounts = ((JObject)obj.serviceAccounts).ToList(serviceAccount => new ServiceAccount
+                    ServiceAccounts = ((JObject)obj.serviceAccounts)?.ToList(serviceAccount => new ServiceAccount
                     {
                         Email = serviceAccount.Name,
-                        Scopes = ((JArray)serviceAccount.Value.scopes).ToList(scope => (string)scope.Value)
+                        Scopes = ((JArray)serviceAccount.Value?.scopes)?.ToList(scope => (string)scope.Value)
                     }),
                     Tags = new Tags
                     {
-                        Items = ((JArray)obj.tags).ToList(tag => (string)tag.Value)
+                        Items = ((JArray)obj.tags)?.ToList(tag => (string)tag.Value)
                     },
                     Zone = obj.zone
                 };
@@ -193,12 +191,11 @@ namespace Google.Cloud.Metadata.V1
             try
             {
                 dynamic obj = JObject.Parse(content);
-                // TODO: Detect when format is missing keys here
                 return new Project
                 {
                     CommonInstanceMetadata = new Apis.Compute.v1.Data.Metadata
                     {
-                        Items = ((JObject)obj.attributes).ToList(attribute => new ItemsData
+                        Items = ((JObject)obj.attributes)?.ToList(attribute => new ItemsData
                         {
                             Key = attribute.Name,
                             Value = attribute.Value
