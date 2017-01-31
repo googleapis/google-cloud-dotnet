@@ -33,10 +33,15 @@ namespace Google.Cloud.Metadata.V1
         /// </summary>
         public string Content { get; }
 
-        internal MetadataResult(string content, string etag)
+        /// <summary>
+        /// Construct a result.
+        /// </summary>
+        /// <param name="content">The content of the server response.</param>
+        /// <param name="eTag">The ETag header from the server response.</param>
+        public MetadataResult(string content, string eTag)
         {
             Content = content;
-            ETag = etag;
+            ETag = eTag;
         }
     }
 }
