@@ -72,14 +72,14 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        protected override Task ReceiveAsyncWithSemaphoreHeld(
+        protected override Task ReceiveAsyncWithSemaphoreHeldAsync(
             IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             _items.AddRange(items);
             if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
             {
-                return FlushAsyncWithSemaphoreHeld(cancellationToken);
+                return FlushAsyncWithSemaphoreHeldAsync(cancellationToken);
             }
             return CommonUtils.CompletedTask;
         }
@@ -98,7 +98,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        protected override Task FlushAsyncWithSemaphoreHeld(CancellationToken cancellationToken)
+        protected override Task FlushAsyncWithSemaphoreHeldAsync(CancellationToken cancellationToken)
         {
             if (_items.Count == 0)
             {

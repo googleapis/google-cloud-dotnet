@@ -25,8 +25,8 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class SizedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-         /// <summary>The consumer to flush to.</summary>		
-         private readonly IConsumer<T> _consumer;
+        /// <summary>The consumer to flush to.</summary>		
+        private readonly IConsumer<T> _consumer;
 
         /// <summary>Used to obtain the size of an item.</summary>
         private readonly ISizer<T> _sizer;
@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        protected override Task ReceiveAsyncWithSemaphoreHeld(
+        protected override async Task ReceiveAsyncWithSemaphoreHeldAsync(
             IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
@@ -87,10 +87,9 @@ namespace Google.Cloud.Diagnostics.Common
                 _items.Add(item);
                 if (_size >= _bufferSize)
                 {
-                    return FlushAsyncWithSemaphoreHeld(cancellationToken);
+                    await FlushAsyncWithSemaphoreHeldAsync(cancellationToken);
                 }
             }
-            return CommonUtils.CompletedTask;
         }
 
         /// <inheritdoc />
@@ -106,7 +105,8 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        protected override Task FlushAsyncWithSemaphoreHeld(CancellationToken cancellationToken = default(CancellationToken))
+        protected override Task FlushAsyncWithSemaphoreHeldAsync(
+            CancellationToken cancellationToken = default(CancellationToken))
         {
             if (_items.Count == 0)
             {

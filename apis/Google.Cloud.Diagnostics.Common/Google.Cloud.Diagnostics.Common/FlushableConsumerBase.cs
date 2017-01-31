@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="items">The items to receive. Cannot be null.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        protected abstract Task ReceiveAsyncWithSemaphoreHeld(
+        protected abstract Task ReceiveAsyncWithSemaphoreHeldAsync(
             IEnumerable<T> items, CancellationToken cancellationToken);
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        protected abstract Task FlushAsyncWithSemaphoreHeld(CancellationToken cancellationToken);
+        protected abstract Task FlushAsyncWithSemaphoreHeldAsync(CancellationToken cancellationToken);
 
         /// <inheritdoc />
         public void Receive(IEnumerable<T> items)
@@ -70,12 +70,12 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken)
+        public async Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken)
         {
-            _semaphore.Wait();
+            await _semaphore.WaitAsync(cancellationToken);
             try
             {
-                return ReceiveAsyncWithSemaphoreHeld(items, cancellationToken);
+                await ReceiveAsyncWithSemaphoreHeldAsync(items, cancellationToken);
             }
             finally
             {
@@ -103,7 +103,7 @@ namespace Google.Cloud.Diagnostics.Common
             await _semaphore.WaitAsync(cancellationToken);
             try
             {
-                await FlushAsyncWithSemaphoreHeld(cancellationToken);
+                await FlushAsyncWithSemaphoreHeldAsync(cancellationToken);
             }
             finally
             {
