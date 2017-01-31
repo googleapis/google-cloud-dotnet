@@ -87,7 +87,7 @@ namespace Google.Cloud.Diagnostics.Common
                 _items.Add(item);
                 if (_size >= _bufferSize)
                 {
-                    await FlushAsyncWithSemaphoreHeldAsync(cancellationToken);
+                    await FlushAsyncWithSemaphoreHeldAsync(cancellationToken).ConfigureAwait(false);
                 }
             }
         }

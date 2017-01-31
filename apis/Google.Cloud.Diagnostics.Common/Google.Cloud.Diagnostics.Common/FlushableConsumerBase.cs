@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -72,10 +71,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <inheritdoc />
         public async Task ReceiveAsync(IEnumerable<T> items, CancellationToken cancellationToken)
         {
-            await _semaphore.WaitAsync(cancellationToken);
+            await _semaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
             try
             {
-                await ReceiveAsyncWithSemaphoreHeldAsync(items, cancellationToken);
+                await ReceiveAsyncWithSemaphoreHeldAsync(items, cancellationToken).ConfigureAwait(false);
             }
             finally
             {
@@ -100,10 +99,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <inheritdoc />
         public async Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken))
         {
-            await _semaphore.WaitAsync(cancellationToken);
+            await _semaphore.WaitAsync(cancellationToken).ConfigureAwait(false);
             try
             {
-                await FlushAsyncWithSemaphoreHeldAsync(cancellationToken);
+                await FlushAsyncWithSemaphoreHeldAsync(cancellationToken).ConfigureAwait(false);
             }
             finally
             {
