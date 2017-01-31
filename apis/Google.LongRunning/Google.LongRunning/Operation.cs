@@ -31,6 +31,9 @@ namespace Google.LongRunning
     /// <typeparam name="T">The response message type.</typeparam>
     public class Operation<T> where T : IMessage<T>, new()
     {
+        /// <summary>
+        /// The poll settings to use if the neither the OperationsClient nor the caller provides anything.
+        /// </summary>
         private static readonly PollSettings s_defaultPollSettings = new PollSettings(Expiration.None, TimeSpan.FromSeconds(10));
 
         /// <summary>
@@ -142,7 +145,7 @@ namespace Google.LongRunning
             Func<DateTime?, Operation<T>> pollAction = deadline => PollOnce(callSettings.WithEarlierDeadline(deadline, Client.Clock));
             return Polling.PollRepeatedly(
                 pollAction, o => o.IsCompleted,
-                Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
+                Client.Clock, Client.Scheduler, pollSettings ?? Client.DefaultPollSettings ?? s_defaultPollSettings,
                 callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
@@ -167,7 +170,7 @@ namespace Google.LongRunning
             Func<DateTime?, Task<Operation<T>>> pollAction = deadline => PollOnceAsync(callSettings.WithEarlierDeadline(deadline, Client.Clock));
             return Polling.PollRepeatedlyAsync(
                 pollAction, o => o.IsCompleted,
-                Client.Clock, Client.Scheduler, pollSettings ?? s_defaultPollSettings,
+                Client.Clock, Client.Scheduler, pollSettings ?? Client.DefaultPollSettings ?? s_defaultPollSettings,
                 callSettings?.CancellationToken ?? CancellationToken.None);
         }
 
