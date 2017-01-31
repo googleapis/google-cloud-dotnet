@@ -21,12 +21,12 @@ using System.Threading;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush after
-    /// a given span of time.
+    /// A <see cref="IFlushableConsumer{T}"/> that will flush the buffer during a receive
+    /// call if the given amount of time has passed..
     /// </summary>
     internal class TimedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>The consumer to flush to.</summary>		
+        /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
         /// <summary>The minimum amount of time to wait between automatically flushing the buffer.</summary>
@@ -35,7 +35,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        /// <summary>The buffered items.</summary>		
+        /// <summary>
+        /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
+        /// </summary>
         private List<T> _items = new List<T>();
 
         /// <summary>The earliest time of the next automatica flush.</summary>

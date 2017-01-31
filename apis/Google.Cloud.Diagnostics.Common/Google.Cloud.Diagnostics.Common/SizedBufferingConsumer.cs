@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class SizedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>The consumer to flush to.</summary>		
+        /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
         /// <summary>Used to obtain the size of an item.</summary>
@@ -34,7 +34,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The size of the buffer in bytes.</summary>
         private readonly int _bufferSize;
 
-        /// <summary>The buffered items.</summary>		
+        /// <summary>
+        /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
+        /// </summary>
         private IList<T> _items = new List<T>();
 
         /// <summary>The current size of the items.</summary>

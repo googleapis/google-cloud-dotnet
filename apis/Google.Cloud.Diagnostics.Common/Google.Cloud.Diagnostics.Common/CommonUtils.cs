@@ -19,6 +19,6 @@ namespace Google.Cloud.Diagnostics.Common
     internal static class CommonUtils
     {
         /// <summary>A completed <see cref="Task"/>.</summary>
-        public static Task CompletedTask = Task.FromResult(false);
+        internal readonly static Task CompletedTask = Task.FromResult(false);
     }
 }
