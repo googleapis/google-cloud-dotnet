@@ -16,6 +16,7 @@
 using Google.Cloud.Trace.V1;
 using Moq;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -36,7 +37,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Traces traces = GetTraces();
 
             var mockClient = new Mock<TraceServiceClient>();
-            mockClient.Setup(c => c.PatchTracesAsync(ProjectId, traces, null));
+            mockClient.Setup(c => c.PatchTraces(ProjectId, traces, null));
             var taskClient = Task.FromResult(mockClient.Object);
             var consumer = new GrpcTraceConsumer(taskClient);
 
@@ -52,6 +53,32 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var consumer = new GrpcTraceConsumer(taskClient);
 
             consumer.Receive(new List<TraceProto>());
+            mockClient.Verify(c => c.PatchTraces(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
+        }
+
+        [Fact]
+        public async Task ReceiveAsync()
+        {
+            Traces traces = GetTraces();
+
+            var mockClient = new Mock<TraceServiceClient>();
+            mockClient.Setup(c => c.PatchTracesAsync(
+                ProjectId, traces, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
+            var taskClient = Task.FromResult(mockClient.Object);
+            var consumer = new GrpcTraceConsumer(taskClient);
+
+            await consumer.ReceiveAsync(traces.Traces_, CancellationToken.None);
+            mockClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ReceiveAsync_EmptyTracesIgnored()
+        {
+            var mockClient = new Mock<TraceServiceClient>();
+            var taskClient = Task.FromResult(mockClient.Object);
+            var consumer = new GrpcTraceConsumer(taskClient);
+
+            await consumer.ReceiveAsync(new List<TraceProto>());
             mockClient.Verify(c => c.PatchTracesAsync(It.IsAny<string>(), It.IsAny<Traces>(), null), Times.Never());
         }
     }

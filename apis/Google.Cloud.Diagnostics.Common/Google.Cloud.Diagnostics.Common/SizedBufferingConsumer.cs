@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -21,11 +23,8 @@ namespace Google.Cloud.Diagnostics.Common
     /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush when
     /// the buffer is full.
     /// </summary>
-    internal class SizedBufferingConsumer<T> : IFlushableConsumer<T>
+    internal class SizedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>A mutex to protect the buffer.</summary>
-        private readonly object _mutex = new object();
-
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
@@ -35,8 +34,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The size of the buffer in bytes.</summary>
         private readonly int _bufferSize;
 
-        /// <summary>The buffered items.</summary>
-        private IList<T> _items;
+        /// <summary>
+        /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
+        /// </summary>
+        private IList<T> _items = new List<T>();
 
         /// <summary>The current size of the items.</summary>
         private int _size;
@@ -50,7 +51,6 @@ namespace Google.Cloud.Diagnostics.Common
             _sizer = GaxPreconditions.CheckNotNull(sizer, nameof(sizer));
             _bufferSize = bufferSize;
 
-            _items = new List<T>();
             _size = 0;
         }
 
@@ -62,43 +62,64 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="bufferSize">The buffer size in bytes.</param>
         /// <param name="sizer">The sizer for the given type. Cannot be null.</param>
         public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
-        {
-            return new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
-        }
+            => new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
 
         /// <inheritdoc />
-        public void Receive(IEnumerable<T> items)
+        protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            lock (_mutex)
+            foreach (T item in items)
             {
-                foreach (T item in items)
+                _size += _sizer.GetSize(item);
+                _items.Add(item);
+                if (_size >= _bufferSize)
                 {
-                    _size += _sizer.GetSize(item);
-                    _items.Add(item);
-                    if (_size >= _bufferSize)
-                    {
-                        Flush();
-                    }
+                    FlushWithSemaphoreHeld();
                 }
             }
         }
 
         /// <inheritdoc />
-        public void Flush()
+        protected override async Task ReceiveAsyncWithSemaphoreHeldAsync(
+            IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
         {
-            IList<T> old;
-            lock (_mutex)
+            GaxPreconditions.CheckNotNull(items, nameof(items));
+            foreach (T item in items)
             {
-                old = _items;
-                _items = new List<T>();
-                _size = 0;
+                _size += _sizer.GetSize(item);
+                _items.Add(item);
+                if (_size >= _bufferSize)
+                {
+                    await FlushAsyncWithSemaphoreHeldAsync(cancellationToken).ConfigureAwait(false);
+                }
+            }
+        }
+
+        /// <inheritdoc />
+        protected override void FlushWithSemaphoreHeld()
+        {
+            if (_items.Count == 0)
+            {
+                return;
+            }
+            _consumer.Receive(_items);
+            _size = 0;
+            _items = new List<T>();
+        }
+
+        /// <inheritdoc />
+        protected override Task FlushAsyncWithSemaphoreHeldAsync(
+            CancellationToken cancellationToken = default(CancellationToken))
+        {
+            if (_items.Count == 0)
+            {
+                return CommonUtils.CompletedTask;
             }
 
-            if (old.Count != 0)
-            {
-                _consumer.Receive(old);
-            }
+            IList<T> old = _items;
+            _items = new List<T>();
+            _size = 0;
+            return _consumer.ReceiveAsync(old, cancellationToken);
         }
     }
 }

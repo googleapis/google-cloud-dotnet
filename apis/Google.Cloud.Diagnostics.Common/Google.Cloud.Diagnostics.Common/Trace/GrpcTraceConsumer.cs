@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using Google.Cloud.Trace.V1;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
@@ -49,7 +50,24 @@ namespace Google.Cloud.Diagnostics.Common
 
             Traces tracesObj = new Traces { Traces_ = { traces } };
             // If the client task has faulted this will throw when accessing 'Result'
-            _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj);
+            _clientTask.Result.PatchTraces(trace.ProjectId, tracesObj);
+        }
+
+        /// <inheritdoc />
+        public Task ReceiveAsync(IEnumerable<TraceProto> traces, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(traces, nameof(traces));
+
+            TraceProto trace = traces.FirstOrDefault();
+            // If there are no traces do not try to send them.
+            if (trace == null)
+            {
+                return CommonUtils.CompletedTask;
+            }
+
+            Traces tracesObj = new Traces { Traces_ = { traces } };
+            // If the client task has faulted this will throw when accessing 'Result'
+            return _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj, cancellationToken);
         }
     }
 }

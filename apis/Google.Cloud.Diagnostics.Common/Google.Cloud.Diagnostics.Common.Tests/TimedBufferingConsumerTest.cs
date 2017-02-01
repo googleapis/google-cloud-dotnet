@@ -16,6 +16,8 @@ using Google.Api.Gax;
 using Moq;
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -26,7 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         private DateTime _start = DateTime.UtcNow;
 
-        private TimedBufferingConsumer<int> GetConsumer(IConsumer<int> consumer, IClock clock)
+        private IFlushableConsumer<int> GetConsumer(IConsumer<int> consumer, IClock clock)
         {
             return TimedBufferingConsumer<int>.Create(consumer, _waitTime, clock);
         }
@@ -87,6 +89,60 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             consumer.Receive(new int[] { });
             consumer.Flush();
             mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Never());
+        }
+
+        [Fact]
+        public async Task ReceiveAsync()
+        {
+            var clock = GetClock(new[] { _start, _start, _start.AddSeconds(_waitTime.TotalSeconds + 1) });
+            var mockConsumer = new Mock<IConsumer<int>>();
+            var consumer = GetConsumer(mockConsumer.Object, clock);
+            await consumer.ReceiveAsync(new[] { 1, 2 }, CancellationToken.None);
+
+            // Ensure ints have not been sent as the wait time hasn't been passed.
+            mockConsumer.Verify(c => c.ReceiveAsync(
+                It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
+
+            // Add the initial ints the list.  This ensures we verify the right 
+            // values where received.
+            mockConsumer.Setup(c => c.ReceiveAsync(
+                new[] { 1, 2, 3, 4, 5 }, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
+            await consumer.ReceiveAsync(new[] { 3, 4, 5 });
+            mockConsumer.VerifyAll();
+        }
+
+
+        [Fact]
+        public async Task FlushAsync()
+        {
+            var clock = GetClock(new[] { _start, _start });
+            int[] intArray = { 1, 2, 3, 4 };
+            var mockConsumer = new Mock<IConsumer<int>>();
+            mockConsumer.Setup(c => c.ReceiveAsync(
+                intArray, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
+            var consumer = GetConsumer(mockConsumer.Object, clock);
+
+            await consumer.ReceiveAsync(intArray, CancellationToken.None);
+            mockConsumer.Verify(c => c.ReceiveAsync(
+                It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
+
+            await consumer.FlushAsync();
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public async Task FlushAsync_NoTraces()
+        {
+            var clock = GetClock(new[] { _start, _start });
+            var mockConsumer = new Mock<IConsumer<int>>();
+            mockConsumer.Setup(c => c.ReceiveAsync(
+                new int[] { }, CancellationToken.None));
+            var consumer = GetConsumer(mockConsumer.Object, clock);
+
+            await consumer.ReceiveAsync(new int[] { }, CancellationToken.None);
+            await consumer.FlushAsync();
+            mockConsumer.Verify(c => c.ReceiveAsync(
+                It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
         }
     }
 }

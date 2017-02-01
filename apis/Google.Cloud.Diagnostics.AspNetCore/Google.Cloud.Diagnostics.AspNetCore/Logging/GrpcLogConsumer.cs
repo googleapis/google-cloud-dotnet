@@ -17,6 +17,8 @@ using Google.Cloud.Logging.V2;
 using Google.Cloud.Diagnostics.Common;
 using Google.Api.Gax;
 using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -39,11 +41,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <inheritdoc />
         public void Receive(IEnumerable<LogEntry> logs)
         {
+            GaxPreconditions.CheckNotNull(logs, nameof(logs));
             if (!logs.Any())
             {
                 return;
             }
-            _client.WriteLogEntriesAsync(null, null, EmptyDictionary, logs);
+            _client.WriteLogEntries(null, null, EmptyDictionary, logs);
+        }
+
+        /// <inheritdoc />
+        public Task ReceiveAsync(
+            IEnumerable<LogEntry> logs, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            GaxPreconditions.CheckNotNull(logs, nameof(logs));
+            if (!logs.Any())
+            {
+                return Task.CompletedTask;
+            }
+            return _client.WriteLogEntriesAsync(null, null, EmptyDictionary, logs, cancellationToken);
         }
     }
 }

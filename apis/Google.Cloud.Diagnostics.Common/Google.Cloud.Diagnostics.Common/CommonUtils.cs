@@ -12,26 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    /// <summary>
-    /// A flushable consumer.
-    /// </summary>
-    internal interface IFlushableConsumer<T> : IConsumer<T> 
+    internal static class CommonUtils
     {
-        /// <summary>
-        /// Flushes the consumer.
-        /// </summary>
-        void Flush();
-
-        /// <summary>
-        /// Flushes the consumer asynchronously.
-        /// </summary>
-        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>A completed <see cref="Task"/>.</summary>
+        internal readonly static Task CompletedTask = Task.FromResult(false);
     }
 }

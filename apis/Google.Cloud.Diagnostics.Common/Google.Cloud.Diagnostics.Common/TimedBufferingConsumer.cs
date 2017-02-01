@@ -15,18 +15,17 @@
 using Google.Api.Gax;
 using System.Collections.Generic;
 using System;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush after
-    /// a given span of time.
+    /// A <see cref="IFlushableConsumer{T}"/> that will flush the buffer during a receive
+    /// call if the given amount of time has passed..
     /// </summary>
-    internal class TimedBufferingConsumer<T> : IFlushableConsumer<T>
+    internal class TimedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>A mutex to protect the buffer.</summary>
-        private readonly object _mutex = new object();
-
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
@@ -36,8 +35,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        /// <summary>The buffered items.</summary>
-        private List<T> _items;
+        /// <summary>
+        /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
+        /// </summary>
+        private List<T> _items = new List<T>();
 
         /// <summary>The earliest time of the next automatica flush.</summary>
         private DateTime _nextFlush;
@@ -47,9 +48,7 @@ namespace Google.Cloud.Diagnostics.Common
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _waitTime = waitTime;
             _clock = GaxPreconditions.CheckNotNull(clock, nameof(clock));
-            _items = new List<T>();
             _nextFlush = _clock.GetCurrentDateTimeUtc().Add(_waitTime);
-
         }
 
         /// <summary>
@@ -61,38 +60,57 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="waitTime">The minimum amount of time between automatic flushes.</param>
         /// <param name="clock">A clock for getting the current timestamp.</param>
         public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime, IClock clock = null)
-        {
-            return new TimedBufferingConsumer<T>(consumer, waitTime, clock ?? SystemClock.Instance);
-        }
+            => new TimedBufferingConsumer<T>(consumer, waitTime, clock ?? SystemClock.Instance);
 
         /// <inheritdoc />
-        public void Receive(IEnumerable<T> items)
+        protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            lock (_mutex)
+            _items.AddRange(items);
+            if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
             {
-                _items.AddRange(items);
-                if (_clock.GetCurrentDateTimeUtc() >= _nextFlush) { 
-                  Flush();
-                }
+                FlushWithSemaphoreHeld();
             }
         }
 
         /// <inheritdoc />
-        public void Flush()
+        protected override Task ReceiveAsyncWithSemaphoreHeldAsync(
+            IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
         {
-            IList<T> old;
-            lock (_mutex)
+            GaxPreconditions.CheckNotNull(items, nameof(items));
+            _items.AddRange(items);
+            if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
             {
-                old = _items;
-                _items = new List<T>();
-                _nextFlush = DateTime.UtcNow.Add(_waitTime);
+                return FlushAsyncWithSemaphoreHeldAsync(cancellationToken);
+            }
+            return CommonUtils.CompletedTask;
+        }
+
+        /// <inheritdoc />
+        protected override void FlushWithSemaphoreHeld()
+        {
+            if (_items.Count == 0)
+            {
+                return;
             }
 
-            if (old.Count != 0)
+            _consumer.Receive(_items);
+            _nextFlush = DateTime.UtcNow.Add(_waitTime);
+            _items = new List<T>();
+        }
+
+        /// <inheritdoc />
+        protected override Task FlushAsyncWithSemaphoreHeldAsync(CancellationToken cancellationToken)
+        {
+            if (_items.Count == 0)
             {
-                _consumer.Receive(old);
+                return CommonUtils.CompletedTask;
             }
+
+            IList<T> old = _items;
+            _items = new List<T>();
+            _nextFlush = DateTime.UtcNow.Add(_waitTime);
+            return _consumer.ReceiveAsync(old, cancellationToken);
         }
     }
 }

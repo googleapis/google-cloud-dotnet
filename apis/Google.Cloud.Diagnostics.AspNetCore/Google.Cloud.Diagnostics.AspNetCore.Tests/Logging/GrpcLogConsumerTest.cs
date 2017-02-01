@@ -15,6 +15,8 @@
 using Google.Cloud.Logging.V2;
 using Moq;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
@@ -26,7 +28,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var logs = new[] { new LogEntry(), new LogEntry() };
             var mockClient = new Mock<LoggingServiceV2Client>();
-            mockClient.Setup(c => c.WriteLogEntriesAsync(
+            mockClient.Setup(c => c.WriteLogEntries(
                 null, null, It.IsAny<IDictionary<string, string>>(), logs, null));
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
@@ -41,9 +43,36 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
             consumer.Receive(new LogEntry[] { });
-            mockClient.Verify(c => c.WriteLogEntriesAsync(
+            mockClient.Verify(c => c.WriteLogEntries(
                 null, null, It.IsAny<IDictionary<string, string>>(),
                 It.IsAny<IEnumerable<LogEntry>>(), null), Times.Never());
+        }
+
+        [Fact]
+        public async Task ReceiveAsync()
+        {
+            var logs = new[] { new LogEntry(), new LogEntry() };
+            var mockClient = new Mock<LoggingServiceV2Client>();
+            var task = Task.FromResult(new WriteLogEntriesRequest());
+            mockClient.Setup(c => c.WriteLogEntriesAsync(
+                null, null, It.IsAny<IDictionary<string, string>>(), logs, CancellationToken.None))
+                .Returns(Task.FromResult(new WriteLogEntriesResponse()));
+            var consumer = new GrpcLogConsumer(mockClient.Object);
+
+            await consumer.ReceiveAsync(logs, CancellationToken.None);
+            mockClient.VerifyAll();
+        }
+
+        [Fact]
+        public async Task ReceiveAsync_EmptyEnumerableIgnored()
+        {
+            var mockClient = new Mock<LoggingServiceV2Client>();
+            var consumer = new GrpcLogConsumer(mockClient.Object);
+
+            await consumer.ReceiveAsync(new LogEntry[] { }, CancellationToken.None);
+            mockClient.Verify(c => c.WriteLogEntriesAsync(
+                null, null, It.IsAny<IDictionary<string, string>>(),
+                It.IsAny<IEnumerable<LogEntry>>(), CancellationToken.None), Times.Never());
         }
     }
 }
