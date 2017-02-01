@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         private DateTime _start = DateTime.UtcNow;
 
-        private TimedBufferingConsumer<int> GetConsumer(IConsumer<int> consumer, IClock clock)
+        private IFlushableConsumer<int> GetConsumer(IConsumer<int> consumer, IClock clock)
         {
             return TimedBufferingConsumer<int>.Create(consumer, _waitTime, clock);
         }

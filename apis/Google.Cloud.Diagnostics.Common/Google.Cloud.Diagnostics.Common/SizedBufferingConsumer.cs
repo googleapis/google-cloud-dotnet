@@ -118,7 +118,7 @@ namespace Google.Cloud.Diagnostics.Common
             IList<T> old = _items;
             _items = new List<T>();
             _size = 0;
-            return _consumer.ReceiveAsync(_items, cancellationToken);
+            return _consumer.ReceiveAsync(old, cancellationToken);
         }
     }
 }
