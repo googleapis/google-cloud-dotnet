@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using System.Threading.Tasks;
 using System.Web;

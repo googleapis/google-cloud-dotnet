@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using System;
 
 namespace Google.LongRunning
@@ -34,6 +35,22 @@ namespace Google.LongRunning
         {
             get { throw new NotImplementedException(); }
         }
+
+        /// <summary>
+        /// Return the <see cref="CallSettings"/> that would be used by a call to
+        /// <see cref="GetOperation(GetOperationRequest, CallSettings)"/>, using the base
+        /// settings of this client and the specified per-call overrides.
+        /// </summary>
+        /// <remarks>
+        /// This method is used when polling, to determine the appropriate timeout and cancellation
+        /// token to use for each call.
+        /// </remarks>
+        /// <param name="callSettings">The per-call override, if any.</param>
+        /// <returns>The effective call settings for a GetOperation RPC.</returns>
+        protected internal virtual CallSettings GetEffectiveCallSettingsForGetOperation(CallSettings callSettings)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public partial class OperationsClientImpl
@@ -43,5 +60,12 @@ namespace Google.LongRunning
 
         /// <inheritdoc />
         public override IScheduler Scheduler => _clientHelper.Scheduler;
+
+        // Note: if we ever have a partial Modify_GetOperationRequest call body,
+        // we'd want to call it here, but cope with not providing a request.
+
+        /// <inheritdoc />
+        protected internal override CallSettings GetEffectiveCallSettingsForGetOperation(CallSettings callSettings) =>
+            _callGetOperation.BaseCallSettings.MergedWith(callSettings);
     }
 }

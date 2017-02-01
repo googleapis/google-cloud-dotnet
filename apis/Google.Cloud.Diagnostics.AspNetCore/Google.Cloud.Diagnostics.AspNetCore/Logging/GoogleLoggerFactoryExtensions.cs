@@ -44,7 +44,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Adds a <see cref="GoogleLoggerProvider"/> for <see cref="GoogleLogger"/>s.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID.</param>
+        /// <param name="factory">The logger factory. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId,
@@ -57,7 +58,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Adds a <see cref="GoogleLoggerProvider"/> for <see cref="GoogleLogger"/>s.
         /// </summary>
-        /// <param name="logTo">Where to log to. Cannot be null.</param>
+        /// <param name="factory">The logger factory. Cannot be null.</param>
+        /// <param name="logTo">Where to log to. Cannot be null. Cannot be null.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
         public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTo logTo,

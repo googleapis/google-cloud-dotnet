@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests.ErrorReporting
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class ErrorReportingExceptionLoggerTest
     {

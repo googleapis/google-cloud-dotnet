@@ -16,7 +16,7 @@ using Google.Cloud.Logging.Type;
 using Microsoft.Extensions.Logging;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class LogUtilsTest
     {

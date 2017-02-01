@@ -22,11 +22,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class SizedBufferingConsumerTest
     {
-        private static readonly Task s_completedTask = Task.FromResult(1);
-
         private const int _bufferSize = 10;
 
-        private SizedBufferingConsumer<int> GetConsumer(IConsumer<int> consumer) 
+        private IFlushableConsumer<int> GetConsumer(IConsumer<int> consumer) 
             => SizedBufferingConsumer<int>.Create(consumer, Utils.IntSizer.Instance, _bufferSize);
 
         [Fact]
@@ -89,7 +87,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             // Add the initial ints the list.  This ensures we verify the right 
             // values where received.
             mockConsumer.Setup(c => c.ReceiveAsync(
-                new[] { 1, 2, 3, 4, 5 }, CancellationToken.None)).Returns(s_completedTask);
+                new[] { 1, 2, 3, 4, 5 }, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
 
             // Fill the buffer so it will be flushed.
             await consumer.ReceiveAsync(new[] { 3, 4, 5 }, CancellationToken.None);
@@ -108,7 +106,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 It.IsAny<IEnumerable<int>>(), CancellationToken.None), Times.Never());
 
             mockConsumer.Setup(c => c.ReceiveAsync(
-                intArray, CancellationToken.None)).Returns(s_completedTask);
+                intArray, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
+
             await consumer.FlushAsync();
             mockConsumer.VerifyAll();
         }

@@ -20,7 +20,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class GrpcLogConsumerTest
     {

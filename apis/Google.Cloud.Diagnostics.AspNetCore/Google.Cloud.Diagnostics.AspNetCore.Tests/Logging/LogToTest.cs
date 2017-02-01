@@ -15,7 +15,7 @@
 using Google.Cloud.Diagnostics.Common;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Logging
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class LogToTest
     {

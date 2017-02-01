@@ -26,6 +26,7 @@ The following libraries are available at a [beta](#versioning) quality level:
 
 The following libraries are available at an [alpha](#versioning) quality level:
 
+* Google Cloud Diagnostics for ASP.NET Core - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Diagnostics.AspNetCore/) (alpha)
 * Google Cloud Metadata - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Metadata.V1) (alpha)
 * [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (alpha)
 * [Google Cloud Speech](https://cloud.google.com/speech/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Speech.V1Beta1/) (alpha)

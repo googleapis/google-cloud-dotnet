@@ -23,11 +23,8 @@ namespace Google.Cloud.Diagnostics.Common
     /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush when
     /// the buffer is full.
     /// </summary>
-    internal class SizedBufferingConsumer<T> : IFlushableConsumer<T>
+    internal class SizedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
-        /// <summary>A semaphore to protect the buffer.</summary>
-        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1);
-
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
@@ -37,8 +34,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The size of the buffer in bytes.</summary>
         private readonly int _bufferSize;
 
-        /// <summary>The buffered items.</summary>
-        private IList<T> _items;
+        /// <summary>
+        /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
+        /// </summary>
+        private IList<T> _items = new List<T>();
 
         /// <summary>The current size of the items.</summary>
         private int _size;
@@ -52,7 +51,6 @@ namespace Google.Cloud.Diagnostics.Common
             _sizer = GaxPreconditions.CheckNotNull(sizer, nameof(sizer));
             _bufferSize = bufferSize;
 
-            _items = new List<T>();
             _size = 0;
         }
 
@@ -62,99 +60,66 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
         /// <param name="bufferSize">The buffer size in bytes.</param>
+        /// <param name="sizer">The sizer for the given type. Cannot be null.</param>
         public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
             => new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
 
         /// <inheritdoc />
-        public void Receive(IEnumerable<T> items)
+        protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            _semaphore.Wait();
             foreach (T item in items)
             {
                 _size += _sizer.GetSize(item);
                 _items.Add(item);
                 if (_size >= _bufferSize)
                 {
-                    Flush(waitForSemaphore: false);
+                    FlushWithSemaphoreHeld();
                 }
             }
-            _semaphore.Release();
         }
 
         /// <inheritdoc />
-        public async Task ReceiveAsync(
+        protected override async Task ReceiveAsyncWithSemaphoreHeldAsync(
             IEnumerable<T> items, CancellationToken cancellationToken = default(CancellationToken))
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            try
+            foreach (T item in items)
             {
-                await _semaphore.WaitAsync(cancellationToken);
-                foreach (T item in items)
+                _size += _sizer.GetSize(item);
+                _items.Add(item);
+                if (_size >= _bufferSize)
                 {
-                    _size += _sizer.GetSize(item);
-                    _items.Add(item);
-                    if (_size >= _bufferSize)
-                    {
-                        await FlushAsync(cancellationToken, waitForSemaphore: false);
-                    }
+                    await FlushAsyncWithSemaphoreHeldAsync(cancellationToken).ConfigureAwait(false);
                 }
             }
-            finally
-            {
-                _semaphore.Release();
-            }
         }
 
         /// <inheritdoc />
-        public void Flush() => Flush(waitForSemaphore: true);
+        protected override void FlushWithSemaphoreHeld()
+        {
+            if (_items.Count == 0)
+            {
+                return;
+            }
+            _consumer.Receive(_items);
+            _size = 0;
+            _items = new List<T>();
+        }
 
         /// <inheritdoc />
-        public async Task FlushAsync(CancellationToken cancellationToken = default(CancellationToken)) => 
-            await FlushAsync(cancellationToken, waitForSemaphore: true);
-
-        /// <summary>
-        /// Flush the buffer.
-        /// </summary>
-        /// <param name="waitForSemaphore">If true the flush will wait for the semaphore.</param>
-        private void Flush(bool waitForSemaphore)
+        protected override Task FlushAsyncWithSemaphoreHeldAsync(
+            CancellationToken cancellationToken = default(CancellationToken))
         {
-            IList<T> old;
-            if (waitForSemaphore) _semaphore.Wait();
-            old = _items;
+            if (_items.Count == 0)
+            {
+                return CommonUtils.CompletedTask;
+            }
+
+            IList<T> old = _items;
             _items = new List<T>();
             _size = 0;
-            if (waitForSemaphore) _semaphore.Release();
-
-            if (old.Count != 0)
-            {
-                _consumer.Receive(old);
-            }
-        }
-
-        /// <summary>
-        /// Flush the buffer asynchronously.
-        /// </summary>
-        /// <param name="waitForSemaphore">If true the flush will wait for the semaphore.</param>
-        private async Task FlushAsync(CancellationToken cancellationToken, bool waitForSemaphore)
-        {
-            IList<T> old;
-            try
-            {
-                if (waitForSemaphore) await _semaphore.WaitAsync(cancellationToken);
-                old = _items;
-                _items = new List<T>();
-                _size = 0;
-            }
-            finally
-            {
-                if (waitForSemaphore) _semaphore.Release();
-            }
-
-            if (old.Count != 0)
-            {
-                await _consumer.ReceiveAsync(old, cancellationToken);
-            }
+            return _consumer.ReceiveAsync(old, cancellationToken);
         }
     }
 }

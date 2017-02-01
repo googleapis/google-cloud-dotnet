@@ -17,7 +17,6 @@ using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Threading.Tasks;
@@ -76,14 +75,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     public static class CloudTraceExtension
     {
         /// <summary>
-        /// Class used to allow dependency injection of a project id.
-        /// </summary>
-        internal class ProjectId
-        {
-            public string Id;
-        }
-
-        /// <summary>
         /// Uses middleware that will trace time taken for all subsequent delegates to run.
         /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
         /// used with <see cref="AddGoogleTrace"/>,
@@ -97,6 +88,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Adds the needed services for Google Cloud Tracing. Used with <see cref="UseGoogleTrace"/>.
         /// </summary>
+        /// <param name="services">The service collection. Cannot be null.</param>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="clientTask">Optional task which produces the Trace client, if 
@@ -114,10 +106,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
                  new GrpcTraceConsumer(clientTask), TraceSizer.Instance, config.BufferOptions);
 
-            services.AddSingleton(new ProjectId { Id = projectId });
-            services.AddSingleton(consumer);
-            services.AddSingleton(TraceIdFactory.Create());
-            services.AddSingleton(RateLimitingTraceOptionsFactory.Create(config));
+            var tracerFactory = new ManagedTracerFactory(projectId, consumer,
+                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
+
+            services.AddSingleton<IManagedTracerFactory>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped(CreateTraceHeaderContext);
@@ -141,38 +133,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
             var headerContext = provider.GetService<TraceHeaderContext>();
-            var rateLimitingFactory = provider.GetService<RateLimitingTraceOptionsFactory>();
-            var projectId = provider.GetService<ProjectId>();
-            var traceIdFactory = provider.GetService<TraceIdFactory>();
-            var consumer = provider.GetService<IConsumer<TraceProto>>();
+            var tracerFactory = provider.GetService<IManagedTracerFactory>();
 
             var message = "No {0} service found. Ensure Google Cloud Trace is properly set up.";
             GaxPreconditions.CheckState(headerContext != null, 
                 string.Format(message, typeof(TraceHeaderContext).GetType()));
-            GaxPreconditions.CheckState(rateLimitingFactory != null,
-                string.Format(message, typeof(RateLimitingTraceOptionsFactory).GetType()));
-            GaxPreconditions.CheckState(projectId != null, 
-                string.Format(message, typeof(ProjectId).GetType()));
-            GaxPreconditions.CheckState(traceIdFactory != null, 
-                string.Format(message, typeof(TraceIdFactory).GetType()));
-            GaxPreconditions.CheckState(consumer != null, 
-                string.Format(message, typeof(TraceProto).GetType()));
+            GaxPreconditions.CheckState(tracerFactory != null,
+                string.Format(message, typeof(IManagedTracerFactory).GetType()));
 
-
-            // If the trace header and rate limiter say not to trace, return a no-op tracer.
-            if (headerContext.ShouldTrace == false || (headerContext.ShouldTrace == null && 
-                !rateLimitingFactory.CreateOptions().ShouldTrace))                
-            {
-                return DoNothingTracer.Instance;
-            }
-
-            // Create the tracer.
-            TraceProto trace = new TraceProto
-            {
-                ProjectId = projectId.Id,
-                TraceId = headerContext.TraceId ?? traceIdFactory.NextId(),
-            };
-            return SimpleManagedTracer.Create(consumer, trace, headerContext.SpanId);
+            return tracerFactory.CreateTracer(headerContext);
         }
     }
 }

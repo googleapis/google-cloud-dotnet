@@ -22,7 +22,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests.Trace
+namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class CloudTraceMiddlewareTest
     {

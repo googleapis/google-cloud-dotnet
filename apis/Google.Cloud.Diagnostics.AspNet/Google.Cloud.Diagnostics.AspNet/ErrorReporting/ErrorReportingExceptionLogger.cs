@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using System.Net.Http;
@@ -67,7 +68,6 @@ namespace Google.Cloud.Diagnostics.AspNet
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = ReportedErrorEventConsumerFactory.Create(projectId, options);
             return new ErrorReportingExceptionLogger(consumer, serviceName, version);
-
         }
         private ErrorReportingExceptionLogger(
             IConsumer<ReportedErrorEvent> consumer, string serviceName, string version) : base()

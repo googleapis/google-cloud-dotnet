@@ -70,7 +70,7 @@ namespace Google.Cloud.Metadata.V1.IntegrationTests
             Assert.Equal(0, instance.Disks[0].Index);
             Assert.Equal("READ_WRITE", instance.Disks[0].Mode);
             Assert.Equal("PERSISTENT", instance.Disks[0].Type);
-            Assert.Equal(67890ul, instance.Id.Value);
+            Assert.Equal(13512546227574112017ul, instance.Id.Value);
             Assert.Equal("projects/12345/machineTypes/n1-standard-1", instance.MachineType);
             Assert.True(instance.Metadata.Items.Count >= 1);
             Assert.Equal("my_instance_value1", instance.Metadata.Items.FirstOrDefault(i => i.Key == "my_instance_key1")?.Value);

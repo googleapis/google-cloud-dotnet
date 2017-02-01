@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Gets a <see cref="IConsumer{T}"/> that wraps the passed in consumer based on the buffer options.
         /// </summary>
-        /// <param name="consumer">The consumer to buffer <see cref="T"/> into.</param>
+        /// <param name="consumer">The consumer to buffer into.</param>
         /// <param name="sizer">A sizer for the type</param>
         /// <param name="options">Buffer options for the buffered consumer</param>
         internal static IConsumer<T> GetConsumer(IConsumer<T> consumer, ISizer<T> sizer, BufferOptions options)
