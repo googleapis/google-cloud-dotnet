@@ -653,6 +653,7 @@ namespace Google.Cloud.Logging.V2 {
         }
       }
     }
+
   }
 
   /// <summary>

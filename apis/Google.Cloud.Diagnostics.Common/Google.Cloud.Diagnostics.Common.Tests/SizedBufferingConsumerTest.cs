@@ -107,7 +107,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             mockConsumer.Setup(c => c.ReceiveAsync(
                 intArray, CancellationToken.None)).Returns(CommonUtils.CompletedTask);
-
             await consumer.FlushAsync();
             mockConsumer.VerifyAll();
         }
