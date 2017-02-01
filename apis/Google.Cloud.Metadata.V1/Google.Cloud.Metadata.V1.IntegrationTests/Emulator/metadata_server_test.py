@@ -262,7 +262,7 @@ def test_instance_hostname():
   check_path('instance/hostname', 'name.project.google.com.internal')
 
 def test_instance_id():
-  check_path('instance/id', 67890)
+  check_path('instance/id', 13512546227574112017)
 
 def test_instance_image():
   check_path('instance/image', '')
@@ -558,7 +558,7 @@ def test_update_string():
 
 def test_update_int():
   path = 'instance/id'
-  original = 67890
+  original = 13512546227574112017
   changed = 43985743985
 
   check_path(path, original)
