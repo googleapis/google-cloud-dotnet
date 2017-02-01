@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The current size of the items.</summary>
         private int _size;
 
-        private SizedBufferingConsumer(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize) : base()
+        private SizedBufferingConsumer(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
         {
             GaxPreconditions.CheckArgument(
                 bufferSize > 0, nameof(bufferSize), "bufferSize must be greater than 0");

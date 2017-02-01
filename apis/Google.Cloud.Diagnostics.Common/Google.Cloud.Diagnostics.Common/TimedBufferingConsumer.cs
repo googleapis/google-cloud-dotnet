@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The earliest time of the next automatica flush.</summary>
         private DateTime _nextFlush;
 
-        private TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IClock clock) : base()
+        private TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IClock clock)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _waitTime = waitTime;
