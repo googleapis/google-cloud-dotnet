@@ -17,8 +17,11 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.AspNetCore.Http;
 using Moq;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -26,24 +29,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class ErrorReportingExceptionLoggerTest
     {
-        private const string _projectId = "pid";
         private const string _serviceName = "SomeService";
         private const string _version = "1.0.0";
         private const string _googleHost = "www.google.com";
         private const string _userAgentValue = "user-agent-1.0";
         private static readonly string s_deleteMethod = HttpMethod.Delete.ToString();
         private static readonly string s_exceptionMessage = "some exception message";
-        private static readonly ProjectName s_projectName = new ProjectName(_projectId);
         private const int _conflictStatusCode = StatusCodes.Status409Conflict;
 
         /// <summary>
         /// Matcher to check if a <see cref="ReportedErrorEvent"/> matches a 
         /// simple <see cref="HttpContext"/> and <see cref="Exception"/>.
         /// </summary>
-        private ReportedErrorEvent IsSimpleContext()
+        private IEnumerable<ReportedErrorEvent> IsSimpleContext()
         {
-            return Match.Create<ReportedErrorEvent>(e =>
-                e.Message.Contains(s_exceptionMessage) &&
+            return Match.Create<IEnumerable<ReportedErrorEvent>>(enumerable => {
+                var e = enumerable.First();
+                return e.Message.Contains(s_exceptionMessage) &&
                 string.IsNullOrEmpty(e.Context.HttpRequest.Method) &&
                 e.Context.HttpRequest.Url.Contains(_googleHost) &&
                 string.IsNullOrEmpty(e.Context.HttpRequest.UserAgent) &&
@@ -52,19 +54,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 string.IsNullOrEmpty(e.Context.ReportLocation.FilePath) &&
                 string.IsNullOrEmpty(e.Context.ReportLocation.FunctionName) &&
                 e.ServiceContext.Service.Equals(_serviceName) &&
-                e.ServiceContext.Version.Equals(_version)
-            );
+                e.ServiceContext.Version.Equals(_version);
+            });
         }
 
         /// <summary>
         /// Matcher to check if a <see cref="ReportedErrorEvent"/> matches a 
         /// complex <see cref="HttpContext"/> and <see cref="Exception"/>.
         /// </summary>
-        private ReportedErrorEvent IsComplexContext()
+        private IEnumerable<ReportedErrorEvent> IsComplexContext()
         {
             bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
-            return Match.Create<ReportedErrorEvent>(e =>
-                e.Message.Contains(s_exceptionMessage) &&
+            return Match.Create<IEnumerable<ReportedErrorEvent>>(enumerable => {
+                var e = enumerable.First();
+                return e.Message.Contains(s_exceptionMessage) &&
                 e.Context.HttpRequest.Method.Equals(s_deleteMethod) &&
                 e.Context.HttpRequest.Url.Contains(_googleHost) &&
                 e.Context.HttpRequest.UserAgent.Equals(_userAgentValue) &&
@@ -73,8 +76,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                 (!isWindows || !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath)) &&
                 e.Context.ReportLocation.FunctionName.Equals(nameof(CreateException)) &&
                 e.ServiceContext.Service.Equals(_serviceName) &&
-                e.ServiceContext.Version.Equals(_version)
-            );
+                e.ServiceContext.Version.Equals(_version);
+            });
         }
 
         /// <summary>
@@ -108,7 +111,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             return context;
         }
-        /*
+        
         [Fact]
         public async Task Report_Simple()
         {
@@ -119,35 +122,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var context = new DefaultHttpContext();
             context.Request.Host = new HostString(_googleHost);
 
-            mockConsumer.Setup(consumer => consumer.ReceiveAsync(IsSimpleContext(), null));
+            mockConsumer.Setup(c => c.ReceiveAsync(IsSimpleContext(), default(CancellationToken)))
+                .Returns(CommonUtils.CompletedTask);
             await logger.LogAsync(context, new Exception(s_exceptionMessage));
             mockConsumer.VerifyAll();
         }
 
         [Fact]
-        public void Report_Complex()
+        public async Task Report_Complex()
         {
-            var mockClient = new Mock<ReportErrorsServiceClient>();
+            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
             var logger = ErrorReportingExceptionLogger.Create(
-                Task.FromResult(mockClient.Object), _projectId, _serviceName, _version);
+                mockConsumer.Object, _serviceName, _version);
 
-            mockClient.Setup(client => client.ReportErrorEvent(s_projectName, IsComplexContext(), null));
-            logger.Log(CreateComplexContext(), CreateException());
-            mockClient.VerifyAll();
-        }
-
-        [Fact]
-        public async Task ReportAsync_Complex()
-        {
-            var mockClient = new Mock<ReportErrorsServiceClient>();
-            var logger = ErrorReportingExceptionLogger.Create(
-                Task.FromResult(mockClient.Object), _projectId, _serviceName, _version);
-
-            mockClient.Setup(client => client.ReportErrorEventAsync(s_projectName, IsComplexContext(), null))
-                .Returns(Task.FromResult(new ReportErrorEventResponse()));
+            mockConsumer.Setup(c => c.ReceiveAsync(IsComplexContext(), default(CancellationToken)))
+                .Returns(CommonUtils.CompletedTask);
             await logger.LogAsync(CreateComplexContext(), CreateException());
-            mockClient.VerifyAll();
+            mockConsumer.VerifyAll();
         }
-        */
     }
 }

@@ -54,6 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     executable or job. Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer 
         ///     provided. Cannot be null.</param> 
+        /// <param name="options">Error reporting options for exception logging.</param>     
         public static void UseGoogleExceptionLogging(
             this IApplicationBuilder app, string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
@@ -69,7 +70,3 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
     }
 }
-
-
-
-// TODO(talarico): ADD OPTIONS PARAM

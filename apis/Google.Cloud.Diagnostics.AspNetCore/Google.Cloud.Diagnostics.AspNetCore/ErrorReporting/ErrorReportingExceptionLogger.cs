@@ -71,7 +71,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             IConsumer<ReportedErrorEvent> consumer, string serviceName, string version) =>
             new ErrorReportingExceptionLogger(consumer, serviceName, version);
 
-        private ErrorReportingExceptionLogger(
+        internal ErrorReportingExceptionLogger(
            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
