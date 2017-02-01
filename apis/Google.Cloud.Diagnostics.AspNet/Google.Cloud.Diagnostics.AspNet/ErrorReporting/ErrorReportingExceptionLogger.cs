@@ -61,6 +61,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="projectId">The Google Cloud Platform project ID.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.</param>
         /// <param name="version">Represents the source code version that the developer provided.</param> 
+        ///  <param name="options">Optional, error reporting options.</param>
         public static ErrorReportingExceptionLogger Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
@@ -69,7 +70,8 @@ namespace Google.Cloud.Diagnostics.AspNet
             var consumer = ReportedErrorEventConsumerFactory.Create(projectId, options);
             return new ErrorReportingExceptionLogger(consumer, serviceName, version);
         }
-        private ErrorReportingExceptionLogger(
+
+        internal ErrorReportingExceptionLogger(
             IConsumer<ReportedErrorEvent> consumer, string serviceName, string version) : base()
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
