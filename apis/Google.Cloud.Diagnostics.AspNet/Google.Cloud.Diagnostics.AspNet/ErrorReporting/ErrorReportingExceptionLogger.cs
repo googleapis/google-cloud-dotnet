@@ -16,6 +16,8 @@ using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -138,6 +140,7 @@ namespace Google.Cloud.Diagnostics.AspNet
                 Message = context.Exception.ToString() ?? "",
                 Context = errorContext,
                 ServiceContext = _serviceContext,
+                EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
             };
         }
     }

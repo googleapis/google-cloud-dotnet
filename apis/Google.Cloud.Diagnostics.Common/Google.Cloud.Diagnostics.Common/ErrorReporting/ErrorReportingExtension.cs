@@ -20,77 +20,19 @@ using Google.Protobuf.WellKnownTypes;
 
 namespace Google.Cloud.Diagnostics.Common
 {
+    /// <summary>
+    /// Extensions for Error Reporting.
+    /// </summary>
     public static class ErrorReportingExtension
     {
+        /// <summary>
+        /// Convert a <see cref="ReportedErrorEvent"/> to a <see cref="Struct"/>.
         public static Struct ToStruct(this ReportedErrorEvent errorEvent)
         {
             GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
             var jsonFormatter = new JsonFormatter(JsonFormatter.Settings.Default);
-            return Struct.Parser.ParseJson(jsonFormatter.Format(errorEvent));
-
-            /*
-            GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
-
-            
-
-            return new Struct
-            {
-                Fields = {
-                    { "message", new Value { StringValue = errorEvent.Message }  },
-                    { "context", new Value { StructValue = context } },
-                    { "serviceContext", new Value { StructValue = serviceContext } },
-                }
-            };*/
+            return Struct.Parser.ParseJson(jsonFormatter.Format(errorEvent))
         }
-
-        public static Struct ToStruct(this ServiceContext serviceContext)
-        {
-            return new Struct
-            {
-                Fields = {
-                    { "service", new Value { StringValue = serviceContext?.Service } },
-                    { "version", new Value { StringValue = serviceContext?.Version } },
-                },
-            };
-        }
-
-        public static Struct ToStruct(this HttpRequestContext httpRequestContext)
-        {
-            return new Struct
-            {
-                Fields = {
-                    { "method", new Value { StringValue = httpRequestContext?.Method } },
-                    { "url", new Value { StringValue = httpRequestContext?.Url } },
-                    { "userAgent", new Value { StringValue = httpRequestContext?.UserAgent } },
-                    { "responseStatusCode", new Value {  NumberValue = httpRequestContext?.ResponseStatusCode ?? 0 } },
-                }
-            };
-        }
-
-        public static Struct ToStruct(this SourceLocation sourceLocation)
-        {
-            return new Struct
-            {
-                Fields = {
-                    { "filePath", new Value { StringValue = sourceLocation?.FilePath } },
-                    { "lineNumber", new Value {  NumberValue = sourceLocation?.LineNumber ?? 0} },
-                    { "functionName", new Value { StringValue = sourceLocation?.FunctionName } },
-                }
-            };
-        }
-/*
-        public static Struct ToStruct(this ErrorContext errorContext)
-        {
-            return new Struct
-            {
-                Fields = {
-                    { "httpRequest", new Value { StructValue = httpRequest } },
-                    { "reportLocation", new Value { StructValue = reportLocation } },
-                }
-            };
-        }
-        */
-
     }
 }
 

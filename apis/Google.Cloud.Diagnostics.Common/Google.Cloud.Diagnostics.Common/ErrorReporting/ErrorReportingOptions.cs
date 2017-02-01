@@ -16,10 +16,17 @@ using Google.Api.Gax;
 
 namespace Google.Cloud.Diagnostics.Common
 {
+    /// <summary>
+    /// Optional configuration to be used when initializing error reporting.
+    /// </summary>
     public sealed class ErrorReportingOptions
     {
+        /// <summary>
+        /// Where the error events should be sent such as the Stackdriver Logging or Error Reporting API.
+        /// </summary>
         public ReportEventsTo ReportEventsTo { get; }
 
+        /// <summary>The buffer options for the error reporter.</summary>
         public BufferOptions BufferOptions { get; }
 
         private ErrorReportingOptions(ReportEventsTo reportEventsTo, BufferOptions bufferOptions)
@@ -28,19 +35,27 @@ namespace Google.Cloud.Diagnostics.Common
             BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
         }
 
+        /// <summary>
+        /// Creates a <see cref="ErrorReportingOptions"/>.
+        /// </summary>
+        /// <param name="reportEventsTo">Where the error events should be sent such as the Stackdriver 
+        ///     Logging or Error Reporting API. Cannot be null.</param>
+        /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         public static ErrorReportingOptions Create(
-            ReportEventsTo reportEventsTo, BufferOptions bufferOptions = null)
-        {
-            return new ErrorReportingOptions(
-                reportEventsTo, bufferOptions ?? BufferOptions.NoBuffer());
-        }
+            ReportEventsTo reportEventsTo, BufferOptions bufferOptions = null) =>
+            new ErrorReportingOptions(reportEventsTo, bufferOptions ?? BufferOptions.NoBuffer());
 
+
+        /// <summary>
+        /// Creates a <see cref="ErrorReportingOptions"/>.
+        /// </summary>
+        /// <param name = "projectId" > The Google Cloud Platform project Id. Cannot be null.</param>
+        /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         public static ErrorReportingOptions Create(
             string projectId, BufferOptions bufferOptions = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            return new ErrorReportingOptions(
-                ReportEventsTo.Logging(projectId), bufferOptions ?? BufferOptions.NoBuffer());
+            return Create(ReportEventsTo.Logging(projectId), bufferOptions);
         }
     }
 }

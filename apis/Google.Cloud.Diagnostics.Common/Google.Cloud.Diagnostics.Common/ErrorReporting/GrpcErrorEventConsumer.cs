@@ -29,12 +29,16 @@ namespace Google.Cloud.Diagnostics.Common
         private readonly ReportErrorsServiceClient _client;
         private readonly ProjectName _projectName;
 
+        /// <summary>
+        /// Creates a new instance of <see cref="GrpcErrorEventConsumer"/>.
+        /// </summary>
         /// <param name="client">The error reporting client that will push logs to 
-        ///     the Stackdriver Error Reporting API.</param>
-        public GrpcErrorEventConsumer(ReportErrorsServiceClient client, ProjectName projectName)
+        ///     the Stackdriver Error Reporting API. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        public GrpcErrorEventConsumer(ReportErrorsServiceClient client, string projectId)
         {
             _client = GaxPreconditions.CheckNotNull(client, nameof(client));
-            _projectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName));
+            _projectName = new ProjectName(GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
         }
 
         /// <inheritdoc />

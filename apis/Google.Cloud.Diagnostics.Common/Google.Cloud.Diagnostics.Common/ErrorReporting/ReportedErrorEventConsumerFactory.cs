@@ -20,6 +20,11 @@ namespace Google.Cloud.Diagnostics.Common
 {
     internal static class ReportedErrorEventConsumerFactory
     {
+        /// <summary>
+        /// Gets a <see cref="IConsumer{ReportedErrorEvent}"/> with the given options.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="options">Error Reporting options for the buffered consumer. Cannot be null.</param>
         public static IConsumer<ReportedErrorEvent> Create(string projectId, ErrorReportingOptions options)
         {
             GaxPreconditions.CheckNotNull(options, nameof(options));
@@ -35,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common
                     break;
                 case ReportEventsToLocation.ErrorReporting:
                     consumer = new GrpcErrorEventConsumer(
-                        reportTo.ErrorReportingClient, new ProjectName(projectId));
+                        reportTo.ErrorReportingClient, projectId);
                     break;
                 default:
                     Debug.Assert(false, $"Unsupported location {reportTo.ReportEventsToLocation}");

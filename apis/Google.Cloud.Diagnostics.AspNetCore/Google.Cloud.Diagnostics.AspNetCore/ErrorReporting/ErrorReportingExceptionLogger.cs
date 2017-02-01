@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using System;
@@ -153,6 +154,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Message = exception?.ToString() ?? "",
                 Context = errorContext,
                 ServiceContext = _serviceContext,
+                EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
             };
         }
     }

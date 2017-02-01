@@ -19,6 +19,8 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Google.Protobuf.WellKnownTypes;
+using System;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
@@ -127,6 +129,7 @@ namespace Google.Cloud.Diagnostics.AspNet
                 Message = context.Exception.ToString() ?? "",
                 Context = errorContext,
                 ServiceContext = _serviceContext,
+                EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
             };
         }
     }

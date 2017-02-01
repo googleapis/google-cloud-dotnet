@@ -19,59 +19,85 @@ using Google.Cloud.Logging.V2;
 
 namespace Google.Cloud.Diagnostics.Common
 {
+    /// <summary>
+    /// The location error events will be sent to.
+    /// </summary>
     public enum ReportEventsToLocation
     {
+        /// <summary>Stackdriver Error Reporting API.</summary>
         ErrorReporting,
+
+        /// <summary>Stackdriver Error Logging API.</summary>
         Logging
     }
 
+    /// <summary>
+    /// Represents the location error events will be sent, such as the Stackdriver Logging or Error Reporting API.
+    /// </summary>
     public sealed class ReportEventsTo
     {
-        internal const string LogNameDefault = "err-log";
+        /// <summary>The default log name, this is the log that error events will be written to.</summary>
+        internal const string LogNameDefault = "stackdriver-error-reporting";
 
         /// <summary>The global resource.</summary>
         internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
 
+        /// <summary>The location to send error events to.</summary>
         public ReportEventsToLocation ReportEventsToLocation { get; private set; }
 
+        /// <summary>The error reporting client.</summary>
         public ReportErrorsServiceClient ErrorReportingClient { get; private set; }
 
+        /// <summary>The logging client.</summary>
         public LoggingServiceV2Client LoggingClient { get; private set; }
 
+        /// <summary>Where to log to such as project or organization.</summary>
         public LogTo LogTo { get; private set; }
 
+        /// <summary>The name of the log.</summary>
         public string LogName { get; private set; }
 
+        /// <summary>The resource being monitored.</summary>
         public MonitoredResource MonitoredResource { get; private set; }
 
+        /// <summary>
+        /// Creates a new <see cref="ReportEventsTo"/> what will report to the Stackdriver Logging API.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project Id. Cannot be null.</param>
+        /// <param name="logName">The log name.</param>
+        /// <param name="loggingClient">The logging client.</param>
+        /// <param name="monitoredResource">The resource to monitor.</param>
         public static ReportEventsTo Logging(string projectId, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
-
-            return new ReportEventsTo
-            {
-                ReportEventsToLocation = ReportEventsToLocation.Logging,
-                LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
-                LogTo = LogTo.Project(GaxPreconditions.CheckNotNull(projectId, nameof(projectId))),
-                LogName = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
-                MonitoredResource = monitoredResource ?? GlobalResource,
-            };
+            var logTo = LogTo.Project(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+            return Logging(logTo, logName, loggingClient, monitoredResource);
         }
 
+        /// <summary>
+        /// Creates a new <see cref="ReportEventsTo"/> what will report to the Stackdriver Logging API.
+        /// </summary>
+        /// <param name="logTo">Where to log to such as a project or organization. Cannot be null.</param>
+        /// <param name="logName">The log name.</param>
+        /// <param name="loggingClient">The logging client.</param>
+        /// <param name="monitoredResource">The resource to monitor.</param>
         public static ReportEventsTo Logging(LogTo logTo, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
-            
             return new ReportEventsTo
             {
                 ReportEventsToLocation = ReportEventsToLocation.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
                 LogTo = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)),
-                LogName = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
+                LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? GlobalResource,
             };
         }
 
+        /// <summary>
+        /// Creates a new <see cref="ReportEventsTo"/> what will report to the Stackdriver Error Reporting API.
+        /// </summary>
+        /// <param name="errorReportingClient">The error reporting client.</param>
         public static ReportEventsTo ErrorReporting(ReportErrorsServiceClient errorReportingClient = null)
         {
             return new ReportEventsTo

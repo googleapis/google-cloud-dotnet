@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,32 +19,47 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
 using Google.Api.Gax;
 using Google.Api;
-using Google.Protobuf.WellKnownTypes;
 using Google.Cloud.Logging.Type;
 
 namespace Google.Cloud.Diagnostics.Common
 {
+    /// <summary>
+    /// Converts and sends <see cref="ReportedErrorEvent"/>s to an <see cref="IConsumer{LogEntry}"/>.
+    /// </summary>
     internal class ErrorEventToLogEntryConsumer : IConsumer<ReportedErrorEvent>
     {
         private readonly string _logName;
         private readonly IConsumer<LogEntry> _logConsumer;
         private readonly MonitoredResource _monitoredResource;
 
-        public ErrorEventToLogEntryConsumer(string logName, LogTo logTo,
+        /// <summary>
+        /// Creates a new instance of the <see cref="ErrorEventToLogEntryConsumer"/>.
+        /// </summary>
+        /// <param name="logName">The name of the log.  Not the fully qualified name. Cannot be null.</param>
+        /// <param name="logTo">Where to log, such as a project or organization. Cannot be null.</param>
+        /// <param name="logConsumer">The log consumer. Cannot be null.</param>
+        /// <param name="monitoredResource">The resource that is being monitored. Cannot be null.</param>
+        internal ErrorEventToLogEntryConsumer(string logName, LogTo logTo,
             IConsumer<LogEntry> logConsumer, MonitoredResource monitoredResource)
         {
+            GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
             _logName = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)).GetFullLogName(logName);
             _logConsumer = GaxPreconditions.CheckNotNull(logConsumer, nameof(logConsumer));
             _monitoredResource = GaxPreconditions.CheckNotNull(monitoredResource, nameof(monitoredResource));
         }
 
+        /// <inheritdoc />
         public void Receive(IEnumerable<ReportedErrorEvent> items) =>
             _logConsumer.Receive(ConvertErrorEvents(items));
 
-        public async Task ReceiveAsync(IEnumerable<ReportedErrorEvent> items,
+        /// <inheritdoc />
+        public Task ReceiveAsync(IEnumerable<ReportedErrorEvent> items,
             CancellationToken cancellationToken = default(CancellationToken)) => 
-                await _logConsumer.ReceiveAsync(ConvertErrorEvents(items), cancellationToken);
-    
+                _logConsumer.ReceiveAsync(ConvertErrorEvents(items), cancellationToken);
+
+        /// <summary>
+        /// Converts an <see cref="IEnumerable{ReportedErrorEvent}"/> to <see cref="IEnumerable{LogEntry}"/>.
+        /// </summary>
         internal IEnumerable<LogEntry> ConvertErrorEvents(IEnumerable<ReportedErrorEvent> items)
         {
             List<LogEntry> logEntries = new List<LogEntry>();
@@ -56,7 +70,7 @@ namespace Google.Cloud.Diagnostics.Common
                     Resource = _monitoredResource,
                     LogName = _logName,
                     Severity = LogSeverity.Error,
-                    Timestamp = Timestamp.FromDateTime(DateTime.UtcNow),
+                    Timestamp = errorEvent.EventTime,
                     JsonPayload = errorEvent.ToStruct(),
                 };
                 logEntries.Add(logEntry);
