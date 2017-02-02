@@ -71,6 +71,9 @@ namespace Google.Cloud.Diagnostics.AspNet
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = ReportedErrorEventConsumerFactory.Create(projectId, options);
             return new ErrorReportingExceptionFilter(consumer, serviceName, version);
