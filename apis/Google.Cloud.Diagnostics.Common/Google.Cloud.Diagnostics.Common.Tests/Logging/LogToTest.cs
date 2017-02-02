@@ -12,10 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class LogToTest
     {

@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 using Moq;
 using System.Collections.Generic;
@@ -20,7 +19,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.Tests
+namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class GrpcLogConsumerTest
     {
