@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a <see cref="ErrorReportingOptions"/>.
+        /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
         /// <param name="reportEventsTo">Where the error events should be sent such as the Stackdriver 
         ///     Logging or Error Reporting API. Cannot be null.</param>
@@ -46,7 +46,8 @@ namespace Google.Cloud.Diagnostics.Common
             new ErrorReportingOptions(reportEventsTo, bufferOptions ?? BufferOptions.NoBuffer());
 
         /// <summary>
-        /// Creates a <see cref="ErrorReportingOptions"/>.
+        /// Creates an <see cref="ErrorReportingOptions"/> that will send error events to the
+        /// Stackdriver Logging API.
         /// </summary>
         /// <param name = "projectId">The Google Cloud Platform project Id. Cannot be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>

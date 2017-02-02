@@ -20,7 +20,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// A flushable consumer.
     /// </summary>
-    internal interface IFlushableConsumer<T> : IConsumer<T>
+    internal interface IFlushableConsumer<T> : IConsumer<T> 
     {
         /// <summary>
         /// Flushes the consumer.

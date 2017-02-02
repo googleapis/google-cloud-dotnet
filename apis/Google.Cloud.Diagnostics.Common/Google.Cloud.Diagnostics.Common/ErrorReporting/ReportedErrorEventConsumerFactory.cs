@@ -27,6 +27,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="options">Error Reporting options for the buffered consumer. Cannot be null.</param>
         public static IConsumer<ReportedErrorEvent> Create(string projectId, ErrorReportingOptions options)
         {
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNull(options, nameof(options));
 
             var reportTo = options.ReportEventsTo;

@@ -51,7 +51,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The logging client.</summary>
         public LoggingServiceV2Client LoggingClient { get; private set; }
 
-        /// <summary>Where to log to such as project or organization.</summary>
+        /// <summary>Where to log to, such as project or organization.</summary>
         public LogTo LogTo { get; private set; }
 
         /// <summary>The name of the log.</summary>
@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a new <see cref="ReportEventsTo"/> what will report to the Stackdriver Logging API.
         /// </summary>
-        /// <param name="logTo">Where to log to such as a project or organization. Cannot be null.</param>
+        /// <param name="logTo">Where to log to, such as a project or organization. Cannot be null.</param>
         /// <param name="logName">The log name.</param>
         /// <param name="loggingClient">The logging client.</param>
         /// <param name="monitoredResource">The resource to monitor.</param>
@@ -106,6 +106,5 @@ namespace Google.Cloud.Diagnostics.Common
                 ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
             };
         }
-           
     }
 }
