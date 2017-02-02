@@ -20,6 +20,7 @@ using Google.Cloud.Logging.V2;
 using Google.Api.Gax;
 using Google.Api;
 using Google.Cloud.Logging.Type;
+using System.Linq;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -62,20 +63,14 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         internal IEnumerable<LogEntry> ConvertErrorEvents(IEnumerable<ReportedErrorEvent> items)
         {
-            List<LogEntry> logEntries = new List<LogEntry>();
-            foreach (var errorEvent in items)
+            return items.Select(errorEvent => new LogEntry
             {
-                LogEntry logEntry = new LogEntry
-                {
-                    Resource = _monitoredResource,
-                    LogName = _logName,
-                    Severity = LogSeverity.Error,
-                    Timestamp = errorEvent.EventTime,
-                    JsonPayload = errorEvent.ToStruct(),
-                };
-                logEntries.Add(logEntry);
-            }
-            return logEntries;
+                Resource = _monitoredResource,
+                LogName = _logName,
+                Severity = LogSeverity.Error,
+                Timestamp = errorEvent.EventTime,
+                JsonPayload = errorEvent.ToStruct()
+            });
         }
     }
 }

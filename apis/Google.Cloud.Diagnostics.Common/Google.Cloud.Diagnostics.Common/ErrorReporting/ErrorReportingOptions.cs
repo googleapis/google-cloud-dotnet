@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
     public sealed class ErrorReportingOptions
     {
         /// <summary>
-        /// Where the error events should be sent such as the Stackdriver Logging or Error Reporting API.
+        /// Where the error events should be sent, such as the Stackdriver Logging or Error Reporting API.
         /// </summary>
         public ReportEventsTo ReportEventsTo { get; }
 
@@ -38,7 +38,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
-        /// <param name="reportEventsTo">Where the error events should be sent such as the Stackdriver 
+        /// <param name="reportEventsTo">Where the error events should be sent, such as the Stackdriver 
         ///     Logging or Error Reporting API. Cannot be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         public static ErrorReportingOptions Create(

@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         internal ErrorReportingExceptionLogger(
-            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version) : base()
+            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _serviceContext = new ServiceContext
@@ -88,10 +88,10 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public override async Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
+        public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
             var errorEvent = CreateReportRequest(context);
-            await _consumer.ReceiveAsync(new[] { errorEvent }, cancellationToken);
+            return _consumer.ReceiveAsync(new[] { errorEvent }, cancellationToken);
         }
 
         /// <inheritdoc />

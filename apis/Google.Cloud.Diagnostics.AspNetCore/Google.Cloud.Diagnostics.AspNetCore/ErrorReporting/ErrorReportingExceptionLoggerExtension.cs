@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = ReportedErrorEventConsumerFactory.Create(projectId, options);
-            var logger = ErrorReportingExceptionLogger.Create(consumer, serviceName, version);
+            var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
             app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
         }
     }

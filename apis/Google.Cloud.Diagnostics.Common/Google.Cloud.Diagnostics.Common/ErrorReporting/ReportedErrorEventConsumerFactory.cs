@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.Common
                         reportTo.ErrorReportingClient, projectId);
                     break;
                 default:
-                    Debug.Assert(false, $"Unsupported location {reportTo.ReportEventsToLocation}");
+                    Debug.Fail($"Unsupported location {reportTo.ReportEventsToLocation}");
                     return null;
             }
 
