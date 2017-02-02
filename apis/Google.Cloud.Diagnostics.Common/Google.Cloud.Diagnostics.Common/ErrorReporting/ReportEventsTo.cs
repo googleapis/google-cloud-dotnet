@@ -61,7 +61,7 @@ namespace Google.Cloud.Diagnostics.Common
         public MonitoredResource MonitoredResource { get; private set; }
 
         /// <summary>
-        /// Creates a new <see cref="ReportEventsTo"/> what will report to the Stackdriver Logging API.
+        /// Creates a new <see cref="ReportEventsTo"/> that will report to the Stackdriver Logging API.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project Id. Cannot be null.</param>
         /// <param name="logName">The log name.</param>

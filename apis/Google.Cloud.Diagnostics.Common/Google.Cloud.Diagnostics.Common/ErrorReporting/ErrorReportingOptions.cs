@@ -45,11 +45,10 @@ namespace Google.Cloud.Diagnostics.Common
             ReportEventsTo reportEventsTo, BufferOptions bufferOptions = null) =>
             new ErrorReportingOptions(reportEventsTo, bufferOptions ?? BufferOptions.NoBuffer());
 
-
         /// <summary>
         /// Creates a <see cref="ErrorReportingOptions"/>.
         /// </summary>
-        /// <param name = "projectId" > The Google Cloud Platform project Id. Cannot be null.</param>
+        /// <param name = "projectId">The Google Cloud Platform project Id. Cannot be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         public static ErrorReportingOptions Create(
             string projectId, BufferOptions bufferOptions = null)

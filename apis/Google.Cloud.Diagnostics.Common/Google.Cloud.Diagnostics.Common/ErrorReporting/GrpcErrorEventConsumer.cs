@@ -44,6 +44,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <inheritdoc />
         public void Receive(IEnumerable<ReportedErrorEvent> events)
         {
+            GaxPreconditions.CheckNotNull(events, nameof(events));
             if (!events.Any())
             {
                 return;
@@ -59,6 +60,7 @@ namespace Google.Cloud.Diagnostics.Common
         public async Task ReceiveAsync(
             IEnumerable<ReportedErrorEvent> events, CancellationToken cancellationToken = default(CancellationToken))
         {
+            GaxPreconditions.CheckNotNull(events, nameof(events));
             if (!events.Any())
             {
                 return;
