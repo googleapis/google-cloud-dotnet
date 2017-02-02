@@ -21,6 +21,7 @@ using Google.Api.Gax;
 using Google.Api;
 using Google.Cloud.Logging.Type;
 using System.Linq;
+using System.Diagnostics;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -61,9 +62,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Converts an <see cref="IEnumerable{ReportedErrorEvent}"/> to <see cref="IEnumerable{LogEntry}"/>.
         /// </summary>
-        internal IEnumerable<LogEntry> ConvertErrorEvents(IEnumerable<ReportedErrorEvent> items)
-        {
-            return items.Select(errorEvent => new LogEntry
+        internal IEnumerable<LogEntry> ConvertErrorEvents(IEnumerable<ReportedErrorEvent> items) =>
+            items.Select(errorEvent => new LogEntry
             {
                 Resource = _monitoredResource,
                 LogName = _logName,
@@ -71,6 +71,5 @@ namespace Google.Cloud.Diagnostics.Common
                 Timestamp = errorEvent.EventTime,
                 JsonPayload = errorEvent.ToStruct()
             });
-        }
     }
 }

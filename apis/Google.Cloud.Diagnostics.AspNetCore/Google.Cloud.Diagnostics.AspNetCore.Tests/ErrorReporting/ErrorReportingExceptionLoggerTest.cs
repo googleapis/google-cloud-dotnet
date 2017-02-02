@@ -46,15 +46,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             return Match.Create<IEnumerable<ReportedErrorEvent>>(enumerable => {
                 var e = enumerable.Single();
                 return e.Message.Contains(s_exceptionMessage) &&
-                string.IsNullOrEmpty(e.Context.HttpRequest.Method) &&
-                e.Context.HttpRequest.Url.Contains(_googleHost) &&
-                string.IsNullOrEmpty(e.Context.HttpRequest.UserAgent) &&
-                e.Context.HttpRequest.ResponseStatusCode == StatusCodes.Status200OK &&
-                e.Context.ReportLocation.LineNumber == 0 &&
-                string.IsNullOrEmpty(e.Context.ReportLocation.FilePath) &&
-                string.IsNullOrEmpty(e.Context.ReportLocation.FunctionName) &&
-                e.ServiceContext.Service.Equals(_serviceName) &&
-                e.ServiceContext.Version.Equals(_version);
+                    string.IsNullOrEmpty(e.Context.HttpRequest.Method) &&
+                    e.Context.HttpRequest.Url.Contains(_googleHost) &&
+                    string.IsNullOrEmpty(e.Context.HttpRequest.UserAgent) &&
+                    e.Context.HttpRequest.ResponseStatusCode == StatusCodes.Status200OK &&
+                    e.Context.ReportLocation.LineNumber == 0 &&
+                    string.IsNullOrEmpty(e.Context.ReportLocation.FilePath) &&
+                    string.IsNullOrEmpty(e.Context.ReportLocation.FunctionName) &&
+                    e.ServiceContext.Service.Equals(_serviceName) &&
+                    e.ServiceContext.Version.Equals(_version);
             });
         }
 
@@ -68,15 +68,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             return Match.Create<IEnumerable<ReportedErrorEvent>>(enumerable => {
                 var e = enumerable.Single();
                 return e.Message.Contains(s_exceptionMessage) &&
-                e.Context.HttpRequest.Method.Equals(s_deleteMethod) &&
-                e.Context.HttpRequest.Url.Contains(_googleHost) &&
-                e.Context.HttpRequest.UserAgent.Equals(_userAgentValue) &&
-                e.Context.HttpRequest.ResponseStatusCode == _conflictStatusCode &&
-                (!isWindows || e.Context.ReportLocation.LineNumber > 0) &&
-                (!isWindows || !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath)) &&
-                e.Context.ReportLocation.FunctionName.Equals(nameof(CreateException)) &&
-                e.ServiceContext.Service.Equals(_serviceName) &&
-                e.ServiceContext.Version.Equals(_version);
+                    e.Context.HttpRequest.Method.Equals(s_deleteMethod) &&
+                    e.Context.HttpRequest.Url.Contains(_googleHost) &&
+                    e.Context.HttpRequest.UserAgent.Equals(_userAgentValue) &&
+                    e.Context.HttpRequest.ResponseStatusCode == _conflictStatusCode &&
+                    (!isWindows || e.Context.ReportLocation.LineNumber > 0) &&
+                    (!isWindows || !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath)) &&
+                    e.Context.ReportLocation.FunctionName.Equals(nameof(CreateException)) &&
+                    e.ServiceContext.Service.Equals(_serviceName) &&
+                    e.ServiceContext.Version.Equals(_version);
             });
         }
 
