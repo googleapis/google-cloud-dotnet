@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0-*",
+  "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
+  "authors": [ "Google Inc." ],
+
+  "packOptions": {
+    "summary": "Recommended Google client library to access the Translation API.",
+    "owners": [ "google-cloud" ],
+    "tags": [ "Google", "Cloud", "Translate", "Translation" ],
+    "iconUrl": "https://cloud.google.com/images/gcp-icon-64x64.png",
+    "projectUrl": "https://github.com/GoogleCloudPlatform/google-cloud-dotnet",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
+    "requireLicenseAcceptance": false
+  },
+
+  "buildOptions": {
+    "keyFile": "../../GoogleApis.snk",
+    "xmlDoc": true
+  },
+
+  "dependencies": {
+    "Google.Api.Gax.Rest": "1.0.0-beta09"
+  },
+
+  "frameworks": {
+    "net45": {},
+    "netstandard1.3": {
+      "dependencies": {
+        "System.Threading.Thread": "4.0.0"
+      }
+    }
+  }
+}
