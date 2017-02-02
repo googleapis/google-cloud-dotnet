@@ -1,0 +1,17 @@
+﻿{
+  "description": "Generates LanguageCodes.cs content",
+
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Google.Cloud.Translation.V2": { "target": "project" }
+  },
+
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": { "System.Xml.Linq": "4.0.0.0" }
+    }
+  }
+}
