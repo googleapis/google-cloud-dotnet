@@ -102,7 +102,7 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return new ReportEventsTo
             {
-                ReportEventsToLocation = ReportEventsToLocation.Logging,
+                ReportEventsToLocation = ReportEventsToLocation.ErrorReporting,
                 ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
             };
         }
