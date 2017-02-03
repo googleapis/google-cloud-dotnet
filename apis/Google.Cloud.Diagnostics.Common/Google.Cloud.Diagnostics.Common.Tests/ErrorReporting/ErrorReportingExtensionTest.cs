@@ -13,8 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.ErrorReporting.V1Beta1;
-using Google.Protobuf.WellKnownTypes;
-using System;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests.ErrorReporting

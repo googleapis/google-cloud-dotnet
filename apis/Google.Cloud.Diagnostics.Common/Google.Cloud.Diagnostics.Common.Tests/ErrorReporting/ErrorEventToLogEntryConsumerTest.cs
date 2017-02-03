@@ -14,22 +14,25 @@
 
 using Google.Api;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
+using Google.Protobuf.WellKnownTypes;
 using Moq;
+using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class ErrorEventToLogEntryConsumerTest
     {
-
-        // TODO(talarico): TESTS
-
         private const string _logName = "some-log-name";
         private static readonly MonitoredResource s_monitoredResource = new MonitoredResource { Type = "global" };
         private static readonly LogTo s_logTo = LogTo.Project("pid");
 
-        private IConsumer<ReportedErrorEvent> CreateErrorConsumer(IConsumer<LogEntry> logConsumer) =>
+        private ErrorEventToLogEntryConsumer CreateErrorConsumer(IConsumer<LogEntry> logConsumer) =>
             new ErrorEventToLogEntryConsumer(_logName, s_logTo, logConsumer, s_monitoredResource);
 
         [Fact]
@@ -37,18 +40,77 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockLogConsumer = new Mock<IConsumer<LogEntry>>();
             var errorConsumer = CreateErrorConsumer(mockLogConsumer.Object);
+            var errorEvents = new[] { new ReportedErrorEvent(), new ReportedErrorEvent() };
+            var logEntries = errorConsumer.ConvertErrorEvents(errorEvents);
 
-
+            mockLogConsumer.Setup(c => c.Receive(logEntries));
+            errorConsumer.Receive(errorEvents);
+            mockLogConsumer.VerifyAll();
         }
 
         [Fact]
-        public void ReceiveAsync()
+        public async Task ReceiveAsync()
         {
+            var mockLogConsumer = new Mock<IConsumer<LogEntry>>();
+            var errorConsumer = CreateErrorConsumer(mockLogConsumer.Object);
+            var errorEvents = new[] { new ReportedErrorEvent(), new ReportedErrorEvent() };
+            var logEntries = errorConsumer.ConvertErrorEvents(errorEvents);
+
+            mockLogConsumer.Setup(c => c.ReceiveAsync(logEntries, default(CancellationToken)))
+                .Returns(CommonUtils.CompletedTask);
+            await errorConsumer.ReceiveAsync(errorEvents);
+            mockLogConsumer.VerifyAll();
         }
 
         [Fact]
         public void ConvertErrorEvents()
         {
+            var startTime = DateTime.UtcNow;
+            var eventOne = new ReportedErrorEvent
+            {
+                Message = "Event one!",
+                EventTime = Timestamp.FromDateTime(startTime),
+                Context = new ErrorContext
+                {
+                    HttpRequest = new HttpRequestContext() { Method = "GET" },
+                }
+            };
+
+            var eventTwo = new ReportedErrorEvent
+            {
+                Message = "Event two!",
+                EventTime = Timestamp.FromDateTime(startTime.AddSeconds(2)),
+                Context = new ErrorContext
+                {
+                    ReportLocation = new SourceLocation() { LineNumber = 10 }
+                }
+            };
+
+            var eventThree = new ReportedErrorEvent
+            {
+                Message = "Event three!",
+                EventTime = Timestamp.FromDateTime(startTime.AddSeconds(4)),
+            };
+
+            var errorConsumer = CreateErrorConsumer(new Mock<IConsumer<LogEntry>>().Object);
+            var logEntries = errorConsumer.ConvertErrorEvents(new [] { eventOne, eventTwo, eventThree });
+
+            Assert.Equal(3, logEntries.Count());
+            foreach (var entry in logEntries)
+            {
+                Assert.Equal(s_monitoredResource, entry.Resource);
+                Assert.Contains(_logName, entry.LogName);
+                Assert.Equal(LogSeverity.Error, entry.Severity);
+            }
+
+            var logOne = logEntries.Where(l => l.Timestamp.Equals(eventOne.EventTime)).Single();
+            Assert.Equal(logOne.JsonPayload, eventOne.ToStruct());
+
+            var logTwo = logEntries.Where(l => l.Timestamp.Equals(eventTwo.EventTime)).Single();
+            Assert.Equal(logTwo.JsonPayload, eventTwo.ToStruct());
+
+            var logThree = logEntries.Where(l => l.Timestamp.Equals(eventThree.EventTime)).Single();
+            Assert.Equal(logThree.JsonPayload, eventThree.ToStruct());
         }
     }
 }
