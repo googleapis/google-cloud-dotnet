@@ -118,19 +118,9 @@ namespace Google.Cloud.Logging.Log4Net
         private List<Label> _customLabels = new List<Label>();
         private HashSet<MetaDataType> _withMetaData = new HashSet<MetaDataType>();
 
-        class PlatformDetails
-        {
-            public PlatformDetails(MonitoredResource resource, string logName, LogEntry logsLostWarningEntry)
-            {
-                Resource = resource;
-                LogName = logName;
-                LogsLostWarningEntry = logsLostWarningEntry;
-            }
+        private readonly LruCache<string, System.Type> _typeCache = new LruCache<string, System.Type>(1000);
+        private readonly List<Func<LogEntry>> preLogs = new List<Func<LogEntry>>();
 
-            public MonitoredResource Resource { get; }
-            public string LogName { get; }
-            public LogEntry LogsLostWarningEntry { get; }
-        }
         /// <inheritdoc/>
         public override void ActivateOptions()
         {
@@ -148,8 +138,6 @@ namespace Google.Cloud.Logging.Log4Net
             File = string.IsNullOrWhiteSpace(File) ? null : File;
 
             // Validate configuration
-            GaxPreconditions.CheckState(ResourceType != null || _resourceLabels.Count == 0,
-                $"Resource labels must be empty if {nameof(ResourceType)} is set.");
             GaxPreconditions.CheckState(LogId != null, $"{nameof(LogId)} must be set.");
             GaxPreconditions.CheckState(MaxUploadBatchSize > 0, $"{nameof(MaxUploadBatchSize)} must be > 0");
             GaxPreconditions.CheckEnumValue<LocalQueueType>(LocalQueueType, nameof(LocalQueueType));
@@ -174,76 +162,7 @@ namespace Google.Cloud.Logging.Log4Net
             GaxPreconditions.CheckState(ServerErrorBackoffMaxDelaySeconds >= 20,
                 $"{nameof(ServerErrorBackoffMaxDelaySeconds)} must be >= 20 seconds.");
 
-            // Configure the logger from the given configuration
-            if (ResourceType != null && ProjectId != null && !PreferPlatformResourceTypeDetection)
-            {
-                // If ResourceType and ProjectId explicitly set in configuration,
-                // and platform detected is not prefered, then just use the manual configuration.
-                _logName = new LogName(ProjectId, LogId).ToString();
-                _resource = new MonitoredResource
-                {
-                    Type = ResourceType,
-                    Labels = { _resourceLabels.ToDictionary(x => x.Key, x => x.Value) }
-                };
-            }
-            else
-            {
-                // Use auto-detected platform information.
-                string platformProjectId;
-                MonitoredResource platformResource;
-                var platform = Platform.Instance();
-                switch (platform.Type)
-                {
-                    case PlatformType.Gae:
-                        var gae = platform.GaeDetails;
-                        platformProjectId = gae.ProjectId;
-                        platformResource = new MonitoredResource
-                        {
-                            Type = "gae_app",
-                            Labels =
-                            {
-                                { "project_id", gae.ProjectId },
-                                { "module_id", gae.ServiceId },
-                                { "version_id", gae.VersionId }
-                            }
-                        };
-                        break;
-                    case PlatformType.Gce:
-                        var gce = platform.GceDetails;
-                        platformProjectId = gce.ProjectId;
-                        platformResource = new MonitoredResource
-                        {
-                            Type = "gce_instance",
-                            Labels =
-                            {
-                                { "project_id", gce.ProjectId },
-                                { "instance_id", gce.InstanceId },
-                                { "zone", gce.ZoneName }
-                            }
-                        };
-                        break;
-                    case PlatformType.Unknown:
-                        GaxPreconditions.CheckState(!string.IsNullOrEmpty(ProjectId), $"{nameof(ProjectId)} must be set on this platform.");
-                        platformProjectId = ProjectId;
-                        platformResource = new MonitoredResource
-                        {
-                            Type = "global",
-                            Labels =
-                            {
-                                {"project_id", ProjectId }
-                            }
-                        };
-                        break;
-                    default:
-                        throw new InvalidOperationException($"Unrecognized platform detected: '{platform.Type}'");
-                }
-                _logName = new LogName(PreferPlatformResourceTypeDetection ? platformProjectId : (ProjectId ?? platformProjectId), LogId).ToString();
-                _resource = PreferPlatformResourceTypeDetection ? platformResource : (ResourceType != null ? new MonitoredResource
-                {
-                    Type = ResourceType,
-                    Labels = { _resourceLabels.ToDictionary(x => x.Key, x => x.Value) }
-                } : platformResource);
-            }
+            ActivateLogIdAndResource();
             switch (LocalQueueType)
             {
                 case LocalQueueType.Memory:
@@ -277,9 +196,82 @@ namespace Google.Cloud.Logging.Log4Net
                 _client, _scheduler, _clock,
                 _logQ, logsLostWarningEntry, MaxUploadBatchSize,
                 serverErrorBackoffSettings);
+            // Write any log entries generated by configuring this appender
+            Task.Run(() => Write(preLogs.Select(x => x())));
         }
 
-        private LruCache<string, System.Type> _typeCache = new LruCache<string, System.Type>(1000);
+        private void ActivateLogIdAndResource()
+        {
+            string projectId = null;
+            MonitoredResource resource = null;
+            if (!DisableResourceTypeDetection)
+            {
+                var platform = Platform.Instance();
+                switch (platform.Type)
+                {
+                    case PlatformType.Gae:
+                        var gae = platform.GaeDetails;
+                        projectId = gae.ProjectId;
+                        resource = new MonitoredResource
+                        {
+                            Type = "gae_app",
+                            Labels =
+                            {
+                                { "project_id", gae.ProjectId },
+                                { "module_id", gae.ServiceId },
+                                { "version_id", gae.VersionId }
+                            }
+                        };
+                        break;
+                    case PlatformType.Gce:
+                        var gce = platform.GceDetails;
+                        projectId = gce.ProjectId;
+                        resource = new MonitoredResource
+                        {
+                            Type = "gce_instance",
+                            Labels =
+                            {
+                                { "project_id", gce.ProjectId },
+                                { "instance_id", gce.InstanceId },
+                                { "zone", gce.ZoneName }
+                            }
+                        };
+                        break;
+                    case PlatformType.Unknown:
+                        break;
+                    default:
+                        throw new InvalidOperationException($"Unrecognized platform detected: '{platform.Type}'");
+                }
+            }
+            if (projectId == null)
+            {
+                // Either platform detection is disabled, or it detected an unknown platform
+                projectId = ProjectId;
+                if (ResourceType == null)
+                {
+                    resource = new MonitoredResource { Type = "global", Labels = { { "project_id", projectId } } };
+                }
+                else
+                {
+                    resource = new MonitoredResource { Type = ResourceType, Labels = { _resourceLabels.ToDictionary(x => x.Key, x => x.Value) } };
+                }
+            }
+            else
+            {
+                if (ProjectId != null && projectId != ProjectId)
+                {
+                    preLogs.Add(() => BuildLogEntry(new LoggingEvent(new LoggingEventData
+                    {
+                        Level = Level.Warn,
+                        LoggerName = "",
+                        Message = "Detected project ID does not match configured project ID; using detected project ID.",
+                        TimeStamp = _clock.GetCurrentDateTimeUtc()
+                    })));
+                }
+            }
+            _resource = resource;
+            _logName = new LogName(projectId, LogId).ToString();
+        }
 
         private LogEntry BuildLogEntry(LoggingEvent loggingEvent)
         {
@@ -288,60 +280,7 @@ namespace Google.Cloud.Logging.Log4Net
             LogEntrySourceLocation sourceLocation = null;
             if (_withMetaData.Contains(MetaDataType.Location))
             {
-                string file = null;
-                long? line = null;
-                string function = null;
-                if (loggingEvent.LocationInformation?.FileName != null)
-                {
-                    file = loggingEvent.LocationInformation?.FileName;
-                }
-                long lineNumber;
-                if (long.TryParse(loggingEvent.LocationInformation?.LineNumber, out lineNumber))
-                {
-                    line = lineNumber;
-                }
-                string function0 = null;
-                string typeName = loggingEvent.LocationInformation?.ClassName;
-                if (typeName != null)
-                {
-                    try
-                    {
-                        var type = _typeCache.GetOrAdd(typeName, () =>
-                            AppDomain.CurrentDomain.GetAssemblies()
-                                .SelectMany(a => a.GetTypes())
-                                .FirstOrDefault(t => t.FullName == typeName)
-                        );
-                        function0 = type.AssemblyQualifiedName;
-                    }
-                    catch
-                    {
-                        // Ignore exceptions. This is best-effort only, and expected to fail in some situations.
-                    }
-                }
-                string function1 = loggingEvent.LocationInformation?.MethodName;
-                if (function0 != null || function1 != null)
-                {
-                    function = $"[{function0 ?? ""}].{function1 ?? ""}";
-                }
-                if (file != null || line != null || function != null)
-                {
-                    sourceLocation = new LogEntrySourceLocation();
-                    if (file != null)
-                    {
-                        sourceLocation.File = file;
-                    }
-                    if (line != null)
-                    {
-                        sourceLocation.Line = line.Value;
-                    }
-                    if (function != null)
-                    {
-                        // Format of "function" is:
-                        // "[<assembly-qualified type name>].<method name>"
-                        // E.g. "[Google.Cloud.Logging.Log4Net.Tests.Log4NetTest, Google.Cloud.Logging.Log4Net.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0].LogInfo"
-                        sourceLocation.Function = function;
-                    }
-                }
+                sourceLocation = BuildLogEntryLocation(loggingEvent);
             }
             if (_withMetaData.Contains(MetaDataType.Identity))
             {
@@ -385,6 +324,72 @@ namespace Google.Cloud.Logging.Log4Net
                 logEntry.SourceLocation = sourceLocation;
             }
             return logEntry;
+        }
+
+        private LogEntrySourceLocation BuildLogEntryLocation(LoggingEvent loggingEvent)
+        {
+            string file = null;
+            long? line = null;
+            string function = null;
+            if (loggingEvent.LocationInformation?.FileName != null)
+            {
+                file = loggingEvent.LocationInformation?.FileName;
+            }
+            long lineNumber;
+            if (long.TryParse(loggingEvent.LocationInformation?.LineNumber, out lineNumber))
+            {
+                line = lineNumber;
+            }
+            string function0 = null;
+            string fullTypeName = loggingEvent.LocationInformation?.ClassName;
+            if (fullTypeName != null)
+            {
+                var type = _typeCache.GetOrAdd(fullTypeName, () =>
+                {
+                    try
+                    {
+                        return AppDomain.CurrentDomain.GetAssemblies()
+                            .SelectMany(a => a.GetTypes())
+                            .FirstOrDefault(t => t.FullName == fullTypeName);
+                    }
+                    catch
+                    {
+                        // Ignore exceptions. This is best-effort only, and expected to fail in some situations.
+                        // Returning null caches the failure.
+                        return null;
+                    }
+                });
+                if (type != null)
+                {
+                    function0 = type.AssemblyQualifiedName;
+                }
+            }
+            string function1 = loggingEvent.LocationInformation?.MethodName;
+            if (function0 != null || function1 != null)
+            {
+                function = $"[{function0 ?? ""}].{function1 ?? ""}";
+            }
+            if (file != null || line != null || function != null)
+            {
+                var sourceLocation = new LogEntrySourceLocation();
+                if (file != null)
+                {
+                    sourceLocation.File = file;
+                }
+                if (line != null)
+                {
+                    sourceLocation.Line = line.Value;
+                }
+                if (function != null)
+                {
+                    // Format of "function" is:
+                    // "[<assembly-qualified type name>].<method name>"
+                    // E.g. "[Google.Cloud.Logging.Log4Net.Tests.Log4NetTest, Google.Cloud.Logging.Log4Net.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=185c282632e132a0].LogInfo"
+                    sourceLocation.Function = function;
+                }
+                return sourceLocation;
+            }
+            return null;
         }
 
         private void Write(IEnumerable<LogEntry> logEntries)

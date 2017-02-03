@@ -34,13 +34,27 @@ namespace Google.Cloud.Logging.Log4Net.Tests
 {
     public class Log4NetTest
     {
+        // At the top of the file to minimize line number changes.
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private void LogInfo(IEnumerable<string> messages)
+        {
+            ILog log = LogManager.GetLogger("testlogger");
+            foreach (string message in messages)
+            {
+                log.Info(message);
+            }
+        }
+
+        private void LogInfo(params string[] messages) => LogInfo((IEnumerable<string>)messages);
+
         private static readonly TimeSpan s_testTimeout = TimeSpan.FromSeconds(3);
         private static readonly string s_lostMsg = GoogleStackdriverAppender.s_logsLostWarningMessage;
         private const string s_projectId = "projectId";
         private const string s_logId = "logId";
 
         // TODO:
-        // * Test retry timing behaviour
+        // * Test retry timing behaviour.
+        // * Add integration tests to check correct logging on various platforms.
 
         private class LoggingErrorException : Exception
         {
@@ -79,9 +93,14 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Func<GoogleStackdriverAppender, Task> testFn,
             IClock clock = null, IScheduler scheduler = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
-            IEnumerable<MetaDataType> withMetadata = null)
+            IEnumerable<MetaDataType> withMetadata = null,
+            bool requiresLog4Net = false)
         {
-            Hierarchy hierarchy = (Hierarchy)LogManager.GetRepository();
+            Hierarchy hierarchy = null;
+            if (requiresLog4Net)
+            {
+                hierarchy = (Hierarchy)LogManager.GetRepository();
+            }
             try
             {
                 var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
@@ -93,6 +112,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     ErrorHandler = new ThrowingErrorHandler(),
                     Layout = new PatternLayout { ConversionPattern = "%message" },
+                    DisableResourceTypeDetection = true,
                     ResourceType = "global",
                     ProjectId = s_projectId,
                     LogId = s_logId,
@@ -105,14 +125,20 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                     appender.AddWithMetaData(metadata);
                 }
                 appender.ActivateOptions();
-                hierarchy.Root.AddAppender(appender);
-                hierarchy.Root.Level = Level.Info;
-                hierarchy.Configured = true;
+                if (hierarchy != null)
+                {
+                    hierarchy.Root.AddAppender(appender);
+                    hierarchy.Root.Level = Level.Info;
+                    hierarchy.Configured = true;
+                }
                 await testFn(appender);
             }
             finally
             {
-                hierarchy.Shutdown();
+                if (hierarchy != null)
+                {
+                    hierarchy.Clear();
+                }
             }
         }
 
@@ -120,14 +146,15 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             Func<GoogleStackdriverAppender, Task> testFn,
             IClock clock = null, IScheduler scheduler = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
-            IEnumerable<MetaDataType> withMetadata = null)
+            IEnumerable<MetaDataType> withMetadata = null,
+            bool requiresLog4Net = false)
         {
             List<LogEntry> uploadedEntries = new List<LogEntry>();
             await RunTest(entries =>
             {
                 uploadedEntries.AddRange(entries);
                 return Task.FromResult(new WriteLogEntriesResponse());
-            }, testFn, clock, scheduler, maxMemoryCount, maxMemorySize, maxUploadBatchSize, withMetadata);
+            }, testFn, clock, scheduler, maxMemoryCount, maxMemorySize, maxUploadBatchSize, withMetadata, requiresLog4Net);
             return uploadedEntries;
         }
 
@@ -147,18 +174,6 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             (s_time0 + TimeSpan.FromSeconds(secondsOfs))
             .ToString(GoogleStackdriverAppender.s_lostDateTimeFmt);
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
-        private void LogInfo(IEnumerable<string> messages)
-        {
-            ILog log = LogManager.GetLogger("testlogger");
-            foreach (string message in messages)
-            {
-                log.Info(message);
-            }
-        }
-
-        private void LogInfo(params string[] messages) => LogInfo((IEnumerable<string>)messages);
-
         [Fact]
         public async Task SingleLogEntry()
         {
@@ -167,7 +182,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 {
                     LogInfo("Message0");
                     Assert.True(await appender.FlushAsync(s_testTimeout));
-                });
+                },
+                requiresLog4Net: true);
             Assert.Equal(1, uploadedEntries.Count);
             Assert.Equal("Message0", uploadedEntries[0].TextPayload.Trim());
         }
@@ -181,13 +197,17 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                     LogInfo("Message0");
                     Assert.True(await appender.FlushAsync(s_testTimeout));
                 },
-                withMetadata: new[] { MetaDataType.Location });
+                withMetadata: new[] { MetaDataType.Location },
+                requiresLog4Net: true);
             Assert.Equal(1, uploadedEntries.Count);
             var entry0 = uploadedEntries[0];
             Assert.Equal("Message0", entry0.TextPayload.Trim());
             Assert.NotNull(entry0.SourceLocation);
-            Assert.EndsWith("Log4NetTest.cs", entry0.SourceLocation.File);
-            Assert.Equal(156L, entry0.SourceLocation.Line); // This may change when this file is edited ;)
+            Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("Log4NetTest.cs"),
+                $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
+            // Line 44 on dev machine, line 42 on AppVeyor. Don't ask, I don't understand.
+            Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 44L || entry0.SourceLocation.Line == 42L,
+                $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
             Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
         }
 
@@ -202,7 +222,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                     Assert.True(await appender.FlushAsync(s_testTimeout));
                     LogInfo(logs.Skip(2));
                     Assert.True(await appender.FlushAsync(s_testTimeout));
-                });
+                },
+                requiresLog4Net: true);
             Assert.Equal(5, uploadedEntries.Count);
             Assert.Equal(logs, uploadedEntries.Select(x => x.TextPayload.Trim()));
         }

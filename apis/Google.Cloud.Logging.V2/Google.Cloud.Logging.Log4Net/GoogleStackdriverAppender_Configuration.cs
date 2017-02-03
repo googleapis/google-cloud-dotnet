@@ -106,10 +106,10 @@ namespace Google.Cloud.Logging.Log4Net
         }
 
         /// <summary>
-        /// Whether to prefer platform detection for setting resource type
-        /// over the manual configuration; if the platform is not unknown.
+        /// If set, disables resource-type detection based on platform,
+        /// so ResourceType will default to "global" if not manually set. 
         /// </summary>
-        public bool PreferPlatformResourceTypeDetection { get; set; } = false;
+        public bool DisableResourceTypeDetection { get; set; } = false;
 
         /// <summary>
         /// The resource type of log entries.
@@ -128,13 +128,14 @@ namespace Google.Cloud.Logging.Log4Net
         /// Unknown: ResourceType "global", with project_id set from this configuration.
         /// </description></item>
         /// </list>
-        /// If <see cref="PreferPlatformResourceTypeDetection"/> is <c>true</c>, then this detected
-        /// resource-type is always used, unless the platform is unknown.
+        /// If <see cref="DisableResourceTypeDetection"/> is <c>true</c>, then this platform detection
+        /// is not performed, and this ResourceType defaults to "global" if not set.
         /// </remarks>
         public string ResourceType { get; set; } = null;
 
         /// <summary>
-        /// Specify labels for the resource type.
+        /// Specify labels for the resource type;
+        /// only used if platform detection is disabled or detects an unknown platform.
         /// </summary>
         /// <param name="label">The resource type label.</param>
         public void AddResourceLabel(Label label)

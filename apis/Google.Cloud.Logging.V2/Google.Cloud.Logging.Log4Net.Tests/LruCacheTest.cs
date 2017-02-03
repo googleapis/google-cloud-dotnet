@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -97,6 +98,40 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 Assert.Equal("gone", lru.GetOrAdd(i, () => "gone"));
             }
             Assert.Equal(100, lru.Count);
+        }
+
+        [Fact]
+        public void MultithreadedUse()
+        {
+            const int threadCount = 50;
+            const int lruCapacity = 1000;
+            const int perThread = 10000;
+            var lru = new LruCache<int, object>(lruCapacity);
+            bool failure = false;
+            Thread[] threads = new Thread[threadCount];
+            for (int i = 0; i < threadCount; i++)
+            {
+                int initial = i * perThread;
+                threads[i] = new Thread(() =>
+                {
+                    for (int j = 0; j < perThread; j++)
+                    {
+                        var obj0 = new object();
+                        var obj1 = lru.GetOrAdd(initial + j, () => obj0);
+                        if (!ReferenceEquals(obj0, obj1))
+                        {
+                            failure = true;
+                        }
+                    }
+                });
+                threads[i].Start();
+            }
+            for (int i = 0; i < threadCount; i++)
+            {
+                Assert.True(threads[i].Join(TimeSpan.FromSeconds(5)));
+            }
+            Assert.False(failure);
+            Assert.Equal(lruCapacity, lru.Count);
         }
     }
 }
