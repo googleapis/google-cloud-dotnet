@@ -106,13 +106,47 @@ namespace Google.Cloud.Logging.Log4Net
         }
 
         /// <summary>
-        /// The resource type of log entries.
-        /// Default value is "global".
+        /// If set, disables resource-type detection based on platform,
+        /// so ResourceType will default to "global" if not manually set. 
         /// </summary>
-        public string ResourceType { get; set; } = "global";
+        public bool DisableResourceTypeDetection { get; set; } = false;
 
         /// <summary>
-        /// The project ID for all log entries. Must be configured.
+        /// The resource type of log entries.
+        /// Default value depends on the detected platform. See the remarks section for details.
+        /// </summary>
+        /// <remarks>
+        /// If this is not set, then Resource type is set depending on the detected execution platform:
+        /// <list type="bullet">
+        /// <item><description>
+        /// Google App Engine: ResourceType "gae_app", with project_id, module_id, and version_id set approprately.
+        /// </description></item>
+        /// <item><description>
+        /// Google Compute Engine: ResourceType "gce_instance", with project_id, instance_id, and zone set approprately.
+        /// </description></item>
+        /// <item><description>
+        /// Unknown: ResourceType "global", with project_id set from this configuration.
+        /// </description></item>
+        /// </list>
+        /// If <see cref="DisableResourceTypeDetection"/> is <c>true</c>, then this platform detection
+        /// is not performed, and this ResourceType defaults to "global" if not set.
+        /// </remarks>
+        public string ResourceType { get; set; } = null;
+
+        /// <summary>
+        /// Specify labels for the resource type;
+        /// only used if platform detection is disabled or detects an unknown platform.
+        /// </summary>
+        /// <param name="label">The resource type label.</param>
+        public void AddResourceLabel(Label label)
+        {
+            _resourceLabels.Add(label);
+        }
+
+        /// <summary>
+        /// The project ID for all log entries.
+        /// Must be configured in not executing on Google Compute Engine or Google App Engine.
+        /// If running on GCE or GAE, the ProjectId will be automatically detected if not set.
         /// </summary>
         public string ProjectId { get; set; }
 

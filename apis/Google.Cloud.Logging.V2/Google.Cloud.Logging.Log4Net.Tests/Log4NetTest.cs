@@ -14,16 +14,18 @@
 
 using Google.Api;
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Logging.V2;
 using Grpc.Core;
+using log4net;
 using log4net.Core;
 using log4net.Layout;
+using log4net.Repository.Hierarchy;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -32,13 +34,27 @@ namespace Google.Cloud.Logging.Log4Net.Tests
 {
     public class Log4NetTest
     {
+        // At the top of the file to minimize line number changes.
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private void LogInfo(IEnumerable<string> messages)
+        {
+            ILog log = LogManager.GetLogger("testlogger");
+            foreach (string message in messages)
+            {
+                log.Info(message);
+            }
+        }
+
+        private void LogInfo(params string[] messages) => LogInfo((IEnumerable<string>)messages);
+
         private static readonly TimeSpan s_testTimeout = TimeSpan.FromSeconds(3);
         private static readonly string s_lostMsg = GoogleStackdriverAppender.s_logsLostWarningMessage;
         private const string s_projectId = "projectId";
         private const string s_logId = "logId";
 
         // TODO:
-        // * Test retry timing behaviour
+        // * Test retry timing behaviour.
+        // * Add integration tests to check correct logging on various platforms.
 
         private class LoggingErrorException : Exception
         {
@@ -72,42 +88,73 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             public Task Delay(TimeSpan delay, CancellationToken cancellationToken) => Task.FromResult(0);
         }
 
-        private Task RunTest(
+        private async Task RunTest(
             Func<IEnumerable<LogEntry>, Task<WriteLogEntriesResponse>> handlerFn,
             Func<GoogleStackdriverAppender, Task> testFn,
             IClock clock = null, IScheduler scheduler = null,
-            int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null)
+            int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
+            IEnumerable<MetaDataType> withMetadata = null,
+            bool requiresLog4Net = false)
         {
-            var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
-            fakeClient.Setup(x => x.WriteLogEntriesAsync(
-                null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
-                .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
-            var appender = new GoogleStackdriverAppender(fakeClient.Object,
-                scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock())
+            Hierarchy hierarchy = null;
+            if (requiresLog4Net)
             {
-                ErrorHandler = new ThrowingErrorHandler(),
-                Layout = new PatternLayout { ConversionPattern = "%message" },
-                ProjectId = s_projectId,
-                LogId = s_logId,
-            };
-            if (maxMemoryCount != null) appender.MaxMemoryCount = maxMemoryCount.Value;
-            if (maxMemorySize != null) appender.MaxMemorySize = maxMemorySize.Value;
-            if (maxUploadBatchSize != null) appender.MaxUploadBatchSize = maxUploadBatchSize.Value;
-            appender.ActivateOptions();
-            return testFn(appender);
+                hierarchy = (Hierarchy)LogManager.GetRepository();
+            }
+            try
+            {
+                var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
+                fakeClient.Setup(x => x.WriteLogEntriesAsync(
+                    null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
+                    .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
+                var appender = new GoogleStackdriverAppender(fakeClient.Object,
+                    scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock())
+                {
+                    ErrorHandler = new ThrowingErrorHandler(),
+                    Layout = new PatternLayout { ConversionPattern = "%message" },
+                    DisableResourceTypeDetection = true,
+                    ResourceType = "global",
+                    ProjectId = s_projectId,
+                    LogId = s_logId,
+                };
+                if (maxMemoryCount != null) appender.MaxMemoryCount = maxMemoryCount.Value;
+                if (maxMemorySize != null) appender.MaxMemorySize = maxMemorySize.Value;
+                if (maxUploadBatchSize != null) appender.MaxUploadBatchSize = maxUploadBatchSize.Value;
+                foreach (var metadata in withMetadata ?? Enumerable.Empty<MetaDataType>())
+                {
+                    appender.AddWithMetaData(metadata);
+                }
+                appender.ActivateOptions();
+                if (hierarchy != null)
+                {
+                    hierarchy.Root.AddAppender(appender);
+                    hierarchy.Root.Level = Level.Info;
+                    hierarchy.Configured = true;
+                }
+                await testFn(appender);
+            }
+            finally
+            {
+                if (hierarchy != null)
+                {
+                    hierarchy.Clear();
+                }
+            }
         }
 
         private async Task<List<LogEntry>> RunTestWorkingServer(
             Func<GoogleStackdriverAppender, Task> testFn,
             IClock clock = null, IScheduler scheduler = null,
-            int? maxMemoryCount = null, long? maxMemorySize = null)
+            int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
+            IEnumerable<MetaDataType> withMetadata = null,
+            bool requiresLog4Net = false)
         {
             List<LogEntry> uploadedEntries = new List<LogEntry>();
             await RunTest(entries =>
             {
                 uploadedEntries.AddRange(entries);
                 return Task.FromResult(new WriteLogEntriesResponse());
-            }, testFn, clock, scheduler, maxMemoryCount, maxMemorySize);
+            }, testFn, clock, scheduler, maxMemoryCount, maxMemorySize, maxUploadBatchSize, withMetadata, requiresLog4Net);
             return uploadedEntries;
         }
 
@@ -133,28 +180,52 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             var uploadedEntries = await RunTestWorkingServer(
                 async appender =>
                 {
-                    var log = CreateLog(Level.Info, "Message0");
-                    appender.DoAppend(log);
+                    LogInfo("Message0");
                     Assert.True(await appender.FlushAsync(s_testTimeout));
-                });
+                },
+                requiresLog4Net: true);
             Assert.Equal(1, uploadedEntries.Count);
             Assert.Equal("Message0", uploadedEntries[0].TextPayload.Trim());
         }
 
         [Fact]
-        public async Task MultipleLogEntries()
+        public async Task SingleLogEntryWithLocation()
         {
-            var logs = Enumerable.Range(1, 5).Select(i => CreateLog(Level.Info, $"Message{i}")).ToArray();
             var uploadedEntries = await RunTestWorkingServer(
                 async appender =>
                 {
-                    appender.DoAppend(logs.Take(2).ToArray());
+                    LogInfo("Message0");
                     Assert.True(await appender.FlushAsync(s_testTimeout));
-                    appender.DoAppend(logs.Skip(2).ToArray());
+                },
+                withMetadata: new[] { MetaDataType.Location },
+                requiresLog4Net: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var entry0 = uploadedEntries[0];
+            Assert.Equal("Message0", entry0.TextPayload.Trim());
+            Assert.NotNull(entry0.SourceLocation);
+            Assert.True(string.IsNullOrEmpty(entry0.SourceLocation.File) || entry0.SourceLocation.File.EndsWith("Log4NetTest.cs"),
+                $"Actual 'entry0.SourceLocation.File' = '{entry0.SourceLocation.File}'");
+            // Line 44 on dev machine, line 42 on AppVeyor. Don't ask, I don't understand.
+            Assert.True(entry0.SourceLocation.Line == 0L || entry0.SourceLocation.Line == 44L || entry0.SourceLocation.Line == 42L,
+                $"Actual 'entry0.SourceLocation.Line' = '{entry0.SourceLocation.Line}'"); // This may change when this file is edited ;)
+            Assert.Matches(@"\[Google\.Cloud\.Logging\.Log4Net\.Tests\.Log4NetTest, Google\.Cloud\.Logging\.Log4Net\.Tests, .*]\.LogInfo", entry0.SourceLocation.Function);
+        }
+
+        [Fact]
+        public async Task MultipleLogEntries()
+        {
+            var logs = Enumerable.Range(1, 5).Select(i => $"Message{i}");
+            var uploadedEntries = await RunTestWorkingServer(
+                async appender =>
+                {
+                    LogInfo(logs.Take(2));
                     Assert.True(await appender.FlushAsync(s_testTimeout));
-                });
+                    LogInfo(logs.Skip(2));
+                    Assert.True(await appender.FlushAsync(s_testTimeout));
+                },
+                requiresLog4Net: true);
             Assert.Equal(5, uploadedEntries.Count);
-            Assert.Equal(logs.Select(x => x.RenderedMessage), uploadedEntries.Select(x => x.TextPayload.Trim()));
+            Assert.Equal(logs, uploadedEntries.Select(x => x.TextPayload.Trim()));
         }
 
         [Fact]
