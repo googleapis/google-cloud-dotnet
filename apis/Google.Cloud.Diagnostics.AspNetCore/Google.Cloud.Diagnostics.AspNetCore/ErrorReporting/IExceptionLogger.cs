@@ -21,7 +21,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <summary>
     /// A generic exception logger.
     /// </summary>
-    internal interface IExceptionLogger
+    public interface IExceptionLogger
     {
         /// <summary>
         ///  Asynchronously logs an exception that occurred.

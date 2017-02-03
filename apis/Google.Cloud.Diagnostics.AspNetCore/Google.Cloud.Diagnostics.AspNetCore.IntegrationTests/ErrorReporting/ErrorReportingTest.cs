@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.AspNetCore.Builder;
@@ -210,7 +211,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseGoogleExceptionLogging(_projectId, Service, Version);
+            var options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
+            app.UseGoogleExceptionLogging(_projectId, Service, Version, options);
 
             app.UseMvc(routes =>
             {

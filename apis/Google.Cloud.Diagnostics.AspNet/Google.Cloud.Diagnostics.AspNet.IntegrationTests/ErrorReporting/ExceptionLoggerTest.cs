@@ -25,6 +25,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 using Xunit;
+using Google.Cloud.Diagnostics.Common;
 
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
@@ -91,8 +92,9 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             {
                 HttpConfiguration config = new HttpConfiguration();
                 config.Routes.MapHttpRoute("", "", null, null, new ThrowErrorHandler());
+                var options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
                 config.Services.Add(typeof(IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(ProjectId, TestId, TestId));
+                    ErrorReportingExceptionLogger.Create(ProjectId, TestId, TestId, options));
                 app.UseWebApi(config);
             }
         }
