@@ -43,12 +43,19 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact]
-        public async Task ErrorReportingTest()
+        public async Task ErrorReportingTest_ErrorReporting()
+            => await ErrorReportingTest(TestServer.Create<ReportToErrorReportingApplication>());
+
+        [Fact]
+        public async Task ErrorReportingTest_Logging()
+            => await ErrorReportingTest(TestServer.Create<ReportToLoggingApplication>());
+
+        public async Task ErrorReportingTest(TestServer testServer)
         {
             DateTime startTime = DateTime.UtcNow;
 
             // Create a test server and make an http.
-            using (TestServer server = TestServer.Create<ErrorReportingApplication>())
+            using (TestServer server = testServer)
             {
                 await server.HttpClient.GetAsync("");
             }
@@ -71,17 +78,37 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         };
 
         /// <summary>
+        /// A <see cref="BaseErrorReportingApplication"/> that will report events through the
+        /// error reporting api.
+        /// </summary>
+        public class ReportToErrorReportingApplication : BaseErrorReportingApplication
+        {
+            public override ErrorReportingOptions GetOptions() =>
+                ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
+        }
+
+        /// <summary>
+        /// A <see cref="BaseErrorReportingApplication"/> that will report events through the
+        /// logging api.
+        /// </summary>
+        public class ReportToLoggingApplication : BaseErrorReportingApplication
+        {
+            public override ErrorReportingOptions GetOptions() => null;
+        }
+
+        /// <summary>
         /// A simple <see cref="HttpApplication"/> that registers a <see cref="ErrorReportingExceptionLogger"/>
         /// </summary>
-        private class ErrorReportingApplication : HttpApplication
+        public abstract class BaseErrorReportingApplication : HttpApplication
         {
+            public abstract ErrorReportingOptions GetOptions();
+
             public void Configuration(IAppBuilder app)
             {
                 HttpConfiguration config = new HttpConfiguration();
                 config.Routes.MapHttpRoute("", "", null, null, new ThrowErrorHandler());
-                var options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
                 config.Services.Add(typeof(IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId, options));
+                    ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId, GetOptions()));
                 app.UseWebApi(config);
             }
         }
