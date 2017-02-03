@@ -26,6 +26,7 @@ namespace Google.Cloud.Diagnostics.Common
     {
         /// <summary>
         /// Convert a <see cref="ReportedErrorEvent"/> to a <see cref="Struct"/>.
+        /// </summary>
         public static Struct ToStruct(this ReportedErrorEvent errorEvent)
         {
             GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));

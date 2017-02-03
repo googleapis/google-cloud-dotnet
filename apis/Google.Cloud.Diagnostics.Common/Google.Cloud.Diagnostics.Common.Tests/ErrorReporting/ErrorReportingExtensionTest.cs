@@ -12,10 +12,51 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf.WellKnownTypes;
+using System;
+using Xunit;
+
 namespace Google.Cloud.Diagnostics.Common.Tests.ErrorReporting
 {
     public class ErrorReportingExtensionTest
     {
-        // TODO(talarico): TESTS
+        /// <summary>
+        /// This test is mainly just a sanity check that the extension "ToStruct" 
+        /// does the right thing.
+        /// </summary>
+        [Fact]
+        public void ToStruct()
+        {
+            var message = "exception message";
+            var method = "DELETE";
+            var lineNumber = 116;
+
+            var errorEvent = new ReportedErrorEvent()
+            {
+                Message = message,
+                Context = new ErrorContext()
+                {
+                    HttpRequest = new HttpRequestContext() { Method = method },
+                    ReportLocation = new SourceLocation() { LineNumber = lineNumber }
+                },
+                
+            };
+
+            var errorStruct = errorEvent.ToStruct();
+            Assert.NotEmpty(errorStruct?.Fields);
+            Assert.Equal(message, errorStruct.Fields["message"].StringValue);
+
+            var contextStruct = errorStruct.Fields["context"].StructValue;
+            Assert.NotEmpty(contextStruct?.Fields);
+
+            var httpStruct = contextStruct.Fields["httpRequest"].StructValue;
+            Assert.NotEmpty(httpStruct?.Fields);
+            Assert.Equal(method, httpStruct.Fields["method"].StringValue);
+
+            var locationStruct = contextStruct.Fields["reportLocation"].StructValue;
+            Assert.NotEmpty(locationStruct?.Fields);
+            Assert.Equal(lineNumber, locationStruct.Fields["lineNumber"].NumberValue);
+        }
     }
 }
