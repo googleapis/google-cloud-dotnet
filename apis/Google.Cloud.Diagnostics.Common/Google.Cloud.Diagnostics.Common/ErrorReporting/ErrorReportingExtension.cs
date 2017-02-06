@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,23 +12,27 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Threading.Tasks;
 
-namespace Google.Cloud.Diagnostics.AspNetCore
+using Google.Api.Gax;
+using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf;
+using Google.Protobuf.WellKnownTypes;
+
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A generic exception logger.
+    /// Extensions for Error Reporting.
     /// </summary>
-    public interface IExceptionLogger
+    internal static class ErrorReportingExtension
     {
         /// <summary>
-        /// Asynchronously logs an exception that occurred.
+        /// Convert a <see cref="ReportedErrorEvent"/> to a <see cref="Struct"/>.
         /// </summary>
-        /// <param name="context">The current http context.  Cannot be null.</param>
-        /// <param name="exception">The exception to log.  Cannot be null.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        Task LogAsync(HttpContext context, Exception exception);
+        public static Struct ToStruct(this ReportedErrorEvent errorEvent)
+        {
+            GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
+            return Struct.Parser.ParseJson(JsonFormatter.Default.Format(errorEvent));
+        }
     }
 }
+

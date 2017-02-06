@@ -14,7 +14,10 @@
 
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -47,59 +50,36 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public sealed class ErrorReportingExceptionLogger : ExceptionLogger
     {
-        // The Google Cloud Platform project id as a resource name.
-        private readonly ProjectName _projectResourceName;
-
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
         private readonly ServiceContext _serviceContext;
 
-        private readonly Task<ReportErrorsServiceClient> _clientTask;
-
-        /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
-        /// </summary>
-        /// <param name="client">The Error Reporting client. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable
-        ///     or job. Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer
-        /// provided. Cannot be null.</param> 
-        public static ErrorReportingExceptionLogger Create(
-            ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
-                new ErrorReportingExceptionLogger(Task.FromResult(client), projectId, serviceName, version);
-
-        /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
-        /// </summary>
-        /// <param name="clientTask">The Error Reporting client. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable
-        ///     or job. Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer
-        ///     provided. Cannot be null.</param> 
-        public static ErrorReportingExceptionLogger Create(
-            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
-                new ErrorReportingExceptionLogger(clientTask, projectId, serviceName, version);
+        private readonly IConsumer<ReportedErrorEvent> _consumer;
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/> using credentials as
         /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable
-        ///     or job. Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer
-        ///     provided. Cannot be null.</param> 
-        public static ErrorReportingExceptionLogger Create(string projectId, string serviceName, string version) =>
-            new ErrorReportingExceptionLogger(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
-
-        private ErrorReportingExceptionLogger(
-            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) : base()
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job. Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
+        ///  <param name="options">Optional, error reporting options.</param>
+        public static ErrorReportingExceptionLogger Create(string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
         {
-            _clientTask = GaxPreconditions.CheckNotNull(clientTask, nameof(clientTask));
-            _projectResourceName = new ProjectName(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
 
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = options.CreateConsumer(projectId);
+            return new ErrorReportingExceptionLogger(consumer, serviceName, version);
+        }
+
+        internal ErrorReportingExceptionLogger(
+            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
+        {
+            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _serviceContext = new ServiceContext
             {
                 Service = GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName)),
@@ -108,19 +88,17 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public override async Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
+        public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            ReportErrorsServiceClient client = await _clientTask;
-            await client.ReportErrorEventAsync(_projectResourceName, errorEvent);
+            var errorEvent = CreateReportRequest(context);
+            return _consumer.ReceiveAsync(new[] { errorEvent }, cancellationToken);
         }
 
         /// <inheritdoc />
         public override void Log(ExceptionLoggerContext context)
         {
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            // If the client task has faulted this will throw when accessing 'Result'
-            _clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
+            var errorEvent = CreateReportRequest(context);
+            _consumer.Receive(new[] { errorEvent });
         }
 
         /// <inheritdoc />
@@ -165,6 +143,7 @@ namespace Google.Cloud.Diagnostics.AspNet
                 Message = context.Exception.ToString() ?? "",
                 Context = errorContext,
                 ServiceContext = _serviceContext,
+                EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
             };
         }
     }

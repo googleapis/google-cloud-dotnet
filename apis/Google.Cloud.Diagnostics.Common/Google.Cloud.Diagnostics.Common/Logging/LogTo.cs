@@ -14,10 +14,9 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Logging.V2;
-using System;
 using System.Diagnostics;
 
-namespace Google.Cloud.Diagnostics.AspNetCore
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// The location log entries will be logged to.

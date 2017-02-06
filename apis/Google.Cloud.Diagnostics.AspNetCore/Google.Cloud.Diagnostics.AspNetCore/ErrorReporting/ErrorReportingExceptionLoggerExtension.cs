@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
@@ -52,10 +54,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     executable or job. Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer 
         ///     provided. Cannot be null.</param> 
+        /// <param name="options">Error reporting options for exception logging.</param>     
         public static void UseGoogleExceptionLogging(
-            this IApplicationBuilder app, string projectId, string serviceName, string version)
+            this IApplicationBuilder app, string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
         {
-            var logger = ErrorReportingExceptionLogger.Create(projectId, serviceName, version);
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = options.CreateConsumer(projectId);
+            var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
             app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
         }
     }

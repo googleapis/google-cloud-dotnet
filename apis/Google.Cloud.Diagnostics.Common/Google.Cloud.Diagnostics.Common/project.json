@@ -21,7 +21,10 @@
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-beta05",
     "Google.Api.Gax": "1.0.0-beta07",
+    "Google.Cloud.Logging.Type": { "target": "project" },
+    "Google.Cloud.Logging.V2": { "target": "project" },
     "Google.Cloud.Trace.V1": { "target": "project" },
+    "Google.Cloud.ErrorReporting.V1Beta1": "1.0.0-beta01",
     "System.Net.Http": "4.3.0"
   },
 

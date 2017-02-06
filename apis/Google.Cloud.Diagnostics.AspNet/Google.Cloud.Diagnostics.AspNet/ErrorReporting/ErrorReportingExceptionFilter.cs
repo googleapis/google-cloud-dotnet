@@ -13,11 +13,14 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.Diagnostics.Common;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Google.Protobuf.WellKnownTypes;
+using System;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
@@ -48,38 +51,11 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public class ErrorReportingExceptionFilter : IExceptionFilter
     {
-        // The Google Cloud Platform project id as a resource name.
-        private readonly ProjectName _projectResourceName;
-
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
         private readonly ServiceContext _serviceContext;
 
-        private readonly Task<ReportErrorsServiceClient> _clientTask;
-
-        /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>.
-        /// </summary>
-        /// <param name="client">The Error Reporting client. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
-        ///     Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
-        public static ErrorReportingExceptionFilter Create(
-            ReportErrorsServiceClient client, string projectId, string serviceName, string version) =>
-                new ErrorReportingExceptionFilter(Task.FromResult(client), projectId, serviceName, version);
-
-        /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/>.
-        /// </summary>
-        /// <param name="clientTask">A task which produces the Error Reporting client. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
-        ///     Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
-        public static ErrorReportingExceptionFilter Create(
-            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version) =>
-                new ErrorReportingExceptionFilter(clientTask, projectId, serviceName, version);
+        private readonly IConsumer<ReportedErrorEvent> _consumer;
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
@@ -88,16 +64,25 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
         ///     Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
-        public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version) => 
-            new ErrorReportingExceptionFilter(ReportErrorsServiceClient.CreateAsync(), projectId, serviceName, version);
+        /// <param name="version">Represents the source code version that the developer provided. 
+        ///     Cannot be null.</param>
+        /// <param name="options">Optional, error reporting options.</param>
+        public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = options.CreateConsumer(projectId);
+            return new ErrorReportingExceptionFilter(consumer, serviceName, version);
+        }
 
         internal ErrorReportingExceptionFilter(
-            Task<ReportErrorsServiceClient> clientTask, string projectId, string serviceName, string version)
+            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
         {
-            _clientTask = GaxPreconditions.CheckNotNull(clientTask, nameof(clientTask));
-            _projectResourceName = new ProjectName(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
-
+            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _serviceContext = new ServiceContext
             {
                 Service = GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName)),
@@ -108,9 +93,8 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <inheritdoc />
         public void OnException(ExceptionContext context)
         {
-            ReportedErrorEvent errorEvent = CreateReportRequest(context);
-            // If the client task has faulted this will throw when accessing 'Result'
-            _clientTask.Result.ReportErrorEvent(_projectResourceName, errorEvent);
+            var errorEvent = CreateReportRequest(context);
+            _consumer.Receive(new[] { errorEvent });
         }
 
         /// <summary>
@@ -148,6 +132,7 @@ namespace Google.Cloud.Diagnostics.AspNet
                 Message = context.Exception.ToString() ?? "",
                 Context = errorContext,
                 ServiceContext = _serviceContext,
+                EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
             };
         }
     }
