@@ -64,7 +64,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
 
             options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = ReportedErrorEventConsumerFactory.Create(projectId, options);
+            var consumer = options.CreateConsumer(projectId);
             var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
             app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
         }
