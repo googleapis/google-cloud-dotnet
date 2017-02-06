@@ -16,17 +16,9 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    /// <summary>
-    /// An <see cref="ISizer{T}"/> for <see cref="ReportedErrorEvent"/>s.
-    /// </summary>
-    internal sealed class ReportedErrorEventSizer : ISizer<ReportedErrorEvent>
+    internal static class ReportedErrorEventSizer
     {
-        /// <summary>The single log entry sizer instance.</summary>
-        internal static readonly ReportedErrorEventSizer Instance = new ReportedErrorEventSizer();
-
-        private ReportedErrorEventSizer() { }
-
-        /// <inheritdoc />
-        public int GetSize(ReportedErrorEvent item) => item.CalculateSize();
+        /// <summary>Gets the size of a <see cref="ReportedErrorEvent"/> in bytes.</summary>
+        public static int GetSize(ReportedErrorEvent item) => item.CalculateSize();
     }
 }

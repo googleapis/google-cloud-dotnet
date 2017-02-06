@@ -12,22 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-    /// <summary>
-    /// An <see cref="ISizer{T}"/> for <see cref="LogEntry"/>s.
-    /// </summary>
-    internal sealed class LogEntrySizer : ISizer<LogEntry>
+    internal static class LogEntrySizer
     {
-        /// <summary>The single log entry sizer instance.</summary>
-        internal static LogEntrySizer Instance = new LogEntrySizer();
-
-        private LogEntrySizer() { }
-
-        /// <inheritdoc />
-        public int GetSize(LogEntry item) => item.CalculateSize();
+        /// <summary>Gets the size of a <see cref="LogEntry"/> in bytes.</summary>
+        public static int GetSize(LogEntry item) => item.CalculateSize();
     }
 }

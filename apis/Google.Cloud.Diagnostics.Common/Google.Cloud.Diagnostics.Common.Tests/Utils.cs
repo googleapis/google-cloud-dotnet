@@ -43,16 +43,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             return Guid.NewGuid().ToString();
         }
 
-        /// <summary>A sizer for ints.</summary>
-        public class IntSizer : ISizer<int>
+        public static class IntSizer
         {
-            /// <summary>The single instance of the <see cref="IntSizer"/>.</summary>
-            public static readonly IntSizer Instance = new IntSizer();
-
-            private IntSizer() { }
-
             /// <summary>Always returns 2.</summary>
-            public int GetSize(int item) => 2;
+            public static int GetSize(int item) => 2;
         }
 
         /// <summary>

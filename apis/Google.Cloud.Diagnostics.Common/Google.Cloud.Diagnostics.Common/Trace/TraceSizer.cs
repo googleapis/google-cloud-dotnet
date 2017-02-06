@@ -12,23 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
-
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    /// <summary>
-    /// An <see cref="ISizer{T}"/> for <see cref="TraceProto"/>s.
-    /// </summary>
-    internal sealed class TraceSizer : ISizer<TraceProto>
+    internal static class TraceSizer
     {
-        /// <summary>The single trace sizer instance.</summary>
-        internal static readonly TraceSizer Instance = new TraceSizer();
-
-        private TraceSizer() { }
-
-        /// <inheritdoc />
-        public int GetSize(TraceProto item) => item.CalculateSize();
+        /// <summary>Gets the size of a <see cref="TraceProto"/> in bytes.</summary>
+        public static int GetSize(TraceProto item) => item.CalculateSize();
     }
 }

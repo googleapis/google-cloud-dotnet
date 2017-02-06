@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -28,8 +29,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
-        /// <summary>Used to obtain the size of an item.</summary>
-        private readonly ISizer<T> _sizer;
+        /// <summary>A function to obtain the size of an item in bytes.</summary>
+        private readonly Func<T, int> _sizer;
 
         /// <summary>The size of the buffer in bytes.</summary>
         private readonly int _bufferSize;
@@ -42,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The current size of the items.</summary>
         private int _size;
 
-        private SizedBufferingConsumer(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
+        private SizedBufferingConsumer(IConsumer<T> consumer, Func<T, int> sizer, int bufferSize)
         {
             GaxPreconditions.CheckArgument(
                 bufferSize > 0, nameof(bufferSize), "bufferSize must be greater than 0");
@@ -60,8 +61,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
         /// <param name="bufferSize">The buffer size in bytes.</param>
-        /// <param name="sizer">The sizer for the given type. Cannot be null.</param>
-        public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, ISizer<T> sizer, int bufferSize)
+        /// <param name="sizer">A function to obtain the size of an item in bytes.</param>
+        public static SizedBufferingConsumer<T> Create(IConsumer<T> consumer, Func<T, int> sizer, int bufferSize)
             => new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
 
         /// <inheritdoc />
@@ -70,7 +71,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(items, nameof(items));
             foreach (T item in items)
             {
-                _size += _sizer.GetSize(item);
+                _size += _sizer(item);
                 _items.Add(item);
                 if (_size >= _bufferSize)
                 {
@@ -86,7 +87,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(items, nameof(items));
             foreach (T item in items)
             {
-                _size += _sizer.GetSize(item);
+                _size += _sizer(item);
                 _items.Add(item);
                 if (_size >= _bufferSize)
                 {
