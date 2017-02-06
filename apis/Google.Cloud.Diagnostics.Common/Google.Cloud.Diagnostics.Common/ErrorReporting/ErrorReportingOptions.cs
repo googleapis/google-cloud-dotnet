@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.ErrorReporting.V1Beta1;
+using System.Diagnostics;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -56,6 +58,34 @@ namespace Google.Cloud.Diagnostics.Common
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
             return Create(ReportEventsTo.Logging(projectId), bufferOptions);
+        }
+
+        /// <summary>
+        /// Gets a <see cref="IConsumer{ReportedErrorEvent}"/>.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        internal IConsumer<ReportedErrorEvent> CreateConsumer(string projectId)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+
+            IConsumer<ReportedErrorEvent> consumer;
+            switch (ReportEventsTo.ReportEventsToLocation)
+            {
+                case ReportEventsToLocation.Logging:
+                    consumer = new ErrorEventToLogEntryConsumer(ReportEventsTo.LogName, ReportEventsTo.LogTo,
+                        new GrpcLogConsumer(ReportEventsTo.LoggingClient), ReportEventsTo.MonitoredResource);
+                    break;
+                case ReportEventsToLocation.ErrorReporting:
+                    consumer = new GrpcErrorEventConsumer(
+                        ReportEventsTo.ErrorReportingClient, projectId);
+                    break;
+                default:
+                    Debug.Fail($"Unsupported location {ReportEventsTo.ReportEventsToLocation}");
+                    return null;
+            }
+
+            return ConsumerFactory<ReportedErrorEvent>.GetConsumer(
+                consumer, ReportedErrorEventSizer.Instance, BufferOptions);
         }
     }
 }

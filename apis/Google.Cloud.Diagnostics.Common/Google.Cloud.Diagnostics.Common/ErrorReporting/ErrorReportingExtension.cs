@@ -31,8 +31,7 @@ namespace Google.Cloud.Diagnostics.Common
         public static Struct ToStruct(this ReportedErrorEvent errorEvent)
         {
             GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
-            var jsonFormatter = new JsonFormatter(JsonFormatter.Settings.Default);
-            return Struct.Parser.ParseJson(jsonFormatter.Format(errorEvent));
+            return Struct.Parser.ParseJson(JsonFormatter.Default.Format(errorEvent));
         }
     }
 }

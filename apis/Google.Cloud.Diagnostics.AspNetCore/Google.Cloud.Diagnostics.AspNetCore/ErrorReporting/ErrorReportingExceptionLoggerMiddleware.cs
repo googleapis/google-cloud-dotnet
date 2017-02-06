@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         /// <param name="next">The next request delegate. Cannot be null.</param>
         /// <param name="logger">A logger that will report exceptions. Cannot be null.</param>
-        internal ErrorReportingExceptionLoggerMiddleware(RequestDelegate next, IExceptionLogger logger)
+        public ErrorReportingExceptionLoggerMiddleware(RequestDelegate next, IExceptionLogger logger)
         {
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
