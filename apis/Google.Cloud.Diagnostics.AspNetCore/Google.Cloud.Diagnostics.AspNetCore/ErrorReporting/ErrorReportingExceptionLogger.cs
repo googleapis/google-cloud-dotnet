@@ -62,15 +62,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
         /// </summary>
         /// <param name="consumer">The consumer to report errors to. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the 
         ///     executable or job. Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer
-        ///     provided. Cannot be null.</param> 
-        internal static ErrorReportingExceptionLogger Create(
-            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version) =>
-            new ErrorReportingExceptionLogger(consumer, serviceName, version);
-
+        ///     provided. Cannot be null.</param>
         internal ErrorReportingExceptionLogger(
            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
         {
@@ -86,10 +81,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Asynchronously logs an exception that occurred.
         /// </summary>
         /// <returns>A task containing an empty response on success.</returns>
-        public async Task LogAsync(HttpContext context, Exception exception)
+        public Task LogAsync(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
-            await _consumer.ReceiveAsync(new[] { errorEvent });
+            return _consumer.ReceiveAsync(new[] { errorEvent });
         }
 
         /// <summary>

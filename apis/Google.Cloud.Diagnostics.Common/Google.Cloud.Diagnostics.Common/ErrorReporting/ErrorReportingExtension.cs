@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Extensions for Error Reporting.
     /// </summary>
-    public static class ErrorReportingExtension
+    internal static class ErrorReportingExtension
     {
         /// <summary>
         /// Convert a <see cref="ReportedErrorEvent"/> to a <see cref="Struct"/>.
@@ -30,8 +30,7 @@ namespace Google.Cloud.Diagnostics.Common
         public static Struct ToStruct(this ReportedErrorEvent errorEvent)
         {
             GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
-            var jsonFormatter = new JsonFormatter(JsonFormatter.Settings.Default);
-            return Struct.Parser.ParseJson(jsonFormatter.Format(errorEvent));
+            return Struct.Parser.ParseJson(JsonFormatter.Default.Format(errorEvent));
         }
     }
 }

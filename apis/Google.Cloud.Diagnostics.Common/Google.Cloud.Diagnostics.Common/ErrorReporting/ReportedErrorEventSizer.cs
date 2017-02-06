@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
     internal sealed class ReportedErrorEventSizer : ISizer<ReportedErrorEvent>
     {
         /// <summary>The single log entry sizer instance.</summary>
-        internal static ReportedErrorEventSizer Instance = new ReportedErrorEventSizer();
+        internal static readonly ReportedErrorEventSizer Instance = new ReportedErrorEventSizer();
 
         private ReportedErrorEventSizer() { }
 

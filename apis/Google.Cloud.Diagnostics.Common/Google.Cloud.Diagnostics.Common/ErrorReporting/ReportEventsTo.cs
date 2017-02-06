@@ -61,10 +61,10 @@ namespace Google.Cloud.Diagnostics.Common
         public MonitoredResource MonitoredResource { get; private set; }
 
         /// <summary>
-        /// Creates a new <see cref="ReportEventsTo"/> that will report to the Stackdriver Logging API.
+        /// Creates a new <see cref="ReportEventsTo"/> instance that will report to the Stackdriver Logging API.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project Id. Cannot be null.</param>
-        /// <param name="logName">The log name.</param>
+        /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
         /// <param name="monitoredResource">The resource to monitor.</param>
         public static ReportEventsTo Logging(string projectId, string logName = LogNameDefault,
@@ -75,10 +75,10 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a new <see cref="ReportEventsTo"/> what will report to the Stackdriver Logging API.
+        /// Creates a new <see cref="ReportEventsTo"/> instance what will report to the Stackdriver Logging API.
         /// </summary>
         /// <param name="logTo">Where to log to, such as a project or organization. Cannot be null.</param>
-        /// <param name="logName">The log name.</param>
+        /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
         /// <param name="monitoredResource">The resource to monitor.</param>
         public static ReportEventsTo Logging(LogTo logTo, string logName = LogNameDefault,
@@ -95,7 +95,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a new <see cref="ReportEventsTo"/> what will report to the Stackdriver Error Reporting API.
+        /// Creates a new <see cref="ReportEventsTo"/> instance that will report to the Stackdriver Error Reporting API.
         /// </summary>
         /// <param name="errorReportingClient">The error reporting client.</param>
         public static ReportEventsTo ErrorReporting(ReportErrorsServiceClient errorReportingClient = null)

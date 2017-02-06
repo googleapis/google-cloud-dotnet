@@ -12,16 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
     public class ErrorReportingOptionsTest
     {
+        private const string _projectId = "pid";
+
         [Fact]
         public void ErrorReportingOptions_ProjectId()
         {
-            var options = ErrorReportingOptions.Create("pid");
+            var options = ErrorReportingOptions.Create(_projectId);
             Assert.NotNull(options.ReportEventsTo);
             Assert.Equal(ReportEventsToLocation.Logging, options.ReportEventsTo.ReportEventsToLocation);
             Assert.Equal(BufferOptions.NoBuffer(), options.BufferOptions);
@@ -36,6 +39,34 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var options = ErrorReportingOptions.Create(reportTo, bufferOptions);
             Assert.Equal(reportTo, options.ReportEventsTo);
             Assert.Equal(bufferOptions, options.BufferOptions);
+        }
+
+        [Fact]
+        public void CreateConsumer_ErrorConsumer()
+        {
+            var reportTo = ReportEventsTo.ErrorReporting();
+            var options = ErrorReportingOptions.Create(reportTo);
+            var consumer = options.CreateConsumer(_projectId);
+            Assert.IsType<GrpcErrorEventConsumer>(consumer);
+        }
+
+        [Fact]
+        public void CreateConsumer_ErrorToLogsConsumer()
+        {
+            var reportTo = ReportEventsTo.Logging(_projectId);
+            var options = ErrorReportingOptions.Create(reportTo);
+            var consumer = options.CreateConsumer(_projectId);
+            Assert.IsType<ErrorEventToLogEntryConsumer>(consumer);
+        }
+
+        [Fact]
+        public void CreateConsumer_BufferdConsumer()
+        {
+            var bufferOptions = BufferOptions.SizedBuffer();
+            var reportTo = ReportEventsTo.Logging(_projectId);
+            var options = ErrorReportingOptions.Create(reportTo, bufferOptions);
+            var consumer = options.CreateConsumer(_projectId);
+            Assert.IsType<SizedBufferingConsumer<ReportedErrorEvent>>(consumer);
         }
     }
 }

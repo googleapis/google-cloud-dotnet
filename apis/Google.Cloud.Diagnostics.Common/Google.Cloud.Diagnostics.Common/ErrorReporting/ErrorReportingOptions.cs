@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Cloud.ErrorReporting.V1Beta1;
+using System.Diagnostics;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -22,7 +24,7 @@ namespace Google.Cloud.Diagnostics.Common
     public sealed class ErrorReportingOptions
     {
         /// <summary>
-        /// Where the error events should be sent such as the Stackdriver Logging or Error Reporting API.
+        /// Where the error events should be sent, such as the Stackdriver Logging or Error Reporting API.
         /// </summary>
         public ReportEventsTo ReportEventsTo { get; }
 
@@ -38,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
-        /// <param name="reportEventsTo">Where the error events should be sent such as the Stackdriver 
+        /// <param name="reportEventsTo">Where the error events should be sent, such as the Stackdriver 
         ///     Logging or Error Reporting API. Cannot be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         public static ErrorReportingOptions Create(
@@ -56,6 +58,34 @@ namespace Google.Cloud.Diagnostics.Common
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
             return Create(ReportEventsTo.Logging(projectId), bufferOptions);
+        }
+
+        /// <summary>
+        /// Gets a <see cref="IConsumer{ReportedErrorEvent}"/>.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        internal IConsumer<ReportedErrorEvent> CreateConsumer(string projectId)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+
+            IConsumer<ReportedErrorEvent> consumer;
+            switch (ReportEventsTo.ReportEventsToLocation)
+            {
+                case ReportEventsToLocation.Logging:
+                    consumer = new ErrorEventToLogEntryConsumer(ReportEventsTo.LogName, ReportEventsTo.LogTo,
+                        new GrpcLogConsumer(ReportEventsTo.LoggingClient), ReportEventsTo.MonitoredResource);
+                    break;
+                case ReportEventsToLocation.ErrorReporting:
+                    consumer = new GrpcErrorEventConsumer(
+                        ReportEventsTo.ErrorReportingClient, projectId);
+                    break;
+                default:
+                    Debug.Fail($"Unsupported location {ReportEventsTo.ReportEventsToLocation}");
+                    return null;
+            }
+
+            return ConsumerFactory<ReportedErrorEvent>.GetConsumer(
+                consumer, ReportedErrorEventSizer.Instance, BufferOptions);
         }
     }
 }
