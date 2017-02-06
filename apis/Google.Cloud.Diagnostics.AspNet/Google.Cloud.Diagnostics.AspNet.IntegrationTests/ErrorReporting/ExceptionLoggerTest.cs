@@ -79,9 +79,8 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             {
                 HttpConfiguration config = new HttpConfiguration();
                 config.Routes.MapHttpRoute("", "", null, null, new ThrowErrorHandler());
-                var options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
                 config.Services.Add(typeof(IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId, options));
+                    ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId));
                 app.UseWebApi(config);
             }
         }
