@@ -25,28 +25,61 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 {
     public class AspNetSnippets
     {
-        // Sample: RegisterExceptionLoggerWebApi
-        public static void Register(HttpConfiguration config)
+        private class ErrorReporting_LoggingApi
         {
-            string projectId = "[Google Cloud Platform project ID]";
-            string serviceName = "[Name of service]";
-            string version = "[Version of service]";
-            // Add a catch all for the uncaught exceptions.
-            config.Services.Add(typeof(IExceptionLogger),
-                ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
-        }
-        // End sample
+            // Sample: RegisterExceptionLoggerWebApi
+            public static void Register(HttpConfiguration config)
+            {
+                string projectId = "[Google Cloud Platform project ID]";
+                string serviceName = "[Name of service]";
+                string version = "[Version of service]";
+                // Add a catch all for the uncaught exceptions.
+                config.Services.Add(typeof(IExceptionLogger),
+                    ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
+            }
+            // End sample
 
-        // Sample: RegisterExceptionLoggerMvc
-        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
-        {
-            string projectId = "[Google Cloud Platform project ID]";
-            string serviceName = "[Name of service]";
-            string version = "[Version of service]";
-            // Add a catch all for the uncaught exceptions.
-            filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
+            // Sample: RegisterExceptionLoggerMvc
+            public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+            {
+                string projectId = "[Google Cloud Platform project ID]";
+                string serviceName = "[Name of service]";
+                string version = "[Version of service]";
+                // Add a catch all for the uncaught exceptions.
+                filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
+            }
+            // End sample
         }
-        // End sample
+
+        private class ErrorReporting_ErrorReportingApi
+        {
+            // Sample: RegisterExceptionLoggerWebApiErrorReportingApi
+            public static void Register(HttpConfiguration config)
+            {
+                string projectId = "[Google Cloud Platform project ID]";
+                string serviceName = "[Name of service]";
+                string version = "[Version of service]";
+                // Report error events directly to the Stackdriver Error Reporting API.
+                ErrorReportingOptions options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
+                // Add a catch all for the uncaught exceptions.
+                config.Services.Add(typeof(IExceptionLogger),
+                    ErrorReportingExceptionLogger.Create(projectId, serviceName, version, options));
+            }
+            // End sample
+
+            // Sample: RegisterExceptionLoggerMvcErrorReportingApi
+            public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+            {
+                string projectId = "[Google Cloud Platform project ID]";
+                string serviceName = "[Name of service]";
+                string version = "[Version of service]";
+                // Report error events directly to the Stackdriver Error Reporting API.
+                ErrorReportingOptions options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
+                // Add a catch all for the uncaught exceptions.
+                filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version, options));
+            }
+            // End sample
+        }
 
         // Sample: InitializeTrace
         public class Global : HttpApplication
