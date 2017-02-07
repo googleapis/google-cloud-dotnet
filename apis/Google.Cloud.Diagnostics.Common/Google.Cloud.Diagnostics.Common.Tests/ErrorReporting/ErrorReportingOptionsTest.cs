@@ -48,7 +48,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void CreateConsumer_ErrorToLogsConsumer()
         {
-            var reportTo = ReportEventsTo.Logging(_projectId, null, _loggingClient);
+            var reportTo = ReportEventsTo.Logging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(reportTo);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<ErrorEventToLogEntryConsumer>(consumer);
@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void CreateConsumer_BufferdConsumer()
         {
             var bufferOptions = BufferOptions.SizedBuffer();
-            var reportTo = ReportEventsTo.Logging(_projectId, null, _loggingClient);
+            var reportTo = ReportEventsTo.Logging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(reportTo, bufferOptions);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<SizedBufferingConsumer<ReportedErrorEvent>>(consumer);

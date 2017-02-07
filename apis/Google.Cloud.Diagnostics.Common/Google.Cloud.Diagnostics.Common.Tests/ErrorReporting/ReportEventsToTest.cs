@@ -30,7 +30,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Logging_ProjectId()
         {
-            var reportEventsTo = ReportEventsTo.Logging(_projectId, null, _loggingClient);
+            var reportEventsTo = ReportEventsTo.Logging(_projectId, "test-log", _loggingClient);
 
             Assert.Equal(ReportEventsToLocation.Logging, reportEventsTo.ReportEventsToLocation);
             Assert.Null(reportEventsTo.ErrorReportingClient);
