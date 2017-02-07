@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -20,5 +21,14 @@ namespace Google.Cloud.Diagnostics.Common
     {
         /// <summary>A completed <see cref="Task"/>.</summary>
         internal readonly static Task CompletedTask = Task.FromResult(false);
+
+        /// <summary>Gets the version of the current library using reflection.</summary>
+        internal static string GetVersion(System.Type type)
+        {
+            return type.GetTypeInfo()
+                .Assembly
+                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                .InformationalVersion;
+        }
     }
 }

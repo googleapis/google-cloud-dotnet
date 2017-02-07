@@ -18,7 +18,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -64,16 +63,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// Gets a map with the label for the agent which contains the agent's name and version.
         /// </summary>
         internal static Dictionary<string, string> GetAgentLabel(System.Type type) =>
-            new Dictionary<string, string> { { Agent, $"{AgentName} {GetAgentVersion(type)}" } };
+            new Dictionary<string, string> { { Agent, $"{AgentName} {CommonUtils.GetVersion(type)}" } };
 
-        /// <summary>Gets the version of the current library using reflection.</summary>
-        internal static string GetAgentVersion(System.Type type)
-        {
-            return type.GetTypeInfo()
-                .Assembly
-                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                .InformationalVersion;
-        }
 
         /// <summary>
         /// Creates a string JSON representation of a stack trace or the empty string
