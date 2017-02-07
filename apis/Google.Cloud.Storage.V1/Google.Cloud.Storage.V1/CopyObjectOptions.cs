@@ -98,6 +98,18 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public Object ExtraMetadata { get; set; }
 
+        /// <summary>
+        /// The encryption key to use for this operation. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
+        /// will be used instead. Use <see cref="EncryptionKey.None"/> to remove encryption headers from this request.
+        /// </summary>
+        public EncryptionKey EncryptionKey { get; set; }
+
+        /// <summary>
+        /// The encryption key to use for the source of the copy. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
+        /// will be used instead. Use <see cref="EncryptionKey.None"/> if the source is not encrypted.
+        /// </summary>
+        public EncryptionKey SourceEncryptionKey { get; set; }
+
         internal void ModifyRequest(RewriteRequest request)
         {
             // Note the use of ArgumentException here, as this will basically be the result of invalid

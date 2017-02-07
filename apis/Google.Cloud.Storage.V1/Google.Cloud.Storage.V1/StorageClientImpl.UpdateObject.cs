@@ -42,6 +42,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckArgument(obj.Name != null, nameof(obj), "The Name property of the object to update is null");
             var request = Service.Objects.Update(obj, obj.Bucket, obj.Name);
             options?.ModifyRequest(request, obj);
+            ApplyEncryptionKey(options?.EncryptionKey, request);
             return request;
         }
     }

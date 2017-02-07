@@ -179,49 +179,20 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var data = _fixture.SmallContent;
             string url = null;
 
-            string key;
-            string hash;
-            using (var rand = RandomNumberGenerator.Create())
-            using (var sha256 = SHA256.Create())
+            EncryptionKey key = EncryptionKey.Generate();
+
+            Func<HttpRequestMessage> createGetRequest = () =>
             {
-                var keyBytes = new byte[32];
-                rand.GetBytes(keyBytes);
-                key = Convert.ToBase64String(keyBytes);
-                hash = Convert.ToBase64String(sha256.ComputeHash(keyBytes));
-            }
-            
-            Func<HttpRequestMessage> createGetRequest = () => new HttpRequestMessage()
-            {
-                Method = HttpMethod.Get,
-                Headers = {
-                    { "x-goog-encryption-algorithm", "AES256" },
-                    { "x-goog-encryption-key", key },
-                    { "x-goog-encryption-key-sha256", hash }
-                }
+                var request = new HttpRequestMessage { Method = HttpMethod.Get };
+                key.ModifyRequest(request);
+                return request;
             };
 
             _fixture.RegisterDelayTest(_duration,
                 beforeDelay: async duration =>
                 {
-                    // TODO: Replace this with calls to the StorageClient if/when it supports customer-supplied encryption keys.
-                    var putRequest = new HttpRequestMessage()
-                    {
-                        Content = new ByteArrayContent(data),
-                        Method = HttpMethod.Put,
-                        Headers = {
-                            { "x-goog-encryption-algorithm", "AES256" },
-                            { "x-goog-encryption-key", key },
-                            { "x-goog-encryption-key-sha256", hash }
-                        }
-                    };
-
-                    putRequest.RequestUri = new Uri(_fixture.UrlSigner.Sign(
-                        bucket,
-                        name,
-                        expiration: null,
-                        request: putRequest));
-                    var response = await _fixture.HttpClient.SendAsync(putRequest);
-                    Assert.True(response.IsSuccessStatusCode);
+                    var encryptingClient = StorageClient.Create(encryptionKey: key);
+                    encryptingClient.UploadObject(bucket, name, "application/octet-stream", new MemoryStream(data));
 
                     // Make sure the encryption succeeded.
                     await Assert.ThrowsAsync<GoogleApiException>(
@@ -232,7 +203,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     request.RequestUri = new Uri(url);
 
                     // Verify that the URL works initially.
-                    response = await _fixture.HttpClient.SendAsync(request);
+                    var response = await _fixture.HttpClient.SendAsync(request);
                     var result = await response.Content.ReadAsByteArrayAsync();
                     Assert.Equal(data, result);
                 },

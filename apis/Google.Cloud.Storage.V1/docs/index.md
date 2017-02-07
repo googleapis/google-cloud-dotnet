@@ -47,3 +47,12 @@ existing objects:
 Or write-only access to put specific object content into a bucket:
 
 [!code-cs[](obj/snippets/Google.Cloud.Storage.V1.UrlSigner.txt#SignedURLPut)]
+
+## Customer-supplied encryption keys
+
+Storage objects are always stored encrypted, but if you wish to
+specify your own encryption key instead of using the server-supplied
+one, you can do so either for all operations with a particular
+`StorageClient` or on individual ones.
+
+[!code-cs[](obj/snippets/Google.Cloud.Storage.V1.StorageClient.txt#CustomerSuppliedEncryptionKeys)]

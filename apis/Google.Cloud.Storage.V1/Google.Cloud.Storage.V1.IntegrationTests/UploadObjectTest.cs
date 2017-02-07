@@ -46,7 +46,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(_fixture.MultiVersionBucket, result.Bucket);
             Assert.Equal(name, result.Name);
             Assert.Equal(contentType, result.ContentType);
-            ValidateData(source, name);            
+            ValidateData(_fixture.MultiVersionBucket, name, source);
         }
 
         [Fact]
@@ -68,7 +68,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.Equal(destination.ContentType, result.ContentType);
             Assert.Equal(destination.ContentDisposition, result.ContentDisposition);
             Assert.Equal(destination.Metadata, result.Metadata);
-            ValidateData(source, destination.Name);
+            ValidateData(_fixture.MultiVersionBucket, destination.Name, source);
         }
 
         [Fact]
@@ -85,7 +85,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 CancellationToken.None, progress);
             Assert.Equal(chunks + 1, progressCount); // Should start with a 0 progress
             Assert.Equal(name, result.Name); // Assume the rest of the properties are okay...
-            ValidateData(source, name);
+            ValidateData(_fixture.MultiVersionBucket, name, source);
         }
 
         [Fact]
@@ -97,7 +97,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var contentType = "application/octet-stream";
             var source1 = GenerateData(100);
             var firstVersion = client.UploadObject(bucket, name, contentType, source1);
-            ValidateData(source1, name);
+            ValidateData(_fixture.MultiVersionBucket, name, source1);
             var source2 = GenerateData(50);
             firstVersion.ContentType = "application/x-replaced";
 
@@ -106,7 +106,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             firstVersion.ETag = null;
             firstVersion.Md5Hash = null;
             var secondVersion = client.UploadObject(firstVersion, source2);
-            ValidateData(source2, name);
+            ValidateData(_fixture.MultiVersionBucket, name, source2);
             Assert.NotEqual(firstVersion.Generation, secondVersion.Generation);
             Assert.Equal(firstVersion.ContentType, secondVersion.ContentType); // The modified content type should stick
 
@@ -232,13 +232,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             obj.ETag = null;
             obj.Md5Hash = null;
             return obj;
-        }
-
-        private void ValidateData(MemoryStream original, string objectName)
-        {
-            var downloaded = new MemoryStream();
-            _fixture.Client.DownloadObject(_fixture.MultiVersionBucket, objectName, downloaded);
-            Assert.Equal(original.ToArray(), downloaded.ToArray());
         }
     }
 }

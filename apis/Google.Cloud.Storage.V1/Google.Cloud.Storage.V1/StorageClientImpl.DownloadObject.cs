@@ -105,6 +105,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
             var downloader = new HashValidatingDownloader(Service);
             options?.ModifyDownloader(downloader);
+            ApplyEncryptionKey(options?.EncryptionKey, downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)
             {
@@ -128,6 +129,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
             var downloader = new HashValidatingDownloader(Service);
             options?.ModifyDownloader(downloader);
+            ApplyEncryptionKey(options?.EncryptionKey, downloader);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)
             {

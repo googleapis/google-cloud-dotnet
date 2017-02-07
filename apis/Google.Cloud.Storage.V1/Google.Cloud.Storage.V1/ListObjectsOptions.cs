@@ -52,6 +52,12 @@ namespace Google.Cloud.Storage.V1
         public Projection? Projection { get; set; }
 
         /// <summary>
+        /// The encryption key to use for this operation. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
+        /// will be used instead. Use <see cref="EncryptionKey.None"/> to remove encryption headers from this request.
+        /// </summary>
+        public EncryptionKey EncryptionKey { get; set; }
+
+        /// <summary>
         /// Modifies the specified request for all non-null properties of this options object.
         /// </summary>
         /// <param name="request">The request to modify</param>

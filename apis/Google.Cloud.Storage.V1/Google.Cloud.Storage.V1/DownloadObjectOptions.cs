@@ -61,6 +61,12 @@ namespace Google.Cloud.Storage.V1
         /// </summary>
         public RangeHeaderValue Range { get; set; }
 
+        /// <summary>
+        /// The encryption key to use for this operation. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
+        /// will be used instead. Use <see cref="EncryptionKey.None"/> to remove encryption headers from this request.
+        /// </summary>
+        public EncryptionKey EncryptionKey { get; set; }
+
         internal void ModifyDownloader(MediaDownloader downloader)
         {
             if (ChunkSize != null)
