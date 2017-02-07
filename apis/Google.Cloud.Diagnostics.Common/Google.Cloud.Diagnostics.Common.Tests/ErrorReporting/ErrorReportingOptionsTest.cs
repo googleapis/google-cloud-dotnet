@@ -13,6 +13,8 @@
 // limitations under the License.
 
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Cloud.Logging.V2;
+using Moq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -20,20 +22,13 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     public class ErrorReportingOptionsTest
     {
         private const string _projectId = "pid";
-
-        [Fact]
-        public void ErrorReportingOptions_ProjectId()
-        {
-            var options = ErrorReportingOptions.Create(_projectId);
-            Assert.NotNull(options.ReportEventsTo);
-            Assert.Equal(ReportEventsToLocation.Logging, options.ReportEventsTo.ReportEventsToLocation);
-            Assert.Equal(BufferOptions.NoBuffer(), options.BufferOptions);
-        }
+        private static readonly LoggingServiceV2Client _loggingClient = new Mock<LoggingServiceV2Client>().Object;
+        private static readonly ReportErrorsServiceClient _errorClient = new Mock<ReportErrorsServiceClient>().Object;
 
         [Fact]
         public void ErrorReportingOptions_ReportEventsTo()
         {
-            var reportTo = ReportEventsTo.ErrorReporting();
+            var reportTo = ReportEventsTo.ErrorReporting(_errorClient);
             var bufferOptions = BufferOptions.SizedBuffer();
 
             var options = ErrorReportingOptions.Create(reportTo, bufferOptions);
@@ -44,7 +39,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void CreateConsumer_ErrorConsumer()
         {
-            var reportTo = ReportEventsTo.ErrorReporting();
+            var reportTo = ReportEventsTo.ErrorReporting(_errorClient);
             var options = ErrorReportingOptions.Create(reportTo);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<GrpcErrorEventConsumer>(consumer);
@@ -53,7 +48,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void CreateConsumer_ErrorToLogsConsumer()
         {
-            var reportTo = ReportEventsTo.Logging(_projectId);
+            var reportTo = ReportEventsTo.Logging(_projectId, null, _loggingClient);
             var options = ErrorReportingOptions.Create(reportTo);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<ErrorEventToLogEntryConsumer>(consumer);
@@ -63,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void CreateConsumer_BufferdConsumer()
         {
             var bufferOptions = BufferOptions.SizedBuffer();
-            var reportTo = ReportEventsTo.Logging(_projectId);
+            var reportTo = ReportEventsTo.Logging(_projectId, null, _loggingClient);
             var options = ErrorReportingOptions.Create(reportTo, bufferOptions);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<SizedBufferingConsumer<ReportedErrorEvent>>(consumer);

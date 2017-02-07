@@ -13,7 +13,9 @@
 // limitations under the License.
 
 using Google.Api;
+using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
+using Moq;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -22,15 +24,17 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         private const string _projectId = "pid";
         private const string _organizationId = "oid";
+        private static readonly LoggingServiceV2Client _loggingClient = new Mock<LoggingServiceV2Client>().Object;
+        private static readonly ReportErrorsServiceClient _errorClient = new Mock<ReportErrorsServiceClient>().Object;
 
         [Fact]
         public void Logging_ProjectId()
         {
-            var reportEventsTo = ReportEventsTo.Logging(_projectId);
+            var reportEventsTo = ReportEventsTo.Logging(_projectId, null, _loggingClient);
 
             Assert.Equal(ReportEventsToLocation.Logging, reportEventsTo.ReportEventsToLocation);
             Assert.Null(reportEventsTo.ErrorReportingClient);
-            Assert.NotNull(reportEventsTo.LoggingClient);
+            Assert.Equal(_loggingClient, reportEventsTo.LoggingClient);
             Assert.NotNull(reportEventsTo.LogTo);
             Assert.Equal(LogToLocation.Project, reportEventsTo.LogTo.Location);
             Assert.Equal(_projectId, reportEventsTo.LogTo.ProjectId);
@@ -43,13 +47,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var logTo = LogTo.Organization(_organizationId);
             var logName = "another-log";
-            var loggingClient = LoggingServiceV2Client.Create();
             var monitoredResource = new MonitoredResource { Type = "not_global" };
-            var reportEventsTo = ReportEventsTo.Logging(logTo, logName, loggingClient, monitoredResource);
+            var reportEventsTo = ReportEventsTo.Logging(logTo, logName, _loggingClient, monitoredResource);
 
             Assert.Equal(ReportEventsToLocation.Logging, reportEventsTo.ReportEventsToLocation);
             Assert.Null(reportEventsTo.ErrorReportingClient);
-            Assert.Equal(loggingClient, reportEventsTo.LoggingClient);
+            Assert.Equal(_loggingClient, reportEventsTo.LoggingClient);
             Assert.Equal(logTo, reportEventsTo.LogTo);
             Assert.Equal(logName, reportEventsTo.LogName);
             Assert.Equal(monitoredResource, reportEventsTo.MonitoredResource);
@@ -58,10 +61,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void ErrorReporting()
         {
-            var reportEventsTo = ReportEventsTo.ErrorReporting();
+            var reportEventsTo = ReportEventsTo.ErrorReporting(_errorClient);
 
             Assert.Equal(ReportEventsToLocation.ErrorReporting, reportEventsTo.ReportEventsToLocation);
-            Assert.NotNull(reportEventsTo.ErrorReportingClient);
+            Assert.Equal(_errorClient, reportEventsTo.ErrorReportingClient);
             Assert.Null(reportEventsTo.LoggingClient);
             Assert.Null(reportEventsTo.LogTo);
             Assert.Null(reportEventsTo.LogName);
