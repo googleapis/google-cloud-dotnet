@@ -60,6 +60,7 @@ namespace Google.Cloud.Storage.V1
             var request = Service.Objects.List(bucket);
             request.Prefix = prefix;
             options?.ModifyRequest(request);
+            ApplyEncryptionKey(options?.EncryptionKey, request);
             return request;
         }
     }

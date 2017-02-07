@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
+using Google.Apis.Download;
+using Google.Apis.Requests;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
 using System;
@@ -28,8 +30,8 @@ namespace Google.Cloud.Storage.V1
     /// <remarks>
     /// This is the "default" implementation of <see cref="StorageClient"/>. Most client code
     /// should refer to <see cref="StorageClient"/>, creating instances with
-    /// <see cref="StorageClient.Create(Apis.Auth.OAuth2.GoogleCredential)"/> and
-    /// <see cref="StorageClient.CreateAsync(Apis.Auth.OAuth2.GoogleCredential)"/>. The constructor
+    /// <see cref="StorageClient.Create(Apis.Auth.OAuth2.GoogleCredential, EncryptionKey)"/> and
+    /// <see cref="StorageClient.CreateAsync(Apis.Auth.OAuth2.GoogleCredential, EncryptionKey)"/>. The constructor
     /// of this class is public for the sake of constructor-based dependency injection.
     /// </remarks>
     public sealed partial class StorageClientImpl : StorageClient
@@ -67,13 +69,19 @@ namespace Google.Cloud.Storage.V1
         /// <inheritdoc />
         public override StorageService Service { get; }
 
+        /// <inheritdoc />
+        public override EncryptionKey EncryptionKey { get; }
+
         /// <summary>
         /// Constructs a new client wrapping the given <see cref="StorageService"/>.
         /// </summary>
         /// <param name="service">The service to wrap. Must not be null.</param>
-        public StorageClientImpl(StorageService service)
+        /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all object-based operations by default. May be null,
+        /// in which case <see cref="EncryptionKey.None"/> will be used.</param>
+        public StorageClientImpl(StorageService service, EncryptionKey encryptionKey = null)
         {            
             Service = GaxPreconditions.CheckNotNull(service, nameof(service));
+            EncryptionKey = encryptionKey ?? EncryptionKey.None;
         }
 
         /// <summary>
@@ -126,6 +134,24 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckArgument(ValidBucketName.IsMatch(obj.Bucket),
                 paramName,
                 "Object bucket '{0}' is invalid", obj.Bucket);
+        }
+
+        private void ApplyEncryptionKey<TRequest>(EncryptionKey keyFromOptions, ClientServiceRequest<TRequest> request)
+        {
+            var effectiveKey = keyFromOptions ?? EncryptionKey;
+            request.ModifyRequest += effectiveKey.ModifyRequest;
+        }
+
+        private void ApplyEncryptionKey(EncryptionKey keyFromOptions, CustomMediaUpload upload)
+        {
+            var effectiveKey = keyFromOptions ?? EncryptionKey;
+            upload.Options.ModifySessionInitiationRequest += effectiveKey.ModifyRequest;
+        }
+
+        private void ApplyEncryptionKey(EncryptionKey keyFromOptions, MediaDownloader download)
+        {
+            var effectiveKey = keyFromOptions ?? EncryptionKey;
+            download.ModifyRequest += effectiveKey.ModifyRequest;
         }
     }
 }

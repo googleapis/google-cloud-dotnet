@@ -28,8 +28,8 @@ namespace Google.Cloud.Storage.V1
     /// <remarks>
     /// <para>
     /// This abstract class is provided to enable testability while permitting
-    /// additional operations to be added in the future. See <see cref="Create(GoogleCredential)"/>
-    /// and <see cref="CreateAsync(GoogleCredential)"/> to construct instances; alternatively, you can
+    /// additional operations to be added in the future. See <see cref="Create(GoogleCredential, EncryptionKey)"/>
+    /// and <see cref="CreateAsync(GoogleCredential, EncryptionKey)"/> to construct instances; alternatively, you can
     /// construct a <see cref="StorageClientImpl"/> directly from a <see cref="StorageService"/>.
     /// </para>
     /// <para>
@@ -54,6 +54,13 @@ namespace Google.Cloud.Storage.V1
         public virtual StorageService Service { get { throw new NotImplementedException(); } }
 
         /// <summary>
+        /// The encryption key used by default for all object-based operations. This can be overridden in call-specific options.
+        /// This will never return null in the built-in implementation; if no encryption key is specified,
+        /// <see cref="EncryptionKey.None"/> is returned.
+        /// </summary>
+        public virtual EncryptionKey EncryptionKey { get { throw new NotImplementedException(); } }
+
+        /// <summary>
         /// Asynchronously creates a <see cref="StorageClient"/>, using application default credentials if
         /// no credentials are specified.
         /// </summary>
@@ -61,11 +68,12 @@ namespace Google.Cloud.Storage.V1
         /// The credentials are scoped as necessary.
         /// </remarks>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all object-based operations by default. May be null.</param>
         /// <returns>The task representing the created <see cref="StorageClient"/>.</returns>
-        public static async Task<StorageClient> CreateAsync(GoogleCredential credential = null)
+        public static async Task<StorageClient> CreateAsync(GoogleCredential credential = null, EncryptionKey encryptionKey = null)
         {
             var scopedCredentials = await _credentialProvider.GetCredentialsAsync(credential);
-            return CreateImpl(scopedCredentials);
+            return CreateImpl(scopedCredentials, encryptionKey);
         }
 
         /// <summary>
@@ -76,15 +84,16 @@ namespace Google.Cloud.Storage.V1
         /// The credentials are scoped as necessary.
         /// </remarks>
         /// <param name="credential">Optional <see cref="GoogleCredential"/>.</param>
+        /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all object-based operations by default. May be null.</param>
         /// <returns>The created <see cref="StorageClient"/>.</returns>
-        public static StorageClient Create(GoogleCredential credential = null)
+        public static StorageClient Create(GoogleCredential credential = null, EncryptionKey encryptionKey = null)
         {
             var scopedCredentials = _credentialProvider.GetCredentials(credential);
-            return CreateImpl(scopedCredentials);
+            return CreateImpl(scopedCredentials, encryptionKey);
         }
 
 
-        private static StorageClient CreateImpl(GoogleCredential scopedCredentials)
+        private static StorageClient CreateImpl(GoogleCredential scopedCredentials, EncryptionKey encryptionKey)
         {
             var service = new StorageService(new BaseClientService.Initializer
             {
@@ -92,7 +101,7 @@ namespace Google.Cloud.Storage.V1
                 ApplicationName = StorageClientImpl.ApplicationName,
             });
 
-            return new StorageClientImpl(service);
+            return new StorageClientImpl(service, encryptionKey);
         }
     }
 }

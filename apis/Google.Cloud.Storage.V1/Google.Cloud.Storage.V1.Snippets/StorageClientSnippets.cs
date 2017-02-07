@@ -75,6 +75,30 @@ namespace Google.Cloud.Storage.V1.Snippets
         }
 
         [Fact]
+        public void CustomerSuppliedEncryptionKeys()
+        {
+            var bucketName = _fixture.BucketName;
+
+            // Sample: CustomerSuppliedEncryptionKeys
+            // Use EncryptionKey.Create if you already have a key.
+            EncryptionKey key = EncryptionKey.Generate();
+            
+            // This will affect all object-based operations by default.
+            var client = StorageClient.Create(encryptionKey: key);
+            var content = Encoding.UTF8.GetBytes("hello, world");
+            client.UploadObject(bucketName, "encrypted.txt", "text/plain", new MemoryStream(content));
+
+            // When downloading, either use a client with the same key...
+            client.DownloadObject(bucketName, "encrypted.txt", new MemoryStream());
+
+            // Or specify a key just for that operation.
+            var client2 = StorageClient.Create();
+            client2.DownloadObject(bucketName, "encrypted.txt", new MemoryStream(),
+                new DownloadObjectOptions { EncryptionKey = key });
+            // End sample
+        }
+
+        [Fact]
         public void ListBuckets()
         {
             var projectId = _fixture.ProjectId;

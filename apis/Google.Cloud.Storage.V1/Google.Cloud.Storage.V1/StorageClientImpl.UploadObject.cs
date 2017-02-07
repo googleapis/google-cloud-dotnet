@@ -65,8 +65,9 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateObject(destination, nameof(destination));
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
+            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
+            ApplyEncryptionKey(options?.EncryptionKey, mediaUpload);
             if (progress != null)
             {
                 mediaUpload.ProgressChanged += progress.Report;
@@ -76,6 +77,7 @@ namespace Google.Cloud.Storage.V1
             {
                 throw finalProgress.Exception;
             }
+            
             return mediaUpload.ResponseBody;
         }
 
@@ -89,8 +91,9 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateObject(destination, nameof(destination));
             GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = Service.Objects.Insert(destination, destination.Bucket, source, destination.ContentType);
+            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
+            ApplyEncryptionKey(options?.EncryptionKey, mediaUpload);
             if (progress != null)
             {
                 mediaUpload.ProgressChanged += progress.Report;

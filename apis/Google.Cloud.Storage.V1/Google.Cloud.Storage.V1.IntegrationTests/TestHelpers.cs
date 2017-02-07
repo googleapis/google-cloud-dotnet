@@ -40,12 +40,18 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             return new MemoryStream(data);
         }
 
-        internal static void ValidateData(string bucketName, string objectName, byte[] expectedData)
+        internal static void ValidateData(string bucketName, string objectName, byte[] expectedData,
+            StorageClient client = null, DownloadObjectOptions options = null)
         {
-            var client = StorageClient.Create();
+            client = client ?? StorageClient.Create();
             var downloaded = new MemoryStream();
-            client.DownloadObject(bucketName, objectName, downloaded);
+            client.DownloadObject(bucketName, objectName, downloaded, options);
             Assert.Equal(expectedData, downloaded.ToArray());
         }
+
+
+        internal static void ValidateData(string bucketName, string objectName, MemoryStream expectedData,
+            StorageClient client = null, DownloadObjectOptions options = null) =>
+            ValidateData(bucketName, objectName, expectedData.ToArray(), client, options);
     }
 }

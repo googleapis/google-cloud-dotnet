@@ -39,8 +39,6 @@ namespace Google.Cloud.Storage.V1
     public sealed class UrlSigner
     {
         private const string GoogHeaderPrefix = "x-goog-";
-        private const string GoogEncryptionKeyHeader = "x-goog-encryption-key";
-        private const string GoogEncryptionKeySHA256Header = "x-goog-encryption-key-sha256";
         private const string StorageHost = "https://storage.googleapis.com";
         private static readonly DateTimeOffset UnixEpoch = new DateTimeOffset(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc), TimeSpan.Zero);
 
@@ -359,8 +357,8 @@ namespace Google.Cloud.Storage.V1
             {
                 var key = header.Key.ToLowerInvariant();
                 if (!key.StartsWith(GoogHeaderPrefix) ||
-                    key == GoogEncryptionKeyHeader ||
-                    key == GoogEncryptionKeySHA256Header)
+                    key == EncryptionKey.KeyHeader ||
+                    key == EncryptionKey.KeyHashHeader)
                 {
                     continue;
                 }
