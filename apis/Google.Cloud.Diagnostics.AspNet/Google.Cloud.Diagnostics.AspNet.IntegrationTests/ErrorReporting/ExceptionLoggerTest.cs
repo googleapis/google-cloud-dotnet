@@ -24,15 +24,14 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 using Xunit;
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
     public class ExceptionLoggerTest
     {
-        private static string _projectId;
-        private static string _testId;
+        internal static string _projectId { get; private set; }
+        internal static string _testId { get; private set; }
 
         private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
 

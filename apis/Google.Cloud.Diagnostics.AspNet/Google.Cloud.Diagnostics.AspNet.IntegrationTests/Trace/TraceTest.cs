@@ -31,7 +31,7 @@ using Google.Cloud.Diagnostics.Common.IntegrationTests;
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
     public class TraceTest
-    {   
+    {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
 
         private readonly TraceEntryPolling _polling = new TraceEntryPolling();
