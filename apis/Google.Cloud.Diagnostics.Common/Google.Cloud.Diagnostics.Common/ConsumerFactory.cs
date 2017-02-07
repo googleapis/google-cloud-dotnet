@@ -23,9 +23,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// Gets a <see cref="IConsumer{T}"/> that wraps the passed in consumer based on the buffer options.
         /// </summary>
         /// <param name="consumer">The consumer to buffer into.</param>
-        /// <param name="sizer">A sizer for the type</param>
+        /// <param name="sizer">A function to obtain the size of an item in bytes.</param>
         /// <param name="options">Buffer options for the buffered consumer</param>
-        internal static IConsumer<T> GetConsumer(IConsumer<T> consumer, ISizer<T> sizer, BufferOptions options)
+        internal static IConsumer<T> GetConsumer(IConsumer<T> consumer, Func<T, int> sizer, BufferOptions options)
         {
             GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             GaxPreconditions.CheckNotNull(options, nameof(options));
