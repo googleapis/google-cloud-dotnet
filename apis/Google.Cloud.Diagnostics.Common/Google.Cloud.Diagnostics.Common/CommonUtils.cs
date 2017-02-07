@@ -22,13 +22,21 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>A completed <see cref="Task"/>.</summary>
         internal readonly static Task CompletedTask = Task.FromResult(false);
 
+        /// <summary>The name of the this agent.</summary>
+        internal const string AgentName = "google-cloud-csharp-diagnostics";
+
+        /// <summary>
+        /// The agent name <see cref="AgentName"/> and version of the agent in the
+        /// format "[agent-name] [agent-version]".
+        /// </summary>
+        internal static string AgentNameAndVersion = $"{AgentName} {GetVersion(typeof(CommonUtils))}";
+
         /// <summary>Gets the version of the current library using reflection.</summary>
-        internal static string GetVersion(System.Type type)
-        {
-            return type.GetTypeInfo()
+        internal static string GetVersion(System.Type type) =>
+            type.GetTypeInfo()
                 .Assembly
                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                 .InformationalVersion;
-        }
+        
     }
 }
