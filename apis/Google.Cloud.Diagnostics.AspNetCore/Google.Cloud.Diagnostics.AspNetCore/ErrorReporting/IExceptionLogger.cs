@@ -24,7 +24,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     public interface IExceptionLogger
     {
         /// <summary>
-        ///  Asynchronously logs an exception that occurred.
+        /// Asynchronously logs an exception that occurred.
         /// </summary>
         /// <param name="context">The current http context.  Cannot be null.</param>
         /// <param name="exception">The exception to log.  Cannot be null.</param>
