@@ -43,19 +43,17 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact]
-        public async Task ErrorReportingTest_ErrorReporting()
-            => await ErrorReportingTest(TestServer.Create<ReportToErrorReportingApplication>());
+        public Task ErrorReportingTest_ErrorReporting() => ErrorReportingTest<ReportToErrorReportingApplication>();
 
         [Fact]
-        public async Task ErrorReportingTest_Logging()
-            => await ErrorReportingTest(TestServer.Create<ReportToLoggingApplication>());
+        public Task ErrorReportingTest_Logging() => ErrorReportingTest<ReportToLoggingApplication>();
 
-        public async Task ErrorReportingTest(TestServer testServer)
+        public async Task ErrorReportingTest<T>()
         {
             DateTime startTime = DateTime.UtcNow;
 
             // Create a test server and make an http.
-            using (TestServer server = testServer)
+            using (TestServer server = TestServer.Create<T>())
             {
                 await server.HttpClient.GetAsync("");
             }

@@ -34,40 +34,35 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
 
         [Fact]
-        public async Task NoExceptions_ErrorReporting()
-            => await NoExceptions(
-                new WebHostBuilder().UseStartup<ReportToErrorReportingTestApplication>());
+        public Task NoExceptions_ErrorReporting()
+            => NoExceptions<ReportToErrorReportingTestApplication>();
 
         [Fact]
-        public async Task LogsException_ErrorReporting()
-            => await LogsException(
-                new WebHostBuilder().UseStartup<ReportToErrorReportingTestApplication>());
+        public Task LogsException_ErrorReporting()
+            => LogsException<ReportToErrorReportingTestApplication>();
 
         [Fact]
-        public async Task LogsMultipleExceptions_ErrorReporting()
-            => await LogsMultipleExceptions(
-                new WebHostBuilder().UseStartup<ReportToErrorReportingTestApplication>());
+        public Task LogsMultipleExceptions_ErrorReporting()
+            => LogsMultipleExceptions<ReportToErrorReportingTestApplication>();
 
         [Fact]
-        public async Task NoExceptions_Logging()
-            => await NoExceptions(
-                new WebHostBuilder().UseStartup<ReportToLoggingTestApplication>());
+        public Task NoExceptions_Logging()
+            => NoExceptions<ReportToLoggingTestApplication>();
 
         [Fact]
-        public async Task LogsException_Logging()
-             => await LogsException(
-                new WebHostBuilder().UseStartup<ReportToLoggingTestApplication>());
+        public Task LogsException_Logging()
+            => LogsException<ReportToLoggingTestApplication>();
 
         [Fact]
-        public async Task LogsMultipleExceptions_Logging()
-            => await LogsMultipleExceptions(
-                new WebHostBuilder().UseStartup<ReportToLoggingTestApplication>());
+        public Task LogsMultipleExceptions_Logging()
+            => LogsMultipleExceptions<ReportToLoggingTestApplication>();
 
-        public async Task NoExceptions(IWebHostBuilder builder)
+        public async Task NoExceptions<T>() where T : class
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
+            var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
@@ -78,11 +73,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Empty(errorEvents);
         }
 
-        public async Task LogsException(IWebHostBuilder builder)
+        public async Task LogsException<T>() where T : class
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
+            var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
@@ -95,11 +91,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             VerifyErrorEvent(errorEvents.First(), testId, "ThrowsException");
         }
 
-        public async Task LogsMultipleExceptions(IWebHostBuilder builder)
+        public async Task LogsMultipleExceptions<T>() where T : class
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
 
+            var builder = new WebHostBuilder().UseStartup<T>();
             using (TestServer server = new TestServer(builder))
             {
                 var client = server.CreateClient();
@@ -190,7 +187,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public void Configure(IApplicationBuilder app)
         {
-            var options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
             app.UseGoogleExceptionLogging(_projectId, Service, Version, GetOptions());
 
             app.UseMvc(routes =>
