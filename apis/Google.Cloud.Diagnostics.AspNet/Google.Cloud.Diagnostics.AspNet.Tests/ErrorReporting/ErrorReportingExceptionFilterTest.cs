@@ -14,6 +14,7 @@
 
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf.WellKnownTypes;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -98,6 +99,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             return Match.Create<IEnumerable<ReportedErrorEvent>>(enumerable => {
                 var e = enumerable.Single();
                 return e.Message.Contains(SimpleException.Message) &&
+                    e.EventTime.Seconds <= Timestamp.FromDateTime(DateTime.UtcNow).Seconds &&
                     e.Context.HttpRequest.Method.Equals(DeleteMethod) &&
                     e.Context.HttpRequest.Url.Equals(GoogleUri.ToString()) &&
                     e.Context.HttpRequest.UserAgent.Equals(UserAgent) &&
@@ -119,6 +121,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             return Match.Create<IEnumerable<ReportedErrorEvent>>(enumerable => {
                 var e = enumerable.Single();
                 return e.Message.Contains(SimpleException.Message) &&
+                    e.EventTime.Seconds <= Timestamp.FromDateTime(DateTime.UtcNow).Seconds &&
                     string.IsNullOrEmpty(e.Context.HttpRequest.Method) &&
                     string.IsNullOrEmpty(e.Context.HttpRequest.Url) &&
                     string.IsNullOrEmpty(e.Context.HttpRequest.UserAgent) &&

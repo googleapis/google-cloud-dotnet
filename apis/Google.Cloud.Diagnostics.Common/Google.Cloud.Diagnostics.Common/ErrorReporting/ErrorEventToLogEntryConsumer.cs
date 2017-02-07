@@ -21,7 +21,6 @@ using Google.Api.Gax;
 using Google.Api;
 using Google.Cloud.Logging.Type;
 using System.Linq;
-using System.Diagnostics;
 
 namespace Google.Cloud.Diagnostics.Common
 {
