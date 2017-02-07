@@ -32,7 +32,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetConsumer_Sized()
         {
             BufferOptions options = BufferOptions.SizedBuffer();
-            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), IntSizer.Instance, options);
+            IConsumer<int> consumer = ConsumerFactory<int>.GetConsumer(new IntConsumer(), ConstantSizer<int>.GetSize, options);
             Assert.IsType<SizedBufferingConsumer<int>>(consumer);
         }
 

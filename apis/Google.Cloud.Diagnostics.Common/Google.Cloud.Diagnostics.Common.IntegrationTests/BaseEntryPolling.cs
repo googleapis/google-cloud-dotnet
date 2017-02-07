@@ -24,10 +24,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
     /// </summary>
     internal abstract class BaseEntryPolling<T>
     {
-        /// <summary>Total time to spend sleeping when looking for traces.</summary>
+        /// <summary>Total time to spend sleeping when looking for entries.</summary>
         private static readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
 
-        /// <summary>Time to sleep between checks for traces.</summary>
+        /// <summary>Time to sleep between checks for entries.</summary>
         private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
 
         /// <summary>
@@ -36,6 +36,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// </summary>
         /// <param name="minEntries">The minimum number of entries needed.</param>
         /// <param name="getEntries">Function that will return a <see cref="IEnumerable{T}"/></param>
+        /// <returns>The entries or an empty list if not enough entries are found or polling times out.</returns>
         protected IEnumerable<T> GetEntries(int minEntries, Func<IEnumerable<T>> getEntries)
         {
             TimeSpan totalSleepTime = TimeSpan.Zero;
