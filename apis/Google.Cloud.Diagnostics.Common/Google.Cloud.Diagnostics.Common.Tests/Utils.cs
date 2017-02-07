@@ -43,10 +43,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             return Guid.NewGuid().ToString();
         }
 
-        public static class IntSizer
+        public static class ConstantSizer<T>
         {
             /// <summary>Always returns 2.</summary>
-            public static int GetSize(int item) => 2;
+            public static int GetSize(T item) => 2;
         }
 
         /// <summary>

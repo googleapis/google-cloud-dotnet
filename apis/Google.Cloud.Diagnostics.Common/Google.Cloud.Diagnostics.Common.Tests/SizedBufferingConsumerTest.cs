@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private const int _bufferSize = 10;
 
         private IFlushableConsumer<int> GetConsumer(IConsumer<int> consumer) 
-            => SizedBufferingConsumer<int>.Create(consumer, Utils.IntSizer.GetSize, _bufferSize);
+            => SizedBufferingConsumer<int>.Create(consumer, Utils.ConstantSizer<int>.GetSize, _bufferSize);
 
         [Fact]
         public void Receive()

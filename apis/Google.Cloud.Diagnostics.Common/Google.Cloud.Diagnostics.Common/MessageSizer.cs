@@ -11,14 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Protobuf;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    internal static class ReportedErrorEventSizer
+    internal static class MessageSizer<T> where T : IMessage
     {
-        /// <summary>Gets the size of a <see cref="ReportedErrorEvent"/> in bytes.</summary>
-        public static int GetSize(ReportedErrorEvent item) => item.CalculateSize();
+        /// <summary>Gets the size of a <see cref="T"/> in bytes.</summary>
+        public static int GetSize(T item) => item.CalculateSize();
     }
 }

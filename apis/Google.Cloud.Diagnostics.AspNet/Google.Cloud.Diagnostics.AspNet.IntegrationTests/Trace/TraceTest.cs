@@ -140,7 +140,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple_Buffer));
             var consumer = SizedBufferingConsumer<TraceProto>.Create(
-                CreateGrpcTraceConsumer(), TraceSizer.GetSize, BufferOptions.DefaultBufferSize);
+                CreateGrpcTraceConsumer(), MessageSizer<TraceProto>.GetSize, BufferOptions.DefaultBufferSize);
             var tracer = CreateSimpleManagedTracer(consumer);
 
             // Create annotations with very large labels to ensure the buffer is flushed.
@@ -169,7 +169,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple_BufferNoTrace));
             var consumer = SizedBufferingConsumer<TraceProto>.Create(
-                CreateGrpcTraceConsumer(), TraceSizer.GetSize, BufferOptions.DefaultBufferSize);
+                CreateGrpcTraceConsumer(), MessageSizer<TraceProto>.GetSize, BufferOptions.DefaultBufferSize);
             var tracer = CreateSimpleManagedTracer(consumer);
 
             tracer.StartSpan(rootSpanName);
