@@ -19,17 +19,17 @@ namespace Google.Cloud.Diagnostics.Common
 {
     internal static class CommonUtils
     {
-        /// <summary>A completed <see cref="Task"/>.</summary>
-        internal readonly static Task CompletedTask = Task.FromResult(false);
-
         /// <summary>The name of the this agent.</summary>
         internal const string AgentName = "google-cloud-csharp-diagnostics";
+
+        /// <summary>A completed <see cref="Task"/>.</summary>
+        internal readonly static Task CompletedTask = Task.FromResult(false);
 
         /// <summary>
         /// The agent name <see cref="AgentName"/> and version of the agent in the
         /// format "[agent-name] [agent-version]".
         /// </summary>
-        internal static string AgentNameAndVersion = $"{AgentName} {GetVersion(typeof(CommonUtils))}";
+        internal readonly static string AgentNameAndVersion = $"{AgentName} {GetVersion(typeof(CommonUtils))}";
 
         /// <summary>Gets the version of the current library using reflection.</summary>
         internal static string GetVersion(System.Type type) =>
