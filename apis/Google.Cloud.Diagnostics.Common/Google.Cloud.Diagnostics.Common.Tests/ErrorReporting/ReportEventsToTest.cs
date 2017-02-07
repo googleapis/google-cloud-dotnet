@@ -30,7 +30,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void Logging_ProjectId()
         {
-            var reportEventsTo = ReportEventsTo.Logging(_projectId, "test-log", _loggingClient);
+            var logName = "another-log";
+            var reportEventsTo = ReportEventsTo.Logging(_projectId, logName, _loggingClient);
 
             Assert.Equal(ReportEventsToLocation.Logging, reportEventsTo.ReportEventsToLocation);
             Assert.Null(reportEventsTo.ErrorReportingClient);
@@ -38,7 +39,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.NotNull(reportEventsTo.LogTo);
             Assert.Equal(LogToLocation.Project, reportEventsTo.LogTo.Location);
             Assert.Equal(_projectId, reportEventsTo.LogTo.ProjectId);
-            Assert.Equal(ReportEventsTo.LogNameDefault, reportEventsTo.LogName);
+            Assert.Equal(logName, reportEventsTo.LogName);
             Assert.Equal(ReportEventsTo.GlobalResource, reportEventsTo.MonitoredResource);
         }
 
