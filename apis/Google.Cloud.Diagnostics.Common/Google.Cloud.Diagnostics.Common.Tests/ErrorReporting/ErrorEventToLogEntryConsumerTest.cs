@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 EventTime = Timestamp.FromDateTime(startTime),
                 Context = new ErrorContext
                 {
-                    HttpRequest = new HttpRequestContext() { Method = "GET" },
+                    HttpRequest = new HttpRequestContext() { Method = "GET" }
                 }
             };
 
@@ -89,7 +89,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var eventThree = new ReportedErrorEvent
             {
                 Message = "Event three!",
-                EventTime = Timestamp.FromDateTime(startTime.AddSeconds(4)),
+                EventTime = Timestamp.FromDateTime(startTime.AddSeconds(4))
             };
 
             var errorConsumer = CreateErrorConsumer(new Mock<IConsumer<LogEntry>>().Object);
@@ -101,16 +101,19 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 Assert.Equal(s_monitoredResource, entry.Resource);
                 Assert.Contains(_logName, entry.LogName);
                 Assert.Equal(LogSeverity.Error, entry.Severity);
+                if (entry.Timestamp.Equals(eventOne.EventTime))
+                {
+                    Assert.Equal(entry.JsonPayload, eventOne.ToStruct());
+                }
+                else if (entry.Timestamp.Equals(eventTwo.EventTime))
+                {
+                    Assert.Equal(entry.JsonPayload, eventTwo.ToStruct());
+                }
+                else if (entry.Timestamp.Equals(eventThree.EventTime))
+                {
+                    Assert.Equal(entry.JsonPayload, eventThree.ToStruct());
+                }
             }
-
-            var logOne = logEntries.Where(l => l.Timestamp.Equals(eventOne.EventTime)).Single();
-            Assert.Equal(logOne.JsonPayload, eventOne.ToStruct());
-
-            var logTwo = logEntries.Where(l => l.Timestamp.Equals(eventTwo.EventTime)).Single();
-            Assert.Equal(logTwo.JsonPayload, eventTwo.ToStruct());
-
-            var logThree = logEntries.Where(l => l.Timestamp.Equals(eventThree.EventTime)).Single();
-            Assert.Equal(logThree.JsonPayload, eventThree.ToStruct());
         }
     }
 }

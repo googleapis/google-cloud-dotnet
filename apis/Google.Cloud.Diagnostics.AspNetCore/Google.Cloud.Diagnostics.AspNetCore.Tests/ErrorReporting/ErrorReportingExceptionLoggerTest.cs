@@ -114,7 +114,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             return context;
         }
-        
+
         [Fact]
         public async Task Report_Simple()
         {
