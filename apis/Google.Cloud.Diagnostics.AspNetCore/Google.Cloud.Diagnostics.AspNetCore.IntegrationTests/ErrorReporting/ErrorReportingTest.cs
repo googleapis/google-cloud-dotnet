@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Microsoft.AspNetCore.Builder;
@@ -22,16 +20,79 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using static Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
+namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
 {
     public class ErrorReportingTest
     {
-        private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
+        /// <summary>Total time to spend sleeping when looking for error events.</summary>
+        private static readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
+
+        /// <summary>Time to sleep between checks for error events.</summary>
+        private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
+
+        /// <summary>A query time range of one hour.</summary>
+        private static readonly QueryTimeRange s_oneHour = new QueryTimeRange { Period = Period._1Hour };
+
+        /// <summary>Project to run the test on.</summary>
+        private readonly ProjectName _projectName;
+
+        /// <summary>Client to use to send RPCs.</summary>
+        private readonly ErrorStatsServiceClient _client;
+
+        public ErrorReportingTest()
+        {
+            _projectName = new ProjectName(Utils.GetProjectIdFromEnvironment());
+            _client = ErrorStatsServiceClient.Create();
+        }
+
+        /// <summary>
+        /// Gets error events that contain the passed in testId in the message.  Will poll
+        /// and wait for the entries to appear.
+        /// </summary>
+        /// <param name="startTime">The earliest error event time that will be looked at.</param>
+        /// <param name="testId">The test id to filter error events on.</param>
+        /// <param name="minEntries">The minimum number of error events that should be waited for.
+        ///     If minEntries is zero this method will wait the full timeout before checking for the
+        ///     entries.</param>
+        private IEnumerable<ErrorEvent> GetEvents(DateTime startTime, string testId, int minEntries)
+        {
+            TimeSpan totalSleepTime = TimeSpan.Zero;
+            while (totalSleepTime < _timeout)
+            {
+                TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : _timeout;
+                totalSleepTime += sleepTime;
+                Thread.Sleep(sleepTime);
+
+                List<ErrorEvent> errorEvents = new List<ErrorEvent>();
+                var groups = _client.ListGroupStats(_projectName, s_oneHour);
+                foreach (var group in groups)
+                {
+                    ListEventsRequest request = new ListEventsRequest
+                    {
+                        ProjectName = _projectName.ToString(),
+                        GroupId = group.Group.GroupId,
+                        TimeRange = s_oneHour
+                    };
+
+                    var events = _client.ListEvents(request);
+                    errorEvents.AddRange(events.Where(e => e.Message.Contains(testId)));
+                }
+
+                if (minEntries == 0 || errorEvents.Count() >= minEntries)
+                {
+                    return errorEvents;
+                }
+            }
+            return new List<ErrorEvent>();
+        }
 
         [Fact]
         public async Task NoExceptions()
@@ -46,7 +107,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/ErrorReporting/Index/{testId}");
             }
 
-            var errorEvents = _polling.GetEvents(startTime, testId, 0);
+            var errorEvents = GetEvents(startTime, testId, 0);
             Assert.Empty(errorEvents);
         }
 
@@ -64,7 +125,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
             }
 
-            var errorEvents = _polling.GetEvents(startTime, testId, 1);
+            var errorEvents = GetEvents(startTime, testId, 1);
             Assert.Single(errorEvents);
             VerifyErrorEvent(errorEvents.First(), testId, "ThrowsException");
         }
@@ -89,7 +150,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
             }
 
-            var errorEvents = _polling.GetEvents(startTime, testId, 4);
+            var errorEvents = GetEvents(startTime, testId, 1);
             Assert.Equal(4, errorEvents.Count());
 
             var exceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsException"));

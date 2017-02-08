@@ -14,9 +14,9 @@
 
 using Google.Api;
 using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Logging.Type;
+using Google.Cloud.Logging.V2;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -24,16 +24,70 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class LoggingTest
     {
-        private readonly LogEntryPolling _polling = new LogEntryPolling();
+        /// <summary>Total time to spend sleeping when looking for log entries.</summary>
+        private readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
+
+        /// <summary>Time to sleep between checks for log entries.</summary>
+        private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
+
+        /// <summary>Project id to run the test on.</summary>
+        private readonly string _projectId;
+
+        /// <summary>Client to use to send RPCs.</summary>
+        private readonly LoggingServiceV2Client _client;
+
+        public LoggingTest()
+        {
+            _projectId = Utils.GetProjectIdFromEnvironment();
+            _client = LoggingServiceV2Client.Create();
+        }
+
+        /// <summary>
+        /// Gets log entries that contain the passed in testId in the log message.  Will poll
+        /// and wait for the entries to appear.
+        /// </summary>
+        /// <param name="startTime">The earliest log entry time that will be looked at.</param>
+        /// <param name="testId">The test id to filter log entries on.</param>
+        /// <param name="minEntries">The minimum number of logs entries that should be waited for.
+        ///     If minEntries is zero this method will wait the full timeout before checking for the
+        ///     entries.</param>
+        private IEnumerable<LogEntry> GetEntries(DateTime startTime, string testId, int minEntries)
+        {
+            TimeSpan totalSleepTime = TimeSpan.Zero;
+            while (totalSleepTime < _timeout)
+            {
+                TimeSpan sleepTime = minEntries > 0 ? _sleepInterval : _timeout;
+                totalSleepTime += sleepTime;
+                Thread.Sleep(sleepTime);
+
+                // Convert the time to RFC3339 UTC format.
+                string time = XmlConvert.ToString(startTime, XmlDateTimeSerializationMode.Utc);
+                var request =  new ListLogEntriesRequest
+                {
+                    ResourceNames = { $"projects/{_projectId}" },
+                    Filter = $"timestamp >= \"{time}\""
+                };
+
+                var results = _client.ListLogEntries(request);
+                var entries = results.Where(p => p.TextPayload.Contains(testId)).ToList();
+                if (minEntries == 0 || entries.Count() >= minEntries)
+                {
+                    return entries;
+                }
+            }
+            return new List<LogEntry>();
+        }
 
         [Fact]
         public async Task Logging_SizedBufferNoLogs()
@@ -52,7 +106,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             // No entries should be found as not enough entries were created to
             // flush the buffer.
-            Assert.Empty(_polling.GetEntries(startTime, testId, 0));
+            Assert.Empty(GetEntries(startTime, testId, 0));
         }
 
         [Fact]
@@ -73,7 +127,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             // NoBufferLoggerTestApplication does not support debug or info logs.
-            var results = _polling.GetEntries(startTime, testId, 3);
+            var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Error));
@@ -103,7 +157,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             // Just check that a large portion of logs entires were pushed.  Not all
             // will be pushed as some may be in the buffer.
-            var results = _polling.GetEntries(startTime, testId, 500);
+            var results = GetEntries(startTime, testId, 500);
             Assert.True(results.Count() >= 500);
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Debug));
             Assert.Null(results.FirstOrDefault(l => l.Severity == LogSeverity.Info));
@@ -127,7 +181,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Warning/{testId}");
                 await client.GetAsync($"/Main/Error/{testId}");
 
-                var noResults = _polling.GetEntries(startTime, testId, 0);
+                var noResults = GetEntries(startTime, testId, 0);
                 Assert.Empty(noResults);
                 Thread.Sleep(TimeSpan.FromSeconds(10));
 
@@ -136,7 +190,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             // The fourth entry is not pushed as it is buffered after the last push.
-            var results = _polling.GetEntries(startTime, testId, 3);
+            var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
             Assert.NotNull(results.FirstOrDefault(l => l.Severity == LogSeverity.Warning));
             Assert.Equal(2, results.Count(l => l.Severity == LogSeverity.Error));
@@ -158,7 +212,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 await client.GetAsync($"/Main/Critical/{testId}");
             }
 
-            var results = _polling.GetEntries(startTime, testId, 3);
+            var results = GetEntries(startTime, testId, 3);
             Assert.Equal(3, results.Count());
             var resourceType = NoBufferResourceLoggerTestApplication.Resource.Type;
             var buildResources = results.Where(e => e.Resource.Type.Equals(resourceType));
