@@ -62,7 +62,13 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Creates a new <see cref="ReportEventsTo"/> instance that will report to the Stackdriver Logging API.
+        /// The events are then automatically propigated to the Stackdriver Error Logging API from the 
+        /// Stackdriver Logging API.
         /// </summary>
+        /// <remarks>
+        /// For more information see "Formatting Log Error Messages"
+        /// (https://cloud.google.com/error-reporting/docs/formatting-error-messages).
+        /// </remarks>
         /// <param name="projectId">The Google Cloud Platform project Id. Cannot be null.</param>
         /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
@@ -75,8 +81,14 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a new <see cref="ReportEventsTo"/> instance what will report to the Stackdriver Logging API.
+        /// Creates a new <see cref="ReportEventsTo"/> instance that will report to the Stackdriver Logging API.
+        /// The events are then automatically propigated to the Stackdriver Error Logging API from the 
+        /// Stackdriver Logging API.
         /// </summary>
+        /// <remarks>
+        /// For more information see "Formatting Log Error Messages"
+        /// (https://cloud.google.com/error-reporting/docs/formatting-error-messages).
+        /// </remarks>
         /// <param name="logTo">Where to log to, such as a project or organization. Cannot be null.</param>
         /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
