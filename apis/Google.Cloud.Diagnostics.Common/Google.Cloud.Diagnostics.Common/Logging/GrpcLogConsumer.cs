@@ -26,9 +26,6 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal sealed class GrpcLogConsumer : IConsumer<LogEntry>
     {
-        /// <summary>An empty dictionary used for labels.</summary>
-        private static readonly IDictionary<string, string> EmptyDictionary = new Dictionary<string, string>();
-
         private LoggingServiceV2Client _client;
 
         /// <param name="client">The logging client that will push logs to the Stackdriver Logging API.</param>
@@ -45,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return;
             }
-            _client.WriteLogEntries(null, null, EmptyDictionary, logs);
+            _client.WriteLogEntries(null, null, LogLabels.AgentLabel, logs);
         }
 
         /// <inheritdoc />
@@ -57,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return CommonUtils.CompletedTask;
             }
-            return _client.WriteLogEntriesAsync(null, null, EmptyDictionary, logs, cancellationToken);
+            return _client.WriteLogEntriesAsync(null, null, LogLabels.AgentLabel, logs, cancellationToken);
         }
     }
 }
