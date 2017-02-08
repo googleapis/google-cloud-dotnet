@@ -68,7 +68,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             foreach (var errorEvent in events)
             {
-                await _client.ReportErrorEventAsync(_projectName, errorEvent, cancellationToken).ConfigureAwait(false);
+                await _client.ReportErrorEventAsync(_projectName, errorEvent, cancellationToken);
             }
         }
     }
