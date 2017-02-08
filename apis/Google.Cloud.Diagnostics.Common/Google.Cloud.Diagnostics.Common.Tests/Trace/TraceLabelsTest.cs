@@ -20,7 +20,7 @@ using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
-    public class LabelsTest
+    public class TraceLabelsTest
     {
         [Fact]
         public void FromStackTrace()
@@ -41,9 +41,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             stackTraceMock.Setup(t => t.GetFrames()).Returns(new StackFrame[] {
                 frameRequest.Object, frameResponse.Object, frameStack.Object });
 
-            var labels = Labels.FromStackTrace(stackTraceMock.Object);
+            var labels = TraceLabels.FromStackTrace(stackTraceMock.Object);
             Assert.Equal(1, labels.Count);
-            string jsonTrace = labels[Labels.StackTrace];
+            string jsonTrace = labels[TraceLabels.StackTrace];
 
             Assert.Equal(Regex.Matches(jsonTrace, "stack_frame").Count, 1);
             Assert.Equal(Regex.Matches(jsonTrace, "class_name").Count, 3);
@@ -66,9 +66,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var stackTraceMock = new Mock<StackTrace>();
             stackTraceMock.Setup(t => t.GetFrames()).Returns(new StackFrame[] { });
 
-            var labels = Labels.FromStackTrace(stackTraceMock.Object);
+            var labels = TraceLabels.FromStackTrace(stackTraceMock.Object);
             Assert.Equal(1, labels.Count);
-            Assert.Equal(string.Empty, labels[Labels.StackTrace]);
+            Assert.Equal(string.Empty, labels[TraceLabels.StackTrace]);
         }
 
         [Fact]
@@ -77,9 +77,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var stackTraceMock = new Mock<StackTrace>();
             stackTraceMock.Setup(t => t.GetFrames()).Returns((StackFrame[]) null);
 
-            var labels = Labels.FromStackTrace(stackTraceMock.Object);
+            var labels = TraceLabels.FromStackTrace(stackTraceMock.Object);
             Assert.Equal(1, labels.Count);
-            Assert.Equal(string.Empty, labels[Labels.StackTrace]);
+            Assert.Equal(string.Empty, labels[TraceLabels.StackTrace]);
         }
 
         /// <summary>

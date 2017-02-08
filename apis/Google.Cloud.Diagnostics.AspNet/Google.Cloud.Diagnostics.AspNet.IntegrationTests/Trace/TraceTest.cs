@@ -24,7 +24,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-using LabelsCommon = Google.Cloud.Diagnostics.Common.Labels;
+using LabelsCommon = Google.Cloud.Diagnostics.Common.TraceLabels;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 

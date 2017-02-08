@@ -12,26 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
-using Google.Cloud.ErrorReporting.V1Beta1;
-using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    /// <summary>
-    /// Extensions for Error Reporting.
-    /// </summary>
-    internal static class ErrorReportingExtension
+    internal static class LogLabels
     {
+        ///<summary>The label key to denote this agent.</summary> 
+        public const string Agent = "agent";
+
         /// <summary>
-        /// Convert a <see cref="ReportedErrorEvent"/> to a <see cref="Struct"/>.
+        /// Gets a map with the label for the agent which contains the agent's name and version.
         /// </summary>
-        public static Struct ToStruct(this ReportedErrorEvent errorEvent)
-        {
-            GaxPreconditions.CheckNotNull(errorEvent, nameof(errorEvent));
-            return Struct.Parser.ParseJson(JsonFormatter.Default.Format(errorEvent));
-        }
+        public static Dictionary<string, string> AgentLabel { get; } =
+            new Dictionary<string, string> { { Agent, CommonUtils.AgentNameAndVersion } };
     }
 }
-

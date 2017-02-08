@@ -28,8 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var logs = new[] { new LogEntry(), new LogEntry() };
             var mockClient = new Mock<LoggingServiceV2Client>();
-            mockClient.Setup(c => c.WriteLogEntries(
-                null, null, It.IsAny<IDictionary<string, string>>(), logs, null));
+            mockClient.Setup(c => c.WriteLogEntries(null, null, LogLabels.AgentLabel, logs, null));
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
             consumer.Receive(logs);
@@ -43,8 +42,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
             consumer.Receive(new LogEntry[] { });
-            mockClient.Verify(c => c.WriteLogEntries(
-                null, null, It.IsAny<IDictionary<string, string>>(),
+            mockClient.Verify(c => c.WriteLogEntries(null, null, LogLabels.AgentLabel,
                 It.IsAny<IEnumerable<LogEntry>>(), null), Times.Never());
         }
 
@@ -55,7 +53,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockClient = new Mock<LoggingServiceV2Client>();
             var task = Task.FromResult(new WriteLogEntriesRequest());
             mockClient.Setup(c => c.WriteLogEntriesAsync(
-                null, null, It.IsAny<IDictionary<string, string>>(), logs, CancellationToken.None))
+                null, null, LogLabels.AgentLabel, logs, CancellationToken.None))
                 .Returns(Task.FromResult(new WriteLogEntriesResponse()));
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
@@ -70,8 +68,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var consumer = new GrpcLogConsumer(mockClient.Object);
 
             await consumer.ReceiveAsync(new LogEntry[] { }, CancellationToken.None);
-            mockClient.Verify(c => c.WriteLogEntriesAsync(
-                null, null, It.IsAny<IDictionary<string, string>>(),
+            mockClient.Verify(c => c.WriteLogEntriesAsync(null, null, LogLabels.AgentLabel,
                 It.IsAny<IEnumerable<LogEntry>>(), CancellationToken.None), Times.Never());
         }
     }
