@@ -48,7 +48,13 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         [Fact]
         public Task ErrorReportingTest_Logging() => ErrorReportingTest<ReportToLoggingApplication>();
 
-        public async Task ErrorReportingTest<T>()
+        /// <summary>
+        /// Test helper that will run a <see cref="TestServer"/> with a start up class,
+        /// send a request to the server and ensure an error event was reported from 
+        /// the test server to the error reporting api.
+        /// </summary>
+        /// <typeparam name="T">The type of the start up class for the test server.</typeparam>
+        private async Task ErrorReportingTest<T>()
         {
             DateTime startTime = DateTime.UtcNow;
 
@@ -79,7 +85,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// A <see cref="BaseErrorReportingApplication"/> that will report events through the
         /// error reporting api.
         /// </summary>
-        public class ReportToErrorReportingApplication : BaseErrorReportingApplication
+        private class ReportToErrorReportingApplication : BaseErrorReportingApplication
         {
             public override ErrorReportingOptions GetOptions() =>
                 ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
@@ -89,7 +95,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// A <see cref="BaseErrorReportingApplication"/> that will report events through the
         /// logging api.
         /// </summary>
-        public class ReportToLoggingApplication : BaseErrorReportingApplication
+        private class ReportToLoggingApplication : BaseErrorReportingApplication
         {
             public override ErrorReportingOptions GetOptions() => null;
         }
@@ -97,7 +103,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         /// <summary>
         /// A simple <see cref="HttpApplication"/> that registers a <see cref="ErrorReportingExceptionLogger"/>
         /// </summary>
-        public abstract class BaseErrorReportingApplication : HttpApplication
+        private abstract class BaseErrorReportingApplication : HttpApplication
         {
             public abstract ErrorReportingOptions GetOptions();
 

@@ -57,7 +57,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public Task LogsMultipleExceptions_Logging()
             => LogsMultipleExceptions<ReportToLoggingTestApplication>();
 
-        public async Task NoExceptions<T>() where T : class
+        /// <summary>
+        /// Test helper that will run a <see cref="TestServer"/> with a start up class,
+        /// send a request to the server that will throw and catch and exception.  It 
+        /// will ensure no error event was reported from  the test server to the error
+        /// reporting api.
+        /// </summary>
+        /// <typeparam name="T">The type of the start up class for the test server.</typeparam>
+        private async Task NoExceptions<T>() where T : class
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
@@ -73,7 +80,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Empty(errorEvents);
         }
 
-        public async Task LogsException<T>() where T : class
+        /// <summary>
+        /// Test helper that will run a <see cref="TestServer"/> with a start up class,
+        /// send a request to the server and ensure an error event was reported from 
+        /// the test server to the error reporting api.
+        /// </summary>
+        /// <typeparam name="T">The type of the start up class for the test server.</typeparam>
+        private async Task LogsException<T>() where T : class
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
@@ -91,7 +104,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             VerifyErrorEvent(errorEvents.First(), testId, "ThrowsException");
         }
 
-        public async Task LogsMultipleExceptions<T>() where T : class
+        /// <summary>
+        /// Test helper that will run a <see cref="TestServer"/> with a start up class,
+        /// send multiple requests to the server and ensure multiple error events were
+        /// reported from  the test server to the error reporting api.
+        /// </summary>
+        /// <typeparam name="T">The type of the start up class for the test server.</typeparam>
+        private async Task LogsMultipleExceptions<T>() where T : class
         {
             string testId = Utils.GetTestId();
             DateTime startTime = DateTime.UtcNow;
@@ -147,54 +166,54 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(functionName, errorEvent.Context.ReportLocation.FunctionName);
             Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
         }
-    }
 
-    /// <summary>
-    /// A <see cref="BaseErrorReportingTestApplication"/> that will report events through the
-    /// error reporting api.
-    /// </summary>
-    public class ReportToErrorReportingTestApplication : BaseErrorReportingTestApplication
-    {
-        public override ErrorReportingOptions GetOptions() => 
-            ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
-    }
-
-    /// <summary>
-    /// A <see cref="BaseErrorReportingTestApplication"/> that will report events through the
-    /// logging api.
-    /// </summary>
-    public class ReportToLoggingTestApplication : BaseErrorReportingTestApplication
-    {
-        public override ErrorReportingOptions GetOptions() => null;
-    }
-
-    /// <summary>
-    /// A simple web application base to test the <see cref="ErrorReportingExceptionLogger"/>
-    /// and associated classes.
-    /// </summary>
-    public abstract class BaseErrorReportingTestApplication
-    {
-        public const string Service = "service-name";
-        public const string Version = "version-id";
-        private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
-
-        public abstract ErrorReportingOptions GetOptions();
-
-        public void ConfigureServices(IServiceCollection services)
+        /// <summary>
+        /// A <see cref="BaseErrorReportingTestApplication"/> that will report events through the
+        /// error reporting api.
+        /// </summary>
+        private class ReportToErrorReportingTestApplication : BaseErrorReportingTestApplication
         {
-            services.AddMvc();
+            public override ErrorReportingOptions GetOptions() =>
+                ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
         }
 
-        public void Configure(IApplicationBuilder app)
+        /// <summary>
+        /// A <see cref="BaseErrorReportingTestApplication"/> that will report events through the
+        /// logging api.
+        /// </summary>
+        private class ReportToLoggingTestApplication : BaseErrorReportingTestApplication
         {
-            app.UseGoogleExceptionLogging(_projectId, Service, Version, GetOptions());
+            public override ErrorReportingOptions GetOptions() => null;
+        }
 
-            app.UseMvc(routes =>
+        /// <summary>
+        /// A simple web application base to test the <see cref="ErrorReportingExceptionLogger"/>
+        /// and associated classes.
+        /// </summary>
+        private abstract class BaseErrorReportingTestApplication
+        {
+            public const string Service = "service-name";
+            public const string Version = "version-id";
+            private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
+
+            public abstract ErrorReportingOptions GetOptions();
+
+            public void ConfigureServices(IServiceCollection services)
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=ErrorReporting}/{action=Index}/{id}");
-            });
+                services.AddMvc();
+            }
+
+            public void Configure(IApplicationBuilder app)
+            {
+                app.UseGoogleExceptionLogging(_projectId, Service, Version, GetOptions());
+
+                app.UseMvc(routes =>
+                {
+                    routes.MapRoute(
+                        name: "default",
+                        template: "{controller=ErrorReporting}/{action=Index}/{id}");
+                });
+            }
         }
     }
 
@@ -203,10 +222,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class ErrorReportingController : Controller
     {
-        public ErrorReportingController() {}
+        public ErrorReportingController() { }
 
         /// <summary>Cathces and handles a thrown <see cref="Exception"/>.</summary>
-        public string Index(string id) {
+        public string Index(string id)
+        {
             var message = GetMessage(nameof(Index), id);
             try
             {
