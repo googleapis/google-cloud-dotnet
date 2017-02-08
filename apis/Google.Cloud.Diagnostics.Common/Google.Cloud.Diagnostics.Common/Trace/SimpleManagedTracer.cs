@@ -135,7 +135,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(stackTrace, nameof(stackTrace));
             CheckStackNotEmpty();
 
-            AnnotateSpan(Labels.FromStackTrace(stackTrace));
+            AnnotateSpan(TraceLabels.FromStackTrace(stackTrace));
         }
 
         /// <inheritdoc />

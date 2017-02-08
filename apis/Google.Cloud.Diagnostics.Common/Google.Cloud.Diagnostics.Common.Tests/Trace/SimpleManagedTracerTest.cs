@@ -144,7 +144,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
                     t => IsValidSpan(t.Single().Spans.Single(), "span-name") &&
-                        !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[Labels.StackTrace]))));
+                        !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[TraceLabels.StackTrace]))));
 
             tracer.StartSpan("span-name");
             tracer.SetStackTrace(FilledStackTrace);
@@ -170,7 +170,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     IsValidSpan(spans[2], "grandchild-two", spans[3].SpanId) &&
                     TraceUtils.IsValidAnnotation(spans[2], annotation) &&
                     IsValidSpan(spans[3], "child-two", spans[4].SpanId) &&
-                    !string.IsNullOrWhiteSpace(spans[0].Labels[Labels.StackTrace]) &&
+                    !string.IsNullOrWhiteSpace(spans[0].Labels[TraceLabels.StackTrace]) &&
                     IsValidSpan(spans[4], "root");
             };
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
