@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             app.UseGoogleExceptionLogging(projectId, serviceName, version);
         }
         // End sample
-        
+
         // Sample: RegisterGoogleLogger
         public void Configure(ILoggerFactory loggerFactory)
         {

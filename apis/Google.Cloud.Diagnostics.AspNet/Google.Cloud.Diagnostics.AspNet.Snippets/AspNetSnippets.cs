@@ -60,7 +60,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             }
         }
         // End sample
-        
+
         public void TraceHelloWorld()
         {
             // Sample: UseTracer
