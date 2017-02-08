@@ -104,7 +104,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             config = config ?? TraceConfiguration.Create();
 
             IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                 new GrpcTraceConsumer(clientTask), TraceSizer.Instance, config.BufferOptions);
+                 new GrpcTraceConsumer(clientTask), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
 
             var tracerFactory = new ManagedTracerFactory(projectId, consumer,
                 RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());

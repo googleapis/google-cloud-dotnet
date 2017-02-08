@@ -85,7 +85,7 @@ namespace Google.Cloud.Diagnostics.Common
             }
 
             return ConsumerFactory<ReportedErrorEvent>.GetConsumer(
-                consumer, ReportedErrorEventSizer.Instance, BufferOptions);
+                consumer, MessageSizer<ReportedErrorEvent>.GetSize, BufferOptions);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,24 +11,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
-using Google.Cloud.Diagnostics.Common;
-
-using TraceProto = Google.Cloud.Trace.V1.Trace;
+using Google.Protobuf;
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    /// <summary>
-    /// An <see cref="ISizer{T}"/> for <see cref="TraceProto"/>s.
-    /// </summary>
-    internal sealed class TraceSizer : ISizer<TraceProto>
+    internal static class MessageSizer<T> where T : IMessage
     {
-        /// <summary>The single trace sizer instance.</summary>
-        internal static readonly TraceSizer Instance = new TraceSizer();
-
-        private TraceSizer() { }
-
-        /// <inheritdoc />
-        public int GetSize(TraceProto item) => item.CalculateSize();
+        /// <summary>Gets the size of a <see cref="T"/> in bytes.</summary>
+        public static int GetSize(T item) => item.CalculateSize();
     }
 }
