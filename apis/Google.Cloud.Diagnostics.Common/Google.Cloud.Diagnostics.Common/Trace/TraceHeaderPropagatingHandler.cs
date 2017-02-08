@@ -67,7 +67,7 @@ namespace Google.Cloud.Diagnostics.Common
         {
             if (_tracer.GetCurrentTraceId() == null)
             {
-                return await base.SendAsync(request, cancellationToken);
+                return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
             }
 
             var traceHeader = TraceHeaderContext.Create(
@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.Common
             _tracer.StartSpan(request.RequestUri.ToString());
             try
             {
-                return await base.SendAsync(request, cancellationToken);
+                return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
             }
             catch (Exception e)
             {
