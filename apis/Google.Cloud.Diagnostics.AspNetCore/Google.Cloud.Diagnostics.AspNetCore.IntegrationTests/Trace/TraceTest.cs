@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -32,11 +31,57 @@ using Xunit;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
+namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTest
 {
     public class TraceTest
     {
-        private readonly TraceEntryPolling _polling = new TraceEntryPolling();
+        /// <summary>Total time to spend sleeping when looking for traces.</summary>
+        private static readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
+
+        /// <summary>Time to sleep between checks for traces.</summary>
+        private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
+
+        /// <summary>Project id to run the test on.</summary>
+        private readonly string _projectId;
+
+        /// <summary>Client to use to send RPCs.</summary>
+        private readonly TraceServiceClient _client;
+
+        public TraceTest()
+        {
+            _projectId = Utils.GetProjectIdFromEnvironment();
+            _client = TraceServiceClient.Create();
+        }
+
+        /// <summary>
+        /// Gets a trace that contains a span with the given name.
+        /// </summary>
+        /// <param name="expectTrace">True if the trace is expected to exist.  This is used
+        ///     to minimize RPC calls.</param>
+        private async Task<TraceProto> GetTrace(string spanName, Timestamp startTime, bool expectTrace = true)
+        {
+            TimeSpan totalSleepTime = TimeSpan.Zero;
+            while (totalSleepTime <= _timeout)
+            {
+                TimeSpan sleepTime = expectTrace ? _sleepInterval : _timeout;
+                totalSleepTime += sleepTime;
+                Thread.Sleep(sleepTime);
+
+                ListTracesRequest request = new ListTracesRequest
+                {
+                    ProjectId = _projectId,
+                    StartTime = startTime,
+                    View = ListTracesRequest.Types.ViewType.Complete
+                };
+                var traces = _client.ListTracesAsync(request);
+                TraceProto trace = await traces.FirstOrDefault(t => t.Spans.Any(s => s.Name == spanName));
+                if (trace != null)
+                {
+                    return trace;
+                }
+            }
+            return null;
+        }
 
         [Fact]
         public async Task Trace()
@@ -52,7 +97,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
+            var trace = await GetTrace(spanName, startTime);
 
             Assert.NotNull(trace);
             Assert.Equal(2, trace.Spans.Count);
@@ -76,7 +121,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             var spanName = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
+            var trace = await GetTrace(spanName, startTime);
 
             Assert.NotNull(trace);
             Assert.Equal(2, trace.Spans.Count);
@@ -99,7 +144,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             var spanName = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
+            var trace = await GetTrace(spanName, startTime);
 
             Assert.NotNull(trace);
             Assert.Equal(2, trace.Spans.Count);
@@ -128,7 +173,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
+            var trace = await GetTrace(spanName, startTime);
 
             Assert.NotNull(trace);
             Assert.Equal(traceId, trace.TraceId);
@@ -158,8 +203,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
             var spanNameLabels = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
-            Assert.Null(_polling.GetTrace(spanNameLabels, startTime, expectTrace: false));
-            Assert.NotNull(_polling.GetTrace(spanNameTrace, startTime));
+            Assert.Null(await GetTrace(spanNameLabels, startTime, expectTrace: false));
+            Assert.NotNull(await GetTrace(spanNameTrace, startTime));
         }
 
         [Fact]
@@ -177,15 +222,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 // Make a trace with a small span that will not cause the buffer to flush.
                 await client.GetAsync($"/Trace/Trace/{testId}");
-                Assert.Null(_polling.GetTrace(spanName, startTime, expectTrace: false));
+                Assert.Null(await GetTrace(spanName, startTime, expectTrace: false));
 
                 // Make a large trace that will flush the buffer.
                 await client.GetAsync($"/Trace/TraceStackTrace/{testId}");
             }
 
             var spanNameStack = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
-            Assert.NotNull(_polling.GetTrace(spanName, startTime));
-            Assert.NotNull(_polling.GetTrace(spanNameStack, startTime));
+            Assert.NotNull(await GetTrace(spanName, startTime));
+            Assert.NotNull(await GetTrace(spanNameStack, startTime));
         }
 
         [Fact]
@@ -209,7 +254,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             }
 
             var spanName = TraceController.GetMessage(nameof(TraceController.ThrowException), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
+            var trace = await GetTrace(spanName, startTime);
 
             Assert.NotNull(trace);
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));

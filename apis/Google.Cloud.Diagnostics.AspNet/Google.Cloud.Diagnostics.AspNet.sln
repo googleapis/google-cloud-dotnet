@@ -23,8 +23,6 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Logging.Type",
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Logging.V2", "..\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2\Google.Cloud.Logging.V2.xproj", "{35B8D21D-0253-417F-B171-06BF70AA9485}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Diagnostics.Common.IntegrationTests", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.xproj", "{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,10 +69,6 @@ Global
 		{35B8D21D-0253-417F-B171-06BF70AA9485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35B8D21D-0253-417F-B171-06BF70AA9485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35B8D21D-0253-417F-B171-06BF70AA9485}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE96A626-6BAF-4012-889C-E1AAADE5CB3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
