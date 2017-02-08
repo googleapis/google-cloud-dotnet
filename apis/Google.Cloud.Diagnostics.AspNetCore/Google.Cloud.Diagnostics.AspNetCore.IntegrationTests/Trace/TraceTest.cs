@@ -58,8 +58,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(2, trace.Spans.Count);
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
             Assert.NotEmpty(span.Labels);
-            Assert.Equal(span.Labels[Common.Labels.HttpMethod], "GET");
-            Assert.Equal(span.Labels[Common.Labels.HttpStatusCode], "200");
+            Assert.Equal(span.Labels[Common.TraceLabels.HttpMethod], "GET");
+            Assert.Equal(span.Labels[Common.TraceLabels.HttpStatusCode], "200");
         }
 
         [Fact]
@@ -105,8 +105,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(2, trace.Spans.Count);
             var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
             Assert.Single(span.Labels);
-            Assert.Contains(nameof(TraceController), span.Labels[Common.Labels.StackTrace]);
-            Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[Common.Labels.StackTrace]);   
+            Assert.Contains(nameof(TraceController), span.Labels[Common.TraceLabels.StackTrace]);
+            Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[Common.TraceLabels.StackTrace]);   
         }
 
         [Fact]
@@ -214,8 +214,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.NotNull(trace);
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));
             Assert.NotEmpty(span.Labels);
-            Assert.Contains(nameof(TraceController), span.Labels[Common.Labels.StackTrace]);
-            Assert.Contains(nameof(TraceController.ThrowException), span.Labels[Common.Labels.StackTrace]);
+            Assert.Contains(nameof(TraceController), span.Labels[Common.TraceLabels.StackTrace]);
+            Assert.Contains(nameof(TraceController.ThrowException), span.Labels[Common.TraceLabels.StackTrace]);
         }
     }
 

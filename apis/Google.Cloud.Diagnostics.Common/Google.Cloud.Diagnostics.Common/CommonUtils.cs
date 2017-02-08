@@ -12,13 +12,31 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
     internal static class CommonUtils
     {
+        /// <summary>The name of the this agent.</summary>
+        internal const string AgentName = "google-cloud-csharp-diagnostics";
+
         /// <summary>A completed <see cref="Task"/>.</summary>
         internal readonly static Task CompletedTask = Task.FromResult(false);
+
+        /// <summary>
+        /// The agent name <see cref="AgentName"/> and version of the agent in the
+        /// format "[agent-name] [agent-version]".
+        /// </summary>
+        internal readonly static string AgentNameAndVersion = $"{AgentName} {GetVersion(typeof(CommonUtils))}";
+
+        /// <summary>Gets the version of the current library using reflection.</summary>
+        internal static string GetVersion(System.Type type) =>
+            type.GetTypeInfo()
+                .Assembly
+                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                .InformationalVersion;
+        
     }
 }

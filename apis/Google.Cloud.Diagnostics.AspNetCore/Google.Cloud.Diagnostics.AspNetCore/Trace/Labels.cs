@@ -18,7 +18,7 @@ using Microsoft.AspNetCore.Http.Internal;
 using System.Collections.Generic;
 using System.Linq;
 
-using LabelsCommon = Google.Cloud.Diagnostics.Common.Labels;
+using LabelsCommon = Google.Cloud.Diagnostics.Common.TraceLabels;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -30,8 +30,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Gets a map with the label for the agent which contains the agent's name and version.
         /// </summary>
-        internal static Dictionary<string, string> AgentLabel { get; } =
-            LabelsCommon.GetAgentLabel(typeof(Labels));
+        internal static Dictionary<string, string> AgentLabel { get; } = LabelsCommon.GetAgentLabel();
 
         /// <summary>
         /// Gets a map of labels for a span from an <see cref="HttpContext"/>, such as request size,

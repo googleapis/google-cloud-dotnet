@@ -12,11 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Xunit;
 
-using LabelsCommon = Google.Cloud.Diagnostics.Common.Labels;
+using LabelsCommon = Google.Cloud.Diagnostics.Common.TraceLabels;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
@@ -27,8 +28,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var labels = Labels.AgentLabel;
             Assert.Single(labels);
-            Assert.Contains(LabelsCommon.AgentName, labels[LabelsCommon.Agent]);
-            Assert.Contains(LabelsCommon.GetAgentVersion(typeof(Labels)), labels[LabelsCommon.Agent]);
+            Assert.Contains(CommonUtils.AgentName, labels[LabelsCommon.Agent]);
+            Assert.Contains(CommonUtils.GetVersion(typeof(CommonUtils)), labels[LabelsCommon.Agent]);
         }
 
         [Fact]
