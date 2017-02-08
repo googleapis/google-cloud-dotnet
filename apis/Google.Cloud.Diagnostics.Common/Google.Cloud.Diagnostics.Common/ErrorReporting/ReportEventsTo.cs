@@ -96,6 +96,8 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Creates a new <see cref="ReportEventsTo"/> instance that will report to the Stackdriver Error Reporting API.
+        /// To use this option you must enable the Stackdriver Error Reporting API
+        /// (https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview).
         /// </summary>
         /// <param name="errorReportingClient">The error reporting client.</param>
         public static ReportEventsTo ErrorReporting(ReportErrorsServiceClient errorReportingClient = null)

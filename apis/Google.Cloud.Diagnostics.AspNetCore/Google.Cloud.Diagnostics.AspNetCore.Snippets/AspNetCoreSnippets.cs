@@ -24,35 +24,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
     public class AspNetCoreSnippets
     {
-        private class ErrorReporting_LoggingApi
+        // Sample: ReportUnandledExceptions
+        public void Configure(IApplicationBuilder app)
         {
-            // Sample: ReportUnandledExceptions
-            public void Configure(IApplicationBuilder app)
-            {
-                // Use before handling any requests to ensure all unhandled exceptions are reported.
-                string projectId = "[Google Cloud Platform project ID]";
-                string serviceName = "[Name of service]";
-                string version = "[Version of service]";
-                app.UseGoogleExceptionLogging(projectId, serviceName, version);
-            }
-            // End sample
+            // Use before handling any requests to ensure all unhandled exceptions are reported.
+            string projectId = "[Google Cloud Platform project ID]";
+            string serviceName = "[Name of service]";
+            string version = "[Version of service]";
+            app.UseGoogleExceptionLogging(projectId, serviceName, version);
         }
-
-        private class ErrorReporting_ErrorReportingApi
-        {
-            // Sample: ReportUnandledExceptionsErrorReportingApi
-            public void Configure(IApplicationBuilder app)
-            {
-                // Use before handling any requests to ensure all unhandled exceptions are reported.
-                string projectId = "[Google Cloud Platform project ID]";
-                string serviceName = "[Name of service]";
-                string version = "[Version of service]";
-                // Report error events directly to the Stackdriver Error Reporting API.
-                ErrorReportingOptions options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
-                app.UseGoogleExceptionLogging(projectId, serviceName, version, options);
-            }
-            // End sample
-        }
+        // End sample
 
         // Sample: RegisterGoogleLogger
         public void Configure(ILoggerFactory loggerFactory)

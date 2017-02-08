@@ -25,61 +25,28 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 {
     public class AspNetSnippets
     {
-        private class ErrorReporting_LoggingApi
+        // Sample: RegisterExceptionLoggerWebApi
+        public static void Register(HttpConfiguration config)
         {
-            // Sample: RegisterExceptionLoggerWebApi
-            public static void Register(HttpConfiguration config)
-            {
-                string projectId = "[Google Cloud Platform project ID]";
-                string serviceName = "[Name of service]";
-                string version = "[Version of service]";
-                // Add a catch all for the uncaught exceptions.
-                config.Services.Add(typeof(IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
-            }
-            // End sample
-
-            // Sample: RegisterExceptionLoggerMvc
-            public static void RegisterGlobalFilters(GlobalFilterCollection filters)
-            {
-                string projectId = "[Google Cloud Platform project ID]";
-                string serviceName = "[Name of service]";
-                string version = "[Version of service]";
-                // Add a catch all for the uncaught exceptions.
-                filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
-            }
-            // End sample
+            string projectId = "[Google Cloud Platform project ID]";
+            string serviceName = "[Name of service]";
+            string version = "[Version of service]";
+            // Add a catch all for the uncaught exceptions.
+            config.Services.Add(typeof(IExceptionLogger),
+                ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
         }
+        // End sample
 
-        private class ErrorReporting_ErrorReportingApi
+        // Sample: RegisterExceptionLoggerMvc
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            // Sample: RegisterExceptionLoggerWebApiErrorReportingApi
-            public static void Register(HttpConfiguration config)
-            {
-                string projectId = "[Google Cloud Platform project ID]";
-                string serviceName = "[Name of service]";
-                string version = "[Version of service]";
-                // Report error events directly to the Stackdriver Error Reporting API.
-                ErrorReportingOptions options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
-                // Add a catch all for the uncaught exceptions.
-                config.Services.Add(typeof(IExceptionLogger),
-                    ErrorReportingExceptionLogger.Create(projectId, serviceName, version, options));
-            }
-            // End sample
-
-            // Sample: RegisterExceptionLoggerMvcErrorReportingApi
-            public static void RegisterGlobalFilters(GlobalFilterCollection filters)
-            {
-                string projectId = "[Google Cloud Platform project ID]";
-                string serviceName = "[Name of service]";
-                string version = "[Version of service]";
-                // Report error events directly to the Stackdriver Error Reporting API.
-                ErrorReportingOptions options = ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
-                // Add a catch all for the uncaught exceptions.
-                filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version, options));
-            }
-            // End sample
+            string projectId = "[Google Cloud Platform project ID]";
+            string serviceName = "[Name of service]";
+            string version = "[Version of service]";
+            // Add a catch all for the uncaught exceptions.
+            filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
         }
+        // End sample
 
         // Sample: InitializeTrace
         public class Global : HttpApplication
@@ -93,7 +60,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             }
         }
         // End sample
-        
+
         public void TraceHelloWorld()
         {
             // Sample: UseTracer

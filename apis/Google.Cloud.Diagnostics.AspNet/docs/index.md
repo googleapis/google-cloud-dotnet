@@ -26,25 +26,11 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 ## Registering Error Reporting (Web Api)
 
-Reports error events to the Stackdriver Error Reporting API via the Stackdriver Logging API (default
-and suggested method).  For more information see
-["Formatting Log Error Messages"](https://cloud.google.com/error-reporting/docs/formatting-error-messages).
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerWebApi)]
-
-Error events can be reported directly to the Stackdriver Error Reporting API. However, it requires enabling
-the [Stackdriver Error Reporting API](https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview).
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerWebApiErrorReportingApi)]
 
 ## Registering Error Reporting (MVC)
 
-Reports error events to the Stackdriver Error Reporting API via the Stackdriver Logging API (default
-and suggested method).  For more information see
-["Formatting Log Error Messages"](https://cloud.google.com/error-reporting/docs/formatting-error-messages).
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerMvc)]
-
-Error events can be reported directly to the Stackdriver Error Reporting API. However, it requires enabling
-the [Stackdriver Error Reporting API](https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview).
-[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerMvcErrorReportingApi)]
 
 ## Initializing Tracing
 
