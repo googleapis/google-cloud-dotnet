@@ -15,7 +15,6 @@
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
-using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,8 +28,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
-
-using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
@@ -58,8 +55,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(2, trace.Spans.Count);
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
             Assert.NotEmpty(span.Labels);
-            Assert.Equal(span.Labels[Common.TraceLabels.HttpMethod], "GET");
-            Assert.Equal(span.Labels[Common.TraceLabels.HttpStatusCode], "200");
+            Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
+            Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
         }
 
         [Fact]
@@ -105,8 +102,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(2, trace.Spans.Count);
             var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
             Assert.Single(span.Labels);
-            Assert.Contains(nameof(TraceController), span.Labels[Common.TraceLabels.StackTrace]);
-            Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[Common.TraceLabels.StackTrace]);   
+            Assert.Contains(nameof(TraceController), span.Labels[TraceLabels.StackTrace]);
+            Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[TraceLabels.StackTrace]);   
         }
 
         [Fact]
