@@ -10,7 +10,7 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
-// limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
+// limitations under the License.
 
 using Google.Cloud.Trace.V1;
 using Google.Cloud.Diagnostics.Common;
@@ -26,6 +26,7 @@ using Xunit;
 
 using LabelsCommon = Google.Cloud.Diagnostics.Common.Labels;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
+using Google.Cloud.Diagnostics.Common.IntegrationTests;
 
 namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 {
@@ -33,31 +34,16 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
     {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
 
-        /// <summary>Total time to spend sleeping when looking for a trace.</summary>
-        private readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
-
-        /// <summary>Time to sleep between checks for a trace.</summary>
-        private readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
+        private readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
         /// <summary>Project id to run the test on.</summary>
-        private readonly string _projectId;
+        private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
 
         /// <summary>Unique id of the test.</summary>
-        private readonly string _testId;
+        private readonly string _testId = Utils.GetTestId();
 
         /// <summary>Test start time to allow for easier querying of traces.</summary>
-        private readonly Timestamp _startTime;
-
-        /// <summary>Client to use to send RPCs.</summary>
-        private readonly TraceServiceClient _client;
-
-        public TraceTest()
-        {
-            _projectId = Utils.GetProjectIdFromEnvironment();
-            _testId = Utils.GetTestId();
-            _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
-            _client = TraceServiceClient.Create();
-        }
+        private readonly Timestamp _startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
         private IConsumer<TraceProto> CreateGrpcTraceConsumer()
         {
@@ -87,40 +73,10 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             }
         }
 
-        /// <summary>
-        /// Gets a trace that contains a span with the given name.
-        /// </summary>
-        /// <param name="expectTrace">True if the trace is expected to exist.  This is used
-        ///     to minimize RPC calls.</param>
-        private async Task<TraceProto> GetTrace(string spanName, bool expectTrace = true)
-        {
-            TimeSpan totalSleepTime = TimeSpan.Zero;
-            while (totalSleepTime <= _timeout)
-            {
-                TimeSpan sleepTime = expectTrace ? _sleepInterval : _timeout;
-                totalSleepTime += sleepTime;
-                Thread.Sleep(sleepTime);
-
-                ListTracesRequest request = new ListTracesRequest
-                {
-                    ProjectId = _projectId,
-                    StartTime = _startTime,
-                    View = ListTracesRequest.Types.ViewType.Complete
-                };
-                var traces = _client.ListTracesAsync(request);
-                TraceProto trace = await traces.FirstOrDefault(t => t.Spans.Any(s => s.Name.Equals(spanName)));
-                if (trace != null)
-                {
-                    return trace;
-                }
-            }
-            return null;
-        }
-
         private string CreateRootSpanName(string name) => $"{_testId}-{name}";
 
         [Fact]
-        public async Task Trace_Simple()
+        public void Trace_Simple()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple));
             var consumer = CreateGrpcTraceConsumer();
@@ -130,21 +86,21 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             BlockUntilClockTick();
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName);
+            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
         }
 
         [Fact]
-        public async Task Trace_Simple_Buffer()
+        public void Trace_Simple_Buffer()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple_Buffer));
             var consumer = SizedBufferingConsumer<TraceProto>.Create(
-                CreateGrpcTraceConsumer(), TraceSizer.Instance, BufferOptions.DefaultBufferSize);
+                CreateGrpcTraceConsumer(), TraceSizer.Instance, BufferOptions.DefaultBufferSize / 2);
             var tracer = CreateSimpleManagedTracer(consumer);
 
             // Create annotations with very large labels to ensure the buffer is flushed.
-            string label = string.Join("", Enumerable.Repeat("1234567890", 2000));
+            string label = string.Join("", Enumerable.Repeat("1234567890", 1000));
             var annotation = new Dictionary<string, string>
             {
                 { "key-one", label },
@@ -159,13 +115,13 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName);
+            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
         }
 
         [Fact]
-        public async Task Trace_Simple_BufferNoTrace()
+        public void Trace_Simple_BufferNoTrace()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_Simple_BufferNoTrace));
             var consumer = SizedBufferingConsumer<TraceProto>.Create(
@@ -176,12 +132,12 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             BlockUntilClockTick();
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName, false);
+            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime, false);
             Assert.Null(trace);
         }
 
         [Fact]
-        public async Task Trace_SimpleAnnotation()
+        public void Trace_SimpleAnnotation()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_SimpleAnnotation));
             var consumer = CreateGrpcTraceConsumer();
@@ -198,14 +154,14 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName);
+            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
             Assert.True(TraceUtils.IsValidAnnotation(trace.Spans[0], annotation));
         }
 
         [Fact]
-        public async Task Trace_SimpleStacktrace()
+        public void Trace_SimpleStacktrace()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_SimpleStacktrace));
             var consumer = CreateGrpcTraceConsumer();
@@ -216,7 +172,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.SetStackTrace(new StackTrace(true));
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName);
+            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
             Assert.Single(trace.Spans);
 
@@ -227,7 +183,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact]
-        public async Task Trace_MultipleSpans()
+        public void Trace_MultipleSpans()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_MultipleSpans));
             var consumer = CreateGrpcTraceConsumer();
@@ -256,7 +212,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.EndSpan();
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName);
+            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
             Assert.NotNull(trace);
             Assert.Equal(5, trace.Spans.Count);
 
@@ -283,7 +239,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         }
 
         [Fact]
-        public async Task Trace_IncompleteSpans()
+        public void Trace_IncompleteSpans()
         {
             string rootSpanName = CreateRootSpanName(nameof(Trace_IncompleteSpans));
             var consumer = CreateGrpcTraceConsumer();
@@ -297,7 +253,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.EndSpan();
             tracer.EndSpan();
 
-            TraceProto trace = await GetTrace(rootSpanName, false);
+            TraceProto trace = _polling.GetTrace(rootSpanName, _startTime, false);
             Assert.Null(trace);
         }
     }
