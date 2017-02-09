@@ -7,6 +7,19 @@ $(function () {
   var show = 'show';
   var hide = 'hide';
 
+  // Styling for tables in conceptual documents using Bootstrap.
+  // See http://getbootstrap.com/css/#tables
+  (function () {
+    $('table').addClass('table table-bordered table-striped table-condensed');
+  })();
+
+  // Styling for alerts.
+  (function () {
+    $('.NOTE, .TIP').addClass('alert alert-info');
+    $('.WARNING').addClass('alert alert-warning');
+    $('.IMPORTANT, .CAUTION').addClass('alert alert-danger');
+  })();  
+
   // Enable highlight.js
   (function () {
     $('pre code').each(function(i, block) {
@@ -76,13 +89,11 @@ $(function () {
   // Support full-text-search
   (function () {
     var query;
-    var relHref = $("meta[property='docfx\\:rel']").attr("content");
-    if (relHref) {
-      var search = searchFactory();
-      search();
-      highlightKeywords();
-      addSearchEvent();
-    }
+    var relHref = $("meta[property='docfx\\:rel']").attr("content") || "";
+    var search = searchFactory();
+    search();
+    highlightKeywords();
+    addSearchEvent();
 
     // Search factory
     function searchFactory() {
@@ -249,7 +260,7 @@ $(function () {
             );
             query.split(/\s+/).forEach(function (word) {
               if (word !== '') {
-                highlight($('#search-results>.sr-items *'), word, "<strong>");
+                $('#search-results>.sr-items *').mark(word);
               }
             });
           }
@@ -304,10 +315,13 @@ $(function () {
             }
             if (isActive) {
               $(e).parent().addClass(active);
-              breadcrumb.insert({
-                href: e.href,
-                name: e.innerHTML
-              }, 0);
+              if (!breadcrumb.isNavPartLoaded) {
+                breadcrumb.insert({
+                  href: e.href,
+                  name: e.innerHTML
+                }, 0);
+                breadcrumb.isNavPartLoaded = true;
+              }
             } else {
               $(e).parent().removeClass(active)
             }
@@ -338,20 +352,25 @@ $(function () {
           if (getAbsolutePath(e.href) === currentHref) {
             $(e).parent().addClass(active);
             var parent = $(e).parent().parents('li').children('a');
+            if (!breadcrumb.isTocPartLoaded) {
+              for (var i = parent.length - 1; i >= 0; i--) {
+                breadcrumb.push({
+                  href: parent[i].href,
+                  name: parent[i].innerHTML
+                });
+              }
+              breadcrumb.push({
+                href: e.href,
+                name: e.innerHTML
+              });
+              breadcrumb.isTocPartLoaded = true;
+            }
             if (parent.length > 0) {
               parent.addClass(active);
-              breadcrumb.push({
-                href: parent[0].href,
-                name: parent[0].innerHTML
-              });
             }
             // for active li, expand it
             $(e).parents('ul.nav>li').addClass(expanded);
 
-            breadcrumb.push({
-              href: e.href,
-              name: e.innerHTML
-            });
             // Scroll to active item
             var top = 0;
             $(e).parents('li').each(function (i, e) {
@@ -429,6 +448,8 @@ $(function () {
 
     function Breadcrumb() {
       var breadcrumb = [];
+      var isNavPartLoaded = false;
+      var isTocPartLoaded = false;
       this.push = pushBreadcrumb;
       this.insert = insertBreadcrumb;
 

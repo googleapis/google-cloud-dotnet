@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Rpc
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -74,24 +75,24 @@
               <div class="markdown level0 remarks"></div>
                 <h3 id="classes">Classes
               </h3>
-                  <h4><a class="xref" href="Google.Rpc.BadRequest.html#Google_Rpc_BadRequest">BadRequest</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.BadRequest.html">BadRequest</a></h4>
                   <section><p>Describes violations in a client request. This error type focuses on the
 syntactic aspects of the request.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.DebugInfo.html#Google_Rpc_DebugInfo">DebugInfo</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.DebugInfo.html">DebugInfo</a></h4>
                   <section><p>Describes additional debugging info.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.Help.html#Google_Rpc_Help">Help</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.Help.html">Help</a></h4>
                   <section><p>Provides links to documentation or for performing an out of band action.</p>
 <p>For example, if a quota check failed with an error indicating the calling
 project hasn&#39;t enabled the accessed service, this can contain a URL pointing
 directly to the right place in the developer console to flip the bit.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.LocalizedMessage.html#Google_Rpc_LocalizedMessage">LocalizedMessage</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.LocalizedMessage.html">LocalizedMessage</a></h4>
                   <section><p>Provides a localized error message that is safe to return to the user
 which can be attached to an RPC error.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.QuotaFailure.html#Google_Rpc_QuotaFailure">QuotaFailure</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.QuotaFailure.html">QuotaFailure</a></h4>
                   <section><p>Describes how a quota check failed.</p>
 <p>For example if a daily limit was exceeded for the calling project,
 a service could respond with a QuotaFailure detail containing the project
@@ -102,14 +103,14 @@ to true.</p>
 <p>Also see RetryDetail and Help types for other details about handling a
 quota failure.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.RequestInfo.html#Google_Rpc_RequestInfo">RequestInfo</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.RequestInfo.html">RequestInfo</a></h4>
                   <section><p>Contains metadata about the request that clients can attach when filing a bug
 or providing other forms of feedback.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.ResourceInfo.html#Google_Rpc_ResourceInfo">ResourceInfo</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.ResourceInfo.html">ResourceInfo</a></h4>
                   <section><p>Describes the resource that is being accessed.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.RetryInfo.html#Google_Rpc_RetryInfo">RetryInfo</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.RetryInfo.html">RetryInfo</a></h4>
                   <section><p>Describes when the clients can retry a failed request. Clients could ignore
 the recommendation here or retry when this information is missing from error
 responses.</p>
@@ -122,7 +123,7 @@ the delay between retries based on <code>retry_delay</code>, until either a maxi
 number of retires have been reached or a maximum retry delay cap has been
 reached.</p>
 </section>
-                  <h4><a class="xref" href="Google.Rpc.Status.html#Google_Rpc_Status">Status</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.Status.html">Status</a></h4>
                   <section><p>The <code>Status</code> type defines a logical error model that is suitable for different
 programming environments, including REST APIs and RPC APIs. It is used by
 <a href="https://github.com/grpc">gRPC</a>. The error model is designed to be:</p>
@@ -174,14 +175,14 @@ be used directly after any stripping needed for security/privacy reasons.</p>
 </section>
                 <h3 id="enums">Enums
               </h3>
-                  <h4><a class="xref" href="Google.Rpc.Code.html#Google_Rpc_Code">Code</a></h4>
+                  <h4><a class="xref" href="Google.Rpc.Code.html">Code</a></h4>
                   <section><p>The canonical error codes for Google APIs.</p>
 <p>Sometimes multiple error codes may apply.  Services should return
 the most specific error code that applies.  For example, prefer
 <code>OUT_OF_RANGE</code> over <code>FAILED_PRECONDITION</code> if both codes apply.
 Similarly prefer <code>NOT_FOUND</code> or <code>ALREADY_EXISTS</code> over <code>FAILED_PRECONDITION</code>.</p>
 </section>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

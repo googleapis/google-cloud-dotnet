@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GoogleLoggerFactoryExtensions
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -70,7 +71,7 @@
               
               <h1 id="Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions" data-uid="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions">Class GoogleLoggerFactoryExtensions
               </h1>
-              <div class="markdown level0 summary"><p>Extensions to add <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerProvider">GoogleLoggerProvider</a>s to an <span class="xref">Microsoft.Extensions.Logging.ILoggerFactory</span>.</p>
+              <div class="markdown level0 summary"><p>Extensions to add <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html">GoogleLoggerProvider</a>s to an <span class="xref">Microsoft.Extensions.Logging.ILoggerFactory</span>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -115,8 +116,8 @@ Docs: <a href="https://cloud.google.com/logging/docs/">https://cloud.google.com/
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_" data-uid="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_Microsoft_Extensions_Logging_ILoggerFactory_Google_Cloud_Diagnostics_AspNetCore_LogTo_Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Google_Cloud_Logging_V2_LoggingServiceV2Client_" data-uid="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory,Google.Cloud.Diagnostics.AspNetCore.LogTo,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,Google.Cloud.Logging.V2.LoggingServiceV2Client)">AddGoogle(ILoggerFactory, LogTo, LoggerOptions, LoggingServiceV2Client)</h4>
-              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerProvider">GoogleLoggerProvider</a> for <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger">GoogleLogger</a>s.</p>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_Microsoft_Extensions_Logging_ILoggerFactory_Google_Cloud_Diagnostics_Common_LogTo_Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Google_Cloud_Logging_V2_LoggingServiceV2Client_" data-uid="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory,Google.Cloud.Diagnostics.Common.LogTo,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,Google.Cloud.Logging.V2.LoggingServiceV2Client)">AddGoogle(ILoggerFactory, LogTo, LoggerOptions, LoggingServiceV2Client)</h4>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html">GoogleLoggerProvider</a> for <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a>s.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -135,24 +136,25 @@ Docs: <a href="https://cloud.google.com/logging/docs/">https://cloud.google.com/
                 <tbody>
                   <tr>
                     <td><span class="xref">Microsoft.Extensions.Logging.ILoggerFactory</span></td>
-                    <td><em>factory</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LogTo.html#Google_Cloud_Diagnostics_AspNetCore_LogTo">LogTo</a></td>
-                    <td><em>logTo</em></td>
-                    <td><p>Where to log to. Cannot be null.</p>
+                    <td><span class="parametername">factory</span></td>
+                    <td><p>The logger factory. Cannot be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html#Google_Cloud_Diagnostics_AspNetCore_LoggerOptions">LoggerOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.LogTo.html">LogTo</a></td>
+                    <td><span class="parametername">logTo</span></td>
+                    <td><p>Where to log to. Cannot be null. Cannot be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html">LoggerOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td><p>Optional, options for the logger.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a></td>
-                    <td><em>client</em></td>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a></td>
+                    <td><span class="parametername">client</span></td>
                     <td><p>Optional, logging client.</p>
 </td>
                   </tr>
@@ -175,7 +177,7 @@ Docs: <a href="https://cloud.google.com/logging/docs/">https://cloud.google.com/
               </table>
               <a id="Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_" data-uid="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle*"></a>
               <h4 id="Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerFactoryExtensions_AddGoogle_Microsoft_Extensions_Logging_ILoggerFactory_System_String_Google_Cloud_Diagnostics_AspNetCore_LoggerOptions_Google_Cloud_Logging_V2_LoggingServiceV2Client_" data-uid="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerFactoryExtensions.AddGoogle(Microsoft.Extensions.Logging.ILoggerFactory,System.String,Google.Cloud.Diagnostics.AspNetCore.LoggerOptions,Google.Cloud.Logging.V2.LoggingServiceV2Client)">AddGoogle(ILoggerFactory, String, LoggerOptions, LoggingServiceV2Client)</h4>
-              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLoggerProvider">GoogleLoggerProvider</a> for <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger">GoogleLogger</a>s.</p>
+              <div class="markdown level1 summary"><p>Adds a <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLoggerProvider.html">GoogleLoggerProvider</a> for <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a>s.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -194,24 +196,25 @@ Docs: <a href="https://cloud.google.com/logging/docs/">https://cloud.google.com/
                 <tbody>
                   <tr>
                     <td><span class="xref">Microsoft.Extensions.Logging.ILoggerFactory</span></td>
-                    <td><em>factory</em></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
-                    <td><p>The Google Cloud Platform project ID.</p>
+                    <td><span class="parametername">factory</span></td>
+                    <td><p>The logger factory. Cannot be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html#Google_Cloud_Diagnostics_AspNetCore_LoggerOptions">LoggerOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">projectId</span></td>
+                    <td><p>The Google Cloud Platform project ID. Cannot be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.LoggerOptions.html">LoggerOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td><p>Optional, options for the logger.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client">LoggingServiceV2Client</a></td>
-                    <td><em>client</em></td>
+                    <td><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html">LoggingServiceV2Client</a></td>
+                    <td><span class="parametername">client</span></td>
                     <td><p>Optional, logging client.</p>
 </td>
                   </tr>
@@ -234,9 +237,9 @@ Docs: <a href="https://cloud.google.com/logging/docs/">https://cloud.google.com/
               </table>
               <h3 id="seealso">See Also</h3>
               <div class="seealso">
-                  <div><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html#Google_Cloud_Diagnostics_AspNetCore_GoogleLogger">GoogleLogger</a></div>
+                  <div><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.GoogleLogger.html">GoogleLogger</a></div>
               </div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

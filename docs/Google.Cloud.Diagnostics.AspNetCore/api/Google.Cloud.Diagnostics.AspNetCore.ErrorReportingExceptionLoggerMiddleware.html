@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ErrorReportingExceptionLoggerMiddleware
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -104,13 +105,13 @@ Stackdriver Error Reporting API and rethrow the given exception.</p>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Google_Cloud_Diagnostics_AspNetCore_IExceptionLogger_Google_Cloud_ErrorReporting_V1Beta1_ReportErrorEventResponse__" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Google.Cloud.Diagnostics.AspNetCore.IExceptionLogger{Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse})">ErrorReportingExceptionLoggerMiddleware(RequestDelegate, IExceptionLogger&lt;ReportErrorEventResponse&gt;)</h4>
-              <div class="markdown level1 summary"><p>Create a new instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html#Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware">ErrorReportingExceptionLoggerMiddleware</a>.</p>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_ErrorReportingExceptionLoggerMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Google_Cloud_Diagnostics_AspNetCore_IExceptionLogger_" data-uid="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Google.Cloud.Diagnostics.AspNetCore.IExceptionLogger)">ErrorReportingExceptionLoggerMiddleware(RequestDelegate, IExceptionLogger)</h4>
+              <div class="markdown level1 summary"><p>Create a new instance of <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.ErrorReportingExceptionLoggerMiddleware.html">ErrorReportingExceptionLoggerMiddleware</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ErrorReportingExceptionLoggerMiddleware(RequestDelegate next, IExceptionLogger&lt;ReportErrorEventResponse&gt; logger)</code></pre>
+                <pre><code class="lang-csharp hljs">public ErrorReportingExceptionLoggerMiddleware(RequestDelegate next, IExceptionLogger logger)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -124,15 +125,14 @@ Stackdriver Error Reporting API and rethrow the given exception.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Microsoft.AspNetCore.Http.RequestDelegate</span></td>
-                    <td><em>next</em></td>
+                    <td><span class="parametername">next</span></td>
                     <td><p>The next request delegate. Cannot be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.IExceptionLogger-1.html#Google_Cloud_Diagnostics_AspNetCore_IExceptionLogger_1">IExceptionLogger&lt;T&gt;</a>&lt;<a class="xref" href="Google.Cloud.ErrorReporting.V1Beta1.ReportErrorEventResponse.html#Google_Cloud_ErrorReporting_V1Beta1_ReportErrorEventResponse">ReportErrorEventResponse</a>&gt;</td>
-                    <td><em>logger</em></td>
-                    <td><p>A logger that will report exceptions to the Stackdriver
-    Error Reporting API. Cannot be null.</p>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.IExceptionLogger.html">IExceptionLogger</a></td>
+                    <td><span class="parametername">logger</span></td>
+                    <td><p>A logger that will report exceptions. Cannot be null.</p>
 </td>
                   </tr>
                 </tbody>
@@ -162,7 +162,7 @@ the exception.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Microsoft.AspNetCore.Http.HttpContext</span></td>
-                    <td><em>httpContext</em></td>
+                    <td><span class="parametername">httpContext</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -182,7 +182,7 @@ the exception.</p>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
