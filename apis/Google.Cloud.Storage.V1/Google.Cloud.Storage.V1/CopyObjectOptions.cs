@@ -16,6 +16,7 @@ using Google.Api.Gax;
 using System;
 using static Google.Apis.Storage.v1.ObjectsResource;
 using static Google.Apis.Storage.v1.ObjectsResource.RewriteRequest;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1
 {
@@ -89,6 +90,13 @@ namespace Google.Cloud.Storage.V1
         /// meta-generation does not match the given value.
         /// </summary>
         public long? IfSourceMetagenerationNotMatch { get; set; }
+
+        /// <summary>
+        /// Additional object metadata for the new object. This can be used to specify the storage
+        /// class of the new object, the content type etc. If this property is not set, the existing
+        /// object metadata will be used unchanged.
+        /// </summary>
+        public Object ExtraMetadata { get; set; }
 
         internal void ModifyRequest(RewriteRequest request)
         {

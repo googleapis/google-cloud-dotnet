@@ -15,6 +15,7 @@
 using System;
 using System.Linq;
 using Xunit;
+using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests
 {
@@ -28,14 +29,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public CopyObjectTest(StorageFixture fixture)
         {
             _fixture = fixture;
-        }
-
-        [Fact]
-        public void DestinationEqualsSourceIsProhibited()
-        {
-            var bucket = _fixture.ReadBucket;
-            var name = _fixture.SmallObject;
-            Assert.Throws<ArgumentException>(() => _fixture.Client.CopyObject(bucket, name, bucket, name));
         }
 
         [Fact]
@@ -69,6 +62,29 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 _fixture.SingleVersionBucket, destName);
 
             ValidateData(_fixture.SingleVersionBucket, destName, _fixture.LargeContent);
+        }
+
+        [Fact]
+        public void NoMetadataOverride()
+        {
+            var destName = GenerateName();
+            _fixture.Client.CopyObject(
+                _fixture.ReadBucket, _fixture.SmallThenLargeObject,
+                _fixture.SingleVersionBucket, destName);
+            Object fetched = _fixture.Client.GetObject(_fixture.SingleVersionBucket, destName);
+            Assert.Equal("text/plain", fetched.ContentType);
+        }
+
+        [Fact]
+        public void MetadataOverride()
+        {
+            var destName = GenerateName();
+            _fixture.Client.CopyObject(
+                _fixture.ReadBucket, _fixture.SmallThenLargeObject,
+                _fixture.SingleVersionBucket, destName,
+                new CopyObjectOptions { ExtraMetadata = new Object { ContentType = "text/html" } });
+            Object fetched = _fixture.Client.GetObject(_fixture.SingleVersionBucket, destName);
+            Assert.Equal("text/html", fetched.ContentType);
         }
     }
 }
