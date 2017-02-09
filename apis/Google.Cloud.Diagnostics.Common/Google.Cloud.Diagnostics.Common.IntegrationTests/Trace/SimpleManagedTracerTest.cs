@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Trace.V1;
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Protobuf.WellKnownTypes;
 using System;
@@ -24,13 +23,11 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-using LabelsCommon = Google.Cloud.Diagnostics.Common.TraceLabels;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
-using Google.Cloud.Diagnostics.Common.IntegrationTests;
 
-namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
+namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
-    public class TraceTest
+    public class SimpleManagedTracerTest
     {
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
 
@@ -169,7 +166,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
-            tracer.SetStackTrace(new StackTrace(true));
+            tracer.SetStackTrace(new StackTrace(new Exception(), true));
             tracer.EndSpan();
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
@@ -177,9 +174,9 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             Assert.Single(trace.Spans);
 
             var labels = trace.Spans[0].Labels;
-            Assert.True(labels.ContainsKey(LabelsCommon.StackTrace));
-            Assert.Contains(nameof(Trace_SimpleStacktrace), labels[LabelsCommon.StackTrace]);
-            Assert.Contains(nameof(TraceTest), labels[LabelsCommon.StackTrace]);
+            Assert.True(labels.ContainsKey(TraceLabels.StackTrace));
+            Assert.Contains(nameof(Trace_SimpleStacktrace), labels[TraceLabels.StackTrace]);
+            Assert.Contains(nameof(SimpleManagedTracerTest), labels[TraceLabels.StackTrace]);
         }
 
         [Fact]
@@ -197,7 +194,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
             tracer.StartSpan("child-one");
-            tracer.SetStackTrace(new StackTrace(true));
+            tracer.SetStackTrace(new StackTrace(new Exception(), true));
             BlockUntilClockTick();
             tracer.EndSpan();
             tracer.StartSpan("child-two");
@@ -224,9 +221,9 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
 
             Assert.Equal(root.SpanId, childOne.ParentSpanId);
             var labels = childOne.Labels;
-            Assert.True(labels.ContainsKey(LabelsCommon.StackTrace));
-            Assert.Contains(nameof(Trace_MultipleSpans), labels[LabelsCommon.StackTrace]);
-            Assert.Contains(nameof(TraceTest), labels[LabelsCommon.StackTrace]);
+            Assert.True(labels.ContainsKey(TraceLabels.StackTrace));
+            Assert.Contains(nameof(Trace_MultipleSpans), labels[TraceLabels.StackTrace]);
+            Assert.Contains(nameof(SimpleManagedTracerTest), labels[TraceLabels.StackTrace]);
 
             Assert.Equal(root.SpanId, childTwo.ParentSpanId);
 
