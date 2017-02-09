@@ -29,9 +29,8 @@ namespace Google.Cloud.Storage.V1
         /// <param name="sourceObjectName">The name of the object to copy within the bucket. Must not be null.</param>
         /// <param name="destinationBucket">The name of the bucket to copy the object to. Must not be null.</param>
         /// <param name="destinationObjectName">The name of the object within the destination bucket. Must not be null.</param>
-        /// <param name="options">Additional options for the fetch operation. May be null, in which case appropriate
+        /// <param name="options">Additional options for the copy operation. May be null, in which case appropriate
         /// defaults will be used.</param>
-        /// <exception cref="ArgumentException">The arguments attempt to copy an object to itself.</exception>
         /// <returns>The <see cref="Object"/> representation of the new storage object resulting from the copy.</returns>
         public virtual Object CopyObject(
             string sourceBucket,
@@ -51,9 +50,8 @@ namespace Google.Cloud.Storage.V1
         /// <param name="sourceObjectName">The name of the object to copy within the bucket. Must not be null.</param>
         /// <param name="destinationBucket">The name of the bucket to copy the object to. Must not be null.</param>
         /// <param name="destinationObjectName">The name of the object within the destination bucket. Must not be null.</param>
-        /// <param name="options">Additional options for the fetch operation. May be null, in which case appropriate
+        /// <param name="options">Additional options for the copy operation. May be null, in which case appropriate
         /// defaults will be used.</param>
-        /// <exception cref="ArgumentException">The arguments attempt to copy an object to itself.</exception>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation, with a result returning the
         /// <see cref="Object"/> representation of the new storage object resulting from the copy.</returns>
