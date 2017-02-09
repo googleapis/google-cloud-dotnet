@@ -25,10 +25,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         internal const int ConflictStatusCode = 409;
         internal const string ServiceName = "SomeService";
-        internal const string VersionName = "1.0.0";        
-        internal const string UserAgentValue = "user-agent-1.0";
+        internal const string VersionName = "1.0.0";
+        internal const string UserAgentKey = "user-agent";
+        internal const string UserAgentValue = "1.0";    
         internal const string DeleteMethod = "DELETE";
         internal const string ExceptionMessage = "some exception message";
+        internal static readonly string UserAgent = $"{UserAgentKey}/{UserAgentValue}";
         internal static readonly Uri GoogleUri = new Uri("https://www.google.com");
 
         private readonly string _defaultUri;
@@ -73,7 +75,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 var e = enumerable.Single();
                 return e.Message.Contains(ExceptionMessage) &&
                     e.EventTime.Seconds <= Timestamp.FromDateTime(DateTime.UtcNow).Seconds &&
-                    e.Context.HttpRequest.Method.Contains(_defaultMethod) &&
+                    e.Context.HttpRequest.Method.Equals(_defaultMethod) &&
                     e.Context.HttpRequest.Url.Contains(_defaultUri) &&
                     string.IsNullOrEmpty(e.Context.HttpRequest.UserAgent) &&
                     e.Context.HttpRequest.ResponseStatusCode == 0 &&
@@ -92,7 +94,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// <term>The EventTime less than or equal to now</term>
         /// <term>The HttpMethod is <see cref="DeleteMethod"/></term>
         /// <term>The Url is <see cref="GoogleUri"/></term>
-        /// <term>The UserAgent is <see cref="UserAgentValue"/></term>
+        /// <term>The UserAgent is <see cref="UserAgent"/></term>
         /// <term>The ResponseStatusCode is <see cref="ConflictStatusCode"/></term>
         /// <term>The LineNumber is greater than 0</term>
         /// <term>The FilePath is not empty or null</term>
@@ -109,7 +111,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     e.EventTime.Seconds <= Timestamp.FromDateTime(DateTime.UtcNow).Seconds &&
                     e.Context.HttpRequest.Method.Equals(DeleteMethod) &&
                     e.Context.HttpRequest.Url.Contains(GoogleUri.ToString()) &&
-                    e.Context.HttpRequest.UserAgent.Equals(UserAgentValue) &&
+                    e.Context.HttpRequest.UserAgent.Equals(UserAgent) &&
                     e.Context.HttpRequest.ResponseStatusCode == ConflictStatusCode &&
                     (!_isWindows || e.Context.ReportLocation.LineNumber > 0) &&
                     (!_isWindows || !string.IsNullOrEmpty(e.Context.ReportLocation.FilePath)) &&

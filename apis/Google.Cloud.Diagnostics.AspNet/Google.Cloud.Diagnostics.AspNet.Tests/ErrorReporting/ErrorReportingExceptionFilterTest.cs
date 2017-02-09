@@ -57,7 +57,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             var mockRequest = new Mock<HttpRequestBase>();
             mockRequest.Setup(r => r.HttpMethod).Returns(ErrorReportingMatching.DeleteMethod);
             mockRequest.Setup(r => r.Url).Returns(ErrorReportingMatching.GoogleUri);
-            mockRequest.Setup(r => r.UserAgent).Returns(ErrorReportingMatching.UserAgentValue);
+            mockRequest.Setup(r => r.UserAgent).Returns(ErrorReportingMatching.UserAgent);
 
             var mockResponse = new Mock<HttpResponseBase>();
             mockResponse.Setup(r => r.StatusCode).Returns(ErrorReportingMatching.ConflictStatusCode);

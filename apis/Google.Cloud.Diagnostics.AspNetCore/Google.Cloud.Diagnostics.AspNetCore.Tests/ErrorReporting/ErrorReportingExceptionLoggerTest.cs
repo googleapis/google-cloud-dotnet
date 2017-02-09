@@ -41,7 +41,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var request = context.Request;
             request.Method = ErrorReportingMatching.DeleteMethod;
             request.Host = new HostString(s_googleUri);
-            request.Headers["User-Agent"] = ErrorReportingMatching.UserAgentValue;
+            request.Headers["User-Agent"] = ErrorReportingMatching.UserAgent;
 
             var response = context.Response;
             response.StatusCode = ErrorReportingMatching.ConflictStatusCode;
