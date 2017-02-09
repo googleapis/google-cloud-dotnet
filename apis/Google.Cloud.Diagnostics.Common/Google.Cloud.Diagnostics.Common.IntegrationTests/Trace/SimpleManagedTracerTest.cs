@@ -166,7 +166,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
-            tracer.SetStackTrace(new StackTrace(true));
+            tracer.SetStackTrace(new StackTrace(new Exception(), true));
             tracer.EndSpan();
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
@@ -194,7 +194,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
             tracer.StartSpan("child-one");
-            tracer.SetStackTrace(new StackTrace(true));
+            tracer.SetStackTrace(new StackTrace(new Exception(), true));
             BlockUntilClockTick();
             tracer.EndSpan();
             tracer.StartSpan("child-two");
