@@ -27,9 +27,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         internal const string ServiceName = "SomeService";
         internal const string VersionName = "1.0.0";        
         internal const string UserAgentValue = "user-agent-1.0";
+        internal const string DeleteMethod = "DELETE";
+        internal const string ExceptionMessage = "some exception message";
         internal static readonly Uri GoogleUri = new Uri("https://www.google.com");
-        internal static readonly string DeleteMethod = "DELETE";
-        internal static readonly string ExceptionMessage = "some exception message";
 
         private readonly string _defaultUri;
         private readonly string _defaultMethod;
@@ -53,17 +53,19 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         /// <summary>
         /// Matcher to check if an <see cref="IEnumerable{ReportedErrorEvent}"/> contains
-        /// one element and matches the following:
-        ///   - The EventTime less than or equal to now
-        ///   - The HttpMethod matches the default http method
-        ///   - The Url matches the default url
-        ///   - The UserAgent is empty or null
-        ///   - The ResponseStatusCode is "0"
-        ///   - The LineNumber is "0"
-        ///   - The FilePath is empty or null
-        ///   - The FunctionName is empty or null
-        ///   - The Service is <see cref="ServiceName"/>
-        ///   - The Version is <see cref="VersionName"/>
+        /// one element and matches the following: 
+        /// <list type="bullet">
+        /// <term>The EventTime less than or equal to now</term>
+        /// <term>The HttpMethod matches the default http method</term>
+        /// <term>The Url matches the default url</term>
+        /// <term>The UserAgent is empty or null</term>
+        /// <term>The ResponseStatusCode is "0"</term>
+        /// <term>The LineNumber is "0"</term>
+        /// <term>The FilePath is empty or null</term>
+        /// <term>The FunctionName is empty or null</term>
+        /// <term>The Service is <see cref="ServiceName"/></term>
+        /// <term>The Version is <see cref="VersionName"/></term>
+        /// </list>
         /// </summary>
         internal IEnumerable<ReportedErrorEvent> IsSimpleContext()
         {
@@ -86,16 +88,18 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         /// <summary>
         /// Matcher to check if an <see cref="IEnumerable{ReportedErrorEvent}>"/> contains
         /// one element and matches the following:
-        ///   - The EventTime less than or equal to now
-        ///   - The HttpMethod is <see cref="DeleteMethod"/>
-        ///   - The Url is <see cref="GoogleUri"/>
-        ///   - The UserAgent is <see cref="UserAgentValue"/>
-        ///   - The ResponseStatusCode is <see cref="ConflictStatusCode"/>
-        ///   - The LineNumber is greater than 0
-        ///   - The FilePath is not empty or null
-        ///   - The FunctionName is the name of <see cref="CreateException"/>
-        ///   - The Service is <see cref="ServiceName"/>
-        ///   - The Version is <see cref="VersionName"/>
+        /// <list type="bullet">
+        /// <term>The EventTime less than or equal to now</term>
+        /// <term>The HttpMethod is <see cref="DeleteMethod"/></term>
+        /// <term>The Url is <see cref="GoogleUri"/></term>
+        /// <term>The UserAgent is <see cref="UserAgentValue"/></term>
+        /// <term>The ResponseStatusCode is <see cref="ConflictStatusCode"/></term>
+        /// <term>The LineNumber is greater than 0</term>
+        /// <term>The FilePath is not empty or null</term>
+        /// <term>The FunctionName is the name of <see cref="CreateException"/></term>
+        /// <term>The Service is <see cref="ServiceName"/></term>
+        /// <term>The Version is <see cref="VersionName"/></term>
+        /// </list>
         /// </summary>
         internal IEnumerable<ReportedErrorEvent> IsComplexContext()
         {

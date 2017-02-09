@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             new ErrorReportingMatching(ErrorReportingUtils.IsWindows, defaultMethod: "GET");
 
         private static readonly ProductInfoHeaderValue s_userAgentValue = 
-            new ProductInfoHeaderValue(ErrorReportingMatching.UserAgentValue, "");
+            new ProductInfoHeaderValue(ErrorReportingMatching.UserAgentValue, "1.0");
 
         /// <summary>
         /// An <see cref="ExceptionContext"/> that matches expected 
