@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Api
    | Google.Cloud.ErrorReporting.V1Beta1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -74,11 +75,11 @@
               <div class="markdown level0 remarks"></div>
                 <h3 id="classes">Classes
               </h3>
-                  <h4><a class="xref" href="Google.Api.Advice.html#Google_Api_Advice">Advice</a></h4>
+                  <h4><a class="xref" href="Google.Api.Advice.html">Advice</a></h4>
                   <section><p>Generated advice about this change, used for providing more
 information about how a change will affect the existing service.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Authentication.html#Google_Api_Authentication">Authentication</a></h4>
+                  <h4><a class="xref" href="Google.Api.Authentication.html">Authentication</a></h4>
                   <section><p><code>Authentication</code> defines the authentication configuration for an API.</p>
 <p>Example for an API targeted for external use:</p>
 <p>name: calendar.googleapis.com
@@ -95,7 +96,7 @@ oauth:
 </li>
 </ul>
 </section>
-                  <h4><a class="xref" href="Google.Api.AuthenticationRule.html#Google_Api_AuthenticationRule">AuthenticationRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.AuthenticationRule.html">AuthenticationRule</a></h4>
                   <section><p>Authentication rules for the service.</p>
 <p>By default, if a method has any authentication requirements, every request
 must include a valid credential matching one of the requirements.
@@ -104,21 +105,21 @@ request.</p>
 <p>If a method doesn&#39;t have any auth requirements, request credentials will be
 ignored.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.AuthProvider.html#Google_Api_AuthProvider">AuthProvider</a></h4>
+                  <h4><a class="xref" href="Google.Api.AuthProvider.html">AuthProvider</a></h4>
                   <section><p>Configuration for an anthentication provider, including support for
 <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32">JSON Web Token (JWT)</a>.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.AuthRequirement.html#Google_Api_AuthRequirement">AuthRequirement</a></h4>
+                  <h4><a class="xref" href="Google.Api.AuthRequirement.html">AuthRequirement</a></h4>
                   <section><p>User-defined authentication requirements, including support for
 <a href="https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32">JSON Web Token (JWT)</a>.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Backend.html#Google_Api_Backend">Backend</a></h4>
+                  <h4><a class="xref" href="Google.Api.Backend.html">Backend</a></h4>
                   <section><p><code>Backend</code> defines the backend configuration for a service.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.BackendRule.html#Google_Api_BackendRule">BackendRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.BackendRule.html">BackendRule</a></h4>
                   <section><p>A backend rule provides configuration for an individual API element.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Billing.html#Google_Api_Billing">Billing</a></h4>
+                  <h4><a class="xref" href="Google.Api.Billing.html">Billing</a></h4>
                   <section><p>Billing related configuration of the service.</p>
 <p>The following example shows how to configure metrics for billing:</p>
 <p>metrics:</p>
@@ -159,7 +160,7 @@ In addition, services can choose to allow both <code>current</code> and <code>de
 statuses when serving read-only requests to resources. If there&#39;s no
 matching selector for operation, no billing status check will be performed.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.BillingStatusRule.html#Google_Api_BillingStatusRule">BillingStatusRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.BillingStatusRule.html">BillingStatusRule</a></h4>
                   <section><p>Defines the billing status requirements for operations.</p>
 <p>When used with
 <a href="https://cloud.google.com/service-control/">Service Control API</a>, the
@@ -175,14 +176,14 @@ In addition, services can choose to allow both <code>current</code> and <code>de
 statuses when serving read-only requests to resources. If the list of
 allowed_statuses is empty, it means no billing requirement.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.ConfigChange.html#Google_Api_ConfigChange">ConfigChange</a></h4>
+                  <h4><a class="xref" href="Google.Api.ConfigChange.html">ConfigChange</a></h4>
                   <section><p>Output generated from semantically comparing two versions of a service
 configuration.</p>
 <p>Includes detailed information about a field that have changed with
 applicable advice about potential consequences for the change, such as
 backwards-incompatibility.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Context.html#Google_Api_Context">Context</a></h4>
+                  <h4><a class="xref" href="Google.Api.Context.html">Context</a></h4>
                   <section><p><code>Context</code> defines which contexts an API requests.</p>
 <p>Example:</p>
 <p>context:
@@ -201,19 +202,19 @@ requested:<ul>
 <p>Available context types are defined in package
 <code>google.rpc.context</code>.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.ContextRule.html#Google_Api_ContextRule">ContextRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.ContextRule.html">ContextRule</a></h4>
                   <section><p>A context rule provides information about the context for an individual API
 element.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Control.html#Google_Api_Control">Control</a></h4>
+                  <h4><a class="xref" href="Google.Api.Control.html">Control</a></h4>
                   <section><p>Selects and configures the service controller used by the service.  The
 service controller handles features like abuse, quota, billing, logging,
 monitoring, etc.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.CustomHttpPattern.html#Google_Api_CustomHttpPattern">CustomHttpPattern</a></h4>
+                  <h4><a class="xref" href="Google.Api.CustomHttpPattern.html">CustomHttpPattern</a></h4>
                   <section><p>A custom pattern is used for defining custom HTTP verb.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Distribution.html#Google_Api_Distribution">Distribution</a></h4>
+                  <h4><a class="xref" href="Google.Api.Distribution.html">Distribution</a></h4>
                   <section><p>Distribution contains summary statistics for a population of values and,
 optionally, a histogram representing the distribution of those values across
 a specified set of histogram buckets.</p>
@@ -227,7 +228,7 @@ explicitly or by specifying parameters for a method of computing them
 non-finite values (infinities or NaNs) in the population of values, as this
 will render the <code>mean</code> and <code>sum_of_squared_deviation</code> fields meaningless.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Documentation.html#Google_Api_Documentation">Documentation</a></h4>
+                  <h4><a class="xref" href="Google.Api.Documentation.html">Documentation</a></h4>
                   <section><p><code>Documentation</code> provides the information for describing a service.</p>
 <p>Example:
 &lt;pre&gt;&lt;code&gt;documentation:
@@ -284,10 +285,10 @@ to infer the resource from the operations in a collection:
 The directive <code>suppress_warning</code> does not directly affect documentation
 and is documented together with service config validation.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.DocumentationRule.html#Google_Api_DocumentationRule">DocumentationRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.DocumentationRule.html">DocumentationRule</a></h4>
                   <section><p>A documentation rule provides information about individual API elements.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Endpoint.html#Google_Api_Endpoint">Endpoint</a></h4>
+                  <h4><a class="xref" href="Google.Api.Endpoint.html">Endpoint</a></h4>
                   <section><p><code>Endpoint</code> describes a network endpoint that serves a set of APIs.
 A service may expose any number of endpoints, and all endpoints share the
 same service configuration, such as quota configuration and monitoring
@@ -325,12 +326,12 @@ apis: google.example.library.v1.LibraryManager
  }]
 }</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Http.html#Google_Api_Http">Http</a></h4>
+                  <h4><a class="xref" href="Google.Api.Http.html">Http</a></h4>
                   <section><p>Defines the HTTP configuration for a service. It contains a list of
 [HttpRule][google.api.HttpRule], each specifying the mapping of an RPC method
 to one or more HTTP REST API methods.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.HttpBody.html#Google_Api_HttpBody">HttpBody</a></h4>
+                  <h4><a class="xref" href="Google.Api.HttpBody.html">HttpBody</a></h4>
                   <section><p>Message that represents an arbitrary HTTP body. It should only be used for
 payload formats that can&#39;t be represented as JSON, such as raw binary or
 an HTML page.</p>
@@ -360,7 +361,7 @@ request fields and also want access to the raw HTTP body.</p>
 <p>Use of this type only changes how the request and response bodies are
 handled, all other features will continue to work unchanged.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.HttpRule.html#Google_Api_HttpRule">HttpRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.HttpRule.html">HttpRule</a></h4>
                   <section><p><code>HttpRule</code> defines the mapping of an RPC method to one or more HTTP
 REST APIs.  The mapping determines what portions of the request
 message are populated from the path, query parameters, or body of
@@ -579,10 +580,10 @@ repeated fields or map fields.</p>
 a given URL path rule. The wild-card rule is useful for services that provide
 content to Web (HTML) clients.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.LabelDescriptor.html#Google_Api_LabelDescriptor">LabelDescriptor</a></h4>
+                  <h4><a class="xref" href="Google.Api.LabelDescriptor.html">LabelDescriptor</a></h4>
                   <section><p>A description of a label.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.LogDescriptor.html#Google_Api_LogDescriptor">LogDescriptor</a></h4>
+                  <h4><a class="xref" href="Google.Api.LogDescriptor.html">LogDescriptor</a></h4>
                   <section><p>A description of a log type. Example in YAML format:</p>
 <ul>
 <li>name: library.googleapis.com/activity_history
@@ -595,7 +596,7 @@ description: Identifier of a library customer</li>
 </li>
 </ul>
 </section>
-                  <h4><a class="xref" href="Google.Api.Logging.html#Google_Api_Logging">Logging</a></h4>
+                  <h4><a class="xref" href="Google.Api.Logging.html">Logging</a></h4>
                   <section><p>Logging configuration of the service.</p>
 <p>The following example shows how to configure logs to be sent to the
 producer and consumer projects. In the example,
@@ -638,14 +639,14 @@ logs:<ul>
 </li>
 </ul>
 </section>
-                  <h4><a class="xref" href="Google.Api.Metric.html#Google_Api_Metric">Metric</a></h4>
+                  <h4><a class="xref" href="Google.Api.Metric.html">Metric</a></h4>
                   <section><p>A specific metric identified by specifying values for all of the
 labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></h4>
+                  <h4><a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a></h4>
                   <section><p>Defines a metric type and its schema.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.MonitoredResource.html#Google_Api_MonitoredResource">MonitoredResource</a></h4>
+                  <h4><a class="xref" href="Google.Api.MonitoredResource.html">MonitoredResource</a></h4>
                   <section><p>An object representing a resource that can be used for monitoring, logging,
 billing, or other purposes. Examples include virtual machine instances,
 databases, and storage devices such as disks. The <code>type</code> field identifies a
@@ -659,7 +660,7 @@ Engine VM instance could be represented by the following object, because the
  &quot;labels&quot;: { &quot;instance_id&quot;: &quot;12345678901234&quot;,
              &quot;zone&quot;: &quot;us-central1-a&quot; }}</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a></h4>
+                  <h4><a class="xref" href="Google.Api.MonitoredResourceDescriptor.html">MonitoredResourceDescriptor</a></h4>
                   <section><p>An object that describes the schema of a [MonitoredResource][google.api.MonitoredResource] object using a
 type name and a set of labels.  For example, the monitored resource
 descriptor for Google Compute Engine VM instances has a type of
@@ -669,7 +670,7 @@ descriptor for Google Compute Engine VM instances has a type of
 provide a <code>list</code> method that returns the monitored resource descriptors used
 by the API.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Monitoring.html#Google_Api_Monitoring">Monitoring</a></h4>
+                  <h4><a class="xref" href="Google.Api.Monitoring.html">Monitoring</a></h4>
                   <section><p>Monitoring configuration of the service.</p>
 <p>The example below shows how to configure monitored resources and metrics
 for monitoring. In the example, a monitored resource and two metrics are
@@ -718,7 +719,7 @@ metrics:<ul>
 </li>
 </ul>
 </section>
-                  <h4><a class="xref" href="Google.Api.OAuthRequirements.html#Google_Api_OAuthRequirements">OAuthRequirements</a></h4>
+                  <h4><a class="xref" href="Google.Api.OAuthRequirements.html">OAuthRequirements</a></h4>
                   <section><p>OAuth scopes are a way to define data and permissions on data. For example,
 there are scopes defined for &quot;Read-only access to Google Calendar&quot; and
 &quot;Access to Cloud Platform&quot;. Users can consent to a scope for an application,
@@ -734,11 +735,11 @@ management about how developers will use them in practice.</p>
 request to be accepted and passed to the backend, a request can still fail
 due to the backend requiring additional scopes or permissions.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Page.html#Google_Api_Page">Page</a></h4>
+                  <h4><a class="xref" href="Google.Api.Page.html">Page</a></h4>
                   <section><p>Represents a documentation page. A page can contain subpages to represent
 nested documentation set structure.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.ProjectProperties.html#Google_Api_ProjectProperties">ProjectProperties</a></h4>
+                  <h4><a class="xref" href="Google.Api.ProjectProperties.html">ProjectProperties</a></h4>
                   <section><p>A descriptor for defining project properties for a service. One service may
 have many consumer projects, and the service may want to behave differently
 depending on some properties on the project. For example, a project may be
@@ -756,7 +757,7 @@ description: Allows usage of the API without watermarks.</li>
 type: INT64</li>
 </ul>
 </section>
-                  <h4><a class="xref" href="Google.Api.Property.html#Google_Api_Property">Property</a></h4>
+                  <h4><a class="xref" href="Google.Api.Property.html">Property</a></h4>
                   <section><p>Defines project properties.</p>
 <p>API services can define properties that can be assigned to consumer projects
 so that backends can perform response customization without having to make
@@ -766,7 +767,7 @@ watermark in a result.</p>
 <p>These values can be set via API producer console. Only API providers can
 define and set these properties.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Service.html#Google_Api_Service">Service</a></h4>
+                  <h4><a class="xref" href="Google.Api.Service.html">Service</a></h4>
                   <section><p><code>Service</code> is the root object of the configuration schema. It
 describes basic information like the name of the service and the
 exposed API interfaces, and delegates other aspects to configuration
@@ -787,26 +788,26 @@ address: calendar.example.com</li>
 </li>
 </ul>
 </section>
-                  <h4><a class="xref" href="Google.Api.SystemParameter.html#Google_Api_SystemParameter">SystemParameter</a></h4>
+                  <h4><a class="xref" href="Google.Api.SystemParameter.html">SystemParameter</a></h4>
                   <section><p>Define a parameter&#39;s name and location. The parameter may be passed as either
 an HTTP header or a URL query parameter, and if both are passed the behavior
 is implementation-dependent.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.SystemParameterRule.html#Google_Api_SystemParameterRule">SystemParameterRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.SystemParameterRule.html">SystemParameterRule</a></h4>
                   <section><p>Define a system parameter rule mapping system parameter definitions to
 methods.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.SystemParameters.html#Google_Api_SystemParameters">SystemParameters</a></h4>
+                  <h4><a class="xref" href="Google.Api.SystemParameters.html">SystemParameters</a></h4>
                   <section><h3 id="system-parameter-configuration">System parameter configuration</h3>
 <p>A system parameter is a special kind of parameter defined by the API
 system, not by an individual API. It is typically mapped to an HTTP header
 and/or a URL query parameter. This configuration specifies which methods
 change the names of the system parameters.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.Usage.html#Google_Api_Usage">Usage</a></h4>
+                  <h4><a class="xref" href="Google.Api.Usage.html">Usage</a></h4>
                   <section><p>Configuration controlling usage of a service.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.UsageRule.html#Google_Api_UsageRule">UsageRule</a></h4>
+                  <h4><a class="xref" href="Google.Api.UsageRule.html">UsageRule</a></h4>
                   <section><p>Usage configuration rules for the service.</p>
 <p>NOTE: Under development.</p>
 <p>Use this rule to configure unregistered calls for the service. Unregistered
@@ -832,14 +833,14 @@ allow_unregistered_calls: true</li>
 </section>
                 <h3 id="enums">Enums
               </h3>
-                  <h4><a class="xref" href="Google.Api.ChangeType.html#Google_Api_ChangeType">ChangeType</a></h4>
+                  <h4><a class="xref" href="Google.Api.ChangeType.html">ChangeType</a></h4>
                   <section><p>Classifies set of possible modifications to an object in the service
 configuration.</p>
 </section>
-                  <h4><a class="xref" href="Google.Api.HttpRule.PatternOneofCase.html#Google_Api_HttpRule_PatternOneofCase">HttpRule.PatternOneofCase</a></h4>
+                  <h4><a class="xref" href="Google.Api.HttpRule.PatternOneofCase.html">HttpRule.PatternOneofCase</a></h4>
                   <section><p>Enum of possible cases for the &quot;pattern&quot; oneof.</p>
 </section>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
