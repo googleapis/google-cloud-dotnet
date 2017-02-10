@@ -304,7 +304,7 @@ namespace Google.Cloud.Storage.V1
             {
                 requestMethod = HttpMethod.Get;
             }
-            else if (requestMethod.Equals(ResumableHttpMethod))
+            else if (requestMethod == ResumableHttpMethod)
             {
                 isResumableUpload = true;
                 requestMethod = HttpMethod.Post;

@@ -85,7 +85,7 @@ namespace Google.Cloud.Storage.V1
         /// The session URI to use for the resumable upload.
         /// </returns>
         public static Uri InitiateSession(string signedUrl, ResumableUploadOptions options = null) =>
-            GetResult(token => InitiateSessionAsync(signedUrl, options));
+            InitiateSessionAsync(signedUrl, options).ResultWithUnwrappedExceptions();
 
         /// <summary>
         /// Initiates the resumable upload session by posting to the signed URL and returns the session URI.
@@ -104,20 +104,10 @@ namespace Google.Cloud.Storage.V1
             ResumableUploadOptions options = null,
             CancellationToken cancellationToken = default(CancellationToken))
         {
+            // We need an instance to call ExceptionForResponseAsync if the initiate request fails, so create a
+            // temporary instance to initiate the session.
             var uploader = new SignedUrlResumableUpload(signedUrl, new MemoryStream(), options);
             return uploader.InitiateSessionAsync(cancellationToken);
-        }
-
-        private static T GetResult<T>(Func<CancellationToken, Task<T>> operation)
-        {
-            try
-            {
-                return operation(CancellationToken.None).Result;
-            }
-            catch (AggregateException e)
-            {
-                throw e.InnerExceptions.FirstOrDefault() ?? e;
-            }
         }
     }
 }
