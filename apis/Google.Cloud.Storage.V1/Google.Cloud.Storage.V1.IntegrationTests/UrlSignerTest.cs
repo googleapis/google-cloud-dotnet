@@ -196,10 +196,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     var encryptingClient = StorageClient.Create(encryptionKey: key);
                     encryptingClient.UploadObject(bucket, name, "application/octet-stream", new MemoryStream(data));
 
-                    // Make sure the encryption succeeded.
-                    await Assert.ThrowsAsync<GoogleApiException>(
-                        () => _fixture.Client.DownloadObjectAsync(bucket, name, new MemoryStream()));
-
                     var request = createGetRequest();
                     url = _fixture.UrlSigner.Sign(bucket, name, duration, request);
                     request.RequestUri = new Uri(url);
@@ -415,6 +411,61 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         }
 
         [Fact]
+        public async Task PutWithCustomerSuppliedEncryptionKeysTest() => await _fixture.FinishDelayTest(GetTestName());
+
+        private void PutWithCustomerSuppliedEncryptionKeysTest_InitDelayTest()
+        {
+            var bucket = _fixture.SingleVersionBucket;
+            var name = GenerateName();
+            var data = _fixture.SmallContent;
+            string url = null;
+
+            EncryptionKey key = EncryptionKey.Generate();
+
+            Func<HttpRequestMessage> createPutRequest = () =>
+            {
+                var request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Put,
+                    Content = new ByteArrayContent(data)
+                };
+                key.ModifyRequest(request);
+                return request;
+            };
+
+            _fixture.RegisterDelayTest(_duration,
+                beforeDelay: async duration =>
+                {
+                    var request = createPutRequest();
+                    url = _fixture.UrlSigner.Sign(bucket, name, duration, request);
+
+                    // Verify that the URL works initially.
+                    request.RequestUri = new Uri(url);
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    Assert.True(response.IsSuccessStatusCode);
+
+                    // Make sure the encryption succeeded.
+                    var downloadedData = new MemoryStream();
+                    await Assert.ThrowsAsync<GoogleApiException>(
+                        () => _fixture.Client.DownloadObjectAsync(bucket, name, downloadedData));
+
+                    await _fixture.Client.DownloadObjectAsync(bucket, name, downloadedData, new DownloadObjectOptions { EncryptionKey = key });
+                    Assert.Equal(data, downloadedData.ToArray());
+                },
+                afterDelay: async () =>
+                {
+                    // Verify that the URL no longer works.
+                    var request = createPutRequest();
+                    request.RequestUri = new Uri(url);
+                    var response = await _fixture.HttpClient.SendAsync(request);
+                    Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+
+                    // Cleanup
+                    await _fixture.Client.DeleteObjectAsync(bucket, name);
+                });
+        }
+
+        [Fact]
         public async Task PutWithCustomHeadersTest() => await _fixture.FinishDelayTest(GetTestName());
 
         private void PutWithCustomHeadersTest_InitDelayTest()
@@ -577,9 +628,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                         duration,
                         UrlSigner.ResumableHttpMethod,
                         requestHeaders: new Dictionary<string, IEnumerable<string>> {
-                            { "x-goog-encryption-algorithm", new [] { "AES256" } },
-                            { "x-goog-encryption-key", new [] { key.Base64Key } },
-                            { "x-goog-encryption-key-sha256", new []{ key.Base64Hash } }
+                            { "x-goog-encryption-algorithm", new [] { "AES256" } }
                         });
 
                     // Verify that the URL works initially.
