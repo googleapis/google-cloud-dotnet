@@ -62,12 +62,12 @@ namespace Google.Cloud.Diagnostics.Common
         /// Sends the given request.  If tracing is initialized and enabled the outgoing request is
         /// traced and the trace header is added to the request.
         /// </summary>
-        protected override async Task<HttpResponseMessage> SendAsync(
+        protected override Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
             if (_tracer.GetCurrentTraceId() == null)
             {
-                return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
+                return base.SendAsync(request, cancellationToken);
             }
 
             var traceHeader = TraceHeaderContext.Create(
@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.Common
             _tracer.StartSpan(request.RequestUri.ToString());
             try
             {
-                return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
+                return base.SendAsync(request, cancellationToken);
             }
             catch (Exception e)
             {

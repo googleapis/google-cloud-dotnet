@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-alpha01",
   "description": "Integration tests for the  Google Stackdriver Instrumentation Libraries Common Components.",
   "authors": [ "Google Inc." ],
@@ -8,7 +8,7 @@
   },
 
   "dependencies": {
-    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    //"dotnet-test-xunit": "2.2.0-preview2-build1029",
     "xunit": "2.2.0-beta3-build3402",
     "Google.Cloud.Logging.Type": { "target": "project" },
     "Google.Cloud.Logging.V2": { "target": "project" },
@@ -19,14 +19,18 @@
   "testRunner": "xunit",
 
   "frameworks": {
-    "net451": {},
-    "netcoreapp1.0": {
+    "net451": {
+      "dependencies": {
+        "Microsoft.AspNet.WebApi.Client": "5.2.3"
+      }
+    },
+    /*"netcoreapp1.0": {
       "dependencies": {
         "Microsoft.NETCore.App": {
           "version": "1.0.0",
           "type": "platform"
         }
       }
-    }
+    }*/
   }
 }
