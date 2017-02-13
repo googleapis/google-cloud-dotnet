@@ -25,8 +25,6 @@ using System.Text;
 
 namespace Google.Cloud.Storage.V1
 {
-    // TODO: Add unit tests for this
-
     /// <summary>
     /// Class which helps create signed URLs which can be used to provide limited access to specific buckets and objects
     /// to anyone in possession of the URL, regardless of whether they have a Google account.
