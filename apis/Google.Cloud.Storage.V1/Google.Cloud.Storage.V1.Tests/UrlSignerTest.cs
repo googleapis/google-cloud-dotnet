@@ -34,7 +34,7 @@ namespace Google.Cloud.Storage.V1.Tests
         public void FromServiceAccountPath_Validations()
         {
             Assert.Throws<ArgumentNullException>(() => UrlSigner.FromServiceAccountPath(null));
-            Assert.Throws<DirectoryNotFoundException>(() => UrlSigner.FromServiceAccountPath("C:\\does_not_exist\\foo.txt"));
+            Assert.Throws<FileNotFoundException>(() => UrlSigner.FromServiceAccountPath("does_not_exist.txt"));
         }
 
         [Fact]
