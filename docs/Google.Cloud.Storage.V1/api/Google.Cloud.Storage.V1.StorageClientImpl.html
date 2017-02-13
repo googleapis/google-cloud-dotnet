@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StorageClientImpl
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -70,22 +71,22 @@
               
               <h1 id="Google_Cloud_Storage_V1_StorageClientImpl" data-uid="Google.Cloud.Storage.V1.StorageClientImpl">Class StorageClientImpl
               </h1>
-              <div class="markdown level0 summary"><p>Wrapper around <a class="xref" href="Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService">StorageService</a> to provide simpler operations.</p>
+              <div class="markdown level0 summary"><p>Wrapper around <a class="xref" href="Google.Apis.Storage.v1.StorageService.html">StorageService</a> to provide simpler operations.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient">StorageClient</a></div>
+                  <div class="level1"><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a></div>
                   <div class="level2"><span class="xref">StorageClientImpl</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_">StorageClient.CreateAsync(GoogleCredential)</a>
+                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_Google_Cloud_Storage_V1_EncryptionKey_">StorageClient.CreateAsync(GoogleCredential, EncryptionKey)</a>
                 </div>
                 <div>
-                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_">StorageClient.Create(GoogleCredential)</a>
+                  <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_Google_Cloud_Storage_V1_EncryptionKey_">StorageClient.Create(GoogleCredential, EncryptionKey)</a>
                 </div>
                 <div>
                   <span class="xref">System.Object.ToString()</span>
@@ -107,22 +108,22 @@
                 <pre><code class="lang-csharp hljs">public sealed class StorageClientImpl : StorageClient</code></pre>
               </div>
               <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient">StorageClient</a>. Most client code
-should refer to <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient">StorageClient</a>, creating instances with</p>
-<p><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_">Create(GoogleCredential)</a> and</p>
-<p><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_">CreateAsync(GoogleCredential)</a>. The constructor
+              <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a>. Most client code
+should refer to <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a>, creating instances with
+<a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Create_Google_Apis_Auth_OAuth2_GoogleCredential_Google_Cloud_Storage_V1_EncryptionKey_">Create(GoogleCredential, EncryptionKey)</a> and
+<a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateAsync_Google_Apis_Auth_OAuth2_GoogleCredential_Google_Cloud_Storage_V1_EncryptionKey_">CreateAsync(GoogleCredential, EncryptionKey)</a>. The constructor
 of this class is public for the sake of constructor-based dependency injection.</p>
 </div>
               <h3 id="constructors">Constructors
               </h3>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl__ctor_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.#ctor*"></a>
-              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl__ctor_Google_Apis_Storage_v1_StorageService_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.#ctor(Google.Apis.Storage.v1.StorageService)">StorageClientImpl(StorageService)</h4>
-              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService">StorageService</a>.</p>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl__ctor_Google_Apis_Storage_v1_StorageService_Google_Cloud_Storage_V1_EncryptionKey_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.#ctor(Google.Apis.Storage.v1.StorageService,Google.Cloud.Storage.V1.EncryptionKey)">StorageClientImpl(StorageService, EncryptionKey)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new client wrapping the given <a class="xref" href="Google.Apis.Storage.v1.StorageService.html">StorageService</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public StorageClientImpl(StorageService service)</code></pre>
+                <pre><code class="lang-csharp hljs">public StorageClientImpl(StorageService service, EncryptionKey encryptionKey = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -135,9 +136,16 @@ of this class is public for the sake of constructor-based dependency injection.<
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService">StorageService</a></td>
-                    <td><em>service</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.StorageService.html">StorageService</a></td>
+                    <td><span class="parametername">service</span></td>
                     <td><p>The service to wrap. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.EncryptionKey.html">EncryptionKey</a></td>
+                    <td><span class="parametername">encryptionKey</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_EncryptionKey">EncryptionKey</a> to use for all object-based operations by default. May be null,
+in which case <a class="xref" href="Google.Cloud.Storage.V1.EncryptionKey.html#Google_Cloud_Storage_V1_EncryptionKey_None">None</a> will be used.</p>
 </td>
                   </tr>
                 </tbody>
@@ -146,7 +154,7 @@ of this class is public for the sake of constructor-based dependency injection.<
               </h3>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_ApplicationName_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ApplicationName*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ApplicationName" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ApplicationName">ApplicationName</h4>
-              <div class="markdown level1 summary"><p>The default application name used when creating a <a class="xref" href="Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService">StorageService</a>.
+              <div class="markdown level1 summary"><p>The default application name used when creating a <a class="xref" href="Google.Apis.Storage.v1.StorageService.html">StorageService</a>.
 Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -170,9 +178,34 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ApplicationName_remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>Most applications will never want to set this, which is why it&#39;s in this class rather than</p>
-<p><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient">StorageClient</a>.</p>
+              <div class="markdown level1 remarks"><p>Most applications will never want to set this, which is why it&#39;s in this class rather than
+<a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a>.</p>
 </div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_EncryptionKey_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.EncryptionKey*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_EncryptionKey" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.EncryptionKey">EncryptionKey</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override EncryptionKey EncryptionKey { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.EncryptionKey.html">EncryptionKey</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_EncryptionKey">StorageClient.EncryptionKey</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_Service_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.Service*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_Service" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.Service">Service</h4>
               <div class="markdown level1 summary"></div>
@@ -191,7 +224,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService">StorageService</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.StorageService.html">StorageService</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -220,27 +253,27 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>sourceBucket</em></td>
+                    <td><span class="parametername">sourceBucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>sourceObjectName</em></td>
+                    <td><span class="parametername">sourceObjectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>destinationBucket</em></td>
+                    <td><span class="parametername">destinationBucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>destinationObjectName</em></td>
+                    <td><span class="parametername">destinationObjectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.CopyObjectOptions.html#Google_Cloud_Storage_V1_CopyObjectOptions">CopyObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.CopyObjectOptions.html">CopyObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -255,7 +288,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -282,32 +315,32 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>sourceBucket</em></td>
+                    <td><span class="parametername">sourceBucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>sourceObjectName</em></td>
+                    <td><span class="parametername">sourceObjectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>destinationBucket</em></td>
+                    <td><span class="parametername">destinationBucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>destinationObjectName</em></td>
+                    <td><span class="parametername">destinationObjectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.CopyObjectOptions.html#Google_Cloud_Storage_V1_CopyObjectOptions">CopyObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.CopyObjectOptions.html">CopyObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -322,7 +355,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -349,17 +382,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html#Google_Cloud_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -374,7 +407,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -401,17 +434,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html#Google_Cloud_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -426,7 +459,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -453,22 +486,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html#Google_Cloud_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -483,7 +516,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -510,22 +543,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html#Google_Cloud_Storage_V1_CreateBucketOptions">CreateBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -540,7 +573,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -566,13 +599,13 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html#Google_Cloud_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -599,12 +632,12 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html#Google_Cloud_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -630,18 +663,18 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html#Google_Cloud_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -683,17 +716,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html#Google_Cloud_Storage_V1_DeleteBucketOptions">DeleteBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -734,13 +767,13 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>obj</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">obj</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions">DeleteObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -767,17 +800,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions">DeleteObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -803,18 +836,18 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>obj</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">obj</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions">DeleteObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -856,22 +889,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions">DeleteObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -912,23 +945,23 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>source</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">source</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>destination</em></td>
+                    <td><span class="parametername">destination</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions">DownloadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -955,27 +988,27 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>destination</em></td>
+                    <td><span class="parametername">destination</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions">DownloadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1001,28 +1034,28 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>source</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">source</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>destination</em></td>
+                    <td><span class="parametername">destination</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions">DownloadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1064,32 +1097,32 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>destination</em></td>
+                    <td><span class="parametername">destination</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions">DownloadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1131,12 +1164,12 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketOptions.html#Google_Cloud_Storage_V1_GetBucketOptions">GetBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketOptions.html">GetBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1151,7 +1184,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1178,17 +1211,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketOptions.html#Google_Cloud_Storage_V1_GetBucketOptions">GetBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketOptions.html">GetBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1203,7 +1236,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1230,17 +1263,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetObjectOptions.html#Google_Cloud_Storage_V1_GetObjectOptions">GetObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetObjectOptions.html">GetObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1255,7 +1288,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1282,22 +1315,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetObjectOptions.html#Google_Cloud_Storage_V1_GetObjectOptions">GetObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.GetObjectOptions.html">GetObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1312,7 +1345,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1339,12 +1372,12 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListBucketsOptions.html#Google_Cloud_Storage_V1_ListBucketsOptions">ListBucketsOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListBucketsOptions.html">ListBucketsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1359,7 +1392,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Buckets.html#Google_Apis_Storage_v1_Data_Buckets">Buckets</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Buckets.html">Buckets</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1386,12 +1419,12 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListBucketsOptions.html#Google_Cloud_Storage_V1_ListBucketsOptions">ListBucketsOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListBucketsOptions.html">ListBucketsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1406,7 +1439,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Buckets.html#Google_Apis_Storage_v1_Data_Buckets">Buckets</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Buckets.html">Buckets</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1433,17 +1466,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>prefix</em></td>
+                    <td><span class="parametername">prefix</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions">ListObjectsOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html">ListObjectsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1458,7 +1491,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Objects.html#Google_Apis_Storage_v1_Data_Objects">Objects</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Objects.html">Objects</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1485,17 +1518,17 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>prefix</em></td>
+                    <td><span class="parametername">prefix</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions">ListObjectsOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html">ListObjectsOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1510,7 +1543,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html#Google_Api_Gax_PagedAsyncEnumerable_2">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Objects.html#Google_Apis_Storage_v1_Data_Objects">Objects</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Objects.html">Objects</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1536,13 +1569,13 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchBucketOptions.html#Google_Cloud_Storage_V1_PatchBucketOptions">PatchBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchBucketOptions.html">PatchBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1557,7 +1590,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1583,18 +1616,18 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchBucketOptions.html#Google_Cloud_Storage_V1_PatchBucketOptions">PatchBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchBucketOptions.html">PatchBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1609,7 +1642,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1635,13 +1668,13 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>obj</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">obj</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchObjectOptions.html#Google_Cloud_Storage_V1_PatchObjectOptions">PatchObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchObjectOptions.html">PatchObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1656,7 +1689,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1682,18 +1715,18 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>obj</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">obj</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchObjectOptions.html#Google_Cloud_Storage_V1_PatchObjectOptions">PatchObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.PatchObjectOptions.html">PatchObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1708,7 +1741,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1734,13 +1767,13 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions">UpdateBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html">UpdateBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1755,7 +1788,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1781,18 +1814,18 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a></td>
-                    <td><em>bucket</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions">UpdateBucketOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html">UpdateBucketOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1807,7 +1840,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket">Bucket</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1833,13 +1866,13 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>obj</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">obj</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions">UpdateObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html">UpdateObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1854,7 +1887,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1880,18 +1913,18 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>obj</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">obj</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions">UpdateObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html">UpdateObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1906,7 +1939,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1932,23 +1965,23 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>destination</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">destination</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>source</em></td>
+                    <td><span class="parametername">source</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions">UploadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1963,7 +1996,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1990,32 +2023,32 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>contentType</em></td>
+                    <td><span class="parametername">contentType</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>source</em></td>
+                    <td><span class="parametername">source</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions">UploadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -2030,7 +2063,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -2056,28 +2089,28 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a></td>
-                    <td><em>destination</em></td>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">destination</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>source</em></td>
+                    <td><span class="parametername">source</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions">UploadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -2092,7 +2125,7 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -2119,37 +2152,37 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>contentType</em></td>
+                    <td><span class="parametername">contentType</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>source</em></td>
+                    <td><span class="parametername">source</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html#Google_Cloud_Storage_V1_UploadObjectOptions">UploadObjectOptions</a></td>
-                    <td><em>options</em></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.IProgress&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>progress</em></td>
+                    <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
+                    <td><span class="parametername">progress</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -2164,14 +2197,14 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html#Google_Apis_Storage_v1_Data_Object">Object</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__">StorageClient.UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</a></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

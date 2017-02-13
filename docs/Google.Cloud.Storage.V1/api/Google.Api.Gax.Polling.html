@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Polling
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -122,41 +123,41 @@ until a given condition is met in the response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;, TResponse&gt;</td>
-                    <td><em>pollAction</em></td>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;, TResponse&gt;</td>
+                    <td><span class="parametername">pollAction</span></td>
                     <td><p>The poll action, typically performing an RPC. The value passed to the
 action is the overall deadline, so that the RPC settings can be adjusted accordingly. A null value
 indicates no deadline.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TResponse&gt;</td>
-                    <td><em>completionPredicate</em></td>
+                    <td><span class="xref">System.Predicate</span>&lt;TResponse&gt;</td>
+                    <td><span class="parametername">completionPredicate</span></td>
                     <td><p>The test for whether to return the response (<code>true</code>) or continue
 polling (<code>false</code>). Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IClock.html#Google_Api_Gax_IClock">IClock</a></td>
-                    <td><em>clock</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.IClock.html">IClock</a></td>
+                    <td><span class="parametername">clock</span></td>
                     <td><p>The clock to use for determining deadlines. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a></td>
-                    <td><em>scheduler</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.IScheduler.html">IScheduler</a></td>
+                    <td><span class="parametername">scheduler</span></td>
                     <td><p>The scheduler to use for delaying between calls. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
-                    <td><em>pollSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
+                    <td><span class="parametername">pollSettings</span></td>
                     <td><p>The poll settings, controlling timeouts, call settings and delays.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>The cancellation token used to cancel delays, if any.</p>
 </td>
                   </tr>
@@ -188,8 +189,9 @@ polling (<code>false</code>). Must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><em>TResponse</em></td>
-                    <td>The response type. Must not be null.</td>
+                    <td><span class="parametername">TResponse</span></td>
+                    <td><p>The response type. Must not be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -230,41 +232,41 @@ until a given condition is met in the response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;, <span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;TResponse&gt;&gt;</td>
-                    <td><em>pollAction</em></td>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;, <span class="xref">System.Threading.Tasks.Task</span>&lt;TResponse&gt;&gt;</td>
+                    <td><span class="parametername">pollAction</span></td>
                     <td><p>The poll action, typically performing an RPC. The value passed to the
 action is the overall deadline, so that the RPC settings can be adjusted accordingly. A null
 value indicates no deadline.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Predicate&lt;T&gt;</span>&lt;TResponse&gt;</td>
-                    <td><em>completionPredicate</em></td>
+                    <td><span class="xref">System.Predicate</span>&lt;TResponse&gt;</td>
+                    <td><span class="parametername">completionPredicate</span></td>
                     <td><p>The test for whether to return the response (<code>true</code>) or continue
 polling (<code>false</code>). Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IClock.html#Google_Api_Gax_IClock">IClock</a></td>
-                    <td><em>clock</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.IClock.html">IClock</a></td>
+                    <td><span class="parametername">clock</span></td>
                     <td><p>The clock to use for determining deadlines. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.IScheduler.html#Google_Api_Gax_IScheduler">IScheduler</a></td>
-                    <td><em>scheduler</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.IScheduler.html">IScheduler</a></td>
+                    <td><span class="parametername">scheduler</span></td>
                     <td><p>The scheduler to use for delaying between calls. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html#Google_Api_Gax_PollSettings">PollSettings</a></td>
-                    <td><em>pollSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.PollSettings.html">PollSettings</a></td>
+                    <td><span class="parametername">pollSettings</span></td>
                     <td><p>The poll settings, controlling timeouts, call settings and delays.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>The cancellation token used to cancel delays, if any.</p>
 </td>
                   </tr>
@@ -280,7 +282,7 @@ polling (<code>false</code>). Must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;TResponse&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;TResponse&gt;</td>
                     <td><p>A task representing the asynchronous operation. The result of the task will be the completed response.</p>
 </td>
                   </tr>
@@ -296,12 +298,13 @@ polling (<code>false</code>). Must not be null.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><em>TResponse</em></td>
-                    <td>The response type. Must not be null.</td>
+                    <td><span class="parametername">TResponse</span></td>
+                    <td><p>The response type. Must not be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UrlSigner
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -103,11 +104,43 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
               <h5 id="Google_Cloud_Storage_V1_UrlSigner_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.</p>
 </div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod_" data-uid="Google.Cloud.Storage.V1.UrlSigner.ResumableHttpMethod*"></a>
+              <h4 id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod" data-uid="Google.Cloud.Storage.V1.UrlSigner.ResumableHttpMethod">ResumableHttpMethod</h4>
+              <div class="markdown level1 summary"><p>Gets a special HTTP method which can be used to create a signed URL for initiating a resumable upload.
+See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls#signing-resumable">https://cloud.google.com/storage/docs/access-control/signed-urls#signing-resumable</a> for more information.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static HttpMethod ResumableHttpMethod { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Net.Http.HttpMethod</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Storage_V1_UrlSigner_ResumableHttpMethod_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Note: When using the RESUMABLE method to create a signed URL, a URL will actually be signed for the POST method with a header of
+&#39;x-goog-resumable:start&#39;. The caller must perform a POST request with this URL and specify the &#39;x-goog-resumable:start&#39; header as
+well or signature validation will fail.</p>
+</div>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential*"></a>
               <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountCredential_Google_Apis_Auth_OAuth2_ServiceAccountCredential_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountCredential(Google.Apis.Auth.OAuth2.ServiceAccountCredential)">FromServiceAccountCredential(ServiceAccountCredential)</h4>
-              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner">UrlSigner</a> instance for a service account.</p>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -126,7 +159,7 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Auth.OAuth2.ServiceAccountCredential</span></td>
-                    <td><em>credential</em></td>
+                    <td><span class="parametername">credential</span></td>
                     <td><p>The credential for the a service account. Must not be null.</p>
 </td>
                   </tr>
@@ -142,14 +175,14 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner">UrlSigner</a></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountData_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountData*"></a>
               <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountData_System_IO_Stream_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountData(System.IO.Stream)">FromServiceAccountData(Stream)</h4>
-              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner">UrlSigner</a> instance for a service account.</p>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -168,7 +201,7 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 <tbody>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
-                    <td><em>credentialData</em></td>
+                    <td><span class="parametername">credentialData</span></td>
                     <td><p>The stream from which to read the JSON key data for a service account. Must not be null.</p>
 </td>
                   </tr>
@@ -184,7 +217,7 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner">UrlSigner</a></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -200,14 +233,14 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The <em>credentialData</em> does not contain valid JSON service account key data.</p>
+                    <td><p>The <span class="paramref">credentialData</span> does not contain valid JSON service account key data.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountPath_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountPath*"></a>
               <h4 id="Google_Cloud_Storage_V1_UrlSigner_FromServiceAccountPath_System_String_" data-uid="Google.Cloud.Storage.V1.UrlSigner.FromServiceAccountPath(System.String)">FromServiceAccountPath(String)</h4>
-              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner">UrlSigner</a> instance for a service account.</p>
+              <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a> instance for a service account.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -226,7 +259,7 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>credentialFilePath</em></td>
+                    <td><span class="parametername">credentialFilePath</span></td>
                     <td><p>The path to the JSON key file for a service account. Must not be null.</p>
 </td>
                   </tr>
@@ -242,7 +275,7 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner">UrlSigner</a></td>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UrlSigner.html">UrlSigner</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -258,7 +291,7 @@ to anyone in possession of the URL, regardless of whether they have a Google acc
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>The <em>credentialFilePath</em> does not refer to a valid JSON service account key file.</p>
+                    <td><p>The <span class="paramref">credentialFilePath</span> does not refer to a valid JSON service account key file.</p>
 </td>
                   </tr>
                 </tbody>
@@ -285,40 +318,40 @@ in possession of the URL, regardless of whether they have a Google account.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td><p>The name of the bucket. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>expiration</em></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+                    <td><span class="parametername">expiration</span></td>
                     <td><p>The point in time after which the signed URL will be invalid. May be null, in which
 case the signed URL never expires.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Net.Http.HttpMethod</span></td>
-                    <td><em>requestMethod</em></td>
+                    <td><span class="parametername">requestMethod</span></td>
                     <td><p>The HTTP request method for which the signed URL is allowed to be used. May be null,
 in which case GET will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><em>requestHeaders</em></td>
+                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+                    <td><span class="parametername">requestHeaders</span></td>
                     <td><p>The headers which will be included with the request. May be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><em>contentHeaders</em></td>
+                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+                    <td><span class="parametername">contentHeaders</span></td>
                     <td><p>The headers for the content which will be included with the request.
 May be null.</p>
 </td>
@@ -357,11 +390,11 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the <em>requestHeaders</em> specified only need to have the x-goog-encryption-algorithm header.
+So the <span class="paramref">requestHeaders</span> specified only need to have the x-goog-encryption-algorithm header.
 The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <em>requestMethod</em> (or it is null, in which case GET is
+Note that when GET is specified as the <span class="paramref">requestMethod</span> (or it is null, in which case GET is
 used), both GET and HEAD requests can be made with the created signed URL.
 </p>
 <p>
@@ -390,27 +423,27 @@ in possession of the URL, regardless of whether they have a Google account.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td><p>The name of the bucket. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
-                    <td><em>expiration</em></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTimeOffset</span>&gt;</td>
+                    <td><span class="parametername">expiration</span></td>
                     <td><p>The point in time after which the signed URL will be invalid. May be null, in which
 case the signed URL never expires.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
-                    <td><em>request</em></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>A sample request for which the signed URL might be used. May be null.</p>
 </td>
                   </tr>
@@ -434,12 +467,12 @@ case the signed URL never expires.</p>
               </table>
               <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_Nullable_System_DateTimeOffset__System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
-When the <em>request</em> is specified, some of its headers will be included in the signed URL&#39;s
+When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&#39;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
 </p>
 <p>
-If <em>request</em> is null, no headers are included in the signed URL&#39;s signature, so any requests
+If <span class="paramref">request</span> is null, no headers are included in the signed URL&#39;s signature, so any requests
 made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>
@@ -447,11 +480,11 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the sample <em>request</em> specified only needs to have the x-goog-encryption-algorithm request
+So the sample <span class="paramref">request</span> specified only needs to have the x-goog-encryption-algorithm request
 header. The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <em>request</em>, both GET and HEAD requests can be made with
+Note that when GET is specified as the <span class="paramref">request</span>, both GET and HEAD requests can be made with
 the created signed URL.
 </p>
 <p>
@@ -480,39 +513,39 @@ in possession of the URL, regardless of whether they have a Google account.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td><p>The name of the bucket. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>duration</em></td>
+                    <td><span class="parametername">duration</span></td>
                     <td><p>The length of time for which the signed URL should remain usable.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Net.Http.HttpMethod</span></td>
-                    <td><em>requestMethod</em></td>
+                    <td><span class="parametername">requestMethod</span></td>
                     <td><p>The HTTP request method for which the signed URL is allowed to be used. May be null,
 in which case GET will be used.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><em>requestHeaders</em></td>
+                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+                    <td><span class="parametername">requestHeaders</span></td>
                     <td><p>The headers which will be included with the request. May be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
-                    <td><em>contentHeaders</em></td>
+                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+                    <td><span class="parametername">contentHeaders</span></td>
                     <td><p>The headers for the content which will be included with the request.
 May be null.</p>
 </td>
@@ -551,11 +584,11 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the <em>requestHeaders</em> specified only need to have the x-goog-encryption-algorithm header.
+So the <span class="paramref">requestHeaders</span> specified only need to have the x-goog-encryption-algorithm header.
 The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <em>requestMethod</em> (or it is null, in which case GET is
+Note that when GET is specified as the <span class="paramref">requestMethod</span> (or it is null, in which case GET is
 used), both GET and HEAD requests can be made with the created signed URL.
 </p>
 <p>
@@ -584,26 +617,26 @@ in possession of the URL, regardless of whether they have a Google account.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>bucket</em></td>
+                    <td><span class="parametername">bucket</span></td>
                     <td><p>The name of the bucket. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>objectName</em></td>
+                    <td><span class="parametername">objectName</span></td>
                     <td><p>The name of the object within the bucket. May be null, in which case the signed URL
 will refer to the bucket instead of an object.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>duration</em></td>
+                    <td><span class="parametername">duration</span></td>
                     <td><p>The length of time for which the signed URL should remain usable.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Net.Http.HttpRequestMessage</span></td>
-                    <td><em>request</em></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>A sample request for which the signed URL might be used. May be null.</p>
 </td>
                   </tr>
@@ -627,12 +660,12 @@ will refer to the bucket instead of an object.</p>
               </table>
               <h5 id="Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpRequestMessage__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>
-When the <em>request</em> is specified, some of its headers will be included in the signed URL&#39;s
+When the <span class="paramref">request</span> is specified, some of its headers will be included in the signed URL&#39;s
 signature, and therefore must be included in requests made with the created URL. These are the Content-MD5 and
 Content-Type content headers as well as any content or request header with a name starting with &quot;x-goog-&quot;.
 </p>
 <p>
-If <em>request</em> is null, no headers are included in the signed URL&#39;s signature, so any requests
+If <span class="paramref">request</span> is null, no headers are included in the signed URL&#39;s signature, so any requests
 made with the created URL must not contain Content-MD5, Content-Type, or any header starting with &quot;x-goog-&quot;.
 </p>
 <p>
@@ -640,18 +673,18 @@ Note that if the entity is encrypted with customer-supplied encryption keys (see
 <a href="https://cloud.google.com/storage/docs/encryption">https://cloud.google.com/storage/docs/encryption</a> for more information), the <strong>x-goog-encryption-algorithm</strong>,
 <strong>x-goog-encryption-key</strong>, and <strong>x-goog-encryption-key-sha256</strong> headers will be required when making the
 request. However, only the x-goog-encryption-algorithm header is included in the signature for the signed URL.
-So the sample <em>request</em> specified only needs to have the x-goog-encryption-algorithm request
+So the sample <span class="paramref">request</span> specified only needs to have the x-goog-encryption-algorithm request
 header. The other headers can be included, but will be ignored.
 </p>
 <p>
-Note that when GET is specified as the <em>request</em>, both GET and HEAD requests can be made with
+Note that when GET is specified as the <span class="paramref">request</span>, both GET and HEAD requests can be made with
 the created signed URL.
 </p>
 <p>
 See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">https://cloud.google.com/storage/docs/access-control/signed-urls</a> for more information on signed URLs.
 </p>
 </div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
