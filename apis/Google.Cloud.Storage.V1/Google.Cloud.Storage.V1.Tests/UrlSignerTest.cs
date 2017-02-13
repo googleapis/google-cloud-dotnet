@@ -17,7 +17,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Security.Cryptography;
 using Xunit;
+
+#if NETCOREAPP1_0
+using RsaKey = System.Security.Cryptography.RSA;
+#else
+using RsaKey = System.Security.Cryptography.RSACryptoServiceProvider;
+#endif
 
 namespace Google.Cloud.Storage.V1.Tests
 {
@@ -45,9 +52,10 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void Sign_Validations()
         {
-            var signer = UrlSigner.FromServiceAccountCredential(
-                GoogleCredential.GetApplicationDefaultAsync().Result.UnderlyingCredential as ServiceAccountCredential);
+            var signer = CreateSigner();
 
+            // Bucket names cannot be null or contain uppercase letters (among other rules).
+            // Make sure we verify the presence and format of the bucket name in all overloads.
             Assert.Throws<ArgumentNullException>(() => signer.Sign(null, "objectName", TimeSpan.FromDays(1), new HttpRequestMessage()));
             Assert.Throws<ArgumentException>(() => signer.Sign("BUCKETNAME", "objectName", TimeSpan.FromDays(1), new HttpRequestMessage()));
 
@@ -70,9 +78,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void DefaultHttpMethodIsGet()
         {
-            var signer = UrlSigner.FromServiceAccountCredential(
-                GoogleCredential.GetApplicationDefaultAsync().Result.UnderlyingCredential as ServiceAccountCredential);
-
+            var signer = CreateSigner();
             var bucketName = "bucket-name";
             var objectName = "object-name";
             var expiration = DateTimeOffset.UtcNow + TimeSpan.FromDays(1);
@@ -84,19 +90,17 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void EncryptionKeyAndHashAreIgnored()
         {
-            var signer = UrlSigner.FromServiceAccountCredential(
-                GoogleCredential.GetApplicationDefaultAsync().Result.UnderlyingCredential as ServiceAccountCredential);
-
+            var signer = CreateSigner();
             var bucketName = "bucket-name";
             var objectName = "object-name";
             var expiration = DateTimeOffset.UtcNow + TimeSpan.FromDays(1);
             var url1 = signer.Sign(bucketName, objectName, expiration, requestHeaders: new Dictionary<string, IEnumerable<string>> {
-                    { "x-goog-encryption-algorithm", new [] { "AES256" } }
+                    { EncryptionKey.AlgorithmHeader, new [] { EncryptionKey.AlgorithmValue } }
                 });
             var url2 = signer.Sign(bucketName, objectName, expiration, requestHeaders: new Dictionary<string, IEnumerable<string>> {
-                    { "x-goog-encryption-algorithm", new [] { "AES256" } },
-                    { "x-goog-encryption-key", new [] { "abc" } },
-                    { "x-goog-encryption-key-sha256", new [] { "def" } }
+                    { EncryptionKey.AlgorithmHeader, new [] { EncryptionKey.AlgorithmValue } },
+                    { EncryptionKey.KeyHeader, new [] { "abc" } },
+                    { EncryptionKey.KeyHashHeader, new [] { "def" } }
                 });
             Assert.Equal(url1, url2);
 
@@ -108,9 +112,7 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void ResumableEquivalentToPostWithStartHeader()
         {
-            var signer = UrlSigner.FromServiceAccountCredential(
-                GoogleCredential.GetApplicationDefaultAsync().Result.UnderlyingCredential as ServiceAccountCredential);
-
+            var signer = CreateSigner();
             var bucketName = "bucket-name";
             var objectName = "object-name";
             var expiration = DateTimeOffset.UtcNow + TimeSpan.FromDays(1);
@@ -119,5 +121,11 @@ namespace Google.Cloud.Storage.V1.Tests
                 new Dictionary<string, IEnumerable<string>> { { "x-goog-resumable", new[] { "start" } } });
             Assert.Equal(url1, url2);
         }
+
+        private static UrlSigner CreateSigner() =>
+            UrlSigner.FromServiceAccountCredential(new ServiceAccountCredential(new ServiceAccountCredential.Initializer("test")
+            {
+                Key = (RsaKey)RSA.Create()
+            }));
     }
 }
