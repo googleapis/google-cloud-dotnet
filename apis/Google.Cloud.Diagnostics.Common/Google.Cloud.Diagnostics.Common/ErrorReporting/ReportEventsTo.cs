@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common
         internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
 
         /// <summary>The location to send error events to.</summary>
-        public EventTarget Location { get; private set; }
+        public EventTarget Target { get; private set; }
 
         /// <summary>The error reporting client.</summary>
         public ReportErrorsServiceClient ErrorReportingClient { get; private set; }
@@ -98,7 +98,7 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return new ReportEventsTo
             {
-                Location = EventTarget.Logging,
+                Target = EventTarget.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
                 LogTo = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
@@ -116,7 +116,7 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return new ReportEventsTo
             {
-                Location = EventTarget.ErrorReporting,
+                Target = EventTarget.ErrorReporting,
                 ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
             };
         }

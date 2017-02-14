@@ -23,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             string projectId = "pid";
             LogTo logTo = LogTo.Project(projectId);
-            Assert.Equal(LogTarget.Project, logTo.Location);
+            Assert.Equal(LogTarget.Project, logTo.Target);
             Assert.Equal(projectId, logTo.ProjectId);
             Assert.Null(logTo.OrganizationId);
         }
@@ -33,7 +33,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             string organizationId = "oid";
             LogTo logTo = LogTo.Organization(organizationId);
-            Assert.Equal(LogTarget.Organization, logTo.Location);
+            Assert.Equal(LogTarget.Organization, logTo.Target);
             Assert.Equal(organizationId, logTo.OrganizationId);
             Assert.Null(logTo.ProjectId);
         }

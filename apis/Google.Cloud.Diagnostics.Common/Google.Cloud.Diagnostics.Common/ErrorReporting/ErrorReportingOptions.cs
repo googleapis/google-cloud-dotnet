@@ -69,7 +69,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
 
             IConsumer<ReportedErrorEvent> consumer;
-            switch (ReportEventsTo.Location)
+            switch (ReportEventsTo.Target)
             {
                 case EventTarget.Logging:
                     consumer = new ErrorEventToLogEntryConsumer(ReportEventsTo.LogName, ReportEventsTo.LogTo,
@@ -80,7 +80,7 @@ namespace Google.Cloud.Diagnostics.Common
                         ReportEventsTo.ErrorReportingClient, projectId);
                     break;
                 default:
-                    Debug.Fail($"Unsupported location {ReportEventsTo.Location}");
+                    Debug.Fail($"Unsupported location {ReportEventsTo.Target}");
                     return null;
             }
 

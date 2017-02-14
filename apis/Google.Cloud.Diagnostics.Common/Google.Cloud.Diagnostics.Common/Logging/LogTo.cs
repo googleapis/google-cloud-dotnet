@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common
     public sealed class LogTo
     {
         /// <summary>The location to log entries to.</summary>
-        public LogTarget Location { get; }
+        public LogTarget Target { get; }
 
         /// <summary>The Google Cloud Platform project Id.</summary>
         public string ProjectId { get; }
@@ -46,7 +46,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         private LogTo(LogTarget location, string projectId, string organizationId)
         {
-            Location = GaxPreconditions.CheckEnumValue(location, nameof(location));
+            Target = GaxPreconditions.CheckEnumValue(location, nameof(location));
             ProjectId = projectId;
             OrganizationId = organizationId;
         }
@@ -78,14 +78,14 @@ namespace Google.Cloud.Diagnostics.Common
         public string GetFullLogName(string name)
         {
             GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
-            switch (Location)
+            switch (Target)
             {
                 case LogTarget.Project:
                     return new LogName(ProjectId, name).ToString();
                 case LogTarget.Organization:
                     return new OrganizationLogName(OrganizationId, name).ToString();
                 default:
-                    Debug.Assert(false, $"Unsupported location {Location}");
+                    Debug.Assert(false, $"Unsupported location {Target}");
                     return null;
             }
         }
