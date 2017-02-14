@@ -21,7 +21,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// The location log entries will be logged to.
     /// </summary>
-    public enum LogToLocation
+    public enum LogTarget
     {
         /// <summary>A Google Cloud Platform project.</summary>
         Project,
@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common
     public sealed class LogTo
     {
         /// <summary>The location to log entries to.</summary>
-        public LogToLocation Location { get; }
+        public LogTarget Location { get; }
 
         /// <summary>The Google Cloud Platform project Id.</summary>
         public string ProjectId { get; }
@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The Google Cloud Platform organization Id.</summary>
         public string OrganizationId { get; }
 
-        private LogTo(LogToLocation location, string projectId, string organizationId)
+        private LogTo(LogTarget location, string projectId, string organizationId)
         {
             Location = GaxPreconditions.CheckEnumValue(location, nameof(location));
             ProjectId = projectId;
@@ -52,21 +52,21 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates a <see cref="LogTo"/> instance for sending log entries to a <see cref="LogToLocation.Project"/>.
+        /// Creates a <see cref="LogTo"/> instance for sending log entries to a <see cref="LogTarget.Project"/>.
         /// </summary>
         public static LogTo Project(string projectId)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            return new LogTo(LogToLocation.Project, projectId, null);
+            return new LogTo(LogTarget.Project, projectId, null);
         }
 
         /// <summary>
-        /// Creates a <see cref="LogTo"/> instance for sending log entries to an <see cref="LogToLocation.Organization"/>.
+        /// Creates a <see cref="LogTo"/> instance for sending log entries to an <see cref="LogTarget.Organization"/>.
         /// </summary>
         public static LogTo Organization(string organizationId)
         {
             GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId));
-            return new LogTo(LogToLocation.Organization, null, organizationId);
+            return new LogTo(LogTarget.Organization, null, organizationId);
         }
 
         /// <summary>
@@ -80,9 +80,9 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
             switch (Location)
             {
-                case LogToLocation.Project:
+                case LogTarget.Project:
                     return new LogName(ProjectId, name).ToString();
-                case LogToLocation.Organization:
+                case LogTarget.Organization:
                     return new OrganizationLogName(OrganizationId, name).ToString();
                 default:
                     Debug.Assert(false, $"Unsupported location {Location}");

@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// The location error events will be sent to.
     /// </summary>
-    public enum ReportEventsToLocation
+    public enum EventTarget
     {
         /// <summary>Stackdriver Error Reporting API.</summary>
         ErrorReporting,
@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common
         internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
 
         /// <summary>The location to send error events to.</summary>
-        public ReportEventsToLocation ReportEventsToLocation { get; private set; }
+        public EventTarget Location { get; private set; }
 
         /// <summary>The error reporting client.</summary>
         public ReportErrorsServiceClient ErrorReportingClient { get; private set; }
@@ -98,7 +98,7 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return new ReportEventsTo
             {
-                ReportEventsToLocation = ReportEventsToLocation.Logging,
+                Location = EventTarget.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
                 LogTo = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
@@ -116,7 +116,7 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return new ReportEventsTo
             {
-                ReportEventsToLocation = ReportEventsToLocation.ErrorReporting,
+                Location = EventTarget.ErrorReporting,
                 ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
             };
         }

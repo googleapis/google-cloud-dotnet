@@ -33,11 +33,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var logName = "another-log";
             var reportEventsTo = ReportEventsTo.Logging(_projectId, logName, _loggingClient);
 
-            Assert.Equal(ReportEventsToLocation.Logging, reportEventsTo.ReportEventsToLocation);
+            Assert.Equal(EventTarget.Logging, reportEventsTo.Location);
             Assert.Null(reportEventsTo.ErrorReportingClient);
             Assert.Equal(_loggingClient, reportEventsTo.LoggingClient);
             Assert.NotNull(reportEventsTo.LogTo);
-            Assert.Equal(LogToLocation.Project, reportEventsTo.LogTo.Location);
+            Assert.Equal(LogTarget.Project, reportEventsTo.LogTo.Location);
             Assert.Equal(_projectId, reportEventsTo.LogTo.ProjectId);
             Assert.Equal(logName, reportEventsTo.LogName);
             Assert.Equal(ReportEventsTo.GlobalResource, reportEventsTo.MonitoredResource);
@@ -51,7 +51,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var monitoredResource = new MonitoredResource { Type = "not_global" };
             var reportEventsTo = ReportEventsTo.Logging(logTo, logName, _loggingClient, monitoredResource);
 
-            Assert.Equal(ReportEventsToLocation.Logging, reportEventsTo.ReportEventsToLocation);
+            Assert.Equal(EventTarget.Logging, reportEventsTo.Location);
             Assert.Null(reportEventsTo.ErrorReportingClient);
             Assert.Equal(_loggingClient, reportEventsTo.LoggingClient);
             Assert.Equal(logTo, reportEventsTo.LogTo);
@@ -64,7 +64,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var reportEventsTo = ReportEventsTo.ErrorReporting(_errorClient);
 
-            Assert.Equal(ReportEventsToLocation.ErrorReporting, reportEventsTo.ReportEventsToLocation);
+            Assert.Equal(EventTarget.ErrorReporting, reportEventsTo.Location);
             Assert.Equal(_errorClient, reportEventsTo.ErrorReportingClient);
             Assert.Null(reportEventsTo.LoggingClient);
             Assert.Null(reportEventsTo.LogTo);
