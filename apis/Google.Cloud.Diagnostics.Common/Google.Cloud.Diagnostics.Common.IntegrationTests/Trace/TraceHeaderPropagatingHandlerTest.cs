@@ -34,11 +34,6 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private static readonly SpanIdFactory _spanIdFactory = SpanIdFactory.Create();
         private readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
-
-
-        // TODO(talarico): Update TraceHeader with asp.net core option and snippets!
-
-
         [Fact]
         public async Task TraceOutGoing()
         {
@@ -46,7 +41,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             string testId = Utils.GetTestId();
             var spanName = $"{nameof(TraceOutGoing)}-{testId}";
 
-            var trace = await TestAndTraceOutGoingRequest(googleUri, spanName, shouldThrow: false);
+            var trace = await TestTracingOutGoingRequest(googleUri, spanName, shouldThrow: false);
             var innerSpan = trace.Spans.Single(s => s.Name != spanName);
             Assert.Empty(innerSpan.Labels);
         }
@@ -58,23 +53,22 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             string testId = Utils.GetTestId();
             var spanName = $"{nameof(TraceOutGoing_Exception)}-{testId}";
 
-            var trace = await TestAndTraceOutGoingRequest(fakeUri, spanName, shouldThrow: true);
+            var trace = await TestTracingOutGoingRequest(fakeUri, spanName, shouldThrow: true);
             var innerSpan = trace.Spans.Single(s => s.Name != spanName);
             var label = innerSpan.Labels.Single();
             Assert.Equal(TraceLabels.StackTrace, label.Key);
             Assert.False(string.IsNullOrWhiteSpace(label.Value));
         }
 
-
         /// <summary>
-        /// Helper funtion to test and trace out going requests.
+        /// Helper funtion to test tracing of out going requests.
         /// </summary>
         /// <param name="uri">The uri to call.</param>
         /// <param name="rootSpanName">The name for the root span.</param>
         /// <param name="shouldThrow">True if the request to the uri should throw.</param>
         /// <returns>A trace with two spans.  A root span and a child span tracing the outgoing uri
         ///     request.</returns>
-        private async Task<TraceProto> TestAndTraceOutGoingRequest(
+        private async Task<TraceProto> TestTracingOutGoingRequest(
             string uri, string rootSpanName, bool shouldThrow)
         {
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
