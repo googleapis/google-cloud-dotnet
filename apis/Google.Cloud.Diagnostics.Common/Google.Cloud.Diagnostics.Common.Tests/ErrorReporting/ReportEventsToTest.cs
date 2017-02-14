@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal(LogToLocation.Project, reportEventsTo.LogTo.Location);
             Assert.Equal(_projectId, reportEventsTo.LogTo.ProjectId);
             Assert.Equal(logName, reportEventsTo.LogName);
-            Assert.Equal(ReportEventsTo.GlobalResource, reportEventsTo.MonitoredResource);
+            Assert.Equal(MonitoredResourceUtils.GlobalResource, reportEventsTo.MonitoredResource);
         }
 
         [Fact]

@@ -9,7 +9,7 @@
 
   "dependencies": {
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "Google.Api.Gax.Testing": "1.0.0-beta07",
+    "Google.Api.Gax.Testing": "1.0.0-beta09",
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
     "Moq": "4.6.38-alpha",
     "xunit": "2.2.0-beta3-build3402"
