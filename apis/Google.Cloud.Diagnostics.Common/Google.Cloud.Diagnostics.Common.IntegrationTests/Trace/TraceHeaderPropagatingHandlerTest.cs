@@ -41,7 +41,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             string testId = Utils.GetTestId();
             var spanName = $"{nameof(TraceOutGoing)}-{testId}";
 
-            var trace = await TestTracingOutGoingRequest(googleUri, spanName, shouldThrow: false);
+            var trace = await TestTracingOutGoingRequest(googleUri, spanName, shouldCatch: false);
             var innerSpan = trace.Spans.Single(s => s.Name != spanName);
             Assert.Empty(innerSpan.Labels);
         }
@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             string testId = Utils.GetTestId();
             var spanName = $"{nameof(TraceOutGoing_Exception)}-{testId}";
 
-            var trace = await TestTracingOutGoingRequest(fakeUri, spanName, shouldThrow: true);
+            var trace = await TestTracingOutGoingRequest(fakeUri, spanName, shouldCatch: true);
             var innerSpan = trace.Spans.Single(s => s.Name != spanName);
             var label = innerSpan.Labels.Single();
             Assert.Equal(TraceLabels.StackTrace, label.Key);
@@ -65,14 +65,14 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// </summary>
         /// <param name="uri">The uri to call.</param>
         /// <param name="rootSpanName">The name for the root span.</param>
-        /// <param name="shouldThrow">True if the request to the uri should throw.</param>
+        /// <param name="shouldCatch">True if exceptions from the request to the uri should be caught.</param>
         /// <returns>A trace with two spans.  A root span and a child span tracing the outgoing uri
         ///     request.</returns>
         private async Task<TraceProto> TestTracingOutGoingRequest(
-            string uri, string rootSpanName, bool shouldThrow)
+            string uri, string rootSpanName, bool shouldCatch)
         {
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
-            await TraceOutGoingRequest(CreateTracer(), rootSpanName, uri, shouldThrow);
+            await TraceOutGoingRequest(CreateTracer(), rootSpanName, uri, shouldCatch);
             var trace = _polling.GetTrace(rootSpanName, startTime);
             CheckTrace(trace, rootSpanName, uri);
             return trace;
@@ -97,9 +97,9 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <param name="rootSpanName">The name of the root span that will wrap the span
         ///     that traces the request.</param>
         /// <param name="uri">The uri to request.</param>
-        /// <param name="shouldThrow">True if the request will throw.</param>
+        /// <param name="shouldCatch">True if exceptions from the request to the uri should be caught.</param>
         private async Task TraceOutGoingRequest(
-            IManagedTracer tracer, string rootSpanName, string uri, bool shouldThrow)
+            IManagedTracer tracer, string rootSpanName, string uri, bool shouldCatch)
         {
             tracer.StartSpan(rootSpanName);
             var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
@@ -108,11 +108,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 try
                 {
                     await httpClient.GetAsync(uri);
-                    Assert.False(shouldThrow);
+                    Assert.False(shouldCatch);
                 }
                 catch
                 {
-                    Assert.True(shouldThrow);
+                    Assert.True(shouldCatch);
                 }
             }
             tracer.EndSpan();
