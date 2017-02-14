@@ -62,7 +62,7 @@ dotnet restore -v Warning external/gax-dotnet
 
 # For Google.Protobuf
 fetch protobuf google
-dotnet restore -v Warning external/protobuf
+dotnet restore -v Warning external/protobuf/csharp/src
 # Remove // comments in project.json; dotnet cli is fine with it, but docfx isn't.
 sed -i -r 's/\s+\/\/.*//g' external/protobuf/csharp/src/Google.Protobuf/project.json
 
