@@ -23,7 +23,7 @@
         "System.Threading.Tasks": "4.0.0" 
       }
     },
-   /* "netcoreapp1.0": {
+    "netcoreapp1.0": {
       "imports": "netcore50",
       "dependencies": {
         "System.Diagnostics.StackTrace": "4.3.0",
@@ -32,6 +32,6 @@
           "type": "platform"
         }
       }
-    }*/
+    }
   }
 }

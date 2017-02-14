@@ -27,8 +27,6 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
     public class TraceHeaderPropagatingHandlerTest
     {
-
-
         /// <summary>Project id to run the test on.</summary>
         private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
 
@@ -48,42 +46,105 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             string testId = Utils.GetTestId();
             var spanName = $"{nameof(TraceOutGoing)}-{testId}";
 
-            var trace = await TraceOutGoing(googleUri, spanName);
-            var spans = trace.Spans;
-            Assert.Equal(2, spans.Count);
-
-            var mainSpan = spans.Single(s => s.Name == spanName);
-            Assert.Empty(mainSpan.Labels);
-
-            var innerSpan = spans.Single(s => s.Name != spanName);
-            Assert.Equal(googleUri, innerSpan.Name);
-            Assert.Equal(mainSpan.SpanId, innerSpan.ParentSpanId);
+            var trace = await TestAndTraceOutGoingRequest(googleUri, spanName, shouldThrow: false);
+            var innerSpan = trace.Spans.Single(s => s.Name != spanName);
+            Assert.Empty(innerSpan.Labels);
         }
 
         [Fact]
         public async Task TraceOutGoing_Exception()
         {
+            string fakeUri = "http://www.thiscannotpossiblyexist934719238.com/";
+            string testId = Utils.GetTestId();
+            var spanName = $"{nameof(TraceOutGoing_Exception)}-{testId}";
+
+            var trace = await TestAndTraceOutGoingRequest(fakeUri, spanName, shouldThrow: true);
+            var innerSpan = trace.Spans.Single(s => s.Name != spanName);
+            var label = innerSpan.Labels.Single();
+            Assert.Equal(TraceLabels.StackTrace, label.Key);
+            Assert.False(string.IsNullOrWhiteSpace(label.Value));
         }
 
 
-        private async Task<TraceProto> TraceOutGoing(string uri, string spanName)
+        /// <summary>
+        /// Helper funtion to test and trace out going requests.
+        /// </summary>
+        /// <param name="uri">The uri to call.</param>
+        /// <param name="rootSpanName">The name for the root span.</param>
+        /// <param name="shouldThrow">True if the request to the uri should throw.</param>
+        /// <returns>A trace with two spans.  A root span and a child span tracing the outgoing uri
+        ///     request.</returns>
+        private async Task<TraceProto> TestAndTraceOutGoingRequest(
+            string uri, string rootSpanName, bool shouldThrow)
         {
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
+            await TraceOutGoingRequest(CreateTracer(), rootSpanName, uri, shouldThrow);
+            var trace = _polling.GetTrace(rootSpanName, startTime);
+            CheckTrace(trace, rootSpanName, uri);
+            return trace;
+        }
 
+        /// <summary>
+        /// Creates a <see cref="SimpleManagedTracer"/> with a <see cref="GrpcTraceConsumer"/>.
+        /// </summary>
+        private SimpleManagedTracer CreateTracer()
+        {
             string traceId = _traceIdFactory.NextId();
             var traceProto = new TraceProto { ProjectId = _projectId, TraceId = traceId };
             var consumer = new GrpcTraceConsumer(TraceServiceClient.CreateAsync());
-            var tracer = SimpleManagedTracer.Create(consumer, traceProto, null);
+            return SimpleManagedTracer.Create(consumer, traceProto, null);
+        }
 
-            tracer.StartSpan(spanName);
+        /// <summary>
+        /// Creates a <see cref="TraceHeaderPropagatingHandler"/> and traces the sending of a
+        /// GET request to the given uri.  The trace is wrapped in a parent span.
+        /// </summary>
+        /// <param name="tracer">The tracer to trace the request with.</param>
+        /// <param name="rootSpanName">The name of the root span that will wrap the span
+        ///     that traces the request.</param>
+        /// <param name="uri">The uri to request.</param>
+        /// <param name="shouldThrow">True if the request will throw.</param>
+        private async Task TraceOutGoingRequest(
+            IManagedTracer tracer, string rootSpanName, string uri, bool shouldThrow)
+        {
+            tracer.StartSpan(rootSpanName);
             var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
-            using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
+            using (var httpClient = new HttpClient(traceHeaderHandler))
             {
-                await httpClient.GetAsync(uri);
+                try
+                {
+                    await httpClient.GetAsync(uri);
+                    Assert.False(shouldThrow);
+                }
+                catch
+                {
+                    Assert.True(shouldThrow);
+                }
             }
             tracer.EndSpan();
+        }
 
-            return _polling.GetTrace(spanName, startTime);
+        /// <summary>
+        /// Checks a trace for the following:
+        /// <list type="bullet">
+        /// <term>The trace is not null.</term>
+        /// <term>The trace has two spans.</term>
+        /// <term>The trace has a root span with name rootSpanName</term>
+        /// <term>The root span has a single child span with name childSpanName</term>
+        /// </list>
+        /// </summary>
+        /// <param name="trace">The trace to check.</param>
+        /// <param name="rootSpanName">The name of the root span.</param>
+        /// <param name="childSpanName">The name of the child span.</param>
+        private void CheckTrace(TraceProto trace, string rootSpanName, string childSpanName)
+        {
+            Assert.NotNull(trace);
+            var spans = trace.Spans;
+            Assert.Equal(2, spans.Count);
+            var mainSpan = spans.Single(s => s.Name == rootSpanName);
+            var innerSpan = spans.Single(s => s.Name != rootSpanName);
+            Assert.Equal(childSpanName, innerSpan.Name);
+            Assert.Equal(mainSpan.SpanId, innerSpan.ParentSpanId);
         }
     }
 }
