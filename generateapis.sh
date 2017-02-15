@@ -92,7 +92,7 @@ generator:
 EOF
   
   pushd toolkit > /dev/null
-  ./gradlew -q runVGen -Pclargs=--descriptor_set=../$OUTDIR/protos.desc,--service_yaml=../$API_YAML,--gapic_yaml=../$API_TMP_DIR/gapic.yaml,--output=../$API_TMP_DIR
+  ./gradlew -q runCodeGen -Pclargs=--descriptor_set=../$OUTDIR/protos.desc,--service_yaml=../$API_YAML,--gapic_yaml=../$API_TMP_DIR/gapic.yaml,--output=../$API_TMP_DIR
   popd > /dev/null
 
   for f in `find $API_TMP_DIR -type f -name '*.cs'`
@@ -145,3 +145,7 @@ generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorrepor
 generate_api Google.Cloud.PubSub.V1 google/pubsub/v1 pubsub.yaml
 generate_api Google.Cloud.Datastore.V1 google/datastore/v1 datastore.yaml
 generate_api Google.Cloud.Monitoring.V3 google/monitoring/v3 monitoring.yaml
+
+generate_api Google.Cloud.Spanner.V1 google/spanner/v1 spanner.yaml
+generate_api Google.Cloud.Spanner.Admin.Database.V1 google/spanner/admin/database/v1 spanner_admin_database.yaml
+generate_api Google.Cloud.Spanner.Admin.Instance.V1 google/spanner/admin/instance/v1 spanner_admin_instance.yaml
