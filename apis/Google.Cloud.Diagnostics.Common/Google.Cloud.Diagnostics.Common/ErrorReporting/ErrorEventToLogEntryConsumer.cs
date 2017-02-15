@@ -37,14 +37,14 @@ namespace Google.Cloud.Diagnostics.Common
         /// Creates a new instance of the <see cref="ErrorEventToLogEntryConsumer"/>.
         /// </summary>
         /// <param name="logName">The name of the log.  Not the fully qualified name. Cannot be null.</param>
-        /// <param name="logTo">Where to log, such as a project or organization. Cannot be null.</param>
+        /// <param name="logTarget">Where to log, such as a project or organization. Cannot be null.</param>
         /// <param name="logConsumer">The log consumer. Cannot be null.</param>
         /// <param name="monitoredResource">The resource that is being monitored. Cannot be null.</param>
-        internal ErrorEventToLogEntryConsumer(string logName, LogTo logTo,
+        internal ErrorEventToLogEntryConsumer(string logName, LogTarget logTarget,
             IConsumer<LogEntry> logConsumer, MonitoredResource monitoredResource)
         {
             GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
-            _logName = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)).GetFullLogName(logName);
+            _logName = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)).GetFullLogName(logName);
             _logConsumer = GaxPreconditions.CheckNotNull(logConsumer, nameof(logConsumer));
             _monitoredResource = GaxPreconditions.CheckNotNull(monitoredResource, nameof(monitoredResource));
         }

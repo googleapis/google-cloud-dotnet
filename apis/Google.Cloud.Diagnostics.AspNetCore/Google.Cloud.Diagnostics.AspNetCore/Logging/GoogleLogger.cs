@@ -55,7 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTo logTo, LoggerOptions loggerOptions, 
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTo, LoggerOptions loggerOptions, 
             string logName, IClock clock = null)
         {
             GaxPreconditions.CheckNotNull(logTo, nameof(logTo));

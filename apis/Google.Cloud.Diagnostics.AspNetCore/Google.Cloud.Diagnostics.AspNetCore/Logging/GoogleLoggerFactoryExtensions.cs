@@ -52,17 +52,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            return factory.AddGoogle(LogTo.Project(projectId), options, client);
+            return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
         }
 
         /// <summary>
         /// Adds a <see cref="GoogleLoggerProvider"/> for <see cref="GoogleLogger"/>s.
         /// </summary>
         /// <param name="factory">The logger factory. Cannot be null.</param>
-        /// <param name="logTo">Where to log to. Cannot be null. Cannot be null.</param>
+        /// <param name="logTo">Where to log to. Cannot be null.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTo logTo,
+        public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTarget logTo,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             // Check params and set defaults if unset.

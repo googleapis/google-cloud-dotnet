@@ -21,7 +21,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// The location log entries will be logged to.
     /// </summary>
-    public enum LogTarget
+    public enum LogTargetKind
     {
         /// <summary>A Google Cloud Platform project.</summary>
         Project,
@@ -33,10 +33,10 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Represents the location log entries will be sent, such as a project or organization.
     /// </summary>
-    public sealed class LogTo
+    public sealed class LogTarget
     {
         /// <summary>The location to log entries to.</summary>
-        public LogTarget Target { get; }
+        public LogTargetKind Kind { get; }
 
         /// <summary>The Google Cloud Platform project Id.</summary>
         public string ProjectId { get; }
@@ -44,29 +44,29 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The Google Cloud Platform organization Id.</summary>
         public string OrganizationId { get; }
 
-        private LogTo(LogTarget location, string projectId, string organizationId)
+        private LogTarget(LogTargetKind kind, string projectId, string organizationId)
         {
-            Target = GaxPreconditions.CheckEnumValue(location, nameof(location));
+            Kind = GaxPreconditions.CheckEnumValue(kind, nameof(kind));
             ProjectId = projectId;
             OrganizationId = organizationId;
         }
 
         /// <summary>
-        /// Creates a <see cref="LogTo"/> instance for sending log entries to a <see cref="LogTarget.Project"/>.
+        /// Creates a <see cref="LogTarget"/> instance for sending log entries to a <see cref="LogTargetKind.Project"/>.
         /// </summary>
-        public static LogTo Project(string projectId)
+        public static LogTarget ForProject(string projectId)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            return new LogTo(LogTarget.Project, projectId, null);
+            return new LogTarget(LogTargetKind.Project, projectId, null);
         }
 
         /// <summary>
-        /// Creates a <see cref="LogTo"/> instance for sending log entries to an <see cref="LogTarget.Organization"/>.
+        /// Creates a <see cref="LogTarget"/> instance for sending log entries to an <see cref="LogTargetKind.Organization"/>.
         /// </summary>
-        public static LogTo Organization(string organizationId)
+        public static LogTarget ForOrganization(string organizationId)
         {
             GaxPreconditions.CheckNotNullOrEmpty(organizationId, nameof(organizationId));
-            return new LogTo(LogTarget.Organization, null, organizationId);
+            return new LogTarget(LogTargetKind.Organization, null, organizationId);
         }
 
         /// <summary>
@@ -78,14 +78,14 @@ namespace Google.Cloud.Diagnostics.Common
         public string GetFullLogName(string name)
         {
             GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name));
-            switch (Target)
+            switch (Kind)
             {
-                case LogTarget.Project:
+                case LogTargetKind.Project:
                     return new LogName(ProjectId, name).ToString();
-                case LogTarget.Organization:
+                case LogTargetKind.Organization:
                     return new OrganizationLogName(OrganizationId, name).ToString();
                 default:
-                    Debug.Assert(false, $"Unsupported location {Target}");
+                    Debug.Assert(false, $"Unsupported location {Kind}");
                     return null;
             }
         }

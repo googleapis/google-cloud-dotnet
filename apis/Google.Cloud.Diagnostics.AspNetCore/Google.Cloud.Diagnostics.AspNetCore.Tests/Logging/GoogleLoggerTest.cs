@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         private static readonly DateTime s_dateTime = DateTime.UtcNow;
         private static readonly Exception s_exception = new Exception("some message");
         private static readonly IClock s_clock = new FakeClock(s_dateTime);
-        private static readonly LogTo s_logToProject = LogTo.Project(_projectId);
+        private static readonly LogTarget s_logTarget = LogTarget.ForProject(_projectId);
 
         /// <summary>
         /// Function to format a string and exception.  Used to test logging.
@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
         {
             LoggerOptions options = LoggerOptions.Create(logLevel);
-            return new GoogleLogger(consumer, s_logToProject, options, _logName, s_clock);
+            return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock);
         }
 
         [Fact]

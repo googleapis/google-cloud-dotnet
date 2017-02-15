@@ -28,19 +28,19 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void ErrorReportingOptions_ReportEventsTo()
         {
-            var reportTo = ReportEventsTo.ErrorReporting(_errorClient);
+            var eventTarget = EventTarget.ForErrorReporting(_errorClient);
             var bufferOptions = BufferOptions.SizedBuffer();
 
-            var options = ErrorReportingOptions.Create(reportTo, bufferOptions);
-            Assert.Equal(reportTo, options.ReportEventsTo);
+            var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
+            Assert.Equal(eventTarget, options.EventTarget);
             Assert.Equal(bufferOptions, options.BufferOptions);
         }
 
         [Fact]
         public void CreateConsumer_ErrorConsumer()
         {
-            var reportTo = ReportEventsTo.ErrorReporting(_errorClient);
-            var options = ErrorReportingOptions.Create(reportTo);
+            var eventTarget = EventTarget.ForErrorReporting(_errorClient);
+            var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<GrpcErrorEventConsumer>(consumer);
         }
@@ -48,8 +48,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void CreateConsumer_ErrorToLogsConsumer()
         {
-            var reportTo = ReportEventsTo.Logging(_projectId, "test-log", _loggingClient);
-            var options = ErrorReportingOptions.Create(reportTo);
+            var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
+            var options = ErrorReportingOptions.Create(eventTarget);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<ErrorEventToLogEntryConsumer>(consumer);
         }
@@ -58,8 +58,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void CreateConsumer_BufferdConsumer()
         {
             var bufferOptions = BufferOptions.SizedBuffer();
-            var reportTo = ReportEventsTo.Logging(_projectId, "test-log", _loggingClient);
-            var options = ErrorReportingOptions.Create(reportTo, bufferOptions);
+            var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
+            var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
             var consumer = options.CreateConsumer(_projectId);
             Assert.IsType<SizedBufferingConsumer<ReportedErrorEvent>>(consumer);
         }
