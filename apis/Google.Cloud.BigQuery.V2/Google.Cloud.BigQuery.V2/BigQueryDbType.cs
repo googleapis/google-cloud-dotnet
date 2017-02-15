@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
+
 namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
@@ -75,5 +77,28 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         [ApiValue("RECORD")]
         Struct
+    }
+
+    internal static class BigQueryDbTypeExtensions
+    {
+        // The names given in query parameters aren't always the same as the names in the rest of the API.
+        // (BOOL is BOOLEAN elsewhere, for example.) We could use another attribute, but a dictionary
+        // is a bit simpler.
+        private static Dictionary<BigQueryDbType, string> s_typeToNameMapping = new Dictionary<BigQueryDbType, string>
+        {
+            { BigQueryDbType.Int64, "INTEGER" },
+            { BigQueryDbType.Float64, "FLOAT" },
+            { BigQueryDbType.Bool, "BOOL" },
+            { BigQueryDbType.String, "STRING" },
+            { BigQueryDbType.Bytes, "BYTES" },
+            { BigQueryDbType.Date, "DATE" },
+            { BigQueryDbType.DateTime, "DATETIME" },
+            { BigQueryDbType.Time, "TIME" },
+            { BigQueryDbType.Timestamp, "TIMESTAMP" },
+            { BigQueryDbType.Array, "ARRAY" },
+            { BigQueryDbType.Struct, "STRUCT" }
+        };
+
+        internal static string ToParameterApiType(this BigQueryDbType type) => s_typeToNameMapping[type];
     }
 }

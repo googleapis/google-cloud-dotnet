@@ -119,7 +119,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             // Timestamp
             ScalarTest("Timestamp parameter, DateTime value (UTC)", BigQueryDbType.Timestamp,
                 new DateTime(2016, 10, 31, 1, 2, 3, 123, DateTimeKind.Utc).AddTicks(4567),
-                "2016-10-31 01:02:03.123456"), // UTC is implicit
+                "2016-10-31 01:02:03.123456+00"),
             ScalarTest("Timestamp parameter, DateTimeOffset value positive offset", BigQueryDbType.Timestamp,
                 new DateTimeOffset(2016, 10, 31, 0, 0, 0, TimeSpan.FromHours(2)), "2016-10-31 00:00:00+02:00"),
             ScalarTest("Timestamp parameter, DateTimeOffset value negative offset", BigQueryDbType.Timestamp,
@@ -209,7 +209,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var parameter = new BigQueryParameter();
             parameter.Value = value;
             var queryParameter = parameter.ToQueryParameter(BigQueryParameterMode.Positional);
-            Assert.Equal(EnumMap.ToApiValue(BigQueryDbType.Array), queryParameter.ParameterType.Type);
+            Assert.Equal(BigQueryDbType.Array.ToParameterApiType(), queryParameter.ParameterType.Type);
             var actualArrayType = EnumMap<BigQueryDbType>.ToValue(queryParameter.ParameterType.ArrayType.Type);
             Assert.Equal(expectedArrayType, actualArrayType);
         }
@@ -255,8 +255,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 ParameterType = new QueryParameterType
                 {
-                    Type = EnumMap.ToApiValue(BigQueryDbType.Array),
-                    ArrayType = new QueryParameterType { Type = EnumMap.ToApiValue(BigQueryDbType.DateTime) }
+                    Type = BigQueryDbType.Array.ToParameterApiType(),
+                    ArrayType = new QueryParameterType { Type = BigQueryDbType.DateTime.ToParameterApiType() }
                 },
                 ParameterValue = new QueryParameterValue
                 {
@@ -296,7 +296,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
         private static QueryParameter ScalarParameter(BigQueryDbType type, string value) =>
             new QueryParameter
             {
-                ParameterType = new QueryParameterType { Type = EnumMap.ToApiValue(type) },
+                ParameterType = new QueryParameterType { Type = type.ToParameterApiType() },
                 ParameterValue = new QueryParameterValue { Value = value }
             };
     }

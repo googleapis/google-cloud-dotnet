@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections;
@@ -45,14 +44,25 @@ namespace Google.Cloud.BigQuery.V2
     ///   <item><description><c>System.String</c></description></item>
     ///   <item><description><c>System.DateTime</c></description></item>
     ///   <item><description><c>System.DateTimeOffset</c></description></item>
+    ///   <item><description><c>System.TimeSpan</c></description></item>
     ///   <item><description>A <c>Google.Cloud.BigQuery.V2.InsertRow</c> (for record/struct fields)</description></item>
     ///   <item><description>Any <c>IReadOnlyList&lt;T&gt;</c> of one of the above types (for repeated fields). This
     ///   includes arrays and <c>List&lt;T&gt;</c> values.</description></item>
     /// </list>
     /// <para>
     /// Note that all integer types are stored as <c>System.Int64</c>, and all floating point
-    /// types are stored as <c>System.Double.</c> Date/time values are converted to UTC and stored
-    /// as timestamps with precision of a microsecond.
+    /// types are stored as <c>System.Double.</c></para>
+    /// <para><c>DateTimeOffset</c> values are converted to UTC and treated as timestamp. The handling
+    /// of <c>DateTime</c> values depends on the <c>Kind</c>: values with a <c>Kind</c> of <c>Local</c> are rejected;
+    /// values with a <c>Kind</c> of <c>UTC</c> are treated as timestamps; values with a <c>Kind</c> of <c>Unspecified</c>
+    /// are treated as civil datetime values. All values are stored with a precision of a microsecond.
+    /// </para>
+    /// <para>
+    /// <c>TimeSpan</c> values must be non-negative and less than 24 hours, used to represent a time-of-day.
+    /// </para>
+    /// <para>
+    /// Although date values are retrieved as <c>System.DateTime</c>, they must be inserted as string values, in the format
+    /// "yyyy-MM-dd".
     /// </para>
     /// <para>
     /// <see cref="BigQueryInsertRow"/> is used for record/struct fields for convenience, but only the <see cref="InsertId"/>
@@ -72,6 +82,7 @@ namespace Google.Cloud.BigQuery.V2
             typeof(string), typeof(byte[]),
             typeof(bool),
             typeof(DateTime), typeof(DateTimeOffset),
+            typeof(TimeSpan),
             typeof(BigQueryInsertRow)
         };
 
@@ -185,13 +196,35 @@ namespace Google.Cloud.BigQuery.V2
             if (value is DateTime)
             {
                 DateTime dt = (DateTime)value;
-                // TODO: Maybe enforce universal only?
-                return dt.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
+                switch (dt.Kind)
+                {
+                    // Civil datetime
+                    case DateTimeKind.Unspecified:
+                        return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
+                    // Timestamp
+                    case DateTimeKind.Utc:
+                        return dt.ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
+                    // We can get into this situation if we accept a list of DateTime values. We can't
+                    // validate when we're given the list, as it can change.
+                    default:
+                        throw new InvalidOperationException("Local DateTime values are not supported");
+                }
             }
             else if (value is DateTimeOffset)
             {
                 DateTimeOffset dto = (DateTimeOffset)value;
-                return dto.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
+                // Timestamp
+                return dto.ToUniversalTime().ToString("yyyy-MM-dd'T'HH:mm:ss.FFFFFF'Z'", CultureInfo.InvariantCulture);
+            }
+            else if (value is TimeSpan)
+            {
+                TimeSpan ts = (TimeSpan) value;
+                if (ts < TimeSpan.Zero || ts >= TimeSpan.FromHours(24))
+                {
+                    throw new InvalidOperationException("TimeSpan values must be non-negative and less than 24 hours");
+                }
+                // This is ugly, but it avoids a trailing . when there are no fractional seconds.
+                return (new DateTime(1970, 1, 1) + ts).ToString("HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
             }
             else if (value is BigQueryInsertRow)
             {
@@ -214,6 +247,22 @@ namespace Google.Cloud.BigQuery.V2
                 return;
             }
             Type type = value.GetType();
+            if (value is DateTime)
+            {
+                DateTime dt = (DateTime) value;
+                if (dt.Kind == DateTimeKind.Local)
+                {
+                    throw new ArgumentException("Local DateTime values are not supported", paramName);
+                }
+            }
+            if (value is TimeSpan)
+            {
+                TimeSpan ts = (TimeSpan) value;
+                if (ts < TimeSpan.Zero || ts >= TimeSpan.FromHours(24))
+                {
+                    throw new ArgumentException("TimeSpan values must be non-negative and less than 24 hours", paramName);
+                }
+            }
             if (ValidSingleTypes.Contains(type))
             {
                 return;
