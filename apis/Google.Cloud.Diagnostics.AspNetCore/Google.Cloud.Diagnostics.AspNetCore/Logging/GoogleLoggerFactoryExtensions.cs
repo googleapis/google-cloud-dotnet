@@ -52,22 +52,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
-            return factory.AddGoogle(LogTo.Project(projectId), options, client);
+            return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
         }
 
         /// <summary>
         /// Adds a <see cref="GoogleLoggerProvider"/> for <see cref="GoogleLogger"/>s.
         /// </summary>
         /// <param name="factory">The logger factory. Cannot be null.</param>
-        /// <param name="logTo">Where to log to. Cannot be null. Cannot be null.</param>
+        /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTo logTo,
+        public static ILoggerFactory AddGoogle(this ILoggerFactory factory, LogTarget logTarget,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
             // Check params and set defaults if unset.
             GaxPreconditions.CheckNotNull(factory, nameof(factory));
-            GaxPreconditions.CheckNotNull(logTo, nameof(logTo));
+            GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             client = client ?? LoggingServiceV2Client.Create();
             options = options ?? LoggerOptions.Create();
 
@@ -75,7 +75,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             GrpcLogConsumer grpcConsumer = new GrpcLogConsumer(client);
             IConsumer<LogEntry> consumer = ConsumerFactory<LogEntry>.GetConsumer(
                 grpcConsumer, MessageSizer<LogEntry>.GetSize, options.BufferOptions);
-            GoogleLoggerProvider provider = new GoogleLoggerProvider(consumer, logTo, options);
+            GoogleLoggerProvider provider = new GoogleLoggerProvider(consumer, logTarget, options);
             factory.AddProvider(provider);
             return factory;
         }

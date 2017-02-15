@@ -12,14 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
-    public class InsertRowTest
+    public class BigQueryInsertRowTest
     {
         [Fact]
         public void InsertId()
@@ -103,18 +102,42 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 { "field", new DateTimeOffset(2000, 1, 1, 5, 0, 0, TimeSpan.FromHours(2)) },
             };
             var rowData = row.ToRowsData();
-            Assert.Equal("2000-01-01 03:00:00Z", rowData.Json["field"]);
+            Assert.Equal("2000-01-01T03:00:00Z", rowData.Json["field"]);
         }
 
         [Fact]
-        public void DateTimeFormatting()
+        public void TimeSpan_Invalid()
+        {
+            AssertInvalid("field", TimeSpan.FromTicks(-1L));
+            AssertInvalid("field", TimeSpan.FromDays(1));
+        }
+
+        [Fact]
+        public void LocalDateTimeRejection()
+        {
+            AssertInvalid("field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Local));
+        }
+
+        [Fact]
+        public void UnspecifiedDateTimeFormatting()
+        {
+            var row = new BigQueryInsertRow
+            {
+                { "field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Unspecified) },
+            };
+            var rowData = row.ToRowsData();
+            Assert.Equal("2000-01-01T05:00:00", rowData.Json["field"]);
+        }
+
+        [Fact]
+        public void UtcDateTimeFormatting()
         {
             var row = new BigQueryInsertRow
             {
                 { "field", new DateTime(2000, 1, 1, 5, 0, 0, DateTimeKind.Utc) },
             };
             var rowData = row.ToRowsData();
-            Assert.Equal("2000-01-01 05:00:00Z", rowData.Json["field"]);
+            Assert.Equal("2000-01-01T05:00:00Z", rowData.Json["field"]);
         }
 
         [Fact]

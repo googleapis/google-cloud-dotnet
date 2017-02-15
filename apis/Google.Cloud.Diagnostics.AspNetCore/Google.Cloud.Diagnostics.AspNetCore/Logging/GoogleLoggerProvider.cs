@@ -31,18 +31,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         private readonly LoggerOptions _loggerOptions;
 
         /// <summary>Where to log to.</summary>
-        private readonly LogTo _logTo;
+        private readonly LogTarget _logTarget;
 
         /// <summary>
         /// <see cref="ILoggerProvider"/> for Google Stackdriver Logging.
         /// </summary>
         /// <param name="consumer">The consumer to push logs to. Cannot be null.</param>
-        /// <param name="logTo">Where to log to. Cannot be null.</param>
+        /// <param name="logTarget">Where to log to. Cannot be null.</param>
         /// <param name="loggerOptions">The logger options. Cannot be null.</param>
-        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTo logTo, LoggerOptions loggerOptions)
+        internal GoogleLoggerProvider(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _logTo = GaxPreconditions.CheckNotNull(logTo, nameof(logTo));
+            _logTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions));
         }
 
@@ -50,8 +50,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Creates a <see cref="GoogleLogger"/> with the given log name.
         /// </summary>
         /// <param name="logName">The name of the log.  This will be combined with the log location
-        ///     (<see cref="LogTo"/>) to generate the resource name for the log.</param>
-        public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logTo, _loggerOptions, logName);
+        ///     (<see cref="LogTarget"/>) to generate the resource name for the log.</param>
+        public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logTarget, _loggerOptions, logName);
 
         /// <inheritdoc />
         public void Dispose() {}
