@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Bigquery.v2.Data;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -41,6 +42,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         public string HighScoreTableId { get; } = "highscores";
         public string PeopleTableId { get; } = "people";
         public string ComplexTypesTableId { get; } = "complex";
+        public string ExhaustiveTypesTableId { get; } = "exhaustive";
 
         public BigQueryFixture()
         {
@@ -63,6 +65,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             CreateHighScoreTable(dataset);
             CreatePeopleTable(dataset);
             CreateComplexTypesTable(dataset);
+            CreateExhaustiveTypesTable(dataset);
         }
 
         private void CreateHighScoreTable(BigQueryDataset dataset)
@@ -163,6 +166,51 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     BigQueryFieldMode.Repeated
                 }
             }.Build());
+        }
+
+        private void CreateExhaustiveTypesTable(BigQueryDataset dataset)
+        {
+            // Record containing a single string, a repeated string and a nested record
+            TableSchema recordSchema = new TableSchemaBuilder
+            {
+                { "single_string", BigQueryDbType.String },
+                { "repeated_string", BigQueryDbType.String, BigQueryFieldMode.Repeated },
+                { "nested_record",
+                    new TableSchemaBuilder {    
+                        { "a", BigQueryDbType.Int64 },
+                        { "b", BigQueryDbType.Int64 },
+                    }
+                }
+            }.Build();
+
+            var table = dataset.CreateTable(ExhaustiveTypesTableId, new TableSchemaBuilder
+            {
+                // Single fields
+                { "single_string", BigQueryDbType.String },
+                { "single_bool", BigQueryDbType.Bool },
+                { "single_bytes", BigQueryDbType.Bytes },
+                { "single_date", BigQueryDbType.Date },
+                { "single_datetime", BigQueryDbType.DateTime },
+                { "single_time", BigQueryDbType.Time },
+                { "single_timestamp", BigQueryDbType.Timestamp },
+                { "single_int64", BigQueryDbType.Int64 },
+                { "single_float64", BigQueryDbType.Float64 },
+                { "single_record", recordSchema },
+                
+                // Repeated fields
+                { "array_string", BigQueryDbType.String, BigQueryFieldMode.Repeated },
+                { "array_bool", BigQueryDbType.Bool, BigQueryFieldMode.Repeated },
+                { "array_bytes", BigQueryDbType.Bytes, BigQueryFieldMode.Repeated },
+                { "array_date", BigQueryDbType.Date, BigQueryFieldMode.Repeated },
+                { "array_datetime", BigQueryDbType.DateTime, BigQueryFieldMode.Repeated },
+                { "array_time", BigQueryDbType.Time, BigQueryFieldMode.Repeated },
+                { "array_timestamp", BigQueryDbType.Timestamp, BigQueryFieldMode.Repeated },
+                { "array_int64", BigQueryDbType.Int64, BigQueryFieldMode.Repeated },
+                { "array_float64", BigQueryDbType.Float64, BigQueryFieldMode.Repeated },
+                { "array_record", recordSchema, BigQueryFieldMode.Repeated },                
+            }.Build());
+
+            table.Insert(ExhaustiveTypesTest.GetSampleRow());
         }
 
         internal List<string> LoadTextResource(string relativeName)

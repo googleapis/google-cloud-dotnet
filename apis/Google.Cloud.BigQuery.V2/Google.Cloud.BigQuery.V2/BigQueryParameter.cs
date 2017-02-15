@@ -227,7 +227,7 @@ namespace Google.Cloud.BigQuery.V2
             var parameter = new QueryParameter
             {
                 Name = Name,
-                ParameterType = new QueryParameterType { Type = EnumMap.ToApiValue(type) },
+                ParameterType = new QueryParameterType { Type = type.ToParameterApiType() },
             };
             switch (type)
             {
@@ -242,8 +242,8 @@ namespace Google.Cloud.BigQuery.V2
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.Date:
-                    return parameter.PopulateScalar<DateTime>(value, x => x.ToString("yyyy-MM-dd", InvariantCulture))
-                        ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd", InvariantCulture))
+                    return parameter.PopulateScalar<DateTime>(value, x => x.AsBigQueryDate())
+                        ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.AsBigQueryDate())
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.DateTime:
@@ -277,7 +277,7 @@ namespace Google.Cloud.BigQuery.V2
                             {
                                 throw new InvalidOperationException($"A DateTime with a Kind of {x.Kind} cannot be used for a Timestamp parameter");
                             }
-                            return x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF");
+                            return x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFF+00", InvariantCulture);
                         })
                         ?? parameter.PopulateScalar<DateTimeOffset>(value, x => x.ToString("yyyy-MM-dd HH:mm:ss.FFFFFFzzz", InvariantCulture))
                         ?? parameter.PopulateScalar<string>(value, x => x)
@@ -329,8 +329,8 @@ namespace Google.Cloud.BigQuery.V2
             BigQueryDbType actualArrayType = arrayType ?? s_typeMapping[GetArrayElementType(value)];
             parameter.ParameterType = new QueryParameterType
             {
-                Type = EnumMap.ToApiValue(BigQueryDbType.Array),
-                ArrayType = new QueryParameterType { Type = EnumMap.ToApiValue(actualArrayType) }
+                Type = BigQueryDbType.Array.ToParameterApiType(),
+                ArrayType = new QueryParameterType { Type = actualArrayType.ToParameterApiType() }
             };
             var parameterValues = values
                 .Select(p => new BigQueryParameter(actualArrayType, p).ToQueryParameter(BigQueryParameterMode.Positional).ParameterValue)
