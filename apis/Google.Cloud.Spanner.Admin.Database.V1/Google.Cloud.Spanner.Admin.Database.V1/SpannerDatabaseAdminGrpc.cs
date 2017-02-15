@@ -30,7 +30,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   ///  list databases. It also enables updating the schema of pre-existing
   ///  databases.
   /// </summary>
-  public static class DatabaseAdmin
+  public static partial class DatabaseAdmin
   {
     static readonly string __ServiceName = "google.spanner.admin.database.v1.DatabaseAdmin";
 
@@ -121,7 +121,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     }
 
     /// <summary>Base class for server-side implementations of DatabaseAdmin</summary>
-    public abstract class DatabaseAdminBase
+    public abstract partial class DatabaseAdminBase
     {
       /// <summary>
       ///  Lists Cloud Spanner databases.
@@ -226,7 +226,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     }
 
     /// <summary>Client for DatabaseAdmin</summary>
-    public class DatabaseAdminClient : ClientBase<DatabaseAdminClient>
+    public partial class DatabaseAdminClient : ClientBase<DatabaseAdminClient>
     {
       /// <summary>Creates a new client for DatabaseAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>

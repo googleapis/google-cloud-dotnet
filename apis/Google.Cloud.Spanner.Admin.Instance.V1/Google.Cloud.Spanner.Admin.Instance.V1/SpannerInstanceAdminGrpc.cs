@@ -46,7 +46,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   ///  instance resources, fewer resources are available for other
   ///  databases in that instance, and their performance may suffer.
   /// </summary>
-  public static class InstanceAdmin
+  public static partial class InstanceAdmin
   {
     static readonly string __ServiceName = "google.spanner.admin.instance.v1.InstanceAdmin";
 
@@ -146,7 +146,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     }
 
     /// <summary>Base class for server-side implementations of InstanceAdmin</summary>
-    public abstract class InstanceAdminBase
+    public abstract partial class InstanceAdminBase
     {
       /// <summary>
       ///  Lists the supported instance configurations for a given project.
@@ -326,7 +326,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     }
 
     /// <summary>Client for InstanceAdmin</summary>
-    public class InstanceAdminClient : ClientBase<InstanceAdminClient>
+    public partial class InstanceAdminClient : ClientBase<InstanceAdminClient>
     {
       /// <summary>Creates a new client for InstanceAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
