@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
         private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
         {
-            LoggerOptions options = LoggerOptions.Create(logLevel);
+            LoggerOptions options = LoggerOptions.Create(logLevel, MonitoredResourceUtils.GlobalResource);
             return new GoogleLogger(consumer, s_logToProject, options, _logName, s_clock);
         }
 
@@ -98,6 +98,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void Log()
         {
+            var expectedType = Platform.Instance().Type == PlatformType.Gce ? "gce_instance" : "global";
             Predicate<IEnumerable<LogEntry>> matcher = (l) =>
             {
                 LogEntry entry = l.Single();
@@ -105,7 +106,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     entry.TextPayload == Formatter(_logMessage, s_exception) &&
-                    entry.Resource == MonitoredResourceUtils.GlobalResource;
+                    entry.Resource.Type == expectedType;
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
