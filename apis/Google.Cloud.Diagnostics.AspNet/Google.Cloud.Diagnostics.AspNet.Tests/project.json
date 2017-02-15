@@ -6,13 +6,13 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Testing": "1.0.0-beta07",
+    "Google.Api.Gax.Testing": "1.0.0-beta09",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Cloud.Diagnostics.AspNet": { "target": "project" },
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
     "Google.Cloud.Diagnostics.Common.Tests": { "target": "project" },
-    "xunit": "2.2.0-beta3-build3402",
-    "Moq": "4.6.36-alpha"
+    "xunit": "2.2.0-rc2-build3523",
+    "Moq": "4.6.38-alpha"
   },
   "testRunner": "xunit",
 
