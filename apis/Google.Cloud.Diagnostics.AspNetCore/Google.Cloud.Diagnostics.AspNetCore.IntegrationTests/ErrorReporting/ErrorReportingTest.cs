@@ -174,7 +174,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private class ReportToErrorReportingTestApplication : BaseErrorReportingTestApplication
         {
             public override ErrorReportingOptions GetOptions() =>
-                ErrorReportingOptions.Create(ReportEventsTo.ErrorReporting());
+                ErrorReportingOptions.Create(EventTarget.ForErrorReporting());
         }
 
         /// <summary>

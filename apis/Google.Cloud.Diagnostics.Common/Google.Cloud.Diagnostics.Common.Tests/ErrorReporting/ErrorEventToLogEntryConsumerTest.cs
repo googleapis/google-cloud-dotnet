@@ -30,10 +30,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
     {
         private const string _logName = "some-log-name";
         private static readonly MonitoredResource s_monitoredResource = new MonitoredResource { Type = "global" };
-        private static readonly LogTo s_logTo = LogTo.Project("pid");
+        private static readonly LogTarget s_logTarget = LogTarget.ForProject("pid");
 
         private ErrorEventToLogEntryConsumer CreateErrorConsumer(IConsumer<LogEntry> logConsumer) =>
-            new ErrorEventToLogEntryConsumer(_logName, s_logTo, logConsumer, s_monitoredResource);
+            new ErrorEventToLogEntryConsumer(_logName, s_logTarget, logConsumer, s_monitoredResource);
 
         [Fact]
         public void Receive()

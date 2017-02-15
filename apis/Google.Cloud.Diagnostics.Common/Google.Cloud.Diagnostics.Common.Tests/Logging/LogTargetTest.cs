@@ -16,26 +16,26 @@ using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
-    public class LogToTest
+    public class LogTargetTest
     {
         [Fact]
         public void Project()
         {
             string projectId = "pid";
-            LogTo logTo = LogTo.Project(projectId);
-            Assert.Equal(LogToLocation.Project, logTo.Location);
-            Assert.Equal(projectId, logTo.ProjectId);
-            Assert.Null(logTo.OrganizationId);
+            LogTarget logTarget = LogTarget.ForProject(projectId);
+            Assert.Equal(LogTargetKind.Project, logTarget.Kind);
+            Assert.Equal(projectId, logTarget.ProjectId);
+            Assert.Null(logTarget.OrganizationId);
         }
 
         [Fact]
         public void OrganizationId()
         {
             string organizationId = "oid";
-            LogTo logTo = LogTo.Organization(organizationId);
-            Assert.Equal(LogToLocation.Organization, logTo.Location);
-            Assert.Equal(organizationId, logTo.OrganizationId);
-            Assert.Null(logTo.ProjectId);
+            LogTarget logTarget = LogTarget.ForOrganization(organizationId);
+            Assert.Equal(LogTargetKind.Organization, logTarget.Kind);
+            Assert.Equal(organizationId, logTarget.OrganizationId);
+            Assert.Null(logTarget.ProjectId);
         }
 
         [Fact]
@@ -43,8 +43,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             string projectId = "pid";
             string name = "name";
-            LogTo logTo = LogTo.Project(projectId);
-            string projectName = logTo.GetFullLogName(name);
+            LogTarget logTarget = LogTarget.ForProject(projectId);
+            string projectName = logTarget.GetFullLogName(name);
             Assert.Contains(name, projectName);
             Assert.Contains(projectId, projectName);
         }
@@ -54,8 +54,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             string organizationId = "oid";
             string name = "name";
-            LogTo logTo = LogTo.Organization(organizationId);
-            string organizationName = logTo.GetFullLogName(name);
+            LogTarget logTarget = LogTarget.ForOrganization(organizationId);
+            string organizationName = logTarget.GetFullLogName(name);
             Assert.Contains(name, organizationName);
             Assert.Contains(organizationId, organizationName);
         }

@@ -55,14 +55,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>A clock for getting the current timestamp.</summary>
         private readonly IClock _clock;
 
-        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTo logTo, LoggerOptions loggerOptions, 
+        internal GoogleLogger(IConsumer<LogEntry> consumer, LogTarget logTarget, LoggerOptions loggerOptions, 
             string logName, IClock clock = null)
         {
-            GaxPreconditions.CheckNotNull(logTo, nameof(logTo));
+            GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget));
             GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName));
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _loggerOptions = GaxPreconditions.CheckNotNull(loggerOptions, nameof(loggerOptions)); ;
-            _logName = logTo.GetFullLogName(logName);
+            _logName = logTarget.GetFullLogName(logName);
             _clock = clock ?? SystemClock.Instance;
         }
 

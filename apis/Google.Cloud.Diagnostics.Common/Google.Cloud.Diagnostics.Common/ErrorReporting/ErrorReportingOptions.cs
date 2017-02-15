@@ -26,26 +26,26 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Where the error events should be sent, such as the Stackdriver Logging or Error Reporting API.
         /// </summary>
-        public ReportEventsTo ReportEventsTo { get; }
+        public EventTarget EventTarget { get; }
 
         /// <summary>The buffer options for the error reporter.</summary>
         public BufferOptions BufferOptions { get; }
 
-        private ErrorReportingOptions(ReportEventsTo reportEventsTo, BufferOptions bufferOptions)
+        private ErrorReportingOptions(EventTarget eventTarget, BufferOptions bufferOptions)
         {
-            ReportEventsTo = GaxPreconditions.CheckNotNull(reportEventsTo, nameof(reportEventsTo));
+            EventTarget = GaxPreconditions.CheckNotNull(eventTarget, nameof(eventTarget));
             BufferOptions = GaxPreconditions.CheckNotNull(bufferOptions, nameof(bufferOptions));
         }
 
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/>.
         /// </summary>
-        /// <param name="reportEventsTo">Where the error events should be sent, such as the Stackdriver 
+        /// <param name="eventTarget">Where the error events should be sent, such as the Stackdriver 
         ///     Logging or Error Reporting API. Cannot be null.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         public static ErrorReportingOptions Create(
-            ReportEventsTo reportEventsTo, BufferOptions bufferOptions = null) =>
-            new ErrorReportingOptions(reportEventsTo, bufferOptions ?? BufferOptions.NoBuffer());
+            EventTarget eventTarget, BufferOptions bufferOptions = null) =>
+            new ErrorReportingOptions(eventTarget, bufferOptions ?? BufferOptions.NoBuffer());
 
         /// <summary>
         /// Creates an <see cref="ErrorReportingOptions"/> that will send error events to the
@@ -57,7 +57,7 @@ namespace Google.Cloud.Diagnostics.Common
             string projectId, BufferOptions bufferOptions = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            return Create(ReportEventsTo.Logging(projectId), bufferOptions);
+            return Create(EventTarget.ForLogging(projectId), bufferOptions);
         }
 
         /// <summary>
@@ -69,18 +69,18 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
 
             IConsumer<ReportedErrorEvent> consumer;
-            switch (ReportEventsTo.ReportEventsToLocation)
+            switch (EventTarget.Kind)
             {
-                case ReportEventsToLocation.Logging:
-                    consumer = new ErrorEventToLogEntryConsumer(ReportEventsTo.LogName, ReportEventsTo.LogTo,
-                        new GrpcLogConsumer(ReportEventsTo.LoggingClient), ReportEventsTo.MonitoredResource);
+                case EventTargetKind.Logging:
+                    consumer = new ErrorEventToLogEntryConsumer(EventTarget.LogName, EventTarget.LogTarget,
+                        new GrpcLogConsumer(EventTarget.LoggingClient), EventTarget.MonitoredResource);
                     break;
-                case ReportEventsToLocation.ErrorReporting:
+                case EventTargetKind.ErrorReporting:
                     consumer = new GrpcErrorEventConsumer(
-                        ReportEventsTo.ErrorReportingClient, projectId);
+                        EventTarget.ErrorReportingClient, projectId);
                     break;
                 default:
-                    Debug.Fail($"Unsupported location {ReportEventsTo.ReportEventsToLocation}");
+                    Debug.Fail($"Unsupported location {EventTarget.Kind}");
                     return null;
             }
 
