@@ -8,6 +8,7 @@
   "dependencies": {
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Cloud.Diagnostics.AspNet": { "target": "project" },
+    "Google.Cloud.Diagnostics.Common.Snippets": { "target": "project" },
     "xunit": "2.2.0-beta3-build3402"
   },
   "testRunner": "xunit",
