@@ -98,7 +98,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void Log()
         {
-            var expectedType = Platform.Instance().Type == PlatformType.Gce ? "gce_instance" : "global";
             Predicate<IEnumerable<LogEntry>> matcher = (l) =>
             {
                 LogEntry entry = l.Single();
@@ -106,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     entry.TextPayload == Formatter(_logMessage, s_exception) &&
-                    entry.Resource.Type == expectedType;
+                    entry.Resource == MonitoredResourceUtils.GlobalResource;
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
