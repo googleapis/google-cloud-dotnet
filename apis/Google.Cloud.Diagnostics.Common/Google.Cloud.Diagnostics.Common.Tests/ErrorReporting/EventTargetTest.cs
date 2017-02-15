@@ -36,9 +36,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
             Assert.Null(eventTarget.ErrorReportingClient);
             Assert.Equal(_loggingClient, eventTarget.LoggingClient);
-            Assert.NotNull(eventTarget.LogTo);
-            Assert.Equal(LogTargetKind.Project, eventTarget.LogTo.Kind);
-            Assert.Equal(_projectId, eventTarget.LogTo.ProjectId);
+            Assert.NotNull(eventTarget.LogTarget);
+            Assert.Equal(LogTargetKind.Project, eventTarget.LogTarget.Kind);
+            Assert.Equal(_projectId, eventTarget.LogTarget.ProjectId);
             Assert.Equal(logName, eventTarget.LogName);
             Assert.Equal(EventTarget.GlobalResource, eventTarget.MonitoredResource);
         }
@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
             Assert.Null(eventTarget.ErrorReportingClient);
             Assert.Equal(_loggingClient, eventTarget.LoggingClient);
-            Assert.Equal(logTarget, eventTarget.LogTo);
+            Assert.Equal(logTarget, eventTarget.LogTarget);
             Assert.Equal(logName, eventTarget.LogName);
             Assert.Equal(monitoredResource, eventTarget.MonitoredResource);
         }
@@ -67,7 +67,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal(EventTargetKind.ErrorReporting, eventTarget.Kind);
             Assert.Equal(_errorClient, eventTarget.ErrorReportingClient);
             Assert.Null(eventTarget.LoggingClient);
-            Assert.Null(eventTarget.LogTo);
+            Assert.Null(eventTarget.LogTarget);
             Assert.Null(eventTarget.LogName);
             Assert.Null(eventTarget.MonitoredResource);
         }

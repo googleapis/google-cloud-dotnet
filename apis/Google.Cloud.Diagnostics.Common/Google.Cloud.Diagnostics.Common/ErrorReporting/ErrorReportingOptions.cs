@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.Common
             switch (EventTarget.Kind)
             {
                 case EventTargetKind.Logging:
-                    consumer = new ErrorEventToLogEntryConsumer(EventTarget.LogName, EventTarget.LogTo,
+                    consumer = new ErrorEventToLogEntryConsumer(EventTarget.LogName, EventTarget.LogTarget,
                         new GrpcLogConsumer(EventTarget.LoggingClient), EventTarget.MonitoredResource);
                     break;
                 case EventTargetKind.ErrorReporting:

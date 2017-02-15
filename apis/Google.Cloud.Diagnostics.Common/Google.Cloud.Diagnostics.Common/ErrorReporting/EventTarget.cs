@@ -52,7 +52,7 @@ namespace Google.Cloud.Diagnostics.Common
         public LoggingServiceV2Client LoggingClient { get; private set; }
 
         /// <summary>Where to log to, such as project or organization.</summary>
-        public LogTarget LogTo { get; private set; }
+        public LogTarget LogTarget { get; private set; }
 
         /// <summary>The name of the log.</summary>
         public string LogName { get; private set; }
@@ -100,7 +100,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 Kind = EventTargetKind.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
-                LogTo = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)),
+                LogTarget = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? GlobalResource,
             };
