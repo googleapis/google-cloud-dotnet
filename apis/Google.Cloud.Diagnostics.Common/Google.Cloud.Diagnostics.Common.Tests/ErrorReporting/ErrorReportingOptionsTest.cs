@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private static readonly ReportErrorsServiceClient _errorClient = new Mock<ReportErrorsServiceClient>().Object;
 
         [Fact]
-        public void ErrorReportingOptions_ReportEventsTo()
+        public void ErrorReportingOptions_EventTarget()
         {
             var eventTarget = EventTarget.ForErrorReporting(_errorClient);
             var bufferOptions = BufferOptions.SizedBuffer();

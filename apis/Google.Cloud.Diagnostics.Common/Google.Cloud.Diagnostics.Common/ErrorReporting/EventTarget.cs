@@ -76,8 +76,8 @@ namespace Google.Cloud.Diagnostics.Common
         public static EventTarget ForLogging(string projectId, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
-            var logTo = LogTarget.ForProject(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
-            return ForLogging(logTo, logName, loggingClient, monitoredResource);
+            var logTarget = LogTarget.ForProject(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+            return ForLogging(logTarget, logName, loggingClient, monitoredResource);
         }
 
         /// <summary>
@@ -89,18 +89,18 @@ namespace Google.Cloud.Diagnostics.Common
         /// For more information see "Formatting Log Error Messages"
         /// (https://cloud.google.com/error-reporting/docs/formatting-error-messages).
         /// </remarks>
-        /// <param name="logTo">Where to log to, such as a project or organization. Cannot be null.</param>
+        /// <param name="logTarget">Where to log to, such as a project or organization. Cannot be null.</param>
         /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
         /// <param name="monitoredResource">The resource to monitor.</param>
-        public static EventTarget ForLogging(LogTarget logTo, string logName = LogNameDefault,
+        public static EventTarget ForLogging(LogTarget logTarget, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
             return new EventTarget
             {
                 Kind = EventTargetKind.Logging,
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
-                LogTarget = GaxPreconditions.CheckNotNull(logTo, nameof(logTo)),
+                LogTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? GlobalResource,
             };

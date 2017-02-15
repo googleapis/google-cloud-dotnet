@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
-        public void Logging_LogTo()
+        public void Logging_LogTarget()
         {
             var logTarget = LogTarget.ForOrganization(_organizationId);
             var logName = "another-log";
