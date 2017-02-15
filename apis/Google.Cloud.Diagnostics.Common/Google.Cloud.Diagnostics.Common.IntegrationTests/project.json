@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "1.0.0-alpha01",
   "description": "Integration tests for the  Google Stackdriver Instrumentation Libraries Common Components.",
   "authors": [ "Google Inc." ],
@@ -19,7 +19,11 @@
   "testRunner": "xunit",
 
   "frameworks": {
-    "net451": {},
+    "net451": {
+      "dependencies": {
+        "Microsoft.AspNet.WebApi.Client": "5.2.3"
+      }
+    },
     "netcoreapp1.0": {
       "dependencies": {
         "Microsoft.NETCore.App": {

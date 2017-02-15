@@ -42,8 +42,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task SendAsync_NoTrace()
         {
             var mockTracer = new Mock<IManagedTracer>();
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object);
-            traceHandler.InnerHandler = new FakeDelegatingHandler();
+            var fakeHandler = new FakeDelegatingHandler();
+            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
 
             using (var httpClient = new HttpClient(traceHandler))
             {
@@ -59,8 +59,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
 
             var mockTracer = GetSetUpTracer();
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object);
-            traceHandler.InnerHandler = new FakeDelegatingHandler(headerContext);
+            var fakeHandler = new FakeDelegatingHandler(headerContext);
+            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
@@ -77,8 +77,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public async Task SendAsync_TraceException()
         {
             var mockTracer = GetSetUpTracer();
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object);
-            traceHandler.InnerHandler = new FakeDelegatingHandler(headerContext, throwException: true);
+            var fakeHandler = new FakeDelegatingHandler(headerContext, throwException: true);
+            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
