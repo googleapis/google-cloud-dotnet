@@ -6,8 +6,7 @@
   },
 
   "dependencies": {
-    "Google.Cloud.Diagnostics.AspNetCore": { "target": "project" },
-    "Google.Cloud.Diagnostics.Common.Snippets": { "target": "project" }
+    "Google.Cloud.Diagnostics.AspNetCore": { "target": "project" }
   },
 
   "frameworks": {
