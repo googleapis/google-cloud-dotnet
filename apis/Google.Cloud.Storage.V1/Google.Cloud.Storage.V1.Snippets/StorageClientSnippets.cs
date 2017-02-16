@@ -83,7 +83,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             // Use EncryptionKey.Create if you already have a key.
             EncryptionKey key = EncryptionKey.Generate();
             
-            // This will affect all object-based operations by default.
+            // This will affect all relevant object-based operations by default.
             var client = StorageClient.Create(encryptionKey: key);
             var content = Encoding.UTF8.GetBytes("hello, world");
             client.UploadObject(bucketName, "encrypted.txt", "text/plain", new MemoryStream(content));

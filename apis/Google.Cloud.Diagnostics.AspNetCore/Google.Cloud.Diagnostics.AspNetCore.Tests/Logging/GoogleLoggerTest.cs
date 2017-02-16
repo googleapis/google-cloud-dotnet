@@ -44,7 +44,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
         private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
         {
-            LoggerOptions options = LoggerOptions.Create(logLevel);
+            LoggerOptions options = LoggerOptions.Create(logLevel, MonitoredResourceUtils.GlobalResource);
             return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock);
         }
 
@@ -105,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     entry.TextPayload == Formatter(_logMessage, s_exception) &&
-                    entry.Resource == LoggerOptions.GlobalResource;
+                    entry.Resource == MonitoredResourceUtils.GlobalResource;
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();

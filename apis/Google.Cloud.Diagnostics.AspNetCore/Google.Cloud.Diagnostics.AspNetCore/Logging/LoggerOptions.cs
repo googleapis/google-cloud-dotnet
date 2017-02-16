@@ -24,9 +24,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </summary>
     public sealed class LoggerOptions
     {
-        /// <summary>The global resource.</summary>
-        internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
-
         /// <summary>The minimum log level.</summary>
         public LogLevel LogLevel { get; }
 
@@ -47,13 +44,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Create a new instance of <see cref="LoggerOptions"/>.
         /// </summary>
         /// <param name="logLevel">Optional, the minimum log level.  Defaults to <see cref="LogLevel.Information"/></param>
-        /// <param name="monitoredResource">Optional, the monitored resource.  Defaults to the global resource.
+        /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
+        ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
             MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
         {
-            monitoredResource = monitoredResource ?? GlobalResource;
+            monitoredResource = monitoredResource ?? MonitoredResourceUtils.DetectCurrentResource();
             bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
             return new LoggerOptions(logLevel, monitoredResource, bufferOptions);
         }

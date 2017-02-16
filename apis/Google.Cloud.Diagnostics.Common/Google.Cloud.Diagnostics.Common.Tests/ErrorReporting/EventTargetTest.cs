@@ -31,7 +31,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void Logging_ProjectId()
         {
             var logName = "another-log";
-            var eventTarget = EventTarget.ForLogging(_projectId, logName, _loggingClient);
+            var eventTarget = EventTarget.ForLogging(
+                _projectId, logName, _loggingClient, MonitoredResourceUtils.GlobalResource);
 
             Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
             Assert.Null(eventTarget.ErrorReportingClient);
@@ -40,7 +41,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal(LogTargetKind.Project, eventTarget.LogTarget.Kind);
             Assert.Equal(_projectId, eventTarget.LogTarget.ProjectId);
             Assert.Equal(logName, eventTarget.LogName);
-            Assert.Equal(EventTarget.GlobalResource, eventTarget.MonitoredResource);
+            Assert.Equal(MonitoredResourceUtils.GlobalResource, eventTarget.MonitoredResource);
         }
 
         [Fact]
