@@ -49,7 +49,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// https://msdn.microsoft.com/en-us/library/system.web.mvc.iexceptionfilter.onexception(v=vs.118).aspx
     /// Docs: https://cloud.google.com/error-reporting/docs/
     /// </remarks>
-    public class ErrorReportingExceptionFilter : IExceptionFilter
+    public class ErrorReportingExceptionFilter : IExceptionFilter, IDisposable
     {
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
@@ -96,6 +96,9 @@ namespace Google.Cloud.Diagnostics.AspNet
             var errorEvent = CreateReportRequest(context);
             _consumer.Receive(new[] { errorEvent });
         }
+
+        /// <inheritdoc />
+        public void Dispose() => _consumer.Dispose();
 
         /// <summary>
         /// Gets information about the HTTP request and response when the exception occured 
