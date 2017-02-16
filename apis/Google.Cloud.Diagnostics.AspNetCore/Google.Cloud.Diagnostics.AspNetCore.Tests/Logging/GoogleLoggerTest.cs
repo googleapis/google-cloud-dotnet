@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
@@ -44,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
         private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
         {
-            LoggerOptions options = LoggerOptions.Create(logLevel, MonitoredResourceUtils.GlobalResource);
+            LoggerOptions options = LoggerOptions.Create(logLevel, MonitoredResourceBuilder.GlobalResource);
             return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock);
         }
 
@@ -105,7 +106,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     entry.TextPayload == Formatter(_logMessage, s_exception) &&
-                    entry.Resource == MonitoredResourceUtils.GlobalResource;
+                    entry.Resource == MonitoredResourceBuilder.GlobalResource;
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();

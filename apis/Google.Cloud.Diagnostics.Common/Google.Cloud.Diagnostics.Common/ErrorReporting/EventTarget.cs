@@ -14,6 +14,7 @@
 
 using Google.Api;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
 
@@ -103,7 +104,7 @@ namespace Google.Cloud.Diagnostics.Common
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
                 LogTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
-                MonitoredResource = monitoredResource ?? MonitoredResourceUtils.DetectCurrentResource(),
+                MonitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform(),
             };
         }
 

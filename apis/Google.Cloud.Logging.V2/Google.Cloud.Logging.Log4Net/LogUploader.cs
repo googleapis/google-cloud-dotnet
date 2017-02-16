@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Logging.V2;
-using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,7 +57,7 @@ namespace Google.Cloud.Logging.Log4Net
             _uploaderTask = Task.Run(() => RunUploader(_uploaderTaskCancellation.Token));
         }
 
-        private readonly object _lockObj = new object();
+        private readonly object _lock = new object();
         private readonly LoggingServiceV2Client _client;
         private readonly IScheduler _scheduler;
         private readonly IClock _clock;
@@ -75,16 +74,11 @@ namespace Google.Cloud.Logging.Log4Net
         // Set whenever data has just been uploaded and locally removed.
         private readonly AsyncAutoResetEvent _uploadCompleteEvent = new AsyncAutoResetEvent();
 
-        private DateTimeRange _logEntriesLost = null;
         private long _maxConfirmedSentId = -1;
 
-        public void TriggerUpload(DateTimeRange logEntriesLost)
+        public void TriggerUpload()
         {
-            lock (_lockObj)
-            {
-                _logEntriesLost = _logEntriesLost != null ? _logEntriesLost.Union(logEntriesLost) : logEntriesLost;
-                _uploadReadyEvent.Set();
-            }
+            _uploadReadyEvent.Set();
         }
 
         private LogEntry MakeLostEntry(DateTimeRange lostRange)
@@ -106,13 +100,9 @@ namespace Google.Cloud.Logging.Log4Net
                 // Wait/loop until there are some log entries that need uploading.
                 while (true)
                 {
-                    DateTimeRange logEntriesLost;
-                    lock (_lockObj)
-                    {
-                        logEntriesLost = _logEntriesLost;
-                        _logEntriesLost = null;
-                    }
-                    entries = await _logQ.PeekAsync(_maxUploadBatchSize - (logEntriesLost != null ? 1 : 0), cancellationToken);
+                    var peek = await _logQ.PeekAsync(_maxUploadBatchSize, cancellationToken);
+                    var logEntriesLost = peek.Lost;
+                    entries = peek.Entries;
                     if (logEntriesLost != null)
                     {
                         var lostEntryExtra = new LogEntryExtra(-1, MakeLostEntry(logEntriesLost));
@@ -130,7 +120,7 @@ namespace Google.Cloud.Logging.Log4Net
                 {
                     await _client.WriteLogEntriesAsync(null, null, s_emptyLabels, entries.Select(x => x.Entry), cancellationToken);
                     await _logQ.RemoveUntilAsync(entries.Last().Id, cancellationToken);
-                    lock (_lockObj)
+                    lock (_lock)
                     {
                         _maxConfirmedSentId = entries.Last().Id;
                     }
@@ -159,7 +149,7 @@ namespace Google.Cloud.Logging.Log4Net
             var timeoutTask = Task.Delay(timeout);
             while (true)
             {
-                lock (_lockObj)
+                lock (_lock)
                 {
                     if (_maxConfirmedSentId >= untilId)
                     {

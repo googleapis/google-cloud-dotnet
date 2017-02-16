@@ -14,6 +14,7 @@
 
 using Google.Api;
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.Extensions.Logging;
 
@@ -51,7 +52,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
             MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
         {
-            monitoredResource = monitoredResource ?? MonitoredResourceUtils.DetectCurrentResource();
+            monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             bufferOptions = bufferOptions ?? BufferOptions.SizedBuffer();
             return new LoggerOptions(logLevel, monitoredResource, bufferOptions);
         }
