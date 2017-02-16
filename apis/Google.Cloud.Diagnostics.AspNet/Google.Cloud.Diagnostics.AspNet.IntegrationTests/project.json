@@ -18,7 +18,7 @@
     "Microsoft.Owin.Host.HttpListener": "3.0.1",
     "Microsoft.Owin.Hosting": "3.0.1",
     "Microsoft.Owin.Testing": "3.0.1",
-    "xunit": "2.2.0-beta3-build3402"
+    "xunit": "2.2.0-rc2-build3523"
   },
   "testRunner": "xunit",
 
