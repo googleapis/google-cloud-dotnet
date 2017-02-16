@@ -75,6 +75,50 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         }
 
         [Fact]
+        public void ExternalCsv()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GenerateDatasetId();
+            string tableId = "people";
+            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string objectName = "table.csv";
+            StorageClient storageClient = StorageClient.Create();
+            byte[] csvData = Encoding.UTF8.GetBytes("Jon,10\nChris,20");
+            storageClient.CreateBucket(projectId, bucket);
+            storageClient.UploadObject(bucket, objectName, "text/csv", new MemoryStream(csvData));
+            BigQueryClient.Create(projectId).CreateDataset(datasetId);
+            _fixture.RegisterDatasetToDelete(datasetId);
+
+            // Sample: ExternalCsv
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            TableSchema schema = new TableSchemaBuilder
+            {
+                { "name", BigQueryDbType.String },
+                { "score", BigQueryDbType.Int64 }
+            }.Build();
+            CreateTableOptions options = new CreateTableOptions
+            {
+                ExternalDataConfiguration = new ExternalDataConfiguration
+                {
+                    SourceFormat = "CSV",
+                    SourceUris = new[] { $"gs://{bucket}/{objectName}" }
+                }
+            };
+            BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
+            List<BigQueryRow> rows = client.ExecuteQuery($"SELECT name, score FROM {table} ORDER BY score").GetRows().ToList();
+            foreach (BigQueryRow row in rows)
+            {
+                Console.WriteLine($"{row["name"]} - {row["score"]}");
+            }
+            // End sample
+            Assert.Equal(2, rows.Count);
+            Assert.Equal(new[] { "Jon", "Chris" }, rows.Select(r => (string) r["name"]));
+            Assert.Equal(new[] { 10L, 20L }, rows.Select(r => (long) r["score"]));
+            storageClient.DeleteObject(bucket, objectName);
+            storageClient.DeleteBucket(bucket);
+        }
+
+        [Fact]
         public void InsertionOverview()
         {
             string projectId = _fixture.ProjectId;
