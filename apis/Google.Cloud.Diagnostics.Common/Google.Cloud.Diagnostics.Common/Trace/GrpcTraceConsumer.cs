@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Trace.V1;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
