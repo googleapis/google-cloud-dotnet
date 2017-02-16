@@ -31,7 +31,8 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 Description = "A description",
                 FriendlyName = "A friendly name",
                 TimePartitionType = TimePartitionType.Day,
-                TimePartitionExpiration = TimeSpan.FromDays(10)
+                TimePartitionExpiration = TimeSpan.FromDays(10),
+                ExternalDataConfiguration = new ExternalDataConfiguration(),
             };
             Table table = new Table();
             InsertRequest request = new InsertRequest(new BigqueryService(), table, "project", "dataset");
@@ -41,6 +42,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("A friendly name", table.FriendlyName);
             Assert.Equal("DAY", table.TimePartitioning.Type);
             Assert.Equal(10 * 24 * 60 * 60 * 1000L, table.TimePartitioning.ExpirationMs);
+            Assert.Same(options.ExternalDataConfiguration, table.ExternalDataConfiguration);
         }
 
         [Fact]

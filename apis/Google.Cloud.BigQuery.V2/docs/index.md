@@ -66,3 +66,12 @@ below.
 ## Creating a table partitioned by time
 
 [!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#CreatePartitionedTable)]
+
+## Querying an external data source
+
+As [described in the
+documentation](https://cloud.google.com/bigquery/external-data-sources),
+BigQuery can query some external data sources. The sample code below
+demonstrates querying a CSV file stored in Google Cloud Storage.
+
+[!code-cs[](obj/snippets/Google.Cloud.BigQuery.V2.BigQueryClient.txt#ExternalCsv)]

@@ -30,7 +30,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// public void DoSomething(IManagedTracer tracer)
     /// {
     ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
-    ///     using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
+    ///     using (var httpClient = new HttpClient(traceHeaderHandler))
     ///     {
     ///         ...
     ///     }
@@ -46,17 +46,20 @@ namespace Google.Cloud.Diagnostics.Common
     {
         private readonly IManagedTracer _tracer;
 
-        private TraceHeaderPropagatingHandler(IManagedTracer tracer)
+        private TraceHeaderPropagatingHandler(IManagedTracer tracer, HttpMessageHandler innerHandler)
         {
             _tracer = GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
+            InnerHandler = GaxPreconditions.CheckNotNull(innerHandler, nameof(innerHandler));
         }
 
         /// <summary>
         /// Gets a <see cref="TraceHeaderPropagatingHandler"/>.
         /// </summary>
         /// <param name="tracer">The tracer to trace with. Cannot be null.</param>
-        public static TraceHeaderPropagatingHandler Create(IManagedTracer tracer) =>
-            new TraceHeaderPropagatingHandler(tracer);
+        /// <param name="innerHandler">Optional message handler.  If non is set an
+        ///     <see cref="HttpClientHandler"/>will be used.</param>
+        public static TraceHeaderPropagatingHandler Create(IManagedTracer tracer, HttpMessageHandler innerHandler = null) =>
+            new TraceHeaderPropagatingHandler(tracer, innerHandler ?? new HttpClientHandler());
 
         /// <summary>
         /// Sends the given request.  If tracing is initialized and enabled the outgoing request is

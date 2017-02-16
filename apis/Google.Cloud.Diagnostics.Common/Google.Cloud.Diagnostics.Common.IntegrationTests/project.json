@@ -19,7 +19,11 @@
   "testRunner": "xunit",
 
   "frameworks": {
-    "net451": {},
+    "net451": {
+      "dependencies": {
+        "Microsoft.AspNet.WebApi.Client": "5.2.3"
+      }
+    },
     "netcoreapp1.0": {
       "dependencies": {
         "Microsoft.NETCore.App": {
