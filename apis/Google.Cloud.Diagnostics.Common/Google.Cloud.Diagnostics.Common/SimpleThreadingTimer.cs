@@ -23,7 +23,7 @@ namespace Google.Cloud.Diagnostics.Common
     internal class SimpleThreadingTimer : IThreadingTimer
     {
         /// <summary>The underlying timer.</summary>
-        Timer _timer;
+        private Timer _timer;
 
         /// <inheritdoc />
         void IThreadingTimer.Initialize(TimerCallback callback, TimeSpan waitTime)

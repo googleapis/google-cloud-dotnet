@@ -18,14 +18,14 @@ using System.Threading;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A timer that will automatically call a callback every after every wait time interval.
+    /// A timer that will automatically call a callback after every wait time interval.
     /// </summary>
     interface IThreadingTimer : IDisposable
     {
         /// <summary>
         /// Initialize the timer.
         /// </summary>
-        /// <param name="callback">The callback to be called when after every wait time interval.</param>
+        /// <param name="callback">The callback to be called after every wait time interval.</param>
         /// <param name="waitTime">The amount of time between calls to the callback.</param>
         void Initialize(TimerCallback callback, TimeSpan waitTime);
     }

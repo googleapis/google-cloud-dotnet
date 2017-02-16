@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush the buffer after a 
-    /// given amoutn of time.
+    /// given amount of time.
     /// </summary>
     internal class TimedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
