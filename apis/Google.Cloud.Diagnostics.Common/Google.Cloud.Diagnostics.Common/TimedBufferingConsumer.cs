@@ -21,56 +21,50 @@ using System.Threading;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A <see cref="IFlushableConsumer{T}"/> that will flush the buffer during a receive
-    /// call if the given amount of time has passed..
+    /// A <see cref="IFlushableConsumer{T}"/> that will automatically flush the buffer after a 
+    /// given amoutn of time.
     /// </summary>
     internal class TimedBufferingConsumer<T> : FlushableConsumerBase<T>
     {
         /// <summary>The consumer to flush to.</summary>
         private readonly IConsumer<T> _consumer;
 
-        /// <summary>The minimum amount of time to wait between automatically flushing the buffer.</summary>
-        private readonly TimeSpan _waitTime;
-
-        /// <summary>A clock for getting the current timestamp.</summary>
-        private readonly IClock _clock;
-
         /// <summary>
         /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
         /// </summary>
         private List<T> _items = new List<T>();
 
-        /// <summary>The earliest time of the next automatica flush.</summary>
-        private DateTime _nextFlush;
+        /// <summary>The timer to automatically flush the buffer.</summary>
+        private IThreadingTimer _timer;
 
-        private TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IClock clock)
+        internal TimedBufferingConsumer(IConsumer<T> consumer, TimeSpan waitTime, IThreadingTimer timer)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _waitTime = waitTime;
-            _clock = GaxPreconditions.CheckNotNull(clock, nameof(clock));
-            _nextFlush = _clock.GetCurrentDateTimeUtc().Add(_waitTime);
+            _timer = GaxPreconditions.CheckNotNull(timer, nameof(timer));
+            // Initialize the timer to flush ever wait time interval.
+            _timer.Initialize((e) => { Flush(); }, waitTime);
+        }
+
+        ~TimedBufferingConsumer()
+        {
+            Flush();
+            _timer.Dispose();
         }
 
         /// <summary>
-        /// Creates a new <see cref="TimedBufferingConsumer{T}"/> that will flush to the
-        /// given <see cref="IConsumer{T}"/> during a <see cref="Receive(IEnumerable{T})"/> call after
-        /// the preset wait time since the last flush has passed.
+        /// Creates a new <see cref="TimedBufferingConsumer{T}"/> that will automatically flush the 
+        /// buffer to the <see cref="IConsumer{T}"/> after the given wait time.
         /// </summary>
         /// <param name="consumer">The consumer to flush to, cannot be null.</param>
-        /// <param name="waitTime">The minimum amount of time between automatic flushes.</param>
-        /// <param name="clock">A clock for getting the current timestamp.</param>
-        public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime, IClock clock = null)
-            => new TimedBufferingConsumer<T>(consumer, waitTime, clock ?? SystemClock.Instance);
+        /// <param name="waitTime">The amount of time between automatic flushes.</param>
+        public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime)
+            => new TimedBufferingConsumer<T>(consumer, waitTime, new SimpleThreadingTimer());
 
         /// <inheritdoc />
         protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             _items.AddRange(items);
-            if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
-            {
-                FlushWithSemaphoreHeld();
-            }
         }
 
         /// <inheritdoc />
@@ -79,10 +73,6 @@ namespace Google.Cloud.Diagnostics.Common
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
             _items.AddRange(items);
-            if (_clock.GetCurrentDateTimeUtc() >= _nextFlush)
-            {
-                return FlushAsyncWithSemaphoreHeldAsync(cancellationToken);
-            }
             return CommonUtils.CompletedTask;
         }
 
@@ -95,7 +85,6 @@ namespace Google.Cloud.Diagnostics.Common
             }
 
             _consumer.Receive(_items);
-            _nextFlush = DateTime.UtcNow.Add(_waitTime);
             _items = new List<T>();
         }
 
@@ -109,7 +98,6 @@ namespace Google.Cloud.Diagnostics.Common
 
             IList<T> old = _items;
             _items = new List<T>();
-            _nextFlush = DateTime.UtcNow.Add(_waitTime);
             return _consumer.ReceiveAsync(old, cancellationToken);
         }
     }

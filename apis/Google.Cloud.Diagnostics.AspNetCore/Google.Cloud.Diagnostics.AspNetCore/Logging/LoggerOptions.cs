@@ -49,12 +49,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="logLevel">Optional, the minimum log level.  Defaults to <see cref="LogLevel.Information"/></param>
         /// <param name="monitoredResource">Optional, the monitored resource.  Defaults to the global resource.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
-        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Sized"/></param>
+        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
             MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
         {
             monitoredResource = monitoredResource ?? GlobalResource;
-            bufferOptions = bufferOptions ?? BufferOptions.SizedBuffer();
+            bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
             return new LoggerOptions(logLevel, monitoredResource, bufferOptions);
         }
     }
