@@ -74,6 +74,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </remarks>
     public static class CloudTraceExtension
     {
+        private const string ServiceErrorMessageTemplate = 
+            "No {0} service found. Ensure Google Cloud Trace is properly set up.";
+
+        /// <summary>
+        /// Class used to allow dependency injection of a project id.
+        /// </summary>
+        internal class ProjectId
+         {
+             public string Id;
+         }
+
         /// <summary>
         /// Uses middleware that will trace time taken for all subsequent delegates to run.
         /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
@@ -103,17 +114,38 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             clientTask = clientTask ?? TraceServiceClient.CreateAsync();
             config = config ?? TraceConfiguration.Create();
 
-            IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
+            var consumer = ConsumerFactory<TraceProto>.GetConsumer(
                  new GrpcTraceConsumer(clientTask), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
 
-            var tracerFactory = new ManagedTracerFactory(projectId, consumer,
-                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
-
-            services.AddSingleton<IManagedTracerFactory>(tracerFactory);
+            services.AddSingleton(new ProjectId { Id = projectId });
+            services.AddSingleton(config);
+            services.AddSingleton(consumer);
+            services.AddSingleton(CreateManagedTracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped(CreateTraceHeaderContext);
             services.AddScoped(CreateManagedTracer);
+        }
+
+        /// <summary>
+        /// Creates an <see cref="IManagedTracer"/> from an <see cref="ProjectId"/>, 
+        /// <see cref="TraceConfiguration"/> and <see cref="IConsumer{TraceProto}"/>.
+        /// </summary>
+        internal static IManagedTracerFactory CreateManagedTracerFactory(IServiceProvider provider)
+        {
+            var projectId = provider.GetService<ProjectId>();
+            var config = provider.GetService<TraceConfiguration>();
+            var consumer = provider.GetService<IConsumer<TraceProto>>();
+
+            GaxPreconditions.CheckState(projectId != null,
+                string.Format(ServiceErrorMessageTemplate, typeof(ProjectId).GetType()));
+            GaxPreconditions.CheckState(config != null,
+                string.Format(ServiceErrorMessageTemplate, typeof(TraceConfiguration).GetType()));
+            GaxPreconditions.CheckState(consumer != null,
+                string.Format(ServiceErrorMessageTemplate, typeof(IConsumer<TraceProto>).GetType()));
+
+            return new ManagedTracerFactory(projectId.Id, consumer,
+                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
         }
 
         /// <summary>
@@ -135,11 +167,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var headerContext = provider.GetService<TraceHeaderContext>();
             var tracerFactory = provider.GetService<IManagedTracerFactory>();
 
-            var message = "No {0} service found. Ensure Google Cloud Trace is properly set up.";
             GaxPreconditions.CheckState(headerContext != null, 
-                string.Format(message, typeof(TraceHeaderContext).GetType()));
+                string.Format(ServiceErrorMessageTemplate, typeof(TraceHeaderContext).GetType()));
             GaxPreconditions.CheckState(tracerFactory != null,
-                string.Format(message, typeof(IManagedTracerFactory).GetType()));
+                string.Format(ServiceErrorMessageTemplate, typeof(IManagedTracerFactory).GetType()));
 
             return tracerFactory.CreateTracer(headerContext);
         }
