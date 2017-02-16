@@ -54,6 +54,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <returns>A task representing the asynchronous operation.</returns>
         protected abstract Task FlushAsyncWithSemaphoreHeldAsync(CancellationToken cancellationToken);
 
+
+        /// <inheritdoc />
+        public abstract void Dispose();
+
         /// <inheritdoc />
         public void Receive(IEnumerable<T> items)
         {

@@ -69,5 +69,8 @@ namespace Google.Cloud.Diagnostics.Common
             // If the client task has faulted this will throw when accessing 'Result'
             return _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj, cancellationToken);
         }
+
+        /// <inheritdoc />
+        public void Dispose() { }
     }
 }
