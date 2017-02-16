@@ -56,5 +56,8 @@ namespace Google.Cloud.Diagnostics.Common
             }
             return _client.WriteLogEntriesAsync(null, null, LogLabels.AgentLabel, logs, cancellationToken);
         }
+
+        /// <inheritdoc />
+        public void Dispose() { }
     }
 }

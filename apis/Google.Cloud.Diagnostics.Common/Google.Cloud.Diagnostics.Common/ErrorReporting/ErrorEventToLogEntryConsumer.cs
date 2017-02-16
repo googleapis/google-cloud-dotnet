@@ -58,6 +58,9 @@ namespace Google.Cloud.Diagnostics.Common
             CancellationToken cancellationToken = default(CancellationToken)) => 
                 _logConsumer.ReceiveAsync(ConvertErrorEvents(items), cancellationToken);
 
+        /// <inheritdoc />
+        public void Dispose() { }
+
         /// <summary>
         /// Converts an <see cref="IEnumerable{ReportedErrorEvent}"/> to <see cref="IEnumerable{LogEntry}"/>.
         /// </summary>

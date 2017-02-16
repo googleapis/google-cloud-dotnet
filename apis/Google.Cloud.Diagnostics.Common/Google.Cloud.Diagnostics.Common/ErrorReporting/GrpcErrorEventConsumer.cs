@@ -71,5 +71,8 @@ namespace Google.Cloud.Diagnostics.Common
                 await _client.ReportErrorEventAsync(_projectName, errorEvent, cancellationToken).ConfigureAwait(false);
             }
         }
+
+        /// <inheritdoc />
+        public void Dispose() { }
     }
 }

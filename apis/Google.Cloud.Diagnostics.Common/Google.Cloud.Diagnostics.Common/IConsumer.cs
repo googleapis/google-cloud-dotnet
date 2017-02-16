@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// A consumer.
     /// </summary>
-    internal interface IConsumer<T>
+    internal interface IConsumer<T> : IDisposable
     {
         /// <summary>
         /// Accepts an enumerable of items.

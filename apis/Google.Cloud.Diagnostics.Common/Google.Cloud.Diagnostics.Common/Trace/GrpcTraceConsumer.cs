@@ -14,6 +14,7 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Trace.V1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -69,5 +70,8 @@ namespace Google.Cloud.Diagnostics.Common
             // If the client task has faulted this will throw when accessing 'Result'
             return _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj, cancellationToken);
         }
+
+        /// <inheritdoc />
+        public void Dispose() { }
     }
 }
