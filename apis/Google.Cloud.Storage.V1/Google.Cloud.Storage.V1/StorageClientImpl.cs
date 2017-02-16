@@ -76,7 +76,7 @@ namespace Google.Cloud.Storage.V1
         /// Constructs a new client wrapping the given <see cref="StorageService"/>.
         /// </summary>
         /// <param name="service">The service to wrap. Must not be null.</param>
-        /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for all object-based operations by default. May be null,
+        /// <param name="encryptionKey">Optional <see cref="EncryptionKey"/> to use for object-based operations by default. May be null,
         /// in which case <see cref="EncryptionKey.None"/> will be used.</param>
         public StorageClientImpl(StorageService service, EncryptionKey encryptionKey = null)
         {            
