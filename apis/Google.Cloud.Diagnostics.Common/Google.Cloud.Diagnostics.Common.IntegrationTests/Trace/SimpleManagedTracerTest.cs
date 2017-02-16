@@ -70,6 +70,19 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             }
         }
 
+        /// <summary>Create a thrown exception.</summary>
+        internal Exception CreateException()
+        {
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception e)
+            {
+                return e;
+            }
+        }
+
         private string CreateRootSpanName(string name) => $"{_testId}-{name}";
 
         [Fact]
@@ -166,7 +179,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
-            tracer.SetStackTrace(new StackTrace(new Exception(), true));
+            tracer.SetStackTrace(new StackTrace(CreateException(), true));
             tracer.EndSpan();
 
             TraceProto trace = _polling.GetTrace(rootSpanName, _startTime);
@@ -175,7 +188,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             var labels = trace.Spans[0].Labels;
             Assert.True(labels.ContainsKey(TraceLabels.StackTrace));
-            Assert.Contains(nameof(Trace_SimpleStacktrace), labels[TraceLabels.StackTrace]);
+            Assert.Contains(nameof(CreateException), labels[TraceLabels.StackTrace]);
             Assert.Contains(nameof(SimpleManagedTracerTest), labels[TraceLabels.StackTrace]);
         }
 
@@ -194,7 +207,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             tracer.StartSpan(rootSpanName);
             BlockUntilClockTick();
             tracer.StartSpan("child-one");
-            tracer.SetStackTrace(new StackTrace(new Exception(), true));
+            tracer.SetStackTrace(new StackTrace(CreateException(), true));
             BlockUntilClockTick();
             tracer.EndSpan();
             tracer.StartSpan("child-two");
@@ -222,7 +235,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             Assert.Equal(root.SpanId, childOne.ParentSpanId);
             var labels = childOne.Labels;
             Assert.True(labels.ContainsKey(TraceLabels.StackTrace));
-            Assert.Contains(nameof(Trace_MultipleSpans), labels[TraceLabels.StackTrace]);
+            Assert.Contains(nameof(CreateException), labels[TraceLabels.StackTrace]);
             Assert.Contains(nameof(SimpleManagedTracerTest), labels[TraceLabels.StackTrace]);
 
             Assert.Equal(root.SpanId, childTwo.ParentSpanId);
