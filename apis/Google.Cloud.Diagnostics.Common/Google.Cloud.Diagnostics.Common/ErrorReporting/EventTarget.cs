@@ -39,9 +39,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The default log name, this is the log that error events will be written to.</summary>
         internal const string LogNameDefault = "stackdriver-error-reporting";
 
-        /// <summary>The global resource.</summary>
-        internal static readonly MonitoredResource GlobalResource = new MonitoredResource { Type = "global" };
-
         /// <summary>The location to send error events to.</summary>
         public EventTargetKind Kind { get; private set; }
 
@@ -72,7 +69,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="projectId">The Google Cloud Platform project Id. Cannot be null.</param>
         /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
-        /// <param name="monitoredResource">The resource to monitor.</param>
+        /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
+        ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
+        ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         public static EventTarget ForLogging(string projectId, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
@@ -92,7 +91,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="logTarget">Where to log to, such as a project or organization. Cannot be null.</param>
         /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
-        /// <param name="monitoredResource">The resource to monitor.</param>
+        /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
+        ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
+        ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         public static EventTarget ForLogging(LogTarget logTarget, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
@@ -102,7 +103,7 @@ namespace Google.Cloud.Diagnostics.Common
                 LoggingClient = loggingClient ?? LoggingServiceV2Client.Create(),
                 LogTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
-                MonitoredResource = monitoredResource ?? GlobalResource,
+                MonitoredResource = monitoredResource ?? MonitoredResourceUtils.DetectCurrentResource(),
             };
         }
 
