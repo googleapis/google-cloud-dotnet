@@ -66,6 +66,9 @@ namespace Google.Cloud.Diagnostics.Common
             => new SizedBufferingConsumer<T>(consumer, sizer, bufferSize);
 
         /// <inheritdoc />
+        public override void Dispose() => Flush();
+
+        /// <inheritdoc />
         protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));

@@ -60,6 +60,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             /// <summary>Does nothing with the passed in items.</summary>
             public Task ReceiveAsync(IEnumerable<int> items, CancellationToken cancellationToken) => 
                 CommonUtils.CompletedTask;
+
+            /// <inheritdoc />
+            public void Dispose() { }
         }
     }
 }

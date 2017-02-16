@@ -45,12 +45,6 @@ namespace Google.Cloud.Diagnostics.Common
             _timer.Initialize((e) => { Flush(); }, waitTime);
         }
 
-        ~TimedBufferingConsumer()
-        {
-            Flush();
-            _timer.Dispose();
-        }
-
         /// <summary>
         /// Creates a new <see cref="TimedBufferingConsumer{T}"/> that will automatically flush the 
         /// buffer to the <see cref="IConsumer{T}"/> after the given wait time.
@@ -59,6 +53,13 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="waitTime">The amount of time between automatic flushes.</param>
         public static TimedBufferingConsumer<T> Create(IConsumer<T> consumer, TimeSpan waitTime)
             => new TimedBufferingConsumer<T>(consumer, waitTime, new SimpleThreadingTimer());
+
+        /// <inheritdoc />
+        public override void Dispose()
+        {
+            Flush();
+            _timer.Dispose();
+        }
 
         /// <inheritdoc />
         protected override void ReceiveWithSemaphoreHeld(IEnumerable<T> items)
