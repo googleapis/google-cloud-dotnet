@@ -47,12 +47,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
-        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Sized"/></param>
+        /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
             MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
         {
             monitoredResource = monitoredResource ?? MonitoredResourceUtils.DetectCurrentResource();
-            bufferOptions = bufferOptions ?? BufferOptions.SizedBuffer();
+            bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
             return new LoggerOptions(logLevel, monitoredResource, bufferOptions);
         }
     }
