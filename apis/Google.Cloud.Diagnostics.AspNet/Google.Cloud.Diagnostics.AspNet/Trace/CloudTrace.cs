@@ -72,9 +72,11 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// 
     /// Docs: https://cloud.google.com/trace/docs/
     /// </remarks>
-    public sealed class CloudTrace
+    public sealed class CloudTrace : IDisposable
     {
         private readonly IManagedTracerFactory _tracerFactory;
+
+        private readonly IConsumer<TraceProto> _consumer;
 
         /// <summary>Gets the current <see cref="IManagedTracer"/> for the given request.</summary>
         public static IManagedTracer CurrentTracer =>
@@ -88,10 +90,10 @@ namespace Google.Cloud.Diagnostics.AspNet
             client = client ?? TraceServiceClient.CreateAsync();
             config = config ?? TraceConfiguration.Create();
 
-            var consumer = ConsumerFactory<TraceProto>.GetConsumer(
+            _consumer = ConsumerFactory<TraceProto>.GetConsumer(
                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
 
-            _tracerFactory = new ManagedTracerFactory(projectId, consumer,
+            _tracerFactory = new ManagedTracerFactory(projectId, _consumer,
                 RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
         }
 
@@ -102,7 +104,8 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="application">The Http application.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
-        public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
+        /// <returns>The initialized instance of <see cref="CloudTrace"/> the caller is responsible for disposal.</returns>
+        public static CloudTrace Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
             CloudTrace trace = new CloudTrace(projectId, config, client);
@@ -110,7 +113,11 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;
             application.EndRequest += trace.EndRequest;
+            return trace;
         }
+
+        /// <inheritdoc />
+        public void Dispose() => _consumer.Dispose();
 
         private void BeginRequest(object sender, EventArgs e)
         {
