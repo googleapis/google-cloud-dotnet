@@ -54,6 +54,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public ILogger CreateLogger(string logName) => new GoogleLogger(_consumer, _logTarget, _loggerOptions, logName);
 
         /// <inheritdoc />
-        public void Dispose() {}
+        public void Dispose() => _consumer.Dispose();
     }
 }
