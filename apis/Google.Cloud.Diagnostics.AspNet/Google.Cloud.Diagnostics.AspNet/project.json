@@ -19,10 +19,6 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-beta05",
-    "Google.Api.Gax": "1.0.0-beta11",
-    "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" },
-    "Google.Cloud.Trace.V1": { "target": "project" },
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
     "Microsoft.AspNet.WebApi.Core": "5.2.3",
     "Microsoft.AspNet.WebPages": "3.2.3",
