@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Integration tests for Google.Cloud.Datastore.V1.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

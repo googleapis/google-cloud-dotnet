@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Integration tests for Google.Cloud.Metadata.V1.",
-
   "buildOptions": {
     "embed": {
       "include": [
