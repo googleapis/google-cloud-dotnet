@@ -91,9 +91,9 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         private async Task RunTest(
             Func<IEnumerable<LogEntry>, Task<WriteLogEntriesResponse>> handlerFn,
             Func<GoogleStackdriverAppender, Task> testFn,
-            IClock clock = null, IScheduler scheduler = null,
+            IClock clock = null, IScheduler scheduler = null, Platform platform = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
-            IEnumerable<MetaDataType> withMetadata = null,
+            IEnumerable<MetaDataType> withMetadata = null, bool enableResourceTypeDetection = false,
             bool requiresLog4Net = false)
         {
             Hierarchy hierarchy = null;
@@ -108,15 +108,18 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                     null, null, It.IsAny<IDictionary<string, string>>(), It.IsAny<IEnumerable<LogEntry>>(), It.IsAny<CancellationToken>()))
                     .Returns<LogNameOneof, MonitoredResource, IDictionary<string, string>, IEnumerable<LogEntry>, CancellationToken>((a, b, c, entries, d) => handlerFn(entries));
                 var appender = new GoogleStackdriverAppender(fakeClient.Object,
-                    scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock())
+                    scheduler ?? new NoDelayScheduler(), clock ?? new FakeClock(), platform)
                 {
                     ErrorHandler = new ThrowingErrorHandler(),
                     Layout = new PatternLayout { ConversionPattern = "%message" },
-                    DisableResourceTypeDetection = true,
-                    ResourceType = "global",
                     ProjectId = s_projectId,
                     LogId = s_logId,
                 };
+                if (!enableResourceTypeDetection)
+                {
+                    appender.DisableResourceTypeDetection = true;
+                    appender.ResourceType = "global";
+                }
                 if (maxMemoryCount != null) appender.MaxMemoryCount = maxMemoryCount.Value;
                 if (maxMemorySize != null) appender.MaxMemorySize = maxMemorySize.Value;
                 if (maxUploadBatchSize != null) appender.MaxUploadBatchSize = maxUploadBatchSize.Value;
@@ -144,9 +147,9 @@ namespace Google.Cloud.Logging.Log4Net.Tests
 
         private async Task<List<LogEntry>> RunTestWorkingServer(
             Func<GoogleStackdriverAppender, Task> testFn,
-            IClock clock = null, IScheduler scheduler = null,
+            IClock clock = null, IScheduler scheduler = null, Platform platform = null,
             int? maxMemoryCount = null, long? maxMemorySize = null, int? maxUploadBatchSize = null,
-            IEnumerable<MetaDataType> withMetadata = null,
+            IEnumerable<MetaDataType> withMetadata = null, bool enableResourceTypeDetection = false,
             bool requiresLog4Net = false)
         {
             List<LogEntry> uploadedEntries = new List<LogEntry>();
@@ -154,7 +157,8 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             {
                 uploadedEntries.AddRange(entries);
                 return Task.FromResult(new WriteLogEntriesResponse());
-            }, testFn, clock, scheduler, maxMemoryCount, maxMemorySize, maxUploadBatchSize, withMetadata, requiresLog4Net);
+            }, testFn, clock, scheduler, platform, maxMemoryCount, maxMemorySize, maxUploadBatchSize,
+                withMetadata, enableResourceTypeDetection, requiresLog4Net);
             return uploadedEntries;
         }
 
@@ -383,6 +387,88 @@ namespace Google.Cloud.Logging.Log4Net.Tests
                 Assert.InRange(t1 - t0, TimeSpan.FromSeconds(0.0), TimeSpan.FromSeconds(1.0));
             });
             await Assert.ThrowsAsync<OperationCanceledException>(() => task);
+        }
+
+        [Fact]
+        public async Task UnknownPlatform()
+        {
+            var uploadedEntries = await RunTestWorkingServer(async appender =>
+            {
+                appender.DoAppend(CreateLog(Level.Info, "0"));
+                Assert.True(await appender.FlushAsync(s_testTimeout));
+            }, platform: new Platform(), enableResourceTypeDetection: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var r = uploadedEntries[0].Resource;
+            Assert.Equal("global", r.Type);
+            Assert.Equal(1, r.Labels.Count);
+            Assert.Equal(s_projectId, r.Labels["project_id"]);
+        }
+
+        [Fact]
+        public async Task GcePlatform()
+        {
+            const string json = @"
+{
+  'project': {
+    'projectId': '" + s_projectId + @"'
+  },
+  'instance': {
+    'id': 'FakeInstanceId',
+    'zone': 'FakeZone'
+  }
+}
+";
+            var platform = new Platform(new GcePlatformDetails(json));
+            var uploadedEntries = await RunTestWorkingServer(async appender =>
+            {
+                appender.DoAppend(CreateLog(Level.Info, "0"));
+                Assert.True(await appender.FlushAsync(s_testTimeout));
+            }, platform: platform, enableResourceTypeDetection: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var r = uploadedEntries[0].Resource;
+            Assert.Equal("gce_instance", r.Type);
+            Assert.Equal(3, r.Labels.Count);
+            Assert.Equal(s_projectId, r.Labels["project_id"]);
+            Assert.Equal("FakeInstanceId", r.Labels["instance_id"]);
+            Assert.Equal("FakeZone", r.Labels["zone"]);
+        }
+
+        [Fact]
+        public async Task GaePlatform()
+        {
+            var platform = new Platform(new GaePlatformDetails(s_projectId, "FakeInstanceId", "FakeService", "FakeVersion"));
+            var uploadedEntries = await RunTestWorkingServer(async appender =>
+            {
+                appender.DoAppend(CreateLog(Level.Info, "0"));
+                Assert.True(await appender.FlushAsync(s_testTimeout));
+            }, platform: platform, enableResourceTypeDetection: true);
+            Assert.Equal(1, uploadedEntries.Count);
+            var r = uploadedEntries[0].Resource;
+            Assert.Equal("gae_app", r.Type);
+            Assert.Equal(3, r.Labels.Count);
+            Assert.Equal(s_projectId, r.Labels["project_id"]);
+            Assert.Equal("FakeService", r.Labels["module_id"]);
+            Assert.Equal("FakeVersion", r.Labels["version_id"]);
+        }
+
+        [Fact]
+        public async Task GaePlatformMismatchedProjectId()
+        {
+            var platform = new Platform(new GaePlatformDetails("PlatformProjectId", "FakeInstanceId", "FakeService", "FakeVersion"));
+            var uploadedEntries = await RunTestWorkingServer(async appender =>
+            {
+                appender.DoAppend(CreateLog(Level.Info, "0"));
+                Assert.True(await appender.FlushAsync(s_testTimeout));
+            }, platform: platform, enableResourceTypeDetection: true);
+            Assert.Equal(2, uploadedEntries.Count);
+            Assert.Equal(GoogleStackdriverAppender.s_mismatchedProjectIdMessage, uploadedEntries[0].TextPayload.Trim());
+            Assert.Equal("0", uploadedEntries[1].TextPayload.Trim());
+            var r = uploadedEntries[1].Resource;
+            Assert.Equal("gae_app", r.Type);
+            Assert.Equal(3, r.Labels.Count);
+            Assert.Equal("PlatformProjectId", r.Labels["project_id"]);
+            Assert.Equal("FakeService", r.Labels["module_id"]);
+            Assert.Equal("FakeVersion", r.Labels["version_id"]);
         }
     }
 }

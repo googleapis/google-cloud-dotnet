@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Cloud.Logging.V2;
 using Moq;
@@ -32,7 +33,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var logName = "another-log";
             var eventTarget = EventTarget.ForLogging(
-                _projectId, logName, _loggingClient, MonitoredResourceUtils.GlobalResource);
+                _projectId, logName, _loggingClient, MonitoredResourceBuilder.GlobalResource);
 
             Assert.Equal(EventTargetKind.Logging, eventTarget.Kind);
             Assert.Null(eventTarget.ErrorReportingClient);
@@ -41,7 +42,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Assert.Equal(LogTargetKind.Project, eventTarget.LogTarget.Kind);
             Assert.Equal(_projectId, eventTarget.LogTarget.ProjectId);
             Assert.Equal(logName, eventTarget.LogName);
-            Assert.Equal(MonitoredResourceUtils.GlobalResource, eventTarget.MonitoredResource);
+            Assert.Equal(MonitoredResourceBuilder.GlobalResource, eventTarget.MonitoredResource);
         }
 
         [Fact]

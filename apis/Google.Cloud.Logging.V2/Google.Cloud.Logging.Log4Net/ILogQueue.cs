@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -31,22 +30,21 @@ namespace Google.Cloud.Logging.Log4Net
         /// Enqueue the given log entries.
         /// </summary>
         /// <param name="logEntries"></param>
-        /// <returns>The date/time range lost, or null if nothing lost.</returns>
         /// <remarks>
         /// This enqueues log entries in a local buffer, which are then asynchronously uploaded to Google
         /// Stackdriver. If the local buffer is full, then the oldest locally buffered log entries will
-        /// be purged to allow these newer entries to be buffered. In this case the date/time range of the
-        /// purged log entries will be returned.
+        /// be purged to allow these newer entries to be buffered.
         /// </remarks>
-        DateTimeRange Enqueue(IEnumerable<LogEntryExtra> logEntries);
+        void Enqueue(IEnumerable<LogEntryExtra> logEntries);
 
         /// <summary>
         /// Peek up to the specified maximum number of items.
         /// </summary>
         /// <param name="maximumCount">The maximum number of items to retrieve.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the async operation. The result of the task is the enumerable of requested items.</returns>
-        Task<List<LogEntryExtra>> PeekAsync(int maximumCount, CancellationToken cancellationToken);
+        /// <returns>A task representing the async operation.
+        /// The result of the task contains the enumerable of requested items, and any lost datetime-range.</returns>
+        Task<LogQueuePeekResult> PeekAsync(int maximumCount, CancellationToken cancellationToken);
 
         /// <summary>
         /// Remove items up to and including the specified internal sequential ID.
