@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Integration tests for the Google BigQuery library.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk",
     "embed": {
