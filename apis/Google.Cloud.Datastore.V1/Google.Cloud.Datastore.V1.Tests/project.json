@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Unit tests for the Google Cloud Datastore library.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

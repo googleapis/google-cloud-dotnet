@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Unit tests for Google.Cloud.Metadata.V1.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

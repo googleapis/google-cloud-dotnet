@@ -1,6 +1,4 @@
 {
-  "description": "Unit tests for the Cloud Storage client wrapper library.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

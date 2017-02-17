@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Unit tests for the Google StackDriver log4net appender library.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
