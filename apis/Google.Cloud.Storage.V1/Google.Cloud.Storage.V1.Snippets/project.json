@@ -1,6 +1,4 @@
 {
-  "description": "Snippets for the Google.Cloud.Storage.V1 package (written as tests).",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

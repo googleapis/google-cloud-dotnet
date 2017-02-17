@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Snippets for the Google.LongRunning package",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

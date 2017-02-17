@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Snippets for the Google.Cloud.Monitoring.V3 package (written as tests).",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

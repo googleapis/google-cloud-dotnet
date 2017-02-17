@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Snippets for the ASP.NET Core instrumentation library.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

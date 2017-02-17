@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Google.Cloud.Logging.Log4Net.Snippets Class Library",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk",
     "embed": {
