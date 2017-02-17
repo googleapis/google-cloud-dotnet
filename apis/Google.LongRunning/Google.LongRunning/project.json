@@ -20,7 +20,7 @@
 
   "dependencies": {
     "Google.Api.CommonProtos": "1.0.0-beta05",
-    "Google.Api.Gax.Grpc": "1.0.0-beta08"
+    "Google.Api.Gax.Grpc": "1.0.0-beta11"
   },
 
   "frameworks": {
