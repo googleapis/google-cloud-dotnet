@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Unit tests for the Google Cloud Vision library.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

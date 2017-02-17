@@ -1,6 +1,4 @@
 {
-  "description": "Unit tests for the Google Stackdriver ASP.NET Core Instrumentation Libraries",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

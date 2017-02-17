@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Unit tests for the Google Cloud Natural Language library.",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
