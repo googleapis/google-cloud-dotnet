@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Snippets for the Google.Cloud.Logging.V2 package",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Snippets for the Google.Cloud.Pubsub.V1 package",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },

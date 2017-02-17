@@ -1,6 +1,4 @@
 ﻿{
-  "description": "Snippets for the Google.Cloud.BigQuery.V2 package (written as tests).",
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
