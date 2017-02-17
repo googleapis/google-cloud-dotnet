@@ -4,7 +4,7 @@
   },
 
   "dependencies": {
-    "xunit": "2.2.0-rc2-build3523",
+    "xunit": "2.2.0-rc3-build3528",
     "Moq": "4.6.38-alpha",
     "Microsoft.Extensions.Logging": "1.0.0",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",

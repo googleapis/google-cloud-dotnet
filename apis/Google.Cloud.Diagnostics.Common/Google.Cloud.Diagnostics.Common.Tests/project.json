@@ -8,7 +8,7 @@
     "Google.Api.Gax.Testing": "1.0.0-beta11",
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
     "Moq": "4.6.38-alpha",
-    "xunit": "2.2.0-rc2-build3523"
+    "xunit": "2.2.0-rc3-build3528"
   },
   "testRunner": "xunit",
 
