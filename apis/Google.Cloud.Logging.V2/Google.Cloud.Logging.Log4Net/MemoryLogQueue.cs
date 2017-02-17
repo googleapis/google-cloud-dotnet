@@ -58,7 +58,7 @@ namespace Google.Cloud.Logging.Log4Net
                         var lostEntry = _q.Dequeue();
                         _currentMemorySize -= lostEntry.Size;
                         var lost = new DateTimeRange(lostEntry.LogEntryExtra.Entry.Timestamp.ToDateTime(), lostEntry.LogEntryExtra.Entry.Timestamp.ToDateTime());
-                        _lost = _lost?.Union(lost) ?? lost;
+                        _lost = lost.Union(_lost);
                     }
                     var sizedEntry = new LogEntryExtraSize(entry, _maxMemorySize > 0 ? entry.Entry.CalculateSize() : 0);
                     _q.Enqueue(sizedEntry);

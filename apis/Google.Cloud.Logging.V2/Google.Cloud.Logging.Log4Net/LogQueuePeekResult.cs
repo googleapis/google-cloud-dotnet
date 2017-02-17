@@ -16,6 +16,10 @@ using System.Collections.Generic;
 
 namespace Google.Cloud.Logging.Log4Net
 {
+    /// <summary>
+    /// Contains the result of peeking the local log queue:
+    /// Log entries to send; and the datetime-range of lost log entries, if relevant.
+    /// </summary>
     internal sealed class LogQueuePeekResult
     {
         internal LogQueuePeekResult(List<LogEntryExtra> entries, DateTimeRange lost)
@@ -24,7 +28,15 @@ namespace Google.Cloud.Logging.Log4Net
             Lost = lost;
         }
 
+        /// <summary>
+        /// Log entries to send.
+        /// </summary>
         internal List<LogEntryExtra> Entries { get; }
+
+        /// <summary>
+        /// If not <c>null</c>, the datetime-range of lost log entries;
+        /// <c>null</c> if no log entries have been lost.
+        /// </summary>
         internal DateTimeRange Lost { get; }
     }
 }
