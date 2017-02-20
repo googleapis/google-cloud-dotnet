@@ -55,10 +55,10 @@ namespace Google.Cloud.Tools.Common
         // TODO: Make this a regular class, and move all the logic that's currently in GenerateSnippetMarkdown etc here instead.
 
         /// <summary>
-        /// Find the root directory of the project. We expect this to contain "GoogleApis.sln" and "LICENSE".
+        /// Find the root directory of the project. We expect this to contain "apis" and "LICENSE".
         /// </summary>
         /// <returns></returns>
-        private static string DetermineRootDirectory()
+        public static string DetermineRootDirectory()
         {
             var currentDirectory = Path.GetFullPath(".");
             var directory = new DirectoryInfo(currentDirectory);

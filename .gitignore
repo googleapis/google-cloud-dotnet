@@ -25,3 +25,7 @@ results.xml
 
 # Speech language codes temporary output
 language-codes.tmp.txt
+
+# Generated files when releasing
+tagselectedreleases.sh
+pushselectedreleases.sh
