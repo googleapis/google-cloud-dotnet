@@ -29,7 +29,8 @@ namespace Google.Cloud.PubSub.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
 
         /// <summary>
-        /// Parses a project resource name in string form into a <see cref="ProjectName"/>.
+        /// Parses the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
@@ -41,7 +42,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Tries to parse project resource name in string form into a <see cref="ProjectName"/>/
+        /// Tries to parse the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
@@ -68,7 +70,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Constructs a project name from its component parts.
+        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
@@ -111,7 +114,8 @@ namespace Google.Cloud.PubSub.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/subscriptions/{subscription}");
 
         /// <summary>
-        /// Parses a subscription resource name in string form into a <see cref="SubscriptionName"/>.
+        /// Parses the given subscription resource name in string form into a new
+        /// <see cref="SubscriptionName"/> instance.
         /// </summary>
         /// <param name="subscriptionName">The subscription resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="SubscriptionName"/> if successful.</returns>
@@ -123,7 +127,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Tries to parse subscription resource name in string form into a <see cref="SubscriptionName"/>/
+        /// Tries to parse the given subscription resource name in string form into a new
+        /// <see cref="SubscriptionName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="subscriptionName"/> is null,
@@ -150,7 +155,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Constructs a subscription name from its component parts.
+        /// Constructs a new instance of the <see cref="SubscriptionName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="subscriptionId">The subscription ID. Must not be <c>null</c>.</param>
@@ -200,7 +206,8 @@ namespace Google.Cloud.PubSub.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/topics/{topic}");
 
         /// <summary>
-        /// Parses a topic resource name in string form into a <see cref="TopicName"/>.
+        /// Parses the given topic resource name in string form into a new
+        /// <see cref="TopicName"/> instance.
         /// </summary>
         /// <param name="topicName">The topic resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="TopicName"/> if successful.</returns>
@@ -212,7 +219,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Tries to parse topic resource name in string form into a <see cref="TopicName"/>/
+        /// Tries to parse the given topic resource name in string form into a new
+        /// <see cref="TopicName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="topicName"/> is null,
@@ -239,7 +247,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Constructs a topic name from its component parts.
+        /// Constructs a new instance of the <see cref="TopicName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="topicId">The topic ID. Must not be <c>null</c>.</param>
@@ -315,7 +324,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Parses a resource name in string form into a <see cref="TopicNameOneof"/>.
+        /// Parses a resource name in string form into a new <see cref="TopicNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -327,7 +336,8 @@ namespace Google.Cloud.PubSub.V1
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="TopicNameOneof"/> if successful.</returns>
         public static TopicNameOneof Parse(string name, bool allowUnknown)
         {
@@ -340,7 +350,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Tries to parse a resource name in string form into a <see cref="TopicNameOneof"/>.
+        /// Tries to parse a resource name in string form into a new <see cref="TopicNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -385,7 +395,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Construct an instance of <see cref="TopicNameOneof"/> from the provided <see cref="TopicName"/>
+        /// Construct a new instance of <see cref="TopicNameOneof"/> from the provided <see cref="TopicName"/>
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> to be contained within
         /// the returned <see cref="TopicNameOneof"/>. Must not be <c>null</c>.</param>
@@ -393,7 +403,7 @@ namespace Google.Cloud.PubSub.V1
         public static TopicNameOneof From(TopicName topicName) => new TopicNameOneof(OneofType.TopicName, topicName);
 
         /// <summary>
-        /// Construct an instance of <see cref="TopicNameOneof"/> from the provided <see cref="DeletedTopicNameFixed"/>
+        /// Construct a new instance of <see cref="TopicNameOneof"/> from the provided <see cref="DeletedTopicNameFixed"/>
         /// </summary>
         /// <param name="deletedTopicNameFixed">The <see cref="DeletedTopicNameFixed"/> to be contained within
         /// the returned <see cref="TopicNameOneof"/>. Must not be <c>null</c>.</param>
@@ -412,7 +422,8 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Constructs a {resource.docName} resource name from a suitable <see cref="IResourceName"/> instance.
+        /// Constructs a new instance of the <see cref="TopicNameOneof"/> resource name class
+        /// from a suitable <see cref="IResourceName"/> instance.
         /// </summary>
         public TopicNameOneof(OneofType type, IResourceName name)
         {
@@ -499,7 +510,7 @@ namespace Google.Cloud.PubSub.V1
         public static DeletedTopicNameFixed Instance => new DeletedTopicNameFixed();
 
         /// <summary>
-        /// Parses a string into a <see cref="DeletedTopicNameFixed"/>.
+        /// Parses the given string into a new <see cref="DeletedTopicNameFixed"/> instance.
         /// Only succeeds if the string is equal to "_deleted-topic_".
         /// </summary>
         public static DeletedTopicNameFixed Parse(string deletedTopicNameFixed)
@@ -513,7 +524,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// Tries to parses a string into a <see cref="DeletedTopicNameFixed"/>.
+        /// Tries to parse the given string into a new <see cref="DeletedTopicNameFixed"/> instance.
         /// Only succeeds if the string is equal to "_deleted-topic_".
         /// </summary>
         public static bool TryParse(string deletedTopicNameFixed, out DeletedTopicNameFixed result)
@@ -559,7 +570,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class AcknowledgeRequest
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
@@ -572,7 +583,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class DeleteSubscriptionRequest
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
@@ -585,7 +596,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class DeleteTopicRequest
     {
         /// <summary>
-        /// A <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
+        /// <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
         /// </summary>
         public TopicName TopicAsTopicName
         {
@@ -598,7 +609,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class GetSubscriptionRequest
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
@@ -611,7 +622,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class GetTopicRequest
     {
         /// <summary>
-        /// A <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
+        /// <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
         /// </summary>
         public TopicName TopicAsTopicName
         {
@@ -624,7 +635,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class ListSubscriptionsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Project"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Project"/> resource name property.
         /// </summary>
         public ProjectName ProjectAsProjectName
         {
@@ -637,7 +648,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class ListTopicSubscriptionsRequest
     {
         /// <summary>
-        /// A <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
+        /// <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
         /// </summary>
         public TopicName TopicAsTopicName
         {
@@ -650,7 +661,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class ListTopicSubscriptionsResponse
     {
         /// <summary>
-        /// A <see cref="IList{SubscriptionName}"/>-typed view over the <see cref="Subscriptions"/> resource name property.
+        /// <see cref="IList{SubscriptionName}"/>-typed view over the <see cref="Subscriptions"/> resource name property.
         /// </summary>
         public IList<SubscriptionName> SubscriptionsAsSubscriptionNames =>
             new ResourceNameList<SubscriptionName>(Subscriptions,
@@ -661,7 +672,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class ListTopicsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Project"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Project"/> resource name property.
         /// </summary>
         public ProjectName ProjectAsProjectName
         {
@@ -674,7 +685,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class ModifyAckDeadlineRequest
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
@@ -687,7 +698,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class ModifyPushConfigRequest
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
@@ -700,7 +711,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class PublishRequest
     {
         /// <summary>
-        /// A <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
+        /// <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
         /// </summary>
         public TopicName TopicAsTopicName
         {
@@ -713,7 +724,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class PullRequest
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
@@ -726,7 +737,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class StreamingPullRequest
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionAsSubscriptionName
         {
@@ -739,7 +750,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class Subscription
     {
         /// <summary>
-        /// A <see cref="SubscriptionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public SubscriptionName SubscriptionName
         {
@@ -748,7 +759,7 @@ namespace Google.Cloud.PubSub.V1
         }
 
         /// <summary>
-        /// A <see cref="TopicNameOneof"/>-typed view over the <see cref="Topic"/> resource name property.
+        /// <see cref="TopicNameOneof"/>-typed view over the <see cref="Topic"/> resource name property.
         /// </summary>
         public TopicNameOneof TopicAsTopicNameOneof
         {
@@ -761,7 +772,7 @@ namespace Google.Cloud.PubSub.V1
     public partial class Topic
     {
         /// <summary>
-        /// A <see cref="TopicName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="TopicName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public TopicName TopicName
         {

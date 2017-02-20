@@ -515,7 +515,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose databases should be listed.
-        /// Values are of the form `projects/<project>/instances/<instance>`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -549,7 +549,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose databases should be listed.
-        /// Values are of the form `projects/<project>/instances/<instance>`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -619,7 +619,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<database_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -628,7 +628,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/<project>/instances/<instance>`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -655,7 +655,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<database_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -664,7 +664,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/<project>/instances/<instance>`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -691,7 +691,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<database_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -700,7 +700,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the instance that will serve the new database.
-        /// Values are of the form `projects/<project>/instances/<instance>`.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="createStatement">
         /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
@@ -727,7 +727,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<database_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -766,7 +766,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<database_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -807,7 +807,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/<project>/instances/<instance>/databases/<database>`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -829,7 +829,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/<project>/instances/<instance>/databases/<database>`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -848,7 +848,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested database. Values are of the form
-        /// `projects/<project>/instances/<instance>/databases/<database>`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -907,7 +907,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `<database_name>/operations/<operation_id>` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -939,7 +939,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `<database_name>/operations/<operation_id>` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -971,7 +971,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `<database_name>/operations/<operation_id>` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1003,7 +1003,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `<database_name>/operations/<operation_id>` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1041,7 +1041,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `<database_name>/operations/<operation_id>` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1822,7 +1822,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<database_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -1850,7 +1850,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// <summary>
         /// Creates a new Cloud Spanner database and starts to prepare it for serving.
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<database_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track preparation of the database. The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
@@ -1919,7 +1919,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `<database_name>/operations/<operation_id>` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
@@ -1946,7 +1946,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// Updates the schema of a Cloud Spanner database by
         /// creating/altering/dropping tables, columns, indexes, etc. The returned
         /// [long-running operation][google.longrunning.Operation] will have a name of
-        /// the format `<database_name>/operations/<operation_id>` and can be used to
+        /// the format `&lt;database_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track execution of the schema change(s). The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.

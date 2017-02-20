@@ -28,7 +28,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}");
 
         /// <summary>
-        /// Parses a instance resource name in string form into a <see cref="InstanceName"/>.
+        /// Parses the given instance resource name in string form into a new
+        /// <see cref="InstanceName"/> instance.
         /// </summary>
         /// <param name="instanceName">The instance resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="InstanceName"/> if successful.</returns>
@@ -40,7 +41,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Tries to parse instance resource name in string form into a <see cref="InstanceName"/>/
+        /// Tries to parse the given instance resource name in string form into a new
+        /// <see cref="InstanceName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="instanceName"/> is null,
@@ -67,7 +69,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Constructs a instance name from its component parts.
+        /// Constructs a new instance of the <see cref="InstanceName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
@@ -117,7 +120,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/databases/{database}");
 
         /// <summary>
-        /// Parses a database resource name in string form into a <see cref="DatabaseName"/>.
+        /// Parses the given database resource name in string form into a new
+        /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="DatabaseName"/> if successful.</returns>
@@ -129,7 +133,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Tries to parse database resource name in string form into a <see cref="DatabaseName"/>/
+        /// Tries to parse the given database resource name in string form into a new
+        /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="databaseName"/> is null,
@@ -156,7 +161,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
-        /// Constructs a database name from its component parts.
+        /// Constructs a new instance of the <see cref="DatabaseName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>

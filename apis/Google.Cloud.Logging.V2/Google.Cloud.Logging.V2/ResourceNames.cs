@@ -28,7 +28,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
 
         /// <summary>
-        /// Parses a project resource name in string form into a <see cref="ProjectName"/>.
+        /// Parses the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
@@ -40,7 +41,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse project resource name in string form into a <see cref="ProjectName"/>/
+        /// Tries to parse the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
@@ -67,7 +69,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a project name from its component parts.
+        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
@@ -110,7 +113,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/logs/{log}");
 
         /// <summary>
-        /// Parses a log resource name in string form into a <see cref="LogName"/>.
+        /// Parses the given log resource name in string form into a new
+        /// <see cref="LogName"/> instance.
         /// </summary>
         /// <param name="logName">The log resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="LogName"/> if successful.</returns>
@@ -122,7 +126,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse log resource name in string form into a <see cref="LogName"/>/
+        /// Tries to parse the given log resource name in string form into a new
+        /// <see cref="LogName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="logName"/> is null,
@@ -149,7 +154,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a log name from its component parts.
+        /// Constructs a new instance of the <see cref="LogName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
@@ -199,7 +205,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/sinks/{sink}");
 
         /// <summary>
-        /// Parses a sink resource name in string form into a <see cref="SinkName"/>.
+        /// Parses the given sink resource name in string form into a new
+        /// <see cref="SinkName"/> instance.
         /// </summary>
         /// <param name="sinkName">The sink resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="SinkName"/> if successful.</returns>
@@ -211,7 +218,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse sink resource name in string form into a <see cref="SinkName"/>/
+        /// Tries to parse the given sink resource name in string form into a new
+        /// <see cref="SinkName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="sinkName"/> is null,
@@ -238,7 +246,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a sink name from its component parts.
+        /// Constructs a new instance of the <see cref="SinkName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
@@ -288,7 +297,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/metrics/{metric}");
 
         /// <summary>
-        /// Parses a metric resource name in string form into a <see cref="MetricName"/>.
+        /// Parses the given metric resource name in string form into a new
+        /// <see cref="MetricName"/> instance.
         /// </summary>
         /// <param name="metricName">The metric resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="MetricName"/> if successful.</returns>
@@ -300,7 +310,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse metric resource name in string form into a <see cref="MetricName"/>/
+        /// Tries to parse the given metric resource name in string form into a new
+        /// <see cref="MetricName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="metricName"/> is null,
@@ -327,7 +338,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a metric name from its component parts.
+        /// Constructs a new instance of the <see cref="MetricName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="metricId">The metric ID. Must not be <c>null</c>.</param>
@@ -377,7 +389,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}");
 
         /// <summary>
-        /// Parses a organization resource name in string form into a <see cref="OrganizationName"/>.
+        /// Parses the given organization resource name in string form into a new
+        /// <see cref="OrganizationName"/> instance.
         /// </summary>
         /// <param name="organizationName">The organization resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="OrganizationName"/> if successful.</returns>
@@ -389,7 +402,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse organization resource name in string form into a <see cref="OrganizationName"/>/
+        /// Tries to parse the given organization resource name in string form into a new
+        /// <see cref="OrganizationName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationName"/> is null,
@@ -416,7 +430,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a organization name from its component parts.
+        /// Constructs a new instance of the <see cref="OrganizationName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
         public OrganizationName(string organizationId)
@@ -459,7 +474,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}/logs/{log}");
 
         /// <summary>
-        /// Parses a organization_log resource name in string form into a <see cref="OrganizationLogName"/>.
+        /// Parses the given organization_log resource name in string form into a new
+        /// <see cref="OrganizationLogName"/> instance.
         /// </summary>
         /// <param name="organizationLogName">The organization_log resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="OrganizationLogName"/> if successful.</returns>
@@ -471,7 +487,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse organization_log resource name in string form into a <see cref="OrganizationLogName"/>/
+        /// Tries to parse the given organization_log resource name in string form into a new
+        /// <see cref="OrganizationLogName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationLogName"/> is null,
@@ -498,7 +515,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a organization_log name from its component parts.
+        /// Constructs a new instance of the <see cref="OrganizationLogName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
         /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
@@ -548,7 +566,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("organizations/{organization}/sinks/{sink}");
 
         /// <summary>
-        /// Parses a organization_sink resource name in string form into a <see cref="OrganizationSinkName"/>.
+        /// Parses the given organization_sink resource name in string form into a new
+        /// <see cref="OrganizationSinkName"/> instance.
         /// </summary>
         /// <param name="organizationSinkName">The organization_sink resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="OrganizationSinkName"/> if successful.</returns>
@@ -560,7 +579,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse organization_sink resource name in string form into a <see cref="OrganizationSinkName"/>/
+        /// Tries to parse the given organization_sink resource name in string form into a new
+        /// <see cref="OrganizationSinkName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="organizationSinkName"/> is null,
@@ -587,7 +607,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a organization_sink name from its component parts.
+        /// Constructs a new instance of the <see cref="OrganizationSinkName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="organizationId">The organization ID. Must not be <c>null</c>.</param>
         /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
@@ -637,7 +658,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("folders/{folder}");
 
         /// <summary>
-        /// Parses a folder resource name in string form into a <see cref="FolderName"/>.
+        /// Parses the given folder resource name in string form into a new
+        /// <see cref="FolderName"/> instance.
         /// </summary>
         /// <param name="folderName">The folder resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="FolderName"/> if successful.</returns>
@@ -649,7 +671,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse folder resource name in string form into a <see cref="FolderName"/>/
+        /// Tries to parse the given folder resource name in string form into a new
+        /// <see cref="FolderName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="folderName"/> is null,
@@ -676,7 +699,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a folder name from its component parts.
+        /// Constructs a new instance of the <see cref="FolderName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
         public FolderName(string folderId)
@@ -719,7 +743,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("folders/{folder}/logs/{log}");
 
         /// <summary>
-        /// Parses a folder_log resource name in string form into a <see cref="FolderLogName"/>.
+        /// Parses the given folder_log resource name in string form into a new
+        /// <see cref="FolderLogName"/> instance.
         /// </summary>
         /// <param name="folderLogName">The folder_log resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="FolderLogName"/> if successful.</returns>
@@ -731,7 +756,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse folder_log resource name in string form into a <see cref="FolderLogName"/>/
+        /// Tries to parse the given folder_log resource name in string form into a new
+        /// <see cref="FolderLogName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="folderLogName"/> is null,
@@ -758,7 +784,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a folder_log name from its component parts.
+        /// Constructs a new instance of the <see cref="FolderLogName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
         /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
@@ -808,7 +835,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("folders/{folder}/sinks/{sink}");
 
         /// <summary>
-        /// Parses a folder_sink resource name in string form into a <see cref="FolderSinkName"/>.
+        /// Parses the given folder_sink resource name in string form into a new
+        /// <see cref="FolderSinkName"/> instance.
         /// </summary>
         /// <param name="folderSinkName">The folder_sink resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="FolderSinkName"/> if successful.</returns>
@@ -820,7 +848,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse folder_sink resource name in string form into a <see cref="FolderSinkName"/>/
+        /// Tries to parse the given folder_sink resource name in string form into a new
+        /// <see cref="FolderSinkName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="folderSinkName"/> is null,
@@ -847,7 +876,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a folder_sink name from its component parts.
+        /// Constructs a new instance of the <see cref="FolderSinkName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="folderId">The folder ID. Must not be <c>null</c>.</param>
         /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
@@ -897,7 +927,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("billingAccounts/{billing_account}");
 
         /// <summary>
-        /// Parses a billing resource name in string form into a <see cref="BillingName"/>.
+        /// Parses the given billing resource name in string form into a new
+        /// <see cref="BillingName"/> instance.
         /// </summary>
         /// <param name="billingName">The billing resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="BillingName"/> if successful.</returns>
@@ -909,7 +940,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse billing resource name in string form into a <see cref="BillingName"/>/
+        /// Tries to parse the given billing resource name in string form into a new
+        /// <see cref="BillingName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="billingName"/> is null,
@@ -936,7 +968,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a billing name from its component parts.
+        /// Constructs a new instance of the <see cref="BillingName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="billingAccountId">The billingAccount ID. Must not be <c>null</c>.</param>
         public BillingName(string billingAccountId)
@@ -979,7 +1012,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("billingAccounts/{billing_account}/logs/{log}");
 
         /// <summary>
-        /// Parses a billing_log resource name in string form into a <see cref="BillingLogName"/>.
+        /// Parses the given billing_log resource name in string form into a new
+        /// <see cref="BillingLogName"/> instance.
         /// </summary>
         /// <param name="billingLogName">The billing_log resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="BillingLogName"/> if successful.</returns>
@@ -991,7 +1025,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse billing_log resource name in string form into a <see cref="BillingLogName"/>/
+        /// Tries to parse the given billing_log resource name in string form into a new
+        /// <see cref="BillingLogName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="billingLogName"/> is null,
@@ -1018,7 +1053,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a billing_log name from its component parts.
+        /// Constructs a new instance of the <see cref="BillingLogName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="billingAccountId">The billingAccount ID. Must not be <c>null</c>.</param>
         /// <param name="logId">The log ID. Must not be <c>null</c>.</param>
@@ -1068,7 +1104,8 @@ namespace Google.Cloud.Logging.V2
         private static readonly PathTemplate s_template = new PathTemplate("billingAccounts/{billing_account}/sinks/{sink}");
 
         /// <summary>
-        /// Parses a billing_sink resource name in string form into a <see cref="BillingSinkName"/>.
+        /// Parses the given billing_sink resource name in string form into a new
+        /// <see cref="BillingSinkName"/> instance.
         /// </summary>
         /// <param name="billingSinkName">The billing_sink resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="BillingSinkName"/> if successful.</returns>
@@ -1080,7 +1117,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse billing_sink resource name in string form into a <see cref="BillingSinkName"/>/
+        /// Tries to parse the given billing_sink resource name in string form into a new
+        /// <see cref="BillingSinkName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="billingSinkName"/> is null,
@@ -1107,7 +1145,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a billing_sink name from its component parts.
+        /// Constructs a new instance of the <see cref="BillingSinkName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="billingAccountId">The billingAccount ID. Must not be <c>null</c>.</param>
         /// <param name="sinkId">The sink ID. Must not be <c>null</c>.</param>
@@ -1195,7 +1234,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Parses a resource name in string form into a <see cref="ParentNameOneof"/>.
+        /// Parses a resource name in string form into a new <see cref="ParentNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -1209,7 +1248,8 @@ namespace Google.Cloud.Logging.V2
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="ParentNameOneof"/> if successful.</returns>
         public static ParentNameOneof Parse(string name, bool allowUnknown)
         {
@@ -1222,7 +1262,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse a resource name in string form into a <see cref="ParentNameOneof"/>.
+        /// Tries to parse a resource name in string form into a new <see cref="ParentNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -1281,7 +1321,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Construct an instance of <see cref="ParentNameOneof"/> from the provided <see cref="ProjectName"/>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="ProjectName"/>
         /// </summary>
         /// <param name="projectName">The <see cref="ProjectName"/> to be contained within
         /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1289,7 +1329,7 @@ namespace Google.Cloud.Logging.V2
         public static ParentNameOneof From(ProjectName projectName) => new ParentNameOneof(OneofType.ProjectName, projectName);
 
         /// <summary>
-        /// Construct an instance of <see cref="ParentNameOneof"/> from the provided <see cref="OrganizationName"/>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="OrganizationName"/>
         /// </summary>
         /// <param name="organizationName">The <see cref="OrganizationName"/> to be contained within
         /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1297,7 +1337,7 @@ namespace Google.Cloud.Logging.V2
         public static ParentNameOneof From(OrganizationName organizationName) => new ParentNameOneof(OneofType.OrganizationName, organizationName);
 
         /// <summary>
-        /// Construct an instance of <see cref="ParentNameOneof"/> from the provided <see cref="FolderName"/>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="FolderName"/>
         /// </summary>
         /// <param name="folderName">The <see cref="FolderName"/> to be contained within
         /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1305,7 +1345,7 @@ namespace Google.Cloud.Logging.V2
         public static ParentNameOneof From(FolderName folderName) => new ParentNameOneof(OneofType.FolderName, folderName);
 
         /// <summary>
-        /// Construct an instance of <see cref="ParentNameOneof"/> from the provided <see cref="BillingName"/>
+        /// Construct a new instance of <see cref="ParentNameOneof"/> from the provided <see cref="BillingName"/>
         /// </summary>
         /// <param name="billingName">The <see cref="BillingName"/> to be contained within
         /// the returned <see cref="ParentNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1326,7 +1366,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a {resource.docName} resource name from a suitable <see cref="IResourceName"/> instance.
+        /// Constructs a new instance of the <see cref="ParentNameOneof"/> resource name class
+        /// from a suitable <see cref="IResourceName"/> instance.
         /// </summary>
         public ParentNameOneof(OneofType type, IResourceName name)
         {
@@ -1461,7 +1502,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Parses a resource name in string form into a <see cref="SinkNameOneof"/>.
+        /// Parses a resource name in string form into a new <see cref="SinkNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -1475,7 +1516,8 @@ namespace Google.Cloud.Logging.V2
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="SinkNameOneof"/> if successful.</returns>
         public static SinkNameOneof Parse(string name, bool allowUnknown)
         {
@@ -1488,7 +1530,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse a resource name in string form into a <see cref="SinkNameOneof"/>.
+        /// Tries to parse a resource name in string form into a new <see cref="SinkNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -1547,7 +1589,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Construct an instance of <see cref="SinkNameOneof"/> from the provided <see cref="SinkName"/>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="SinkName"/>
         /// </summary>
         /// <param name="sinkName">The <see cref="SinkName"/> to be contained within
         /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1555,7 +1597,7 @@ namespace Google.Cloud.Logging.V2
         public static SinkNameOneof From(SinkName sinkName) => new SinkNameOneof(OneofType.SinkName, sinkName);
 
         /// <summary>
-        /// Construct an instance of <see cref="SinkNameOneof"/> from the provided <see cref="OrganizationSinkName"/>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="OrganizationSinkName"/>
         /// </summary>
         /// <param name="organizationSinkName">The <see cref="OrganizationSinkName"/> to be contained within
         /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1563,7 +1605,7 @@ namespace Google.Cloud.Logging.V2
         public static SinkNameOneof From(OrganizationSinkName organizationSinkName) => new SinkNameOneof(OneofType.OrganizationSinkName, organizationSinkName);
 
         /// <summary>
-        /// Construct an instance of <see cref="SinkNameOneof"/> from the provided <see cref="FolderSinkName"/>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="FolderSinkName"/>
         /// </summary>
         /// <param name="folderSinkName">The <see cref="FolderSinkName"/> to be contained within
         /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1571,7 +1613,7 @@ namespace Google.Cloud.Logging.V2
         public static SinkNameOneof From(FolderSinkName folderSinkName) => new SinkNameOneof(OneofType.FolderSinkName, folderSinkName);
 
         /// <summary>
-        /// Construct an instance of <see cref="SinkNameOneof"/> from the provided <see cref="BillingSinkName"/>
+        /// Construct a new instance of <see cref="SinkNameOneof"/> from the provided <see cref="BillingSinkName"/>
         /// </summary>
         /// <param name="billingSinkName">The <see cref="BillingSinkName"/> to be contained within
         /// the returned <see cref="SinkNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1592,7 +1634,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a {resource.docName} resource name from a suitable <see cref="IResourceName"/> instance.
+        /// Constructs a new instance of the <see cref="SinkNameOneof"/> resource name class
+        /// from a suitable <see cref="IResourceName"/> instance.
         /// </summary>
         public SinkNameOneof(OneofType type, IResourceName name)
         {
@@ -1727,7 +1770,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Parses a resource name in string form into a <see cref="LogNameOneof"/>.
+        /// Parses a resource name in string form into a new <see cref="LogNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -1741,7 +1784,8 @@ namespace Google.Cloud.Logging.V2
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="LogNameOneof"/> if successful.</returns>
         public static LogNameOneof Parse(string name, bool allowUnknown)
         {
@@ -1754,7 +1798,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse a resource name in string form into a <see cref="LogNameOneof"/>.
+        /// Tries to parse a resource name in string form into a new <see cref="LogNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -1813,7 +1857,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Construct an instance of <see cref="LogNameOneof"/> from the provided <see cref="LogName"/>
+        /// Construct a new instance of <see cref="LogNameOneof"/> from the provided <see cref="LogName"/>
         /// </summary>
         /// <param name="logName">The <see cref="LogName"/> to be contained within
         /// the returned <see cref="LogNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1821,7 +1865,7 @@ namespace Google.Cloud.Logging.V2
         public static LogNameOneof From(LogName logName) => new LogNameOneof(OneofType.LogName, logName);
 
         /// <summary>
-        /// Construct an instance of <see cref="LogNameOneof"/> from the provided <see cref="OrganizationLogName"/>
+        /// Construct a new instance of <see cref="LogNameOneof"/> from the provided <see cref="OrganizationLogName"/>
         /// </summary>
         /// <param name="organizationLogName">The <see cref="OrganizationLogName"/> to be contained within
         /// the returned <see cref="LogNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1829,7 +1873,7 @@ namespace Google.Cloud.Logging.V2
         public static LogNameOneof From(OrganizationLogName organizationLogName) => new LogNameOneof(OneofType.OrganizationLogName, organizationLogName);
 
         /// <summary>
-        /// Construct an instance of <see cref="LogNameOneof"/> from the provided <see cref="FolderLogName"/>
+        /// Construct a new instance of <see cref="LogNameOneof"/> from the provided <see cref="FolderLogName"/>
         /// </summary>
         /// <param name="folderLogName">The <see cref="FolderLogName"/> to be contained within
         /// the returned <see cref="LogNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1837,7 +1881,7 @@ namespace Google.Cloud.Logging.V2
         public static LogNameOneof From(FolderLogName folderLogName) => new LogNameOneof(OneofType.FolderLogName, folderLogName);
 
         /// <summary>
-        /// Construct an instance of <see cref="LogNameOneof"/> from the provided <see cref="BillingLogName"/>
+        /// Construct a new instance of <see cref="LogNameOneof"/> from the provided <see cref="BillingLogName"/>
         /// </summary>
         /// <param name="billingLogName">The <see cref="BillingLogName"/> to be contained within
         /// the returned <see cref="LogNameOneof"/>. Must not be <c>null</c>.</param>
@@ -1858,7 +1902,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a {resource.docName} resource name from a suitable <see cref="IResourceName"/> instance.
+        /// Constructs a new instance of the <see cref="LogNameOneof"/> resource name class
+        /// from a suitable <see cref="IResourceName"/> instance.
         /// </summary>
         public LogNameOneof(OneofType type, IResourceName name)
         {
@@ -1975,7 +2020,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Parses a resource name in string form into a <see cref="MetricNameOneof"/>.
+        /// Parses a resource name in string form into a new <see cref="MetricNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -1986,7 +2031,8 @@ namespace Google.Cloud.Logging.V2
         /// </remarks>
         /// <param name="name">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnknown">If true, will successfully parse an unknown resource name
-        /// into an <see cref="UnknownResourceName"/>.</param>
+        /// into an <see cref="UnknownResourceName"/>; otherwise will throw an
+        /// <see cref="ArgumentException"/> if an unknown resource name is given.</param>
         /// <returns>The parsed <see cref="MetricNameOneof"/> if successful.</returns>
         public static MetricNameOneof Parse(string name, bool allowUnknown)
         {
@@ -1999,7 +2045,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Tries to parse a resource name in string form into a <see cref="MetricNameOneof"/>.
+        /// Tries to parse a resource name in string form into a new <see cref="MetricNameOneof"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully the resource name must be one of the following:
@@ -2037,7 +2083,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Construct an instance of <see cref="MetricNameOneof"/> from the provided <see cref="MetricName"/>
+        /// Construct a new instance of <see cref="MetricNameOneof"/> from the provided <see cref="MetricName"/>
         /// </summary>
         /// <param name="metricName">The <see cref="MetricName"/> to be contained within
         /// the returned <see cref="MetricNameOneof"/>. Must not be <c>null</c>.</param>
@@ -2055,7 +2101,8 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Constructs a {resource.docName} resource name from a suitable <see cref="IResourceName"/> instance.
+        /// Constructs a new instance of the <see cref="MetricNameOneof"/> resource name class
+        /// from a suitable <see cref="IResourceName"/> instance.
         /// </summary>
         public MetricNameOneof(OneofType type, IResourceName name)
         {
@@ -2121,7 +2168,7 @@ namespace Google.Cloud.Logging.V2
     public partial class CreateLogMetricRequest
     {
         /// <summary>
-        /// A <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
@@ -2134,7 +2181,7 @@ namespace Google.Cloud.Logging.V2
     public partial class CreateSinkRequest
     {
         /// <summary>
-        /// A <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
@@ -2147,7 +2194,7 @@ namespace Google.Cloud.Logging.V2
     public partial class DeleteLogMetricRequest
     {
         /// <summary>
-        /// A <see cref="MetricNameOneof"/>-typed view over the <see cref="MetricName"/> resource name property.
+        /// <see cref="MetricNameOneof"/>-typed view over the <see cref="MetricName"/> resource name property.
         /// </summary>
         public MetricNameOneof MetricNameAsMetricNameOneof
         {
@@ -2160,7 +2207,7 @@ namespace Google.Cloud.Logging.V2
     public partial class DeleteLogRequest
     {
         /// <summary>
-        /// A <see cref="LogNameOneof"/>-typed view over the <see cref="LogName"/> resource name property.
+        /// <see cref="LogNameOneof"/>-typed view over the <see cref="LogName"/> resource name property.
         /// </summary>
         public LogNameOneof LogNameAsLogNameOneof
         {
@@ -2173,7 +2220,7 @@ namespace Google.Cloud.Logging.V2
     public partial class DeleteSinkRequest
     {
         /// <summary>
-        /// A <see cref="SinkNameOneof"/>-typed view over the <see cref="SinkName"/> resource name property.
+        /// <see cref="SinkNameOneof"/>-typed view over the <see cref="SinkName"/> resource name property.
         /// </summary>
         public SinkNameOneof SinkNameAsSinkNameOneof
         {
@@ -2186,7 +2233,7 @@ namespace Google.Cloud.Logging.V2
     public partial class GetLogMetricRequest
     {
         /// <summary>
-        /// A <see cref="MetricNameOneof"/>-typed view over the <see cref="MetricName"/> resource name property.
+        /// <see cref="MetricNameOneof"/>-typed view over the <see cref="MetricName"/> resource name property.
         /// </summary>
         public MetricNameOneof MetricNameAsMetricNameOneof
         {
@@ -2199,7 +2246,7 @@ namespace Google.Cloud.Logging.V2
     public partial class GetSinkRequest
     {
         /// <summary>
-        /// A <see cref="SinkNameOneof"/>-typed view over the <see cref="SinkName"/> resource name property.
+        /// <see cref="SinkNameOneof"/>-typed view over the <see cref="SinkName"/> resource name property.
         /// </summary>
         public SinkNameOneof SinkNameAsSinkNameOneof
         {
@@ -2212,7 +2259,7 @@ namespace Google.Cloud.Logging.V2
     public partial class ListLogMetricsRequest
     {
         /// <summary>
-        /// A <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
@@ -2225,7 +2272,7 @@ namespace Google.Cloud.Logging.V2
     public partial class ListLogsRequest
     {
         /// <summary>
-        /// A <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
@@ -2238,7 +2285,7 @@ namespace Google.Cloud.Logging.V2
     public partial class ListSinksRequest
     {
         /// <summary>
-        /// A <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// <see cref="ParentNameOneof"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
         public ParentNameOneof ParentAsParentNameOneof
         {
@@ -2251,7 +2298,7 @@ namespace Google.Cloud.Logging.V2
     public partial class LogEntry
     {
         /// <summary>
-        /// A <see cref="LogNameOneof"/>-typed view over the <see cref="LogName"/> resource name property.
+        /// <see cref="LogNameOneof"/>-typed view over the <see cref="LogName"/> resource name property.
         /// </summary>
         public LogNameOneof LogNameAsLogNameOneof
         {
@@ -2264,7 +2311,7 @@ namespace Google.Cloud.Logging.V2
     public partial class LogSink
     {
         /// <summary>
-        /// A <see cref="IResourceName"/>-typed view over the <see cref="Destination"/> resource name property.
+        /// <see cref="IResourceName"/>-typed view over the <see cref="Destination"/> resource name property.
         /// </summary>
         public IResourceName DestinationAsResourceName
         {
@@ -2277,7 +2324,7 @@ namespace Google.Cloud.Logging.V2
     public partial class UpdateLogMetricRequest
     {
         /// <summary>
-        /// A <see cref="MetricNameOneof"/>-typed view over the <see cref="MetricName"/> resource name property.
+        /// <see cref="MetricNameOneof"/>-typed view over the <see cref="MetricName"/> resource name property.
         /// </summary>
         public MetricNameOneof MetricNameAsMetricNameOneof
         {
@@ -2290,7 +2337,7 @@ namespace Google.Cloud.Logging.V2
     public partial class UpdateSinkRequest
     {
         /// <summary>
-        /// A <see cref="SinkNameOneof"/>-typed view over the <see cref="SinkName"/> resource name property.
+        /// <see cref="SinkNameOneof"/>-typed view over the <see cref="SinkName"/> resource name property.
         /// </summary>
         public SinkNameOneof SinkNameAsSinkNameOneof
         {
@@ -2303,7 +2350,7 @@ namespace Google.Cloud.Logging.V2
     public partial class WriteLogEntriesRequest
     {
         /// <summary>
-        /// A <see cref="LogNameOneof"/>-typed view over the <see cref="LogName"/> resource name property.
+        /// <see cref="LogNameOneof"/>-typed view over the <see cref="LogName"/> resource name property.
         /// </summary>
         public LogNameOneof LogNameAsLogNameOneof
         {
