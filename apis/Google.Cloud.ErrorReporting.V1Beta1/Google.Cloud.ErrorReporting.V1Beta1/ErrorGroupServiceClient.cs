@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -50,7 +50,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetGroupSettings = existing.GetGroupSettings;
             UpdateGroupSettings = existing.UpdateGroupSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(ErrorGroupServiceSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -504,7 +507,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// </summary>
     public sealed partial class ErrorGroupServiceClientImpl : ErrorGroupServiceClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<GetGroupRequest, ErrorGroup> _callGetGroup;
         private readonly ApiCall<UpdateGroupRequest, ErrorGroup> _callUpdateGroup;
 
@@ -517,12 +519,15 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             this.GrpcClient = grpcClient;
             ErrorGroupServiceSettings effectiveSettings = settings ?? ErrorGroupServiceSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callGetGroup = _clientHelper.BuildApiCall<GetGroupRequest, ErrorGroup>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callGetGroup = clientHelper.BuildApiCall<GetGroupRequest, ErrorGroup>(
                 GrpcClient.GetGroupAsync, GrpcClient.GetGroup, effectiveSettings.GetGroupSettings);
-            _callUpdateGroup = _clientHelper.BuildApiCall<UpdateGroupRequest, ErrorGroup>(
+            _callUpdateGroup = clientHelper.BuildApiCall<UpdateGroupRequest, ErrorGroup>(
                 GrpcClient.UpdateGroupAsync, GrpcClient.UpdateGroup, effectiveSettings.UpdateGroupSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(ErrorGroupService.ErrorGroupServiceClient grpcClient, ErrorGroupServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ErrorGroupService client.

@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,7 +53,10 @@ namespace Google.Cloud.Logging.V2
             CreateLogMetricSettings = existing.CreateLogMetricSettings;
             UpdateLogMetricSettings = existing.UpdateLogMetricSettings;
             DeleteLogMetricSettings = existing.DeleteLogMetricSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(MetricsServiceV2Settings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -956,7 +959,6 @@ namespace Google.Cloud.Logging.V2
     /// </summary>
     public sealed partial class MetricsServiceV2ClientImpl : MetricsServiceV2Client
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ListLogMetricsRequest, ListLogMetricsResponse> _callListLogMetrics;
         private readonly ApiCall<GetLogMetricRequest, LogMetric> _callGetLogMetric;
         private readonly ApiCall<CreateLogMetricRequest, LogMetric> _callCreateLogMetric;
@@ -972,18 +974,21 @@ namespace Google.Cloud.Logging.V2
         {
             this.GrpcClient = grpcClient;
             MetricsServiceV2Settings effectiveSettings = settings ?? MetricsServiceV2Settings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callListLogMetrics = _clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callListLogMetrics = clientHelper.BuildApiCall<ListLogMetricsRequest, ListLogMetricsResponse>(
                 GrpcClient.ListLogMetricsAsync, GrpcClient.ListLogMetrics, effectiveSettings.ListLogMetricsSettings);
-            _callGetLogMetric = _clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>(
+            _callGetLogMetric = clientHelper.BuildApiCall<GetLogMetricRequest, LogMetric>(
                 GrpcClient.GetLogMetricAsync, GrpcClient.GetLogMetric, effectiveSettings.GetLogMetricSettings);
-            _callCreateLogMetric = _clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>(
+            _callCreateLogMetric = clientHelper.BuildApiCall<CreateLogMetricRequest, LogMetric>(
                 GrpcClient.CreateLogMetricAsync, GrpcClient.CreateLogMetric, effectiveSettings.CreateLogMetricSettings);
-            _callUpdateLogMetric = _clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(
+            _callUpdateLogMetric = clientHelper.BuildApiCall<UpdateLogMetricRequest, LogMetric>(
                 GrpcClient.UpdateLogMetricAsync, GrpcClient.UpdateLogMetric, effectiveSettings.UpdateLogMetricSettings);
-            _callDeleteLogMetric = _clientHelper.BuildApiCall<DeleteLogMetricRequest, Empty>(
+            _callDeleteLogMetric = clientHelper.BuildApiCall<DeleteLogMetricRequest, Empty>(
                 GrpcClient.DeleteLogMetricAsync, GrpcClient.DeleteLogMetric, effectiveSettings.DeleteLogMetricSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(MetricsServiceV2.MetricsServiceV2Client grpcClient, MetricsServiceV2Settings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC MetricsServiceV2 client.

@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,7 +51,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ListGroupStatsSettings = existing.ListGroupStatsSettings;
             ListEventsSettings = existing.ListEventsSettings;
             DeleteEventsSettings = existing.DeleteEventsSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(ErrorStatsServiceSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -681,7 +684,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// </summary>
     public sealed partial class ErrorStatsServiceClientImpl : ErrorStatsServiceClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> _callListGroupStats;
         private readonly ApiCall<ListEventsRequest, ListEventsResponse> _callListEvents;
         private readonly ApiCall<DeleteEventsRequest, DeleteEventsResponse> _callDeleteEvents;
@@ -695,14 +697,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             this.GrpcClient = grpcClient;
             ErrorStatsServiceSettings effectiveSettings = settings ?? ErrorStatsServiceSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callListGroupStats = _clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(
                 GrpcClient.ListGroupStatsAsync, GrpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings);
-            _callListEvents = _clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(
+            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(
                 GrpcClient.ListEventsAsync, GrpcClient.ListEvents, effectiveSettings.ListEventsSettings);
-            _callDeleteEvents = _clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(
+            _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(
                 GrpcClient.DeleteEventsAsync, GrpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ErrorStatsService client.

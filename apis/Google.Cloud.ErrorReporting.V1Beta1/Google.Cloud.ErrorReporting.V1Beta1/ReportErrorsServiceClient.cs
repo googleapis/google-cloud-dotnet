@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -49,7 +49,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ReportErrorEventSettings = existing.ReportErrorEventSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(ReportErrorsServiceSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -407,7 +410,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// </summary>
     public sealed partial class ReportErrorsServiceClientImpl : ReportErrorsServiceClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ReportErrorEventRequest, ReportErrorEventResponse> _callReportErrorEvent;
 
         /// <summary>
@@ -419,10 +421,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             this.GrpcClient = grpcClient;
             ReportErrorsServiceSettings effectiveSettings = settings ?? ReportErrorsServiceSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callReportErrorEvent = _clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callReportErrorEvent = clientHelper.BuildApiCall<ReportErrorEventRequest, ReportErrorEventResponse>(
                 GrpcClient.ReportErrorEventAsync, GrpcClient.ReportErrorEvent, effectiveSettings.ReportErrorEventSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(ReportErrorsService.ReportErrorsServiceClient grpcClient, ReportErrorsServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ReportErrorsService client.

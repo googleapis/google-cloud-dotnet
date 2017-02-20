@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -49,7 +49,10 @@ namespace Google.Cloud.Vision.V1
         {
             GaxPreconditions.CheckNotNull(existing, nameof(existing));
             BatchAnnotateImagesSettings = existing.BatchAnnotateImagesSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(ImageAnnotatorSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -349,7 +352,6 @@ namespace Google.Cloud.Vision.V1
     /// </summary>
     public sealed partial class ImageAnnotatorClientImpl : ImageAnnotatorClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse> _callBatchAnnotateImages;
 
         /// <summary>
@@ -361,10 +363,13 @@ namespace Google.Cloud.Vision.V1
         {
             this.GrpcClient = grpcClient;
             ImageAnnotatorSettings effectiveSettings = settings ?? ImageAnnotatorSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callBatchAnnotateImages = _clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callBatchAnnotateImages = clientHelper.BuildApiCall<BatchAnnotateImagesRequest, BatchAnnotateImagesResponse>(
                 GrpcClient.BatchAnnotateImagesAsync, GrpcClient.BatchAnnotateImages, effectiveSettings.BatchAnnotateImagesSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(ImageAnnotator.ImageAnnotatorClient grpcClient, ImageAnnotatorSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ImageAnnotator client.

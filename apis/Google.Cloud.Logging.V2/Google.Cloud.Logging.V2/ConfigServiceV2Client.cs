@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,7 +53,10 @@ namespace Google.Cloud.Logging.V2
             CreateSinkSettings = existing.CreateSinkSettings;
             UpdateSinkSettings = existing.UpdateSinkSettings;
             DeleteSinkSettings = existing.DeleteSinkSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(ConfigServiceV2Settings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -1050,7 +1053,6 @@ namespace Google.Cloud.Logging.V2
     /// </summary>
     public sealed partial class ConfigServiceV2ClientImpl : ConfigServiceV2Client
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ListSinksRequest, ListSinksResponse> _callListSinks;
         private readonly ApiCall<GetSinkRequest, LogSink> _callGetSink;
         private readonly ApiCall<CreateSinkRequest, LogSink> _callCreateSink;
@@ -1066,18 +1068,21 @@ namespace Google.Cloud.Logging.V2
         {
             this.GrpcClient = grpcClient;
             ConfigServiceV2Settings effectiveSettings = settings ?? ConfigServiceV2Settings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callListSinks = _clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callListSinks = clientHelper.BuildApiCall<ListSinksRequest, ListSinksResponse>(
                 GrpcClient.ListSinksAsync, GrpcClient.ListSinks, effectiveSettings.ListSinksSettings);
-            _callGetSink = _clientHelper.BuildApiCall<GetSinkRequest, LogSink>(
+            _callGetSink = clientHelper.BuildApiCall<GetSinkRequest, LogSink>(
                 GrpcClient.GetSinkAsync, GrpcClient.GetSink, effectiveSettings.GetSinkSettings);
-            _callCreateSink = _clientHelper.BuildApiCall<CreateSinkRequest, LogSink>(
+            _callCreateSink = clientHelper.BuildApiCall<CreateSinkRequest, LogSink>(
                 GrpcClient.CreateSinkAsync, GrpcClient.CreateSink, effectiveSettings.CreateSinkSettings);
-            _callUpdateSink = _clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(
+            _callUpdateSink = clientHelper.BuildApiCall<UpdateSinkRequest, LogSink>(
                 GrpcClient.UpdateSinkAsync, GrpcClient.UpdateSink, effectiveSettings.UpdateSinkSettings);
-            _callDeleteSink = _clientHelper.BuildApiCall<DeleteSinkRequest, Empty>(
+            _callDeleteSink = clientHelper.BuildApiCall<DeleteSinkRequest, Empty>(
                 GrpcClient.DeleteSinkAsync, GrpcClient.DeleteSink, effectiveSettings.DeleteSinkSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(ConfigServiceV2.ConfigServiceV2Client grpcClient, ConfigServiceV2Settings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ConfigServiceV2 client.

@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,7 +57,10 @@ namespace Google.Cloud.Monitoring.V3
             DeleteMetricDescriptorSettings = existing.DeleteMetricDescriptorSettings;
             ListTimeSeriesSettings = existing.ListTimeSeriesSettings;
             CreateTimeSeriesSettings = existing.CreateTimeSeriesSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(MetricServiceSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -1435,7 +1438,6 @@ namespace Google.Cloud.Monitoring.V3
     /// </summary>
     public sealed partial class MetricServiceClientImpl : MetricServiceClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse> _callListMonitoredResourceDescriptors;
         private readonly ApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor> _callGetMonitoredResourceDescriptor;
         private readonly ApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse> _callListMetricDescriptors;
@@ -1454,24 +1456,27 @@ namespace Google.Cloud.Monitoring.V3
         {
             this.GrpcClient = grpcClient;
             MetricServiceSettings effectiveSettings = settings ?? MetricServiceSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callListMonitoredResourceDescriptors = _clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
-            _callGetMonitoredResourceDescriptor = _clientHelper.BuildApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor>(
+            _callGetMonitoredResourceDescriptor = clientHelper.BuildApiCall<GetMonitoredResourceDescriptorRequest, MonitoredResourceDescriptor>(
                 GrpcClient.GetMonitoredResourceDescriptorAsync, GrpcClient.GetMonitoredResourceDescriptor, effectiveSettings.GetMonitoredResourceDescriptorSettings);
-            _callListMetricDescriptors = _clientHelper.BuildApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse>(
+            _callListMetricDescriptors = clientHelper.BuildApiCall<ListMetricDescriptorsRequest, ListMetricDescriptorsResponse>(
                 GrpcClient.ListMetricDescriptorsAsync, GrpcClient.ListMetricDescriptors, effectiveSettings.ListMetricDescriptorsSettings);
-            _callGetMetricDescriptor = _clientHelper.BuildApiCall<GetMetricDescriptorRequest, MetricDescriptor>(
+            _callGetMetricDescriptor = clientHelper.BuildApiCall<GetMetricDescriptorRequest, MetricDescriptor>(
                 GrpcClient.GetMetricDescriptorAsync, GrpcClient.GetMetricDescriptor, effectiveSettings.GetMetricDescriptorSettings);
-            _callCreateMetricDescriptor = _clientHelper.BuildApiCall<CreateMetricDescriptorRequest, MetricDescriptor>(
+            _callCreateMetricDescriptor = clientHelper.BuildApiCall<CreateMetricDescriptorRequest, MetricDescriptor>(
                 GrpcClient.CreateMetricDescriptorAsync, GrpcClient.CreateMetricDescriptor, effectiveSettings.CreateMetricDescriptorSettings);
-            _callDeleteMetricDescriptor = _clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, Empty>(
+            _callDeleteMetricDescriptor = clientHelper.BuildApiCall<DeleteMetricDescriptorRequest, Empty>(
                 GrpcClient.DeleteMetricDescriptorAsync, GrpcClient.DeleteMetricDescriptor, effectiveSettings.DeleteMetricDescriptorSettings);
-            _callListTimeSeries = _clientHelper.BuildApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse>(
+            _callListTimeSeries = clientHelper.BuildApiCall<ListTimeSeriesRequest, ListTimeSeriesResponse>(
                 GrpcClient.ListTimeSeriesAsync, GrpcClient.ListTimeSeries, effectiveSettings.ListTimeSeriesSettings);
-            _callCreateTimeSeries = _clientHelper.BuildApiCall<CreateTimeSeriesRequest, Empty>(
+            _callCreateTimeSeries = clientHelper.BuildApiCall<CreateTimeSeriesRequest, Empty>(
                 GrpcClient.CreateTimeSeriesAsync, GrpcClient.CreateTimeSeries, effectiveSettings.CreateTimeSeriesSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(MetricService.MetricServiceClient grpcClient, MetricServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC MetricService client.
