@@ -55,11 +55,14 @@ namespace Google.LongRunning
 
     public partial class OperationsClientImpl
     {
-        /// <inheritdoc />
-        public override IClock Clock => _clientHelper.Clock;
+        private IClock _clock;
+        private IScheduler _scheduler;
 
         /// <inheritdoc />
-        public override IScheduler Scheduler => _clientHelper.Scheduler;
+        public override IClock Clock => _clock;
+
+        /// <inheritdoc />
+        public override IScheduler Scheduler => _scheduler;
 
         // Note: if we ever have a partial Modify_GetOperationRequest call body,
         // we'd want to call it here, but cope with not providing a request.
@@ -67,5 +70,11 @@ namespace Google.LongRunning
         /// <inheritdoc />
         protected internal override CallSettings GetEffectiveCallSettingsForGetOperation(CallSettings callSettings) =>
             _callGetOperation.BaseCallSettings.MergedWith(callSettings);
+
+        partial void OnConstruction(Operations.OperationsClient grpcClient, OperationsSettings effectiveSettings, ClientHelper clientHelper)
+        {
+            _clock = clientHelper.Clock;
+            _scheduler = clientHelper.Scheduler;
+        }
     }
 }
