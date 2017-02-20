@@ -57,7 +57,10 @@ namespace Google.Cloud.Spanner.V1
             BeginTransactionSettings = existing.BeginTransactionSettings;
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(SpannerSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -1480,7 +1483,10 @@ namespace Google.Cloud.Spanner.V1
                 GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
             _callRollback = clientHelper.BuildApiCall<RollbackRequest, Empty>(
                 GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Spanner client.

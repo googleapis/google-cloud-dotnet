@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -55,7 +55,10 @@ namespace Google.Cloud.Datastore.V1
             CommitSettings = existing.CommitSettings;
             RollbackSettings = existing.RollbackSettings;
             AllocateIdsSettings = existing.AllocateIdsSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(DatastoreSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -1453,7 +1456,6 @@ namespace Google.Cloud.Datastore.V1
     /// </summary>
     public sealed partial class DatastoreClientImpl : DatastoreClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<LookupRequest, LookupResponse> _callLookup;
         private readonly ApiCall<RunQueryRequest, RunQueryResponse> _callRunQuery;
         private readonly ApiCall<BeginTransactionRequest, BeginTransactionResponse> _callBeginTransaction;
@@ -1470,20 +1472,23 @@ namespace Google.Cloud.Datastore.V1
         {
             this.GrpcClient = grpcClient;
             DatastoreSettings effectiveSettings = settings ?? DatastoreSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callLookup = _clientHelper.BuildApiCall<LookupRequest, LookupResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callLookup = clientHelper.BuildApiCall<LookupRequest, LookupResponse>(
                 GrpcClient.LookupAsync, GrpcClient.Lookup, effectiveSettings.LookupSettings);
-            _callRunQuery = _clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
+            _callRunQuery = clientHelper.BuildApiCall<RunQueryRequest, RunQueryResponse>(
                 GrpcClient.RunQueryAsync, GrpcClient.RunQuery, effectiveSettings.RunQuerySettings);
-            _callBeginTransaction = _clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(
+            _callBeginTransaction = clientHelper.BuildApiCall<BeginTransactionRequest, BeginTransactionResponse>(
                 GrpcClient.BeginTransactionAsync, GrpcClient.BeginTransaction, effectiveSettings.BeginTransactionSettings);
-            _callCommit = _clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
+            _callCommit = clientHelper.BuildApiCall<CommitRequest, CommitResponse>(
                 GrpcClient.CommitAsync, GrpcClient.Commit, effectiveSettings.CommitSettings);
-            _callRollback = _clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>(
+            _callRollback = clientHelper.BuildApiCall<RollbackRequest, RollbackResponse>(
                 GrpcClient.RollbackAsync, GrpcClient.Rollback, effectiveSettings.RollbackSettings);
-            _callAllocateIds = _clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>(
+            _callAllocateIds = clientHelper.BuildApiCall<AllocateIdsRequest, AllocateIdsResponse>(
                 GrpcClient.AllocateIdsAsync, GrpcClient.AllocateIds, effectiveSettings.AllocateIdsSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(Datastore.DatastoreClient grpcClient, DatastoreSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Datastore client.

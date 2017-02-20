@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -52,7 +52,10 @@ namespace Google.LongRunning
             ListOperationsSettings = existing.ListOperationsSettings;
             CancelOperationSettings = existing.CancelOperationSettings;
             DeleteOperationSettings = existing.DeleteOperationSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(OperationsSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -836,7 +839,6 @@ namespace Google.LongRunning
     /// </summary>
     public sealed partial class OperationsClientImpl : OperationsClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<GetOperationRequest, Operation> _callGetOperation;
         private readonly ApiCall<ListOperationsRequest, ListOperationsResponse> _callListOperations;
         private readonly ApiCall<CancelOperationRequest, Empty> _callCancelOperation;
@@ -851,16 +853,19 @@ namespace Google.LongRunning
         {
             this.GrpcClient = grpcClient;
             OperationsSettings effectiveSettings = settings ?? OperationsSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callGetOperation = _clientHelper.BuildApiCall<GetOperationRequest, Operation>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callGetOperation = clientHelper.BuildApiCall<GetOperationRequest, Operation>(
                 GrpcClient.GetOperationAsync, GrpcClient.GetOperation, effectiveSettings.GetOperationSettings);
-            _callListOperations = _clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(
+            _callListOperations = clientHelper.BuildApiCall<ListOperationsRequest, ListOperationsResponse>(
                 GrpcClient.ListOperationsAsync, GrpcClient.ListOperations, effectiveSettings.ListOperationsSettings);
-            _callCancelOperation = _clientHelper.BuildApiCall<CancelOperationRequest, Empty>(
+            _callCancelOperation = clientHelper.BuildApiCall<CancelOperationRequest, Empty>(
                 GrpcClient.CancelOperationAsync, GrpcClient.CancelOperation, effectiveSettings.CancelOperationSettings);
-            _callDeleteOperation = _clientHelper.BuildApiCall<DeleteOperationRequest, Empty>(
+            _callDeleteOperation = clientHelper.BuildApiCall<DeleteOperationRequest, Empty>(
                 GrpcClient.DeleteOperationAsync, GrpcClient.DeleteOperation, effectiveSettings.DeleteOperationSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(Operations.OperationsClient grpcClient, OperationsSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Operations client.

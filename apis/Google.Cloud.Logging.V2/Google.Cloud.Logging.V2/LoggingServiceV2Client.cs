@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -54,7 +54,10 @@ namespace Google.Cloud.Logging.V2
             ListLogEntriesSettings = existing.ListLogEntriesSettings;
             ListMonitoredResourceDescriptorsSettings = existing.ListMonitoredResourceDescriptorsSettings;
             ListLogsSettings = existing.ListLogsSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(LoggingServiceV2Settings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -1105,7 +1108,6 @@ namespace Google.Cloud.Logging.V2
     /// </summary>
     public sealed partial class LoggingServiceV2ClientImpl : LoggingServiceV2Client
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<DeleteLogRequest, Empty> _callDeleteLog;
         private readonly ApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse> _callWriteLogEntries;
         private readonly ApiCall<ListLogEntriesRequest, ListLogEntriesResponse> _callListLogEntries;
@@ -1121,18 +1123,21 @@ namespace Google.Cloud.Logging.V2
         {
             this.GrpcClient = grpcClient;
             LoggingServiceV2Settings effectiveSettings = settings ?? LoggingServiceV2Settings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callDeleteLog = _clientHelper.BuildApiCall<DeleteLogRequest, Empty>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callDeleteLog = clientHelper.BuildApiCall<DeleteLogRequest, Empty>(
                 GrpcClient.DeleteLogAsync, GrpcClient.DeleteLog, effectiveSettings.DeleteLogSettings);
-            _callWriteLogEntries = _clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(
+            _callWriteLogEntries = clientHelper.BuildApiCall<WriteLogEntriesRequest, WriteLogEntriesResponse>(
                 GrpcClient.WriteLogEntriesAsync, GrpcClient.WriteLogEntries, effectiveSettings.WriteLogEntriesSettings);
-            _callListLogEntries = _clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(
+            _callListLogEntries = clientHelper.BuildApiCall<ListLogEntriesRequest, ListLogEntriesResponse>(
                 GrpcClient.ListLogEntriesAsync, GrpcClient.ListLogEntries, effectiveSettings.ListLogEntriesSettings);
-            _callListMonitoredResourceDescriptors = _clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
+            _callListMonitoredResourceDescriptors = clientHelper.BuildApiCall<ListMonitoredResourceDescriptorsRequest, ListMonitoredResourceDescriptorsResponse>(
                 GrpcClient.ListMonitoredResourceDescriptorsAsync, GrpcClient.ListMonitoredResourceDescriptors, effectiveSettings.ListMonitoredResourceDescriptorsSettings);
-            _callListLogs = _clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>(
+            _callListLogs = clientHelper.BuildApiCall<ListLogsRequest, ListLogsResponse>(
                 GrpcClient.ListLogsAsync, GrpcClient.ListLogs, effectiveSettings.ListLogsSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(LoggingServiceV2.LoggingServiceV2Client grpcClient, LoggingServiceV2Settings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC LoggingServiceV2 client.

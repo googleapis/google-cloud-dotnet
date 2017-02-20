@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -62,7 +62,10 @@ namespace Google.Cloud.PubSub.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(SubscriberSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -2279,7 +2282,6 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public sealed partial class SubscriberClientImpl : SubscriberClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<Subscription, Subscription> _callCreateSubscription;
         private readonly ApiCall<GetSubscriptionRequest, Subscription> _callGetSubscription;
         private readonly ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _callListSubscriptions;
@@ -2302,33 +2304,36 @@ namespace Google.Cloud.PubSub.V1
         {
             this.GrpcClient = grpcClient;
             SubscriberSettings effectiveSettings = settings ?? SubscriberSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             var grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
-            _callCreateSubscription = _clientHelper.BuildApiCall<Subscription, Subscription>(
+            _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>(
                 GrpcClient.CreateSubscriptionAsync, GrpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings);
-            _callGetSubscription = _clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(
+            _callGetSubscription = clientHelper.BuildApiCall<GetSubscriptionRequest, Subscription>(
                 GrpcClient.GetSubscriptionAsync, GrpcClient.GetSubscription, effectiveSettings.GetSubscriptionSettings);
-            _callListSubscriptions = _clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(
+            _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>(
                 GrpcClient.ListSubscriptionsAsync, GrpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings);
-            _callDeleteSubscription = _clientHelper.BuildApiCall<DeleteSubscriptionRequest, Empty>(
+            _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, Empty>(
                 GrpcClient.DeleteSubscriptionAsync, GrpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings);
-            _callModifyAckDeadline = _clientHelper.BuildApiCall<ModifyAckDeadlineRequest, Empty>(
+            _callModifyAckDeadline = clientHelper.BuildApiCall<ModifyAckDeadlineRequest, Empty>(
                 GrpcClient.ModifyAckDeadlineAsync, GrpcClient.ModifyAckDeadline, effectiveSettings.ModifyAckDeadlineSettings);
-            _callAcknowledge = _clientHelper.BuildApiCall<AcknowledgeRequest, Empty>(
+            _callAcknowledge = clientHelper.BuildApiCall<AcknowledgeRequest, Empty>(
                 GrpcClient.AcknowledgeAsync, GrpcClient.Acknowledge, effectiveSettings.AcknowledgeSettings);
-            _callPull = _clientHelper.BuildApiCall<PullRequest, PullResponse>(
+            _callPull = clientHelper.BuildApiCall<PullRequest, PullResponse>(
                 GrpcClient.PullAsync, GrpcClient.Pull, effectiveSettings.PullSettings);
-            _callStreamingPull = _clientHelper.BuildApiCall<StreamingPullRequest, StreamingPullResponse>(
+            _callStreamingPull = clientHelper.BuildApiCall<StreamingPullRequest, StreamingPullResponse>(
                 GrpcClient.StreamingPull, effectiveSettings.StreamingPullSettings, effectiveSettings.StreamingPullStreamingSettings);
-            _callModifyPushConfig = _clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(
+            _callModifyPushConfig = clientHelper.BuildApiCall<ModifyPushConfigRequest, Empty>(
                 GrpcClient.ModifyPushConfigAsync, GrpcClient.ModifyPushConfig, effectiveSettings.ModifyPushConfigSettings);
-            _callSetIamPolicy = _clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
                 grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
-            _callGetIamPolicy = _clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
                 grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
-            _callTestIamPermissions = _clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
                 grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(Subscriber.SubscriberClient grpcClient, SubscriberSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Subscriber client.

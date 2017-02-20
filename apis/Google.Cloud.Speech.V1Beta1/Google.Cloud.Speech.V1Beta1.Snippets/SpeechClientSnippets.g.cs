@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -40,8 +40,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Create client
             SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig();
-            RecognitionAudio audio = new RecognitionAudio();
+            RecognitionConfig config = new RecognitionConfig
+            {
+                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                SampleRate = 44100,
+            };
+            RecognitionAudio audio = new RecognitionAudio
+            {
+                Uri = "gs://bucket_name/file_name.flac",
+            };
             // Make the request
             SyncRecognizeResponse response = await speechClient.SyncRecognizeAsync(config, audio);
             // End snippet
@@ -53,8 +60,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig();
-            RecognitionAudio audio = new RecognitionAudio();
+            RecognitionConfig config = new RecognitionConfig
+            {
+                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                SampleRate = 44100,
+            };
+            RecognitionAudio audio = new RecognitionAudio
+            {
+                Uri = "gs://bucket_name/file_name.flac",
+            };
             // Make the request
             SyncRecognizeResponse response = speechClient.SyncRecognize(config, audio);
             // End snippet
@@ -68,8 +82,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Initialize request argument(s)
             SyncRecognizeRequest request = new SyncRecognizeRequest
             {
-                Config = new RecognitionConfig(),
-                Audio = new RecognitionAudio(),
+                Config = new RecognitionConfig
+                         {
+                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                             SampleRate = 44100,
+                         },
+                Audio = new RecognitionAudio
+                        {
+                            Uri = "gs://bucket_name/file_name.flac",
+                        },
             };
             // Make the request
             SyncRecognizeResponse response = await speechClient.SyncRecognizeAsync(request);
@@ -84,8 +105,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Initialize request argument(s)
             SyncRecognizeRequest request = new SyncRecognizeRequest
             {
-                Config = new RecognitionConfig(),
-                Audio = new RecognitionAudio(),
+                Config = new RecognitionConfig
+                         {
+                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                             SampleRate = 44100,
+                         },
+                Audio = new RecognitionAudio
+                        {
+                            Uri = "gs://bucket_name/file_name.flac",
+                        },
             };
             // Make the request
             SyncRecognizeResponse response = speechClient.SyncRecognize(request);
@@ -99,8 +127,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Create client
             SpeechClient speechClient = await SpeechClient.CreateAsync();
             // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig();
-            RecognitionAudio audio = new RecognitionAudio();
+            RecognitionConfig config = new RecognitionConfig
+            {
+                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                SampleRate = 44100,
+            };
+            RecognitionAudio audio = new RecognitionAudio
+            {
+                Uri = "gs://bucket_name/file_name.flac",
+            };
             // Make the request
             Operation<AsyncRecognizeResponse> response =
                 await speechClient.AsyncRecognizeAsync(config, audio);
@@ -131,8 +166,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Create client
             SpeechClient speechClient = SpeechClient.Create();
             // Initialize request argument(s)
-            RecognitionConfig config = new RecognitionConfig();
-            RecognitionAudio audio = new RecognitionAudio();
+            RecognitionConfig config = new RecognitionConfig
+            {
+                Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                SampleRate = 44100,
+            };
+            RecognitionAudio audio = new RecognitionAudio
+            {
+                Uri = "gs://bucket_name/file_name.flac",
+            };
             // Make the request
             Operation<AsyncRecognizeResponse> response =
                 speechClient.AsyncRecognize(config, audio);
@@ -165,8 +207,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Initialize request argument(s)
             AsyncRecognizeRequest request = new AsyncRecognizeRequest
             {
-                Config = new RecognitionConfig(),
-                Audio = new RecognitionAudio(),
+                Config = new RecognitionConfig
+                         {
+                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                             SampleRate = 44100,
+                         },
+                Audio = new RecognitionAudio
+                        {
+                            Uri = "gs://bucket_name/file_name.flac",
+                        },
             };
             // Make the request
             Operation<AsyncRecognizeResponse> response =
@@ -200,8 +249,15 @@ namespace Google.Cloud.Speech.V1Beta1.Snippets
             // Initialize request argument(s)
             AsyncRecognizeRequest request = new AsyncRecognizeRequest
             {
-                Config = new RecognitionConfig(),
-                Audio = new RecognitionAudio(),
+                Config = new RecognitionConfig
+                         {
+                             Encoding = RecognitionConfig.Types.AudioEncoding.Flac,
+                             SampleRate = 44100,
+                         },
+                Audio = new RecognitionAudio
+                        {
+                            Uri = "gs://bucket_name/file_name.flac",
+                        },
             };
             // Make the request
             Operation<AsyncRecognizeResponse> response =
