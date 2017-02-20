@@ -314,19 +314,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as <code>projects/</code> plus the
-        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-        /// Platform project ID</a>.
+        /// as &lt;code&gt;projects/&lt;/code&gt; plus the
+        /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
+        /// Platform project ID&lt;/a&gt;.
         ///
-        /// Example: <code>projects/my-project-123</code>.
+        /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
         /// [Optional] List data for the given time range.
         /// If not set a default time range is used. The field time_range_begin
         /// in the response will specify the beginning of this time range.
-        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
         /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">
@@ -363,19 +363,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as <code>projects/</code> plus the
-        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-        /// Platform project ID</a>.
+        /// as &lt;code&gt;projects/&lt;/code&gt; plus the
+        /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
+        /// Platform project ID&lt;/a&gt;.
         ///
-        /// Example: <code>projects/my-project-123</code>.
+        /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
         /// [Optional] List data for the given time range.
         /// If not set a default time range is used. The field time_range_begin
         /// in the response will specify the beginning of this time range.
-        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
         /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">

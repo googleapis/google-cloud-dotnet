@@ -546,7 +546,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
         /// configurations is requested. Values are of the form
-        /// `projects/<project>`.
+        /// `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -581,7 +581,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
         /// configurations is requested. Values are of the form
-        /// `projects/<project>`.
+        /// `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -653,7 +653,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested instance configuration. Values are of
-        /// the form `projects/<project>/instanceConfigs/<config>`.
+        /// the form `projects/&lt;project&gt;/instanceConfigs/&lt;config&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -675,7 +675,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested instance configuration. Values are of
-        /// the form `projects/<project>/instanceConfigs/<config>`.
+        /// the form `projects/&lt;project&gt;/instanceConfigs/&lt;config&gt;`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -694,7 +694,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested instance configuration. Values are of
-        /// the form `projects/<project>/instanceConfigs/<config>`.
+        /// the form `projects/&lt;project&gt;/instanceConfigs/&lt;config&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -754,7 +754,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of instances is
-        /// requested. Values are of the form `projects/<project>`.
+        /// requested. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -788,7 +788,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of instances is
-        /// requested. Values are of the form `projects/<project>`.
+        /// requested. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -860,7 +860,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested instance. Values are of the form
-        /// `projects/<project>/instances/<instance>`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -882,7 +882,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested instance. Values are of the form
-        /// `projects/<project>/instances/<instance>`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -901,7 +901,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the requested instance. Values are of the form
-        /// `projects/<project>/instances/<instance>`.
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -985,7 +985,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's state becomes `READY`.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
@@ -994,7 +994,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which to create the instance. Values
-        /// are of the form `projects/<project>`.
+        /// are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
@@ -1003,7 +1003,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.  The name may be omitted, but if
-        /// specified must be `<parent>/instances/<instance_id>`.
+        /// specified must be `&lt;parent&gt;/instances/&lt;instance_id&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's state becomes `READY`.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which to create the instance. Values
-        /// are of the form `projects/<project>`.
+        /// are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
@@ -1071,7 +1071,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.  The name may be omitted, but if
-        /// specified must be `<parent>/instances/<instance_id>`.
+        /// specified must be `&lt;parent&gt;/instances/&lt;instance_id&gt;`.
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -1121,7 +1121,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's state becomes `READY`.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project in which to create the instance. Values
-        /// are of the form `projects/<project>`.
+        /// are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceId">
         /// Required. The ID of the instance to create.  Valid identifiers are of the
@@ -1139,7 +1139,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </param>
         /// <param name="instance">
         /// Required. The instance to create.  The name may be omitted, but if
-        /// specified must be `<parent>/instances/<instance_id>`.
+        /// specified must be `&lt;parent&gt;/instances/&lt;instance_id&gt;`.
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1189,7 +1189,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's state becomes `READY`.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's state becomes `READY`.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
@@ -1322,7 +1322,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's new resource levels are readable via the API.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
@@ -1391,7 +1391,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's new resource levels are readable via the API.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
@@ -1460,7 +1460,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's new resource levels are readable via the API.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
@@ -1529,7 +1529,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's new resource levels are readable via the API.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
@@ -1600,7 +1600,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's new resource levels are readable via the API.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
@@ -1654,7 +1654,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the instance to be deleted. Values are of the form
-        /// `projects/<project>/instances/<instance>`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -1686,7 +1686,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the instance to be deleted. Values are of the form
-        /// `projects/<project>/instances/<instance>`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -1715,7 +1715,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the instance to be deleted. Values are of the form
-        /// `projects/<project>/instances/<instance>`
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;`
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -2481,7 +2481,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's state becomes `READY`.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
@@ -2535,7 +2535,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's state becomes `READY`.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
@@ -2592,7 +2592,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's new resource levels are readable via the API.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
@@ -2652,7 +2652,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         ///   * The instance's new resource levels are readable via the API.
         ///
         /// The returned [long-running operation][google.longrunning.Operation] will
-        /// have a name of the format `<instance_name>/operations/<operation_id>` and
+        /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
         /// [metadata][google.longrunning.Operation.metadata] field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].

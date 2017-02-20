@@ -283,13 +283,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="groupName">
         /// [Required] The group resource name. Written as
-        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
-        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
-        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
+        /// &lt;code&gt;groupStats.list&lt;/code&gt;&lt;/a&gt; to return a list of groups belonging to
         /// this project.
         ///
-        /// Example: <code>projects/my-project-123/groups/my-group</code>
+        /// Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.
@@ -311,13 +311,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="groupName">
         /// [Required] The group resource name. Written as
-        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
-        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
-        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
+        /// &lt;code&gt;groupStats.list&lt;/code&gt;&lt;/a&gt; to return a list of groups belonging to
         /// this project.
         ///
-        /// Example: <code>projects/my-project-123/groups/my-group</code>
+        /// Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
         /// </param>
         /// <param name="cancellationToken">
         /// A <see cref="CancellationToken"/> to use for this RPC.
@@ -336,13 +336,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="groupName">
         /// [Required] The group resource name. Written as
-        /// <code>projects/<var>projectID</var>/groups/<var>group_name</var></code>.
+        /// &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
         /// Call
-        /// <a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
-        /// <code>groupStats.list</code></a> to return a list of groups belonging to
+        /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
+        /// &lt;code&gt;groupStats.list&lt;/code&gt;&lt;/a&gt; to return a list of groups belonging to
         /// this project.
         ///
-        /// Example: <code>projects/my-project-123/groups/my-group</code>
+        /// Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
         /// </param>
         /// <param name="callSettings">
         /// If not null, applies overrides to this RPC call.

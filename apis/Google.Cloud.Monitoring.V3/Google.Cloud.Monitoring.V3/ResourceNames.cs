@@ -28,7 +28,8 @@ namespace Google.Cloud.Monitoring.V3
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
 
         /// <summary>
-        /// Parses a project resource name in string form into a <see cref="ProjectName"/>.
+        /// Parses the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
@@ -40,7 +41,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Tries to parse project resource name in string form into a <see cref="ProjectName"/>/
+        /// Tries to parse the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
@@ -67,7 +69,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Constructs a project name from its component parts.
+        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
@@ -110,7 +113,8 @@ namespace Google.Cloud.Monitoring.V3
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/metricDescriptors/{metric_descriptor=**}");
 
         /// <summary>
-        /// Parses a metric_descriptor resource name in string form into a <see cref="MetricDescriptorName"/>.
+        /// Parses the given metric_descriptor resource name in string form into a new
+        /// <see cref="MetricDescriptorName"/> instance.
         /// </summary>
         /// <param name="metricDescriptorName">The metric_descriptor resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="MetricDescriptorName"/> if successful.</returns>
@@ -122,7 +126,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Tries to parse metric_descriptor resource name in string form into a <see cref="MetricDescriptorName"/>/
+        /// Tries to parse the given metric_descriptor resource name in string form into a new
+        /// <see cref="MetricDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="metricDescriptorName"/> is null,
@@ -149,7 +154,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Constructs a metric_descriptor name from its component parts.
+        /// Constructs a new instance of the <see cref="MetricDescriptorName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="metricDescriptorId">The metricDescriptor ID. Must not be <c>null</c>.</param>
@@ -199,7 +205,8 @@ namespace Google.Cloud.Monitoring.V3
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/monitoredResourceDescriptors/{monitored_resource_descriptor}");
 
         /// <summary>
-        /// Parses a monitored_resource_descriptor resource name in string form into a <see cref="MonitoredResourceDescriptorName"/>.
+        /// Parses the given monitored_resource_descriptor resource name in string form into a new
+        /// <see cref="MonitoredResourceDescriptorName"/> instance.
         /// </summary>
         /// <param name="monitoredResourceDescriptorName">The monitored_resource_descriptor resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="MonitoredResourceDescriptorName"/> if successful.</returns>
@@ -211,7 +218,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Tries to parse monitored_resource_descriptor resource name in string form into a <see cref="MonitoredResourceDescriptorName"/>/
+        /// Tries to parse the given monitored_resource_descriptor resource name in string form into a new
+        /// <see cref="MonitoredResourceDescriptorName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="monitoredResourceDescriptorName"/> is null,
@@ -238,7 +246,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Constructs a monitored_resource_descriptor name from its component parts.
+        /// Constructs a new instance of the <see cref="MonitoredResourceDescriptorName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="monitoredResourceDescriptorId">The monitoredResourceDescriptor ID. Must not be <c>null</c>.</param>
@@ -288,7 +297,8 @@ namespace Google.Cloud.Monitoring.V3
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/groups/{group}");
 
         /// <summary>
-        /// Parses a group resource name in string form into a <see cref="GroupName"/>.
+        /// Parses the given group resource name in string form into a new
+        /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="GroupName"/> if successful.</returns>
@@ -300,7 +310,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Tries to parse group resource name in string form into a <see cref="GroupName"/>/
+        /// Tries to parse the given group resource name in string form into a new
+        /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="groupName"/> is null,
@@ -327,7 +338,8 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Constructs a group name from its component parts.
+        /// Constructs a new instance of the <see cref="GroupName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="groupId">The group ID. Must not be <c>null</c>.</param>
@@ -373,7 +385,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateGroupRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public ProjectName ProjectName
         {
@@ -386,7 +398,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateMetricDescriptorRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public ProjectName ProjectName
         {
@@ -399,7 +411,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class CreateTimeSeriesRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public ProjectName ProjectName
         {
@@ -412,7 +424,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class DeleteGroupRequest
     {
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public GroupName GroupName
         {
@@ -425,7 +437,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class DeleteMetricDescriptorRequest
     {
         /// <summary>
-        /// A <see cref="MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public MetricDescriptorName MetricDescriptorName
         {
@@ -438,7 +450,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetGroupRequest
     {
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public GroupName GroupName
         {
@@ -451,7 +463,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetMetricDescriptorRequest
     {
         /// <summary>
-        /// A <see cref="MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="MetricDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public MetricDescriptorName MetricDescriptorName
         {
@@ -464,7 +476,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class GetMonitoredResourceDescriptorRequest
     {
         /// <summary>
-        /// A <see cref="MonitoredResourceDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="MonitoredResourceDescriptorName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public MonitoredResourceDescriptorName MonitoredResourceDescriptorName
         {
@@ -477,7 +489,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class Group
     {
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public GroupName GroupName
         {
@@ -486,7 +498,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="ParentName"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="ParentName"/> resource name property.
         /// </summary>
         public GroupName ParentNameAsGroupName
         {
@@ -499,7 +511,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListGroupMembersRequest
     {
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public GroupName GroupName
         {
@@ -512,7 +524,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListGroupsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public ProjectName ProjectName
         {
@@ -521,7 +533,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="ChildrenOfGroup"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="ChildrenOfGroup"/> resource name property.
         /// </summary>
         public GroupName ChildrenOfGroupAsGroupName
         {
@@ -530,7 +542,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="AncestorsOfGroup"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="AncestorsOfGroup"/> resource name property.
         /// </summary>
         public GroupName AncestorsOfGroupAsGroupName
         {
@@ -539,7 +551,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="DescendantsOfGroup"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="DescendantsOfGroup"/> resource name property.
         /// </summary>
         public GroupName DescendantsOfGroupAsGroupName
         {
@@ -552,7 +564,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListMetricDescriptorsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public ProjectName ProjectName
         {
@@ -565,7 +577,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListMonitoredResourceDescriptorsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public ProjectName ProjectName
         {
@@ -578,7 +590,7 @@ namespace Google.Cloud.Monitoring.V3
     public partial class ListTimeSeriesRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public ProjectName ProjectName
         {

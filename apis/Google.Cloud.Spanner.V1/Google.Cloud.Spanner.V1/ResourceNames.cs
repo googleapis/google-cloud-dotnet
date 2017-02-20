@@ -28,7 +28,8 @@ namespace Google.Cloud.Spanner.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/databases/{database}");
 
         /// <summary>
-        /// Parses a database resource name in string form into a <see cref="DatabaseName"/>.
+        /// Parses the given database resource name in string form into a new
+        /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="DatabaseName"/> if successful.</returns>
@@ -40,7 +41,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Tries to parse database resource name in string form into a <see cref="DatabaseName"/>/
+        /// Tries to parse the given database resource name in string form into a new
+        /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="databaseName"/> is null,
@@ -67,7 +69,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Constructs a database name from its component parts.
+        /// Constructs a new instance of the <see cref="DatabaseName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
@@ -124,7 +127,8 @@ namespace Google.Cloud.Spanner.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/databases/{database}/sessions/{session}");
 
         /// <summary>
-        /// Parses a session resource name in string form into a <see cref="SessionName"/>.
+        /// Parses the given session resource name in string form into a new
+        /// <see cref="SessionName"/> instance.
         /// </summary>
         /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="SessionName"/> if successful.</returns>
@@ -136,7 +140,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Tries to parse session resource name in string form into a <see cref="SessionName"/>/
+        /// Tries to parse the given session resource name in string form into a new
+        /// <see cref="SessionName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="sessionName"/> is null,
@@ -163,7 +168,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Constructs a session name from its component parts.
+        /// Constructs a new instance of the <see cref="SessionName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
