@@ -1,5 +1,5 @@
-﻿{
-  "version": "1.0.0-beta07-*",
+{
+  "version": "1.0.0-beta08-*",
   "description": "Log4Net client library for the Google Stackdriver Logging API.",
   "authors": [ "Google Inc." ],
 
