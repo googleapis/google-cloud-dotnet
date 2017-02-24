@@ -104,7 +104,6 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="application">The Http application.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
-        /// <returns>The initialized instance of <see cref="CloudTrace"/> the caller is responsible for disposal.</returns>
         public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
