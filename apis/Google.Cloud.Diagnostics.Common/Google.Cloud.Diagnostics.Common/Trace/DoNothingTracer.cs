@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
@@ -22,10 +23,16 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal sealed class DoNothingTracer : IManagedTracer
     {
-        public static DoNothingTracer Instance = new DoNothingTracer();
+        public static readonly DoNothingTracer Instance = new DoNothingTracer();
+
+        private class DoNothingDisposable : IDisposable { public void Dispose() { } }
+        private static readonly DoNothingDisposable _doNothingDisposableInstnace = new DoNothingDisposable();
+
         private DoNothingTracer() { }
-        public void StartSpan(string name, StartSpanOptions options = null) { }
+        public IDisposable StartSpan(string name, StartSpanOptions options = null) => _doNothingDisposableInstnace;
         public void EndSpan() { }
+        public void RunInSpan(Action action, string name, StartSpanOptions options = null) => action();
+        public T RunInSpan<T>(Func<T> func, string name, StartSpanOptions options = null) => func();
         public void AnnotateSpan(Dictionary<string, string> labels) { }
         public void SetStackTrace(StackTrace stackTrace) { }
         public string GetCurrentTraceId() => null;

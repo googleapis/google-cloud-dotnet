@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
+using System.Collections.Generic;
+
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
@@ -22,16 +25,22 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>Gets the span kind.</summary>
         public SpanKind SpanKind { get; }
 
-        private StartSpanOptions(SpanKind spanKind)
+        /// <summary>Gets the lables to be added to the span.</summary>
+        public Dictionary<string, string> Labels { get; }
+
+        private StartSpanOptions(SpanKind spanKind, Dictionary<string, string> labels)
         {
-            SpanKind = spanKind;
+            SpanKind = GaxPreconditions.CheckEnumValue(spanKind, nameof(spanKind));
+            Labels = GaxPreconditions.CheckNotNull(labels, nameof(labels));
         }
 
         /// <summary>
         /// Creates a <see cref="StartSpanOptions"/>.
         /// </summary>
         /// <param name="spanKind">Optional, the span kind.  Defaults to <see cref="SpanKind.Unspecified"/></param>
-        public static StartSpanOptions Create(SpanKind spanKind = SpanKind.Unspecified)
-            => new StartSpanOptions(spanKind);
+        /// <param name="labels">Optional, labels to add to the span.<param>
+        public static StartSpanOptions Create(
+            SpanKind spanKind = SpanKind.Unspecified, Dictionary<string, string> labels = null)
+                => new StartSpanOptions(spanKind, labels ?? new Dictionary<string, string>());
     }
 }

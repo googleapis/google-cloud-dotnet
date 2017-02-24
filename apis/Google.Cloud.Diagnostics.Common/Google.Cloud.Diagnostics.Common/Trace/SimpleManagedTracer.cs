@@ -28,8 +28,20 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal sealed class SimpleManagedTracer : IManagedTracer
     {
+        /// <summary>
+        /// A class that represents a running trace span.
+        /// </summary>
+        private class Span : IDisposable
+        {
+            private readonly SimpleManagedTracer _tracer;
+            public Span(SimpleManagedTracer tracer) { _tracer = tracer; }
+
+            /// <summary> Ends the current span.</summary>
+            public void Dispose() =>_tracer.EndSpan();
+        }
+
         /// <summary>A mutex to protect the rate limiter instance.</summary>
-        private static object _stackLock = new object();
+        private readonly object _stackLock = new object();
 
         /// <summary>The trace consumer to push the trace to when completed.</summary>
         private readonly IConsumer<TraceProto> _consumer;
@@ -62,12 +74,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="trace">The current trace.</param>
         /// <param name="rootSpanParentId">Optional, the parent span id of the root span of the passed in trace.</param>
         public static SimpleManagedTracer Create(IConsumer<TraceProto> consumer, TraceProto trace, ulong? rootSpanParentId = null)
-        {
-            return new SimpleManagedTracer(consumer, trace, rootSpanParentId);
-        }
+            => new SimpleManagedTracer(consumer, trace, rootSpanParentId);
 
         /// <inheritdoc />
-        public void StartSpan(string name, StartSpanOptions options = null)
+        public IDisposable StartSpan(string name, StartSpanOptions options = null)
         {
             GaxPreconditions.CheckNotNull(name, nameof(name));
             options = options ?? StartSpanOptions.Create();
@@ -90,6 +100,43 @@ namespace Google.Cloud.Diagnostics.Common
                 }
 
                 _traceStack.Push(span);
+                AnnotateSpan(options.Labels);
+            }
+
+            return new Span(this);
+        }
+
+        /// <inheritdoc />
+        public void RunInSpan(Action action, string name, StartSpanOptions options = null)
+        {
+            using (StartSpan(name, options))
+            {
+                try
+                {
+                    action();
+                }
+                catch (Exception e)
+                {
+                    SetStackTrace(new StackTrace(e, true));
+                    throw;
+                }
+            }
+        }
+
+        /// <inheritdoc />
+        public T RunInSpan<T>(Func<T> func, string name, StartSpanOptions options = null)
+        {
+            using (StartSpan(name, options))
+            {
+                try
+                {
+                    return func();
+                }
+                catch (Exception e)
+                {
+                    SetStackTrace(new StackTrace(e, true));
+                    throw;
+                }
             }
         }
 
