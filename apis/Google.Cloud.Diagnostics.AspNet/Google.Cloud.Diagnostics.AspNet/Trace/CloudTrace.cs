@@ -105,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
         /// <returns>The initialized instance of <see cref="CloudTrace"/> the caller is responsible for disposal.</returns>
-        public static CloudTrace Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
+        public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
             CloudTrace trace = new CloudTrace(projectId, config, client);
@@ -113,11 +113,13 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;
             application.EndRequest += trace.EndRequest;
-            return trace;
+            application.Disposed += trace.Disposed;
         }
 
         /// <inheritdoc />
         public void Dispose() => _consumer.Dispose();
+
+        private void Disposed(object sender, EventArgs e) => Dispose();
 
         private void BeginRequest(object sender, EventArgs e)
         {

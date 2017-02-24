@@ -51,20 +51,12 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         // Sample: InitializeTrace
         public class Global : HttpApplication
         {
-            private CloudTrace _cloudTrace;
-
             public override void Init()
             {
                 base.Init();
                 string projectId = "[Google Cloud Platform project ID]";
                 // Trace a sampling of incoming Http requests.
-                _cloudTrace = CloudTrace.Initialize(projectId, this);
-            }
-
-            public override void Dispose()
-            {
-                base.Dispose();
-                _cloudTrace.Dispose();
+                CloudTrace.Initialize(projectId, this);
             }
         }
         // End sample
