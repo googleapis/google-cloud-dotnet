@@ -48,7 +48,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// Reports unhandled exceptions to Google Cloud Error Reporting.
     /// Docs: https://cloud.google.com/error-reporting/docs/
     /// </remarks>
-    public sealed class ErrorReportingExceptionLogger : ExceptionLogger
+    public sealed class ErrorReportingExceptionLogger : ExceptionLogger, IDisposable
     {
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
@@ -106,6 +106,9 @@ namespace Google.Cloud.Diagnostics.AspNet
         {
             return context?.Exception != null;
         }
+
+        /// <inheritdoc />
+        public void Dispose() => _consumer.Dispose();
 
         /// <summary>
         /// Gets information about the HTTP request and response when the exception occured 

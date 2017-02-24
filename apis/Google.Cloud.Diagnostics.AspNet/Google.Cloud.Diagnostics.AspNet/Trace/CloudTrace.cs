@@ -72,9 +72,11 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// 
     /// Docs: https://cloud.google.com/trace/docs/
     /// </remarks>
-    public sealed class CloudTrace
+    public sealed class CloudTrace : IDisposable
     {
         private readonly IManagedTracerFactory _tracerFactory;
+
+        private readonly IConsumer<TraceProto> _consumer;
 
         /// <summary>Gets the current <see cref="IManagedTracer"/> for the given request.</summary>
         public static IManagedTracer CurrentTracer =>
@@ -88,10 +90,10 @@ namespace Google.Cloud.Diagnostics.AspNet
             client = client ?? TraceServiceClient.CreateAsync();
             config = config ?? TraceConfiguration.Create();
 
-            var consumer = ConsumerFactory<TraceProto>.GetConsumer(
+            _consumer = ConsumerFactory<TraceProto>.GetConsumer(
                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
 
-            _tracerFactory = new ManagedTracerFactory(projectId, consumer,
+            _tracerFactory = new ManagedTracerFactory(projectId, _consumer,
                 RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
         }
 
@@ -110,7 +112,11 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;
             application.EndRequest += trace.EndRequest;
+            application.Disposed += (object sender, EventArgs e) => { trace.Dispose(); };
         }
+
+        /// <inheritdoc />
+        public void Dispose() => _consumer.Dispose();
 
         private void BeginRequest(object sender, EventArgs e)
         {
