@@ -112,13 +112,11 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;
             application.EndRequest += trace.EndRequest;
-            application.Disposed += trace.Disposed;
+            application.Disposed += (object sender, EventArgs e) => { trace.Dispose(); };
         }
 
         /// <inheritdoc />
         public void Dispose() => _consumer.Dispose();
-
-        private void Disposed(object sender, EventArgs e) => Dispose();
 
         private void BeginRequest(object sender, EventArgs e)
         {
