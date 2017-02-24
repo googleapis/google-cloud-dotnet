@@ -12,9 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
+using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
+using Microsoft.Extensions.DependencyInjection;
+using Moq;
 using System;
 using System.Linq;
 using System.Net.Http;
@@ -23,7 +27,7 @@ using Xunit;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.Common.IntegrationTests
+namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class TraceHeaderPropagatingHandlerTest
     {
@@ -72,7 +76,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             string uri, string rootSpanName, bool exceptionExpected)
         {
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
-            await TraceOutGoingRequest(CreateTracer(), rootSpanName, uri, exceptionExpected);
+            await TraceOutGoingRequest(CreateProvider(), rootSpanName, uri, exceptionExpected);
             var trace = _polling.GetTrace(rootSpanName, startTime);
             CheckTrace(trace, rootSpanName, uri);
             return trace;
@@ -81,16 +85,19 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>
         /// Creates a <see cref="SimpleManagedTracer"/> with a <see cref="GrpcTraceConsumer"/>.
         /// </summary>
-        private SimpleManagedTracer CreateTracer()
+        private IServiceProvider CreateProvider()
         {
             string traceId = _traceIdFactory.NextId();
             var traceProto = new TraceProto { ProjectId = _projectId, TraceId = traceId };
             var consumer = new GrpcTraceConsumer(TraceServiceClient.CreateAsync());
-            return SimpleManagedTracer.Create(consumer, traceProto, null);
+            var tracer = SimpleManagedTracer.Create(consumer, traceProto, null);
+            Mock<IServiceProvider> provider = new Mock<IServiceProvider>();
+            provider.Setup(p => p.GetService(typeof(IManagedTracer))).Returns(tracer);
+            return provider.Object;
         }
 
         /// <summary>
-        /// Creates a <see cref="TraceHeaderPropagatingHandler"/> and traces the sending of a
+        /// Creates a <see cref="AbstractTraceHeaderPropagatingHandler"/> and traces the sending of a
         /// GET request to the given uri.  The trace is wrapped in a parent span.
         /// </summary>
         /// <param name="tracer">The tracer to trace the request with.</param>
@@ -99,10 +106,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <param name="uri">The uri to request.</param>
         /// <param name="exceptionExpected">True if an exception from the request to the uri is expected.</param>
         private async Task TraceOutGoingRequest(
-            IManagedTracer tracer, string rootSpanName, string uri, bool exceptionExpected)
+            IServiceProvider provider, string rootSpanName, string uri, bool exceptionExpected)
         {
+            var tracer = provider.GetService<IManagedTracer>();
             tracer.StartSpan(rootSpanName);
-            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
+            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(provider);
             using (var httpClient = new HttpClient(traceHeaderHandler))
             {
                 try

@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = new Mock<IManagedTracer>();
             var fakeHandler = new FakeDelegatingHandler();
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
 
             using (var httpClient = new HttpClient(traceHandler))
             {
@@ -60,7 +60,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext);
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
@@ -78,7 +78,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext, throwException: true);
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
@@ -123,7 +123,19 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 }
                 return Task.FromResult(new HttpResponseMessage());
             }
+        }
 
+        private class TraceHeaderPropagatingHandler : AbstractTraceHeaderPropagatingHandler
+        {
+            private readonly IManagedTracer _tracer;
+
+            public TraceHeaderPropagatingHandler(
+                IManagedTracer tracer, HttpMessageHandler innerHandler) : base(innerHandler)
+            {
+                _tracer = tracer;
+            }
+
+            internal override IManagedTracer GetCurrentTracer() => _tracer;
         }
     }
 }

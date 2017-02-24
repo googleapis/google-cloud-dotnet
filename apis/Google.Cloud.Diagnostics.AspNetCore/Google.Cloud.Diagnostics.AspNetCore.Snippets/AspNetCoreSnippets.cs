@@ -82,10 +82,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             // End sample
 
             // Sample: TraceOutgoing
-            public async Task<HttpResponseMessage> TraceOutgoing(IManagedTracer tracer)
+            public async Task<HttpResponseMessage> TraceOutgoing(IServiceProvider provider)
             {
                 // Add a handler to trace outgoing requests and to propagate the trace header.
-                var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
+                var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(provider);
                 using (var httpClient = new HttpClient(traceHeaderHandler))
                 {
                     return await httpClient.GetAsync("https://weather.com/");

@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
 using System;
 using System.Diagnostics;
 using System.Net.Http;
@@ -25,41 +24,20 @@ namespace Google.Cloud.Diagnostics.Common
     /// Traces outgoing HTTP requests and propagates the trace header.
     /// </summary>
     ///
-    /// <example>
-    /// <code>
-    /// public void DoSomething(IManagedTracer tracer)
-    /// {
-    ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
-    ///     using (var httpClient = new HttpClient(traceHeaderHandler))
-    ///     {
-    ///         ...
-    ///     }
-    /// }
-    /// </code>
-    /// </example>
     /// <remarks>
     /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
     /// traces the total time of the outgoing HTTP request.  This is only done if tracing is initialized
     /// and tracing is enabled for the request current request.
     /// </remarks>
-    public class TraceHeaderPropagatingHandler : DelegatingHandler
+    public abstract class AbstractTraceHeaderPropagatingHandler : DelegatingHandler
     {
-        private readonly IManagedTracer _tracer;
-
-        private TraceHeaderPropagatingHandler(IManagedTracer tracer, HttpMessageHandler innerHandler)
+        internal AbstractTraceHeaderPropagatingHandler(HttpMessageHandler innerHandler)
         {
-            _tracer = GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
-            InnerHandler = GaxPreconditions.CheckNotNull(innerHandler, nameof(innerHandler));
+            InnerHandler = innerHandler ?? new HttpClientHandler();
         }
 
-        /// <summary>
-        /// Gets a <see cref="TraceHeaderPropagatingHandler"/>.
-        /// </summary>
-        /// <param name="tracer">The tracer to trace with. Cannot be null.</param>
-        /// <param name="innerHandler">Optional message handler.  If non is set an
-        ///     <see cref="HttpClientHandler"/>will be used.</param>
-        public static TraceHeaderPropagatingHandler Create(IManagedTracer tracer, HttpMessageHandler innerHandler = null) =>
-            new TraceHeaderPropagatingHandler(tracer, innerHandler ?? new HttpClientHandler());
+        /// <summary>Gets the current <see cref="IManagedTracer"/>.</summary>
+        internal abstract IManagedTracer GetCurrentTracer();
 
         /// <summary>
         /// Sends the given request.  If tracing is initialized and enabled the outgoing request is
@@ -68,16 +46,17 @@ namespace Google.Cloud.Diagnostics.Common
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            if (_tracer.GetCurrentTraceId() == null)
+            var tracer = GetCurrentTracer();
+            if (tracer.GetCurrentTraceId() == null)
             {
                 return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
             }
 
             var traceHeader = TraceHeaderContext.Create(
-                _tracer.GetCurrentTraceId(), _tracer.GetCurrentSpanId() ?? 0, true);
+                tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
             request.Headers.Add(TraceHeaderContext.TraceHeader, traceHeader.ToString());
 
-            _tracer.StartSpan(request.RequestUri.ToString());
+            tracer.StartSpan(request.RequestUri.ToString());
             try
             {
                 return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
@@ -85,12 +64,12 @@ namespace Google.Cloud.Diagnostics.Common
             catch (Exception e)
             {
                 StackTrace stackTrace = new StackTrace(e, true);
-                _tracer.SetStackTrace(stackTrace);
+                tracer.SetStackTrace(stackTrace);
                 throw;
             }
             finally
             {
-                _tracer.EndSpan();
+                tracer.EndSpan();
             }
         }
     }
