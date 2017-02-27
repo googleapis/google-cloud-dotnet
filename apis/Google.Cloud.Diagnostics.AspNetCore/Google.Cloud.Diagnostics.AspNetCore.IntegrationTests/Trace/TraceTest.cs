@@ -326,11 +326,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public string TraceLabels(string id, [FromServices] IManagedTracer tracer)
         {
             string message = GetMessage(nameof(TraceLabels), id);
-            tracer.StartSpan(message);
-            Thread.Sleep(10);
-            tracer.AnnotateSpan(new Dictionary<string, string> { { Label, LabelValue } });
-            tracer.EndSpan();
-            return message;
+            using (tracer.StartSpan(message))
+            {
+                Thread.Sleep(10);
+                tracer.AnnotateSpan(new Dictionary<string, string> { { Label, LabelValue } });
+                return message;
+            }
         }
 
         /// <summary>Traces a 10ms sleep and adds a stacktrace.</summary>
@@ -349,10 +350,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             // Add a span with the test id to allow for the trace to be found.
             string message = GetMessage(nameof(ThrowException), id);
-            tracer.StartSpan(message);
-            Thread.Sleep(10);
-            tracer.EndSpan();
-            throw new DivideByZeroException();
+            using (tracer.StartSpan(message))
+            {
+                Thread.Sleep(10);
+                throw new DivideByZeroException();
+            }
         }
 
         /// <summary>Creates a stack trace.</summary>

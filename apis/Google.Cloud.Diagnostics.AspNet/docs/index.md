@@ -43,3 +43,5 @@ installed, run the following command in a Google Cloud SDK Shell:
 ## Manual Tracing
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#UseTracer)]
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#UseTracerRunIn)]

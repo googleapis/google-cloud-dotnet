@@ -45,6 +45,8 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#UseTracer)]
 
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#UseTracerRunIn)]
+
 ## Trace Outgoing HTTP Requests
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#TraceOutgoing)]
