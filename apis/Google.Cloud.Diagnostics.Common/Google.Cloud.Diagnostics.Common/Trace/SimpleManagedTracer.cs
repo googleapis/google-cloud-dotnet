@@ -208,8 +208,8 @@ namespace Google.Cloud.Diagnostics.Common
 
         /// <summary>
         /// Sets a <see cref="StackTrace"/> on the current span for the given exception and
-        /// returns false.  This is used for exception handling to ensure proper timing for
-        /// recording the stacktrace.
+        /// returns false.  This is used for exception handling to ensure no data is lost
+        /// in the stacktrace.
         /// </summary>
         private bool SetStackTraceAndReturnFalse(Exception e)
         {
