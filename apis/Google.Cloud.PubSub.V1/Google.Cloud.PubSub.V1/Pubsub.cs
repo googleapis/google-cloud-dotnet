@@ -23,107 +23,141 @@ namespace Google.Cloud.PubSub.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1nb29nbGUvcHVic3ViL3YxL3B1YnN1Yi5wcm90bxIQZ29vZ2xlLnB1YnN1",
-            "Yi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3By",
-            "b3RvYnVmL2VtcHR5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIhUKBVRvcGljEgwKBG5hbWUYASABKAki2wEKDVB1YnN1Yk1lc3Nh",
-            "Z2USDAoEZGF0YRgBIAEoDBJDCgphdHRyaWJ1dGVzGAIgAygLMi8uZ29vZ2xl",
-            "LnB1YnN1Yi52MS5QdWJzdWJNZXNzYWdlLkF0dHJpYnV0ZXNFbnRyeRISCgpt",
-            "ZXNzYWdlX2lkGAMgASgJEjAKDHB1Ymxpc2hfdGltZRgEIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAaMQoPQXR0cmlidXRlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiIAoPR2V0VG9waWNSZXF1ZXN0",
-            "Eg0KBXRvcGljGAEgASgJIlIKDlB1Ymxpc2hSZXF1ZXN0Eg0KBXRvcGljGAEg",
-            "ASgJEjEKCG1lc3NhZ2VzGAIgAygLMh8uZ29vZ2xlLnB1YnN1Yi52MS5QdWJz",
-            "dWJNZXNzYWdlIiYKD1B1Ymxpc2hSZXNwb25zZRITCgttZXNzYWdlX2lkcxgB",
-            "IAMoCSJLChFMaXN0VG9waWNzUmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEK",
-            "CXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlYKEkxpc3RU",
-            "b3BpY3NSZXNwb25zZRInCgZ0b3BpY3MYASADKAsyFy5nb29nbGUucHVic3Vi",
-            "LnYxLlRvcGljEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJVCh1MaXN0VG9w",
-            "aWNTdWJzY3JpcHRpb25zUmVxdWVzdBINCgV0b3BpYxgBIAEoCRIRCglwYWdl",
-            "X3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJQCh5MaXN0VG9waWNT",
-            "dWJzY3JpcHRpb25zUmVzcG9uc2USFQoNc3Vic2NyaXB0aW9ucxgBIAMoCRIX",
-            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiIwoSRGVsZXRlVG9waWNSZXF1ZXN0",
-            "Eg0KBXRvcGljGAEgASgJInwKDFN1YnNjcmlwdGlvbhIMCgRuYW1lGAEgASgJ",
-            "Eg0KBXRvcGljGAIgASgJEjEKC3B1c2hfY29uZmlnGAQgASgLMhwuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5QdXNoQ29uZmlnEhwKFGFja19kZWFkbGluZV9zZWNvbmRz",
-            "GAUgASgFIpgBCgpQdXNoQ29uZmlnEhUKDXB1c2hfZW5kcG9pbnQYASABKAkS",
-            "QAoKYXR0cmlidXRlcxgCIAMoCzIsLmdvb2dsZS5wdWJzdWIudjEuUHVzaENv",
-            "bmZpZy5BdHRyaWJ1dGVzRW50cnkaMQoPQXR0cmlidXRlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiUwoPUmVjZWl2ZWRNZXNzYWdl",
-            "Eg4KBmFja19pZBgBIAEoCRIwCgdtZXNzYWdlGAIgASgLMh8uZ29vZ2xlLnB1",
-            "YnN1Yi52MS5QdWJzdWJNZXNzYWdlIi4KFkdldFN1YnNjcmlwdGlvblJlcXVl",
-            "c3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJIlIKGExpc3RTdWJzY3JpcHRpb25z",
-            "UmVxdWVzdBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
-            "CgpwYWdlX3Rva2VuGAMgASgJImsKGUxpc3RTdWJzY3JpcHRpb25zUmVzcG9u",
-            "c2USNQoNc3Vic2NyaXB0aW9ucxgBIAMoCzIeLmdvb2dsZS5wdWJzdWIudjEu",
-            "U3Vic2NyaXB0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIxChlEZWxl",
-            "dGVTdWJzY3JpcHRpb25SZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCSJi",
-            "ChdNb2RpZnlQdXNoQ29uZmlnUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASAB",
-            "KAkSMQoLcHVzaF9jb25maWcYAiABKAsyHC5nb29nbGUucHVic3ViLnYxLlB1",
-            "c2hDb25maWciVQoLUHVsbFJlcXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJ",
-            "EhoKEnJldHVybl9pbW1lZGlhdGVseRgCIAEoCBIUCgxtYXhfbWVzc2FnZXMY",
-            "AyABKAUiTAoMUHVsbFJlc3BvbnNlEjwKEXJlY2VpdmVkX21lc3NhZ2VzGAEg",
-            "AygLMiEuZ29vZ2xlLnB1YnN1Yi52MS5SZWNlaXZlZE1lc3NhZ2UiXwoYTW9k",
-            "aWZ5QWNrRGVhZGxpbmVSZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCRIP",
-            "CgdhY2tfaWRzGAQgAygJEhwKFGFja19kZWFkbGluZV9zZWNvbmRzGAMgASgF",
-            "IjsKEkFja25vd2xlZGdlUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkS",
-            "DwoHYWNrX2lkcxgCIAMoCSKkAQoUU3RyZWFtaW5nUHVsbFJlcXVlc3QSFAoM",
-            "c3Vic2NyaXB0aW9uGAEgASgJEg8KB2Fja19pZHMYAiADKAkSHwoXbW9kaWZ5",
-            "X2RlYWRsaW5lX3NlY29uZHMYAyADKAUSHwoXbW9kaWZ5X2RlYWRsaW5lX2Fj",
-            "a19pZHMYBCADKAkSIwobc3RyZWFtX2Fja19kZWFkbGluZV9zZWNvbmRzGAUg",
-            "ASgFIlUKFVN0cmVhbWluZ1B1bGxSZXNwb25zZRI8ChFyZWNlaXZlZF9tZXNz",
-            "YWdlcxgBIAMoCzIhLmdvb2dsZS5wdWJzdWIudjEuUmVjZWl2ZWRNZXNzYWdl",
-            "MqYKCgpTdWJzY3JpYmVyEoYBChJDcmVhdGVTdWJzY3JpcHRpb24SHi5nb29n",
-            "bGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbhoeLmdvb2dsZS5wdWJzdWIudjEu",
-            "U3Vic2NyaXB0aW9uIjCC0+STAioaJS92MS97bmFtZT1wcm9qZWN0cy8qL3N1",
-            "YnNjcmlwdGlvbnMvKn06ASoSkgEKD0dldFN1YnNjcmlwdGlvbhIoLmdvb2ds",
-            "ZS5wdWJzdWIudjEuR2V0U3Vic2NyaXB0aW9uUmVxdWVzdBoeLmdvb2dsZS5w",
-            "dWJzdWIudjEuU3Vic2NyaXB0aW9uIjWC0+STAi8SLS92MS97c3Vic2NyaXB0",
-            "aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfRKcAQoRTGlzdFN1YnNj",
-            "cmlwdGlvbnMSKi5nb29nbGUucHVic3ViLnYxLkxpc3RTdWJzY3JpcHRpb25z",
-            "UmVxdWVzdBorLmdvb2dsZS5wdWJzdWIudjEuTGlzdFN1YnNjcmlwdGlvbnNS",
-            "ZXNwb25zZSIugtPkkwIoEiYvdjEve3Byb2plY3Q9cHJvamVjdHMvKn0vc3Vi",
-            "c2NyaXB0aW9ucxKQAQoSRGVsZXRlU3Vic2NyaXB0aW9uEisuZ29vZ2xlLnB1",
-            "YnN1Yi52MS5EZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IjWC0+STAi8qLS92MS97c3Vic2NyaXB0aW9uPXByb2pl",
-            "Y3RzLyovc3Vic2NyaXB0aW9ucy8qfRKjAQoRTW9kaWZ5QWNrRGVhZGxpbmUS",
-            "Ki5nb29nbGUucHVic3ViLnYxLk1vZGlmeUFja0RlYWRsaW5lUmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJKgtPkkwJEIj8vdjEve3N1YnNjcmlw",
-            "dGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06bW9kaWZ5QWNrRGVh",
-            "ZGxpbmU6ASoSkQEKC0Fja25vd2xlZGdlEiQuZ29vZ2xlLnB1YnN1Yi52MS5B",
-            "Y2tub3dsZWRnZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRILT",
-            "5JMCPiI5L3YxL3tzdWJzY3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRp",
-            "b25zLyp9OmFja25vd2xlZGdlOgEqEoQBCgRQdWxsEh0uZ29vZ2xlLnB1YnN1",
-            "Yi52MS5QdWxsUmVxdWVzdBoeLmdvb2dsZS5wdWJzdWIudjEuUHVsbFJlc3Bv",
-            "bnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vi",
-            "c2NyaXB0aW9ucy8qfTpwdWxsOgEqEmQKDVN0cmVhbWluZ1B1bGwSJi5nb29n",
-            "bGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXF1ZXN0GicuZ29vZ2xlLnB1",
-            "YnN1Yi52MS5TdHJlYW1pbmdQdWxsUmVzcG9uc2UoATABEqABChBNb2RpZnlQ",
-            "dXNoQ29uZmlnEikuZ29vZ2xlLnB1YnN1Yi52MS5Nb2RpZnlQdXNoQ29uZmln",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJJgtPkkwJDIj4vdjEv",
-            "e3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8qL3N1YnNjcmlwdGlvbnMvKn06bW9k",
-            "aWZ5UHVzaENvbmZpZzoBKjKbBgoJUHVibGlzaGVyEmoKC0NyZWF0ZVRvcGlj",
-            "EhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYxoXLmdvb2dsZS5wdWJzdWIudjEu",
-            "VG9waWMiKYLT5JMCIxoeL3YxL3tuYW1lPXByb2plY3RzLyovdG9waWNzLyp9",
-            "OgEqEoIBCgdQdWJsaXNoEiAuZ29vZ2xlLnB1YnN1Yi52MS5QdWJsaXNoUmVx",
-            "dWVzdBohLmdvb2dsZS5wdWJzdWIudjEuUHVibGlzaFJlc3BvbnNlIjKC0+ST",
-            "AiwiJy92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn06cHVibGlzaDoB",
-            "KhJvCghHZXRUb3BpYxIhLmdvb2dsZS5wdWJzdWIudjEuR2V0VG9waWNSZXF1",
-            "ZXN0GhcuZ29vZ2xlLnB1YnN1Yi52MS5Ub3BpYyIngtPkkwIhEh8vdjEve3Rv",
-            "cGljPXByb2plY3RzLyovdG9waWNzLyp9EoABCgpMaXN0VG9waWNzEiMuZ29v",
-            "Z2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVxdWVzdBokLmdvb2dsZS5wdWJz",
-            "dWIudjEuTGlzdFRvcGljc1Jlc3BvbnNlIieC0+STAiESHy92MS97cHJvamVj",
-            "dD1wcm9qZWN0cy8qfS90b3BpY3MSsgEKFkxpc3RUb3BpY1N1YnNjcmlwdGlv",
-            "bnMSLy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY1N1YnNjcmlwdGlvbnNS",
-            "ZXF1ZXN0GjAuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNTdWJzY3JpcHRp",
-            "b25zUmVzcG9uc2UiNYLT5JMCLxItL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3Rv",
-            "cGljcy8qfS9zdWJzY3JpcHRpb25zEnQKC0RlbGV0ZVRvcGljEiQuZ29vZ2xl",
-            "LnB1YnN1Yi52MS5EZWxldGVUb3BpY1JlcXVlc3QaFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkiJ4LT5JMCISofL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3RvcGlj",
-            "cy8qfUJ5ChRjb20uZ29vZ2xlLnB1YnN1Yi52MUILUHVic3ViUHJvdG9QAVo2",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9wdWJzdWIv",
-            "djE7cHVic3Vi+AEBqgIWR29vZ2xlLkNsb3VkLlB1YlN1Yi5WMWIGcHJvdG8z"));
+            "Yi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoeZ29vZ2xlL3By",
+            "b3RvYnVmL2R1cmF0aW9uLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHku",
+            "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIhUKBVRvcGljEgwKBG5hbWUY",
+            "ASABKAki2wEKDVB1YnN1Yk1lc3NhZ2USDAoEZGF0YRgBIAEoDBJDCgphdHRy",
+            "aWJ1dGVzGAIgAygLMi8uZ29vZ2xlLnB1YnN1Yi52MS5QdWJzdWJNZXNzYWdl",
+            "LkF0dHJpYnV0ZXNFbnRyeRISCgptZXNzYWdlX2lkGAMgASgJEjAKDHB1Ymxp",
+            "c2hfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAaMQoP",
+            "QXR0cmlidXRlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEiIAoPR2V0VG9waWNSZXF1ZXN0Eg0KBXRvcGljGAEgASgJIlIKDlB1Ymxp",
+            "c2hSZXF1ZXN0Eg0KBXRvcGljGAEgASgJEjEKCG1lc3NhZ2VzGAIgAygLMh8u",
+            "Z29vZ2xlLnB1YnN1Yi52MS5QdWJzdWJNZXNzYWdlIiYKD1B1Ymxpc2hSZXNw",
+            "b25zZRITCgttZXNzYWdlX2lkcxgBIAMoCSJLChFMaXN0VG9waWNzUmVxdWVz",
+            "dBIPCgdwcm9qZWN0GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdl",
+            "X3Rva2VuGAMgASgJIlYKEkxpc3RUb3BpY3NSZXNwb25zZRInCgZ0b3BpY3MY",
+            "ASADKAsyFy5nb29nbGUucHVic3ViLnYxLlRvcGljEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCSJVCh1MaXN0VG9waWNTdWJzY3JpcHRpb25zUmVxdWVzdBIN",
+            "CgV0b3BpYxgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
+            "bhgDIAEoCSJQCh5MaXN0VG9waWNTdWJzY3JpcHRpb25zUmVzcG9uc2USFQoN",
+            "c3Vic2NyaXB0aW9ucxgBIAMoCRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
+            "IwoSRGVsZXRlVG9waWNSZXF1ZXN0Eg0KBXRvcGljGAEgASgJItoBCgxTdWJz",
+            "Y3JpcHRpb24SDAoEbmFtZRgBIAEoCRINCgV0b3BpYxgCIAEoCRIxCgtwdXNo",
+            "X2NvbmZpZxgEIAEoCzIcLmdvb2dsZS5wdWJzdWIudjEuUHVzaENvbmZpZxIc",
+            "ChRhY2tfZGVhZGxpbmVfc2Vjb25kcxgFIAEoBRIdChVyZXRhaW5fYWNrZWRf",
+            "bWVzc2FnZXMYByABKAgSPQoabWVzc2FnZV9yZXRlbnRpb25fZHVyYXRpb24Y",
+            "CCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24imAEKClB1c2hDb25m",
+            "aWcSFQoNcHVzaF9lbmRwb2ludBgBIAEoCRJACgphdHRyaWJ1dGVzGAIgAygL",
+            "MiwuZ29vZ2xlLnB1YnN1Yi52MS5QdXNoQ29uZmlnLkF0dHJpYnV0ZXNFbnRy",
+            "eRoxCg9BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
+            "ASgJOgI4ASJTCg9SZWNlaXZlZE1lc3NhZ2USDgoGYWNrX2lkGAEgASgJEjAK",
+            "B21lc3NhZ2UYAiABKAsyHy5nb29nbGUucHVic3ViLnYxLlB1YnN1Yk1lc3Nh",
+            "Z2UiLgoWR2V0U3Vic2NyaXB0aW9uUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24Y",
+            "ASABKAkiggEKGVVwZGF0ZVN1YnNjcmlwdGlvblJlcXVlc3QSNAoMc3Vic2Ny",
+            "aXB0aW9uGAEgASgLMh4uZ29vZ2xlLnB1YnN1Yi52MS5TdWJzY3JpcHRpb24S",
+            "LwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrIlIKGExpc3RTdWJzY3JpcHRpb25zUmVxdWVzdBIPCgdwcm9qZWN0GAEg",
+            "ASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImsK",
+            "GUxpc3RTdWJzY3JpcHRpb25zUmVzcG9uc2USNQoNc3Vic2NyaXB0aW9ucxgB",
+            "IAMoCzIeLmdvb2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCSIxChlEZWxldGVTdWJzY3JpcHRpb25SZXF1ZXN0",
+            "EhQKDHN1YnNjcmlwdGlvbhgBIAEoCSJiChdNb2RpZnlQdXNoQ29uZmlnUmVx",
+            "dWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkSMQoLcHVzaF9jb25maWcYAiAB",
+            "KAsyHC5nb29nbGUucHVic3ViLnYxLlB1c2hDb25maWciVQoLUHVsbFJlcXVl",
+            "c3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJEhoKEnJldHVybl9pbW1lZGlhdGVs",
+            "eRgCIAEoCBIUCgxtYXhfbWVzc2FnZXMYAyABKAUiTAoMUHVsbFJlc3BvbnNl",
+            "EjwKEXJlY2VpdmVkX21lc3NhZ2VzGAEgAygLMiEuZ29vZ2xlLnB1YnN1Yi52",
+            "MS5SZWNlaXZlZE1lc3NhZ2UiXwoYTW9kaWZ5QWNrRGVhZGxpbmVSZXF1ZXN0",
+            "EhQKDHN1YnNjcmlwdGlvbhgBIAEoCRIPCgdhY2tfaWRzGAQgAygJEhwKFGFj",
+            "a19kZWFkbGluZV9zZWNvbmRzGAMgASgFIjsKEkFja25vd2xlZGdlUmVxdWVz",
+            "dBIUCgxzdWJzY3JpcHRpb24YASABKAkSDwoHYWNrX2lkcxgCIAMoCSKkAQoU",
+            "U3RyZWFtaW5nUHVsbFJlcXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJEg8K",
+            "B2Fja19pZHMYAiADKAkSHwoXbW9kaWZ5X2RlYWRsaW5lX3NlY29uZHMYAyAD",
+            "KAUSHwoXbW9kaWZ5X2RlYWRsaW5lX2Fja19pZHMYBCADKAkSIwobc3RyZWFt",
+            "X2Fja19kZWFkbGluZV9zZWNvbmRzGAUgASgFIlUKFVN0cmVhbWluZ1B1bGxS",
+            "ZXNwb25zZRI8ChFyZWNlaXZlZF9tZXNzYWdlcxgBIAMoCzIhLmdvb2dsZS5w",
+            "dWJzdWIudjEuUmVjZWl2ZWRNZXNzYWdlIjsKFUNyZWF0ZVNuYXBzaG90UmVx",
+            "dWVzdBIMCgRuYW1lGAEgASgJEhQKDHN1YnNjcmlwdGlvbhgCIAEoCSJcCghT",
+            "bmFwc2hvdBIMCgRuYW1lGAEgASgJEg0KBXRvcGljGAIgASgJEjMKD2V4cGly",
+            "YXRpb25fdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi",
+            "TgoUTGlzdFNuYXBzaG90c1JlcXVlc3QSDwoHcHJvamVjdBgBIAEoCRIRCglw",
+            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJfChVMaXN0U25h",
+            "cHNob3RzUmVzcG9uc2USLQoJc25hcHNob3RzGAEgAygLMhouZ29vZ2xlLnB1",
+            "YnN1Yi52MS5TbmFwc2hvdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiKQoV",
+            "RGVsZXRlU25hcHNob3RSZXF1ZXN0EhAKCHNuYXBzaG90GAEgASgJIm0KC1Nl",
+            "ZWtSZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCRIqCgR0aW1lGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEhIKCHNuYXBzaG90GAMg",
+            "ASgJSABCCAoGdGFyZ2V0Ig4KDFNlZWtSZXNwb25zZTLoDwoKU3Vic2NyaWJl",
+            "chKGAQoSQ3JlYXRlU3Vic2NyaXB0aW9uEh4uZ29vZ2xlLnB1YnN1Yi52MS5T",
+            "dWJzY3JpcHRpb24aHi5nb29nbGUucHVic3ViLnYxLlN1YnNjcmlwdGlvbiIw",
+            "gtPkkwIqGiUvdjEve25hbWU9cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9",
+            "OgEqEpIBCg9HZXRTdWJzY3JpcHRpb24SKC5nb29nbGUucHVic3ViLnYxLkdl",
+            "dFN1YnNjcmlwdGlvblJlcXVlc3QaHi5nb29nbGUucHVic3ViLnYxLlN1YnNj",
+            "cmlwdGlvbiI1gtPkkwIvEi0vdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0cy8q",
+            "L3N1YnNjcmlwdGlvbnMvKn0SoAEKElVwZGF0ZVN1YnNjcmlwdGlvbhIrLmdv",
+            "b2dsZS5wdWJzdWIudjEuVXBkYXRlU3Vic2NyaXB0aW9uUmVxdWVzdBoeLmdv",
+            "b2dsZS5wdWJzdWIudjEuU3Vic2NyaXB0aW9uIj2C0+STAjcyMi92MS97c3Vi",
+            "c2NyaXB0aW9uLm5hbWU9cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OgEq",
+            "EpwBChFMaXN0U3Vic2NyaXB0aW9ucxIqLmdvb2dsZS5wdWJzdWIudjEuTGlz",
+            "dFN1YnNjcmlwdGlvbnNSZXF1ZXN0GisuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0",
+            "U3Vic2NyaXB0aW9uc1Jlc3BvbnNlIi6C0+STAigSJi92MS97cHJvamVjdD1w",
+            "cm9qZWN0cy8qfS9zdWJzY3JpcHRpb25zEpABChJEZWxldGVTdWJzY3JpcHRp",
+            "b24SKy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVN1YnNjcmlwdGlvblJlcXVl",
+            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNYLT5JMCLyotL3YxL3tzdWJz",
+            "Y3JpcHRpb249cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9EqMBChFNb2Rp",
+            "ZnlBY2tEZWFkbGluZRIqLmdvb2dsZS5wdWJzdWIudjEuTW9kaWZ5QWNrRGVh",
+            "ZGxpbmVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkqC0+STAkQi",
+            "Py92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2NyaXB0aW9ucy8q",
+            "fTptb2RpZnlBY2tEZWFkbGluZToBKhKRAQoLQWNrbm93bGVkZ2USJC5nb29n",
+            "bGUucHVic3ViLnYxLkFja25vd2xlZGdlUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSJEgtPkkwI+IjkvdjEve3N1YnNjcmlwdGlvbj1wcm9qZWN0",
+            "cy8qL3N1YnNjcmlwdGlvbnMvKn06YWNrbm93bGVkZ2U6ASoShAEKBFB1bGwS",
+            "HS5nb29nbGUucHVic3ViLnYxLlB1bGxSZXF1ZXN0Gh4uZ29vZ2xlLnB1YnN1",
+            "Yi52MS5QdWxsUmVzcG9uc2UiPYLT5JMCNyIyL3YxL3tzdWJzY3JpcHRpb249",
+            "cHJvamVjdHMvKi9zdWJzY3JpcHRpb25zLyp9OnB1bGw6ASoSZAoNU3RyZWFt",
+            "aW5nUHVsbBImLmdvb2dsZS5wdWJzdWIudjEuU3RyZWFtaW5nUHVsbFJlcXVl",
+            "c3QaJy5nb29nbGUucHVic3ViLnYxLlN0cmVhbWluZ1B1bGxSZXNwb25zZSgB",
+            "MAESoAEKEE1vZGlmeVB1c2hDb25maWcSKS5nb29nbGUucHVic3ViLnYxLk1v",
+            "ZGlmeVB1c2hDb25maWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IkmC0+STAkMiPi92MS97c3Vic2NyaXB0aW9uPXByb2plY3RzLyovc3Vic2Ny",
+            "aXB0aW9ucy8qfTptb2RpZnlQdXNoQ29uZmlnOgEqEowBCg1MaXN0U25hcHNo",
+            "b3RzEiYuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0U25hcHNob3RzUmVxdWVzdBon",
+            "Lmdvb2dsZS5wdWJzdWIudjEuTGlzdFNuYXBzaG90c1Jlc3BvbnNlIiqC0+ST",
+            "AiQSIi92MS97cHJvamVjdD1wcm9qZWN0cy8qfS9zbmFwc2hvdHMSgwEKDkNy",
+            "ZWF0ZVNuYXBzaG90EicuZ29vZ2xlLnB1YnN1Yi52MS5DcmVhdGVTbmFwc2hv",
+            "dFJlcXVlc3QaGi5nb29nbGUucHVic3ViLnYxLlNuYXBzaG90IiyC0+STAiYa",
+            "IS92MS97bmFtZT1wcm9qZWN0cy8qL3NuYXBzaG90cy8qfToBKhKAAQoORGVs",
+            "ZXRlU25hcHNob3QSJy5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVNuYXBzaG90",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSItgtPkkwInKiUvdjEv",
+            "e3NuYXBzaG90PXByb2plY3RzLyovc25hcHNob3RzLyp9EoQBCgRTZWVrEh0u",
+            "Z29vZ2xlLnB1YnN1Yi52MS5TZWVrUmVxdWVzdBoeLmdvb2dsZS5wdWJzdWIu",
+            "djEuU2Vla1Jlc3BvbnNlIj2C0+STAjciMi92MS97c3Vic2NyaXB0aW9uPXBy",
+            "b2plY3RzLyovc3Vic2NyaXB0aW9ucy8qfTpzZWVrOgEqMpsGCglQdWJsaXNo",
+            "ZXISagoLQ3JlYXRlVG9waWMSFy5nb29nbGUucHVic3ViLnYxLlRvcGljGhcu",
+            "Z29vZ2xlLnB1YnN1Yi52MS5Ub3BpYyIpgtPkkwIjGh4vdjEve25hbWU9cHJv",
+            "amVjdHMvKi90b3BpY3MvKn06ASoSggEKB1B1Ymxpc2gSIC5nb29nbGUucHVi",
+            "c3ViLnYxLlB1Ymxpc2hSZXF1ZXN0GiEuZ29vZ2xlLnB1YnN1Yi52MS5QdWJs",
+            "aXNoUmVzcG9uc2UiMoLT5JMCLCInL3YxL3t0b3BpYz1wcm9qZWN0cy8qL3Rv",
+            "cGljcy8qfTpwdWJsaXNoOgEqEm8KCEdldFRvcGljEiEuZ29vZ2xlLnB1YnN1",
+            "Yi52MS5HZXRUb3BpY1JlcXVlc3QaFy5nb29nbGUucHVic3ViLnYxLlRvcGlj",
+            "IieC0+STAiESHy92MS97dG9waWM9cHJvamVjdHMvKi90b3BpY3MvKn0SgAEK",
+            "Ckxpc3RUb3BpY3MSIy5nb29nbGUucHVic3ViLnYxLkxpc3RUb3BpY3NSZXF1",
+            "ZXN0GiQuZ29vZ2xlLnB1YnN1Yi52MS5MaXN0VG9waWNzUmVzcG9uc2UiJ4LT",
+            "5JMCIRIfL3YxL3twcm9qZWN0PXByb2plY3RzLyp9L3RvcGljcxKyAQoWTGlz",
+            "dFRvcGljU3Vic2NyaXB0aW9ucxIvLmdvb2dsZS5wdWJzdWIudjEuTGlzdFRv",
+            "cGljU3Vic2NyaXB0aW9uc1JlcXVlc3QaMC5nb29nbGUucHVic3ViLnYxLkxp",
+            "c3RUb3BpY1N1YnNjcmlwdGlvbnNSZXNwb25zZSI1gtPkkwIvEi0vdjEve3Rv",
+            "cGljPXByb2plY3RzLyovdG9waWNzLyp9L3N1YnNjcmlwdGlvbnMSdAoLRGVs",
+            "ZXRlVG9waWMSJC5nb29nbGUucHVic3ViLnYxLkRlbGV0ZVRvcGljUmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIngtPkkwIhKh8vdjEve3RvcGlj",
+            "PXByb2plY3RzLyovdG9waWNzLyp9QnkKFGNvbS5nb29nbGUucHVic3ViLnYx",
+            "QgtQdWJzdWJQcm90b1ABWjZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL3B1YnN1Yi92MTtwdWJzdWL4AQGqAhZHb29nbGUuQ2xvdWQu",
+            "UHViU3ViLlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Topic), global::Google.Cloud.PubSub.V1.Topic.Parser, new[]{ "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PubsubMessage), global::Google.Cloud.PubSub.V1.PubsubMessage.Parser, new[]{ "Data", "Attributes", "MessageId", "PublishTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -135,10 +169,11 @@ namespace Google.Cloud.PubSub.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsRequest.Parser, new[]{ "Topic", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse), global::Google.Cloud.PubSub.V1.ListTopicSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.DeleteTopicRequest), global::Google.Cloud.PubSub.V1.DeleteTopicRequest.Parser, new[]{ "Topic" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Subscription), global::Google.Cloud.PubSub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Subscription), global::Google.Cloud.PubSub.V1.Subscription.Parser, new[]{ "Name", "Topic", "PushConfig", "AckDeadlineSeconds", "RetainAckedMessages", "MessageRetentionDuration" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.PushConfig), global::Google.Cloud.PubSub.V1.PushConfig.Parser, new[]{ "PushEndpoint", "Attributes" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ReceivedMessage), global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser, new[]{ "AckId", "Message" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.GetSubscriptionRequest), global::Google.Cloud.PubSub.V1.GetSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.UpdateSubscriptionRequest), global::Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.Parser, new[]{ "Subscription", "UpdateMask" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest), global::Google.Cloud.PubSub.V1.ListSubscriptionsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse), global::Google.Cloud.PubSub.V1.ListSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest), global::Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.Parser, new[]{ "Subscription" }, null, null, null),
@@ -148,7 +183,14 @@ namespace Google.Cloud.PubSub.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest), global::Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.Parser, new[]{ "Subscription", "AckIds", "AckDeadlineSeconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.AcknowledgeRequest), global::Google.Cloud.PubSub.V1.AcknowledgeRequest.Parser, new[]{ "Subscription", "AckIds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullRequest), global::Google.Cloud.PubSub.V1.StreamingPullRequest.Parser, new[]{ "Subscription", "AckIds", "ModifyDeadlineSeconds", "ModifyDeadlineAckIds", "StreamAckDeadlineSeconds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.StreamingPullResponse), global::Google.Cloud.PubSub.V1.StreamingPullResponse.Parser, new[]{ "ReceivedMessages" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.CreateSnapshotRequest), global::Google.Cloud.PubSub.V1.CreateSnapshotRequest.Parser, new[]{ "Name", "Subscription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.Snapshot), global::Google.Cloud.PubSub.V1.Snapshot.Parser, new[]{ "Name", "Topic", "ExpirationTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSnapshotsRequest), global::Google.Cloud.PubSub.V1.ListSnapshotsRequest.Parser, new[]{ "Project", "PageSize", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.ListSnapshotsResponse), global::Google.Cloud.PubSub.V1.ListSnapshotsResponse.Parser, new[]{ "Snapshots", "NextPageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest), global::Google.Cloud.PubSub.V1.DeleteSnapshotRequest.Parser, new[]{ "Snapshot" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.SeekRequest), global::Google.Cloud.PubSub.V1.SeekRequest.Parser, new[]{ "Subscription", "Time", "Snapshot" }, new[]{ "Target" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.PubSub.V1.SeekResponse), global::Google.Cloud.PubSub.V1.SeekResponse.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -1717,6 +1759,8 @@ namespace Google.Cloud.PubSub.V1 {
       topic_ = other.topic_;
       PushConfig = other.pushConfig_ != null ? other.PushConfig.Clone() : null;
       ackDeadlineSeconds_ = other.ackDeadlineSeconds_;
+      retainAckedMessages_ = other.retainAckedMessages_;
+      MessageRetentionDuration = other.messageRetentionDuration_ != null ? other.MessageRetentionDuration.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1808,6 +1852,42 @@ namespace Google.Cloud.PubSub.V1 {
       }
     }
 
+    /// <summary>Field number for the "retain_acked_messages" field.</summary>
+    public const int RetainAckedMessagesFieldNumber = 7;
+    private bool retainAckedMessages_;
+    /// <summary>
+    ///  Indicates whether to retain acknowledged messages. If true, then
+    ///  messages are not expunged from the subscription's backlog, even if they are
+    ///  acknowledged, until they fall out of the `message_retention_duration`
+    ///  window.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool RetainAckedMessages {
+      get { return retainAckedMessages_; }
+      set {
+        retainAckedMessages_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message_retention_duration" field.</summary>
+    public const int MessageRetentionDurationFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Duration messageRetentionDuration_;
+    /// <summary>
+    ///  How long to retain unacknowledged messages in the subscription's backlog,
+    ///  from the moment a message is published.
+    ///  If `retain_acked_messages` is true, then this also configures the retention
+    ///  of acknowledged messages, and thus configures how far back in time a `Seek`
+    ///  can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10
+    ///  minutes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Duration MessageRetentionDuration {
+      get { return messageRetentionDuration_; }
+      set {
+        messageRetentionDuration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Subscription);
@@ -1825,6 +1905,8 @@ namespace Google.Cloud.PubSub.V1 {
       if (Topic != other.Topic) return false;
       if (!object.Equals(PushConfig, other.PushConfig)) return false;
       if (AckDeadlineSeconds != other.AckDeadlineSeconds) return false;
+      if (RetainAckedMessages != other.RetainAckedMessages) return false;
+      if (!object.Equals(MessageRetentionDuration, other.MessageRetentionDuration)) return false;
       return true;
     }
 
@@ -1835,6 +1917,8 @@ namespace Google.Cloud.PubSub.V1 {
       if (Topic.Length != 0) hash ^= Topic.GetHashCode();
       if (pushConfig_ != null) hash ^= PushConfig.GetHashCode();
       if (AckDeadlineSeconds != 0) hash ^= AckDeadlineSeconds.GetHashCode();
+      if (RetainAckedMessages != false) hash ^= RetainAckedMessages.GetHashCode();
+      if (messageRetentionDuration_ != null) hash ^= MessageRetentionDuration.GetHashCode();
       return hash;
     }
 
@@ -1861,6 +1945,14 @@ namespace Google.Cloud.PubSub.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(AckDeadlineSeconds);
       }
+      if (RetainAckedMessages != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(RetainAckedMessages);
+      }
+      if (messageRetentionDuration_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MessageRetentionDuration);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1877,6 +1969,12 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (AckDeadlineSeconds != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AckDeadlineSeconds);
+      }
+      if (RetainAckedMessages != false) {
+        size += 1 + 1;
+      }
+      if (messageRetentionDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MessageRetentionDuration);
       }
       return size;
     }
@@ -1900,6 +1998,15 @@ namespace Google.Cloud.PubSub.V1 {
       }
       if (other.AckDeadlineSeconds != 0) {
         AckDeadlineSeconds = other.AckDeadlineSeconds;
+      }
+      if (other.RetainAckedMessages != false) {
+        RetainAckedMessages = other.RetainAckedMessages;
+      }
+      if (other.messageRetentionDuration_ != null) {
+        if (messageRetentionDuration_ == null) {
+          messageRetentionDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        MessageRetentionDuration.MergeFrom(other.MessageRetentionDuration);
       }
     }
 
@@ -1928,6 +2035,17 @@ namespace Google.Cloud.PubSub.V1 {
           }
           case 40: {
             AckDeadlineSeconds = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            RetainAckedMessages = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (messageRetentionDuration_ == null) {
+              messageRetentionDuration_ = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(messageRetentionDuration_);
             break;
           }
         }
@@ -1999,11 +2117,10 @@ namespace Google.Cloud.PubSub.V1 {
     ///  control different aspects of the message delivery.
     ///
     ///  The currently supported attribute is `x-goog-version`, which you can
-    ///  use to change the format of the push message. This attribute
+    ///  use to change the format of the pushed message. This attribute
     ///  indicates the version of the data expected by the endpoint. This
-    ///  controls the shape of the envelope (i.e. its fields and metadata).
-    ///  The endpoint version is based on the version of the Pub/Sub
-    ///  API.
+    ///  controls the shape of the pushed message (i.e., its fields and metadata).
+    ///  The endpoint version is based on the version of the Pub/Sub API.
     ///
     ///  If not present during the `CreateSubscription` call, it will default to
     ///  the version of the API used to make such call. If not present during a
@@ -2389,6 +2506,173 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
+  ///  Request for the UpdateSubscription method.
+  /// </summary>
+  public sealed partial class UpdateSubscriptionRequest : pb::IMessage<UpdateSubscriptionRequest> {
+    private static readonly pb::MessageParser<UpdateSubscriptionRequest> _parser = new pb::MessageParser<UpdateSubscriptionRequest>(() => new UpdateSubscriptionRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateSubscriptionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateSubscriptionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateSubscriptionRequest(UpdateSubscriptionRequest other) : this() {
+      Subscription = other.subscription_ != null ? other.Subscription.Clone() : null;
+      UpdateMask = other.updateMask_ != null ? other.UpdateMask.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateSubscriptionRequest Clone() {
+      return new UpdateSubscriptionRequest(this);
+    }
+
+    /// <summary>Field number for the "subscription" field.</summary>
+    public const int SubscriptionFieldNumber = 1;
+    private global::Google.Cloud.PubSub.V1.Subscription subscription_;
+    /// <summary>
+    ///  The updated subscription object.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.PubSub.V1.Subscription Subscription {
+      get { return subscription_; }
+      set {
+        subscription_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    ///  Indicates which fields in the provided subscription to update.
+    ///  Must be specified and non-empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateSubscriptionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateSubscriptionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Subscription, other.Subscription)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (subscription_ != null) hash ^= Subscription.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (subscription_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Subscription);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (subscription_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Subscription);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateSubscriptionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.subscription_ != null) {
+        if (subscription_ == null) {
+          subscription_ = new global::Google.Cloud.PubSub.V1.Subscription();
+        }
+        Subscription.MergeFrom(other.Subscription);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (subscription_ == null) {
+              subscription_ = new global::Google.Cloud.PubSub.V1.Subscription();
+            }
+            input.ReadMessage(subscription_);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              updateMask_ = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(updateMask_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
   ///  Request for the `ListSubscriptions` method.
   /// </summary>
   public sealed partial class ListSubscriptionsRequest : pb::IMessage<ListSubscriptionsRequest> {
@@ -2398,7 +2682,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2586,7 +2870,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2734,7 +3018,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2858,7 +3142,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3024,7 +3308,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3216,7 +3500,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3334,7 +3618,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3518,7 +3802,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3668,7 +3952,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3917,7 +4201,7 @@ namespace Google.Cloud.PubSub.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4016,6 +4300,1152 @@ namespace Google.Cloud.PubSub.V1 {
             receivedMessages_.AddEntriesFrom(input, _repeated_receivedMessages_codec);
             break;
           }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Request for the `CreateSnapshot` method.
+  /// </summary>
+  public sealed partial class CreateSnapshotRequest : pb::IMessage<CreateSnapshotRequest> {
+    private static readonly pb::MessageParser<CreateSnapshotRequest> _parser = new pb::MessageParser<CreateSnapshotRequest>(() => new CreateSnapshotRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CreateSnapshotRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateSnapshotRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateSnapshotRequest(CreateSnapshotRequest other) : this() {
+      name_ = other.name_;
+      subscription_ = other.subscription_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CreateSnapshotRequest Clone() {
+      return new CreateSnapshotRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    ///  Optional user-provided name for this snapshot.
+    ///  If the name is not provided in the request, the server will assign a random
+    ///  name for this snapshot on the same project as the subscription.
+    ///  Note that for REST API requests, you must specify a name.
+    ///  Format is `projects/{project}/snapshots/{snap}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "subscription" field.</summary>
+    public const int SubscriptionFieldNumber = 2;
+    private string subscription_ = "";
+    /// <summary>
+    ///  The subscription whose backlog the snapshot retains.
+    ///  Specifically, the created snapshot is guaranteed to retain:
+    ///   (a) The existing backlog on the subscription. More precisely, this is
+    ///       defined as the messages in the subscription's backlog that are
+    ///       unacknowledged upon the successful completion of the
+    ///       `CreateSnapshot` request; as well as:
+    ///   (b) Any messages published to the subscription's topic following the
+    ///       successful completion of the CreateSnapshot request.
+    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Subscription {
+      get { return subscription_; }
+      set {
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CreateSnapshotRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CreateSnapshotRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Subscription != other.Subscription) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Subscription.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Subscription);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Subscription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Subscription);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CreateSnapshotRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Subscription.Length != 0) {
+        Subscription = other.Subscription;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Subscription = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  A snapshot resource.
+  /// </summary>
+  public sealed partial class Snapshot : pb::IMessage<Snapshot> {
+    private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Snapshot> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Snapshot() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Snapshot(Snapshot other) : this() {
+      name_ = other.name_;
+      topic_ = other.topic_;
+      ExpirationTime = other.expirationTime_ != null ? other.ExpirationTime.Clone() : null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Snapshot Clone() {
+      return new Snapshot(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    ///  The name of the snapshot.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "topic" field.</summary>
+    public const int TopicFieldNumber = 2;
+    private string topic_ = "";
+    /// <summary>
+    ///  The name of the topic from which this snapshot is retaining messages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Topic {
+      get { return topic_; }
+      set {
+        topic_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "expiration_time" field.</summary>
+    public const int ExpirationTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expirationTime_;
+    /// <summary>
+    ///  The snapshot is guaranteed to exist up until this time.
+    ///  A newly-created snapshot expires no later than 7 days from the time of its
+    ///  creation. Its exact lifetime is determined at creation by the existing
+    ///  backlog in the source subscription. Specifically, the lifetime of the
+    ///  snapshot is `7 days - (age of oldest unacked message in the subscription)`.
+    ///  For example, consider a subscription whose oldest unacked message is 3 days
+    ///  old. If a snapshot is created from this subscription, the snapshot -- which
+    ///  will always capture this 3-day-old backlog as long as the snapshot
+    ///  exists -- will expire in 4 days.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpirationTime {
+      get { return expirationTime_; }
+      set {
+        expirationTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Snapshot);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Snapshot other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Topic != other.Topic) return false;
+      if (!object.Equals(ExpirationTime, other.ExpirationTime)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Topic.Length != 0) hash ^= Topic.GetHashCode();
+      if (expirationTime_ != null) hash ^= ExpirationTime.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Topic.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Topic);
+      }
+      if (expirationTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ExpirationTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Topic.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Topic);
+      }
+      if (expirationTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpirationTime);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Snapshot other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Topic.Length != 0) {
+        Topic = other.Topic;
+      }
+      if (other.expirationTime_ != null) {
+        if (expirationTime_ == null) {
+          expirationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpirationTime.MergeFrom(other.ExpirationTime);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Topic = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (expirationTime_ == null) {
+              expirationTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(expirationTime_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Request for the `ListSnapshots` method.
+  /// </summary>
+  public sealed partial class ListSnapshotsRequest : pb::IMessage<ListSnapshotsRequest> {
+    private static readonly pb::MessageParser<ListSnapshotsRequest> _parser = new pb::MessageParser<ListSnapshotsRequest>(() => new ListSnapshotsRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListSnapshotsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSnapshotsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSnapshotsRequest(ListSnapshotsRequest other) : this() {
+      project_ = other.project_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSnapshotsRequest Clone() {
+      return new ListSnapshotsRequest(this);
+    }
+
+    /// <summary>Field number for the "project" field.</summary>
+    public const int ProjectFieldNumber = 1;
+    private string project_ = "";
+    /// <summary>
+    ///  The name of the cloud project that snapshots belong to.
+    ///  Format is `projects/{project}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Project {
+      get { return project_; }
+      set {
+        project_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    ///  Maximum number of snapshots to return.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    ///  The value returned by the last `ListSnapshotsResponse`; indicates that this
+    ///  is a continuation of a prior `ListSnapshots` call, and that the system
+    ///  should return the next page of data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListSnapshotsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListSnapshotsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Project != other.Project) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Project.Length != 0) hash ^= Project.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Project.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Project);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Project.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Project);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListSnapshotsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Project.Length != 0) {
+        Project = other.Project;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Project = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Response for the `ListSnapshots` method.
+  /// </summary>
+  public sealed partial class ListSnapshotsResponse : pb::IMessage<ListSnapshotsResponse> {
+    private static readonly pb::MessageParser<ListSnapshotsResponse> _parser = new pb::MessageParser<ListSnapshotsResponse>(() => new ListSnapshotsResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ListSnapshotsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSnapshotsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSnapshotsResponse(ListSnapshotsResponse other) : this() {
+      snapshots_ = other.snapshots_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ListSnapshotsResponse Clone() {
+      return new ListSnapshotsResponse(this);
+    }
+
+    /// <summary>Field number for the "snapshots" field.</summary>
+    public const int SnapshotsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.PubSub.V1.Snapshot> _repeated_snapshots_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Snapshot.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot> snapshots_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot>();
+    /// <summary>
+    ///  The resulting snapshots.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot> Snapshots {
+      get { return snapshots_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    ///  If not empty, indicates that there may be more snapshot that match the
+    ///  request; this value should be passed in a new `ListSnapshotsRequest`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ListSnapshotsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ListSnapshotsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!snapshots_.Equals(other.snapshots_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= snapshots_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      snapshots_.WriteTo(output, _repeated_snapshots_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += snapshots_.CalculateSize(_repeated_snapshots_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ListSnapshotsResponse other) {
+      if (other == null) {
+        return;
+      }
+      snapshots_.Add(other.snapshots_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            snapshots_.AddEntriesFrom(input, _repeated_snapshots_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Request for the `DeleteSnapshot` method.
+  /// </summary>
+  public sealed partial class DeleteSnapshotRequest : pb::IMessage<DeleteSnapshotRequest> {
+    private static readonly pb::MessageParser<DeleteSnapshotRequest> _parser = new pb::MessageParser<DeleteSnapshotRequest>(() => new DeleteSnapshotRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteSnapshotRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteSnapshotRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteSnapshotRequest(DeleteSnapshotRequest other) : this() {
+      snapshot_ = other.snapshot_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteSnapshotRequest Clone() {
+      return new DeleteSnapshotRequest(this);
+    }
+
+    /// <summary>Field number for the "snapshot" field.</summary>
+    public const int SnapshotFieldNumber = 1;
+    private string snapshot_ = "";
+    /// <summary>
+    ///  The name of the snapshot to delete.
+    ///  Format is `projects/{project}/snapshots/{snap}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Snapshot {
+      get { return snapshot_; }
+      set {
+        snapshot_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteSnapshotRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteSnapshotRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Snapshot != other.Snapshot) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Snapshot.Length != 0) hash ^= Snapshot.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Snapshot.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Snapshot);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Snapshot.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Snapshot);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteSnapshotRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Snapshot.Length != 0) {
+        Snapshot = other.Snapshot;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Snapshot = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Request for the `Seek` method.
+  /// </summary>
+  public sealed partial class SeekRequest : pb::IMessage<SeekRequest> {
+    private static readonly pb::MessageParser<SeekRequest> _parser = new pb::MessageParser<SeekRequest>(() => new SeekRequest());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SeekRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SeekRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SeekRequest(SeekRequest other) : this() {
+      subscription_ = other.subscription_;
+      switch (other.TargetCase) {
+        case TargetOneofCase.Time:
+          Time = other.Time.Clone();
+          break;
+        case TargetOneofCase.Snapshot:
+          Snapshot = other.Snapshot;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SeekRequest Clone() {
+      return new SeekRequest(this);
+    }
+
+    /// <summary>Field number for the "subscription" field.</summary>
+    public const int SubscriptionFieldNumber = 1;
+    private string subscription_ = "";
+    /// <summary>
+    ///  The subscription to affect.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Subscription {
+      get { return subscription_; }
+      set {
+        subscription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 2;
+    /// <summary>
+    ///  The time to seek to.
+    ///  Messages retained in the subscription that were published before this
+    ///  time are marked as acknowledged, and messages retained in the
+    ///  subscription that were published after this time are marked as
+    ///  unacknowledged. Note that this operation affects only those messages
+    ///  retained in the subscription (configured by the combination of
+    ///  `message_retention_duration` and `retain_acked_messages`). For example,
+    ///  if `time` corresponds to a point before the message retention
+    ///  window (or to a point before the system's notion of the subscription
+    ///  creation time), only retained messages will be marked as unacknowledged,
+    ///  and already-expunged messages will not be restored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp Time {
+      get { return targetCase_ == TargetOneofCase.Time ? (global::Google.Protobuf.WellKnownTypes.Timestamp) target_ : null; }
+      set {
+        target_ = value;
+        targetCase_ = value == null ? TargetOneofCase.None : TargetOneofCase.Time;
+      }
+    }
+
+    /// <summary>Field number for the "snapshot" field.</summary>
+    public const int SnapshotFieldNumber = 3;
+    /// <summary>
+    ///  The snapshot to seek to. The snapshot's topic must be the same as that of
+    ///  the provided subscription.
+    ///  Format is `projects/{project}/snapshots/{snap}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Snapshot {
+      get { return targetCase_ == TargetOneofCase.Snapshot ? (string) target_ : ""; }
+      set {
+        target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetCase_ = TargetOneofCase.Snapshot;
+      }
+    }
+
+    private object target_;
+    /// <summary>Enum of possible cases for the "target" oneof.</summary>
+    public enum TargetOneofCase {
+      None = 0,
+      Time = 2,
+      Snapshot = 3,
+    }
+    private TargetOneofCase targetCase_ = TargetOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TargetOneofCase TargetCase {
+      get { return targetCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearTarget() {
+      targetCase_ = TargetOneofCase.None;
+      target_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SeekRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SeekRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Subscription != other.Subscription) return false;
+      if (!object.Equals(Time, other.Time)) return false;
+      if (Snapshot != other.Snapshot) return false;
+      if (TargetCase != other.TargetCase) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
+      if (targetCase_ == TargetOneofCase.Time) hash ^= Time.GetHashCode();
+      if (targetCase_ == TargetOneofCase.Snapshot) hash ^= Snapshot.GetHashCode();
+      hash ^= (int) targetCase_;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Subscription.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Subscription);
+      }
+      if (targetCase_ == TargetOneofCase.Time) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Time);
+      }
+      if (targetCase_ == TargetOneofCase.Snapshot) {
+        output.WriteRawTag(26);
+        output.WriteString(Snapshot);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Subscription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Subscription);
+      }
+      if (targetCase_ == TargetOneofCase.Time) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Time);
+      }
+      if (targetCase_ == TargetOneofCase.Snapshot) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Snapshot);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SeekRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Subscription.Length != 0) {
+        Subscription = other.Subscription;
+      }
+      switch (other.TargetCase) {
+        case TargetOneofCase.Time:
+          Time = other.Time;
+          break;
+        case TargetOneofCase.Snapshot:
+          Snapshot = other.Snapshot;
+          break;
+      }
+
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            Subscription = input.ReadString();
+            break;
+          }
+          case 18: {
+            global::Google.Protobuf.WellKnownTypes.Timestamp subBuilder = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            if (targetCase_ == TargetOneofCase.Time) {
+              subBuilder.MergeFrom(Time);
+            }
+            input.ReadMessage(subBuilder);
+            Time = subBuilder;
+            break;
+          }
+          case 26: {
+            Snapshot = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class SeekResponse : pb::IMessage<SeekResponse> {
+    private static readonly pb::MessageParser<SeekResponse> _parser = new pb::MessageParser<SeekResponse>(() => new SeekResponse());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SeekResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.PubSub.V1.PubsubReflection.Descriptor.MessageTypes[31]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SeekResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SeekResponse(SeekResponse other) : this() {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SeekResponse Clone() {
+      return new SeekResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SeekResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SeekResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SeekResponse other) {
+      if (other == null) {
+        return;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
         }
       }
     }
