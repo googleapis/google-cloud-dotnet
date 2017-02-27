@@ -76,7 +76,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string uri, string rootSpanName, bool exceptionExpected)
         {
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
-            await TraceOutGoingRequest(CreateProvider(), rootSpanName, uri, exceptionExpected);
+            await TraceOutGoingRequest(CreateTracer(), rootSpanName, uri, exceptionExpected);
             var trace = _polling.GetTrace(rootSpanName, startTime);
             CheckTrace(trace, rootSpanName, uri);
             return trace;
@@ -85,19 +85,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <summary>
         /// Creates a <see cref="SimpleManagedTracer"/> with a <see cref="GrpcTraceConsumer"/>.
         /// </summary>
-        private IServiceProvider CreateProvider()
+        private IManagedTracer CreateTracer()
         {
             string traceId = _traceIdFactory.NextId();
             var traceProto = new TraceProto { ProjectId = _projectId, TraceId = traceId };
             var consumer = new GrpcTraceConsumer(TraceServiceClient.CreateAsync());
-            var tracer = SimpleManagedTracer.Create(consumer, traceProto, null);
-            Mock<IServiceProvider> provider = new Mock<IServiceProvider>();
-            provider.Setup(p => p.GetService(typeof(IManagedTracer))).Returns(tracer);
-            return provider.Object;
+            return SimpleManagedTracer.Create(consumer, traceProto, null);
         }
 
         /// <summary>
-        /// Creates a <see cref="AbstractTraceHeaderPropagatingHandler"/> and traces the sending of a
+        /// Creates a <see cref="TraceHeaderPropagatingHandlerBase"/> and traces the sending of a
         /// GET request to the given uri.  The trace is wrapped in a parent span.
         /// </summary>
         /// <param name="tracer">The tracer to trace the request with.</param>
@@ -106,11 +103,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <param name="uri">The uri to request.</param>
         /// <param name="exceptionExpected">True if an exception from the request to the uri is expected.</param>
         private async Task TraceOutGoingRequest(
-            IServiceProvider provider, string rootSpanName, string uri, bool exceptionExpected)
+            IManagedTracer tracer, string rootSpanName, string uri, bool exceptionExpected)
         {
-            var tracer = provider.GetService<IManagedTracer>();
-            tracer.StartSpan(rootSpanName);
-            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(provider);
+           tracer.StartSpan(rootSpanName);
+            var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => tracer);
             using (var httpClient = new HttpClient(traceHeaderHandler))
             {
                 try

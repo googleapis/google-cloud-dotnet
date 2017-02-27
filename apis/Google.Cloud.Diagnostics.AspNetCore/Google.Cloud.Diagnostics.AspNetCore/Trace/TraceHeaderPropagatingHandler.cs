@@ -26,9 +26,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     ///
     /// <example>
     /// <code>
-    /// public void DoSomething(IServiceProvider provider)
+    /// public void DoSomething(TraceHeaderPropagatingHandler traceHeaderHandler)
     /// {
-    ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(provider);
     ///     using (var httpClient = new HttpClient(traceHeaderHandler))
     ///     {
     ///         ...
@@ -39,29 +38,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// <remarks>
     /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
     /// traces the total time of the outgoing HTTP request.  This is only done if tracing is initialized
-    /// and tracing is enabled for the request current request.
+    /// and tracing is enabled for the current request.
     /// </remarks>
-    public class TraceHeaderPropagatingHandler : AbstractTraceHeaderPropagatingHandler
+    public class TraceHeaderPropagatingHandler : TraceHeaderPropagatingHandlerBase
     {
-        private readonly IServiceProvider _provider;
-
-        private TraceHeaderPropagatingHandler(
-            IServiceProvider provider, HttpMessageHandler innerHandler) : base(innerHandler)
-        {
-            _provider = GaxPreconditions.CheckNotNull(provider, nameof(provider));
-        }
-
-        /// <summary>
-        /// Gets a <see cref="TraceHeaderPropagatingHandler"/>.
-        /// </summary>
-        /// <param name="provider">The service provider. Cannot be null.</param>
-        /// <param name="innerHandler">Optional message handler.  If non is set an
-        ///     <see cref="HttpClientHandler"/>will be used.</param>
-        public static TraceHeaderPropagatingHandler Create(
-            IServiceProvider provider, HttpMessageHandler innerHandler = null) =>
-             new TraceHeaderPropagatingHandler(provider, innerHandler ?? new HttpClientHandler());
-
-        /// <inheritdoc />
-        internal override IManagedTracer GetCurrentTracer() => _provider.GetService<IManagedTracer>();
+        internal TraceHeaderPropagatingHandler(
+            Func<IManagedTracer> managedTracerFactory, HttpMessageHandler innerHandler = null) 
+            : base(managedTracerFactory, innerHandler)
+        {}
     }
 }

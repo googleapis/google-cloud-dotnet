@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using System;
 using System.Diagnostics;
 using System.Net.Http;
@@ -29,15 +30,15 @@ namespace Google.Cloud.Diagnostics.Common
     /// traces the total time of the outgoing HTTP request.  This is only done if tracing is initialized
     /// and tracing is enabled for the request current request.
     /// </remarks>
-    public abstract class AbstractTraceHeaderPropagatingHandler : DelegatingHandler
+    public class TraceHeaderPropagatingHandlerBase : DelegatingHandler
     {
-        internal AbstractTraceHeaderPropagatingHandler(HttpMessageHandler innerHandler)
+        private readonly Func<IManagedTracer> _managedTracerFactory;
+        internal TraceHeaderPropagatingHandlerBase(
+            Func<IManagedTracer> managedTracerFactory, HttpMessageHandler innerHandler)
         {
+            _managedTracerFactory = GaxPreconditions.CheckNotNull(managedTracerFactory, nameof(managedTracerFactory));
             InnerHandler = innerHandler ?? new HttpClientHandler();
         }
-
-        /// <summary>Gets the current <see cref="IManagedTracer"/>.</summary>
-        internal abstract IManagedTracer GetCurrentTracer();
 
         /// <summary>
         /// Sends the given request.  If tracing is initialized and enabled the outgoing request is
@@ -46,7 +47,7 @@ namespace Google.Cloud.Diagnostics.Common
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            var tracer = GetCurrentTracer();
+            var tracer = _managedTracerFactory();
             if (tracer.GetCurrentTraceId() == null)
             {
                 return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);

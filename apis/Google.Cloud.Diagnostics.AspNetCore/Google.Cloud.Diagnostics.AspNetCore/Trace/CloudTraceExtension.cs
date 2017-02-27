@@ -120,8 +120,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Creates an <see cref="TraceHeaderPropagatingHandler"/>.
         /// </summary>
-        internal static TraceHeaderPropagatingHandler CreateTraceHeaderPropagatingHandler(IServiceProvider provider) 
-            => TraceHeaderPropagatingHandler.Create(provider);
+        internal static TraceHeaderPropagatingHandler CreateTraceHeaderPropagatingHandler(IServiceProvider provider)
+        {
+            Func<IManagedTracer> managedTracerFactory = () => provider.GetService<IManagedTracer>();
+            return new TraceHeaderPropagatingHandler(managedTracerFactory);
+        }
 
         /// <summary>
         /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>.

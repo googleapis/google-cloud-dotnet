@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Diagnostics.Common;
+using System;
 using System.Net.Http;
 
 namespace Google.Cloud.Diagnostics.AspNet
@@ -36,11 +37,13 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <remarks>
     /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
     /// traces the total time of the outgoing HTTP request.  This is only done if tracing is initialized
-    /// and tracing is enabled for the request current request.
+    /// and tracing is enabled for the current request.
     /// </remarks>
-    public class TraceHeaderPropagatingHandler : AbstractTraceHeaderPropagatingHandler
+    public class TraceHeaderPropagatingHandler : TraceHeaderPropagatingHandlerBase
     {
-        private TraceHeaderPropagatingHandler(HttpMessageHandler innerHandler) : base(innerHandler) { }
+        private TraceHeaderPropagatingHandler(
+            Func<IManagedTracer> managedTracerFatory, HttpMessageHandler innerHandler) 
+            : base(managedTracerFatory, innerHandler) { }
         
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/>.
@@ -48,9 +51,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="innerHandler">Optional message handler.  If non is set an
         ///     <see cref="HttpClientHandler"/>will be used.</param>
         public static TraceHeaderPropagatingHandler Create(HttpMessageHandler innerHandler = null) =>
-            new TraceHeaderPropagatingHandler(innerHandler ?? new HttpClientHandler());
-
-        /// <inheritdoc />
-        internal override IManagedTracer GetCurrentTracer() => CloudTrace.CurrentTracer;
+            new TraceHeaderPropagatingHandler(
+                () => CloudTrace.CurrentTracer, innerHandler ?? new HttpClientHandler());
     }
 }

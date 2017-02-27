@@ -23,7 +23,7 @@ using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
-    public class TraceHeaderPropagatingHandlerTest
+    public class TraceHeaderPropagatingHandlerBaseTest
     {
         private const string traceId = "105445aa7843bc8bf206b12000100f00";
         private const ulong spanId = 81237123;
@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = new Mock<IManagedTracer>();
             var fakeHandler = new FakeDelegatingHandler();
-            var traceHandler = new TraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
+            var traceHandler = new FakeTraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
 
             using (var httpClient = new HttpClient(traceHandler))
             {
@@ -60,7 +60,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext);
-            var traceHandler = new TraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
+            var traceHandler = new FakeTraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
@@ -78,7 +78,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext, throwException: true);
-            var traceHandler = new TraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
+            var traceHandler = new FakeTraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
@@ -125,17 +125,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             }
         }
 
-        private class TraceHeaderPropagatingHandler : AbstractTraceHeaderPropagatingHandler
+        private class FakeTraceHeaderPropagatingHandler : TraceHeaderPropagatingHandlerBase
         {
-            private readonly IManagedTracer _tracer;
-
-            public TraceHeaderPropagatingHandler(
-                IManagedTracer tracer, HttpMessageHandler innerHandler) : base(innerHandler)
-            {
-                _tracer = tracer;
-            }
-
-            internal override IManagedTracer GetCurrentTracer() => _tracer;
+            public FakeTraceHeaderPropagatingHandler(
+                IManagedTracer tracer, HttpMessageHandler innerHandler) : base(() => tracer, innerHandler)
+           { }
         }
     }
 }
