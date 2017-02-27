@@ -25,7 +25,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>Gets the span kind.</summary>
         public SpanKind SpanKind { get; }
 
-        /// <summary>Gets the lables to be added to the span.</summary>
+        /// <summary>Gets the labels to be added to the span.</summary>
         public Dictionary<string, string> Labels { get; }
 
         private StartSpanOptions(SpanKind spanKind, Dictionary<string, string> labels)

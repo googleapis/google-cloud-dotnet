@@ -29,8 +29,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="name">The name of the span, cannot be null.</param>
         /// <param name="options">The span options to override default values.</param>
         /// <returns>
-        /// An <see cref="IDisposable"/> that will end the current span.  If the span cannot
-        /// end in the current scope, disposal can be skipped and <see cref="EndSpan"/> can
+        /// An <see cref="IDisposable"/> that will end the current span when disposed.  If the span
+        /// cannot end in the current scope, disposal can be skipped and <see cref="EndSpan"/> can
         /// be called at a later time (this is not recommended and should be avoided if possible).
         /// </returns>
         IDisposable StartSpan(string name, StartSpanOptions options = null);

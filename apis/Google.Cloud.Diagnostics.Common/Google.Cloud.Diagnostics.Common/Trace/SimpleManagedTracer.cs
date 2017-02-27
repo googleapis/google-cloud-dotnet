@@ -37,7 +37,7 @@ namespace Google.Cloud.Diagnostics.Common
             public Span(SimpleManagedTracer tracer) { _tracer = tracer; }
 
             /// <summary> Ends the current span.</summary>
-            public void Dispose() =>_tracer.EndSpan();
+            public void Dispose() => _tracer.EndSpan();
         }
 
         /// <summary>A mutex to protect the rate limiter instance.</summary>
@@ -115,10 +115,8 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     action();
                 }
-                catch (Exception e)
+                catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
-                    SetStackTrace(new StackTrace(e, true));
-                    throw;
                 }
             }
         }
@@ -132,10 +130,10 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     return func();
                 }
-                catch (Exception e)
+                catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
-                    SetStackTrace(new StackTrace(e, true));
-                    throw;
+                    // This will never return as the condition above will always be false.
+                    return default(T);
                 }
             }
         }
@@ -206,6 +204,17 @@ namespace Google.Cloud.Diagnostics.Common
                 }
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Sets a <see cref="StackTrace"/> on the current span for the given exception and
+        /// returns false.  This is used for exception handling to ensure proper timing for
+        /// recording the stacktrace.
+        /// </summary>
+        private bool SetStackTraceAndReturnFalse(Exception e)
+        {
+            SetStackTrace(new StackTrace(e, true));
+            return false;
         }
 
         private void CheckStackNotEmpty()
