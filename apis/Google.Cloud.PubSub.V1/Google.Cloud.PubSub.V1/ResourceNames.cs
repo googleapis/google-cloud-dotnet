@@ -107,6 +107,98 @@ namespace Google.Cloud.PubSub.V1
     }
 
     /// <summary>
+    /// Resource name for the 'snapshot' resource.
+    /// </summary>
+    public sealed partial class SnapshotName : IResourceName, IEquatable<SnapshotName>
+    {
+        private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/snapshots/{snapshot}");
+
+        /// <summary>
+        /// Parses the given snapshot resource name in string form into a new
+        /// <see cref="SnapshotName"/> instance.
+        /// </summary>
+        /// <param name="snapshotName">The snapshot resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SnapshotName"/> if successful.</returns>
+        public static SnapshotName Parse(string snapshotName)
+        {
+            GaxPreconditions.CheckNotNull(snapshotName, nameof(snapshotName));
+            TemplatedResourceName resourceName = s_template.ParseName(snapshotName);
+            return new SnapshotName(resourceName[0], resourceName[1]);
+        }
+
+        /// <summary>
+        /// Tries to parse the given snapshot resource name in string form into a new
+        /// <see cref="SnapshotName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="snapshotName"/> is null,
+        /// as this would usually indicate a programming error rather than a data error.
+        /// </remarks>
+        /// <param name="snapshotName">The snapshot resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">When this method returns, the parsed <see cref="SnapshotName"/>,
+        /// or <c>null</c> if parsing fails.</param>
+        /// <returns><c>true</c> if the name was parsed succssfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string snapshotName, out SnapshotName result)
+        {
+            GaxPreconditions.CheckNotNull(snapshotName, nameof(snapshotName));
+            TemplatedResourceName resourceName;
+            if (s_template.TryParseName(snapshotName, out resourceName))
+            {
+                result = new SnapshotName(resourceName[0], resourceName[1]);
+                return true;
+            }
+            else
+            {
+                result = null;
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Constructs a new instance of the <see cref="SnapshotName"/> resource name class
+        /// from its component parts.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
+        /// <param name="snapshotId">The snapshot ID. Must not be <c>null</c>.</param>
+        public SnapshotName(string projectId, string snapshotId)
+        {
+            ProjectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            SnapshotId = GaxPreconditions.CheckNotNull(snapshotId, nameof(snapshotId));
+        }
+
+        /// <summary>
+        /// The project ID. Never <c>null</c>.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The snapshot ID. Never <c>null</c>.
+        /// </summary>
+        public string SnapshotId { get; }
+
+        /// <inheritdoc />
+        public ResourceNameKind Kind => ResourceNameKind.Simple;
+
+        /// <inheritdoc />
+        public override string ToString() => s_template.Expand(ProjectId, SnapshotId);
+
+        /// <inheritdoc />
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc />
+        public override bool Equals(object obj) => Equals(obj as SnapshotName);
+
+        /// <inheritdoc />
+        public bool Equals(SnapshotName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc />
+        public static bool operator ==(SnapshotName a, SnapshotName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc />
+        public static bool operator !=(SnapshotName a, SnapshotName b) => !(a == b);
+    }
+
+    /// <summary>
     /// Resource name for the 'subscription' resource.
     /// </summary>
     public sealed partial class SubscriptionName : IResourceName, IEquatable<SubscriptionName>
@@ -580,6 +672,41 @@ namespace Google.Cloud.PubSub.V1
 
     }
 
+    public partial class CreateSnapshotRequest
+    {
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public SnapshotName SnapshotName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.PubSub.V1.SnapshotName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// </summary>
+        public SubscriptionName SubscriptionAsSubscriptionName
+        {
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteSnapshotRequest
+    {
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="Snapshot"/> resource name property.
+        /// </summary>
+        public SnapshotName SnapshotAsSnapshotName
+        {
+            get { return string.IsNullOrEmpty(Snapshot) ? null : Google.Cloud.PubSub.V1.SnapshotName.Parse(Snapshot); }
+            set { Snapshot = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
     public partial class DeleteSubscriptionRequest
     {
         /// <summary>
@@ -628,6 +755,19 @@ namespace Google.Cloud.PubSub.V1
         {
             get { return string.IsNullOrEmpty(Topic) ? null : Google.Cloud.PubSub.V1.TopicName.Parse(Topic); }
             set { Topic = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListSnapshotsRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Project"/> resource name property.
+        /// </summary>
+        public ProjectName ProjectAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Project) ? null : Google.Cloud.PubSub.V1.ProjectName.Parse(Project); }
+            set { Project = value != null ? value.ToString() : ""; }
         }
 
     }
@@ -730,6 +870,50 @@ namespace Google.Cloud.PubSub.V1
         {
             get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
             set { Subscription = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class SeekRequest
+    {
+        /// <summary>
+        /// <see cref="SubscriptionName"/>-typed view over the <see cref="Subscription"/> resource name property.
+        /// </summary>
+        public SubscriptionName SubscriptionAsSubscriptionName
+        {
+            get { return string.IsNullOrEmpty(Subscription) ? null : Google.Cloud.PubSub.V1.SubscriptionName.Parse(Subscription); }
+            set { Subscription = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="Snapshot"/> resource name property.
+        /// </summary>
+        public SnapshotName SnapshotAsSnapshotName
+        {
+            get { return string.IsNullOrEmpty(Snapshot) ? null : Google.Cloud.PubSub.V1.SnapshotName.Parse(Snapshot); }
+            set { Snapshot = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Snapshot
+    {
+        /// <summary>
+        /// <see cref="SnapshotName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public SnapshotName SnapshotName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.PubSub.V1.SnapshotName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="TopicName"/>-typed view over the <see cref="Topic"/> resource name property.
+        /// </summary>
+        public TopicName TopicAsTopicName
+        {
+            get { return string.IsNullOrEmpty(Topic) ? null : Google.Cloud.PubSub.V1.TopicName.Parse(Topic); }
+            set { Topic = value != null ? value.ToString() : ""; }
         }
 
     }

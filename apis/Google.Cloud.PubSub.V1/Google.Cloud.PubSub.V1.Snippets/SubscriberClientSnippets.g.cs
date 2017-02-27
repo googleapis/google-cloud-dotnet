@@ -151,6 +151,38 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // End snippet
         }
 
+        public async Task UpdateSubscriptionAsync_RequestObject()
+        {
+            // Snippet: UpdateSubscriptionAsync(UpdateSubscriptionRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Subscription response = await subscriberClient.UpdateSubscriptionAsync(request);
+            // End snippet
+        }
+
+        public void UpdateSubscription_RequestObject()
+        {
+            // Snippet: UpdateSubscription(UpdateSubscriptionRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
+            {
+                Subscription = new Subscription(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Subscription response = subscriberClient.UpdateSubscription(request);
+            // End snippet
+        }
+
         public async Task ListSubscriptionsAsync()
         {
             // Snippet: ListSubscriptionsAsync(ProjectName,string,int?,CallSettings)
@@ -666,6 +698,328 @@ namespace Google.Cloud.PubSub.V1.Snippets
             };
             // Make the request
             subscriberClient.ModifyPushConfig(request);
+            // End snippet
+        }
+
+        public async Task ListSnapshotsAsync()
+        {
+            // Snippet: ListSnapshotsAsync(string,string,int?,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedProject = new ProjectName("[PROJECT]").ToString();
+            // Make the request
+            PagedAsyncEnumerable<ListSnapshotsResponse,Snapshot> response =
+                subscriberClient.ListSnapshotsAsync(formattedProject);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Snapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListSnapshots()
+        {
+            // Snippet: ListSnapshots(string,string,int?,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedProject = new ProjectName("[PROJECT]").ToString();
+            // Make the request
+            PagedEnumerable<ListSnapshotsResponse,Snapshot> response =
+                subscriberClient.ListSnapshots(formattedProject);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Snapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task ListSnapshotsAsync_RequestObject()
+        {
+            // Snippet: ListSnapshotsAsync(ListSnapshotsRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSnapshotsRequest request = new ListSnapshotsRequest
+            {
+                Project = new ProjectName("[PROJECT]").ToString(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSnapshotsResponse,Snapshot> response =
+                subscriberClient.ListSnapshotsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Snapshot item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListSnapshotsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public void ListSnapshots_RequestObject()
+        {
+            // Snippet: ListSnapshots(ListSnapshotsRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            ListSnapshotsRequest request = new ListSnapshotsRequest
+            {
+                Project = new ProjectName("[PROJECT]").ToString(),
+            };
+            // Make the request
+            PagedEnumerable<ListSnapshotsResponse,Snapshot> response =
+                subscriberClient.ListSnapshots(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Snapshot item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSnapshotsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Snapshot item in page)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Snapshot> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Snapshot item in singlePage)
+            {
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        public async Task CreateSnapshotAsync()
+        {
+            // Snippet: CreateSnapshotAsync(string,string,CallSettings)
+            // Additional: CreateSnapshotAsync(string,string,CancellationToken)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedName = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
+            string formattedSubscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
+            // Make the request
+            Snapshot response = await subscriberClient.CreateSnapshotAsync(formattedName, formattedSubscription);
+            // End snippet
+        }
+
+        public void CreateSnapshot()
+        {
+            // Snippet: CreateSnapshot(string,string,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedName = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
+            string formattedSubscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
+            // Make the request
+            Snapshot response = subscriberClient.CreateSnapshot(formattedName, formattedSubscription);
+            // End snippet
+        }
+
+        public async Task CreateSnapshotAsync_RequestObject()
+        {
+            // Snippet: CreateSnapshotAsync(CreateSnapshotRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSnapshotRequest request = new CreateSnapshotRequest
+            {
+                Name = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
+                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+            };
+            // Make the request
+            Snapshot response = await subscriberClient.CreateSnapshotAsync(request);
+            // End snippet
+        }
+
+        public void CreateSnapshot_RequestObject()
+        {
+            // Snippet: CreateSnapshot(CreateSnapshotRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            CreateSnapshotRequest request = new CreateSnapshotRequest
+            {
+                Name = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
+                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+            };
+            // Make the request
+            Snapshot response = subscriberClient.CreateSnapshot(request);
+            // End snippet
+        }
+
+        public async Task DeleteSnapshotAsync()
+        {
+            // Snippet: DeleteSnapshotAsync(string,CallSettings)
+            // Additional: DeleteSnapshotAsync(string,CancellationToken)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            string formattedSnapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
+            // Make the request
+            await subscriberClient.DeleteSnapshotAsync(formattedSnapshot);
+            // End snippet
+        }
+
+        public void DeleteSnapshot()
+        {
+            // Snippet: DeleteSnapshot(string,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            string formattedSnapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
+            // Make the request
+            subscriberClient.DeleteSnapshot(formattedSnapshot);
+            // End snippet
+        }
+
+        public async Task DeleteSnapshotAsync_RequestObject()
+        {
+            // Snippet: DeleteSnapshotAsync(DeleteSnapshotRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSnapshotRequest request = new DeleteSnapshotRequest
+            {
+                Snapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
+            };
+            // Make the request
+            await subscriberClient.DeleteSnapshotAsync(request);
+            // End snippet
+        }
+
+        public void DeleteSnapshot_RequestObject()
+        {
+            // Snippet: DeleteSnapshot(DeleteSnapshotRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            DeleteSnapshotRequest request = new DeleteSnapshotRequest
+            {
+                Snapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
+            };
+            // Make the request
+            subscriberClient.DeleteSnapshot(request);
+            // End snippet
+        }
+
+        public async Task SeekAsync_RequestObject()
+        {
+            // Snippet: SeekAsync(SeekRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
+            // Initialize request argument(s)
+            SeekRequest request = new SeekRequest
+            {
+                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+            };
+            // Make the request
+            SeekResponse response = await subscriberClient.SeekAsync(request);
+            // End snippet
+        }
+
+        public void Seek_RequestObject()
+        {
+            // Snippet: Seek(SeekRequest,CallSettings)
+            // Create client
+            SubscriberClient subscriberClient = SubscriberClient.Create();
+            // Initialize request argument(s)
+            SeekRequest request = new SeekRequest
+            {
+                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+            };
+            // Make the request
+            SeekResponse response = subscriberClient.Seek(request);
             // End snippet
         }
 
