@@ -29,8 +29,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             HttpContext.Current = new HttpContext(request, response);
 
             Assert.Null(TracerManager.GetCurrentTracer());
-            TracerManager.SetCurrentTracer(DoNothingTracer.Instance);
-            Assert.Equal(DoNothingTracer.Instance, TracerManager.GetCurrentTracer());
+            TracerManager.SetCurrentTracer(NullManagedTracer.Instance);
+            Assert.Equal(NullManagedTracer.Instance, TracerManager.GetCurrentTracer());
             TracerManager.SetCurrentTracer(null);
             Assert.Null(TracerManager.GetCurrentTracer());
         }
