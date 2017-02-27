@@ -187,6 +187,24 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void RunInSpan_Action_Throws()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name") &&
+                    !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[TraceLabels.StackTrace]) &&
+                    t.ElementAt(0).Spans[0].Labels[TraceLabels.StackTrace].Contains(nameof(RunInSpan_Action_Throws)))));
+
+            Assert.Throws<DivideByZeroException>(
+                () => tracer.RunInSpan(
+                    () => { throw new DivideByZeroException(); }, "span-name"));
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void RunInSpan_Func()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
