@@ -492,11 +492,11 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> CreateSessionAsync(
-            string database,
+            DatabaseName database,
             CallSettings callSettings = null) => CreateSessionAsync(
                 new CreateSessionRequest
                 {
-                    Database = database,
+                    DatabaseAsDatabaseName = database,
                 },
                 callSettings);
 
@@ -531,7 +531,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> CreateSessionAsync(
-            string database,
+            DatabaseName database,
             CancellationToken cancellationToken) => CreateSessionAsync(
                 database,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -567,11 +567,11 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual Session CreateSession(
-            string database,
+            DatabaseName database,
             CallSettings callSettings = null) => CreateSession(
                 new CreateSessionRequest
                 {
-                    Database = database,
+                    DatabaseAsDatabaseName = database,
                 },
                 callSettings);
 
@@ -664,11 +664,11 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> GetSessionAsync(
-            string name,
+            SessionName name,
             CallSettings callSettings = null) => GetSessionAsync(
                 new GetSessionRequest
                 {
-                    Name = name,
+                    SessionName = name,
                 },
                 callSettings);
 
@@ -687,7 +687,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> GetSessionAsync(
-            string name,
+            SessionName name,
             CancellationToken cancellationToken) => GetSessionAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -707,11 +707,11 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual Session GetSession(
-            string name,
+            SessionName name,
             CallSettings callSettings = null) => GetSession(
                 new GetSessionRequest
                 {
-                    Name = name,
+                    SessionName = name,
                 },
                 callSettings);
 
@@ -770,11 +770,11 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSessionAsync(
-            string name,
+            SessionName name,
             CallSettings callSettings = null) => DeleteSessionAsync(
                 new DeleteSessionRequest
                 {
-                    Name = name,
+                    SessionName = name,
                 },
                 callSettings);
 
@@ -791,7 +791,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSessionAsync(
-            string name,
+            SessionName name,
             CancellationToken cancellationToken) => DeleteSessionAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -809,11 +809,11 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual void DeleteSession(
-            string name,
+            SessionName name,
             CallSettings callSettings = null) => DeleteSession(
                 new DeleteSessionRequest
                 {
-                    Name = name,
+                    SessionName = name,
                 },
                 callSettings);
 
@@ -850,6 +850,126 @@ namespace Google.Cloud.Spanner.V1
         /// </returns>
         public virtual void DeleteSession(
             DeleteSessionRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes an SQL query, returning all rows in a single reply. This
+        /// method cannot be used to return a result set larger than 10 MiB;
+        /// if the query yields more data than that, the query fails with
+        /// a `FAILED_PRECONDITION` error.
+        ///
+        /// Queries inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be fetched in streaming fashion by calling
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ResultSet> ExecuteSqlAsync(
+            ExecuteSqlRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Executes an SQL query, returning all rows in a single reply. This
+        /// method cannot be used to return a result set larger than 10 MiB;
+        /// if the query yields more data than that, the query fails with
+        /// a `FAILED_PRECONDITION` error.
+        ///
+        /// Queries inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be fetched in streaming fashion by calling
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ResultSet ExecuteSql(
+            ExecuteSqlRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Reads rows from the database using key lookups and scans, as a
+        /// simple key/value style alternative to
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
+        /// data than that, the read fails with a `FAILED_PRECONDITION`
+        /// error.
+        ///
+        /// Reads inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be yielded in streaming fashion by calling
+        /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public virtual Task<ResultSet> ReadAsync(
+            ReadRequest request,
+            CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Reads rows from the database using key lookups and scans, as a
+        /// simple key/value style alternative to
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
+        /// data than that, the read fails with a `FAILED_PRECONDITION`
+        /// error.
+        ///
+        /// Reads inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be yielded in streaming fashion by calling
+        /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public virtual ResultSet Read(
+            ReadRequest request,
             CallSettings callSettings = null)
         {
             throw new NotImplementedException();
@@ -874,12 +994,12 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Transaction> BeginTransactionAsync(
-            string session,
+            SessionName session,
             TransactionOptions options,
             CallSettings callSettings = null) => BeginTransactionAsync(
                 new BeginTransactionRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     Options = options,
                 },
                 callSettings);
@@ -903,7 +1023,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Transaction> BeginTransactionAsync(
-            string session,
+            SessionName session,
             TransactionOptions options,
             CancellationToken cancellationToken) => BeginTransactionAsync(
                 session,
@@ -929,12 +1049,12 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual Transaction BeginTransaction(
-            string session,
+            SessionName session,
             TransactionOptions options,
             CallSettings callSettings = null) => BeginTransaction(
                 new BeginTransactionRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     Options = options,
                 },
                 callSettings);
@@ -1011,13 +1131,13 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            string session,
+            SessionName session,
             ByteString transactionId,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     TransactionId = transactionId,
                     Mutations = { mutations },
                 },
@@ -1051,7 +1171,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            string session,
+            SessionName session,
             ByteString transactionId,
             IEnumerable<Mutation> mutations,
             CancellationToken cancellationToken) => CommitAsync(
@@ -1088,13 +1208,13 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual CommitResponse Commit(
-            string session,
+            SessionName session,
             ByteString transactionId,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     TransactionId = transactionId,
                     Mutations = { mutations },
                 },
@@ -1136,13 +1256,13 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            string session,
+            SessionName session,
             TransactionOptions singleUseTransaction,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     SingleUseTransaction = singleUseTransaction,
                     Mutations = { mutations },
                 },
@@ -1184,7 +1304,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            string session,
+            SessionName session,
             TransactionOptions singleUseTransaction,
             IEnumerable<Mutation> mutations,
             CancellationToken cancellationToken) => CommitAsync(
@@ -1229,13 +1349,13 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual CommitResponse Commit(
-            string session,
+            SessionName session,
             TransactionOptions singleUseTransaction,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     SingleUseTransaction = singleUseTransaction,
                     Mutations = { mutations },
                 },
@@ -1316,12 +1436,12 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task RollbackAsync(
-            string session,
+            SessionName session,
             ByteString transactionId,
             CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     TransactionId = transactionId,
                 },
                 callSettings);
@@ -1349,7 +1469,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task RollbackAsync(
-            string session,
+            SessionName session,
             ByteString transactionId,
             CancellationToken cancellationToken) => RollbackAsync(
                 session,
@@ -1379,12 +1499,12 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual void Rollback(
-            string session,
+            SessionName session,
             ByteString transactionId,
             CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
-                    Session = session,
+                    SessionAsSessionName = session,
                     TransactionId = transactionId,
                 },
                 callSettings);
@@ -1661,6 +1781,130 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_DeleteSessionRequest(ref request, ref callSettings);
             _callDeleteSession.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Executes an SQL query, returning all rows in a single reply. This
+        /// method cannot be used to return a result set larger than 10 MiB;
+        /// if the query yields more data than that, the query fails with
+        /// a `FAILED_PRECONDITION` error.
+        ///
+        /// Queries inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be fetched in streaming fashion by calling
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<ResultSet> ExecuteSqlAsync(
+            ExecuteSqlRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ExecuteSqlRequest(ref request, ref callSettings);
+            return _callExecuteSql.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Executes an SQL query, returning all rows in a single reply. This
+        /// method cannot be used to return a result set larger than 10 MiB;
+        /// if the query yields more data than that, the query fails with
+        /// a `FAILED_PRECONDITION` error.
+        ///
+        /// Queries inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be fetched in streaming fashion by calling
+        /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ResultSet ExecuteSql(
+            ExecuteSqlRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ExecuteSqlRequest(ref request, ref callSettings);
+            return _callExecuteSql.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Reads rows from the database using key lookups and scans, as a
+        /// simple key/value style alternative to
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
+        /// data than that, the read fails with a `FAILED_PRECONDITION`
+        /// error.
+        ///
+        /// Reads inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be yielded in streaming fashion by calling
+        /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// A Task containing the RPC response.
+        /// </returns>
+        public override Task<ResultSet> ReadAsync(
+            ReadRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ReadRequest(ref request, ref callSettings);
+            return _callRead.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Reads rows from the database using key lookups and scans, as a
+        /// simple key/value style alternative to
+        /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+        /// return a result set larger than 10 MiB; if the read matches more
+        /// data than that, the read fails with a `FAILED_PRECONDITION`
+        /// error.
+        ///
+        /// Reads inside read-write transactions might return `ABORTED`. If
+        /// this occurs, the application should restart the transaction from
+        /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+        ///
+        /// Larger result sets can be yielded in streaming fashion by calling
+        /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+        /// </summary>
+        /// <param name="request">
+        /// The request object containing all of the parameters for the API call.
+        /// </param>
+        /// <param name="callSettings">
+        /// If not null, applies overrides to this RPC call.
+        /// </param>
+        /// <returns>
+        /// The RPC response.
+        /// </returns>
+        public override ResultSet Read(
+            ReadRequest request,
+            CallSettings callSettings = null)
+        {
+            Modify_ReadRequest(ref request, ref callSettings);
+            return _callRead.Sync(request, callSettings);
         }
 
         /// <summary>
