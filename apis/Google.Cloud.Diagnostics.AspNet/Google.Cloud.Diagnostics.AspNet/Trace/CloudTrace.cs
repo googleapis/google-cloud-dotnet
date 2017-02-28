@@ -80,7 +80,7 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         /// <summary>Gets the current <see cref="IManagedTracer"/> for the given request.</summary>
         public static IManagedTracer CurrentTracer =>
-            TracerManager.GetCurrentTracer() ?? DoNothingTracer.Instance;
+            TracerManager.GetCurrentTracer() ?? NullManagedTracer.Instance;
 
         private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
