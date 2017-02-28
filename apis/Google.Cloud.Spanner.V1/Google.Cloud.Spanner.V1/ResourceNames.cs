@@ -28,7 +28,8 @@ namespace Google.Cloud.Spanner.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/databases/{database}");
 
         /// <summary>
-        /// Parses a database resource name in string form into a <see cref="DatabaseName"/>.
+        /// Parses the given database resource name in string form into a new
+        /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <param name="databaseName">The database resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="DatabaseName"/> if successful.</returns>
@@ -40,7 +41,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Tries to parse database resource name in string form into a <see cref="DatabaseName"/>/
+        /// Tries to parse the given database resource name in string form into a new
+        /// <see cref="DatabaseName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="databaseName"/> is null,
@@ -67,7 +69,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Constructs a database name from its component parts.
+        /// Constructs a new instance of the <see cref="DatabaseName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
@@ -124,7 +127,8 @@ namespace Google.Cloud.Spanner.V1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/instances/{instance}/databases/{database}/sessions/{session}");
 
         /// <summary>
-        /// Parses a session resource name in string form into a <see cref="SessionName"/>.
+        /// Parses the given session resource name in string form into a new
+        /// <see cref="SessionName"/> instance.
         /// </summary>
         /// <param name="sessionName">The session resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="SessionName"/> if successful.</returns>
@@ -136,7 +140,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Tries to parse session resource name in string form into a <see cref="SessionName"/>/
+        /// Tries to parse the given session resource name in string form into a new
+        /// <see cref="SessionName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="sessionName"/> is null,
@@ -163,7 +168,8 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Constructs a session name from its component parts.
+        /// Constructs a new instance of the <see cref="SessionName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="instanceId">The instance ID. Must not be <c>null</c>.</param>
@@ -220,5 +226,121 @@ namespace Google.Cloud.Spanner.V1
     }
 
 
+    public partial class BeginTransactionRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
+            set { Session = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CommitRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
+            set { Session = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateSessionRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseAsDatabaseName
+        {
+            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.V1.DatabaseName.Parse(Database); }
+            set { Database = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteSessionRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public SessionName SessionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ExecuteSqlRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
+            set { Session = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetSessionRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public SessionName SessionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ReadRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
+            set { Session = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class RollbackRequest
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Session"/> resource name property.
+        /// </summary>
+        public SessionName SessionAsSessionName
+        {
+            get { return string.IsNullOrEmpty(Session) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Session); }
+            set { Session = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Session
+    {
+        /// <summary>
+        /// <see cref="SessionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public SessionName SessionName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.V1.SessionName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -54,7 +54,10 @@ namespace Google.Cloud.Speech.V1Beta1
             StreamingRecognizeSettings = existing.StreamingRecognizeSettings;
             StreamingRecognizeStreamingSettings = existing.StreamingRecognizeStreamingSettings;
             LongRunningOperationsSettings = existing.LongRunningOperationsSettings?.Clone();
+            OnCopy(existing);
         }
+
+        partial void OnCopy(SpeechSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -626,7 +629,6 @@ namespace Google.Cloud.Speech.V1Beta1
     /// </summary>
     public sealed partial class SpeechClientImpl : SpeechClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<SyncRecognizeRequest, SyncRecognizeResponse> _callSyncRecognize;
         private readonly ApiCall<AsyncRecognizeRequest, Operation> _callAsyncRecognize;
         private readonly ApiBidirectionalStreamingCall<StreamingRecognizeRequest, StreamingRecognizeResponse> _callStreamingRecognize;
@@ -642,14 +644,17 @@ namespace Google.Cloud.Speech.V1Beta1
             SpeechSettings effectiveSettings = settings ?? SpeechSettings.GetDefault();
             LongRunningOperationsClient = new OperationsClientImpl(
                 grpcClient.CreateOperationsClient(), effectiveSettings.LongRunningOperationsSettings);
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callSyncRecognize = _clientHelper.BuildApiCall<SyncRecognizeRequest, SyncRecognizeResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callSyncRecognize = clientHelper.BuildApiCall<SyncRecognizeRequest, SyncRecognizeResponse>(
                 GrpcClient.SyncRecognizeAsync, GrpcClient.SyncRecognize, effectiveSettings.SyncRecognizeSettings);
-            _callAsyncRecognize = _clientHelper.BuildApiCall<AsyncRecognizeRequest, Operation>(
+            _callAsyncRecognize = clientHelper.BuildApiCall<AsyncRecognizeRequest, Operation>(
                 GrpcClient.AsyncRecognizeAsync, GrpcClient.AsyncRecognize, effectiveSettings.AsyncRecognizeSettings);
-            _callStreamingRecognize = _clientHelper.BuildApiCall<StreamingRecognizeRequest, StreamingRecognizeResponse>(
+            _callStreamingRecognize = clientHelper.BuildApiCall<StreamingRecognizeRequest, StreamingRecognizeResponse>(
                 GrpcClient.StreamingRecognize, effectiveSettings.StreamingRecognizeSettings, effectiveSettings.StreamingRecognizeStreamingSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(Speech.SpeechClient grpcClient, SpeechSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Speech client.

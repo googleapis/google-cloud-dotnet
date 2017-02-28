@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,7 +51,10 @@ namespace Google.Cloud.Trace.V1
             PatchTracesSettings = existing.PatchTracesSettings;
             GetTraceSettings = existing.GetTraceSettings;
             ListTracesSettings = existing.ListTracesSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(TraceServiceSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -667,7 +670,6 @@ namespace Google.Cloud.Trace.V1
     /// </summary>
     public sealed partial class TraceServiceClientImpl : TraceServiceClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<PatchTracesRequest, Empty> _callPatchTraces;
         private readonly ApiCall<GetTraceRequest, Trace> _callGetTrace;
         private readonly ApiCall<ListTracesRequest, ListTracesResponse> _callListTraces;
@@ -681,14 +683,17 @@ namespace Google.Cloud.Trace.V1
         {
             this.GrpcClient = grpcClient;
             TraceServiceSettings effectiveSettings = settings ?? TraceServiceSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callPatchTraces = _clientHelper.BuildApiCall<PatchTracesRequest, Empty>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callPatchTraces = clientHelper.BuildApiCall<PatchTracesRequest, Empty>(
                 GrpcClient.PatchTracesAsync, GrpcClient.PatchTraces, effectiveSettings.PatchTracesSettings);
-            _callGetTrace = _clientHelper.BuildApiCall<GetTraceRequest, Trace>(
+            _callGetTrace = clientHelper.BuildApiCall<GetTraceRequest, Trace>(
                 GrpcClient.GetTraceAsync, GrpcClient.GetTrace, effectiveSettings.GetTraceSettings);
-            _callListTraces = _clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(
+            _callListTraces = clientHelper.BuildApiCall<ListTracesRequest, ListTracesResponse>(
                 GrpcClient.ListTracesAsync, GrpcClient.ListTraces, effectiveSettings.ListTracesSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(TraceService.TraceServiceClient grpcClient, TraceServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC TraceService client.

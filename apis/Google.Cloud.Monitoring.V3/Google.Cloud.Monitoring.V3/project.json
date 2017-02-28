@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta02-*",
+  "version": "1.0.0-beta03-*",
   "description": "Recommended Google client library to access the Stackdriver Monitoring API, which manages your Stackdriver Monitoring data and configurations. Most projects must be associated with a Stackdriver account, with a few exceptions as noted on the individual method pages.",
   "authors": [ "Google Inc." ],
 
@@ -19,8 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-beta05",
-    "Google.Api.Gax.Grpc": "1.0.0-beta07"
+    "Google.Api.Gax.Grpc": "1.0.0-beta11"
   },
 
   "frameworks": {

@@ -1,5 +1,5 @@
-﻿{
-  "version": "1.0.0-alpha06-*",
+{
+  "version": "1.0.0-alpha07-*",
   "description": "Recommended Google client library to access the Google Cloud Vision API, which integrates Google Vision features, including image labeling, face, logo, and landmark detection, optical character recognition (OCR), and detection of explicit content, into applications.",
   "authors": [ "Google Inc." ],
 
@@ -19,8 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-beta05",
-    "Google.Api.Gax.Grpc": "1.0.0-beta07"
+    "Google.Api.Gax.Grpc": "1.0.0-beta11"
   },
 
   "frameworks": {

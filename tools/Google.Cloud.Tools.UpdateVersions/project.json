@@ -1,0 +1,22 @@
+﻿{
+  "description": "Console app to update versions in project files and generate tag/push scripts",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "Google.Cloud.Tools.Common": {
+      "target": "project"
+    },
+    "Newtonsoft.Json": "9.0.1"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0"
+        }
+      }
+    }
+  }
+}

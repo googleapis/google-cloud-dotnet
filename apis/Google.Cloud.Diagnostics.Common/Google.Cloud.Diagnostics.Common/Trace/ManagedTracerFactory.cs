@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(headerContext, nameof(headerContext));
             if (!ShouldTrace(headerContext))
             {
-                return DoNothingTracer.Instance;
+                return NullManagedTracer.Instance;
             }
 
             TraceProto trace = new TraceProto

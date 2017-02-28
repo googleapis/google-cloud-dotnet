@@ -1,15 +1,11 @@
 {
-  "version": "1.0.0-alpha01",
-  "description": "Integration tests for the  Google Stackdriver Instrumentation Libraries Common Components.",
-  "authors": [ "Google Inc." ],
-
   "buildOptions": {
     "keyFile": "../../GoogleApis.snk"
   },
 
   "dependencies": {
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "xunit": "2.2.0-rc2-build3523",
+    "xunit": "2.2.0-rc3-build3528",
     "Google.Cloud.Logging.Type": { "target": "project" },
     "Google.Cloud.Logging.V2": { "target": "project" },
     "Google.Cloud.Trace.V1": { "target": "project" },

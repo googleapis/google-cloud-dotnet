@@ -75,9 +75,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
             public void TraceHelloWorld(IManagedTracer tracer)
             {
                 // Manually trace a specific operation.
-                tracer.StartSpan(nameof(TraceHelloWorld));
-                Console.Out.WriteLine("Hello, World!");
-                tracer.EndSpan();
+                using (tracer.StartSpan(nameof(TraceHelloWorld)))
+                {
+                    Console.Out.WriteLine("Hello, World!");
+                }
+            }
+            // End sample
+
+            // Sample: UseTracerRunIn
+            /// <summary>
+            /// The <see cref="IManagedTracer"/> is populated by dependency injection.
+            /// </summary>
+            public void TraceHelloWorldRunIn(IManagedTracer tracer)
+            {
+                // Manually trace a specific Action or Func<T>.
+                tracer.RunInSpan(
+                    () => Console.Out.WriteLine("Hello, World!"),
+                    nameof(TraceHelloWorldRunIn));
             }
             // End sample
 

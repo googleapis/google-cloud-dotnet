@@ -86,7 +86,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void CreateTracer_DoNothingTracer()
         {
             IManagedTracer tracer =  s_tracerFactoryLimit.CreateTracer(s_headerFalse);
-            Assert.IsType(typeof(DoNothingTracer), tracer);
+            Assert.IsType(typeof(NullManagedTracer), tracer);
         }
 
         [Fact]

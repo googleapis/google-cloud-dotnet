@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,7 +51,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             ListGroupStatsSettings = existing.ListGroupStatsSettings;
             ListEventsSettings = existing.ListEventsSettings;
             DeleteEventsSettings = existing.DeleteEventsSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(ErrorStatsServiceSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -311,19 +314,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as <code>projects/</code> plus the
-        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-        /// Platform project ID</a>.
+        /// as &lt;code&gt;projects/&lt;/code&gt; plus the
+        /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
+        /// Platform project ID&lt;/a&gt;.
         ///
-        /// Example: <code>projects/my-project-123</code>.
+        /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
         /// [Optional] List data for the given time range.
         /// If not set a default time range is used. The field time_range_begin
         /// in the response will specify the beginning of this time range.
-        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
         /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">
@@ -360,19 +363,19 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         /// </summary>
         /// <param name="projectName">
         /// [Required] The resource name of the Google Cloud Platform project. Written
-        /// as <code>projects/</code> plus the
-        /// <a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-        /// Platform project ID</a>.
+        /// as &lt;code&gt;projects/&lt;/code&gt; plus the
+        /// &lt;a href="https://support.google.com/cloud/answer/6158840"&gt;Google Cloud
+        /// Platform project ID&lt;/a&gt;.
         ///
-        /// Example: <code>projects/my-project-123</code>.
+        /// Example: &lt;code&gt;projects/my-project-123&lt;/code&gt;.
         /// </param>
         /// <param name="timeRange">
         /// [Optional] List data for the given time range.
         /// If not set a default time range is used. The field time_range_begin
         /// in the response will specify the beginning of this time range.
-        /// Only <code>ErrorGroupStats</code> with a non-zero count in the given time
+        /// Only &lt;code&gt;ErrorGroupStats&lt;/code&gt; with a non-zero count in the given time
         /// range are returned, unless the request contains an explicit group_id list.
-        /// If a group_id list is given, also <code>ErrorGroupStats</code> with zero
+        /// If a group_id list is given, also &lt;code&gt;ErrorGroupStats&lt;/code&gt; with zero
         /// occurrences are returned.
         /// </param>
         /// <param name="pageToken">
@@ -681,7 +684,6 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     /// </summary>
     public sealed partial class ErrorStatsServiceClientImpl : ErrorStatsServiceClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<ListGroupStatsRequest, ListGroupStatsResponse> _callListGroupStats;
         private readonly ApiCall<ListEventsRequest, ListEventsResponse> _callListEvents;
         private readonly ApiCall<DeleteEventsRequest, DeleteEventsResponse> _callDeleteEvents;
@@ -695,14 +697,17 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         {
             this.GrpcClient = grpcClient;
             ErrorStatsServiceSettings effectiveSettings = settings ?? ErrorStatsServiceSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
-            _callListGroupStats = _clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
+            _callListGroupStats = clientHelper.BuildApiCall<ListGroupStatsRequest, ListGroupStatsResponse>(
                 GrpcClient.ListGroupStatsAsync, GrpcClient.ListGroupStats, effectiveSettings.ListGroupStatsSettings);
-            _callListEvents = _clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(
+            _callListEvents = clientHelper.BuildApiCall<ListEventsRequest, ListEventsResponse>(
                 GrpcClient.ListEventsAsync, GrpcClient.ListEvents, effectiveSettings.ListEventsSettings);
-            _callDeleteEvents = _clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(
+            _callDeleteEvents = clientHelper.BuildApiCall<DeleteEventsRequest, DeleteEventsResponse>(
                 GrpcClient.DeleteEventsAsync, GrpcClient.DeleteEvents, effectiveSettings.DeleteEventsSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(ErrorStatsService.ErrorStatsServiceClient grpcClient, ErrorStatsServiceSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC ErrorStatsService client.

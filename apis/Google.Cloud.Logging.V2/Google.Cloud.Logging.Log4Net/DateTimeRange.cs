@@ -36,8 +36,6 @@ namespace Google.Cloud.Logging.Log4Net
         public DateTime From { get; }
         public DateTime To { get; }
 
-        public DateTimeRange WithTo(DateTime to) => new DateTimeRange(From, to);
-
         public DateTimeRange Union(DateTimeRange other)
         {
             if (other == null)

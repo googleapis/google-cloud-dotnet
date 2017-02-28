@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,7 +28,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}");
 
         /// <summary>
-        /// Parses a project resource name in string form into a <see cref="ProjectName"/>.
+        /// Parses the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <param name="projectName">The project resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="ProjectName"/> if successful.</returns>
@@ -40,7 +41,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         }
 
         /// <summary>
-        /// Tries to parse project resource name in string form into a <see cref="ProjectName"/>/
+        /// Tries to parse the given project resource name in string form into a new
+        /// <see cref="ProjectName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="projectName"/> is null,
@@ -67,7 +69,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         }
 
         /// <summary>
-        /// Constructs a project name from its component parts.
+        /// Constructs a new instance of the <see cref="ProjectName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         public ProjectName(string projectId)
@@ -110,7 +113,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         private static readonly PathTemplate s_template = new PathTemplate("projects/{project}/groups/{group}");
 
         /// <summary>
-        /// Parses a group resource name in string form into a <see cref="GroupName"/>.
+        /// Parses the given group resource name in string form into a new
+        /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <param name="groupName">The group resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="GroupName"/> if successful.</returns>
@@ -122,7 +126,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         }
 
         /// <summary>
-        /// Tries to parse group resource name in string form into a <see cref="GroupName"/>/
+        /// Tries to parse the given group resource name in string form into a new
+        /// <see cref="GroupName"/> instance.
         /// </summary>
         /// <remarks>
         /// This method still throws <see cref="ArgumentNullException"/> if <paramref name="groupName"/> is null,
@@ -149,7 +154,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
         }
 
         /// <summary>
-        /// Constructs a group name from its component parts.
+        /// Constructs a new instance of the <see cref="GroupName"/> resource name class
+        /// from its component parts.
         /// </summary>
         /// <param name="projectId">The project ID. Must not be <c>null</c>.</param>
         /// <param name="groupId">The group ID. Must not be <c>null</c>.</param>
@@ -195,7 +201,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class DeleteEventsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
@@ -208,7 +214,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ErrorGroup
     {
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
         public GroupName GroupName
         {
@@ -221,7 +227,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class GetGroupRequest
     {
         /// <summary>
-        /// A <see cref="GroupName"/>-typed view over the <see cref="GroupName"/> resource name property.
+        /// <see cref="GroupName"/>-typed view over the <see cref="GroupName"/> resource name property.
         /// </summary>
         public GroupName GroupNameAsGroupName
         {
@@ -234,7 +240,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ListEventsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
@@ -247,7 +253,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ListGroupStatsRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {
@@ -260,7 +266,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
     public partial class ReportErrorEventRequest
     {
         /// <summary>
-        /// A <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
+        /// <see cref="ProjectName"/>-typed view over the <see cref="ProjectName"/> resource name property.
         /// </summary>
         public ProjectName ProjectNameAsProjectName
         {

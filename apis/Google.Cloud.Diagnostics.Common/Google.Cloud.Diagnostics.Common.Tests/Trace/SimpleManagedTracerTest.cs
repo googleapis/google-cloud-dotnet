@@ -82,6 +82,20 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void SingleSpan_Dispose()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
+
+            using (tracer.StartSpan("span-name")) { }
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void SingleSpan_ParentId()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
@@ -102,11 +116,15 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
 
+            var annotation = new Dictionary<string, string>();
+            annotation.Add("annotation-key", "annotation-value");
+
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
-                    t => IsValidSpan(t.Single().Spans.Single(), "span-name", 0, SpanKind.RpcClient))));
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name", 0, SpanKind.RpcClient)
+                        && TraceUtils.IsValidAnnotation(t.ElementAt(0).Spans[0], annotation))));
 
-            var options = StartSpanOptions.Create(SpanKind.RpcClient);
+            var options = StartSpanOptions.Create(SpanKind.RpcClient, annotation);
             tracer.StartSpan("span-name", options);
             tracer.EndSpan();
             mockConsumer.VerifyAll();
@@ -153,6 +171,54 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void RunInSpan_Action()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
+
+            bool hasActionRan = false;
+            tracer.RunInSpan(() => { hasActionRan = true; }, "span-name");
+            Assert.True(hasActionRan);
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void RunInSpan_Action_Throws()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name") &&
+                    !string.IsNullOrWhiteSpace(t.ElementAt(0).Spans[0].Labels[TraceLabels.StackTrace]) &&
+                    t.ElementAt(0).Spans[0].Labels[TraceLabels.StackTrace].Contains(nameof(RunInSpan_Action_Throws)))));
+
+            Assert.Throws<DivideByZeroException>(
+                () => tracer.RunInSpan(
+                    () => { throw new DivideByZeroException(); }, "span-name"));
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void RunInSpan_Func()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name"))));
+
+            Assert.Equal(11, tracer.RunInSpan(() => { return 11; }, "span-name"));
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void MultipleSpans()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
@@ -187,6 +253,37 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             tracer.EndSpan();
             tracer.EndSpan();
             tracer.EndSpan();
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void MultipleSpans_Dispose()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            var annotation = new Dictionary<string, string>();
+            annotation.Add("annotation-key", "annotation-value");
+
+            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) =>
+            {
+                var spans = t.Single().Spans;
+                return spans.Count == 4 &&
+                    IsValidSpan(spans[0], "child-one", spans[3].SpanId) &&
+                    IsValidSpan(spans[1], "grandchild-one", spans[2].SpanId) &&
+                    IsValidSpan(spans[2], "child-two", spans[3].SpanId) &&
+                    IsValidSpan(spans[3], "root");
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+
+            using (tracer.StartSpan("root"))
+            {
+                using (tracer.StartSpan("child-one")) { }
+                using (tracer.StartSpan("child-two"))
+                {
+                    using (tracer.StartSpan("grandchild-one")) { } ;
+                }
+            }
             mockConsumer.VerifyAll();
         }
 

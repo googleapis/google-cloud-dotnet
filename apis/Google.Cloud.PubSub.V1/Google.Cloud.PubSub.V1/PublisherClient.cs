@@ -1,4 +1,4 @@
-// Copyright 2016, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -58,7 +58,10 @@ namespace Google.Cloud.PubSub.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            OnCopy(existing);
         }
+
+        partial void OnCopy(PublisherSettings existing);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -1612,7 +1615,6 @@ namespace Google.Cloud.PubSub.V1
     /// </summary>
     public sealed partial class PublisherClientImpl : PublisherClient
     {
-        private readonly ClientHelper _clientHelper;
         private readonly ApiCall<Topic, Topic> _callCreateTopic;
         private readonly ApiCall<PublishRequest, PublishResponse> _callPublish;
         private readonly ApiCall<GetTopicRequest, Topic> _callGetTopic;
@@ -1632,27 +1634,30 @@ namespace Google.Cloud.PubSub.V1
         {
             this.GrpcClient = grpcClient;
             PublisherSettings effectiveSettings = settings ?? PublisherSettings.GetDefault();
-            _clientHelper = new ClientHelper(effectiveSettings);
+            ClientHelper clientHelper = new ClientHelper(effectiveSettings);
             var grpcIAMPolicyClient = grpcClient.CreateIAMPolicyClient();
-            _callCreateTopic = _clientHelper.BuildApiCall<Topic, Topic>(
+            _callCreateTopic = clientHelper.BuildApiCall<Topic, Topic>(
                 GrpcClient.CreateTopicAsync, GrpcClient.CreateTopic, effectiveSettings.CreateTopicSettings);
-            _callPublish = _clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
+            _callPublish = clientHelper.BuildApiCall<PublishRequest, PublishResponse>(
                 GrpcClient.PublishAsync, GrpcClient.Publish, effectiveSettings.PublishSettings);
-            _callGetTopic = _clientHelper.BuildApiCall<GetTopicRequest, Topic>(
+            _callGetTopic = clientHelper.BuildApiCall<GetTopicRequest, Topic>(
                 GrpcClient.GetTopicAsync, GrpcClient.GetTopic, effectiveSettings.GetTopicSettings);
-            _callListTopics = _clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(
+            _callListTopics = clientHelper.BuildApiCall<ListTopicsRequest, ListTopicsResponse>(
                 GrpcClient.ListTopicsAsync, GrpcClient.ListTopics, effectiveSettings.ListTopicsSettings);
-            _callListTopicSubscriptions = _clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(
+            _callListTopicSubscriptions = clientHelper.BuildApiCall<ListTopicSubscriptionsRequest, ListTopicSubscriptionsResponse>(
                 GrpcClient.ListTopicSubscriptionsAsync, GrpcClient.ListTopicSubscriptions, effectiveSettings.ListTopicSubscriptionsSettings);
-            _callDeleteTopic = _clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(
+            _callDeleteTopic = clientHelper.BuildApiCall<DeleteTopicRequest, Empty>(
                 GrpcClient.DeleteTopicAsync, GrpcClient.DeleteTopic, effectiveSettings.DeleteTopicSettings);
-            _callSetIamPolicy = _clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
+            _callSetIamPolicy = clientHelper.BuildApiCall<SetIamPolicyRequest, Policy>(
                 grpcIAMPolicyClient.SetIamPolicyAsync, grpcIAMPolicyClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings);
-            _callGetIamPolicy = _clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
+            _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyRequest, Policy>(
                 grpcIAMPolicyClient.GetIamPolicyAsync, grpcIAMPolicyClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings);
-            _callTestIamPermissions = _clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
+            _callTestIamPermissions = clientHelper.BuildApiCall<TestIamPermissionsRequest, TestIamPermissionsResponse>(
                 grpcIAMPolicyClient.TestIamPermissionsAsync, grpcIAMPolicyClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings);
+            OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
+
+        partial void OnConstruction(Publisher.PublisherClient grpcClient, PublisherSettings effectiveSettings, ClientHelper clientHelper);
 
         /// <summary>
         /// The underlying gRPC Publisher client.
