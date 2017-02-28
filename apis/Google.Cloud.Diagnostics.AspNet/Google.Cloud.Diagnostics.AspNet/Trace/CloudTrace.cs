@@ -101,12 +101,12 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler() =>
             new TraceHeaderPropagatingHandler(() => CurrentTracer);
 
-        private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
+        private CloudTrace(string projectId, TraceConfiguration config = null, TraceServiceClient client = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             // Create the default values if not set.
-            client = client ?? TraceServiceClient.CreateAsync();
+            client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
 
             _consumer = ConsumerFactory<TraceProto>.GetConsumer(
@@ -123,7 +123,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="application">The Http application.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
-        public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
+        public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, TraceServiceClient client = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
             CloudTrace trace = new CloudTrace(projectId, config, client);

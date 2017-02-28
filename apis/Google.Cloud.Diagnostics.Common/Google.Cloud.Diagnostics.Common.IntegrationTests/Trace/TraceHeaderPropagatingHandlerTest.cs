@@ -87,7 +87,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string traceId = _traceIdFactory.NextId();
             var traceProto = new TraceProto { ProjectId = _projectId, TraceId = traceId };
-            var consumer = new GrpcTraceConsumer(TraceServiceClient.CreateAsync());
+            var consumer = new GrpcTraceConsumer(TraceServiceClient.Create());
             return SimpleManagedTracer.Create(consumer, traceProto, null);
         }
 

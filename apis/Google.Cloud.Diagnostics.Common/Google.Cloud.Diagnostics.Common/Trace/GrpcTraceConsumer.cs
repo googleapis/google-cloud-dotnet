@@ -28,12 +28,12 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal sealed class GrpcTraceConsumer : IConsumer<TraceProto>
     {
-        private readonly Task<TraceServiceClient> _clientTask;
+        private readonly TraceServiceClient _client;
 
         /// <param name="client">The trace client that will push traces to the Stackdriver Trace API.</param>
-        internal GrpcTraceConsumer(Task<TraceServiceClient> client)
+        internal GrpcTraceConsumer(TraceServiceClient client)
         {
-            _clientTask = GaxPreconditions.CheckNotNull(client, nameof(client));
+            _client = GaxPreconditions.CheckNotNull(client, nameof(client));
         }
 
         /// <inheritdoc />
@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             Traces tracesObj = new Traces { Traces_ = { traces } };
             // If the client task has faulted this will throw when accessing 'Result'
-            _clientTask.Result.PatchTraces(trace.ProjectId, tracesObj);
+            _client.PatchTraces(trace.ProjectId, tracesObj);
         }
 
         /// <inheritdoc />
@@ -67,7 +67,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             Traces tracesObj = new Traces { Traces_ = { traces } };
             // If the client task has faulted this will throw when accessing 'Result'
-            return _clientTask.Result.PatchTracesAsync(trace.ProjectId, tracesObj, cancellationToken);
+            return _client.PatchTracesAsync(trace.ProjectId, tracesObj, cancellationToken);
         }
 
         /// <inheritdoc />
