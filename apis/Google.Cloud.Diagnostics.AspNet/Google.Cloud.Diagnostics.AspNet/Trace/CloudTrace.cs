@@ -82,6 +82,25 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static IManagedTracer CurrentTracer =>
             TracerManager.GetCurrentTracer() ?? NullManagedTracer.Instance;
 
+        /// <summary>
+        /// Creates a <see cref="TraceHeaderPropagatingHandler"/> to propagate trace headers
+        /// in Http requests.
+        /// <example>
+        /// <code>
+        /// public void DoSomething()
+        /// {
+        ///     var traceHeaderHandler = CloudTrace.CreateHandler();
+        ///     using (var httpClient = new HttpClient(traceHeaderHandler))
+        ///     {
+        ///         ...
+        ///     }
+        /// }
+        /// </code>
+        /// </example>
+        /// </summary>
+        public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler() =>
+            new TraceHeaderPropagatingHandler(() => CurrentTracer);
+
         private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));

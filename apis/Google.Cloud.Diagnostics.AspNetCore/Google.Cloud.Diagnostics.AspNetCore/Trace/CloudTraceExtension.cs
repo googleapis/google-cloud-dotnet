@@ -111,9 +111,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             services.AddSingleton<IManagedTracerFactory>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton(CreateTraceHeaderPropagatingHandler);
 
             services.AddScoped(CreateTraceHeaderContext);
             services.AddScoped(CreateManagedTracer);
+        }
+
+        /// <summary>
+        /// Creates an <see cref="TraceHeaderPropagatingHandler"/>.
+        /// </summary>
+        private static TraceHeaderPropagatingHandler CreateTraceHeaderPropagatingHandler(IServiceProvider provider)
+        {
+            Func<IManagedTracer> managedTracerFactory = () => provider.GetService<IManagedTracer>();
+            return new TraceHeaderPropagatingHandler(managedTracerFactory);
         }
 
         /// <summary>

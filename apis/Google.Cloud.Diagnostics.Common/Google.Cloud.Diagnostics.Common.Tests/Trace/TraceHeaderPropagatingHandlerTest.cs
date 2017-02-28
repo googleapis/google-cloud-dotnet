@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = new Mock<IManagedTracer>();
             var fakeHandler = new FakeDelegatingHandler();
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
 
             using (var httpClient = new HttpClient(traceHandler))
             {
@@ -60,36 +60,21 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext);
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
+            var requestUriString = requestUri.ToString();
+
+            mockTracer.Setup(t => t.RunInSpan(
+                It.IsAny<Func<Task<HttpResponseMessage>>>(), requestUri.ToString(), null))
+                .Returns(Task.FromResult(new HttpResponseMessage()));
 
             using (var httpClient = new HttpClient(traceHandler))
             {
                 await httpClient.GetAsync(requestUri);
             }
 
-            mockTracer.Verify(t => t.StartSpan(requestUri.ToString(), null), Times.Once());
-            mockTracer.Verify(t => t.EndSpan(), Times.Once());
-        }
-
-        [Fact]
-        public async Task SendAsync_TraceException()
-        {
-            var mockTracer = GetSetUpTracer();
-            var fakeHandler = new FakeDelegatingHandler(headerContext, throwException: true);
-            var traceHandler = TraceHeaderPropagatingHandler.Create(mockTracer.Object, fakeHandler);
-
-            var requestUri = new Uri("https://www.google.com");
-
-            using (var httpClient = new HttpClient(traceHandler))
-            {
-                await Assert.ThrowsAsync<DivideByZeroException>(() => httpClient.GetAsync(requestUri));
-            }
-
-            mockTracer.Verify(t => t.StartSpan(requestUri.ToString(), null), Times.Once());
-            mockTracer.Verify(t => t.SetStackTrace(It.IsAny<StackTrace>()), Times.Once());
-            mockTracer.Verify(t => t.EndSpan(), Times.Once());
+            mockTracer.VerifyAll();
         }
 
         /// <summary>
@@ -98,12 +83,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private class FakeDelegatingHandler : DelegatingHandler
         {
             private readonly TraceHeaderContext _context;
-            private readonly bool _throwException;
 
-            public FakeDelegatingHandler(TraceHeaderContext context = null, bool throwException = false)
+            public FakeDelegatingHandler(TraceHeaderContext context = null)
             {
                 _context = context;
-                _throwException = throwException;
             }
 
             protected override Task<HttpResponseMessage> SendAsync(
@@ -117,13 +100,8 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     Assert.Equal(_context.SpanId, currentContext.SpanId);
                     Assert.Equal(_context.ShouldTrace, currentContext.ShouldTrace);
                 }
-                if (_throwException)
-                {
-                    throw new DivideByZeroException();
-                }
                 return Task.FromResult(new HttpResponseMessage());
             }
-
         }
     }
 }

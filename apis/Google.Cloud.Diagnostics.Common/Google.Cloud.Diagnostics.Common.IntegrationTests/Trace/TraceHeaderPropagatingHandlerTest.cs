@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
+using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -23,7 +25,7 @@ using Xunit;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.Common.IntegrationTests
+namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 {
     public class TraceHeaderPropagatingHandlerTest
     {
@@ -81,7 +83,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// <summary>
         /// Creates a <see cref="SimpleManagedTracer"/> with a <see cref="GrpcTraceConsumer"/>.
         /// </summary>
-        private SimpleManagedTracer CreateTracer()
+        private IManagedTracer CreateTracer()
         {
             string traceId = _traceIdFactory.NextId();
             var traceProto = new TraceProto { ProjectId = _projectId, TraceId = traceId };
@@ -101,20 +103,21 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private async Task TraceOutGoingRequest(
             IManagedTracer tracer, string rootSpanName, string uri, bool exceptionExpected)
         {
-            tracer.StartSpan(rootSpanName);
-            var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
-            using (var httpClient = new HttpClient(traceHeaderHandler))
+            using (tracer.StartSpan(rootSpanName))
             {
-                try
+                var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => tracer);
+                using (var httpClient = new HttpClient(traceHeaderHandler))
                 {
-                    await httpClient.GetAsync(uri);
-                    Assert.False(exceptionExpected);
-                }
-                catch (Exception e) when (exceptionExpected && !(e is Xunit.Sdk.XunitException))
-                {
+                    try
+                    {
+                        await httpClient.GetAsync(uri);
+                        Assert.False(exceptionExpected);
+                    }
+                    catch (Exception e) when (exceptionExpected && !(e is Xunit.Sdk.XunitException))
+                    {
+                    }
                 }
             }
-            tracer.EndSpan();
         }
 
         /// <summary>
