@@ -91,20 +91,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="services">The service collection. Cannot be null.</param>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
-        /// <param name="clientTask">Optional task which produces the Trace client, if 
-        ///     unset the default will be used.</param>
+        /// <param name="client">Optional Trace client, if unset the default will be used.</param>
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId,
-            TraceConfiguration config = null, Task<TraceServiceClient> clientTask = null)
+            TraceConfiguration config = null, TraceServiceClient client = null)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
-            clientTask = clientTask ?? TraceServiceClient.CreateAsync();
+            client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
 
             IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
-                 new GrpcTraceConsumer(clientTask), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
+                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
 
             var tracerFactory = new ManagedTracerFactory(projectId, consumer,
                 RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());

@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private IConsumer<TraceProto> CreateGrpcTraceConsumer()
         {
             TraceServiceClient client = TraceServiceClient.Create();
-            return new GrpcTraceConsumer(Task.FromResult(client));
+            return new GrpcTraceConsumer(client);
         }
 
         private SimpleManagedTracer CreateSimpleManagedTracer(IConsumer<TraceProto> consumer)
