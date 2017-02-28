@@ -24,17 +24,31 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Traces outgoing HTTP requests and propagates the trace header.
     /// </summary>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void DoSomething(IManagedTracer tracer)
+    /// {
+    ///     var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => tracer);
+    ///     using (var httpClient = new HttpClient(traceHeaderHandler))
+    ///     {
+    ///         ...
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
     ///
     /// <remarks>
     /// Ensures the trace header is propagated in the headers for outgoing HTTP requests and 
     /// traces the total time of the outgoing HTTP request.  This is only done if tracing is initialized
     /// and tracing is enabled for the request current request.
     /// </remarks>
-    public class TraceHeaderPropagatingHandlerBase : DelegatingHandler
+    public class TraceHeaderPropagatingHandler : DelegatingHandler
     {
         private readonly Func<IManagedTracer> _managedTracerFactory;
-        internal TraceHeaderPropagatingHandlerBase(
-            Func<IManagedTracer> managedTracerFactory, HttpMessageHandler innerHandler)
+
+        internal TraceHeaderPropagatingHandler(
+            Func<IManagedTracer> managedTracerFactory, HttpMessageHandler innerHandler = null)
         {
             _managedTracerFactory = GaxPreconditions.CheckNotNull(managedTracerFactory, nameof(managedTracerFactory));
             InnerHandler = innerHandler ?? new HttpClientHandler();

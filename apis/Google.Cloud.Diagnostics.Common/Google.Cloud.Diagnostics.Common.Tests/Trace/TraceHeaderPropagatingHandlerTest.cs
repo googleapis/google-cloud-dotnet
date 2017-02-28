@@ -23,7 +23,7 @@ using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
 {
-    public class TraceHeaderPropagatingHandlerBaseTest
+    public class TraceHeaderPropagatingHandlerTest
     {
         private const string traceId = "105445aa7843bc8bf206b12000100f00";
         private const ulong spanId = 81237123;
@@ -43,7 +43,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = new Mock<IManagedTracer>();
             var fakeHandler = new FakeDelegatingHandler();
-            var traceHandler = new FakeTraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
 
             using (var httpClient = new HttpClient(traceHandler))
             {
@@ -60,7 +60,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext);
-            var traceHandler = new FakeTraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
@@ -78,7 +78,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext, throwException: true);
-            var traceHandler = new FakeTraceHeaderPropagatingHandler(mockTracer.Object, fakeHandler);
+            var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
 
             var requestUri = new Uri("https://www.google.com");
 
@@ -123,13 +123,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 }
                 return Task.FromResult(new HttpResponseMessage());
             }
-        }
-
-        private class FakeTraceHeaderPropagatingHandler : TraceHeaderPropagatingHandlerBase
-        {
-            public FakeTraceHeaderPropagatingHandler(
-                IManagedTracer tracer, HttpMessageHandler innerHandler) : base(() => tracer, innerHandler)
-           { }
         }
     }
 }

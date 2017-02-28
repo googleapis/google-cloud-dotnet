@@ -17,8 +17,6 @@ using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
-using Microsoft.Extensions.DependencyInjection;
-using Moq;
 using System;
 using System.Linq;
 using System.Net.Http;
@@ -94,7 +92,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         /// <summary>
-        /// Creates a <see cref="TraceHeaderPropagatingHandlerBase"/> and traces the sending of a
+        /// Creates a <see cref="Common.TraceHeaderPropagatingHandler"/> and traces the sending of a
         /// GET request to the given uri.  The trace is wrapped in a parent span.
         /// </summary>
         /// <param name="tracer">The tracer to trace the request with.</param>
