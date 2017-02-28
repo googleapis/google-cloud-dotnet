@@ -84,7 +84,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         {
             // Sample: TraceOutgoing
             // Add a handler to trace outgoing requests and to propagate the trace header.
-            var traceHeaderHandler = CloudTrace.CreateHandler();
+            var traceHeaderHandler = CloudTrace.CreateTracingHttpMessageHandler();
             using (var httpClient = new HttpClient(traceHeaderHandler))
             {
                 return await httpClient.GetAsync("https://weather.com/");

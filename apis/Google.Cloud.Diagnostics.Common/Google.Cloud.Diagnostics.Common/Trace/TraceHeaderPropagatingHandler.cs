@@ -47,7 +47,7 @@ namespace Google.Cloud.Diagnostics.Common
     {
         private readonly Func<IManagedTracer> _managedTracerFactory;
 
-        internal TraceHeaderPropagatingHandler(
+        public TraceHeaderPropagatingHandler(
             Func<IManagedTracer> managedTracerFactory, HttpMessageHandler innerHandler = null)
         {
             _managedTracerFactory = GaxPreconditions.CheckNotNull(managedTracerFactory, nameof(managedTracerFactory));
@@ -71,21 +71,9 @@ namespace Google.Cloud.Diagnostics.Common
                 tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
             request.Headers.Add(TraceHeaderContext.TraceHeader, traceHeader.ToString());
 
-            tracer.StartSpan(request.RequestUri.ToString());
-            try
-            {
-                return await base.SendAsync(request, cancellationToken).ConfigureAwait(false);
-            }
-            catch (Exception e)
-            {
-                StackTrace stackTrace = new StackTrace(e, true);
-                tracer.SetStackTrace(stackTrace);
-                throw;
-            }
-            finally
-            {
-                tracer.EndSpan();
-            }
+            return await tracer.RunInSpan(
+                async () => { return await base.SendAsync(request, cancellationToken).ConfigureAwait(false); }, 
+                request.RequestUri.ToString());
         }
     }
 }

@@ -92,7 +92,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         /// <summary>
-        /// Creates a <see cref="Common.TraceHeaderPropagatingHandler"/> and traces the sending of a
+        /// Creates a <see cref="TraceHeaderPropagatingHandler"/> and traces the sending of a
         /// GET request to the given uri.  The trace is wrapped in a parent span.
         /// </summary>
         /// <param name="tracer">The tracer to trace the request with.</param>
@@ -103,20 +103,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private async Task TraceOutGoingRequest(
             IManagedTracer tracer, string rootSpanName, string uri, bool exceptionExpected)
         {
-           tracer.StartSpan(rootSpanName);
-            var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => tracer);
-            using (var httpClient = new HttpClient(traceHeaderHandler))
+            using (tracer.StartSpan(rootSpanName))
             {
-                try
+                var traceHeaderHandler = new TraceHeaderPropagatingHandler(() => tracer);
+                using (var httpClient = new HttpClient(traceHeaderHandler))
                 {
-                    await httpClient.GetAsync(uri);
-                    Assert.False(exceptionExpected);
-                }
-                catch (Exception e) when (exceptionExpected && !(e is Xunit.Sdk.XunitException))
-                {
+                    try
+                    {
+                        await httpClient.GetAsync(uri);
+                        Assert.False(exceptionExpected);
+                    }
+                    catch (Exception e) when (exceptionExpected && !(e is Xunit.Sdk.XunitException))
+                    {
+                    }
                 }
             }
-            tracer.EndSpan();
         }
 
         /// <summary>

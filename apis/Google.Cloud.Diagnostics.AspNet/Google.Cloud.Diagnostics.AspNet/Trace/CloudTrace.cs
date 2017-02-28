@@ -98,7 +98,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// </code>
         /// </example>
         /// </summary>
-        public static TraceHeaderPropagatingHandler CreateHandler() =>
+        public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler() =>
             new TraceHeaderPropagatingHandler(() => CurrentTracer);
 
         private CloudTrace(string projectId, TraceConfiguration config = null, Task<TraceServiceClient> client = null)
