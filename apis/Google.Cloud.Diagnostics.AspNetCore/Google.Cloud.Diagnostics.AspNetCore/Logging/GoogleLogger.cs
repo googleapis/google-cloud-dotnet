@@ -18,6 +18,7 @@ using Google.Protobuf.WellKnownTypes;
 using Google.Api.Gax;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -95,13 +96,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
 
             LogEntry entry = new LogEntry
-            {   
+            {
                 Resource = _loggerOptions.MonitoredResource,
                 LogName = _logName,
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 TextPayload = message,
             };
+            entry.Labels.Add(_loggerOptions.Labels);
 
             _consumer.Receive(new[] { entry });
         }

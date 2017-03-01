@@ -17,6 +17,7 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -34,9 +35,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The buffer options for the logger.</summary>
         public BufferOptions BufferOptions { get; }
 
-        private LoggerOptions(LogLevel logLevel, MonitoredResource monitoredResource, BufferOptions bufferOptions)
+        /// <summary>Custom labels for log entires.</summary>
+        public Dictionary<string, string> Labels { get; }
+
+        private LoggerOptions(
+            LogLevel logLevel, Dictionary<string, string> labels,
+            MonitoredResource monitoredResource, BufferOptions bufferOptions)
         {
             LogLevel = GaxPreconditions.CheckEnumValue(logLevel, nameof(logLevel));
+            Labels = labels;
             MonitoredResource = monitoredResource;
             BufferOptions = bufferOptions;
         }
@@ -45,16 +52,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Create a new instance of <see cref="LoggerOptions"/>.
         /// </summary>
         /// <param name="logLevel">Optional, the minimum log level.  Defaults to <see cref="LogLevel.Information"/></param>
+        /// <param name="labels">Optional, custom labels to be added to log entries.</param>
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
         /// <param name="bufferOptions">Optional, the buffer options.  Defaults to a <see cref="BufferType.Timed"/></param>
         public static LoggerOptions Create(LogLevel logLevel = LogLevel.Information,
+            Dictionary<string, string> labels = null,
             MonitoredResource monitoredResource = null, BufferOptions bufferOptions = null)
         {
+            labels = labels ?? new Dictionary<string, string>();
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             bufferOptions = bufferOptions ?? BufferOptions.TimedBuffer();
-            return new LoggerOptions(logLevel, monitoredResource, bufferOptions);
+            return new LoggerOptions(logLevel, labels, monitoredResource, bufferOptions);
         }
     }
 }
