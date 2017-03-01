@@ -71,10 +71,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Uses middleware that will report all uncaught exceptions to the Stackdriver
         /// Error Reporting API.
-        /// <para />
+        /// <para>
         /// Can be used when running on Google App Engine or Google Compute Engine.
         /// The Google Cloud Platform project to report error to will detected from the
         /// current platform.
+        /// </para>
         /// </summary>
         /// <param name="app">The application builder. Cannot be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the 

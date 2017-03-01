@@ -78,10 +78,11 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/> using credentials as
         /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
-        /// <para />
+        /// <para>
         /// Can be used when running on Google App Engine or Google Compute Engine.
         /// The Google Cloud Platform project to report error to will detected from the
         /// current platform.
+        /// </para>
         /// </summary>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job. Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 

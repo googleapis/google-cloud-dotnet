@@ -80,7 +80,7 @@ namespace Google.Cloud.Diagnostics.Common
                     Debug.WriteLine("Google Cloud Platfrom project ID mismatch. " +
                         $"Project Id parameter '{projectId}' does not match " +
                         $"resource project ID '{resourceProjectId}' " +
-                        $"Defaulting to project ID parameter '{projectId}'");
+                        $"Defaulting to project ID parameter '{projectId}'.");
                 }
             }
 
