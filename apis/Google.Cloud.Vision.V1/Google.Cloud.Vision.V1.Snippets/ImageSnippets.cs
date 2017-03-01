@@ -23,15 +23,19 @@ namespace Google.Cloud.Vision.V1.Snippets
         {
             // Sample: FactoryMethods
             Image image1 = Image.FromFile("Pictures/LocalImage.jpg");
+            // Fetched locally by the client, then uploaded to the server
             Image image2 = Image.FetchFromUri("https://cloud.google.com/images/devtools-icon-64x64.png");
-            Image image3 = Image.FromStorageUri("gs://my-bucket/my-file");
+            // Fetched by the Google Cloud Vision server
+            Image image3 = Image.FromUri("https://cloud.google.com/images/devtools-icon-64x64.png");
+            // Google Cloud Storage URI
+            Image image4 = Image.FromUri("gs://my-bucket/my-file");
 
             byte[] bytes = ReadImageData(); // For example, from a database
-            Image image4 = Image.FromBytes(bytes);
+            Image image5 = Image.FromBytes(bytes);
 
             using (Stream stream = OpenImageStream()) // Any regular .NET stream
             {
-                Image image5 = Image.FromStream(stream);
+                Image image6 = Image.FromStream(stream);
             }
             // End sample
         }

@@ -233,6 +233,85 @@ namespace Google.Cloud.Vision.V1.Snippets
         }
 
         [Fact]
+        public void DetectCropHints()
+        {
+            Image image = LoadResourceImage("Gladiolos.jpg");
+            // Snippet: DetectCropHints
+            ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+            CropHintsAnnotation cropHints = client.DetectCropHints(image);
+            foreach (CropHint hint in cropHints.CropHints)
+            {
+                Console.WriteLine("Crop hint:");
+                string poly = string.Join(" - ", hint.BoundingPoly.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                Console.WriteLine($"  Poly: {poly}");
+                Console.WriteLine($"  Confidence: {hint.Confidence}");
+                Console.WriteLine($"  Importance fraction: {hint.ImportanceFraction}");
+            }
+            // End snippet
+            Assert.Equal(1, cropHints.CropHints.Count);
+        }
+
+        [Fact]
+        public void DetectDocumentText()
+        {
+            Image image = LoadResourceImage("DocumentText.png");
+            // Snippet: DetectDocumentText
+            ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+            TextAnnotation text = client.DetectDocumentText(image);
+            Console.WriteLine($"Text: {text.Text}");
+            foreach (var page in text.Pages)
+            {
+                foreach (var block in page.Blocks)
+                {
+                    string box = string.Join(" - ", block.BoundingBox.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                    Console.WriteLine($"Block {block.BlockType} at {box}");
+                    foreach (var paragraph in block.Paragraphs)
+                    {
+                        box = string.Join(" - ", paragraph.BoundingBox.Vertices.Select(v => $"({v.X}, {v.Y})"));
+                        Console.WriteLine($"  Paragraph at {box}");
+                        foreach (var word in paragraph.Words)
+                        {
+                            Console.WriteLine($"    Word: {string.Join("", word.Symbols.Select(s => s.Text))}");
+                        }
+                    }
+                }
+            }
+            // End snippet
+            var lines = text.Pages[0].Blocks
+                .Select(b => b.Paragraphs[0].Words.Select(w => string.Join("", w.Symbols.Select(s => s.Text))))
+                .ToList();
+            Assert.Equal(new[] { "Sample", "text", "line", "1", }, lines[0]);
+            Assert.Equal(new[] { "Text", "near", "the", "middle", }, lines[1]);
+            Assert.Equal(new[] { "Text", "near", "bottom", "right", }, lines[2]);
+        }
+
+        [Fact]
+        public void DetectWebInformation()
+        {
+            Image image = LoadResourceImage("SchmidtBrinPage.jpg");
+            // Snippet: DetectWebInformation
+            ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+            WebDetection webDetection = client.DetectWebInformation(image);
+            foreach (WebDetection.Types.WebImage webImage in webDetection.FullMatchingImages)
+            {
+                Console.WriteLine($"Full image: {webImage.Url} ({webImage.Score})");
+            }
+            foreach (WebDetection.Types.WebImage webImage in webDetection.PartialMatchingImages)
+            {
+                Console.WriteLine($"Partial image: {webImage.Url} ({webImage.Score})");
+            }
+            foreach (WebDetection.Types.WebPage webPage in webDetection.PagesWithMatchingImages)
+            {
+                Console.WriteLine($"Page with matching image: {webPage.Url} ({webPage.Score})");
+            }
+            foreach (WebDetection.Types.WebEntity entity in webDetection.WebEntities)
+            {
+                Console.WriteLine($"Web entity: {entity.EntityId} / {entity.Description} ({entity.Score})");
+            }
+            // End snippet
+        }
+
+        [Fact]
         public void ErrorHandling_SingleImage()
         {
             // Sample: ErrorHandling_SingleImage
