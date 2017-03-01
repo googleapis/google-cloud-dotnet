@@ -25,114 +25,130 @@ namespace Google.Cloud.Vision.V1 {
             "Cixnb29nbGUvY2xvdWQvdmlzaW9uL3YxL2ltYWdlX2Fubm90YXRvci5wcm90",
             "bxIWZ29vZ2xlLmNsb3VkLnZpc2lvbi52MRocZ29vZ2xlL2FwaS9hbm5vdGF0",
             "aW9ucy5wcm90bxolZ29vZ2xlL2Nsb3VkL3Zpc2lvbi92MS9nZW9tZXRyeS5w",
+            "cm90bxosZ29vZ2xlL2Nsb3VkL3Zpc2lvbi92MS90ZXh0X2Fubm90YXRpb24u",
+            "cHJvdG8aKmdvb2dsZS9jbG91ZC92aXNpb24vdjEvd2ViX2RldGVjdGlvbi5w",
             "cm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aF2dvb2dsZS90eXBlL2Nv",
-            "bG9yLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8iiwIKB0ZlYXR1",
+            "bG9yLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8iywIKB0ZlYXR1",
             "cmUSMgoEdHlwZRgBIAEoDjIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmVh",
-            "dHVyZS5UeXBlEhMKC21heF9yZXN1bHRzGAIgASgFIrYBCgRUeXBlEhQKEFRZ",
+            "dHVyZS5UeXBlEhMKC21heF9yZXN1bHRzGAIgASgFIvYBCgRUeXBlEhQKEFRZ",
             "UEVfVU5TUEVDSUZJRUQQABISCg5GQUNFX0RFVEVDVElPThABEhYKEkxBTkRN",
             "QVJLX0RFVEVDVElPThACEhIKDkxPR09fREVURUNUSU9OEAMSEwoPTEFCRUxf",
-            "REVURUNUSU9OEAQSEgoOVEVYVF9ERVRFQ1RJT04QBRIZChVTQUZFX1NFQVJD",
-            "SF9ERVRFQ1RJT04QBhIUChBJTUFHRV9QUk9QRVJUSUVTEAciJAoLSW1hZ2VT",
-            "b3VyY2USFQoNZ2NzX2ltYWdlX3VyaRgBIAEoCSJNCgVJbWFnZRIPCgdjb250",
-            "ZW50GAEgASgMEjMKBnNvdXJjZRgCIAEoCzIjLmdvb2dsZS5jbG91ZC52aXNp",
-            "b24udjEuSW1hZ2VTb3VyY2Uixw0KDkZhY2VBbm5vdGF0aW9uEjsKDWJvdW5k",
-            "aW5nX3BvbHkYASABKAsyJC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkJvdW5k",
-            "aW5nUG9seRI+ChBmZF9ib3VuZGluZ19wb2x5GAIgASgLMiQuZ29vZ2xlLmNs",
-            "b3VkLnZpc2lvbi52MS5Cb3VuZGluZ1BvbHkSQgoJbGFuZG1hcmtzGAMgAygL",
-            "Mi8uZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5GYWNlQW5ub3RhdGlvbi5MYW5k",
-            "bWFyaxISCgpyb2xsX2FuZ2xlGAQgASgCEhEKCXBhbl9hbmdsZRgFIAEoAhIS",
-            "Cgp0aWx0X2FuZ2xlGAYgASgCEhwKFGRldGVjdGlvbl9jb25maWRlbmNlGAcg",
-            "ASgCEh4KFmxhbmRtYXJraW5nX2NvbmZpZGVuY2UYCCABKAISOgoOam95X2xp",
-            "a2VsaWhvb2QYCSABKA4yIi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkxpa2Vs",
-            "aWhvb2QSPQoRc29ycm93X2xpa2VsaWhvb2QYCiABKA4yIi5nb29nbGUuY2xv",
-            "dWQudmlzaW9uLnYxLkxpa2VsaWhvb2QSPAoQYW5nZXJfbGlrZWxpaG9vZBgL",
-            "IAEoDjIiLmdvb2dsZS5jbG91ZC52aXNpb24udjEuTGlrZWxpaG9vZBI/ChNz",
-            "dXJwcmlzZV9saWtlbGlob29kGAwgASgOMiIuZ29vZ2xlLmNsb3VkLnZpc2lv",
-            "bi52MS5MaWtlbGlob29kEkQKGHVuZGVyX2V4cG9zZWRfbGlrZWxpaG9vZBgN",
-            "IAEoDjIiLmdvb2dsZS5jbG91ZC52aXNpb24udjEuTGlrZWxpaG9vZBI+ChJi",
-            "bHVycmVkX2xpa2VsaWhvb2QYDiABKA4yIi5nb29nbGUuY2xvdWQudmlzaW9u",
-            "LnYxLkxpa2VsaWhvb2QSPwoTaGVhZHdlYXJfbGlrZWxpaG9vZBgPIAEoDjIi",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuTGlrZWxpaG9vZBq5BwoITGFuZG1h",
-            "cmsSQgoEdHlwZRgDIAEoDjI0Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmFj",
-            "ZUFubm90YXRpb24uTGFuZG1hcmsuVHlwZRIyCghwb3NpdGlvbhgEIAEoCzIg",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuUG9zaXRpb24itAYKBFR5cGUSFAoQ",
-            "VU5LTk9XTl9MQU5ETUFSSxAAEgwKCExFRlRfRVlFEAESDQoJUklHSFRfRVlF",
-            "EAISGAoUTEVGVF9PRl9MRUZUX0VZRUJST1cQAxIZChVSSUdIVF9PRl9MRUZU",
-            "X0VZRUJST1cQBBIZChVMRUZUX09GX1JJR0hUX0VZRUJST1cQBRIaChZSSUdI",
-            "VF9PRl9SSUdIVF9FWUVCUk9XEAYSGQoVTUlEUE9JTlRfQkVUV0VFTl9FWUVT",
-            "EAcSDAoITk9TRV9USVAQCBINCglVUFBFUl9MSVAQCRINCglMT1dFUl9MSVAQ",
-            "ChIOCgpNT1VUSF9MRUZUEAsSDwoLTU9VVEhfUklHSFQQDBIQCgxNT1VUSF9D",
-            "RU5URVIQDRIVChFOT1NFX0JPVFRPTV9SSUdIVBAOEhQKEE5PU0VfQk9UVE9N",
-            "X0xFRlQQDxIWChJOT1NFX0JPVFRPTV9DRU5URVIQEBIZChVMRUZUX0VZRV9U",
-            "T1BfQk9VTkRBUlkQERIZChVMRUZUX0VZRV9SSUdIVF9DT1JORVIQEhIcChhM",
-            "RUZUX0VZRV9CT1RUT01fQk9VTkRBUlkQExIYChRMRUZUX0VZRV9MRUZUX0NP",
-            "Uk5FUhAUEhoKFlJJR0hUX0VZRV9UT1BfQk9VTkRBUlkQFRIaChZSSUdIVF9F",
-            "WUVfUklHSFRfQ09STkVSEBYSHQoZUklHSFRfRVlFX0JPVFRPTV9CT1VOREFS",
-            "WRAXEhkKFVJJR0hUX0VZRV9MRUZUX0NPUk5FUhAYEh8KG0xFRlRfRVlFQlJP",
-            "V19VUFBFUl9NSURQT0lOVBAZEiAKHFJJR0hUX0VZRUJST1dfVVBQRVJfTUlE",
-            "UE9JTlQQGhIUChBMRUZUX0VBUl9UUkFHSU9OEBsSFQoRUklHSFRfRUFSX1RS",
-            "QUdJT04QHBISCg5MRUZUX0VZRV9QVVBJTBAdEhMKD1JJR0hUX0VZRV9QVVBJ",
-            "TBAeEhUKEUZPUkVIRUFEX0dMQUJFTExBEB8SEQoNQ0hJTl9HTkFUSElPThAg",
-            "EhQKEENISU5fTEVGVF9HT05JT04QIRIVChFDSElOX1JJR0hUX0dPTklPThAi",
-            "IjQKDExvY2F0aW9uSW5mbxIkCgdsYXRfbG5nGAEgASgLMhMuZ29vZ2xlLnR5",
-            "cGUuTGF0TG5nIicKCFByb3BlcnR5EgwKBG5hbWUYASABKAkSDQoFdmFsdWUY",
-            "AiABKAkipwIKEEVudGl0eUFubm90YXRpb24SCwoDbWlkGAEgASgJEg4KBmxv",
-            "Y2FsZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRINCgVzY29yZRgEIAEo",
-            "AhISCgpjb25maWRlbmNlGAUgASgCEhIKCnRvcGljYWxpdHkYBiABKAISOwoN",
-            "Ym91bmRpbmdfcG9seRgHIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
-            "Qm91bmRpbmdQb2x5EjcKCWxvY2F0aW9ucxgIIAMoCzIkLmdvb2dsZS5jbG91",
-            "ZC52aXNpb24udjEuTG9jYXRpb25JbmZvEjQKCnByb3BlcnRpZXMYCSADKAsy",
-            "IC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlByb3BlcnR5IucBChRTYWZlU2Vh",
-            "cmNoQW5ub3RhdGlvbhIxCgVhZHVsdBgBIAEoDjIiLmdvb2dsZS5jbG91ZC52",
-            "aXNpb24udjEuTGlrZWxpaG9vZBIxCgVzcG9vZhgCIAEoDjIiLmdvb2dsZS5j",
-            "bG91ZC52aXNpb24udjEuTGlrZWxpaG9vZBIzCgdtZWRpY2FsGAMgASgOMiIu",
-            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5MaWtlbGlob29kEjQKCHZpb2xlbmNl",
-            "GAQgASgOMiIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5MaWtlbGlob29kImEK",
-            "C0xhdExvbmdSZWN0EigKC21pbl9sYXRfbG5nGAEgASgLMhMuZ29vZ2xlLnR5",
-            "cGUuTGF0TG5nEigKC21heF9sYXRfbG5nGAIgASgLMhMuZ29vZ2xlLnR5cGUu",
-            "TGF0TG5nIlUKCUNvbG9ySW5mbxIhCgVjb2xvchgBIAEoCzISLmdvb2dsZS50",
-            "eXBlLkNvbG9yEg0KBXNjb3JlGAIgASgCEhYKDnBpeGVsX2ZyYWN0aW9uGAMg",
-            "ASgCIk0KGERvbWluYW50Q29sb3JzQW5ub3RhdGlvbhIxCgZjb2xvcnMYASAD",
-            "KAsyIS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkNvbG9ySW5mbyJcCg9JbWFn",
-            "ZVByb3BlcnRpZXMSSQoPZG9taW5hbnRfY29sb3JzGAEgASgLMjAuZ29vZ2xl",
-            "LmNsb3VkLnZpc2lvbi52MS5Eb21pbmFudENvbG9yc0Fubm90YXRpb24iYgoM",
-            "SW1hZ2VDb250ZXh0EjoKDWxhdF9sb25nX3JlY3QYASABKAsyIy5nb29nbGUu",
-            "Y2xvdWQudmlzaW9uLnYxLkxhdExvbmdSZWN0EhYKDmxhbmd1YWdlX2hpbnRz",
-            "GAIgAygJIrQBChRBbm5vdGF0ZUltYWdlUmVxdWVzdBIsCgVpbWFnZRgBIAEo",
-            "CzIdLmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW1hZ2USMQoIZmVhdHVyZXMY",
-            "AiADKAsyHy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkZlYXR1cmUSOwoNaW1h",
-            "Z2VfY29udGV4dBgDIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW1h",
-            "Z2VDb250ZXh0Iq0EChVBbm5vdGF0ZUltYWdlUmVzcG9uc2USQAoQZmFjZV9h",
-            "bm5vdGF0aW9ucxgBIAMoCzImLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmFj",
-            "ZUFubm90YXRpb24SRgoUbGFuZG1hcmtfYW5ub3RhdGlvbnMYAiADKAsyKC5n",
-            "b29nbGUuY2xvdWQudmlzaW9uLnYxLkVudGl0eUFubm90YXRpb24SQgoQbG9n",
-            "b19hbm5vdGF0aW9ucxgDIAMoCzIoLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
-            "RW50aXR5QW5ub3RhdGlvbhJDChFsYWJlbF9hbm5vdGF0aW9ucxgEIAMoCzIo",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuRW50aXR5QW5ub3RhdGlvbhJCChB0",
-            "ZXh0X2Fubm90YXRpb25zGAUgAygLMiguZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
-            "MS5FbnRpdHlBbm5vdGF0aW9uEkwKFnNhZmVfc2VhcmNoX2Fubm90YXRpb24Y",
-            "BiABKAsyLC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLlNhZmVTZWFyY2hBbm5v",
-            "dGF0aW9uEkwKG2ltYWdlX3Byb3BlcnRpZXNfYW5ub3RhdGlvbhgIIAEoCzIn",
-            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW1hZ2VQcm9wZXJ0aWVzEiEKBWVy",
-            "cm9yGAkgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMiXAoaQmF0Y2hBbm5vdGF0",
-            "ZUltYWdlc1JlcXVlc3QSPgoIcmVxdWVzdHMYASADKAsyLC5nb29nbGUuY2xv",
-            "dWQudmlzaW9uLnYxLkFubm90YXRlSW1hZ2VSZXF1ZXN0Il8KG0JhdGNoQW5u",
-            "b3RhdGVJbWFnZXNSZXNwb25zZRJACglyZXNwb25zZXMYASADKAsyLS5nb29n",
-            "bGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlSW1hZ2VSZXNwb25zZSplCgpM",
-            "aWtlbGlob29kEgsKB1VOS05PV04QABIRCg1WRVJZX1VOTElLRUxZEAESDAoI",
-            "VU5MSUtFTFkQAhIMCghQT1NTSUJMRRADEgoKBkxJS0VMWRAEEg8KC1ZFUllf",
-            "TElLRUxZEAUysQEKDkltYWdlQW5ub3RhdG9yEp4BChNCYXRjaEFubm90YXRl",
-            "SW1hZ2VzEjIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5CYXRjaEFubm90YXRl",
-            "SW1hZ2VzUmVxdWVzdBozLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQmF0Y2hB",
-            "bm5vdGF0ZUltYWdlc1Jlc3BvbnNlIh6C0+STAhgiEy92MS9pbWFnZXM6YW5u",
-            "b3RhdGU6ASpCdAoaY29tLmdvb2dsZS5jbG91ZC52aXNpb24udjFCE0ltYWdl",
-            "QW5ub3RhdG9yUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8v",
-            "Z29vZ2xlYXBpcy9jbG91ZC92aXNpb24vdjE7dmlzaW9u+AEBYgZwcm90bzM="));
+            "REVURUNUSU9OEAQSEgoOVEVYVF9ERVRFQ1RJT04QBRIbChdET0NVTUVOVF9U",
+            "RVhUX0RFVEVDVElPThALEhkKFVNBRkVfU0VBUkNIX0RFVEVDVElPThAGEhQK",
+            "EElNQUdFX1BST1BFUlRJRVMQBxIOCgpDUk9QX0hJTlRTEAkSEQoNV0VCX0RF",
+            "VEVDVElPThAKIjcKC0ltYWdlU291cmNlEhUKDWdjc19pbWFnZV91cmkYASAB",
+            "KAkSEQoJaW1hZ2VfdXJpGAIgASgJIk0KBUltYWdlEg8KB2NvbnRlbnQYASAB",
+            "KAwSMwoGc291cmNlGAIgASgLMiMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5J",
+            "bWFnZVNvdXJjZSLHDQoORmFjZUFubm90YXRpb24SOwoNYm91bmRpbmdfcG9s",
+            "eRgBIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuQm91bmRpbmdQb2x5",
+            "Ej4KEGZkX2JvdW5kaW5nX3BvbHkYAiABKAsyJC5nb29nbGUuY2xvdWQudmlz",
+            "aW9uLnYxLkJvdW5kaW5nUG9seRJCCglsYW5kbWFya3MYAyADKAsyLy5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkZhY2VBbm5vdGF0aW9uLkxhbmRtYXJrEhIK",
+            "CnJvbGxfYW5nbGUYBCABKAISEQoJcGFuX2FuZ2xlGAUgASgCEhIKCnRpbHRf",
+            "YW5nbGUYBiABKAISHAoUZGV0ZWN0aW9uX2NvbmZpZGVuY2UYByABKAISHgoW",
+            "bGFuZG1hcmtpbmdfY29uZmlkZW5jZRgIIAEoAhI6Cg5qb3lfbGlrZWxpaG9v",
+            "ZBgJIAEoDjIiLmdvb2dsZS5jbG91ZC52aXNpb24udjEuTGlrZWxpaG9vZBI9",
+            "ChFzb3Jyb3dfbGlrZWxpaG9vZBgKIAEoDjIiLmdvb2dsZS5jbG91ZC52aXNp",
+            "b24udjEuTGlrZWxpaG9vZBI8ChBhbmdlcl9saWtlbGlob29kGAsgASgOMiIu",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5MaWtlbGlob29kEj8KE3N1cnByaXNl",
+            "X2xpa2VsaWhvb2QYDCABKA4yIi5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkxp",
+            "a2VsaWhvb2QSRAoYdW5kZXJfZXhwb3NlZF9saWtlbGlob29kGA0gASgOMiIu",
+            "Z29vZ2xlLmNsb3VkLnZpc2lvbi52MS5MaWtlbGlob29kEj4KEmJsdXJyZWRf",
+            "bGlrZWxpaG9vZBgOIAEoDjIiLmdvb2dsZS5jbG91ZC52aXNpb24udjEuTGlr",
+            "ZWxpaG9vZBI/ChNoZWFkd2Vhcl9saWtlbGlob29kGA8gASgOMiIuZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5MaWtlbGlob29kGrkHCghMYW5kbWFyaxJCCgR0",
+            "eXBlGAMgASgOMjQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5GYWNlQW5ub3Rh",
+            "dGlvbi5MYW5kbWFyay5UeXBlEjIKCHBvc2l0aW9uGAQgASgLMiAuZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5Qb3NpdGlvbiK0BgoEVHlwZRIUChBVTktOT1dO",
+            "X0xBTkRNQVJLEAASDAoITEVGVF9FWUUQARINCglSSUdIVF9FWUUQAhIYChRM",
+            "RUZUX09GX0xFRlRfRVlFQlJPVxADEhkKFVJJR0hUX09GX0xFRlRfRVlFQlJP",
+            "VxAEEhkKFUxFRlRfT0ZfUklHSFRfRVlFQlJPVxAFEhoKFlJJR0hUX09GX1JJ",
+            "R0hUX0VZRUJST1cQBhIZChVNSURQT0lOVF9CRVRXRUVOX0VZRVMQBxIMCghO",
+            "T1NFX1RJUBAIEg0KCVVQUEVSX0xJUBAJEg0KCUxPV0VSX0xJUBAKEg4KCk1P",
+            "VVRIX0xFRlQQCxIPCgtNT1VUSF9SSUdIVBAMEhAKDE1PVVRIX0NFTlRFUhAN",
+            "EhUKEU5PU0VfQk9UVE9NX1JJR0hUEA4SFAoQTk9TRV9CT1RUT01fTEVGVBAP",
+            "EhYKEk5PU0VfQk9UVE9NX0NFTlRFUhAQEhkKFUxFRlRfRVlFX1RPUF9CT1VO",
+            "REFSWRAREhkKFUxFRlRfRVlFX1JJR0hUX0NPUk5FUhASEhwKGExFRlRfRVlF",
+            "X0JPVFRPTV9CT1VOREFSWRATEhgKFExFRlRfRVlFX0xFRlRfQ09STkVSEBQS",
+            "GgoWUklHSFRfRVlFX1RPUF9CT1VOREFSWRAVEhoKFlJJR0hUX0VZRV9SSUdI",
+            "VF9DT1JORVIQFhIdChlSSUdIVF9FWUVfQk9UVE9NX0JPVU5EQVJZEBcSGQoV",
+            "UklHSFRfRVlFX0xFRlRfQ09STkVSEBgSHwobTEVGVF9FWUVCUk9XX1VQUEVS",
+            "X01JRFBPSU5UEBkSIAocUklHSFRfRVlFQlJPV19VUFBFUl9NSURQT0lOVBAa",
+            "EhQKEExFRlRfRUFSX1RSQUdJT04QGxIVChFSSUdIVF9FQVJfVFJBR0lPThAc",
+            "EhIKDkxFRlRfRVlFX1BVUElMEB0SEwoPUklHSFRfRVlFX1BVUElMEB4SFQoR",
+            "Rk9SRUhFQURfR0xBQkVMTEEQHxIRCg1DSElOX0dOQVRISU9OECASFAoQQ0hJ",
+            "Tl9MRUZUX0dPTklPThAhEhUKEUNISU5fUklHSFRfR09OSU9OECIiNAoMTG9j",
+            "YXRpb25JbmZvEiQKB2xhdF9sbmcYASABKAsyEy5nb29nbGUudHlwZS5MYXRM",
+            "bmciJwoIUHJvcGVydHkSDAoEbmFtZRgBIAEoCRINCgV2YWx1ZRgCIAEoCSKn",
+            "AgoQRW50aXR5QW5ub3RhdGlvbhILCgNtaWQYASABKAkSDgoGbG9jYWxlGAIg",
+            "ASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEg0KBXNjb3JlGAQgASgCEhIKCmNv",
+            "bmZpZGVuY2UYBSABKAISEgoKdG9waWNhbGl0eRgGIAEoAhI7Cg1ib3VuZGlu",
+            "Z19wb2x5GAcgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5Cb3VuZGlu",
+            "Z1BvbHkSNwoJbG9jYXRpb25zGAggAygLMiQuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5Mb2NhdGlvbkluZm8SNAoKcHJvcGVydGllcxgJIAMoCzIgLmdvb2ds",
+            "ZS5jbG91ZC52aXNpb24udjEuUHJvcGVydHki5wEKFFNhZmVTZWFyY2hBbm5v",
+            "dGF0aW9uEjEKBWFkdWx0GAEgASgOMiIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
+            "MS5MaWtlbGlob29kEjEKBXNwb29mGAIgASgOMiIuZ29vZ2xlLmNsb3VkLnZp",
+            "c2lvbi52MS5MaWtlbGlob29kEjMKB21lZGljYWwYAyABKA4yIi5nb29nbGUu",
+            "Y2xvdWQudmlzaW9uLnYxLkxpa2VsaWhvb2QSNAoIdmlvbGVuY2UYBCABKA4y",
+            "Ii5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkxpa2VsaWhvb2QiYQoLTGF0TG9u",
+            "Z1JlY3QSKAoLbWluX2xhdF9sbmcYASABKAsyEy5nb29nbGUudHlwZS5MYXRM",
+            "bmcSKAoLbWF4X2xhdF9sbmcYAiABKAsyEy5nb29nbGUudHlwZS5MYXRMbmci",
+            "VQoJQ29sb3JJbmZvEiEKBWNvbG9yGAEgASgLMhIuZ29vZ2xlLnR5cGUuQ29s",
+            "b3ISDQoFc2NvcmUYAiABKAISFgoOcGl4ZWxfZnJhY3Rpb24YAyABKAIiTQoY",
+            "RG9taW5hbnRDb2xvcnNBbm5vdGF0aW9uEjEKBmNvbG9ycxgBIAMoCzIhLmdv",
+            "b2dsZS5jbG91ZC52aXNpb24udjEuQ29sb3JJbmZvIlwKD0ltYWdlUHJvcGVy",
+            "dGllcxJJCg9kb21pbmFudF9jb2xvcnMYASABKAsyMC5nb29nbGUuY2xvdWQu",
+            "dmlzaW9uLnYxLkRvbWluYW50Q29sb3JzQW5ub3RhdGlvbiJ4CghDcm9wSGlu",
+            "dBI7Cg1ib3VuZGluZ19wb2x5GAEgASgLMiQuZ29vZ2xlLmNsb3VkLnZpc2lv",
+            "bi52MS5Cb3VuZGluZ1BvbHkSEgoKY29uZmlkZW5jZRgCIAEoAhIbChNpbXBv",
+            "cnRhbmNlX2ZyYWN0aW9uGAMgASgCIksKE0Nyb3BIaW50c0Fubm90YXRpb24S",
+            "NAoKY3JvcF9oaW50cxgBIAMoCzIgLmdvb2dsZS5jbG91ZC52aXNpb24udjEu",
+            "Q3JvcEhpbnQiKAoPQ3JvcEhpbnRzUGFyYW1zEhUKDWFzcGVjdF9yYXRpb3MY",
+            "ASADKAIipgEKDEltYWdlQ29udGV4dBI6Cg1sYXRfbG9uZ19yZWN0GAEgASgL",
+            "MiMuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5MYXRMb25nUmVjdBIWCg5sYW5n",
+            "dWFnZV9oaW50cxgCIAMoCRJCChFjcm9wX2hpbnRzX3BhcmFtcxgEIAEoCzIn",
+            "Lmdvb2dsZS5jbG91ZC52aXNpb24udjEuQ3JvcEhpbnRzUGFyYW1zIrQBChRB",
+            "bm5vdGF0ZUltYWdlUmVxdWVzdBIsCgVpbWFnZRgBIAEoCzIdLmdvb2dsZS5j",
+            "bG91ZC52aXNpb24udjEuSW1hZ2USMQoIZmVhdHVyZXMYAiADKAsyHy5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkZlYXR1cmUSOwoNaW1hZ2VfY29udGV4dBgD",
+            "IAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuSW1hZ2VDb250ZXh0IvwF",
+            "ChVBbm5vdGF0ZUltYWdlUmVzcG9uc2USQAoQZmFjZV9hbm5vdGF0aW9ucxgB",
+            "IAMoCzImLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRmFjZUFubm90YXRpb24S",
+            "RgoUbGFuZG1hcmtfYW5ub3RhdGlvbnMYAiADKAsyKC5nb29nbGUuY2xvdWQu",
+            "dmlzaW9uLnYxLkVudGl0eUFubm90YXRpb24SQgoQbG9nb19hbm5vdGF0aW9u",
+            "cxgDIAMoCzIoLmdvb2dsZS5jbG91ZC52aXNpb24udjEuRW50aXR5QW5ub3Rh",
+            "dGlvbhJDChFsYWJlbF9hbm5vdGF0aW9ucxgEIAMoCzIoLmdvb2dsZS5jbG91",
+            "ZC52aXNpb24udjEuRW50aXR5QW5ub3RhdGlvbhJCChB0ZXh0X2Fubm90YXRp",
+            "b25zGAUgAygLMiguZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5FbnRpdHlBbm5v",
+            "dGF0aW9uEkQKFGZ1bGxfdGV4dF9hbm5vdGF0aW9uGAwgASgLMiYuZ29vZ2xl",
+            "LmNsb3VkLnZpc2lvbi52MS5UZXh0QW5ub3RhdGlvbhJMChZzYWZlX3NlYXJj",
+            "aF9hbm5vdGF0aW9uGAYgASgLMiwuZ29vZ2xlLmNsb3VkLnZpc2lvbi52MS5T",
+            "YWZlU2VhcmNoQW5ub3RhdGlvbhJMChtpbWFnZV9wcm9wZXJ0aWVzX2Fubm90",
+            "YXRpb24YCCABKAsyJy5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkltYWdlUHJv",
+            "cGVydGllcxJKChVjcm9wX2hpbnRzX2Fubm90YXRpb24YCyABKAsyKy5nb29n",
+            "bGUuY2xvdWQudmlzaW9uLnYxLkNyb3BIaW50c0Fubm90YXRpb24SOwoNd2Vi",
+            "X2RldGVjdGlvbhgNIAEoCzIkLmdvb2dsZS5jbG91ZC52aXNpb24udjEuV2Vi",
+            "RGV0ZWN0aW9uEiEKBWVycm9yGAkgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXMi",
+            "XAoaQmF0Y2hBbm5vdGF0ZUltYWdlc1JlcXVlc3QSPgoIcmVxdWVzdHMYASAD",
+            "KAsyLC5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlSW1hZ2VSZXF1",
+            "ZXN0Il8KG0JhdGNoQW5ub3RhdGVJbWFnZXNSZXNwb25zZRJACglyZXNwb25z",
+            "ZXMYASADKAsyLS5nb29nbGUuY2xvdWQudmlzaW9uLnYxLkFubm90YXRlSW1h",
+            "Z2VSZXNwb25zZSplCgpMaWtlbGlob29kEgsKB1VOS05PV04QABIRCg1WRVJZ",
+            "X1VOTElLRUxZEAESDAoIVU5MSUtFTFkQAhIMCghQT1NTSUJMRRADEgoKBkxJ",
+            "S0VMWRAEEg8KC1ZFUllfTElLRUxZEAUysQEKDkltYWdlQW5ub3RhdG9yEp4B",
+            "ChNCYXRjaEFubm90YXRlSW1hZ2VzEjIuZ29vZ2xlLmNsb3VkLnZpc2lvbi52",
+            "MS5CYXRjaEFubm90YXRlSW1hZ2VzUmVxdWVzdBozLmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjEuQmF0Y2hBbm5vdGF0ZUltYWdlc1Jlc3BvbnNlIh6C0+STAhgi",
+            "Ey92MS9pbWFnZXM6YW5ub3RhdGU6ASpCdAoaY29tLmdvb2dsZS5jbG91ZC52",
+            "aXNpb24udjFCE0ltYWdlQW5ub3RhdG9yUHJvdG9QAVo8Z29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC92aXNpb24vdjE7dmlz",
+            "aW9u+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Vision.V1.GeometryReflection.Descriptor, global::Google.Cloud.Vision.V1.TextAnnotationReflection.Descriptor, global::Google.Cloud.Vision.V1.WebDetectionReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.ColorReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Vision.V1.Likelihood), }, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Feature), global::Google.Cloud.Vision.V1.Feature.Parser, new[]{ "Type", "MaxResults" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.Feature.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageSource), global::Google.Cloud.Vision.V1.ImageSource.Parser, new[]{ "GcsImageUri" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageSource), global::Google.Cloud.Vision.V1.ImageSource.Parser, new[]{ "GcsImageUri", "ImageUri" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.Image), global::Google.Cloud.Vision.V1.Image.Parser, new[]{ "Content", "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.FaceAnnotation), global::Google.Cloud.Vision.V1.FaceAnnotation.Parser, new[]{ "BoundingPoly", "FdBoundingPoly", "Landmarks", "RollAngle", "PanAngle", "TiltAngle", "DetectionConfidence", "LandmarkingConfidence", "JoyLikelihood", "SorrowLikelihood", "AngerLikelihood", "SurpriseLikelihood", "UnderExposedLikelihood", "BlurredLikelihood", "HeadwearLikelihood" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark), global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Parser, new[]{ "Type", "Position" }, null, new[]{ typeof(global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type) }, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.LocationInfo), global::Google.Cloud.Vision.V1.LocationInfo.Parser, new[]{ "LatLng" }, null, null, null),
@@ -143,9 +159,12 @@ namespace Google.Cloud.Vision.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ColorInfo), global::Google.Cloud.Vision.V1.ColorInfo.Parser, new[]{ "Color", "Score", "PixelFraction" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.DominantColorsAnnotation), global::Google.Cloud.Vision.V1.DominantColorsAnnotation.Parser, new[]{ "Colors" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageProperties), global::Google.Cloud.Vision.V1.ImageProperties.Parser, new[]{ "DominantColors" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageContext), global::Google.Cloud.Vision.V1.ImageContext.Parser, new[]{ "LatLongRect", "LanguageHints" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHint), global::Google.Cloud.Vision.V1.CropHint.Parser, new[]{ "BoundingPoly", "Confidence", "ImportanceFraction" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHintsAnnotation), global::Google.Cloud.Vision.V1.CropHintsAnnotation.Parser, new[]{ "CropHints" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.CropHintsParams), global::Google.Cloud.Vision.V1.CropHintsParams.Parser, new[]{ "AspectRatios" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.ImageContext), global::Google.Cloud.Vision.V1.ImageContext.Parser, new[]{ "LatLongRect", "LanguageHints", "CropHintsParams" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageRequest), global::Google.Cloud.Vision.V1.AnnotateImageRequest.Parser, new[]{ "Image", "Features", "ImageContext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageResponse), global::Google.Cloud.Vision.V1.AnnotateImageResponse.Parser, new[]{ "FaceAnnotations", "LandmarkAnnotations", "LogoAnnotations", "LabelAnnotations", "TextAnnotations", "SafeSearchAnnotation", "ImagePropertiesAnnotation", "Error" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.AnnotateImageResponse), global::Google.Cloud.Vision.V1.AnnotateImageResponse.Parser, new[]{ "FaceAnnotations", "LandmarkAnnotations", "LogoAnnotations", "LabelAnnotations", "TextAnnotations", "FullTextAnnotation", "SafeSearchAnnotation", "ImagePropertiesAnnotation", "CropHintsAnnotation", "WebDetection", "Error" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest), global::Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.Parser, new[]{ "Requests" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse), global::Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.Parser, new[]{ "Responses" }, null, null, null)
           }));
@@ -155,8 +174,8 @@ namespace Google.Cloud.Vision.V1 {
   }
   #region Enums
   /// <summary>
-  ///  A bucketized representation of likelihood meant to give our clients highly
-  ///  stable results across model upgrades.
+  ///  A bucketized representation of likelihood, which is intended to give clients
+  ///  highly stable results across model upgrades.
   /// </summary>
   public enum Likelihood {
     /// <summary>
@@ -164,23 +183,23 @@ namespace Google.Cloud.Vision.V1 {
     /// </summary>
     [pbr::OriginalName("UNKNOWN")] Unknown = 0,
     /// <summary>
-    ///  The image very unlikely belongs to the vertical specified.
+    ///  It is very unlikely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("VERY_UNLIKELY")] VeryUnlikely = 1,
     /// <summary>
-    ///  The image unlikely belongs to the vertical specified.
+    ///  It is unlikely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("UNLIKELY")] Unlikely = 2,
     /// <summary>
-    ///  The image possibly belongs to the vertical specified.
+    ///  It is possible that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("POSSIBLE")] Possible = 3,
     /// <summary>
-    ///  The image likely belongs to the vertical specified.
+    ///  It is likely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("LIKELY")] Likely = 4,
     /// <summary>
-    ///  The image very likely belongs to the vertical specified.
+    ///  It is very likely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("VERY_LIKELY")] VeryLikely = 5,
   }
@@ -189,9 +208,9 @@ namespace Google.Cloud.Vision.V1 {
 
   #region Messages
   /// <summary>
-  ///  The &lt;em>Feature&lt;/em> indicates what type of image detection task to perform.
   ///  Users describe the type of Google Cloud Vision API tasks to perform over
-  ///  images by using &lt;em>Feature&lt;/em>s. Features encode the Cloud Vision API
+  ///  images by using *Feature*s. Each Feature indicates a type of image
+  ///  detection task to perform. Features encode the Cloud Vision API
   ///  vertical to operate on and the number of top-scoring results to return.
   /// </summary>
   public sealed partial class Feature : pb::IMessage<Feature> {
@@ -376,13 +395,26 @@ namespace Google.Cloud.Vision.V1 {
         /// </summary>
         [pbr::OriginalName("TEXT_DETECTION")] TextDetection = 5,
         /// <summary>
-        ///  Run various computer vision models to compute image safe-search properties.
+        ///  Run dense text document OCR. Takes precedence when both
+        ///  DOCUMENT_TEXT_DETECTION and TEXT_DETECTION are present.
+        /// </summary>
+        [pbr::OriginalName("DOCUMENT_TEXT_DETECTION")] DocumentTextDetection = 11,
+        /// <summary>
+        ///  Run computer vision models to compute image safe-search properties.
         /// </summary>
         [pbr::OriginalName("SAFE_SEARCH_DETECTION")] SafeSearchDetection = 6,
         /// <summary>
-        ///  Compute a set of properties about the image (such as the image's dominant colors).
+        ///  Compute a set of image properties, such as the image's dominant colors.
         /// </summary>
         [pbr::OriginalName("IMAGE_PROPERTIES")] ImageProperties = 7,
+        /// <summary>
+        ///  Run crop hints.
+        /// </summary>
+        [pbr::OriginalName("CROP_HINTS")] CropHints = 9,
+        /// <summary>
+        ///  Run web detection.
+        /// </summary>
+        [pbr::OriginalName("WEB_DETECTION")] WebDetection = 10,
       }
 
     }
@@ -418,6 +450,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ImageSource(ImageSource other) : this() {
       gcsImageUri_ = other.gcsImageUri_;
+      imageUri_ = other.imageUri_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -429,16 +462,41 @@ namespace Google.Cloud.Vision.V1 {
     public const int GcsImageUriFieldNumber = 1;
     private string gcsImageUri_ = "";
     /// <summary>
-    ///  Google Cloud Storage image URI. It must be in the following form:
-    ///  `gs://bucket_name/object_name`. For more
-    ///  details, please see: https://cloud.google.com/storage/docs/reference-uris.
-    ///  NOTE: Cloud Storage object versioning is not supported!
+    ///  NOTE: For new code `image_uri` below is preferred.
+    ///  Google Cloud Storage image URI, which must be in the following form:
+    ///  `gs://bucket_name/object_name` (for details, see
+    ///  [Google Cloud Storage Request
+    ///  URIs](https://cloud.google.com/storage/docs/reference-uris)).
+    ///  NOTE: Cloud Storage object versioning is not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GcsImageUri {
       get { return gcsImageUri_; }
       set {
         gcsImageUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "image_uri" field.</summary>
+    public const int ImageUriFieldNumber = 2;
+    private string imageUri_ = "";
+    /// <summary>
+    ///  Image URI which supports:
+    ///  1) Google Cloud Storage image URI, which must be in the following form:
+    ///  `gs://bucket_name/object_name` (for details, see
+    ///  [Google Cloud Storage Request
+    ///  URIs](https://cloud.google.com/storage/docs/reference-uris)).
+    ///  NOTE: Cloud Storage object versioning is not supported.
+    ///  2) Publicly accessible image HTTP/HTTPS URL.
+    ///  This is preferred over the legacy `gcs_image_uri` above. When both
+    ///  `gcs_image_uri` and `image_uri` are specified, `image_uri` takes
+    ///  precedence.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ImageUri {
+      get { return imageUri_; }
+      set {
+        imageUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -456,6 +514,7 @@ namespace Google.Cloud.Vision.V1 {
         return true;
       }
       if (GcsImageUri != other.GcsImageUri) return false;
+      if (ImageUri != other.ImageUri) return false;
       return true;
     }
 
@@ -463,6 +522,7 @@ namespace Google.Cloud.Vision.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (GcsImageUri.Length != 0) hash ^= GcsImageUri.GetHashCode();
+      if (ImageUri.Length != 0) hash ^= ImageUri.GetHashCode();
       return hash;
     }
 
@@ -477,6 +537,10 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(10);
         output.WriteString(GcsImageUri);
       }
+      if (ImageUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ImageUri);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -484,6 +548,9 @@ namespace Google.Cloud.Vision.V1 {
       int size = 0;
       if (GcsImageUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsImageUri);
+      }
+      if (ImageUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUri);
       }
       return size;
     }
@@ -495,6 +562,9 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (other.GcsImageUri.Length != 0) {
         GcsImageUri = other.GcsImageUri;
+      }
+      if (other.ImageUri.Length != 0) {
+        ImageUri = other.ImageUri;
       }
     }
 
@@ -508,6 +578,10 @@ namespace Google.Cloud.Vision.V1 {
             break;
           case 10: {
             GcsImageUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            ImageUri = input.ReadString();
             break;
           }
         }
@@ -572,9 +646,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int SourceFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.ImageSource source_;
     /// <summary>
-    ///  Google Cloud Storage image location. If both 'content' and 'source'
-    ///  are filled for an image, 'content' takes precedence and it will be
-    ///  used for performing the image annotation request.
+    ///  Google Cloud Storage image location. If both `content` and `source`
+    ///  are provided for an image, `content` takes precedence and is
+    ///  used to perform the image annotation request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.ImageSource Source {
@@ -734,12 +808,12 @@ namespace Google.Cloud.Vision.V1 {
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingPoly_;
     /// <summary>
     ///  The bounding polygon around the face. The coordinates of the bounding box
-    ///  are in the original image's scale, as returned in ImageParams.
+    ///  are in the original image's scale, as returned in `ImageParams`.
     ///  The bounding box is computed to "frame" the face in accordance with human
     ///  expectations. It is based on the landmarker results.
     ///  Note that one or more x and/or y coordinates may not be generated in the
-    ///  BoundingPoly (the polygon will be unbounded) if only a partial face appears in
-    ///  the image to be annotated.
+    ///  `BoundingPoly` (the polygon will be unbounded) if only a partial face
+    ///  appears in the image to be annotated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
@@ -753,10 +827,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int FdBoundingPolyFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.BoundingPoly fdBoundingPoly_;
     /// <summary>
-    ///  This bounding polygon is tighter than the previous
-    ///  &lt;code>boundingPoly&lt;/code>, and
-    ///  encloses only the skin part of the face. Typically, it is used to
-    ///  eliminate the face from any image analysis that detects the
+    ///  The `fd_bounding_poly` bounding polygon is tighter than the
+    ///  `boundingPoly`, and encloses only the skin part of the face. Typically, it
+    ///  is used to eliminate the face from any image analysis that detects the
     ///  "amount of skin" visible in an image. It is not based on the
     ///  landmarker results, only on the initial face detection, hence
     ///  the &lt;code>fd&lt;/code> (face detection) prefix.
@@ -786,10 +859,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int RollAngleFieldNumber = 4;
     private float rollAngle_;
     /// <summary>
-    ///  Roll angle. Indicates the amount of clockwise/anti-clockwise rotation of
-    ///  the
-    ///  face relative to the image vertical, about the axis perpendicular to the
-    ///  face. Range [-180,180].
+    ///  Roll angle, which indicates the amount of clockwise/anti-clockwise rotation
+    ///  of the face relative to the image vertical about the axis perpendicular to
+    ///  the face. Range [-180,180].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float RollAngle {
@@ -803,8 +875,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int PanAngleFieldNumber = 5;
     private float panAngle_;
     /// <summary>
-    ///  Yaw angle. Indicates the leftward/rightward angle that the face is
-    ///  pointing, relative to the vertical plane perpendicular to the image. Range
+    ///  Yaw angle, which indicates the leftward/rightward angle that the face is
+    ///  pointing relative to the vertical plane perpendicular to the image. Range
     ///  [-180,180].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -819,9 +891,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int TiltAngleFieldNumber = 6;
     private float tiltAngle_;
     /// <summary>
-    ///  Pitch angle. Indicates the upwards/downwards angle that the face is
-    ///  pointing
-    ///  relative to the image's horizontal plane. Range [-180,180].
+    ///  Pitch angle, which indicates the upwards/downwards angle that the face is
+    ///  pointing relative to the image's horizontal plane. Range [-180,180].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float TiltAngle {
@@ -1265,8 +1336,9 @@ namespace Google.Cloud.Vision.V1 {
       /// <summary>
       ///  A face-specific landmark (for example, a face feature).
       ///  Landmark positions may fall outside the bounds of the image
-      ///  when the face is near one or more edges of the image.
-      ///  Therefore it is NOT guaranteed that 0 &lt;= x &lt; width or 0 &lt;= y &lt; height.
+      ///  if the face is near one or more edges of the image.
+      ///  Therefore it is NOT guaranteed that `0 &lt;= x &lt; width` or
+      ///  `0 &lt;= y &lt; height`.
       /// </summary>
       public sealed partial class Landmark : pb::IMessage<Landmark> {
         private static readonly pb::MessageParser<Landmark> _parser = new pb::MessageParser<Landmark>(() => new Landmark());
@@ -1429,9 +1501,9 @@ namespace Google.Cloud.Vision.V1 {
         public static partial class Types {
           /// <summary>
           ///  Face landmark (feature) type.
-          ///  Left and right are defined from the vantage of the viewer of the image,
-          ///  without considering mirror projections typical of photos. So, LEFT_EYE,
-          ///  typically is the person's right eye.
+          ///  Left and right are defined from the vantage of the viewer of the image
+          ///  without considering mirror projections typical of photos. So, `LEFT_EYE`,
+          ///  typically, is the person's right eye.
           /// </summary>
           public enum Type {
             /// <summary>
@@ -1625,7 +1697,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int LatLngFieldNumber = 1;
     private global::Google.Type.LatLng latLng_;
     /// <summary>
-    ///  Lat - long location coordinates.
+    ///  lat/long location coordinates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng LatLng {
@@ -1716,7 +1788,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Arbitrary name/value pair.
+  ///  A `Property` consists of a user-supplied name/value pair.
   /// </summary>
   public sealed partial class Property : pb::IMessage<Property> {
     private static readonly pb::MessageParser<Property> _parser = new pb::MessageParser<Property>(() => new Property());
@@ -1916,9 +1988,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int MidFieldNumber = 1;
     private string mid_ = "";
     /// <summary>
-    ///  Opaque entity ID. Some IDs might be available in Knowledge Graph(KG).
-    ///  For more details on KG please see:
-    ///  https://developers.google.com/knowledge-graph/
+    ///  Opaque entity ID. Some IDs may be available in
+    ///  [Google Knowledge Graph Search API](https://developers.google.com/knowledge-graph/).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Mid {
@@ -1933,7 +2004,7 @@ namespace Google.Cloud.Vision.V1 {
     private string locale_ = "";
     /// <summary>
     ///  The language code for the locale in which the entity textual
-    ///  &lt;code>description&lt;/code> (next field) is expressed.
+    ///  `description` is expressed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Locale {
@@ -1947,7 +2018,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    ///  Entity textual description, expressed in its &lt;code>locale&lt;/code> language.
+    ///  Entity textual description, expressed in its `locale` language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -1976,8 +2047,9 @@ namespace Google.Cloud.Vision.V1 {
     private float confidence_;
     /// <summary>
     ///  The accuracy of the entity detection in an image.
-    ///  For example, for an image containing 'Eiffel Tower,' this field represents
-    ///  the confidence that there is a tower in the query image. Range [0, 1].
+    ///  For example, for an image in which the "Eiffel Tower" entity is detected,
+    ///  this field represents the confidence that there is a tower in the query
+    ///  image. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Confidence {
@@ -1992,10 +2064,10 @@ namespace Google.Cloud.Vision.V1 {
     private float topicality_;
     /// <summary>
     ///  The relevancy of the ICA (Image Content Annotation) label to the
-    ///  image. For example, the relevancy of 'tower' to an image containing
-    ///  'Eiffel Tower' is likely higher than an image containing a distant towering
-    ///  building, though the confidence that there is a tower may be the same.
-    ///  Range [0, 1].
+    ///  image. For example, the relevancy of "tower" is likely higher to an image
+    ///  containing the detected "Eiffel Tower" than to an image containing a
+    ///  detected distant towering building, even though the confidence that
+    ///  there is a tower in each image may be the same. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Topicality {
@@ -2009,7 +2081,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingPolyFieldNumber = 7;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingPoly_;
     /// <summary>
-    ///  Image region to which this entity belongs. Not filled currently
+    ///  Image region to which this entity belongs. Currently not produced
     ///  for `LABEL_DETECTION` features. For `TEXT_DETECTION` (OCR), `boundingPoly`s
     ///  are produced for the entire text detected in an image region, followed by
     ///  `boundingPoly`s for each word within the detected text.
@@ -2029,10 +2101,10 @@ namespace Google.Cloud.Vision.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.LocationInfo> locations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.LocationInfo>();
     /// <summary>
     ///  The location information for the detected entity. Multiple
-    ///  &lt;code>LocationInfo&lt;/code> elements can be present since one location may
-    ///  indicate the location of the scene in the query image, and another the
-    ///  location of the place where the query image was taken. Location information
-    ///  is usually present for landmarks.
+    ///  `LocationInfo` elements can be present because one location may
+    ///  indicate the location of the scene in the image, and another location
+    ///  may indicate the location of the place where the image was taken.
+    ///  Location information is usually present for landmarks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.LocationInfo> Locations {
@@ -2045,8 +2117,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Vision.V1.Property.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Property> properties_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Property>();
     /// <summary>
-    ///  Some entities can have additional optional &lt;code>Property&lt;/code> fields.
-    ///  For example a different kind of score or string that qualifies the entity.
+    ///  Some entities may have optional user-supplied `Property` (name/value)
+    ///  fields, such a score or string that qualifies the entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Property> Properties {
@@ -2248,7 +2320,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Set of features pertaining to the image, computed by various computer vision
+  ///  Set of features pertaining to the image, computed by computer vision
   ///  methods over safe-search verticals (for example, adult, spoof, medical,
   ///  violence).
   /// </summary>
@@ -2291,7 +2363,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int AdultFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.Likelihood adult_ = 0;
     /// <summary>
-    ///  Represents the adult contents likelihood for the image.
+    ///  Represents the adult content likelihood for the image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Adult {
@@ -2305,7 +2377,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int SpoofFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.Likelihood spoof_ = 0;
     /// <summary>
-    ///  Spoof likelihood. The likelihood that an obvious modification
+    ///  Spoof likelihood. The likelihood that an modification
     ///  was made to the image's canonical version to make it appear
     ///  funny or offensive.
     /// </summary>
@@ -2321,7 +2393,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int MedicalFieldNumber = 3;
     private global::Google.Cloud.Vision.V1.Likelihood medical_ = 0;
     /// <summary>
-    ///  Likelihood this is a medical image.
+    ///  Likelihood that this is a medical image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Medical {
@@ -2468,7 +2540,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Rectangle determined by min and max LatLng pairs.
+  ///  Rectangle determined by min and max `LatLng` pairs.
   /// </summary>
   public sealed partial class LatLongRect : pb::IMessage<LatLongRect> {
     private static readonly pb::MessageParser<LatLongRect> _parser = new pb::MessageParser<LatLongRect>(() => new LatLongRect());
@@ -2634,8 +2706,8 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Color information consists of RGB channels, score and fraction of
-  ///  image the color occupies in the image.
+  ///  Color information consists of RGB channels, score, and the fraction of
+  ///  the image that the color occupies in the image.
   /// </summary>
   public sealed partial class ColorInfo : pb::IMessage<ColorInfo> {
     private static readonly pb::MessageParser<ColorInfo> _parser = new pb::MessageParser<ColorInfo>(() => new ColorInfo());
@@ -2703,7 +2775,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int PixelFractionFieldNumber = 3;
     private float pixelFraction_;
     /// <summary>
-    ///  Stores the fraction of pixels the color occupies in the image.
+    ///  The fraction of pixels the color occupies in the image.
     ///  Value in range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2867,7 +2939,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.ColorInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.ColorInfo> colors_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.ColorInfo>();
     /// <summary>
-    ///  RGB color values, with their score and pixel fraction.
+    ///  RGB color values with their score and pixel fraction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.ColorInfo> Colors {
@@ -2942,7 +3014,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Stores image properties (e.g. dominant colors).
+  ///  Stores image properties, such as dominant colors.
   /// </summary>
   public sealed partial class ImageProperties : pb::IMessage<ImageProperties> {
     private static readonly pb::MessageParser<ImageProperties> _parser = new pb::MessageParser<ImageProperties>(() => new ImageProperties());
@@ -3071,7 +3143,433 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Image context.
+  ///  Single crop hint that is used to generate a new crop when serving an image.
+  /// </summary>
+  public sealed partial class CropHint : pb::IMessage<CropHint> {
+    private static readonly pb::MessageParser<CropHint> _parser = new pb::MessageParser<CropHint>(() => new CropHint());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CropHint> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHint() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHint(CropHint other) : this() {
+      BoundingPoly = other.boundingPoly_ != null ? other.BoundingPoly.Clone() : null;
+      confidence_ = other.confidence_;
+      importanceFraction_ = other.importanceFraction_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHint Clone() {
+      return new CropHint(this);
+    }
+
+    /// <summary>Field number for the "bounding_poly" field.</summary>
+    public const int BoundingPolyFieldNumber = 1;
+    private global::Google.Cloud.Vision.V1.BoundingPoly boundingPoly_;
+    /// <summary>
+    ///  The bounding polygon for the crop region. The coordinates of the bounding
+    ///  box are in the original image's scale, as returned in `ImageParams`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
+      get { return boundingPoly_; }
+      set {
+        boundingPoly_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 2;
+    private float confidence_;
+    /// <summary>
+    ///  Confidence of this being a salient region.  Range [0, 1].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "importance_fraction" field.</summary>
+    public const int ImportanceFractionFieldNumber = 3;
+    private float importanceFraction_;
+    /// <summary>
+    ///  Fraction of importance of this salient region with respect to the original
+    ///  image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float ImportanceFraction {
+      get { return importanceFraction_; }
+      set {
+        importanceFraction_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CropHint);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CropHint other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(BoundingPoly, other.BoundingPoly)) return false;
+      if (Confidence != other.Confidence) return false;
+      if (ImportanceFraction != other.ImportanceFraction) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (boundingPoly_ != null) hash ^= BoundingPoly.GetHashCode();
+      if (Confidence != 0F) hash ^= Confidence.GetHashCode();
+      if (ImportanceFraction != 0F) hash ^= ImportanceFraction.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (boundingPoly_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(BoundingPoly);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      if (ImportanceFraction != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(ImportanceFraction);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (boundingPoly_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingPoly);
+      }
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
+      if (ImportanceFraction != 0F) {
+        size += 1 + 4;
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CropHint other) {
+      if (other == null) {
+        return;
+      }
+      if (other.boundingPoly_ != null) {
+        if (boundingPoly_ == null) {
+          boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+        }
+        BoundingPoly.MergeFrom(other.BoundingPoly);
+      }
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
+      if (other.ImportanceFraction != 0F) {
+        ImportanceFraction = other.ImportanceFraction;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            if (boundingPoly_ == null) {
+              boundingPoly_ = new global::Google.Cloud.Vision.V1.BoundingPoly();
+            }
+            input.ReadMessage(boundingPoly_);
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            ImportanceFraction = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Set of crop hints that are used to generate new crops when serving images.
+  /// </summary>
+  public sealed partial class CropHintsAnnotation : pb::IMessage<CropHintsAnnotation> {
+    private static readonly pb::MessageParser<CropHintsAnnotation> _parser = new pb::MessageParser<CropHintsAnnotation>(() => new CropHintsAnnotation());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CropHintsAnnotation> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHintsAnnotation() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHintsAnnotation(CropHintsAnnotation other) : this() {
+      cropHints_ = other.cropHints_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHintsAnnotation Clone() {
+      return new CropHintsAnnotation(this);
+    }
+
+    /// <summary>Field number for the "crop_hints" field.</summary>
+    public const int CropHintsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Vision.V1.CropHint> _repeated_cropHints_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.CropHint.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.CropHint> cropHints_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.CropHint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Google.Cloud.Vision.V1.CropHint> CropHints {
+      get { return cropHints_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CropHintsAnnotation);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CropHintsAnnotation other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!cropHints_.Equals(other.cropHints_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= cropHints_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      cropHints_.WriteTo(output, _repeated_cropHints_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += cropHints_.CalculateSize(_repeated_cropHints_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CropHintsAnnotation other) {
+      if (other == null) {
+        return;
+      }
+      cropHints_.Add(other.cropHints_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10: {
+            cropHints_.AddEntriesFrom(input, _repeated_cropHints_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Parameters for crop hints annotation request.
+  /// </summary>
+  public sealed partial class CropHintsParams : pb::IMessage<CropHintsParams> {
+    private static readonly pb::MessageParser<CropHintsParams> _parser = new pb::MessageParser<CropHintsParams>(() => new CropHintsParams());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CropHintsParams> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHintsParams() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHintsParams(CropHintsParams other) : this() {
+      aspectRatios_ = other.aspectRatios_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CropHintsParams Clone() {
+      return new CropHintsParams(this);
+    }
+
+    /// <summary>Field number for the "aspect_ratios" field.</summary>
+    public const int AspectRatiosFieldNumber = 1;
+    private static readonly pb::FieldCodec<float> _repeated_aspectRatios_codec
+        = pb::FieldCodec.ForFloat(10);
+    private readonly pbc::RepeatedField<float> aspectRatios_ = new pbc::RepeatedField<float>();
+    /// <summary>
+    ///  Aspect ratios in floats, representing the ratio of the width to the height
+    ///  of the image. For example, if the desired aspect ratio is 4/3, the
+    ///  corresponding float value should be 1.33333.  If not specified, the
+    ///  best possible crop is returned. The number of provided aspect ratios is
+    ///  limited to a maximum of 16; any aspect ratios provided after the 16th are
+    ///  ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<float> AspectRatios {
+      get { return aspectRatios_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CropHintsParams);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CropHintsParams other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!aspectRatios_.Equals(other.aspectRatios_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= aspectRatios_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      aspectRatios_.WriteTo(output, _repeated_aspectRatios_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += aspectRatios_.CalculateSize(_repeated_aspectRatios_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CropHintsParams other) {
+      if (other == null) {
+        return;
+      }
+      aspectRatios_.Add(other.aspectRatios_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 10:
+          case 13: {
+            aspectRatios_.AddEntriesFrom(input, _repeated_aspectRatios_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  ///  Image context and/or feature-specific parameters.
   /// </summary>
   public sealed partial class ImageContext : pb::IMessage<ImageContext> {
     private static readonly pb::MessageParser<ImageContext> _parser = new pb::MessageParser<ImageContext>(() => new ImageContext());
@@ -3080,7 +3578,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3099,6 +3597,7 @@ namespace Google.Cloud.Vision.V1 {
     public ImageContext(ImageContext other) : this() {
       LatLongRect = other.latLongRect_ != null ? other.LatLongRect.Clone() : null;
       languageHints_ = other.languageHints_.Clone();
+      CropHintsParams = other.cropHintsParams_ != null ? other.CropHintsParams.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3110,7 +3609,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int LatLongRectFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.LatLongRect latLongRect_;
     /// <summary>
-    ///  Lat/long rectangle that specifies the location of the image.
+    ///  lat/long rectangle that specifies the location of the image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.LatLongRect LatLongRect {
@@ -3133,12 +3632,25 @@ namespace Google.Cloud.Vision.V1 {
     ///  setting a hint will help get better results (although it will be a
     ///  significant hindrance if the hint is wrong). Text detection returns an
     ///  error if one or more of the specified languages is not one of the
-    ///  [supported
-    ///  languages](/translate/v2/translate-reference#supported_languages).
+    ///  [supported languages](/vision/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> LanguageHints {
       get { return languageHints_; }
+    }
+
+    /// <summary>Field number for the "crop_hints_params" field.</summary>
+    public const int CropHintsParamsFieldNumber = 4;
+    private global::Google.Cloud.Vision.V1.CropHintsParams cropHintsParams_;
+    /// <summary>
+    ///  Parameters for crop hints annotation request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Vision.V1.CropHintsParams CropHintsParams {
+      get { return cropHintsParams_; }
+      set {
+        cropHintsParams_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3156,6 +3668,7 @@ namespace Google.Cloud.Vision.V1 {
       }
       if (!object.Equals(LatLongRect, other.LatLongRect)) return false;
       if(!languageHints_.Equals(other.languageHints_)) return false;
+      if (!object.Equals(CropHintsParams, other.CropHintsParams)) return false;
       return true;
     }
 
@@ -3164,6 +3677,7 @@ namespace Google.Cloud.Vision.V1 {
       int hash = 1;
       if (latLongRect_ != null) hash ^= LatLongRect.GetHashCode();
       hash ^= languageHints_.GetHashCode();
+      if (cropHintsParams_ != null) hash ^= CropHintsParams.GetHashCode();
       return hash;
     }
 
@@ -3179,6 +3693,10 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteMessage(LatLongRect);
       }
       languageHints_.WriteTo(output, _repeated_languageHints_codec);
+      if (cropHintsParams_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CropHintsParams);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3188,6 +3706,9 @@ namespace Google.Cloud.Vision.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LatLongRect);
       }
       size += languageHints_.CalculateSize(_repeated_languageHints_codec);
+      if (cropHintsParams_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CropHintsParams);
+      }
       return size;
     }
 
@@ -3203,6 +3724,12 @@ namespace Google.Cloud.Vision.V1 {
         LatLongRect.MergeFrom(other.LatLongRect);
       }
       languageHints_.Add(other.languageHints_);
+      if (other.cropHintsParams_ != null) {
+        if (cropHintsParams_ == null) {
+          cropHintsParams_ = new global::Google.Cloud.Vision.V1.CropHintsParams();
+        }
+        CropHintsParams.MergeFrom(other.CropHintsParams);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3224,6 +3751,13 @@ namespace Google.Cloud.Vision.V1 {
             languageHints_.AddEntriesFrom(input, _repeated_languageHints_codec);
             break;
           }
+          case 34: {
+            if (cropHintsParams_ == null) {
+              cropHintsParams_ = new global::Google.Cloud.Vision.V1.CropHintsParams();
+            }
+            input.ReadMessage(cropHintsParams_);
+            break;
+          }
         }
       }
     }
@@ -3241,7 +3775,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3430,7 +3964,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3452,8 +3986,11 @@ namespace Google.Cloud.Vision.V1 {
       logoAnnotations_ = other.logoAnnotations_.Clone();
       labelAnnotations_ = other.labelAnnotations_.Clone();
       textAnnotations_ = other.textAnnotations_.Clone();
+      FullTextAnnotation = other.fullTextAnnotation_ != null ? other.FullTextAnnotation.Clone() : null;
       SafeSearchAnnotation = other.safeSearchAnnotation_ != null ? other.SafeSearchAnnotation.Clone() : null;
       ImagePropertiesAnnotation = other.imagePropertiesAnnotation_ != null ? other.ImagePropertiesAnnotation.Clone() : null;
+      CropHintsAnnotation = other.cropHintsAnnotation_ != null ? other.CropHintsAnnotation.Clone() : null;
+      WebDetection = other.webDetection_ != null ? other.WebDetection.Clone() : null;
       Error = other.error_ != null ? other.Error.Clone() : null;
     }
 
@@ -3468,7 +4005,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.FaceAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation> faceAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation>();
     /// <summary>
-    ///  If present, face detection completed successfully.
+    ///  If present, face detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation> FaceAnnotations {
@@ -3481,7 +4018,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> landmarkAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, landmark detection completed successfully.
+    ///  If present, landmark detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LandmarkAnnotations {
@@ -3494,7 +4031,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> logoAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, logo detection completed successfully.
+    ///  If present, logo detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LogoAnnotations {
@@ -3507,7 +4044,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> labelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, label detection completed successfully.
+    ///  If present, label detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LabelAnnotations {
@@ -3520,18 +4057,36 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> textAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, text (OCR) detection completed successfully.
+    ///  If present, text (OCR) detection or document (OCR) text detection has
+    ///  completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> TextAnnotations {
       get { return textAnnotations_; }
     }
 
+    /// <summary>Field number for the "full_text_annotation" field.</summary>
+    public const int FullTextAnnotationFieldNumber = 12;
+    private global::Google.Cloud.Vision.V1.TextAnnotation fullTextAnnotation_;
+    /// <summary>
+    ///  If present, text (OCR) detection or document (OCR) text detection has
+    ///  completed successfully.
+    ///  This annotation provides the structural hierarchy for the OCR detected
+    ///  text.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Vision.V1.TextAnnotation FullTextAnnotation {
+      get { return fullTextAnnotation_; }
+      set {
+        fullTextAnnotation_ = value;
+      }
+    }
+
     /// <summary>Field number for the "safe_search_annotation" field.</summary>
     public const int SafeSearchAnnotationFieldNumber = 6;
     private global::Google.Cloud.Vision.V1.SafeSearchAnnotation safeSearchAnnotation_;
     /// <summary>
-    ///  If present, safe-search annotation completed successfully.
+    ///  If present, safe-search annotation has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.SafeSearchAnnotation SafeSearchAnnotation {
@@ -3555,13 +4110,41 @@ namespace Google.Cloud.Vision.V1 {
       }
     }
 
+    /// <summary>Field number for the "crop_hints_annotation" field.</summary>
+    public const int CropHintsAnnotationFieldNumber = 11;
+    private global::Google.Cloud.Vision.V1.CropHintsAnnotation cropHintsAnnotation_;
+    /// <summary>
+    ///  If present, crop hints have completed successfully.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Vision.V1.CropHintsAnnotation CropHintsAnnotation {
+      get { return cropHintsAnnotation_; }
+      set {
+        cropHintsAnnotation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "web_detection" field.</summary>
+    public const int WebDetectionFieldNumber = 13;
+    private global::Google.Cloud.Vision.V1.WebDetection webDetection_;
+    /// <summary>
+    ///  If present, web detection has completed successfully.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.Vision.V1.WebDetection WebDetection {
+      get { return webDetection_; }
+      set {
+        webDetection_ = value;
+      }
+    }
+
     /// <summary>Field number for the "error" field.</summary>
     public const int ErrorFieldNumber = 9;
     private global::Google.Rpc.Status error_;
     /// <summary>
     ///  If set, represents the error message for the operation.
-    ///  Note that filled-in mage annotations are guaranteed to be
-    ///  correct, even when &lt;code>error&lt;/code> is non-empty.
+    ///  Note that filled-in image annotations are guaranteed to be
+    ///  correct, even when `error` is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Error {
@@ -3589,8 +4172,11 @@ namespace Google.Cloud.Vision.V1 {
       if(!logoAnnotations_.Equals(other.logoAnnotations_)) return false;
       if(!labelAnnotations_.Equals(other.labelAnnotations_)) return false;
       if(!textAnnotations_.Equals(other.textAnnotations_)) return false;
+      if (!object.Equals(FullTextAnnotation, other.FullTextAnnotation)) return false;
       if (!object.Equals(SafeSearchAnnotation, other.SafeSearchAnnotation)) return false;
       if (!object.Equals(ImagePropertiesAnnotation, other.ImagePropertiesAnnotation)) return false;
+      if (!object.Equals(CropHintsAnnotation, other.CropHintsAnnotation)) return false;
+      if (!object.Equals(WebDetection, other.WebDetection)) return false;
       if (!object.Equals(Error, other.Error)) return false;
       return true;
     }
@@ -3603,8 +4189,11 @@ namespace Google.Cloud.Vision.V1 {
       hash ^= logoAnnotations_.GetHashCode();
       hash ^= labelAnnotations_.GetHashCode();
       hash ^= textAnnotations_.GetHashCode();
+      if (fullTextAnnotation_ != null) hash ^= FullTextAnnotation.GetHashCode();
       if (safeSearchAnnotation_ != null) hash ^= SafeSearchAnnotation.GetHashCode();
       if (imagePropertiesAnnotation_ != null) hash ^= ImagePropertiesAnnotation.GetHashCode();
+      if (cropHintsAnnotation_ != null) hash ^= CropHintsAnnotation.GetHashCode();
+      if (webDetection_ != null) hash ^= WebDetection.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       return hash;
     }
@@ -3633,6 +4222,18 @@ namespace Google.Cloud.Vision.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(Error);
       }
+      if (cropHintsAnnotation_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CropHintsAnnotation);
+      }
+      if (fullTextAnnotation_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(FullTextAnnotation);
+      }
+      if (webDetection_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(WebDetection);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3643,11 +4244,20 @@ namespace Google.Cloud.Vision.V1 {
       size += logoAnnotations_.CalculateSize(_repeated_logoAnnotations_codec);
       size += labelAnnotations_.CalculateSize(_repeated_labelAnnotations_codec);
       size += textAnnotations_.CalculateSize(_repeated_textAnnotations_codec);
+      if (fullTextAnnotation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FullTextAnnotation);
+      }
       if (safeSearchAnnotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SafeSearchAnnotation);
       }
       if (imagePropertiesAnnotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImagePropertiesAnnotation);
+      }
+      if (cropHintsAnnotation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CropHintsAnnotation);
+      }
+      if (webDetection_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WebDetection);
       }
       if (error_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
@@ -3665,6 +4275,12 @@ namespace Google.Cloud.Vision.V1 {
       logoAnnotations_.Add(other.logoAnnotations_);
       labelAnnotations_.Add(other.labelAnnotations_);
       textAnnotations_.Add(other.textAnnotations_);
+      if (other.fullTextAnnotation_ != null) {
+        if (fullTextAnnotation_ == null) {
+          fullTextAnnotation_ = new global::Google.Cloud.Vision.V1.TextAnnotation();
+        }
+        FullTextAnnotation.MergeFrom(other.FullTextAnnotation);
+      }
       if (other.safeSearchAnnotation_ != null) {
         if (safeSearchAnnotation_ == null) {
           safeSearchAnnotation_ = new global::Google.Cloud.Vision.V1.SafeSearchAnnotation();
@@ -3676,6 +4292,18 @@ namespace Google.Cloud.Vision.V1 {
           imagePropertiesAnnotation_ = new global::Google.Cloud.Vision.V1.ImageProperties();
         }
         ImagePropertiesAnnotation.MergeFrom(other.ImagePropertiesAnnotation);
+      }
+      if (other.cropHintsAnnotation_ != null) {
+        if (cropHintsAnnotation_ == null) {
+          cropHintsAnnotation_ = new global::Google.Cloud.Vision.V1.CropHintsAnnotation();
+        }
+        CropHintsAnnotation.MergeFrom(other.CropHintsAnnotation);
+      }
+      if (other.webDetection_ != null) {
+        if (webDetection_ == null) {
+          webDetection_ = new global::Google.Cloud.Vision.V1.WebDetection();
+        }
+        WebDetection.MergeFrom(other.WebDetection);
       }
       if (other.error_ != null) {
         if (error_ == null) {
@@ -3734,6 +4362,27 @@ namespace Google.Cloud.Vision.V1 {
             input.ReadMessage(error_);
             break;
           }
+          case 90: {
+            if (cropHintsAnnotation_ == null) {
+              cropHintsAnnotation_ = new global::Google.Cloud.Vision.V1.CropHintsAnnotation();
+            }
+            input.ReadMessage(cropHintsAnnotation_);
+            break;
+          }
+          case 98: {
+            if (fullTextAnnotation_ == null) {
+              fullTextAnnotation_ = new global::Google.Cloud.Vision.V1.TextAnnotation();
+            }
+            input.ReadMessage(fullTextAnnotation_);
+            break;
+          }
+          case 106: {
+            if (webDetection_ == null) {
+              webDetection_ = new global::Google.Cloud.Vision.V1.WebDetection();
+            }
+            input.ReadMessage(webDetection_);
+            break;
+          }
         }
       }
     }
@@ -3750,7 +4399,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3865,7 +4514,7 @@ namespace Google.Cloud.Vision.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Vision.V1.ImageAnnotatorReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
