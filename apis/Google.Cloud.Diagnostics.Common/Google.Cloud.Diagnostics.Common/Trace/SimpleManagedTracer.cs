@@ -145,7 +145,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 try
                 {
-                    return await func();
+                    return await func().ConfigureAwait(false);
                 }
                 catch (Exception e) when (SetStackTraceAndReturnFalse(e))
                 {
