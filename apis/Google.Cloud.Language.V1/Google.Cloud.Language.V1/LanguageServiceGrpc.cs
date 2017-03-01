@@ -24,10 +24,10 @@ using Grpc.Core;
 
 namespace Google.Cloud.Language.V1 {
   /// <summary>
-  ///  Provides text analysis operations such as sentiment analysis and entity
-  ///  recognition.
+  /// Provides text analysis operations such as sentiment analysis and entity
+  /// recognition.
   /// </summary>
-  public static class LanguageService
+  public static partial class LanguageService
   {
     static readonly string __ServiceName = "google.cloud.language.v1.LanguageService";
 
@@ -75,39 +75,51 @@ namespace Google.Cloud.Language.V1 {
     }
 
     /// <summary>Base class for server-side implementations of LanguageService</summary>
-    public abstract class LanguageServiceBase
+    public abstract partial class LanguageServiceBase
     {
       /// <summary>
-      ///  Analyzes the sentiment of the provided text.
+      /// Analyzes the sentiment of the provided text.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Finds named entities (currently finds proper names) in the text,
-      ///  entity types, salience, mentions for each entity, and other properties.
+      /// Finds named entities (currently finds proper names) in the text,
+      /// entity types, salience, mentions for each entity, and other properties.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Analyzes the syntax of the text and provides sentence boundaries and
-      ///  tokenization along with part of speech tags, dependency trees, and other
-      ///  properties.
+      /// Analyzes the syntax of the text and provides sentence boundaries and
+      /// tokenization along with part of speech tags, dependency trees, and other
+      /// properties.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  A convenience method that provides all the features that analyzeSentiment,
-      ///  analyzeEntities, and analyzeSyntax provide in one call.
+      /// A convenience method that provides all the features that analyzeSentiment,
+      /// analyzeEntities, and analyzeSyntax provide in one call.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -116,7 +128,7 @@ namespace Google.Cloud.Language.V1 {
     }
 
     /// <summary>Client for LanguageService</summary>
-    public class LanguageServiceClient : ClientBase<LanguageServiceClient>
+    public partial class LanguageServiceClient : ClientBase<LanguageServiceClient>
     {
       /// <summary>Creates a new client for LanguageService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -139,133 +151,198 @@ namespace Google.Cloud.Language.V1 {
       }
 
       /// <summary>
-      ///  Analyzes the sentiment of the provided text.
+      /// Analyzes the sentiment of the provided text.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnalyzeSentimentResponse AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnalyzeSentiment(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Analyzes the sentiment of the provided text.
+      /// Analyzes the sentiment of the provided text.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnalyzeSentimentResponse AnalyzeSentiment(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeSentiment, null, options, request);
       }
       /// <summary>
-      ///  Analyzes the sentiment of the provided text.
+      /// Analyzes the sentiment of the provided text.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentimentAsync(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnalyzeSentimentAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Analyzes the sentiment of the provided text.
+      /// Analyzes the sentiment of the provided text.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSentimentResponse> AnalyzeSentimentAsync(global::Google.Cloud.Language.V1.AnalyzeSentimentRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeSentiment, null, options, request);
       }
       /// <summary>
-      ///  Finds named entities (currently finds proper names) in the text,
-      ///  entity types, salience, mentions for each entity, and other properties.
+      /// Finds named entities (currently finds proper names) in the text,
+      /// entity types, salience, mentions for each entity, and other properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnalyzeEntities(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Finds named entities (currently finds proper names) in the text,
-      ///  entity types, salience, mentions for each entity, and other properties.
+      /// Finds named entities (currently finds proper names) in the text,
+      /// entity types, salience, mentions for each entity, and other properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse AnalyzeEntities(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeEntities, null, options, request);
       }
       /// <summary>
-      ///  Finds named entities (currently finds proper names) in the text,
-      ///  entity types, salience, mentions for each entity, and other properties.
+      /// Finds named entities (currently finds proper names) in the text,
+      /// entity types, salience, mentions for each entity, and other properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnalyzeEntitiesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Finds named entities (currently finds proper names) in the text,
-      ///  entity types, salience, mentions for each entity, and other properties.
+      /// Finds named entities (currently finds proper names) in the text,
+      /// entity types, salience, mentions for each entity, and other properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeEntitiesResponse> AnalyzeEntitiesAsync(global::Google.Cloud.Language.V1.AnalyzeEntitiesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeEntities, null, options, request);
       }
       /// <summary>
-      ///  Analyzes the syntax of the text and provides sentence boundaries and
-      ///  tokenization along with part of speech tags, dependency trees, and other
-      ///  properties.
+      /// Analyzes the syntax of the text and provides sentence boundaries and
+      /// tokenization along with part of speech tags, dependency trees, and other
+      /// properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnalyzeSyntax(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Analyzes the syntax of the text and provides sentence boundaries and
-      ///  tokenization along with part of speech tags, dependency trees, and other
-      ///  properties.
+      /// Analyzes the syntax of the text and provides sentence boundaries and
+      /// tokenization along with part of speech tags, dependency trees, and other
+      /// properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse AnalyzeSyntax(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnalyzeSyntax, null, options, request);
       }
       /// <summary>
-      ///  Analyzes the syntax of the text and provides sentence boundaries and
-      ///  tokenization along with part of speech tags, dependency trees, and other
-      ///  properties.
+      /// Analyzes the syntax of the text and provides sentence boundaries and
+      /// tokenization along with part of speech tags, dependency trees, and other
+      /// properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnalyzeSyntaxAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Analyzes the syntax of the text and provides sentence boundaries and
-      ///  tokenization along with part of speech tags, dependency trees, and other
-      ///  properties.
+      /// Analyzes the syntax of the text and provides sentence boundaries and
+      /// tokenization along with part of speech tags, dependency trees, and other
+      /// properties.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnalyzeSyntaxResponse> AnalyzeSyntaxAsync(global::Google.Cloud.Language.V1.AnalyzeSyntaxRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnalyzeSyntax, null, options, request);
       }
       /// <summary>
-      ///  A convenience method that provides all the features that analyzeSentiment,
-      ///  analyzeEntities, and analyzeSyntax provide in one call.
+      /// A convenience method that provides all the features that analyzeSentiment,
+      /// analyzeEntities, and analyzeSyntax provide in one call.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnnotateTextResponse AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnnotateText(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  A convenience method that provides all the features that analyzeSentiment,
-      ///  analyzeEntities, and analyzeSyntax provide in one call.
+      /// A convenience method that provides all the features that analyzeSentiment,
+      /// analyzeEntities, and analyzeSyntax provide in one call.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Language.V1.AnnotateTextResponse AnnotateText(global::Google.Cloud.Language.V1.AnnotateTextRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AnnotateText, null, options, request);
       }
       /// <summary>
-      ///  A convenience method that provides all the features that analyzeSentiment,
-      ///  analyzeEntities, and analyzeSyntax provide in one call.
+      /// A convenience method that provides all the features that analyzeSentiment,
+      /// analyzeEntities, and analyzeSyntax provide in one call.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateTextAsync(global::Google.Cloud.Language.V1.AnnotateTextRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AnnotateTextAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  A convenience method that provides all the features that analyzeSentiment,
-      ///  analyzeEntities, and analyzeSyntax provide in one call.
+      /// A convenience method that provides all the features that analyzeSentiment,
+      /// analyzeEntities, and analyzeSyntax provide in one call.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Language.V1.AnnotateTextResponse> AnnotateTextAsync(global::Google.Cloud.Language.V1.AnnotateTextRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AnnotateText, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override LanguageServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new LanguageServiceClient(configuration);
@@ -273,6 +350,7 @@ namespace Google.Cloud.Language.V1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(LanguageServiceBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

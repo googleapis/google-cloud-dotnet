@@ -24,9 +24,9 @@ using Grpc.Core;
 
 namespace Google.Cloud.Logging.V2 {
   /// <summary>
-  ///  Service for ingesting and querying logs.
+  /// Service for ingesting and querying logs.
   /// </summary>
-  public static class LoggingServiceV2
+  public static partial class LoggingServiceV2
   {
     static readonly string __ServiceName = "google.logging.v2.LoggingServiceV2";
 
@@ -83,49 +83,64 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Base class for server-side implementations of LoggingServiceV2</summary>
-    public abstract class LoggingServiceV2Base
+    public abstract partial class LoggingServiceV2Base
     {
       /// <summary>
-      ///  Deletes all the log entries in a log.
-      ///  The log reappears if it receives new entries.
+      /// Deletes all the log entries in a log.
+      /// The log reappears if it receives new entries.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
+      /// Writes log entries to Stackdriver Logging.  All log entries are
+      /// written by this method.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from
-      ///  Stackdriver Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries from
+      /// Stackdriver Logging.  For ways to export log entries, see
+      /// [Exporting Logs](/logging/docs/export).
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Lists the descriptors for monitored resource types used by Stackdriver
-      ///  Logging.
+      /// Lists the descriptors for monitored resource types used by Stackdriver
+      /// Logging.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Lists the logs in projects or organizations.
-      ///  Only logs that have entries are listed.
+      /// Lists the logs in projects or organizations.
+      /// Only logs that have entries are listed.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -134,7 +149,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Client for LoggingServiceV2</summary>
-    public class LoggingServiceV2Client : ClientBase<LoggingServiceV2Client>
+    public partial class LoggingServiceV2Client : ClientBase<LoggingServiceV2Client>
     {
       /// <summary>Creates a new client for LoggingServiceV2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -157,169 +172,250 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      ///  Deletes all the log entries in a log.
-      ///  The log reappears if it receives new entries.
+      /// Deletes all the log entries in a log.
+      /// The log reappears if it receives new entries.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteLog(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes all the log entries in a log.
-      ///  The log reappears if it receives new entries.
+      /// Deletes all the log entries in a log.
+      /// The log reappears if it receives new entries.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLog(global::Google.Cloud.Logging.V2.DeleteLogRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteLog, null, options, request);
       }
       /// <summary>
-      ///  Deletes all the log entries in a log.
-      ///  The log reappears if it receives new entries.
+      /// Deletes all the log entries in a log.
+      /// The log reappears if it receives new entries.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Cloud.Logging.V2.DeleteLogRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteLogAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes all the log entries in a log.
-      ///  The log reappears if it receives new entries.
+      /// Deletes all the log entries in a log.
+      /// The log reappears if it receives new entries.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogAsync(global::Google.Cloud.Logging.V2.DeleteLogRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLog, null, options, request);
       }
       /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
+      /// Writes log entries to Stackdriver Logging.  All log entries are
+      /// written by this method.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return WriteLogEntries(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
+      /// Writes log entries to Stackdriver Logging.  All log entries are
+      /// written by this method.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.WriteLogEntriesResponse WriteLogEntries(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_WriteLogEntries, null, options, request);
       }
       /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
+      /// Writes log entries to Stackdriver Logging.  All log entries are
+      /// written by this method.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return WriteLogEntriesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Writes log entries to Stackdriver Logging.  All log entries are
-      ///  written by this method.
+      /// Writes log entries to Stackdriver Logging.  All log entries are
+      /// written by this method.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.WriteLogEntriesResponse> WriteLogEntriesAsync(global::Google.Cloud.Logging.V2.WriteLogEntriesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_WriteLogEntries, null, options, request);
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from
-      ///  Stackdriver Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries from
+      /// Stackdriver Logging.  For ways to export log entries, see
+      /// [Exporting Logs](/logging/docs/export).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListLogEntries(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from
-      ///  Stackdriver Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries from
+      /// Stackdriver Logging.  For ways to export log entries, see
+      /// [Exporting Logs](/logging/docs/export).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListLogEntriesResponse ListLogEntries(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListLogEntries, null, options, request);
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from
-      ///  Stackdriver Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries from
+      /// Stackdriver Logging.  For ways to export log entries, see
+      /// [Exporting Logs](/logging/docs/export).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListLogEntriesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists log entries.  Use this method to retrieve log entries from
-      ///  Stackdriver Logging.  For ways to export log entries, see
-      ///  [Exporting Logs](/logging/docs/export).
+      /// Lists log entries.  Use this method to retrieve log entries from
+      /// Stackdriver Logging.  For ways to export log entries, see
+      /// [Exporting Logs](/logging/docs/export).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogEntriesResponse> ListLogEntriesAsync(global::Google.Cloud.Logging.V2.ListLogEntriesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogEntries, null, options, request);
       }
       /// <summary>
-      ///  Lists the descriptors for monitored resource types used by Stackdriver
-      ///  Logging.
+      /// Lists the descriptors for monitored resource types used by Stackdriver
+      /// Logging.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the descriptors for monitored resource types used by Stackdriver
-      ///  Logging.
+      /// Lists the descriptors for monitored resource types used by Stackdriver
+      /// Logging.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Lists the descriptors for monitored resource types used by Stackdriver
-      ///  Logging.
+      /// Lists the descriptors for monitored resource types used by Stackdriver
+      /// Logging.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the descriptors for monitored resource types used by Stackdriver
-      ///  Logging.
+      /// Lists the descriptors for monitored resource types used by Stackdriver
+      /// Logging.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Logging.V2.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Lists the logs in projects or organizations.
-      ///  Only logs that have entries are listed.
+      /// Lists the logs in projects or organizations.
+      /// Only logs that have entries are listed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListLogs(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the logs in projects or organizations.
-      ///  Only logs that have entries are listed.
+      /// Lists the logs in projects or organizations.
+      /// Only logs that have entries are listed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListLogsResponse ListLogs(global::Google.Cloud.Logging.V2.ListLogsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListLogs, null, options, request);
       }
       /// <summary>
-      ///  Lists the logs in projects or organizations.
-      ///  Only logs that have entries are listed.
+      /// Lists the logs in projects or organizations.
+      /// Only logs that have entries are listed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListLogsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the logs in projects or organizations.
-      ///  Only logs that have entries are listed.
+      /// Lists the logs in projects or organizations.
+      /// Only logs that have entries are listed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogsResponse> ListLogsAsync(global::Google.Cloud.Logging.V2.ListLogsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogs, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override LoggingServiceV2Client NewInstance(ClientBaseConfiguration configuration)
       {
         return new LoggingServiceV2Client(configuration);
@@ -327,6 +423,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(LoggingServiceV2Base serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

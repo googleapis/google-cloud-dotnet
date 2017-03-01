@@ -24,14 +24,14 @@ using Grpc.Core;
 
 namespace Google.Cloud.Datastore.V1 {
   /// <summary>
-  ///  Each RPC normalizes the partition IDs of the keys in its input entities,
-  ///  and always returns entities with keys with normalized partition IDs.
-  ///  This applies to all keys and entities, including those in values, except keys
-  ///  with both an empty path and an empty or unset partition ID. Normalization of
-  ///  input keys sets the project ID (if not already set) to the project ID from
-  ///  the request.
+  /// Each RPC normalizes the partition IDs of the keys in its input entities,
+  /// and always returns entities with keys with normalized partition IDs.
+  /// This applies to all keys and entities, including those in values, except keys
+  /// with both an empty path and an empty or unset partition ID. Normalization of
+  /// input keys sets the project ID (if not already set) to the project ID from
+  /// the request.
   /// </summary>
-  public static class Datastore
+  public static partial class Datastore
   {
     static readonly string __ServiceName = "google.datastore.v1.Datastore";
 
@@ -97,53 +97,71 @@ namespace Google.Cloud.Datastore.V1 {
     }
 
     /// <summary>Base class for server-side implementations of Datastore</summary>
-    public abstract class DatastoreBase
+    public abstract partial class DatastoreBase
     {
       /// <summary>
-      ///  Looks up entities by key.
+      /// Looks up entities by key.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.LookupResponse> Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Queries for entities.
+      /// Queries for entities.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Begins a new transaction.
+      /// Begins a new transaction.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
+      /// Commits a transaction, optionally creating, deleting or modifying some
+      /// entities.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.CommitResponse> Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Rolls back a transaction.
+      /// Rolls back a transaction.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.RollbackResponse> Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
+      /// Allocates IDs for the given keys, which is useful for referencing an entity
+      /// before it is inserted.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -152,7 +170,7 @@ namespace Google.Cloud.Datastore.V1 {
     }
 
     /// <summary>Client for Datastore</summary>
-    public class DatastoreClient : ClientBase<DatastoreClient>
+    public partial class DatastoreClient : ClientBase<DatastoreClient>
     {
       /// <summary>Creates a new client for Datastore</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -175,181 +193,278 @@ namespace Google.Cloud.Datastore.V1 {
       }
 
       /// <summary>
-      ///  Looks up entities by key.
+      /// Looks up entities by key.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.LookupResponse Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return Lookup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Looks up entities by key.
+      /// Looks up entities by key.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.LookupResponse Lookup(global::Google.Cloud.Datastore.V1.LookupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Lookup, null, options, request);
       }
       /// <summary>
-      ///  Looks up entities by key.
+      /// Looks up entities by key.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.LookupResponse> LookupAsync(global::Google.Cloud.Datastore.V1.LookupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return LookupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Looks up entities by key.
+      /// Looks up entities by key.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.LookupResponse> LookupAsync(global::Google.Cloud.Datastore.V1.LookupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Lookup, null, options, request);
       }
       /// <summary>
-      ///  Queries for entities.
+      /// Queries for entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.RunQueryResponse RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return RunQuery(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Queries for entities.
+      /// Queries for entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.RunQueryResponse RunQuery(global::Google.Cloud.Datastore.V1.RunQueryRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RunQuery, null, options, request);
       }
       /// <summary>
-      ///  Queries for entities.
+      /// Queries for entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQueryAsync(global::Google.Cloud.Datastore.V1.RunQueryRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return RunQueryAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Queries for entities.
+      /// Queries for entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RunQueryResponse> RunQueryAsync(global::Google.Cloud.Datastore.V1.RunQueryRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RunQuery, null, options, request);
       }
       /// <summary>
-      ///  Begins a new transaction.
+      /// Begins a new transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return BeginTransaction(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Begins a new transaction.
+      /// Begins a new transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.BeginTransactionResponse BeginTransaction(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BeginTransaction, null, options, request);
       }
       /// <summary>
-      ///  Begins a new transaction.
+      /// Begins a new transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return BeginTransactionAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Begins a new transaction.
+      /// Begins a new transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.BeginTransactionResponse> BeginTransactionAsync(global::Google.Cloud.Datastore.V1.BeginTransactionRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BeginTransaction, null, options, request);
       }
       /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
+      /// Commits a transaction, optionally creating, deleting or modifying some
+      /// entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.CommitResponse Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return Commit(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
+      /// Commits a transaction, optionally creating, deleting or modifying some
+      /// entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.CommitResponse Commit(global::Google.Cloud.Datastore.V1.CommitRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Commit, null, options, request);
       }
       /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
+      /// Commits a transaction, optionally creating, deleting or modifying some
+      /// entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Datastore.V1.CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CommitAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Commits a transaction, optionally creating, deleting or modifying some
-      ///  entities.
+      /// Commits a transaction, optionally creating, deleting or modifying some
+      /// entities.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.CommitResponse> CommitAsync(global::Google.Cloud.Datastore.V1.CommitRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Commit, null, options, request);
       }
       /// <summary>
-      ///  Rolls back a transaction.
+      /// Rolls back a transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.RollbackResponse Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return Rollback(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Rolls back a transaction.
+      /// Rolls back a transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.RollbackResponse Rollback(global::Google.Cloud.Datastore.V1.RollbackRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Rollback, null, options, request);
       }
       /// <summary>
-      ///  Rolls back a transaction.
+      /// Rolls back a transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RollbackResponse> RollbackAsync(global::Google.Cloud.Datastore.V1.RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return RollbackAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Rolls back a transaction.
+      /// Rolls back a transaction.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.RollbackResponse> RollbackAsync(global::Google.Cloud.Datastore.V1.RollbackRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Rollback, null, options, request);
       }
       /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
+      /// Allocates IDs for the given keys, which is useful for referencing an entity
+      /// before it is inserted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.AllocateIdsResponse AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AllocateIds(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
+      /// Allocates IDs for the given keys, which is useful for referencing an entity
+      /// before it is inserted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Datastore.V1.AllocateIdsResponse AllocateIds(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AllocateIds, null, options, request);
       }
       /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
+      /// Allocates IDs for the given keys, which is useful for referencing an entity
+      /// before it is inserted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIdsAsync(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AllocateIdsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Allocates IDs for the given keys, which is useful for referencing an entity
-      ///  before it is inserted.
+      /// Allocates IDs for the given keys, which is useful for referencing an entity
+      /// before it is inserted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Datastore.V1.AllocateIdsResponse> AllocateIdsAsync(global::Google.Cloud.Datastore.V1.AllocateIdsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AllocateIds, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DatastoreClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DatastoreClient(configuration);
@@ -357,6 +472,7 @@ namespace Google.Cloud.Datastore.V1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(DatastoreBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

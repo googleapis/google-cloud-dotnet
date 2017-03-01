@@ -24,27 +24,27 @@ using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// <summary>
-  ///  Cloud Spanner Instance Admin API
+  /// Cloud Spanner Instance Admin API
   ///
-  ///  The Cloud Spanner Instance Admin API can be used to create, delete,
-  ///  modify and list instances. Instances are dedicated Cloud Spanner serving
-  ///  and storage resources to be used by Cloud Spanner databases.
+  /// The Cloud Spanner Instance Admin API can be used to create, delete,
+  /// modify and list instances. Instances are dedicated Cloud Spanner serving
+  /// and storage resources to be used by Cloud Spanner databases.
   ///
-  ///  Each instance has a "configuration", which dictates where the
-  ///  serving resources for the Cloud Spanner instance are located (e.g.,
-  ///  US-central, Europe). Configurations are created by Google based on
-  ///  resource availability.
+  /// Each instance has a "configuration", which dictates where the
+  /// serving resources for the Cloud Spanner instance are located (e.g.,
+  /// US-central, Europe). Configurations are created by Google based on
+  /// resource availability.
   ///
-  ///  Cloud Spanner billing is based on the instances that exist and their
-  ///  sizes. After an instance exists, there are no additional
-  ///  per-database or per-operation charges for use of the instance
-  ///  (though there may be additional network bandwidth charges).
-  ///  Instances offer isolation: problems with databases in one instance
-  ///  will not affect other instances. However, within an instance
-  ///  databases can affect each other. For example, if one database in an
-  ///  instance receives a lot of requests and consumes most of the
-  ///  instance resources, fewer resources are available for other
-  ///  databases in that instance, and their performance may suffer.
+  /// Cloud Spanner billing is based on the instances that exist and their
+  /// sizes. After an instance exists, there are no additional
+  /// per-database or per-operation charges for use of the instance
+  /// (though there may be additional network bandwidth charges).
+  /// Instances offer isolation: problems with databases in one instance
+  /// will not affect other instances. However, within an instance
+  /// databases can affect each other. For example, if one database in an
+  /// instance receives a lot of requests and consumes most of the
+  /// instance resources, fewer resources are available for other
+  /// databases in that instance, and their performance may suffer.
   /// </summary>
   public static partial class InstanceAdmin
   {
@@ -149,175 +149,205 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     public abstract partial class InstanceAdminBase
     {
       /// <summary>
-      ///  Lists the supported instance configurations for a given project.
+      /// Lists the supported instance configurations for a given project.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets information about a particular instance configuration.
+      /// Gets information about a particular instance configuration.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Lists all instances in the given project.
+      /// Lists all instances in the given project.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets information about a particular instance.
+      /// Gets information about a particular instance.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Creates an instance and begins preparing it to begin serving. The
-      ///  returned [long-running operation][google.longrunning.Operation]
-      ///  can be used to track the progress of preparing the new
-      ///  instance. The instance name is assigned by the caller. If the
-      ///  named instance already exists, `CreateInstance` returns
-      ///  `ALREADY_EXISTS`.
+      /// Creates an instance and begins preparing it to begin serving. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance. The instance name is assigned by the caller. If the
+      /// named instance already exists, `CreateInstance` returns
+      /// `ALREADY_EXISTS`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * The instance is readable via the API, with all requested attributes
-      ///      but no allocated resources. Its state is `CREATING`.
+      ///   * The instance is readable via the API, with all requested attributes
+      ///     but no allocated resources. Its state is `CREATING`.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation renders the instance immediately unreadable
-      ///      via the API.
-      ///    * The instance can be deleted.
-      ///    * All other attempts to modify the instance are rejected.
+      ///   * Cancelling the operation renders the instance immediately unreadable
+      ///     via the API.
+      ///   * The instance can be deleted.
+      ///   * All other attempts to modify the instance are rejected.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing for all successfully-allocated resources begins (some types
-      ///      may have lower than the requested levels).
-      ///    * Databases can be created in the instance.
-      ///    * The instance's allocated resource levels are readable via the API.
-      ///    * The instance's state becomes `READY`.
+      ///   * Billing for all successfully-allocated resources begins (some types
+      ///     may have lower than the requested levels).
+      ///   * Databases can be created in the instance.
+      ///   * The instance's allocated resource levels are readable via the API.
+      ///   * The instance's state becomes `READY`.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track creation of the instance.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track creation of the instance.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Updates an instance, and begins allocating or releasing resources
-      ///  as requested. The returned [long-running
-      ///  operation][google.longrunning.Operation] can be used to track the
-      ///  progress of updating the instance. If the named instance does not
-      ///  exist, returns `NOT_FOUND`.
+      /// Updates an instance, and begins allocating or releasing resources
+      /// as requested. The returned [long-running
+      /// operation][google.longrunning.Operation] can be used to track the
+      /// progress of updating the instance. If the named instance does not
+      /// exist, returns `NOT_FOUND`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * For resource types for which a decrease in the instance's allocation
-      ///      has been requested, billing is based on the newly-requested level.
+      ///   * For resource types for which a decrease in the instance's allocation
+      ///     has been requested, billing is based on the newly-requested level.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation sets its metadata's
-      ///      [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-      ///      restoring resources to their pre-request values. The operation
-      ///      is guaranteed to succeed at undoing all resource changes,
-      ///      after which point it terminates with a `CANCELLED` status.
-      ///    * All other attempts to modify the instance are rejected.
-      ///    * Reading the instance via the API continues to give the pre-request
-      ///      resource levels.
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance are rejected.
+      ///   * Reading the instance via the API continues to give the pre-request
+      ///     resource levels.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing begins for all successfully-allocated resources (some types
-      ///      may have lower than the requested levels).
-      ///    * All newly-reserved resources are available for serving the instance's
-      ///      tables.
-      ///    * The instance's new resource levels are readable via the API.
+      ///   * Billing begins for all successfully-allocated resources (some types
+      ///     may have lower than the requested levels).
+      ///   * All newly-reserved resources are available for serving the instance's
+      ///     tables.
+      ///   * The instance's new resource levels are readable via the API.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track the instance modification.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track the instance modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
-      ///  Authorization requires `spanner.instances.update` permission on
-      ///  resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// Authorization requires `spanner.instances.update` permission on
+      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Deletes an instance.
+      /// Deletes an instance.
       ///
-      ///  Immediately upon completion of the request:
+      /// Immediately upon completion of the request:
       ///
-      ///    * Billing ceases for all of the instance's reserved resources.
+      ///   * Billing ceases for all of the instance's reserved resources.
       ///
-      ///  Soon afterward:
+      /// Soon afterward:
       ///
-      ///    * The instance and *all of its databases* immediately and
-      ///      irrevocably disappear from the API. All data in the databases
-      ///      is permanently deleted.
+      ///   * The instance and *all of its databases* immediately and
+      ///     irrevocably disappear from the API. All data in the databases
+      ///     is permanently deleted.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Sets the access control policy on an instance resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.instances.setIamPolicy` on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.setIamPolicy` on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets the access control policy for an instance resource. Returns an empty
-      ///  policy if an instance exists but does not have a policy set.
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.instances.getIamPolicy` on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.getIamPolicy` on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Returns permissions that the caller has on the specified instance resource.
+      /// Returns permissions that the caller has on the specified instance resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner instance resource will
-      ///  result in a NOT_FOUND error if the user has `spanner.instances.list`
-      ///  permission on the containing Google Cloud Project. Otherwise returns an
-      ///  empty set of permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+      /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+      /// permission on the containing Google Cloud Project. Otherwise returns an
+      /// empty set of permissions.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -349,665 +379,826 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       }
 
       /// <summary>
-      ///  Lists the supported instance configurations for a given project.
+      /// Lists the supported instance configurations for a given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListInstanceConfigs(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the supported instance configurations for a given project.
+      /// Lists the supported instance configurations for a given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstanceConfigs, null, options, request);
       }
       /// <summary>
-      ///  Lists the supported instance configurations for a given project.
+      /// Lists the supported instance configurations for a given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListInstanceConfigsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the supported instance configurations for a given project.
+      /// Lists the supported instance configurations for a given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstanceConfigs, null, options, request);
       }
       /// <summary>
-      ///  Gets information about a particular instance configuration.
+      /// Gets information about a particular instance configuration.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetInstanceConfig(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets information about a particular instance configuration.
+      /// Gets information about a particular instance configuration.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstanceConfig, null, options, request);
       }
       /// <summary>
-      ///  Gets information about a particular instance configuration.
+      /// Gets information about a particular instance configuration.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetInstanceConfigAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets information about a particular instance configuration.
+      /// Gets information about a particular instance configuration.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstanceConfig, null, options, request);
       }
       /// <summary>
-      ///  Lists all instances in the given project.
+      /// Lists all instances in the given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListInstances(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists all instances in the given project.
+      /// Lists all instances in the given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstances, null, options, request);
       }
       /// <summary>
-      ///  Lists all instances in the given project.
+      /// Lists all instances in the given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListInstancesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists all instances in the given project.
+      /// Lists all instances in the given project.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstances, null, options, request);
       }
       /// <summary>
-      ///  Gets information about a particular instance.
+      /// Gets information about a particular instance.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.Instance GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetInstance(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets information about a particular instance.
+      /// Gets information about a particular instance.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.Instance GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstance, null, options, request);
       }
       /// <summary>
-      ///  Gets information about a particular instance.
+      /// Gets information about a particular instance.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets information about a particular instance.
+      /// Gets information about a particular instance.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstance, null, options, request);
       }
       /// <summary>
-      ///  Creates an instance and begins preparing it to begin serving. The
-      ///  returned [long-running operation][google.longrunning.Operation]
-      ///  can be used to track the progress of preparing the new
-      ///  instance. The instance name is assigned by the caller. If the
-      ///  named instance already exists, `CreateInstance` returns
-      ///  `ALREADY_EXISTS`.
+      /// Creates an instance and begins preparing it to begin serving. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance. The instance name is assigned by the caller. If the
+      /// named instance already exists, `CreateInstance` returns
+      /// `ALREADY_EXISTS`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * The instance is readable via the API, with all requested attributes
-      ///      but no allocated resources. Its state is `CREATING`.
+      ///   * The instance is readable via the API, with all requested attributes
+      ///     but no allocated resources. Its state is `CREATING`.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation renders the instance immediately unreadable
-      ///      via the API.
-      ///    * The instance can be deleted.
-      ///    * All other attempts to modify the instance are rejected.
+      ///   * Cancelling the operation renders the instance immediately unreadable
+      ///     via the API.
+      ///   * The instance can be deleted.
+      ///   * All other attempts to modify the instance are rejected.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing for all successfully-allocated resources begins (some types
-      ///      may have lower than the requested levels).
-      ///    * Databases can be created in the instance.
-      ///    * The instance's allocated resource levels are readable via the API.
-      ///    * The instance's state becomes `READY`.
+      ///   * Billing for all successfully-allocated resources begins (some types
+      ///     may have lower than the requested levels).
+      ///   * Databases can be created in the instance.
+      ///   * The instance's allocated resource levels are readable via the API.
+      ///   * The instance's state becomes `READY`.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track creation of the instance.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track creation of the instance.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateInstance(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates an instance and begins preparing it to begin serving. The
-      ///  returned [long-running operation][google.longrunning.Operation]
-      ///  can be used to track the progress of preparing the new
-      ///  instance. The instance name is assigned by the caller. If the
-      ///  named instance already exists, `CreateInstance` returns
-      ///  `ALREADY_EXISTS`.
+      /// Creates an instance and begins preparing it to begin serving. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance. The instance name is assigned by the caller. If the
+      /// named instance already exists, `CreateInstance` returns
+      /// `ALREADY_EXISTS`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * The instance is readable via the API, with all requested attributes
-      ///      but no allocated resources. Its state is `CREATING`.
+      ///   * The instance is readable via the API, with all requested attributes
+      ///     but no allocated resources. Its state is `CREATING`.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation renders the instance immediately unreadable
-      ///      via the API.
-      ///    * The instance can be deleted.
-      ///    * All other attempts to modify the instance are rejected.
+      ///   * Cancelling the operation renders the instance immediately unreadable
+      ///     via the API.
+      ///   * The instance can be deleted.
+      ///   * All other attempts to modify the instance are rejected.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing for all successfully-allocated resources begins (some types
-      ///      may have lower than the requested levels).
-      ///    * Databases can be created in the instance.
-      ///    * The instance's allocated resource levels are readable via the API.
-      ///    * The instance's state becomes `READY`.
+      ///   * Billing for all successfully-allocated resources begins (some types
+      ///     may have lower than the requested levels).
+      ///   * Databases can be created in the instance.
+      ///   * The instance's allocated resource levels are readable via the API.
+      ///   * The instance's state becomes `READY`.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track creation of the instance.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track creation of the instance.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInstance, null, options, request);
       }
       /// <summary>
-      ///  Creates an instance and begins preparing it to begin serving. The
-      ///  returned [long-running operation][google.longrunning.Operation]
-      ///  can be used to track the progress of preparing the new
-      ///  instance. The instance name is assigned by the caller. If the
-      ///  named instance already exists, `CreateInstance` returns
-      ///  `ALREADY_EXISTS`.
+      /// Creates an instance and begins preparing it to begin serving. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance. The instance name is assigned by the caller. If the
+      /// named instance already exists, `CreateInstance` returns
+      /// `ALREADY_EXISTS`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * The instance is readable via the API, with all requested attributes
-      ///      but no allocated resources. Its state is `CREATING`.
+      ///   * The instance is readable via the API, with all requested attributes
+      ///     but no allocated resources. Its state is `CREATING`.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation renders the instance immediately unreadable
-      ///      via the API.
-      ///    * The instance can be deleted.
-      ///    * All other attempts to modify the instance are rejected.
+      ///   * Cancelling the operation renders the instance immediately unreadable
+      ///     via the API.
+      ///   * The instance can be deleted.
+      ///   * All other attempts to modify the instance are rejected.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing for all successfully-allocated resources begins (some types
-      ///      may have lower than the requested levels).
-      ///    * Databases can be created in the instance.
-      ///    * The instance's allocated resource levels are readable via the API.
-      ///    * The instance's state becomes `READY`.
+      ///   * Billing for all successfully-allocated resources begins (some types
+      ///     may have lower than the requested levels).
+      ///   * Databases can be created in the instance.
+      ///   * The instance's allocated resource levels are readable via the API.
+      ///   * The instance's state becomes `READY`.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track creation of the instance.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track creation of the instance.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates an instance and begins preparing it to begin serving. The
-      ///  returned [long-running operation][google.longrunning.Operation]
-      ///  can be used to track the progress of preparing the new
-      ///  instance. The instance name is assigned by the caller. If the
-      ///  named instance already exists, `CreateInstance` returns
-      ///  `ALREADY_EXISTS`.
+      /// Creates an instance and begins preparing it to begin serving. The
+      /// returned [long-running operation][google.longrunning.Operation]
+      /// can be used to track the progress of preparing the new
+      /// instance. The instance name is assigned by the caller. If the
+      /// named instance already exists, `CreateInstance` returns
+      /// `ALREADY_EXISTS`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * The instance is readable via the API, with all requested attributes
-      ///      but no allocated resources. Its state is `CREATING`.
+      ///   * The instance is readable via the API, with all requested attributes
+      ///     but no allocated resources. Its state is `CREATING`.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation renders the instance immediately unreadable
-      ///      via the API.
-      ///    * The instance can be deleted.
-      ///    * All other attempts to modify the instance are rejected.
+      ///   * Cancelling the operation renders the instance immediately unreadable
+      ///     via the API.
+      ///   * The instance can be deleted.
+      ///   * All other attempts to modify the instance are rejected.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing for all successfully-allocated resources begins (some types
-      ///      may have lower than the requested levels).
-      ///    * Databases can be created in the instance.
-      ///    * The instance's allocated resource levels are readable via the API.
-      ///    * The instance's state becomes `READY`.
+      ///   * Billing for all successfully-allocated resources begins (some types
+      ///     may have lower than the requested levels).
+      ///   * Databases can be created in the instance.
+      ///   * The instance's allocated resource levels are readable via the API.
+      ///   * The instance's state becomes `READY`.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track creation of the instance.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track creation of the instance.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInstance, null, options, request);
       }
       /// <summary>
-      ///  Updates an instance, and begins allocating or releasing resources
-      ///  as requested. The returned [long-running
-      ///  operation][google.longrunning.Operation] can be used to track the
-      ///  progress of updating the instance. If the named instance does not
-      ///  exist, returns `NOT_FOUND`.
+      /// Updates an instance, and begins allocating or releasing resources
+      /// as requested. The returned [long-running
+      /// operation][google.longrunning.Operation] can be used to track the
+      /// progress of updating the instance. If the named instance does not
+      /// exist, returns `NOT_FOUND`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * For resource types for which a decrease in the instance's allocation
-      ///      has been requested, billing is based on the newly-requested level.
+      ///   * For resource types for which a decrease in the instance's allocation
+      ///     has been requested, billing is based on the newly-requested level.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation sets its metadata's
-      ///      [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-      ///      restoring resources to their pre-request values. The operation
-      ///      is guaranteed to succeed at undoing all resource changes,
-      ///      after which point it terminates with a `CANCELLED` status.
-      ///    * All other attempts to modify the instance are rejected.
-      ///    * Reading the instance via the API continues to give the pre-request
-      ///      resource levels.
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance are rejected.
+      ///   * Reading the instance via the API continues to give the pre-request
+      ///     resource levels.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing begins for all successfully-allocated resources (some types
-      ///      may have lower than the requested levels).
-      ///    * All newly-reserved resources are available for serving the instance's
-      ///      tables.
-      ///    * The instance's new resource levels are readable via the API.
+      ///   * Billing begins for all successfully-allocated resources (some types
+      ///     may have lower than the requested levels).
+      ///   * All newly-reserved resources are available for serving the instance's
+      ///     tables.
+      ///   * The instance's new resource levels are readable via the API.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track the instance modification.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track the instance modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
-      ///  Authorization requires `spanner.instances.update` permission on
-      ///  resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// Authorization requires `spanner.instances.update` permission on
+      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateInstance(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates an instance, and begins allocating or releasing resources
-      ///  as requested. The returned [long-running
-      ///  operation][google.longrunning.Operation] can be used to track the
-      ///  progress of updating the instance. If the named instance does not
-      ///  exist, returns `NOT_FOUND`.
+      /// Updates an instance, and begins allocating or releasing resources
+      /// as requested. The returned [long-running
+      /// operation][google.longrunning.Operation] can be used to track the
+      /// progress of updating the instance. If the named instance does not
+      /// exist, returns `NOT_FOUND`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * For resource types for which a decrease in the instance's allocation
-      ///      has been requested, billing is based on the newly-requested level.
+      ///   * For resource types for which a decrease in the instance's allocation
+      ///     has been requested, billing is based on the newly-requested level.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation sets its metadata's
-      ///      [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-      ///      restoring resources to their pre-request values. The operation
-      ///      is guaranteed to succeed at undoing all resource changes,
-      ///      after which point it terminates with a `CANCELLED` status.
-      ///    * All other attempts to modify the instance are rejected.
-      ///    * Reading the instance via the API continues to give the pre-request
-      ///      resource levels.
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance are rejected.
+      ///   * Reading the instance via the API continues to give the pre-request
+      ///     resource levels.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing begins for all successfully-allocated resources (some types
-      ///      may have lower than the requested levels).
-      ///    * All newly-reserved resources are available for serving the instance's
-      ///      tables.
-      ///    * The instance's new resource levels are readable via the API.
+      ///   * Billing begins for all successfully-allocated resources (some types
+      ///     may have lower than the requested levels).
+      ///   * All newly-reserved resources are available for serving the instance's
+      ///     tables.
+      ///   * The instance's new resource levels are readable via the API.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track the instance modification.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track the instance modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
-      ///  Authorization requires `spanner.instances.update` permission on
-      ///  resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// Authorization requires `spanner.instances.update` permission on
+      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      ///  Updates an instance, and begins allocating or releasing resources
-      ///  as requested. The returned [long-running
-      ///  operation][google.longrunning.Operation] can be used to track the
-      ///  progress of updating the instance. If the named instance does not
-      ///  exist, returns `NOT_FOUND`.
+      /// Updates an instance, and begins allocating or releasing resources
+      /// as requested. The returned [long-running
+      /// operation][google.longrunning.Operation] can be used to track the
+      /// progress of updating the instance. If the named instance does not
+      /// exist, returns `NOT_FOUND`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * For resource types for which a decrease in the instance's allocation
-      ///      has been requested, billing is based on the newly-requested level.
+      ///   * For resource types for which a decrease in the instance's allocation
+      ///     has been requested, billing is based on the newly-requested level.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation sets its metadata's
-      ///      [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-      ///      restoring resources to their pre-request values. The operation
-      ///      is guaranteed to succeed at undoing all resource changes,
-      ///      after which point it terminates with a `CANCELLED` status.
-      ///    * All other attempts to modify the instance are rejected.
-      ///    * Reading the instance via the API continues to give the pre-request
-      ///      resource levels.
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance are rejected.
+      ///   * Reading the instance via the API continues to give the pre-request
+      ///     resource levels.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing begins for all successfully-allocated resources (some types
-      ///      may have lower than the requested levels).
-      ///    * All newly-reserved resources are available for serving the instance's
-      ///      tables.
-      ///    * The instance's new resource levels are readable via the API.
+      ///   * Billing begins for all successfully-allocated resources (some types
+      ///     may have lower than the requested levels).
+      ///   * All newly-reserved resources are available for serving the instance's
+      ///     tables.
+      ///   * The instance's new resource levels are readable via the API.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track the instance modification.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track the instance modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
-      ///  Authorization requires `spanner.instances.update` permission on
-      ///  resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// Authorization requires `spanner.instances.update` permission on
+      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates an instance, and begins allocating or releasing resources
-      ///  as requested. The returned [long-running
-      ///  operation][google.longrunning.Operation] can be used to track the
-      ///  progress of updating the instance. If the named instance does not
-      ///  exist, returns `NOT_FOUND`.
+      /// Updates an instance, and begins allocating or releasing resources
+      /// as requested. The returned [long-running
+      /// operation][google.longrunning.Operation] can be used to track the
+      /// progress of updating the instance. If the named instance does not
+      /// exist, returns `NOT_FOUND`.
       ///
-      ///  Immediately upon completion of this request:
+      /// Immediately upon completion of this request:
       ///
-      ///    * For resource types for which a decrease in the instance's allocation
-      ///      has been requested, billing is based on the newly-requested level.
+      ///   * For resource types for which a decrease in the instance's allocation
+      ///     has been requested, billing is based on the newly-requested level.
       ///
-      ///  Until completion of the returned operation:
+      /// Until completion of the returned operation:
       ///
-      ///    * Cancelling the operation sets its metadata's
-      ///      [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
-      ///      restoring resources to their pre-request values. The operation
-      ///      is guaranteed to succeed at undoing all resource changes,
-      ///      after which point it terminates with a `CANCELLED` status.
-      ///    * All other attempts to modify the instance are rejected.
-      ///    * Reading the instance via the API continues to give the pre-request
-      ///      resource levels.
+      ///   * Cancelling the operation sets its metadata's
+      ///     [cancel_time][google.spanner.admin.instance.v1.UpdateInstanceMetadata.cancel_time], and begins
+      ///     restoring resources to their pre-request values. The operation
+      ///     is guaranteed to succeed at undoing all resource changes,
+      ///     after which point it terminates with a `CANCELLED` status.
+      ///   * All other attempts to modify the instance are rejected.
+      ///   * Reading the instance via the API continues to give the pre-request
+      ///     resource levels.
       ///
-      ///  Upon completion of the returned operation:
+      /// Upon completion of the returned operation:
       ///
-      ///    * Billing begins for all successfully-allocated resources (some types
-      ///      may have lower than the requested levels).
-      ///    * All newly-reserved resources are available for serving the instance's
-      ///      tables.
-      ///    * The instance's new resource levels are readable via the API.
+      ///   * Billing begins for all successfully-allocated resources (some types
+      ///     may have lower than the requested levels).
+      ///   * All newly-reserved resources are available for serving the instance's
+      ///     tables.
+      ///   * The instance's new resource levels are readable via the API.
       ///
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
-      ///  can be used to track the instance modification.  The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-      ///  The [response][google.longrunning.Operation.response] field type is
-      ///  [Instance][google.spanner.admin.instance.v1.Instance], if successful.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;instance_name>/operations/&lt;operation_id>` and
+      /// can be used to track the instance modification.  The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
+      /// The [response][google.longrunning.Operation.response] field type is
+      /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
       ///
-      ///  Authorization requires `spanner.instances.update` permission on
-      ///  resource [name][google.spanner.admin.instance.v1.Instance.name].
+      /// Authorization requires `spanner.instances.update` permission on
+      /// resource [name][google.spanner.admin.instance.v1.Instance.name].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
       /// <summary>
-      ///  Deletes an instance.
+      /// Deletes an instance.
       ///
-      ///  Immediately upon completion of the request:
+      /// Immediately upon completion of the request:
       ///
-      ///    * Billing ceases for all of the instance's reserved resources.
+      ///   * Billing ceases for all of the instance's reserved resources.
       ///
-      ///  Soon afterward:
+      /// Soon afterward:
       ///
-      ///    * The instance and *all of its databases* immediately and
-      ///      irrevocably disappear from the API. All data in the databases
-      ///      is permanently deleted.
+      ///   * The instance and *all of its databases* immediately and
+      ///     irrevocably disappear from the API. All data in the databases
+      ///     is permanently deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteInstance(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an instance.
+      /// Deletes an instance.
       ///
-      ///  Immediately upon completion of the request:
+      /// Immediately upon completion of the request:
       ///
-      ///    * Billing ceases for all of the instance's reserved resources.
+      ///   * Billing ceases for all of the instance's reserved resources.
       ///
-      ///  Soon afterward:
+      /// Soon afterward:
       ///
-      ///    * The instance and *all of its databases* immediately and
-      ///      irrevocably disappear from the API. All data in the databases
-      ///      is permanently deleted.
+      ///   * The instance and *all of its databases* immediately and
+      ///     irrevocably disappear from the API. All data in the databases
+      ///     is permanently deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInstance, null, options, request);
       }
       /// <summary>
-      ///  Deletes an instance.
+      /// Deletes an instance.
       ///
-      ///  Immediately upon completion of the request:
+      /// Immediately upon completion of the request:
       ///
-      ///    * Billing ceases for all of the instance's reserved resources.
+      ///   * Billing ceases for all of the instance's reserved resources.
       ///
-      ///  Soon afterward:
+      /// Soon afterward:
       ///
-      ///    * The instance and *all of its databases* immediately and
-      ///      irrevocably disappear from the API. All data in the databases
-      ///      is permanently deleted.
+      ///   * The instance and *all of its databases* immediately and
+      ///     irrevocably disappear from the API. All data in the databases
+      ///     is permanently deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an instance.
+      /// Deletes an instance.
       ///
-      ///  Immediately upon completion of the request:
+      /// Immediately upon completion of the request:
       ///
-      ///    * Billing ceases for all of the instance's reserved resources.
+      ///   * Billing ceases for all of the instance's reserved resources.
       ///
-      ///  Soon afterward:
+      /// Soon afterward:
       ///
-      ///    * The instance and *all of its databases* immediately and
-      ///      irrevocably disappear from the API. All data in the databases
-      ///      is permanently deleted.
+      ///   * The instance and *all of its databases* immediately and
+      ///     irrevocably disappear from the API. All data in the databases
+      ///     is permanently deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
       /// <summary>
-      ///  Sets the access control policy on an instance resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.instances.setIamPolicy` on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.setIamPolicy` on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Sets the access control policy on an instance resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.instances.setIamPolicy` on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.setIamPolicy` on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Sets the access control policy on an instance resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.instances.setIamPolicy` on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.setIamPolicy` on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Sets the access control policy on an instance resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on an instance resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.instances.setIamPolicy` on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.setIamPolicy` on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Gets the access control policy for an instance resource. Returns an empty
-      ///  policy if an instance exists but does not have a policy set.
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.instances.getIamPolicy` on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.getIamPolicy` on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the access control policy for an instance resource. Returns an empty
-      ///  policy if an instance exists but does not have a policy set.
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.instances.getIamPolicy` on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.getIamPolicy` on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Gets the access control policy for an instance resource. Returns an empty
-      ///  policy if an instance exists but does not have a policy set.
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.instances.getIamPolicy` on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.getIamPolicy` on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the access control policy for an instance resource. Returns an empty
-      ///  policy if an instance exists but does not have a policy set.
+      /// Gets the access control policy for an instance resource. Returns an empty
+      /// policy if an instance exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.instances.getIamPolicy` on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.instances.getIamPolicy` on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified instance resource.
+      /// Returns permissions that the caller has on the specified instance resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner instance resource will
-      ///  result in a NOT_FOUND error if the user has `spanner.instances.list`
-      ///  permission on the containing Google Cloud Project. Otherwise returns an
-      ///  empty set of permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+      /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+      /// permission on the containing Google Cloud Project. Otherwise returns an
+      /// empty set of permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissions(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified instance resource.
+      /// Returns permissions that the caller has on the specified instance resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner instance resource will
-      ///  result in a NOT_FOUND error if the user has `spanner.instances.list`
-      ///  permission on the containing Google Cloud Project. Otherwise returns an
-      ///  empty set of permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+      /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+      /// permission on the containing Google Cloud Project. Otherwise returns an
+      /// empty set of permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified instance resource.
+      /// Returns permissions that the caller has on the specified instance resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner instance resource will
-      ///  result in a NOT_FOUND error if the user has `spanner.instances.list`
-      ///  permission on the containing Google Cloud Project. Otherwise returns an
-      ///  empty set of permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+      /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+      /// permission on the containing Google Cloud Project. Otherwise returns an
+      /// empty set of permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissionsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified instance resource.
+      /// Returns permissions that the caller has on the specified instance resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner instance resource will
-      ///  result in a NOT_FOUND error if the user has `spanner.instances.list`
-      ///  permission on the containing Google Cloud Project. Otherwise returns an
-      ///  empty set of permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner instance resource will
+      /// result in a NOT_FOUND error if the user has `spanner.instances.list`
+      /// permission on the containing Google Cloud Project. Otherwise returns an
+      /// empty set of permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override InstanceAdminClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new InstanceAdminClient(configuration);
@@ -1015,6 +1206,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(InstanceAdminBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

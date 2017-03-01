@@ -24,7 +24,7 @@ using Grpc.Core;
 
 namespace Google.Cloud.Speech.V1Beta1 {
   /// <summary>
-  ///  Service that implements Google Cloud Speech API.
+  /// Service that implements Google Cloud Speech API.
   /// </summary>
   public static partial class Speech
   {
@@ -65,32 +65,42 @@ namespace Google.Cloud.Speech.V1Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of Speech</summary>
-    public abstract class SpeechBase
+    public abstract partial class SpeechBase
     {
       /// <summary>
-      ///  Perform synchronous speech-recognition: receive results after all audio
-      ///  has been sent and processed.
+      /// Perform synchronous speech-recognition: receive results after all audio
+      /// has been sent and processed.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse> SyncRecognize(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. Returns either an
-      ///  `Operation.error` or an `Operation.response` which contains
-      ///  an `AsyncRecognizeResponse` message.
+      /// Perform asynchronous speech-recognition: receive results via the
+      /// google.longrunning.Operations interface. Returns either an
+      /// `Operation.error` or an `Operation.response` which contains
+      /// an `AsyncRecognizeResponse` message.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Perform bidirectional streaming speech-recognition: receive results while
-      ///  sending audio. This method is only available via the gRPC API (not REST).
+      /// Perform bidirectional streaming speech-recognition: receive results while
+      /// sending audio. This method is only available via the gRPC API (not REST).
       /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
       public virtual global::System.Threading.Tasks.Task StreamingRecognize(IAsyncStreamReader<global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest> requestStream, IServerStreamWriter<global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse> responseStream, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -122,93 +132,132 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
 
       /// <summary>
-      ///  Perform synchronous speech-recognition: receive results after all audio
-      ///  has been sent and processed.
+      /// Perform synchronous speech-recognition: receive results after all audio
+      /// has been sent and processed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse SyncRecognize(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SyncRecognize(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Perform synchronous speech-recognition: receive results after all audio
-      ///  has been sent and processed.
+      /// Perform synchronous speech-recognition: receive results after all audio
+      /// has been sent and processed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse SyncRecognize(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SyncRecognize, null, options, request);
       }
       /// <summary>
-      ///  Perform synchronous speech-recognition: receive results after all audio
-      ///  has been sent and processed.
+      /// Perform synchronous speech-recognition: receive results after all audio
+      /// has been sent and processed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse> SyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SyncRecognizeAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Perform synchronous speech-recognition: receive results after all audio
-      ///  has been sent and processed.
+      /// Perform synchronous speech-recognition: receive results after all audio
+      /// has been sent and processed.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse> SyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SyncRecognize, null, options, request);
       }
       /// <summary>
-      ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. Returns either an
-      ///  `Operation.error` or an `Operation.response` which contains
-      ///  an `AsyncRecognizeResponse` message.
+      /// Perform asynchronous speech-recognition: receive results via the
+      /// google.longrunning.Operations interface. Returns either an
+      /// `Operation.error` or an `Operation.response` which contains
+      /// an `AsyncRecognizeResponse` message.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AsyncRecognize(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. Returns either an
-      ///  `Operation.error` or an `Operation.response` which contains
-      ///  an `AsyncRecognizeResponse` message.
+      /// Perform asynchronous speech-recognition: receive results via the
+      /// google.longrunning.Operations interface. Returns either an
+      /// `Operation.error` or an `Operation.response` which contains
+      /// an `AsyncRecognizeResponse` message.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation AsyncRecognize(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_AsyncRecognize, null, options, request);
       }
       /// <summary>
-      ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. Returns either an
-      ///  `Operation.error` or an `Operation.response` which contains
-      ///  an `AsyncRecognizeResponse` message.
+      /// Perform asynchronous speech-recognition: receive results via the
+      /// google.longrunning.Operations interface. Returns either an
+      /// `Operation.error` or an `Operation.response` which contains
+      /// an `AsyncRecognizeResponse` message.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return AsyncRecognizeAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Perform asynchronous speech-recognition: receive results via the
-      ///  google.longrunning.Operations interface. Returns either an
-      ///  `Operation.error` or an `Operation.response` which contains
-      ///  an `AsyncRecognizeResponse` message.
+      /// Perform asynchronous speech-recognition: receive results via the
+      /// google.longrunning.Operations interface. Returns either an
+      /// `Operation.error` or an `Operation.response` which contains
+      /// an `AsyncRecognizeResponse` message.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> AsyncRecognizeAsync(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AsyncRecognize, null, options, request);
       }
       /// <summary>
-      ///  Perform bidirectional streaming speech-recognition: receive results while
-      ///  sending audio. This method is only available via the gRPC API (not REST).
+      /// Perform bidirectional streaming speech-recognition: receive results while
+      /// sending audio. This method is only available via the gRPC API (not REST).
       /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncDuplexStreamingCall<global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse> StreamingRecognize(Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return StreamingRecognize(new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Perform bidirectional streaming speech-recognition: receive results while
-      ///  sending audio. This method is only available via the gRPC API (not REST).
+      /// Perform bidirectional streaming speech-recognition: receive results while
+      /// sending audio. This method is only available via the gRPC API (not REST).
       /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncDuplexStreamingCall<global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest, global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse> StreamingRecognize(CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamingRecognize, null, options);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override SpeechClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SpeechClient(configuration);
@@ -216,6 +265,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(SpeechBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()
