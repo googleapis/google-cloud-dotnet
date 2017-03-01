@@ -18,7 +18,7 @@ using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-
+using System.Threading.Tasks;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -134,6 +134,23 @@ namespace Google.Cloud.Diagnostics.Common
                 {
                     // This will never return as the condition above will always be false.
                     return default(T);
+                }
+            }
+        }
+
+        /// <inheritdoc />
+        public async Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null)
+        {
+            using (StartSpan(name, options))
+            {
+                try
+                {
+                    return await func();
+                }
+                catch (Exception e) when (SetStackTraceAndReturnFalse(e))
+                {
+                    // This will never return as the condition above will always be false.
+                    return await Task.FromResult(default(T));
                 }
             }
         }

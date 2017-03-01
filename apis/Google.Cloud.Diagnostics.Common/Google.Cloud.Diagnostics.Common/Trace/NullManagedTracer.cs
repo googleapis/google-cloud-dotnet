@@ -15,6 +15,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -56,6 +57,11 @@ namespace Google.Cloud.Diagnostics.Common
         /// Calls <paramref name="func"/> and returns the result.
         /// </summary>
         public T RunInSpan<T>(Func<T> func, string name, StartSpanOptions options = null) => func();
+
+        /// <summary>
+        /// Calls <paramref name="func"/> asynchronously and returns the result.
+        /// </summary>
+        public async Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) => await func();
 
         /// <summary>
         /// Does nothing.
