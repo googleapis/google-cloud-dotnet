@@ -35,7 +35,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>The buffer options for the logger.</summary>
         public BufferOptions BufferOptions { get; }
 
-        /// <summary>Custom labels for log entires.</summary>
+        /// <summary>Custom labels for log entries.</summary>
         public Dictionary<string, string> Labels { get; }
 
         private LoggerOptions(

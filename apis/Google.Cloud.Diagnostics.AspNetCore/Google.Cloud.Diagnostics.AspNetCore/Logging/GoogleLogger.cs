@@ -18,7 +18,6 @@ using Google.Protobuf.WellKnownTypes;
 using Google.Api.Gax;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
