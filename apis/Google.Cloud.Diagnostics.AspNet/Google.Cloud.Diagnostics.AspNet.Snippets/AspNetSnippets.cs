@@ -56,7 +56,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
                 base.Init();
                 string projectId = "[Google Cloud Platform project ID]";
                 // Trace a sampling of incoming Http requests.
-                CloudTrace.Initialize(projectId, this);
+                CloudTrace.Initialize(this, projectId);
             }
         }
         // End sample

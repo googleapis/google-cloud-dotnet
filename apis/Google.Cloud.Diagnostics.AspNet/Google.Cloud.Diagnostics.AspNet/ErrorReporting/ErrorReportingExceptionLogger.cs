@@ -71,7 +71,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
 
             options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = options.CreateConsumer(options.EventTarget?.LogTarget.ProjectId);
+            var consumer = options.CreateConsumer();
             return new ErrorReportingExceptionLogger(consumer, serviceName, version);
         }
 
