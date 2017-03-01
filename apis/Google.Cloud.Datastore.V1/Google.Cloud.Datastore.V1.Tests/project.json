@@ -4,7 +4,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Grpc.Testing": "1.0.0-beta11",
+    "Google.Api.Gax.Grpc.Testing": "1.0.0-beta12",
     "Google.Cloud.ClientTesting": { "target": "project" },
     "Google.Cloud.Datastore.V1": { "target": "project" },
     "xunit": "2.2.0-rc3-build3528",
