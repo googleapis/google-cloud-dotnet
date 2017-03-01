@@ -24,9 +24,9 @@ using Grpc.Core;
 
 namespace Google.Cloud.Logging.V2 {
   /// <summary>
-  ///  Service for configuring logs-based metrics.
+  /// Service for configuring logs-based metrics.
   /// </summary>
-  public static class MetricsServiceV2
+  public static partial class MetricsServiceV2
   {
     static readonly string __ServiceName = "google.logging.v2.MetricsServiceV2";
 
@@ -81,43 +81,58 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Base class for server-side implementations of MetricsServiceV2</summary>
-    public abstract class MetricsServiceV2Base
+    public abstract partial class MetricsServiceV2Base
     {
       /// <summary>
-      ///  Lists logs-based metrics.
+      /// Lists logs-based metrics.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListLogMetricsResponse> ListLogMetrics(global::Google.Cloud.Logging.V2.ListLogMetricsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets a logs-based metric.
+      /// Gets a logs-based metric.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogMetric> GetLogMetric(global::Google.Cloud.Logging.V2.GetLogMetricRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Creates a logs-based metric.
+      /// Creates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogMetric> CreateLogMetric(global::Google.Cloud.Logging.V2.CreateLogMetricRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Creates or updates a logs-based metric.
+      /// Creates or updates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogMetric> UpdateLogMetric(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Deletes a logs-based metric.
+      /// Deletes a logs-based metric.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogMetric(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -126,7 +141,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Client for MetricsServiceV2</summary>
-    public class MetricsServiceV2Client : ClientBase<MetricsServiceV2Client>
+    public partial class MetricsServiceV2Client : ClientBase<MetricsServiceV2Client>
     {
       /// <summary>Creates a new client for MetricsServiceV2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -149,145 +164,226 @@ namespace Google.Cloud.Logging.V2 {
       }
 
       /// <summary>
-      ///  Lists logs-based metrics.
+      /// Lists logs-based metrics.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListLogMetricsResponse ListLogMetrics(global::Google.Cloud.Logging.V2.ListLogMetricsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListLogMetrics(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists logs-based metrics.
+      /// Lists logs-based metrics.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.ListLogMetricsResponse ListLogMetrics(global::Google.Cloud.Logging.V2.ListLogMetricsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListLogMetrics, null, options, request);
       }
       /// <summary>
-      ///  Lists logs-based metrics.
+      /// Lists logs-based metrics.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogMetricsResponse> ListLogMetricsAsync(global::Google.Cloud.Logging.V2.ListLogMetricsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListLogMetricsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists logs-based metrics.
+      /// Lists logs-based metrics.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListLogMetricsResponse> ListLogMetricsAsync(global::Google.Cloud.Logging.V2.ListLogMetricsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListLogMetrics, null, options, request);
       }
       /// <summary>
-      ///  Gets a logs-based metric.
+      /// Gets a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.LogMetric GetLogMetric(global::Google.Cloud.Logging.V2.GetLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetLogMetric(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a logs-based metric.
+      /// Gets a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.LogMetric GetLogMetric(global::Google.Cloud.Logging.V2.GetLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetLogMetric, null, options, request);
       }
       /// <summary>
-      ///  Gets a logs-based metric.
+      /// Gets a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogMetric> GetLogMetricAsync(global::Google.Cloud.Logging.V2.GetLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetLogMetricAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a logs-based metric.
+      /// Gets a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogMetric> GetLogMetricAsync(global::Google.Cloud.Logging.V2.GetLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetLogMetric, null, options, request);
       }
       /// <summary>
-      ///  Creates a logs-based metric.
+      /// Creates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.LogMetric CreateLogMetric(global::Google.Cloud.Logging.V2.CreateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateLogMetric(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a logs-based metric.
+      /// Creates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.LogMetric CreateLogMetric(global::Google.Cloud.Logging.V2.CreateLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateLogMetric, null, options, request);
       }
       /// <summary>
-      ///  Creates a logs-based metric.
+      /// Creates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogMetric> CreateLogMetricAsync(global::Google.Cloud.Logging.V2.CreateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateLogMetricAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a logs-based metric.
+      /// Creates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogMetric> CreateLogMetricAsync(global::Google.Cloud.Logging.V2.CreateLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateLogMetric, null, options, request);
       }
       /// <summary>
-      ///  Creates or updates a logs-based metric.
+      /// Creates or updates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.LogMetric UpdateLogMetric(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateLogMetric(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates or updates a logs-based metric.
+      /// Creates or updates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Logging.V2.LogMetric UpdateLogMetric(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateLogMetric, null, options, request);
       }
       /// <summary>
-      ///  Creates or updates a logs-based metric.
+      /// Creates or updates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogMetric> UpdateLogMetricAsync(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateLogMetricAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates or updates a logs-based metric.
+      /// Creates or updates a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogMetric> UpdateLogMetricAsync(global::Google.Cloud.Logging.V2.UpdateLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateLogMetric, null, options, request);
       }
       /// <summary>
-      ///  Deletes a logs-based metric.
+      /// Deletes a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLogMetric(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteLogMetric(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a logs-based metric.
+      /// Deletes a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteLogMetric(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteLogMetric, null, options, request);
       }
       /// <summary>
-      ///  Deletes a logs-based metric.
+      /// Deletes a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogMetricAsync(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteLogMetricAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a logs-based metric.
+      /// Deletes a logs-based metric.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteLogMetricAsync(global::Google.Cloud.Logging.V2.DeleteLogMetricRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteLogMetric, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override MetricsServiceV2Client NewInstance(ClientBaseConfiguration configuration)
       {
         return new MetricsServiceV2Client(configuration);
@@ -295,6 +391,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(MetricsServiceV2Base serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

@@ -24,12 +24,12 @@ using Grpc.Core;
 
 namespace Google.Cloud.Spanner.V1 {
   /// <summary>
-  ///  Cloud Spanner API
+  /// Cloud Spanner API
   ///
-  ///  The Cloud Spanner API can be used to manage sessions and execute
-  ///  transactions on data stored in Cloud Spanner databases.
+  /// The Cloud Spanner API can be used to manage sessions and execute
+  /// transactions on data stored in Cloud Spanner databases.
   /// </summary>
-  public static class Spanner
+  public static partial class Spanner
   {
     static readonly string __ServiceName = "google.spanner.v1.Spanner";
 
@@ -125,150 +125,182 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     /// <summary>Base class for server-side implementations of Spanner</summary>
-    public abstract class SpannerBase
+    public abstract partial class SpannerBase
     {
       /// <summary>
-      ///  Creates a new session. A session can be used to perform
-      ///  transactions that read and/or modify data in a Cloud Spanner database.
-      ///  Sessions are meant to be reused for many consecutive
-      ///  transactions.
+      /// Creates a new session. A session can be used to perform
+      /// transactions that read and/or modify data in a Cloud Spanner database.
+      /// Sessions are meant to be reused for many consecutive
+      /// transactions.
       ///
-      ///  Sessions can only execute one transaction at a time. To execute
-      ///  multiple concurrent read-write/write-only transactions, create
-      ///  multiple sessions. Note that standalone reads and queries use a
-      ///  transaction internally, and count toward the one transaction
-      ///  limit.
+      /// Sessions can only execute one transaction at a time. To execute
+      /// multiple concurrent read-write/write-only transactions, create
+      /// multiple sessions. Note that standalone reads and queries use a
+      /// transaction internally, and count toward the one transaction
+      /// limit.
       ///
-      ///  Cloud Spanner limits the number of sessions that can exist at any given
-      ///  time; thus, it is a good idea to delete idle and/or unneeded sessions.
-      ///  Aside from explicit deletes, Cloud Spanner can delete sessions for which no
-      ///  operations are sent for more than an hour. If a session is deleted,
-      ///  requests to it return `NOT_FOUND`.
+      /// Cloud Spanner limits the number of sessions that can exist at any given
+      /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+      /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+      /// operations are sent for more than an hour. If a session is deleted,
+      /// requests to it return `NOT_FOUND`.
       ///
-      ///  Idle sessions can be kept alive by sending a trivial SQL query
-      ///  periodically, e.g., `"SELECT 1"`.
+      /// Idle sessions can be kept alive by sending a trivial SQL query
+      /// periodically, e.g., `"SELECT 1"`.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.Session> CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets a session. Returns `NOT_FOUND` if the session does not exist.
-      ///  This is mainly useful for determining whether a session is still
-      ///  alive.
+      /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+      /// This is mainly useful for determining whether a session is still
+      /// alive.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.Session> GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Executes an SQL query, returning all rows in a single reply. This
-      ///  method cannot be used to return a result set larger than 10 MiB;
-      ///  if the query yields more data than that, the query fails with
-      ///  a `FAILED_PRECONDITION` error.
+      /// Executes an SQL query, returning all rows in a single reply. This
+      /// method cannot be used to return a result set larger than 10 MiB;
+      /// if the query yields more data than that, the query fails with
+      /// a `FAILED_PRECONDITION` error.
       ///
-      ///  Queries inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Queries inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be fetched in streaming fashion by calling
-      ///  [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+      /// Larger result sets can be fetched in streaming fashion by calling
+      /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
-      ///  set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
-      ///  is no limit on the size of the returned result set. However, no
-      ///  individual row in the result set can exceed 100 MiB, and no
-      ///  column value can exceed 10 MiB.
+      /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+      /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+      /// is no limit on the size of the returned result set. However, no
+      /// individual row in the result set can exceed 100 MiB, and no
+      /// column value can exceed 10 MiB.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
       public virtual global::System.Threading.Tasks.Task ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, IServerStreamWriter<global::Google.Cloud.Spanner.V1.PartialResultSet> responseStream, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Reads rows from the database using key lookups and scans, as a
-      ///  simple key/value style alternative to
-      ///  [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-      ///  return a result set larger than 10 MiB; if the read matches more
-      ///  data than that, the read fails with a `FAILED_PRECONDITION`
-      ///  error.
+      /// Reads rows from the database using key lookups and scans, as a
+      /// simple key/value style alternative to
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+      /// return a result set larger than 10 MiB; if the read matches more
+      /// data than that, the read fails with a `FAILED_PRECONDITION`
+      /// error.
       ///
-      ///  Reads inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Reads inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be yielded in streaming fashion by calling
-      ///  [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+      /// Larger result sets can be yielded in streaming fashion by calling
+      /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.ResultSet> Read(global::Google.Cloud.Spanner.V1.ReadRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
-      ///  stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
-      ///  size of the returned result set. However, no individual row in
-      ///  the result set can exceed 100 MiB, and no column value can exceed
-      ///  10 MiB.
+      /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+      /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+      /// size of the returned result set. However, no individual row in
+      /// the result set can exceed 100 MiB, and no column value can exceed
+      /// 10 MiB.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
       public virtual global::System.Threading.Tasks.Task StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, IServerStreamWriter<global::Google.Cloud.Spanner.V1.PartialResultSet> responseStream, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Begins a new transaction. This step can often be skipped:
-      ///  [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
-      ///  [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
-      ///  side-effect.
+      /// Begins a new transaction. This step can often be skipped:
+      /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+      /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+      /// side-effect.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.Transaction> BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Commits a transaction. The request includes the mutations to be
-      ///  applied to rows in the database.
+      /// Commits a transaction. The request includes the mutations to be
+      /// applied to rows in the database.
       ///
-      ///  `Commit` might return an `ABORTED` error. This can occur at any time;
-      ///  commonly, the cause is conflicts with concurrent
-      ///  transactions. However, it can also happen for a variety of other
-      ///  reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
-      ///  the transaction from the beginning, re-using the same session.
+      /// `Commit` might return an `ABORTED` error. This can occur at any time;
+      /// commonly, the cause is conflicts with concurrent
+      /// transactions. However, it can also happen for a variety of other
+      /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+      /// the transaction from the beginning, re-using the same session.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.V1.CommitResponse> Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Rolls back a transaction, releasing any locks it holds. It is a good
-      ///  idea to call this for any transaction that includes one or more
-      ///  [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-      ///  ultimately decides not to commit.
+      /// Rolls back a transaction, releasing any locks it holds. It is a good
+      /// idea to call this for any transaction that includes one or more
+      /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+      /// ultimately decides not to commit.
       ///
-      ///  `Rollback` returns `OK` if it successfully aborts the transaction, the
-      ///  transaction was already aborted, or the transaction is not
-      ///  found. `Rollback` never returns `ABORTED`.
+      /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+      /// transaction was already aborted, or the transaction is not
+      /// found. `Rollback` never returns `ABORTED`.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -277,7 +309,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     /// <summary>Client for Spanner</summary>
-    public class SpannerClient : ClientBase<SpannerClient>
+    public partial class SpannerClient : ClientBase<SpannerClient>
     {
       /// <summary>Creates a new client for Spanner</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -300,509 +332,654 @@ namespace Google.Cloud.Spanner.V1 {
       }
 
       /// <summary>
-      ///  Creates a new session. A session can be used to perform
-      ///  transactions that read and/or modify data in a Cloud Spanner database.
-      ///  Sessions are meant to be reused for many consecutive
-      ///  transactions.
+      /// Creates a new session. A session can be used to perform
+      /// transactions that read and/or modify data in a Cloud Spanner database.
+      /// Sessions are meant to be reused for many consecutive
+      /// transactions.
       ///
-      ///  Sessions can only execute one transaction at a time. To execute
-      ///  multiple concurrent read-write/write-only transactions, create
-      ///  multiple sessions. Note that standalone reads and queries use a
-      ///  transaction internally, and count toward the one transaction
-      ///  limit.
+      /// Sessions can only execute one transaction at a time. To execute
+      /// multiple concurrent read-write/write-only transactions, create
+      /// multiple sessions. Note that standalone reads and queries use a
+      /// transaction internally, and count toward the one transaction
+      /// limit.
       ///
-      ///  Cloud Spanner limits the number of sessions that can exist at any given
-      ///  time; thus, it is a good idea to delete idle and/or unneeded sessions.
-      ///  Aside from explicit deletes, Cloud Spanner can delete sessions for which no
-      ///  operations are sent for more than an hour. If a session is deleted,
-      ///  requests to it return `NOT_FOUND`.
+      /// Cloud Spanner limits the number of sessions that can exist at any given
+      /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+      /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+      /// operations are sent for more than an hour. If a session is deleted,
+      /// requests to it return `NOT_FOUND`.
       ///
-      ///  Idle sessions can be kept alive by sending a trivial SQL query
-      ///  periodically, e.g., `"SELECT 1"`.
+      /// Idle sessions can be kept alive by sending a trivial SQL query
+      /// periodically, e.g., `"SELECT 1"`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.Session CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateSession(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new session. A session can be used to perform
-      ///  transactions that read and/or modify data in a Cloud Spanner database.
-      ///  Sessions are meant to be reused for many consecutive
-      ///  transactions.
+      /// Creates a new session. A session can be used to perform
+      /// transactions that read and/or modify data in a Cloud Spanner database.
+      /// Sessions are meant to be reused for many consecutive
+      /// transactions.
       ///
-      ///  Sessions can only execute one transaction at a time. To execute
-      ///  multiple concurrent read-write/write-only transactions, create
-      ///  multiple sessions. Note that standalone reads and queries use a
-      ///  transaction internally, and count toward the one transaction
-      ///  limit.
+      /// Sessions can only execute one transaction at a time. To execute
+      /// multiple concurrent read-write/write-only transactions, create
+      /// multiple sessions. Note that standalone reads and queries use a
+      /// transaction internally, and count toward the one transaction
+      /// limit.
       ///
-      ///  Cloud Spanner limits the number of sessions that can exist at any given
-      ///  time; thus, it is a good idea to delete idle and/or unneeded sessions.
-      ///  Aside from explicit deletes, Cloud Spanner can delete sessions for which no
-      ///  operations are sent for more than an hour. If a session is deleted,
-      ///  requests to it return `NOT_FOUND`.
+      /// Cloud Spanner limits the number of sessions that can exist at any given
+      /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+      /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+      /// operations are sent for more than an hour. If a session is deleted,
+      /// requests to it return `NOT_FOUND`.
       ///
-      ///  Idle sessions can be kept alive by sending a trivial SQL query
-      ///  periodically, e.g., `"SELECT 1"`.
+      /// Idle sessions can be kept alive by sending a trivial SQL query
+      /// periodically, e.g., `"SELECT 1"`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.Session CreateSession(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSession, null, options, request);
       }
       /// <summary>
-      ///  Creates a new session. A session can be used to perform
-      ///  transactions that read and/or modify data in a Cloud Spanner database.
-      ///  Sessions are meant to be reused for many consecutive
-      ///  transactions.
+      /// Creates a new session. A session can be used to perform
+      /// transactions that read and/or modify data in a Cloud Spanner database.
+      /// Sessions are meant to be reused for many consecutive
+      /// transactions.
       ///
-      ///  Sessions can only execute one transaction at a time. To execute
-      ///  multiple concurrent read-write/write-only transactions, create
-      ///  multiple sessions. Note that standalone reads and queries use a
-      ///  transaction internally, and count toward the one transaction
-      ///  limit.
+      /// Sessions can only execute one transaction at a time. To execute
+      /// multiple concurrent read-write/write-only transactions, create
+      /// multiple sessions. Note that standalone reads and queries use a
+      /// transaction internally, and count toward the one transaction
+      /// limit.
       ///
-      ///  Cloud Spanner limits the number of sessions that can exist at any given
-      ///  time; thus, it is a good idea to delete idle and/or unneeded sessions.
-      ///  Aside from explicit deletes, Cloud Spanner can delete sessions for which no
-      ///  operations are sent for more than an hour. If a session is deleted,
-      ///  requests to it return `NOT_FOUND`.
+      /// Cloud Spanner limits the number of sessions that can exist at any given
+      /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+      /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+      /// operations are sent for more than an hour. If a session is deleted,
+      /// requests to it return `NOT_FOUND`.
       ///
-      ///  Idle sessions can be kept alive by sending a trivial SQL query
-      ///  periodically, e.g., `"SELECT 1"`.
+      /// Idle sessions can be kept alive by sending a trivial SQL query
+      /// periodically, e.g., `"SELECT 1"`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> CreateSessionAsync(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateSessionAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new session. A session can be used to perform
-      ///  transactions that read and/or modify data in a Cloud Spanner database.
-      ///  Sessions are meant to be reused for many consecutive
-      ///  transactions.
+      /// Creates a new session. A session can be used to perform
+      /// transactions that read and/or modify data in a Cloud Spanner database.
+      /// Sessions are meant to be reused for many consecutive
+      /// transactions.
       ///
-      ///  Sessions can only execute one transaction at a time. To execute
-      ///  multiple concurrent read-write/write-only transactions, create
-      ///  multiple sessions. Note that standalone reads and queries use a
-      ///  transaction internally, and count toward the one transaction
-      ///  limit.
+      /// Sessions can only execute one transaction at a time. To execute
+      /// multiple concurrent read-write/write-only transactions, create
+      /// multiple sessions. Note that standalone reads and queries use a
+      /// transaction internally, and count toward the one transaction
+      /// limit.
       ///
-      ///  Cloud Spanner limits the number of sessions that can exist at any given
-      ///  time; thus, it is a good idea to delete idle and/or unneeded sessions.
-      ///  Aside from explicit deletes, Cloud Spanner can delete sessions for which no
-      ///  operations are sent for more than an hour. If a session is deleted,
-      ///  requests to it return `NOT_FOUND`.
+      /// Cloud Spanner limits the number of sessions that can exist at any given
+      /// time; thus, it is a good idea to delete idle and/or unneeded sessions.
+      /// Aside from explicit deletes, Cloud Spanner can delete sessions for which no
+      /// operations are sent for more than an hour. If a session is deleted,
+      /// requests to it return `NOT_FOUND`.
       ///
-      ///  Idle sessions can be kept alive by sending a trivial SQL query
-      ///  periodically, e.g., `"SELECT 1"`.
+      /// Idle sessions can be kept alive by sending a trivial SQL query
+      /// periodically, e.g., `"SELECT 1"`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> CreateSessionAsync(global::Google.Cloud.Spanner.V1.CreateSessionRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSession, null, options, request);
       }
       /// <summary>
-      ///  Gets a session. Returns `NOT_FOUND` if the session does not exist.
-      ///  This is mainly useful for determining whether a session is still
-      ///  alive.
+      /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+      /// This is mainly useful for determining whether a session is still
+      /// alive.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.Session GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetSession(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a session. Returns `NOT_FOUND` if the session does not exist.
-      ///  This is mainly useful for determining whether a session is still
-      ///  alive.
+      /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+      /// This is mainly useful for determining whether a session is still
+      /// alive.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.Session GetSession(global::Google.Cloud.Spanner.V1.GetSessionRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSession, null, options, request);
       }
       /// <summary>
-      ///  Gets a session. Returns `NOT_FOUND` if the session does not exist.
-      ///  This is mainly useful for determining whether a session is still
-      ///  alive.
+      /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+      /// This is mainly useful for determining whether a session is still
+      /// alive.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> GetSessionAsync(global::Google.Cloud.Spanner.V1.GetSessionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetSessionAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a session. Returns `NOT_FOUND` if the session does not exist.
-      ///  This is mainly useful for determining whether a session is still
-      ///  alive.
+      /// Gets a session. Returns `NOT_FOUND` if the session does not exist.
+      /// This is mainly useful for determining whether a session is still
+      /// alive.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Session> GetSessionAsync(global::Google.Cloud.Spanner.V1.GetSessionRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSession, null, options, request);
       }
       /// <summary>
-      ///  Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteSession(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSession(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSession, null, options, request);
       }
       /// <summary>
-      ///  Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteSessionAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Ends a session, releasing server resources associated with it.
+      /// Ends a session, releasing server resources associated with it.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSessionAsync(global::Google.Cloud.Spanner.V1.DeleteSessionRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSession, null, options, request);
       }
       /// <summary>
-      ///  Executes an SQL query, returning all rows in a single reply. This
-      ///  method cannot be used to return a result set larger than 10 MiB;
-      ///  if the query yields more data than that, the query fails with
-      ///  a `FAILED_PRECONDITION` error.
+      /// Executes an SQL query, returning all rows in a single reply. This
+      /// method cannot be used to return a result set larger than 10 MiB;
+      /// if the query yields more data than that, the query fails with
+      /// a `FAILED_PRECONDITION` error.
       ///
-      ///  Queries inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Queries inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be fetched in streaming fashion by calling
-      ///  [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+      /// Larger result sets can be fetched in streaming fashion by calling
+      /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.ResultSet ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ExecuteSql(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Executes an SQL query, returning all rows in a single reply. This
-      ///  method cannot be used to return a result set larger than 10 MiB;
-      ///  if the query yields more data than that, the query fails with
-      ///  a `FAILED_PRECONDITION` error.
+      /// Executes an SQL query, returning all rows in a single reply. This
+      /// method cannot be used to return a result set larger than 10 MiB;
+      /// if the query yields more data than that, the query fails with
+      /// a `FAILED_PRECONDITION` error.
       ///
-      ///  Queries inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Queries inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be fetched in streaming fashion by calling
-      ///  [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+      /// Larger result sets can be fetched in streaming fashion by calling
+      /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.ResultSet ExecuteSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteSql, null, options, request);
       }
       /// <summary>
-      ///  Executes an SQL query, returning all rows in a single reply. This
-      ///  method cannot be used to return a result set larger than 10 MiB;
-      ///  if the query yields more data than that, the query fails with
-      ///  a `FAILED_PRECONDITION` error.
+      /// Executes an SQL query, returning all rows in a single reply. This
+      /// method cannot be used to return a result set larger than 10 MiB;
+      /// if the query yields more data than that, the query fails with
+      /// a `FAILED_PRECONDITION` error.
       ///
-      ///  Queries inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Queries inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be fetched in streaming fashion by calling
-      ///  [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+      /// Larger result sets can be fetched in streaming fashion by calling
+      /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSqlAsync(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ExecuteSqlAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Executes an SQL query, returning all rows in a single reply. This
-      ///  method cannot be used to return a result set larger than 10 MiB;
-      ///  if the query yields more data than that, the query fails with
-      ///  a `FAILED_PRECONDITION` error.
+      /// Executes an SQL query, returning all rows in a single reply. This
+      /// method cannot be used to return a result set larger than 10 MiB;
+      /// if the query yields more data than that, the query fails with
+      /// a `FAILED_PRECONDITION` error.
       ///
-      ///  Queries inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Queries inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be fetched in streaming fashion by calling
-      ///  [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
+      /// Larger result sets can be fetched in streaming fashion by calling
+      /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ExecuteSqlAsync(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteSql, null, options, request);
       }
       /// <summary>
-      ///  Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
-      ///  set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
-      ///  is no limit on the size of the returned result set. However, no
-      ///  individual row in the result set can exceed 100 MiB, and no
-      ///  column value can exceed 10 MiB.
+      /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+      /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+      /// is no limit on the size of the returned result set. However, no
+      /// individual row in the result set can exceed 100 MiB, and no
+      /// column value can exceed 10 MiB.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ExecuteStreamingSql(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
-      ///  set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
-      ///  is no limit on the size of the returned result set. However, no
-      ///  individual row in the result set can exceed 100 MiB, and no
-      ///  column value can exceed 10 MiB.
+      /// Like [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], except returns the result
+      /// set as a stream. Unlike [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql], there
+      /// is no limit on the size of the returned result set. However, no
+      /// individual row in the result set can exceed 100 MiB, and no
+      /// column value can exceed 10 MiB.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> ExecuteStreamingSql(global::Google.Cloud.Spanner.V1.ExecuteSqlRequest request, CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_ExecuteStreamingSql, null, options, request);
       }
       /// <summary>
-      ///  Reads rows from the database using key lookups and scans, as a
-      ///  simple key/value style alternative to
-      ///  [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-      ///  return a result set larger than 10 MiB; if the read matches more
-      ///  data than that, the read fails with a `FAILED_PRECONDITION`
-      ///  error.
+      /// Reads rows from the database using key lookups and scans, as a
+      /// simple key/value style alternative to
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+      /// return a result set larger than 10 MiB; if the read matches more
+      /// data than that, the read fails with a `FAILED_PRECONDITION`
+      /// error.
       ///
-      ///  Reads inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Reads inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be yielded in streaming fashion by calling
-      ///  [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+      /// Larger result sets can be yielded in streaming fashion by calling
+      /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.ResultSet Read(global::Google.Cloud.Spanner.V1.ReadRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return Read(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Reads rows from the database using key lookups and scans, as a
-      ///  simple key/value style alternative to
-      ///  [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-      ///  return a result set larger than 10 MiB; if the read matches more
-      ///  data than that, the read fails with a `FAILED_PRECONDITION`
-      ///  error.
+      /// Reads rows from the database using key lookups and scans, as a
+      /// simple key/value style alternative to
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+      /// return a result set larger than 10 MiB; if the read matches more
+      /// data than that, the read fails with a `FAILED_PRECONDITION`
+      /// error.
       ///
-      ///  Reads inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Reads inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be yielded in streaming fashion by calling
-      ///  [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+      /// Larger result sets can be yielded in streaming fashion by calling
+      /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.ResultSet Read(global::Google.Cloud.Spanner.V1.ReadRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Read, null, options, request);
       }
       /// <summary>
-      ///  Reads rows from the database using key lookups and scans, as a
-      ///  simple key/value style alternative to
-      ///  [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-      ///  return a result set larger than 10 MiB; if the read matches more
-      ///  data than that, the read fails with a `FAILED_PRECONDITION`
-      ///  error.
+      /// Reads rows from the database using key lookups and scans, as a
+      /// simple key/value style alternative to
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+      /// return a result set larger than 10 MiB; if the read matches more
+      /// data than that, the read fails with a `FAILED_PRECONDITION`
+      /// error.
       ///
-      ///  Reads inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Reads inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be yielded in streaming fashion by calling
-      ///  [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+      /// Larger result sets can be yielded in streaming fashion by calling
+      /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ReadAsync(global::Google.Cloud.Spanner.V1.ReadRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ReadAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Reads rows from the database using key lookups and scans, as a
-      ///  simple key/value style alternative to
-      ///  [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
-      ///  return a result set larger than 10 MiB; if the read matches more
-      ///  data than that, the read fails with a `FAILED_PRECONDITION`
-      ///  error.
+      /// Reads rows from the database using key lookups and scans, as a
+      /// simple key/value style alternative to
+      /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].  This method cannot be used to
+      /// return a result set larger than 10 MiB; if the read matches more
+      /// data than that, the read fails with a `FAILED_PRECONDITION`
+      /// error.
       ///
-      ///  Reads inside read-write transactions might return `ABORTED`. If
-      ///  this occurs, the application should restart the transaction from
-      ///  the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
+      /// Reads inside read-write transactions might return `ABORTED`. If
+      /// this occurs, the application should restart the transaction from
+      /// the beginning. See [Transaction][google.spanner.v1.Transaction] for more details.
       ///
-      ///  Larger result sets can be yielded in streaming fashion by calling
-      ///  [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
+      /// Larger result sets can be yielded in streaming fashion by calling
+      /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead] instead.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.ResultSet> ReadAsync(global::Google.Cloud.Spanner.V1.ReadRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Read, null, options, request);
       }
       /// <summary>
-      ///  Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
-      ///  stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
-      ///  size of the returned result set. However, no individual row in
-      ///  the result set can exceed 100 MiB, and no column value can exceed
-      ///  10 MiB.
+      /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+      /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+      /// size of the returned result set. However, no individual row in
+      /// the result set can exceed 100 MiB, and no column value can exceed
+      /// 10 MiB.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return StreamingRead(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
-      ///  stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
-      ///  size of the returned result set. However, no individual row in
-      ///  the result set can exceed 100 MiB, and no column value can exceed
-      ///  10 MiB.
+      /// Like [Read][google.spanner.v1.Spanner.Read], except returns the result set as a
+      /// stream. Unlike [Read][google.spanner.v1.Spanner.Read], there is no limit on the
+      /// size of the returned result set. However, no individual row in
+      /// the result set can exceed 100 MiB, and no column value can exceed
+      /// 10 MiB.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.PartialResultSet> StreamingRead(global::Google.Cloud.Spanner.V1.ReadRequest request, CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamingRead, null, options, request);
       }
       /// <summary>
-      ///  Begins a new transaction. This step can often be skipped:
-      ///  [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
-      ///  [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
-      ///  side-effect.
+      /// Begins a new transaction. This step can often be skipped:
+      /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+      /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+      /// side-effect.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.Transaction BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return BeginTransaction(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Begins a new transaction. This step can often be skipped:
-      ///  [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
-      ///  [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
-      ///  side-effect.
+      /// Begins a new transaction. This step can often be skipped:
+      /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+      /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+      /// side-effect.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.Transaction BeginTransaction(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BeginTransaction, null, options, request);
       }
       /// <summary>
-      ///  Begins a new transaction. This step can often be skipped:
-      ///  [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
-      ///  [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
-      ///  side-effect.
+      /// Begins a new transaction. This step can often be skipped:
+      /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+      /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+      /// side-effect.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Transaction> BeginTransactionAsync(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return BeginTransactionAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Begins a new transaction. This step can often be skipped:
-      ///  [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
-      ///  [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
-      ///  side-effect.
+      /// Begins a new transaction. This step can often be skipped:
+      /// [Read][google.spanner.v1.Spanner.Read], [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+      /// [Commit][google.spanner.v1.Spanner.Commit] can begin a new transaction as a
+      /// side-effect.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.Transaction> BeginTransactionAsync(global::Google.Cloud.Spanner.V1.BeginTransactionRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BeginTransaction, null, options, request);
       }
       /// <summary>
-      ///  Commits a transaction. The request includes the mutations to be
-      ///  applied to rows in the database.
+      /// Commits a transaction. The request includes the mutations to be
+      /// applied to rows in the database.
       ///
-      ///  `Commit` might return an `ABORTED` error. This can occur at any time;
-      ///  commonly, the cause is conflicts with concurrent
-      ///  transactions. However, it can also happen for a variety of other
-      ///  reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
-      ///  the transaction from the beginning, re-using the same session.
+      /// `Commit` might return an `ABORTED` error. This can occur at any time;
+      /// commonly, the cause is conflicts with concurrent
+      /// transactions. However, it can also happen for a variety of other
+      /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+      /// the transaction from the beginning, re-using the same session.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.CommitResponse Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return Commit(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Commits a transaction. The request includes the mutations to be
-      ///  applied to rows in the database.
+      /// Commits a transaction. The request includes the mutations to be
+      /// applied to rows in the database.
       ///
-      ///  `Commit` might return an `ABORTED` error. This can occur at any time;
-      ///  commonly, the cause is conflicts with concurrent
-      ///  transactions. However, it can also happen for a variety of other
-      ///  reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
-      ///  the transaction from the beginning, re-using the same session.
+      /// `Commit` might return an `ABORTED` error. This can occur at any time;
+      /// commonly, the cause is conflicts with concurrent
+      /// transactions. However, it can also happen for a variety of other
+      /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+      /// the transaction from the beginning, re-using the same session.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.V1.CommitResponse Commit(global::Google.Cloud.Spanner.V1.CommitRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Commit, null, options, request);
       }
       /// <summary>
-      ///  Commits a transaction. The request includes the mutations to be
-      ///  applied to rows in the database.
+      /// Commits a transaction. The request includes the mutations to be
+      /// applied to rows in the database.
       ///
-      ///  `Commit` might return an `ABORTED` error. This can occur at any time;
-      ///  commonly, the cause is conflicts with concurrent
-      ///  transactions. However, it can also happen for a variety of other
-      ///  reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
-      ///  the transaction from the beginning, re-using the same session.
+      /// `Commit` might return an `ABORTED` error. This can occur at any time;
+      /// commonly, the cause is conflicts with concurrent
+      /// transactions. However, it can also happen for a variety of other
+      /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+      /// the transaction from the beginning, re-using the same session.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.CommitResponse> CommitAsync(global::Google.Cloud.Spanner.V1.CommitRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CommitAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Commits a transaction. The request includes the mutations to be
-      ///  applied to rows in the database.
+      /// Commits a transaction. The request includes the mutations to be
+      /// applied to rows in the database.
       ///
-      ///  `Commit` might return an `ABORTED` error. This can occur at any time;
-      ///  commonly, the cause is conflicts with concurrent
-      ///  transactions. However, it can also happen for a variety of other
-      ///  reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
-      ///  the transaction from the beginning, re-using the same session.
+      /// `Commit` might return an `ABORTED` error. This can occur at any time;
+      /// commonly, the cause is conflicts with concurrent
+      /// transactions. However, it can also happen for a variety of other
+      /// reasons. If `Commit` returns `ABORTED`, the caller should re-attempt
+      /// the transaction from the beginning, re-using the same session.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.V1.CommitResponse> CommitAsync(global::Google.Cloud.Spanner.V1.CommitRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Commit, null, options, request);
       }
       /// <summary>
-      ///  Rolls back a transaction, releasing any locks it holds. It is a good
-      ///  idea to call this for any transaction that includes one or more
-      ///  [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-      ///  ultimately decides not to commit.
+      /// Rolls back a transaction, releasing any locks it holds. It is a good
+      /// idea to call this for any transaction that includes one or more
+      /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+      /// ultimately decides not to commit.
       ///
-      ///  `Rollback` returns `OK` if it successfully aborts the transaction, the
-      ///  transaction was already aborted, or the transaction is not
-      ///  found. `Rollback` never returns `ABORTED`.
+      /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+      /// transaction was already aborted, or the transaction is not
+      /// found. `Rollback` never returns `ABORTED`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return Rollback(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Rolls back a transaction, releasing any locks it holds. It is a good
-      ///  idea to call this for any transaction that includes one or more
-      ///  [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-      ///  ultimately decides not to commit.
+      /// Rolls back a transaction, releasing any locks it holds. It is a good
+      /// idea to call this for any transaction that includes one or more
+      /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+      /// ultimately decides not to commit.
       ///
-      ///  `Rollback` returns `OK` if it successfully aborts the transaction, the
-      ///  transaction was already aborted, or the transaction is not
-      ///  found. `Rollback` never returns `ABORTED`.
+      /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+      /// transaction was already aborted, or the transaction is not
+      /// found. `Rollback` never returns `ABORTED`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty Rollback(global::Google.Cloud.Spanner.V1.RollbackRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Rollback, null, options, request);
       }
       /// <summary>
-      ///  Rolls back a transaction, releasing any locks it holds. It is a good
-      ///  idea to call this for any transaction that includes one or more
-      ///  [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-      ///  ultimately decides not to commit.
+      /// Rolls back a transaction, releasing any locks it holds. It is a good
+      /// idea to call this for any transaction that includes one or more
+      /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+      /// ultimately decides not to commit.
       ///
-      ///  `Rollback` returns `OK` if it successfully aborts the transaction, the
-      ///  transaction was already aborted, or the transaction is not
-      ///  found. `Rollback` never returns `ABORTED`.
+      /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+      /// transaction was already aborted, or the transaction is not
+      /// found. `Rollback` never returns `ABORTED`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Spanner.V1.RollbackRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return RollbackAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Rolls back a transaction, releasing any locks it holds. It is a good
-      ///  idea to call this for any transaction that includes one or more
-      ///  [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
-      ///  ultimately decides not to commit.
+      /// Rolls back a transaction, releasing any locks it holds. It is a good
+      /// idea to call this for any transaction that includes one or more
+      /// [Read][google.spanner.v1.Spanner.Read] or [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] requests and
+      /// ultimately decides not to commit.
       ///
-      ///  `Rollback` returns `OK` if it successfully aborts the transaction, the
-      ///  transaction was already aborted, or the transaction is not
-      ///  found. `Rollback` never returns `ABORTED`.
+      /// `Rollback` returns `OK` if it successfully aborts the transaction, the
+      /// transaction was already aborted, or the transaction is not
+      /// found. `Rollback` never returns `ABORTED`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RollbackAsync(global::Google.Cloud.Spanner.V1.RollbackRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Rollback, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override SpannerClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new SpannerClient(configuration);
@@ -810,6 +987,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(SpannerBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

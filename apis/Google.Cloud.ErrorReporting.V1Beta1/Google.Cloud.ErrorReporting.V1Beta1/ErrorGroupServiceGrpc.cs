@@ -24,9 +24,9 @@ using Grpc.Core;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
-  ///  Service for retrieving and updating individual error groups.
+  /// Service for retrieving and updating individual error groups.
   /// </summary>
-  public static class ErrorGroupService
+  public static partial class ErrorGroupService
   {
     static readonly string __ServiceName = "google.devtools.clouderrorreporting.v1beta1.ErrorGroupService";
 
@@ -55,20 +55,26 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     }
 
     /// <summary>Base class for server-side implementations of ErrorGroupService</summary>
-    public abstract class ErrorGroupServiceBase
+    public abstract partial class ErrorGroupServiceBase
     {
       /// <summary>
-      ///  Get the specified group.
+      /// Get the specified group.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> GetGroup(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Replace the data for the specified group.
-      ///  Fails if the group does not exist.
+      /// Replace the data for the specified group.
+      /// Fails if the group does not exist.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> UpdateGroup(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -77,7 +83,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     }
 
     /// <summary>Client for ErrorGroupService</summary>
-    public class ErrorGroupServiceClient : ClientBase<ErrorGroupServiceClient>
+    public partial class ErrorGroupServiceClient : ClientBase<ErrorGroupServiceClient>
     {
       /// <summary>Creates a new client for ErrorGroupService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -100,65 +106,98 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       }
 
       /// <summary>
-      ///  Get the specified group.
+      /// Get the specified group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup GetGroup(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Get the specified group.
+      /// Get the specified group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup GetGroup(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
-      ///  Get the specified group.
+      /// Get the specified group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> GetGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Get the specified group.
+      /// Get the specified group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> GetGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
-      ///  Replace the data for the specified group.
-      ///  Fails if the group does not exist.
+      /// Replace the data for the specified group.
+      /// Fails if the group does not exist.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup UpdateGroup(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Replace the data for the specified group.
-      ///  Fails if the group does not exist.
+      /// Replace the data for the specified group.
+      /// Fails if the group does not exist.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup UpdateGroup(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGroup, null, options, request);
       }
       /// <summary>
-      ///  Replace the data for the specified group.
-      ///  Fails if the group does not exist.
+      /// Replace the data for the specified group.
+      /// Fails if the group does not exist.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> UpdateGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Replace the data for the specified group.
-      ///  Fails if the group does not exist.
+      /// Replace the data for the specified group.
+      /// Fails if the group does not exist.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup> UpdateGroupAsync(global::Google.Cloud.ErrorReporting.V1Beta1.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGroup, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override ErrorGroupServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new ErrorGroupServiceClient(configuration);
@@ -166,6 +205,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(ErrorGroupServiceBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

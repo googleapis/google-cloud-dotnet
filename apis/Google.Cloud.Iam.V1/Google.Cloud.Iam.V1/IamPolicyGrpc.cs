@@ -24,33 +24,33 @@ using Grpc.Core;
 
 namespace Google.Cloud.Iam.V1 {
   /// <summary>
-  ///  ## API Overview
+  /// ## API Overview
   ///
-  ///  Manages Identity and Access Management (IAM) policies.
+  /// Manages Identity and Access Management (IAM) policies.
   ///
-  ///  Any implementation of an API that offers access control features
-  ///  implements the google.iam.v1.IAMPolicy interface.
+  /// Any implementation of an API that offers access control features
+  /// implements the google.iam.v1.IAMPolicy interface.
   ///
-  ///  ## Data model
+  /// ## Data model
   ///
-  ///  Access control is applied when a principal (user or service account), takes
-  ///  some action on a resource exposed by a service. Resources, identified by
-  ///  URI-like names, are the unit of access control specification. Service
-  ///  implementations can choose the granularity of access control and the
-  ///  supported permissions for their resources.
-  ///  For example one database service may allow access control to be
-  ///  specified only at the Table level, whereas another might allow access control
-  ///  to also be specified at the Column level.
+  /// Access control is applied when a principal (user or service account), takes
+  /// some action on a resource exposed by a service. Resources, identified by
+  /// URI-like names, are the unit of access control specification. Service
+  /// implementations can choose the granularity of access control and the
+  /// supported permissions for their resources.
+  /// For example one database service may allow access control to be
+  /// specified only at the Table level, whereas another might allow access control
+  /// to also be specified at the Column level.
   ///
-  ///  ## Policy Structure
+  /// ## Policy Structure
   ///
-  ///  See google.iam.v1.Policy
+  /// See google.iam.v1.Policy
   ///
-  ///  This is intentionally not a CRUD style API because access control policies
-  ///  are created and deleted implicitly with the resources to which they are
-  ///  attached.
+  /// This is intentionally not a CRUD style API because access control policies
+  /// are created and deleted implicitly with the resources to which they are
+  /// attached.
   /// </summary>
-  public static class IAMPolicy
+  public static partial class IAMPolicy
   {
     static readonly string __ServiceName = "google.iam.v1.IAMPolicy";
 
@@ -88,32 +88,41 @@ namespace Google.Cloud.Iam.V1 {
     }
 
     /// <summary>Base class for server-side implementations of IAMPolicy</summary>
-    public abstract class IAMPolicyBase
+    public abstract partial class IAMPolicyBase
     {
       /// <summary>
-      ///  Sets the access control policy on the specified resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on the specified resource. Replaces any
+      /// existing policy.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets the access control policy for a resource.
-      ///  Returns an empty policy if the resource exists and does not have a policy
-      ///  set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists and does not have a policy
+      /// set.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Returns permissions that a caller has on the specified resource.
-      ///  If the resource does not exist, this will return an empty set of
-      ///  permissions, not a NOT_FOUND error.
+      /// Returns permissions that a caller has on the specified resource.
+      /// If the resource does not exist, this will return an empty set of
+      /// permissions, not a NOT_FOUND error.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -122,7 +131,7 @@ namespace Google.Cloud.Iam.V1 {
     }
 
     /// <summary>Client for IAMPolicy</summary>
-    public class IAMPolicyClient : ClientBase<IAMPolicyClient>
+    public partial class IAMPolicyClient : ClientBase<IAMPolicyClient>
     {
       /// <summary>Creates a new client for IAMPolicy</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -145,109 +154,158 @@ namespace Google.Cloud.Iam.V1 {
       }
 
       /// <summary>
-      ///  Sets the access control policy on the specified resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on the specified resource. Replaces any
+      /// existing policy.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Sets the access control policy on the specified resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on the specified resource. Replaces any
+      /// existing policy.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Sets the access control policy on the specified resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on the specified resource. Replaces any
+      /// existing policy.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Sets the access control policy on the specified resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on the specified resource. Replaces any
+      /// existing policy.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Gets the access control policy for a resource.
-      ///  Returns an empty policy if the resource exists and does not have a policy
-      ///  set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists and does not have a policy
+      /// set.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the access control policy for a resource.
-      ///  Returns an empty policy if the resource exists and does not have a policy
-      ///  set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists and does not have a policy
+      /// set.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Gets the access control policy for a resource.
-      ///  Returns an empty policy if the resource exists and does not have a policy
-      ///  set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists and does not have a policy
+      /// set.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the access control policy for a resource.
-      ///  Returns an empty policy if the resource exists and does not have a policy
-      ///  set.
+      /// Gets the access control policy for a resource.
+      /// Returns an empty policy if the resource exists and does not have a policy
+      /// set.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Returns permissions that a caller has on the specified resource.
-      ///  If the resource does not exist, this will return an empty set of
-      ///  permissions, not a NOT_FOUND error.
+      /// Returns permissions that a caller has on the specified resource.
+      /// If the resource does not exist, this will return an empty set of
+      /// permissions, not a NOT_FOUND error.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissions(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns permissions that a caller has on the specified resource.
-      ///  If the resource does not exist, this will return an empty set of
-      ///  permissions, not a NOT_FOUND error.
+      /// Returns permissions that a caller has on the specified resource.
+      /// If the resource does not exist, this will return an empty set of
+      /// permissions, not a NOT_FOUND error.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      ///  Returns permissions that a caller has on the specified resource.
-      ///  If the resource does not exist, this will return an empty set of
-      ///  permissions, not a NOT_FOUND error.
+      /// Returns permissions that a caller has on the specified resource.
+      /// If the resource does not exist, this will return an empty set of
+      /// permissions, not a NOT_FOUND error.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissionsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns permissions that a caller has on the specified resource.
-      ///  If the resource does not exist, this will return an empty set of
-      ///  permissions, not a NOT_FOUND error.
+      /// Returns permissions that a caller has on the specified resource.
+      /// If the resource does not exist, this will return an empty set of
+      /// permissions, not a NOT_FOUND error.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override IAMPolicyClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new IAMPolicyClient(configuration);
@@ -255,6 +313,7 @@ namespace Google.Cloud.Iam.V1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(IAMPolicyBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

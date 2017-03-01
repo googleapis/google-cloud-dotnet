@@ -24,11 +24,11 @@ using Grpc.Core;
 
 namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// <summary>
-  ///  Cloud Spanner Database Admin API
+  /// Cloud Spanner Database Admin API
   ///
-  ///  The Cloud Spanner Database Admin API can be used to create, drop, and
-  ///  list databases. It also enables updating the schema of pre-existing
-  ///  databases.
+  /// The Cloud Spanner Database Admin API can be used to create, drop, and
+  /// list databases. It also enables updating the schema of pre-existing
+  /// databases.
   /// </summary>
   public static partial class DatabaseAdmin
   {
@@ -124,100 +124,127 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public abstract partial class DatabaseAdminBase
     {
       /// <summary>
-      ///  Lists Cloud Spanner databases.
+      /// Lists Cloud Spanner databases.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Creates a new Cloud Spanner database and starts to prepare it for serving.
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
-      ///  can be used to track preparation of the database. The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      ///  [response][google.longrunning.Operation.response] field type is
-      ///  [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
+      /// can be used to track preparation of the database. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets the state of a Cloud Spanner database.
+      /// Gets the state of a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Updates the schema of a Cloud Spanner database by
-      ///  creating/altering/dropping tables, columns, indexes, etc. The returned
-      ///  [long-running operation][google.longrunning.Operation] will have a name of
-      ///  the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
-      ///  track execution of the schema change(s). The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// Updates the schema of a Cloud Spanner database by
+      /// creating/altering/dropping tables, columns, indexes, etc. The returned
+      /// [long-running operation][google.longrunning.Operation] will have a name of
+      /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
+      /// track execution of the schema change(s). The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Drops (aka deletes) a Cloud Spanner database.
+      /// Drops (aka deletes) a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Returns the schema of a Cloud Spanner database as a list of formatted
-      ///  DDL statements. This method does not show pending schema updates, those may
-      ///  be queried using the [Operations][google.longrunning.Operations] API.
+      /// Returns the schema of a Cloud Spanner database as a list of formatted
+      /// DDL statements. This method does not show pending schema updates, those may
+      /// be queried using the [Operations][google.longrunning.Operations] API.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Sets the access control policy on a database resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on a database resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.databases.setIamPolicy` permission on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.setIamPolicy` permission on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets the access control policy for a database resource. Returns an empty
-      ///  policy if a database exists but does not have a policy set.
+      /// Gets the access control policy for a database resource. Returns an empty
+      /// policy if a database exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.databases.getIamPolicy` permission on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.getIamPolicy` permission on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner database will result in
-      ///  a NOT_FOUND error if the user has `spanner.databases.list` permission on
-      ///  the containing Cloud Spanner instance. Otherwise returns an empty set of
-      ///  permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner database will result in
+      /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
+      /// the containing Cloud Spanner instance. Otherwise returns an empty set of
+      /// permissions.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -249,369 +276,514 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       }
 
       /// <summary>
-      ///  Lists Cloud Spanner databases.
+      /// Lists Cloud Spanner databases.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListDatabases(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists Cloud Spanner databases.
+      /// Lists Cloud Spanner databases.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDatabases, null, options, request);
       }
       /// <summary>
-      ///  Lists Cloud Spanner databases.
+      /// Lists Cloud Spanner databases.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListDatabasesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists Cloud Spanner databases.
+      /// Lists Cloud Spanner databases.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatabases, null, options, request);
       }
       /// <summary>
-      ///  Creates a new Cloud Spanner database and starts to prepare it for serving.
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
-      ///  can be used to track preparation of the database. The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      ///  [response][google.longrunning.Operation.response] field type is
-      ///  [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
+      /// can be used to track preparation of the database. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateDatabase(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new Cloud Spanner database and starts to prepare it for serving.
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
-      ///  can be used to track preparation of the database. The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      ///  [response][google.longrunning.Operation.response] field type is
-      ///  [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
+      /// can be used to track preparation of the database. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDatabase, null, options, request);
       }
       /// <summary>
-      ///  Creates a new Cloud Spanner database and starts to prepare it for serving.
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
-      ///  can be used to track preparation of the database. The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      ///  [response][google.longrunning.Operation.response] field type is
-      ///  [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
+      /// can be used to track preparation of the database. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateDatabaseAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new Cloud Spanner database and starts to prepare it for serving.
-      ///  The returned [long-running operation][google.longrunning.Operation] will
-      ///  have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
-      ///  can be used to track preparation of the database. The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
-      ///  [response][google.longrunning.Operation.response] field type is
-      ///  [Database][google.spanner.admin.database.v1.Database], if successful.
+      /// Creates a new Cloud Spanner database and starts to prepare it for serving.
+      /// The returned [long-running operation][google.longrunning.Operation] will
+      /// have a name of the format `&lt;database_name>/operations/&lt;operation_id>` and
+      /// can be used to track preparation of the database. The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [CreateDatabaseMetadata][google.spanner.admin.database.v1.CreateDatabaseMetadata]. The
+      /// [response][google.longrunning.Operation.response] field type is
+      /// [Database][google.spanner.admin.database.v1.Database], if successful.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDatabase, null, options, request);
       }
       /// <summary>
-      ///  Gets the state of a Cloud Spanner database.
+      /// Gets the state of a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Database GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetDatabase(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the state of a Cloud Spanner database.
+      /// Gets the state of a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Database GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDatabase, null, options, request);
       }
       /// <summary>
-      ///  Gets the state of a Cloud Spanner database.
+      /// Gets the state of a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetDatabaseAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the state of a Cloud Spanner database.
+      /// Gets the state of a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatabase, null, options, request);
       }
       /// <summary>
-      ///  Updates the schema of a Cloud Spanner database by
-      ///  creating/altering/dropping tables, columns, indexes, etc. The returned
-      ///  [long-running operation][google.longrunning.Operation] will have a name of
-      ///  the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
-      ///  track execution of the schema change(s). The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// Updates the schema of a Cloud Spanner database by
+      /// creating/altering/dropping tables, columns, indexes, etc. The returned
+      /// [long-running operation][google.longrunning.Operation] will have a name of
+      /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
+      /// track execution of the schema change(s). The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateDatabaseDdl(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates the schema of a Cloud Spanner database by
-      ///  creating/altering/dropping tables, columns, indexes, etc. The returned
-      ///  [long-running operation][google.longrunning.Operation] will have a name of
-      ///  the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
-      ///  track execution of the schema change(s). The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// Updates the schema of a Cloud Spanner database by
+      /// creating/altering/dropping tables, columns, indexes, etc. The returned
+      /// [long-running operation][google.longrunning.Operation] will have a name of
+      /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
+      /// track execution of the schema change(s). The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.LongRunning.Operation UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDatabaseDdl, null, options, request);
       }
       /// <summary>
-      ///  Updates the schema of a Cloud Spanner database by
-      ///  creating/altering/dropping tables, columns, indexes, etc. The returned
-      ///  [long-running operation][google.longrunning.Operation] will have a name of
-      ///  the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
-      ///  track execution of the schema change(s). The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// Updates the schema of a Cloud Spanner database by
+      /// creating/altering/dropping tables, columns, indexes, etc. The returned
+      /// [long-running operation][google.longrunning.Operation] will have a name of
+      /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
+      /// track execution of the schema change(s). The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateDatabaseDdlAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates the schema of a Cloud Spanner database by
-      ///  creating/altering/dropping tables, columns, indexes, etc. The returned
-      ///  [long-running operation][google.longrunning.Operation] will have a name of
-      ///  the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
-      ///  track execution of the schema change(s). The
-      ///  [metadata][google.longrunning.Operation.metadata] field type is
-      ///  [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
+      /// Updates the schema of a Cloud Spanner database by
+      /// creating/altering/dropping tables, columns, indexes, etc. The returned
+      /// [long-running operation][google.longrunning.Operation] will have a name of
+      /// the format `&lt;database_name>/operations/&lt;operation_id>` and can be used to
+      /// track execution of the schema change(s). The
+      /// [metadata][google.longrunning.Operation.metadata] field type is
+      /// [UpdateDatabaseDdlMetadata][google.spanner.admin.database.v1.UpdateDatabaseDdlMetadata].  The operation has no response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDatabaseDdl, null, options, request);
       }
       /// <summary>
-      ///  Drops (aka deletes) a Cloud Spanner database.
+      /// Drops (aka deletes) a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DropDatabase(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Drops (aka deletes) a Cloud Spanner database.
+      /// Drops (aka deletes) a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DropDatabase, null, options, request);
       }
       /// <summary>
-      ///  Drops (aka deletes) a Cloud Spanner database.
+      /// Drops (aka deletes) a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DropDatabaseAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Drops (aka deletes) a Cloud Spanner database.
+      /// Drops (aka deletes) a Cloud Spanner database.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DropDatabase, null, options, request);
       }
       /// <summary>
-      ///  Returns the schema of a Cloud Spanner database as a list of formatted
-      ///  DDL statements. This method does not show pending schema updates, those may
-      ///  be queried using the [Operations][google.longrunning.Operations] API.
+      /// Returns the schema of a Cloud Spanner database as a list of formatted
+      /// DDL statements. This method does not show pending schema updates, those may
+      /// be queried using the [Operations][google.longrunning.Operations] API.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetDatabaseDdl(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns the schema of a Cloud Spanner database as a list of formatted
-      ///  DDL statements. This method does not show pending schema updates, those may
-      ///  be queried using the [Operations][google.longrunning.Operations] API.
+      /// Returns the schema of a Cloud Spanner database as a list of formatted
+      /// DDL statements. This method does not show pending schema updates, those may
+      /// be queried using the [Operations][google.longrunning.Operations] API.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDatabaseDdl, null, options, request);
       }
       /// <summary>
-      ///  Returns the schema of a Cloud Spanner database as a list of formatted
-      ///  DDL statements. This method does not show pending schema updates, those may
-      ///  be queried using the [Operations][google.longrunning.Operations] API.
+      /// Returns the schema of a Cloud Spanner database as a list of formatted
+      /// DDL statements. This method does not show pending schema updates, those may
+      /// be queried using the [Operations][google.longrunning.Operations] API.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetDatabaseDdlAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns the schema of a Cloud Spanner database as a list of formatted
-      ///  DDL statements. This method does not show pending schema updates, those may
-      ///  be queried using the [Operations][google.longrunning.Operations] API.
+      /// Returns the schema of a Cloud Spanner database as a list of formatted
+      /// DDL statements. This method does not show pending schema updates, those may
+      /// be queried using the [Operations][google.longrunning.Operations] API.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatabaseDdl, null, options, request);
       }
       /// <summary>
-      ///  Sets the access control policy on a database resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on a database resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.databases.setIamPolicy` permission on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.setIamPolicy` permission on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Sets the access control policy on a database resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on a database resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.databases.setIamPolicy` permission on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.setIamPolicy` permission on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Sets the access control policy on a database resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on a database resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.databases.setIamPolicy` permission on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.setIamPolicy` permission on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return SetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Sets the access control policy on a database resource. Replaces any
-      ///  existing policy.
+      /// Sets the access control policy on a database resource. Replaces any
+      /// existing policy.
       ///
-      ///  Authorization requires `spanner.databases.setIamPolicy` permission on
-      ///  [resource][google.iam.v1.SetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.setIamPolicy` permission on
+      /// [resource][google.iam.v1.SetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Gets the access control policy for a database resource. Returns an empty
-      ///  policy if a database exists but does not have a policy set.
+      /// Gets the access control policy for a database resource. Returns an empty
+      /// policy if a database exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.databases.getIamPolicy` permission on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.getIamPolicy` permission on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the access control policy for a database resource. Returns an empty
-      ///  policy if a database exists but does not have a policy set.
+      /// Gets the access control policy for a database resource. Returns an empty
+      /// policy if a database exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.databases.getIamPolicy` permission on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.getIamPolicy` permission on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Gets the access control policy for a database resource. Returns an empty
-      ///  policy if a database exists but does not have a policy set.
+      /// Gets the access control policy for a database resource. Returns an empty
+      /// policy if a database exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.databases.getIamPolicy` permission on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.getIamPolicy` permission on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets the access control policy for a database resource. Returns an empty
-      ///  policy if a database exists but does not have a policy set.
+      /// Gets the access control policy for a database resource. Returns an empty
+      /// policy if a database exists but does not have a policy set.
       ///
-      ///  Authorization requires `spanner.databases.getIamPolicy` permission on
-      ///  [resource][google.iam.v1.GetIamPolicyRequest.resource].
+      /// Authorization requires `spanner.databases.getIamPolicy` permission on
+      /// [resource][google.iam.v1.GetIamPolicyRequest.resource].
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner database will result in
-      ///  a NOT_FOUND error if the user has `spanner.databases.list` permission on
-      ///  the containing Cloud Spanner instance. Otherwise returns an empty set of
-      ///  permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner database will result in
+      /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
+      /// the containing Cloud Spanner instance. Otherwise returns an empty set of
+      /// permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissions(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner database will result in
-      ///  a NOT_FOUND error if the user has `spanner.databases.list` permission on
-      ///  the containing Cloud Spanner instance. Otherwise returns an empty set of
-      ///  permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner database will result in
+      /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
+      /// the containing Cloud Spanner instance. Otherwise returns an empty set of
+      /// permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner database will result in
-      ///  a NOT_FOUND error if the user has `spanner.databases.list` permission on
-      ///  the containing Cloud Spanner instance. Otherwise returns an empty set of
-      ///  permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner database will result in
+      /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
+      /// the containing Cloud Spanner instance. Otherwise returns an empty set of
+      /// permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return TestIamPermissionsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Returns permissions that the caller has on the specified database resource.
+      /// Returns permissions that the caller has on the specified database resource.
       ///
-      ///  Attempting this RPC on a non-existent Cloud Spanner database will result in
-      ///  a NOT_FOUND error if the user has `spanner.databases.list` permission on
-      ///  the containing Cloud Spanner instance. Otherwise returns an empty set of
-      ///  permissions.
+      /// Attempting this RPC on a non-existent Cloud Spanner database will result in
+      /// a NOT_FOUND error if the user has `spanner.databases.list` permission on
+      /// the containing Cloud Spanner instance. Otherwise returns an empty set of
+      /// permissions.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override DatabaseAdminClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new DatabaseAdminClient(configuration);
@@ -619,6 +791,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(DatabaseAdminBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

@@ -24,10 +24,10 @@ using Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
-  ///  Manages metric descriptors, monitored resource descriptors, and
-  ///  time series data.
+  /// Manages metric descriptors, monitored resource descriptors, and
+  /// time series data.
   /// </summary>
-  public static class MetricService
+  public static partial class MetricService
   {
     static readonly string __ServiceName = "google.monitoring.v3.MetricService";
 
@@ -109,73 +109,97 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Base class for server-side implementations of MetricService</summary>
-    public abstract class MetricServiceBase
+    public abstract partial class MetricServiceBase
     {
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MetricDescriptor> GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Creates a new metric descriptor.
-      ///  User-created metric descriptors define
-      ///  [custom metrics](/monitoring/custom-metrics).
+      /// Creates a new metric descriptor.
+      /// User-created metric descriptors define
+      /// [custom metrics](/monitoring/custom-metrics).
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Api.MetricDescriptor> CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Deletes a metric descriptor. Only user-created
-      ///  [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// Deletes a metric descriptor. Only user-created
+      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Creates or adds data to one or more time series.
-      ///  The response is empty if all time series in the request were written.
-      ///  If any time series could not be written, a corresponding failure message is
-      ///  included in the error response.
+      /// Creates or adds data to one or more time series.
+      /// The response is empty if all time series in the request were written.
+      /// If any time series could not be written, a corresponding failure message is
+      /// included in the error response.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -184,7 +208,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Client for MetricService</summary>
-    public class MetricServiceClient : ClientBase<MetricServiceClient>
+    public partial class MetricServiceClient : ClientBase<MetricServiceClient>
     {
       /// <summary>Creates a new client for MetricService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -207,253 +231,382 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptors(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse ListMonitoredResourceDescriptors(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMonitoredResourceDescriptorsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse> ListMonitoredResourceDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMonitoredResourceDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMonitoredResourceDescriptor(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Api.MonitoredResourceDescriptor GetMonitoredResourceDescriptor(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMonitoredResourceDescriptorAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
+      /// Gets a single monitored resource descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Api.MonitoredResourceDescriptor> GetMonitoredResourceDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMonitoredResourceDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMetricDescriptors(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse ListMetricDescriptors(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListMetricDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListMetricDescriptorsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
+      /// Lists metric descriptors that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse> ListMetricDescriptorsAsync(global::Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMetricDescriptors, null, options, request);
       }
       /// <summary>
-      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMetricDescriptor(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Api.MetricDescriptor GetMetricDescriptor(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetMetricDescriptorAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single metric descriptor. This method does not require a Stackdriver account.
+      /// Gets a single metric descriptor. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Api.MetricDescriptor> GetMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Creates a new metric descriptor.
-      ///  User-created metric descriptors define
-      ///  [custom metrics](/monitoring/custom-metrics).
+      /// Creates a new metric descriptor.
+      /// User-created metric descriptors define
+      /// [custom metrics](/monitoring/custom-metrics).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Api.MetricDescriptor CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateMetricDescriptor(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new metric descriptor.
-      ///  User-created metric descriptors define
-      ///  [custom metrics](/monitoring/custom-metrics).
+      /// Creates a new metric descriptor.
+      /// User-created metric descriptors define
+      /// [custom metrics](/monitoring/custom-metrics).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Api.MetricDescriptor CreateMetricDescriptor(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Creates a new metric descriptor.
-      ///  User-created metric descriptors define
-      ///  [custom metrics](/monitoring/custom-metrics).
+      /// Creates a new metric descriptor.
+      /// User-created metric descriptors define
+      /// [custom metrics](/monitoring/custom-metrics).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Api.MetricDescriptor> CreateMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateMetricDescriptorAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new metric descriptor.
-      ///  User-created metric descriptors define
-      ///  [custom metrics](/monitoring/custom-metrics).
+      /// Creates a new metric descriptor.
+      /// User-created metric descriptors define
+      /// [custom metrics](/monitoring/custom-metrics).
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Api.MetricDescriptor> CreateMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Deletes a metric descriptor. Only user-created
-      ///  [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// Deletes a metric descriptor. Only user-created
+      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteMetricDescriptor(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a metric descriptor. Only user-created
-      ///  [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// Deletes a metric descriptor. Only user-created
+      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMetricDescriptor(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Deletes a metric descriptor. Only user-created
-      ///  [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// Deletes a metric descriptor. Only user-created
+      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteMetricDescriptorAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes a metric descriptor. Only user-created
-      ///  [custom metrics](/monitoring/custom-metrics) can be deleted.
+      /// Deletes a metric descriptor. Only user-created
+      /// [custom metrics](/monitoring/custom-metrics) can be deleted.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMetricDescriptorAsync(global::Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteMetricDescriptor, null, options, request);
       }
       /// <summary>
-      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListTimeSeries(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse ListTimeSeries(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTimeSeries, null, options, request);
       }
       /// <summary>
-      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListTimeSeriesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists time series that match a filter. This method does not require a Stackdriver account.
+      /// Lists time series that match a filter. This method does not require a Stackdriver account.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListTimeSeriesResponse> ListTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTimeSeries, null, options, request);
       }
       /// <summary>
-      ///  Creates or adds data to one or more time series.
-      ///  The response is empty if all time series in the request were written.
-      ///  If any time series could not be written, a corresponding failure message is
-      ///  included in the error response.
+      /// Creates or adds data to one or more time series.
+      /// The response is empty if all time series in the request were written.
+      /// If any time series could not be written, a corresponding failure message is
+      /// included in the error response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateTimeSeries(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates or adds data to one or more time series.
-      ///  The response is empty if all time series in the request were written.
-      ///  If any time series could not be written, a corresponding failure message is
-      ///  included in the error response.
+      /// Creates or adds data to one or more time series.
+      /// The response is empty if all time series in the request were written.
+      /// If any time series could not be written, a corresponding failure message is
+      /// included in the error response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty CreateTimeSeries(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTimeSeries, null, options, request);
       }
       /// <summary>
-      ///  Creates or adds data to one or more time series.
-      ///  The response is empty if all time series in the request were written.
-      ///  If any time series could not be written, a corresponding failure message is
-      ///  included in the error response.
+      /// Creates or adds data to one or more time series.
+      /// The response is empty if all time series in the request were written.
+      /// If any time series could not be written, a corresponding failure message is
+      /// included in the error response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateTimeSeriesAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates or adds data to one or more time series.
-      ///  The response is empty if all time series in the request were written.
-      ///  If any time series could not be written, a corresponding failure message is
-      ///  included in the error response.
+      /// Creates or adds data to one or more time series.
+      /// The response is empty if all time series in the request were written.
+      /// If any time series could not be written, a corresponding failure message is
+      /// included in the error response.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CreateTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateTimeSeries, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override MetricServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new MetricServiceClient(configuration);
@@ -461,6 +614,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(MetricServiceBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()

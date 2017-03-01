@@ -24,20 +24,20 @@ using Grpc.Core;
 
 namespace Google.Cloud.Monitoring.V3 {
   /// <summary>
-  ///  The Group API lets you inspect and manage your
-  ///  [groups](google.monitoring.v3.Group).
+  /// The Group API lets you inspect and manage your
+  /// [groups](google.monitoring.v3.Group).
   ///
-  ///  A group is a named filter that is used to identify
-  ///  a collection of monitored resources. Groups are typically used to
-  ///  mirror the physical and/or logical topology of the environment.
-  ///  Because group membership is computed dynamically, monitored
-  ///  resources that are started in the future are automatically placed
-  ///  in matching groups. By using a group to name monitored resources in,
-  ///  for example, an alert policy, the target of that alert policy is
-  ///  updated automatically as monitored resources are added and removed
-  ///  from the infrastructure.
+  /// A group is a named filter that is used to identify
+  /// a collection of monitored resources. Groups are typically used to
+  /// mirror the physical and/or logical topology of the environment.
+  /// Because group membership is computed dynamically, monitored
+  /// resources that are started in the future are automatically placed
+  /// in matching groups. By using a group to name monitored resources in,
+  /// for example, an alert policy, the target of that alert policy is
+  /// updated automatically as monitored resources are added and removed
+  /// from the infrastructure.
   /// </summary>
-  public static class GroupService
+  public static partial class GroupService
   {
     static readonly string __ServiceName = "google.monitoring.v3.GroupService";
 
@@ -101,52 +101,70 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Base class for server-side implementations of GroupService</summary>
-    public abstract class GroupServiceBase
+    public abstract partial class GroupServiceBase
     {
       /// <summary>
-      ///  Lists the existing groups.
+      /// Lists the existing groups.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Gets a single group.
+      /// Gets a single group.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.Group> GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Creates a new group.
+      /// Creates a new group.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.Group> CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Updates an existing group.
-      ///  You can change any group attributes except `name`.
+      /// Updates an existing group.
+      /// You can change any group attributes except `name`.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.Group> UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Deletes an existing group.
+      /// Deletes an existing group.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
-      ///  Lists the monitored resources that are members of a group.
+      /// Lists the monitored resources that are members of a group.
       /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
@@ -155,7 +173,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Client for GroupService</summary>
-    public class GroupServiceClient : ClientBase<GroupServiceClient>
+    public partial class GroupServiceClient : ClientBase<GroupServiceClient>
     {
       /// <summary>Creates a new client for GroupService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
@@ -178,177 +196,274 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      ///  Lists the existing groups.
+      /// Lists the existing groups.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroups(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the existing groups.
+      /// Lists the existing groups.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListGroupsResponse ListGroups(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGroups, null, options, request);
       }
       /// <summary>
-      ///  Lists the existing groups.
+      /// Lists the existing groups.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupsAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the existing groups.
+      /// Lists the existing groups.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupsResponse> ListGroupsAsync(global::Google.Cloud.Monitoring.V3.ListGroupsRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGroups, null, options, request);
       }
       /// <summary>
-      ///  Gets a single group.
+      /// Gets a single group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.Group GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single group.
+      /// Gets a single group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.Group GetGroup(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
-      ///  Gets a single group.
+      /// Gets a single group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> GetGroupAsync(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return GetGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Gets a single group.
+      /// Gets a single group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> GetGroupAsync(global::Google.Cloud.Monitoring.V3.GetGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetGroup, null, options, request);
       }
       /// <summary>
-      ///  Creates a new group.
+      /// Creates a new group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.Group CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new group.
+      /// Creates a new group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.Group CreateGroup(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateGroup, null, options, request);
       }
       /// <summary>
-      ///  Creates a new group.
+      /// Creates a new group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> CreateGroupAsync(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return CreateGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Creates a new group.
+      /// Creates a new group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> CreateGroupAsync(global::Google.Cloud.Monitoring.V3.CreateGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateGroup, null, options, request);
       }
       /// <summary>
-      ///  Updates an existing group.
-      ///  You can change any group attributes except `name`.
+      /// Updates an existing group.
+      /// You can change any group attributes except `name`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.Group UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates an existing group.
-      ///  You can change any group attributes except `name`.
+      /// Updates an existing group.
+      /// You can change any group attributes except `name`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.Group UpdateGroup(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateGroup, null, options, request);
       }
       /// <summary>
-      ///  Updates an existing group.
-      ///  You can change any group attributes except `name`.
+      /// Updates an existing group.
+      /// You can change any group attributes except `name`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return UpdateGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Updates an existing group.
-      ///  You can change any group attributes except `name`.
+      /// Updates an existing group.
+      /// You can change any group attributes except `name`.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.Group> UpdateGroupAsync(global::Google.Cloud.Monitoring.V3.UpdateGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateGroup, null, options, request);
       }
       /// <summary>
-      ///  Deletes an existing group.
+      /// Deletes an existing group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteGroup(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an existing group.
+      /// Deletes an existing group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteGroup(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteGroup, null, options, request);
       }
       /// <summary>
-      ///  Deletes an existing group.
+      /// Deletes an existing group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return DeleteGroupAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Deletes an existing group.
+      /// Deletes an existing group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteGroupAsync(global::Google.Cloud.Monitoring.V3.DeleteGroupRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteGroup, null, options, request);
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group.
+      /// Lists the monitored resources that are members of a group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupMembers(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group.
+      /// Lists the monitored resources that are members of a group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
       public virtual global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse ListGroupMembers(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGroupMembers, null, options, request);
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group.
+      /// Lists the monitored resources that are members of a group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
         return ListGroupMembersAsync(request, new CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      ///  Lists the monitored resources that are members of a group.
+      /// Lists the monitored resources that are members of a group.
       /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
       public virtual AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.ListGroupMembersResponse> ListGroupMembersAsync(global::Google.Cloud.Monitoring.V3.ListGroupMembersRequest request, CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGroupMembers, null, options, request);
       }
+      /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override GroupServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new GroupServiceClient(configuration);
@@ -356,6 +471,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
+    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static ServerServiceDefinition BindService(GroupServiceBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()
