@@ -74,6 +74,28 @@ namespace Google.Cloud.Vision.V1.Tests
             {
                 new EntityAnnotation { Description = "Mind the gap" },
                 new EntityAnnotation { Description = "Queue here" }
+            },
+            CropHintsAnnotation = new CropHintsAnnotation {
+                CropHints = {
+                    new CropHint {
+                        BoundingPoly = new BoundingPoly {
+                            Vertices = {
+                                new Vertex { X = 0, Y = 0},
+                                new Vertex { X = 100, Y = 0},
+                                new Vertex { X = 100, Y = 100},
+                                new Vertex { X = 0, Y = 1000}
+                            }
+                        }
+                    }
+                }
+            },
+            WebDetection = new WebDetection
+            {
+                WebEntities = { new WebDetection.Types.WebEntity { Description = "Statue Of Liberty" } }
+            },
+            FullTextAnnotation = new TextAnnotation
+            {
+                Text = "The cat sat on the mat"
             }
         };
         // Image corresponding to s_allAnnotationsResponse.
@@ -154,6 +176,30 @@ namespace Google.Cloud.Vision.V1.Tests
             ImageAnnotatorClient client = new FakeImageAnnotator();
             Assert.Equal(s_allAnnotationsResponse.SafeSearchAnnotation, client.DetectSafeSearch(s_allAnnotationsImage));
             Assert.Equal(s_allAnnotationsResponse.SafeSearchAnnotation, await client.DetectSafeSearchAsync(s_allAnnotationsImage));
+        }
+
+        [Fact]
+        public async Task DetectDocumentText()
+        {
+            ImageAnnotatorClient client = new FakeImageAnnotator();
+            Assert.Equal(s_allAnnotationsResponse.FullTextAnnotation, client.DetectDocumentText(s_allAnnotationsImage));
+            Assert.Equal(s_allAnnotationsResponse.FullTextAnnotation, await client.DetectDocumentTextAsync(s_allAnnotationsImage));
+        }
+
+        [Fact]
+        public async Task DetectCropHints()
+        {
+            ImageAnnotatorClient client = new FakeImageAnnotator();
+            Assert.Equal(s_allAnnotationsResponse.CropHintsAnnotation, client.DetectCropHints(s_allAnnotationsImage));
+            Assert.Equal(s_allAnnotationsResponse.CropHintsAnnotation, await client.DetectCropHintsAsync(s_allAnnotationsImage));
+        }
+
+        [Fact]
+        public async Task DetectWebInformation()
+        {
+            ImageAnnotatorClient client = new FakeImageAnnotator();
+            Assert.Equal(s_allAnnotationsResponse.WebDetection, client.DetectWebInformation(s_allAnnotationsImage));
+            Assert.Equal(s_allAnnotationsResponse.WebDetection, await client.DetectWebInformationAsync(s_allAnnotationsImage));
         }
 
         [Fact]

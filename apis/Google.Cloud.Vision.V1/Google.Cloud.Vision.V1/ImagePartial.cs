@@ -26,21 +26,41 @@ namespace Google.Cloud.Vision.V1
         private static readonly HttpClient s_defaultHttpClient = new HttpClient();
 
         /// <summary>
-        /// Constructs an <see cref="Image"/> with a <see cref="Image.Source"/> property referring to a Google Cloud
-        /// Storage URI.
+        /// Constructs an <see cref="Image"/> with a <see cref="Image.Source"/> property referring to a URI,
+        /// which may either be a Google Cloud Storage URI or a publicly accessible HTTP or HTTPS URI. The
+        /// image is fetched from the URI by the Google Cloud Vision server.
         /// </summary>
-        /// <param name="storageUri">A Google Cloud Storage URI, of the form <c>gs://bucket-name/file-name</c>. Must not be null.</param>
+        /// <param name="uri">The URI of the image, which may either be a Google Cloud Storage URI of the form <c>gs://bucket-name/file-name</c>
+        /// or a publicly accessibly HTTP or HTTPS URI. Must not be null.</param>
         /// <returns>The newly created image.</returns>
-        public static Image FromStorageUri(string storageUri)
+        public static Image FromUri(string uri)
         {
-            GaxPreconditions.CheckNotNull(storageUri, nameof(storageUri));
-            // TODO: Validate that it looks like gs://bucket/object
-            return new Image { Source = new ImageSource { GcsImageUri = storageUri } };
+            GaxPreconditions.CheckNotNull(uri, nameof(uri));
+            return new Image { Source = new ImageSource { ImageUri = uri } };
+        }
+
+        /// <summary>
+        /// Constructs an <see cref="Image"/> with a <see cref="Image.Source"/> property referring to a URI,
+        /// which may either be a Google Cloud Storage URI or a publicly accessible HTTP or HTTPS URI. The
+        /// image is fetched from the URI by the Google Cloud Vision server.
+        /// </summary>
+        /// <param name="uri">The URI of the image, which may either be a Google Cloud Storage URI of the form <c>gs://bucket-name/file-name</c>
+        /// or a publicly accessibly HTTP or HTTPS URI. Must not be null.</param>
+        /// <returns>The newly created image.</returns>
+        public static Image FromUri(Uri uri)
+        {
+            GaxPreconditions.CheckNotNull(uri, nameof(uri));
+            GaxPreconditions.CheckArgument(uri.IsAbsoluteUri, nameof(uri), "URI must be absolute");
+            return new Image { Source = new ImageSource { ImageUri = uri.AbsoluteUri } };
         }
 
         /// <summary>
         /// Asynchronously constructs an <see cref="Image"/> by downloading data from the given URI.
         /// </summary>
+        /// <remarks>
+        /// <para>Unlike <see cref="FromUri(Uri)"/>, this method downloads the image locally then uploads
+        /// it to the Google Cloud Vision server.</para>
+        /// </remarks>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
         /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
         /// <c>null</c> to use a default client.</param>
@@ -56,6 +76,10 @@ namespace Google.Cloud.Vision.V1
         /// <summary>
         /// Asynchronously constructs an <see cref="Image"/> by downloading data from the given URI.
         /// </summary>
+        /// <remarks>
+        /// <para>Unlike <see cref="FromUri(Uri)"/>, this method downloads the image locally then uploads
+        /// it to the Google Cloud Vision server.</para>
+        /// </remarks>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
         /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
         /// <c>null</c> to use a default client.</param>
@@ -73,6 +97,10 @@ namespace Google.Cloud.Vision.V1
         /// <summary>
         /// Constructs an <see cref="Image"/> by downloading data from the given URI.
         /// </summary>
+        /// <remarks>
+        /// <para>Unlike <see cref="FromUri(string)"/>, this method downloads the image locally then uploads
+        /// it to the Google Cloud Vision server.</para>
+        /// </remarks>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
         /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
         /// <c>null</c> to use a default client.</param>
@@ -86,6 +114,10 @@ namespace Google.Cloud.Vision.V1
         /// <summary>
         /// Constructs an <see cref="Image"/> by downloading data from the given URI.
         /// </summary>
+        /// <remarks>
+        /// <para>Unlike <see cref="FromUri(string)"/>, this method downloads the image locally then uploads
+        /// it to the Google Cloud Vision server.</para>
+        /// </remarks>
         /// <param name="uri">The URI to fetch. Must not be null.</param>
         /// <param name="httpClient">The <see cref="HttpClient"/> to use to fetch the image, or
         /// <c>null</c> to use a default client.</param>

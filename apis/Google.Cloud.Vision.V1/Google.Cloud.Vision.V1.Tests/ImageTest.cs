@@ -11,6 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using System;
 using System.IO;
 using System.Threading.Tasks;
 using Xunit;
@@ -20,11 +21,19 @@ namespace Google.Cloud.Vision.V1.Tests
     public class ImageTest
     {
         [Fact]
-        public void FromStorageUri()
+        public void FromUri_String()
         {
             string uri = "gs://bucket/file";
-            var image = Image.FromStorageUri(uri);
-            Assert.Equal(uri, image.Source.GcsImageUri);
+            var image = Image.FromUri(uri);
+            Assert.Equal(uri, image.Source.ImageUri);
+        }
+
+        [Fact]
+        public void FromUri_Uri()
+        {
+            Uri uri = new Uri("https://google.com/someimage.png");
+            var image = Image.FromUri(uri);
+            Assert.Equal("https://google.com/someimage.png", image.Source.ImageUri);
         }
 
         [Fact]

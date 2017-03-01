@@ -47,14 +47,11 @@ namespace Google.Cloud.Vision.V1.Tests
             AddRepeatedFeatures(request, fullResponse, actualResponse, FeatureType.LandmarkDetection, r => r.LandmarkAnnotations);
             AddRepeatedFeatures(request, fullResponse, actualResponse, FeatureType.LogoDetection, r => r.LogoAnnotations);
             AddRepeatedFeatures(request, fullResponse, actualResponse, FeatureType.TextDetection, r => r.TextAnnotations);
-            if (request.Features.Any(f => f.Type == FeatureType.ImageProperties))
-            {
-                actualResponse.ImagePropertiesAnnotation = fullResponse.ImagePropertiesAnnotation;
-            }
-            if (request.Features.Any(f => f.Type == FeatureType.SafeSearchDetection))
-            {
-                actualResponse.SafeSearchAnnotation = fullResponse.SafeSearchAnnotation;
-            }
+            AddSingularFeature(request, fullResponse, actualResponse, FeatureType.CropHints, r => r.CropHintsAnnotation, (r, v) => r.CropHintsAnnotation = v);
+            AddSingularFeature(request, fullResponse, actualResponse, FeatureType.WebDetection, r => r.WebDetection, (r, v) => r.WebDetection = v);
+            AddSingularFeature(request, fullResponse, actualResponse, FeatureType.DocumentTextDetection, r => r.FullTextAnnotation, (r, v) => r.FullTextAnnotation = v);
+            AddSingularFeature(request, fullResponse, actualResponse, FeatureType.SafeSearchDetection, r => r.SafeSearchAnnotation, (r, v) => r.SafeSearchAnnotation = v);
+            AddSingularFeature(request, fullResponse, actualResponse, FeatureType.ImageProperties, r => r.ImagePropertiesAnnotation, (r, v) => r.ImagePropertiesAnnotation = v);
             return actualResponse;
         }
 
@@ -72,6 +69,20 @@ namespace Google.Cloud.Vision.V1.Tests
             }
             var maxEntries = featureRequest.MaxResults == 0 ? int.MaxValue : featureRequest.MaxResults;
             extractor(actualResponse).AddRange(extractor(fullResponse).Take(maxEntries));
+        }
+
+        private static void AddSingularFeature<T>(
+            AnnotateImageRequest request,
+            AnnotateImageResponse fullResponse,
+            AnnotateImageResponse actualResponse,
+            FeatureType featureType,
+            Func<AnnotateImageResponse, T> extractor,
+            Action<AnnotateImageResponse, T> assigner)
+        {
+            if (request.Features.Any(f => f.Type == featureType))
+            {
+                assigner(actualResponse, extractor(fullResponse));
+            }
         }
     }
 }
