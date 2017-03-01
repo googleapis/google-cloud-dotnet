@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// then the project id from the MonitoredResource is retruned.
         /// </term>
         /// <term>
-        /// If the string project id not null and the MonitoredResource does not contain a project id
+        /// If the string project id is null and the MonitoredResource does not contain a project id
         /// then an <see cref="InvalidOperationException"/> is thrown.
         /// </term>
         /// </list>
