@@ -101,8 +101,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 TextPayload = message,
+                Labels = { _loggerOptions.Labels },
             };
-            entry.Labels.Add(_loggerOptions.Labels);
 
             _consumer.Receive(new[] { entry });
         }
