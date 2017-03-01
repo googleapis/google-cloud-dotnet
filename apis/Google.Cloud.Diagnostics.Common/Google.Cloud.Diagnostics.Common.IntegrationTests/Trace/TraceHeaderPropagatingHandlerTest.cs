@@ -25,7 +25,7 @@ using Xunit;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
-namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
+namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 {
     public class TraceHeaderPropagatingHandlerTest
     {
