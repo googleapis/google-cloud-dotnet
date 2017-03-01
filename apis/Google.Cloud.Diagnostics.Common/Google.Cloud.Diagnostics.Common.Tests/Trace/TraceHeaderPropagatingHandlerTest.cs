@@ -57,7 +57,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public async Task SendAsync_Trace()
         {
-
             var mockTracer = GetSetUpTracer();
             var fakeHandler = new FakeDelegatingHandler(headerContext);
             var traceHandler = new TraceHeaderPropagatingHandler(() => mockTracer.Object, fakeHandler);
@@ -65,7 +64,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var requestUri = new Uri("https://www.google.com");
             var requestUriString = requestUri.ToString();
 
-            mockTracer.Setup(t => t.RunInSpan(
+            mockTracer.Setup(t => t.RunInSpanAsync(
                 It.IsAny<Func<Task<HttpResponseMessage>>>(), requestUri.ToString(), null))
                 .Returns(Task.FromResult(new HttpResponseMessage()));
 
