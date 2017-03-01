@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
@@ -89,18 +90,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Adds the needed services for Google Cloud Tracing. Used with <see cref="UseGoogleTrace"/>.
         /// </summary>
         /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+        ///     detected from the platform.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional Trace client, if unset the default will be used.</param>
         public static void AddGoogleTrace(
-            this IServiceCollection services, string projectId,
+            this IServiceCollection services, string projectId = null,
             TraceConfiguration config = null, TraceServiceClient client = null)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
-            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
+
+            // Trace does not use monitored resources, only detect the monitored resource if
+            // a project id is needed.
+            projectId = projectId ?? CommonUtils.GetAndCheckProjectId(
+                projectId, MonitoredResourceBuilder.FromPlatform());
 
             IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
                  new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);

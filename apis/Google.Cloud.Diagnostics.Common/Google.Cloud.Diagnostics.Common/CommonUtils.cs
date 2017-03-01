@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api;
+using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Threading.Tasks;
 
@@ -37,6 +40,57 @@ namespace Google.Cloud.Diagnostics.Common
                 .Assembly
                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                 .InformationalVersion;
+
+        /// <summary>
+        /// Determines the correct project id from a string project id and a <see cref="MonitoredResource"/>.
+        /// <list type="bullet">
+        /// <term>
+        /// If the string project id is not null and the MonitoredResource does not contain a project id
+        /// then the string project id is retruned.
+        /// </term>
+        /// <term>
+        /// If the string project id is not null and the MonitoredResource contains a project id
+        /// then the string project id is retruned.  We do this as the explictly set project id should be
+        /// defaulted too.
+        /// </term>
+        /// <term>
+        /// If the string project id is null and the MonitoredResource does contains a project id
+        /// then the project id from the MonitoredResource is retruned.
+        /// </term>
+        /// <term>
+        /// If the string project id not null and the MonitoredResource does not contain a project id
+        /// then an <see cref="InvalidOperationException"/> is thrown.
+        /// </term>
+        /// </list>
+        /// </summary>
+        /// <param name="projectId">The Google Cloud project ID.  Can be null.</param>
+        /// <param name="monitoredResource">The monitored resource.</param>
+        /// <returns>The Google Cloud project ID.</returns>
+        internal static string GetAndCheckProjectId(string projectId, MonitoredResource monitoredResource)
+        {
+            string resourceProjectId;
+            if (monitoredResource.Labels.TryGetValue("project_id", out resourceProjectId))
+            {
+                if (projectId == null)
+                {
+                    projectId = resourceProjectId;
+                }
+                else if (projectId != resourceProjectId)
+                {
+                    Debug.WriteLine("Google Cloud Platfrom project ID mismatch. " +
+                        $"Project Id parameter '{projectId}' does not match " +
+                        $"resource project ID '{resourceProjectId}' " +
+                        $"Defaulting to project ID parameter '{projectId}'");
+                }
+            }
+
+            if (projectId == null)
+            {
+                throw new InvalidOperationException("No Google Cloud project ID was passed in or detected.");
+            }
+
+            return projectId;
+        }
         
     }
 }

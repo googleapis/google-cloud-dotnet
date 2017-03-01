@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api;
+using System;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -23,6 +25,27 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             Assert.Contains(CommonUtils.AgentName, CommonUtils.AgentNameAndVersion);
             Assert.Contains(CommonUtils.GetVersion(typeof(CommonUtils)), CommonUtils.AgentNameAndVersion);
+        }
+
+        [Fact]
+        public void GetAndCheckProjectId()
+        {
+            var projectId = "pid";
+            var resourceProjectId = "pid";
+            var monitoredResource = new MonitoredResource
+            {
+                Type = "some-type",
+                Labels =
+                {
+                    { "project_id", resourceProjectId }
+                }
+            };
+
+            Assert.Equal(projectId, CommonUtils.GetAndCheckProjectId(projectId, monitoredResource));
+            Assert.Equal(projectId, CommonUtils.GetAndCheckProjectId(projectId, new MonitoredResource()));
+            Assert.Equal(resourceProjectId, CommonUtils.GetAndCheckProjectId(null, monitoredResource));
+            Assert.Throws<InvalidOperationException>(
+                () => CommonUtils.GetAndCheckProjectId(null, new MonitoredResource()));
         }
     }
 }

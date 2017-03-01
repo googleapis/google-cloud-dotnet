@@ -67,14 +67,28 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static ErrorReportingExceptionLogger Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
             GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
             GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
 
             options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = options.CreateConsumer(projectId);
+            var consumer = options.CreateConsumer(options.EventTarget?.LogTarget.ProjectId);
             return new ErrorReportingExceptionLogger(consumer, serviceName, version);
         }
+
+        /// <summary>
+        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/> using credentials as
+        /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
+        /// <para />
+        /// Can be used when running on Google App Engine or Google Compute Engine.
+        /// The Google Cloud Platform project to report error to will detected from the
+        /// current platform.
+        /// </summary>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job. Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. Cannot be null.</param> 
+        ///  <param name="options">Optional, error reporting options.</param>
+        public static ErrorReportingExceptionLogger Create(
+            string serviceName, string version, ErrorReportingOptions options = null) =>
+                Create(null, serviceName, version, options);
 
         internal ErrorReportingExceptionLogger(
             IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)

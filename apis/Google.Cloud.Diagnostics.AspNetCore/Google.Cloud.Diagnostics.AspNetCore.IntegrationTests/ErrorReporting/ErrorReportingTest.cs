@@ -174,7 +174,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         private class ReportToErrorReportingTestApplication : BaseErrorReportingTestApplication
         {
             public override ErrorReportingOptions GetOptions() =>
-                ErrorReportingOptions.Create(EventTarget.ForErrorReporting());
+                ErrorReportingOptions.Create(EventTarget.ForErrorReporting(ProjectId));
         }
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             public const string Service = "service-name";
             public const string Version = "version-id";
-            private readonly string _projectId = Utils.GetProjectIdFromEnvironment();
+            protected readonly string ProjectId = Utils.GetProjectIdFromEnvironment();
 
             public abstract ErrorReportingOptions GetOptions();
 
@@ -205,7 +205,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             public void Configure(IApplicationBuilder app)
             {
-                app.UseGoogleExceptionLogging(_projectId, Service, Version, GetOptions());
+                app.UseGoogleExceptionLogging(ProjectId, Service, Version, GetOptions());
 
                 app.UseMvc(routes =>
                 {

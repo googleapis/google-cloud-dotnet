@@ -45,13 +45,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Adds a <see cref="GoogleLoggerProvider"/> for <see cref="GoogleLogger"/>s.
         /// </summary>
         /// <param name="factory">The logger factory. Cannot be null.</param>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+        ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
         /// <param name="client">Optional, logging client.</param>
-        public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId,
+        public static ILoggerFactory AddGoogle(this ILoggerFactory factory, string projectId = null,
             LoggerOptions options = null, LoggingServiceV2Client client = null)
         {
-            GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            options = options ?? LoggerOptions.Create();
+            projectId = CommonUtils.GetAndCheckProjectId(projectId, options.MonitoredResource);
             return factory.AddGoogle(LogTarget.ForProject(projectId), options, client);
         }
 
