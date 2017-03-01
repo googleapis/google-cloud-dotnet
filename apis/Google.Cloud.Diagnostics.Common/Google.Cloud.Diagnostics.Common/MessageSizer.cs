@@ -17,7 +17,7 @@ namespace Google.Cloud.Diagnostics.Common
 {
     internal static class MessageSizer<T> where T : IMessage
     {
-        /// <summary>Gets the size of a <see cref="T"/> in bytes.</summary>
+        /// <summary>Gets the size of a <c>T</c> in bytes.</summary>
         public static int GetSize(T item) => item.CalculateSize();
     }
 }

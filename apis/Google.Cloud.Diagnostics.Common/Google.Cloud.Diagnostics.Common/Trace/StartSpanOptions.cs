@@ -38,7 +38,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Creates a <see cref="StartSpanOptions"/>.
         /// </summary>
         /// <param name="spanKind">Optional, the span kind.  Defaults to <see cref="SpanKind.Unspecified"/></param>
-        /// <param name="labels">Optional, labels to add to the span.<param>
+        /// <param name="labels">Optional, labels to add to the span.</param>
         public static StartSpanOptions Create(
             SpanKind spanKind = SpanKind.Unspecified, Dictionary<string, string> labels = null)
                 => new StartSpanOptions(spanKind, labels ?? new Dictionary<string, string>());

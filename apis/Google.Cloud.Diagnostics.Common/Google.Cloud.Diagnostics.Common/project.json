@@ -22,10 +22,8 @@
     "Google.Cloud.Logging.Type": { "target": "project" },
     "Google.Cloud.Logging.V2": { "target": "project" },
     "Google.Cloud.Trace.V1": { "target": "project" },
-    "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" },
-    "System.Net.Http": "4.3.0"
+    "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" }
   },
-
 
   "frameworks": {
     "net45": {},

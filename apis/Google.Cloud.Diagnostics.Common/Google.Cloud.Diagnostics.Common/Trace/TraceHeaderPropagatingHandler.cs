@@ -47,6 +47,14 @@ namespace Google.Cloud.Diagnostics.Common
     {
         private readonly Func<IManagedTracer> _managedTracerFactory;
 
+        /// <summary>
+        /// Constructs a new instance using the given delegate to obtain the "current" tracer
+        /// on each request.
+        /// </summary>
+        /// <param name="managedTracerFactory">A delegate used to obtain the "current" tracer
+        /// for each request. The delegate should therefore be thread-safe.</param>
+        /// <param name="innerHandler">The inner handler to delegate to. May be null, in which
+        /// case a new <see cref="HttpClientHandler"/> will be used.</param>
         public TraceHeaderPropagatingHandler(
             Func<IManagedTracer> managedTracerFactory, HttpMessageHandler innerHandler = null)
         {
