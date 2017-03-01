@@ -5,7 +5,7 @@
 
   "dependencies": {
     "Google.Cloud.Logging.Log4Net": { "target": "project" },
-    "Google.Api.Gax.Testing": "1.0.0-beta11",
+    "Google.Api.Gax.Testing": "1.0.0-beta12",
     "xunit": "2.2.0-rc3-build3528",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Moq": "4.6.36-alpha",
