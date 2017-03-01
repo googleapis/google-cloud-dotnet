@@ -129,6 +129,8 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return new EventTarget
             {
+                // The Error Reporting API does not use monitored resources, only detect the monitored
+                // resource if a project id is needed.
                 ProjectId = projectId ?? CommonUtils.GetAndCheckProjectId(projectId, MonitoredResourceBuilder.FromPlatform()),
                 Kind = EventTargetKind.ErrorReporting,
                 ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
