@@ -81,10 +81,13 @@ namespace Google.Cloud.Spanner.V1
         /// for "NonIdempotent" <see cref="SpannerClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="SpannerClient"/> RPC methods.
@@ -143,7 +146,7 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -232,7 +235,7 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -261,7 +264,7 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -290,7 +293,7 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -319,7 +322,7 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -348,7 +351,7 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -492,11 +495,11 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> CreateSessionAsync(
-            DatabaseName database,
+            string database,
             CallSettings callSettings = null) => CreateSessionAsync(
                 new CreateSessionRequest
                 {
-                    DatabaseAsDatabaseName = database,
+                    Database = database,
                 },
                 callSettings);
 
@@ -531,7 +534,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> CreateSessionAsync(
-            DatabaseName database,
+            string database,
             CancellationToken cancellationToken) => CreateSessionAsync(
                 database,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -567,11 +570,11 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual Session CreateSession(
-            DatabaseName database,
+            string database,
             CallSettings callSettings = null) => CreateSession(
                 new CreateSessionRequest
                 {
-                    DatabaseAsDatabaseName = database,
+                    Database = database,
                 },
                 callSettings);
 
@@ -664,11 +667,11 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> GetSessionAsync(
-            SessionName name,
+            string name,
             CallSettings callSettings = null) => GetSessionAsync(
                 new GetSessionRequest
                 {
-                    SessionName = name,
+                    Name = name,
                 },
                 callSettings);
 
@@ -687,7 +690,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Session> GetSessionAsync(
-            SessionName name,
+            string name,
             CancellationToken cancellationToken) => GetSessionAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -707,11 +710,11 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual Session GetSession(
-            SessionName name,
+            string name,
             CallSettings callSettings = null) => GetSession(
                 new GetSessionRequest
                 {
-                    SessionName = name,
+                    Name = name,
                 },
                 callSettings);
 
@@ -770,11 +773,11 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSessionAsync(
-            SessionName name,
+            string name,
             CallSettings callSettings = null) => DeleteSessionAsync(
                 new DeleteSessionRequest
                 {
-                    SessionName = name,
+                    Name = name,
                 },
                 callSettings);
 
@@ -791,7 +794,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteSessionAsync(
-            SessionName name,
+            string name,
             CancellationToken cancellationToken) => DeleteSessionAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -809,11 +812,11 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual void DeleteSession(
-            SessionName name,
+            string name,
             CallSettings callSettings = null) => DeleteSession(
                 new DeleteSessionRequest
                 {
-                    SessionName = name,
+                    Name = name,
                 },
                 callSettings);
 
@@ -994,12 +997,12 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Transaction> BeginTransactionAsync(
-            SessionName session,
+            string session,
             TransactionOptions options,
             CallSettings callSettings = null) => BeginTransactionAsync(
                 new BeginTransactionRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     Options = options,
                 },
                 callSettings);
@@ -1023,7 +1026,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Transaction> BeginTransactionAsync(
-            SessionName session,
+            string session,
             TransactionOptions options,
             CancellationToken cancellationToken) => BeginTransactionAsync(
                 session,
@@ -1049,12 +1052,12 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual Transaction BeginTransaction(
-            SessionName session,
+            string session,
             TransactionOptions options,
             CallSettings callSettings = null) => BeginTransaction(
                 new BeginTransactionRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     Options = options,
                 },
                 callSettings);
@@ -1131,13 +1134,13 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            SessionName session,
+            string session,
             ByteString transactionId,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     TransactionId = transactionId,
                     Mutations = { mutations },
                 },
@@ -1171,7 +1174,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            SessionName session,
+            string session,
             ByteString transactionId,
             IEnumerable<Mutation> mutations,
             CancellationToken cancellationToken) => CommitAsync(
@@ -1208,13 +1211,13 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual CommitResponse Commit(
-            SessionName session,
+            string session,
             ByteString transactionId,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     TransactionId = transactionId,
                     Mutations = { mutations },
                 },
@@ -1256,13 +1259,13 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            SessionName session,
+            string session,
             TransactionOptions singleUseTransaction,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     SingleUseTransaction = singleUseTransaction,
                     Mutations = { mutations },
                 },
@@ -1304,7 +1307,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<CommitResponse> CommitAsync(
-            SessionName session,
+            string session,
             TransactionOptions singleUseTransaction,
             IEnumerable<Mutation> mutations,
             CancellationToken cancellationToken) => CommitAsync(
@@ -1349,13 +1352,13 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual CommitResponse Commit(
-            SessionName session,
+            string session,
             TransactionOptions singleUseTransaction,
             IEnumerable<Mutation> mutations,
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     SingleUseTransaction = singleUseTransaction,
                     Mutations = { mutations },
                 },
@@ -1436,12 +1439,12 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task RollbackAsync(
-            SessionName session,
+            string session,
             ByteString transactionId,
             CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     TransactionId = transactionId,
                 },
                 callSettings);
@@ -1469,7 +1472,7 @@ namespace Google.Cloud.Spanner.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task RollbackAsync(
-            SessionName session,
+            string session,
             ByteString transactionId,
             CancellationToken cancellationToken) => RollbackAsync(
                 session,
@@ -1499,12 +1502,12 @@ namespace Google.Cloud.Spanner.V1
         /// The RPC response.
         /// </returns>
         public virtual void Rollback(
-            SessionName session,
+            string session,
             ByteString transactionId,
             CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
-                    SessionAsSessionName = session,
+                    Session = session,
                     TransactionId = transactionId,
                 },
                 callSettings);
