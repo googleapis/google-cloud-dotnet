@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net.Http;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -61,6 +62,29 @@ namespace Google.Cloud.Diagnostics.Common
         internal static Dictionary<string, string> GetAgentLabel() =>
             new Dictionary<string, string> { { Agent, CommonUtils.AgentNameAndVersion } };
 
+        /// <summary>
+        /// Gets a map of labels for a span from an <see cref="HttpRequestMessage"/>.
+        /// </summary>
+        internal static Dictionary<string, string> FromHttpRequestMessage(HttpRequestMessage request)
+        {
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            return new Dictionary<string, string>
+            {
+                { HttpMethod, request.Method.Method }
+            };
+        }
+
+        /// <summary>
+        /// Gets a map of labels for a span from an <see cref="HttpResponseMessage"/>.
+        /// </summary>
+        internal static Dictionary<string, string> FromHttpResponseMessage(HttpResponseMessage response)
+        {
+            GaxPreconditions.CheckNotNull(response, nameof(response));
+            return new Dictionary<string, string>
+            {
+                { HttpStatusCode, ((int)response.StatusCode).ToString() }
+            };
+        }
 
         /// <summary>
         /// Creates a string JSON representation of a stack trace or the empty string

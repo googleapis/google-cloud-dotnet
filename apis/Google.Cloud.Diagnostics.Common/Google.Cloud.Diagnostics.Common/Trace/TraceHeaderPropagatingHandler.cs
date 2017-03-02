@@ -80,7 +80,13 @@ namespace Google.Cloud.Diagnostics.Common
             request.Headers.Add(TraceHeaderContext.TraceHeader, traceHeader.ToString());
 
             return tracer.RunInSpanAsync(
-                () => base.SendAsync(request, cancellationToken), 
+                async () =>
+                {
+                    tracer.AnnotateSpan(TraceLabels.FromHttpRequestMessage(request));
+                    var response = await base.SendAsync(request, cancellationToken);
+                    tracer.AnnotateSpan(TraceLabels.FromHttpResponseMessage(response));
+                    return response;
+                },
                 request.RequestUri.ToString());
         }
     }
