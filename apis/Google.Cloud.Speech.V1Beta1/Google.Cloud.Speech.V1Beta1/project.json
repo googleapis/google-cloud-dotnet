@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha05-*",
+  "version": "1.0.0-alpha06-*",
   "description": "Recommended Google client library to access the Google Cloud Speech API, which performs speech recognition.",
   "authors": [ "Google Inc." ],
 

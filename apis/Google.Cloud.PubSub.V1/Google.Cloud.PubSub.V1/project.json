@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta07-*",
+  "version": "1.0.0-beta08-*",
   "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
   "authors": [ "Google Inc." ],
 
