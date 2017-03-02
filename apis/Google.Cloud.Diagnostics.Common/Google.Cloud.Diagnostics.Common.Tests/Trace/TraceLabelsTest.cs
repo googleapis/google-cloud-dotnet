@@ -14,6 +14,8 @@
 
 using Moq;
 using System.Diagnostics;
+using System.Net;
+using System.Net.Http;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using Xunit;
@@ -80,6 +82,28 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var labels = TraceLabels.FromStackTrace(stackTraceMock.Object);
             Assert.Equal(1, labels.Count);
             Assert.Equal(string.Empty, labels[TraceLabels.StackTrace]);
+        }
+
+        [Fact]
+        public void FromHttpRequestMessage()
+        {
+            HttpRequestMessage request = new HttpRequestMessage();
+            request.Method = HttpMethod.Put;
+
+            var labels = TraceLabels.FromHttpRequestMessage(request);
+            Assert.Single(labels);
+            Assert.Equal("PUT", labels[TraceLabels.HttpMethod]);
+        }
+
+        [Fact]
+        public void FromHttpResponseMessage()
+        {
+            HttpResponseMessage response = new HttpResponseMessage();
+            response.StatusCode = HttpStatusCode.Conflict;
+
+            var labels = TraceLabels.FromHttpResponseMessage(response);
+            Assert.Single(labels);
+            Assert.Equal("409", labels[TraceLabels.HttpStatusCode]);
         }
 
         /// <summary>
