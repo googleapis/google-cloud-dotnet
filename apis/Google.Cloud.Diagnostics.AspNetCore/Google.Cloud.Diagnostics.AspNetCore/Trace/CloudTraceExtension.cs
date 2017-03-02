@@ -74,6 +74,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </remarks>
     public static class CloudTraceExtension
     {
+        ///<summary>The key to save the tracer under in the <see cref="HttpContext"/></summary> 
+        internal const string TraceKey = "Google.Cloud.Diagnostics.AspNetCore.Trace";
+
         /// <summary>
         /// Uses middleware that will trace time taken for all subsequent delegates to run.
         /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
@@ -121,7 +124,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         private static TraceHeaderPropagatingHandler CreateTraceHeaderPropagatingHandler(IServiceProvider provider)
         {
-            Func<IManagedTracer> managedTracerFactory = () => provider.GetService<IManagedTracer>();
+            Func<IManagedTracer> managedTracerFactory = () =>
+            {
+                // We use the IHttpContextAccessor to get the IManagedTracer as the 
+                // IHttpContextAccessor is a singleton and will always have the proper
+                // HttpContext.  The IManagedTracer is attached to the HttpContext in
+                // CreateManagedTracer.
+                var accessor = provider.GetService<IHttpContextAccessor>();
+                return accessor.HttpContext.Items[TraceKey] as IManagedTracer;
+            };
             return new TraceHeaderPropagatingHandler(managedTracerFactory);
         }
 
@@ -143,14 +154,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             var headerContext = provider.GetService<TraceHeaderContext>();
             var tracerFactory = provider.GetService<IManagedTracerFactory>();
+            var accessor = provider.GetService<IHttpContextAccessor>();
 
             var message = "No {0} service found. Ensure Google Cloud Trace is properly set up.";
             GaxPreconditions.CheckState(headerContext != null, 
                 string.Format(message, typeof(TraceHeaderContext).GetType()));
             GaxPreconditions.CheckState(tracerFactory != null,
                 string.Format(message, typeof(IManagedTracerFactory).GetType()));
+            GaxPreconditions.CheckState(accessor != null,
+               string.Format(message, typeof(IHttpContextAccessor).GetType()));
 
-            return tracerFactory.CreateTracer(headerContext);
+            var tracer = tracerFactory.CreateTracer(headerContext);
+
+            // Attach the IManagedTracer to the current HttpContext.  See comments
+            // in CreateTraceHeaderPropagatingHandler for more details.
+            accessor.HttpContext.Items[TraceKey] = tracer;
+            return tracer;
         }
     }
 }
