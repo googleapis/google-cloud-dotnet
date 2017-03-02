@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             if (tracer.GetCurrentTraceId() == null)
             {
-                await _next(httpContext);
+                await _next(httpContext).ConfigureAwait(false);
             }
             else
             {
@@ -59,7 +59,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 tracer.StartSpan(httpContext.Request.Path);
                 try
                 {
-                    await _next(httpContext);
+                    await _next(httpContext).ConfigureAwait(false);
                 }
                 catch (Exception e)
                 {
