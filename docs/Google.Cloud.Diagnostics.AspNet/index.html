@@ -105,20 +105,22 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
     }
 }
 </code></pre><h2 id="trace-outgoing-http-requests">Trace Outgoing HTTP Requests</h2>
-<pre><code class="lang-cs">public async Task&lt;HttpResponseMessage&gt; TraceOutgoing(IManagedTracer tracer)
+<pre><code class="lang-cs">// Add a handler to trace outgoing requests and to propagate the trace header.
+var traceHeaderHandler = CloudTrace.CreateTracingHttpMessageHandler();
+using (var httpClient = new HttpClient(traceHeaderHandler))
 {
-    // Add a handler to trace outgoing requests and to propagate the trace header.
-    var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
-    using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
-    {
-        return await httpClient.GetAsync(&quot;https://weather.com/&quot;);
-    }
+    return await httpClient.GetAsync(&quot;https://weather.com/&quot;);
 }
 </code></pre><h2 id="manual-tracing">Manual Tracing</h2>
 <pre><code class="lang-cs">// Manually trace a specific operation.
-CloudTrace.CurrentTracer.StartSpan(&quot;hello-world&quot;);
-Console.Out.WriteLine(&quot;Hello, World!&quot;);
-CloudTrace.CurrentTracer.EndSpan();
+using (CloudTrace.CurrentTracer.StartSpan(&quot;hello-world&quot;))
+{
+    Console.Out.WriteLine(&quot;Hello, World!&quot;);
+}
+</code></pre><pre><code class="lang-cs">// Manually trace a specific Action or Func&lt;T&gt;.
+CloudTrace.CurrentTracer.RunInSpan(
+    () =&gt; Console.Out.WriteLine(&quot;Hello, World!&quot;),
+    &quot;hello-world&quot;);
 </code></pre>
             </article>
           </div>

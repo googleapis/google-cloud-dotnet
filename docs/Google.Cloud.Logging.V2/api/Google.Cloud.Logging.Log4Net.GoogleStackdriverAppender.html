@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GoogleStackdriverAppender
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -182,9 +183,34 @@ can be performed. It is not generally necessary to call <a class="xref" href="Go
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisableResourceTypeDetection_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisableResourceTypeDetection*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisableResourceTypeDetection" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisableResourceTypeDetection">DisableResourceTypeDetection</h4>
+              <div class="markdown level1 summary"><p>If set, disables resource-type detection based on platform,
+so ResourceType will default to &quot;global&quot; if not manually set. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool DisableResourceTypeDetection { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisposeTimeoutSeconds_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisposeTimeoutSeconds" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.DisposeTimeoutSeconds">DisposeTimeoutSeconds</h4>
-              <div class="markdown level1 summary"><p>The maximum time the <code>Dispose()</code> call of <a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender">GoogleStackdriverAppender</a> may take. 
+              <div class="markdown level1 summary"><p>The maximum time the <code>Dispose()</code> call of <a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html">GoogleStackdriverAppender</a> may take. 
 Default value is 30 seconds.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -251,7 +277,7 @@ Defaults to <a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.ht
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType">LocalQueueType</a></td>
+                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html">LocalQueueType</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -431,7 +457,9 @@ Default value is 100.</p>
               </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ProjectId_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ProjectId*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ProjectId" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"><p>The project ID for all log entries. Must be configured.</p>
+              <div class="markdown level1 summary"><p>The project ID for all log entries.
+Must be configured in not executing on Google Compute Engine or Google App Engine.
+If running on GCE or GAE, the ProjectId will be automatically detected if not set.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -456,7 +484,7 @@ Default value is 100.</p>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ResourceType_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ResourceType*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ResourceType" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ResourceType">ResourceType</h4>
               <div class="markdown level1 summary"><p>The resource type of log entries.
-Default value is &quot;global&quot;.</p>
+Default value depends on the detected platform. See the remarks section for details.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -478,6 +506,18 @@ Default value is &quot;global&quot;.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ResourceType_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If this is not set, then Resource type is set depending on the detected execution platform:
+<ul><li>
+Google App Engine: ResourceType &quot;gae_app&quot;, with project_id, module_id, and version_id set approprately.
+</li><li>
+Google Compute Engine: ResourceType &quot;gce_instance&quot;, with project_id, instance_id, and zone set approprately.
+</li><li>
+Unknown: ResourceType &quot;global&quot;, with project_id set from this configuration.
+</li></ul>
+If <a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_DisableResourceTypeDetection">DisableResourceTypeDetection</a> is <code>true</code>, then this platform detection
+is not performed, and this ResourceType defaults to &quot;global&quot; if not set.</p>
+</div>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_ServerErrorBackoffDelaySeconds" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.ServerErrorBackoffDelaySeconds">ServerErrorBackoffDelaySeconds</h4>
               <div class="markdown level1 summary"><p>On receiving a server error during log upload, the initial delay in seconds before retry.
@@ -585,9 +625,37 @@ Default value is 1.5</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label.html#Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Label">GoogleStackdriverAppender.Label</a></td>
-                    <td><em>label</em></td>
+                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label.html">GoogleStackdriverAppender.Label</a></td>
+                    <td><span class="parametername">label</span></td>
                     <td><p>The custom label.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddResourceLabel_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddResourceLabel*"></a>
+              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_AddResourceLabel_Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_Label_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.AddResourceLabel(Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label)">AddResourceLabel(GoogleStackdriverAppender.Label)</h4>
+              <div class="markdown level1 summary"><p>Specify labels for the resource type;
+only used if platform detection is disabled or detects an unknown platform.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void AddResourceLabel(GoogleStackdriverAppender.Label label)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.Label.html">GoogleStackdriverAppender.Label</a></td>
+                    <td><span class="parametername">label</span></td>
+                    <td><p>The resource type label.</p>
 </td>
                   </tr>
                 </tbody>
@@ -612,8 +680,8 @@ Default value is 1.5</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.MetaDataType.html#Google_Cloud_Logging_Log4Net_MetaDataType">MetaDataType</a></td>
-                    <td><em>enable</em></td>
+                    <td><a class="xref" href="Google.Cloud.Logging.Log4Net.MetaDataType.html">MetaDataType</a></td>
+                    <td><span class="parametername">enable</span></td>
                     <td><p>The additional metadata to enable.</p>
 </td>
                   </tr>
@@ -639,7 +707,7 @@ Default value is 1.5</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">log4net.Core.LoggingEvent</span></td>
-                    <td><em>loggingEvent</em></td>
+                    <td><span class="parametername">loggingEvent</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -666,7 +734,7 @@ Default value is 1.5</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">log4net.Core.LoggingEvent</span>[]</td>
-                    <td><em>loggingEvents</em></td>
+                    <td><span class="parametername">loggingEvents</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -709,13 +777,13 @@ This defaults to 30 seconds if not set.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>timeout</em></td>
+                    <td><span class="parametername">timeout</span></td>
                     <td><p>The maxmimum time to spend waiting for the flush to complete.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>The token to monitor for cancellation requests.
 The default value is <span class="xref">System.Threading.CancellationToken.None</span>.</p>
 </td>
@@ -759,13 +827,13 @@ The default value is <span class="xref">System.Threading.CancellationToken.None<
                 <tbody>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>timeout</em></td>
+                    <td><span class="parametername">timeout</span></td>
                     <td><p>The maxmimum time to spend waiting for the flush to complete.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>The token to monitor for cancellation requests.
 The default value is <span class="xref">System.Threading.CancellationToken.None</span>.</p>
 </td>
@@ -782,7 +850,7 @@ The default value is <span class="xref">System.Threading.CancellationToken.None<
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td><p>A task representing whether the flush completed within the timeout.</p>
 </td>
                   </tr>
@@ -798,7 +866,7 @@ The default value is <span class="xref">System.Threading.CancellationToken.None<
               </div>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">log4net.Appender.AppenderSkeleton.OnClose()</span></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

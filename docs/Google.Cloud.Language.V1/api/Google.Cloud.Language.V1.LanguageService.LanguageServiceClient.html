@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LanguageService.LanguageServiceClient
    | Google.Cloud.Language.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -77,13 +78,13 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
-                  <div class="level2"><span class="xref">Grpc.Core.ClientBase&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.LanguageService.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageService_LanguageServiceClient">LanguageService.LanguageServiceClient</a>&gt;</div>
+                  <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.LanguageService.LanguageServiceClient.html">LanguageService.LanguageServiceClient</a>&gt;</div>
                   <div class="level3"><span class="xref">LanguageService.LanguageServiceClient</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">Grpc.Core.ClientBase&lt;T&gt;.WithHost(System.String)</span>
+                  <span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Language.V1.LanguageService.LanguageServiceClient&gt;.WithHost(System.String)</span>
                 </div>
                 <div>
                   <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
@@ -139,7 +140,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallInvoker</span></td>
-                    <td><em>callInvoker</em></td>
+                    <td><span class="parametername">callInvoker</span></td>
                     <td><p>The callInvoker to use to make remote calls.</p>
 </td>
                   </tr>
@@ -166,7 +167,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.Channel</span></td>
-                    <td><em>channel</em></td>
+                    <td><span class="parametername">channel</span></td>
                     <td><p>The channel to use to make remote calls.</p>
 </td>
                   </tr>
@@ -193,7 +194,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
-                    <td><em>configuration</em></td>
+                    <td><span class="parametername">configuration</span></td>
                     <td><p>The client configuration.</p>
 </td>
                   </tr>
@@ -222,14 +223,16 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html#Google_Cloud_Language_V1_AnalyzeEntitiesRequest">AnalyzeEntitiesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html">AnalyzeEntitiesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -243,8 +246,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html#Google_Cloud_Language_V1_AnalyzeEntitiesResponse">AnalyzeEntitiesResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html">AnalyzeEntitiesResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -269,24 +273,28 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html#Google_Cloud_Language_V1_AnalyzeEntitiesRequest">AnalyzeEntitiesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html">AnalyzeEntitiesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -300,8 +308,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html#Google_Cloud_Language_V1_AnalyzeEntitiesResponse">AnalyzeEntitiesResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html">AnalyzeEntitiesResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -326,14 +335,16 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html#Google_Cloud_Language_V1_AnalyzeEntitiesRequest">AnalyzeEntitiesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html">AnalyzeEntitiesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -347,8 +358,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html#Google_Cloud_Language_V1_AnalyzeEntitiesResponse">AnalyzeEntitiesResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html">AnalyzeEntitiesResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -373,24 +385,28 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html#Google_Cloud_Language_V1_AnalyzeEntitiesRequest">AnalyzeEntitiesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesRequest.html">AnalyzeEntitiesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -404,8 +420,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html#Google_Cloud_Language_V1_AnalyzeEntitiesResponse">AnalyzeEntitiesResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeEntitiesResponse.html">AnalyzeEntitiesResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -429,14 +446,16 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html#Google_Cloud_Language_V1_AnalyzeSentimentRequest">AnalyzeSentimentRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html">AnalyzeSentimentRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -450,8 +469,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html#Google_Cloud_Language_V1_AnalyzeSentimentResponse">AnalyzeSentimentResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html">AnalyzeSentimentResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -475,24 +495,28 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html#Google_Cloud_Language_V1_AnalyzeSentimentRequest">AnalyzeSentimentRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html">AnalyzeSentimentRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -506,8 +530,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html#Google_Cloud_Language_V1_AnalyzeSentimentResponse">AnalyzeSentimentResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html">AnalyzeSentimentResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -531,14 +556,16 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html#Google_Cloud_Language_V1_AnalyzeSentimentRequest">AnalyzeSentimentRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html">AnalyzeSentimentRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -552,8 +579,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html#Google_Cloud_Language_V1_AnalyzeSentimentResponse">AnalyzeSentimentResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html">AnalyzeSentimentResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -577,24 +605,28 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html#Google_Cloud_Language_V1_AnalyzeSentimentRequest">AnalyzeSentimentRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentRequest.html">AnalyzeSentimentRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -608,8 +640,9 @@ entity types, salience, mentions for each entity, and other properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html#Google_Cloud_Language_V1_AnalyzeSentimentResponse">AnalyzeSentimentResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSentimentResponse.html">AnalyzeSentimentResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -635,14 +668,16 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html#Google_Cloud_Language_V1_AnalyzeSyntaxRequest">AnalyzeSyntaxRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html">AnalyzeSyntaxRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -656,8 +691,9 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html#Google_Cloud_Language_V1_AnalyzeSyntaxResponse">AnalyzeSyntaxResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html">AnalyzeSyntaxResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -683,24 +719,28 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html#Google_Cloud_Language_V1_AnalyzeSyntaxRequest">AnalyzeSyntaxRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html">AnalyzeSyntaxRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -714,8 +754,9 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html#Google_Cloud_Language_V1_AnalyzeSyntaxResponse">AnalyzeSyntaxResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html">AnalyzeSyntaxResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -741,14 +782,16 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html#Google_Cloud_Language_V1_AnalyzeSyntaxRequest">AnalyzeSyntaxRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html">AnalyzeSyntaxRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -762,8 +805,9 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html#Google_Cloud_Language_V1_AnalyzeSyntaxResponse">AnalyzeSyntaxResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html">AnalyzeSyntaxResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -789,24 +833,28 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html#Google_Cloud_Language_V1_AnalyzeSyntaxRequest">AnalyzeSyntaxRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxRequest.html">AnalyzeSyntaxRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -820,8 +868,9 @@ properties.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html#Google_Cloud_Language_V1_AnalyzeSyntaxResponse">AnalyzeSyntaxResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnalyzeSyntaxResponse.html">AnalyzeSyntaxResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -846,14 +895,16 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html#Google_Cloud_Language_V1_AnnotateTextRequest">AnnotateTextRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html">AnnotateTextRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -867,8 +918,9 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html#Google_Cloud_Language_V1_AnnotateTextResponse">AnnotateTextResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html">AnnotateTextResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -893,24 +945,28 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html#Google_Cloud_Language_V1_AnnotateTextRequest">AnnotateTextRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html">AnnotateTextRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -924,8 +980,9 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html#Google_Cloud_Language_V1_AnnotateTextResponse">AnnotateTextResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html">AnnotateTextResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -950,14 +1007,16 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html#Google_Cloud_Language_V1_AnnotateTextRequest">AnnotateTextRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html">AnnotateTextRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -971,8 +1030,9 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html#Google_Cloud_Language_V1_AnnotateTextResponse">AnnotateTextResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html">AnnotateTextResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -997,24 +1057,28 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html#Google_Cloud_Language_V1_AnnotateTextRequest">AnnotateTextRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.AnnotateTextRequest.html">AnnotateTextRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1028,14 +1092,16 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html#Google_Cloud_Language_V1_AnnotateTextResponse">AnnotateTextResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Language.V1.AnnotateTextResponse.html">AnnotateTextResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Language_V1_LanguageService_LanguageServiceClient_NewInstance_" data-uid="Google.Cloud.Language.V1.LanguageService.LanguageServiceClient.NewInstance*"></a>
               <h4 id="Google_Cloud_Language_V1_LanguageService_LanguageServiceClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Language.V1.LanguageService.LanguageServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a new instance of client from given <code>ClientBaseConfiguration</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1053,7 +1119,7 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
-                    <td><em>configuration</em></td>
+                    <td><span class="parametername">configuration</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1068,14 +1134,14 @@ analyzeEntities, and analyzeSyntax provide in one call.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Language.V1.LanguageService.LanguageServiceClient.html#Google_Cloud_Language_V1_LanguageService_LanguageServiceClient">LanguageService.LanguageServiceClient</a></td>
+                    <td><a class="xref" href="Google.Cloud.Language.V1.LanguageService.LanguageServiceClient.html">LanguageService.LanguageServiceClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Language.V1.LanguageService.LanguageServiceClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

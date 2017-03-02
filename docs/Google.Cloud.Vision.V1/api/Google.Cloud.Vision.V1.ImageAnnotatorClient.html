@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ImageAnnotatorClient
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -77,6 +78,7 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">ImageAnnotatorClient</span></div>
+                  <div class="level2"><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClientImpl.html">ImageAnnotatorClientImpl</a></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -120,7 +122,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -144,7 +146,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -172,7 +174,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotator.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotator_ImageAnnotatorClient">ImageAnnotator.ImageAnnotatorClient</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotator.ImageAnnotatorClient.html">ImageAnnotator.ImageAnnotatorClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -214,7 +216,7 @@ if (response.Error != null)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public AnnotateImageResponse Annotate(AnnotateImageRequest request, CallSettings settings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual AnnotateImageResponse Annotate(AnnotateImageRequest request, CallSettings settings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -227,14 +229,14 @@ if (response.Error != null)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html#Google_Cloud_Vision_V1_AnnotateImageRequest">AnnotateImageRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html">AnnotateImageRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The annotation request to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>settings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -250,7 +252,7 @@ if (response.Error != null)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse">AnnotateImageResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html">AnnotateImageResponse</a></td>
                     <td><p>The annotation response.</p>
 </td>
                   </tr>
@@ -259,7 +261,7 @@ if (response.Error != null)
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Annotate_Google_Cloud_Vision_V1_AnnotateImageRequest_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This simply delegates to <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImages_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_">BatchAnnotateImages(IEnumerable&lt;AnnotateImageRequest&gt;, CallSettings)</a>
 by creating a batch with a single request, and returns the single response.</p>
-<p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.
 </p>
 </div>
@@ -273,7 +275,7 @@ by creating a batch with a single request, and returns the single response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -286,7 +288,7 @@ by creating a batch with a single request, and returns the single response.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;AnnotateImageResponse&gt; AnnotateAsync(AnnotateImageRequest request, CallSettings settings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;AnnotateImageResponse&gt; AnnotateAsync(AnnotateImageRequest request, CallSettings settings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -299,14 +301,14 @@ by creating a batch with a single request, and returns the single response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html#Google_Cloud_Vision_V1_AnnotateImageRequest">AnnotateImageRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html">AnnotateImageRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The annotation request to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>settings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -322,7 +324,7 @@ by creating a batch with a single request, and returns the single response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse">AnnotateImageResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html">AnnotateImageResponse</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be the annotation response.</p>
 </td>
                   </tr>
@@ -331,7 +333,7 @@ by creating a batch with a single request, and returns the single response.</p>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_AnnotateAsync_Google_Cloud_Vision_V1_AnnotateImageRequest_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This simply delegates to <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_">BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt;, CallSettings)</a>
 by creating a batch with a single request, and returns the single response.</p>
-<p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
@@ -344,7 +346,7 @@ by creating a batch with a single request, and returns the single response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -357,7 +359,7 @@ by creating a batch with a single request, and returns the single response.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;AnnotateImageResponse&gt; AnnotateAsync(AnnotateImageRequest request, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;AnnotateImageResponse&gt; AnnotateAsync(AnnotateImageRequest request, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -370,14 +372,14 @@ by creating a batch with a single request, and returns the single response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html#Google_Cloud_Vision_V1_AnnotateImageRequest">AnnotateImageRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html">AnnotateImageRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The annotation request to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -393,7 +395,7 @@ by creating a batch with a single request, and returns the single response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse">AnnotateImageResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html">AnnotateImageResponse</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be the annotation response.</p>
 </td>
                   </tr>
@@ -402,7 +404,7 @@ by creating a batch with a single request, and returns the single response.</p>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_AnnotateAsync_Google_Cloud_Vision_V1_AnnotateImageRequest_System_Threading_CancellationToken__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This simply delegates to <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Vision_V1_AnnotateImageRequest__Google_Api_Gax_Grpc_CallSettings_">BatchAnnotateImagesAsync(IEnumerable&lt;AnnotateImageRequest&gt;, CallSettings)</a>
 by creating a batch with a single request, and returns the single response.</p>
-<p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
 <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
@@ -415,7 +417,7 @@ by creating a batch with a single request, and returns the single response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -451,14 +453,14 @@ BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html#Google_Cloud_Vision_V1_BatchAnnotateImagesRequest">BatchAnnotateImagesRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html">BatchAnnotateImagesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -474,7 +476,7 @@ BatchAnnotateImagesResponse response = imageAnnotatorClient.BatchAnnotateImages(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html">BatchAnnotateImagesResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -529,14 +531,14 @@ foreach (Status error in response.Responses.Select(r =&gt; r.Error))
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html#Google_Cloud_Vision_V1_AnnotateImageRequest">AnnotateImageRequest</a>&gt;</td>
-                    <td><em>requests</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html">AnnotateImageRequest</a>&gt;</td>
+                    <td><span class="parametername">requests</span></td>
                     <td><p>Individual image annotation requests for this batch.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -552,7 +554,7 @@ foreach (Status error in response.Responses.Select(r =&gt; r.Error))
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html">BatchAnnotateImagesResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -588,14 +590,14 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html#Google_Cloud_Vision_V1_BatchAnnotateImagesRequest">BatchAnnotateImagesRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html">BatchAnnotateImagesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -611,7 +613,7 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html">BatchAnnotateImagesResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -644,14 +646,14 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html#Google_Cloud_Vision_V1_AnnotateImageRequest">AnnotateImageRequest</a>&gt;</td>
-                    <td><em>requests</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html">AnnotateImageRequest</a>&gt;</td>
+                    <td><span class="parametername">requests</span></td>
                     <td><p>Individual image annotation requests for this batch.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -667,7 +669,7 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html">BatchAnnotateImagesResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -700,14 +702,14 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html#Google_Cloud_Vision_V1_AnnotateImageRequest">AnnotateImageRequest</a>&gt;</td>
-                    <td><em>requests</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageRequest.html">AnnotateImageRequest</a>&gt;</td>
+                    <td><span class="parametername">requests</span></td>
                     <td><p>Individual image annotation requests for this batch.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -723,7 +725,7 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html">BatchAnnotateImagesResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -731,7 +733,7 @@ BatchAnnotateImagesResponse response = await imageAnnotatorClient.BatchAnnotateI
               </table>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Create_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.Create*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Vision_V1_ImageAnnotatorSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Vision.V1.ImageAnnotatorSettings)">Create(ServiceEndpoint, ImageAnnotatorSettings)</h4>
-              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a>, applying defaults for all unspecified settings,
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>, applying defaults for all unspecified settings,
 and creating a channel connecting to the given endpoint with application default credentials where
 necessary.</p>
 </div>
@@ -751,15 +753,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
-                    <td><em>endpoint</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a>.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+                    <td><span class="parametername">endpoint</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -774,15 +776,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a></td>
-                    <td><p>The created <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Create_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.Create*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_Create_Grpc_Core_Channel_Google_Cloud_Vision_V1_ImageAnnotatorSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.Create(Grpc.Core.Channel,Google.Cloud.Vision.V1.ImageAnnotatorSettings)">Create(Channel, ImageAnnotatorSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a> which uses the specified channel for remote operations.</p>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a> which uses the specified channel for remote operations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -801,14 +803,14 @@ necessary.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.Channel</span></td>
-                    <td><em>channel</em></td>
+                    <td><span class="parametername">channel</span></td>
                     <td><p>The <span class="xref">Grpc.Core.Channel</span> for remote operations. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -823,15 +825,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a></td>
-                    <td><p>The created <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_CreateAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.CreateAsync*"></a>
               <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Vision_V1_ImageAnnotatorSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Vision.V1.ImageAnnotatorSettings)">CreateAsync(ServiceEndpoint, ImageAnnotatorSettings)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a>, applying defaults for all unspecified settings,
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>, applying defaults for all unspecified settings,
 and creating a channel connecting to the given endpoint with application default credentials where
 necessary.</p>
 </div>
@@ -851,15 +853,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
-                    <td><em>endpoint</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a>.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+                    <td><span class="parametername">endpoint</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -874,8 +876,340 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a>&gt;</td>
-                    <td><p>The task representing the created <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a>.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>&gt;</td>
+                    <td><p>The task representing the created <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a>.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHints_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectCropHints*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHints_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectCropHints(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectCropHints(Image, ImageContext, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Suggests crop hints for a single image.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+CropHintsAnnotation cropHints = client.DetectCropHints(image);
+foreach (CropHint hint in cropHints.CropHints)
+{
+    Console.WriteLine(&quot;Crop hint:&quot;);
+    string poly = string.Join(&quot; - &quot;, hint.BoundingPoly.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+    Console.WriteLine($&quot;  Poly: {poly}&quot;);
+    Console.WriteLine($&quot;  Confidence: {hint.Confidence}&quot;);
+    Console.WriteLine($&quot;  Importance fraction: {hint.ImportanceFraction}&quot;);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual CropHintsAnnotation DetectCropHints(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
+                    <td><p>The image to process. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>Additional contextual information, if any.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
+                    <td><p>Call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.CropHintsAnnotation.html">CropHintsAnnotation</a></td>
+                    <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHints_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
+                    <td><p>The RPC returns a response, but the response contains an error.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHintsAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectCropHintsAsync*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHintsAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectCropHintsAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectCropHintsAsync(Image, ImageContext, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Suggests crop hints for a single image asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;CropHintsAnnotation&gt; DetectCropHintsAsync(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
+                    <td><p>The image to process. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>Additional contextual information, if any.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
+                    <td><p>Call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.CropHintsAnnotation.html">CropHintsAnnotation</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHintsAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
+                    <td><p>The RPC returns a response, but the response contains an error.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentText_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectDocumentText*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectDocumentText(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectDocumentText(Image, ImageContext, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Detects document text in a single image.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+TextAnnotation text = client.DetectDocumentText(image);
+Console.WriteLine($&quot;Text: {text.Text}&quot;);
+foreach (var page in text.Pages)
+{
+    foreach (var block in page.Blocks)
+    {
+        string box = string.Join(&quot; - &quot;, block.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+        Console.WriteLine($&quot;Block {block.BlockType} at {box}&quot;);
+        foreach (var paragraph in block.Paragraphs)
+        {
+            box = string.Join(&quot; - &quot;, paragraph.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+            Console.WriteLine($&quot;  Paragraph at {box}&quot;);
+            foreach (var word in paragraph.Words)
+            {
+                Console.WriteLine($&quot;    Word: {string.Join(&quot;&quot;, word.Symbols.Select(s =&gt; s.Text))}&quot;);
+            }
+        }
+    }
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual TextAnnotation DetectDocumentText(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
+                    <td><p>The image to process. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>Additional contextual information, if any.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
+                    <td><p>Call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.html">TextAnnotation</a></td>
+                    <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
+                    <td><p>The RPC returns a response, but the response contains an error.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentTextAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectDocumentTextAsync*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentTextAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectDocumentTextAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectDocumentTextAsync(Image, ImageContext, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Detects document text in a single image asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;TextAnnotation&gt; DetectDocumentTextAsync(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
+                    <td><p>The image to process. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>Additional contextual information, if any.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
+                    <td><p>Call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.html">TextAnnotation</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentTextAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
+                    <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
                 </tbody>
@@ -894,7 +1228,7 @@ foreach (FaceAnnotation face in result)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;FaceAnnotation&gt; DetectFaces(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;FaceAnnotation&gt; DetectFaces(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -907,26 +1241,26 @@ foreach (FaceAnnotation face in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -942,15 +1276,15 @@ foreach (FaceAnnotation face in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html#Google_Cloud_Vision_V1_FaceAnnotation">FaceAnnotation</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html">FaceAnnotation</a>&gt;</td>
                     <td><p>A set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectFaces_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -962,7 +1296,7 @@ foreach (FaceAnnotation face in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -975,7 +1309,7 @@ foreach (FaceAnnotation face in result)
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;FaceAnnotation&gt;&gt; DetectFacesAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;FaceAnnotation&gt;&gt; DetectFacesAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -988,26 +1322,26 @@ foreach (FaceAnnotation face in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1023,15 +1357,15 @@ foreach (FaceAnnotation face in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html#Google_Cloud_Vision_V1_FaceAnnotation">FaceAnnotation</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html">FaceAnnotation</a>&gt;&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectFacesAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1043,7 +1377,7 @@ foreach (FaceAnnotation face in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1061,7 +1395,7 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ImageProperties DetectImageProperties(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual ImageProperties DetectImageProperties(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1074,20 +1408,20 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1103,15 +1437,15 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageProperties.html#Google_Cloud_Vision_V1_ImageProperties">ImageProperties</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageProperties.html">ImageProperties</a></td>
                     <td><p>The detected properties for the image.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectImageProperties_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1123,7 +1457,7 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1136,7 +1470,7 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;ImageProperties&gt; DetectImagePropertiesAsync(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;ImageProperties&gt; DetectImagePropertiesAsync(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1149,20 +1483,20 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1178,15 +1512,15 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.ImageProperties.html#Google_Cloud_Vision_V1_ImageProperties">ImageProperties</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.ImageProperties.html">ImageProperties</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be the detected properties for the image.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectImagePropertiesAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1198,7 +1532,7 @@ Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1218,7 +1552,7 @@ foreach (EntityAnnotation label in labels)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;EntityAnnotation&gt; DetectLabels(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectLabels(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1231,26 +1565,26 @@ foreach (EntityAnnotation label in labels)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1266,15 +1600,15 @@ foreach (EntityAnnotation label in labels)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
                     <td><p>A set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLabels_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1286,7 +1620,7 @@ foreach (EntityAnnotation label in labels)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1299,7 +1633,7 @@ foreach (EntityAnnotation label in labels)
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectLabelsAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectLabelsAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1312,26 +1646,26 @@ foreach (EntityAnnotation label in labels)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1347,15 +1681,15 @@ foreach (EntityAnnotation label in labels)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLabelsAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1367,7 +1701,7 @@ foreach (EntityAnnotation label in labels)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1387,7 +1721,7 @@ foreach (EntityAnnotation landmark in result)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;EntityAnnotation&gt; DetectLandmarks(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectLandmarks(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1400,26 +1734,26 @@ foreach (EntityAnnotation landmark in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1435,15 +1769,15 @@ foreach (EntityAnnotation landmark in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
                     <td><p>A set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLandmarks_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1455,7 +1789,7 @@ foreach (EntityAnnotation landmark in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1468,7 +1802,7 @@ foreach (EntityAnnotation landmark in result)
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectLandmarksAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectLandmarksAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1481,26 +1815,26 @@ foreach (EntityAnnotation landmark in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1516,15 +1850,15 @@ foreach (EntityAnnotation landmark in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLandmarksAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1536,7 +1870,7 @@ foreach (EntityAnnotation landmark in result)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1556,7 +1890,7 @@ foreach (EntityAnnotation logo in logos)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;EntityAnnotation&gt; DetectLogos(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectLogos(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1569,26 +1903,26 @@ foreach (EntityAnnotation logo in logos)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1604,15 +1938,15 @@ foreach (EntityAnnotation logo in logos)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
                     <td><p>A set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLogos_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1624,7 +1958,7 @@ foreach (EntityAnnotation logo in logos)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1637,7 +1971,7 @@ foreach (EntityAnnotation logo in logos)
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectLogosAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectLogosAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1650,26 +1984,26 @@ foreach (EntityAnnotation logo in logos)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1685,15 +2019,15 @@ foreach (EntityAnnotation logo in logos)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectLogosAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1705,7 +2039,7 @@ foreach (EntityAnnotation logo in logos)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1726,7 +2060,7 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public SafeSearchAnnotation DetectSafeSearch(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual SafeSearchAnnotation DetectSafeSearch(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1739,20 +2073,20 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1768,15 +2102,15 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.SafeSearchAnnotation.html#Google_Cloud_Vision_V1_SafeSearchAnnotation">SafeSearchAnnotation</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.SafeSearchAnnotation.html">SafeSearchAnnotation</a></td>
                     <td><p>The safe search categorization for the image.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectSafeSearch_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1788,7 +2122,7 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1801,7 +2135,7 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;SafeSearchAnnotation&gt; DetectSafeSearchAsync(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;SafeSearchAnnotation&gt; DetectSafeSearchAsync(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1814,20 +2148,20 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1843,15 +2177,15 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.SafeSearchAnnotation.html#Google_Cloud_Vision_V1_SafeSearchAnnotation">SafeSearchAnnotation</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.SafeSearchAnnotation.html">SafeSearchAnnotation</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be the safe search categorization for the image.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectSafeSearchAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1863,7 +2197,7 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1883,7 +2217,7 @@ foreach (EntityAnnotation text in textAnnotations)
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;EntityAnnotation&gt; DetectText(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;EntityAnnotation&gt; DetectText(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1896,26 +2230,26 @@ foreach (EntityAnnotation text in textAnnotations)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -1931,15 +2265,21 @@ foreach (EntityAnnotation text in textAnnotations)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
                     <td><p>A set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>
+This method is suitable for an image with individual words; for more structured text,
+use <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">DetectDocumentText(Image, ImageContext, CallSettings)</a>.
+</p>
+<p>
+If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.
+</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1951,7 +2291,7 @@ foreach (EntityAnnotation text in textAnnotations)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -1964,7 +2304,7 @@ foreach (EntityAnnotation text in textAnnotations)
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectTextAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;EntityAnnotation&gt;&gt; DetectTextAsync(Image image, ImageContext context = null, int maxResults = 0, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1977,26 +2317,26 @@ foreach (EntityAnnotation text in textAnnotations)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html#Google_Cloud_Vision_V1_Image">Image</a></td>
-                    <td><em>image</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
                     <td><p>The image to process. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html#Google_Cloud_Vision_V1_ImageContext">ImageContext</a></td>
-                    <td><em>context</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
                     <td><p>Additional contextual information, if any.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>maxResults</em></td>
+                    <td><span class="parametername">maxResults</span></td>
                     <td><p>The maximum number of results to return. 0 (the default) means &quot;unlimited&quot;. Must not be negative.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>Call settings to apply to the RPC, if any.</p>
 </td>
                   </tr>
@@ -2012,15 +2352,21 @@ foreach (EntityAnnotation text in textAnnotations)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;&gt;</td>
                     <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectTextAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a> is thrown, the original response can still be retrieved using</p>
-<p><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+              <div class="markdown level1 remarks"><p>
+This method is suitable for an image with individual words; for more structured text,
+use <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentTextAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">DetectDocumentTextAsync(Image, ImageContext, CallSettings)</a>.
+</p>
+<p>
+If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.
+</p>
 </div>
               <h5 class="exceptions">Exceptions</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2032,7 +2378,176 @@ foreach (EntityAnnotation text in textAnnotations)
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
+                    <td><p>The RPC returns a response, but the response contains an error.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformation_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectWebInformation*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformation_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectWebInformation(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectWebInformation(Image, ImageContext, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Performs web detection for a single image.</p>
+</div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+WebDetection webDetection = client.DetectWebInformation(image);
+foreach (WebDetection.Types.WebImage webImage in webDetection.FullMatchingImages)
+{
+    Console.WriteLine($&quot;Full image: {webImage.Url} ({webImage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebImage webImage in webDetection.PartialMatchingImages)
+{
+    Console.WriteLine($&quot;Partial image: {webImage.Url} ({webImage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebPage webPage in webDetection.PagesWithMatchingImages)
+{
+    Console.WriteLine($&quot;Page with matching image: {webPage.Url} ({webPage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebEntity entity in webDetection.WebEntities)
+{
+    Console.WriteLine($&quot;Web entity: {entity.EntityId} / {entity.Description} ({entity.Score})&quot;);
+}
+</code></pre></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual WebDetection DetectWebInformation(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
+                    <td><p>The image to process. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>Additional contextual information, if any.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
+                    <td><p>Call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.WebDetection.html">WebDetection</a></td>
+                    <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformation_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
+                    <td><p>The RPC returns a response, but the response contains an error.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformationAsync_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectWebInformationAsync*"></a>
+              <h4 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformationAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Vision.V1.ImageAnnotatorClient.DetectWebInformationAsync(Google.Cloud.Vision.V1.Image,Google.Cloud.Vision.V1.ImageContext,Google.Api.Gax.Grpc.CallSettings)">DetectWebInformationAsync(Image, ImageContext, CallSettings)</h4>
+              <div class="markdown level1 summary"><p>Performs web detection for a single image asynchronously.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;WebDetection&gt; DetectWebInformationAsync(Image image, ImageContext context = null, CallSettings callSettings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Image.html">Image</a></td>
+                    <td><span class="parametername">image</span></td>
+                    <td><p>The image to process. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageContext.html">ImageContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>Additional contextual information, if any.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
+                    <td><p>Call settings to apply to the RPC, if any.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.WebDetection.html">WebDetection</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. The task result will be a set of annotations.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformationAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>If <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> is thrown, the original response can still be retrieved using
+<a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException_Response">Response</a>.</p>
+</div>
+              <h5 class="exceptions">Exceptions</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Condition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The RPC returns a response, but the response contains an error.</p>
 </td>
                   </tr>
@@ -2070,7 +2585,7 @@ created are not affected.</p>
 and <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Vision_V1_ImageAnnotatorSettings_">CreateAsync(ServiceEndpoint, ImageAnnotatorSettings)</a> will create new channels, which could
 in turn be shut down by another call to this method.</p>
 </div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

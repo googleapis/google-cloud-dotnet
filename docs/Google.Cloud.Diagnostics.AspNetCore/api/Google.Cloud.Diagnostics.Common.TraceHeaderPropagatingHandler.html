@@ -120,23 +120,24 @@ and tracing is enabled for the request current request.</p>
               
 <pre><code>public void DoSomething(IManagedTracer tracer)
 {
-    var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
-    using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
+    var traceHeaderHandler = new TraceHeaderPropagatingHandler(() =&gt; tracer);
+    using (var httpClient = new HttpClient(traceHeaderHandler))
     {
         ...
     }
 }</code></pre>
 
-              <h3 id="methods">Methods
+              <h3 id="constructors">Constructors
               </h3>
-              <a id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler_Create_" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.Create*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler_Create_Google_Cloud_Diagnostics_Common_IManagedTracer_" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.Create(Google.Cloud.Diagnostics.Common.IManagedTracer)">Create(IManagedTracer)</h4>
-              <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a>.</p>
+              <a id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler__ctor_" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.#ctor*"></a>
+              <h4 id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler__ctor_System_Func_Google_Cloud_Diagnostics_Common_IManagedTracer__System_Net_Http_HttpMessageHandler_" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.#ctor(System.Func{Google.Cloud.Diagnostics.Common.IManagedTracer},System.Net.Http.HttpMessageHandler)">TraceHeaderPropagatingHandler(Func&lt;IManagedTracer&gt;, HttpMessageHandler)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new instance using the given delegate to obtain the &quot;current&quot; tracer
+on each request.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static TraceHeaderPropagatingHandler Create(IManagedTracer tracer)</code></pre>
+                <pre><code class="lang-csharp hljs">public TraceHeaderPropagatingHandler(Func&lt;IManagedTracer&gt; managedTracerFactory, HttpMessageHandler innerHandler = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -149,28 +150,23 @@ and tracing is enabled for the request current request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a></td>
-                    <td><span class="parametername">tracer</span></td>
-                    <td><p>The tracer to trace with. Cannot be null.</p>
+                    <td><span class="xref">System.Func</span>&lt;<a class="xref" href="Google.Cloud.Diagnostics.Common.IManagedTracer.html">IManagedTracer</a>&gt;</td>
+                    <td><span class="parametername">managedTracerFactory</span></td>
+                    <td><p>A delegate used to obtain the &quot;current&quot; tracer
+for each request. The delegate should therefore be thread-safe.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Net.Http.HttpMessageHandler</span></td>
+                    <td><span class="parametername">innerHandler</span></td>
+                    <td><p>The inner handler to delegate to. May be null, in which
+case a new <span class="xref">System.Net.Http.HttpClientHandler</span> will be used.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+              <h3 id="methods">Methods
+              </h3>
               <a id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler_SendAsync_" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync*"></a>
               <h4 id="Google_Cloud_Diagnostics_Common_TraceHeaderPropagatingHandler_SendAsync_System_Net_Http_HttpRequestMessage_System_Threading_CancellationToken_" data-uid="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">SendAsync(HttpRequestMessage, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Sends the given request.  If tracing is initialized and enabled the outgoing request is

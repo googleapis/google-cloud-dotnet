@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreTransaction
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -79,15 +80,15 @@ API operations.
 </p>
 <p>
 Even though transactions aren&#39;t inherently related to a specific partition ID, the expected usage is that queries run inside
-a transaction are likely to be in a single partition, specified in a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb">DatastoreDb</a> used to create the transaction.
+a transaction are likely to be in a single partition, specified in a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> used to create the transaction.
 </p>
 <p>
 Disposing of a transaction calls <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Rollback_Google_Api_Gax_Grpc_CallSettings_">Rollback(CallSettings)</a> if the transaction has not already been committed
 or rolled back.
 </p>
 <p>
-This is an abstract class, implemented by <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.html#Google_Cloud_Datastore_V1_DatastoreTransactionImpl">DatastoreTransactionImpl</a> for production use. Users creating their own
-<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb">DatastoreDb</a> subclasses may choose to create fake implementations for testing purposes. There are no abstract
+This is an abstract class, implemented by <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.html">DatastoreTransactionImpl</a> for production use. Users creating their own
+<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> subclasses may choose to create fake implementations for testing purposes. There are no abstract
 methods in this class; instead, all methods either delegate to another or throw <span class="xref">System.NotImplementedException</span>.
 </p>
 </div>
@@ -96,6 +97,7 @@ methods in this class; instead, all methods either delegate to another or throw 
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">DatastoreTransaction</span></div>
+                  <div class="level2"><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransactionImpl.html">DatastoreTransactionImpl</a></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -166,8 +168,8 @@ methods in this class; instead, all methods either delegate to another or throw 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -182,7 +184,7 @@ methods in this class; instead, all methods either delegate to another or throw 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a></td>
                     <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
 </td>
                   </tr>
@@ -224,8 +226,8 @@ methods in this class; instead, all methods either delegate to another or throw 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -241,7 +243,7 @@ methods in this class; instead, all methods either delegate to another or throw 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
                     <td><p>The response from the commit operation. This can be used to determine server-allocated keys.</p>
 </td>
                   </tr>
@@ -265,9 +267,9 @@ methods in this class; instead, all methods either delegate to another or throw 
               </table>
               <a id="Google_Cloud_Datastore_V1_DatastoreTransaction_Create_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.Create*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreTransaction_Create_Google_Cloud_Datastore_V1_DatastoreClient_System_String_System_String_Google_Protobuf_ByteString_" data-uid="Google.Cloud.Datastore.V1.DatastoreTransaction.Create(Google.Cloud.Datastore.V1.DatastoreClient,System.String,System.String,Google.Protobuf.ByteString)">Create(DatastoreClient, String, String, ByteString)</h4>
-              <div class="markdown level1 summary"><p>Constructs an instance of <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClientImpl.html#Google_Cloud_Datastore_V1_DatastoreClientImpl">DatastoreClientImpl</a> with the given arguments.
-Clients using the <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb">DatastoreDb</a> abstraction layer would normally call</p>
-<p><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction(CallSettings)</a> or <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_">BeginTransactionAsync(CallSettings)</a>
+              <div class="markdown level1 summary"><p>Constructs an instance of <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClientImpl.html">DatastoreClientImpl</a> with the given arguments.
+Clients using the <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> abstraction layer would normally call
+<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction(CallSettings)</a> or <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_">BeginTransactionAsync(CallSettings)</a>
 instead of calling this method directly.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -286,27 +288,27 @@ instead of calling this method directly.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
-                    <td><em>client</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a></td>
+                    <td><span class="parametername">client</span></td>
                     <td><p>The client to use for Datastore operations. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project of the Datastore operations. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>namespaceId</em></td>
-                    <td><p>The ID of the namespace which is combined with <em>projectId</em> to form a partition ID
+                    <td><span class="parametername">namespaceId</span></td>
+                    <td><p>The ID of the namespace which is combined with <span class="paramref">projectId</span> to form a partition ID
 to use in query operations. May be null.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Protobuf.ByteString</span></td>
-                    <td><em>transactionId</em></td>
+                    <td><span class="parametername">transactionId</span></td>
                     <td><p>The transaction obtained by an earlier <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_BeginTransaction_System_String_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction(String, CallSettings)</a>
 or the asynchronous equivalent. Must not be null</p>
 </td>
@@ -323,8 +325,8 @@ or the asynchronous equivalent. Must not be null</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a></td>
-                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction">DatastoreTransaction</a> representation of the specified transaction.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a></td>
+                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> representation of the specified transaction.</p>
 </td>
                   </tr>
                 </tbody>
@@ -349,8 +351,8 @@ or the asynchronous equivalent. Must not be null</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>[]</td>
-                    <td><em>entities</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>[]</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to delete. Must not be null.</p>
 </td>
                   </tr>
@@ -379,8 +381,8 @@ or the asynchronous equivalent. Must not be null</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>[]</td>
-                    <td><em>keys</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>[]</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>The keys to delete. Must not be null.</p>
 </td>
                   </tr>
@@ -409,8 +411,8 @@ or the asynchronous equivalent. Must not be null</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><em>entities</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to delete. Must not be null.</p>
 </td>
                   </tr>
@@ -436,8 +438,8 @@ or the asynchronous equivalent. Must not be null</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>The keys to delete. Must not be null.</p>
 </td>
                   </tr>
@@ -475,8 +477,8 @@ Otherwise, it rolls back the transaction.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>[]</td>
-                    <td><em>entities</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>[]</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to insert. Must not be null.</p>
 </td>
                   </tr>
@@ -505,8 +507,8 @@ Otherwise, it rolls back the transaction.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><em>entities</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to insert. Must not be null.</p>
 </td>
                   </tr>
@@ -532,14 +534,14 @@ Otherwise, it rolls back the transaction.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a></td>
-                    <td><em>key</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a></td>
+                    <td><span class="parametername">key</span></td>
                     <td><p>The key to look up. Must not be null, and must be complete.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -555,7 +557,7 @@ Otherwise, it rolls back the transaction.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a></td>
                     <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
 </td>
                   </tr>
@@ -584,8 +586,8 @@ Otherwise, it rolls back the transaction.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>[]</td>
-                    <td><em>keys</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>[]</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
@@ -601,8 +603,8 @@ Otherwise, it rolls back the transaction.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
@@ -613,7 +615,7 @@ references, or <code>null</code> where the key was not found.</p>
 This call may perform multiple RPC operations in order to look up all keys.
 </p>
 <p>
-This overload does not support the <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> to be specified due to restrictions with
+This overload does not support the <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
 It simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the call settings.
@@ -639,14 +641,14 @@ value for the call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -662,8 +664,8 @@ value for the call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
@@ -692,14 +694,14 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a></td>
-                    <td><em>key</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a></td>
+                    <td><span class="parametername">key</span></td>
                     <td><p>The key to look up. Must not be null, and must be complete.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -715,7 +717,7 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><p>The entity with the specified key, or <code>null</code> if no such entity exists.</p>
 </td>
                   </tr>
@@ -744,8 +746,8 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>[]</td>
-                    <td><em>keys</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>[]</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
@@ -761,8 +763,8 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
-                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
@@ -773,7 +775,7 @@ references, or <code>null</code> where the key was not found.</p>
 This call may perform multiple RPC operations in order to look up all keys.
 </p>
 <p>
-This overload does not support the <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a> to be specified due to restrictions with
+This overload does not support the <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> to be specified due to restrictions with
 methods containing a parameter array and optional parameters.
 It simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html#Google_Cloud_Datastore_V1_DatastoreTransaction_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the call settings.
@@ -799,14 +801,14 @@ value for the call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -822,8 +824,8 @@ value for the call settings.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;&gt;</td>
-                    <td><p>A collection of entities with the same size as <em>keys</em>, containing corresponding entity
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
+                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
 references, or <code>null</code> where the key was not found.</p>
 </td>
                   </tr>
@@ -852,8 +854,8 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -869,7 +871,7 @@ references, or <code>null</code> where the key was not found.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html#Google_Cloud_Datastore_V1_RollbackResponse">RollbackResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -914,8 +916,8 @@ is still active, so a <code>using</code> statement is normally preferable to thi
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -931,7 +933,7 @@ is still active, so a <code>using</code> statement is normally preferable to thi
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html#Google_Cloud_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -978,14 +980,14 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html#Google_Cloud_Datastore_V1_GqlQuery">GqlQuery</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1001,7 +1003,7 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html#Google_Cloud_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html">DatastoreQueryResults</a></td>
                     <td><p>The complete query results.</p>
 </td>
                   </tr>
@@ -1038,14 +1040,14 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html#Google_Cloud_Datastore_V1_Query">Query</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1061,7 +1063,7 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html#Google_Cloud_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html">DatastoreQueryResults</a></td>
                     <td><p>The complete query results.</p>
 </td>
                   </tr>
@@ -1098,14 +1100,14 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html#Google_Cloud_Datastore_V1_GqlQuery">GqlQuery</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1121,7 +1123,7 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html#Google_Cloud_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html">DatastoreQueryResults</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
@@ -1158,14 +1160,14 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html#Google_Cloud_Datastore_V1_Query">Query</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1181,7 +1183,7 @@ number of results, for example to build a web application which fetches results 
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html#Google_Cloud_Datastore_V1_DatastoreQueryResults">DatastoreQueryResults</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreQueryResults.html">DatastoreQueryResults</a>&gt;</td>
                     <td><p>A task representing the asynchronous operation. The result of the task is the complete set of query results.</p>
 </td>
                   </tr>
@@ -1216,14 +1218,14 @@ and calls <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuer
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html#Google_Cloud_Datastore_V1_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+                    <td><span class="parametername">gqlQuery</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1239,8 +1241,8 @@ and calls <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuer
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
-                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the result of the query.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the result of the query.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1253,7 +1255,7 @@ as part of this operation are not reflected in the query results.
 </p>
 <p>
 The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
@@ -1277,14 +1279,14 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html#Google_Cloud_Datastore_V1_Query">Query</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1300,8 +1302,8 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a></td>
-                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> representing the the lazy query results.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
+                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the the lazy query results.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1314,7 +1316,7 @@ as part of this operation are not reflected in the query results.
 </p>
 <p>
 The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
@@ -1338,14 +1340,14 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html#Google_Cloud_Datastore_V1_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+                    <td><span class="parametername">gqlQuery</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1361,8 +1363,8 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Cloud_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
-                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Cloud_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1375,7 +1377,7 @@ as part of this operation are not reflected in the query results.
 </p>
 <p>
 The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
@@ -1399,14 +1401,14 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html#Google_Cloud_Datastore_V1_Query">Query</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to execute. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to RPC calls.</p>
 </td>
                   </tr>
@@ -1422,8 +1424,8 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Cloud_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a></td>
-                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html#Google_Cloud_Datastore_V1_AsyncLazyDatastoreQuery">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
+                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the result of the query.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1436,7 +1438,7 @@ as part of this operation are not reflected in the query results.
 </p>
 <p>
 The results are requested lazily: no API calls will be made until the application starts
-iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html#Google_Cloud_Datastore_V1_LazyDatastoreQuery">LazyDatastoreQuery</a> object
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
 multiple times will execute the query again, potentially returning different results.
 </p>
 </div>
@@ -1460,8 +1462,8 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>[]</td>
-                    <td><em>entities</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>[]</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to update. Must not be null.</p>
 </td>
                   </tr>
@@ -1490,8 +1492,8 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><em>entities</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to update. Must not be null.</p>
 </td>
                   </tr>
@@ -1517,8 +1519,8 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>[]</td>
-                    <td><em>entities</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>[]</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to upsert. Must not be null.</p>
 </td>
                   </tr>
@@ -1547,14 +1549,14 @@ multiple times will execute the query again, potentially returning different res
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html#Google_Cloud_Datastore_V1_Entity">Entity</a>&gt;</td>
-                    <td><em>entities</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
+                    <td><span class="parametername">entities</span></td>
                     <td><p>The entities to upsert. Must not be null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PagedAsyncEnumerable&lt;TResponse, TResource&gt;
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -80,6 +81,7 @@ one API response at a time, potentially with additional information.</p>
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">PagedAsyncEnumerable&lt;TResponse, TResource&gt;</span></div>
+                  <div class="level2"><a class="xref" href="Google.Api.Gax.Grpc.GrpcPagedAsyncEnumerable-3.html">GrpcPagedAsyncEnumerable&lt;TRequest, TResponse, TResource&gt;</a></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -112,12 +114,14 @@ one API response at a time, potentially with additional information.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><em>TResponse</em></td>
-                    <td>The API response type. Each response contains a page of resources.</td>
+                    <td><span class="parametername">TResponse</span></td>
+                    <td><p>The API response type. Each response contains a page of resources.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><em>TResource</em></td>
-                    <td>The resource type contained within the response.</td>
+                    <td><span class="parametername">TResource</span></td>
+                    <td><p>The resource type contained within the response.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -143,7 +147,7 @@ resources to this sequence.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable&lt;T&gt;</span>&lt;TResponse&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerable</span>&lt;TResponse&gt;</td>
                     <td><p>An asynchronous sequence of raw API responses, each containing a page of resources.</p>
 </td>
                   </tr>
@@ -167,7 +171,7 @@ resources to this sequence.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerator&lt;T&gt;</span>&lt;TResource&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IAsyncEnumerator</span>&lt;TResource&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -196,13 +200,13 @@ to have that many results, unless there is no more data available.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>pageSize</em></td>
+                    <td><span class="parametername">pageSize</span></td>
                     <td><p>The page size. Must be greater than 0.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A token to cancel the operation.</p>
 </td>
                   </tr>
@@ -218,7 +222,7 @@ to have that many results, unless there is no more data available.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Api.Gax.Page-1.html#Google_Api_Gax_Page_1">Page&lt;TResource&gt;</a>&lt;TResource&gt;&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Api.Gax.Page-1.html">Page</a>&lt;TResource&gt;&gt;</td>
                     <td><p>An asynchronous operation, the result of which is a page of resources.</p>
 </td>
                   </tr>
@@ -231,7 +235,7 @@ a next page token for more to be retrieved. This is suitable for batch-processin
 for user-visible paging such as in a web application, where fixed-size pages are expected.
 This method may make more than one API call in order to fill the page.</p>
 </div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

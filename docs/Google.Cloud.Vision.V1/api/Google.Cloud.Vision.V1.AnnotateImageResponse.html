@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AnnotateImageResponse
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -101,11 +102,35 @@
               </div>
               <h3 id="properties">Properties
               </h3>
+              <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_CropHintsAnnotation_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.CropHintsAnnotation*"></a>
+              <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_CropHintsAnnotation" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.CropHintsAnnotation">CropHintsAnnotation</h4>
+              <div class="markdown level1 summary"><p>If present, crop hints have completed successfully.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CropHintsAnnotation CropHintsAnnotation { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.CropHintsAnnotation.html">CropHintsAnnotation</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_Error_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.Error*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_Error" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.Error">Error</h4>
               <div class="markdown level1 summary"><p>If set, represents the error message for the operation.
-Note that filled-in mage annotations are guaranteed to be
-correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
+Note that filled-in image annotations are guaranteed to be
+correct, even when <code>error</code> is set.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -122,14 +147,14 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Rpc.Status.html#Google_Rpc_Status">Status</a></td>
+                    <td><span class="xref">Google.Rpc.Status</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_FaceAnnotations_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.FaceAnnotations*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_FaceAnnotations" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.FaceAnnotations">FaceAnnotations</h4>
-              <div class="markdown level1 summary"><p>If present, face detection completed successfully.</p>
+              <div class="markdown level1 summary"><p>If present, face detection has completed successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -146,7 +171,34 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html#Google_Cloud_Vision_V1_FaceAnnotation">FaceAnnotation</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.FaceAnnotation.html">FaceAnnotation</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_FullTextAnnotation_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.FullTextAnnotation*"></a>
+              <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_FullTextAnnotation" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.FullTextAnnotation">FullTextAnnotation</h4>
+              <div class="markdown level1 summary"><p>If present, text (OCR) detection or document (OCR) text detection has
+completed successfully.
+This annotation provides the structural hierarchy for the OCR detected
+text.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TextAnnotation FullTextAnnotation { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.TextAnnotation.html">TextAnnotation</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -170,14 +222,14 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageProperties.html#Google_Cloud_Vision_V1_ImageProperties">ImageProperties</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageProperties.html">ImageProperties</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_LabelAnnotations_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.LabelAnnotations*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_LabelAnnotations" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.LabelAnnotations">LabelAnnotations</h4>
-              <div class="markdown level1 summary"><p>If present, label detection completed successfully.</p>
+              <div class="markdown level1 summary"><p>If present, label detection has completed successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -194,14 +246,14 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_LandmarkAnnotations_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.LandmarkAnnotations*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_LandmarkAnnotations" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.LandmarkAnnotations">LandmarkAnnotations</h4>
-              <div class="markdown level1 summary"><p>If present, landmark detection completed successfully.</p>
+              <div class="markdown level1 summary"><p>If present, landmark detection has completed successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -218,14 +270,14 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_LogoAnnotations_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.LogoAnnotations*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_LogoAnnotations" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.LogoAnnotations">LogoAnnotations</h4>
-              <div class="markdown level1 summary"><p>If present, logo detection completed successfully.</p>
+              <div class="markdown level1 summary"><p>If present, logo detection has completed successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -242,14 +294,14 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_SafeSearchAnnotation_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.SafeSearchAnnotation*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_SafeSearchAnnotation" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.SafeSearchAnnotation">SafeSearchAnnotation</h4>
-              <div class="markdown level1 summary"><p>If present, safe-search annotation completed successfully.</p>
+              <div class="markdown level1 summary"><p>If present, safe-search annotation has completed successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -266,14 +318,15 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.SafeSearchAnnotation.html#Google_Cloud_Vision_V1_SafeSearchAnnotation">SafeSearchAnnotation</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.SafeSearchAnnotation.html">SafeSearchAnnotation</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_TextAnnotations_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.TextAnnotations*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_TextAnnotations" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.TextAnnotations">TextAnnotations</h4>
-              <div class="markdown level1 summary"><p>If present, text (OCR) detection completed successfully.</p>
+              <div class="markdown level1 summary"><p>If present, text (OCR) detection or document (OCR) text detection has
+completed successfully.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -290,7 +343,31 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html#Google_Cloud_Vision_V1_EntityAnnotation">EntityAnnotation</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.EntityAnnotation.html">EntityAnnotation</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_WebDetection_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.WebDetection*"></a>
+              <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_WebDetection" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.WebDetection">WebDetection</h4>
+              <div class="markdown level1 summary"><p>If present, web detection has completed successfully.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public WebDetection WebDetection { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.WebDetection.html">WebDetection</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -299,7 +376,7 @@ correct, even when &lt;code&gt;error&lt;/code&gt; is non-empty.</p>
               </h3>
               <a id="Google_Cloud_Vision_V1_AnnotateImageResponse_ThrowOnError_" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.ThrowOnError*"></a>
               <h4 id="Google_Cloud_Vision_V1_AnnotateImageResponse_ThrowOnError" data-uid="Google.Cloud.Vision.V1.AnnotateImageResponse.ThrowOnError">ThrowOnError()</h4>
-              <div class="markdown level1 summary"><p>If the <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null, throws an <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a>.
+              <div class="markdown level1 summary"><p>If the <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null, throws an <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a>.
 Otherwise, returns <code>this</code> (so that the method can be called in a fluent manner).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -317,7 +394,7 @@ Otherwise, returns <code>this</code> (so that the method can be called in a flue
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse">AnnotateImageResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html">AnnotateImageResponse</a></td>
                     <td><p><code>this</code> if the message has no error.</p>
 </td>
                   </tr>
@@ -333,13 +410,13 @@ Otherwise, returns <code>this</code> (so that the method can be called in a flue
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html#Google_Cloud_Vision_V1_AnnotateImageException">AnnotateImageException</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a></td>
                     <td><p>The <a class="xref" href="Google.Cloud.Vision.V1.AnnotateImageResponse.html#Google_Cloud_Vision_V1_AnnotateImageResponse_Error">Error</a> property is non-null.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

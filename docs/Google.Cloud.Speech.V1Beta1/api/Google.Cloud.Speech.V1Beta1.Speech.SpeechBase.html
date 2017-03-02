@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Speech.SpeechBase
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -124,14 +125,16 @@ an <code>AsyncRecognizeResponse</code> message.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_AsyncRecognizeRequest">AsyncRecognizeRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.html">AsyncRecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -145,8 +148,9 @@ an <code>AsyncRecognizeResponse</code> message.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html#Google_LongRunning_Operation">Operation</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -171,19 +175,22 @@ sending audio. This method is only available via the gRPC API (not REST).</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.IAsyncStreamReader&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeRequest">StreamingRecognizeRequest</a>&gt;</td>
-                    <td><em>requestStream</em></td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.IAsyncStreamReader</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.html">StreamingRecognizeRequest</a>&gt;</td>
+                    <td><span class="parametername">requestStream</span></td>
+                    <td><p>Used for reading requests from the client.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Grpc.Core.IServerStreamWriter&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_StreamingRecognizeResponse">StreamingRecognizeResponse</a>&gt;</td>
-                    <td><em>responseStream</em></td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.IServerStreamWriter</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.html">StreamingRecognizeResponse</a>&gt;</td>
+                    <td><span class="parametername">responseStream</span></td>
+                    <td><p>Used for sending responses back to the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -198,7 +205,8 @@ sending audio. This method is only available via the gRPC API (not REST).</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task indicating completion of the handler.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -223,14 +231,16 @@ has been sent and processed.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.html#Google_Cloud_Speech_V1Beta1_SyncRecognizeRequest">SyncRecognizeRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.html">SyncRecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -244,12 +254,13 @@ has been sent and processed.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse.html#Google_Cloud_Speech_V1Beta1_SyncRecognizeResponse">SyncRecognizeResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse.html">SyncRecognizeResponse</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

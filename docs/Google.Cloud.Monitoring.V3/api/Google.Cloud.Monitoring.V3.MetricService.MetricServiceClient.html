@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetricService.MetricServiceClient
    | Google.Cloud.Monitoring.V3 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -77,13 +78,13 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
-                  <div class="level2"><span class="xref">Grpc.Core.ClientBase&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricService_MetricServiceClient">MetricService.MetricServiceClient</a>&gt;</div>
+                  <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient.html">MetricService.MetricServiceClient</a>&gt;</div>
                   <div class="level3"><span class="xref">MetricService.MetricServiceClient</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">Grpc.Core.ClientBase&lt;T&gt;.WithHost(System.String)</span>
+                  <span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient&gt;.WithHost(System.String)</span>
                 </div>
                 <div>
                   <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
@@ -139,7 +140,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallInvoker</span></td>
-                    <td><em>callInvoker</em></td>
+                    <td><span class="parametername">callInvoker</span></td>
                     <td><p>The callInvoker to use to make remote calls.</p>
 </td>
                   </tr>
@@ -166,7 +167,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.Channel</span></td>
-                    <td><em>channel</em></td>
+                    <td><span class="parametername">channel</span></td>
                     <td><p>The channel to use to make remote calls.</p>
 </td>
                   </tr>
@@ -193,7 +194,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
-                    <td><em>configuration</em></td>
+                    <td><span class="parametername">configuration</span></td>
                     <td><p>The client configuration.</p>
 </td>
                   </tr>
@@ -223,14 +224,16 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest">CreateMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html">CreateMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -244,8 +247,9 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
-                    <td></td>
+                    <td><span class="xref">Google.Api.MetricDescriptor</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -271,24 +275,28 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest">CreateMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html">CreateMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -302,8 +310,9 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
-                    <td></td>
+                    <td><span class="xref">Google.Api.MetricDescriptor</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -329,14 +338,16 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest">CreateMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html">CreateMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -350,8 +361,9 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Api.MetricDescriptor</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -377,24 +389,28 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_CreateMetricDescriptorRequest">CreateMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateMetricDescriptorRequest.html">CreateMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -408,8 +424,9 @@ User-created metric descriptors define
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Api.MetricDescriptor</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -436,14 +453,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest">CreateTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html">CreateTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -458,7 +477,8 @@ included in the error response.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -485,24 +505,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest">CreateTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html">CreateTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -517,7 +541,8 @@ included in the error response.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -544,14 +569,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest">CreateTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html">CreateTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -565,8 +592,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -593,24 +621,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_CreateTimeSeriesRequest">CreateTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.CreateTimeSeriesRequest.html">CreateTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -624,8 +656,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -650,14 +683,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest">DeleteMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html">DeleteMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -672,7 +707,8 @@ included in the error response.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -697,24 +733,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest">DeleteMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html">DeleteMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -729,7 +769,8 @@ included in the error response.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -754,14 +795,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest">DeleteMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html">DeleteMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -775,8 +818,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -801,24 +845,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_DeleteMetricDescriptorRequest">DeleteMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.DeleteMetricDescriptorRequest.html">DeleteMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -832,8 +880,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -857,14 +906,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest">GetMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html">GetMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -878,8 +929,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
-                    <td></td>
+                    <td><span class="xref">Google.Api.MetricDescriptor</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -903,24 +955,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest">GetMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html">GetMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -934,8 +990,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a></td>
-                    <td></td>
+                    <td><span class="xref">Google.Api.MetricDescriptor</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -959,14 +1016,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest">GetMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html">GetMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -980,8 +1039,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Api.MetricDescriptor</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1005,24 +1065,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMetricDescriptorRequest">GetMetricDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMetricDescriptorRequest.html">GetMetricDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1036,8 +1100,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Api.MetricDescriptor.html#Google_Api_MetricDescriptor">MetricDescriptor</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Api.MetricDescriptor</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1061,14 +1126,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest">GetMonitoredResourceDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html">GetMonitoredResourceDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1082,8 +1149,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a></td>
-                    <td></td>
+                    <td><span class="xref">Google.Api.MonitoredResourceDescriptor</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1107,24 +1175,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest">GetMonitoredResourceDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html">GetMonitoredResourceDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1138,8 +1210,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a></td>
-                    <td></td>
+                    <td><span class="xref">Google.Api.MonitoredResourceDescriptor</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1163,14 +1236,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest">GetMonitoredResourceDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html">GetMonitoredResourceDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1184,8 +1259,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Api.MonitoredResourceDescriptor</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1209,24 +1285,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html#Google_Cloud_Monitoring_V3_GetMonitoredResourceDescriptorRequest">GetMonitoredResourceDescriptorRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.GetMonitoredResourceDescriptorRequest.html">GetMonitoredResourceDescriptorRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1240,8 +1320,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Api.MonitoredResourceDescriptor.html#Google_Api_MonitoredResourceDescriptor">MonitoredResourceDescriptor</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Api.MonitoredResourceDescriptor</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1265,14 +1346,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest">ListMetricDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html">ListMetricDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1286,8 +1369,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsResponse">ListMetricDescriptorsResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html">ListMetricDescriptorsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1311,24 +1395,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest">ListMetricDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html">ListMetricDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1342,8 +1430,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsResponse">ListMetricDescriptorsResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html">ListMetricDescriptorsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1367,14 +1456,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest">ListMetricDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html">ListMetricDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1388,8 +1479,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsResponse">ListMetricDescriptorsResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html">ListMetricDescriptorsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1413,24 +1505,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsRequest">ListMetricDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsRequest.html">ListMetricDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1444,8 +1540,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMetricDescriptorsResponse">ListMetricDescriptorsResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMetricDescriptorsResponse.html">ListMetricDescriptorsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1469,14 +1566,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest">ListMonitoredResourceDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html">ListMonitoredResourceDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1490,8 +1589,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html">ListMonitoredResourceDescriptorsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1515,24 +1615,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest">ListMonitoredResourceDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html">ListMonitoredResourceDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1546,8 +1650,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html">ListMonitoredResourceDescriptorsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1571,14 +1676,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest">ListMonitoredResourceDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html">ListMonitoredResourceDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1592,8 +1699,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1617,24 +1725,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsRequest">ListMonitoredResourceDescriptorsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsRequest.html">ListMonitoredResourceDescriptorsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1648,8 +1760,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html#Google_Cloud_Monitoring_V3_ListMonitoredResourceDescriptorsResponse">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListMonitoredResourceDescriptorsResponse.html">ListMonitoredResourceDescriptorsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1673,14 +1786,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_ListTimeSeriesRequest">ListTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html">ListTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1694,8 +1809,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html#Google_Cloud_Monitoring_V3_ListTimeSeriesResponse">ListTimeSeriesResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html">ListTimeSeriesResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1719,24 +1835,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_ListTimeSeriesRequest">ListTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html">ListTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1750,8 +1870,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html#Google_Cloud_Monitoring_V3_ListTimeSeriesResponse">ListTimeSeriesResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html">ListTimeSeriesResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1775,14 +1896,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_ListTimeSeriesRequest">ListTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html">ListTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1796,8 +1919,9 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html#Google_Cloud_Monitoring_V3_ListTimeSeriesResponse">ListTimeSeriesResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html">ListTimeSeriesResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1821,24 +1945,28 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html#Google_Cloud_Monitoring_V3_ListTimeSeriesRequest">ListTimeSeriesRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.html">ListTimeSeriesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1852,14 +1980,16 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html#Google_Cloud_Monitoring_V3_ListTimeSeriesResponse">ListTimeSeriesResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Monitoring.V3.ListTimeSeriesResponse.html">ListTimeSeriesResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceClient_NewInstance_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient.NewInstance*"></a>
               <h4 id="Google_Cloud_Monitoring_V3_MetricService_MetricServiceClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a new instance of client from given <code>ClientBaseConfiguration</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1877,7 +2007,7 @@ included in the error response.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
-                    <td><em>configuration</em></td>
+                    <td><span class="parametername">configuration</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1892,14 +2022,14 @@ included in the error response.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient.html#Google_Cloud_Monitoring_V3_MetricService_MetricServiceClient">MetricService.MetricServiceClient</a></td>
+                    <td><a class="xref" href="Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient.html">MetricService.MetricServiceClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Monitoring.V3.MetricService.MetricServiceClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -138,13 +138,13 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_System_Threading_Tasks_Task_Google_Cloud_Trace_V1_TraceServiceClient__" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,System.Threading.Tasks.Task{Google.Cloud.Trace.V1.TraceServiceClient})">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, Task&lt;TraceServiceClient&gt;)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient)">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient)</h4>
               <div class="markdown level1 summary"><p>Adds the needed services for Google Cloud Tracing. Used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_Microsoft_AspNetCore_Builder_IApplicationBuilder_">UseGoogleTrace(IApplicationBuilder)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, string projectId, TraceConfiguration config = null, Task&lt;TraceServiceClient&gt; clientTask = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, string projectId, TraceConfiguration config = null, TraceServiceClient client = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -175,10 +175,9 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html">TraceServiceClient</a>&gt;</td>
-                    <td><span class="parametername">clientTask</span></td>
-                    <td><p>Optional task which produces the Trace client, if 
-    unset the default will be used.</p>
+                    <td><span class="xref">Google.Cloud.Trace.V1.TraceServiceClient</span></td>
+                    <td><span class="parametername">client</span></td>
+                    <td><p>Optional Trace client, if unset the default will be used.</p>
 </td>
                   </tr>
                 </tbody>
@@ -187,7 +186,7 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
               <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseGoogleTrace(IApplicationBuilder)</h4>
               <div class="markdown level1 summary"><p>Uses middleware that will trace time taken for all subsequent delegates to run.
 The time taken and metadata will be sent to the Stackdriver Trace API. To be
-used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_System_Threading_Tasks_Task_Google_Cloud_Trace_V1_TraceServiceClient__">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, Task&lt;TraceServiceClient&gt;)</a>,</p>
+used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient)</a>,</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

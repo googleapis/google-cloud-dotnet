@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EntityAnnotation
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -103,7 +104,7 @@
               </h3>
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_BoundingPoly_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.BoundingPoly*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_BoundingPoly" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.BoundingPoly">BoundingPoly</h4>
-              <div class="markdown level1 summary"><p>Image region to which this entity belongs. Not filled currently
+              <div class="markdown level1 summary"><p>Image region to which this entity belongs. Currently not produced
 for <code>LABEL_DETECTION</code> features. For <code>TEXT_DETECTION</code> (OCR), <code>boundingPoly</code>s
 are produced for the entire text detected in an image region, followed by
 <code>boundingPoly</code>s for each word within the detected text.</p>
@@ -123,7 +124,7 @@ are produced for the entire text detected in an image region, followed by
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html#Google_Cloud_Vision_V1_BoundingPoly">BoundingPoly</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html">BoundingPoly</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -131,8 +132,9 @@ are produced for the entire text detected in an image region, followed by
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_Confidence_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Confidence*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Confidence" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Confidence">Confidence</h4>
               <div class="markdown level1 summary"><p>The accuracy of the entity detection in an image.
-For example, for an image containing &#39;Eiffel Tower,&#39; this field represents
-the confidence that there is a tower in the query image. Range [0, 1].</p>
+For example, for an image in which the &quot;Eiffel Tower&quot; entity is detected,
+this field represents the confidence that there is a tower in the query
+image. Range [0, 1].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -156,7 +158,7 @@ the confidence that there is a tower in the query image. Range [0, 1].</p>
               </table>
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_Description_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Description*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Description" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Description">Description</h4>
-              <div class="markdown level1 summary"><p>Entity textual description, expressed in its &lt;code&gt;locale&lt;/code&gt; language.</p>
+              <div class="markdown level1 summary"><p>Entity textual description, expressed in its <code>locale</code> language.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -181,7 +183,7 @@ the confidence that there is a tower in the query image. Range [0, 1].</p>
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_Locale_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locale*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Locale" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locale">Locale</h4>
               <div class="markdown level1 summary"><p>The language code for the locale in which the entity textual
-&lt;code&gt;description&lt;/code&gt; (next field) is expressed.</p>
+<code>description</code> is expressed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -206,10 +208,10 @@ the confidence that there is a tower in the query image. Range [0, 1].</p>
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_Locations_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locations*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Locations" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Locations">Locations</h4>
               <div class="markdown level1 summary"><p>The location information for the detected entity. Multiple
-&lt;code&gt;LocationInfo&lt;/code&gt; elements can be present since one location may
-indicate the location of the scene in the query image, and another the
-location of the place where the query image was taken. Location information
-is usually present for landmarks.</p>
+<code>LocationInfo</code> elements can be present because one location may
+indicate the location of the scene in the image, and another location
+may indicate the location of the place where the image was taken.
+Location information is usually present for landmarks.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -226,16 +228,15 @@ is usually present for landmarks.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.LocationInfo.html#Google_Cloud_Vision_V1_LocationInfo">LocationInfo</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.LocationInfo.html">LocationInfo</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_Mid_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Mid*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Mid" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Mid">Mid</h4>
-              <div class="markdown level1 summary"><p>Opaque entity ID. Some IDs might be available in Knowledge Graph(KG).
-For more details on KG please see:
-<a href="https://developers.google.com/knowledge-graph/">https://developers.google.com/knowledge-graph/</a></p>
+              <div class="markdown level1 summary"><p>Opaque entity ID. Some IDs may be available in
+<a href="https://developers.google.com/knowledge-graph/">Google Knowledge Graph Search API</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -259,8 +260,8 @@ For more details on KG please see:
               </table>
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_Properties_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Properties*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Properties" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Properties">Properties</h4>
-              <div class="markdown level1 summary"><p>Some entities can have additional optional &lt;code&gt;Property&lt;/code&gt; fields.
-For example a different kind of score or string that qualifies the entity.</p>
+              <div class="markdown level1 summary"><p>Some entities may have optional user-supplied <code>Property</code> (name/value)
+fields, such a score or string that qualifies the entity.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -277,7 +278,7 @@ For example a different kind of score or string that qualifies the entity.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Property.html#Google_Cloud_Vision_V1_Property">Property</a>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.Property.html">Property</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -309,10 +310,10 @@ For example a different kind of score or string that qualifies the entity.</p>
               <a id="Google_Cloud_Vision_V1_EntityAnnotation_Topicality_" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Topicality*"></a>
               <h4 id="Google_Cloud_Vision_V1_EntityAnnotation_Topicality" data-uid="Google.Cloud.Vision.V1.EntityAnnotation.Topicality">Topicality</h4>
               <div class="markdown level1 summary"><p>The relevancy of the ICA (Image Content Annotation) label to the
-image. For example, the relevancy of &#39;tower&#39; to an image containing
-&#39;Eiffel Tower&#39; is likely higher than an image containing a distant towering
-building, though the confidence that there is a tower may be the same.
-Range [0, 1].</p>
+image. For example, the relevancy of &quot;tower&quot; is likely higher to an image
+containing the detected &quot;Eiffel Tower&quot; than to an image containing a
+detected distant towering building, even though the confidence that
+there is a tower in each image may be the same. Range [0, 1].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -334,7 +335,7 @@ Range [0, 1].</p>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

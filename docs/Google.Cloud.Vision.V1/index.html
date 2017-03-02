@@ -8,7 +8,7 @@
     <title>Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -31,6 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="index.html">
                 <img id="logo" class="svg" src="logo.svg" alt="">
               </a>
@@ -91,15 +92,19 @@ operation on a single image.</p>
 <a href="api/Google.Cloud.Vision.V1.Image.html">Image</a> class to allow
 instances to be constructed from files, streams, byte arrays and URIs.</p>
 <pre><code class="lang-cs">Image image1 = Image.FromFile(&quot;Pictures/LocalImage.jpg&quot;);
+// Fetched locally by the client, then uploaded to the server
 Image image2 = Image.FetchFromUri(&quot;https://cloud.google.com/images/devtools-icon-64x64.png&quot;);
-Image image3 = Image.FromStorageUri(&quot;gs://my-bucket/my-file&quot;);
+// Fetched by the Google Cloud Vision server
+Image image3 = Image.FromUri(&quot;https://cloud.google.com/images/devtools-icon-64x64.png&quot;);
+// Google Cloud Storage URI
+Image image4 = Image.FromUri(&quot;gs://my-bucket/my-file&quot;);
 
 byte[] bytes = ReadImageData(); // For example, from a database
-Image image4 = Image.FromBytes(bytes);
+Image image5 = Image.FromBytes(bytes);
 
 using (Stream stream = OpenImageStream()) // Any regular .NET stream
 {
-    Image image5 = Image.FromStream(stream);
+    Image image6 = Image.FromStream(stream);
 }
 </code></pre><p>All IO-related methods have async equivalents.</p>
 <h2 id="detect-faces-in-a-single-image">Detect faces in a single image</h2>
@@ -115,6 +120,27 @@ IReadOnlyList&lt;EntityAnnotation&gt; textAnnotations = client.DetectText(image)
 foreach (EntityAnnotation text in textAnnotations)
 {
     Console.WriteLine($&quot;Description: {text.Description}&quot;);
+}
+</code></pre><h2 id="detect-document-text-in-a-single-image">Detect document text in a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+TextAnnotation text = client.DetectDocumentText(image);
+Console.WriteLine($&quot;Text: {text.Text}&quot;);
+foreach (var page in text.Pages)
+{
+    foreach (var block in page.Blocks)
+    {
+        string box = string.Join(&quot; - &quot;, block.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+        Console.WriteLine($&quot;Block {block.BlockType} at {box}&quot;);
+        foreach (var paragraph in block.Paragraphs)
+        {
+            box = string.Join(&quot; - &quot;, paragraph.BoundingBox.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+            Console.WriteLine($&quot;  Paragraph at {box}&quot;);
+            foreach (var word in paragraph.Words)
+            {
+                Console.WriteLine($&quot;    Word: {string.Join(&quot;&quot;, word.Symbols.Select(s =&gt; s.Text))}&quot;);
+            }
+        }
+    }
 }
 </code></pre><h2 id="detect-labels-in-a-single-image">Detect labels in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
@@ -150,6 +176,36 @@ Console.WriteLine($&quot;Medical? {annotation.Medical}&quot;);
 ImageProperties properties = client.DetectImageProperties(image);
 ColorInfo dominantColor = properties.DominantColors.Colors.OrderByDescending(c =&gt; c.PixelFraction).First();
 Console.WriteLine($&quot;Dominant color in image: {dominantColor}&quot;);
+</code></pre><h2 id="suggest-crop-hints-for-a-single-image">Suggest crop hints for a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+CropHintsAnnotation cropHints = client.DetectCropHints(image);
+foreach (CropHint hint in cropHints.CropHints)
+{
+    Console.WriteLine(&quot;Crop hint:&quot;);
+    string poly = string.Join(&quot; - &quot;, hint.BoundingPoly.Vertices.Select(v =&gt; $&quot;({v.X}, {v.Y})&quot;));
+    Console.WriteLine($&quot;  Poly: {poly}&quot;);
+    Console.WriteLine($&quot;  Confidence: {hint.Confidence}&quot;);
+    Console.WriteLine($&quot;  Importance fraction: {hint.ImportanceFraction}&quot;);
+}
+</code></pre><h2 id="perform-analysis-for-other-web-references-on-a-single-image">Perform analysis for other web references on a single image</h2>
+<pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
+WebDetection webDetection = client.DetectWebInformation(image);
+foreach (WebDetection.Types.WebImage webImage in webDetection.FullMatchingImages)
+{
+    Console.WriteLine($&quot;Full image: {webImage.Url} ({webImage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebImage webImage in webDetection.PartialMatchingImages)
+{
+    Console.WriteLine($&quot;Partial image: {webImage.Url} ({webImage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebPage webPage in webDetection.PagesWithMatchingImages)
+{
+    Console.WriteLine($&quot;Page with matching image: {webPage.Url} ({webPage.Score})&quot;);
+}
+foreach (WebDetection.Types.WebEntity entity in webDetection.WebEntities)
+{
+    Console.WriteLine($&quot;Web entity: {entity.EntityId} / {entity.Description} ({entity.Score})&quot;);
+}
 </code></pre><h2 id="detect-faces-and-landmarks-in-a-single-image">Detect faces and landmarks in a single image</h2>
 <pre><code class="lang-cs">ImageAnnotatorClient client = ImageAnnotatorClient.Create();
 AnnotateImageRequest request = new AnnotateImageRequest

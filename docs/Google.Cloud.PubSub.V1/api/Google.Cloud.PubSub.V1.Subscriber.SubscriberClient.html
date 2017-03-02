@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Subscriber.SubscriberClient
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -77,13 +78,13 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
-                  <div class="level2"><span class="xref">Grpc.Core.ClientBase&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient">Subscriber.SubscriberClient</a>&gt;</div>
+                  <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html">Subscriber.SubscriberClient</a>&gt;</div>
                   <div class="level3"><span class="xref">Subscriber.SubscriberClient</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
-                  <span class="xref">Grpc.Core.ClientBase&lt;T&gt;.WithHost(System.String)</span>
+                  <span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.PubSub.V1.Subscriber.SubscriberClient&gt;.WithHost(System.String)</span>
                 </div>
                 <div>
                   <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
@@ -139,7 +140,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallInvoker</span></td>
-                    <td><em>callInvoker</em></td>
+                    <td><span class="parametername">callInvoker</span></td>
                     <td><p>The callInvoker to use to make remote calls.</p>
 </td>
                   </tr>
@@ -166,7 +167,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.Channel</span></td>
-                    <td><em>channel</em></td>
+                    <td><span class="parametername">channel</span></td>
                     <td><p>The channel to use to make remote calls.</p>
 </td>
                   </tr>
@@ -193,7 +194,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
-                    <td><em>configuration</em></td>
+                    <td><span class="parametername">configuration</span></td>
                     <td><p>The client configuration.</p>
 </td>
                   </tr>
@@ -226,14 +227,16 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html#Google_Cloud_PubSub_V1_AcknowledgeRequest">AcknowledgeRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html">AcknowledgeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -248,7 +251,8 @@ than once will not result in an error.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -277,24 +281,28 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html#Google_Cloud_PubSub_V1_AcknowledgeRequest">AcknowledgeRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html">AcknowledgeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -309,7 +317,8 @@ than once will not result in an error.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -338,14 +347,16 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html#Google_Cloud_PubSub_V1_AcknowledgeRequest">AcknowledgeRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html">AcknowledgeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -359,8 +370,9 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -389,24 +401,28 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html#Google_Cloud_PubSub_V1_AcknowledgeRequest">AcknowledgeRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html">AcknowledgeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -420,14 +436,15 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateIAMPolicyClient_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateIAMPolicyClient*"></a>
               <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateIAMPolicyClient" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateIAMPolicyClient">CreateIAMPolicyClient()</h4>
-              <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="Google.Cloud.Iam.V1.IAMPolicy.IAMPolicyClient.html#Google_Cloud_Iam_V1_IAMPolicy_IAMPolicyClient">IAMPolicy.IAMPolicyClient</a> using the same call invoker
+              <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="Google.Cloud.Iam.V1.IAMPolicy.IAMPolicyClient.html">IAMPolicy.IAMPolicyClient</a> using the same call invoker
 as this client.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -445,8 +462,260 @@ as this client.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Iam.V1.IAMPolicy.IAMPolicyClient.html#Google_Cloud_Iam_V1_IAMPolicy_IAMPolicyClient">IAMPolicy.IAMPolicyClient</a></td>
+                    <td><a class="xref" href="Google.Cloud.Iam.V1.IAMPolicy.IAMPolicyClient.html">IAMPolicy.IAMPolicyClient</a></td>
                     <td><p>A new IAM client for the same target as this client.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshot*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshot_Google_Cloud_PubSub_V1_CreateSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Grpc.Core.CallOptions)">CreateSnapshot(CreateSnapshotRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
+If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
+If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p>If the name is not provided in the request, the server will assign a random
+name for this snapshot on the same project as the subscription, conforming
+to the
+<a href="https://cloud.google.com/pubsub/docs/overview#names">resource name format</a>.
+The generated name is populated in the returned Snapshot object.
+Note that for REST API requests, you must specify a name in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Snapshot CreateSnapshot(CreateSnapshotRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.CreateSnapshotRequest.html">CreateSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshot*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshot_Google_Cloud_PubSub_V1_CreateSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSnapshot(CreateSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
+If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
+If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p>If the name is not provided in the request, the server will assign a random
+name for this snapshot on the same project as the subscription, conforming
+to the
+<a href="https://cloud.google.com/pubsub/docs/overview#names">resource name format</a>.
+The generated name is populated in the returned Snapshot object.
+Note that for REST API requests, you must specify a name in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Snapshot CreateSnapshot(CreateSnapshotRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.CreateSnapshotRequest.html">CreateSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshotAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_CreateSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Grpc.Core.CallOptions)">CreateSnapshotAsync(CreateSnapshotRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
+If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
+If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p>If the name is not provided in the request, the server will assign a random
+name for this snapshot on the same project as the subscription, conforming
+to the
+<a href="https://cloud.google.com/pubsub/docs/overview#names">resource name format</a>.
+The generated name is populated in the returned Snapshot object.
+Note that for REST API requests, you must specify a name in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Snapshot&gt; CreateSnapshotAsync(CreateSnapshotRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.CreateSnapshotRequest.html">CreateSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshotAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_CreateSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">CreateSnapshotAsync(CreateSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
+If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
+If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p>If the name is not provided in the request, the server will assign a random
+name for this snapshot on the same project as the subscription, conforming
+to the
+<a href="https://cloud.google.com/pubsub/docs/overview#names">resource name format</a>.
+The generated name is populated in the returned Snapshot object.
+Note that for REST API requests, you must specify a name in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Snapshot&gt; CreateSnapshotAsync(CreateSnapshotRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.CreateSnapshotRequest.html">CreateSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a>&gt;</td>
+                    <td><p>The call object.</p>
 </td>
                   </tr>
                 </tbody>
@@ -479,14 +748,16 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -500,8 +771,9 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -533,24 +805,28 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -564,8 +840,9 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -597,14 +874,16 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -618,8 +897,9 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -651,24 +931,28 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -682,8 +966,241 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshot*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshot_Google_Cloud_PubSub_V1_DeleteSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.DeleteSnapshotRequest,Grpc.Core.CallOptions)">DeleteSnapshot(DeleteSnapshotRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
+are immediately dropped. After a snapshot is deleted, a new one may be
+created with the same name, but the new one has no association with the old
+snapshot or its subscription, unless the same subscription is specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Empty DeleteSnapshot(DeleteSnapshotRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshot*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshot_Google_Cloud_PubSub_V1_DeleteSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.DeleteSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSnapshot(DeleteSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
+are immediately dropped. After a snapshot is deleted, a new one may be
+created with the same name, but the new one has no association with the old
+snapshot or its subscription, unless the same subscription is specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Empty DeleteSnapshot(DeleteSnapshotRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshotAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshotAsync_Google_Cloud_PubSub_V1_DeleteSnapshotRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.DeleteSnapshotRequest,Grpc.Core.CallOptions)">DeleteSnapshotAsync(DeleteSnapshotRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
+are immediately dropped. After a snapshot is deleted, a new one may be
+created with the same name, but the new one has no association with the old
+snapshot or its subscription, unless the same subscription is specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSnapshotAsync(DeleteSnapshotRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshotAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_DeleteSnapshotAsync_Google_Cloud_PubSub_V1_DeleteSnapshotRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.DeleteSnapshotRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteSnapshotAsync(DeleteSnapshotRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
+are immediately dropped. After a snapshot is deleted, a new one may be
+created with the same name, but the new one has no association with the old
+snapshot or its subscription, unless the same subscription is specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Empty&gt; DeleteSnapshotAsync(DeleteSnapshotRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -711,14 +1228,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html#Google_Cloud_PubSub_V1_DeleteSubscriptionRequest">DeleteSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html">DeleteSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -733,7 +1252,8 @@ subscription or its topic unless the same topic is specified.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -761,24 +1281,28 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html#Google_Cloud_PubSub_V1_DeleteSubscriptionRequest">DeleteSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html">DeleteSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -793,7 +1317,8 @@ subscription or its topic unless the same topic is specified.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -821,14 +1346,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html#Google_Cloud_PubSub_V1_DeleteSubscriptionRequest">DeleteSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html">DeleteSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -842,8 +1369,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -871,24 +1399,28 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html#Google_Cloud_PubSub_V1_DeleteSubscriptionRequest">DeleteSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html">DeleteSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -902,8 +1434,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -927,14 +1460,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html#Google_Cloud_PubSub_V1_GetSubscriptionRequest">GetSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html">GetSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -948,8 +1483,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -973,24 +1509,28 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html#Google_Cloud_PubSub_V1_GetSubscriptionRequest">GetSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html">GetSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1004,8 +1544,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1029,14 +1570,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html#Google_Cloud_PubSub_V1_GetSubscriptionRequest">GetSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html">GetSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1050,8 +1593,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1075,24 +1619,28 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html#Google_Cloud_PubSub_V1_GetSubscriptionRequest">GetSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html">GetSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1106,8 +1654,229 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshots_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshots*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshots_Google_Cloud_PubSub_V1_ListSnapshotsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ListSnapshotsRequest,Grpc.Core.CallOptions)">ListSnapshots(ListSnapshotsRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the existing snapshots.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ListSnapshotsResponse ListSnapshots(ListSnapshotsRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsResponse.html">ListSnapshotsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshots_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshots*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshots_Google_Cloud_PubSub_V1_ListSnapshotsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ListSnapshotsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSnapshots(ListSnapshotsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Lists the existing snapshots.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ListSnapshotsResponse ListSnapshots(ListSnapshotsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsResponse.html">ListSnapshotsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshotsAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshotsAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshotsAsync_Google_Cloud_PubSub_V1_ListSnapshotsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ListSnapshotsRequest,Grpc.Core.CallOptions)">ListSnapshotsAsync(ListSnapshotsRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Lists the existing snapshots.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSnapshotsResponse&gt; ListSnapshotsAsync(ListSnapshotsRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsResponse.html">ListSnapshotsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshotsAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshotsAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_ListSnapshotsAsync_Google_Cloud_PubSub_V1_ListSnapshotsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ListSnapshotsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListSnapshotsAsync(ListSnapshotsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Lists the existing snapshots.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;ListSnapshotsResponse&gt; ListSnapshotsAsync(ListSnapshotsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsResponse.html">ListSnapshotsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1131,14 +1900,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html#Google_Cloud_PubSub_V1_ListSubscriptionsRequest">ListSubscriptionsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html">ListSubscriptionsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1152,8 +1923,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html#Google_Cloud_PubSub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html">ListSubscriptionsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1177,24 +1949,28 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html#Google_Cloud_PubSub_V1_ListSubscriptionsRequest">ListSubscriptionsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html">ListSubscriptionsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1208,8 +1984,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html#Google_Cloud_PubSub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html">ListSubscriptionsResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1233,14 +2010,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html#Google_Cloud_PubSub_V1_ListSubscriptionsRequest">ListSubscriptionsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html">ListSubscriptionsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1254,8 +2033,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html#Google_Cloud_PubSub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html">ListSubscriptionsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1279,24 +2059,28 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html#Google_Cloud_PubSub_V1_ListSubscriptionsRequest">ListSubscriptionsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html">ListSubscriptionsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1310,8 +2094,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html#Google_Cloud_PubSub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html">ListSubscriptionsResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1339,14 +2124,16 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html#Google_Cloud_PubSub_V1_ModifyAckDeadlineRequest">ModifyAckDeadlineRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html">ModifyAckDeadlineRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1361,7 +2148,8 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1389,24 +2177,28 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html#Google_Cloud_PubSub_V1_ModifyAckDeadlineRequest">ModifyAckDeadlineRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html">ModifyAckDeadlineRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1421,7 +2213,8 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1449,14 +2242,16 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html#Google_Cloud_PubSub_V1_ModifyAckDeadlineRequest">ModifyAckDeadlineRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html">ModifyAckDeadlineRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1470,8 +2265,9 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1499,24 +2295,28 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html#Google_Cloud_PubSub_V1_ModifyAckDeadlineRequest">ModifyAckDeadlineRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html">ModifyAckDeadlineRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1530,8 +2330,9 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1559,14 +2360,16 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html#Google_Cloud_PubSub_V1_ModifyPushConfigRequest">ModifyPushConfigRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html">ModifyPushConfigRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1581,7 +2384,8 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1609,24 +2413,28 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html#Google_Cloud_PubSub_V1_ModifyPushConfigRequest">ModifyPushConfigRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html">ModifyPushConfigRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1641,7 +2449,8 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Protobuf.WellKnownTypes.Empty</span></td>
-                    <td></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1669,14 +2478,16 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html#Google_Cloud_PubSub_V1_ModifyPushConfigRequest">ModifyPushConfigRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html">ModifyPushConfigRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1690,8 +2501,9 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1719,24 +2531,28 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html#Google_Cloud_PubSub_V1_ModifyPushConfigRequest">ModifyPushConfigRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html">ModifyPushConfigRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1750,14 +2566,16 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_NewInstance_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.NewInstance*"></a>
               <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a new instance of client from given <code>ClientBaseConfiguration</code>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1775,7 +2593,7 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
-                    <td><em>configuration</em></td>
+                    <td><span class="parametername">configuration</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1790,7 +2608,7 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html#Google_Cloud_PubSub_V1_Subscriber_SubscriberClient">Subscriber.SubscriberClient</a></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.html">Subscriber.SubscriberClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1820,14 +2638,16 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html#Google_Cloud_PubSub_V1_PullRequest">PullRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html">PullRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1841,8 +2661,9 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html#Google_Cloud_PubSub_V1_PullResponse">PullResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html">PullResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1869,24 +2690,28 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html#Google_Cloud_PubSub_V1_PullRequest">PullRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html">PullRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1900,8 +2725,9 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html#Google_Cloud_PubSub_V1_PullResponse">PullResponse</a></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html">PullResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1928,14 +2754,16 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html#Google_Cloud_PubSub_V1_PullRequest">PullRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html">PullRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1949,8 +2777,9 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html#Google_Cloud_PubSub_V1_PullResponse">PullResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html">PullResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1977,24 +2806,28 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html#Google_Cloud_PubSub_V1_PullRequest">PullRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html">PullRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2008,8 +2841,233 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncUnaryCall&lt;TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html#Google_Cloud_PubSub_V1_PullResponse">PullResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html">PullResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_Seek_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.Seek*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_Seek_Google_Cloud_PubSub_V1_SeekRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.Seek(Google.Cloud.PubSub.V1.SeekRequest,Grpc.Core.CallOptions)">Seek(SeekRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Seeks an existing subscription to a point in time or to a given snapshot,
+whichever is provided in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual SeekResponse Seek(SeekRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SeekRequest.html">SeekRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SeekResponse.html">SeekResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_Seek_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.Seek*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_Seek_Google_Cloud_PubSub_V1_SeekRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.Seek(Google.Cloud.PubSub.V1.SeekRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Seek(SeekRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Seeks an existing subscription to a point in time or to a given snapshot,
+whichever is provided in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual SeekResponse Seek(SeekRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SeekRequest.html">SeekRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SeekResponse.html">SeekResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_SeekAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.SeekAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_SeekAsync_Google_Cloud_PubSub_V1_SeekRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.SeekAsync(Google.Cloud.PubSub.V1.SeekRequest,Grpc.Core.CallOptions)">SeekAsync(SeekRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Seeks an existing subscription to a point in time or to a given snapshot,
+whichever is provided in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;SeekResponse&gt; SeekAsync(SeekRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SeekRequest.html">SeekRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.SeekResponse.html">SeekResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_SeekAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.SeekAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_SeekAsync_Google_Cloud_PubSub_V1_SeekRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.SeekAsync(Google.Cloud.PubSub.V1.SeekRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">SeekAsync(SeekRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Seeks an existing subscription to a point in time or to a given snapshot,
+whichever is provided in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;SeekResponse&gt; SeekAsync(SeekRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SeekRequest.html">SeekRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.SeekResponse.html">SeekResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2044,8 +3102,9 @@ control can be achieved by configuring the underlying RPC channel.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.CallOptions</span></td>
-                    <td><em>options</em></td>
-                    <td></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2059,8 +3118,9 @@ control can be achieved by configuring the underlying RPC channel.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall&lt;TRequest, TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest">StreamingPullRequest</a>, <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse">StreamingPullResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html">StreamingPullRequest</a>, <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html">StreamingPullResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2095,18 +3155,21 @@ control can be achieved by configuring the underlying RPC channel.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.Metadata</span></td>
-                    <td><em>headers</em></td>
-                    <td></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
-                    <td><em>deadline</em></td>
-                    <td></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
-                    <td></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2120,12 +3183,237 @@ control can be achieved by configuring the underlying RPC channel.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall&lt;TRequest, TResponse&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest">StreamingPullRequest</a>, <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse">StreamingPullResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html">StreamingPullRequest</a>, <a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html">StreamingPullResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.CallOptions)">UpdateSubscription(UpdateSubscriptionRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
+subscription, such as its topic, are not modifiable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Subscription UpdateSubscription(UpdateSubscriptionRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.html">UpdateSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSubscription(UpdateSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
+subscription, such as its topic, are not modifiable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Subscription UpdateSubscription(UpdateSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.html">UpdateSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.CallOptions)">UpdateSubscriptionAsync(UpdateSubscriptionRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
+subscription, such as its topic, are not modifiable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Subscription&gt; UpdateSubscriptionAsync(UpdateSubscriptionRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.html">UpdateSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberClient_UpdateSubscriptionAsync_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberClient.UpdateSubscriptionAsync(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">UpdateSubscriptionAsync(UpdateSubscriptionRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
+subscription, such as its topic, are not modifiable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Subscription&gt; UpdateSubscriptionAsync(UpdateSubscriptionRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.html">UpdateSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

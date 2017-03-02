@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Subscriber.SubscriberBase
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -126,14 +127,16 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html#Google_Cloud_PubSub_V1_AcknowledgeRequest">AcknowledgeRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.AcknowledgeRequest.html">AcknowledgeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -147,8 +150,66 @@ than once will not result in an error.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_CreateSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.CreateSnapshot*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_CreateSnapshot_Google_Cloud_PubSub_V1_CreateSnapshotRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.CreateSnapshot(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Grpc.Core.ServerCallContext)">CreateSnapshot(CreateSnapshotRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
+If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
+If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
+<p>If the name is not provided in the request, the server will assign a random
+name for this snapshot on the same project as the subscription, conforming
+to the
+<a href="https://cloud.google.com/pubsub/docs/overview#names">resource name format</a>.
+The generated name is populated in the returned Snapshot object.
+Note that for REST API requests, you must specify a name in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Snapshot&gt; CreateSnapshot(CreateSnapshotRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.CreateSnapshotRequest.html">CreateSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Snapshot.html">Snapshot</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -180,14 +241,16 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -201,8 +264,61 @@ Note that for REST API requests, you must specify a name in the request.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_DeleteSnapshot_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.DeleteSnapshot*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_DeleteSnapshot_Google_Cloud_PubSub_V1_DeleteSnapshotRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.DeleteSnapshot(Google.Cloud.PubSub.V1.DeleteSnapshotRequest,Grpc.Core.ServerCallContext)">DeleteSnapshot(DeleteSnapshotRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
+are immediately dropped. After a snapshot is deleted, a new one may be
+created with the same name, but the new one has no association with the old
+snapshot or its subscription, unless the same subscription is specified.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Empty&gt; DeleteSnapshot(DeleteSnapshotRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSnapshotRequest.html">DeleteSnapshotRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -230,14 +346,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html#Google_Cloud_PubSub_V1_DeleteSubscriptionRequest">DeleteSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.DeleteSubscriptionRequest.html">DeleteSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -251,8 +369,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -276,14 +395,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html#Google_Cloud_PubSub_V1_GetSubscriptionRequest">GetSubscriptionRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.GetSubscriptionRequest.html">GetSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -297,8 +418,58 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html#Google_Cloud_PubSub_V1_Subscription">Subscription</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_ListSnapshots_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.ListSnapshots*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_ListSnapshots_Google_Cloud_PubSub_V1_ListSnapshotsRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.ListSnapshots(Google.Cloud.PubSub.V1.ListSnapshotsRequest,Grpc.Core.ServerCallContext)">ListSnapshots(ListSnapshotsRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Lists the existing snapshots.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;ListSnapshotsResponse&gt; ListSnapshots(ListSnapshotsRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsRequest.html">ListSnapshotsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSnapshotsResponse.html">ListSnapshotsResponse</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -322,14 +493,16 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html#Google_Cloud_PubSub_V1_ListSubscriptionsRequest">ListSubscriptionsRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsRequest.html">ListSubscriptionsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -343,8 +516,9 @@ subscription or its topic unless the same topic is specified.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html#Google_Cloud_PubSub_V1_ListSubscriptionsResponse">ListSubscriptionsResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.ListSubscriptionsResponse.html">ListSubscriptionsResponse</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -372,14 +546,16 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html#Google_Cloud_PubSub_V1_ModifyAckDeadlineRequest">ModifyAckDeadlineRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyAckDeadlineRequest.html">ModifyAckDeadlineRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -393,8 +569,9 @@ subscription-level <code>ackDeadlineSeconds</code> used for subsequent messages.
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -422,14 +599,16 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html#Google_Cloud_PubSub_V1_ModifyPushConfigRequest">ModifyPushConfigRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ModifyPushConfigRequest.html">ModifyPushConfigRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -443,8 +622,9 @@ continuously through the call regardless of changes to the <code>PushConfig</cod
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Protobuf.WellKnownTypes.Empty</span>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -471,14 +651,16 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html#Google_Cloud_PubSub_V1_PullRequest">PullRequest</a></td>
-                    <td><em>request</em></td>
-                    <td></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.PullRequest.html">PullRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -492,8 +674,59 @@ subscription.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html#Google_Cloud_PubSub_V1_PullResponse">PullResponse</a>&gt;</td>
-                    <td></td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.PullResponse.html">PullResponse</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_Seek_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.Seek*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_Seek_Google_Cloud_PubSub_V1_SeekRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.Seek(Google.Cloud.PubSub.V1.SeekRequest,Grpc.Core.ServerCallContext)">Seek(SeekRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Seeks an existing subscription to a point in time or to a given snapshot,
+whichever is provided in the request.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;SeekResponse&gt; Seek(SeekRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SeekRequest.html">SeekRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.SeekResponse.html">SeekResponse</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -527,19 +760,22 @@ control can be achieved by configuring the underlying RPC channel.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Grpc.Core.IAsyncStreamReader&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html#Google_Cloud_PubSub_V1_StreamingPullRequest">StreamingPullRequest</a>&gt;</td>
-                    <td><em>requestStream</em></td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.IAsyncStreamReader</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullRequest.html">StreamingPullRequest</a>&gt;</td>
+                    <td><span class="parametername">requestStream</span></td>
+                    <td><p>Used for reading requests from the client.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><span class="xref">Grpc.Core.IServerStreamWriter&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html#Google_Cloud_PubSub_V1_StreamingPullResponse">StreamingPullResponse</a>&gt;</td>
-                    <td><em>responseStream</em></td>
-                    <td></td>
+                    <td><span class="xref">Grpc.Core.IServerStreamWriter</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.StreamingPullResponse.html">StreamingPullResponse</a>&gt;</td>
+                    <td><span class="parametername">responseStream</span></td>
+                    <td><p>Used for sending responses back to the client.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
-                    <td><em>context</em></td>
-                    <td></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -554,11 +790,62 @@ control can be achieved by configuring the underlying RPC channel.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task indicating completion of the handler.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+              <a id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_UpdateSubscription_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSubscription*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_Subscriber_SubscriberBase_UpdateSubscription_Google_Cloud_PubSub_V1_UpdateSubscriptionRequest_Grpc_Core_ServerCallContext_" data-uid="Google.Cloud.PubSub.V1.Subscriber.SubscriberBase.UpdateSubscription(Google.Cloud.PubSub.V1.UpdateSubscriptionRequest,Grpc.Core.ServerCallContext)">UpdateSubscription(UpdateSubscriptionRequest, ServerCallContext)</h4>
+              <div class="markdown level1 summary"><p>Updates an existing subscription. Note that certain properties of a
+subscription, such as its topic, are not modifiable.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Subscription&gt; UpdateSubscription(UpdateSubscriptionRequest request, ServerCallContext context)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.UpdateSubscriptionRequest.html">UpdateSubscriptionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request received from the client.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ServerCallContext</span></td>
+                    <td><span class="parametername">context</span></td>
+                    <td><p>The context of the server-side call handler being invoked.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.PubSub.V1.Subscription.html">Subscription</a>&gt;</td>
+                    <td><p>The response to send back to the client (wrapped by a task).</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

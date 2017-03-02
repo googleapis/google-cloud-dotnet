@@ -204,14 +204,15 @@
                   <tr>
                     <td><span class="xref">Google.Api.MonitoredResource</span></td>
                     <td><span class="parametername">monitoredResource</span></td>
-                    <td><p>Optional, the monitored resource.  Defaults to the global resource.
+                    <td><p>Optional, the monitored resource.  The monitored resource will
+    be automatically detected if it is not set and will default to the global resource if the detection fails.
     See: <a href="https://cloud.google.com/logging/docs/api/v2/resource-list">https://cloud.google.com/logging/docs/api/v2/resource-list</a> </p>
 </td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Diagnostics.Common.BufferOptions.html">BufferOptions</a></td>
                     <td><span class="parametername">bufferOptions</span></td>
-                    <td><p>Optional, the buffer options.  Defaults to a <a class="xref" href="Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType_Sized">Sized</a></p>
+                    <td><p>Optional, the buffer options.  Defaults to a <a class="xref" href="Google.Cloud.Diagnostics.Common.BufferType.html#Google_Cloud_Diagnostics_Common_BufferType_Timed">Timed</a></p>
 </td>
                   </tr>
                 </tbody>

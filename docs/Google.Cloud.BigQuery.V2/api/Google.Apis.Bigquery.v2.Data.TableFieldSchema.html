@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TableFieldSchema
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -171,7 +172,7 @@ public virtual IList&lt;TableFieldSchema&gt; Fields { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableFieldSchema.html#Google_Apis_Bigquery_v2_Data_TableFieldSchema">TableFieldSchema</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableFieldSchema.html">TableFieldSchema</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -230,9 +231,10 @@ public virtual string Name { get; set; }</code></pre>
               </table>
               <a id="Google_Apis_Bigquery_v2_Data_TableFieldSchema_Type_" data-uid="Google.Apis.Bigquery.v2.Data.TableFieldSchema.Type*"></a>
               <h4 id="Google_Apis_Bigquery_v2_Data_TableFieldSchema_Type" data-uid="Google.Apis.Bigquery.v2.Data.TableFieldSchema.Type">Type</h4>
-              <div class="markdown level1 summary"><p>[Required] The field data type. Possible values include STRING, BYTES, INTEGER, FLOAT, BOOLEAN,
-TIMESTAMP, DATE, TIME, DATETIME, or RECORD (where RECORD indicates that the field contains a nested
-schema).</p>
+              <div class="markdown level1 summary"><p>[Required] The field data type. Possible values include STRING, BYTES, INTEGER, INT64 (same as
+INTEGER), FLOAT, FLOAT64 (same as FLOAT), BOOLEAN, BOOL (same as BOOLEAN), TIMESTAMP, DATE, TIME, DATETIME,
+RECORD (where RECORD indicates that the field contains a nested schema) or STRUCT (same as
+RECORD).</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -255,7 +257,7 @@ public virtual string Type { get; set; }</code></pre>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

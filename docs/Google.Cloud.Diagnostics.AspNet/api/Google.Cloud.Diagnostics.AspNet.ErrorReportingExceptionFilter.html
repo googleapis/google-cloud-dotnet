@@ -98,7 +98,7 @@
               <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.AspNet.dll</h6>
               <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ErrorReportingExceptionFilter : IExceptionFilter</code></pre>
+                <pre><code class="lang-csharp hljs">public class ErrorReportingExceptionFilter : IExceptionFilter, IDisposable</code></pre>
               </div>
               <h5 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>Reports unhandled exceptions to Google Cloud Error Reporting.
@@ -184,6 +184,16 @@ defined by <span class="xref">Google.Apis.Auth.OAuth2.GoogleCredential.GetApplic
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Dispose_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Dispose*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_Dispose" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.Dispose">Dispose()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IDisposable.Dispose()</span></div>
               <a id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_OnException_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.OnException*"></a>
               <h4 id="Google_Cloud_Diagnostics_AspNet_ErrorReportingExceptionFilter_OnException_System_Web_Mvc_ExceptionContext_" data-uid="Google.Cloud.Diagnostics.AspNet.ErrorReportingExceptionFilter.OnException(System.Web.Mvc.ExceptionContext)">OnException(ExceptionContext)</h4>
               <div class="markdown level1 summary"></div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreClient
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -77,6 +78,7 @@
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">DatastoreClient</span></div>
+                  <div class="level2"><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClientImpl.html">DatastoreClientImpl</a></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -120,7 +122,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -144,7 +146,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IReadOnlyList&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -172,7 +174,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html#Google_Cloud_Datastore_V1_Datastore_DatastoreClient">Datastore.DatastoreClient</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Datastore.DatastoreClient.html">Datastore.DatastoreClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -211,14 +213,14 @@ AllocateIdsResponse response = datastoreClient.AllocateIds(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsRequest.html#Google_Cloud_Datastore_V1_AllocateIdsRequest">AllocateIdsRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsRequest.html">AllocateIdsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -234,7 +236,7 @@ AllocateIdsResponse response = datastoreClient.AllocateIds(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html#Google_Cloud_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html">AllocateIdsResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -270,20 +272,20 @@ Entity entity2 = new Entity { Key = response.Keys[1], [&quot;text&quot;] = &quot
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>A list of keys with incomplete key paths for which to allocate IDs.
 No key may be reserved/read-only.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -299,7 +301,7 @@ No key may be reserved/read-only.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html#Google_Cloud_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html">AllocateIdsResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -337,14 +339,14 @@ AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsRequest.html#Google_Cloud_Datastore_V1_AllocateIdsRequest">AllocateIdsRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsRequest.html">AllocateIdsRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -360,7 +362,7 @@ AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html#Google_Cloud_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html">AllocateIdsResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -396,20 +398,20 @@ AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId,
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>A list of keys with incomplete key paths for which to allocate IDs.
 No key may be reserved/read-only.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -425,7 +427,7 @@ No key may be reserved/read-only.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html#Google_Cloud_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html">AllocateIdsResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -461,20 +463,20 @@ AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(projectId,
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>A list of keys with incomplete key paths for which to allocate IDs.
 No key may be reserved/read-only.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -490,7 +492,7 @@ No key may be reserved/read-only.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html#Google_Cloud_Datastore_V1_AllocateIdsResponse">AllocateIdsResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.AllocateIdsResponse.html">AllocateIdsResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -526,14 +528,14 @@ BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionRequest.html#Google_Cloud_Datastore_V1_BeginTransactionRequest">BeginTransactionRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -549,7 +551,7 @@ BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html#Google_Cloud_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html">BeginTransactionResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -583,13 +585,13 @@ BeginTransactionResponse response = datastoreClient.BeginTransaction(projectId);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -605,7 +607,7 @@ BeginTransactionResponse response = datastoreClient.BeginTransaction(projectId);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html#Google_Cloud_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html">BeginTransactionResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -641,14 +643,14 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionRequest.html#Google_Cloud_Datastore_V1_BeginTransactionRequest">BeginTransactionRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionRequest.html">BeginTransactionRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -664,7 +666,7 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html#Google_Cloud_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -698,13 +700,13 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -720,7 +722,7 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html#Google_Cloud_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -754,13 +756,13 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -776,7 +778,7 @@ BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html#Google_Cloud_Datastore_V1_BeginTransactionResponse">BeginTransactionResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.BeginTransactionResponse.html">BeginTransactionResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -815,14 +817,14 @@ CommitResponse response = datastoreClient.Commit(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.html#Google_Cloud_Datastore_V1_CommitRequest">CommitRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.html">CommitRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -838,7 +840,7 @@ CommitResponse response = datastoreClient.Commit(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -876,27 +878,27 @@ CommitResponse response = datastoreClient.Commit(projectId, mode, transaction, m
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref"></span></td>
-                    <td><em>mode</em></td>
+                    <td><span class="xref">Google.Cloud.Datastore.V1.CommitRequest.Types.Mode</span></td>
+                    <td><span class="parametername">mode</span></td>
                     <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Protobuf.ByteString</span></td>
-                    <td><em>transaction</em></td>
+                    <td><span class="parametername">transaction</span></td>
                     <td><p>The identifier of the transaction associated with the commit. A
 transaction identifier is returned by a call to
 [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html#Google_Cloud_Datastore_V1_Mutation">Mutation</a>&gt;</td>
-                    <td><em>mutations</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html">Mutation</a>&gt;</td>
+                    <td><span class="parametername">mutations</span></td>
                     <td><p>The mutations to perform.</p>
 <p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
 applied in order. The following sequences of mutations affecting a single
@@ -912,8 +914,8 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -929,7 +931,7 @@ entity.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -966,19 +968,19 @@ CommitResponse response = datastoreClient.Commit(projectId, mode, mutations);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref"></span></td>
-                    <td><em>mode</em></td>
+                    <td><span class="xref">Google.Cloud.Datastore.V1.CommitRequest.Types.Mode</span></td>
+                    <td><span class="parametername">mode</span></td>
                     <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html#Google_Cloud_Datastore_V1_Mutation">Mutation</a>&gt;</td>
-                    <td><em>mutations</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html">Mutation</a>&gt;</td>
+                    <td><span class="parametername">mutations</span></td>
                     <td><p>The mutations to perform.</p>
 <p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
 applied in order. The following sequences of mutations affecting a single
@@ -994,8 +996,8 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1011,7 +1013,7 @@ entity.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -1050,14 +1052,14 @@ CommitResponse response = await datastoreClient.CommitAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.html#Google_Cloud_Datastore_V1_CommitRequest">CommitRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.CommitRequest.html">CommitRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1073,7 +1075,7 @@ CommitResponse response = await datastoreClient.CommitAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1111,27 +1113,27 @@ CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, tra
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref"></span></td>
-                    <td><em>mode</em></td>
+                    <td><span class="xref">Google.Cloud.Datastore.V1.CommitRequest.Types.Mode</span></td>
+                    <td><span class="parametername">mode</span></td>
                     <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Protobuf.ByteString</span></td>
-                    <td><em>transaction</em></td>
+                    <td><span class="parametername">transaction</span></td>
                     <td><p>The identifier of the transaction associated with the commit. A
 transaction identifier is returned by a call to
 [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html#Google_Cloud_Datastore_V1_Mutation">Mutation</a>&gt;</td>
-                    <td><em>mutations</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html">Mutation</a>&gt;</td>
+                    <td><span class="parametername">mutations</span></td>
                     <td><p>The mutations to perform.</p>
 <p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
 applied in order. The following sequences of mutations affecting a single
@@ -1147,8 +1149,8 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1164,7 +1166,7 @@ entity.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1202,27 +1204,27 @@ CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, tra
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref"></span></td>
-                    <td><em>mode</em></td>
+                    <td><span class="xref">Google.Cloud.Datastore.V1.CommitRequest.Types.Mode</span></td>
+                    <td><span class="parametername">mode</span></td>
                     <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Protobuf.ByteString</span></td>
-                    <td><em>transaction</em></td>
+                    <td><span class="parametername">transaction</span></td>
                     <td><p>The identifier of the transaction associated with the commit. A
 transaction identifier is returned by a call to
 [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html#Google_Cloud_Datastore_V1_Mutation">Mutation</a>&gt;</td>
-                    <td><em>mutations</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html">Mutation</a>&gt;</td>
+                    <td><span class="parametername">mutations</span></td>
                     <td><p>The mutations to perform.</p>
 <p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
 applied in order. The following sequences of mutations affecting a single
@@ -1239,7 +1241,7 @@ entity.</p>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -1255,7 +1257,7 @@ entity.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1292,19 +1294,19 @@ CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mut
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref"></span></td>
-                    <td><em>mode</em></td>
+                    <td><span class="xref">Google.Cloud.Datastore.V1.CommitRequest.Types.Mode</span></td>
+                    <td><span class="parametername">mode</span></td>
                     <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html#Google_Cloud_Datastore_V1_Mutation">Mutation</a>&gt;</td>
-                    <td><em>mutations</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html">Mutation</a>&gt;</td>
+                    <td><span class="parametername">mutations</span></td>
                     <td><p>The mutations to perform.</p>
 <p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
 applied in order. The following sequences of mutations affecting a single
@@ -1320,8 +1322,8 @@ entity.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1337,7 +1339,7 @@ entity.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1374,19 +1376,19 @@ CommitResponse response = await datastoreClient.CommitAsync(projectId, mode, mut
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref"></span></td>
-                    <td><em>mode</em></td>
+                    <td><span class="xref">Google.Cloud.Datastore.V1.CommitRequest.Types.Mode</span></td>
+                    <td><span class="parametername">mode</span></td>
                     <td><p>The type of commit to perform. Defaults to <code>TRANSACTIONAL</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html#Google_Cloud_Datastore_V1_Mutation">Mutation</a>&gt;</td>
-                    <td><em>mutations</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Mutation.html">Mutation</a>&gt;</td>
+                    <td><span class="parametername">mutations</span></td>
                     <td><p>The mutations to perform.</p>
 <p>When mode is <code>TRANSACTIONAL</code>, mutations affecting a single entity are
 applied in order. The following sequences of mutations affecting a single
@@ -1403,7 +1405,7 @@ entity.</p>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -1419,7 +1421,7 @@ entity.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html#Google_Cloud_Datastore_V1_CommitResponse">CommitResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.CommitResponse.html">CommitResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1427,7 +1429,7 @@ entity.</p>
               </table>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Create_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Create*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Create_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Datastore_V1_DatastoreSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Create(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Datastore.V1.DatastoreSettings)">Create(ServiceEndpoint, DatastoreSettings)</h4>
-              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a>, applying defaults for all unspecified settings,
+              <div class="markdown level1 summary"><p>Synchronously creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>, applying defaults for all unspecified settings,
 and creating a channel connecting to the given endpoint with application default credentials where
 necessary.</p>
 </div>
@@ -1447,15 +1449,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
-                    <td><em>endpoint</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a>.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+                    <td><span class="parametername">endpoint</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html">DatastoreSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html">DatastoreSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1470,15 +1472,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
-                    <td><p>The created <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_Create_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Create*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_Create_Grpc_Core_Channel_Google_Cloud_Datastore_V1_DatastoreSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.Create(Grpc.Core.Channel,Google.Cloud.Datastore.V1.DatastoreSettings)">Create(Channel, DatastoreSettings)</h4>
-              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a> which uses the specified channel for remote operations.</p>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a> which uses the specified channel for remote operations.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1497,14 +1499,14 @@ necessary.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">Grpc.Core.Channel</span></td>
-                    <td><em>channel</em></td>
+                    <td><span class="parametername">channel</span></td>
                     <td><p>The <span class="xref">Grpc.Core.Channel</span> for remote operations. Must not be null.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html">DatastoreSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html">DatastoreSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1519,15 +1521,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a></td>
-                    <td><p>The created <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a></td>
+                    <td><p>The created <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Datastore_V1_DatastoreClient_CreateAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CreateAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Datastore_V1_DatastoreSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreClient.CreateAsync(Google.Api.Gax.Grpc.ServiceEndpoint,Google.Cloud.Datastore.V1.DatastoreSettings)">CreateAsync(ServiceEndpoint, DatastoreSettings)</h4>
-              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a>, applying defaults for all unspecified settings,
+              <div class="markdown level1 summary"><p>Asynchronously creates a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>, applying defaults for all unspecified settings,
 and creating a channel connecting to the given endpoint with application default credentials where
 necessary.</p>
 </div>
@@ -1547,15 +1549,15 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a></td>
-                    <td><em>endpoint</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html#Google_Api_Gax_Grpc_ServiceEndpoint">ServiceEndpoint</a>.</p>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a></td>
+                    <td><span class="parametername">endpoint</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Api.Gax.Grpc.ServiceEndpoint.html">ServiceEndpoint</a>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings">DatastoreSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>Optional <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html#Google_Cloud_Datastore_V1_DatastoreSettings">DatastoreSettings</a>.</p>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html">DatastoreSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
+                    <td><p>Optional <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreSettings.html">DatastoreSettings</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1570,8 +1572,8 @@ necessary.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a>&gt;</td>
-                    <td><p>The task representing the created <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient">DatastoreClient</a>.</p>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>&gt;</td>
+                    <td><p>The task representing the created <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -1608,14 +1610,14 @@ LookupResponse response = datastoreClient.Lookup(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupRequest.html#Google_Cloud_Datastore_V1_LookupRequest">LookupRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupRequest.html">LookupRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1631,7 +1633,7 @@ LookupResponse response = datastoreClient.Lookup(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html#Google_Cloud_Datastore_V1_LookupResponse">LookupResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html">LookupResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -1671,25 +1673,25 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this lookup request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>Keys of entities to look up.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1705,7 +1707,7 @@ Console.WriteLine($&quot;Missing: {response.Missing.Count}&quot;);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html#Google_Cloud_Datastore_V1_LookupResponse">LookupResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html">LookupResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -1743,14 +1745,14 @@ LookupResponse response = await datastoreClient.LookupAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupRequest.html#Google_Cloud_Datastore_V1_LookupRequest">LookupRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.LookupRequest.html">LookupRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1766,7 +1768,7 @@ LookupResponse response = await datastoreClient.LookupAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html#Google_Cloud_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html">LookupResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1802,25 +1804,25 @@ LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptio
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this lookup request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>Keys of entities to look up.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1836,7 +1838,7 @@ LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptio
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html#Google_Cloud_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html">LookupResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1872,25 +1874,25 @@ LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptio
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this lookup request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html#Google_Cloud_Datastore_V1_Key">Key</a>&gt;</td>
-                    <td><em>keys</em></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
+                    <td><span class="parametername">keys</span></td>
                     <td><p>Keys of entities to look up.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -1906,7 +1908,7 @@ LookupResponse response = await datastoreClient.LookupAsync(projectId, readOptio
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html#Google_Cloud_Datastore_V1_LookupResponse">LookupResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.LookupResponse.html">LookupResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -1943,14 +1945,14 @@ RollbackResponse response = datastoreClient.Rollback(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackRequest.html#Google_Cloud_Datastore_V1_RollbackRequest">RollbackRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackRequest.html">RollbackRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -1966,7 +1968,7 @@ RollbackResponse response = datastoreClient.Rollback(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html#Google_Cloud_Datastore_V1_RollbackResponse">RollbackResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -2001,20 +2003,20 @@ RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Protobuf.ByteString</span></td>
-                    <td><em>transaction</em></td>
+                    <td><span class="parametername">transaction</span></td>
                     <td><p>The transaction identifier, returned by a call to
 [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2030,7 +2032,7 @@ RollbackResponse response = datastoreClient.Rollback(projectId, transaction);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html#Google_Cloud_Datastore_V1_RollbackResponse">RollbackResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -2067,14 +2069,14 @@ RollbackResponse response = await datastoreClient.RollbackAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackRequest.html#Google_Cloud_Datastore_V1_RollbackRequest">RollbackRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RollbackRequest.html">RollbackRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2090,7 +2092,7 @@ RollbackResponse response = await datastoreClient.RollbackAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html#Google_Cloud_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2125,20 +2127,20 @@ RollbackResponse response = await datastoreClient.RollbackAsync(projectId, trans
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Protobuf.ByteString</span></td>
-                    <td><em>transaction</em></td>
+                    <td><span class="parametername">transaction</span></td>
                     <td><p>The transaction identifier, returned by a call to
 [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2154,7 +2156,7 @@ RollbackResponse response = await datastoreClient.RollbackAsync(projectId, trans
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html#Google_Cloud_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2189,20 +2191,20 @@ RollbackResponse response = await datastoreClient.RollbackAsync(projectId, trans
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">Google.Protobuf.ByteString</span></td>
-                    <td><em>transaction</em></td>
+                    <td><span class="parametername">transaction</span></td>
                     <td><p>The transaction identifier, returned by a call to
 [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -2218,7 +2220,7 @@ RollbackResponse response = await datastoreClient.RollbackAsync(projectId, trans
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html#Google_Cloud_Datastore_V1_RollbackResponse">RollbackResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RollbackResponse.html">RollbackResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2256,14 +2258,14 @@ RunQueryResponse response = datastoreClient.RunQuery(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryRequest.html#Google_Cloud_Datastore_V1_RunQueryRequest">RunQueryRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryRequest.html">RunQueryRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2279,7 +2281,7 @@ RunQueryResponse response = datastoreClient.RunQuery(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -2323,13 +2325,13 @@ foreach (EntityResult result in response.Batch.EntityResults)
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html#Google_Cloud_Datastore_V1_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html">PartitionId</a></td>
+                    <td><span class="parametername">partitionId</span></td>
                     <td><p>Entities are partitioned into subsets, identified by a partition ID.
 Queries are scoped to a single partition.
 This partition ID is normalized with the standard default context
@@ -2337,20 +2339,20 @@ partition ID.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this query.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html#Google_Cloud_Datastore_V1_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+                    <td><span class="parametername">gqlQuery</span></td>
                     <td><p>The GQL query to run.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2366,7 +2368,7 @@ partition ID.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -2409,13 +2411,13 @@ foreach (EntityResult result in response.Batch.EntityResults)
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html#Google_Cloud_Datastore_V1_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html">PartitionId</a></td>
+                    <td><span class="parametername">partitionId</span></td>
                     <td><p>Entities are partitioned into subsets, identified by a partition ID.
 Queries are scoped to a single partition.
 This partition ID is normalized with the standard default context
@@ -2423,20 +2425,20 @@ partition ID.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this query.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html#Google_Cloud_Datastore_V1_Query">Query</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to run.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2452,7 +2454,7 @@ partition ID.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -2490,14 +2492,14 @@ RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryRequest.html#Google_Cloud_Datastore_V1_RunQueryRequest">RunQueryRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.RunQueryRequest.html">RunQueryRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2513,7 +2515,7 @@ RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2550,13 +2552,13 @@ RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, parti
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html#Google_Cloud_Datastore_V1_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html">PartitionId</a></td>
+                    <td><span class="parametername">partitionId</span></td>
                     <td><p>Entities are partitioned into subsets, identified by a partition ID.
 Queries are scoped to a single partition.
 This partition ID is normalized with the standard default context
@@ -2564,20 +2566,20 @@ partition ID.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this query.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html#Google_Cloud_Datastore_V1_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+                    <td><span class="parametername">gqlQuery</span></td>
                     <td><p>The GQL query to run.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2593,7 +2595,7 @@ partition ID.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2630,13 +2632,13 @@ RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, parti
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html#Google_Cloud_Datastore_V1_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html">PartitionId</a></td>
+                    <td><span class="parametername">partitionId</span></td>
                     <td><p>Entities are partitioned into subsets, identified by a partition ID.
 Queries are scoped to a single partition.
 This partition ID is normalized with the standard default context
@@ -2644,20 +2646,20 @@ partition ID.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this query.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html#Google_Cloud_Datastore_V1_GqlQuery">GqlQuery</a></td>
-                    <td><em>gqlQuery</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
+                    <td><span class="parametername">gqlQuery</span></td>
                     <td><p>The GQL query to run.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -2673,7 +2675,7 @@ partition ID.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2710,13 +2712,13 @@ RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, parti
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html#Google_Cloud_Datastore_V1_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html">PartitionId</a></td>
+                    <td><span class="parametername">partitionId</span></td>
                     <td><p>Entities are partitioned into subsets, identified by a partition ID.
 Queries are scoped to a single partition.
 This partition ID is normalized with the standard default context
@@ -2724,20 +2726,20 @@ partition ID.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this query.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html#Google_Cloud_Datastore_V1_Query">Query</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to run.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -2753,7 +2755,7 @@ partition ID.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2790,13 +2792,13 @@ RunQueryResponse response = await datastoreClient.RunQueryAsync(projectId, parti
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>projectId</em></td>
+                    <td><span class="parametername">projectId</span></td>
                     <td><p>The ID of the project against which to make the request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html#Google_Cloud_Datastore_V1_PartitionId">PartitionId</a></td>
-                    <td><em>partitionId</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.PartitionId.html">PartitionId</a></td>
+                    <td><span class="parametername">partitionId</span></td>
                     <td><p>Entities are partitioned into subsets, identified by a partition ID.
 Queries are scoped to a single partition.
 This partition ID is normalized with the standard default context
@@ -2804,20 +2806,20 @@ partition ID.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html#Google_Cloud_Datastore_V1_ReadOptions">ReadOptions</a></td>
-                    <td><em>readOptions</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.ReadOptions.html">ReadOptions</a></td>
+                    <td><span class="parametername">readOptions</span></td>
                     <td><p>The options for this query.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html#Google_Cloud_Datastore_V1_Query">Query</a></td>
-                    <td><em>query</em></td>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
+                    <td><span class="parametername">query</span></td>
                     <td><p>The query to run.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td><p>A <span class="xref">System.Threading.CancellationToken</span> to use for this RPC.</p>
 </td>
                   </tr>
@@ -2833,7 +2835,7 @@ partition ID.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html#Google_Cloud_Datastore_V1_RunQueryResponse">RunQueryResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.RunQueryResponse.html">RunQueryResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -2871,7 +2873,7 @@ created are not affected.</p>
 and <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html#Google_Cloud_Datastore_V1_DatastoreClient_CreateAsync_Google_Api_Gax_Grpc_ServiceEndpoint_Google_Cloud_Datastore_V1_DatastoreSettings_">CreateAsync(ServiceEndpoint, DatastoreSettings)</a> will create new channels, which could
 in turn be shut down by another call to this method.</p>
 </div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

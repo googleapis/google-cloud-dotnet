@@ -8,7 +8,7 @@
     <title>Google.Cloud.Speech.V1Beta1 | Google.Cloud.Speech.V1Beta1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Speech.V1Beta1 | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -31,6 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="index.html">
                 <img id="logo" class="svg" src="logo.svg" alt="">
               </a>
@@ -100,7 +101,12 @@ using (Stream stream = OpenAudioStream()) // Any regular .NET stream
 }
 </code></pre><h2 id="detect-speech-in-a-single-file">Detect speech in a single file</h2>
 <pre><code class="lang-cs">SpeechClient client = SpeechClient.Create();
-RecognitionConfig config = new RecognitionConfig { Encoding = AudioEncoding.Linear16, SampleRate = 16000 };
+RecognitionConfig config = new RecognitionConfig
+{
+    Encoding = AudioEncoding.Linear16,
+    SampleRate = 16000,
+    LanguageCode = LanguageCodes.English.UnitedStates
+};
 SyncRecognizeResponse response = client.SyncRecognize(config, audio);
 Console.WriteLine(response);
 </code></pre><h1 id="synchronous-asynchronous-and-streaming-operations">Synchronous, asynchronous and streaming operations</h1>

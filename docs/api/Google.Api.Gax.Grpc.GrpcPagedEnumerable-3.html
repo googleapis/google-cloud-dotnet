@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GrpcPagedEnumerable&lt;TRequest, TResponse, TResource&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -76,7 +77,7 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2">PagedEnumerable&lt;TResponse, TResource&gt;</a>&lt;TResponse, TResource&gt;</div>
+                  <div class="level1"><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;TResponse, TResource&gt;</div>
                   <div class="level2"><span class="xref">GrpcPagedEnumerable&lt;TRequest, TResponse, TResource&gt;</span></div>
               </div>
               <div class="inheritedMembers">
@@ -91,7 +92,7 @@
                   <a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2_GetEnumerator">PagedEnumerable&lt;TResponse, TResource&gt;.GetEnumerator()</a>
                 </div>
                 <div>
-                  <span class="xref"></span>
+                  <a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html#Google_Api_Gax_PagedEnumerable_2_System_Collections_IEnumerable_GetEnumerator">PagedEnumerable&lt;TResponse, TResource&gt;.IEnumerable.GetEnumerator()</a>
                 </div>
                 <div>
                   <span class="xref">System.Object.ToString()</span>
@@ -131,16 +132,19 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><em>TRequest</em></td>
-                    <td>The API request type.</td>
+                    <td><span class="parametername">TRequest</span></td>
+                    <td><p>The API request type.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><em>TResponse</em></td>
-                    <td>The API response type. Each response contains a page of resources.</td>
+                    <td><span class="parametername">TResponse</span></td>
+                    <td><p>The API response type. Each response contains a page of resources.</p>
+</td>
                   </tr>
                   <tr>
-                    <td><em>TResource</em></td>
-                    <td>The resource type contained within the response.</td>
+                    <td><span class="parametername">TResource</span></td>
+                    <td><p>The resource type contained within the response.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -166,20 +170,20 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.ApiCall-2.html#Google_Api_Gax_Grpc_ApiCall_2">ApiCall&lt;TRequest, TResponse&gt;</a>&lt;TRequest, TResponse&gt;</td>
-                    <td><em>apiCall</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.ApiCall-2.html">ApiCall</a>&lt;TRequest, TResponse&gt;</td>
+                    <td><span class="parametername">apiCall</span></td>
                     <td><p>The API call made each time a page is required.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">TRequest</span></td>
-                    <td><em>request</em></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The initial request.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>The settings to apply to each API call.</p>
 </td>
                   </tr>
@@ -208,7 +212,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;</span>&lt;TResponse&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TResponse&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -233,7 +237,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerator&lt;T&gt;</span>&lt;TResource&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;TResource&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -260,7 +264,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>pageSize</em></td>
+                    <td><span class="parametername">pageSize</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -275,14 +279,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Page-1.html#Google_Api_Gax_Page_1">Page&lt;TResource&gt;</a>&lt;TResource&gt;</td>
+                    <td><a class="xref" href="Google.Api.Gax.Page-1.html">Page</a>&lt;TResource&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><span class="xref">Google.Api.Gax.PagedEnumerable&lt;TResponse, TResource&gt;.ReadPage(System.Int32)</span></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

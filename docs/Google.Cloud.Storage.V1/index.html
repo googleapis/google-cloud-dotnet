@@ -155,7 +155,7 @@ one, you can do so either for all operations with a particular
 <pre><code class="lang-cs">// Use EncryptionKey.Create if you already have a key.
 EncryptionKey key = EncryptionKey.Generate();
 
-// This will affect all object-based operations by default.
+// This will affect all relevant object-based operations by default.
 var client = StorageClient.Create(encryptionKey: key);
 var content = Encoding.UTF8.GetBytes(&quot;hello, world&quot;);
 client.UploadObject(bucketName, &quot;encrypted.txt&quot;, &quot;text/plain&quot;, new MemoryStream(content));

@@ -7,6 +7,31 @@ references:
   commentId: N:Google.Api.Gax
   fullName: Google.Api.Gax
   nameWithType: Google.Api.Gax
+- uid: Google.Api.Gax.EmptyDictionary`2
+  name: EmptyDictionary<TKey, TValue>
+  href: api/Google.Api.Gax.EmptyDictionary-2.html
+  commentId: T:Google.Api.Gax.EmptyDictionary`2
+  name.vb: EmptyDictionary(Of TKey, TValue)
+  fullName: Google.Api.Gax.EmptyDictionary<TKey, TValue>
+  fullName.vb: Google.Api.Gax.EmptyDictionary(Of TKey, TValue)
+  nameWithType: EmptyDictionary<TKey, TValue>
+  nameWithType.vb: EmptyDictionary(Of TKey, TValue)
+- uid: Google.Api.Gax.EmptyDictionary`2.Instance
+  name: Instance
+  href: api/Google.Api.Gax.EmptyDictionary-2.html#Google_Api_Gax_EmptyDictionary_2_Instance
+  commentId: P:Google.Api.Gax.EmptyDictionary`2.Instance
+  fullName: Google.Api.Gax.EmptyDictionary<TKey, TValue>.Instance
+  fullName.vb: Google.Api.Gax.EmptyDictionary(Of TKey, TValue).Instance
+  nameWithType: EmptyDictionary<TKey, TValue>.Instance
+  nameWithType.vb: EmptyDictionary(Of TKey, TValue).Instance
+- uid: Google.Api.Gax.EmptyDictionary`2.Instance*
+  name: Instance
+  href: api/Google.Api.Gax.EmptyDictionary-2.html#Google_Api_Gax_EmptyDictionary_2_Instance_
+  commentId: Overload:Google.Api.Gax.EmptyDictionary`2.Instance
+  fullName: Google.Api.Gax.EmptyDictionary<TKey, TValue>.Instance
+  fullName.vb: Google.Api.Gax.EmptyDictionary(Of TKey, TValue).Instance
+  nameWithType: EmptyDictionary<TKey, TValue>.Instance
+  nameWithType.vb: EmptyDictionary(Of TKey, TValue).Instance
 - uid: Google.Api.Gax.Expiration
   name: Expiration
   href: api/Google.Api.Gax.Expiration.html
@@ -776,6 +801,30 @@ references:
   commentId: T:Google.Api.Gax.Platform
   fullName: Google.Api.Gax.Platform
   nameWithType: Platform
+- uid: Google.Api.Gax.Platform.#ctor
+  name: Platform()
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor
+  commentId: M:Google.Api.Gax.Platform.#ctor
+  fullName: Google.Api.Gax.Platform.Platform()
+  nameWithType: Platform.Platform()
+- uid: Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GaePlatformDetails)
+  name: Platform(GaePlatformDetails)
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_Google_Api_Gax_GaePlatformDetails_
+  commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GaePlatformDetails)
+  fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GaePlatformDetails)
+  nameWithType: Platform.Platform(GaePlatformDetails)
+- uid: Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GcePlatformDetails)
+  name: Platform(GcePlatformDetails)
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_Google_Api_Gax_GcePlatformDetails_
+  commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GcePlatformDetails)
+  fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GcePlatformDetails)
+  nameWithType: Platform.Platform(GcePlatformDetails)
+- uid: Google.Api.Gax.Platform.#ctor*
+  name: Platform
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_
+  commentId: Overload:Google.Api.Gax.Platform.#ctor
+  fullName: Google.Api.Gax.Platform.Platform
+  nameWithType: Platform.Platform
 - uid: Google.Api.Gax.Platform.GaeDetails
   name: GaeDetails
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_GaeDetails
@@ -1038,6 +1087,15 @@ references:
   fullName.vb: Google.Api.Gax.ResourceNameList(Of TName).Add(TName)
   nameWithType: ResourceNameList<TName>.Add(TName)
   nameWithType.vb: ResourceNameList(Of TName).Add(TName)
+- uid: Google.Api.Gax.ResourceNameList`1.Add(System.Collections.Generic.IEnumerable{`0})
+  name: Add(IEnumerable<TName>)
+  href: api/Google.Api.Gax.ResourceNameList-1.html#Google_Api_Gax_ResourceNameList_1_Add_System_Collections_Generic_IEnumerable__0__
+  commentId: M:Google.Api.Gax.ResourceNameList`1.Add(System.Collections.Generic.IEnumerable{`0})
+  name.vb: Add(IEnumerable(Of TName))
+  fullName: Google.Api.Gax.ResourceNameList<TName>.Add(System.Collections.Generic.IEnumerable<TName>)
+  fullName.vb: Google.Api.Gax.ResourceNameList(Of TName).Add(System.Collections.Generic.IEnumerable(Of TName))
+  nameWithType: ResourceNameList<TName>.Add(IEnumerable<TName>)
+  nameWithType.vb: ResourceNameList(Of TName).Add(IEnumerable(Of TName))
 - uid: Google.Api.Gax.ResourceNameList`1.Add*
   name: Add
   href: api/Google.Api.Gax.ResourceNameList-1.html#Google_Api_Gax_ResourceNameList_1_Add_
@@ -11152,18 +11210,6 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.ListObjectsOptions.Delimiter
   fullName: Google.Cloud.Storage.V1.ListObjectsOptions.Delimiter
   nameWithType: ListObjectsOptions.Delimiter
-- uid: Google.Cloud.Storage.V1.ListObjectsOptions.EncryptionKey
-  name: EncryptionKey
-  href: api/Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_EncryptionKey
-  commentId: P:Google.Cloud.Storage.V1.ListObjectsOptions.EncryptionKey
-  fullName: Google.Cloud.Storage.V1.ListObjectsOptions.EncryptionKey
-  nameWithType: ListObjectsOptions.EncryptionKey
-- uid: Google.Cloud.Storage.V1.ListObjectsOptions.EncryptionKey*
-  name: EncryptionKey
-  href: api/Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_EncryptionKey_
-  commentId: Overload:Google.Cloud.Storage.V1.ListObjectsOptions.EncryptionKey
-  fullName: Google.Cloud.Storage.V1.ListObjectsOptions.EncryptionKey
-  nameWithType: ListObjectsOptions.EncryptionKey
 - uid: Google.Cloud.Storage.V1.ListObjectsOptions.PageSize
   name: PageSize
   href: api/Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_PageSize

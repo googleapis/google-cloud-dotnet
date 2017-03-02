@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ImageAnnotatorClientImpl
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -76,7 +77,7 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient">ImageAnnotatorClient</a></div>
+                  <div class="level1"><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html">ImageAnnotatorClient</a></div>
                   <div class="level2"><span class="xref">ImageAnnotatorClientImpl</span></div>
               </div>
               <div class="inheritedMembers">
@@ -137,6 +138,24 @@
                 </div>
                 <div>
                   <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectTextAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_System_Int32_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectTextAsync(Image, ImageContext, Int32, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentText_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectDocumentText(Image, ImageContext, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectDocumentTextAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectDocumentTextAsync(Image, ImageContext, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHints_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectCropHints(Image, ImageContext, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectCropHintsAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectCropHintsAsync(Image, ImageContext, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformation_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectWebInformation(Image, ImageContext, CallSettings)</a>
+                </div>
+                <div>
+                  <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectWebInformationAsync_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectWebInformationAsync(Image, ImageContext, CallSettings)</a>
                 </div>
                 <div>
                   <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_DetectSafeSearch_Google_Cloud_Vision_V1_Image_Google_Cloud_Vision_V1_ImageContext_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.DetectSafeSearch(Image, ImageContext, CallSettings)</a>
@@ -200,15 +219,15 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotator.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotator_ImageAnnotatorClient">ImageAnnotator.ImageAnnotatorClient</a></td>
-                    <td><em>grpcClient</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotator.ImageAnnotatorClient.html">ImageAnnotator.ImageAnnotatorClient</a></td>
+                    <td><span class="parametername">grpcClient</span></td>
                     <td><p>The underlying gRPC client.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a></td>
-                    <td><em>settings</em></td>
-                    <td><p>The base <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html#Google_Cloud_Vision_V1_ImageAnnotatorSettings">ImageAnnotatorSettings</a> used within this client </p>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a></td>
+                    <td><span class="parametername">settings</span></td>
+                    <td><p>The base <a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorSettings.html">ImageAnnotatorSettings</a> used within this client </p>
 </td>
                   </tr>
                 </tbody>
@@ -234,7 +253,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotator.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotator_ImageAnnotatorClient">ImageAnnotator.ImageAnnotatorClient</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotator.ImageAnnotatorClient.html">ImageAnnotator.ImageAnnotatorClient</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -263,14 +282,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html#Google_Cloud_Vision_V1_BatchAnnotateImagesRequest">BatchAnnotateImagesRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html">BatchAnnotateImagesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -286,7 +305,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html">BatchAnnotateImagesResponse</a></td>
                     <td><p>The RPC response.</p>
 </td>
                   </tr>
@@ -314,14 +333,14 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html#Google_Cloud_Vision_V1_BatchAnnotateImagesRequest">BatchAnnotateImagesRequest</a></td>
-                    <td><em>request</em></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesRequest.html">BatchAnnotateImagesRequest</a></td>
+                    <td><span class="parametername">request</span></td>
                     <td><p>The request object containing all of the parameters for the API call.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html#Google_Api_Gax_Grpc_CallSettings">CallSettings</a></td>
-                    <td><em>callSettings</em></td>
+                    <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
+                    <td><span class="parametername">callSettings</span></td>
                     <td><p>If not null, applies overrides to this RPC call.</p>
 </td>
                   </tr>
@@ -337,7 +356,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html#Google_Cloud_Vision_V1_BatchAnnotateImagesResponse">BatchAnnotateImagesResponse</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Vision.V1.BatchAnnotateImagesResponse.html">BatchAnnotateImagesResponse</a>&gt;</td>
                     <td><p>A Task containing the RPC response.</p>
 </td>
                   </tr>
@@ -345,7 +364,7 @@
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Vision.V1.ImageAnnotatorClient.html#Google_Cloud_Vision_V1_ImageAnnotatorClient_BatchAnnotateImagesAsync_Google_Cloud_Vision_V1_BatchAnnotateImagesRequest_Google_Api_Gax_Grpc_CallSettings_">ImageAnnotatorClient.BatchAnnotateImagesAsync(BatchAnnotateImagesRequest, CallSettings)</a></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -116,15 +116,28 @@ public void Configure(IApplicationBuilder app)
 public void TraceHelloWorld(IManagedTracer tracer)
 {
     // Manually trace a specific operation.
-    tracer.StartSpan(nameof(TraceHelloWorld));
-    Console.Out.WriteLine(&quot;Hello, World!&quot;);
-    tracer.EndSpan();
+    using (tracer.StartSpan(nameof(TraceHelloWorld)))
+    {
+        Console.Out.WriteLine(&quot;Hello, World!&quot;);
+    }
+}
+</code></pre><pre><code class="lang-cs">/// &lt;summary&gt;
+/// The &lt;see cref=&quot;IManagedTracer&quot;/&gt; is populated by dependency injection.
+/// &lt;/summary&gt;
+public void TraceHelloWorldRunIn(IManagedTracer tracer)
+{
+    // Manually trace a specific Action or Func&lt;T&gt;.
+    tracer.RunInSpan(
+        () =&gt; Console.Out.WriteLine(&quot;Hello, World!&quot;),
+        nameof(TraceHelloWorldRunIn));
 }
 </code></pre><h2 id="trace-outgoing-http-requests">Trace Outgoing HTTP Requests</h2>
-<pre><code class="lang-cs">public async Task&lt;HttpResponseMessage&gt; TraceOutgoing(IManagedTracer tracer)
+<pre><code class="lang-cs">/// &lt;summary&gt;
+/// The &lt;see cref=&quot;TraceHeaderPropagatingHandler&quot;/&gt; is populated by dependency injection.
+/// &lt;/summary&gt;
+public async Task&lt;HttpResponseMessage&gt; TraceOutgoing(TraceHeaderPropagatingHandler traceHeaderHandler)
 {
     // Add a handler to trace outgoing requests and to propagate the trace header.
-    var traceHeaderHandler = TraceHeaderPropagatingHandler.Create(tracer);
     using (var httpClient = new HttpClient(traceHeaderHandler))
     {
         return await httpClient.GetAsync(&quot;https://weather.com/&quot;);

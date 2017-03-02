@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigQueryInsertRow
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -105,15 +106,25 @@ This is effectively a dictionary where each key is the field name (a string)
 and the value is the corresponding value for that field.
 Supported value types:
 </p>
-<ul><li><code>System.Boolean</code></li><li><code>System.Int16</code></li><li><code>System.UInt16</code></li><li><code>System.Int32</code></li><li><code>System.UInt32</code></li><li><code>System.Int64</code></li><li><code>System.Float</code></li><li><code>System.Double</code></li><li><code>System.String</code></li><li><code>System.DateTime</code></li><li><code>System.DateTimeOffset</code></li><li>A <code>Google.Cloud.BigQuery.V2.InsertRow</code> (for record/struct fields)</li><li>Any <code>IReadOnlyList&lt;T&gt;</code> of one of the above types (for repeated fields). This
+<ul><li><code>System.Boolean</code></li><li><code>System.Int16</code></li><li><code>System.UInt16</code></li><li><code>System.Int32</code></li><li><code>System.UInt32</code></li><li><code>System.Int64</code></li><li><code>System.Float</code></li><li><code>System.Double</code></li><li><code>System.String</code></li><li><code>System.DateTime</code></li><li><code>System.DateTimeOffset</code></li><li><code>System.TimeSpan</code></li><li>A <code>Google.Cloud.BigQuery.V2.InsertRow</code> (for record/struct fields)</li><li>Any <code>IReadOnlyList&lt;T&gt;</code> of one of the above types (for repeated fields). This
   includes arrays and <code>List&lt;T&gt;</code> values.</li></ul>
 <p>
 Note that all integer types are stored as <code>System.Int64</code>, and all floating point
-types are stored as <code>System.Double.</code> Date/time values are converted to UTC and stored
-as timestamps with precision of a microsecond.
+types are stored as <code>System.Double.</code></p>
+<p><code>DateTimeOffset</code> values are converted to UTC and treated as timestamp. The handling
+of <code>DateTime</code> values depends on the <code>Kind</code>: values with a <code>Kind</code> of <code>Local</code> are rejected;
+values with a <code>Kind</code> of <code>UTC</code> are treated as timestamps; values with a <code>Kind</code> of <code>Unspecified</code>
+are treated as civil datetime values. All values are stored with a precision of a microsecond.
 </p>
 <p>
-<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html#Google_Cloud_BigQuery_V2_BigQueryInsertRow">BigQueryInsertRow</a> is used for record/struct fields for convenience, but only the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html#Google_Cloud_BigQuery_V2_BigQueryInsertRow_InsertId">InsertId</a>
+<code>TimeSpan</code> values must be non-negative and less than 24 hours, used to represent a time-of-day.
+</p>
+<p>
+Although date values are retrieved as <code>System.DateTime</code>, they must be inserted as string values, in the format
+&quot;yyyy-MM-dd&quot;.
+</p>
+<p>
+<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html">BigQueryInsertRow</a> is used for record/struct fields for convenience, but only the <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html#Google_Cloud_BigQuery_V2_BigQueryInsertRow_InsertId">InsertId</a>
 of the top-level row is relevant.
 </p>
 <p>
@@ -152,7 +163,7 @@ Null elements within repeated fields are ignored by the server.
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>insertId</em></td>
+                    <td><span class="parametername">insertId</span></td>
                     <td><p>Insert ID used for deduplication. May be null.</p>
 </td>
                   </tr>
@@ -208,7 +219,7 @@ your data on a best effort basis.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>name</em></td>
+                    <td><span class="parametername">name</span></td>
                     <td><p>The name of the field to access. Must be a valid BigQuery field name.</p>
 </td>
                   </tr>
@@ -225,7 +236,7 @@ your data on a best effort basis.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Object</span></td>
-                    <td><p>The value associated with <em>name</em>.</p>
+                    <td><p>The value associated with <span class="paramref">name</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -268,8 +279,8 @@ your data on a best effort basis.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
-                    <td><em>fields</em></td>
+                    <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+                    <td><span class="parametername">fields</span></td>
                     <td><p>The fields to add to the row. Must not be null.</p>
 </td>
                   </tr>
@@ -301,13 +312,13 @@ to provide a set of common fields and then some extra values.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td><p>The name of the field. Must be a valid BigQuery field name.</p>
 </td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Object</span></td>
-                    <td><em>value</em></td>
+                    <td><span class="parametername">value</span></td>
                     <td><p>The value for the field, which must be <code>null</code> or one of the supported types.</p>
 </td>
                   </tr>
@@ -344,7 +355,7 @@ to permit collection initializers.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetadataClientImpl
    | Google.Cloud.Metadata.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -76,7 +77,7 @@
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient">MetadataClient</a></div>
+                  <div class="level1"><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html">MetadataClient</a></div>
                   <div class="level2"><span class="xref">MetadataClientImpl</span></div>
               </div>
               <div class="inheritedMembers">
@@ -107,10 +108,10 @@
                 <pre><code class="lang-csharp hljs">public sealed class MetadataClientImpl : MetadataClient</code></pre>
               </div>
               <h5 id="Google_Cloud_Metadata_V1_MetadataClientImpl_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient">MetadataClient</a>. Most client code
-should refer to <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient">MetadataClient</a>, creating instances with</p>
-<p><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_Create_Google_Apis_Http_ConfigurableHttpClient_">Create(ConfigurableHttpClient)</a> and</p>
-<p><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_Create_Google_Apis_Http_IHttpClientFactory_">Create(IHttpClientFactory)</a>. The constructor
+              <div class="markdown level0 remarks"><p>This is the &quot;default&quot; implementation of <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html">MetadataClient</a>. Most client code
+should refer to <a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html">MetadataClient</a>, creating instances with
+<a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_Create_Google_Apis_Http_ConfigurableHttpClient_">Create(ConfigurableHttpClient)</a> and
+<a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_Create_Google_Apis_Http_IHttpClientFactory_">Create(IHttpClientFactory)</a>. The constructor
 of this class is public for the sake of constructor-based dependency injection.</p>
 </div>
               <h3 id="constructors">Constructors
@@ -136,7 +137,7 @@ of this class is public for the sake of constructor-based dependency injection.<
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Http.ConfigurableHttpClient</span></td>
-                    <td><em>httpClient</em></td>
+                    <td><span class="parametername">httpClient</span></td>
                     <td><p>The <span class="xref">Google.Apis.Http.ConfigurableHttpClient</span> to use when making requests, or null to create a default instance.</p>
 </td>
                   </tr>
@@ -163,7 +164,7 @@ of this class is public for the sake of constructor-based dependency injection.<
                 <tbody>
                   <tr>
                     <td><span class="xref">Google.Apis.Http.IHttpClientFactory</span></td>
-                    <td><em>httpClientFactory</em></td>
+                    <td><span class="parametername">httpClientFactory</span></td>
                     <td><p>An <span class="xref">Google.Apis.Http.IHttpClientFactory</span> used to create a <span class="xref">Google.Apis.Http.ConfigurableHttpClient</span> for making requests, or null to
 create a default instance.</p>
 </td>
@@ -244,7 +245,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -259,7 +260,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">Google.Apis.Auth.OAuth2.Responses.TokenResponse</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Auth.OAuth2.Responses.TokenResponse</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -286,7 +287,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -328,12 +329,12 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -348,7 +349,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -375,7 +376,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -417,12 +418,12 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -437,7 +438,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -489,7 +490,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -504,7 +505,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">Google.Apis.Compute.v1.Data.Instance</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Compute.v1.Data.Instance</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -529,7 +530,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus">MaintenanceStatus</a></td>
+                    <td><a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html">MaintenanceStatus</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -556,7 +557,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -571,7 +572,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus">MaintenanceStatus</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatus.html">MaintenanceStatus</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -598,7 +599,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -613,7 +614,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult">MetadataResult</a></td>
+                    <td><a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html">MetadataResult</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -640,12 +641,12 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -660,7 +661,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult">MetadataResult</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html">MetadataResult</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -712,7 +713,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -727,7 +728,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">Google.Apis.Compute.v1.Data.Project</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Google.Apis.Compute.v1.Data.Project</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -779,7 +780,7 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -794,7 +795,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -821,17 +822,17 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>lastETag</em></td>
+                    <td><span class="parametername">lastETag</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>timeout</em></td>
+                    <td><span class="parametername">timeout</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -846,7 +847,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult">MetadataResult</a></td>
+                    <td><a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html">MetadataResult</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -873,22 +874,22 @@ create a default instance.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>key</em></td>
+                    <td><span class="parametername">key</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td><em>lastETag</em></td>
+                    <td><span class="parametername">lastETag</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.TimeSpan</span></td>
-                    <td><em>timeout</em></td>
+                    <td><span class="parametername">timeout</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
-                    <td><em>cancellationToken</em></td>
+                    <td><span class="parametername">cancellationToken</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -903,7 +904,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task&lt;TResult&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult">MetadataResult</a>&gt;</td>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MetadataResult.html">MetadataResult</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -929,7 +930,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs">InstanceMetadataChangedEventArgs</a>&gt;</td>
+                    <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html">InstanceMetadataChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -953,7 +954,7 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs">MaintenanceStatusChangedEventArgs</a>&gt;</td>
+                    <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html">MaintenanceStatusChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -977,14 +978,14 @@ create a default instance.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.EventHandler&lt;TEventArgs&gt;</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs">ProjectMetadataChangedEventArgs</a>&gt;</td>
+                    <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html">ProjectMetadataChangedEventArgs</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_ProjectMetadataChanged">MetadataClient.ProjectMetadataChanged</a></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

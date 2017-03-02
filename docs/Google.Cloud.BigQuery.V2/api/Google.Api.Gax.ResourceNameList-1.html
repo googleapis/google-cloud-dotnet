@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResourceNameList&lt;TName&gt;
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -110,8 +111,9 @@ underlying list of string-based resource names.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><em>TName</em></td>
-                    <td>The type of the resource name contained in this list.</td>
+                    <td><span class="parametername">TName</span></td>
+                    <td><p>The type of the resource name contained in this list.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -119,7 +121,7 @@ underlying list of string-based resource names.</p>
               </h3>
               <a id="Google_Api_Gax_ResourceNameList_1__ctor_" data-uid="Google.Api.Gax.ResourceNameList`1.#ctor*"></a>
               <h4 id="Google_Api_Gax_ResourceNameList_1__ctor_System_Collections_Generic_IList_System_String__System_Func_System_String__0__" data-uid="Google.Api.Gax.ResourceNameList`1.#ctor(System.Collections.Generic.IList{System.String},System.Func{System.String,`0})">ResourceNameList(IList&lt;String&gt;, Func&lt;String, TName&gt;)</h4>
-              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Api.Gax.ResourceNameList-1.html#Google_Api_Gax_ResourceNameList_1">ResourceNameList&lt;TName&gt;</a> from an underlying string-based list
+              <div class="markdown level1 summary"><p>Constructs a <a class="xref" href="Google.Api.Gax.ResourceNameList-1.html">ResourceNameList&lt;TName&gt;</a> from an underlying string-based list
 and a resource name parser.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -138,13 +140,13 @@ and a resource name parser.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<span class="xref">System.String</span>&gt;</td>
-                    <td><em>underlyingList</em></td>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">underlyingList</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Func&lt;T, TResult&gt;</span>&lt;<span class="xref">System.String</span>, TName&gt;</td>
-                    <td><em>stringToName</em></td>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, TName&gt;</td>
+                    <td><span class="parametername">stringToName</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -221,7 +223,7 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>index</em></td>
+                    <td><span class="parametername">index</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -265,13 +267,40 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">TName</span></td>
-                    <td><em>item</em></td>
+                    <td><span class="parametername">item</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Add(T)</span></div>
+              <a id="Google_Api_Gax_ResourceNameList_1_Add_" data-uid="Google.Api.Gax.ResourceNameList`1.Add*"></a>
+              <h4 id="Google_Api_Gax_ResourceNameList_1_Add_System_Collections_Generic_IEnumerable__0__" data-uid="Google.Api.Gax.ResourceNameList`1.Add(System.Collections.Generic.IEnumerable{`0})">Add(IEnumerable&lt;TName&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds all items to this list.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(IEnumerable&lt;TName&gt; items)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TName&gt;</td>
+                    <td><span class="parametername">items</span></td>
+                    <td><p>The items to add to this list.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Api_Gax_ResourceNameList_1_Clear_" data-uid="Google.Api.Gax.ResourceNameList`1.Clear*"></a>
               <h4 id="Google_Api_Gax_ResourceNameList_1_Clear" data-uid="Google.Api.Gax.ResourceNameList`1.Clear">Clear()</h4>
               <div class="markdown level1 summary"></div>
@@ -302,7 +331,7 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">TName</span></td>
-                    <td><em>item</em></td>
+                    <td><span class="parametername">item</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -344,12 +373,12 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td>TName[]</td>
-                    <td><em>array</em></td>
+                    <td><span class="parametername">array</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>arrayIndex</em></td>
+                    <td><span class="parametername">arrayIndex</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -374,7 +403,7 @@ and a resource name parser.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerator&lt;T&gt;</span>&lt;TName&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;TName&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -401,7 +430,7 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">TName</span></td>
-                    <td><em>item</em></td>
+                    <td><span class="parametername">item</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -443,12 +472,12 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>index</em></td>
+                    <td><span class="parametername">index</span></td>
                     <td></td>
                   </tr>
                   <tr>
                     <td><span class="xref">TName</span></td>
-                    <td><em>item</em></td>
+                    <td><span class="parametername">item</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -475,7 +504,7 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">TName</span></td>
-                    <td><em>item</em></td>
+                    <td><span class="parametername">item</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -517,7 +546,7 @@ and a resource name parser.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
-                    <td><em>index</em></td>
+                    <td><span class="parametername">index</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -551,7 +580,7 @@ and a resource name parser.</p>
               </table>
               <h5 class="implements">Implements</h5>
                   <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

@@ -8,7 +8,7 @@
     <title>Google.Cloud.BigQuery.V2 | Google.Cloud.BigQuery.V2 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.BigQuery.V2 | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -31,6 +31,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="index.html">
                 <img id="logo" class="svg" src="logo.svg" alt="">
               </a>
@@ -177,6 +178,31 @@ foreach (BigQueryRow row in rows)
     string message = (string) row[&quot;message&quot;];
     DateTime partition = (DateTime) row[&quot;pt&quot;];
     Console.WriteLine($&quot;Message: {message}; partition: {partition:yyyy-MM-dd}&quot;);
+}
+</code></pre><h2 id="querying-an-external-data-source">Querying an external data source</h2>
+<p>As <a href="https://cloud.google.com/bigquery/external-data-sources">described in the
+documentation</a>,
+BigQuery can query some external data sources. The sample code below
+demonstrates querying a CSV file stored in Google Cloud Storage.</p>
+<pre><code class="lang-cs">BigQueryClient client = BigQueryClient.Create(projectId);
+TableSchema schema = new TableSchemaBuilder
+{
+    { &quot;name&quot;, BigQueryDbType.String },
+    { &quot;score&quot;, BigQueryDbType.Int64 }
+}.Build();
+CreateTableOptions options = new CreateTableOptions
+{
+    ExternalDataConfiguration = new ExternalDataConfiguration
+    {
+        SourceFormat = &quot;CSV&quot;,
+        SourceUris = new[] { $&quot;gs://{bucket}/{objectName}&quot; }
+    }
+};
+BigQueryTable table = client.CreateTable(datasetId, tableId, schema, options);
+List&lt;BigQueryRow&gt; rows = client.ExecuteQuery($&quot;SELECT name, score FROM {table} ORDER BY score&quot;).GetRows().ToList();
+foreach (BigQueryRow row in rows)
+{
+    Console.WriteLine($&quot;{row[&quot;name&quot;]} - {row[&quot;score&quot;]}&quot;);
 }
 </code></pre>
             </article>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class JobStatistics2
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -120,7 +121,7 @@ public virtual int ? BillingTier { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -145,7 +146,7 @@ public virtual bool ? CacheHit { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -197,7 +198,7 @@ public virtual long ? NumDmlAffectedRows { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -222,7 +223,7 @@ public virtual IList&lt;ExplainQueryStage&gt; QueryPlan { get; set; }</code></pr
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.html#Google_Apis_Bigquery_v2_Data_ExplainQueryStage">ExplainQueryStage</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.ExplainQueryStage.html">ExplainQueryStage</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -248,7 +249,7 @@ public virtual IList&lt;TableReference&gt; ReferencedTables { get; set; }</code>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html#Google_Apis_Bigquery_v2_Data_TableReference">TableReference</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -274,7 +275,32 @@ public virtual TableSchema Schema { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html#Google_Apis_Bigquery_v2_Data_TableSchema">TableSchema</a></td>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableSchema.html">TableSchema</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Bigquery_v2_Data_JobStatistics2_StatementType_" data-uid="Google.Apis.Bigquery.v2.Data.JobStatistics2.StatementType*"></a>
+              <h4 id="Google_Apis_Bigquery_v2_Data_JobStatistics2_StatementType" data-uid="Google.Apis.Bigquery.v2.Data.JobStatistics2.StatementType">StatementType</h4>
+              <div class="markdown level1 summary"><p>[Output-only, Experimental] The type of query statement, if valid.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[JsonProperty(&quot;statementType&quot;)]
+public virtual string StatementType { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -299,7 +325,7 @@ public virtual long ? TotalBytesBilled { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -324,7 +350,7 @@ public virtual long ? TotalBytesProcessed { get; set; }</code></pre>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Nullable&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -350,12 +376,12 @@ public virtual IList&lt;QueryParameter&gt; UndeclaredQueryParameters { get; set;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.IList&lt;T&gt;</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.QueryParameter.html#Google_Apis_Bigquery_v2_Data_QueryParameter">QueryParameter</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="Google.Apis.Bigquery.v2.Data.QueryParameter.html">QueryParameter</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

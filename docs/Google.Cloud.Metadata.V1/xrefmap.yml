@@ -3,13 +3,13 @@ sorted: true
 references:
 - uid: Google.Cloud.Metadata.V1
   name: Google.Cloud.Metadata.V1
-  href: api/Google.Cloud.Metadata.V1.html#Google_Cloud_Metadata_V1
+  href: api/Google.Cloud.Metadata.V1.html
   commentId: N:Google.Cloud.Metadata.V1
   fullName: Google.Cloud.Metadata.V1
   nameWithType: Google.Cloud.Metadata.V1
 - uid: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs
   name: InstanceMetadataChangedEventArgs
-  href: api/Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs
+  href: api/Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html
   commentId: T:Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs
   fullName: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs
   nameWithType: InstanceMetadataChangedEventArgs
@@ -20,13 +20,14 @@ references:
   fullName: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Instance)
   nameWithType: InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs(Instance)
 - uid: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.#ctor*
+  name: InstanceMetadataChangedEventArgs
   href: api/Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_InstanceMetadataChangedEventArgs__ctor_
   commentId: Overload:Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.#ctor
-  name: InstanceMetadataChangedEventArgs
-  fullName: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Instance)
+  fullName: Google.Cloud.Metadata.V1.InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs
+  nameWithType: InstanceMetadataChangedEventArgs.InstanceMetadataChangedEventArgs
 - uid: Google.Cloud.Metadata.V1.MaintenanceStatus
   name: MaintenanceStatus
-  href: api/Google.Cloud.Metadata.V1.MaintenanceStatus.html#Google_Cloud_Metadata_V1_MaintenanceStatus
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatus.html
   commentId: T:Google.Cloud.Metadata.V1.MaintenanceStatus
   fullName: Google.Cloud.Metadata.V1.MaintenanceStatus
   nameWithType: MaintenanceStatus
@@ -50,7 +51,7 @@ references:
   nameWithType: MaintenanceStatus.Unknown
 - uid: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs
   name: MaintenanceStatusChangedEventArgs
-  href: api/Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs
+  href: api/Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html
   commentId: T:Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs
   fullName: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs
   nameWithType: MaintenanceStatusChangedEventArgs
@@ -61,13 +62,14 @@ references:
   fullName: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs(Google.Cloud.Metadata.V1.MaintenanceStatus)
   nameWithType: MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs(MaintenanceStatus)
 - uid: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.#ctor*
+  name: MaintenanceStatusChangedEventArgs
   href: api/Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.html#Google_Cloud_Metadata_V1_MaintenanceStatusChangedEventArgs__ctor_
   commentId: Overload:Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.#ctor
-  name: MaintenanceStatusChangedEventArgs
-  fullName: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs(Google.Cloud.Metadata.V1.MaintenanceStatus)
+  fullName: Google.Cloud.Metadata.V1.MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs
+  nameWithType: MaintenanceStatusChangedEventArgs.MaintenanceStatusChangedEventArgs
 - uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1
   name: MetadataChangedEventArgs<T>
-  href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1
+  href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html
   commentId: T:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1
   name.vb: MetadataChangedEventArgs(Of T)
   fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>
@@ -81,12 +83,15 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.MetadataChangedEventArgs(T)
   fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs(Of T).MetadataChangedEventArgs(T)
   nameWithType: MetadataChangedEventArgs<T>.MetadataChangedEventArgs(T)
+  nameWithType.vb: MetadataChangedEventArgs(Of T).MetadataChangedEventArgs(T)
 - uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.#ctor*
+  name: MetadataChangedEventArgs
   href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1__ctor_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.#ctor
-  name: MetadataChangedEventArgs
-  fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.MetadataChangedEventArgs(T)
-  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs
+  fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.MetadataChangedEventArgs
+  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs(Of T).MetadataChangedEventArgs
+  nameWithType: MetadataChangedEventArgs<T>.MetadataChangedEventArgs
+  nameWithType.vb: MetadataChangedEventArgs(Of T).MetadataChangedEventArgs
 - uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.NewMetadata
   name: NewMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1_NewMetadata
@@ -94,15 +99,18 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.NewMetadata
   fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs(Of T).NewMetadata
   nameWithType: MetadataChangedEventArgs<T>.NewMetadata
+  nameWithType.vb: MetadataChangedEventArgs(Of T).NewMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.NewMetadata*
+  name: NewMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataChangedEventArgs-1.html#Google_Cloud_Metadata_V1_MetadataChangedEventArgs_1_NewMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataChangedEventArgs`1.NewMetadata
-  name: NewMetadata
   fullName: Google.Cloud.Metadata.V1.MetadataChangedEventArgs<T>.NewMetadata
-  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs
+  fullName.vb: Google.Cloud.Metadata.V1.MetadataChangedEventArgs(Of T).NewMetadata
+  nameWithType: MetadataChangedEventArgs<T>.NewMetadata
+  nameWithType.vb: MetadataChangedEventArgs(Of T).NewMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClient
   name: MetadataClient
-  href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient
+  href: api/Google.Cloud.Metadata.V1.MetadataClient.html
   commentId: T:Google.Cloud.Metadata.V1.MetadataClient
   fullName: Google.Cloud.Metadata.V1.MetadataClient
   nameWithType: MetadataClient
@@ -119,10 +127,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.IHttpClientFactory)
   nameWithType: MetadataClient.Create(IHttpClientFactory)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.Create*
+  name: Create
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_Create_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.Create
-  name: Create
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.Create(Google.Apis.Http.ConfigurableHttpClient)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.Create
+  nameWithType: MetadataClient.Create
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken
   name: GetAccessToken()
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetAccessToken
@@ -130,10 +139,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken()
   nameWithType: MetadataClient.GetAccessToken()
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken*
+  name: GetAccessToken
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetAccessToken_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken
-  name: GetAccessToken
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken()
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessToken
+  nameWithType: MetadataClient.GetAccessToken
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync(System.Threading.CancellationToken)
   name: GetAccessTokenAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetAccessTokenAsync_System_Threading_CancellationToken_
@@ -141,10 +151,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClient.GetAccessTokenAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync*
+  name: GetAccessTokenAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetAccessTokenAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync
-  name: GetAccessTokenAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetAccessTokenAsync
+  nameWithType: MetadataClient.GetAccessTokenAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata(System.String)
   name: GetCustomInstanceMetadata(String)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadata_System_String_
@@ -152,10 +163,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata(System.String)
   nameWithType: MetadataClient.GetCustomInstanceMetadata(String)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata*
+  name: GetCustomInstanceMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata
-  name: GetCustomInstanceMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadata
+  nameWithType: MetadataClient.GetCustomInstanceMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync(System.String,System.Threading.CancellationToken)
   name: GetCustomInstanceMetadataAsync(String, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadataAsync_System_String_System_Threading_CancellationToken_
@@ -163,10 +175,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync(System.String, System.Threading.CancellationToken)
   nameWithType: MetadataClient.GetCustomInstanceMetadataAsync(String, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync*
+  name: GetCustomInstanceMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomInstanceMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync
-  name: GetCustomInstanceMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync(System.String, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomInstanceMetadataAsync
+  nameWithType: MetadataClient.GetCustomInstanceMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata(System.String)
   name: GetCustomProjectMetadata(String)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomProjectMetadata_System_String_
@@ -174,10 +187,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata(System.String)
   nameWithType: MetadataClient.GetCustomProjectMetadata(String)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata*
+  name: GetCustomProjectMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomProjectMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata
-  name: GetCustomProjectMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadata
+  nameWithType: MetadataClient.GetCustomProjectMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync(System.String,System.Threading.CancellationToken)
   name: GetCustomProjectMetadataAsync(String, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomProjectMetadataAsync_System_String_System_Threading_CancellationToken_
@@ -185,10 +199,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync(System.String, System.Threading.CancellationToken)
   nameWithType: MetadataClient.GetCustomProjectMetadataAsync(String, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync*
+  name: GetCustomProjectMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetCustomProjectMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync
-  name: GetCustomProjectMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync(System.String, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetCustomProjectMetadataAsync
+  nameWithType: MetadataClient.GetCustomProjectMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata
   name: GetInstanceMetadata()
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadata
@@ -196,10 +211,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata()
   nameWithType: MetadataClient.GetInstanceMetadata()
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata*
+  name: GetInstanceMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata
-  name: GetInstanceMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata()
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadata
+  nameWithType: MetadataClient.GetInstanceMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync(System.Threading.CancellationToken)
   name: GetInstanceMetadataAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadataAsync_System_Threading_CancellationToken_
@@ -207,10 +223,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClient.GetInstanceMetadataAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync*
+  name: GetInstanceMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetInstanceMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync
-  name: GetInstanceMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetInstanceMetadataAsync
+  nameWithType: MetadataClient.GetInstanceMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus
   name: GetMaintenanceStatus()
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatus
@@ -218,10 +235,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus()
   nameWithType: MetadataClient.GetMaintenanceStatus()
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus*
+  name: GetMaintenanceStatus
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatus_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus
-  name: GetMaintenanceStatus
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus()
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatus
+  nameWithType: MetadataClient.GetMaintenanceStatus
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
   name: GetMaintenanceStatusAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatusAsync_System_Threading_CancellationToken_
@@ -229,10 +247,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClient.GetMaintenanceStatusAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync*
+  name: GetMaintenanceStatusAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMaintenanceStatusAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync
-  name: GetMaintenanceStatusAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMaintenanceStatusAsync
+  nameWithType: MetadataClient.GetMaintenanceStatusAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMetadata(System.String)
   name: GetMetadata(String)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMetadata_System_String_
@@ -240,10 +259,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMetadata(System.String)
   nameWithType: MetadataClient.GetMetadata(String)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMetadata*
+  name: GetMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetMetadata
-  name: GetMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMetadata
+  nameWithType: MetadataClient.GetMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMetadataAsync(System.String,System.Threading.CancellationToken)
   name: GetMetadataAsync(String, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMetadataAsync_System_String_System_Threading_CancellationToken_
@@ -251,10 +271,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMetadataAsync(System.String, System.Threading.CancellationToken)
   nameWithType: MetadataClient.GetMetadataAsync(String, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetMetadataAsync*
+  name: GetMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetMetadataAsync
-  name: GetMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMetadataAsync(System.String, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetMetadataAsync
+  nameWithType: MetadataClient.GetMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata
   name: GetProjectMetadata()
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadata
@@ -262,10 +283,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata()
   nameWithType: MetadataClient.GetProjectMetadata()
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata*
+  name: GetProjectMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata
-  name: GetProjectMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata()
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadata
+  nameWithType: MetadataClient.GetProjectMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync(System.Threading.CancellationToken)
   name: GetProjectMetadataAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadataAsync_System_Threading_CancellationToken_
@@ -273,10 +295,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClient.GetProjectMetadataAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync*
+  name: GetProjectMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_GetProjectMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync
-  name: GetProjectMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.GetProjectMetadataAsync
+  nameWithType: MetadataClient.GetProjectMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.HttpClient
   name: HttpClient
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_HttpClient
@@ -284,10 +307,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.HttpClient
   nameWithType: MetadataClient.HttpClient
 - uid: Google.Cloud.Metadata.V1.MetadataClient.HttpClient*
+  name: HttpClient
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_HttpClient_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.HttpClient
-  name: HttpClient
   fullName: Google.Cloud.Metadata.V1.MetadataClient.HttpClient
+  nameWithType: MetadataClient.HttpClient
 - uid: Google.Cloud.Metadata.V1.MetadataClient.InstanceMetadataChanged
   name: InstanceMetadataChanged
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_InstanceMetadataChanged
@@ -301,10 +325,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable()
   nameWithType: MetadataClient.IsServerAvailable()
 - uid: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable*
+  name: IsServerAvailable
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailable_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable
-  name: IsServerAvailable
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable()
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailable
+  nameWithType: MetadataClient.IsServerAvailable
 - uid: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync(System.Threading.CancellationToken)
   name: IsServerAvailableAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailableAsync_System_Threading_CancellationToken_
@@ -312,10 +337,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClient.IsServerAvailableAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync*
+  name: IsServerAvailableAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_IsServerAvailableAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync
-  name: IsServerAvailableAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.IsServerAvailableAsync
+  nameWithType: MetadataClient.IsServerAvailableAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClient.MaintenanceStatusChanged
   name: MaintenanceStatusChanged
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_MaintenanceStatusChanged
@@ -335,10 +361,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String, System.String, System.TimeSpan)
   nameWithType: MetadataClient.WaitForChange(String, String, TimeSpan)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange*
+  name: WaitForChange
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChange_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.WaitForChange
-  name: WaitForChange
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange(System.String, System.String, System.TimeSpan)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChange
+  nameWithType: MetadataClient.WaitForChange
 - uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)
   name: WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_
@@ -346,13 +373,14 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
   nameWithType: MetadataClient.WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync*
+  name: WaitForChangeAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClient.html#Google_Cloud_Metadata_V1_MetadataClient_WaitForChangeAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync
-  name: WaitForChangeAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClient.WaitForChangeAsync
+  nameWithType: MetadataClient.WaitForChangeAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl
   name: MetadataClientImpl
-  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl
+  href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html
   commentId: T:Google.Cloud.Metadata.V1.MetadataClientImpl
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl
   nameWithType: MetadataClientImpl
@@ -369,10 +397,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.MetadataClientImpl(Google.Apis.Http.IHttpClientFactory)
   nameWithType: MetadataClientImpl.MetadataClientImpl(IHttpClientFactory)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.#ctor*
+  name: MetadataClientImpl
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl__ctor_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.#ctor
-  name: MetadataClientImpl
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.MetadataClientImpl(Google.Apis.Http.ConfigurableHttpClient)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.MetadataClientImpl
+  nameWithType: MetadataClientImpl.MetadataClientImpl
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken
   name: GetAccessToken()
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetAccessToken
@@ -380,10 +409,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken()
   nameWithType: MetadataClientImpl.GetAccessToken()
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken*
+  name: GetAccessToken
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetAccessToken_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken
-  name: GetAccessToken
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken()
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessToken
+  nameWithType: MetadataClientImpl.GetAccessToken
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync(System.Threading.CancellationToken)
   name: GetAccessTokenAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetAccessTokenAsync_System_Threading_CancellationToken_
@@ -391,10 +421,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.GetAccessTokenAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync*
+  name: GetAccessTokenAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetAccessTokenAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync
-  name: GetAccessTokenAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetAccessTokenAsync
+  nameWithType: MetadataClientImpl.GetAccessTokenAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata(System.String)
   name: GetCustomInstanceMetadata(String)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomInstanceMetadata_System_String_
@@ -402,10 +433,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata(System.String)
   nameWithType: MetadataClientImpl.GetCustomInstanceMetadata(String)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata*
+  name: GetCustomInstanceMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomInstanceMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata
-  name: GetCustomInstanceMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadata
+  nameWithType: MetadataClientImpl.GetCustomInstanceMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync(System.String,System.Threading.CancellationToken)
   name: GetCustomInstanceMetadataAsync(String, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomInstanceMetadataAsync_System_String_System_Threading_CancellationToken_
@@ -413,10 +445,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync(System.String, System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.GetCustomInstanceMetadataAsync(String, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync*
+  name: GetCustomInstanceMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomInstanceMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync
-  name: GetCustomInstanceMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync(System.String, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomInstanceMetadataAsync
+  nameWithType: MetadataClientImpl.GetCustomInstanceMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata(System.String)
   name: GetCustomProjectMetadata(String)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomProjectMetadata_System_String_
@@ -424,10 +457,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata(System.String)
   nameWithType: MetadataClientImpl.GetCustomProjectMetadata(String)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata*
+  name: GetCustomProjectMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomProjectMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata
-  name: GetCustomProjectMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadata
+  nameWithType: MetadataClientImpl.GetCustomProjectMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync(System.String,System.Threading.CancellationToken)
   name: GetCustomProjectMetadataAsync(String, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomProjectMetadataAsync_System_String_System_Threading_CancellationToken_
@@ -435,10 +469,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync(System.String, System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.GetCustomProjectMetadataAsync(String, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync*
+  name: GetCustomProjectMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetCustomProjectMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync
-  name: GetCustomProjectMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync(System.String, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetCustomProjectMetadataAsync
+  nameWithType: MetadataClientImpl.GetCustomProjectMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata
   name: GetInstanceMetadata()
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetInstanceMetadata
@@ -446,10 +481,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata()
   nameWithType: MetadataClientImpl.GetInstanceMetadata()
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata*
+  name: GetInstanceMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetInstanceMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata
-  name: GetInstanceMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata()
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadata
+  nameWithType: MetadataClientImpl.GetInstanceMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync(System.Threading.CancellationToken)
   name: GetInstanceMetadataAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetInstanceMetadataAsync_System_Threading_CancellationToken_
@@ -457,10 +493,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.GetInstanceMetadataAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync*
+  name: GetInstanceMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetInstanceMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync
-  name: GetInstanceMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetInstanceMetadataAsync
+  nameWithType: MetadataClientImpl.GetInstanceMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus
   name: GetMaintenanceStatus()
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMaintenanceStatus
@@ -468,10 +505,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus()
   nameWithType: MetadataClientImpl.GetMaintenanceStatus()
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus*
+  name: GetMaintenanceStatus
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMaintenanceStatus_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus
-  name: GetMaintenanceStatus
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus()
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatus
+  nameWithType: MetadataClientImpl.GetMaintenanceStatus
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
   name: GetMaintenanceStatusAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMaintenanceStatusAsync_System_Threading_CancellationToken_
@@ -479,10 +517,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.GetMaintenanceStatusAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync*
+  name: GetMaintenanceStatusAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMaintenanceStatusAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync
-  name: GetMaintenanceStatusAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMaintenanceStatusAsync
+  nameWithType: MetadataClientImpl.GetMaintenanceStatusAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadata(System.String)
   name: GetMetadata(String)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMetadata_System_String_
@@ -490,10 +529,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadata(System.String)
   nameWithType: MetadataClientImpl.GetMetadata(String)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadata*
+  name: GetMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadata
-  name: GetMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadata(System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadata
+  nameWithType: MetadataClientImpl.GetMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadataAsync(System.String,System.Threading.CancellationToken)
   name: GetMetadataAsync(String, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMetadataAsync_System_String_System_Threading_CancellationToken_
@@ -501,10 +541,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadataAsync(System.String, System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.GetMetadataAsync(String, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadataAsync*
+  name: GetMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadataAsync
-  name: GetMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadataAsync(System.String, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetMetadataAsync
+  nameWithType: MetadataClientImpl.GetMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata
   name: GetProjectMetadata()
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetProjectMetadata
@@ -512,10 +553,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata()
   nameWithType: MetadataClientImpl.GetProjectMetadata()
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata*
+  name: GetProjectMetadata
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetProjectMetadata_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata
-  name: GetProjectMetadata
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata()
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadata
+  nameWithType: MetadataClientImpl.GetProjectMetadata
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync(System.Threading.CancellationToken)
   name: GetProjectMetadataAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetProjectMetadataAsync_System_Threading_CancellationToken_
@@ -523,10 +565,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.GetProjectMetadataAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync*
+  name: GetProjectMetadataAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_GetProjectMetadataAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync
-  name: GetProjectMetadataAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.GetProjectMetadataAsync
+  nameWithType: MetadataClientImpl.GetProjectMetadataAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient
   name: HttpClient
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_HttpClient
@@ -534,10 +577,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient
   nameWithType: MetadataClientImpl.HttpClient
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient*
+  name: HttpClient
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_HttpClient_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient
-  name: HttpClient
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.HttpClient
+  nameWithType: MetadataClientImpl.HttpClient
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.InstanceMetadataChanged
   name: InstanceMetadataChanged
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_InstanceMetadataChanged
@@ -551,10 +595,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable()
   nameWithType: MetadataClientImpl.IsServerAvailable()
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable*
+  name: IsServerAvailable
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_IsServerAvailable_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable
-  name: IsServerAvailable
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable()
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailable
+  nameWithType: MetadataClientImpl.IsServerAvailable
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync(System.Threading.CancellationToken)
   name: IsServerAvailableAsync(CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_IsServerAvailableAsync_System_Threading_CancellationToken_
@@ -562,10 +607,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync(System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.IsServerAvailableAsync(CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync*
+  name: IsServerAvailableAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_IsServerAvailableAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync
-  name: IsServerAvailableAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync(System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.IsServerAvailableAsync
+  nameWithType: MetadataClientImpl.IsServerAvailableAsync
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.MaintenanceStatusChanged
   name: MaintenanceStatusChanged
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_MaintenanceStatusChanged
@@ -585,10 +631,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String, System.String, System.TimeSpan)
   nameWithType: MetadataClientImpl.WaitForChange(String, String, TimeSpan)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange*
+  name: WaitForChange
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChange_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange
-  name: WaitForChange
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange(System.String, System.String, System.TimeSpan)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChange
+  nameWithType: MetadataClientImpl.WaitForChange
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String,System.String,System.TimeSpan,System.Threading.CancellationToken)
   name: WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_System_String_System_String_System_TimeSpan_System_Threading_CancellationToken_
@@ -596,16 +643,29 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
   nameWithType: MetadataClientImpl.WaitForChangeAsync(String, String, TimeSpan, CancellationToken)
 - uid: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync*
+  name: WaitForChangeAsync
   href: api/Google.Cloud.Metadata.V1.MetadataClientImpl.html#Google_Cloud_Metadata_V1_MetadataClientImpl_WaitForChangeAsync_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync
-  name: WaitForChangeAsync
-  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync(System.String, System.String, System.TimeSpan, System.Threading.CancellationToken)
+  fullName: Google.Cloud.Metadata.V1.MetadataClientImpl.WaitForChangeAsync
+  nameWithType: MetadataClientImpl.WaitForChangeAsync
 - uid: Google.Cloud.Metadata.V1.MetadataResult
   name: MetadataResult
-  href: api/Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult
+  href: api/Google.Cloud.Metadata.V1.MetadataResult.html
   commentId: T:Google.Cloud.Metadata.V1.MetadataResult
   fullName: Google.Cloud.Metadata.V1.MetadataResult
   nameWithType: MetadataResult
+- uid: Google.Cloud.Metadata.V1.MetadataResult.#ctor(System.String,System.String)
+  name: MetadataResult(String, String)
+  href: api/Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult__ctor_System_String_System_String_
+  commentId: M:Google.Cloud.Metadata.V1.MetadataResult.#ctor(System.String,System.String)
+  fullName: Google.Cloud.Metadata.V1.MetadataResult.MetadataResult(System.String, System.String)
+  nameWithType: MetadataResult.MetadataResult(String, String)
+- uid: Google.Cloud.Metadata.V1.MetadataResult.#ctor*
+  name: MetadataResult
+  href: api/Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult__ctor_
+  commentId: Overload:Google.Cloud.Metadata.V1.MetadataResult.#ctor
+  fullName: Google.Cloud.Metadata.V1.MetadataResult.MetadataResult
+  nameWithType: MetadataResult.MetadataResult
 - uid: Google.Cloud.Metadata.V1.MetadataResult.Content
   name: Content
   href: api/Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult_Content
@@ -613,10 +673,11 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataResult.Content
   nameWithType: MetadataResult.Content
 - uid: Google.Cloud.Metadata.V1.MetadataResult.Content*
+  name: Content
   href: api/Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult_Content_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataResult.Content
-  name: Content
   fullName: Google.Cloud.Metadata.V1.MetadataResult.Content
+  nameWithType: MetadataResult.Content
 - uid: Google.Cloud.Metadata.V1.MetadataResult.ETag
   name: ETag
   href: api/Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult_ETag
@@ -624,13 +685,14 @@ references:
   fullName: Google.Cloud.Metadata.V1.MetadataResult.ETag
   nameWithType: MetadataResult.ETag
 - uid: Google.Cloud.Metadata.V1.MetadataResult.ETag*
+  name: ETag
   href: api/Google.Cloud.Metadata.V1.MetadataResult.html#Google_Cloud_Metadata_V1_MetadataResult_ETag_
   commentId: Overload:Google.Cloud.Metadata.V1.MetadataResult.ETag
-  name: ETag
   fullName: Google.Cloud.Metadata.V1.MetadataResult.ETag
+  nameWithType: MetadataResult.ETag
 - uid: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs
   name: ProjectMetadataChangedEventArgs
-  href: api/Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs
+  href: api/Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html
   commentId: T:Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs
   fullName: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs
   nameWithType: ProjectMetadataChangedEventArgs
@@ -641,7 +703,8 @@ references:
   fullName: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Project)
   nameWithType: ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs(Project)
 - uid: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.#ctor*
+  name: ProjectMetadataChangedEventArgs
   href: api/Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.html#Google_Cloud_Metadata_V1_ProjectMetadataChangedEventArgs__ctor_
   commentId: Overload:Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.#ctor
-  name: ProjectMetadataChangedEventArgs
-  fullName: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs(Google.Apis.Compute.v1.Data.Project)
+  fullName: Google.Cloud.Metadata.V1.ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs
+  nameWithType: ProjectMetadataChangedEventArgs.ProjectMetadataChangedEventArgs

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PushConfig
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -107,11 +108,10 @@
 <p>Every endpoint has a set of API supported attributes that can be used to
 control different aspects of the message delivery.</p>
 <p>The currently supported attribute is <code>x-goog-version</code>, which you can
-use to change the format of the push message. This attribute
+use to change the format of the pushed message. This attribute
 indicates the version of the data expected by the endpoint. This
-controls the shape of the envelope (i.e. its fields and metadata).
-The endpoint version is based on the version of the Pub/Sub
-API.</p>
+controls the shape of the pushed message (i.e., its fields and metadata).
+The endpoint version is based on the version of the Pub/Sub API.</p>
 <p>If not present during the <code>CreateSubscription</code> call, it will default to
 the version of the API used to make such call. If not present during a
 <code>ModifyPushConfig</code> call, its value will not be changed. <code>GetSubscription</code>
@@ -138,7 +138,7 @@ created without this attribute.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.MapField&lt;TKey, TValue&gt;</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -168,7 +168,7 @@ For example, a Webhook endpoint might use &quot;<a href="https://example.com/pus
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

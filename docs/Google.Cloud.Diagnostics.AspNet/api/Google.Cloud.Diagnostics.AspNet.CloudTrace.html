@@ -98,7 +98,7 @@
               <h6><strong>Assembly</strong>:Google.Cloud.Diagnostics.AspNet.dll</h6>
               <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class CloudTrace</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class CloudTrace : IDisposable</code></pre>
               </div>
               <h5 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>Handles tracing for ASP.NET applications and sends data to the Stackdriver Trace API Reporting.</p>
@@ -163,14 +163,59 @@ trace data can be collected manually.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_CreateTracingHttpMessageHandler" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.CreateTracingHttpMessageHandler">CreateTracingHttpMessageHandler()</h4>
+              <div class="markdown level1 summary"><p>Creates a <a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a> to propagate trace headers
+in Http requests.</p>
+<example>
+<pre><code>public void DoSomething()
+{
+    var traceHeaderHandler = CloudTrace.CreateHandler();
+    using (var httpClient = new HttpClient(traceHeaderHandler))
+    {
+        ...
+    }
+}</code></pre>
+</example>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Diagnostics.Common.TraceHeaderPropagatingHandler.html">TraceHeaderPropagatingHandler</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Dispose_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose*"></a>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Dispose" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Dispose">Dispose()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+              </div>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">System.IDisposable.Dispose()</span></div>
               <a id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_String_System_Web_HttpApplication_Google_Cloud_Diagnostics_Common_TraceConfiguration_System_Threading_Tasks_Task_Google_Cloud_Trace_V1_TraceServiceClient__" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.String,System.Web.HttpApplication,Google.Cloud.Diagnostics.Common.TraceConfiguration,System.Threading.Tasks.Task{Google.Cloud.Trace.V1.TraceServiceClient})">Initialize(String, HttpApplication, TraceConfiguration, Task&lt;TraceServiceClient&gt;)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNet_CloudTrace_Initialize_System_String_System_Web_HttpApplication_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_" data-uid="Google.Cloud.Diagnostics.AspNet.CloudTrace.Initialize(System.String,System.Web.HttpApplication,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient)">Initialize(String, HttpApplication, TraceConfiguration, TraceServiceClient)</h4>
               <div class="markdown level1 summary"><p>Initialize tracing for this application.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, Task&lt;TraceServiceClient&gt; client = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void Initialize(string projectId, HttpApplication application, TraceConfiguration config = null, TraceServiceClient client = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -201,7 +246,7 @@ trace data can be collected manually.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Trace.V1.TraceServiceClient.html">TraceServiceClient</a>&gt;</td>
+                    <td><span class="xref">Google.Cloud.Trace.V1.TraceServiceClient</span></td>
                     <td><span class="parametername">client</span></td>
                     <td><p>Optional trace client, if unset the default will be used.</p>
 </td>

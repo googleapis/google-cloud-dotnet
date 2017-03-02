@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class FaceAnnotation
    | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.7.2.0">
+    <meta name="generator" content="docfx 2.11.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -33,6 +33,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              
               <a class="navbar-brand" href="../index.html">
                 <img id="logo" class="svg" src="../logo.svg" alt="">
               </a>
@@ -120,7 +121,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -144,7 +145,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -152,12 +153,12 @@
               <a id="Google_Cloud_Vision_V1_FaceAnnotation_BoundingPoly_" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.BoundingPoly*"></a>
               <h4 id="Google_Cloud_Vision_V1_FaceAnnotation_BoundingPoly" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.BoundingPoly">BoundingPoly</h4>
               <div class="markdown level1 summary"><p>The bounding polygon around the face. The coordinates of the bounding box
-are in the original image&#39;s scale, as returned in ImageParams.
+are in the original image&#39;s scale, as returned in <code>ImageParams</code>.
 The bounding box is computed to &quot;frame&quot; the face in accordance with human
 expectations. It is based on the landmarker results.
 Note that one or more x and/or y coordinates may not be generated in the
-BoundingPoly (the polygon will be unbounded) if only a partial face appears in
-the image to be annotated.</p>
+<code>BoundingPoly</code> (the polygon will be unbounded) if only a partial face
+appears in the image to be annotated.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -174,7 +175,7 @@ the image to be annotated.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html#Google_Cloud_Vision_V1_BoundingPoly">BoundingPoly</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html">BoundingPoly</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -205,10 +206,9 @@ the image to be annotated.</p>
               </table>
               <a id="Google_Cloud_Vision_V1_FaceAnnotation_FdBoundingPoly_" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.FdBoundingPoly*"></a>
               <h4 id="Google_Cloud_Vision_V1_FaceAnnotation_FdBoundingPoly" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.FdBoundingPoly">FdBoundingPoly</h4>
-              <div class="markdown level1 summary"><p>This bounding polygon is tighter than the previous
-&lt;code&gt;boundingPoly&lt;/code&gt;, and
-encloses only the skin part of the face. Typically, it is used to
-eliminate the face from any image analysis that detects the
+              <div class="markdown level1 summary"><p>The <code>fd_bounding_poly</code> bounding polygon is tighter than the
+<code>boundingPoly</code>, and encloses only the skin part of the face. Typically, it
+is used to eliminate the face from any image analysis that detects the
 &quot;amount of skin&quot; visible in an image. It is not based on the
 landmarker results, only on the initial face detection, hence
 the &lt;code&gt;fd&lt;/code&gt; (face detection) prefix.</p>
@@ -228,7 +228,7 @@ the &lt;code&gt;fd&lt;/code&gt; (face detection) prefix.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html#Google_Cloud_Vision_V1_BoundingPoly">BoundingPoly</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.BoundingPoly.html">BoundingPoly</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -252,7 +252,7 @@ the &lt;code&gt;fd&lt;/code&gt; (face detection) prefix.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -276,7 +276,7 @@ the &lt;code&gt;fd&lt;/code&gt; (face detection) prefix.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -324,15 +324,15 @@ the &lt;code&gt;fd&lt;/code&gt; (face detection) prefix.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField&lt;T&gt;</span>&lt;<span class="xref"></span>&gt;</td>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<span class="xref">Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_FaceAnnotation_PanAngle_" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.PanAngle*"></a>
               <h4 id="Google_Cloud_Vision_V1_FaceAnnotation_PanAngle" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.PanAngle">PanAngle</h4>
-              <div class="markdown level1 summary"><p>Yaw angle. Indicates the leftward/rightward angle that the face is
-pointing, relative to the vertical plane perpendicular to the image. Range
+              <div class="markdown level1 summary"><p>Yaw angle, which indicates the leftward/rightward angle that the face is
+pointing relative to the vertical plane perpendicular to the image. Range
 [-180,180].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -357,10 +357,9 @@ pointing, relative to the vertical plane perpendicular to the image. Range
               </table>
               <a id="Google_Cloud_Vision_V1_FaceAnnotation_RollAngle_" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.RollAngle*"></a>
               <h4 id="Google_Cloud_Vision_V1_FaceAnnotation_RollAngle" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.RollAngle">RollAngle</h4>
-              <div class="markdown level1 summary"><p>Roll angle. Indicates the amount of clockwise/anti-clockwise rotation of
-the
-face relative to the image vertical, about the axis perpendicular to the
-face. Range [-180,180].</p>
+              <div class="markdown level1 summary"><p>Roll angle, which indicates the amount of clockwise/anti-clockwise rotation
+of the face relative to the image vertical about the axis perpendicular to
+the face. Range [-180,180].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -401,7 +400,7 @@ face. Range [-180,180].</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -425,16 +424,15 @@ face. Range [-180,180].</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Vision_V1_FaceAnnotation_TiltAngle_" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.TiltAngle*"></a>
               <h4 id="Google_Cloud_Vision_V1_FaceAnnotation_TiltAngle" data-uid="Google.Cloud.Vision.V1.FaceAnnotation.TiltAngle">TiltAngle</h4>
-              <div class="markdown level1 summary"><p>Pitch angle. Indicates the upwards/downwards angle that the face is
-pointing
-relative to the image&#39;s horizontal plane. Range [-180,180].</p>
+              <div class="markdown level1 summary"><p>Pitch angle, which indicates the upwards/downwards angle that the face is
+pointing relative to the image&#39;s horizontal plane. Range [-180,180].</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -475,12 +473,12 @@ relative to the image&#39;s horizontal plane. Range [-180,180].</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html#Google_Cloud_Vision_V1_Likelihood">Likelihood</a></td>
+                    <td><a class="xref" href="Google.Cloud.Vision.V1.Likelihood.html">Likelihood</a></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-            </article>
+                        </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
