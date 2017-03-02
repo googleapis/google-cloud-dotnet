@@ -84,10 +84,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// for "NonIdempotent" <see cref="DatabaseAdminClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="DatabaseAdminClient"/> RPC methods.
@@ -176,7 +179,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -325,7 +328,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -384,7 +387,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>

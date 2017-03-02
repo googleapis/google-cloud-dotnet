@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta07-*",
+  "version": "1.0.0-beta08-*",
   "description": "gRPC services for the Google Identity and Access Management API. This library is typically used as a dependency for other API client libraries.",
   "authors": [ "Google Inc." ],
 
