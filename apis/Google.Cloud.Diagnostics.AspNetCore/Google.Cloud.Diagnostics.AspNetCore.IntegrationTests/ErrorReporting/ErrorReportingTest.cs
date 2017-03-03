@@ -74,10 +74,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 var client = server.CreateClient();
                 await client.GetAsync($"/ErrorReporting/Index/{testId}");
-            }
 
-            var errorEvents = _polling.GetEvents(startTime, testId, 0);
-            Assert.Empty(errorEvents);
+                var errorEvents = _polling.GetEvents(startTime, testId, 0);
+                Assert.Empty(errorEvents);
+            }
         }
 
         /// <summary>
@@ -97,11 +97,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var client = server.CreateClient();
                 await Assert.ThrowsAsync<Exception>(() =>
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
-            }
 
-            var errorEvents = _polling.GetEvents(startTime, testId, 1);
-            Assert.Single(errorEvents);
-            VerifyErrorEvent(errorEvents.First(), testId, "ThrowsException");
+                var errorEvents = _polling.GetEvents(startTime, testId, 1);
+                Assert.Single(errorEvents);
+                VerifyErrorEvent(errorEvents.First(), testId, "ThrowsException");
+            }
         }
 
         /// <summary>
@@ -127,21 +127,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
                 await Assert.ThrowsAsync<Exception>(() =>
                     client.GetAsync($"/ErrorReporting/ThrowsException/{testId}"));
+
+                var errorEvents = _polling.GetEvents(startTime, testId, 4);
+                Assert.Equal(4, errorEvents.Count());
+
+                var exceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsException"));
+                Assert.Equal(3, exceptionEvents.Count());
+                foreach (var errorEvent in exceptionEvents)
+                {
+                    VerifyErrorEvent(errorEvent, testId, "ThrowsException");
+                }
+
+                var argumentExceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsArgumentException"));
+                Assert.Single(argumentExceptionEvents);
+                VerifyErrorEvent(argumentExceptionEvents.First(), testId, "ThrowsArgumentException");
             }
-
-            var errorEvents = _polling.GetEvents(startTime, testId, 4);
-            Assert.Equal(4, errorEvents.Count());
-
-            var exceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsException"));
-            Assert.Equal(3, exceptionEvents.Count());
-            foreach (var errorEvent in exceptionEvents)
-            {
-                VerifyErrorEvent(errorEvent, testId, "ThrowsException");
-            }
-
-            var argumentExceptionEvents = errorEvents.Where(e => e.Message.Contains("ThrowsArgumentException"));
-            Assert.Single(argumentExceptionEvents);
-            VerifyErrorEvent(argumentExceptionEvents.First(), testId, "ThrowsArgumentException");
         }
 
         /// <summary>
