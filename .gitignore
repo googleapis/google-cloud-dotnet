@@ -13,6 +13,7 @@ output
 packages
 coverage
 releasebuild
+launchSettings.json
 
 # Used when generating APIs
 tmp
