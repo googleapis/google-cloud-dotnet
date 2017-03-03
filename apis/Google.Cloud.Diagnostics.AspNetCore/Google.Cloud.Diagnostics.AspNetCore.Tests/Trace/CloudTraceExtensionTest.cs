@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
             mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
             mockProvider.Setup(p => p.GetService(typeof(ShouldTraceRequest))).Returns(
-                new ShouldTraceRequest { ShouldTrace = shouldTraceFunc });
+                new ShouldTraceRequest(shouldTraceFunc));
             mockProvider.Setup(p => p.GetService(typeof(TraceIdFactory))).Returns(traceIdFactory);
             return mockProvider.Object;
         }
@@ -64,17 +64,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
         }
 
-        [Fact]
-        public void CreateTraceHeaderContext_ForceTrace_False() =>
-            TestCreateTraceHeaderContextForceTrace(false);
-
-        [Fact]
-        public void CreateTraceHeaderContext_ForceTrace_True() =>
-            TestCreateTraceHeaderContextForceTrace(true);
-
-        [Fact]
-        public void CreateTraceHeaderContext_ForceTrace_Null() =>
-            TestCreateTraceHeaderContextForceTrace(null);
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        [InlineData(null)]
+        public void CreateTraceHeaderContext_ForceTrace(bool? shouldTrace)
+        {
+            var provider = CreateProviderForTraceHeaderContext($"{_traceId}/{_spanId};", ((HttpRequest r) => shouldTrace));
+            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
+            Assert.Equal(_traceId, headerContext.TraceId);
+            Assert.Equal(_spanId, headerContext.SpanId);
+            Assert.Equal(shouldTrace, headerContext.ShouldTrace);
+        }
 
         [Fact]
         public void CreateTraceHeaderContext_ForceTrace_NoHeader()
@@ -122,20 +123,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             var mockProvider = new Mock<IServiceProvider>();
             Assert.Throws<InvalidOperationException>(
                 () => mockProvider.Object.GetServiceCheckNotNull<IHttpContextAccessor>());
-        }
-
-        /// <summary>
-        /// A helper to run tests to check that <see cref="ShouldTraceRequest"/> does the
-        /// correct right thing in <see cref="CloudTraceExtension.CreateTraceHeaderContext(IServiceProvider)"/>
-        /// </summary>
-        /// <param name="shouldTrace"></param>
-        private void TestCreateTraceHeaderContextForceTrace(bool? shouldTrace)
-        {
-            var provider = CreateProviderForTraceHeaderContext($"{_traceId}/{_spanId};", ((HttpRequest r) => shouldTrace));
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
-            Assert.Equal(_traceId, headerContext.TraceId);
-            Assert.Equal(_spanId, headerContext.SpanId);
-            Assert.Equal(shouldTrace, headerContext.ShouldTrace);
         }
     }
 }

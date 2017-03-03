@@ -82,9 +82,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// This is used instead of injecting the value of "shouldTraceFunc" directly 
         /// to ensure we do not override a service the user setup.
         /// </summary>
-        internal class ShouldTraceRequest
+        internal sealed class ShouldTraceRequest
         {
-            internal Func<HttpRequest, bool?> ShouldTrace { get; set; }
+            internal Func<HttpRequest, bool?> ShouldTrace { get; }
+
+            internal ShouldTraceRequest(Func<HttpRequest, bool?> shouldTrace)
+            {
+                ShouldTrace = shouldTrace;
+            }
         }
 
         /// <summary>
@@ -105,7 +110,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional Trace client, if unset the default will be used.</param>
-        /// <param name="shouldTraceFunc">Optional function to trace requests. If the trace header is not set
+        /// <param name="traceOverridePredicate">Optional function to trace requests. If the trace header is not set
         ///     then this function will be called to determine if a given request should be traced.  This will
         ///     not override trace headers. If the function returns true the request will be traced, if false
         ///     is returned the trace will not be traced and if null is returned it will not affect the
@@ -113,7 +118,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId,
             TraceConfiguration config = null, TraceServiceClient client = null,
-            Func<HttpRequest, bool?> shouldTraceFunc = null)
+            Func<HttpRequest, bool?> traceOverridePredicate = null)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
@@ -132,7 +137,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddSingleton<IManagedTracerFactory>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
-            services.AddSingleton(new ShouldTraceRequest { ShouldTrace = shouldTraceFunc });
+            services.AddSingleton(new ShouldTraceRequest(traceOverridePredicate));
             services.AddSingleton(traceIdFactory);
 
             services.AddScoped(CreateTraceHeaderContext);
@@ -170,12 +175,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var traceHeaderContext = TraceHeaderContext.FromHeader(header);
             if (traceHeaderContext.ShouldTrace == null && shouldTraceRequest.ShouldTrace != null)
             {
-                string traceId = traceHeaderContext.TraceId ?? traceIdFactory.NextId();
-                ulong spanId = traceHeaderContext.SpanId ?? 0;
                 bool? shouldTrace = shouldTraceRequest.ShouldTrace(accessor.HttpContext?.Request);
+                string traceId = traceHeaderContext.TraceId;
+                if (shouldTrace == true && traceHeaderContext.TraceId == null)
+                {
+                    traceId = traceIdFactory.NextId();
+                }
+                ulong spanId = traceHeaderContext.SpanId ?? 0;
                 return new TraceHeaderContext(traceId, spanId, shouldTrace);
             }
-            return TraceHeaderContext.FromHeader(header);
+            return traceHeaderContext;
         }
 
         /// <summary>
