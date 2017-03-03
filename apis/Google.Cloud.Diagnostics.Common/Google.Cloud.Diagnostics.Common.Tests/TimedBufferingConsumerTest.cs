@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Grpc.Core;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -121,6 +122,39 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             consumer.Receive(intArrayTwo);
             fakeTimer.FullTick();
             mockConsumer.Verify(c => c.Receive(intArrayTwo), Times.Once());
+        }
+
+        [Fact]
+        public void Timer_SwallowRpcException()
+        {
+            var mockConsumer = new Mock<IConsumer<int>>();
+            var fakeTimer = new FakeThreadingTimer();
+            var consumer = new TimedBufferingConsumer<int>(mockConsumer.Object, _waitTime, fakeTimer);
+
+            mockConsumer.Setup(c => c.Receive(It.IsAny<IEnumerable<int>>())).Throws(new RpcException(Status.DefaultCancelled));
+            consumer.Receive(new[] { 1, 2, 3, 4, 5 });
+            fakeTimer.FullTick();
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Once());
+        }
+
+        [Fact]
+        public void Timer_Exception()
+        {
+            var mockConsumer = new Mock<IConsumer<int>>();
+            var fakeTimer = new FakeThreadingTimer();
+            var consumer = new TimedBufferingConsumer<int>(mockConsumer.Object, _waitTime, fakeTimer);
+
+            mockConsumer.Setup(c => c.Receive(It.IsAny<IEnumerable<int>>())).Throws(new DivideByZeroException());
+            consumer.Receive(new[] { 1, 2, 3, 4, 5 });
+            try
+            {
+                fakeTimer.FullTick();
+                Assert.True(false);
+            }
+            catch (Exception e) when (!(e is Xunit.Sdk.XunitException))
+            {
+            }
+            mockConsumer.Verify(c => c.Receive(It.IsAny<IEnumerable<int>>()), Times.Once());
         }
     }
 }
