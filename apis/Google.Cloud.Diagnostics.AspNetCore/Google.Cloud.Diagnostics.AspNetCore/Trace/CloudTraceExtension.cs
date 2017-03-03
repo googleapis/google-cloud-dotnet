@@ -176,13 +176,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             if (traceHeaderContext.ShouldTrace == null && shouldTraceRequest.ShouldTrace != null)
             {
                 bool? shouldTrace = shouldTraceRequest.ShouldTrace(accessor.HttpContext?.Request);
-                string traceId = traceHeaderContext.TraceId;
-                if (shouldTrace == true && traceHeaderContext.TraceId == null)
+                if (shouldTrace == true)
                 {
-                    traceId = traceIdFactory.NextId();
+                    return new TraceHeaderContext(
+                        traceHeaderContext.TraceId ?? traceIdFactory.NextId(),
+                        traceHeaderContext.SpanId ?? 0, shouldTrace);
                 }
-                ulong spanId = traceHeaderContext.SpanId ?? 0;
-                return new TraceHeaderContext(traceId, spanId, shouldTrace);
+                else if (shouldTrace == false)
+                {
+                    return new TraceHeaderContext(
+                        traceHeaderContext.TraceId, traceHeaderContext.SpanId, shouldTrace);
+                }
             }
             return traceHeaderContext;
         }
