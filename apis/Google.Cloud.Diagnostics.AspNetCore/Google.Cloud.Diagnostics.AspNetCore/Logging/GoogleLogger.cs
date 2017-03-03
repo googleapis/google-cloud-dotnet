@@ -95,12 +95,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
 
             LogEntry entry = new LogEntry
-            {   
+            {
                 Resource = _loggerOptions.MonitoredResource,
                 LogName = _logName,
                 Severity = logLevel.ToLogSeverity(),
                 Timestamp = Timestamp.FromDateTime(_clock.GetCurrentDateTimeUtc()),
                 TextPayload = message,
+                Labels = { _loggerOptions.Labels },
             };
 
             _consumer.Receive(new[] { entry });
