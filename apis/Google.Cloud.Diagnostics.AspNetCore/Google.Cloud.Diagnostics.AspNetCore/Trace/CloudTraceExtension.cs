@@ -78,6 +78,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal const string TraceKey = "Google.Cloud.Diagnostics.AspNetCore.Trace";
 
         /// <summary>
+        /// A class to wrap the "shouldTraceFunc" param in <see cref="AddGoogleTrace"/>.
+        /// This is used instead of injecting the value of "shouldTraceFunc" directly 
+        /// to ensure we do not override a service the user setup.
+        /// </summary>
+        internal class ShouldTraceRequest
+        {
+            internal Func<HttpRequest, bool?> ShouldTrace { get; set; }
+        }
+
+        /// <summary>
         /// Uses middleware that will trace time taken for all subsequent delegates to run.
         /// The time taken and metadata will be sent to the Stackdriver Trace API. To be
         /// used with <see cref="AddGoogleTrace"/>,
@@ -95,9 +105,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional Trace client, if unset the default will be used.</param>
+        /// <param name="shouldTraceFunc">Optional function to trace requests. If the trace header is not set
+        ///     then this function will be called to determine if a given request should be traced.  This will
+        ///     not override trace headers. If the function returns true the request will be traced, if false
+        ///     is returned the trace will not be traced and if null is returned it will not affect the
+        ///     trace decision.</param>
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId,
-            TraceConfiguration config = null, TraceServiceClient client = null)
+            TraceConfiguration config = null, TraceServiceClient client = null,
+            Func<HttpRequest, bool?> shouldTraceFunc = null)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
@@ -105,15 +121,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
 
-            IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
+            var traceIdFactory = TraceIdFactory.Create();
+
+            var consumer = ConsumerFactory<TraceProto>.GetConsumer(
                  new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
 
             var tracerFactory = new ManagedTracerFactory(projectId, consumer,
-                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
+                RateLimitingTraceOptionsFactory.Create(config), traceIdFactory);
 
             services.AddSingleton<IManagedTracerFactory>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
+            services.AddSingleton(new ShouldTraceRequest { ShouldTrace = shouldTraceFunc });
+            services.AddSingleton(traceIdFactory);
 
             services.AddScoped(CreateTraceHeaderContext);
             services.AddScoped(CreateManagedTracer);
@@ -137,12 +157,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>.
+        /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>
+        /// and a <see cref="ShouldTraceRequest"/>.
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
-            var accessor = provider.GetService<IHttpContextAccessor>();
-            string header = accessor?.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
+            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
+            var shouldTraceRequest = provider.GetServiceCheckNotNull<ShouldTraceRequest>();
+            var traceIdFactory = provider.GetServiceCheckNotNull<TraceIdFactory>();
+
+            string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
+            var traceHeaderContext = TraceHeaderContext.FromHeader(header);
+            if (traceHeaderContext.ShouldTrace == null && shouldTraceRequest.ShouldTrace != null)
+            {
+                string traceId = traceHeaderContext.TraceId ?? traceIdFactory.NextId();
+                ulong spanId = traceHeaderContext.SpanId ?? 0;
+                bool? shouldTrace = shouldTraceRequest.ShouldTrace(accessor.HttpContext?.Request);
+                return new TraceHeaderContext(traceId, spanId, shouldTrace);
+            }
             return TraceHeaderContext.FromHeader(header);
         }
 
@@ -152,17 +184,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
-            var headerContext = provider.GetService<TraceHeaderContext>();
-            var tracerFactory = provider.GetService<IManagedTracerFactory>();
-            var accessor = provider.GetService<IHttpContextAccessor>();
-
-            var message = "No {0} service found. Ensure Google Cloud Trace is properly set up.";
-            GaxPreconditions.CheckState(headerContext != null, 
-                string.Format(message, typeof(TraceHeaderContext).GetType()));
-            GaxPreconditions.CheckState(tracerFactory != null,
-                string.Format(message, typeof(IManagedTracerFactory).GetType()));
-            GaxPreconditions.CheckState(accessor != null,
-               string.Format(message, typeof(IHttpContextAccessor).GetType()));
+            var headerContext = provider.GetServiceCheckNotNull<TraceHeaderContext>();
+            var tracerFactory = provider.GetServiceCheckNotNull<IManagedTracerFactory>();
+            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
 
             var tracer = tracerFactory.CreateTracer(headerContext);
 
@@ -170,6 +194,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             // in CreateTraceHeaderPropagatingHandler for more details.
             accessor.HttpContext.Items[TraceKey] = tracer;
             return tracer;
+        }
+
+        /// <summary>
+        /// Extension for the <see cref="IServiceProvider"/> that will call and return 
+        /// <see cref="IServiceProvider.GetService(System.Type)"/>.  If the result of the
+        /// call is null it will throw.
+        /// </summary>
+        internal static T GetServiceCheckNotNull<T>(this IServiceProvider provider)
+        {
+            var message = "No {0} service found. Ensure Google Cloud Trace is properly set up.";
+            T service = provider.GetService<T>();
+            GaxPreconditions.CheckState(service != null, string.Format(message, typeof(T)));
+            return service;
         }
     }
 }
