@@ -19,30 +19,72 @@ using Moq;
 using System;
 using Xunit;
 
+using static Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension;
+
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class CloudTraceExtensionTest
     {
-        private const string TraceId = "105445aa7843bc8bf206b12000100f00";
-        private const ulong SpanId = 81237123;
+        private const string _traceId = "105445aa7843bc8bf206b12000100f00";
+        private const ulong _spanId = 81237123;
+
+        /// <summary>
+        /// Create an <see cref="IServiceProvider"/> to be used during tests of 
+        /// <see cref="CloudTraceExtension.CreateTraceHeaderContext(IServiceProvider)"/>.
+        /// It will set up an <see cref="IHttpContextAccessor"/> with the passed in trace header,
+        /// a <see cref="ShouldTraceRequest"/> with the passed in should trace function and a
+        /// <see cref="TraceIdFactory"/>.
+        /// </summary>
+        private IServiceProvider CreateProviderForTraceHeaderContext(
+            string traceHeader, Func<HttpRequest, bool?> shouldTraceFunc = null)
+        {
+            var context = new DefaultHttpContext();
+            var request = new DefaultHttpRequest(context);
+            request.Headers[TraceHeaderContext.TraceHeader] = traceHeader;
+
+            var accessor = new HttpContextAccessor();
+            accessor.HttpContext = context;
+
+            var traceIdFactory = TraceIdFactory.Create();
+
+            Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
+            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
+            mockProvider.Setup(p => p.GetService(typeof(ShouldTraceRequest))).Returns(
+                new ShouldTraceRequest(shouldTraceFunc));
+            mockProvider.Setup(p => p.GetService(typeof(TraceIdFactory))).Returns(traceIdFactory);
+            return mockProvider.Object;
+        }
 
         [Fact]
         public void CreateTraceHeaderContext()
         {
-            string header = $"{TraceId}/{SpanId};o=1";
-
-            var context = new DefaultHttpContext();
-            var request = new DefaultHttpRequest(context);
-            request.Headers[TraceHeaderContext.TraceHeader] = header;
-
-            var accessor = new HttpContextAccessor();
-            accessor.HttpContext = context;
-            
-            Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
-            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
-
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(mockProvider.Object);
+            var header = $"{_traceId}/{_spanId};o=1";
+            var provider = CreateProviderForTraceHeaderContext(header);
+            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
             Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
+        }
+
+        [Theory]
+        [InlineData(true)]
+        [InlineData(false)]
+        [InlineData(null)]
+        public void CreateTraceHeaderContext_ForceTrace(bool? shouldTrace)
+        {
+            var provider = CreateProviderForTraceHeaderContext($"{_traceId}/{_spanId};", ((HttpRequest r) => shouldTrace));
+            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
+            Assert.Equal(_traceId, headerContext.TraceId);
+            Assert.Equal(_spanId, headerContext.SpanId);
+            Assert.Equal(shouldTrace, headerContext.ShouldTrace);
+        }
+
+        [Fact]
+        public void CreateTraceHeaderContext_ForceTrace_NoHeader()
+        {
+            var provider = CreateProviderForTraceHeaderContext("", ((HttpRequest r) => true));
+            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
+            Assert.NotNull(headerContext.TraceId);
+            Assert.Equal((ulong)0, headerContext.SpanId);
+            Assert.Equal(true, headerContext.ShouldTrace);
         }
 
         [Fact]
@@ -65,5 +107,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             mockProvider.VerifyAll();
         }
 
+        [Fact]
+        public void GetServiceCheckNotNull()
+        {
+            var accessor = new HttpContextAccessor();
+            var mockProvider = new Mock<IServiceProvider>();
+            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
+            var service = mockProvider.Object.GetServiceCheckNotNull<IHttpContextAccessor>();
+            Assert.Equal(accessor, service);
+        }
+
+        [Fact]
+        public void GetServiceCheckNotNull_Throws()
+        {
+            var mockProvider = new Mock<IServiceProvider>();
+            Assert.Throws<InvalidOperationException>(
+                () => mockProvider.Object.GetServiceCheckNotNull<IHttpContextAccessor>());
+        }
     }
 }
