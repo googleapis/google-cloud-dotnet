@@ -46,8 +46,8 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             var client = DatastoreClient.Create();
             // Delete all the entities in our partition.
             // TODO: Transactions? Paging?
-            var query = new Query { Projection = { new Projection { Property = new PropertyReference { Name = "__key__" } } } };
-            var response = client.RunQuery(ProjectId, PartitionId, null, query);
+            var query = new Query { Projection = { DatastoreConstants.KeyProperty } };
+            var response = client.RunQuery(new RunQueryRequest { ProjectId = ProjectId, PartitionId = PartitionId, Query = query });
             var deletions = response.Batch.EntityResults.Select(entityResult => entityResult.Entity.ToDelete());
             client.Commit(ProjectId, CommitRequest.Types.Mode.NonTransactional, deletions);
         }
