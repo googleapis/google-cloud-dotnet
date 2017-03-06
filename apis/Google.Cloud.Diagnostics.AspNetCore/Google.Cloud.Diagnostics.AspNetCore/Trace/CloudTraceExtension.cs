@@ -74,9 +74,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </remarks>
     public static class CloudTraceExtension
     {
-        ///<summary>The key to save the tracer under in the <see cref="HttpContext"/></summary> 
-        internal const string TraceKey = "Google.Cloud.Diagnostics.AspNetCore.Trace";
-
         /// <summary>
         /// A class to wrap the "shouldTraceFunc" param in <see cref="AddGoogleTrace"/>.
         /// This is used instead of injecting the value of "shouldTraceFunc" directly 
@@ -134,14 +131,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var tracerFactory = new ManagedTracerFactory(projectId, consumer,
                 RateLimitingTraceOptionsFactory.Create(config), traceIdFactory);
 
+            services.AddScoped(CreateTraceHeaderContext);
+            services.AddScoped(CreateManagedTracer);
+
             services.AddSingleton<IManagedTracerFactory>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
             services.AddSingleton(new ShouldTraceRequest(traceOverridePredicate));
             services.AddSingleton(traceIdFactory);
 
-            services.AddScoped(CreateTraceHeaderContext);
-            services.AddScoped(CreateManagedTracer);
+
+
+
+
+
+            /// CreateTraceHeaderContext is now never getting called it needs to be used... 
+            /// we need to in some way set up the httpcontext making a scoped service that sets it up seems to work
+            
+
         }
 
         /// <summary>
@@ -149,27 +157,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         private static TraceHeaderPropagatingHandler CreateTraceHeaderPropagatingHandler(IServiceProvider provider)
         {
-            Func<IManagedTracer> managedTracerFactory = () =>
-            {
-                // We use the IHttpContextAccessor to get the IManagedTracer as the 
-                // IHttpContextAccessor is a singleton and will always have the proper
-                // HttpContext.  The IManagedTracer is attached to the HttpContext in
-                // CreateManagedTracer.
-                var accessor = provider.GetService<IHttpContextAccessor>();
-                return accessor.HttpContext.Items[TraceKey] as IManagedTracer;
-            };
-            return new TraceHeaderPropagatingHandler(managedTracerFactory);
+            var tracer = provider.GetService<IManagedTracer>();
+            return new TraceHeaderPropagatingHandler(() => tracer);
         }
 
         /// <summary>
         /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>
-        /// and a <see cref="ShouldTraceRequest"/>.
+        /// and a <see cref="ShouldTraceRequest"/>.  This also creates an 
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             var shouldTraceRequest = provider.GetServiceCheckNotNull<ShouldTraceRequest>();
             var traceIdFactory = provider.GetServiceCheckNotNull<TraceIdFactory>();
+            var tracerFactory = provider.GetServiceCheckNotNull<IManagedTracerFactory>();
 
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
             var traceHeaderContext = TraceHeaderContext.FromHeader(header);
@@ -178,16 +179,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 bool? shouldTrace = shouldTraceRequest.ShouldTrace(accessor.HttpContext?.Request);
                 if (shouldTrace == true)
                 {
-                    return new TraceHeaderContext(
+                    traceHeaderContext = new TraceHeaderContext(
                         traceHeaderContext.TraceId ?? traceIdFactory.NextId(),
                         traceHeaderContext.SpanId ?? 0, shouldTrace);
                 }
                 else if (shouldTrace == false)
                 {
-                    return new TraceHeaderContext(
+                    traceHeaderContext = new TraceHeaderContext(
                         traceHeaderContext.TraceId, traceHeaderContext.SpanId, shouldTrace);
                 }
             }
+
+            var tracer = tracerFactory.CreateTracer(traceHeaderContext);
+            ContextTracerManager.SetCurrentTracer(accessor, tracer);
+
             return traceHeaderContext;
         }
 
@@ -197,16 +202,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
-            var headerContext = provider.GetServiceCheckNotNull<TraceHeaderContext>();
-            var tracerFactory = provider.GetServiceCheckNotNull<IManagedTracerFactory>();
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-
-            var tracer = tracerFactory.CreateTracer(headerContext);
-
-            // Attach the IManagedTracer to the current HttpContext.  See comments
-            // in CreateTraceHeaderPropagatingHandler for more details.
-            accessor.HttpContext.Items[TraceKey] = tracer;
-            return tracer;
+            var temp = provider.GetServiceCheckNotNull<TraceHeaderContext>();
+            return new ContextManagedTracer(accessor);
         }
 
         /// <summary>

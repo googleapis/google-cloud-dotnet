@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var server = new TestServer(builder))
             {
                 var client = server.CreateClient();
-                await client.GetAsync($"/Trace/Trace/{testId}");
+                client.GetAsync($"/Trace/Trace/{testId}").Wait();
             }
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
