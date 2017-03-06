@@ -70,12 +70,8 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
-            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
-
-            options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = options.CreateConsumer();
-            return new ErrorReportingExceptionFilter(consumer, serviceName, version);
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            return CreateBase(projectId, serviceName, version, options);
         }
 
         /// <summary>
@@ -83,7 +79,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
         /// <para>
         /// Can be used when running on Google App Engine or Google Compute Engine.
-        /// The Google Cloud Platform project to report error to will detected from the
+        /// The Google Cloud Platform project to report errors to will detected from the
         /// current platform.
         /// </para>
         /// </summary>
@@ -94,7 +90,27 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="options">Optional, error reporting options.</param>
         public static ErrorReportingExceptionFilter Create(
             string serviceName, string version, ErrorReportingOptions options = null) =>
-                Create(null, serviceName, version, options);
+                CreateBase(null, serviceName, version, options);
+
+        /// <summary>
+        /// Shared code for creating <see cref="ErrorReportingExceptionFilter"/>.
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. If null the project Id will be auto detected.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
+        ///     Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. 
+        ///     Cannot be null.</param>
+        /// <param name="options">Optional, error reporting options.</param>
+        private static ErrorReportingExceptionFilter CreateBase(string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = options.CreateConsumer();
+            return new ErrorReportingExceptionFilter(consumer, serviceName, version);
+        }
 
         internal ErrorReportingExceptionFilter(
             IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)

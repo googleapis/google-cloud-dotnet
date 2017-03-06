@@ -59,13 +59,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             this IApplicationBuilder app, string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
-            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
-
-            options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = options.CreateConsumer();
-            var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
-            app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
+            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
+            UseGoogleExceptionLoggingBase(app, projectId, serviceName, version, options);
         }
 
         /// <summary>
@@ -86,7 +81,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static void UseGoogleExceptionLogging(
             this IApplicationBuilder app, string serviceName, string version,
             ErrorReportingOptions options = null) =>
-                UseGoogleExceptionLogging(app, null, serviceName, version, options);
+                UseGoogleExceptionLoggingBase(app, null, serviceName, version, options);
+
+        /// <summary>
+        /// Shared code for creating error reporting middleware
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. If null the project Id will be auto detected.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
+        ///     Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. 
+        ///     Cannot be null.</param>
+        /// <param name="options">Optional, error reporting options.</param>
+        private static void UseGoogleExceptionLoggingBase(
+            this IApplicationBuilder app, string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = options.CreateConsumer();
+            var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
+            app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
+        }
 
     }
 }

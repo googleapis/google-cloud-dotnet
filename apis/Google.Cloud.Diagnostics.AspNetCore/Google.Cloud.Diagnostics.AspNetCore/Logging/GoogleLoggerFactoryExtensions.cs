@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Adds a <see cref="GoogleLoggerProvider"/> for <see cref="GoogleLogger"/>s.
         /// </summary>
         /// <param name="factory">The logger factory. Cannot be null.</param>
-        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        /// <param name="projectId">Optional if unspecified and running on Google App Engine or Google Compute Engine.
         ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
         /// <param name="options">Optional, options for the logger.</param>
