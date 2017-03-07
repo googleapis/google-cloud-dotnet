@@ -21,6 +21,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Iam.V1", "..\a
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.Tools.UpdateVersions", "Google.Cloud.Tools.UpdateVersions\Google.Cloud.Tools.UpdateVersions.xproj", "{5BBEA02A-6BBE-4E37-9095-07F480C39FA7}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Google.Cloud.CheckGapicConfigs", "Google.Cloud.CheckGapicConfigs\Google.Cloud.CheckGapicConfigs.xproj", "{C6DF820C-BC9D-4320-9819-E63BC1E9E8C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{5BBEA02A-6BBE-4E37-9095-07F480C39FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BBEA02A-6BBE-4E37-9095-07F480C39FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BBEA02A-6BBE-4E37-9095-07F480C39FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6DF820C-BC9D-4320-9819-E63BC1E9E8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6DF820C-BC9D-4320-9819-E63BC1E9E8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6DF820C-BC9D-4320-9819-E63BC1E9E8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6DF820C-BC9D-4320-9819-E63BC1E9E8C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

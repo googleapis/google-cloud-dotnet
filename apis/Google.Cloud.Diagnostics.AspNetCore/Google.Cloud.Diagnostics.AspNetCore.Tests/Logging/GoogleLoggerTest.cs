@@ -17,6 +17,7 @@ using Google.Api.Gax.Grpc;
 using Google.Api.Gax.Testing;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Logging.V2;
+using Google.Protobuf.Collections;
 using Google.Protobuf.WellKnownTypes;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -43,9 +44,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         private string Formatter(string message, Exception ex)
             => ex == null ? message : $"{message} - {ex.Message}";
 
-        private GoogleLogger GetLogger(IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information)
+        private GoogleLogger GetLogger(
+            IConsumer<LogEntry> consumer, LogLevel logLevel = LogLevel.Information,
+            Dictionary<string, string> labels = null)
         {
-            LoggerOptions options = LoggerOptions.Create(logLevel, MonitoredResourceBuilder.GlobalResource);
+            LoggerOptions options = LoggerOptions.Create(logLevel, labels, MonitoredResourceBuilder.GlobalResource);
             return new GoogleLogger(consumer, s_logTarget, options, _logName, s_clock);
         }
 
@@ -99,19 +102,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void Log()
         {
+            var labels = new Dictionary<string, string> { { "some-key", "some-value" } };
             Predicate<IEnumerable<LogEntry>> matcher = (l) =>
             {
                 LogEntry entry = l.Single();
+                KeyValuePair<string, string> label = entry.Labels.Single();
                 return entry.LogName == new LogName(_projectId, _logName).ToString() &&
                     entry.Severity == LogLevel.Error.ToLogSeverity() &&
                     entry.Timestamp.Equals(Timestamp.FromDateTime(s_dateTime)) &&
                     entry.TextPayload == Formatter(_logMessage, s_exception) &&
-                    entry.Resource.Equals(MonitoredResourceBuilder.GlobalResource);
+                    entry.Resource.Equals(MonitoredResourceBuilder.GlobalResource) &&
+                    label.Key == "some-key" &&
+                    label.Value == "some-value";
             };
 
             var mockConsumer = new Mock<IConsumer<LogEntry>>();
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
-            var logger = GetLogger(mockConsumer.Object);
+            var logger = GetLogger(mockConsumer.Object, LogLevel.Information, labels);
             logger.Log(LogLevel.Error, 0, _logMessage, s_exception, Formatter);
             mockConsumer.VerifyAll();
         }

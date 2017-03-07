@@ -12,8 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Diagnostics.Common.Tests;
 using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -45,7 +43,9 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             var trace = await TestTracingOutGoingRequest(googleUri, spanName, exceptionExpected: false);
             var innerSpan = trace.Spans.Single(s => s.Name != spanName);
-            Assert.Empty(innerSpan.Labels);
+            Assert.Equal(2, innerSpan.Labels.Count);
+            Assert.Equal("GET", innerSpan.Labels[TraceLabels.HttpMethod]);
+            Assert.Equal("200", innerSpan.Labels[TraceLabels.HttpStatusCode]);
         }
 
         [Fact]
@@ -57,9 +57,23 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             var trace = await TestTracingOutGoingRequest(fakeUri, spanName, exceptionExpected: true);
             var innerSpan = trace.Spans.Single(s => s.Name != spanName);
-            var label = innerSpan.Labels.Single();
-            Assert.Equal(TraceLabels.StackTrace, label.Key);
-            Assert.False(string.IsNullOrWhiteSpace(label.Value));
+            Assert.Equal(2, innerSpan.Labels.Count);
+            Assert.Equal("GET", innerSpan.Labels[TraceLabels.HttpMethod]);
+            Assert.False(string.IsNullOrWhiteSpace(innerSpan.Labels[TraceLabels.StackTrace]));
+        }
+
+        [Fact]
+        public async Task TraceOutGoing_HttpError()
+        {
+            string fakeUri = "https://google.com/404";
+            string testId = Utils.GetTestId();
+            var spanName = $"{nameof(TraceOutGoing_Exception)}-{testId}";
+
+            var trace = await TestTracingOutGoingRequest(fakeUri, spanName, exceptionExpected: false);
+            var innerSpan = trace.Spans.Single(s => s.Name != spanName);
+            Assert.Equal(2, innerSpan.Labels.Count);
+            Assert.Equal("GET", innerSpan.Labels[TraceLabels.HttpMethod]);
+            Assert.Equal("404", innerSpan.Labels[TraceLabels.HttpStatusCode]);
         }
 
         /// <summary>

@@ -59,54 +59,37 @@ namespace Google.Cloud.Datastore.V1.Snippets
         }
 
         [Fact]
-        public void StructuredQuery()
+        public void RunQuery()
         {
             string projectId = _fixture.ProjectId;
             PartitionId partitionId = _fixture.PartitionId;
             
-            // Snippet: RunQuery(string,PartitionId,ReadOptions,Query,CallSettings)
+            // Snippet: RunQuery(RunQueryRequest,*)
             DatastoreClient client = DatastoreClient.Create();
-            Query query = new Query("book")
+
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                ReadOptions = new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
+            };
+            // Structured query
+            request.Query = new Query("book")
             {
                 Filter = Filter.Equal("author", "Jane Austen")
             };
-            RunQueryResponse response = client.RunQuery(
-                projectId, 
-                partitionId,
-                new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-                query);
-
+            RunQueryResponse response = client.RunQuery(request);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity);
             }
-            // End snippet
 
-            Assert.Equal(1, response.Batch.EntityResults.Count);
-            Entity entity = response.Batch.EntityResults[0].Entity;
-            Assert.Equal("Jane Austen", (string)entity["author"]);
-            Assert.Equal("Pride and Prejudice", (string)entity["title"]);
-        }
-
-        [Fact]
-        public void GqlQuery()
-        {
-            string projectId = _fixture.ProjectId;
-            PartitionId partitionId = _fixture.PartitionId;
-
-            // Snippet: RunQuery(string,PartitionId,ReadOptions,GqlQuery,CallSettings)
-            DatastoreClient client = DatastoreClient.Create();
-            GqlQuery gqlQuery = new GqlQuery
+            // Equivalent GQL query
+            request.GqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
                 NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
             };
-            RunQueryResponse response = client.RunQuery(
-                projectId,
-                partitionId,
-                new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
-                gqlQuery);
-
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity);
@@ -183,8 +166,13 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Sample: NamespaceQuery
             DatastoreClient client = DatastoreClient.Create();
             PartitionId partitionId = new PartitionId(projectId);
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query(DatastoreConstants.NamespaceKind));
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                Query = new Query(DatastoreConstants.NamespaceKind)
+            };
+            RunQueryResponse response = client.RunQuery(request);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity.Key.Path.Last().Name);
@@ -201,8 +189,13 @@ namespace Google.Cloud.Datastore.V1.Snippets
 
             // Sample: KindQuery
             DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query(DatastoreConstants.KindKind));
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                Query = new Query(DatastoreConstants.KindKind)
+            };
+            RunQueryResponse response = client.RunQuery(request);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Console.WriteLine(result.Entity.Key.Path.Last().Name);
@@ -219,11 +212,16 @@ namespace Google.Cloud.Datastore.V1.Snippets
 
             // Sample: PropertyQuery
             DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, null,
-                new Query(DatastoreConstants.PropertyKind)
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                Query = new Query(DatastoreConstants.PropertyKind)
                 {
                     Projection = { DatastoreConstants.KeyProperty }
-                });
+                }
+            };
+            RunQueryResponse response = client.RunQuery(request);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Key key = result.Entity.Key;
@@ -240,10 +238,10 @@ namespace Google.Cloud.Datastore.V1.Snippets
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
             // Sample: Overview
-            var client = DatastoreClient.Create();
+            DatastoreClient client = DatastoreClient.Create();
 
-            var keyFactory = new KeyFactory(projectId, namespaceId, "message");
-            var entity = new Entity
+            KeyFactory keyFactory = new KeyFactory(projectId, namespaceId, "message");
+            Entity entity = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
                 ["created"] = DateTime.UtcNow,
@@ -254,8 +252,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
             using (DatastoreTransaction transaction = DatastoreTransaction.Create(client, projectId, namespaceId, transactionId))
             {
                 transaction.Insert(entity);
-                var commitResponse = transaction.Commit();
-                var insertedKey = commitResponse.MutationResults[0].Key;
+                CommitResponse commitResponse = transaction.Commit();
+                Key insertedKey = commitResponse.MutationResults[0].Key;
                 Console.WriteLine($"Inserted key: {insertedKey}");
             }
             // End sample
@@ -422,7 +420,14 @@ namespace Google.Cloud.Datastore.V1.Snippets
             };
 
             DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, new ReadOptions { ReadConsistency = ReadConsistency.Eventual }, query);
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                ReadOptions = new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
+                Query = query
+            };
+            RunQueryResponse response = client.RunQuery(request);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Entity entity = result.Entity;
@@ -496,12 +501,17 @@ namespace Google.Cloud.Datastore.V1.Snippets
             PartitionId partitionId = _fixture.PartitionId;
 
             // Sample: ProjectionQuery
-            Query query = new Query("Task")
+            RunQueryRequest request = new RunQueryRequest
             {
-                Projection = { "priority", "percentage_complete" }
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                Query = new Query("Task")
+                {
+                    Projection = { "priority", "percentage_complete" }
+                }
             };
             DatastoreClient client = DatastoreClient.Create();
-            RunQueryResponse response = client.RunQuery(projectId, partitionId, new ReadOptions { ReadConsistency = ReadConsistency.Eventual }, query);
+            RunQueryResponse response = client.RunQuery(request);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Entity entity = result.Entity;
@@ -564,11 +574,16 @@ namespace Google.Cloud.Datastore.V1.Snippets
             ByteString pageCursor = null;
             int pageSize = 5;
             // Sample: PaginateWithCursor
-            Query query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty };
+            RunQueryRequest request = new RunQueryRequest
+            {
+                ProjectId = projectId,
+                PartitionId = partitionId,
+                ReadOptions = new ReadOptions { ReadConsistency = ReadConsistency.Eventual },
+                Query = new Query("Task") { Limit = pageSize, StartCursor = pageCursor ?? ByteString.Empty }
+            };
             DatastoreClient client = DatastoreClient.Create();
 
-            RunQueryResponse response = client.RunQuery(
-                projectId, partitionId, new ReadOptions { ReadConsistency = ReadConsistency.Eventual }, query);
+            RunQueryResponse response = client.RunQuery(request);
             foreach (EntityResult result in response.Batch.EntityResults)
             {
                 Entity entity = result.Entity;

@@ -17,6 +17,7 @@ using System.Collections.Generic;
 using System;
 using System.Threading.Tasks;
 using System.Threading;
+using Grpc.Core;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -42,7 +43,19 @@ namespace Google.Cloud.Diagnostics.Common
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _timer = GaxPreconditions.CheckNotNull(timer, nameof(timer));
             // Initialize the timer to flush ever wait time interval.
-            _timer.Initialize((e) => { Flush(); }, waitTime);
+            _timer.Initialize((e) => {
+                try
+                {
+                    Flush();
+                }
+                catch (RpcException ex)
+                {
+                    // TODO(talarico): This is a short term solution to ensure 
+                    // we do not kill a process. See issue #842 to track the long term solution.
+                    // This solution is dependent on implementation details specifically the fact
+                    // that all consumers that make requests are gRPC based.
+                }
+            }, waitTime);
         }
 
         /// <summary>

@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net.Http;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -26,19 +27,19 @@ namespace Google.Cloud.Diagnostics.Common
     internal static class TraceLabels
     {
         ///<summary>The label to denote the size of a request.</summary> 
-        internal const string HttpRequestSize = "trace.cloud.google.com/http/request/size";
+        internal const string HttpRequestSize = "/http/request/size";
 
         ///<summary>The label to denote the host.</summary> 
-        internal const string HttpHost = "trace.cloud.google.com/http/host";
+        internal const string HttpHost = "/http/host";
 
         ///<summary>The label to denote the request method.</summary> 
-        internal const string HttpMethod = "trace.cloud.google.com/http/method";
+        internal const string HttpMethod = "/http/method";
 
         ///<summary>The label to denote the response status code.</summary> 
-        internal const string HttpStatusCode = "trace.cloud.google.com/http/status_code";
+        internal const string HttpStatusCode = "/http/status_code";
 
         ///<summary>The label to denote a stack trace.</summary> 
-        internal const string StackTrace = "trace.cloud.google.com/stacktrace";
+        internal const string StackTrace = "/stacktrace";
 
         ///<summary>The label to denote an agent.</summary> 
         internal const string Agent = "/agent";
@@ -61,6 +62,29 @@ namespace Google.Cloud.Diagnostics.Common
         internal static Dictionary<string, string> GetAgentLabel() =>
             new Dictionary<string, string> { { Agent, CommonUtils.AgentNameAndVersion } };
 
+        /// <summary>
+        /// Gets a map of labels for a span from an <see cref="HttpRequestMessage"/>.
+        /// </summary>
+        internal static Dictionary<string, string> FromHttpRequestMessage(HttpRequestMessage request)
+        {
+            GaxPreconditions.CheckNotNull(request, nameof(request));
+            return new Dictionary<string, string>
+            {
+                { HttpMethod, request.Method.Method }
+            };
+        }
+
+        /// <summary>
+        /// Gets a map of labels for a span from an <see cref="HttpResponseMessage"/>.
+        /// </summary>
+        internal static Dictionary<string, string> FromHttpResponseMessage(HttpResponseMessage response)
+        {
+            GaxPreconditions.CheckNotNull(response, nameof(response));
+            return new Dictionary<string, string>
+            {
+                { HttpStatusCode, ((int)response.StatusCode).ToString() }
+            };
+        }
 
         /// <summary>
         /// Creates a string JSON representation of a stack trace or the empty string

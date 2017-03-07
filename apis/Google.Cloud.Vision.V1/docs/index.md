@@ -56,6 +56,10 @@ All IO-related methods have async equivalents.
 
 [!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectText)]
 
+## Detect document text in a single image
+
+[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectDocumentText)]
+
 ## Detect labels in a single image
 
 [!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectLabels)]
@@ -75,6 +79,14 @@ All IO-related methods have async equivalents.
 ## Perform image property processing on a single image
 
 [!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectImageProperties)]
+
+## Suggest crop hints for a single image
+
+[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectCropHints)]
+
+## Perform analysis for other web references on a single image
+
+[!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#DetectWebInformation)]
 
 ## Detect faces and landmarks in a single image
 

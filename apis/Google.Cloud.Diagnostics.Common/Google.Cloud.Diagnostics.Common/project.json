@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha04-*",
+  "version": "1.0.0-alpha06-*",
   "description": "Google Stackdriver Instrumentation Libraries Common Components.",
   "authors": [ "Google Inc." ],
 

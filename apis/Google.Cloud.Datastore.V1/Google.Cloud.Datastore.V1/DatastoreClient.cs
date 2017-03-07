@@ -79,10 +79,13 @@ namespace Google.Cloud.Datastore.V1
         /// for "NonIdempotent" <see cref="DatastoreClient"/> RPC methods.
         /// </summary>
         /// <remarks>
-        /// There are no RPC <see cref="StatusCode"/>s eligible for retry for "NonIdempotent" RPC methods.
+        /// The eligible RPC <see cref="StatusCode"/>s for retry for "NonIdempotent" RPC methods are:
+        /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
+        /// </list>
         /// </remarks>
         public static Predicate<RpcException> NonIdempotentRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes();
+            RetrySettings.FilterForStatusCodes(StatusCode.Unavailable);
 
         /// <summary>
         /// "Default" retry backoff for <see cref="DatastoreClient"/> RPC methods.
@@ -201,7 +204,7 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -230,7 +233,7 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -259,7 +262,7 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -288,7 +291,7 @@ namespace Google.Cloud.Datastore.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
-        /// <item><description>No status codes</description></item>
+        /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
         /// </remarks>
@@ -528,234 +531,6 @@ namespace Google.Cloud.Datastore.V1
         {
             throw new NotImplementedException();
         }
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="query">
-        /// The query to run.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            Query query,
-            CallSettings callSettings = null) => RunQueryAsync(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    Query = query,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="query">
-        /// The query to run.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            Query query,
-            CancellationToken cancellationToken) => RunQueryAsync(
-                projectId,
-                partitionId,
-                readOptions,
-                query,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="query">
-        /// The query to run.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual RunQueryResponse RunQuery(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            Query query,
-            CallSettings callSettings = null) => RunQuery(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    Query = query,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="gqlQuery">
-        /// The GQL query to run.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            GqlQuery gqlQuery,
-            CallSettings callSettings = null) => RunQueryAsync(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    GqlQuery = gqlQuery,
-                },
-                callSettings);
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="gqlQuery">
-        /// The GQL query to run.
-        /// </param>
-        /// <param name="cancellationToken">
-        /// A <see cref="CancellationToken"/> to use for this RPC.
-        /// </param>
-        /// <returns>
-        /// A Task containing the RPC response.
-        /// </returns>
-        public virtual Task<RunQueryResponse> RunQueryAsync(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            GqlQuery gqlQuery,
-            CancellationToken cancellationToken) => RunQueryAsync(
-                projectId,
-                partitionId,
-                readOptions,
-                gqlQuery,
-                CallSettings.FromCancellationToken(cancellationToken));
-
-        /// <summary>
-        /// Queries for entities.
-        /// </summary>
-        /// <param name="projectId">
-        /// The ID of the project against which to make the request.
-        /// </param>
-        /// <param name="partitionId">
-        /// Entities are partitioned into subsets, identified by a partition ID.
-        /// Queries are scoped to a single partition.
-        /// This partition ID is normalized with the standard default context
-        /// partition ID.
-        /// </param>
-        /// <param name="readOptions">
-        /// The options for this query.
-        /// </param>
-        /// <param name="gqlQuery">
-        /// The GQL query to run.
-        /// </param>
-        /// <param name="callSettings">
-        /// If not null, applies overrides to this RPC call.
-        /// </param>
-        /// <returns>
-        /// The RPC response.
-        /// </returns>
-        public virtual RunQueryResponse RunQuery(
-            string projectId,
-            PartitionId partitionId,
-            ReadOptions readOptions,
-            GqlQuery gqlQuery,
-            CallSettings callSettings = null) => RunQuery(
-                new RunQueryRequest
-                {
-                    ProjectId = projectId,
-                    PartitionId = partitionId,
-                    ReadOptions = readOptions,
-                    GqlQuery = gqlQuery,
-                },
-                callSettings);
 
         /// <summary>
         /// Queries for entities.

@@ -540,8 +540,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // Sample: InsertOverview
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
-            var keyFactory = db.CreateKeyFactory("message");
-            var entity = new Entity
+            KeyFactory keyFactory = db.CreateKeyFactory("message");
+            Entity entity = new Entity
             {
                 Key = keyFactory.CreateIncompleteKey(),
                 ["created"] = DateTime.UtcNow,
@@ -551,8 +551,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
             using (DatastoreTransaction transaction = db.BeginTransaction())
             {
                 transaction.Insert(entity);
-                var commitResponse = transaction.Commit();
-                var insertedKey = commitResponse.MutationResults[0].Key;
+                CommitResponse commitResponse = transaction.Commit();
+                Key insertedKey = commitResponse.MutationResults[0].Key;
                 Console.WriteLine($"Inserted key: {insertedKey}");
             }
             // End sample
