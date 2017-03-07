@@ -49,7 +49,7 @@ Within a `GoogleStackdriverAppender` the following options are available (also s
 ```
 Optional when running on Google App Engine (GAE) or Google Compute Engine (GCE), must be present on other platforms. The project ID given must be the ID of a project that already exists on [Google Cloud Platform](https://cloud.google.com/).
 
-On GCE and GAE the projectId will be auto-detected from the platform.
+On GCE and GAE the project ID will be auto-detected from the platform.
 
 ### logId
 
