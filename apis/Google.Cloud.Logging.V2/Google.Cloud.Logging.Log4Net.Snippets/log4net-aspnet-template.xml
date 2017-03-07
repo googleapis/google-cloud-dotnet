@@ -1,0 +1,27 @@
+﻿<configuration>
+  <configSections>
+
+    <!-- Other configSection item -->
+
+    <!-- Specify a configuration section for log4net -->
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,log4net" />
+  </configSections>
+
+  <!-- The log4net configuration -->
+  <log4net>
+    <appender name="CloudLogger" type="Google.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message" />
+      </layout>
+      <projectId value="PROJECT_ID" />
+      <logId value="LOG_ID" />
+    </appender>
+    <root>
+      <level value="ALL" />
+      <appender-ref ref="CloudLogger" />
+    </root>
+  </log4net>
+
+  <!-- Other configuration items -->
+
+</configuration>

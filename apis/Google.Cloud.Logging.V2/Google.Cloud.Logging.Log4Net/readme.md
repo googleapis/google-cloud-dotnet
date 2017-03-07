@@ -1,4 +1,4 @@
-﻿# Google Cloud Logging Log4Net appender
+# Google Cloud Logging Log4Net appender
 
 ## Example use in a console app
 
@@ -30,7 +30,7 @@ public static void Main(string[] args)
     XmlConfigurator.Configure("new FileInfo("log4net.xml"));
 }
 ```
-Then log away!
+Logged items will now be sent to Google Cloud Logging:
 ``` csharp
 using log4net;
 
@@ -40,17 +40,25 @@ log.Info("An exciting log entry!");
 
 ## Custom configuration
 
-Within an appender the following options are available:
+Within a `GoogleStackdriverAppender` the following options are available (also see [GoogleStackdriverAppender_Configuration.cs](https://github.com/GoogleCloudPlatform/google-cloud-dotnet/blob/master/apis/Google.Cloud.Logging.V2/Google.Cloud.Logging.Log4Net/GoogleStackdriverAppender_Configuration.cs)):
+
+### projectId
 
 ``` xml
 <projectId value="<your project ID>"/>
 ```
-Must be present. The project ID given must be the ID of a project that already exists on [Google Cloud Platform](https://cloud.google.com/).
+Optional when running on Google App Engine (GAE) or Google Compute Engine (GCE), must be present on other platforms. The project ID given must be the ID of a project that already exists on [Google Cloud Platform](https://cloud.google.com/).
+
+On GCE and GAE the projectId will be auto-detected from the platform.
+
+### logId
 
 ``` xml
 <logId value="<your log ID>"/>
 ```
-Must be present. The log ID given is any string that is recorded as the name of the log, which can be used for simple filtering.
+Must be present. The log ID given is any string that is recorded as the name of the log, which can be used for simple filtering when viewing log entries.
+
+### withMetaData
 
 ``` xml
 <withMetaData value="<various, see below>"/>
@@ -65,19 +73,49 @@ By default no extra metadata is logged. `withMetaData` specifies which extra met
  * `LoggerName`: The name of the log4net logger that created this log entry.
  * `Label`: The name of the log4net logging level that caused this log entry (e.g. "FATAL")
 
+### customLabel
+
 ``` xml
 <customLabel>
-  <key value="<your key>"/>
-  <value value="<your value>"/>
+  <key value="<your key>" />
+  <value value="<your value>" />
 </customLabel>
 ```
 Allows custom labels to be added to the metadata of log entries.
 
+### resourceType
+
 ``` xml
 <resourceType value="<your resource type>"/>
 ```
-Allows the [Monitored resources](https://cloud.google.com/logging/docs/api/ref_v2beta1/rest/v2beta1/MonitoredResource) resource type to be changed. This defaults to `global`.
-*(TODO: If resource type isn't global then it's currently impossible to set any monitored-resource labels which will be required, so this setting is essentially useless at the moment)*
+Allows the [Monitored resources](https://cloud.google.com/logging/docs/reference/v2/rest/v2/MonitoredResource) resource type to be specified; must be set to an entry on the [Monitored Resource List](https://cloud.google.com/logging/docs/api/v2/resource-list).
+
+If unset, the default value depends on the detected platform:
+
+* `gae_app` on Google App Engine (GAE).
+* `gce_instance` on Google Compute Engine (GCE).
+* `global` on all other platforms.
+
+(See [MonitoredResourceBuilder.cs](https://github.com/googleapis/gax-dotnet/blob/master/src/Google.Api.Gax.Grpc/MonitoredResourceBuilder.cs) for details)
+
+### resourceLabel
+
+``` xml
+<resourceLabel>
+  <key value="<key>" />
+  <value value="<value>" />
+</resourceLabel>
+```
+If `resourceType` has been manually set, then `resourceLabel` is used to specify extra labels as shown in the [Monitoring Resource Types](https://cloud.google.com/logging/docs/api/v2/resource-list#resource-types) list.
+
+### DisableResourceTypeDetection
+
+``` xml
+<disableResourceTypeDetection value="true">
+```
+Defaults to `false`. Setting this to `true` disables automatic `resourceType` setting based on platform detection.
+
+### Complete configuration example
 
 So, for example, a complete configuration might look like this:
 ``` xml
@@ -125,4 +163,4 @@ when the first limit is reached.
 The default setting is to limit count to 1,000; with no limit on bytes.
 
 ## Feedback...
-...is appreciated - please let me know what doesn't work, or what else would be useful :)
+Please file github issues for bugs or questions.
