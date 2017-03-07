@@ -90,8 +90,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Adds the needed services for Google Cloud Tracing. Used with <see cref="UseGoogleTrace"/>.
         /// </summary>
         /// <param name="services">The service collection. Cannot be null.</param>
-        /// <param name="projectId">Optional if unspecified and running on Google App Engine or Google Compute Engine.
-        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional Trace client, if unset the default will be used.</param>
@@ -104,9 +104,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
 
-            // Trace does not use monitored resources, only detect the monitored resource if
-            // a project id is needed.
-            projectId = projectId ?? CommonUtils.GetAndCheckProjectId(projectId);
+            projectId = CommonUtils.GetAndCheckProjectId(projectId);
 
             IConsumer<TraceProto> consumer = ConsumerFactory<TraceProto>.GetConsumer(
                  new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);

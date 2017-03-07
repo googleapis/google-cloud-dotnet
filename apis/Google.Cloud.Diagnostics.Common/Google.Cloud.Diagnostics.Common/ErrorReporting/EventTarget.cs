@@ -81,7 +81,6 @@ namespace Google.Cloud.Diagnostics.Common
         public static EventTarget ForLogging(string projectId = null, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
-            monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             projectId = CommonUtils.GetAndCheckProjectId(projectId, monitoredResource);
             var logTarget = LogTarget.ForProject(projectId);
             return ForLogging(logTarget, logName, loggingClient, monitoredResource);

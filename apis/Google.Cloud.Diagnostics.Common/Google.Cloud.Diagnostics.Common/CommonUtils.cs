@@ -54,30 +54,19 @@ namespace Google.Cloud.Diagnostics.Common
         /// <returns>The Google Cloud project ID.</returns>
         internal static string GetAndCheckProjectId(string projectId, MonitoredResource monitoredResource = null)
         {
+            if (projectId != null)
+            {
+                return projectId;
+            }
+
             monitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform();
             string resourceProjectId;
             if (monitoredResource.Labels.TryGetValue("project_id", out resourceProjectId))
             {
-                if (projectId == null)
-                {
-                    projectId = resourceProjectId;
-                }
-                else if (projectId != resourceProjectId)
-                {
-                    Debug.WriteLine("Google Cloud Platfrom project ID mismatch. " +
-                        $"Project Id parameter '{projectId}' does not match " +
-                        $"resource project ID '{resourceProjectId}' " +
-                        $"Defaulting to project ID parameter '{projectId}'.");
-                }
+                return resourceProjectId;
             }
 
-            if (projectId == null)
-            {
-                throw new InvalidOperationException("No Google Cloud project ID was passed in or detected.");
-            }
-
-            return projectId;
+            throw new InvalidOperationException("No Google Cloud project ID was passed in or detected.");
         }
-        
     }
 }

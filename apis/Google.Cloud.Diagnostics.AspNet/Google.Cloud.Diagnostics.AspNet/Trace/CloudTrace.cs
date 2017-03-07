@@ -121,8 +121,8 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// Initialize tracing for this application.
         /// </summary>
         /// <param name="application">The Http application.</param>
-        /// <param name="projectId">Optional if unspecified and running on Google App Engine or Google Compute Engine.
-        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
         ///     detected from the platform.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
@@ -130,9 +130,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
 
-            // Trace does not use monitored resources, only detect the monitored resource if
-            // a project id is needed.
-            projectId = projectId ?? CommonUtils.GetAndCheckProjectId(projectId);
+            projectId = CommonUtils.GetAndCheckProjectId(projectId);
             CloudTrace trace = new CloudTrace(projectId, config, client);
 
             // Add event handlers to the application.
