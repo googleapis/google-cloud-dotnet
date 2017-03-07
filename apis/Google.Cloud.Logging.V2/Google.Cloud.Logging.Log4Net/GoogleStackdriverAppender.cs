@@ -139,7 +139,6 @@ namespace Google.Cloud.Logging.Log4Net
             ResourceType = string.IsNullOrWhiteSpace(ResourceType) ? null : ResourceType;
             ProjectId = string.IsNullOrWhiteSpace(ProjectId) ? null : ProjectId;
             LogId = string.IsNullOrWhiteSpace(LogId) ? null : LogId;
-            File = string.IsNullOrWhiteSpace(File) ? null : File;
 
             // Validate configuration
             GaxPreconditions.CheckState(LogId != null, $"{nameof(LogId)} must be set.");
@@ -149,15 +148,10 @@ namespace Google.Cloud.Logging.Log4Net
             {
                 case LocalQueueType.Memory:
                     GaxPreconditions.CheckState(MaxMemoryCount > 0 || MaxMemorySize > 0,
-                        $"Either {nameof(MaxMemoryCount)} or {nameof(MaxFileSize)} must be configured to be > 0");
-                    break;
-                case LocalQueueType.Disk:
-                    GaxPreconditions.CheckState(File != null, $"{nameof(File)} must be set.");
-                    GaxPreconditions.CheckState(MaxFileSize > 0, $"{nameof(MaxFileSize)} must be > 0");
-                    GaxPreconditions.CheckState(MaxSizeRollBackups > 0, $"{nameof(MaxSizeRollBackups)} must be > 0");
+                        $"Either {nameof(MaxMemoryCount)} or {nameof(MaxMemorySize)} must be configured to be > 0");
                     break;
                 default:
-                    throw new InvalidOperationException("Inconceivable!");
+                    throw new InvalidOperationException($"Invalid {nameof(Log4Net.LocalQueueType)}: '{LocalQueueType}'");
             }
             GaxPreconditions.CheckState(ServerErrorBackoffDelaySeconds >= 1,
                 $"{nameof(ServerErrorBackoffDelaySeconds)} must be >= 1 second.");
@@ -172,10 +166,8 @@ namespace Google.Cloud.Logging.Log4Net
                 case LocalQueueType.Memory:
                     _logQ = new MemoryLogQueue(MaxMemorySize, MaxMemoryCount);
                     break;
-                case LocalQueueType.Disk:
-                    throw new NotImplementedException("File-base local queues not implemented.");
                 default:
-                    throw new InvalidOperationException("Inconceivable!");
+                    throw new InvalidOperationException($"Invalid {nameof(Log4Net.LocalQueueType)}: '{LocalQueueType}'");
             }
             _initIdTask = Task.Run(_logQ.GetPreviousExecutionIdAsync);
             var labels = new Dictionary<string, string>();
