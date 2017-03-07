@@ -68,7 +68,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Error Reporting API.
         /// <para>
         /// Can be used when running on Google App Engine or Google Compute Engine.
-        /// The Google Cloud Platform project to report error to will detected from the
+        /// The Google Cloud Platform project to report errors to will detected from the
         /// current platform.
         /// </para>
         /// </summary>
