@@ -31,7 +31,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         public static void SetCurrentTracer(IHttpContextAccessor accessor, IManagedTracer tracer)
         {
-            accessor.HttpContext.Items[TraceKey] = tracer;
+            if (accessor?.HttpContext?.Items != null)
+            {
+                accessor.HttpContext.Items[TraceKey] = tracer;
+            }
         }
 
         /// <summary>
@@ -39,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         public static IManagedTracer GetCurrentTracer(IHttpContextAccessor accessor)
         {
-            return accessor.HttpContext.Items[TraceKey] as IManagedTracer ?? NullManagedTracer.Instance;
+            return accessor?.HttpContext?.Items[TraceKey] as IManagedTracer ?? NullManagedTracer.Instance;
         }
     }
 }

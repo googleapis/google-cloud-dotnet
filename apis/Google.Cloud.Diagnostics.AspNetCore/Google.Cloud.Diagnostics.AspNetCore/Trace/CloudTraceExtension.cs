@@ -170,7 +170,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             var shouldTraceRequest = provider.GetServiceCheckNotNull<ShouldTraceRequest>();
             var traceIdFactory = provider.GetServiceCheckNotNull<TraceIdFactory>();
-            var tracerFactory = provider.GetServiceCheckNotNull<IManagedTracerFactory>();
 
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
             var traceHeaderContext = TraceHeaderContext.FromHeader(header);
@@ -190,9 +189,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 }
             }
 
-            var tracer = tracerFactory.CreateTracer(traceHeaderContext);
-            ContextTracerManager.SetCurrentTracer(accessor, tracer);
-
             return traceHeaderContext;
         }
 
@@ -203,7 +199,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            var temp = provider.GetServiceCheckNotNull<TraceHeaderContext>();
+            var traceHeaderContext = provider.GetServiceCheckNotNull<TraceHeaderContext>();
+            var tracerFactory = provider.GetServiceCheckNotNull<IManagedTracerFactory>();
+
+            var tracer = tracerFactory.CreateTracer(traceHeaderContext);
+            ContextTracerManager.SetCurrentTracer(accessor, tracer);
             return new ContextManagedTracer(accessor);
         }
 
