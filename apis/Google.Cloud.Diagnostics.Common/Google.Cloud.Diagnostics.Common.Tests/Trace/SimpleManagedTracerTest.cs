@@ -255,7 +255,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
-        public void MultipleSpans_Async()
+        public async Task MultipleSpans_Async()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
@@ -274,20 +274,23 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
             Func<string, string, Task> op = async (childName, grandchildName) =>
             {
-                tracer.StartSpan(childName);
-                await Task.Delay(30);
-                tracer.StartSpan(grandchildName);
-                await Task.Delay(30);
-                tracer.EndSpan();
-                await Task.Delay(30);
-                tracer.EndSpan();
+                using (tracer.StartSpan(childName))
+                {
+                    await Task.Delay(30);
+                    using (tracer.StartSpan(grandchildName))
+                    {
+                        await Task.Delay(30);
+                    }
+                    await Task.Delay(30);
+                }
             };
 
-            tracer.StartSpan("root");
-            Task.WhenAll(
-                op("child-one", "grandchild-one"),
-                op("child-two", "grandchild-two")).Wait();
-            tracer.EndSpan();
+            using (tracer.StartSpan("root"))
+            {
+                await Task.WhenAll(
+                    op("child-one", "grandchild-one"),
+                    op("child-two", "grandchild-two"));
+            }
             mockConsumer.VerifyAll();
         }
 
