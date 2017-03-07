@@ -19,6 +19,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
@@ -249,6 +250,43 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             tracer.AnnotateSpan(annotation);
             tracer.EndSpan();
             tracer.EndSpan();
+            tracer.EndSpan();
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public void MultipleSpans_Async()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) =>
+            {
+                var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
+                return spans.Count == 5 &&
+                    IsValidSpan(spans[0], "child-one", spans[4].SpanId) &&
+                    IsValidSpan(spans[1], "child-two", spans[4].SpanId) &&
+                    IsValidSpan(spans[2], "grandchild-one", spans[0].SpanId) &&
+                    IsValidSpan(spans[3], "grandchild-two", spans[1].SpanId) &&
+                    IsValidSpan(spans[4], "root");
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+
+            Func<string, string, Task> op = async (childName, grandchildName) =>
+            {
+                tracer.StartSpan(childName);
+                await Task.Delay(30);
+                tracer.StartSpan(grandchildName);
+                await Task.Delay(30);
+                tracer.EndSpan();
+                await Task.Delay(30);
+                tracer.EndSpan();
+            };
+
+            tracer.StartSpan("root");
+            Task.WhenAll(
+                op("child-one", "grandchild-one"),
+                op("child-two", "grandchild-two")).Wait();
             tracer.EndSpan();
             mockConsumer.VerifyAll();
         }
