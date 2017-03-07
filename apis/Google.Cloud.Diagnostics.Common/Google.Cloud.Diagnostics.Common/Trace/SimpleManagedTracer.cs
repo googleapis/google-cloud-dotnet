@@ -59,6 +59,8 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The Google Cloud Platform project ID.</summary>
         private readonly string _projectId;
 
+        private readonly object _traceLock = new object();
+
 #if NETSTANDARD1_5
         private readonly AsyncLocal<ImmutableStack<TraceSpan>> _traceStack = new AsyncLocal<ImmutableStack<TraceSpan>>();
 #else
@@ -175,11 +177,14 @@ namespace Google.Cloud.Diagnostics.Common
             TraceStack = currentStack;
             span.EndTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
 
-            _trace.Spans.Add(span);
-
-            if (currentStack.IsEmpty)
+            lock (_traceLock)
             {
-                Flush();
+                _trace.Spans.Add(span);
+
+                if (currentStack.IsEmpty)
+                {
+                    Flush();
+                }
             }
         }
 

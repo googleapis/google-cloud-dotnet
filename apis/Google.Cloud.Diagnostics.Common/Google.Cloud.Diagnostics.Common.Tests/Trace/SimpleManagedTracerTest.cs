@@ -263,11 +263,14 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) =>
             {
                 var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
+                var rootId = spans[4].SpanId;
+                var childOneId = spans[0].SpanId;
+                var childTwoId = spans[1].SpanId;
                 return spans.Count == 5 &&
-                    IsValidSpan(spans[0], "child-one", spans[4].SpanId) &&
-                    IsValidSpan(spans[1], "child-two", spans[4].SpanId) &&
-                    IsValidSpan(spans[2], "grandchild-one", spans[0].SpanId) &&
-                    IsValidSpan(spans[3], "grandchild-two", spans[1].SpanId) &&
+                    IsValidSpan(spans[0], "child-one", parentId: rootId) &&
+                    IsValidSpan(spans[1], "child-two", parentId: rootId) &&
+                    IsValidSpan(spans[2], "grandchild-one", parentId: childOneId) &&
+                    IsValidSpan(spans[3], "grandchild-two", parentId: childTwoId) &&
                     IsValidSpan(spans[4], "root");
             };
             mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
