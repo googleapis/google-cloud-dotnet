@@ -242,6 +242,8 @@ namespace Google.Cloud.Diagnostics.Common
         private void Flush()
         {
             _consumer.Receive(new[] { _trace });
+            // Clear out the flushed spans.
+            _trace.Spans.Clear();
         }
     }
 }

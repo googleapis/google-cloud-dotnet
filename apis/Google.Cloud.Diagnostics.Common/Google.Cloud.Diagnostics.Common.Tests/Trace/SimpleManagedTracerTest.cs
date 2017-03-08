@@ -302,6 +302,33 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void SpansClearedOnFlush()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+
+            mockConsumer.Setup(c => c.Receive(
+                 Match.Create<IEnumerable<TraceProto>>(
+                     t => IsValidSpan(t.Single().Spans.Single(), "span-name-0"))));
+
+            tracer.StartSpan("span-name-0");
+            tracer.EndSpan();
+
+            mockConsumer.VerifyAll();
+
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name-1"))));
+
+            tracer.StartSpan("span-name-1");
+            tracer.EndSpan();
+
+            mockConsumer.VerifyAll();
+
+
+        }
+
+        [Fact]
         public void EndSpan_NoAvailableSpan()
         {
             var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
