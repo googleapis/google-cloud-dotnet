@@ -47,7 +47,7 @@ namespace Google.Cloud.Diagnostics.Common
         private readonly IConsumer<TraceProto> _consumer;
 
         /// <summary>The current trace.</summary>
-        private readonly TraceProto _trace;
+        private TraceProto _trace;
 
         /// <summary>A stack of trace spans.</summary>
         private readonly Stack<TraceSpan> _traceStack;
@@ -241,7 +241,9 @@ namespace Google.Cloud.Diagnostics.Common
 
         private void Flush()
         {
-            _consumer.Receive(new[] { _trace });
+            var old = _trace;
+            _trace = new TraceProto { TraceId = old.TraceId };
+            _consumer.Receive(new[] { old });
         }
     }
 }
