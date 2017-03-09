@@ -19,12 +19,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
-#if NETSTANDARD1_5
-using System.Threading;
-#else
+#if !NETSTANDARD1_5
 // TODO: Remove when we support .NET 4.6.1
 using System.Runtime.Remoting.Messaging;
 #endif
+using System.Threading;
 using System.Threading.Tasks;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
@@ -62,11 +61,20 @@ namespace Google.Cloud.Diagnostics.Common
         private readonly object _traceLock = new object();
 
 #if NETSTANDARD1_5
+        /// <summary>
+        /// The stack of trace spans for the current logical call context. Note that this is logically cloned when each async
+        /// block is entered and each thread is spawned, so it will contain the spans which were open previously and those spans
+        /// will never be removed in the context of that async block/thread. Do not rely on the stack contents to know the state
+        /// of things on other threads. It may contain previously closed spans.
+        /// </summary>
         private readonly AsyncLocal<ImmutableStack<TraceSpan>> _traceStack = new AsyncLocal<ImmutableStack<TraceSpan>>();
 #else
         // TODO: Remove when we support .NET 4.6.1
         private readonly string _callContextName = Guid.NewGuid().ToString("N");
 #endif
+
+        /// <summary>The number of spans currently open on any thread.</summary>
+        private int _openSpanCount;
 
         /// <summary>The span id factory to generate new span ids.</summary>
         private readonly SpanIdFactory _spanIdFactory;
@@ -114,6 +122,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             TraceStack = currentStack.Push(span);
 
+            Interlocked.Increment(ref _openSpanCount);
             return new Span(this);
         }
 
@@ -181,7 +190,9 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 _trace.Spans.Add(span);
 
-                if (currentStack.IsEmpty)
+                var newOpenSpanCount = Interlocked.Decrement(ref _openSpanCount);
+                Debug.Assert(newOpenSpanCount >= 0, "Invalid open span count");
+                if (newOpenSpanCount <= 0)
                 {
                     Flush();
                 }
@@ -265,7 +276,10 @@ namespace Google.Cloud.Diagnostics.Common
              new TraceProto { TraceId = _traceId, ProjectId = _projectId };
 
         /// <summary>
-        /// Gets the stack of trace spans for the current logical call context.
+        /// The stack of trace spans for the current logical call context. Note that this is logically cloned when each async
+        /// block is entered and each thread is spawned, so it will contain the spans which were open previously and those spans
+        /// will never be removed in the context of that async block/thread. Do not rely on the stack contents to know the state
+        /// of things on other threads. It may contain previously closed spans.
         /// </summary>
         private ImmutableStack<TraceSpan> TraceStack
         {
