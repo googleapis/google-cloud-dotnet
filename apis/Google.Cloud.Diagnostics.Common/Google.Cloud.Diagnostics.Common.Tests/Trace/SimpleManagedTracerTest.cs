@@ -321,8 +321,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             tracer.EndSpan();
 
             mockConsumer.VerifyAll();
-
-
         }
 
         [Fact]
