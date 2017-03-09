@@ -60,13 +60,8 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 return NullManagedTracer.Instance;
             }
-
-            TraceProto trace = new TraceProto
-            {
-                ProjectId = _projectId,
-                TraceId = headerContext.TraceId ?? _traceIdFactory.NextId(),
-            };
-            return SimpleManagedTracer.Create(_consumer, trace, headerContext.SpanId);
+            var traceId = headerContext.TraceId ?? _traceIdFactory.NextId();
+            return SimpleManagedTracer.Create(_consumer, _projectId, traceId,  headerContext.SpanId);
         }
 
         /// <summary>

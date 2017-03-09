@@ -34,9 +34,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private static readonly StackTrace EmptyStackTrace = new StackTrace(new Exception(), false);
         private static readonly StackTrace FilledStackTrace = CreateStackTrace();
 
-        private static TraceProto CreateTrace(string projectId = ProjectId, string traceId = TraceId)
-            => new TraceProto { ProjectId = ProjectId, TraceId = TraceId };
-
         private static bool IsValidSpan(TraceSpan span, string name)
             => IsValidSpan(span, name, 0);
 
@@ -70,7 +67,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void SingleSpan()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
@@ -85,7 +82,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void SingleSpan_Dispose()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
@@ -99,7 +96,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void SingleSpan_ParentId()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace(), 123);
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId, 123);
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
@@ -114,7 +111,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void SingleSpan_Options()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
@@ -134,7 +131,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void SingleSpan_Annotation()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
@@ -154,7 +151,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void SingleSpan_Stacktrace()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
@@ -174,7 +171,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void RunInSpan_Action()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
@@ -190,7 +187,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void RunInSpan_Action_Throws()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
@@ -208,7 +205,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void RunInSpan_Func()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             mockConsumer.Setup(c => c.Receive(
                 Match.Create<IEnumerable<TraceProto>>(
@@ -222,7 +219,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void MultipleSpans()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
@@ -260,7 +257,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void MultipleSpans_Dispose()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
@@ -291,7 +288,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void IncompleteSpans()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
-            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             tracer.StartSpan("span-name-0");
             tracer.StartSpan("span-name-1");
@@ -302,44 +299,69 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public void SpansClearedOnFlush()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+
+            mockConsumer.Setup(c => c.Receive(
+                 Match.Create<IEnumerable<TraceProto>>(
+                     t => IsValidSpan(t.Single().Spans.Single(), "span-name-0"))));
+
+            tracer.StartSpan("span-name-0");
+            tracer.EndSpan();
+
+            mockConsumer.VerifyAll();
+
+            mockConsumer.Setup(c => c.Receive(
+                Match.Create<IEnumerable<TraceProto>>(
+                    t => IsValidSpan(t.Single().Spans.Single(), "span-name-1"))));
+
+            tracer.StartSpan("span-name-1");
+            tracer.EndSpan();
+
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void EndSpan_NoAvailableSpan()
         {
-            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
             Assert.Throws<InvalidOperationException>(() => tracer.EndSpan());
         }
 
         [Fact]
         public void AnnotateSpan_NoAvailableSpan()
         {
-            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
             Assert.Throws<InvalidOperationException>(() => tracer.AnnotateSpan(EmptyDictionary));
         }
 
         [Fact]
         public void SetStackTrace_NoAvailableSpan()
         {
-            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
             Assert.Throws<InvalidOperationException>(() => tracer.SetStackTrace(EmptyStackTrace));
         }
 
         [Fact]
         public void GetCurrentTraceId()
         {
-            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
             Assert.Equal(tracer.GetCurrentTraceId(), TraceId);
         }
 
         [Fact]
         public void GetCurrentSpanId_NoSpan()
         {
-            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
             Assert.Null(tracer.GetCurrentSpanId());
         }
 
         [Fact]
         public void GetCurrentSpanId_Span()
         {
-            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace());
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId);
             tracer.StartSpan("span-name");
             Assert.NotNull(tracer.GetCurrentSpanId());
         }
@@ -348,7 +370,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void GetCurrentSpanId_ParentSpan()
         {
             ulong parentSpanId = 54321;
-            var tracer = SimpleManagedTracer.Create(UnusedConsumer, CreateTrace(), parentSpanId);
+            var tracer = SimpleManagedTracer.Create(UnusedConsumer, ProjectId, TraceId, parentSpanId);
             Assert.Equal(tracer.GetCurrentSpanId(), parentSpanId);
         }
     }
