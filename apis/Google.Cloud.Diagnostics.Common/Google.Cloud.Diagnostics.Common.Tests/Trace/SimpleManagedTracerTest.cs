@@ -404,7 +404,6 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Setup(c => c.Receive(Match.Create(childMatcher)));
 
             childThreadsReleased.Set();
-
             await Task.WhenAll(t1, t2);
 
             mockConsumer.VerifyAll();
