@@ -19,10 +19,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
-#if !NETSTANDARD1_5
-// TODO: Remove when we support .NET 4.6.1
-using System.Runtime.Remoting.Messaging;
-#endif
 using System.Threading;
 using System.Threading.Tasks;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
@@ -59,19 +55,6 @@ namespace Google.Cloud.Diagnostics.Common
         private readonly string _projectId;
 
         private readonly object _traceLock = new object();
-
-#if NETSTANDARD1_5
-        /// <summary>
-        /// The stack of trace spans for the current logical call context. Note that this is logically cloned when each async
-        /// block is entered and each thread is spawned, so it will contain the spans which were open previously and those spans
-        /// will never be removed in the context of that async block/thread. Do not rely on the stack contents to know the state
-        /// of things on other threads. It may contain previously closed spans.
-        /// </summary>
-        private readonly AsyncLocal<ImmutableStack<TraceSpan>> _traceStack = new AsyncLocal<ImmutableStack<TraceSpan>>();
-#else
-        // TODO: Remove when we support .NET 4.6.1
-        private readonly string _callContextName = Guid.NewGuid().ToString("N");
-#endif
 
         /// <summary>The number of spans currently open on any thread.</summary>
         private int _openSpanCount;
@@ -115,7 +98,7 @@ namespace Google.Cloud.Diagnostics.Common
                 SpanId = _spanIdFactory.NextId(),
                 Kind = options.SpanKind.Convert(),
                 Name = name,
-                StartTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime()),
+                StartTime = Timestamp.FromDateTime(DateTime.UtcNow),
                 ParentSpanId = GetCurrentSpanId(currentStack).GetValueOrDefault()
             };
             AnnotateSpan(span, options.Labels);
@@ -184,7 +167,7 @@ namespace Google.Cloud.Diagnostics.Common
             TraceSpan span;
             currentStack = currentStack.Pop(out span);
             TraceStack = currentStack;
-            span.EndTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
+            span.EndTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             lock (_traceLock)
             {
@@ -281,9 +264,24 @@ namespace Google.Cloud.Diagnostics.Common
         /// will never be removed in the context of that async block/thread. Do not rely on the stack contents to know the state
         /// of things on other threads. It may contain previously closed spans.
         /// </summary>
+#if NET45
+        private readonly string _callContextName = Guid.NewGuid().ToString("N");
         private ImmutableStack<TraceSpan> TraceStack
         {
-#if NETSTANDARD1_5
+            get
+            {
+                var ret = System.Runtime.Remoting.Messaging.CallContext.LogicalGetData(_callContextName) as ImmutableStack<TraceSpan>;
+                return ret ?? ImmutableStack<TraceSpan>.Empty;
+            }
+            set
+            {
+                System.Runtime.Remoting.Messaging.CallContext.LogicalSetData(_callContextName, value);
+            }
+        }
+#else
+        private readonly AsyncLocal<ImmutableStack<TraceSpan>> _traceStack = new AsyncLocal<ImmutableStack<TraceSpan>>();
+        private ImmutableStack<TraceSpan> TraceStack
+        {
             get
             {
                 return _traceStack.Value ?? ImmutableStack<TraceSpan>.Empty;
@@ -292,18 +290,7 @@ namespace Google.Cloud.Diagnostics.Common
             {
                 _traceStack.Value = value;
             }
-#else
-            // TODO: Remove when we support .NET 4.6.1
-            get
-            {
-                var ret = CallContext.LogicalGetData(_callContextName) as ImmutableStack<TraceSpan>;
-                return ret ?? ImmutableStack<TraceSpan>.Empty;
-            }
-            set
-            {
-                 CallContext.LogicalSetData(_callContextName, value);
-            }
-#endif
         }
+#endif
     }
 }

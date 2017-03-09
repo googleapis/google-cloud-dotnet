@@ -226,7 +226,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
-            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) => 
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
             {
                 var spans = t.Single().Spans;
                 return spans.Count == 5 &&
@@ -261,7 +261,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
-            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) =>
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
             {
                 var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
                 var rootId = spans[4].SpanId;
@@ -280,12 +280,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             {
                 using (tracer.StartSpan(childName))
                 {
-                    await Task.Delay(30);
+                    await Task.Yield();
                     using (tracer.StartSpan(grandchildName))
                     {
-                        await Task.Delay(30);
+                        await Task.Yield();
                     }
-                    await Task.Delay(30);
+                    await Task.Yield();
                 }
             };
 
@@ -304,10 +304,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
-            Predicate<IEnumerable<TraceProto>> rootMatcher = (IEnumerable<TraceProto> t) =>
+            Predicate<IEnumerable<TraceProto>> rootMatcher = t =>
             {
                 // Verify that even though the child spans were started during the time when the root span was open, they
-                // don't have it as a parent since it had not been started when their threads were spawned.
+                // don't have it as a parent since it had not been started when their tasks were created.
                 var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
                 var childOneId = spans[0].SpanId;
                 var childTwoId = spans[1].SpanId;
@@ -328,12 +328,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
                 using (tracer.StartSpan(childName))
                 {
-                    await Task.Delay(30);
+                    await Task.Yield();
                     using (tracer.StartSpan(grandchildName))
                     {
-                        await Task.Delay(30);
+                        await Task.Yield();
                     }
-                    await Task.Delay(30);
+                    await Task.Yield();
                 }
             };
             var t1 = Task.Run(() => op("child-one", "grandchild-one").Wait());
@@ -355,7 +355,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
             ulong rootId = 0;
-            Predicate<IEnumerable<TraceProto>> rootMatcher = (IEnumerable<TraceProto> t) =>
+            Predicate<IEnumerable<TraceProto>> rootMatcher = t =>
             {
                 var spans = t.Single().Spans;
                 rootId = spans[0].SpanId;
@@ -371,12 +371,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
                 using (tracer.StartSpan(childName))
                 {
-                    await Task.Delay(30);
+                    await Task.Yield();
                     using (tracer.StartSpan(grandchildName))
                     {
-                        await Task.Delay(30);
+                        await Task.Yield();
                     }
-                    await Task.Delay(30);
+                    await Task.Yield();
                 }
             };
 
@@ -388,10 +388,10 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                 t2 = Task.Run(() => op("child-two", "grandchild-two").Wait());
             }
 
-            Predicate<IEnumerable<TraceProto>> childMatcher = (IEnumerable<TraceProto> t) =>
+            Predicate<IEnumerable<TraceProto>> childMatcher = t =>
             {
                 // Verify that even though the child spans were started after the root span was ended, they
-                // still have it as a parent since it was opened when their threads were spawned.
+                // still have it as a parent since it was opened when their tasks were created.
                 var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
                 var childOneId = spans[0].SpanId;
                 var childTwoId = spans[1].SpanId;
@@ -415,7 +415,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
             var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
 
-            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) =>
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
             {
                 var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
                 var rootId = spans[4].SpanId;
@@ -434,12 +434,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             {
                 using (tracer.StartSpan(childName))
                 {
-                    await Task.Delay(30);
+                    await Task.Yield();
                     using (tracer.StartSpan(grandchildName))
                     {
-                        await Task.Delay(30);
+                        await Task.Yield();
                     }
-                    await Task.Delay(30);
+                    await Task.Yield();
                 }
             };
 
@@ -461,7 +461,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
-            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) =>
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
             {
                 var spans = t.Single().Spans;
                 return spans.Count == 4 &&
