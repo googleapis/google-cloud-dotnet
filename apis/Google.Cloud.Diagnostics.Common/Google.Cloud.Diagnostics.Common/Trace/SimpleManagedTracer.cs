@@ -49,6 +49,12 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The current trace.</summary>
         private TraceProto _trace;
 
+        /// <summary>The id of the current trace.</summary>
+        private readonly string _traceId;
+
+        /// <summary>The Google Cloud Platform project ID.</summary>
+        private readonly string _projectId;
+
         /// <summary>A stack of trace spans.</summary>
         private readonly Stack<TraceSpan> _traceStack;
 
@@ -58,10 +64,12 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The span id of the parent span of the root span of this trace.</summary>
         private readonly ulong? _rootSpanParentId;
 
-        private SimpleManagedTracer(IConsumer<TraceProto> consumer, TraceProto trace, ulong? rootSpanParentId = null)
+        private SimpleManagedTracer(IConsumer<TraceProto> consumer, string projectId, string traceId, ulong? rootSpanParentId = null)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _trace = GaxPreconditions.CheckNotNull(trace, nameof(trace));
+            _traceId = GaxPreconditions.CheckNotNull(traceId, nameof(traceId));
+            _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
+            _trace = CreateTraceProto();
             _traceStack = new Stack<TraceSpan>();
             _spanIdFactory = SpanIdFactory.Create();
             _rootSpanParentId = rootSpanParentId;
@@ -70,11 +78,13 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a <see cref="SimpleManagedTracer"/>>
         /// </summary>
-        /// <param name="consumer">The consumer to push finished traces to.</param>
-        /// <param name="trace">The current trace.</param>
+        /// <param name="consumer">The consumer to push finished traces to. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="traceId">The id of the current trace.  Cannot be null.</param>
         /// <param name="rootSpanParentId">Optional, the parent span id of the root span of the passed in trace.</param>
-        public static SimpleManagedTracer Create(IConsumer<TraceProto> consumer, TraceProto trace, ulong? rootSpanParentId = null)
-            => new SimpleManagedTracer(consumer, trace, rootSpanParentId);
+        public static SimpleManagedTracer Create(IConsumer<TraceProto> consumer, string projectId,
+            string traceId, ulong? rootSpanParentId = null)
+            => new SimpleManagedTracer(consumer, projectId, traceId, rootSpanParentId);
 
         /// <inheritdoc />
         public IDisposable StartSpan(string name, StartSpanOptions options = null)
@@ -242,8 +252,14 @@ namespace Google.Cloud.Diagnostics.Common
         private void Flush()
         {
             var old = _trace;
-            _trace = new TraceProto { TraceId = old.TraceId };
+            _trace = CreateTraceProto();
             _consumer.Receive(new[] { old });
         }
+
+        /// <summary>
+        /// Creates a new <see cref="TraceProto"/> with the project id and trace id set.
+        /// </summary>
+        private TraceProto CreateTraceProto() =>
+             new TraceProto { TraceId = _traceId, ProjectId = _projectId };
     }
 }

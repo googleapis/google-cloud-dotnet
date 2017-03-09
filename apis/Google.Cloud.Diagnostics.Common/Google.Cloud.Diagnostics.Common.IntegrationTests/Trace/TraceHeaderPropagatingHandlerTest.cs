@@ -100,9 +100,8 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private IManagedTracer CreateTracer()
         {
             string traceId = _traceIdFactory.NextId();
-            var traceProto = new TraceProto { ProjectId = _projectId, TraceId = traceId };
             var consumer = new GrpcTraceConsumer(TraceServiceClient.Create());
-            return SimpleManagedTracer.Create(consumer, traceProto, null);
+            return SimpleManagedTracer.Create(consumer, _projectId, traceId, null);
         }
 
         /// <summary>
