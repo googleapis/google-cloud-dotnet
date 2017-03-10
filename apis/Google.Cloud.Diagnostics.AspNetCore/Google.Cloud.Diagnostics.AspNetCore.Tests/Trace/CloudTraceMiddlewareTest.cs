@@ -25,7 +25,7 @@ using Xunit;
 namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class CloudTraceMiddlewareTest
-    {
+    {/*
         [Fact]
         public async Task Invoke_Trace()
         {
@@ -89,5 +89,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             tracerMock.Verify(t => t.StartSpan(It.IsAny<string>(), null), Times.Never());
             tracerMock.Verify(t => t.EndSpan(), Times.Never());
         }
-    }
+    */}
 }

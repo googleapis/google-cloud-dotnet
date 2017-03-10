@@ -29,14 +29,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     internal sealed class CloudTraceMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly IManagedTracerFactory _tracerFactory;
+        private readonly IHttpContextAccessor _accessor;
 
         /// <summary>
         /// Create a new instance of <see cref="CloudTraceMiddleware"/>.
         /// </summary>
         /// <param name="next">The next request delegate. Cannot be null.</param>
-        public CloudTraceMiddleware(RequestDelegate next)
+        public CloudTraceMiddleware(
+            RequestDelegate next, IManagedTracerFactory tracerFactory, IHttpContextAccessor accessor)
         {
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
+            _tracerFactory = GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory));
+            _accessor = GaxPreconditions.CheckNotNull(accessor, nameof(accessor));
         }
 
         /// <summary>
@@ -44,9 +49,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// taken for the next delegate to run, reporting the results to the
         /// Stackdriver Trace API.
         /// </summary>
-        public async Task Invoke(HttpContext httpContext, IManagedTracer tracer)
+        public async Task Invoke(HttpContext httpContext, TraceHeaderContext traceHeaderContext)
         {
-            GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
+            GaxPreconditions.CheckNotNull(traceHeaderContext, nameof(traceHeaderContext));
+
+            var tracer = _tracerFactory.CreateTracer(traceHeaderContext);
+            ContextTracerManager.SetCurrentTracer(_accessor, tracer);
 
             if (tracer.GetCurrentTraceId() == null)
             {
