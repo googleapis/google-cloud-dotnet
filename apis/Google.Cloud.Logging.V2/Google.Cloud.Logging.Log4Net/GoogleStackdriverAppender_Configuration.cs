@@ -79,12 +79,7 @@ namespace Google.Cloud.Logging.Log4Net
         /// </summary>
         Memory,
 
-        /// <summary>
-        /// Queue log events to disk before sending to Cloud Logging.
-        /// Unsent log events will be sent on next program re-start.
-        /// Not yet implemented.
-        /// </summary>
-        Disk,
+        // TODO: File-base log queue.
     }
 
     public partial class GoogleStackdriverAppender
@@ -170,7 +165,7 @@ namespace Google.Cloud.Logging.Log4Net
         /// This is usually for a very brief duration; but if there are problems connecting to Google Logging
         /// this local queue allows the application to continue functioning as normal, without blocking
         /// on log events or immediately throwing aware log entries.</para>
-        /// <para>Two queue types are provided:
+        /// <para>One queue type is provided:
         /// <list type="bullet">
         /// <item><description>
         /// <see cref="LocalQueueType.Memory"/>: Log entries are queued locally in memory. The maximum amount of memory and/or the maximum
@@ -178,14 +173,6 @@ namespace Google.Cloud.Logging.Log4Net
         /// been uploaded to Google Logging, then these log entries are permanently lost. If Google Logging becomes temporarily unavailable
         /// then the number of log entries queued until Google Logging becomes available again will be limited by the configure maximum sizes;
         /// log entries in excess of this configured maximum will cause the oldest queued log entries to be permanently lost.
-        /// </description></item>
-        /// <item><description>
-        /// <see cref="LocalQueueType.Disk"/>: Log entries are queued locally on disk. The maximum file size and file counts can be
-        /// configured. If the application exits or crashes before on-disk entries have been uplaoded to Google Logging, then these log
-        /// entries will be uploaded to Google Logging on program re-start (assuming the logging disk location is unchanged). If Google
-        /// Logging becomes temporarily unavailable then the number of log entries queued until Google Logging becomes available again will
-        /// be limited by the configured maximum file size and maxmimum file count. Log entries in excess of this configured maximum will
-        /// cause the oldest queued log entries to be permanently lost.
         /// </description></item>
         /// </list>
         /// </para>
@@ -205,23 +192,6 @@ namespace Google.Cloud.Logging.Log4Net
         /// Not used for file-based queueing.
         /// </summary>
         public int MaxMemoryCount { get; set; } = 1000;
-
-        /// <summary>
-        /// The path prefix to the files that logging will be written to.
-        /// </summary>
-        public string File { get; set; }
-
-        /// <summary>
-        /// The maximum size in bytes that each log file is allowed to reach, before being rolled over.
-        /// Default value is 10MB.
-        /// </summary>
-        public long MaxFileSize { get; set; } = 10 * 1024 * 1024;
-
-        /// <summary>
-        /// The maximum number of backup files that are kept before the oldest is erased.
-        /// Default value is 10.
-        /// </summary>
-        public int MaxSizeRollBackups { get; set; } = 10;
 
         /// <summary>
         /// Specify custom labels for all log entries.

@@ -48,15 +48,8 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             return new GrpcTraceConsumer(client);
         }
 
-        private SimpleManagedTracer CreateSimpleManagedTracer(IConsumer<TraceProto> consumer)
-        {
-            TraceProto trace = new TraceProto
-            {
-                ProjectId = _projectId,
-                TraceId = _traceIdFactory.NextId()
-            };
-            return SimpleManagedTracer.Create(consumer, trace, null);
-        }
+        private SimpleManagedTracer CreateSimpleManagedTracer(IConsumer<TraceProto> consumer) =>
+            SimpleManagedTracer.Create(consumer, _projectId, _traceIdFactory.NextId(), null);
 
         /// <summary>
         /// Block until the time has changed.

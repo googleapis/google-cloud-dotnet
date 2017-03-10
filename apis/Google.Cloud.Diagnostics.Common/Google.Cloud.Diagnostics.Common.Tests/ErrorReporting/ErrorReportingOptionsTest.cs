@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void ErrorReportingOptions_EventTarget()
         {
-            var eventTarget = EventTarget.ForErrorReporting(_errorClient);
+            var eventTarget = EventTarget.ForErrorReporting(_projectId, _errorClient);
             var bufferOptions = BufferOptions.SizedBuffer();
 
             var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
@@ -39,9 +39,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         [Fact]
         public void CreateConsumer_ErrorConsumer()
         {
-            var eventTarget = EventTarget.ForErrorReporting(_errorClient);
+            var eventTarget = EventTarget.ForErrorReporting(_projectId, _errorClient);
             var options = ErrorReportingOptions.Create(eventTarget);
-            var consumer = options.CreateConsumer(_projectId);
+            var consumer = options.CreateConsumer();
             Assert.IsType<GrpcErrorEventConsumer>(consumer);
         }
 
@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(eventTarget);
-            var consumer = options.CreateConsumer(_projectId);
+            var consumer = options.CreateConsumer();
             Assert.IsType<ErrorEventToLogEntryConsumer>(consumer);
         }
 
@@ -60,7 +60,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var bufferOptions = BufferOptions.SizedBuffer();
             var eventTarget = EventTarget.ForLogging(_projectId, "test-log", _loggingClient);
             var options = ErrorReportingOptions.Create(eventTarget, bufferOptions);
-            var consumer = options.CreateConsumer(_projectId);
+            var consumer = options.CreateConsumer();
             Assert.IsType<SizedBufferingConsumer<ReportedErrorEvent>>(consumer);
         }
     }

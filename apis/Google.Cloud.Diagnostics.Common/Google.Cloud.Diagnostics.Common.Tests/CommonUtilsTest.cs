@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api;
+using System;
 using Xunit;
 
 namespace Google.Cloud.Diagnostics.Common.Tests
@@ -23,6 +25,39 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             Assert.Contains(CommonUtils.AgentName, CommonUtils.AgentNameAndVersion);
             Assert.Contains(CommonUtils.GetVersion(typeof(CommonUtils)), CommonUtils.AgentNameAndVersion);
+        }
+
+        [Fact]
+        public void GetAndCheckProjectId()
+        {
+            var projectId = "pid";
+            var resourceProjectId = "pid";
+            var monitoredResource = new MonitoredResource
+            {
+                Type = "some-type",
+                Labels =
+                {
+                    { "project_id", resourceProjectId }
+                }
+            };
+
+            // The string project id is not null and the MonitoredResource contains a project id
+            // so the string project id is retruned.  We do this as the explictly set project id should be
+            // defaulted too.
+            Assert.Equal(projectId, CommonUtils.GetAndCheckProjectId(projectId, monitoredResource));
+
+            // The string project id is not null and the MonitoredResource does not contain a project id
+            // so the string project id is retruned.
+            Assert.Equal(projectId, CommonUtils.GetAndCheckProjectId(projectId, new MonitoredResource()));
+
+            // The string project id is null and the MonitoredResource does contains a project id
+            // so the project id from the MonitoredResource is retruned.
+            Assert.Equal(resourceProjectId, CommonUtils.GetAndCheckProjectId(null, monitoredResource));
+
+            // The string project id is null and the MonitoredResource does not contain a project id
+            // so we throw an InvalidOperationException.
+            Assert.Throws<InvalidOperationException>(
+                () => CommonUtils.GetAndCheckProjectId(null, new MonitoredResource()));
         }
     }
 }

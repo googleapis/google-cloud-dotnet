@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha06-*",
+  "version": "1.0.0-alpha07-*",
   "description": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
   "authors": [ "Google Inc." ],
 

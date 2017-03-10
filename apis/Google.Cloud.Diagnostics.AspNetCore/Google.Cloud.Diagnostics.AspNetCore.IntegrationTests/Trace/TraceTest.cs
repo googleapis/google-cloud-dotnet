@@ -45,18 +45,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using (var server = new TestServer(builder))
             {
                 var client = server.CreateClient();
-                client.GetAsync($"/Trace/Trace/{testId}").Wait();
+                await client.GetAsync($"/Trace/Trace/{testId}");
+
+                var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+                var trace = _polling.GetTrace(spanName, startTime);
+
+                Assert.NotNull(trace);
+                Assert.Equal(2, trace.Spans.Count);
+                var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
+                Assert.NotEmpty(span.Labels);
+                Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
+                Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
             }
-
-            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
-
-            Assert.NotNull(trace);
-            Assert.Equal(2, trace.Spans.Count);
-            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
-            Assert.NotEmpty(span.Labels);
-            Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
-            Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
         }
 
         [Fact]
@@ -70,16 +70,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 var client = server.CreateClient();
                 await client.GetAsync($"/Trace/TraceLabels/{testId}");
-            }
 
-            var spanName = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
+                var spanName = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
+                var trace = _polling.GetTrace(spanName, startTime);
 
-            Assert.NotNull(trace);
-            Assert.Equal(2, trace.Spans.Count);
-            var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
-            Assert.Single(span.Labels);
-            Assert.Equal(span.Labels[TraceController.Label], TraceController.LabelValue);
+                Assert.NotNull(trace);
+                Assert.Equal(2, trace.Spans.Count);
+                var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
+                Assert.Single(span.Labels);
+                Assert.Equal(span.Labels[TraceController.Label], TraceController.LabelValue);
+            }   
         }
 
         [Fact]
@@ -93,17 +93,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 var client = server.CreateClient();
                 await client.GetAsync($"/Trace/TraceStackTrace/{testId}");
-            }
 
-            var spanName = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
+                var spanName = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
+                var trace = _polling.GetTrace(spanName, startTime);
 
-            Assert.NotNull(trace);
-            Assert.Equal(2, trace.Spans.Count);
-            var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
-            Assert.Single(span.Labels);
-            Assert.Contains(nameof(TraceController), span.Labels[TraceLabels.StackTrace]);
-            Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[TraceLabels.StackTrace]);   
+                Assert.NotNull(trace);
+                Assert.Equal(2, trace.Spans.Count);
+                var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
+                Assert.Single(span.Labels);
+                Assert.Contains(nameof(TraceController), span.Labels[TraceLabels.StackTrace]);
+                Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[TraceLabels.StackTrace]);
+            }   
         }
 
         [Fact]
@@ -122,16 +122,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var header = TraceHeaderContext.Create(traceId, spanId, shouldTrace: true);
                 client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader, header.ToString());
                 await client.GetAsync($"/Trace/Trace/{testId}");
+
+                var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+                var trace = _polling.GetTrace(spanName, startTime);
+
+                Assert.NotNull(trace);
+                Assert.Equal(traceId, trace.TraceId);
+                Assert.Equal(2, trace.Spans.Count);
+                var span = trace.Spans.First(s => s.Name.StartsWith("/Trace"));
+                Assert.Equal(spanId, span.ParentSpanId);
             }
-
-            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
-
-            Assert.NotNull(trace);
-            Assert.Equal(traceId, trace.TraceId);
-            Assert.Equal(2, trace.Spans.Count);
-            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace"));
-            Assert.Equal(spanId, span.ParentSpanId);
         }
 
         [Fact]
@@ -150,13 +150,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 // request is traced.
                 await client.GetAsync($"/Trace/TraceLabels/{testId}");
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                await client.GetAsync($"/Trace/Trace/{testId}");                
-            }
+                await client.GetAsync($"/Trace/Trace/{testId}");
 
-            var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-            var spanNameLabels = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
-            Assert.Null(_polling.GetTrace(spanNameLabels, startTime, expectTrace: false));
-            Assert.NotNull(_polling.GetTrace(spanNameTrace, startTime));
+                var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+                var spanNameLabels = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
+                Assert.Null(_polling.GetTrace(spanNameLabels, startTime, expectTrace: false));
+                Assert.NotNull(_polling.GetTrace(spanNameTrace, startTime));
+            }
         }
 
         [Fact]
@@ -178,11 +178,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 // Make a large trace that will flush the buffer.
                 await client.GetAsync($"/Trace/TraceStackTrace/{testId}");
-            }
 
-            var spanNameStack = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
-            Assert.NotNull(_polling.GetTrace(spanName, startTime));
-            Assert.NotNull(_polling.GetTrace(spanNameStack, startTime));
+                var spanNameStack = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
+                Assert.NotNull(_polling.GetTrace(spanName, startTime));
+                Assert.NotNull(_polling.GetTrace(spanNameStack, startTime));
+            }
         }
 
         [Fact]
@@ -203,16 +203,16 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 {
                     // This will throw as the task faults.
                 }
+
+                var spanName = TraceController.GetMessage(nameof(TraceController.ThrowException), testId);
+                var trace = _polling.GetTrace(spanName, startTime);
+
+                Assert.NotNull(trace);
+                var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));
+                Assert.NotEmpty(span.Labels);
+                Assert.Contains(nameof(TraceController), span.Labels[Common.TraceLabels.StackTrace]);
+                Assert.Contains(nameof(TraceController.ThrowException), span.Labels[Common.TraceLabels.StackTrace]);
             }
-
-            var spanName = TraceController.GetMessage(nameof(TraceController.ThrowException), testId);
-            var trace = _polling.GetTrace(spanName, startTime);
-
-            Assert.NotNull(trace);
-            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));
-            Assert.NotEmpty(span.Labels);
-            Assert.Contains(nameof(TraceController), span.Labels[Common.TraceLabels.StackTrace]);
-            Assert.Contains(nameof(TraceController.ThrowException), span.Labels[Common.TraceLabels.StackTrace]);
         }
     }
 

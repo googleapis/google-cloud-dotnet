@@ -27,19 +27,19 @@ namespace Google.Cloud.Diagnostics.Common
     internal static class TraceLabels
     {
         ///<summary>The label to denote the size of a request.</summary> 
-        internal const string HttpRequestSize = "trace.cloud.google.com/http/request/size";
+        internal const string HttpRequestSize = "/http/request/size";
 
         ///<summary>The label to denote the host.</summary> 
-        internal const string HttpHost = "trace.cloud.google.com/http/host";
+        internal const string HttpHost = "/http/host";
 
         ///<summary>The label to denote the request method.</summary> 
-        internal const string HttpMethod = "trace.cloud.google.com/http/method";
+        internal const string HttpMethod = "/http/method";
 
         ///<summary>The label to denote the response status code.</summary> 
-        internal const string HttpStatusCode = "trace.cloud.google.com/http/status_code";
+        internal const string HttpStatusCode = "/http/status_code";
 
         ///<summary>The label to denote a stack trace.</summary> 
-        internal const string StackTrace = "trace.cloud.google.com/stacktrace";
+        internal const string StackTrace = "/stacktrace";
 
         ///<summary>The label to denote an agent.</summary> 
         internal const string Agent = "/agent";

@@ -62,10 +62,10 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             using (TestServer server = TestServer.Create<T>())
             {
                 await server.HttpClient.GetAsync("");
-            }
 
-            var errorEvent = _polling.GetEvents(startTime, _testId, 1).Single();
-            Assert.Contains(_testId, errorEvent.Message);
+                var errorEvent = _polling.GetEvents(startTime, _testId, 1).Single();
+                Assert.Contains(_testId, errorEvent.Message);
+            }
         }
 
         /// <summary>

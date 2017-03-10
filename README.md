@@ -19,7 +19,7 @@ The following libraries are available at a [beta](#versioning) quality level:
 
 * [Google Cloud Pub/Sub](https://cloud.google.com/pubsub/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.PubSub.V1/) (beta)
 * [Google Cloud Natural Language](https://cloud.google.com/natural-language/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Language.V1/) (beta)
-* [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (alpha)
+* [Google Cloud Vision](https://cloud.google.com/vision/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Vision.V1/) (beta)
 * [Stackdriver Monitoring](https://cloud.google.com/monitoring/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Monitoring.V3/) (beta)
 * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.ErrorReporting.V1Beta1/) (beta)
 * [Stackdriver Trace](https://cloud.google.com/trace/) - [API docs](http://googlecloudplatform.github.io/google-cloud-dotnet/docs/Google.Cloud.Trace.V1/) (beta)

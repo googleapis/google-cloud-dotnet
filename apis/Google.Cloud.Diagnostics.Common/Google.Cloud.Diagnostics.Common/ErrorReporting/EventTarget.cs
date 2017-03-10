@@ -55,6 +55,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The name of the log.</summary>
         public string LogName { get; private set; }
 
+        /// <summary>The Google Cloud Platform project Id.</summary>
+        public string ProjectId { get; private set; }
+
         /// <summary>The resource being monitored.</summary>
         public MonitoredResource MonitoredResource { get; private set; }
 
@@ -67,16 +70,19 @@ namespace Google.Cloud.Diagnostics.Common
         /// For more information see "Formatting Log Error Messages"
         /// (https://cloud.google.com/error-reporting/docs/formatting-error-messages).
         /// </remarks>
-        /// <param name="projectId">The Google Cloud Platform project Id. Cannot be null.</param>
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+        ///     detected from the platform.</param>
         /// <param name="logName">The log name.  Cannot be null.</param>
         /// <param name="loggingClient">The logging client.</param>
         /// <param name="monitoredResource">Optional, the monitored resource.  The monitored resource will
         ///     be automatically detected if it is not set and will default to the global resource if the detection fails.
         ///     See: https://cloud.google.com/logging/docs/api/v2/resource-list </param>
-        public static EventTarget ForLogging(string projectId, string logName = LogNameDefault,
+        public static EventTarget ForLogging(string projectId = null, string logName = LogNameDefault,
             LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)
         {
-            var logTarget = LogTarget.ForProject(GaxPreconditions.CheckNotNull(projectId, nameof(projectId)));
+            projectId = CommonUtils.GetAndCheckProjectId(projectId, monitoredResource);
+            var logTarget = LogTarget.ForProject(projectId);
             return ForLogging(logTarget, logName, loggingClient, monitoredResource);
         }
 
@@ -105,6 +111,7 @@ namespace Google.Cloud.Diagnostics.Common
                 LogTarget = GaxPreconditions.CheckNotNull(logTarget, nameof(logTarget)),
                 LogName = GaxPreconditions.CheckNotNullOrEmpty(logName, nameof(logName)),
                 MonitoredResource = monitoredResource ?? MonitoredResourceBuilder.FromPlatform(),
+                ProjectId = logTarget.ProjectId,
             };
         }
 
@@ -113,11 +120,15 @@ namespace Google.Cloud.Diagnostics.Common
         /// To use this option you must enable the Stackdriver Error Reporting API
         /// (https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview).
         /// </summary>
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+        ///     detected from the platform.</param>
         /// <param name="errorReportingClient">The error reporting client.</param>
-        public static EventTarget ForErrorReporting(ReportErrorsServiceClient errorReportingClient = null)
+        public static EventTarget ForErrorReporting(string projectId = null, ReportErrorsServiceClient errorReportingClient = null)
         {
             return new EventTarget
             {
+                ProjectId = CommonUtils.GetAndCheckProjectId(projectId),
                 Kind = EventTargetKind.ErrorReporting,
                 ErrorReportingClient = errorReportingClient ?? ReportErrorsServiceClient.Create(),
             };

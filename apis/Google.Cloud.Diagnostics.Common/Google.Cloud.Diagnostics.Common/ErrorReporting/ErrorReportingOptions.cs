@@ -51,22 +51,19 @@ namespace Google.Cloud.Diagnostics.Common
         /// Creates an <see cref="ErrorReportingOptions"/> that will send error events to the
         /// Stackdriver Logging API.
         /// </summary>
-        /// <param name = "projectId">The Google Cloud Platform project Id. Cannot be null.</param>
+        /// <param name="projectId">Optional if running on Google App Engine or Google Compute Engine.
+        ///     The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+        ///     detected from the platform.</param>
         /// <param name="bufferOptions">The buffer options for the error reporter. Defaults to no buffer.</param>
         public static ErrorReportingOptions Create(
-            string projectId, BufferOptions bufferOptions = null)
-        {
-            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            return Create(EventTarget.ForLogging(projectId), bufferOptions);
-        }
+            string projectId = null, BufferOptions bufferOptions = null) =>
+                Create(EventTarget.ForLogging(projectId), bufferOptions);
 
         /// <summary>
         /// Gets a <see cref="IConsumer{ReportedErrorEvent}"/>.
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
-        internal IConsumer<ReportedErrorEvent> CreateConsumer(string projectId)
+        internal IConsumer<ReportedErrorEvent> CreateConsumer()
         {
-            GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
 
             IConsumer<ReportedErrorEvent> consumer;
             switch (EventTarget.Kind)
@@ -77,7 +74,7 @@ namespace Google.Cloud.Diagnostics.Common
                     break;
                 case EventTargetKind.ErrorReporting:
                     consumer = new GrpcErrorEventConsumer(
-                        EventTarget.ErrorReportingClient, projectId);
+                        EventTarget.ErrorReportingClient, EventTarget.ProjectId);
                     break;
                 default:
                     Debug.Fail($"Unsupported location {EventTarget.Kind}");
