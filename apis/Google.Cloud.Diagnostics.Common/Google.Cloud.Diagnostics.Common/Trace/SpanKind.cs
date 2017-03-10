@@ -34,14 +34,12 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// Common extensions.
     /// </summary>
-    public static class Extensions
+    internal static class Extensions
     {
         /// <summary>
         /// Converts a <see cref="SpanKind"/> to a <see cref="TraceSpan.Types.SpanKind"/>.
         /// </summary>
-        /// <param name="kind"></param>
-        /// <returns></returns>
-        public static TraceSpan.Types.SpanKind Convert(this SpanKind kind)
+        internal static TraceSpan.Types.SpanKind Convert(this SpanKind kind)
         {
             switch (kind)
             {
