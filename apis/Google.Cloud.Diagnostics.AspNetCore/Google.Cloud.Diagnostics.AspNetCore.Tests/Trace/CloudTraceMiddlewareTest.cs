@@ -79,7 +79,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             tracerMock.VerifyAll();
         }
 
-        
         [Fact]
         public async Task Invoke_TraceException()
         {

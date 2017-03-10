@@ -151,7 +151,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         private static TraceHeaderPropagatingHandler CreateTraceHeaderPropagatingHandler(IServiceProvider provider)
         {
-            var tracer = provider.GetService<IManagedTracer>();
+            var tracer = provider.GetServiceCheckNotNull<IManagedTracer>();
             return new TraceHeaderPropagatingHandler(() => tracer);
         }
 

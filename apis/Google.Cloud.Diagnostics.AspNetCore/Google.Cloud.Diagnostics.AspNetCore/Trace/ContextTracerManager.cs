@@ -17,13 +17,12 @@ using Microsoft.AspNetCore.Http;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-
     /// <summary>
     /// Manages access to the current <see cref="IManagedTracer"/>.
     /// </summary>
     internal static class ContextTracerManager
     {
-        ///<summary>The key to save the tracer under in the <see cref="HttpContext"/></summary> 
+        ///<summary>The key to save the tracer under in the <see cref="HttpContext"/>.</summary> 
         internal const string TraceKey = "Google.Cloud.Diagnostics.AspNetCore.Trace";
 
         /// <summary>
