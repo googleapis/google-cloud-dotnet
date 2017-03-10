@@ -76,5 +76,15 @@ namespace Google.Cloud.Logging.Log4Net.Snippets
             // * Log entries don't appear in the log instantly.
             // * Uploads happen in the background, so we can't check RPC repsonses.
         }
+
+        public void Overview_AspNet()
+        {
+            // This cannot be a unit test as ASP.NET cannot run in this environment.
+            // Resource: log4net-aspnet-template.xml log4net_aspnet_template
+            // Sample: Overview_AspNet
+            // Load log4net configuration from Web.config
+            log4net.Config.XmlConfigurator.Configure();
+            // End sample
+        }
     }
 }
