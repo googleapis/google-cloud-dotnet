@@ -364,6 +364,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             mockConsumer.Setup(c => c.Receive(Match.Create(rootMatcher)));
 
             var childThreadsReleased = new ManualResetEventSlim(initialState: false);
+            var startedChildSpans = 0;
 
             Func<string, string, Task> op = async (childName, grandchildName) =>
             {
@@ -371,12 +372,21 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
                 using (tracer.StartSpan(childName))
                 {
+                    Interlocked.Increment(ref startedChildSpans);
+
                     await Task.Yield();
                     using (tracer.StartSpan(grandchildName))
                     {
                         await Task.Yield();
                     }
-                    await Task.Yield();
+
+                    do
+                    {
+                        await Task.Yield();
+                        // Don't allow the span to close until both are started
+                        // to make sure we only get a single Receive call below
+                        // instead of two.
+                    } while (startedChildSpans < 2);
                 }
             };
 
