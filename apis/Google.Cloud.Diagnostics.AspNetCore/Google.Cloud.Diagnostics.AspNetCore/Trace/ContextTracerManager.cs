@@ -24,7 +24,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     internal static class ContextTracerManager
     {
         ///<summary>The key to save the tracer under in the <see cref="HttpContext"/></summary> 
-        private const string TraceKey = "Google.Cloud.Diagnostics.AspNetCore.Trace";
+        internal const string TraceKey = "Google.Cloud.Diagnostics.AspNetCore.Trace";
 
         /// <summary>
         /// Sets the current <see cref="IManagedTracer"/>

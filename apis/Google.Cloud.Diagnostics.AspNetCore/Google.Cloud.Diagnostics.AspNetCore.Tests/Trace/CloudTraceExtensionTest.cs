@@ -90,21 +90,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public void CreateManagedTracer()
         {
-            var accessor = new HttpContextAccessor();
-            accessor.HttpContext = new DefaultHttpContext();
-            var context = TraceHeaderContext.Create(null, null, false);
-            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
-            tracerFactoryMock.Setup(f => f.CreateTracer(context)).Returns(NullManagedTracer.Instance);
             var mockProvider = new Mock<IServiceProvider>();
-            mockProvider.Setup(p => p.GetService(typeof(TraceHeaderContext))).Returns(context);
-            mockProvider.Setup(p => p.GetService(typeof(IManagedTracerFactory))).Returns(tracerFactoryMock.Object);
-            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
-
-           /* var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
-            Assert.IsType(typeof(NullManagedTracer), tracer);
-            //Assert.Equal(tracer, accessor.HttpContext.Items[CloudTraceExtension.TraceKey]);
-            tracerFactoryMock.VerifyAll();
-            mockProvider.VerifyAll();*/
+            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(new HttpContextAccessor());
+            var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
+            Assert.IsType(typeof(ContextTracerManager), tracer);
+            mockProvider.VerifyAll();
         }
 
         [Fact]

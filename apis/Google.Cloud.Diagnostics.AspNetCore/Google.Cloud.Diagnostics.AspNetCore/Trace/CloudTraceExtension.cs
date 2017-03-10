@@ -144,16 +144,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
             services.AddSingleton(new ShouldTraceRequest(traceOverridePredicate));
             services.AddSingleton(traceIdFactory);
-
-
-
-
-
-            /// We need to filter all incoming http requests
-            /// CreateTraceHeaderContext is now never getting called it needs to be used... 
-            /// we need to in some way set up the httpcontext making a scoped service that sets it up seems to work
-            
-
         }
 
         /// <summary>
@@ -167,7 +157,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <summary>
         /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>
-        /// and a <see cref="ShouldTraceRequest"/>.  This also creates an 
+        /// and a <see cref="ShouldTraceRequest"/>. 
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
@@ -182,20 +172,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 bool? shouldTrace = shouldTraceRequest.ShouldTrace(accessor.HttpContext?.Request);
                 if (shouldTrace == true)
                 {
-                    traceHeaderContext = new TraceHeaderContext(
+                   return new TraceHeaderContext(
                         traceHeaderContext.TraceId ?? traceIdFactory.NextId(),
                         traceHeaderContext.SpanId ?? 0, shouldTrace);
                 }
                 else if (shouldTrace == false)
                 {
-                    traceHeaderContext = new TraceHeaderContext(
+                    return new TraceHeaderContext(
                         traceHeaderContext.TraceId, traceHeaderContext.SpanId, shouldTrace);
                 }
             }
-
             return traceHeaderContext;
         }
-
 
         /// <summary>
         /// Creates a <see cref="ContextManagedTracer"/>.
