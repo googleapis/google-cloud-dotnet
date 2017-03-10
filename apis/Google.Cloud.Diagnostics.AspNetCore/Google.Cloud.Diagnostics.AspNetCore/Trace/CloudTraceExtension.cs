@@ -132,11 +132,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 RateLimitingTraceOptionsFactory.Create(config), traceIdFactory);
 
             services.AddScoped(CreateTraceHeaderContext);
-            services.AddScoped(CreateManagedTracer);
-
+            services.AddScoped(SetAndGetManagedTracer);
+            
             services.AddSingleton<IManagedTracerFactory>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            
+
+            services.AddSingleton(CreateContextManagedTracer);
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
             services.AddSingleton(new ShouldTraceRequest(traceOverridePredicate));
             services.AddSingleton(traceIdFactory);
@@ -196,16 +197,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Creates a <see cref="IManagedTracer"/> based on the <see cref="TraceHeaderContext"/> and
         /// the rate limiter.
         /// </summary>
-        internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
+        internal static IManagedTracer SetAndGetManagedTracer(IServiceProvider provider)
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             var traceHeaderContext = provider.GetServiceCheckNotNull<TraceHeaderContext>();
             var tracerFactory = provider.GetServiceCheckNotNull<IManagedTracerFactory>();
+            var contextManagedTracer = provider.GetServiceCheckNotNull<ContextManagedTracer>();
 
             var tracer = tracerFactory.CreateTracer(traceHeaderContext);
             ContextTracerManager.SetCurrentTracer(accessor, tracer);
+            return contextManagedTracer;
+        }
+
+        /// <summary>
+        /// Creates a <see cref="IManagedTracer"/> based on the <see cref="TraceHeaderContext"/> and
+        /// the rate limiter.
+        /// </summary>
+        internal static ContextManagedTracer CreateContextManagedTracer(IServiceProvider provider)
+        {
+            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             return new ContextManagedTracer(accessor);
         }
+
+
 
         /// <summary>
         /// Extension for the <see cref="IServiceProvider"/> that will call and return 
