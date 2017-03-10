@@ -22,6 +22,13 @@ using Google.Api.Gax;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// An <see cref="IManagedTracer"/> that will pull the the current tracer from
+    /// the <see cref="HttpContext"/>. The current tracer is set per request in the
+    /// <see cref="CloudTraceMiddleware"/> via the <see cref="ContextTracerManager"/>.
+    /// This allows for this to be a singleton <see cref="IManagedTracer"/> so users
+    /// do not need to worry about scoping of the tracer.
+    /// </summary>
     internal sealed class ContextManagedTracer : IManagedTracer
     {
         private readonly IHttpContextAccessor _accessor;

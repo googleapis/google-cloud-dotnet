@@ -157,7 +157,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
         /// <summary>
         /// Creates an <see cref="TraceHeaderContext"/> based on the current <see cref="HttpContext"/>
-        /// and a <see cref="ShouldTraceRequest"/>. 
+        /// and a <see cref="ShouldTraceRequest"/>.
         /// </summary>
         internal static TraceHeaderContext CreateTraceHeaderContext(IServiceProvider provider)
         {
@@ -172,7 +172,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 bool? shouldTrace = shouldTraceRequest.ShouldTrace(accessor.HttpContext?.Request);
                 if (shouldTrace == true)
                 {
-                   return new TraceHeaderContext(
+                    return new TraceHeaderContext(
                         traceHeaderContext.TraceId ?? traceIdFactory.NextId(),
                         traceHeaderContext.SpanId ?? 0, shouldTrace);
                 }
