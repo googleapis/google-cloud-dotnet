@@ -99,7 +99,7 @@ All IO-related methods have async equivalents.
 ## Error handling
 
 All the methods which annotate a single image (and therefore have a single response) throw
-([AnnotateImageException](obj/api/Google.Cloud.Vision.V1.AnnotateImageException.yml) if the response
+[AnnotateImageException](obj/api/Google.Cloud.Vision.V1.AnnotateImageException.yml) if the response
 contains an error.
 
 [!code-cs[](obj/snippets/Google.Cloud.Vision.V1.ImageAnnotatorClient.txt#ErrorHandling_SingleImage)]
