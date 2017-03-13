@@ -17,7 +17,9 @@ using Google.Cloud.Trace.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
@@ -40,9 +42,6 @@ namespace Google.Cloud.Diagnostics.Common
             public void Dispose() => _tracer.EndSpan();
         }
 
-        /// <summary>A mutex to protect the rate limiter instance.</summary>
-        private readonly object _stackLock = new object();
-
         /// <summary>The trace consumer to push the trace to when completed.</summary>
         private readonly IConsumer<TraceProto> _consumer;
 
@@ -55,8 +54,10 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The Google Cloud Platform project ID.</summary>
         private readonly string _projectId;
 
-        /// <summary>A stack of trace spans.</summary>
-        private readonly Stack<TraceSpan> _traceStack;
+        private readonly object _traceLock = new object();
+
+        /// <summary>The number of spans currently open on any thread.</summary>
+        private int _openSpanCount;
 
         /// <summary>The span id factory to generate new span ids.</summary>
         private readonly SpanIdFactory _spanIdFactory;
@@ -70,7 +71,6 @@ namespace Google.Cloud.Diagnostics.Common
             _traceId = GaxPreconditions.CheckNotNull(traceId, nameof(traceId));
             _projectId = GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             _trace = CreateTraceProto();
-            _traceStack = new Stack<TraceSpan>();
             _spanIdFactory = SpanIdFactory.Create();
             _rootSpanParentId = rootSpanParentId;
         }
@@ -92,27 +92,20 @@ namespace Google.Cloud.Diagnostics.Common
             GaxPreconditions.CheckNotNull(name, nameof(name));
             options = options ?? StartSpanOptions.Create();
 
-            TraceSpan span = new TraceSpan();
-            span.SpanId = _spanIdFactory.NextId();
-            span.Kind = options.SpanKind.Convert();
-            span.Name = name;
-            span.StartTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
-
-            lock (_stackLock)
+            var currentStack = TraceStack;
+            var span = new TraceSpan
             {
-                if (_traceStack.Count != 0)
-                {
-                    span.ParentSpanId = _traceStack.Peek().SpanId;
-                }
-                else if (_rootSpanParentId != null)
-                {
-                    span.ParentSpanId = (ulong)_rootSpanParentId;
-                }
+                SpanId = _spanIdFactory.NextId(),
+                Kind = options.SpanKind.Convert(),
+                Name = name,
+                StartTime = Timestamp.FromDateTime(DateTime.UtcNow),
+                ParentSpanId = GetCurrentSpanId(currentStack).GetValueOrDefault()
+            };
+            AnnotateSpan(span, options.Labels);
 
-                _traceStack.Push(span);
-                AnnotateSpan(options.Labels);
-            }
+            TraceStack = currentStack.Push(span);
 
+            Interlocked.Increment(ref _openSpanCount);
             return new Span(this);
         }
 
@@ -168,16 +161,21 @@ namespace Google.Cloud.Diagnostics.Common
         /// <inheritdoc />
         public void EndSpan()
         {
-            lock (_stackLock)
+            var currentStack = TraceStack;
+            CheckStackNotEmpty(currentStack);
+
+            TraceSpan span;
+            currentStack = currentStack.Pop(out span);
+            TraceStack = currentStack;
+            span.EndTime = Timestamp.FromDateTime(DateTime.UtcNow);
+
+            lock (_traceLock)
             {
-                CheckStackNotEmpty();
-
-                TraceSpan span = _traceStack.Pop();
-                span.EndTime = Timestamp.FromDateTime(DateTime.Now.ToUniversalTime());
-
                 _trace.Spans.Add(span);
 
-                if (_traceStack.Count == 0)
+                var newOpenSpanCount = Interlocked.Decrement(ref _openSpanCount);
+                Debug.Assert(newOpenSpanCount >= 0, "Invalid open span count");
+                if (newOpenSpanCount <= 0)
                 {
                     Flush();
                 }
@@ -189,15 +187,20 @@ namespace Google.Cloud.Diagnostics.Common
         {
             GaxPreconditions.CheckNotNull(labels, nameof(labels));
 
-            lock (_stackLock)
-            {
-                CheckStackNotEmpty();
+            var currentStack = TraceStack;
+            CheckStackNotEmpty(currentStack);
 
-                TraceSpan span = _traceStack.Peek();
-                foreach (var l in labels)
-                {
-                    span.Labels.Add(l.Key, l.Value);
-                }
+            AnnotateSpan(currentStack.Peek(), labels);
+        }
+
+        /// <summary>
+        /// Annotates the specified span with the given labels. 
+        /// </summary>
+        private void AnnotateSpan(TraceSpan span, Dictionary<string, string> labels)
+        {
+            foreach (var l in labels)
+            {
+                span.Labels.Add(l.Key, l.Value);
             }
         }
 
@@ -205,9 +208,10 @@ namespace Google.Cloud.Diagnostics.Common
         public void SetStackTrace(StackTrace stackTrace)
         {
             GaxPreconditions.CheckNotNull(stackTrace, nameof(stackTrace));
-            CheckStackNotEmpty();
+            var currentStack = TraceStack;
+            CheckStackNotEmpty(currentStack);
 
-            AnnotateSpan(TraceLabels.FromStackTrace(stackTrace));
+            AnnotateSpan(currentStack.Peek(), TraceLabels.FromStackTrace(stackTrace));
         }
 
         /// <inheritdoc />
@@ -217,21 +221,13 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <inheritdoc />
-        public ulong? GetCurrentSpanId()
-        {
-            lock (_stackLock)
-            {
-                if (_traceStack.Count != 0)
-                {
-                    return _traceStack.Peek().SpanId;
-                }
-                else if (_rootSpanParentId != null)
-                {
-                    return _rootSpanParentId;
-                }
-                return null;
-            }
-        }
+        public ulong? GetCurrentSpanId() => GetCurrentSpanId(TraceStack);
+
+        /// <summary>
+        /// Gets the current span id of the specified stack or null if none exists.
+        /// </summary>
+        private ulong? GetCurrentSpanId(ImmutableStack<TraceSpan> traceStack)
+            => traceStack.IsEmpty ? _rootSpanParentId : traceStack.Peek().SpanId;
 
         /// <summary>
         /// Sets a <see cref="StackTrace"/> on the current span for the given exception and
@@ -244,9 +240,9 @@ namespace Google.Cloud.Diagnostics.Common
             return false;
         }
 
-        private void CheckStackNotEmpty()
+        private void CheckStackNotEmpty(ImmutableStack<TraceSpan> traceStack)
         {
-            GaxPreconditions.CheckState(_traceStack.Count != 0, "No available span.");
+            GaxPreconditions.CheckState(!traceStack.IsEmpty, "No available span.");
         }
 
         private void Flush()
@@ -261,5 +257,40 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         private TraceProto CreateTraceProto() =>
              new TraceProto { TraceId = _traceId, ProjectId = _projectId };
+
+        /// <summary>
+        /// The stack of trace spans for the current logical call context. Note that this is logically cloned when each async
+        /// block is entered and each thread is spawned, so it will contain the spans which were open previously and those spans
+        /// will never be removed in the context of that async block/thread. Do not rely on the stack contents to know the state
+        /// of things on other threads. It may contain previously closed spans.
+        /// </summary>
+#if NET45
+        private readonly string _callContextName = Guid.NewGuid().ToString("N");
+        private ImmutableStack<TraceSpan> TraceStack
+        {
+            get
+            {
+                var ret = System.Runtime.Remoting.Messaging.CallContext.LogicalGetData(_callContextName) as ImmutableStack<TraceSpan>;
+                return ret ?? ImmutableStack<TraceSpan>.Empty;
+            }
+            set
+            {
+                System.Runtime.Remoting.Messaging.CallContext.LogicalSetData(_callContextName, value);
+            }
+        }
+#else
+        private readonly AsyncLocal<ImmutableStack<TraceSpan>> _traceStack = new AsyncLocal<ImmutableStack<TraceSpan>>();
+        private ImmutableStack<TraceSpan> TraceStack
+        {
+            get
+            {
+                return _traceStack.Value ?? ImmutableStack<TraceSpan>.Empty;
+            }
+            set
+            {
+                _traceStack.Value = value;
+            }
+        }
+#endif
     }
 }
