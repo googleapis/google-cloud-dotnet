@@ -65,7 +65,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        public void Lookup_NoPartition()
+        public async Task Lookup_NoPartition()
         {
             // Deliberately in the empty namespace, which won't be cleaned up automatically - hence the db.Delete call later.
             var db = DatastoreDb.Create(_fixture.ProjectId);
@@ -82,6 +82,9 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 var result = db.Lookup(lookupKey);
                 Assert.NotNull(result);
                 Assert.Equal("bar", (string)entity["foo"]);
+
+                // And the same lookup asynchronously...
+                Assert.Equal(result, await db.LookupAsync(lookupKey));
             }
             finally
             {
