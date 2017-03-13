@@ -554,6 +554,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 CommitResponse commitResponse = transaction.Commit();
                 Key insertedKey = commitResponse.MutationResults[0].Key;
                 Console.WriteLine($"Inserted key: {insertedKey}");
+                // The key is also propagated to the entity
+                Console.WriteLine($"Entity key: {entity.Key}");
             }
             // End sample
         }

@@ -36,6 +36,7 @@ namespace Google.Cloud.Datastore.V1
         private readonly string _projectId;
         private readonly PartitionId _partitionId;
         private readonly List<Mutation> _mutations = new List<Mutation>();
+        private readonly List<Action<Key>> _keyPropagations = new List<Action<Key>>();
         private readonly ReadOptions _readOptions;
         private bool _active;
 
@@ -130,26 +131,30 @@ namespace Google.Cloud.Datastore.V1
         public override Task<IReadOnlyList<Entity>> LookupAsync(IEnumerable<Key> keys, CallSettings callSettings = null) =>
             DatastoreDb.LookupImplAsync(_client, _projectId, _readOptions, keys, callSettings);
 
-        private void AddMutations<T>(IEnumerable<T> values, Func<T, Mutation> conversion, string paramName)
+        private void AddMutations<T>(IEnumerable<T> values, Func<T, Mutation> conversion, Func<T, Action<Key>> keyPropagationProvider, string paramName)
         {
             GaxPreconditions.CheckNotNull(values, paramName);
-            _mutations.AddRange(values.Select(conversion));
+            foreach (var value in values)
+            {
+                _mutations.Add(conversion(value));
+                _keyPropagations.Add(keyPropagationProvider?.Invoke(value));
+            }
         }
 
         /// <inheritdoc />
-        public override void Upsert(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToUpsert(), nameof(entities));
+        public override void Upsert(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToUpsert(), entity => key => entity.Key = key, nameof(entities));
 
         /// <inheritdoc />
-        public override void Update(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToUpdate(), nameof(entities));
+        public override void Update(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToUpdate(), null, nameof(entities));
 
         /// <inheritdoc />
-        public override void Insert(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToInsert(), nameof(entities));
+        public override void Insert(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToInsert(), entity => key => entity.Key = key, nameof(entities));
 
         /// <inheritdoc />
-        public override void Delete(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToDelete(), nameof(entities));
+        public override void Delete(IEnumerable<Entity> entities) => AddMutations(entities, e => e.ToDelete(), null, nameof(entities));
 
         /// <inheritdoc />
-        public override void Delete(IEnumerable<Key> keys) => AddMutations(keys, e => e.ToDelete(), nameof(keys));
+        public override void Delete(IEnumerable<Key> keys) => AddMutations(keys, e => e.ToDelete(), null, nameof(keys));
 
         /// <inheritdoc />
         public override CommitResponse Commit(CallSettings callSettings = null)
@@ -157,6 +162,7 @@ namespace Google.Cloud.Datastore.V1
             // TODO: What if there are no mutations? Just rollback?
             CheckActive();
             var response = _client.Commit(_projectId, Mode.Transactional, TransactionId, _mutations);
+            PropagateKeys(response);
             _active = false;
             return response;
         }
@@ -167,6 +173,7 @@ namespace Google.Cloud.Datastore.V1
             // TODO: What if there are no mutations? Just rollback?
             CheckActive();
             var response = await _client.CommitAsync(_projectId, Mode.Transactional, TransactionId, _mutations, callSettings);
+            PropagateKeys(response);
             _active = false;
             return response;
         }
@@ -203,6 +210,19 @@ namespace Google.Cloud.Datastore.V1
             if (!_active)
             {
                 throw new InvalidOperationException("Transaction has already been committed or rolled back");
+            }
+        }
+
+        private void PropagateKeys(CommitResponse response)
+        {
+            for (int i = 0; i < response.MutationResults.Count; i++)
+            {
+                var key = response.MutationResults[i].Key;
+                var propagation = _keyPropagations[i];
+                if (key != null && propagation != null)
+                {
+                    propagation(key);
+                }
             }
         }
     }

@@ -109,12 +109,18 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         {
             var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
             var keyFactory = db.CreateKeyFactory("insert_test");
-            var keys = db.Insert(
+            var entities = new[]
+            {
                 new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" },
-            new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" });
+                new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" }
+            };
 
+            var keys = db.Insert(entities);
             Assert.Null(keys[0]); // Insert with predefined key 
             Assert.NotNull(keys[1]); // Insert with incomplete key
+
+            // Inserted key is propagated into entity
+            Assert.Equal(keys[1], entities[1].Key);
 
             var fetchedEntity = db.Lookup(keys[1]);
             Assert.Equal("incomplete_key", fetchedEntity["description"]);
@@ -135,6 +141,9 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.Null(keys[0]); // Update
             Assert.Null(keys[1]); // Insert with predefined key 
             Assert.NotNull(keys[2]); // Insert with incomplete key
+
+            // Inserted key is propagated into entity
+            Assert.Equal(keys[2], newEntity2.Key);
 
             var fetchedEntity = db.Lookup(keys[2]);
             Assert.Equal("incomplete_key", fetchedEntity["description"]);

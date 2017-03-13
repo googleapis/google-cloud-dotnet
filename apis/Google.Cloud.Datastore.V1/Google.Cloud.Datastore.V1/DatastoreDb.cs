@@ -468,7 +468,10 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Insert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <remarks>
+        /// <para>On success, the entity will be updated in memory with the server-allocated keys.</para>
+        /// <para>This method simply delegates to <see cref="Insert(IEnumerable{Entity}, CallSettings)"/>.</para>
+        /// </remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the inserted entity if it was allocated by the server, or
@@ -479,6 +482,7 @@ namespace Google.Cloud.Datastore.V1
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
         /// <remarks>
+        /// <para>On success, the entities will be updated in memory with the server-allocated keys.</para>
         /// <para>This method simply delegates to <see cref="Insert(IEnumerable{Entity},CallSettings)"/>.</para>
         /// <para>
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
@@ -493,6 +497,9 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
+        /// <remarks>
+        /// On success, the entities will be updated in memory with the server-allocated keys.
+        /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.
@@ -506,7 +513,9 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a single entity, non-transactionally and asynchronously.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <remarks>
+        /// <para>On success, the entity will be updated in memory with the server-allocated keys.</para>
+        /// <para>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity}, CallSettings)"/>.</para></remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is the key of the inserted entity
@@ -521,6 +530,7 @@ namespace Google.Cloud.Datastore.V1
         /// Inserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
         /// <remarks>
+        /// <para>On success, the entities will be updated in memory with the server-allocated keys.</para>
         /// <para>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity},CallSettings)"/>.</para>
         /// <para>
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
@@ -536,6 +546,9 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
+        /// <remarks>
+        /// On success, the entities will be updated in memory with the server-allocated keys.
+        /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is
@@ -550,7 +563,10 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Upserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Upsert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <remarks>
+        /// <para>On success, if entity has an incomplete key it will be updated in memory with the server-allocated keys.</para>
+        /// <para>This method simply delegates to <see cref="Upsert(IEnumerable{Entity}, CallSettings)"/>.</para>
+        /// </remarks>
         /// <param name="entity">The entity to upsert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns><c>null</c> if the entity was updated or was inserted with a predefined key, or the new key if the entity was inserted
@@ -576,6 +592,9 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Upserts a collection of entities, non-transactionally.
         /// </summary>
+        /// <remarks>
+        /// On success, any entities with incomplete keys will be updated in memory with the server-allocated keys.
+        /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of allocated keys, in the same order as <paramref name="entities"/>. Each inserted entity
@@ -622,6 +641,9 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Upserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
+        /// <remarks>
+        /// On success, any entities with incomplete keys will be updated with the server-allocated keys.
+        /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is
