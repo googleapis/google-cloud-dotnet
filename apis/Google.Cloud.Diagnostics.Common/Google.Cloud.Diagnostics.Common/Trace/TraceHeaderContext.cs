@@ -28,6 +28,8 @@ namespace Google.Cloud.Diagnostics.Common
     /// </remarks>
     internal sealed class TraceHeaderContext
     {
+        private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
+
         /// <summary>An TraceHeaderContext representing no information or invalid information from a header.</summary>
         private static readonly TraceHeaderContext InvalidTraceHeaderContext =
             new TraceHeaderContext(null, null, null);
@@ -65,7 +67,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a <see cref="TraceHeaderContext"/> from a header. 
         /// </summary>
-        /// <param name="header">The string value of the trace header.
+        /// <param name="header">The string value of the trace header. Can be null.
         ///     See: https://cloud.google.com/trace/docs/faq </param>
         public static TraceHeaderContext FromHeader(string header)
         {
@@ -89,6 +91,33 @@ namespace Google.Cloud.Diagnostics.Common
             bool hasMask = match.Groups.Count > 4 && match.Groups[4].Success;
             bool? shouldTrace = hasMask ? Convert.ToInt32(match.Groups[4].Value) > 0 : (bool?) null;
             return new TraceHeaderContext(traceId, spanId, shouldTrace);
+        }
+
+        /// <summary>
+        /// Creates a <see cref="TraceHeaderContext"/> from a header. 
+        /// </summary>
+        /// <param name="header">The string value of the trace header. Can be null.
+        ///     See: https://cloud.google.com/trace/docs/faq </param>
+        /// <param name="traceOverridePredicate">Optional function to override and trace requests. Can be null.</param>
+        public static TraceHeaderContext FromHeader(string header, Func<bool?> traceOverridePredicate)
+        {
+            var traceHeaderContext = FromHeader(header);
+            if (traceHeaderContext.ShouldTrace == null && traceOverridePredicate != null)
+            {
+                bool? shouldTrace = traceOverridePredicate();
+                if (shouldTrace == true)
+                {
+                    return new TraceHeaderContext(
+                        traceHeaderContext.TraceId ?? _traceIdFactory.NextId(),
+                        traceHeaderContext.SpanId ?? 0, shouldTrace);
+                }
+                else if (shouldTrace == false)
+                {
+                    return new TraceHeaderContext(
+                        traceHeaderContext.TraceId, traceHeaderContext.SpanId, shouldTrace);
+                }
+            }
+            return traceHeaderContext;
         }
 
         internal TraceHeaderContext(string traceId, ulong? spanId, bool? shouldTrace)

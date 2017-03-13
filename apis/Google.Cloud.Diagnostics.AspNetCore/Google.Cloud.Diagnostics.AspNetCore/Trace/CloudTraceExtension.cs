@@ -127,13 +127,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             projectId = CommonUtils.GetAndCheckProjectId(projectId);
 
-            var traceIdFactory = TraceIdFactory.Create();
-
             var consumer = ConsumerFactory<TraceProto>.GetConsumer(
                  new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
 
             var tracerFactory = new ManagedTracerFactory(projectId, consumer,
-                RateLimitingTraceOptionsFactory.Create(config), traceIdFactory);
+                RateLimitingTraceOptionsFactory.Create(config), TraceIdFactory.Create());
 
             services.AddScoped(CreateTraceHeaderContext);
             
@@ -143,7 +141,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
             services.AddSingleton(new ShouldTraceRequest(traceOverridePredicate));
-            services.AddSingleton(traceIdFactory);
         }
 
         /// <summary>
@@ -163,35 +160,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             var shouldTraceRequest = provider.GetServiceCheckNotNull<ShouldTraceRequest>();
-            var traceIdFactory = provider.GetServiceCheckNotNull<TraceIdFactory>();
 
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
-            var traceHeaderContext = TraceHeaderContext.FromHeader(header);
-            if (traceHeaderContext.ShouldTrace == null && shouldTraceRequest.ShouldTrace != null)
-            {
-                bool? shouldTrace = shouldTraceRequest.ShouldTrace(accessor.HttpContext?.Request);
-                if (shouldTrace == true)
-                {
-                    return new TraceHeaderContext(
-                        traceHeaderContext.TraceId ?? traceIdFactory.NextId(),
-                        traceHeaderContext.SpanId ?? 0, shouldTrace);
-                }
-                else if (shouldTrace == false)
-                {
-                    return new TraceHeaderContext(
-                        traceHeaderContext.TraceId, traceHeaderContext.SpanId, shouldTrace);
-                }
-            }
-            return traceHeaderContext;
+            Func<bool?> shouldTraceFunc = () => shouldTraceRequest?.ShouldTrace(accessor.HttpContext?.Request);
+            return TraceHeaderContext.FromHeader(header, shouldTraceFunc);
         }
 
         /// <summary>
-        /// Creates a <see cref="ContextManagedTracer"/>.
+        /// Creates a <see cref="DelegatingTracer"/>.
         /// </summary>
-        internal static ContextManagedTracer CreateManagedTracer(IServiceProvider provider)
+        internal static DelegatingTracer CreateManagedTracer(IServiceProvider provider)
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            return new ContextManagedTracer(accessor);
+            return new DelegatingTracer(() => ContextTracerManager.GetCurrentTracer(accessor));
         }
 
         /// <summary>

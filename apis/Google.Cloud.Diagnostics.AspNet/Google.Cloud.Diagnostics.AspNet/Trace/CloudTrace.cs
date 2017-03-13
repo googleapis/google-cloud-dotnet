@@ -13,11 +13,9 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using System;
-using System.Threading.Tasks;
 using System.Web;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
@@ -35,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     ///       public override void Init()
     ///       {
     ///           base.Init();
-    ///           CloudTrace.Initialize("some-project-id", this);
+    ///           CloudTrace.Initialize(this, "some-project-id");
     ///       }
     ///  }
     /// </code>
@@ -45,7 +43,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <code>
     /// public void MakeHttpRequest()
     /// {
-    ///     var traceHeaderHandler = TraceHeaderPropagatingHandler.Create();
+    ///     var traceHeaderHandler = CloudTrace.CreateTracingHttpMessageHandler();
     ///     using (var httpClient = HttpClientFactory.Create(traceHeaderHandler))
     ///     {
     ///         ...
@@ -58,9 +56,9 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <code>
     /// public void DoSomething()
     /// {
-    ///     CloudTrace.GetCurrentTracer().StartSpan("DoSomething");
+    ///     CloudTrace.Tracer.StartSpan("DoSomething");
     ///     ...
-    ///     CloudTrace.GetCurrentTracer().EndSpan();
+    ///     CloudTrace.Tracer.EndSpan();
     /// }
     /// </code>
     /// </example>
@@ -79,9 +77,11 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private readonly IConsumer<TraceProto> _consumer;
 
-        /// <summary>Gets the current <see cref="IManagedTracer"/> for the given request.</summary>
-        public static IManagedTracer CurrentTracer =>
-            TracerManager.GetCurrentTracer() ?? NullManagedTracer.Instance;
+        private readonly Func<HttpRequest, bool?> _traceOverridePredicate;
+
+        /// <summary>Gets an <see cref="IManagedTracer"/> to for tracing.</summary>
+        public static readonly IManagedTracer Tracer =
+            new DelegatingTracer(() => (TracerManager.GetCurrentTracer() ?? NullManagedTracer.Instance));
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/> to propagate trace headers
@@ -90,7 +90,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <code>
         /// public void DoSomething()
         /// {
-        ///     var traceHeaderHandler = CloudTrace.CreateHandler();
+        ///     var traceHeaderHandler = CloudTrace.CreateTracingHttpMessageHandler();
         ///     using (var httpClient = new HttpClient(traceHeaderHandler))
         ///     {
         ///         ...
@@ -100,15 +100,18 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// </example>
         /// </summary>
         public static TraceHeaderPropagatingHandler CreateTracingHttpMessageHandler() =>
-            new TraceHeaderPropagatingHandler(() => CurrentTracer);
+            new TraceHeaderPropagatingHandler(() => Tracer);
 
-        private CloudTrace(string projectId, TraceConfiguration config = null, TraceServiceClient client = null)
+        private CloudTrace(string projectId, TraceConfiguration config = null, TraceServiceClient client = null,
+            Func<HttpRequest, bool?> traceOverridePredicate = null)
         {
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
 
             // Create the default values if not set.
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
+
+            _traceOverridePredicate = traceOverridePredicate;
 
             _consumer = ConsumerFactory<TraceProto>.GetConsumer(
                 new GrpcTraceConsumer(client), MessageSizer<TraceProto>.GetSize, config.BufferOptions);
@@ -126,12 +129,19 @@ namespace Google.Cloud.Diagnostics.AspNet
         ///     detected from the platform.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional trace client, if unset the default will be used.</param>
-        public static void Initialize(HttpApplication application, string projectId = null, TraceConfiguration config = null, TraceServiceClient client = null)
+        /// <param name="traceOverridePredicate">Optional function to trace requests. If the trace header is not set
+        ///     then this function will be called to determine if a given request should be traced.  This will
+        ///     not override trace headers. If the function returns true the request will be traced, if false
+        ///     is returned the trace will not be traced and if null is returned it will not affect the
+        ///     trace decision.</param>
+        public static void Initialize(HttpApplication application, string projectId = null,
+            TraceConfiguration config = null, TraceServiceClient client = null,
+            Func<HttpRequest, bool?> traceOverridePredicate = null)
         {
             GaxPreconditions.CheckNotNull(application, nameof(application));
 
             projectId = CommonUtils.GetAndCheckProjectId(projectId);
-            CloudTrace trace = new CloudTrace(projectId, config, client);
+            CloudTrace trace = new CloudTrace(projectId, config, client, traceOverridePredicate);
 
             // Add event handlers to the application.
             application.BeginRequest += trace.BeginRequest;
@@ -144,7 +154,11 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private void BeginRequest(object sender, EventArgs e)
         {
-            var headerContext = TraceHeaderContextUtils.CreateContext(HttpContext.Current.Request);
+            var request = HttpContext.Current.Request;
+            string header = request.Headers.Get(TraceHeaderContext.TraceHeader);
+            var headerContext = TraceHeaderContext.FromHeader(
+                header, () => _traceOverridePredicate?.Invoke(request));
+
             var tracer = _tracerFactory.CreateTracer(headerContext);
             if (tracer.GetCurrentTraceId() == null)
             {
@@ -161,7 +175,7 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private void EndRequest(object sender, EventArgs e)
         {
-            IManagedTracer tracer = CurrentTracer;
+            IManagedTracer tracer = Tracer;
             if (tracer.GetCurrentTraceId() == null)
             {
                 return;
