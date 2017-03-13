@@ -26,7 +26,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         internal const string TraceKey = "Google.Cloud.Diagnostics.AspNetCore.Trace";
 
         /// <summary>
-        /// Sets the current <see cref="IManagedTracer"/>.
+        /// Sets the current <see cref="IManagedTracer"/>.  This is called in <see cref="CloudTraceMiddleware"/>
+        /// for each new request.
         /// </summary>
         public static void SetCurrentTracer(IHttpContextAccessor accessor, IManagedTracer tracer)
         {
@@ -37,7 +38,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Gets the current <see cref="IManagedTracer"/> or a <see cref="NullManagedTracer"/> if non exists.
+        /// Gets the current <see cref="IManagedTracer"/> or a <see cref="NullManagedTracer"/> if none exists.
         /// </summary>
         public static IManagedTracer GetCurrentTracer(IHttpContextAccessor accessor)
         {
