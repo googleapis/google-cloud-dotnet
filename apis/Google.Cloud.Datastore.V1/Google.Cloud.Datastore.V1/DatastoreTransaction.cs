@@ -410,6 +410,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Commits all mutations in this transaction.
         /// </summary>
+        /// <remarks>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
+        /// with the server-allocated keys.</remarks>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
         /// <returns>The response from the commit operation. This can be used to determine server-allocated keys.</returns>
         public virtual CommitResponse Commit(CallSettings callSettings = null)
@@ -420,6 +422,8 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Commits all mutations in this transaction asynchronously.
         /// </summary>
+        /// <remarks>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
+        /// with the server-allocated keys.</remarks>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
         /// <returns>The response from the commit operation. This can be used to determine server-allocated keys.</returns>

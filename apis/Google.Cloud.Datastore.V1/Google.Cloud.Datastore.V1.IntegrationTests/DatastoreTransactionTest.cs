@@ -52,5 +52,30 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 Assert.Equal(1, results.Count());
             }
         }
+
+        [Fact]
+        public void CommitPropagatesKeys()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("book");
+            var updatedEntity = new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "Inserted before transaction" };
+            db.Insert(updatedEntity);
+
+            Entity insertedEntity = new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "Inserted in transaction" };
+            Entity upsertedEntity = new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "Upserted in transaction" };
+            using (var transaction = db.BeginTransaction())
+            {
+                transaction.Insert(insertedEntity);
+                transaction.Upsert(upsertedEntity);
+                updatedEntity["description"] = "Updated in transaction";
+                transaction.Update(updatedEntity);
+                transaction.Commit();
+            }
+
+            // Check we can fetch with the newly allocated keys
+            var entities = db.Lookup(insertedEntity.Key, upsertedEntity.Key, updatedEntity.Key);
+            var descriptions = entities.Select(e => (string) e["description"]);
+            Assert.Equal(new[] { "Inserted in transaction", "Upserted in transaction", "Updated in transaction" }, descriptions);
+        }
     }
 }
