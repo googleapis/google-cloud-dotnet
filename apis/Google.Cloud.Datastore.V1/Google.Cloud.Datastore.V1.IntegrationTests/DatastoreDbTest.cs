@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Datastore.V1.QueryResultBatch.Types;
 
@@ -134,6 +135,19 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
 
             var fetchedEntity = db.Lookup(keys[2]);
             Assert.Equal("incomplete_key", fetchedEntity["description"]);
+        }
+
+        [Fact]
+        public async Task Lookup()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("lookup_test");
+            var entity = new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" };
+            db.Insert(entity);
+
+            // Test both sync and async lookup
+            Assert.Equal(entity, db.Lookup(entity.Key));
+            Assert.Equal(entity, await db.LookupAsync(entity.Key));
         }
     }
 }
