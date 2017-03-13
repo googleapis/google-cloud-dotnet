@@ -383,10 +383,12 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     do
                     {
                         await Task.Yield();
-                        // Don't allow the span to close until both are started
-                        // to make sure we only get a single Receive call below
-                        // instead of two.
-                    } while (startedChildSpans < 2);
+                        // Don't allow the span to close until both are started to make sure we only
+                        // get a single Receive call below instead of two. Interlocked has no way to
+                        // explicitly force read from main memory, but this hack will "attempt" to
+                        // update the count and always fail, returning the actual value from main
+                        // memory.
+                    } while (Interlocked.CompareExchange(ref startedChildSpans, -1, -1) < 2);
                 }
             };
 
