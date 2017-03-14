@@ -77,14 +77,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             };
         }
 
-        /// <summary>
-        /// Asynchronously logs an exception that occurred.
-        /// </summary>
-        /// <returns>A task containing an empty response on success.</returns>
+        /// <inheritdoc />
         public Task LogAsync(HttpContext context, Exception exception)
         {
             var errorEvent = CreateReportRequest(context, exception);
             return _consumer.ReceiveAsync(new[] { errorEvent });
+        }
+
+        /// <inheritdoc />
+        public void Log(HttpContext context, Exception exception)
+        {
+            var errorEvent = CreateReportRequest(context, exception);
+            _consumer.Receive(new[] { errorEvent });
         }
 
         /// <summary>

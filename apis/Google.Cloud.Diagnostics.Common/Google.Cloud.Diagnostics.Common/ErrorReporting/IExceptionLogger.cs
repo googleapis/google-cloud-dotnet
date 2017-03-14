@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,16 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Diagnostics.AspNetCore
+#if NET45
+using System.Web;
+#else
+using Microsoft.AspNetCore.Http;
+#endif
+
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// A generic exception logger.
     /// </summary>
-    public interface IExceptionLogger
+    public interface EIExceptionLogger
     {
         /// <summary>
         /// Asynchronously logs an exception that occurred.

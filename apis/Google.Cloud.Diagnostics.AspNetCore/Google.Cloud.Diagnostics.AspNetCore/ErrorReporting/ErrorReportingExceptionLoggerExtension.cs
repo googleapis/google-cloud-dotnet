@@ -86,6 +86,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// <summary>
         /// Shared code for creating error reporting middleware
         /// </summary>
+        /// <param name="app">The application builder. Cannot be null.</param>
         /// <param name="projectId">The Google Cloud Platform project ID. If null the project Id will be auto detected.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
         ///     Cannot be null.</param>
@@ -104,6 +105,5 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
             app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
         }
-
     }
 }

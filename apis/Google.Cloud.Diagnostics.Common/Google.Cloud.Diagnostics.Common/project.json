@@ -26,9 +26,14 @@
   },
 
   "frameworks": {
-    "net45": {},
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Web": "4.0.0.0"
+      }
+    },
     "netstandard1.5": {
       "dependencies": {
+        "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
         "System.Diagnostics.StackTrace": "4.3.0"
       }
     }

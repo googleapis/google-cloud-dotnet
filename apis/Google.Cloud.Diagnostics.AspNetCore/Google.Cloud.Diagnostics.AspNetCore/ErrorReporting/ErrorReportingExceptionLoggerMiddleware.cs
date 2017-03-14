@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
             catch (Exception exception)
             {
-                await _logger.LogAsync(httpContext, exception);
+                await _logger.LogAsync(exception, httpContext);
                 throw;
             }
         }
