@@ -110,7 +110,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     detected from the platform.</param>
         /// <param name="config">Optional trace configuration, if unset the default will be used.</param>
         /// <param name="client">Optional Trace client, if unset the default will be used.</param>
-        /// <param name="traceOverridePredicate">Optional function to trace requests. If the trace header is not set
+        /// <param name="traceFallbackPredicate">Optional function to trace requests. If the trace header is not set
         ///     then this function will be called to determine if a given request should be traced.  This will
         ///     not override trace headers. If the function returns true the request will be traced, if false
         ///     is returned the trace will not be traced and if null is returned it will not affect the
@@ -118,7 +118,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId = null,
             TraceConfiguration config = null, TraceServiceClient client = null,
-            Func<HttpRequest, bool?> traceOverridePredicate = null)
+            Func<HttpRequest, bool?> traceFallbackPredicate = null)
         {
             GaxPreconditions.CheckNotNull(services, nameof(services));
 
@@ -140,7 +140,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             services.AddSingleton<IManagedTracer>(CreateManagedTracer);
 
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
-            services.AddSingleton(new ShouldTraceRequest(traceOverridePredicate));
+            services.AddSingleton(new ShouldTraceRequest(traceFallbackPredicate));
         }
 
         /// <summary>

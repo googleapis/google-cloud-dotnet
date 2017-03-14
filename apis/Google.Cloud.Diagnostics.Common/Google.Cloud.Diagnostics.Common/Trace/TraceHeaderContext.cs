@@ -98,13 +98,13 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         /// <param name="header">The string value of the trace header. Can be null.
         ///     See: https://cloud.google.com/trace/docs/faq </param>
-        /// <param name="traceOverridePredicate">Optional function to override and trace requests. Can be null.</param>
-        public static TraceHeaderContext FromHeader(string header, Func<bool?> traceOverridePredicate)
+        /// <param name="traceFallbackPredicate">Optional function to override and trace requests. Can be null.</param>
+        public static TraceHeaderContext FromHeader(string header, Func<bool?> traceFallbackPredicate)
         {
             var traceHeaderContext = FromHeader(header);
-            if (traceHeaderContext.ShouldTrace == null && traceOverridePredicate != null)
+            if (traceHeaderContext.ShouldTrace == null && traceFallbackPredicate != null)
             {
-                bool? shouldTrace = traceOverridePredicate();
+                bool? shouldTrace = traceFallbackPredicate();
                 if (shouldTrace == true)
                 {
                     return new TraceHeaderContext(

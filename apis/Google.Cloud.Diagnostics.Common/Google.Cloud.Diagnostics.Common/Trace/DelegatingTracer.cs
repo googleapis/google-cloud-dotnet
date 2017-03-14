@@ -26,42 +26,42 @@ namespace Google.Cloud.Diagnostics.Common
     /// </summary>
     internal class DelegatingTracer : IManagedTracer
     {
-        private readonly Func<IManagedTracer> _managedTracerFactory;
+        private readonly Func<IManagedTracer> _managedTracerGetter;
 
-        internal DelegatingTracer(Func<IManagedTracer> managedTracerFactory)
+        internal DelegatingTracer(Func<IManagedTracer> managedTracerGetter)
         {
-            _managedTracerFactory = GaxPreconditions.CheckNotNull(managedTracerFactory, nameof(managedTracerFactory));
+            _managedTracerGetter = GaxPreconditions.CheckNotNull(managedTracerGetter, nameof(managedTracerGetter));
         }
 
         /// <inheritdoc />
         public IDisposable StartSpan(string name, StartSpanOptions options = null) =>
-           _managedTracerFactory().StartSpan(name, options);
+           _managedTracerGetter().StartSpan(name, options);
 
         /// <inheritdoc />
         public void RunInSpan(Action action, string name, StartSpanOptions options = null) =>
-            _managedTracerFactory().RunInSpan(action, name, options);
+            _managedTracerGetter().RunInSpan(action, name, options);
 
         /// <inheritdoc />
         public T RunInSpan<T>(Func<T> func, string name, StartSpanOptions options = null) =>
-            _managedTracerFactory().RunInSpan(func, name, options);
+            _managedTracerGetter().RunInSpan(func, name, options);
 
         /// <inheritdoc />
         public Task<T> RunInSpanAsync<T>(Func<Task<T>> func, string name, StartSpanOptions options = null) =>
-            _managedTracerFactory().RunInSpan(func, name, options);
+            _managedTracerGetter().RunInSpan(func, name, options);
 
         /// <inheritdoc />
-        public void EndSpan() => _managedTracerFactory().EndSpan();
+        public void EndSpan() => _managedTracerGetter().EndSpan();
 
         /// <inheritdoc />
-        public void AnnotateSpan(Dictionary<string, string> labels) => _managedTracerFactory().AnnotateSpan(labels);
+        public void AnnotateSpan(Dictionary<string, string> labels) => _managedTracerGetter().AnnotateSpan(labels);
 
         /// <inheritdoc />
-        public void SetStackTrace(StackTrace stackTrace) => _managedTracerFactory().SetStackTrace(stackTrace);
+        public void SetStackTrace(StackTrace stackTrace) => _managedTracerGetter().SetStackTrace(stackTrace);
 
         /// <inheritdoc />
-        public string GetCurrentTraceId() => _managedTracerFactory().GetCurrentTraceId();
+        public string GetCurrentTraceId() => _managedTracerGetter().GetCurrentTraceId();
 
         /// <inheritdoc />
-        public ulong? GetCurrentSpanId() =>  _managedTracerFactory().GetCurrentSpanId();
+        public ulong? GetCurrentSpanId() =>  _managedTracerGetter().GetCurrentSpanId();
     }
 }
