@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -93,6 +94,19 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
+        public async Task Lookup()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("lookup_test");
+            var entity = new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" };
+            db.Insert(entity);
+
+            // Test both sync and async lookup
+            Assert.Equal(entity, db.Lookup(entity.Key));
+            Assert.Equal(entity, await db.LookupAsync(entity.Key));
+        }
+
+        [Fact]
         public void RunQuery_NoResults()
         {
             var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
@@ -102,6 +116,57 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.Equal(0, query.Count());
             var singleResponse = query.AsResponses().Single();
             Assert.Equal(MoreResultsType.NoMoreResults, singleResponse.Batch.MoreResults);
+        }
+
+        [Fact]
+        public void SyncQueries()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("syncqueries");
+            using (var transaction = db.BeginTransaction())
+            {
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                transaction.Commit();
+            }
+
+            var query = new Query("syncqueries") { Filter = Filter.LessThan("x", 3) };
+            var gql = new GqlQuery { QueryString = "SELECT * FROM syncqueries WHERE x < 3", AllowLiterals = true };
+
+            ValidateQueryResults(db.RunQuery(gql).Entities);
+            ValidateQueryResults(db.RunQuery(query).Entities);
+            ValidateQueryResults(db.RunQueryLazily(query));
+            ValidateQueryResults(db.RunQueryLazily(gql));
+        }
+
+        [Fact]
+        public async Task AsyncQueries()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("asyncqueries");
+            using (var transaction = await db.BeginTransactionAsync())
+            {
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                await transaction.CommitAsync();
+            }
+
+            var query = new Query("asyncqueries") { Filter = Filter.LessThan("x", 3) };
+            var gql = new GqlQuery { QueryString = "SELECT * FROM asyncqueries WHERE x < 3", AllowLiterals = true };
+
+            ValidateQueryResults((await db.RunQueryAsync(gql)).Entities);
+            ValidateQueryResults((await db.RunQueryAsync(query)).Entities);
+            ValidateQueryResults(db.RunQueryLazilyAsync(query).ToEnumerable());
+            ValidateQueryResults(db.RunQueryLazilyAsync(gql).ToEnumerable());
+        }
+
+        private void ValidateQueryResults(IEnumerable<Entity> entities)
+        {
+            Assert.Equal(new[] { 0, 1, 2 }, entities.Select(e => (int)e["x"]).OrderBy(x => x));
         }
 
         [Fact]
@@ -150,16 +215,104 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
-        public async Task Lookup()
+        public async Task InsertAsync_ResultKeys()
         {
             var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
-            var keyFactory = db.CreateKeyFactory("lookup_test");
-            var entity = new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" };
-            db.Insert(entity);
+            var keyFactory = db.CreateKeyFactory("insertasync_test");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" },
+                new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" }
+            };
 
-            // Test both sync and async lookup
-            Assert.Equal(entity, db.Lookup(entity.Key));
-            Assert.Equal(entity, await db.LookupAsync(entity.Key));
+            var keys = await db.InsertAsync(entities);
+            Assert.Null(keys[0]); // Insert with predefined key 
+            Assert.NotNull(keys[1]); // Insert with incomplete key
+
+            // Inserted key is propagated into entity
+            Assert.Equal(keys[1], entities[1].Key);
+
+            var fetchedEntity = await db.LookupAsync(keys[1]);
+            Assert.Equal("incomplete_key", fetchedEntity["description"]);
+        }
+
+        [Fact]
+        public async Task UpsertAsync_ResultKeys()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("upsertasync_test");
+            var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
+
+            var revisedEntity = new Entity { Key = insertedKey, ["description"] = "changed" };
+            var newEntity1 = new Entity { Key = keyFactory.CreateKey("x"), ["description"] = "predefined_key" };
+            var newEntity2 = new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "incomplete_key" };
+
+            var keys = await db.UpsertAsync(revisedEntity, newEntity1, newEntity2);
+            Assert.Null(keys[0]); // Update
+            Assert.Null(keys[1]); // Insert with predefined key 
+            Assert.NotNull(keys[2]); // Insert with incomplete key
+
+            // Inserted key is propagated into entity
+            Assert.Equal(keys[2], newEntity2.Key);
+
+            var fetchedEntity = await db.LookupAsync(keys[2]);
+            Assert.Equal("incomplete_key", fetchedEntity["description"]);
+        }
+
+        [Fact]
+        public void Update()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("update_test");
+
+            var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
+
+            var fetched = db.Lookup(insertedKey);
+            Assert.Equal("original", (string) fetched["description"]);
+
+            db.Update(new Entity { Key = fetched.Key, ["description"] = "updated" });
+            fetched = db.Lookup(insertedKey);
+            Assert.Equal("updated", (string) fetched["description"]);
+        }
+
+        [Fact]
+        public async Task UpdateAsync()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("update_test");
+
+            var insertedKey = await db.InsertAsync(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
+
+            var fetched = await db.LookupAsync(insertedKey);
+            Assert.Equal("original", (string)fetched["description"]);
+
+            await db.UpdateAsync(new Entity { Key = fetched.Key, ["description"] = "updated" });
+            fetched = await db.LookupAsync(insertedKey);
+            Assert.Equal("updated", (string)fetched["description"]);
+        }
+
+        [Fact]
+        public void Delete()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("update_test");
+
+            var insertedKey = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
+            Assert.NotNull(db.Lookup(insertedKey));
+            db.Delete(insertedKey);
+            Assert.Null(db.Lookup(insertedKey));
+        }
+
+        [Fact]
+        public async Task DeleteAsync()
+        {
+            var db = DatastoreDb.Create(_fixture.ProjectId, _fixture.NamespaceId);
+            var keyFactory = db.CreateKeyFactory("update_test");
+
+            var insertedKey = await db.InsertAsync(new Entity { Key = keyFactory.CreateIncompleteKey(), ["description"] = "original" });
+            Assert.NotNull(await db.LookupAsync(insertedKey));
+            await db.DeleteAsync(insertedKey);
+            Assert.Null(await db.LookupAsync(insertedKey));
         }
     }
 }
