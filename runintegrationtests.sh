@@ -56,6 +56,7 @@ do
         -searchdirs:$testdir/bin/$CONFIG/net451/win7-x64 \
         -register:user \
         -excludebyfile:$generatedFiles
+    echo "$testdir" >> $PROGRESS_FILE
   else
     dotnet test -c Release --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir -xml $testdir/results.xml
     echo "$testdir" >> $PROGRESS_FILE
