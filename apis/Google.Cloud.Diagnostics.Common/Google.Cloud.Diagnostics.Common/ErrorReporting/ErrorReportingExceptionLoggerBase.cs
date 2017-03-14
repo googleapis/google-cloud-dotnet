@@ -16,17 +16,12 @@ using Google.Api.Gax;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Protobuf.WellKnownTypes;
 using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
-
-#if NET45
-using System.Web;
-#else
-using Microsoft.AspNetCore.Http;
-#endif
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    internal class EExceptionLogger : EIExceptionLogger
+    internal class ErrorReportingExceptionLoggerBase : IDisposable
     {
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
@@ -34,7 +29,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         private readonly IConsumer<ReportedErrorEvent> _consumer;
 
-        internal EExceptionLogger(IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
+        internal ErrorReportingExceptionLoggerBase(IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _serviceContext = new ServiceContext
@@ -44,31 +39,60 @@ namespace Google.Cloud.Diagnostics.Common
             };
         }
 
-        public void Log(Exception exception, HttpContext context = null)
+        internal Task LogAsync(Exception exception, IContextWrapper context)
         {
-            throw new NotImplementedException();
+            var errorEvent = CreateReportRequest(exception, context);
+            return _consumer.ReceiveAsync(new[] { errorEvent });
         }
 
-        public Task LogAsync(Exception exception, HttpContext context = null)
+        internal void Log(Exception exception, IContextWrapper context)
         {
-            throw new NotImplementedException();
+            var errorEvent = CreateReportRequest(exception, context);
+            _consumer.Receive(new[] { errorEvent });
         }
+
+        /// <inheritdoc />
+        public void Dispose() => _consumer.Dispose();
 
         /// <summary>
         /// Gets information about the HTTP request and response when the exception occured 
         /// and populates a <see cref="HttpRequestContext"/> object.
         /// </summary>
-        private HttpRequestContext CreateHttpRequestContext(HttpContext context)
+        private HttpRequestContext CreateHttpRequestContext(IContextWrapper context)
         {
-            HttpRequest request = context?.Request;
-            HttpResponse response = context?.Response;
-
             return new HttpRequestContext()
             {
-                Method = request?.HttpMethod ?? "",
-                Url = request?.Url?.ToString() ?? "",
-                UserAgent = request?.UserAgent ?? "",
-                ResponseStatusCode = response?.StatusCode ?? 0,
+                Method = context?.GetMethod() ?? "",
+                Url = context?.GetUri() ?? "",
+                UserAgent = context?.GetUserAgent() ?? "",
+                ResponseStatusCode = context?.GetStatusCode() ?? 0,
+            };
+        }
+
+        /// <summary>
+        /// Gets information about the source location where the exception occured 
+        /// and populates a <see cref="SourceLocation"/> object.
+        /// </summary>
+        private static SourceLocation CreateSourceLocation(Exception exception)
+        {
+            if (exception == null)
+            {
+                return new SourceLocation();
+            }
+
+            StackTrace stackTrace = new StackTrace(exception, true);
+            StackFrame[] frames = stackTrace.GetFrames();
+            if (frames == null || frames.Length == 0)
+            {
+                return new SourceLocation();
+            }
+
+            StackFrame frame = frames[0];
+            return new SourceLocation
+            {
+                FilePath = frame.GetFileName() ?? "",
+                LineNumber = frame.GetFileLineNumber(),
+                FunctionName = frame.GetMethod()?.Name ?? "",
             };
         }
 
@@ -76,12 +100,12 @@ namespace Google.Cloud.Diagnostics.Common
         /// Gets infromation about the exception that occured and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
-        internal ReportedErrorEvent CreateReportRequest(Exception exception, HttpContext context)
+        internal ReportedErrorEvent CreateReportRequest(Exception exception, IContextWrapper context)
         {
             ErrorContext errorContext = new ErrorContext()
             {
                 HttpRequest = CreateHttpRequestContext(context),
-                ReportLocation = ErrorReportingUtils.CreateSourceLocation(exception)
+                ReportLocation = CreateSourceLocation(exception)
             };
 
             return new ReportedErrorEvent()

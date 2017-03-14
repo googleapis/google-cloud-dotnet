@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.Common
     /// <summary>
     /// A generic exception logger.
     /// </summary>
-    public interface EIExceptionLogger
+    public interface IExceptionLogger
     {
         /// <summary>
         /// Asynchronously logs an exception that occurred.

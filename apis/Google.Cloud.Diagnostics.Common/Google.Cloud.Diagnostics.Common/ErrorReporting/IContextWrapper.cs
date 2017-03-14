@@ -14,7 +14,7 @@
 
 namespace Google.Cloud.Diagnostics.Common
 {
-    public interface IHttpContext
+    internal interface IContextWrapper
     {
         string GetMethod();
         string GetUri();

@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public async Task Report_Simple()
         {
             var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            var logger = new ErrorReportingExceptionLogger(
+            var logger = new ExceptionLogger(
                 mockConsumer.Object, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
 
             var context = new DefaultHttpContext();
@@ -70,7 +70,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public async Task Report_Complex()
         {
             var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            var logger = new ErrorReportingExceptionLogger(
+            var logger = new ExceptionLogger(
                 mockConsumer.Object, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
 
             bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);

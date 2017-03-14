@@ -16,7 +16,6 @@ using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.ErrorReporting.V1Beta1;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Google.Protobuf.WellKnownTypes;
@@ -51,11 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public class ErrorReportingExceptionFilter : IExceptionFilter, IDisposable
     {
-        // The service context in which this error has occurred.
-        // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
-        private readonly ServiceContext _serviceContext;
-
-        private readonly IConsumer<ReportedErrorEvent> _consumer;
+        private readonly ErrorReportingExceptionLoggerBase _logger;
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
@@ -109,67 +104,23 @@ namespace Google.Cloud.Diagnostics.AspNet
 
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = options.CreateConsumer();
-            return new ErrorReportingExceptionFilter(consumer, serviceName, version);
+            var logger = new ErrorReportingExceptionLoggerBase(consumer, serviceName, version);
+            return new ErrorReportingExceptionFilter(logger);
         }
 
-        internal ErrorReportingExceptionFilter(
-            IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
+        internal ErrorReportingExceptionFilter(ErrorReportingExceptionLoggerBase logger)
         {
-            _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
-            _serviceContext = new ServiceContext
-            {
-                Service = GaxPreconditions.CheckNotNull(serviceName, nameof(serviceName)),
-                Version = GaxPreconditions.CheckNotNull(version, nameof(version)),
-            };
+            _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }
 
         /// <inheritdoc />
         public void OnException(ExceptionContext context)
         {
-            var errorEvent = CreateReportRequest(context);
-            _consumer.Receive(new[] { errorEvent });
+            var contextWrapper = ExceptionContextWrapper.FromExceptionContext(context);
+            _logger.Log(context.Exception, contextWrapper);
         }
 
         /// <inheritdoc />
-        public void Dispose() => _consumer.Dispose();
-
-        /// <summary>
-        /// Gets information about the HTTP request and response when the exception occured 
-        /// and populates a <see cref="HttpRequestContext"/> object.
-        /// </summary>
-        private HttpRequestContext CreateHttpRequestContext(ExceptionContext context)
-        {
-            HttpRequestBase requestMessage = context?.HttpContext?.Request;
-            HttpResponseBase responseMessage = context?.HttpContext?.Response;
-
-            return new HttpRequestContext
-            {
-                Method = requestMessage?.HttpMethod ?? "",
-                Url = requestMessage?.Url?.ToString() ?? "",
-                UserAgent = requestMessage?.UserAgent ?? "",
-                ResponseStatusCode = responseMessage?.StatusCode ?? 0,
-            };
-        }
-
-        /// <summary>
-        /// Gets infromation about the exception that occured and populates
-        /// a <see cref="ReportedErrorEvent"/> object.
-        /// </summary>
-        private ReportedErrorEvent CreateReportRequest(ExceptionContext context)
-        {
-            ErrorContext errorContext = new ErrorContext
-            {
-                HttpRequest = CreateHttpRequestContext(context),
-                ReportLocation = ErrorReportingUtils.CreateSourceLocation(context.Exception)
-            };
-
-            return new ReportedErrorEvent
-            {
-                Message = context.Exception.ToString() ?? "",
-                Context = errorContext,
-                ServiceContext = _serviceContext,
-                EventTime = Timestamp.FromDateTime(DateTime.UtcNow),
-            };
-        }
+        public void Dispose() => _logger.Dispose();
     }
 }

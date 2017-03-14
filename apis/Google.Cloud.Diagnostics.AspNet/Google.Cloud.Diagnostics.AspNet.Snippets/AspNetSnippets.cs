@@ -32,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             string serviceName = "[Name of service]";
             string version = "[Version of service]";
             // Add a catch all for the uncaught exceptions.
-            config.Services.Add(typeof(IExceptionLogger),
+            config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
                 ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
         }
         // End sample

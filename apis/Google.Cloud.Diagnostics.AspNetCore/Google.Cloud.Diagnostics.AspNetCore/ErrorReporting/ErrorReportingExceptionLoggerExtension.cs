@@ -102,8 +102,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = options.CreateConsumer();
-            var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
-            app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
+            //var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
+            //app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
         }
     }
 }

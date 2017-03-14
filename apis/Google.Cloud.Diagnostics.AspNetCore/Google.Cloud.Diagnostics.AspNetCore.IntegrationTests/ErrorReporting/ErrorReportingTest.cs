@@ -187,7 +187,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         /// <summary>
-        /// A simple web application base to test the <see cref="ErrorReportingExceptionLogger"/>
+        /// A simple web application base to test the <see cref="ExceptionLogger"/>
         /// and associated classes.
         /// </summary>
         private abstract class BaseErrorReportingTestApplication

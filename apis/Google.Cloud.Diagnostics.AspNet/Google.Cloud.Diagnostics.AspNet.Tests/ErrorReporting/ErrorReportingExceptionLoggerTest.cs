@@ -63,8 +63,8 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             return new ExceptionLoggerContext(exceptionContext);
         }
 
-        private ErrorReportingExceptionLogger CreateLogger(IConsumer<ReportedErrorEvent> consumer) 
-            => new ErrorReportingExceptionLogger(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
+        private ErrorReportingExceptionLogger CreateLogger(IConsumer<ReportedErrorEvent> consumer)
+            => null;// new ErrorReportingExceptionLogger(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
 
         [Fact]
         public void ShouldLog()

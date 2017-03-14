@@ -72,9 +72,9 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
                 Exception = s_matcher.CreateException()
             };
         }
-        
+
         private ErrorReportingExceptionFilter CreateFilter(IConsumer<ReportedErrorEvent> consumer)
-            => new ErrorReportingExceptionFilter(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
+            => null;//new ErrorReportingExceptionFilter(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
 
         [Fact]
         public void Log()

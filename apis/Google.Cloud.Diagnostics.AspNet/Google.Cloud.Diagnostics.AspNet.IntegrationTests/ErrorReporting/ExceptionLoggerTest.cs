@@ -111,7 +111,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             {
                 HttpConfiguration config = new HttpConfiguration();
                 config.Routes.MapHttpRoute("", "", null, null, new ThrowErrorHandler());
-                config.Services.Add(typeof(IExceptionLogger),
+                config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
                     ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId, GetOptions()));
                 app.UseWebApi(config);
             }
