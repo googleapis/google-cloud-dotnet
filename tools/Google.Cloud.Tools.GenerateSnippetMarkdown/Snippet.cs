@@ -118,17 +118,5 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             internal string FormatStart(string snippetId) => string.Format(startFormat, snippetId);
             internal string FormatEnd(string snippetId) => string.Format(endFormat, snippetId);
         }
-
-        /// <summary>
-        /// Trim all leading spaces by a uniform amount (the smallest number of spaces in any line).
-        /// </summary>
-        internal void TrimLeadingSpaces()
-        {
-            var spacesToRemove = Lines.Min(line => line.Trim() == "" ? int.MaxValue : line.TakeWhile(c => c == ' ').Count());
-            for (int i = 0; i < Lines.Count; i++)
-            {
-                Lines[i] = Lines[i].Trim() == "" ? "": Lines[i].Substring(spacesToRemove);
-            }
-        }
     }
 }
