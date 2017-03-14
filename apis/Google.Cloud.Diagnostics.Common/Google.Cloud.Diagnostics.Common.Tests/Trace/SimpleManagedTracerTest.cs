@@ -19,6 +19,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
@@ -224,7 +226,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
-            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) => 
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
             {
                 var spans = t.Single().Spans;
                 return spans.Count == 5 &&
@@ -254,6 +256,215 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         }
 
         [Fact]
+        public async Task MultipleSpans_Async()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
+            {
+                var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
+                var rootId = spans[4].SpanId;
+                var childOneId = spans[0].SpanId;
+                var childTwoId = spans[1].SpanId;
+                return spans.Count == 5 &&
+                    IsValidSpan(spans[0], "child-one", parentId: rootId) &&
+                    IsValidSpan(spans[1], "child-two", parentId: rootId) &&
+                    IsValidSpan(spans[2], "grandchild-one", parentId: childOneId) &&
+                    IsValidSpan(spans[3], "grandchild-two", parentId: childTwoId) &&
+                    IsValidSpan(spans[4], "root");
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+
+            Func<string, string, Task> op = async (childName, grandchildName) =>
+            {
+                using (tracer.StartSpan(childName))
+                {
+                    await Task.Yield();
+                    using (tracer.StartSpan(grandchildName))
+                    {
+                        await Task.Yield();
+                    }
+                    await Task.Yield();
+                }
+            };
+
+            using (tracer.StartSpan("root"))
+            {
+                await Task.WhenAll(
+                    op("child-one", "grandchild-one"),
+                    op("child-two", "grandchild-two"));
+            }
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public async Task MultipleSpans_Threads_Started_Before_Span()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+
+            Predicate<IEnumerable<TraceProto>> rootMatcher = t =>
+            {
+                // Verify that even though the child spans were started during the time when the root span was open, they
+                // don't have it as a parent since it had not been started when their tasks were created.
+                var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
+                var childOneId = spans[0].SpanId;
+                var childTwoId = spans[1].SpanId;
+                return spans.Count == 5 &&
+                    IsValidSpan(spans[0], "child-one", parentId: 0) &&
+                    IsValidSpan(spans[1], "child-two", parentId: 0) &&
+                    IsValidSpan(spans[2], "grandchild-one", parentId: childOneId) &&
+                    IsValidSpan(spans[3], "grandchild-two", parentId: childTwoId) &&
+                    IsValidSpan(spans[4], "root");
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(rootMatcher)));
+
+            var childThreadsReleased = new ManualResetEventSlim(initialState: false);
+
+            Func<string, string, Task> op = async (childName, grandchildName) =>
+            {
+                childThreadsReleased.Wait();
+
+                using (tracer.StartSpan(childName))
+                {
+                    await Task.Yield();
+                    using (tracer.StartSpan(grandchildName))
+                    {
+                        await Task.Yield();
+                    }
+                    await Task.Yield();
+                }
+            };
+            var t1 = Task.Run(() => op("child-one", "grandchild-one").Wait());
+            var t2 = Task.Run(() => op("child-two", "grandchild-two").Wait());
+
+            using (tracer.StartSpan("root"))
+            {
+                childThreadsReleased.Set();
+                await Task.WhenAll(t1, t2);
+            }
+
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public async Task MultipleSpans_Threads_Started_During_Span()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+
+            ulong rootId = 0;
+            Predicate<IEnumerable<TraceProto>> rootMatcher = t =>
+            {
+                var spans = t.Single().Spans;
+                rootId = spans[0].SpanId;
+                return spans.Count == 1 && IsValidSpan(spans[0], "root");
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(rootMatcher)));
+
+            var childThreadsReleased = new ManualResetEventSlim(initialState: false);
+            var startedChildSpans = 0;
+
+            Func<string, string, Task> op = async (childName, grandchildName) =>
+            {
+                childThreadsReleased.Wait();
+
+                using (tracer.StartSpan(childName))
+                {
+                    Interlocked.Increment(ref startedChildSpans);
+
+                    await Task.Yield();
+                    using (tracer.StartSpan(grandchildName))
+                    {
+                        await Task.Yield();
+                    }
+
+                    do
+                    {
+                        await Task.Yield();
+                        // Don't allow the span to close until both are started to make sure we only
+                        // get a single Receive call below instead of two. Interlocked has no way to
+                        // explicitly force read from main memory, but this hack will "attempt" to
+                        // update the count and always fail, returning the actual value from main
+                        // memory.
+                    } while (Interlocked.CompareExchange(ref startedChildSpans, -1, -1) < 2);
+                }
+            };
+
+            Task t1;
+            Task t2;
+            using (tracer.StartSpan("root"))
+            {
+                t1 = Task.Run(() => op("child-one", "grandchild-one").Wait());
+                t2 = Task.Run(() => op("child-two", "grandchild-two").Wait());
+            }
+
+            Predicate<IEnumerable<TraceProto>> childMatcher = t =>
+            {
+                // Verify that even though the child spans were started after the root span was ended, they
+                // still have it as a parent since it was opened when their tasks were created.
+                var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
+                var childOneId = spans[0].SpanId;
+                var childTwoId = spans[1].SpanId;
+                return spans.Count == 4 &&
+                    IsValidSpan(spans[0], "child-one", parentId: rootId) &&
+                    IsValidSpan(spans[1], "child-two", parentId: rootId) &&
+                    IsValidSpan(spans[2], "grandchild-one", parentId: childOneId) &&
+                    IsValidSpan(spans[3], "grandchild-two", parentId: childTwoId);
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(childMatcher)));
+
+            childThreadsReleased.Set();
+            await Task.WhenAll(t1, t2);
+
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
+        public async Task MultipleSpans_Threads_Running_During_Span()
+        {
+            var mockConsumer = new Mock<IConsumer<TraceProto>>();
+            var tracer = SimpleManagedTracer.Create(mockConsumer.Object, ProjectId, TraceId);
+
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
+            {
+                var spans = t.Single().Spans.OrderBy(s => s.Name).ToList();
+                var rootId = spans[4].SpanId;
+                var childOneId = spans[0].SpanId;
+                var childTwoId = spans[1].SpanId;
+                return spans.Count == 5 &&
+                    IsValidSpan(spans[0], "child-one", parentId: rootId) &&
+                    IsValidSpan(spans[1], "child-two", parentId: rootId) &&
+                    IsValidSpan(spans[2], "grandchild-one", parentId: childOneId) &&
+                    IsValidSpan(spans[3], "grandchild-two", parentId: childTwoId) &&
+                    IsValidSpan(spans[4], "root");
+            };
+            mockConsumer.Setup(c => c.Receive(Match.Create(matcher)));
+
+            Func<string, string, Task> op = async (childName, grandchildName) =>
+            {
+                using (tracer.StartSpan(childName))
+                {
+                    await Task.Yield();
+                    using (tracer.StartSpan(grandchildName))
+                    {
+                        await Task.Yield();
+                    }
+                    await Task.Yield();
+                }
+            };
+
+            using (tracer.StartSpan("root"))
+            {
+                await Task.WhenAll(
+                    Task.Run(() => op("child-one", "grandchild-one")),
+                    Task.Run(() => op("child-two", "grandchild-two")));
+            }
+            mockConsumer.VerifyAll();
+        }
+
+        [Fact]
         public void MultipleSpans_Dispose()
         {
             var mockConsumer = new Mock<IConsumer<TraceProto>>();
@@ -262,7 +473,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             var annotation = new Dictionary<string, string>();
             annotation.Add("annotation-key", "annotation-value");
 
-            Predicate<IEnumerable<TraceProto>> matcher = (IEnumerable<TraceProto> t) =>
+            Predicate<IEnumerable<TraceProto>> matcher = t =>
             {
                 var spans = t.Single().Spans;
                 return spans.Count == 4 &&

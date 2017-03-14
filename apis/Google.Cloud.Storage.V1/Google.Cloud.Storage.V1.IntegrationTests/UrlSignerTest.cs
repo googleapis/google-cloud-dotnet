@@ -589,7 +589,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                     // Verify that the URL works initially.
                     var uploader = ResumableUpload.CreateFromUploadUri(sessionUri, new MemoryStream(data));
-                    await uploader.ResumeAsync(sessionUri);
+                    var progress = await uploader.ResumeAsync(sessionUri);
+                    Assert.Null(progress.Exception);
+                    Assert.Equal(UploadStatus.Completed, progress.Status);
+
                     var result = new MemoryStream();
                     await _fixture.Client.DownloadObjectAsync(bucket, name, result);
                     Assert.Equal(result.ToArray(), data);
@@ -637,6 +640,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                         new MemoryStream(data),
                         new ResumableUploadOptions { ModifySessionInitiationRequest = key.ModifyRequest });
                     var progress = await uploader.UploadAsync();
+                    Assert.Null(progress.Exception);
                     Assert.Equal(UploadStatus.Completed, progress.Status);
 
                     // Make sure the encryption succeeded.

@@ -46,18 +46,35 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
     // Resource: foo.xml sample_foo
     // creates a snippet with an ID of "sample_foo" with the content of "foo.xml".
 
+    // "See also" format, used to create a reference to another method which has a snippet.
+
+    // See-also: (name of reference snippet)
+    // Member: (member name to match) - 1 or more times
+    // Lines of text including (ref) as a placeholder for the reference.
+    // End see-also
+
+    // The reference must be a method which has a snippet; the reference name and all member names
+    // must match members in the same way as snippets, except that the reference name may start with a type name.
+    // (The see-also members are expected to be in the snippet file for the documentation where the references appear,
+    // but the target may well be in a different type.)
+
     /// <summary>
     /// Simple program to generate markdown and text files for docfx to consume when generating documentation.
     /// The file basically links the snippets projects with the client libraries.
     /// </summary>
     public sealed class Program
     {
+        private const string StartSeeAlso = "// See-also: ";
+        private const string SeeAlsoMember = "// Member: ";
         private const string Resource = "// Resource: ";
         private const string StartSample = "// Sample: ";
         private const string StartSnippet = "// Snippet: ";
         private const string AdditionalMember = "// Additional: ";
         private const string EndSnippet = "// End snippet";
         private const string EndSample = "// End sample";
+        private const string EndSeeAlso = "// End see-also";
+        // All these characters need to be converted to _ when creating a link
+        private static readonly Regex DocfxUidCharactersToEscape = new Regex(@"[\(\),\.\[\]<>]");
         private static readonly Regex DocfxSnippetPattern = new Regex(@"^[\w\.]+$", RegexOptions.Compiled);
         private static readonly Regex NullablePattern = new Regex(@"^System.Nullable\{([\w\.]*)\}+$", RegexOptions.Compiled);
         private static readonly Regex GenericMemberPattern = new Regex(@"^([\w\.]+)\{([\w\.]*,?)\}+$", RegexOptions.Compiled);
@@ -116,13 +133,26 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             List<string> errors = new List<string>();
             var snippets = LoadAllSnippets(snippetsSource, errors);
             Console.WriteLine($"Loaded {snippets.Sum(x => x.Count())} snippets");
+
             foreach (var entry in snippets)
             {
                 string snippetFile = entry.Key + ".txt";
                 GenerateSnippetText(Path.Combine(output, snippetFile), entry);
-                MapMetadataUids(entry, memberLookup[entry.Key], errors);
+                MapSnippetMetadataUids(entry, memberLookup[entry.Key], errors);
                 GenerateSnippetMarkdown(Path.Combine(output, entry.Key + ".md"), snippetFile, entry);
             }
+
+            var seeAlsos = LoadAllSeeAlsos(snippetsSource, errors);
+            Console.WriteLine($"Loaded {seeAlsos.Sum(x => x.Count())} see-alsos");
+            foreach (var entry in seeAlsos)
+            {
+                MapSeeAlsoMetadataUids(entry, memberLookup, entry.Key, errors);
+                GenerateSeeAlsoMarkdown(Path.Combine(output, entry.Key + ".md"), entry);
+            }
+
+            // TODO: Validate that all see-alsos refer to members with snippets.
+            // TODO: Validate that all public members have snippets or see-alsos.
+
             if (errors.Any())
             {
                 foreach (var error in errors)
@@ -208,7 +238,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 {
                     if (currentSnippet != null)
                     {
-                        currentSnippet.TrimLeadingSpaces();
+                        TrimLeadingSpaces(currentSnippet.Lines);
                         yield return currentSnippet;
                         currentSnippet = null;
                     }
@@ -290,6 +320,114 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
         }
 
+        private static ILookup<string, SeeAlso> LoadAllSeeAlsos(string snippetSourceDir, List<string> errors)
+        {
+            var canonicalName = Path.GetFullPath(snippetSourceDir);
+            var projectName = TrimSuffix(Path.GetFileName(canonicalName), ".Snippets");
+            var query = from sourceFile in Directory.GetFiles(snippetSourceDir, "*.cs")
+                        let type = projectName + "." + TrimSuffix(Path.GetFileName(sourceFile), "Snippets.cs", "Snippets.g.cs")
+                        from snippet in LoadFileSeeAlsos(sourceFile, errors)
+                        select new { Type = type, Snippet = snippet };
+            return query.ToLookup(item => item.Type, item => item.Snippet);
+        }
+
+        private static IEnumerable<SeeAlso> LoadFileSeeAlsos(string file, List<string> errors)
+        {
+            SeeAlso currentSeeAlso = null;
+            int lineNumber = 0;
+            // Only keep the filename part for diagnostics; that's usually going to be obvious enough.
+            string sourceFile = Path.GetFileName(file);
+            foreach (var line in File.ReadLines(file))
+            {
+                lineNumber++;
+                // 4 kinds of line to consider:
+                // StartSeeAlso: only valid when not in a see-also
+                // EndSeeAlso: only valid when in a see-also
+                // Member: only valid when at the start of a see-also
+                // Regular line; valid in any case, but with different results.
+
+                string location = $"{sourceFile}:{lineNumber}";
+
+                if (line.Contains(StartSeeAlso))
+                {
+                    if (currentSeeAlso == null)
+                    {
+                        string id = GetContentAfterPrefix(line, StartSeeAlso);
+                        if (!IsValidId(id))
+                        {
+                            errors.Add($"{location}: Invalid see-also reference ID '{id}'");
+                            // We'll also get an "end see-also with no start" error later, but that's
+                            // not too bad.
+                        }
+                        else
+                        {
+                            currentSeeAlso = new SeeAlso
+                            {
+                                SnippetId = id,
+                                SourceFile = sourceFile,
+                                SourceStartLine = lineNumber
+                            };
+                        }
+                    }
+                    else
+                    {
+                        errors.Add($"{location}: Invalid start of nested sample/snippet");
+                    }
+                }
+                else if (line.Contains(EndSeeAlso))
+                {
+                    if (currentSeeAlso != null)
+                    {
+                        TrimLeadingSpaces(currentSeeAlso.Lines);
+                        yield return currentSeeAlso;
+                        currentSeeAlso = null;
+                    }
+                    else
+                    {
+                        errors.Add($"{location}: See-also end without start");
+                    }
+                }
+                else if (line.Contains(SeeAlsoMember))
+                {
+                    if (currentSeeAlso != null)
+                    {
+                        string id = GetContentAfterPrefix(line, SeeAlsoMember);
+                        if (currentSeeAlso.Lines.Count == 0)
+                        {
+                            if (IsValidId(id))
+                            {
+                                currentSeeAlso.MetadataMembers.Add(id);
+                            }
+                            else
+                            {
+                                errors.Add($"{location}: Invalid see-also member ID '{id}'");
+                            }
+                        }
+                        else
+                        {
+                            errors.Add($"{location}: see-also member ID part way through snippet");
+                        }
+                    }
+                    else
+                    {
+                        errors.Add($"{location}: see-also member ID not in snippet");
+                    }
+                }
+                else if (currentSeeAlso != null)
+                {
+                    if (currentSeeAlso.MetadataMembers.Count == 0 && currentSeeAlso.Lines.Count == 0)
+                    {
+                        errors.Add($"{location}: see-also with no members");
+                    }
+                    currentSeeAlso.Lines.Add(line);
+                }
+            }
+            if (currentSeeAlso != null)
+            {
+                errors.Add($"{currentSeeAlso.SourceLocation}: Snippet '{currentSeeAlso.SnippetId}' didn't end");
+            }
+        }
+
         // Is this a valid ID for a member match? We only check that if there's an open-paren,
         // the ID must end with a close-paren.
         private static bool IsValidId(string id) =>
@@ -345,11 +483,11 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         }
 
         /// <summary>
-        /// For each snippet, try to find a single matching member and save it in the MetadataUid property.
+        /// For each snippet, try to find the relevant matching members and save then in the MetadataUids property.
         /// Errors are collected rather than an exception being immediately thrown, so that many errors can be
         /// detected and fixed in a single run.
         /// </summary>
-        private static void MapMetadataUids(IEnumerable<Snippet> snippets, IEnumerable<Member> members, List<string> errors)
+        private static void MapSnippetMetadataUids(IEnumerable<Snippet> snippets, IEnumerable<Member> members, List<string> errors)
         {
             ISet<string> matchedUids = new HashSet<string>();
             // Match manually written snippets first, then autogenerated ones, so
@@ -358,26 +496,83 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             {
                 foreach (var snippetMemberId in snippet.MetadataMembers)
                 {
-                    var matches = members.Where(member => IsMemberMatch(member.Id, snippetMemberId)).ToList();
-                    // We could potentially allow ambiguous matches and just use all of them...
-                    if (matches.Count > 1)
+                    Member member = FindMember(members, snippetMemberId, errors, snippet.SourceLocation);
+                    if (member != null)
                     {
-                        errors.Add($"{snippet.SourceLocation}: Member ID '{snippetMemberId}' matches multiple members ({string.Join(", ", matches.Select(m => m.Id))}).");
-                    }
-                    else if (matches.Count == 0)
-                    {
-                        errors.Add($"{snippet.SourceLocation}: Member ID '{snippetMemberId}' matches no members.");
-                    }
-                    else
-                    {
-                        string uid = matches[0].Uid;
+                        string uid = member.Uid;
                         if (matchedUids.Add(uid))
                         {
-                            snippet.MetadataUids.Add(matches.First().Uid);
+                            snippet.MetadataUids.Add(uid);
                         }
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// For each see-also, try to find the matching members for both the source and target.
+        /// Errors are collected rather than an exception being immediately thrown, so that many errors can be
+        /// detected and fixed in a single run.
+        /// </summary>
+        private static void MapSeeAlsoMetadataUids(IEnumerable<SeeAlso> seeAlsos, ILookup<string, Member> allMembers, string defaultType, List<string> errors)
+        {
+            var targetMembers = allMembers[defaultType];
+
+            foreach (var seeAlso in seeAlsos)
+            {
+                string snippetId = seeAlso.SnippetId;
+                int dot = snippetId.IndexOf('.');
+                string type = defaultType;
+                if (dot != -1)
+                {
+                    string typeNameEnd = "." + snippetId.Substring(0, dot);
+                    var typeNames = allMembers.Select(x => x.Key).Where(k => k.EndsWith(typeNameEnd)).ToList();
+                    if (typeNames.Count > 1)
+                    {
+                        errors.Add($"{seeAlso.SourceLocation}: Snippet ID '{snippetId}' type name matches multiple types ({string.Join(", ", typeNames)}).");
+                        continue;
+                    }
+                    else if (typeNames.Count == 0)
+                    {
+                        errors.Add($"{seeAlso.SourceLocation}: Snippet ID '{snippetId}' type name matches no known types.");
+                        continue;
+                    }
+                    snippetId = snippetId.Substring(dot + 1);
+                    type = typeNames[0];
+                }
+                var snippetMember = FindMember(allMembers[type], snippetId, errors, seeAlso.SourceLocation);
+                if (snippetMember == null)
+                {
+                    continue;
+                }
+                string escapedUid = DocfxUidCharactersToEscape.Replace(snippetMember.Uid, "_");
+                seeAlso.SnippetRef = $"{type}.html#{escapedUid}";
+
+                foreach (var seeAlsoMemberId in seeAlso.MetadataMembers)
+                {
+                    var member = FindMember(targetMembers, seeAlsoMemberId, errors, seeAlso.SourceLocation);
+                    if (member != null)
+                    {
+                        seeAlso.MetadataUids.Add(member.Uid);
+                    }
+                }
+            }
+        }
+
+        private static Member FindMember(IEnumerable<Member> members, string idToMatch, List<string> errors, string sourceLocation)
+        {
+            var matches = members.Where(member => IsMemberMatch(member.Id, idToMatch)).ToList();
+            if (matches.Count > 1)
+            {
+                errors.Add($"{sourceLocation}: Member ID '{idToMatch}' matches multiple members ({string.Join(", ", matches.Select(m => m.Id))}).");
+                return null;
+            }
+            else if (matches.Count == 0)
+            {
+                errors.Add($"{sourceLocation}: Member ID '{idToMatch}' matches no members.");
+                return null;
+            }
+            return matches[0];
         }
 
         private static void GenerateSnippetMarkdown(string outputFile, string relativeSnippetFile, IEnumerable<Snippet> snippets)
@@ -398,6 +593,29 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                         writer.WriteLine();
                         writer.WriteLine("Example:");
                         writer.WriteLine($"[!code-cs[]({relativeSnippetFile}#L{snippet.StartLine}-L{snippet.EndLine})]");
+                        writer.WriteLine();
+                    }
+                }
+            }
+        }
+
+        private static void GenerateSeeAlsoMarkdown(string outputFile, IEnumerable<SeeAlso> seeAlsos)
+        {
+            using (var writer = File.AppendText(outputFile))
+            {
+                foreach (var seeAlso in seeAlsos)
+                {
+                    string target = $"({seeAlso.SnippetRef})";
+                    foreach (var metadataUid in seeAlso.MetadataUids)
+                    {
+                        writer.WriteLine("---");
+                        writer.WriteLine($"uid: {metadataUid}");
+                        writer.WriteLine("---");
+                        writer.WriteLine();
+                        foreach (var line in seeAlso.Lines)
+                        {
+                            writer.WriteLine(line.Replace("(ref)", target).Replace("// ", ""));
+                        }
                         writer.WriteLine();
                     }
                 }
@@ -443,6 +661,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         // TODO: Unit tests for this...
         private static bool IsParameterMatch(string memberParameter, string snippetParameter)
         {
+            snippetParameter = snippetParameter.Trim();
             if (snippetParameter == "*")
             {
                 return true;
@@ -525,6 +744,18 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 }
             }
             return text;
+        }
+
+        /// <summary>
+        /// Trim all leading spaces by a uniform amount (the smallest number of spaces in any line).
+        /// </summary>
+        private static void TrimLeadingSpaces(List<string> lines)
+        {
+            var spacesToRemove = lines.Min(line => line.Trim() == "" ? int.MaxValue : line.TakeWhile(c => c == ' ').Count());
+            for (int i = 0; i < lines.Count; i++)
+            {
+                lines[i] = lines[i].Trim() == "" ? "" : lines[i].Substring(spacesToRemove);
+            }
         }
     }
 }

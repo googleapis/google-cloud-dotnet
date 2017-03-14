@@ -397,6 +397,12 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // End snippet
         }
 
+        // See-also: Insert(Entity[])
+        // Member: Insert(Entity, CallSettings)
+        // Member: Insert(IEnumerable<Entity>, CallSettings)
+        // See [Insert](ref) for a sample of inserting entities.
+        // End see-also
+
         [Fact]
         public async Task AddEntity_NonTransactional_Async()
         {
@@ -426,6 +432,12 @@ namespace Google.Cloud.Datastore.V1.Snippets
             Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
             // End snippet
         }
+
+        // See-also: InsertAsync(*)
+        // Member: InsertAsync(Entity, CallSettings)
+        // Member: InsertAsync(IEnumerable<Entity>, CallSettings)
+        // See [InsertAsync](ref) for a sample of inserting entities asynchronously.
+        // End see-also
 
         [Fact]
         public void AllocateId()
@@ -554,6 +566,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 CommitResponse commitResponse = transaction.Commit();
                 Key insertedKey = commitResponse.MutationResults[0].Key;
                 Console.WriteLine($"Inserted key: {insertedKey}");
+                // The key is also propagated to the entity
+                Console.WriteLine($"Entity key: {entity.Key}");
             }
             // End sample
         }
