@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
     /// An <see cref="IManagedTracer"/> that delegeates all calls to another <see cref="IManagedTracer"/>
-    /// that is retrieved from the given function.
+    /// that is retrieved from the given function on each method call.
     /// </summary>
     internal class DelegatingTracer : IManagedTracer
     {

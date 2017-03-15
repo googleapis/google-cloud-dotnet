@@ -79,9 +79,13 @@ namespace Google.Cloud.Diagnostics.AspNet
 
         private readonly Func<HttpRequest, bool?> _traceFallbackPredicate;
 
-        /// <summary>Gets an <see cref="IManagedTracer"/> for tracing.</summary>
+        /// <summary>
+        /// Gets the <see cref="IManagedTracer"/> for tracing. It can be used
+        /// for creating spans for a trace as well as adding meta data to them.
+        /// This <see cref="IManagedTracer"/> is a singleton.
+        /// </summary>
         public static readonly IManagedTracer Tracer =
-            new DelegatingTracer(() => (TracerManager.GetCurrentTracer() ?? NullManagedTracer.Instance));
+            new DelegatingTracer(() => TracerManager.GetCurrentTracer() ?? NullManagedTracer.Instance);
 
         /// <summary>
         /// Creates a <see cref="TraceHeaderPropagatingHandler"/> to propagate trace headers

@@ -137,8 +137,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             
             services.AddSingleton<IManagedTracerFactory>(tracerFactory);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddSingleton<IManagedTracer>(CreateManagedTracer);
 
+            services.AddSingleton(CreateManagedTracer);
             services.AddSingleton(CreateTraceHeaderPropagatingHandler);
             services.AddSingleton(new ShouldTraceRequest(traceFallbackPredicate));
         }
@@ -167,9 +167,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Creates a <see cref="DelegatingTracer"/>.
+        /// Creates a singleton <see cref="IManagedTracer"/> that is a <see cref="DelegatingTracer"/>.
+        /// The <see cref="DelegatingTracer"/> will use an <see cref="IHttpContextAccessor"/> under the hood
+        /// to get the current tracer which is set by the <see cref="ContextTracerManager"/>.
         /// </summary>
-        internal static DelegatingTracer CreateManagedTracer(IServiceProvider provider)
+        internal static IManagedTracer CreateManagedTracer(IServiceProvider provider)
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             return new DelegatingTracer(() => ContextTracerManager.GetCurrentTracer(accessor));
