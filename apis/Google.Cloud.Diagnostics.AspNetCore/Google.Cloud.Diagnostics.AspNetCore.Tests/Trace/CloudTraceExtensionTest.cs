@@ -65,6 +65,15 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         }
 
         [Fact]
+        public void CreateTraceHeaderContext_UseBackUpFunc()
+        {
+            var header = $"{_traceId}/{_spanId};";
+            var provider = CreateProviderForTraceHeaderContext(header);
+            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
+            Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
+        }
+
+        [Fact]
         public void CreateManagedTracer()
         {
             var mockProvider = new Mock<IServiceProvider>();
