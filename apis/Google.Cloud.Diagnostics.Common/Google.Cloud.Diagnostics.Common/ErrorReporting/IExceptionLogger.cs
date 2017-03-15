@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 #if NET45
@@ -34,8 +35,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="exception">The exception to log. Cannot be null.</param>
         /// <param name="context">Optional, the current http context. If unset the
         ///     current context will be retrieved automatically.</param>
+        /// <param name="cancellationToken">Optional, The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        Task LogAsync(Exception exception, HttpContext context = null);
+        Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Logs an exception that occurred.

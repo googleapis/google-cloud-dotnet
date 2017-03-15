@@ -27,9 +27,6 @@ namespace Google.Cloud.Diagnostics.AspNet
             _context = GaxPreconditions.CheckNotNull(context, nameof(context));
         }
 
-        public static IContextWrapper FromExceptionContext(ExceptionContext context) =>
-            new ExceptionContextWrapper(context);
-
         public string GetMethod() => _context.HttpContext?.Request?.HttpMethod;
         public string GetUri() => _context.HttpContext?.Request?.Url?.ToString();
         public string GetUserAgent() => _context.HttpContext?.Request?.UserAgent;

@@ -17,6 +17,7 @@ using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
@@ -39,10 +40,10 @@ namespace Google.Cloud.Diagnostics.Common
             };
         }
 
-        internal Task LogAsync(Exception exception, IContextWrapper context)
+        internal Task LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default(CancellationToken))
         {
             var errorEvent = CreateReportRequest(exception, context);
-            return _consumer.ReceiveAsync(new[] { errorEvent });
+            return _consumer.ReceiveAsync(new[] { errorEvent }, cancellationToken);
         }
 
         internal void Log(Exception exception, IContextWrapper context)

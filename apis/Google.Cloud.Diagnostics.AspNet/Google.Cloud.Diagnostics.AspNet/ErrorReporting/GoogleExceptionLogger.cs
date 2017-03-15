@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -28,17 +29,17 @@ namespace Google.Cloud.Diagnostics.AspNet
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }
 
-        public Task LogAsync(Exception exception, HttpContext context = null)
+        public Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             context = context ?? HttpContext.Current;
-            var contextWrapper = HttpContextWrapper.FromHttpContext(context);
-            return _logger.LogAsync(exception, contextWrapper);
+            var contextWrapper = new HttpContextWrapper(context);
+            return _logger.LogAsync(exception, contextWrapper, cancellationToken);
         }
 
         public void Log(Exception exception, HttpContext context = null)
         {
             context = context ?? HttpContext.Current;
-            var contextWrapper = HttpContextWrapper.FromHttpContext(context);
+            var contextWrapper = new HttpContextWrapper(context);
             _logger.Log(exception, contextWrapper);
         }
     }

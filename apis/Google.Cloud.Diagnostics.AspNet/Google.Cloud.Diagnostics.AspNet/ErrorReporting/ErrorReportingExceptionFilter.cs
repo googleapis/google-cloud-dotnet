@@ -116,7 +116,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <inheritdoc />
         public void OnException(ExceptionContext context)
         {
-            var contextWrapper = ExceptionContextWrapper.FromExceptionContext(context);
+            var contextWrapper = new ExceptionContextWrapper(context);
             _logger.Log(context.Exception, contextWrapper);
         }
 

@@ -112,14 +112,14 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <inheritdoc />
         public override Task LogAsync(ExceptionLoggerContext context, CancellationToken cancellationToken)
         {
-            var contextWrapper = ExceptionLoggerContextWrapper.FromExceptionLoggerContext(context);
-            return _logger.LogAsync(context.Exception, contextWrapper);
+            var contextWrapper = new ExceptionLoggerContextWrapper(context);
+            return _logger.LogAsync(context.Exception, contextWrapper, cancellationToken);
         }
 
         /// <inheritdoc />
         public override void Log(ExceptionLoggerContext context)
         {
-            var contextWrapper = ExceptionLoggerContextWrapper.FromExceptionLoggerContext(context);
+            var contextWrapper = new ExceptionLoggerContextWrapper(context);
             _logger.Log(context.Exception, contextWrapper);
         }
 

@@ -20,7 +20,7 @@ using Microsoft.AspNetCore.Http.Extensions;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-    internal class HttpContextWrapper : IHttpContextWrapper
+    internal class HttpContextWrapper : IContextWrapper
     {
         private readonly HttpContext _context;
 
@@ -28,8 +28,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             _context = GaxPreconditions.CheckNotNull(context, nameof(context));
         }
-
-        public static IHttpContextWrapper FromHttpContext(HttpContext context) => new HttpContextWrapper(context);
 
         public string GetMethod() => _context.Request?.Method?.ToString();
         public string GetUri() => _context.Request?.GetDisplayUrl();

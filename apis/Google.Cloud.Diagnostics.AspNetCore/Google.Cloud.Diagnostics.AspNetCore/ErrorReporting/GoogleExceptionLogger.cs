@@ -16,16 +16,17 @@ using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
-    internal sealed class ExceptionLogger : IExceptionLogger
+    internal sealed class GoogleExceptionLogger : IExceptionLogger
     {
         private readonly ErrorReportingExceptionLoggerBase _logger;
         private readonly IHttpContextAccessor _accesor;
 
-        internal ExceptionLogger(
+        internal GoogleExceptionLogger(
            ErrorReportingExceptionLoggerBase logger, IHttpContextAccessor accesor)   
         {
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
@@ -33,18 +34,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <inheritdoc />
-        public Task LogAsync(Exception exception, HttpContext context = null)
+        public Task LogAsync(Exception exception, HttpContext context = null,
+            CancellationToken cancellationToken = default(CancellationToken))
         {
             context = context ?? _accesor.HttpContext;
-            var contextWrapper = HttpContextWrapper.FromHttpContext(context);
-            return _logger.LogAsync(exception, contextWrapper);
+            var contextWrapper = new HttpContextWrapper(context);
+            return _logger.LogAsync(exception, contextWrapper, cancellationToken);
         }
 
         /// <inheritdoc />
         public void Log(Exception exception, HttpContext context = null)
         {
             context = context ?? _accesor.HttpContext;
-            var contextWrapper = HttpContextWrapper.FromHttpContext(context);
+            var contextWrapper = new HttpContextWrapper(context);
             _logger.Log(exception, contextWrapper);
         }
     }
