@@ -5,6 +5,7 @@
 set -e
 
 CONTINUE_ARG=
+CONTINUE_ON_FAILURE=false
 
 for arg in "$@"
 do
@@ -16,14 +17,17 @@ do
     OPENCOVER=$PWD/packages/OpenCover.4.6.519/tools/OpenCover.Console.exe
     REPORTGENERATOR=$PWD/packages/ReportGenerator.2.4.5.0/tools/ReportGenerator.exe
     ;;
+  --continue-on-failure)
+    CONTINUE_ON_FAILURE=true
+    ;;
   *)
-    echo "Unknown argument: $arg. Supported arguments: --coverage --continue"
+    echo "Unknown argument: $arg. Supported arguments: --coverage --continue --continue-on-failure"
     exit 1
     ;;
   esac
 done
 
-
+TEST_ERROR=false
 PROGRESS_FILE=`realpath integrationprogress.txt`
 FIND=/usr/bin/find
 
@@ -58,10 +62,23 @@ do
         -excludebyfile:$generatedFiles
     echo "$testdir" >> $PROGRESS_FILE
   else
-    dotnet test -c Release --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir -xml $testdir/results.xml
+    cmd="dotnet test -c Release --no-build -f netcoreapp1.0 $DOTNET_TEST_ARGS $testdir -xml $testdir/results.xml"
+    eval $cmd
+    if [[ $? != 0 && $CONTINUE_ON_FAILURE ]]
+    then
+      TEST_ERROR=true
+    elif [[ $? != 0 && !$CONTINUE_ON_FAILURE ]]
+    then
+      exit $?
+    fi
     echo "$testdir" >> $PROGRESS_FILE
   fi
 done
+
+if [[ $TEST_ERROR ]]
+then
+  exit 1
+fi
 
 if [ -n "$OPENCOVER" -a -n "REPORTGENERATOR" ]
 then
