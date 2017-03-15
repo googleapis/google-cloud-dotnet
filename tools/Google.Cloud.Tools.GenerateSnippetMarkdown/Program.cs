@@ -103,11 +103,30 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
 
         private static int MainImpl(string[] args)
         {
-            if (args.Length != 1)
+            if (args.Length == 0 || args.Length > 2)
             {
-                throw new UserErrorException("Please specify the API name as the sole argument");
+                ThrowUsageError();
             }
             string api = args[0];
+            bool generateReport = false;
+            string reportFile = null;
+            if (args.Length == 2)
+            {
+                generateReport = true;
+                string reportArg = args[1];
+                if (!reportArg.StartsWith("--report"))
+                {
+                    ThrowUsageError();
+                }
+                if (reportArg != "--report")
+                {
+                    if (!reportArg.StartsWith("--report="))
+                    {
+                        ThrowUsageError();
+                    }
+                    reportFile = reportArg.Substring("--report=".Length);
+                }
+            }
             var layout = DirectoryLayout.FromApi(api);
             string snippetsSource = Directory.GetDirectories(layout.ApiSourceDirectory, "*.Snippets").FirstOrDefault();
             if (snippetsSource == null)
@@ -150,8 +169,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 GenerateSeeAlsoMarkdown(Path.Combine(output, entry.Key + ".md"), entry);
             }
 
-            // TODO: Validate that all see-alsos refer to members with snippets.
-            // TODO: Validate that all public members have snippets or see-alsos.
+            ValidateSeeAlsos(seeAlsos.SelectMany(x => x), snippets.SelectMany(x => x), errors);
 
             if (errors.Any())
             {
@@ -162,7 +180,68 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 return 1;
             }
 
+            if (generateReport)
+            {
+                using (var writer = reportFile == null ? Console.Out : File.CreateText(reportFile))
+                {
+                    GenerateReport(memberLookup, snippets, seeAlsos, writer);
+                }
+            }
             return 0;
+        }
+
+        private static void ThrowUsageError()
+        {
+            throw new UserErrorException("Usage: <api name> [--report | --report=file.txt]");
+        }
+
+        private static void GenerateReport(
+            ILookup<string, Member> members,
+            ILookup<string, Snippet> snippets,
+            ILookup<string, SeeAlso> seeAlsos,
+            TextWriter writer)
+        {
+            // We assume that we at least have one snippet/see-also for each type we're interested in.
+            var types = snippets.Select(x => x.Key).Union(seeAlsos.Select(x => x.Key)).OrderBy(x => x).ToList();
+            foreach (var type in types)
+            {
+                writer.WriteLine($"Type {type}: {snippets[type].Count()} snippets; {seeAlsos[type].Count()} see-alsos");
+                var coveredUids = new HashSet<string>(snippets[type].SelectMany(s => s.MetadataUids)
+                    .Union(seeAlsos[type].SelectMany(s => s.MetadataUids)));
+
+                foreach (var member in members[type].Where(m => m.Type == "Method"))
+                {
+                    if (!coveredUids.Contains(member.Uid))
+                    {
+                        writer.WriteLine($"  Uncovered member: {member.Id}");
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Validate SeeAlso entries:
+        /// - No SeeAlso "source" should already have a snippet
+        /// - All SeeAlso "targets" should have a snippet
+        /// </summary>
+        private static void ValidateSeeAlsos(IEnumerable<SeeAlso> seeAlsos, IEnumerable<Snippet> snippets, List<string> errors)
+        {
+            var allSnippetUids = new HashSet<string>(snippets.SelectMany(s => s.MetadataUids));
+            foreach (var seeAlso in seeAlsos)
+            {
+                if (seeAlso.SnippetUid != null && !allSnippetUids.Contains(seeAlso.SnippetUid))
+                {
+                    errors.Add($"{seeAlso.SourceLocation}: See-also target does not contain an example");
+                }
+
+                foreach (var uid in seeAlso.MetadataUids)
+                {
+                    if (allSnippetUids.Contains(uid))
+                    {
+                        errors.Add($"{seeAlso.SourceLocation}: Member {uid} already has an example, so doesn't need a see-also");
+                    }
+                }
+            }
         }
 
         private static ILookup<string, Snippet> LoadAllSnippets(string snippetSourceDir, List<string> errors)
@@ -547,6 +626,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 }
                 string escapedUid = DocfxUidCharactersToEscape.Replace(snippetMember.Uid, "_");
                 seeAlso.SnippetRef = $"{type}.html#{escapedUid}";
+                seeAlso.SnippetUid = snippetMember.Uid;
 
                 foreach (var seeAlsoMemberId in seeAlso.MetadataMembers)
                 {
