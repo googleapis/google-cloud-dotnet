@@ -64,36 +64,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
         }
 
-        [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
-        [InlineData(null)]
-        public void CreateTraceHeaderContext_ForceTrace(bool? shouldTrace)
-        {
-            var provider = CreateProviderForTraceHeaderContext($"{_traceId}/{_spanId};", ((HttpRequest r) => shouldTrace));
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
-            Assert.Equal(_traceId, headerContext.TraceId);
-            Assert.Equal(_spanId, headerContext.SpanId);
-            Assert.Equal(shouldTrace, headerContext.ShouldTrace);
-        }
-
-        [Fact]
-        public void CreateTraceHeaderContext_ForceTrace_NoHeader()
-        {
-            var provider = CreateProviderForTraceHeaderContext("", ((HttpRequest r) => true));
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
-            Assert.NotNull(headerContext.TraceId);
-            Assert.Equal((ulong)0, headerContext.SpanId);
-            Assert.Equal(true, headerContext.ShouldTrace);
-        }
-
         [Fact]
         public void CreateManagedTracer()
         {
             var mockProvider = new Mock<IServiceProvider>();
             mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(new HttpContextAccessor());
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
-            Assert.IsType(typeof(ContextManagedTracer), tracer);
+            Assert.IsType(typeof(DelegatingTracer), tracer);
             mockProvider.VerifyAll();
         }
 
