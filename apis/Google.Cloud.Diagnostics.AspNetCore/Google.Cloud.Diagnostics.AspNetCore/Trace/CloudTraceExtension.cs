@@ -162,7 +162,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             var shouldTraceRequest = provider.GetServiceCheckNotNull<ShouldTraceRequest>();
 
             string header = accessor.HttpContext?.Request?.Headers[TraceHeaderContext.TraceHeader];
-            Func<bool?> shouldTraceFunc = () => shouldTraceRequest?.ShouldTrace(accessor.HttpContext?.Request);
+            Func<bool?> shouldTraceFunc = () => 
+                shouldTraceRequest?.ShouldTrace?.Invoke(accessor.HttpContext?.Request);
             return TraceHeaderContext.FromHeader(header, shouldTraceFunc);
         }
 
