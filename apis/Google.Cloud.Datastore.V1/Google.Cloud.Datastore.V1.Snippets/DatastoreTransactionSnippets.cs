@@ -492,22 +492,24 @@ namespace Google.Cloud.Datastore.V1.Snippets
 
             // Snippet: Lookup(Key[])
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-            KeyFactory keyFactory = db.CreateKeyFactory("book");
-            Key key1 = keyFactory.CreateKey("pride_and_prejudice");
-            Key key2 = keyFactory.CreateKey("not_present");
+            KeyFactory keyFactory = db.CreateKeyFactory("message");
+            Entity message = new Entity { Key = keyFactory.CreateIncompleteKey(), ["text"] = "Original" };
+            db.Insert(message);
 
             using (DatastoreTransaction transaction = db.BeginTransaction())
             {
-                // Note this is calling db.Insert rather than transaction.Insert
-                // - the entity is inserted after the transaction started.
-                Key key3 = db.Insert(new Entity { Key = keyFactory.CreateIncompleteKey() });
+                // Look the message up at the start of the transaction
+                Entity fetched1 = transaction.Lookup(message.Key);
+                Console.WriteLine((string) fetched1["text"]); // "Original"
 
-                IReadOnlyList<Entity> entities = transaction.Lookup(key1, key2, key3);
-                Console.WriteLine(entities[0]); // Pride and Prejudice entity
-                Console.WriteLine(entities[1]); // Nothing (value is null reference)
-                // The lookup of the newly-created entity doesn't find it: we only see
-                // the consistent start at the start of the transaction.
-                Console.WriteLine(entities[2]); // Nothing (value is null reference)
+                // Update the message outside the transaction
+                message["text"] = "Updated";
+                db.Update(message);
+
+                // Look up the message up again. We are guaranteed not to see the
+                // update because it occurred after the start of the transaction.
+                Entity fetched2 = transaction.Lookup(message.Key);
+                Console.WriteLine((string) fetched2["text"]); // Still "Original"
             }
             // End snippet
         }
