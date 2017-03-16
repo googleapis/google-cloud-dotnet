@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Apis.Storage.v1;
 using Google.Apis.Upload;
 using System;
 using System.IO;
@@ -23,6 +24,46 @@ namespace Google.Cloud.Storage.V1
 {
     public abstract partial class StorageClient
     {
+        /// <summary>
+        /// Creates an instance which is capable of starting a resumable upload for an object.
+        /// </summary>
+        /// <param name="bucket">The name of the bucket containing the object. Must not be null.</param>
+        /// <param name="objectName">The name of the object within the bucket. Must not be null.</param>
+        /// <param name="contentType">The content type of the object. This should be a MIME type
+        /// such as "text/html" or "application/octet-stream". May be null.</param>
+        /// <param name="source">The stream to read the data from. Must not be null.</param>
+        /// <param name="options">Additional options for the upload. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <returns>The <see cref="ObjectsResource.InsertMediaUpload"/> which can be used to upload the object.</returns>
+        /// <seealso cref="UploadObject(Object,Stream,UploadObjectOptions,IProgress{IUploadProgress})"/>
+        public virtual ObjectsResource.InsertMediaUpload CreateObjectUploader(
+            string bucket,
+            string objectName,
+            string contentType,
+            Stream source,
+            UploadObjectOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates an instance which is capable of starting a resumable upload for an object.
+        /// </summary>
+        /// <param name="destination">Object to create or update. Must not be null, and must have the name,
+        /// bucket and content type populated.</param>
+        /// <param name="source">The stream to read the data from. Must not be null.</param>
+        /// <param name="options">Additional options for the upload. May be null, in which case appropriate
+        /// defaults will be used.</param>
+        /// <returns>The <see cref="ObjectsResource.InsertMediaUpload"/> which can be used to upload the object.</returns>
+        /// <seealso cref="UploadObject(Object,Stream,UploadObjectOptions,IProgress{IUploadProgress})"/>
+        public virtual ObjectsResource.InsertMediaUpload CreateObjectUploader(
+            Object destination,
+            Stream source,
+            UploadObjectOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Uploads the data for an object in storage synchronously, from a specified stream.
         /// </summary>

@@ -450,16 +450,23 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                     }
                     else
                     {
-                        errors.Add($"{location}: Invalid start of nested sample/snippet");
+                        errors.Add($"{location}: Invalid start of nested see-also");
                     }
                 }
                 else if (line.Contains(EndSeeAlso))
                 {
                     if (currentSeeAlso != null)
                     {
-                        TrimLeadingSpaces(currentSeeAlso.Lines);
-                        yield return currentSeeAlso;
-                        currentSeeAlso = null;
+                        if (currentSeeAlso.Lines.Count == 0)
+                        {
+                            errors.Add($"{location}: see-also with no body text");
+                        }
+                        else
+                        {
+                            TrimLeadingSpaces(currentSeeAlso.Lines);
+                            yield return currentSeeAlso;
+                            currentSeeAlso = null;
+                        }
                     }
                     else
                     {
@@ -484,12 +491,12 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                         }
                         else
                         {
-                            errors.Add($"{location}: see-also member ID part way through snippet");
+                            errors.Add($"{location}: see-also member ID part way through see-also");
                         }
                     }
                     else
                     {
-                        errors.Add($"{location}: see-also member ID not in snippet");
+                        errors.Add($"{location}: see-also member ID not in see-also");
                     }
                 }
                 else if (currentSeeAlso != null)
@@ -503,7 +510,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
             if (currentSeeAlso != null)
             {
-                errors.Add($"{currentSeeAlso.SourceLocation}: Snippet '{currentSeeAlso.SnippetId}' didn't end");
+                errors.Add($"{currentSeeAlso.SourceLocation}: See-also '{currentSeeAlso.SnippetId}' didn't end");
             }
         }
 

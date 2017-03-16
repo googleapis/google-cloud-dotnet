@@ -12,11 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api.Gax;
+using Google.Api.Gax.Grpc;
 using Google.Protobuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -231,6 +232,66 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // successfully-pulled messages before they will be redelivered.
             var ackIds = pullResponse.ReceivedMessages.Select(rm => rm.AckId);
             await client.AcknowledgeAsync(subscriptionName, ackIds);
+            // End snippet
+        }
+
+        [Fact]
+        public async Task StreamingPull()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            // Snippet: StreamingPull(*, *)
+            PublisherClient publisher = PublisherClient.Create();
+            TopicName topicName = new TopicName(projectId, topicId);
+            publisher.CreateTopic(topicName);
+            SubscriberClient subscriber = SubscriberClient.Create();
+            SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
+            subscriber.CreateSubscription(subscriptionName, topicName, null, 60);
+
+            // If we don't see all the messages we expect in 10 seconds, we'll cancel the call.
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+            CallSettings callSettings = CallSettings.FromCancellationToken(cancellationTokenSource.Token);
+            SubscriberClient.StreamingPullStream stream = subscriber.StreamingPull(callSettings);
+
+            // The first request must include the subscription name and the stream ack deadline
+            await stream.WriteAsync(new StreamingPullRequest { SubscriptionAsSubscriptionName = subscriptionName, StreamAckDeadlineSeconds = 20 });
+
+            Task pullingTask = Task.Run(async () =>
+            {
+                int messagesSeen = 0;
+                IAsyncEnumerator<StreamingPullResponse> responseStream = stream.ResponseStream;
+
+                // Handle responses as we see them.
+                while (await responseStream.MoveNext())
+                {
+                    StreamingPullResponse response = responseStream.Current;
+                    Console.WriteLine("Received streaming response");
+                    foreach (ReceivedMessage message in response.ReceivedMessages)
+                    {
+                        // Messages can contain any data. We'll assume that we know this
+                        // topic publishes UTF-8-encoded text.
+                        Console.WriteLine($"Message text: {message.Message.Data.ToStringUtf8()}");
+                    }
+                    // Acknowledge the messages we've just seen
+                    await stream.WriteAsync(new StreamingPullRequest { AckIds = { response.ReceivedMessages.Select(rm => rm.AckId) } });
+
+                    // If we've seen all the messages we expect, we can complete the streaming call,
+                    // and our next MoveNext call will return false.
+                    messagesSeen += response.ReceivedMessages.Count;
+                    if (messagesSeen == 3)
+                    {
+                        await stream.WriteCompleteAsync();
+                    }
+                }
+            });
+
+            publisher.Publish(topicName, new[] { new PubsubMessage { Data = ByteString.CopyFromUtf8("Message 1") } });
+            publisher.Publish(topicName, new[] { new PubsubMessage { Data = ByteString.CopyFromUtf8("Message 2") } });
+            publisher.Publish(topicName, new[] { new PubsubMessage { Data = ByteString.CopyFromUtf8("Message 3") } });
+
+            await pullingTask;
             // End snippet
         }
     }
