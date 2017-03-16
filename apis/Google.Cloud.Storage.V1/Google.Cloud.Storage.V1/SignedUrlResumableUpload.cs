@@ -59,7 +59,7 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc/>
-        protected override async Task<Uri> InitiateSessionAsync(CancellationToken cancellationToken)
+        public override async Task<Uri> InitiateSessionAsync(CancellationToken cancellationToken)
         {
             var httpClient = Options?.HttpClient ?? new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, SignedUrl);
