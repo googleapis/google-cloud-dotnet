@@ -28,7 +28,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         private static readonly TimeSpan _timeout = TimeSpan.FromSeconds(10);
 
         /// <summary>Time to sleep between checks for entries.</summary>
-        private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(2);
+        private static readonly TimeSpan _sleepInterval = TimeSpan.FromSeconds(5);
 
         /// <summary>
         /// Polls for entries of type <see cref="T"/>.  Will continue to poll until
