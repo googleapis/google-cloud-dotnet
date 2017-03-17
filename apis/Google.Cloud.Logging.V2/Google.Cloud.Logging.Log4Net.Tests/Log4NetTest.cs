@@ -212,6 +212,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
             appender = null;
             // This should not cause an error on AppenderSkeleton finalization.
             GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         [Fact]
