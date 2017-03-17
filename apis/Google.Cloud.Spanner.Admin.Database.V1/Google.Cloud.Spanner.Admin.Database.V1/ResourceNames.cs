@@ -212,5 +212,108 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
     }
 
 
+    public partial class CreateDatabaseMetadata
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseAsDatabaseName
+        {
+            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            set { Database = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class CreateDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InstanceName ParentAsInstanceName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Database.V1.InstanceName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DropDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseAsDatabaseName
+        {
+            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            set { Database = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetDatabaseDdlRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseAsDatabaseName
+        {
+            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            set { Database = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListDatabasesRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InstanceName ParentAsInstanceName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Database.V1.InstanceName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class UpdateDatabaseDdlMetadata
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseAsDatabaseName
+        {
+            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            set { Database = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class UpdateDatabaseDdlRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public DatabaseName DatabaseAsDatabaseName
+        {
+            get { return string.IsNullOrEmpty(Database) ? null : Google.Cloud.Spanner.Admin.Database.V1.DatabaseName.Parse(Database); }
+            set { Database = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

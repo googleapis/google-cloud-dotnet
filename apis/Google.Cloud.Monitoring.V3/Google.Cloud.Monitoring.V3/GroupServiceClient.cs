@@ -467,7 +467,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => GetGroupAsync(
                 new GetGroupRequest
                 {
-                    GroupName = name,
+                    GroupName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -508,7 +508,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => GetGroup(
                 new GetGroupRequest
                 {
-                    GroupName = name,
+                    GroupName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -573,8 +573,8 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => CreateGroupAsync(
                 new CreateGroupRequest
                 {
-                    ProjectName = name,
-                    Group = group,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 
@@ -626,8 +626,8 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => CreateGroup(
                 new CreateGroupRequest
                 {
-                    ProjectName = name,
-                    Group = group,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 
@@ -688,7 +688,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => UpdateGroupAsync(
                 new UpdateGroupRequest
                 {
-                    Group = group,
+                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 
@@ -731,7 +731,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => UpdateGroup(
                 new UpdateGroupRequest
                 {
-                    Group = group,
+                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 
@@ -793,7 +793,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => DeleteGroupAsync(
                 new DeleteGroupRequest
                 {
-                    GroupName = name,
+                    GroupName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -834,7 +834,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => DeleteGroup(
                 new DeleteGroupRequest
                 {
-                    GroupName = name,
+                    GroupName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -904,7 +904,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListGroupMembersAsync(
                 new ListGroupMembersRequest
                 {
-                    GroupName = name,
+                    GroupName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -938,7 +938,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListGroupMembers(
                 new ListGroupMembersRequest
                 {
-                    GroupName = name,
+                    GroupName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },

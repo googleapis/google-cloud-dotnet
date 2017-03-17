@@ -84,12 +84,17 @@ namespace Google.Cloud.PubSub.V1
         /// <remarks>
         /// The eligible RPC <see cref="StatusCode"/>s for retry for "OnePlusDelivery" RPC methods are:
         /// <list type="bullet">
+        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
+        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
+        /// <item><description><see cref="StatusCode.Aborted"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// </remarks>
         public static Predicate<RpcException> OnePlusDeliveryRetryFilter { get; } =
-            RetrySettings.FilterForStatusCodes(StatusCode.DeadlineExceeded, StatusCode.Unavailable);
+            RetrySettings.FilterForStatusCodes(StatusCode.Cancelled, StatusCode.Unknown, StatusCode.DeadlineExceeded, StatusCode.ResourceExhausted, StatusCode.Aborted, StatusCode.Internal, StatusCode.Unavailable);
 
         /// <summary>
         /// The filter specifying which RPC <see cref="StatusCode"/>s are eligible for retry
@@ -231,7 +236,12 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// Retry will be attempted on the following response status codes:
         /// <list>
+        /// <item><description><see cref="StatusCode.Cancelled"/></description></item>
+        /// <item><description><see cref="StatusCode.Unknown"/></description></item>
         /// <item><description><see cref="StatusCode.DeadlineExceeded"/></description></item>
+        /// <item><description><see cref="StatusCode.ResourceExhausted"/></description></item>
+        /// <item><description><see cref="StatusCode.Aborted"/></description></item>
+        /// <item><description><see cref="StatusCode.Internal"/></description></item>
         /// <item><description><see cref="StatusCode.Unavailable"/></description></item>
         /// </list>
         /// Default RPC expiration is 600000 milliseconds.
@@ -575,7 +585,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => CreateTopicAsync(
                 new Topic
                 {
-                    TopicName = name,
+                    TopicName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -624,7 +634,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => CreateTopic(
                 new Topic
                 {
-                    TopicName = name,
+                    TopicName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -690,8 +700,8 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => PublishAsync(
                 new PublishRequest
                 {
-                    TopicAsTopicName = topic,
-                    Messages = { messages },
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                    Messages = { GaxPreconditions.CheckNotNull(messages, nameof(messages)) },
                 },
                 callSettings);
 
@@ -745,8 +755,8 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => Publish(
                 new PublishRequest
                 {
-                    TopicAsTopicName = topic,
-                    Messages = { messages },
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
+                    Messages = { GaxPreconditions.CheckNotNull(messages, nameof(messages)) },
                 },
                 callSettings);
 
@@ -810,7 +820,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => GetTopicAsync(
                 new GetTopicRequest
                 {
-                    TopicAsTopicName = topic,
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
                 },
                 callSettings);
 
@@ -851,7 +861,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => GetTopic(
                 new GetTopicRequest
                 {
-                    TopicAsTopicName = topic,
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
                 },
                 callSettings);
 
@@ -921,7 +931,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => ListTopicsAsync(
                 new ListTopicsRequest
                 {
-                    ProjectAsProjectName = project,
+                    ProjectAsProjectName = GaxPreconditions.CheckNotNull(project, nameof(project)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -955,7 +965,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => ListTopics(
                 new ListTopicsRequest
                 {
-                    ProjectAsProjectName = project,
+                    ProjectAsProjectName = GaxPreconditions.CheckNotNull(project, nameof(project)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1027,7 +1037,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => ListTopicSubscriptionsAsync(
                 new ListTopicSubscriptionsRequest
                 {
-                    TopicAsTopicName = topic,
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1061,7 +1071,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => ListTopicSubscriptions(
                 new ListTopicSubscriptionsRequest
                 {
-                    TopicAsTopicName = topic,
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -1127,7 +1137,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => DeleteTopicAsync(
                 new DeleteTopicRequest
                 {
-                    TopicAsTopicName = topic,
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
                 },
                 callSettings);
 
@@ -1176,7 +1186,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => DeleteTopic(
                 new DeleteTopicRequest
                 {
-                    TopicAsTopicName = topic,
+                    TopicAsTopicName = GaxPreconditions.CheckNotNull(topic, nameof(topic)),
                 },
                 callSettings);
 
@@ -1253,8 +1263,8 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => SetIamPolicyAsync(
                 new SetIamPolicyRequest
                 {
-                    Resource = resource,
-                    Policy = policy,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -1314,8 +1324,8 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => SetIamPolicy(
                 new SetIamPolicyRequest
                 {
-                    Resource = resource,
-                    Policy = policy,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -1380,7 +1390,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => GetIamPolicyAsync(
                 new GetIamPolicyRequest
                 {
-                    Resource = resource,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -1427,7 +1437,7 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => GetIamPolicy(
                 new GetIamPolicyRequest
                 {
-                    Resource = resource,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -1501,8 +1511,8 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new TestIamPermissionsRequest
                 {
-                    Resource = resource,
-                    Permissions = { permissions },
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
@@ -1564,8 +1574,8 @@ namespace Google.Cloud.PubSub.V1
             CallSettings callSettings = null) => TestIamPermissions(
                 new TestIamPermissionsRequest
                 {
-                    Resource = resource,
-                    Permissions = { permissions },
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 

@@ -36,14 +36,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
     {
         public async Task ListDatabasesAsync()
         {
-            // Snippet: ListDatabasesAsync(string,string,int?,CallSettings)
+            // Snippet: ListDatabasesAsync(InstanceName,string,int?,CallSettings)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
             PagedAsyncEnumerable<ListDatabasesResponse,Database> response =
-                databaseAdminClient.ListDatabasesAsync(formattedParent);
+                databaseAdminClient.ListDatabasesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Database item) =>
@@ -79,14 +79,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public void ListDatabases()
         {
-            // Snippet: ListDatabases(string,string,int?,CallSettings)
+            // Snippet: ListDatabases(InstanceName,string,int?,CallSettings)
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
             PagedEnumerable<ListDatabasesResponse,Database> response =
-                databaseAdminClient.ListDatabases(formattedParent);
+                databaseAdminClient.ListDatabases(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Database item in response)
@@ -128,7 +128,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             ListDatabasesRequest request = new ListDatabasesRequest
             {
-                Parent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListDatabasesResponse,Database> response =
@@ -174,7 +174,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             ListDatabasesRequest request = new ListDatabasesRequest
             {
-                Parent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             PagedEnumerable<ListDatabasesResponse,Database> response =
@@ -214,16 +214,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public async Task CreateDatabaseAsync()
         {
-            // Snippet: CreateDatabaseAsync(string,string,CallSettings)
-            // Additional: CreateDatabaseAsync(string,string,CancellationToken)
+            // Snippet: CreateDatabaseAsync(InstanceName,string,CallSettings)
+            // Additional: CreateDatabaseAsync(InstanceName,string,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             string createStatement = "";
             // Make the request
             Operation<Database> response =
-                await databaseAdminClient.CreateDatabaseAsync(formattedParent, createStatement);
+                await databaseAdminClient.CreateDatabaseAsync(parent, createStatement);
 
             // Poll until the returned long-running operation is complete
             Operation<Database> completedResponse =
@@ -247,15 +247,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public void CreateDatabase()
         {
-            // Snippet: CreateDatabase(string,string,CallSettings)
+            // Snippet: CreateDatabase(InstanceName,string,CallSettings)
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName parent = new InstanceName("[PROJECT]", "[INSTANCE]");
             string createStatement = "";
             // Make the request
             Operation<Database> response =
-                databaseAdminClient.CreateDatabase(formattedParent, createStatement);
+                databaseAdminClient.CreateDatabase(parent, createStatement);
 
             // Poll until the returned long-running operation is complete
             Operation<Database> completedResponse =
@@ -285,7 +285,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             CreateDatabaseRequest request = new CreateDatabaseRequest
             {
-                Parent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 CreateStatement = "",
             };
             // Make the request
@@ -320,7 +320,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             CreateDatabaseRequest request = new CreateDatabaseRequest
             {
-                Parent = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                ParentAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 CreateStatement = "",
             };
             // Make the request
@@ -349,26 +349,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public async Task GetDatabaseAsync()
         {
-            // Snippet: GetDatabaseAsync(string,CallSettings)
-            // Additional: GetDatabaseAsync(string,CancellationToken)
+            // Snippet: GetDatabaseAsync(DatabaseName,CallSettings)
+            // Additional: GetDatabaseAsync(DatabaseName,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            Database response = await databaseAdminClient.GetDatabaseAsync(formattedName);
+            Database response = await databaseAdminClient.GetDatabaseAsync(name);
             // End snippet
         }
 
         public void GetDatabase()
         {
-            // Snippet: GetDatabase(string,CallSettings)
+            // Snippet: GetDatabase(DatabaseName,CallSettings)
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            Database response = databaseAdminClient.GetDatabase(formattedName);
+            Database response = databaseAdminClient.GetDatabase(name);
             // End snippet
         }
 
@@ -380,7 +380,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseRequest request = new GetDatabaseRequest
             {
-                Name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             Database response = await databaseAdminClient.GetDatabaseAsync(request);
@@ -395,7 +395,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseRequest request = new GetDatabaseRequest
             {
-                Name = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             Database response = databaseAdminClient.GetDatabase(request);
@@ -404,16 +404,16 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public async Task UpdateDatabaseDdlAsync()
         {
-            // Snippet: UpdateDatabaseDdlAsync(string,IEnumerable<string>,CallSettings)
-            // Additional: UpdateDatabaseDdlAsync(string,IEnumerable<string>,CancellationToken)
+            // Snippet: UpdateDatabaseDdlAsync(DatabaseName,IEnumerable<string>,CallSettings)
+            // Additional: UpdateDatabaseDdlAsync(DatabaseName,IEnumerable<string>,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> statements = new List<string>();
             // Make the request
             Operation<Empty> response =
-                await databaseAdminClient.UpdateDatabaseDdlAsync(formattedDatabase, statements);
+                await databaseAdminClient.UpdateDatabaseDdlAsync(database, statements);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty> completedResponse =
@@ -435,15 +435,15 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public void UpdateDatabaseDdl()
         {
-            // Snippet: UpdateDatabaseDdl(string,IEnumerable<string>,CallSettings)
+            // Snippet: UpdateDatabaseDdl(DatabaseName,IEnumerable<string>,CallSettings)
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             IEnumerable<string> statements = new List<string>();
             // Make the request
             Operation<Empty> response =
-                databaseAdminClient.UpdateDatabaseDdl(formattedDatabase, statements);
+                databaseAdminClient.UpdateDatabaseDdl(database, statements);
 
             // Poll until the returned long-running operation is complete
             Operation<Empty> completedResponse =
@@ -471,7 +471,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             UpdateDatabaseDdlRequest request = new UpdateDatabaseDdlRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { },
             };
             // Make the request
@@ -504,7 +504,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             UpdateDatabaseDdlRequest request = new UpdateDatabaseDdlRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
                 Statements = { },
             };
             // Make the request
@@ -531,26 +531,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public async Task DropDatabaseAsync()
         {
-            // Snippet: DropDatabaseAsync(string,CallSettings)
-            // Additional: DropDatabaseAsync(string,CancellationToken)
+            // Snippet: DropDatabaseAsync(DatabaseName,CallSettings)
+            // Additional: DropDatabaseAsync(DatabaseName,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            await databaseAdminClient.DropDatabaseAsync(formattedDatabase);
+            await databaseAdminClient.DropDatabaseAsync(database);
             // End snippet
         }
 
         public void DropDatabase()
         {
-            // Snippet: DropDatabase(string,CallSettings)
+            // Snippet: DropDatabase(DatabaseName,CallSettings)
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            databaseAdminClient.DropDatabase(formattedDatabase);
+            databaseAdminClient.DropDatabase(database);
             // End snippet
         }
 
@@ -562,7 +562,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             DropDatabaseRequest request = new DropDatabaseRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             await databaseAdminClient.DropDatabaseAsync(request);
@@ -577,7 +577,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             DropDatabaseRequest request = new DropDatabaseRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             databaseAdminClient.DropDatabase(request);
@@ -586,26 +586,26 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
 
         public async Task GetDatabaseDdlAsync()
         {
-            // Snippet: GetDatabaseDdlAsync(string,CallSettings)
-            // Additional: GetDatabaseDdlAsync(string,CancellationToken)
+            // Snippet: GetDatabaseDdlAsync(DatabaseName,CallSettings)
+            // Additional: GetDatabaseDdlAsync(DatabaseName,CancellationToken)
             // Create client
             DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(formattedDatabase);
+            GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(database);
             // End snippet
         }
 
         public void GetDatabaseDdl()
         {
-            // Snippet: GetDatabaseDdl(string,CallSettings)
+            // Snippet: GetDatabaseDdl(DatabaseName,CallSettings)
             // Create client
             DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
             // Initialize request argument(s)
-            string formattedDatabase = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString();
+            DatabaseName database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]");
             // Make the request
-            GetDatabaseDdlResponse response = databaseAdminClient.GetDatabaseDdl(formattedDatabase);
+            GetDatabaseDdlResponse response = databaseAdminClient.GetDatabaseDdl(database);
             // End snippet
         }
 
@@ -617,7 +617,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             GetDatabaseDdlResponse response = await databaseAdminClient.GetDatabaseDdlAsync(request);
@@ -632,7 +632,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
             // Initialize request argument(s)
             GetDatabaseDdlRequest request = new GetDatabaseDdlRequest
             {
-                Database = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]").ToString(),
+                DatabaseAsDatabaseName = new DatabaseName("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
             };
             // Make the request
             GetDatabaseDdlResponse response = databaseAdminClient.GetDatabaseDdl(request);

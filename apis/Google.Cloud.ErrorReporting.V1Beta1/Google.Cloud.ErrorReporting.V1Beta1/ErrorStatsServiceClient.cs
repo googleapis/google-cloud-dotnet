@@ -354,8 +354,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => ListGroupStatsAsync(
                 new ListGroupStatsRequest
                 {
-                    ProjectNameAsProjectName = projectName,
-                    TimeRange = timeRange,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    TimeRange = GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -403,8 +403,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => ListGroupStats(
                 new ListGroupStatsRequest
                 {
-                    ProjectNameAsProjectName = projectName,
-                    TimeRange = timeRange,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    TimeRange = GaxPreconditions.CheckNotNull(timeRange, nameof(timeRange)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -483,8 +483,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => ListEventsAsync(
                 new ListEventsRequest
                 {
-                    ProjectNameAsProjectName = projectName,
-                    GroupId = groupId,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    GroupId = GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -525,8 +525,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => ListEvents(
                 new ListEventsRequest
                 {
-                    ProjectNameAsProjectName = projectName,
-                    GroupId = groupId,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    GroupId = GaxPreconditions.CheckNotNullOrEmpty(groupId, nameof(groupId)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -591,7 +591,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => DeleteEventsAsync(
                 new DeleteEventsRequest
                 {
-                    ProjectNameAsProjectName = projectName,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 },
                 callSettings);
 
@@ -638,7 +638,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => DeleteEvents(
                 new DeleteEventsRequest
                 {
-                    ProjectNameAsProjectName = projectName,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
                 },
                 callSettings);
 

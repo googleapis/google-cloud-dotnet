@@ -535,13 +535,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A pageable asynchronous sequence of <see cref="Database"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListDatabasesResponse, Database> ListDatabasesAsync(
-            string parent,
+            InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListDatabasesAsync(
                 new ListDatabasesRequest
                 {
-                    Parent = parent,
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -569,13 +569,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A pageable sequence of <see cref="Database"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListDatabasesResponse, Database> ListDatabases(
-            string parent,
+            InstanceName parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListDatabases(
                 new ListDatabasesRequest
                 {
-                    Parent = parent,
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -645,13 +645,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Operation<Database>> CreateDatabaseAsync(
-            string parent,
+            InstanceName parent,
             string createStatement,
             CallSettings callSettings = null) => CreateDatabaseAsync(
                 new CreateDatabaseRequest
                 {
-                    Parent = parent,
-                    CreateStatement = createStatement,
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    CreateStatement = GaxPreconditions.CheckNotNullOrEmpty(createStatement, nameof(createStatement)),
                 },
                 callSettings);
 
@@ -681,14 +681,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Operation<Database>> CreateDatabaseAsync(
-            string parent,
+            InstanceName parent,
             string createStatement,
             CancellationToken cancellationToken) => CreateDatabaseAsync(
-                new CreateDatabaseRequest
-                {
-                    Parent = parent,
-                    CreateStatement = createStatement,
-                },
+                parent,
+                createStatement,
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -717,13 +714,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual Operation<Database> CreateDatabase(
-            string parent,
+            InstanceName parent,
             string createStatement,
             CallSettings callSettings = null) => CreateDatabase(
                 new CreateDatabaseRequest
                 {
-                    Parent = parent,
-                    CreateStatement = createStatement,
+                    ParentAsInstanceName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    CreateStatement = GaxPreconditions.CheckNotNullOrEmpty(createStatement, nameof(createStatement)),
                 },
                 callSettings);
 
@@ -819,11 +816,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Database> GetDatabaseAsync(
-            string name,
+            DatabaseName name,
             CallSettings callSettings = null) => GetDatabaseAsync(
                 new GetDatabaseRequest
                 {
-                    Name = name,
+                    DatabaseName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -841,7 +838,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Database> GetDatabaseAsync(
-            string name,
+            DatabaseName name,
             CancellationToken cancellationToken) => GetDatabaseAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -860,11 +857,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual Database GetDatabase(
-            string name,
+            DatabaseName name,
             CallSettings callSettings = null) => GetDatabase(
                 new GetDatabaseRequest
                 {
-                    Name = name,
+                    DatabaseName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -928,13 +925,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Operation<Empty>> UpdateDatabaseDdlAsync(
-            string database,
+            DatabaseName database,
             IEnumerable<string> statements,
             CallSettings callSettings = null) => UpdateDatabaseDdlAsync(
                 new UpdateDatabaseDdlRequest
                 {
-                    Database = database,
-                    Statements = { statements },
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
+                    Statements = { GaxPreconditions.CheckNotNull(statements, nameof(statements)) },
                 },
                 callSettings);
 
@@ -960,14 +957,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Operation<Empty>> UpdateDatabaseDdlAsync(
-            string database,
+            DatabaseName database,
             IEnumerable<string> statements,
             CancellationToken cancellationToken) => UpdateDatabaseDdlAsync(
-                new UpdateDatabaseDdlRequest
-                {
-                    Database = database,
-                    Statements = { statements },
-                },
+                database,
+                statements,
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -992,13 +986,13 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual Operation<Empty> UpdateDatabaseDdl(
-            string database,
+            DatabaseName database,
             IEnumerable<string> statements,
             CallSettings callSettings = null) => UpdateDatabaseDdl(
                 new UpdateDatabaseDdlRequest
                 {
-                    Database = database,
-                    Statements = { statements },
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
+                    Statements = { GaxPreconditions.CheckNotNull(statements, nameof(statements)) },
                 },
                 callSettings);
 
@@ -1091,11 +1085,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DropDatabaseAsync(
-            string database,
+            DatabaseName database,
             CallSettings callSettings = null) => DropDatabaseAsync(
                 new DropDatabaseRequest
                 {
-                    Database = database,
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -1112,7 +1106,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DropDatabaseAsync(
-            string database,
+            DatabaseName database,
             CancellationToken cancellationToken) => DropDatabaseAsync(
                 database,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -1130,11 +1124,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual void DropDatabase(
-            string database,
+            DatabaseName database,
             CallSettings callSettings = null) => DropDatabase(
                 new DropDatabaseRequest
                 {
-                    Database = database,
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -1191,11 +1185,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
-            string database,
+            DatabaseName database,
             CallSettings callSettings = null) => GetDatabaseDdlAsync(
                 new GetDatabaseDdlRequest
                 {
-                    Database = database,
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -1214,7 +1208,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<GetDatabaseDdlResponse> GetDatabaseDdlAsync(
-            string database,
+            DatabaseName database,
             CancellationToken cancellationToken) => GetDatabaseDdlAsync(
                 database,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -1234,11 +1228,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// The RPC response.
         /// </returns>
         public virtual GetDatabaseDdlResponse GetDatabaseDdl(
-            string database,
+            DatabaseName database,
             CallSettings callSettings = null) => GetDatabaseDdl(
                 new GetDatabaseDdlRequest
                 {
-                    Database = database,
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -1314,8 +1308,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CallSettings callSettings = null) => SetIamPolicyAsync(
                 new SetIamPolicyRequest
                 {
-                    Resource = resource,
-                    Policy = policy,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -1381,8 +1375,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CallSettings callSettings = null) => SetIamPolicy(
                 new SetIamPolicyRequest
                 {
-                    Resource = resource,
-                    Policy = policy,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -1455,7 +1449,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CallSettings callSettings = null) => GetIamPolicyAsync(
                 new GetIamPolicyRequest
                 {
-                    Resource = resource,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -1506,7 +1500,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CallSettings callSettings = null) => GetIamPolicy(
                 new GetIamPolicyRequest
                 {
-                    Resource = resource,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -1587,8 +1581,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new TestIamPermissionsRequest
                 {
-                    Resource = resource,
-                    Permissions = { permissions },
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
@@ -1656,8 +1650,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             CallSettings callSettings = null) => TestIamPermissions(
                 new TestIamPermissionsRequest
                 {
-                    Resource = resource,
-                    Permissions = { permissions },
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
