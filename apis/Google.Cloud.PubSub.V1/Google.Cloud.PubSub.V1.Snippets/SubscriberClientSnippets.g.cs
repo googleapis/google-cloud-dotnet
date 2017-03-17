@@ -35,8 +35,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
     {
         public async Task CreateSubscriptionAsync()
         {
-            // Snippet: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int,CallSettings)
-            // Additional: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int,CancellationToken)
+            // Snippet: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int?,CallSettings)
+            // Additional: CreateSubscriptionAsync(SubscriptionName,TopicName,PushConfig,int?,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
@@ -51,7 +51,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public void CreateSubscription()
         {
-            // Snippet: CreateSubscription(SubscriptionName,TopicName,PushConfig,int,CallSettings)
+            // Snippet: CreateSubscription(SubscriptionName,TopicName,PushConfig,int?,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
@@ -540,8 +540,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public async Task PullAsync()
         {
-            // Snippet: PullAsync(SubscriptionName,bool,int,CallSettings)
-            // Additional: PullAsync(SubscriptionName,bool,int,CancellationToken)
+            // Snippet: PullAsync(SubscriptionName,bool?,int,CallSettings)
+            // Additional: PullAsync(SubscriptionName,bool?,int,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
@@ -555,7 +555,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public void Pull()
         {
-            // Snippet: Pull(SubscriptionName,bool,int,CallSettings)
+            // Snippet: Pull(SubscriptionName,bool?,int,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
@@ -703,14 +703,14 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public async Task ListSnapshotsAsync()
         {
-            // Snippet: ListSnapshotsAsync(string,string,int?,CallSettings)
+            // Snippet: ListSnapshotsAsync(ProjectName,string,int?,CallSettings)
             // Create client
             SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedProject = new ProjectName("[PROJECT]").ToString();
+            ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
             PagedAsyncEnumerable<ListSnapshotsResponse,Snapshot> response =
-                subscriberClient.ListSnapshotsAsync(formattedProject);
+                subscriberClient.ListSnapshotsAsync(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Snapshot item) =>
@@ -746,14 +746,14 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public void ListSnapshots()
         {
-            // Snippet: ListSnapshots(string,string,int?,CallSettings)
+            // Snippet: ListSnapshots(ProjectName,string,int?,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedProject = new ProjectName("[PROJECT]").ToString();
+            ProjectName project = new ProjectName("[PROJECT]");
             // Make the request
             PagedEnumerable<ListSnapshotsResponse,Snapshot> response =
-                subscriberClient.ListSnapshots(formattedProject);
+                subscriberClient.ListSnapshots(project);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Snapshot item in response)
@@ -795,7 +795,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             ListSnapshotsRequest request = new ListSnapshotsRequest
             {
-                Project = new ProjectName("[PROJECT]").ToString(),
+                ProjectAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListSnapshotsResponse,Snapshot> response =
@@ -841,7 +841,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             ListSnapshotsRequest request = new ListSnapshotsRequest
             {
-                Project = new ProjectName("[PROJECT]").ToString(),
+                ProjectAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListSnapshotsResponse,Snapshot> response =
@@ -881,28 +881,28 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public async Task CreateSnapshotAsync()
         {
-            // Snippet: CreateSnapshotAsync(string,string,CallSettings)
-            // Additional: CreateSnapshotAsync(string,string,CancellationToken)
+            // Snippet: CreateSnapshotAsync(SnapshotName,SubscriptionName,CallSettings)
+            // Additional: CreateSnapshotAsync(SnapshotName,SubscriptionName,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
-            string formattedSubscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
+            SnapshotName name = new SnapshotName("[PROJECT]", "[SNAPSHOT]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
-            Snapshot response = await subscriberClient.CreateSnapshotAsync(formattedName, formattedSubscription);
+            Snapshot response = await subscriberClient.CreateSnapshotAsync(name, subscription);
             // End snippet
         }
 
         public void CreateSnapshot()
         {
-            // Snippet: CreateSnapshot(string,string,CallSettings)
+            // Snippet: CreateSnapshot(SnapshotName,SubscriptionName,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedName = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
-            string formattedSubscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString();
+            SnapshotName name = new SnapshotName("[PROJECT]", "[SNAPSHOT]");
+            SubscriptionName subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]");
             // Make the request
-            Snapshot response = subscriberClient.CreateSnapshot(formattedName, formattedSubscription);
+            Snapshot response = subscriberClient.CreateSnapshot(name, subscription);
             // End snippet
         }
 
@@ -914,8 +914,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
-                Name = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
-                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                SnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             Snapshot response = await subscriberClient.CreateSnapshotAsync(request);
@@ -930,8 +930,8 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
-                Name = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
-                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                SnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             Snapshot response = subscriberClient.CreateSnapshot(request);
@@ -940,26 +940,26 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
         public async Task DeleteSnapshotAsync()
         {
-            // Snippet: DeleteSnapshotAsync(string,CallSettings)
-            // Additional: DeleteSnapshotAsync(string,CancellationToken)
+            // Snippet: DeleteSnapshotAsync(SnapshotName,CallSettings)
+            // Additional: DeleteSnapshotAsync(SnapshotName,CancellationToken)
             // Create client
             SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedSnapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
+            SnapshotName snapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]");
             // Make the request
-            await subscriberClient.DeleteSnapshotAsync(formattedSnapshot);
+            await subscriberClient.DeleteSnapshotAsync(snapshot);
             // End snippet
         }
 
         public void DeleteSnapshot()
         {
-            // Snippet: DeleteSnapshot(string,CallSettings)
+            // Snippet: DeleteSnapshot(SnapshotName,CallSettings)
             // Create client
             SubscriberClient subscriberClient = SubscriberClient.Create();
             // Initialize request argument(s)
-            string formattedSnapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString();
+            SnapshotName snapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]");
             // Make the request
-            subscriberClient.DeleteSnapshot(formattedSnapshot);
+            subscriberClient.DeleteSnapshot(snapshot);
             // End snippet
         }
 
@@ -971,7 +971,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
+                SnapshotAsSnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
             };
             // Make the request
             await subscriberClient.DeleteSnapshotAsync(request);
@@ -986,7 +986,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
-                Snapshot = new SnapshotName("[PROJECT]", "[SNAPSHOT]").ToString(),
+                SnapshotAsSnapshotName = new SnapshotName("[PROJECT]", "[SNAPSHOT]"),
             };
             // Make the request
             subscriberClient.DeleteSnapshot(request);
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             SeekRequest request = new SeekRequest
             {
-                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             SeekResponse response = await subscriberClient.SeekAsync(request);
@@ -1016,7 +1016,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
             // Initialize request argument(s)
             SeekRequest request = new SeekRequest
             {
-                Subscription = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]").ToString(),
+                SubscriptionAsSubscriptionName = new SubscriptionName("[PROJECT]", "[SUBSCRIPTION]"),
             };
             // Make the request
             SeekResponse response = subscriberClient.Seek(request);

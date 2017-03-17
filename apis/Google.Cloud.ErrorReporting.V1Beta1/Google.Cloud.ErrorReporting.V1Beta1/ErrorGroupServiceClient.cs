@@ -305,7 +305,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => GetGroupAsync(
                 new GetGroupRequest
                 {
-                    GroupNameAsGroupName = groupName,
+                    GroupNameAsGroupName = GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
                 },
                 callSettings);
 
@@ -358,7 +358,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => GetGroup(
                 new GetGroupRequest
                 {
-                    GroupNameAsGroupName = groupName,
+                    GroupNameAsGroupName = GaxPreconditions.CheckNotNull(groupName, nameof(groupName)),
                 },
                 callSettings);
 
@@ -418,7 +418,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => UpdateGroupAsync(
                 new UpdateGroupRequest
                 {
-                    Group = group,
+                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 
@@ -459,7 +459,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => UpdateGroup(
                 new UpdateGroupRequest
                 {
-                    Group = group,
+                    Group = GaxPreconditions.CheckNotNull(group, nameof(group)),
                 },
                 callSettings);
 

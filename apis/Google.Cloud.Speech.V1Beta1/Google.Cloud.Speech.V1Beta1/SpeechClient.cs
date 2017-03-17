@@ -340,8 +340,8 @@ namespace Google.Cloud.Speech.V1Beta1
             CallSettings callSettings = null) => SyncRecognizeAsync(
                 new SyncRecognizeRequest
                 {
-                    Config = config,
-                    Audio = audio,
+                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 
@@ -393,8 +393,8 @@ namespace Google.Cloud.Speech.V1Beta1
             CallSettings callSettings = null) => SyncRecognize(
                 new SyncRecognizeRequest
                 {
-                    Config = config,
-                    Audio = audio,
+                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 
@@ -463,8 +463,8 @@ namespace Google.Cloud.Speech.V1Beta1
             CallSettings callSettings = null) => AsyncRecognizeAsync(
                 new AsyncRecognizeRequest
                 {
-                    Config = config,
-                    Audio = audio,
+                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 
@@ -491,11 +491,8 @@ namespace Google.Cloud.Speech.V1Beta1
             RecognitionConfig config,
             RecognitionAudio audio,
             CancellationToken cancellationToken) => AsyncRecognizeAsync(
-                new AsyncRecognizeRequest
-                {
-                    Config = config,
-                    Audio = audio,
-                },
+                config,
+                audio,
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -523,8 +520,8 @@ namespace Google.Cloud.Speech.V1Beta1
             CallSettings callSettings = null) => AsyncRecognize(
                 new AsyncRecognizeRequest
                 {
-                    Config = config,
-                    Audio = audio,
+                    Config = GaxPreconditions.CheckNotNull(config, nameof(config)),
+                    Audio = GaxPreconditions.CheckNotNull(audio, nameof(audio)),
                 },
                 callSettings);
 

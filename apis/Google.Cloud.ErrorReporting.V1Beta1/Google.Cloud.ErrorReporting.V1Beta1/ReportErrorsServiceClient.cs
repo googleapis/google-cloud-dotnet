@@ -280,8 +280,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => ReportErrorEventAsync(
                 new ReportErrorEventRequest
                 {
-                    ProjectNameAsProjectName = projectName,
-                    Event = @event,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    Event = GaxPreconditions.CheckNotNull(@event, nameof(@event)),
                 },
                 callSettings);
 
@@ -349,8 +349,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1
             CallSettings callSettings = null) => ReportErrorEvent(
                 new ReportErrorEventRequest
                 {
-                    ProjectNameAsProjectName = projectName,
-                    Event = @event,
+                    ProjectNameAsProjectName = GaxPreconditions.CheckNotNull(projectName, nameof(projectName)),
+                    Event = GaxPreconditions.CheckNotNull(@event, nameof(@event)),
                 },
                 callSettings);
 

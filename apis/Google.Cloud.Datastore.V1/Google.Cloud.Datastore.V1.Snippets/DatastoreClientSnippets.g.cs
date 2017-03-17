@@ -70,7 +70,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
             LookupRequest request = new LookupRequest
             {
                 ProjectId = "",
-                ReadOptions = new ReadOptions(),
                 Keys = { },
             };
             // Make the request
@@ -87,7 +86,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
             LookupRequest request = new LookupRequest
             {
                 ProjectId = "",
-                ReadOptions = new ReadOptions(),
                 Keys = { },
             };
             // Make the request
@@ -105,7 +103,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 ProjectId = "",
                 PartitionId = new PartitionId(),
-                ReadOptions = new ReadOptions(),
             };
             // Make the request
             RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
@@ -122,7 +119,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 ProjectId = "",
                 PartitionId = new PartitionId(),
-                ReadOptions = new ReadOptions(),
             };
             // Make the request
             RunQueryResponse response = datastoreClient.RunQuery(request);

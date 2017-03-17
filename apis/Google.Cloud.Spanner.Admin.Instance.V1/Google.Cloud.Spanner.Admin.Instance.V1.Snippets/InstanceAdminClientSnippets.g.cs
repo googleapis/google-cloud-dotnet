@@ -36,14 +36,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
     {
         public async Task ListInstanceConfigsAsync()
         {
-            // Snippet: ListInstanceConfigsAsync(string,string,int?,CallSettings)
+            // Snippet: ListInstanceConfigsAsync(ProjectName,string,int?,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedAsyncEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
-                instanceAdminClient.ListInstanceConfigsAsync(formattedParent);
+                instanceAdminClient.ListInstanceConfigsAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((InstanceConfig item) =>
@@ -79,14 +79,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public void ListInstanceConfigs()
         {
-            // Snippet: ListInstanceConfigs(string,string,int?,CallSettings)
+            // Snippet: ListInstanceConfigs(ProjectName,string,int?,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
-                instanceAdminClient.ListInstanceConfigs(formattedParent);
+                instanceAdminClient.ListInstanceConfigs(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (InstanceConfig item in response)
@@ -128,7 +128,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
@@ -174,7 +174,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ListInstanceConfigsRequest request = new ListInstanceConfigsRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListInstanceConfigsResponse,InstanceConfig> response =
@@ -214,26 +214,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public async Task GetInstanceConfigAsync()
         {
-            // Snippet: GetInstanceConfigAsync(string,CallSettings)
-            // Additional: GetInstanceConfigAsync(string,CancellationToken)
+            // Snippet: GetInstanceConfigAsync(InstanceConfigName,CallSettings)
+            // Additional: GetInstanceConfigAsync(InstanceConfigName,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]").ToString();
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
             // Make the request
-            InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(formattedName);
+            InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(name);
             // End snippet
         }
 
         public void GetInstanceConfig()
         {
-            // Snippet: GetInstanceConfig(string,CallSettings)
+            // Snippet: GetInstanceConfig(InstanceConfigName,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]").ToString();
+            InstanceConfigName name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]");
             // Make the request
-            InstanceConfig response = instanceAdminClient.GetInstanceConfig(formattedName);
+            InstanceConfig response = instanceAdminClient.GetInstanceConfig(name);
             // End snippet
         }
 
@@ -245,7 +245,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                Name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]").ToString(),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
             };
             // Make the request
             InstanceConfig response = await instanceAdminClient.GetInstanceConfigAsync(request);
@@ -260,7 +260,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetInstanceConfigRequest request = new GetInstanceConfigRequest
             {
-                Name = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]").ToString(),
+                InstanceConfigName = new InstanceConfigName("[PROJECT]", "[INSTANCE_CONFIG]"),
             };
             // Make the request
             InstanceConfig response = instanceAdminClient.GetInstanceConfig(request);
@@ -269,14 +269,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public async Task ListInstancesAsync()
         {
-            // Snippet: ListInstancesAsync(string,string,int?,CallSettings)
+            // Snippet: ListInstancesAsync(ProjectName,string,int?,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedAsyncEnumerable<ListInstancesResponse,Instance> response =
-                instanceAdminClient.ListInstancesAsync(formattedParent);
+                instanceAdminClient.ListInstancesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Instance item) =>
@@ -312,14 +312,14 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public void ListInstances()
         {
-            // Snippet: ListInstances(string,string,int?,CallSettings)
+            // Snippet: ListInstances(ProjectName,string,int?,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
+            ProjectName parent = new ProjectName("[PROJECT]");
             // Make the request
             PagedEnumerable<ListInstancesResponse,Instance> response =
-                instanceAdminClient.ListInstances(formattedParent);
+                instanceAdminClient.ListInstances(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Instance item in response)
@@ -361,7 +361,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ListInstancesRequest request = new ListInstancesRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedAsyncEnumerable<ListInstancesResponse,Instance> response =
@@ -407,7 +407,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             ListInstancesRequest request = new ListInstancesRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
             };
             // Make the request
             PagedEnumerable<ListInstancesResponse,Instance> response =
@@ -447,26 +447,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public async Task GetInstanceAsync()
         {
-            // Snippet: GetInstanceAsync(string,CallSettings)
-            // Additional: GetInstanceAsync(string,CancellationToken)
+            // Snippet: GetInstanceAsync(InstanceName,CallSettings)
+            // Additional: GetInstanceAsync(InstanceName,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            Instance response = await instanceAdminClient.GetInstanceAsync(formattedName);
+            Instance response = await instanceAdminClient.GetInstanceAsync(name);
             // End snippet
         }
 
         public void GetInstance()
         {
-            // Snippet: GetInstance(string,CallSettings)
+            // Snippet: GetInstance(InstanceName,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            Instance response = instanceAdminClient.GetInstance(formattedName);
+            Instance response = instanceAdminClient.GetInstance(name);
             // End snippet
         }
 
@@ -478,7 +478,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetInstanceRequest request = new GetInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             Instance response = await instanceAdminClient.GetInstanceAsync(request);
@@ -493,7 +493,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             GetInstanceRequest request = new GetInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             Instance response = instanceAdminClient.GetInstance(request);
@@ -502,17 +502,17 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public async Task CreateInstanceAsync()
         {
-            // Snippet: CreateInstanceAsync(string,string,Instance,CallSettings)
-            // Additional: CreateInstanceAsync(string,string,Instance,CancellationToken)
+            // Snippet: CreateInstanceAsync(ProjectName,InstanceName,Instance,CallSettings)
+            // Additional: CreateInstanceAsync(ProjectName,InstanceName,Instance,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
-            string instanceId = "";
+            ProjectName parent = new ProjectName("[PROJECT]");
+            InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
             Instance instance = new Instance();
             // Make the request
             Operation<Instance> response =
-                await instanceAdminClient.CreateInstanceAsync(formattedParent, instanceId, instance);
+                await instanceAdminClient.CreateInstanceAsync(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance> completedResponse =
@@ -536,16 +536,16 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public void CreateInstance()
         {
-            // Snippet: CreateInstance(string,string,Instance,CallSettings)
+            // Snippet: CreateInstance(ProjectName,InstanceName,Instance,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedParent = new ProjectName("[PROJECT]").ToString();
-            string instanceId = "";
+            ProjectName parent = new ProjectName("[PROJECT]");
+            InstanceName instanceId = new InstanceName("[PROJECT]", "[INSTANCE]");
             Instance instance = new Instance();
             // Make the request
             Operation<Instance> response =
-                instanceAdminClient.CreateInstance(formattedParent, instanceId, instance);
+                instanceAdminClient.CreateInstance(parent, instanceId, instance);
 
             // Poll until the returned long-running operation is complete
             Operation<Instance> completedResponse =
@@ -575,8 +575,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             CreateInstanceRequest request = new CreateInstanceRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
-                InstanceId = "",
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                InstanceIdAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Instance = new Instance(),
             };
             // Make the request
@@ -611,8 +611,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             CreateInstanceRequest request = new CreateInstanceRequest
             {
-                Parent = new ProjectName("[PROJECT]").ToString(),
-                InstanceId = "",
+                ParentAsProjectName = new ProjectName("[PROJECT]"),
+                InstanceIdAsInstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
                 Instance = new Instance(),
             };
             // Make the request
@@ -776,26 +776,26 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
 
         public async Task DeleteInstanceAsync()
         {
-            // Snippet: DeleteInstanceAsync(string,CallSettings)
-            // Additional: DeleteInstanceAsync(string,CancellationToken)
+            // Snippet: DeleteInstanceAsync(InstanceName,CallSettings)
+            // Additional: DeleteInstanceAsync(InstanceName,CancellationToken)
             // Create client
             InstanceAdminClient instanceAdminClient = await InstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            await instanceAdminClient.DeleteInstanceAsync(formattedName);
+            await instanceAdminClient.DeleteInstanceAsync(name);
             // End snippet
         }
 
         public void DeleteInstance()
         {
-            // Snippet: DeleteInstance(string,CallSettings)
+            // Snippet: DeleteInstance(InstanceName,CallSettings)
             // Create client
             InstanceAdminClient instanceAdminClient = InstanceAdminClient.Create();
             // Initialize request argument(s)
-            string formattedName = new InstanceName("[PROJECT]", "[INSTANCE]").ToString();
+            InstanceName name = new InstanceName("[PROJECT]", "[INSTANCE]");
             // Make the request
-            instanceAdminClient.DeleteInstance(formattedName);
+            instanceAdminClient.DeleteInstance(name);
             // End snippet
         }
 
@@ -807,7 +807,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             await instanceAdminClient.DeleteInstanceAsync(request);
@@ -822,7 +822,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1.Snippets
             // Initialize request argument(s)
             DeleteInstanceRequest request = new DeleteInstanceRequest
             {
-                Name = new InstanceName("[PROJECT]", "[INSTANCE]").ToString(),
+                InstanceName = new InstanceName("[PROJECT]", "[INSTANCE]"),
             };
             // Make the request
             instanceAdminClient.DeleteInstance(request);

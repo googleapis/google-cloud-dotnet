@@ -361,7 +361,7 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnalyzeSentimentAsync(
                 new AnalyzeSentimentRequest
                 {
-                    Document = document,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                 },
                 callSettings);
 
@@ -402,7 +402,7 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnalyzeSentiment(
                 new AnalyzeSentimentRequest
                 {
-                    Document = document,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                 },
                 callSettings);
 
@@ -466,7 +466,7 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnalyzeEntitiesAsync(
                 new AnalyzeEntitiesRequest
                 {
-                    Document = document,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType,
                 },
                 callSettings);
@@ -517,7 +517,7 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnalyzeEntities(
                 new AnalyzeEntitiesRequest
                 {
-                    Document = document,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType,
                 },
                 callSettings);
@@ -585,7 +585,7 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnalyzeSyntaxAsync(
                 new AnalyzeSyntaxRequest
                 {
-                    Document = document,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType,
                 },
                 callSettings);
@@ -638,7 +638,7 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnalyzeSyntax(
                 new AnalyzeSyntaxRequest
                 {
-                    Document = document,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
                     EncodingType = encodingType,
                 },
                 callSettings);
@@ -711,8 +711,8 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnnotateTextAsync(
                 new AnnotateTextRequest
                 {
-                    Document = document,
-                    Features = features,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Features = GaxPreconditions.CheckNotNull(features, nameof(features)),
                     EncodingType = encodingType,
                 },
                 callSettings);
@@ -772,8 +772,8 @@ namespace Google.Cloud.Language.V1
             CallSettings callSettings = null) => AnnotateText(
                 new AnnotateTextRequest
                 {
-                    Document = document,
-                    Features = features,
+                    Document = GaxPreconditions.CheckNotNull(document, nameof(document)),
+                    Features = GaxPreconditions.CheckNotNull(features, nameof(features)),
                     EncodingType = encodingType,
                 },
                 callSettings);

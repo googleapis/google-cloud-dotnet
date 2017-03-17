@@ -429,9 +429,9 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => LookupAsync(
                 new LookupRequest
                 {
-                    ProjectId = projectId,
-                    ReadOptions = readOptions,
-                    Keys = { keys },
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ReadOptions = readOptions, // Optional
+                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -488,9 +488,9 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => Lookup(
                 new LookupRequest
                 {
-                    ProjectId = projectId,
-                    ReadOptions = readOptions,
-                    Keys = { keys },
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    ReadOptions = readOptions, // Optional
+                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -587,7 +587,7 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => BeginTransactionAsync(
                 new BeginTransactionRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 },
                 callSettings);
 
@@ -626,7 +626,7 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => BeginTransaction(
                 new BeginTransactionRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                 },
                 callSettings);
 
@@ -712,10 +712,10 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Transaction = transaction,
-                    Mutations = { mutations },
+                    Transaction = transaction ?? ByteString.Empty, // Optional
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -811,10 +811,10 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Transaction = transaction,
-                    Mutations = { mutations },
+                    Transaction = transaction ?? ByteString.Empty, // Optional
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -856,9 +856,9 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Mutations = { mutations },
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -941,9 +941,9 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     Mode = mode,
-                    Mutations = { mutations },
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1009,8 +1009,8 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
-                    ProjectId = projectId,
-                    Transaction = transaction,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
                 },
                 callSettings);
 
@@ -1060,8 +1060,8 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
-                    ProjectId = projectId,
-                    Transaction = transaction,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction)),
                 },
                 callSettings);
 
@@ -1126,8 +1126,8 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => AllocateIdsAsync(
                 new AllocateIdsRequest
                 {
-                    ProjectId = projectId,
-                    Keys = { keys },
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 
@@ -1179,8 +1179,8 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null) => AllocateIds(
                 new AllocateIdsRequest
                 {
-                    ProjectId = projectId,
-                    Keys = { keys },
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Keys = { GaxPreconditions.CheckNotNull(keys, nameof(keys)) },
                 },
                 callSettings);
 

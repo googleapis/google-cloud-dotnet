@@ -566,13 +566,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable asynchronous sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigsAsync(
-            string parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListInstanceConfigsAsync(
                 new ListInstanceConfigsRequest
                 {
-                    Parent = parent,
+                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -601,13 +601,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable sequence of <see cref="InstanceConfig"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListInstanceConfigsResponse, InstanceConfig> ListInstanceConfigs(
-            string parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListInstanceConfigs(
                 new ListInstanceConfigsRequest
                 {
-                    Parent = parent,
+                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -665,11 +665,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<InstanceConfig> GetInstanceConfigAsync(
-            string name,
+            InstanceConfigName name,
             CallSettings callSettings = null) => GetInstanceConfigAsync(
                 new GetInstanceConfigRequest
                 {
-                    Name = name,
+                    InstanceConfigName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -687,7 +687,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<InstanceConfig> GetInstanceConfigAsync(
-            string name,
+            InstanceConfigName name,
             CancellationToken cancellationToken) => GetInstanceConfigAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -706,11 +706,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual InstanceConfig GetInstanceConfig(
-            string name,
+            InstanceConfigName name,
             CallSettings callSettings = null) => GetInstanceConfig(
                 new GetInstanceConfigRequest
                 {
-                    Name = name,
+                    InstanceConfigName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -774,13 +774,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable asynchronous sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual PagedAsyncEnumerable<ListInstancesResponse, Instance> ListInstancesAsync(
-            string parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListInstancesAsync(
                 new ListInstancesRequest
                 {
-                    Parent = parent,
+                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -808,13 +808,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A pageable sequence of <see cref="Instance"/> resources.
         /// </returns>
         public virtual PagedEnumerable<ListInstancesResponse, Instance> ListInstances(
-            string parent,
+            ProjectName parent,
             string pageToken = null,
             int? pageSize = null,
             CallSettings callSettings = null) => ListInstances(
                 new ListInstancesRequest
                 {
-                    Parent = parent,
+                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -872,11 +872,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Instance> GetInstanceAsync(
-            string name,
+            InstanceName name,
             CallSettings callSettings = null) => GetInstanceAsync(
                 new GetInstanceRequest
                 {
-                    Name = name,
+                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -894,7 +894,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Instance> GetInstanceAsync(
-            string name,
+            InstanceName name,
             CancellationToken cancellationToken) => GetInstanceAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -913,11 +913,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual Instance GetInstance(
-            string name,
+            InstanceName name,
             CallSettings callSettings = null) => GetInstance(
                 new GetInstanceRequest
                 {
-                    Name = name,
+                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1015,15 +1015,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Operation<Instance>> CreateInstanceAsync(
-            string parent,
-            string instanceId,
+            ProjectName parent,
+            InstanceName instanceId,
             Instance instance,
             CallSettings callSettings = null) => CreateInstanceAsync(
                 new CreateInstanceRequest
                 {
-                    Parent = parent,
-                    InstanceId = instanceId,
-                    Instance = instance,
+                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InstanceIdAsInstanceName = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
+                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
                 callSettings);
 
@@ -1083,16 +1083,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task<Operation<Instance>> CreateInstanceAsync(
-            string parent,
-            string instanceId,
+            ProjectName parent,
+            InstanceName instanceId,
             Instance instance,
             CancellationToken cancellationToken) => CreateInstanceAsync(
-                new CreateInstanceRequest
-                {
-                    Parent = parent,
-                    InstanceId = instanceId,
-                    Instance = instance,
-                },
+                parent,
+                instanceId,
+                instance,
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1151,15 +1148,15 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual Operation<Instance> CreateInstance(
-            string parent,
-            string instanceId,
+            ProjectName parent,
+            InstanceName instanceId,
             Instance instance,
             CallSettings callSettings = null) => CreateInstance(
                 new CreateInstanceRequest
                 {
-                    Parent = parent,
-                    InstanceId = instanceId,
-                    Instance = instance,
+                    ParentAsProjectName = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    InstanceIdAsInstanceName = GaxPreconditions.CheckNotNull(instanceId, nameof(instanceId)),
+                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 },
                 callSettings);
 
@@ -1357,8 +1354,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => UpdateInstanceAsync(
                 new UpdateInstanceRequest
                 {
-                    Instance = instance,
-                    FieldMask = fieldMask,
+                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    FieldMask = GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
                 },
                 callSettings);
 
@@ -1424,11 +1421,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             Instance instance,
             FieldMask fieldMask,
             CancellationToken cancellationToken) => UpdateInstanceAsync(
-                new UpdateInstanceRequest
-                {
-                    Instance = instance,
-                    FieldMask = fieldMask,
-                },
+                instance,
+                fieldMask,
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1495,8 +1489,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => UpdateInstance(
                 new UpdateInstanceRequest
                 {
-                    Instance = instance,
-                    FieldMask = fieldMask,
+                    Instance = GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                    FieldMask = GaxPreconditions.CheckNotNull(fieldMask, nameof(fieldMask)),
                 },
                 callSettings);
 
@@ -1666,11 +1660,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
-            string name,
+            InstanceName name,
             CallSettings callSettings = null) => DeleteInstanceAsync(
                 new DeleteInstanceRequest
                 {
-                    Name = name,
+                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1698,7 +1692,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// A Task containing the RPC response.
         /// </returns>
         public virtual Task DeleteInstanceAsync(
-            string name,
+            InstanceName name,
             CancellationToken cancellationToken) => DeleteInstanceAsync(
                 name,
                 CallSettings.FromCancellationToken(cancellationToken));
@@ -1727,11 +1721,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// The RPC response.
         /// </returns>
         public virtual void DeleteInstance(
-            string name,
+            InstanceName name,
             CallSettings callSettings = null) => DeleteInstance(
                 new DeleteInstanceRequest
                 {
-                    Name = name,
+                    InstanceName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1823,8 +1817,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => SetIamPolicyAsync(
                 new SetIamPolicyRequest
                 {
-                    Resource = resource,
-                    Policy = policy,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -1890,8 +1884,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => SetIamPolicy(
                 new SetIamPolicyRequest
                 {
-                    Resource = resource,
-                    Policy = policy,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Policy = GaxPreconditions.CheckNotNull(policy, nameof(policy)),
                 },
                 callSettings);
 
@@ -1964,7 +1958,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => GetIamPolicyAsync(
                 new GetIamPolicyRequest
                 {
-                    Resource = resource,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2015,7 +2009,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => GetIamPolicy(
                 new GetIamPolicyRequest
                 {
-                    Resource = resource,
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
                 },
                 callSettings);
 
@@ -2096,8 +2090,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => TestIamPermissionsAsync(
                 new TestIamPermissionsRequest
                 {
-                    Resource = resource,
-                    Permissions = { permissions },
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 
@@ -2165,8 +2159,8 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             CallSettings callSettings = null) => TestIamPermissions(
                 new TestIamPermissionsRequest
                 {
-                    Resource = resource,
-                    Permissions = { permissions },
+                    Resource = GaxPreconditions.CheckNotNullOrEmpty(resource, nameof(resource)),
+                    Permissions = { GaxPreconditions.CheckNotNull(permissions, nameof(permissions)) },
                 },
                 callSettings);
 

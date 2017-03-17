@@ -341,8 +341,8 @@ namespace Google.Cloud.Trace.V1
             CallSettings callSettings = null) => PatchTracesAsync(
                 new PatchTracesRequest
                 {
-                    ProjectId = projectId,
-                    Traces = traces,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Traces = GaxPreconditions.CheckNotNull(traces, nameof(traces)),
                 },
                 callSettings);
 
@@ -398,8 +398,8 @@ namespace Google.Cloud.Trace.V1
             CallSettings callSettings = null) => PatchTraces(
                 new PatchTracesRequest
                 {
-                    ProjectId = projectId,
-                    Traces = traces,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    Traces = GaxPreconditions.CheckNotNull(traces, nameof(traces)),
                 },
                 callSettings);
 
@@ -470,8 +470,8 @@ namespace Google.Cloud.Trace.V1
             CallSettings callSettings = null) => GetTraceAsync(
                 new GetTraceRequest
                 {
-                    ProjectId = projectId,
-                    TraceId = traceId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    TraceId = GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)),
                 },
                 callSettings);
 
@@ -519,8 +519,8 @@ namespace Google.Cloud.Trace.V1
             CallSettings callSettings = null) => GetTrace(
                 new GetTraceRequest
                 {
-                    ProjectId = projectId,
-                    TraceId = traceId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
+                    TraceId = GaxPreconditions.CheckNotNullOrEmpty(traceId, nameof(traceId)),
                 },
                 callSettings);
 
@@ -589,7 +589,7 @@ namespace Google.Cloud.Trace.V1
             CallSettings callSettings = null) => ListTracesAsync(
                 new ListTracesRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -622,7 +622,7 @@ namespace Google.Cloud.Trace.V1
             CallSettings callSettings = null) => ListTraces(
                 new ListTracesRequest
                 {
-                    ProjectId = projectId,
+                    ProjectId = GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
