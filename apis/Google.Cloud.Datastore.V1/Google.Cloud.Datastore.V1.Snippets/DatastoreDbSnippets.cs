@@ -164,7 +164,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
-                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+                NamedBindings = { { "author", "Jane Austen" } },
             };
             LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
             // LazyDatastoreQuery implements IEnumerable<Entity>, but you can
@@ -196,7 +196,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
-                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+                NamedBindings = { { "author", "Jane Austen" } },
             };
             AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
             // AsyncLazyDatastoreQuery implements IAsyncEnumerable<Entity>, but you can
@@ -291,8 +291,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 QueryString = "SELECT * FROM book WHERE author = @author LIMIT @limit",
                 NamedBindings = {
-                    { "author", new GqlQueryParameter { Value = "Jane Austen" } },
-                    { "limit", new GqlQueryParameter { Value = 10 } }
+                    { "author", "Jane Austen" },
+                    { "limit", 10 }
                 }
             };
             DatastoreQueryResults results = db.RunQuery(gqlQuery);
@@ -324,7 +324,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
-                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+                NamedBindings = { { "author", "Jane Austen" } },
             };
             DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
             // RunQuery fetches all the results into memory in a single call.

@@ -288,7 +288,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 GqlQuery query = new GqlQuery
                 {
                     QueryString = "SELECT * FROM game WHERE __key__ HAS ANCESTOR @player",
-                    NamedBindings = { { "player", new GqlQueryParameter { Value = playerKey } } }
+                    NamedBindings = { { "player", playerKey } }
                 };
                 LazyDatastoreQuery results = db.RunQueryLazily(query);
                 // LazyDatastoreQuery implements IEnumerable<Entity>, but you can
@@ -347,8 +347,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 {
                     QueryString = "SELECT * FROM game WHERE __key__ HAS ANCESTOR @player LIMIT @limit",
                     NamedBindings = {
-                        { "player", new GqlQueryParameter { Value = playerKey } },
-                        { "limit", new GqlQueryParameter { Value = 10 } }
+                        { "player", playerKey },
+                        { "limit", 10 }
                     }
                 };
                 DatastoreQueryResults results = db.RunQuery(query);
