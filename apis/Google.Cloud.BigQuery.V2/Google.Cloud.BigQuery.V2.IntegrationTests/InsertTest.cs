@@ -120,7 +120,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(expectedResults, resultRows);
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/897")]
         public void Insert_RepeatedField()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
