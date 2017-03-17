@@ -41,7 +41,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 var gql = new GqlQuery
                 {
                     QueryString = "SELECT * FROM childKind WHERE __key__ HAS ANCESTOR @1",
-                    PositionalBindings = { new GqlQueryParameter { Value = parentKey } }
+                    PositionalBindings = { parentKey }
                 };
                 var lazyResults = transaction.RunQueryLazily(query);
                 Assert.Equal(1, lazyResults.Count());
@@ -66,7 +66,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
                 var gql = new GqlQuery
                 {
                     QueryString = "SELECT * FROM childKind WHERE __key__ HAS ANCESTOR @1",
-                    PositionalBindings = { new GqlQueryParameter { Value = parentKey } }
+                    PositionalBindings = { parentKey }
                 };
                 var lazyResults = transaction.RunQueryLazilyAsync(query);
                 Assert.Equal(1, await lazyResults.Count());
