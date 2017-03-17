@@ -13,12 +13,6 @@
   "testRunner": "xunit",
 
   "frameworks": {
-    "net451": {
-      "dependencies": {
-        "System.Runtime": "4.0.10.0",
-        "System.Threading.Tasks": "4.0.0" 
-      }
-    },
     "netcoreapp1.0": {
       "imports": "netcore50",
       "dependencies": {

@@ -53,8 +53,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public async Task Report_Simple()
         {
             var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            var logger = new GoogleExceptionLogger(
+            var loggerBase = new ErrorReportingExceptionLoggerBase(
                 mockConsumer.Object, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
+            var logger = new GoogleExceptionLogger(loggerBase, new HttpContextAccessor());
 
             var context = new DefaultHttpContext();
             context.Request.Host = new HostString(s_googleUri);
@@ -62,7 +63,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             mockConsumer.Setup(c => c.ReceiveAsync(s_matcher.IsSimpleContext(), default(CancellationToken)))
                 .Returns(CommonUtils.CompletedTask);
-            await logger.LogAsync(context, new Exception(ErrorReportingMatching.ExceptionMessage));
+            await logger.LogAsync(new Exception(ErrorReportingMatching.ExceptionMessage), context);
             mockConsumer.VerifyAll();
         }
 
@@ -70,13 +71,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public async Task Report_Complex()
         {
             var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            var logger = new GoogleExceptionLogger(
+            var loggerBase = new ErrorReportingExceptionLoggerBase(
                 mockConsumer.Object, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
+            var logger = new GoogleExceptionLogger(loggerBase, new HttpContextAccessor());
 
             bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
             mockConsumer.Setup(c => c.ReceiveAsync(s_matcher.IsComplexContext(), default(CancellationToken)))
                 .Returns(CommonUtils.CompletedTask);
-            await logger.LogAsync(CreateComplexContext(), s_matcher.CreateException());
+            await logger.LogAsync(s_matcher.CreateException(), CreateComplexContext());
             mockConsumer.VerifyAll();
         }
     }
