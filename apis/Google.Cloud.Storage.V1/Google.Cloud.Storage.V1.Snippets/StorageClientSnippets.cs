@@ -279,7 +279,7 @@ namespace Google.Cloud.Storage.V1.Snippets
         {
             var bucketName = _fixture.BucketName;
 
-            // Snippet: UploadObjectWithSessionUri
+            // Sample: UploadObjectWithSessionUri
             var client = StorageClient.Create();
             var source = "world.txt";
             var destination = "places/world.txt";
@@ -304,7 +304,7 @@ namespace Google.Cloud.Storage.V1.Snippets
                 actualUploader.ProgressChanged += progress.Report;
                 await actualUploader.UploadAsync();
             }
-            // End snippet
+            // End sample
 
             // want to show the source in the snippet, but also
             // want to make sure it matches the one in the fixture
