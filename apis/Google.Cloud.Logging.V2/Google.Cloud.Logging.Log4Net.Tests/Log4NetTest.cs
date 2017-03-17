@@ -59,7 +59,6 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         private class LoggingErrorException : Exception
         {
             public LoggingErrorException(string message) : base(message) { }
-            public LoggingErrorException(string message, Exception e) : base(message, e) { }
         }
 
         private class ThrowingErrorHandler : IErrorHandler
@@ -71,12 +70,12 @@ namespace Google.Cloud.Logging.Log4Net.Tests
 
             public void Error(string message, Exception e)
             {
-                throw new LoggingErrorException(message, e);
+                throw e;
             }
 
             public void Error(string message, Exception e, ErrorCode errorCode)
             {
-                throw new LoggingErrorException($"{message} [errorCode={errorCode}]", e);
+                throw e;
             }
         }
 
@@ -177,6 +176,44 @@ namespace Google.Cloud.Logging.Log4Net.Tests
         private string TimeOfs(int secondsOfs) =>
             (s_time0 + TimeSpan.FromSeconds(secondsOfs))
             .ToString(GoogleStackdriverAppender.s_lostDateTimeFmt);
+
+        [Fact]
+        public async Task UninitialisedBehaviour()
+        {
+            var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
+            var appender = new GoogleStackdriverAppender(fakeClient.Object, new NoDelayScheduler(), new FakeClock())
+            {
+                ErrorHandler = new ThrowingErrorHandler(),
+                Layout = new PatternLayout { ConversionPattern = "%message" },
+                ProjectId = s_projectId,
+                LogId = s_logId,
+            };
+            // ActivateOptions() has not been called, so appending throws.
+            Assert.Throws<InvalidOperationException>(() => appender.DoAppend(CreateLog(Level.Info, "Message0")));
+            Assert.Throws<InvalidOperationException>(() => appender.Flush(TimeSpan.FromSeconds(1)));
+            await Assert.ThrowsAsync<InvalidOperationException>(() => appender.FlushAsync(TimeSpan.FromSeconds(1)));
+            // But close and dispose can be called fine.
+            // They silently do nothing if the appender is not activated.
+            appender.Close();
+            appender.Dispose();
+        }
+
+        [Fact]
+        public void UninitialisedGced()
+        {
+            var fakeClient = new Mock<LoggingServiceV2Client>(MockBehavior.Strict);
+            var appender = new GoogleStackdriverAppender(fakeClient.Object, new NoDelayScheduler(), new FakeClock())
+            {
+                ErrorHandler = new ThrowingErrorHandler(),
+                Layout = new PatternLayout { ConversionPattern = "%message" },
+                ProjectId = s_projectId,
+                LogId = s_logId,
+            };
+            appender = null;
+            // This should not cause an error on AppenderSkeleton finalization.
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+        }
 
         [Fact]
         public async Task SingleLogEntry()
