@@ -15,6 +15,9 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
@@ -26,13 +29,23 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// 
     /// <example>
     /// <code>
-    /// public void Configure(IApplicationBuilder app)
+    /// public void ConfigureServices(IServiceCollection services)
     /// {
-    ///     // Use before handling any requests to ensure all unhandled exceptions are reported.
     ///     string projectId = "[Google Cloud Platform project ID]";
     ///     string serviceName = "[Name of service]";
     ///     string version = "[Version of service]";
-    ///     app.UseGoogleExceptionLogging(projectId, serviceName, version);
+    ///     services.AddGoogleExceptionLogging(projectId, serviceName, version);
+    ///     ...
+    /// }
+    /// </code>
+    /// </example>
+    /// 
+    /// <example>
+    /// <code>
+    /// public void Configure(IApplicationBuilder app)
+    /// {
+    ///     // Use before handling any requests to ensure all unhandled exceptions are reported.
+    ///     app.UseGoogleExceptionLogging();
     ///     ...
     /// }
     /// </code>
@@ -44,57 +57,84 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </remarks>
     public static class ErrorReportingExceptionLoggerExtension
     {
+
+
+
+
+
+
+
+        // TODO(talarico): UPDATE SNIPPETS AND EXAMPLES and add samples for injected reporter
+        // TODO(talarico): Write integration tests for IException logger use asp and asp core
+
+
+
+
+
         /// <summary>
         /// Uses middleware that will report all uncaught exceptions to the Stackdriver
         /// Error Reporting API.
         /// </summary>
-        /// <param name="app">The application builder. Cannot be null.</param>
+        /// <param name="app">The application builder. Cannot be null.</param>   
+        public static void UseGoogleExceptionLogging(this IApplicationBuilder app)
+        {
+            GaxPreconditions.CheckNotNull(app, nameof(app));
+            app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>();
+        }
+
+
+        /// <summary>
+        /// Adds services for middleware that will report all uncaught exceptions to the
+        /// Stackdriver Error Reporting API.
+        /// </summary>
+        /// <param name="services">The service collection. Cannot be null.</param>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the 
         ///     executable or job. Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer 
         ///     provided. Cannot be null.</param> 
-        /// <param name="options">Error reporting options for exception logging.</param>     
-        public static void UseGoogleExceptionLogging(
-            this IApplicationBuilder app, string projectId, string serviceName, string version,
-            ErrorReportingOptions options = null)
+        /// <param name="options">Error reporting options for exception logging.</param>  
+        public static void AddGoogleExceptionLogging(
+             this IServiceCollection services, string projectId, string serviceName, string version,
+             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            UseGoogleExceptionLoggingBase(app, projectId, serviceName, version, options);
+            AddGoogleExceptionLoggingBase(services, projectId, serviceName, version, options);
         }
 
         /// <summary>
-        /// Uses middleware that will report all uncaught exceptions to the Stackdriver
-        /// Error Reporting API.
+        /// Adds services for middleware that will report all uncaught exceptions to the
+        /// Stackdriver Error Reporting API.
         /// <para>
         /// Can be used when running on Google App Engine or Google Compute Engine.
         /// The Google Cloud Platform project to report errors to will detected from the
         /// current platform.
         /// </para>
         /// </summary>
-        /// <param name="app">The application builder. Cannot be null.</param>
+        /// <param name="services">The service collection. Cannot be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the 
         ///     executable or job. Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer 
         ///     provided. Cannot be null.</param> 
-        /// <param name="options">Error reporting options for exception logging.</param>     
-        public static void UseGoogleExceptionLogging(
-            this IApplicationBuilder app, string serviceName, string version,
+        /// <param name="options">Error reporting options for exception logging.</param>   
+        public static void AddGoogleExceptionLogging(
+            this IServiceCollection services, string serviceName, string version,
             ErrorReportingOptions options = null) =>
-                UseGoogleExceptionLoggingBase(app, null, serviceName, version, options);
+                AddGoogleExceptionLoggingBase(services, null, serviceName, version, options);
+
 
         /// <summary>
-        /// Shared code for creating error reporting middleware
+        /// Shared code for creating error reporting services.
         /// </summary>
-        /// <param name="app">The application builder. Cannot be null.</param>
+        /// <param name="services">The service collection. Cannot be null.</param>
         /// <param name="projectId">The Google Cloud Platform project ID. If null the project Id will be auto detected.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
         ///     Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer provided. 
         ///     Cannot be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
-        private static void UseGoogleExceptionLoggingBase(
-            this IApplicationBuilder app, string projectId, string serviceName, string version,
+        private static void AddGoogleExceptionLoggingBase(
+            this IServiceCollection services, string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
@@ -102,8 +142,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = options.CreateConsumer();
-            //var logger = new ErrorReportingExceptionLogger(consumer, serviceName, version);
-            //app.UseMiddleware<ErrorReportingExceptionLoggerMiddleware>(logger);
+            var loggerBase = new ErrorReportingExceptionLoggerBase(consumer, serviceName, version);
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton(loggerBase);
+            services.AddSingleton(CreateExceptionLogger);
+        }
+
+
+        /// <summary>
+        /// Creates an <see cref="IExceptionLogger"/>.
+        /// </summary>
+        private static IExceptionLogger CreateExceptionLogger(IServiceProvider provider)
+        {
+
+
+            // TODO(talarico): this null check is wrong
+
+
+
+            var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
+            var loggerBase = provider.GetServiceCheckNotNull<ErrorReportingExceptionLoggerBase>();
+            return new GoogleExceptionLogger(loggerBase, accessor);
         }
     }
 }

@@ -200,12 +200,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             public void ConfigureServices(IServiceCollection services)
             {
+                services.AddGoogleExceptionLogging(ProjectId, Service, Version, GetOptions());
                 services.AddMvc();
             }
 
             public void Configure(IApplicationBuilder app)
             {
-                app.UseGoogleExceptionLogging(ProjectId, Service, Version, GetOptions());
+                app.UseGoogleExceptionLogging();
 
                 app.UseMvc(routes =>
                 {
