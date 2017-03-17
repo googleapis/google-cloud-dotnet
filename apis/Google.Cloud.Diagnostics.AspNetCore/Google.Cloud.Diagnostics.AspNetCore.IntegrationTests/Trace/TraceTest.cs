@@ -207,13 +207,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
-    /// This app uses a size buffer (1,000 bytes) and will sample 1000000 QPS.
+    /// This app uses a size buffer (500 bytes) and will sample 1000000 QPS.
     /// </summary>
     public class TraceTestBufferHighQpsApplication : AbstractTraceTestApplication
     {
         public override double GetSampleRate() => 1000000;
         public override BufferOptions GetBufferOptions() =>
-            BufferOptions.SizedBuffer(1000);
+            BufferOptions.SizedBuffer(500);
     }
 
     /// <summary>
