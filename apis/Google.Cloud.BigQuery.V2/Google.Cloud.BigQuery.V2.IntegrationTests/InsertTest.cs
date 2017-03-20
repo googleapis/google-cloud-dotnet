@@ -96,7 +96,11 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(0, table.ListRows().Count());
             var row = new BigQueryInsertRow { { "noSuchField", 10 } };
             table.Insert(row, new InsertOptions { AllowUnknownFields = true });
-            Assert.Equal(1, table.ListRows().Count());
+
+            // Check that we get the row. Use WaitForRows as
+            // sometimes this seems to be not-completely-immediate.
+            var command = new BigQueryCommand($"SELECT * FROM {table}");
+            Assert.Equal(1, WaitForRows(client, command).Count());
         }
 
         [Fact]
