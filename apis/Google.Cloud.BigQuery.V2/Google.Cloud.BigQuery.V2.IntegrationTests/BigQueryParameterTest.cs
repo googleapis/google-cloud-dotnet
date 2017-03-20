@@ -78,6 +78,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         [Fact]
         public void NullParameter()
         {
+            // Assumption: no other test inserts a row with a null player name.
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var table = client.GetTable(_fixture.DatasetId, _fixture.HighScoreTableId);
             var parameter = new BigQueryParameter("player", BigQueryDbType.String, "Angela");
