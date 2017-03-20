@@ -88,9 +88,15 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
-            var table = dataset.GetTable(_fixture.HighScoreTableId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "name", BigQueryDbType.String } }.Build());
+
+            Assert.Equal(0, table.ListRows().Count());
             var row = new BigQueryInsertRow { { "noSuchField", 10 } };
             table.Insert(row, new InsertOptions { AllowUnknownFields = true });
+            Assert.Equal(1, table.ListRows().Count());
         }
 
         [Fact]
