@@ -120,7 +120,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(expectedResults, resultRows);
         }
 
-        [Fact(Skip = "https://github.com/GoogleCloudPlatform/google-cloud-dotnet/issues/897")]
+        [Fact]
         public void Insert_RepeatedField()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
@@ -130,8 +130,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
-                // The null element will be ignored here (at the server side)
-                ["tags"] = new[] { "a", null, "b"}
+                ["tags"] = new[] { "a", "b"}
             };
             table.Insert(row);
             var command = new BigQueryCommand($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid=@guid ORDER BY tag")

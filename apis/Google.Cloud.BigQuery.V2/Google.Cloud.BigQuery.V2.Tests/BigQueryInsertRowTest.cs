@@ -157,5 +157,12 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var rowData = row.ToRowsData();
             Assert.Equal(new object[] { 1, 2 }, rowData.Json["numbers"]);
         }
+
+        [Fact]
+        public void RepeatedValue_NullRejectedOnConversion()
+        {
+            var row = new BigQueryInsertRow { { "names", new[] { "a", null, "b" } } };
+            Assert.Throws<InvalidOperationException>(() => row.ToRowsData());
+        }
     }
 }

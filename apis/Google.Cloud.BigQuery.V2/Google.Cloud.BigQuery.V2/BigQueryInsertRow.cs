@@ -69,7 +69,8 @@ namespace Google.Cloud.BigQuery.V2
     /// of the top-level row is relevant.
     /// </para>
     /// <para>
-    /// Null elements within repeated fields are ignored by the server.
+    /// Null elements within repeated fields are prohibited. This is validated client-side when the row is inserted; validating
+    /// when a value is added to the row would be ineffective as the values could change before insertion.
     /// </para>
     /// </remarks>
     public sealed class BigQueryInsertRow : IEnumerable
@@ -237,7 +238,16 @@ namespace Google.Cloud.BigQuery.V2
             }
             // Note: not IEnumerable<object> as we need to box value types.
             IEnumerable values = (IEnumerable)value;
-            return values.Cast<object>().Select(ConvertRowValue).ToArray();
+            return values.Cast<object>().Select(ValidateRepeatedElementNotNull).Select(ConvertRowValue).ToArray();
+        }
+
+        private static object ValidateRepeatedElementNotNull(object value)
+        {
+            if (value == null)
+            {
+                throw new InvalidOperationException("Elements of repeated fields must not be null");
+            }
+            return value;
         }
 
         private void ValidateValue(object value, string paramName)
