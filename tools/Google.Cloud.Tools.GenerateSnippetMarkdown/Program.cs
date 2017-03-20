@@ -74,7 +74,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
         private const string EndSample = "// End sample";
         private const string EndSeeAlso = "// End see-also";
         // All these characters need to be converted to _ when creating a link
-        private static readonly Regex DocfxUidCharactersToEscape = new Regex(@"[\(\),\.\[\]<>]");
+        private static readonly Regex DocfxUidCharactersToEscape = new Regex(@"[\(\),\.\[\]\{\}<>]");
         private static readonly Regex DocfxSnippetPattern = new Regex(@"^[\w\.]+$", RegexOptions.Compiled);
         private static readonly Regex NullablePattern = new Regex(@"^System.Nullable\{([\w\.]*)\}+$", RegexOptions.Compiled);
         private static readonly Regex GenericMemberPattern = new Regex(@"^([\w\.]+)\{([\w\.]*,?)\}+$", RegexOptions.Compiled);
