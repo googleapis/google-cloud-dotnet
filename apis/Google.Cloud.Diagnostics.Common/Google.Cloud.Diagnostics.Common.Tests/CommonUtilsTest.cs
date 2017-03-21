@@ -25,6 +25,11 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         {
             Assert.Contains(CommonUtils.AgentName, CommonUtils.AgentNameAndVersion);
             Assert.Contains(CommonUtils.GetVersion(typeof(CommonUtils)), CommonUtils.AgentNameAndVersion);
+#if NET45
+            Assert.Contains(CommonUtils.AgentFrameworkAspNet, CommonUtils.AgentNameAndVersion);
+#else
+            Assert.Contains(CommonUtils.AgentFrameworkAspNetCore, CommonUtils.AgentNameAndVersion);
+#endif
         }
 
         [Fact]

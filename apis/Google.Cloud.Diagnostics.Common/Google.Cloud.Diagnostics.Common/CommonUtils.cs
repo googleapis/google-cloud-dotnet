@@ -26,14 +26,21 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>The name of the this agent.</summary>
         internal const string AgentName = "google-cloud-csharp-diagnostics";
 
+        /// <summary>The ASP.NET framework.</summary>
+        internal const string AgentFrameworkAspNet = "aspnet";
+
+        /// <summary>The ASP.NET Core framework.</summary>
+        internal const string AgentFrameworkAspNetCore = "aspnetcore";
+
         /// <summary>A completed <see cref="Task"/>.</summary>
         internal readonly static Task CompletedTask = Task.FromResult(false);
 
         /// <summary>
         /// The agent name <see cref="AgentName"/> and version of the agent in the
-        /// format "[agent-name] [agent-version]".
+        /// format "[agent-name] [agent-framework] [agent-version]".
         /// </summary>
-        internal readonly static string AgentNameAndVersion = $"{AgentName} {GetVersion(typeof(CommonUtils))}";
+        internal readonly static string AgentNameAndVersion = 
+            $"{AgentName} {GetFramework()} {GetVersion(typeof(CommonUtils))}";
 
         /// <summary>Gets the version of the current library using reflection.</summary>
         internal static string GetVersion(System.Type type) =>
@@ -41,6 +48,16 @@ namespace Google.Cloud.Diagnostics.Common
                 .Assembly
                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                 .InformationalVersion;
+
+        /// <summary>Gets the current framework aspnet or aspnetcore.</summary>
+       internal static string GetFramework()
+       {
+#if NET45
+            return AgentFrameworkAspNet;
+#else
+            return AgentFrameworkAspNetCore;
+#endif
+        }
 
         /// <summary>
         /// Determines the correct project id from a string project id and a <see cref="MonitoredResource"/>.
