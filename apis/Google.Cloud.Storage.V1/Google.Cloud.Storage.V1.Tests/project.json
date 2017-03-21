@@ -14,17 +14,12 @@
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {
-        "System.Net.Http": "4.1.0",
         "Microsoft.NETCore.App": {
           "version": "1.0.0",
           "type": "platform"
         }
       }
     },
-    "net451": {
-      "dependencies": {
-        "System.Net.Http": "4.0.0"
-      }
-    }
+    "net451": { }
   }
 }
