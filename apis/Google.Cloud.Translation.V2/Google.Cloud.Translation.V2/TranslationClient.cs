@@ -268,6 +268,10 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Creates a <see cref="TranslationClient"/> from an API key instead of using OAuth2 credentials.
         /// </summary>
+        /// <remarks>
+        /// You are encouraged to use OAuth2 credentials where possible. This method is primarily provided to make the transition
+        /// from using API keys to OAuth2 credentials straightforward.
+        /// </remarks>
         /// <param name="apiKey">API key to use. Must not be null.</param>
         /// <param name="model">The default translation model to use. Defaults to <see cref="TranslationModel.Base"/>.</param>
         /// <returns>The created <see cref="TranslationClient"/>.</returns>
