@@ -16,6 +16,8 @@ environment:
 
 # Install the pre-requisites for the build.
 install:
+  # Make sure curl is available
+  - set PATH=C:\Program Files\Git\mingw64\bin;%PATH%
   # Download the installer for dotnet.
   - mkdir .\scripts
   - curl -SL https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.ps1 -o .\scripts\dotnet-install.ps1
