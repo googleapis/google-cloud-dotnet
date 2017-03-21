@@ -455,7 +455,7 @@ namespace Google.Cloud.Logging.Log4Net.Tests
   }
 }
 ";
-            var platform = new Platform(new GcePlatformDetails(json));
+            var platform = new Platform(GcePlatformDetails.TryLoad(json));
             var uploadedEntries = await RunTestWorkingServer(async appender =>
             {
                 appender.DoAppend(CreateLog(Level.Info, "0"));
