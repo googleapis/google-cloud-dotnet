@@ -407,10 +407,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var row = new BigQueryInsertRow();
             VerifyEquivalent(
-                client => client.Insert(MatchesWhenSerialized(reference), new[] { row }, options),
-                client => client.Insert(datasetId, tableId, row, options),
-                client => client.Insert(ProjectId, datasetId, tableId, row, options),
-                client => new BigQueryTable(client, GetTable(reference)).Insert(row, options));
+                client => client.InsertRows(MatchesWhenSerialized(reference), new[] { row }, options),
+                client => client.InsertRow(datasetId, tableId, row, options),
+                client => client.InsertRow(ProjectId, datasetId, tableId, row, options),
+                client => new BigQueryTable(client, GetTable(reference)).InsertRow(row, options));
         }
 
         [Fact]
@@ -424,10 +424,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalent(
-                client => client.Insert(MatchesWhenSerialized(reference), rows, options),
-                client => client.Insert(datasetId, tableId, rows, options),
-                client => client.Insert(ProjectId, datasetId, tableId, rows, options),
-                client => new BigQueryTable(client, GetTable(reference)).Insert(rows, options));
+                client => client.InsertRows(MatchesWhenSerialized(reference), rows, options),
+                client => client.InsertRows(datasetId, tableId, rows, options),
+                client => client.InsertRows(ProjectId, datasetId, tableId, rows, options),
+                client => new BigQueryTable(client, GetTable(reference)).InsertRows(rows, options));
         }
 
         [Fact]
@@ -441,10 +441,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalent(
-                client => client.Insert(MatchesWhenSerialized(reference), rows, null),
-                client => client.Insert(datasetId, tableId, rows[0], rows[1]),
-                client => client.Insert(ProjectId, datasetId, tableId, rows[0], rows[1]),
-                client => new BigQueryTable(client, GetTable(reference)).Insert(rows[0], rows[1]));
+                client => client.InsertRows(MatchesWhenSerialized(reference), rows, null),
+                client => client.InsertRows(datasetId, tableId, rows[0], rows[1]),
+                client => client.InsertRows(ProjectId, datasetId, tableId, rows[0], rows[1]),
+                client => new BigQueryTable(client, GetTable(reference)).InsertRows(rows[0], rows[1]));
         }
 
         [Fact]
@@ -740,10 +740,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var row = new BigQueryInsertRow();
             VerifyEquivalentAsync(
-                client => client.InsertAsync(MatchesWhenSerialized(reference), new[] { row }, options, token),
-                client => client.InsertAsync(datasetId, tableId, row, options, token),
-                client => client.InsertAsync(ProjectId, datasetId, tableId, row, options, token),
-                client => new BigQueryTable(client, GetTable(reference)).InsertAsync(row, options, token));
+                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), new[] { row }, options, token),
+                client => client.InsertRowAsync(datasetId, tableId, row, options, token),
+                client => client.InsertRowAsync(ProjectId, datasetId, tableId, row, options, token),
+                client => new BigQueryTable(client, GetTable(reference)).InsertRowAsync(row, options, token));
         }
 
         [Fact]
@@ -758,10 +758,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(
-                client => client.InsertAsync(MatchesWhenSerialized(reference), rows, options, token),
-                client => client.InsertAsync(datasetId, tableId, rows, options, token),
-                client => client.InsertAsync(ProjectId, datasetId, tableId, rows, options, token),
-                client => new BigQueryTable(client, GetTable(reference)).InsertAsync(rows, options, token));
+                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), rows, options, token),
+                client => client.InsertRowsAsync(datasetId, tableId, rows, options, token),
+                client => client.InsertRowsAsync(ProjectId, datasetId, tableId, rows, options, token),
+                client => new BigQueryTable(client, GetTable(reference)).InsertRowsAsync(rows, options, token));
         }
 
         [Fact]
@@ -776,10 +776,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var stream = new MemoryStream();
             var rows = new[] { new BigQueryInsertRow(), new BigQueryInsertRow() };
             VerifyEquivalentAsync(
-                client => client.InsertAsync(MatchesWhenSerialized(reference), rows, null, default(CancellationToken)),
-                client => client.InsertAsync(datasetId, tableId, rows[0], rows[1]),
-                client => client.InsertAsync(ProjectId, datasetId, tableId, rows[0], rows[1]),
-                client => new BigQueryTable(client, GetTable(reference)).InsertAsync(rows[0], rows[1]));
+                client => client.InsertRowsAsync(MatchesWhenSerialized(reference), rows, null, default(CancellationToken)),
+                client => client.InsertRowsAsync(datasetId, tableId, rows[0], rows[1]),
+                client => client.InsertRowsAsync(ProjectId, datasetId, tableId, rows[0], rows[1]),
+                client => new BigQueryTable(client, GetTable(reference)).InsertRowsAsync(rows[0], rows[1]));
         }
 
         private T MatchesWhenSerialized<T>(T expected)
