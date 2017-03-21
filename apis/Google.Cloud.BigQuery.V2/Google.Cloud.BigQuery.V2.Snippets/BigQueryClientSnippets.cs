@@ -139,7 +139,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Insert a single row. There are many other ways of inserting
             // data into a table.
-            table.Insert(new BigQueryInsertRow
+            table.InsertRow(new BigQueryInsertRow
             {
                 { "player", "Bob" },
                 { "score", 85 },
@@ -278,7 +278,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         }
 
         [Fact]
-        public void Insert()
+        public void InsertRows()
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
@@ -287,7 +287,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: Insert(string,string,*)
+            // Snippet: InsertRows(string,string,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
             // The insert ID is optional, but can avoid duplicate data
             // when retrying inserts.
@@ -305,7 +305,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 { "score", 2000 },
                 { "game_started", DateTime.UtcNow }
             };
-            client.Insert(datasetId, tableId, row1, row2);
+            client.InsertRows(datasetId, tableId, row1, row2);
             // End snippet
 
             int rowsAfter = table.ListRows().Count();
@@ -800,7 +800,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Insert a single row. There are many other ways of inserting
             // data into a table.
-            await table.InsertAsync(new BigQueryInsertRow
+            await table.InsertRowAsync(new BigQueryInsertRow
             {
                 { "player", "Bob" },
                 { "score", 85 },
@@ -939,7 +939,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         }
 
         [Fact]
-        public async Task InsertAsync()
+        public async Task InsertRowsAsync()
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
@@ -948,7 +948,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
 
-            // Snippet: InsertAsync(string,string,*,*)
+            // Snippet: InsertRowsAsync(string,string,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
             // The insert ID is optional, but can avoid duplicate data
             // when retrying inserts.
@@ -966,7 +966,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 { "score", 2000 },
                 { "game_started", DateTime.UtcNow }
             };
-            await client.InsertAsync(datasetId, tableId, row1, row2);
+            await client.InsertRowsAsync(datasetId, tableId, row1, row2);
             // End snippet
 
             int rowsAfter = table.ListRows().Count();

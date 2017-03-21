@@ -76,7 +76,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     { "gameStarted", BigQueryDbType.Timestamp },
                     { "score", BigQueryDbType.Int64 }
                 }.Build());
-            table.Insert(new[]
+            table.InsertRows(new[]
             {
                 new BigQueryInsertRow {
                     { "player", "Bob" },
@@ -210,7 +210,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "array_record", recordSchema, BigQueryFieldMode.Repeated },                
             }.Build());
 
-            table.Insert(ExhaustiveTypesTest.GetSampleRow());
+            table.InsertRow(ExhaustiveTypesTest.GetSampleRow());
         }
 
         internal List<string> LoadTextResource(string relativeName)
