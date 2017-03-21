@@ -16,6 +16,8 @@ using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2;
 using Google.Apis.Bigquery.v2.Data;
+using System;
+using System.Net.Http;
 
 namespace Google.Cloud.BigQuery.V2
 {
@@ -33,6 +35,7 @@ namespace Google.Cloud.BigQuery.V2
     {
         private static readonly object _applicationNameLock = new object();
         private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(BigQueryClient));
+        private static readonly Action<HttpRequestMessage> _versionHeaderAction = UserAgentHelper.CreateRequestModifier(typeof(BigQueryClient));
 
         // TODO: Allow these to be specified for testability.
         private IClock Clock => SystemClock.Instance;

@@ -50,6 +50,7 @@ namespace Google.Cloud.BigQuery.V2
             var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             var queryResponse = request.Execute();
             return new BigQueryResults(this, queryResponse, options);
         }
@@ -62,6 +63,7 @@ namespace Google.Cloud.BigQuery.V2
             command.PopulateQueryRequest(queryRequest);
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             var queryResponse = request.Execute();
             return new BigQueryResults(this, queryResponse, options);
         }
@@ -71,14 +73,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
-            options?.ModifyRequest(query);
-            var job = Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Query = query
-                },
-            }, ProjectId).Execute();
+            var job = CreateInsertQueryJobRequest(query, options).Execute();
             return new BigQueryJob(this, job);
         }
 
@@ -88,14 +83,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(command, nameof(command));
             var query = new JobConfigurationQuery { UseLegacySql = false };
             command.PopulateJobConfigurationQuery(query);
-            options?.ModifyRequest(query);
-            var job = Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Query = query
-                },
-            }, ProjectId).Execute();
+            var job = CreateInsertQueryJobRequest(query, options).Execute();
             return new BigQueryJob(this, job);
         }
 
@@ -113,6 +101,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var firstResponse = request.Execute();
             return new BigQueryResults(this, firstResponse, options);
@@ -129,6 +118,7 @@ namespace Google.Cloud.BigQuery.V2
             Func<TabledataResource.ListRequest> requestProvider = () =>
             {
                 var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+                request.ModifyRequest += _versionHeaderAction;
                 options?.ModifyRequest(request);
                 return request;
             };
@@ -144,6 +134,7 @@ namespace Google.Cloud.BigQuery.V2
             var queryRequest = new QueryRequest { Query = sql, UseLegacySql = false };
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             var queryResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryResults(this, queryResponse, options);
         }
@@ -156,6 +147,7 @@ namespace Google.Cloud.BigQuery.V2
             command.PopulateQueryRequest(queryRequest);
             options?.ModifyRequest(queryRequest);
             var request = Service.Jobs.Query(queryRequest, ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             var queryResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryResults(this, queryResponse, options);
         }
@@ -165,14 +157,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(sql, nameof(sql));
             var query = new JobConfigurationQuery { Query = sql, UseLegacySql = false };
-            options?.ModifyRequest(query);
-            var job = await Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Query = query
-                },
-            }, ProjectId).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
         }
 
@@ -182,14 +167,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(command, nameof(command));
             var query = new JobConfigurationQuery { UseLegacySql = false };
             command.PopulateJobConfigurationQuery(query);
-            options?.ModifyRequest(query);
-            var job = await Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Query = query
-                },
-            }, ProjectId).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            var job = await CreateInsertQueryJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
         }
 
@@ -207,6 +185,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.GetQueryResults(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var firstResponse = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryResults(this, firstResponse, options);
@@ -223,12 +202,27 @@ namespace Google.Cloud.BigQuery.V2
             Func<TabledataResource.ListRequest> requestProvider = () =>
             {
                 var request = Service.Tabledata.List(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+                request.ModifyRequest += _versionHeaderAction;
                 options?.ModifyRequest(request);
                 return request;
             };
             return new RestPagedAsyncEnumerable<TabledataResource.ListRequest, TableDataList, BigQueryRow>(
                 requestProvider,
                 pageManager);
+        }
+
+        private JobsResource.InsertRequest CreateInsertQueryJobRequest(JobConfigurationQuery query, CreateQueryJobOptions options)
+        {
+            options?.ModifyRequest(query);
+            var request = Service.Jobs.Insert(new Job
+            {
+                Configuration = new JobConfiguration
+                {
+                    Query = query
+                },
+            }, ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
+            return request;
         }
     }
 }

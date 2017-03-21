@@ -61,6 +61,7 @@ namespace Google.Cloud.BigQuery.V2
         private ListRequest CreateListProjectsRequest(ListProjectsOptions options)
         {
             var request = Service.Projects.List();
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
