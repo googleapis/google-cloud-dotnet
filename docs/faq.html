@@ -115,6 +115,33 @@ PublisherClient client = PublisherClient.Create();
 client.Publish(/* regular method arguments */,
     CallSettings.FromCallCredentials(callCredentials));
 </code></pre><p>This approach means you don&#39;t need to worry about channel clean-up.</p>
+<h2 id="how-can-i-trace-grpc-issues">How can I trace gRPC issues?</h2>
+<p>For libraries that use gRPC, it can be very useful to hook into the
+gRPC logging framework. There are two aspects to this:</p>
+<ul>
+<li>Setting environment variables</li>
+<li>Directing logs</li>
+</ul>
+<p>The environment variables affecting gRPC are <a href="https://github.com/grpc/grpc/blob/master/doc/environment_variables.md">listed in the gRPC
+repository</a>.
+The important ones for diagnostics are <code>GRPC_TRACE</code> and
+<code>GRPC_VERBOSITY</code>. For example, you might want to start off with
+<code>GRPC_TRACE=all</code> and <code>GRPC_VERBOSITY=DEBUG</code> which will dump a <em>lot</em>
+of information, then tweak them to reduce this to only useful
+data... or start with one kind of tracing (e.g.
+<code>GRPC_TRACE=call_error</code>) and add more as required.</p>
+<p>By default, the gRPC logs will not be displayed anywhere. The
+simplest way of seeing gRPC logs in many cases will be to send them
+to the console:</p>
+<pre><code class="lang-csharp">using Grpc.Core;
+using Grpc.Core.Logging;
+...
+// Call this before you do any gRPC work
+GrpcEnvironment.SetLogger(new ConsoleLogger());
+</code></pre><p>Other <code>ILogger</code> implementations are available, or you can implement
+it yourself to integrate with other systems - see the
+<a href="https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging">Grpc.Core.Logging</a>
+namespace for details.</p>
 
             </article>
           </div>
