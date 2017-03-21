@@ -55,6 +55,7 @@ namespace Google.Cloud.Storage.V1
         {
             ValidateBucketName(bucket);
             var request = Service.Buckets.Delete(bucket);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

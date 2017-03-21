@@ -45,6 +45,7 @@ namespace Google.Cloud.Storage.V1
         private ObjectsResource.GetRequest CreateGetObjectRequest(string bucket, string objectName, GetObjectOptions options)
         {
             var request = Service.Objects.Get(bucket, objectName);
+            request.ModifyRequest += _versionHeaderAction;
             ApplyEncryptionKey(options?.EncryptionKey, request);
             options?.ModifyRequest(request);
             return request;

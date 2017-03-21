@@ -58,6 +58,7 @@ namespace Google.Cloud.Storage.V1
         private ObjectsResource.ListRequest CreateListObjectsRequest(string bucket, string prefix, ListObjectsOptions options)
         {
             var request = Service.Objects.List(bucket);
+            request.ModifyRequest += _versionHeaderAction;
             request.Prefix = prefix;
             options?.ModifyRequest(request);
             return request;
