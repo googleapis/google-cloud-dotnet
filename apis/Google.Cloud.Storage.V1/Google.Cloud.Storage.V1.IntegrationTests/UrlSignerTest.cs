@@ -493,7 +493,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                         },
                         Method = HttpMethod.Put,
                         Headers = {
-                            { "x-goog-foo", "xy\r\n z" },
+                            { "x-goog-foo2", "xy\r\n z" },
                             { "x-goog-bar", "  12345   " },
                             { "x-goog-foo2", new [] { "A B  C", "def" } }
                         }
