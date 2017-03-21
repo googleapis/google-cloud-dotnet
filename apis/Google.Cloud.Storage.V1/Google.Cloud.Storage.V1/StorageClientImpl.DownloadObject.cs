@@ -103,9 +103,7 @@ namespace Google.Cloud.Storage.V1
         {
             // URI will definitely not be null; that's constructed internally.
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            var downloader = new HashValidatingDownloader(Service);
-            options?.ModifyDownloader(downloader);
-            ApplyEncryptionKey(options?.EncryptionKey, downloader);
+            var downloader = CreateDownloader(options);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)
             {
@@ -127,9 +125,7 @@ namespace Google.Cloud.Storage.V1
             IProgress<IDownloadProgress> progress)
         {
             GaxPreconditions.CheckNotNull(destination, nameof(destination));
-            var downloader = new HashValidatingDownloader(Service);
-            options?.ModifyDownloader(downloader);
-            ApplyEncryptionKey(options?.EncryptionKey, downloader);
+            var downloader = CreateDownloader(options);
             string uri = options == null ? baseUri : options.GetUri(baseUri);
             if (progress != null)
             {
@@ -143,6 +139,15 @@ namespace Google.Cloud.Storage.V1
             {
                 throw result.Exception;
             }
+        }
+
+        private HashValidatingDownloader CreateDownloader(DownloadObjectOptions options)
+        {
+            var downloader = new HashValidatingDownloader(Service);
+            downloader.ModifyRequest += _versionHeaderAction;
+            options?.ModifyDownloader(downloader);
+            ApplyEncryptionKey(options?.EncryptionKey, downloader);
+            return downloader;
         }
 
         // MediaDownloader doesn't report progress until the first chunk has been fetched. It can be useful to

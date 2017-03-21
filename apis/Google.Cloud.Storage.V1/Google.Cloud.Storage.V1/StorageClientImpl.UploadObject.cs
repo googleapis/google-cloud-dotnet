@@ -50,6 +50,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(source, nameof(source));
             var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
             options?.ModifyMediaUpload(mediaUpload);
+            mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
             ApplyEncryptionKey(options?.EncryptionKey, mediaUpload);
             return mediaUpload;
         }

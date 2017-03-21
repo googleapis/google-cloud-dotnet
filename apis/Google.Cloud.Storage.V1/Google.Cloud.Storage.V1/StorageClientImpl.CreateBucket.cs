@@ -54,6 +54,7 @@ namespace Google.Cloud.Storage.V1
             GaxPreconditions.CheckNotNull(projectId, nameof(projectId));
             ValidateBucket(bucket, nameof(bucket));
             var request = Service.Buckets.Insert(bucket, projectId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
