@@ -16,8 +16,10 @@ using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Translate.v2;
 using Google.Apis.Util;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using static Google.Apis.Translate.v2.TranslationsResource;
@@ -40,6 +42,7 @@ namespace Google.Cloud.Translation.V2
     {
         private static readonly object _applicationNameLock = new object();
         private static string _applicationName = UserAgentHelper.GetDefaultUserAgent(typeof(TranslationClient));
+        private static Action<HttpRequestMessage> _versionHeaderAction = UserAgentHelper.CreateRequestModifier(typeof(TranslationClient));
 
         /// <summary>
         /// The default application name used when creating a <see cref="TranslateService"/>.
@@ -132,6 +135,7 @@ namespace Google.Cloud.Translation.V2
         public override IList<Detection> DetectLanguage(string text)
         {
             var request = Service.Detections.List(new Repeatable<string>(new[] { text }));
+            request.ModifyRequest += _versionHeaderAction;
             var result = request.Execute().Detections[0];
             return result.Select(Detection.FromResource).ToList();
         }
@@ -140,6 +144,7 @@ namespace Google.Cloud.Translation.V2
         public override IList<Language> ListLanguages(string target = null)
         {
             var request = Service.Languages.List();
+            request.ModifyRequest += _versionHeaderAction;
             request.Target = target;
             return request.Execute().Languages.Select(Language.FromResource).ToList();
         }
@@ -194,6 +199,7 @@ namespace Google.Cloud.Translation.V2
         public override async Task<IList<Detection>> DetectLanguageAsync(string text, CancellationToken cancellationToken = default(CancellationToken))
         {
             var request = Service.Detections.List(new Repeatable<string>(new[] { text }));
+            request.ModifyRequest += _versionHeaderAction;
             var result = (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Detections[0];
             return result.Select(Detection.FromResource).ToList();
         }
@@ -202,12 +208,14 @@ namespace Google.Cloud.Translation.V2
         public override async Task<IList<Language>> ListLanguagesAsync(string target = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             var request = Service.Languages.List();
+            request.ModifyRequest += _versionHeaderAction;
             request.Target = target;
             return (await request.ExecuteAsync(cancellationToken).ConfigureAwait(false)).Languages.Select(Language.FromResource).ToList();
         }
 
         private void ModifyRequest(ListRequest request, string sourceLanguage, FormatEnum format, TranslationModel? model)
         {
+            request.ModifyRequest += _versionHeaderAction;
             request.Source = sourceLanguage;
             request.Format = format;
             var effectiveModel = model ?? DefaultModel;
