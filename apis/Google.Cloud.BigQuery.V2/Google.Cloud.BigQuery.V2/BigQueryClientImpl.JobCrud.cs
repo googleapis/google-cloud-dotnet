@@ -57,6 +57,7 @@ namespace Google.Cloud.BigQuery.V2
         private ListRequest CreateListJobsRequest(ProjectReference projectReference, ListJobsOptions options = null)
         {
             var request = Service.Jobs.List(projectReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -76,6 +77,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var job = request.Execute();
             return new BigQueryJob(this, job);
@@ -86,6 +88,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var result = request.Execute();
             return new BigQueryJob(this, result.Job);
@@ -119,6 +122,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
 
             var request = Service.Jobs.Get(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var job = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, job);
@@ -130,6 +134,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(jobReference, nameof(jobReference));
             var request = Service.Jobs.Cancel(jobReference.ProjectId, jobReference.JobId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var result = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryJob(this, result.Job);

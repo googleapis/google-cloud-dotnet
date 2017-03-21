@@ -47,6 +47,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var resource = request.Execute();
             return new BigQueryTable(this, resource);
@@ -67,6 +68,7 @@ namespace Google.Cloud.BigQuery.V2
         private ListRequest CreateListTablesRequest(DatasetReference datasetReference, ListTablesOptions options)
         {
             var request = Service.Tables.List(datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -78,6 +80,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var table = new Table { TableReference = tableReference, Schema = schema };
             var request = Service.Tables.Insert(table, tableReference.ProjectId, tableReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(table, request);
             var result = request.Execute();
             return new BigQueryTable(this, result);
@@ -104,6 +107,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             request.Execute();
         }
@@ -114,6 +118,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
 
             var request = Service.Tables.Get(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             var resource = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryTable(this, resource);
@@ -138,6 +143,7 @@ namespace Google.Cloud.BigQuery.V2
 
             var table = new Table { TableReference = tableReference, Schema = schema };
             var request = Service.Tables.Insert(table, tableReference.ProjectId, tableReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(table, request);
             var result = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             return new BigQueryTable(this, result);
@@ -165,6 +171,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             var request = Service.Tables.Delete(tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
         }

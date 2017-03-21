@@ -46,6 +46,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return new BigQueryDataset(this, request.Execute());
         }
@@ -64,6 +65,7 @@ namespace Google.Cloud.BigQuery.V2
         private ListRequest CreateListDatasetsRequest(ProjectReference projectReference, ListDatasetsOptions options)
         {
             var request = Service.Datasets.List(projectReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }
@@ -74,6 +76,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var dataset = new Dataset { DatasetReference = datasetReference };
             var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(dataset, request);
             return new BigQueryDataset(this, request.Execute());
         }
@@ -97,6 +100,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             request.Execute();
         }
@@ -106,6 +110,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Get(datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
         }
@@ -127,6 +132,7 @@ namespace Google.Cloud.BigQuery.V2
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var dataset = new Dataset { DatasetReference = datasetReference };
             var request = Service.Datasets.Insert(dataset, datasetReference.ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(dataset, request);
             return new BigQueryDataset(this, await request.ExecuteAsync(cancellationToken).ConfigureAwait(false));
         }
@@ -150,6 +156,7 @@ namespace Google.Cloud.BigQuery.V2
         {
             GaxPreconditions.CheckNotNull(datasetReference, nameof(datasetReference));
             var request = Service.Datasets.Delete(datasetReference.ProjectId, datasetReference.DatasetId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
         }

@@ -95,7 +95,8 @@ namespace Google.Cloud.BigQuery.V2
         private BigQueryJob UploadData(JobConfigurationLoad loadConfiguration, Stream input, string contentType)
         {
             var job = new Job { Configuration = new JobConfiguration { Load = loadConfiguration } };
-            var mediaUpload = Service.Jobs.Insert(job, ProjectId, input, contentType);
+            var mediaUpload = new CustomMediaUpload(Service, job, ProjectId, input, contentType);
+            mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
             var finalProgress = mediaUpload.Upload();
             if (finalProgress.Exception != null)
             {
@@ -120,6 +121,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
             var response = request.Execute();
             HandleInsertAllResponse(response);
         }
@@ -217,7 +219,8 @@ namespace Google.Cloud.BigQuery.V2
         private async Task<BigQueryJob> UploadDataAsync(JobConfigurationLoad loadConfiguration, Stream input, string contentType, CancellationToken cancellationToken)
         {
             var job = new Job { Configuration = new JobConfiguration { Load = loadConfiguration } };
-            var mediaUpload = Service.Jobs.Insert(job, ProjectId, input, contentType);
+            var mediaUpload = new CustomMediaUpload(Service, job, ProjectId, input, contentType);
+            mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
             var finalProgress = await mediaUpload.UploadAsync(cancellationToken).ConfigureAwait(false);
             if (finalProgress.Exception != null)
             {
@@ -243,6 +246,7 @@ namespace Google.Cloud.BigQuery.V2
             };
             options?.ModifyRequest(body);
             var request = Service.Tabledata.InsertAll(body, tableReference.ProjectId, tableReference.DatasetId, tableReference.TableId);
+            request.ModifyRequest += _versionHeaderAction;
             var response = await request.ExecuteAsync(cancellationToken).ConfigureAwait(false);
             HandleInsertAllResponse(response);
         }
