@@ -27,7 +27,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             // Sample: TranslateTextNmtDefaultModel
             TranslationClient client = TranslationClient.Create(model: TranslationModel.NeuralMachineTranslation);
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French);
-            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.SourceLanguage}");
+            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
 
@@ -37,7 +37,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             TranslationClient client = TranslationClient.Create();
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French,
                 model: TranslationModel.NeuralMachineTranslation);
-            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.SourceLanguage}");
+            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
         }
 
@@ -48,11 +48,11 @@ namespace Google.Cloud.Translation.V2.Snippets
             // Additional: TranslateText(string, string, string, *)
             TranslationClient client = TranslationClient.Create();
             TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.French);
-            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.SourceLanguage}");
+            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
 
             Assert.Equal("Il pleut.", result.TranslatedText);
-            Assert.Equal("en", result.SourceLanguage);
+            Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
         [Fact]
@@ -62,11 +62,11 @@ namespace Google.Cloud.Translation.V2.Snippets
             // Additional: TranslateHtml(string, string, string, *)
             TranslationClient client = TranslationClient.Create();
             TranslationResult result = client.TranslateHtml("<p><strong>It is raining.</strong></p>", LanguageCodes.French);
-            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.SourceLanguage}");
+            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             // End sample
 
             Assert.Equal("<p> <strong>Il pleut.</strong> </p>", result.TranslatedText);
-            Assert.Equal("en", result.SourceLanguage);
+            Assert.Equal("en", result.DetectedSourceLanguage);
         }
 
         [Fact]
@@ -80,14 +80,14 @@ namespace Google.Cloud.Translation.V2.Snippets
                 LanguageCodes.French);
             foreach (TranslationResult result in results)
             {
-                Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.SourceLanguage}");
+                Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             }
             // End sample
 
             Assert.Equal("Il pleut.", results[0].TranslatedText);
-            Assert.Equal("en", results[0].SourceLanguage);
+            Assert.Equal("en", results[0].DetectedSourceLanguage);
             Assert.Equal("C'est ensoleillé.", results[1].TranslatedText);
-            Assert.Equal("en", results[1].SourceLanguage);
+            Assert.Equal("en", results[1].DetectedSourceLanguage);
         }
 
         [Fact]
@@ -101,14 +101,14 @@ namespace Google.Cloud.Translation.V2.Snippets
                 LanguageCodes.French);
             foreach (TranslationResult result in results)
             {
-                Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.SourceLanguage}");
+                Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
             }
             // End sample
 
             Assert.Equal("<p> <strong>Il pleut.</strong> </p>", results[0].TranslatedText);
-            Assert.Equal("en", results[0].SourceLanguage);
+            Assert.Equal("en", results[0].DetectedSourceLanguage);
             Assert.Equal("<p> <strong>C&#39;est ensoleillé.</strong> </p>", results[1].TranslatedText);
-            Assert.Equal("en", results[1].SourceLanguage);
+            Assert.Equal("en", results[1].DetectedSourceLanguage);
         }
 
         // See-also: TranslateText(string, string, string, *)
@@ -132,7 +132,7 @@ namespace Google.Cloud.Translation.V2.Snippets
             IList<Detection> results = client.DetectLanguage("It is raining.");
             foreach (Detection result in results)
             {
-                Console.WriteLine($"Result: {result.Language}; confidnce {result.Confidence}");
+                Console.WriteLine($"Result: {result.Language}; confidence {result.Confidence}");
             }
             // End sample
         }
@@ -147,7 +147,8 @@ namespace Google.Cloud.Translation.V2.Snippets
         {
             // Snippet: ListLanguages(string)
             TranslationClient client = TranslationClient.Create();
-            IList<Language> languages = client.ListLanguages();
+            IList<Language> languages = client.ListLanguages(LanguageCodes.English);
+            // Display just the first 10 languages for brevity
             foreach (Language language in languages.Take(10))
             {
                 Console.WriteLine($"Language: {language.Name}; code {language.Code}");
