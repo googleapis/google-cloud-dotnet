@@ -32,10 +32,16 @@ namespace Google.Cloud.Translation.V2
         public string TranslatedText { get; }
 
         /// <summary>
-        /// The source language code, either as provided by the caller
-        /// or detected by the server.
+        /// The source language code detected by the server. This may
+        /// be null, typically due to the source language being supplied
+        /// by the caller.
         /// </summary>
-        public string SourceLanguage { get; }
+        public string DetectedSourceLanguage { get; }
+
+        /// <summary>
+        /// The source language code supplied by the caller, if any.
+        /// </summary>
+        public string SpecifiedSourceLanguage { get; }
 
         /// <summary>
         /// The target language code that the text was translated into.
@@ -50,24 +56,30 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Constructs an instance.
         /// </summary>
+        /// <remarks>This constructor is for the benefit of testability, in case you wish to provide your own
+        /// fake implementation of <see cref="TranslationClient"/>.</remarks>
         /// <param name="originalText">The original text.</param>
         /// <param name="translatedText">The translated text.</param>
-        /// <param name="sourceLanguage">The source language code.</param>
+        /// <param name="detectedSourceLanguage">The source language code detected by the server, if any.</param>
+        /// <param name="specifiedSourceLanguage">The source language code specified by the API caller.</param>
         /// <param name="targetLanguage">The target language code.</param>
         /// <param name="model">The model used to perform the translation, if known.</param>
-        public TranslationResult(string originalText, string translatedText, string sourceLanguage, string targetLanguage, TranslationModel? model)
+        public TranslationResult(string originalText, string translatedText, string detectedSourceLanguage, string specifiedSourceLanguage,
+            string targetLanguage, TranslationModel? model)
         {
             OriginalText = originalText;
             TranslatedText = translatedText;
-            SourceLanguage = sourceLanguage;
+            SpecifiedSourceLanguage = specifiedSourceLanguage;
+            DetectedSourceLanguage = detectedSourceLanguage;
             TargetLanguage = targetLanguage;
         }
 
         /// <summary>
         /// Constructs an instance from an API result.
         /// </summary>
-        internal TranslationResult(TranslationsResource resource, string originalText, string sourceLanguage, string targetLanguage)
-            : this(originalText, resource.TranslatedText, sourceLanguage ?? resource.DetectedSourceLanguage, targetLanguage, TranslationModels.GetModel(resource.Model))
+        internal TranslationResult(TranslationsResource resource, string originalText, string specifiedSourceLanguage, string targetLanguage)
+            : this(originalText, resource.TranslatedText, resource.DetectedSourceLanguage, 
+                  specifiedSourceLanguage, targetLanguage, TranslationModels.GetModel(resource.Model))
         {
         }
     }
