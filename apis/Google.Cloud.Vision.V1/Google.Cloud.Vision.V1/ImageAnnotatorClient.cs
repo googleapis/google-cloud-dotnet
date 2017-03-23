@@ -267,7 +267,7 @@ namespace Google.Cloud.Vision.V1
             CallSettings callSettings = null) => BatchAnnotateImagesAsync(
                 new BatchAnnotateImagesRequest
                 {
-                    Requests = { requests },
+                    Requests = { GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
                 },
                 callSettings);
 
@@ -306,7 +306,7 @@ namespace Google.Cloud.Vision.V1
             CallSettings callSettings = null) => BatchAnnotateImages(
                 new BatchAnnotateImagesRequest
                 {
-                    Requests = { requests },
+                    Requests = { GaxPreconditions.CheckNotNull(requests, nameof(requests)) },
                 },
                 callSettings);
 

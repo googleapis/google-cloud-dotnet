@@ -59,10 +59,16 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc/>
-        protected override async Task<Uri> InitiateSessionAsync(CancellationToken cancellationToken)
+        public override async Task<Uri> InitiateSessionAsync(CancellationToken cancellationToken)
         {
             var httpClient = Options?.HttpClient ?? new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, SignedUrl);
+
+            // The request may auto-populate the Content-Type to be "application/x-www-form-urlencoded",
+            // so force it to be null so it is not auto-populated.
+            request.Content = new ByteArrayContent(new byte[0]);
+            request.Content.Headers.ContentType = null;
+
             request.Headers.Add("x-goog-resumable", "start");
             Options?.ModifySessionInitiationRequest?.Invoke(request);
             var result = await httpClient.SendAsync(request, cancellationToken).ConfigureAwait(false);

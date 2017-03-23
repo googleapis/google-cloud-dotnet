@@ -33,6 +33,9 @@ namespace Google.Cloud.Datastore.V1
     /// operation. This means the mutation methods are all synchronous and do not take call settings, as they don't perform any
     /// API operations.
     /// </para>
+    /// <para>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
+    /// number of entities, partition the changes into multiple transactions. See
+    /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
     /// <para>
     /// Even though transactions aren't inherently related to a specific partition ID, the expected usage is that queries run inside
     /// a transaction are likely to be in a single partition, specified in a <see cref="DatastoreDb"/> used to create the transaction.
@@ -264,6 +267,9 @@ namespace Google.Cloud.Datastore.V1
         /// It simply delegates to <see cref="Lookup(IEnumerable{Key}, CallSettings)"/>, passing in a <c>null</c>
         /// value for the call settings.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
@@ -276,6 +282,9 @@ namespace Google.Cloud.Datastore.V1
         /// <remarks>
         /// This call may perform multiple RPC operations in order to look up all keys.
         /// </remarks>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
@@ -311,6 +320,9 @@ namespace Google.Cloud.Datastore.V1
         /// It simply delegates to <see cref="LookupAsync(IEnumerable{Key}, CallSettings)"/>, passing in a <c>null</c>
         /// value for the call settings.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
@@ -323,6 +335,9 @@ namespace Google.Cloud.Datastore.V1
         /// <remarks>
         /// This call may perform multiple RPC operations in order to look up all keys.
         /// </remarks>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
@@ -410,6 +425,13 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Commits all mutations in this transaction.
         /// </summary>
+        /// <remarks>
+        /// <para>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
+        /// with the server-allocated keys.</para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
+        /// number of entities, partition the changes into multiple transactions. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
         /// <returns>The response from the commit operation. This can be used to determine server-allocated keys.</returns>
         public virtual CommitResponse Commit(CallSettings callSettings = null)
@@ -420,6 +442,13 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Commits all mutations in this transaction asynchronously.
         /// </summary>
+        /// <remarks>
+        /// <para>Any entities with incomplete keys that are assigned keys by this operation will be updated in memory
+        /// with the server-allocated keys.</para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
+        /// number of entities, partition the changes into multiple transactions. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <exception cref="InvalidOperationException">The transaction has already been committed or rolled back.</exception>
         /// <returns>The response from the commit operation. This can be used to determine server-allocated keys.</returns>

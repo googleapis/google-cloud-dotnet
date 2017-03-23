@@ -26,24 +26,54 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 {
     public class CloudTraceMiddlewareTest
     {
-        [Fact]
-        public async Task Invoke_Trace()
+        private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
+        private static readonly TraceHeaderContext _traceHeaderContext = 
+            new TraceHeaderContext(_traceIdFactory.NextId(), 0, true);
+
+        /// <summary>
+        /// Creates a <see cref="Mock{IManagedTracer}"/> that is set up to start and end a span as well as
+        /// annotate the span.
+        /// </summary>
+        private static Mock<IManagedTracer> CreateIManagedTracerMock(HttpContext context)
+        {
+            var tracerMock = new Mock<IManagedTracer>();
+            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns("trace-id");
+            tracerMock.Setup(t => t.StartSpan(context.Request.Path, null));
+            tracerMock.Setup(t => t.AnnotateSpan(It.IsAny<Dictionary<string, string>>()));
+            tracerMock.Setup(t => t.EndSpan());
+            return tracerMock;
+        }
+
+        /// <summary>
+        /// Create a basic <see cref="HttpContext"/> with a request and request path.
+        /// </summary>
+        private static HttpContext CreateHttpContext()
         {
             var context = new DefaultHttpContext();
             var request = new DefaultHttpRequest(context);
             request.Path = new PathString("/api/trace");
+            return context;
+        }
+
+        [Fact]
+        public async Task Invoke_Trace()
+        {
+            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
+            var context = CreateHttpContext();
+            var tracerMock = CreateIManagedTracerMock(context);
 
             var delegateMock = new Mock<RequestDelegate>();
             delegateMock.Setup(d => d(context)).Returns(Task.CompletedTask);
 
-            var tracerMock = new Mock<IManagedTracer>();
-            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns("trace-id");
-            tracerMock.Setup(t => t.StartSpan(request.Path, null));
-            tracerMock.Setup(t => t.AnnotateSpan(It.IsAny<Dictionary<string, string>>()));
-            tracerMock.Setup(t => t.EndSpan());
+            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
+            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object);
-            await middleware.Invoke(context, tracerMock.Object);
+            Assert.Equal(NullManagedTracer.Instance, ContextTracerManager.GetCurrentTracer(accessor));
+
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
+            await middleware.Invoke(context, _traceHeaderContext);
+
+            Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));
 
             delegateMock.VerifyAll();
             tracerMock.VerifyAll();
@@ -52,23 +82,20 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public async Task Invoke_TraceException()
         {
-            var context = new DefaultHttpContext();
-            var request = new DefaultHttpRequest(context);
-            request.Path = new PathString("/api/trace");
+            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
+            var context = CreateHttpContext();
+            var tracerMock = CreateIManagedTracerMock(context);
+            tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()));
 
             var delegateMock = new Mock<RequestDelegate>();
             delegateMock.Setup(d => d(context)).Throws(new Exception());
 
-            var tracerMock = new Mock<IManagedTracer>();
-            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns("trace-id");
-            tracerMock.Setup(t => t.StartSpan(request.Path, null));
-            tracerMock.Setup(t => t.AnnotateSpan(It.IsAny<Dictionary<string, string>>()));
-            tracerMock.Setup(t => t.SetStackTrace(It.IsAny<StackTrace>()));
-            tracerMock.Setup(t => t.EndSpan());
+            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
+            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object);
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
             await Assert.ThrowsAsync<Exception>(
-                () => middleware.Invoke(context, tracerMock.Object));
+                () => middleware.Invoke(context, _traceHeaderContext));
 
             delegateMock.VerifyAll();
             tracerMock.VerifyAll();
@@ -77,13 +104,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         [Fact]
         public async Task Invoke_NoTrace()
         {
+            var accessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
             var context = new DefaultHttpContext();
             var delegateMock = new Mock<RequestDelegate>();
             var tracerMock = new Mock<IManagedTracer>();
-            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns((string) null);
 
-            var middleware = new CloudTraceMiddleware(delegateMock.Object);
-            await middleware.Invoke(context, tracerMock.Object);
+            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
+            tracerFactoryMock.Setup(f => f.CreateTracer(_traceHeaderContext)).Returns(tracerMock.Object);
+
+            var middleware = new CloudTraceMiddleware(delegateMock.Object, tracerFactoryMock.Object, accessor);
+            await middleware.Invoke(context, _traceHeaderContext);
+
+            Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));
 
             delegateMock.Verify(d => d(context), Times.Once());
             tracerMock.Verify(t => t.StartSpan(It.IsAny<string>(), null), Times.Never());

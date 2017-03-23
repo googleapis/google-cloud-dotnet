@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Grpc": "1.0.0-beta12"
+    "Google.Api.Gax.Grpc": "1.0.0-beta13"
   },
 
   "frameworks": {

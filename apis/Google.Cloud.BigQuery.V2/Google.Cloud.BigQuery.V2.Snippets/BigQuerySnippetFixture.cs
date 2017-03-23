@@ -61,7 +61,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 { "game_started", BigQueryDbType.Timestamp }
             }.Build();
             var historyTable = game.CreateTable(HistoryTableId, historySchema);
-            historyTable.Insert(
+            historyTable.InsertRows(
                 CreateHistoryRow("Tim", 503, 1, "2015-05-03T23:01:05"),
                 CreateHistoryRow("Nadia", 450, 1, "2013-05-06T10:05:07"),
                 CreateHistoryRow("Nadia", 1320, 2, "2013-06-01T15:02:07"),

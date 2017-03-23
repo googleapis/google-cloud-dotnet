@@ -66,7 +66,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                     // Verify that the URL works initially.
                     var response = await _fixture.HttpClient.DeleteAsync(url);
-                    Assert.True(response.IsSuccessStatusCode);
+                    await VerifyResponseAsync(response);
                     var obj = await _fixture.Client.ListObjectsAsync(bucket, name).FirstOrDefault(o => o.Name == name);
                     Assert.Null(obj);
 
@@ -159,7 +159,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                     // Verify that the URL works initially.
                     var response = await _fixture.HttpClient.GetAsync(url);
-                    Assert.True(response.IsSuccessStatusCode);
+                    await VerifyResponseAsync(response);
                     var result = await response.Content.ReadAsByteArrayAsync();
                     Assert.Equal(content, result);
                 },
@@ -292,7 +292,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                     // Verify that the URL works initially.
                     var response = await _fixture.HttpClient.SendAsync(createRequest());
-                    Assert.True(response.IsSuccessStatusCode);
+                    await VerifyResponseAsync(response);
                 },
                 afterDelay: async () =>
                 {
@@ -322,7 +322,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                     // Verify that the URL works initially.
                     var response = await _fixture.HttpClient.SendAsync(createRequest());
-                    Assert.True(response.IsSuccessStatusCode);
+                    await VerifyResponseAsync(response);
                 },
                 afterDelay: async () =>
                 {
@@ -391,7 +391,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
             // Verify that the URL works initially.
             var response = await _fixture.HttpClient.PutAsync(url, content);
-            Assert.True(response.IsSuccessStatusCode);
+            await VerifyResponseAsync(response);
             var result = new MemoryStream();
             await _fixture.Client.DownloadObjectAsync(bucket, name, result);
             Assert.Equal(result.ToArray(), _fixture.SmallContent);
@@ -442,7 +442,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     // Verify that the URL works initially.
                     request.RequestUri = new Uri(url);
                     var response = await _fixture.HttpClient.SendAsync(request);
-                    Assert.True(response.IsSuccessStatusCode);
+                    await VerifyResponseAsync(response);
 
                     // Make sure the encryption succeeded.
                     var downloadedData = new MemoryStream();
@@ -493,9 +493,9 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                         },
                         Method = HttpMethod.Put,
                         Headers = {
-                            { "x-goog-foo", "xy\r\n z" },
+                            { "x-goog-foo2", "xy\r\n z" },
                             { "x-goog-bar", "  12345   " },
-                            { "x-goog-foo", new [] { "A B  C", "def" } }
+                            { "x-goog-foo2", new [] { "A B  C", "def" } }
                         }
                     };
                 }
@@ -510,7 +510,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                     // Verify that the URL works initially.
                     var response = await _fixture.HttpClient.SendAsync(request);
-                    Assert.True(response.IsSuccessStatusCode);
+                    await VerifyResponseAsync(response);
                     var result = new MemoryStream();
                     await _fixture.Client.DownloadObjectAsync(bucket, name, result);
                     Assert.Equal(result.ToArray(), _fixture.SmallContent);
@@ -589,7 +589,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
                     // Verify that the URL works initially.
                     var uploader = ResumableUpload.CreateFromUploadUri(sessionUri, new MemoryStream(data));
-                    await uploader.ResumeAsync(sessionUri);
+                    var progress = await uploader.ResumeAsync(sessionUri);
+                    Assert.Null(progress.Exception);
+                    Assert.Equal(UploadStatus.Completed, progress.Status);
+
                     var result = new MemoryStream();
                     await _fixture.Client.DownloadObjectAsync(bucket, name, result);
                     Assert.Equal(result.ToArray(), data);
@@ -637,6 +640,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                         new MemoryStream(data),
                         new ResumableUploadOptions { ModifySessionInitiationRequest = key.ModifyRequest });
                     var progress = await uploader.UploadAsync();
+                    Assert.Null(progress.Exception);
                     Assert.Equal(UploadStatus.Completed, progress.Status);
 
                     // Make sure the encryption succeeded.
@@ -659,6 +663,16 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     Assert.Equal(UploadStatus.Failed, progress.Status);
                     Assert.IsType(typeof(GoogleApiException), progress.Exception);
                 });
+        }
+
+        private static async Task VerifyResponseAsync(HttpResponseMessage response)
+        {
+            if (!response.IsSuccessStatusCode)
+            {
+                // This will automatically fail, but gives more information about the failure cause than
+                // simply asserting that IsSuccessStatusCode is true.
+                Assert.Null(await response.Content.ReadAsStringAsync());
+            }
         }
     }
 }

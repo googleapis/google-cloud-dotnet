@@ -31,7 +31,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void InsertSingleRow()
+        public void InsertRow()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -40,7 +40,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var countBefore = table.ListRows().Count();
 
             var row = BuildRow("Joe", 100, new DateTime(2016, 4, 26, 11, 43, 1, DateTimeKind.Utc));
-            table.Insert(row);
+            table.InsertRow(row);
 
             var rowsAfter = table.ListRows();
             var fetched = rowsAfter.Single(r => (string)r["player"] == "Joe");
@@ -51,7 +51,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void InsertMultipleRows()
+        public void InsertRows()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -64,7 +64,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 BuildRow("Jenny", 125, new DateTime(2012, 5, 22, 1, 20, 30, DateTimeKind.Utc)),
                 BuildRow("Lisa", 90, new DateTime(2011, 10, 12, 0, 0, 0, DateTimeKind.Utc))
             };
-            table.Insert(rows);
+            table.InsertRows(rows);
 
             var rowsAfter = table.ListRows();
             Assert.True(rowsAfter.Any(r => (string)r["player"] == "Jenny"));
@@ -74,27 +74,37 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void Insert_BadData()
+        public void InsertRow_BadData()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
             var table = dataset.GetTable(_fixture.HighScoreTableId);
             var row = new BigQueryInsertRow { { "noSuchField", 10 } };
-            Assert.Throws<GoogleApiException>(() => table.Insert(row));
+            Assert.Throws<GoogleApiException>(() => table.InsertRow(row));
         }
 
         [Fact]
-        public void Insert_BadData_IgnoreBadData()
+        public void InsertRow_BadData_IgnoreBadData()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
-            var table = dataset.GetTable(_fixture.HighScoreTableId);
+            // Don't insert into a table used by other tests...
+            var table = dataset.CreateTable(
+                _fixture.CreateTableId(),
+                new TableSchemaBuilder { { "name", BigQueryDbType.String } }.Build());
+
+            Assert.Equal(0, table.ListRows().Count());
             var row = new BigQueryInsertRow { { "noSuchField", 10 } };
-            table.Insert(row, new InsertOptions { AllowUnknownFields = true });
+            table.InsertRow(row, new InsertOptions { AllowUnknownFields = true });
+
+            // Check that we get the row. Use WaitForRows as
+            // sometimes this seems to be not-completely-immediate.
+            var command = new BigQueryCommand($"SELECT * FROM {table}");
+            Assert.Equal(1, WaitForRows(client, command).Count());
         }
 
         [Fact]
-        public void Insert_RecordField()
+        public void InsertRow_RecordField()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -105,7 +115,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 ["guid"] = guid,
                 ["position"] = new BigQueryInsertRow { ["x"] = 10L, ["y"] = 20L }
             };
-            table.Insert(row);
+            table.InsertRow(row);
             var command = new BigQueryCommand($"SELECT guid, position.x, position.y FROM {table} WHERE guid=@guid")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
@@ -121,7 +131,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void Insert_RepeatedField()
+        public void InsertRow_RepeatedField()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -130,10 +140,9 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             var row = new BigQueryInsertRow
             {
                 ["guid"] = guid,
-                // The null element will be ignored here (at the server side)
-                ["tags"] = new[] { "a", null, "b"}
+                ["tags"] = new[] { "a", "b"}
             };
-            table.Insert(row);
+            table.InsertRow(row);
             var command = new BigQueryCommand($"SELECT guid, tag FROM {table}, UNNEST(tags) AS tag WHERE guid=@guid ORDER BY tag")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }
@@ -150,7 +159,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void Insert_RepeatedRecordField()
+        public void InsertRow_RepeatedRecordField()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -164,7 +173,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                     new BigQueryInsertRow { ["first"] = "x", ["last"] = "y" }
                 }
             };
-            table.Insert(row);
+            table.InsertRow(row);
             // Fetch flattened fields
             var command = new BigQueryCommand($"SELECT guid, name.first, name.last FROM {table}, UNNEST(names) AS name WHERE guid=@guid ORDER BY name.first")
             {
@@ -192,7 +201,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
         }
 
         [Fact]
-        public void Insert_RecordRepeatedField()
+        public void InsertRow_RecordRepeatedField()
         {
             var client = BigQueryClient.Create(_fixture.ProjectId);
             var dataset = client.GetDataset(_fixture.DatasetId);
@@ -203,7 +212,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 ["guid"] = guid,
                 ["job"] = new BigQueryInsertRow { ["company"] = "Pet Store", ["roles"] = new[] { "cashier", "manager" } },
             };
-            table.Insert(row);
+            table.InsertRow(row);
             var command = new BigQueryCommand($"SELECT job FROM {table} WHERE guid=@guid")
             {
                 Parameters = { { "guid", BigQueryDbType.String, guid } }

@@ -4,7 +4,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Testing": "1.0.0-beta12",
+    "Google.Api.Gax.Testing": "1.0.0-beta13",
     "Google.Cloud.ClientTesting": { "target": "project" },
     "Google.LongRunning": { "target": "project" },
     "xunit": "2.2.0-rc3-build3528",

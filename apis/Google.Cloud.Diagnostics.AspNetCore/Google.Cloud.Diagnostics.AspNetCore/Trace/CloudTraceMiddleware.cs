@@ -29,24 +29,38 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     internal sealed class CloudTraceMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly IManagedTracerFactory _tracerFactory;
+        private readonly IHttpContextAccessor _accessor;
 
         /// <summary>
         /// Create a new instance of <see cref="CloudTraceMiddleware"/>.
         /// </summary>
         /// <param name="next">The next request delegate. Cannot be null.</param>
-        public CloudTraceMiddleware(RequestDelegate next)
+        /// <param name="tracerFactory">A factory to create <see cref="IManagedTracer"/>s. Cannot be null.</param>
+        /// <param name="accessor">Access to <see cref="HttpContext"/>. Cannot be null.</param>
+        public CloudTraceMiddleware(
+            RequestDelegate next, IManagedTracerFactory tracerFactory, IHttpContextAccessor accessor)
         {
             _next = GaxPreconditions.CheckNotNull(next, nameof(next));
+            _tracerFactory = GaxPreconditions.CheckNotNull(tracerFactory, nameof(tracerFactory));
+            _accessor = GaxPreconditions.CheckNotNull(accessor, nameof(accessor));
         }
 
         /// <summary>
-        /// Invokes the next <see cref="RequestDelegate"/> and trace the time 
+        /// Invokes the next <see cref="RequestDelegate"/> and traces the time 
         /// taken for the next delegate to run, reporting the results to the
         /// Stackdriver Trace API.
         /// </summary>
-        public async Task Invoke(HttpContext httpContext, IManagedTracer tracer)
+        /// <param name="httpContext">The current http context.</param>
+        /// <param name="traceHeaderContext">Information from the current requrest header. Cannot be null.</param>
+        public async Task Invoke(HttpContext httpContext, TraceHeaderContext traceHeaderContext)
         {
-            GaxPreconditions.CheckNotNull(tracer, nameof(tracer));
+            GaxPreconditions.CheckNotNull(traceHeaderContext, nameof(traceHeaderContext));
+
+            // Create a tracer for the given request and set it on the HttpContext so
+            // the tracer can be used in other places.
+            var tracer = _tracerFactory.CreateTracer(traceHeaderContext);
+            ContextTracerManager.SetCurrentTracer(_accessor, tracer);
 
             if (tracer.GetCurrentTraceId() == null)
             {

@@ -56,13 +56,19 @@ namespace Google.Cloud.Datastore.V1.Snippets
             Assert.Null(entities[1]);
         }
 
+        // See-also: Lookup(*)
+        // Member: Lookup(IEnumerable<Key>, *, *)
+        // Member: Lookup(Key, *, *)
+        // See [Lookup](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task LookupAsync()
         {
             string projectId = _fixture.ProjectId;
             string namespaceId = _fixture.NamespaceId;
 
-            // Snippet: Lookup(*)
+            // Snippet: LookupAsync(*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             KeyFactory keyFactory = db.CreateKeyFactory("book");
             Key key1 = keyFactory.CreateKey("pride_and_prejudice");
@@ -78,6 +84,12 @@ namespace Google.Cloud.Datastore.V1.Snippets
             Assert.Equal("Pride and Prejudice", (string)entity["title"]);
             Assert.Null(entities[1]);
         }
+
+        // See-also: LookupAsync(*)
+        // Member: LookupAsync(IEnumerable<Key>, *, *)
+        // Member: LookupAsync(Key, *, *)
+        // See [LookupAsync](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public void LazyStructuredQuery()
@@ -152,7 +164,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
-                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+                NamedBindings = { { "author", "Jane Austen" } },
             };
             LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
             // LazyDatastoreQuery implements IEnumerable<Entity>, but you can
@@ -184,7 +196,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
-                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+                NamedBindings = { { "author", "Jane Austen" } },
             };
             AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
             // AsyncLazyDatastoreQuery implements IAsyncEnumerable<Entity>, but you can
@@ -246,7 +258,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             Query query = new Query("book")
             {
-                Filter = Filter.Equal("author", "Jane Austen")
+                Filter = Filter.Equal("author", "Jane Austen"),
+                Limit = 10
             };
             DatastoreQueryResults results = await db.RunQueryAsync(query);
             // RunQuery fetches all the results into memory in a single call.
@@ -278,9 +291,9 @@ namespace Google.Cloud.Datastore.V1.Snippets
             {
                 QueryString = "SELECT * FROM book WHERE author = @author LIMIT @limit",
                 NamedBindings = {
-                    { "author", new GqlQueryParameter { Value = "Jane Austen" } },
-                    { "limit", new GqlQueryParameter { Value = 10 } }
-                },
+                    { "author", "Jane Austen" },
+                    { "limit", 10 }
+                }
             };
             DatastoreQueryResults results = db.RunQuery(gqlQuery);
             // RunQuery fetches all the results into memory in a single call.
@@ -311,7 +324,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             GqlQuery gqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
-                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+                NamedBindings = { { "author", "Jane Austen" } },
             };
             DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
             // RunQuery fetches all the results into memory in a single call.
@@ -397,6 +410,12 @@ namespace Google.Cloud.Datastore.V1.Snippets
             // End snippet
         }
 
+        // See-also: Insert(Entity[])
+        // Member: Insert(Entity, CallSettings)
+        // Member: Insert(IEnumerable<Entity>, CallSettings)
+        // See [Insert](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task AddEntity_NonTransactional_Async()
         {
@@ -426,6 +445,199 @@ namespace Google.Cloud.Datastore.V1.Snippets
             Console.WriteLine($"Inserted keys: {string.Join(",", insertedKeys)}");
             // End snippet
         }
+
+        // See-also: InsertAsync(*)
+        // Member: InsertAsync(Entity, CallSettings)
+        // Member: InsertAsync(IEnumerable<Entity>, CallSettings)
+        // See [InsertAsync](ref) for an example using an alternative overload.
+        // End see-also
+
+        [Fact]
+        public void Update()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: Update(Entity, CallSettings)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("book");
+            Entity book = new Entity
+            {
+                Key = keyFactory.CreateIncompleteKey(),
+                ["author"] = "Harper Lee",
+                ["title"] = "Tequila Mockingbird",
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Southern drama", "Courtroom drama", "Bildungsroman" }
+            };
+            db.Insert(book);
+
+            // Correct the typo in memory
+            book["title"] = "To Kill a Mockingbird";
+            // Then update the entity in Datastore
+            db.Update(book);
+            // End snippet
+
+            var fetched = db.Lookup(book.Key);
+            Assert.Equal("To Kill a Mockingbird", (string) fetched["title"]);
+        }
+
+        // See-also: Update(Entity, CallSettings)
+        // Member: Update(*)
+        // Member: Update(IEnumerable<Entity>, *)
+        // See [Update](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: Update(Entity, CallSettings)
+        // Member: UpdateAsync(Entity, CallSettings)
+        // Member: UpdateAsync(*)
+        // Member: UpdateAsync(IEnumerable<Entity>, *)
+        // See [Update](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void Upsert()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: Upsert(Entity[])
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("book");
+            Entity book1 = new Entity
+            {
+                Key = keyFactory.CreateIncompleteKey(),
+                ["author"] = "Harper Lee",
+                ["title"] = "Tequila Mockingbird",
+                ["publication_date"] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Southern drama", "Courtroom drama", "Bildungsroman" }
+            };
+            db.Insert(book1);
+
+            // Correct the typo in memory
+            book1["title"] = "To Kill a Mockingbird";
+
+            Entity book2 = new Entity
+            {
+                Key = keyFactory.CreateIncompleteKey(),
+                ["author"] = "Charlotte Brontë",
+                ["title"] = "Jane Eyre",
+                ["publication_date"] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+                ["genres"] = new[] { "Gothic", "Romance", "Bildungsroman" }
+            };
+
+            // Update book1 and insert book2 into Datastore
+            db.Upsert(book1, book2);
+            // End snippet
+
+            Assert.Equal("To Kill a Mockingbird", (string) db.Lookup(book1.Key)["title"]);
+            Assert.Equal("Jane Eyre", (string) db.Lookup(book2.Key)["title"]);
+        }
+
+        // See-also: Upsert(*)
+        // Member: Upsert(Entity, CallSettings)
+        // Member: Upsert(IEnumerable<Entity>, *)
+        // See [Upsert](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: Upsert(*)
+        // Member: UpsertAsync(Entity, CallSettings)
+        // Member: UpsertAsync(*)
+        // Member: UpsertAsync(IEnumerable<Entity>, *)
+        // See [Update](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void DeleteEntity()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Sample: DeleteEntity
+            // Additional: Delete(Entity, *)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("message");
+            Entity message = new Entity
+            {
+                Key = keyFactory.CreateIncompleteKey(),
+                ["text"] = "Hello",
+            };
+            db.Insert(message);
+
+            Entity fetchedBeforeDeletion = db.Lookup(message.Key);
+
+            // Only the key from the entity is used to determine what to delete.
+            // If you already have the key but not the entity, use Delete(Key, CallSettings) or
+            // a similar overload.
+            db.Delete(message);
+
+            Entity fetchedAfterDeletion = db.Lookup(message.Key);
+
+            Console.WriteLine($"Entity exists before deletion? {fetchedBeforeDeletion != null}");
+            Console.WriteLine($"Entity exists after deletion? {fetchedAfterDeletion != null}");
+            // End snippet
+
+            Assert.NotNull(fetchedBeforeDeletion);
+            Assert.Null(fetchedAfterDeletion);
+        }
+
+        // See-also: Delete(Entity, *)
+        // Member: Delete(Entity[])
+        // Member: Delete(IEnumerable<Entity>, *)
+        // See [Delete](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: Delete(Entity, *)
+        // Member: DeleteAsync(Entity, *)
+        // Member: DeleteAsync(Entity[])
+        // Member: DeleteAsync(IEnumerable<Entity>, *)
+        // See [Delete](ref) for a synchronous example.
+        // End see-also
+
+        [Fact]
+        public void DeleteKey()
+        {
+            string projectId = _fixture.ProjectId;
+            string namespaceId = _fixture.NamespaceId;
+
+            // Snippet: Delete(Key, *)
+            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+            KeyFactory keyFactory = db.CreateKeyFactory("message");
+            Entity message = new Entity
+            {
+                Key = keyFactory.CreateIncompleteKey(),
+                ["text"] = "Hello",
+            };
+            Key key = db.Insert(message);
+
+            Entity fetchedBeforeDeletion = db.Lookup(key);
+
+            // Only the key is required to determine what to delete.
+            // If you have an entity with the right key, you can use Delete(Entity, CallSettings)
+            // or a similar overload for convenience.
+            db.Delete(key);
+
+            Entity fetchedAfterDeletion = db.Lookup(key);
+
+            Console.WriteLine($"Entity exists before deletion? {fetchedBeforeDeletion != null}");
+            Console.WriteLine($"Entity exists after deletion? {fetchedAfterDeletion != null}");
+            // End snippet
+
+            Assert.NotNull(fetchedBeforeDeletion);
+            Assert.Null(fetchedAfterDeletion);
+        }
+
+        // See-also: Delete(Key, *)
+        // Member: Delete(Key[])
+        // Member: Delete(IEnumerable<Key>, *)
+        // See [Delete](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: Delete(Key, *)
+        // Member: DeleteAsync(Key, *)
+        // Member: DeleteAsync(Key[])
+        // Member: DeleteAsync(IEnumerable<Key>, *)
+        // See [Delete](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void AllocateId()
@@ -469,6 +681,11 @@ namespace Google.Cloud.Datastore.V1.Snippets
             Assert.NotEqual(keys[0], keys[1]);
         }
 
+        // See-also: AllocateIds(*)
+        // Member: AllocateIds(*, *)
+        // See [AllocateIds](ref) for an example using an alternative overload.
+        // End see-also
+
         [Fact]
         public async Task AllocateIdsAsync()
         {
@@ -484,6 +701,11 @@ namespace Google.Cloud.Datastore.V1.Snippets
             Assert.Equal(2, keys.Count);
             Assert.NotEqual(keys[0], keys[1]);
         }
+
+        // See-also: AllocateIdsAsync(*)
+        // Member: AllocateIdsAsync(*, *)
+        // See [AllocateIdsAsync](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public void NamespaceQuery()
@@ -554,6 +776,8 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 CommitResponse commitResponse = transaction.Commit();
                 Key insertedKey = commitResponse.MutationResults[0].Key;
                 Console.WriteLine($"Inserted key: {insertedKey}");
+                // The key is also propagated to the entity
+                Console.WriteLine($"Entity key: {entity.Key}");
             }
             // End sample
         }
@@ -656,33 +880,6 @@ namespace Google.Cloud.Datastore.V1.Snippets
                 transaction.Update(entity);
                 transaction.Commit();
             }
-            // End sample
-        }
-
-        [Fact]
-        public void DeleteEntity()
-        {
-            string projectId = _fixture.ProjectId;
-            string namespaceId = _fixture.NamespaceId;
-
-            // Copied from InsertEntity; we want to create a new one to delete.
-            DatastoreDb insertClient = DatastoreDb.Create(projectId, namespaceId);
-            KeyFactory keyFactory = insertClient.CreateKeyFactory("Task");
-            Entity entity = new Entity
-            {
-                Key = keyFactory.CreateIncompleteKey(),
-                ["category"] = "Personal",
-                ["done"] = false,
-                ["priority"] = 4,
-                ["description"] = "Learn Cloud Datastore",
-                ["percent_complete"] = 75.0
-            };
-            Key insertedKey = insertClient.Insert(entity);
-
-            // Sample: DeleteEntity
-            DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
-            // If you have an entity instead of just a key, then entity.ToDelete() would work too.
-            db.Delete(insertedKey);
             // End sample
         }
 
@@ -920,6 +1117,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             Key toKey = CreateAccount("Beth", 15500L);
 
             // Sample: TransactionReadAndWrite
+            // Additional: BeginTransaction(*)
             DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
             using (DatastoreTransaction transaction = db.BeginTransaction())
             {
@@ -936,6 +1134,11 @@ namespace Google.Cloud.Datastore.V1.Snippets
             }
             // End sample
         }
+
+        // See-also: BeginTransaction(*)
+        // Member: BeginTransactionAsync(*)
+        // See [BeginTransaction](ref) for an example of the synchronous equivalent of this method.
+        // End see-also
 
         // Used by TransactionReadAndWrite. Could promote to the fixture.
         private Key CreateAccount(string name, long balance)

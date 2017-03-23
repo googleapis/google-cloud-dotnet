@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
         {
             // Sample: UseTracer
             // Manually trace a specific operation.
-            using (CloudTrace.CurrentTracer.StartSpan("hello-world"))
+            using (CloudTrace.Tracer.StartSpan("hello-world"))
             {
                 Console.Out.WriteLine("Hello, World!");
             }
@@ -74,7 +74,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
 
             // Sample: UseTracerRunIn
             // Manually trace a specific Action or Func<T>.
-            CloudTrace.CurrentTracer.RunInSpan(
+            CloudTrace.Tracer.RunInSpan(
                 () => Console.Out.WriteLine("Hello, World!"),
                 "hello-world");
             // End sample

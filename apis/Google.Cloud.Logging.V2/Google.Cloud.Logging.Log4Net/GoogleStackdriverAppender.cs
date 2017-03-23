@@ -115,6 +115,7 @@ namespace Google.Cloud.Logging.Log4Net
         private ILogQueue _logQ;
         private LogUploader _logUploader;
         private Task<long?> _initIdTask;
+        private bool _isActivated;
         private long _currentId = -1; // Initialised here, in case Flush() is called before any log entries written.
 
         private readonly List<Label> _resourceLabels = new List<Label>();
@@ -192,6 +193,7 @@ namespace Google.Cloud.Logging.Log4Net
                 _client, _scheduler, _clock,
                 _logQ, logsLostWarningEntry, MaxUploadBatchSize,
                 serverErrorBackoffSettings);
+            _isActivated = true;
         }
 
         private void ActivateLogIdAndResource()
@@ -383,6 +385,10 @@ namespace Google.Cloud.Logging.Log4Net
         /// <inheritdoc/>
         protected override void Append(LoggingEvent loggingEvent)
         {
+            if (!_isActivated)
+            {
+                throw new InvalidOperationException($"{nameof(ActivateOptions)}() must be called before using this appender.");
+            }
             var entries = new[] { BuildLogEntry(loggingEvent) };
             Write(entries);
         }
@@ -390,6 +396,10 @@ namespace Google.Cloud.Logging.Log4Net
         /// <inheritdoc/>
         protected override void Append(LoggingEvent[] loggingEvents)
         {
+            if (!_isActivated)
+            {
+                throw new InvalidOperationException($"{nameof(ActivateOptions)}() must be called before using this appender.");
+            }
             var entries = loggingEvents.Select(x => BuildLogEntry(x)).ToList();
             Write(entries);
         }
@@ -403,6 +413,10 @@ namespace Google.Cloud.Logging.Log4Net
         /// <returns>A task representing whether the flush completed within the timeout.</returns>
         public Task<bool> FlushAsync(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken))
         {
+            if (!_isActivated)
+            {
+                throw new InvalidOperationException($"{nameof(ActivateOptions)}() must be called before using this appender.");
+            }
             long untilId;
             lock (_lock)
             {
@@ -418,8 +432,14 @@ namespace Google.Cloud.Logging.Log4Net
         /// <param name="cancellationToken">The token to monitor for cancellation requests.
         /// The default value is <see cref="CancellationToken.None"/>.</param>
         /// <returns>Whether the flush completed within the timeout.</returns>
-        public bool Flush(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken)) =>
-            Task.Run(async () => await FlushAsync(timeout, cancellationToken).ConfigureAwait(false)).Result;
+        public bool Flush(TimeSpan timeout, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            if (!_isActivated)
+            {
+                throw new InvalidOperationException($"{nameof(ActivateOptions)}() must be called before using this appender.");
+            }
+            return Task.Run(async () => await FlushAsync(timeout, cancellationToken).ConfigureAwait(false)).Result;
+        }
 
         /// <summary>
         /// Dispose of this appender, by flushing locally buffer entries then closing the appender.
@@ -430,6 +450,11 @@ namespace Google.Cloud.Logging.Log4Net
         /// </remarks>
         public void Dispose()
         {
+            if (!_isActivated)
+            {
+                // Appender not activated, so Dispose is a nop.
+                return;
+            }
             bool flushSucceeded = Flush(TimeSpan.FromSeconds(DisposeTimeoutSeconds));
             if (!flushSucceeded)
             {
@@ -442,6 +467,11 @@ namespace Google.Cloud.Logging.Log4Net
         protected override void OnClose()
         {
             base.OnClose();
+            if (!_isActivated)
+            {
+                // Appender not activated, so Close is a nop.
+                return;
+            }
             _logUploader.Close();
         }
     }

@@ -35,28 +35,30 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     {
         private readonly TraceEntryPolling _polling = new TraceEntryPolling();
 
+        private readonly TestServer _noBufferHighQps = new TestServer(
+            new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>());
+
+        private readonly TestServer _noBufferLowQps = new TestServer(
+            new WebHostBuilder().UseStartup<TraceTestNoBufferLowQpsApplication>());
+
         [Fact]
         public async Task Trace()
         {
             string testId = Utils.GetTestId();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
-            var builder = new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>();
-            using (var server = new TestServer(builder))
-            {
-                var client = server.CreateClient();
-                await client.GetAsync($"/Trace/Trace/{testId}");
+            var client = _noBufferHighQps.CreateClient();
+            await client.GetAsync($"/Trace/Trace/{testId}");
 
-                var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-                var trace = _polling.GetTrace(spanName, startTime);
+            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+            var trace = _polling.GetTrace(spanName, startTime);
 
-                Assert.NotNull(trace);
-                Assert.Equal(2, trace.Spans.Count);
-                var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
-                Assert.NotEmpty(span.Labels);
-                Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
-                Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
-            }
+            Assert.NotNull(trace);
+            Assert.Equal(2, trace.Spans.Count);
+            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/Trace/"));
+            Assert.NotEmpty(span.Labels);
+            Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
+            Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
         }
 
         [Fact]
@@ -65,21 +67,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = Utils.GetTestId();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
-            var builder = new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>();
-            using (var server = new TestServer(builder))
-            {
-                var client = server.CreateClient();
-                await client.GetAsync($"/Trace/TraceLabels/{testId}");
+            var client = _noBufferHighQps.CreateClient();
+            await client.GetAsync($"/Trace/TraceLabels/{testId}");
 
-                var spanName = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
-                var trace = _polling.GetTrace(spanName, startTime);
+            var spanName = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
+            var trace = _polling.GetTrace(spanName, startTime);
 
-                Assert.NotNull(trace);
-                Assert.Equal(2, trace.Spans.Count);
-                var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
-                Assert.Single(span.Labels);
-                Assert.Equal(span.Labels[TraceController.Label], TraceController.LabelValue);
-            }   
+            Assert.NotNull(trace);
+            Assert.Equal(2, trace.Spans.Count);
+            var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
+            Assert.Single(span.Labels);
+            Assert.Equal(span.Labels[TraceController.Label], TraceController.LabelValue);
         }
 
         [Fact]
@@ -88,22 +86,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = Utils.GetTestId();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
-            var builder = new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>();
-            using (var server = new TestServer(builder))
-            {
-                var client = server.CreateClient();
-                await client.GetAsync($"/Trace/TraceStackTrace/{testId}");
+            var client = _noBufferHighQps.CreateClient();
+            await client.GetAsync($"/Trace/TraceStackTrace/{testId}");
 
-                var spanName = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
-                var trace = _polling.GetTrace(spanName, startTime);
+            var spanName = TraceController.GetMessage(nameof(TraceController.TraceStackTrace), testId);
+            var trace = _polling.GetTrace(spanName, startTime);
 
-                Assert.NotNull(trace);
-                Assert.Equal(2, trace.Spans.Count);
-                var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
-                Assert.Single(span.Labels);
-                Assert.Contains(nameof(TraceController), span.Labels[TraceLabels.StackTrace]);
-                Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[TraceLabels.StackTrace]);
-            }   
+            Assert.NotNull(trace);
+            Assert.Equal(2, trace.Spans.Count);
+            var span = trace.Spans.First(s => s.Name.StartsWith("Trace"));
+            Assert.Single(span.Labels);
+            Assert.Contains(nameof(TraceController), span.Labels[TraceLabels.StackTrace]);
+            Assert.Contains(nameof(TraceController.CreateStackTrace), span.Labels[TraceLabels.StackTrace]);
         }
 
         [Fact]
@@ -114,24 +108,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             string testId = Utils.GetTestId();           
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
-            var builder = new WebHostBuilder().UseStartup<TraceTestNoBufferLowQpsApplication>();
-            using (var server = new TestServer(builder))
-            {
-                var client = server.CreateClient();
+
+            var client = _noBufferLowQps.CreateClient();
                 
-                var header = TraceHeaderContext.Create(traceId, spanId, shouldTrace: true);
-                client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader, header.ToString());
-                await client.GetAsync($"/Trace/Trace/{testId}");
+            var header = TraceHeaderContext.Create(traceId, spanId, shouldTrace: true);
+            client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader, header.ToString());
+            await client.GetAsync($"/Trace/Trace/{testId}");
 
-                var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
-                var trace = _polling.GetTrace(spanName, startTime);
+            var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
+            var trace = _polling.GetTrace(spanName, startTime);
 
-                Assert.NotNull(trace);
-                Assert.Equal(traceId, trace.TraceId);
-                Assert.Equal(2, trace.Spans.Count);
-                var span = trace.Spans.First(s => s.Name.StartsWith("/Trace"));
-                Assert.Equal(spanId, span.ParentSpanId);
-            }
+            Assert.NotNull(trace);
+            Assert.Equal(traceId, trace.TraceId);
+            Assert.Equal(2, trace.Spans.Count);
+            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace"));
+            Assert.Equal(spanId, span.ParentSpanId);
         }
 
         [Fact]
@@ -145,17 +136,19 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 var client = server.CreateClient();
 
-                // The first request is not traced, sleep long enough 
-                // for the rate limiter to allow a request, then the second
-                // request is traced.
-                await client.GetAsync($"/Trace/TraceLabels/{testId}");
+                // Wait for 2 seconds to ensure the next time we make a request it will be
+                // traced.  Then make two request, one of the two should be traced.
                 Thread.Sleep(TimeSpan.FromSeconds(2));
-                await client.GetAsync($"/Trace/Trace/{testId}");
+                var traceTask = client.GetAsync($"/Trace/Trace/{testId}");
+                var traceLabelsTask = client.GetAsync($"/Trace/TraceLabels/{testId}");
+                await traceTask;
+                await traceLabelsTask;
 
                 var spanNameTrace = TraceController.GetMessage(nameof(TraceController.Trace), testId);
                 var spanNameLabels = TraceController.GetMessage(nameof(TraceController.TraceLabels), testId);
-                Assert.Null(_polling.GetTrace(spanNameLabels, startTime, expectTrace: false));
-                Assert.NotNull(_polling.GetTrace(spanNameTrace, startTime));
+                var trace = _polling.GetTrace(spanNameLabels, startTime);
+                var traceLabel = _polling.GetTrace(spanNameTrace, startTime);
+                Assert.True((trace == null && traceLabel != null) || (trace != null && traceLabel == null));
             }
         }
 
@@ -191,40 +184,36 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             string testId = Utils.GetTestId();
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
-            var builder = new WebHostBuilder().UseStartup<TraceTestNoBufferHighQpsApplication>();
-            using (var server = new TestServer(builder))
+            var client = _noBufferHighQps.CreateClient();
+            try
             {
-                var client = server.CreateClient();
-                try
-                {
-                    await client.GetAsync($"/Trace/ThrowException/{testId}");
-                }
-                catch
-                {
-                    // This will throw as the task faults.
-                }
-
-                var spanName = TraceController.GetMessage(nameof(TraceController.ThrowException), testId);
-                var trace = _polling.GetTrace(spanName, startTime);
-
-                Assert.NotNull(trace);
-                var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));
-                Assert.NotEmpty(span.Labels);
-                Assert.Contains(nameof(TraceController), span.Labels[Common.TraceLabels.StackTrace]);
-                Assert.Contains(nameof(TraceController.ThrowException), span.Labels[Common.TraceLabels.StackTrace]);
+                await client.GetAsync($"/Trace/ThrowException/{testId}");
             }
+            catch
+            {
+                // This will throw as the task faults.
+            }
+
+            var spanName = TraceController.GetMessage(nameof(TraceController.ThrowException), testId);
+            var trace = _polling.GetTrace(spanName, startTime);
+
+            Assert.NotNull(trace);
+            var span = trace.Spans.First(s => s.Name.StartsWith("/Trace/ThrowException"));
+            Assert.NotEmpty(span.Labels);
+            Assert.Contains(nameof(TraceController), span.Labels[TraceLabels.StackTrace]);
+            Assert.Contains(nameof(TraceController.ThrowException), span.Labels[TraceLabels.StackTrace]);
         }
     }
 
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
-    /// This app uses a size buffer (1,000 bytes) and will sample 1000000 QPS.
+    /// This app uses a size buffer (500 bytes) and will sample 1000000 QPS.
     /// </summary>
     public class TraceTestBufferHighQpsApplication : AbstractTraceTestApplication
     {
         public override double GetSampleRate() => 1000000;
         public override BufferOptions GetBufferOptions() =>
-            BufferOptions.SizedBuffer(1000);
+            BufferOptions.SizedBuffer(500);
     }
 
     /// <summary>

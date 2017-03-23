@@ -22,14 +22,16 @@
     "Google.Cloud.Logging.Type": { "target": "project" },
     "Google.Cloud.Logging.V2": { "target": "project" },
     "Google.Cloud.Trace.V1": { "target": "project" },
-    "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" }
+    "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" },
+    "System.Collections.Immutable": "1.3.1"
   },
 
   "frameworks": {
     "netstandard1.5": {
       "dependencies": {
         "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
-        "System.Diagnostics.StackTrace": "4.3.0"
+        "System.Diagnostics.StackTrace": "4.3.0",
+        "System.Threading": "4.3.0"
       }
     }
   }

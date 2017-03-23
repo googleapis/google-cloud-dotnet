@@ -24,6 +24,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -32,6 +33,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     public class ErrorReportingTest
     {
         private readonly ErrorEventEntryPolling _polling = new ErrorEventEntryPolling();
+
+        private readonly bool _isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 
         [Fact]
         public Task NoExceptions_ErrorReporting()
@@ -162,9 +165,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.HttpRequest.Url));
             Assert.True(errorEvent.Context.HttpRequest.ResponseStatusCode >= 200);
 
-            Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.ReportLocation.FilePath));
+            if (_isWindows)
+            {
+                Assert.False(string.IsNullOrWhiteSpace(errorEvent.Context.ReportLocation.FilePath));
+                Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
+            }
             Assert.Equal(functionName, errorEvent.Context.ReportLocation.FunctionName);
-            Assert.True(errorEvent.Context.ReportLocation.LineNumber > 0);
         }
 
         /// <summary>

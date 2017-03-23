@@ -19,8 +19,8 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-beta12",
-    "Google.Apis.Bigquery.v2": "1.20.0.667"
+    "Google.Api.Gax.Rest": "1.0.0-beta13",
+    "Google.Apis.Bigquery.v2": "1.22.0.808"
   },
   "frameworks": {
     "net45": { },

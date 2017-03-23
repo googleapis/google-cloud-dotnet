@@ -2,6 +2,8 @@
   href: index.md
 - name: FAQ
   href: faq.md
+- name: Supported platforms
+  href: platforms.md
 - name: Page streaming
   href: page-streaming.md
 - name: Resource names and IDs

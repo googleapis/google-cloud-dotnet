@@ -130,6 +130,8 @@ namespace Google.Cloud.Logging.V2 {
     ///
     ///      "projects/[PROJECT_ID]/logs/[LOG_ID]"
     ///      "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+    ///      "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+    ///      "folders/[FOLDER_ID]/logs/[LOG_ID]"
     ///
     ///  `[LOG_ID]` must be URL-encoded. For example,
     ///  `"projects/my-project-id/logs/syslog"`,
@@ -267,6 +269,8 @@ namespace Google.Cloud.Logging.V2 {
     ///
     ///      "projects/[PROJECT_ID]/logs/[LOG_ID]"
     ///      "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+    ///      "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+    ///      "folders/[FOLDER_ID]/logs/[LOG_ID]"
     ///
     ///  `[LOG_ID]` must be URL-encoded. For example,
     ///  `"projects/my-project-id/logs/syslog"` or
@@ -325,10 +329,16 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Logging.V2.LogEntry.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry> entries_ = new pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogEntry>();
     /// <summary>
-    ///  Required. The log entries to write. Values supplied for the fields
+    ///  Required.  The log entries to write. Values supplied for the fields
     ///  `log_name`, `resource`, and `labels` in this `entries.write` request are
-    ///  added to those log entries that do not provide their own values for the
-    ///  fields.
+    ///  inserted into those log entries in this list that do not provide their own
+    ///  values.
+    ///
+    ///  Stackdriver Logging also creates and inserts values for `timestamp` and
+    ///  `insert_id` if the entries do not provide them. The created `insert_id` for
+    ///  the N'th entry in this list will be greater than earlier entries and less
+    ///  than later entries.  Otherwise, the order of log entries in this list does
+    ///  not matter.
     ///
     ///  To improve throughput and to avoid exceeding the
     ///  [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -346,9 +356,9 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>
     ///  Optional. Whether valid entries should be written even if some other
     ///  entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
-    ///  entry is not written, the response status will be the error associated
-    ///  with one of the failed entries and include error details in the form of
-    ///  WriteLogEntriesPartialErrors.
+    ///  entry is not written, then the response status is the error associated
+    ///  with one of the failed entries and the response includes error details
+    ///  keyed by the entries' zero-based index in the `entries.write` method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool PartialSuccess {
@@ -644,11 +654,13 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> resourceNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  Required. Names of one or more resources from which to retrieve log
-    ///  entries:
+    ///  Required. Names of one or more parent resources from which to
+    ///  retrieve log entries:
     ///
     ///      "projects/[PROJECT_ID]"
     ///      "organizations/[ORGANIZATION_ID]"
+    ///      "billingAccounts/[BILLING_ACCOUNT_ID]"
+    ///      "folders/[FOLDER_ID]"
     ///
     ///  Projects listed in the `project_ids` field are added to this list.
     /// </summary>
@@ -686,7 +698,7 @@ namespace Google.Cloud.Logging.V2 {
     ///  option returns entries in order of increasing values of
     ///  `LogEntry.timestamp` (oldest first), and the second option returns entries
     ///  in order of decreasing timestamps (newest first).  Entries with equal
-    ///  timestamps are returned in order of `LogEntry.insertId`.
+    ///  timestamps are returned in order of their `insert_id` values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -701,7 +713,7 @@ namespace Google.Cloud.Logging.V2 {
     private int pageSize_;
     /// <summary>
     ///  Optional. The maximum number of results to return from this request.
-    ///  Non-positive values are ignored.  The presence of `nextPageToken` in the
+    ///  Non-positive values are ignored.  The presence of `next_page_token` in the
     ///  response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -717,8 +729,8 @@ namespace Google.Cloud.Logging.V2 {
     private string pageToken_ = "";
     /// <summary>
     ///  Optional. If present, then retrieve the next batch of results from the
-    ///  preceding call to this method.  `pageToken` must be the value of
-    ///  `nextPageToken` from the previous response.  The values of other method
+    ///  preceding call to this method.  `page_token` must be the value of
+    ///  `next_page_token` from the previous response.  The values of other method
     ///  parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1376,6 +1388,8 @@ namespace Google.Cloud.Logging.V2 {
     ///
     ///      "projects/[PROJECT_ID]"
     ///      "organizations/[ORGANIZATION_ID]"
+    ///      "billingAccounts/[BILLING_ACCOUNT_ID]"
+    ///      "folders/[FOLDER_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {

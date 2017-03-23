@@ -425,12 +425,16 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes all the log entries in a log.
         /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
         ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+        ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"`,
@@ -449,19 +453,23 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => DeleteLogAsync(
                 new DeleteLogRequest
                 {
-                    LogNameAsLogNameOneof = logName,
+                    LogNameAsLogNameOneof = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
                 },
                 callSettings);
 
         /// <summary>
         /// Deletes all the log entries in a log.
         /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
         ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+        ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"`,
@@ -484,12 +492,16 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes all the log entries in a log.
         /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
         /// </summary>
         /// <param name="logName">
         /// Required. The resource name of the log to delete:
         ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+        ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"`,
@@ -508,13 +520,15 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => DeleteLog(
                 new DeleteLogRequest
                 {
-                    LogNameAsLogNameOneof = logName,
+                    LogNameAsLogNameOneof = GaxPreconditions.CheckNotNull(logName, nameof(logName)),
                 },
                 callSettings);
 
         /// <summary>
         /// Deletes all the log entries in a log.
         /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -535,6 +549,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes all the log entries in a log.
         /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -553,8 +569,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.  All log entries are
-        /// written by this method.
+        /// Writes log entries to Stackdriver Logging.
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -562,6 +577,8 @@ namespace Google.Cloud.Logging.V2
         ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+        ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"` or
@@ -586,10 +603,16 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required. The log entries to write. Values supplied for the fields
+        /// Required.  The log entries to write. Values supplied for the fields
         /// `log_name`, `resource`, and `labels` in this `entries.write` request are
-        /// added to those log entries that do not provide their own values for the
-        /// fields.
+        /// inserted into those log entries in this list that do not provide their own
+        /// values.
+        ///
+        /// Stackdriver Logging also creates and inserts values for `timestamp` and
+        /// `insert_id` if the entries do not provide them. The created `insert_id` for
+        /// the N'th entry in this list will be greater than earlier entries and less
+        /// than later entries.  Otherwise, the order of log entries in this list does
+        /// not matter.
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -610,16 +633,15 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => WriteLogEntriesAsync(
                 new WriteLogEntriesRequest
                 {
-                    LogNameAsLogNameOneof = logName,
-                    Resource = resource,
-                    Labels = { labels },
-                    Entries = { entries },
+                    LogNameAsLogNameOneof = logName, // Optional
+                    Resource = resource, // Optional
+                    Labels = { labels ?? EmptyDictionary<string, string>.Instance }, // Optional
+                    Entries = { GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
                 },
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.  All log entries are
-        /// written by this method.
+        /// Writes log entries to Stackdriver Logging.
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -627,6 +649,8 @@ namespace Google.Cloud.Logging.V2
         ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+        ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"` or
@@ -651,10 +675,16 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required. The log entries to write. Values supplied for the fields
+        /// Required.  The log entries to write. Values supplied for the fields
         /// `log_name`, `resource`, and `labels` in this `entries.write` request are
-        /// added to those log entries that do not provide their own values for the
-        /// fields.
+        /// inserted into those log entries in this list that do not provide their own
+        /// values.
+        ///
+        /// Stackdriver Logging also creates and inserts values for `timestamp` and
+        /// `insert_id` if the entries do not provide them. The created `insert_id` for
+        /// the N'th entry in this list will be greater than earlier entries and less
+        /// than later entries.  Otherwise, the order of log entries in this list does
+        /// not matter.
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -680,8 +710,7 @@ namespace Google.Cloud.Logging.V2
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.  All log entries are
-        /// written by this method.
+        /// Writes log entries to Stackdriver Logging.
         /// </summary>
         /// <param name="logName">
         /// Optional. A default log resource name that is assigned to all log entries
@@ -689,6 +718,8 @@ namespace Google.Cloud.Logging.V2
         ///
         ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
         ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+        ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
         ///
         /// `[LOG_ID]` must be URL-encoded. For example,
         /// `"projects/my-project-id/logs/syslog"` or
@@ -713,10 +744,16 @@ namespace Google.Cloud.Logging.V2
         /// See [LogEntry][google.logging.v2.LogEntry].
         /// </param>
         /// <param name="entries">
-        /// Required. The log entries to write. Values supplied for the fields
+        /// Required.  The log entries to write. Values supplied for the fields
         /// `log_name`, `resource`, and `labels` in this `entries.write` request are
-        /// added to those log entries that do not provide their own values for the
-        /// fields.
+        /// inserted into those log entries in this list that do not provide their own
+        /// values.
+        ///
+        /// Stackdriver Logging also creates and inserts values for `timestamp` and
+        /// `insert_id` if the entries do not provide them. The created `insert_id` for
+        /// the N'th entry in this list will be greater than earlier entries and less
+        /// than later entries.  Otherwise, the order of log entries in this list does
+        /// not matter.
         ///
         /// To improve throughput and to avoid exceeding the
         /// [quota limit](/logging/quota-policy) for calls to `entries.write`,
@@ -737,16 +774,15 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => WriteLogEntries(
                 new WriteLogEntriesRequest
                 {
-                    LogNameAsLogNameOneof = logName,
-                    Resource = resource,
-                    Labels = { labels },
-                    Entries = { entries },
+                    LogNameAsLogNameOneof = logName, // Optional
+                    Resource = resource, // Optional
+                    Labels = { labels ?? EmptyDictionary<string, string>.Instance }, // Optional
+                    Entries = { GaxPreconditions.CheckNotNull(entries, nameof(entries)) },
                 },
                 callSettings);
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.  All log entries are
-        /// written by this method.
+        /// Writes log entries to Stackdriver Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -765,8 +801,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.  All log entries are
-        /// written by this method.
+        /// Writes log entries to Stackdriver Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -790,11 +825,13 @@ namespace Google.Cloud.Logging.V2
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
-        /// Required. Names of one or more resources from which to retrieve log
-        /// entries:
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
         ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
         ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -813,7 +850,7 @@ namespace Google.Cloud.Logging.V2
         /// option returns entries in order of increasing values of
         /// `LogEntry.timestamp` (oldest first), and the second option returns entries
         /// in order of decreasing timestamps (newest first).  Entries with equal
-        /// timestamps are returned in order of `LogEntry.insertId`.
+        /// timestamps are returned in order of their `insert_id` values.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -838,9 +875,9 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => ListLogEntriesAsync(
                 new ListLogEntriesRequest
                 {
-                    ResourceNames = { resourceNames },
-                    Filter = filter,
-                    OrderBy = orderBy,
+                    ResourceNames = { GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
+                    Filter = filter ?? "", // Optional
+                    OrderBy = orderBy ?? "", // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -852,11 +889,13 @@ namespace Google.Cloud.Logging.V2
         /// [Exporting Logs](/logging/docs/export).
         /// </summary>
         /// <param name="resourceNames">
-        /// Required. Names of one or more resources from which to retrieve log
-        /// entries:
+        /// Required. Names of one or more parent resources from which to
+        /// retrieve log entries:
         ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
         ///
         /// Projects listed in the `project_ids` field are added to this list.
         /// </param>
@@ -875,7 +914,7 @@ namespace Google.Cloud.Logging.V2
         /// option returns entries in order of increasing values of
         /// `LogEntry.timestamp` (oldest first), and the second option returns entries
         /// in order of decreasing timestamps (newest first).  Entries with equal
-        /// timestamps are returned in order of `LogEntry.insertId`.
+        /// timestamps are returned in order of their `insert_id` values.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -900,9 +939,9 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => ListLogEntries(
                 new ListLogEntriesRequest
                 {
-                    ResourceNames = { resourceNames },
-                    Filter = filter,
-                    OrderBy = orderBy,
+                    ResourceNames = { GaxPreconditions.CheckNotNull(resourceNames, nameof(resourceNames)) },
+                    Filter = filter ?? "", // Optional
+                    OrderBy = orderBy ?? "", // Optional
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -991,7 +1030,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the logs in projects or organizations.
+        /// Lists the logs in projects, organizations, folders, or billing accounts.
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
@@ -999,6 +1038,8 @@ namespace Google.Cloud.Logging.V2
         ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1021,14 +1062,14 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => ListLogsAsync(
                 new ListLogsRequest
                 {
-                    ParentAsParentNameOneof = parent,
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
                 callSettings);
 
         /// <summary>
-        /// Lists the logs in projects or organizations.
+        /// Lists the logs in projects, organizations, folders, or billing accounts.
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="parent">
@@ -1036,6 +1077,8 @@ namespace Google.Cloud.Logging.V2
         ///
         ///     "projects/[PROJECT_ID]"
         ///     "organizations/[ORGANIZATION_ID]"
+        ///     "billingAccounts/[BILLING_ACCOUNT_ID]"
+        ///     "folders/[FOLDER_ID]"
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request.
@@ -1058,14 +1101,14 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => ListLogs(
                 new ListLogsRequest
                 {
-                    ParentAsParentNameOneof = parent,
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
                 callSettings);
 
         /// <summary>
-        /// Lists the logs in projects or organizations.
+        /// Lists the logs in projects, organizations, folders, or billing accounts.
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="request">
@@ -1085,7 +1128,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the logs in projects or organizations.
+        /// Lists the logs in projects, organizations, folders, or billing accounts.
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="request">
@@ -1157,6 +1200,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes all the log entries in a log.
         /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1178,6 +1223,8 @@ namespace Google.Cloud.Logging.V2
         /// <summary>
         /// Deletes all the log entries in a log.
         /// The log reappears if it receives new entries.
+        /// Log entries written shortly before the delete operation might not be
+        /// deleted.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1197,8 +1244,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.  All log entries are
-        /// written by this method.
+        /// Writes log entries to Stackdriver Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1218,8 +1264,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Writes log entries to Stackdriver Logging.  All log entries are
-        /// written by this method.
+        /// Writes log entries to Stackdriver Logging.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -1325,7 +1370,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the logs in projects or organizations.
+        /// Lists the logs in projects, organizations, folders, or billing accounts.
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="request">
@@ -1346,7 +1391,7 @@ namespace Google.Cloud.Logging.V2
         }
 
         /// <summary>
-        /// Lists the logs in projects or organizations.
+        /// Lists the logs in projects, organizations, folders, or billing accounts.
         /// Only logs that have entries are listed.
         /// </summary>
         /// <param name="request">

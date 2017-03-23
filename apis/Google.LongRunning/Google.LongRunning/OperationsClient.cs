@@ -360,7 +360,7 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => GetOperationAsync(
                 new GetOperationRequest
                 {
-                    Name = name,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -403,7 +403,7 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => GetOperation(
                 new GetOperationRequest
                 {
-                    Name = name,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -484,8 +484,8 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => ListOperationsAsync(
                 new ListOperationsRequest
                 {
-                    Name = name,
-                    Filter = filter,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -526,8 +526,8 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => ListOperations(
                 new ListOperationsRequest
                 {
-                    Name = name,
-                    Filter = filter,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -605,7 +605,7 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => CancelOperationAsync(
                 new CancelOperationRequest
                 {
-                    Name = name,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -662,7 +662,7 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => CancelOperation(
                 new CancelOperationRequest
                 {
-                    Name = name,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -742,7 +742,7 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => DeleteOperationAsync(
                 new DeleteOperationRequest
                 {
-                    Name = name,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 
@@ -787,7 +787,7 @@ namespace Google.LongRunning
             CallSettings callSettings = null) => DeleteOperation(
                 new DeleteOperationRequest
                 {
-                    Name = name,
+                    Name = GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
                 },
                 callSettings);
 

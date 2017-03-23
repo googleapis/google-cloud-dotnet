@@ -11,26 +11,24 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+using Google.Apis.Bigquery.v2.Data;
+using Google.Apis.Services;
+using Google.Apis.Upload;
+using System.IO;
+using static Google.Apis.Bigquery.v2.JobsResource;
 
-using Google.Api.Gax;
-using Google.Cloud.Diagnostics.Common;
-using System.Web;
-
-namespace Google.Cloud.Diagnostics.AspNet
+namespace Google.Cloud.BigQuery.V2
 {
     /// <summary>
-    /// Utilities for <see cref="TraceHeaderContext"/>.
+    /// Upload subclass which allows us to modify headers.
     /// </summary>
-    internal sealed class TraceHeaderContextUtils
+    internal sealed class CustomMediaUpload : InsertMediaUpload
     {
-        /// <summary>
-        /// Creates a <see cref="TraceHeaderContext"/> from an <see cref="HttpRequest"/>. 
-        /// </summary>
-        public static TraceHeaderContext CreateContext(HttpRequest request)
+        public CustomMediaUpload(IClientService service, Job body, string projectId, Stream stream, string contentType)
+            : base(service, body, projectId, stream, contentType)
         {
-            GaxPreconditions.CheckNotNull(request, nameof(request));
-            string header = request.Headers.Get(TraceHeaderContext.TraceHeader);
-            return TraceHeaderContext.FromHeader(header);
         }
+
+        internal new ResumableUploadOptions Options => base.Options;
     }
 }

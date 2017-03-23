@@ -64,46 +64,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
         }
 
-        [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
-        [InlineData(null)]
-        public void CreateTraceHeaderContext_ForceTrace(bool? shouldTrace)
-        {
-            var provider = CreateProviderForTraceHeaderContext($"{_traceId}/{_spanId};", ((HttpRequest r) => shouldTrace));
-            var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
-            Assert.Equal(_traceId, headerContext.TraceId);
-            Assert.Equal(_spanId, headerContext.SpanId);
-            Assert.Equal(shouldTrace, headerContext.ShouldTrace);
-        }
-
         [Fact]
-        public void CreateTraceHeaderContext_ForceTrace_NoHeader()
+        public void CreateTraceHeaderContext_UseBackUpFunc()
         {
-            var provider = CreateProviderForTraceHeaderContext("", ((HttpRequest r) => true));
+            var header = $"{_traceId}/{_spanId};";
+            var provider = CreateProviderForTraceHeaderContext(header);
             var headerContext = CloudTraceExtension.CreateTraceHeaderContext(provider);
-            Assert.NotNull(headerContext.TraceId);
-            Assert.Equal((ulong)0, headerContext.SpanId);
-            Assert.Equal(true, headerContext.ShouldTrace);
+            Assert.Equal(TraceHeaderContext.FromHeader(header).ToString(), headerContext.ToString());
         }
 
         [Fact]
         public void CreateManagedTracer()
         {
-            var accessor = new HttpContextAccessor();
-            accessor.HttpContext = new DefaultHttpContext();
-            var context = TraceHeaderContext.Create(null, null, false);
-            var tracerFactoryMock = new Mock<IManagedTracerFactory>();
-            tracerFactoryMock.Setup(f => f.CreateTracer(context)).Returns(NullManagedTracer.Instance);
             var mockProvider = new Mock<IServiceProvider>();
-            mockProvider.Setup(p => p.GetService(typeof(TraceHeaderContext))).Returns(context);
-            mockProvider.Setup(p => p.GetService(typeof(IManagedTracerFactory))).Returns(tracerFactoryMock.Object);
-            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
-
+            mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(new HttpContextAccessor());
             var tracer = CloudTraceExtension.CreateManagedTracer(mockProvider.Object);
-            Assert.IsType(typeof(NullManagedTracer), tracer);
-            Assert.Equal(tracer, accessor.HttpContext.Items[CloudTraceExtension.TraceKey]);
-            tracerFactoryMock.VerifyAll();
+            Assert.IsType(typeof(DelegatingTracer), tracer);
             mockProvider.VerifyAll();
         }
 

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Protobuf;
 using Google.Protobuf.Collections;
 using static Google.Cloud.Datastore.V1.PropertyOrder.Types;
 
@@ -74,6 +75,34 @@ namespace Google.Cloud.Datastore.V1
         {
             GaxPreconditions.CheckNotNull(orderings, nameof(orderings));
             orderings.Add(new PropertyOrder { Direction = Direction.Ascending, Property = new PropertyReference(propertyName) });
+        }
+
+        /// <summary>
+        /// Adds a GQL parameter with the specified value.
+        /// </summary>
+        /// <param name="parameters">The mapping of GQL query parameters to add to. Must not be null.</param>
+        /// <param name="parameterName">The name of the parameter. Must not be null.</param>
+        /// <param name="value">The value to add.  May be null, which indicates
+        /// a value with <see cref="Value.NullValue"/> set.</param>
+        public static void Add(this MapField<string, GqlQueryParameter> parameters, string parameterName, Value value)
+        {
+            GaxPreconditions.CheckNotNull(parameters, nameof(parameters));
+            GaxPreconditions.CheckNotNull(parameterName, nameof(parameterName));
+            GaxPreconditions.CheckNotNull(value, nameof(value));
+            parameters.Add(parameterName, new GqlQueryParameter { Value = value ?? Value.ForNull() });
+        }
+
+        /// <summary>
+        /// Adds a GQL parameter with the specified value.
+        /// </summary>
+        /// <param name="parameters">The list of positional GQL query parameters to add to. Must not be null.</param>
+        /// <param name="value">The value to add.  May be null, which indicates
+        /// a value with <see cref="Value.NullValue"/> set.</param>
+        public static void Add(this RepeatedField<GqlQueryParameter> parameters, Value value)
+        {
+            GaxPreconditions.CheckNotNull(parameters, nameof(parameters));
+            GaxPreconditions.CheckNotNull(value, nameof(value));
+            parameters.Add(new GqlQueryParameter { Value = value ?? Value.ForNull() });
         }
     }
 }

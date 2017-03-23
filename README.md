@@ -77,8 +77,15 @@ Next, choose a method for authenticating API requests from within your project:
       Download the SDK if you haven't already, then login by running the following in the command line:
 
       ```
-      gcloud auth login
+      gcloud auth application-default login
       ```
+
+## Supported platforms
+
+See the [Supported Platforms
+documentation](https://googlecloudplatform.github.io/google-cloud-dotnet/docs/platforms.html)
+for details on where the Google Cloud Libraries for .NET are
+supported.
 
 ## Contributing
 

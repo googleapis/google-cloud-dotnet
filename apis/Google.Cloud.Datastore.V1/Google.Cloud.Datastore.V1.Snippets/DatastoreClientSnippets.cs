@@ -88,7 +88,7 @@ namespace Google.Cloud.Datastore.V1.Snippets
             request.GqlQuery = new GqlQuery
             {
                 QueryString = "SELECT * FROM book WHERE author = @author",
-                NamedBindings = { { "author", new GqlQueryParameter { Value = "Jane Austen" } } },
+                NamedBindings = { { "author", "Jane Austen" } },
             };
             foreach (EntityResult result in response.Batch.EntityResults)
             {

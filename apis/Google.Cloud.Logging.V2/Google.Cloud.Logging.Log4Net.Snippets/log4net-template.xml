@@ -2,13 +2,13 @@
 <log4net>
   <appender name="CloudLogger" type="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender,Google.Cloud.Logging.Log4Net">
     <layout type="log4net.Layout.PatternLayout">
-      <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message"/>
+      <conversionPattern value="%-4timestamp [%thread] %-5level %logger %ndc - %message" />
     </layout>
-    <projectId value="PROJECT_ID"/>
-    <logId value="LOG_ID"/>
+    <projectId value="PROJECT_ID" />
+    <logId value="LOG_ID" />
   </appender>
   <root>
-    <level value="ALL"/>
-    <appender-ref ref="CloudLogger"/>
+    <level value="ALL" />
+    <appender-ref ref="CloudLogger" />
   </root>
 </log4net>

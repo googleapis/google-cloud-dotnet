@@ -125,6 +125,8 @@ namespace Google.Cloud.Logging.V2 {
     ///
     ///      "projects/[PROJECT_ID]/logs/[LOG_ID]"
     ///      "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+    ///      "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+    ///      "folders/[FOLDER_ID]/logs/[LOG_ID]"
     ///
     ///  `[LOG_ID]` must be URL-encoded within `log_name`. Example:
     ///  `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
@@ -213,7 +215,10 @@ namespace Google.Cloud.Logging.V2 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     /// <summary>
     ///  Optional. The time the event described by the log entry occurred.  If
-    ///  omitted, Stackdriver Logging will use the time the log entry is received.
+    ///  omitted in a new log entry, Stackdriver Logging will insert the time the
+    ///  log entry is received.  Stackdriver Logging might reject log entries whose
+    ///  time stamps are more than a couple of hours in the future. Log entries
+    ///  with time stamps in the past are accepted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
@@ -242,11 +247,12 @@ namespace Google.Cloud.Logging.V2 {
     public const int InsertIdFieldNumber = 4;
     private string insertId_ = "";
     /// <summary>
-    ///  Optional. A unique ID for the log entry. If you provide this
-    ///  field, the logging service considers other log entries in the
-    ///  same project with the same ID as duplicates which can be removed.  If
-    ///  omitted, Stackdriver Logging will generate a unique ID for this
-    ///  log entry.
+    ///  Optional. A unique identifier for the log entry. If you provide a value,
+    ///  then Stackdriver Logging considers other log entries in the same project,
+    ///  with the same `timestamp`, and with the same `insert_id` to be duplicates
+    ///  which can be removed.  If omitted in new log entries, then Stackdriver
+    ///  Logging will insert its own unique identifier. The `insert_id` is used
+    ///  to order log entries that have the same `timestamp` value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InsertId {

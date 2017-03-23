@@ -409,7 +409,7 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => ListLogMetricsAsync(
                 new ListLogMetricsRequest
                 {
-                    ParentAsParentNameOneof = parent,
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -444,7 +444,7 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => ListLogMetrics(
                 new ListLogMetricsRequest
                 {
-                    ParentAsParentNameOneof = parent,
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -507,7 +507,7 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => GetLogMetricAsync(
                 new GetLogMetricRequest
                 {
-                    MetricNameAsMetricNameOneof = metricName,
+                    MetricNameAsMetricNameOneof = GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
                 },
                 callSettings);
 
@@ -550,7 +550,7 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => GetLogMetric(
                 new GetLogMetricRequest
                 {
-                    MetricNameAsMetricNameOneof = metricName,
+                    MetricNameAsMetricNameOneof = GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
                 },
                 callSettings);
 
@@ -618,8 +618,8 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => CreateLogMetricAsync(
                 new CreateLogMetricRequest
                 {
-                    ParentAsParentNameOneof = parent,
-                    Metric = metric,
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Metric = GaxPreconditions.CheckNotNull(metric, nameof(metric)),
                 },
                 callSettings);
 
@@ -677,8 +677,8 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => CreateLogMetric(
                 new CreateLogMetricRequest
                 {
-                    ParentAsParentNameOneof = parent,
-                    Metric = metric,
+                    ParentAsParentNameOneof = GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                    Metric = GaxPreconditions.CheckNotNull(metric, nameof(metric)),
                 },
                 callSettings);
 
@@ -747,8 +747,8 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => UpdateLogMetricAsync(
                 new UpdateLogMetricRequest
                 {
-                    MetricNameAsMetricNameOneof = metricName,
-                    Metric = metric,
+                    MetricNameAsMetricNameOneof = GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                    Metric = GaxPreconditions.CheckNotNull(metric, nameof(metric)),
                 },
                 callSettings);
 
@@ -808,8 +808,8 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => UpdateLogMetric(
                 new UpdateLogMetricRequest
                 {
-                    MetricNameAsMetricNameOneof = metricName,
-                    Metric = metric,
+                    MetricNameAsMetricNameOneof = GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
+                    Metric = GaxPreconditions.CheckNotNull(metric, nameof(metric)),
                 },
                 callSettings);
 
@@ -870,7 +870,7 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => DeleteLogMetricAsync(
                 new DeleteLogMetricRequest
                 {
-                    MetricNameAsMetricNameOneof = metricName,
+                    MetricNameAsMetricNameOneof = GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
                 },
                 callSettings);
 
@@ -913,7 +913,7 @@ namespace Google.Cloud.Logging.V2
             CallSettings callSettings = null) => DeleteLogMetric(
                 new DeleteLogMetricRequest
                 {
-                    MetricNameAsMetricNameOneof = metricName,
+                    MetricNameAsMetricNameOneof = GaxPreconditions.CheckNotNull(metricName, nameof(metricName)),
                 },
                 callSettings);
 

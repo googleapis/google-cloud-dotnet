@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.Snippets
@@ -266,6 +267,44 @@ namespace Google.Cloud.Storage.V1.Snippets
                 var obj = client.UploadObject(bucketName, destination, contentType, stream, options, progress);
             }
             // End snippet
+
+            // want to show the source in the snippet, but also
+            // want to make sure it matches the one in the fixture
+            Assert.Equal(source, _fixture.WorldLocalFileName);
+        }
+
+
+        [Fact]
+        public async Task UploadObjectWithSessionUri()
+        {
+            var bucketName = _fixture.BucketName;
+
+            // Sample: UploadObjectWithSessionUri
+            var client = StorageClient.Create();
+            var source = "world.txt";
+            var destination = "places/world.txt";
+            var contentType = "text/plain";
+
+            // var acl = PredefinedAcl.PublicRead // public
+            var acl = PredefinedObjectAcl.AuthenticatedRead; // private
+            var options = new UploadObjectOptions { PredefinedAcl = acl };
+            // Create a temporary uploader so the upload session can be manually initiated without actually uploading.
+            var tempUploader = client.CreateObjectUploader(bucketName, destination, contentType, new MemoryStream(), options);
+            var uploadUri = await tempUploader.InitiateSessionAsync();
+
+            // Send uploadUri to (unauthenticated) client application, so it can perform the upload:
+            using (var stream = File.OpenRead(source))
+            {
+                // IUploadProgress defined in Google.Apis.Upload namespace
+                IProgress<IUploadProgress> progress = new Progress<IUploadProgress>(
+                  p => Console.WriteLine($"bytes: {p.BytesSent}, status: {p.Status}")
+                );
+
+                var actualUploader = ResumableUpload.CreateFromUploadUri(uploadUri, stream);
+                actualUploader.ProgressChanged += progress.Report;
+                await actualUploader.UploadAsync();
+            }
+            // End sample
 
             // want to show the source in the snippet, but also
             // want to make sure it matches the one in the fixture

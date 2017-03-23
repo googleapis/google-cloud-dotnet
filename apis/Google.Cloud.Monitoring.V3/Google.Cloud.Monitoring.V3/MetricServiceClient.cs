@@ -500,7 +500,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListMonitoredResourceDescriptorsAsync(
                 new ListMonitoredResourceDescriptorsRequest
                 {
-                    ProjectName = name,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -534,7 +534,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListMonitoredResourceDescriptors(
                 new ListMonitoredResourceDescriptorsRequest
                 {
-                    ProjectName = name,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -598,7 +598,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => GetMonitoredResourceDescriptorAsync(
                 new GetMonitoredResourceDescriptorRequest
                 {
-                    MonitoredResourceDescriptorName = name,
+                    MonitoredResourceDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -643,7 +643,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => GetMonitoredResourceDescriptor(
                 new GetMonitoredResourceDescriptorRequest
                 {
-                    MonitoredResourceDescriptorName = name,
+                    MonitoredResourceDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -713,7 +713,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListMetricDescriptorsAsync(
                 new ListMetricDescriptorsRequest
                 {
-                    ProjectName = name,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -747,7 +747,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListMetricDescriptors(
                 new ListMetricDescriptorsRequest
                 {
-                    ProjectName = name,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
                 },
@@ -811,7 +811,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => GetMetricDescriptorAsync(
                 new GetMetricDescriptorRequest
                 {
-                    MetricDescriptorName = name,
+                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -856,7 +856,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => GetMetricDescriptor(
                 new GetMetricDescriptorRequest
                 {
-                    MetricDescriptorName = name,
+                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -923,8 +923,8 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => CreateMetricDescriptorAsync(
                 new CreateMetricDescriptorRequest
                 {
-                    ProjectName = name,
-                    MetricDescriptor = metricDescriptor,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptor = GaxPreconditions.CheckNotNull(metricDescriptor, nameof(metricDescriptor)),
                 },
                 callSettings);
 
@@ -980,8 +980,8 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => CreateMetricDescriptor(
                 new CreateMetricDescriptorRequest
                 {
-                    ProjectName = name,
-                    MetricDescriptor = metricDescriptor,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    MetricDescriptor = GaxPreconditions.CheckNotNull(metricDescriptor, nameof(metricDescriptor)),
                 },
                 callSettings);
 
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => DeleteMetricDescriptorAsync(
                 new DeleteMetricDescriptorRequest
                 {
-                    MetricDescriptorName = name,
+                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1095,7 +1095,7 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => DeleteMetricDescriptor(
                 new DeleteMetricDescriptorRequest
                 {
-                    MetricDescriptorName = name,
+                    MetricDescriptorName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1187,9 +1187,9 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListTimeSeriesAsync(
                 new ListTimeSeriesRequest
                 {
-                    ProjectName = name,
-                    Filter = filter,
-                    Interval = interval,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                    Interval = GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                     View = view,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1244,9 +1244,9 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => ListTimeSeries(
                 new ListTimeSeriesRequest
                 {
-                    ProjectName = name,
-                    Filter = filter,
-                    Interval = interval,
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    Filter = GaxPreconditions.CheckNotNullOrEmpty(filter, nameof(filter)),
+                    Interval = GaxPreconditions.CheckNotNull(interval, nameof(interval)),
                     View = view,
                     PageToken = pageToken ?? "",
                     PageSize = pageSize ?? 0,
@@ -1320,8 +1320,8 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => CreateTimeSeriesAsync(
                 new CreateTimeSeriesRequest
                 {
-                    ProjectName = name,
-                    TimeSeries = { timeSeries },
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TimeSeries = { GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)) },
                 },
                 callSettings);
 
@@ -1385,8 +1385,8 @@ namespace Google.Cloud.Monitoring.V3
             CallSettings callSettings = null) => CreateTimeSeries(
                 new CreateTimeSeriesRequest
                 {
-                    ProjectName = name,
-                    TimeSeries = { timeSeries },
+                    ProjectName = GaxPreconditions.CheckNotNull(name, nameof(name)),
+                    TimeSeries = { GaxPreconditions.CheckNotNull(timeSeries, nameof(timeSeries)) },
                 },
                 callSettings);
 

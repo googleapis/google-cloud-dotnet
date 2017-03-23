@@ -52,6 +52,7 @@ namespace Google.Cloud.Storage.V1
         private BucketsResource.ListRequest CreateListBucketsRequest(string projectId, ListBucketsOptions options)
         {
             var request = Service.Buckets.List(projectId);
+            request.ModifyRequest += _versionHeaderAction;
             options?.ModifyRequest(request);
             return request;
         }

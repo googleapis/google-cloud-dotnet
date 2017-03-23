@@ -71,3 +71,38 @@ client.Publish(/* regular method arguments */,
 ```
 
 This approach means you don't need to worry about channel clean-up.
+
+## How can I trace gRPC issues?
+
+For libraries that use gRPC, it can be very useful to hook into the
+gRPC logging framework. There are two aspects to this:
+
+- Setting environment variables
+- Directing logs
+
+The environment variables affecting gRPC are [listed in the gRPC
+repository](https://github.com/grpc/grpc/blob/master/doc/environment_variables.md).
+The important ones for diagnostics are `GRPC_TRACE` and
+`GRPC_VERBOSITY`. For example, you might want to start off with
+`GRPC_TRACE=all` and `GRPC_VERBOSITY=DEBUG` which will dump a *lot*
+of information, then tweak them to reduce this to only useful
+data... or start with one kind of tracing (e.g.
+`GRPC_TRACE=call_error`) and add more as required.
+
+By default, the gRPC logs will not be displayed anywhere. The
+simplest way of seeing gRPC logs in many cases will be to send them
+to the console:
+
+```csharp
+using Grpc.Core;
+using Grpc.Core.Logging;
+...
+// Call this before you do any gRPC work
+GrpcEnvironment.SetLogger(new ConsoleLogger());
+```
+
+Other `ILogger` implementations are available, or you can implement
+it yourself to integrate with other systems - see the
+[Grpc.Core.Logging](https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging)
+namespace for details.
+

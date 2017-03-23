@@ -290,5 +290,126 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
     }
 
 
+    public partial class CreateInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Instance.V1.ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="InstanceId"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceIdAsInstanceName
+        {
+            get { return string.IsNullOrEmpty(InstanceId) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.Parse(InstanceId); }
+            set { InstanceId = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class DeleteInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetInstanceConfigRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public InstanceConfigName InstanceConfigName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class GetInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class Instance
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+        /// <summary>
+        /// <see cref="InstanceConfigName"/>-typed view over the <see cref="Config"/> resource name property.
+        /// </summary>
+        public InstanceConfigName ConfigAsInstanceConfigName
+        {
+            get { return string.IsNullOrEmpty(Config) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.Parse(Config); }
+            set { Config = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class InstanceConfig
+    {
+        /// <summary>
+        /// <see cref="InstanceConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public InstanceConfigName InstanceConfigName
+        {
+            get { return string.IsNullOrEmpty(Name) ? null : Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfigName.Parse(Name); }
+            set { Name = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListInstanceConfigsRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Instance.V1.ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
+
+    public partial class ListInstancesRequest
+    {
+        /// <summary>
+        /// <see cref="ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ProjectName ParentAsProjectName
+        {
+            get { return string.IsNullOrEmpty(Parent) ? null : Google.Cloud.Spanner.Admin.Instance.V1.ProjectName.Parse(Parent); }
+            set { Parent = value != null ? value.ToString() : ""; }
+        }
+
+    }
 
 }

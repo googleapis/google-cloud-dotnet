@@ -499,7 +499,7 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => CreateSessionAsync(
                 new CreateSessionRequest
                 {
-                    DatabaseAsDatabaseName = database,
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -574,7 +574,7 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => CreateSession(
                 new CreateSessionRequest
                 {
-                    DatabaseAsDatabaseName = database,
+                    DatabaseAsDatabaseName = GaxPreconditions.CheckNotNull(database, nameof(database)),
                 },
                 callSettings);
 
@@ -671,7 +671,7 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => GetSessionAsync(
                 new GetSessionRequest
                 {
-                    SessionName = name,
+                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -714,7 +714,7 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => GetSession(
                 new GetSessionRequest
                 {
-                    SessionName = name,
+                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -777,7 +777,7 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => DeleteSessionAsync(
                 new DeleteSessionRequest
                 {
-                    SessionName = name,
+                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -816,7 +816,7 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => DeleteSession(
                 new DeleteSessionRequest
                 {
-                    SessionName = name,
+                    SessionName = GaxPreconditions.CheckNotNull(name, nameof(name)),
                 },
                 callSettings);
 
@@ -1002,8 +1002,8 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => BeginTransactionAsync(
                 new BeginTransactionRequest
                 {
-                    SessionAsSessionName = session,
-                    Options = options,
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    Options = GaxPreconditions.CheckNotNull(options, nameof(options)),
                 },
                 callSettings);
 
@@ -1057,8 +1057,8 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => BeginTransaction(
                 new BeginTransactionRequest
                 {
-                    SessionAsSessionName = session,
-                    Options = options,
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    Options = GaxPreconditions.CheckNotNull(options, nameof(options)),
                 },
                 callSettings);
 
@@ -1140,9 +1140,9 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
-                    TransactionId = transactionId,
-                    Mutations = { mutations },
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = transactionId ?? ByteString.Empty, // Optional
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1217,9 +1217,9 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
-                    TransactionId = transactionId,
-                    Mutations = { mutations },
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = transactionId ?? ByteString.Empty, // Optional
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1265,9 +1265,9 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => CommitAsync(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
-                    SingleUseTransaction = singleUseTransaction,
-                    Mutations = { mutations },
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    SingleUseTransaction = singleUseTransaction, // Optional
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1358,9 +1358,9 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => Commit(
                 new CommitRequest
                 {
-                    SessionAsSessionName = session,
-                    SingleUseTransaction = singleUseTransaction,
-                    Mutations = { mutations },
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    SingleUseTransaction = singleUseTransaction, // Optional
+                    Mutations = { GaxPreconditions.CheckNotNull(mutations, nameof(mutations)) },
                 },
                 callSettings);
 
@@ -1444,8 +1444,8 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => RollbackAsync(
                 new RollbackRequest
                 {
-                    SessionAsSessionName = session,
-                    TransactionId = transactionId,
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
                 },
                 callSettings);
 
@@ -1507,8 +1507,8 @@ namespace Google.Cloud.Spanner.V1
             CallSettings callSettings = null) => Rollback(
                 new RollbackRequest
                 {
-                    SessionAsSessionName = session,
-                    TransactionId = transactionId,
+                    SessionAsSessionName = GaxPreconditions.CheckNotNull(session, nameof(session)),
+                    TransactionId = GaxPreconditions.CheckNotNull(transactionId, nameof(transactionId)),
                 },
                 callSettings);
 

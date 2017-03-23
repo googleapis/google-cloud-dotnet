@@ -255,6 +255,9 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="AllocateIds(IEnumerable{Key},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+        /// number of keys, partition the allocations into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
@@ -263,6 +266,11 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Allocates IDs for a collection of incomplete keys.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+        /// number of keys, partition the allocations into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
@@ -274,7 +282,9 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Allocates an ID for a single incomplete key asynchronously.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="AllocateIdsAsync(IEnumerable{Key},CallSettings)"/>.</remarks>
+        /// <remarks>
+        /// <para>This method simply delegates to <see cref="AllocateIdsAsync(IEnumerable{Key},CallSettings)"/>.</para>
+        /// </remarks>
         /// <param name="key">The incomplete key to allocate an ID for.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The complete key.</returns>
@@ -293,6 +303,9 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="AllocateIdsAsync(IEnumerable{Key},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+        /// number of keys, partition the allocations into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
@@ -301,6 +314,11 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Allocates IDs for a collection of incomplete keys asynchronously.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+        /// number of keys, partition the allocations into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="keys">The incomplete keys. Must not be null or contain null elements.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of complete keys with allocated IDs, in the same order as <paramref name="keys"/>.</returns>
@@ -332,6 +350,9 @@ namespace Google.Cloud.Datastore.V1
         /// It simply delegates to <see cref="Lookup(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>, passing in a <c>null</c>
         /// value for the read consistency and call settings.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
@@ -342,7 +363,10 @@ namespace Google.Cloud.Datastore.V1
         /// Looks up a collection of entities by key.
         /// </summary>
         /// <remarks>
-        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// <para>This call may perform multiple RPC operations in order to look up all keys.</para>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
@@ -381,6 +405,9 @@ namespace Google.Cloud.Datastore.V1
         /// It simply delegates to <see cref="LookupAsync(IEnumerable{Key}, ReadConsistency?, CallSettings)"/>, passing in a <c>null</c>
         /// value for the read consistency and call settings.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <returns>A collection of entities with the same size as <paramref name="keys"/>, containing corresponding entity
@@ -391,7 +418,10 @@ namespace Google.Cloud.Datastore.V1
         /// Looks up a collection of entities by key asynchronously.
         /// </summary>
         /// <remarks>
-        /// This call may perform multiple RPC operations in order to look up all keys.
+        /// <para>This call may perform multiple RPC operations in order to look up all keys.</para>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</param>
         /// <param name="readConsistency">The desired read consistency of the lookup, or null to use the default.</param>
@@ -442,7 +472,7 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings)
         {
             // Just so we can iterate multiple times safely.
-            keys = keys.ToList();
+            keys = keys.Select(key => key.NormalizeToProjectId(projectId)).ToList();
             GaxPreconditions.CheckArgument(keys.All(x => x != null), nameof(keys), "Key collection must not contain null elements");
             var keyToIndex = keys.Select((value, index) => new { value, index }).ToLookup(pair => pair.value, pair => pair.index);
             IEnumerable<Key> keysToFetch = new HashSet<Key>(keys);
@@ -468,7 +498,10 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Insert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <remarks>
+        /// <para>On success, the entity will be updated in memory with the server-allocated keys.</para>
+        /// <para>This method simply delegates to <see cref="Insert(IEnumerable{Entity}, CallSettings)"/>.</para>
+        /// </remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The key of the inserted entity if it was allocated by the server, or
@@ -479,11 +512,16 @@ namespace Google.Cloud.Datastore.V1
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
         /// <remarks>
+        /// <para>On success, the entities will be updated in memory with the server-allocated keys.</para>
         /// <para>This method simply delegates to <see cref="Insert(IEnumerable{Entity},CallSettings)"/>.</para>
         /// <para>
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="Insert(IEnumerable{Entity},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.
@@ -493,6 +531,13 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a collection of entities, non-transactionally.
         /// </summary>
+        /// <remarks>
+        /// <para>On success, the entities will be updated in memory with the server-allocated keys.</para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of keys of inserted entities, in the same order as <paramref name="entities"/>.
@@ -506,7 +551,9 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a single entity, non-transactionally and asynchronously.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <remarks>
+        /// <para>On success, the entity will be updated in memory with the server-allocated keys.</para>
+        /// <para>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity}, CallSettings)"/>.</para></remarks>
         /// <param name="entity">The entity to insert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is the key of the inserted entity
@@ -521,11 +568,16 @@ namespace Google.Cloud.Datastore.V1
         /// Inserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
         /// <remarks>
+        /// <para>On success, the entities will be updated in memory with the server-allocated keys.</para>
         /// <para>This method simply delegates to <see cref="InsertAsync(IEnumerable{Entity},CallSettings)"/>.</para>
         /// <para>
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="InsertAsync(IEnumerable{Entity},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is
@@ -536,6 +588,12 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Inserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
+        /// <remarks>
+        /// <para>On success, the entities will be updated in memory with the server-allocated keys.</para>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to insert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is
@@ -550,7 +608,10 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Upserts a single entity, non-transactionally.
         /// </summary>
-        /// <remarks>This method simply delegates to <see cref="Upsert(IEnumerable{Entity}, CallSettings)"/>.</remarks>
+        /// <remarks>
+        /// <para>On success, if entity has an incomplete key it will be updated in memory with the server-allocated keys.</para>
+        /// <para>This method simply delegates to <see cref="Upsert(IEnumerable{Entity}, CallSettings)"/>.</para>
+        /// </remarks>
         /// <param name="entity">The entity to upsert. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns><c>null</c> if the entity was updated or was inserted with a predefined key, or the new key if the entity was inserted
@@ -562,6 +623,10 @@ namespace Google.Cloud.Datastore.V1
         /// </summary>
         /// <remarks>
         /// <para>This method simply delegates to <see cref="Upsert(IEnumerable{Entity},CallSettings)"/>.</para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// <para>
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="Upsert(IEnumerable{Entity},CallSettings)"/>.
@@ -576,6 +641,13 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Upserts a collection of entities, non-transactionally.
         /// </summary>
+        /// <remarks>
+        /// <para>On success, any entities with incomplete keys will be updated in memory with the server-allocated keys.</para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A collection of allocated keys, in the same order as <paramref name="entities"/>. Each inserted entity
@@ -611,6 +683,10 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="UpsertAsync(IEnumerable{Entity},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is
@@ -622,6 +698,13 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Upserts a collection of entities, non-transactionally and asynchronously.
         /// </summary>
+        /// <remarks>
+        /// <para>On success, any entities with incomplete keys will be updated with the server-allocated keys.</para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to upsert. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation. The result of the task is
@@ -651,12 +734,21 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="Update(IEnumerable{Entity},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         public virtual void Update(params Entity[] entities) => Update(entities, null);
         /// <summary>
         /// Updates a collection of entities, non-transactionally.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+        /// number of entities, partition the look-ups into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         public virtual void Update(IEnumerable<Entity> entities, CallSettings callSettings = null)
@@ -683,6 +775,10 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="UpdateAsync(IEnumerable{Entity},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
@@ -690,6 +786,12 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Updates a collection of entities, non-transactionally and asynchronously.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to update. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
@@ -715,12 +817,22 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="Delete(IEnumerable{Entity},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
         public virtual void Delete(params Entity[] entities) => Delete(entities, null);
         /// <summary>
         /// Deletes a collection of entities, non-transactionally.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         public virtual void Delete(IEnumerable<Entity> entities, CallSettings callSettings = null)
@@ -746,6 +858,10 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="DeleteAsync(IEnumerable{Entity},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
@@ -753,6 +869,12 @@ namespace Google.Cloud.Datastore.V1
         /// <summary>
         /// Deletes a collection of entities, non-transactionally and asynchronously.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="entities">The entities to delete. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
@@ -778,12 +900,22 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="Delete(IEnumerable{Key},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
         public virtual void Delete(params Key[] keys) => Delete(keys, null);
         /// <summary>
         /// Deletes a collection of keys, non-transactionally.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         public virtual void Delete(IEnumerable<Key> keys, CallSettings callSettings = null)
@@ -808,12 +940,22 @@ namespace Google.Cloud.Datastore.V1
         /// Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
         /// To specify options, create a collection or array explicitly, and call <see cref="DeleteAsync(IEnumerable{Key},CallSettings)"/>.
         /// </para>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
         /// </remarks>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
         public virtual Task DeleteAsync(params Key[] keys) => DeleteAsync(keys, null);
         /// <summary>
         /// Deletes a collection of keys, non-transactionally and asynchronously.
         /// </summary>
+        /// <remarks>
+        /// <para>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+        /// use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+        /// number of entities, partition the changes into batches. See
+        /// [Datastore limits](https://cloud.google.com/datastore/docs/concepts/limits) for more details on Datastore limits.</para>
+        /// </remarks>
         /// <param name="keys">The keys to delete. Must not be null or contain null entries.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         public virtual Task DeleteAsync(IEnumerable<Key> keys, CallSettings callSettings = null)

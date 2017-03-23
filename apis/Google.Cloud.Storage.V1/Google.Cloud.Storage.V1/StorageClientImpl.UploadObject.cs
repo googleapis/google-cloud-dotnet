@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Apis.Storage.v1;
 using Google.Apis.Upload;
 using System;
 using System.IO;
@@ -24,6 +25,36 @@ namespace Google.Cloud.Storage.V1
 {
     public sealed partial class StorageClientImpl : StorageClient
     {
+        /// <inheritdoc />
+        public override ObjectsResource.InsertMediaUpload CreateObjectUploader(
+            string bucket,
+            string objectName,
+            string contentType,
+            Stream source,
+            UploadObjectOptions options = null)
+        {
+            ValidateBucketName(bucket);
+            GaxPreconditions.CheckNotNull(objectName, nameof(objectName));
+            return CreateObjectUploader(
+                new Object { Bucket = bucket, Name = objectName, ContentType = contentType },
+                source, options);
+        }
+
+        /// <inheritdoc />
+        public override ObjectsResource.InsertMediaUpload CreateObjectUploader(
+            Object destination,
+            Stream source,
+            UploadObjectOptions options = null)
+        {
+            ValidateObject(destination, nameof(destination));
+            GaxPreconditions.CheckNotNull(source, nameof(source));
+            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
+            options?.ModifyMediaUpload(mediaUpload);
+            mediaUpload.Options.ModifySessionInitiationRequest += _versionHeaderAction;
+            ApplyEncryptionKey(options?.EncryptionKey, mediaUpload);
+            return mediaUpload;
+        }
+
         /// <inheritdoc />
         public override Object UploadObject(
             string bucket,
@@ -63,11 +94,7 @@ namespace Google.Cloud.Storage.V1
             UploadObjectOptions options = null,
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateObject(destination, nameof(destination));
-            GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
-            options?.ModifyMediaUpload(mediaUpload);
-            ApplyEncryptionKey(options?.EncryptionKey, mediaUpload);
+            var mediaUpload = CreateObjectUploader(destination, source, options);
             if (progress != null)
             {
                 mediaUpload.ProgressChanged += progress.Report;
@@ -89,11 +116,7 @@ namespace Google.Cloud.Storage.V1
             CancellationToken cancellationToken = default(CancellationToken),
             IProgress<IUploadProgress> progress = null)
         {
-            ValidateObject(destination, nameof(destination));
-            GaxPreconditions.CheckNotNull(source, nameof(source));
-            var mediaUpload = new CustomMediaUpload(Service, destination, destination.Bucket, source, destination.ContentType);
-            options?.ModifyMediaUpload(mediaUpload);
-            ApplyEncryptionKey(options?.EncryptionKey, mediaUpload);
+            var mediaUpload = CreateObjectUploader(destination, source, options);
             if (progress != null)
             {
                 mediaUpload.ProgressChanged += progress.Report;
