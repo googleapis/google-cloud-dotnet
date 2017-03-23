@@ -25,13 +25,18 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     public class AspNetCoreSnippets
     {
         // Sample: ReportUnandledExceptions
-        public void Configure(IApplicationBuilder app)
+        public void ConfigureServices(IServiceCollection services)
         {
-            // Use before handling any requests to ensure all unhandled exceptions are reported.
             string projectId = "[Google Cloud Platform project ID]";
             string serviceName = "[Name of service]";
             string version = "[Version of service]";
-            app.UseGoogleExceptionLogging(projectId, serviceName, version);
+            services.AddGoogleExceptionLogging(projectId, serviceName, version);
+        }
+
+        public void Configure(IApplicationBuilder app)
+        {
+            // Use before handling any requests to ensure all unhandled exceptions are reported.
+            app.UseGoogleExceptionLogging();
         }
         // End sample
 
