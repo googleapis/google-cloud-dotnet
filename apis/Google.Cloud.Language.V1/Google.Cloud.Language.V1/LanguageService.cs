@@ -197,34 +197,34 @@ namespace Google.Cloud.Language.V1 {
   }
   #region Enums
   /// <summary>
-  ///  Represents the text encoding that the caller uses to process the output.
-  ///  Providing an `EncodingType` is recommended because the API provides the
-  ///  beginning offsets for various outputs, such as tokens and mentions, and
-  ///  languages that natively use different text encodings may access offsets
-  ///  differently.
+  /// Represents the text encoding that the caller uses to process the output.
+  /// Providing an `EncodingType` is recommended because the API provides the
+  /// beginning offsets for various outputs, such as tokens and mentions, and
+  /// languages that natively use different text encodings may access offsets
+  /// differently.
   /// </summary>
   public enum EncodingType {
     /// <summary>
-    ///  If `EncodingType` is not specified, encoding-dependent information (such as
-    ///  `begin_offset`) will be set at `-1`.
+    /// If `EncodingType` is not specified, encoding-dependent information (such as
+    /// `begin_offset`) will be set at `-1`.
     /// </summary>
     [pbr::OriginalName("NONE")] None = 0,
     /// <summary>
-    ///  Encoding-dependent information (such as `begin_offset`) is calculated based
-    ///  on the UTF-8 encoding of the input. C++ and Go are examples of languages
-    ///  that use this encoding natively.
+    /// Encoding-dependent information (such as `begin_offset`) is calculated based
+    /// on the UTF-8 encoding of the input. C++ and Go are examples of languages
+    /// that use this encoding natively.
     /// </summary>
     [pbr::OriginalName("UTF8")] Utf8 = 1,
     /// <summary>
-    ///  Encoding-dependent information (such as `begin_offset`) is calculated based
-    ///  on the UTF-16 encoding of the input. Java and Javascript are examples of
-    ///  languages that use this encoding natively.
+    /// Encoding-dependent information (such as `begin_offset`) is calculated based
+    /// on the UTF-16 encoding of the input. Java and Javascript are examples of
+    /// languages that use this encoding natively.
     /// </summary>
     [pbr::OriginalName("UTF16")] Utf16 = 2,
     /// <summary>
-    ///  Encoding-dependent information (such as `begin_offset`) is calculated based
-    ///  on the UTF-32 encoding of the input. Python is an example of a language
-    ///  that uses this encoding natively.
+    /// Encoding-dependent information (such as `begin_offset`) is calculated based
+    /// on the UTF-32 encoding of the input. Python is an example of a language
+    /// that uses this encoding natively.
     /// </summary>
     [pbr::OriginalName("UTF32")] Utf32 = 3,
   }
@@ -233,9 +233,9 @@ namespace Google.Cloud.Language.V1 {
 
   #region Messages
   /// <summary>
-  ///  ################################################################ #
+  /// ################################################################ #
   ///
-  ///  Represents the input to API methods.
+  /// Represents the input to API methods.
   /// </summary>
   public sealed partial class Document : pb::IMessage<Document> {
     private static readonly pb::MessageParser<Document> _parser = new pb::MessageParser<Document>(() => new Document());
@@ -283,8 +283,8 @@ namespace Google.Cloud.Language.V1 {
     public const int TypeFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document.Types.Type type_ = 0;
     /// <summary>
-    ///  Required. If the type is not set or is `TYPE_UNSPECIFIED`,
-    ///  returns an `INVALID_ARGUMENT` error.
+    /// Required. If the type is not set or is `TYPE_UNSPECIFIED`,
+    /// returns an `INVALID_ARGUMENT` error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Document.Types.Type Type {
@@ -297,7 +297,7 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 2;
     /// <summary>
-    ///  The content of the input in string format.
+    /// The content of the input in string format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Content {
@@ -311,10 +311,10 @@ namespace Google.Cloud.Language.V1 {
     /// <summary>Field number for the "gcs_content_uri" field.</summary>
     public const int GcsContentUriFieldNumber = 3;
     /// <summary>
-    ///  The Google Cloud Storage URI where the file content is located.
-    ///  This URI must be of the form: gs://bucket_name/object_name. For more
-    ///  details, see https://cloud.google.com/storage/docs/reference-uris.
-    ///  NOTE: Cloud Storage object versioning is not supported.
+    /// The Google Cloud Storage URI where the file content is located.
+    /// This URI must be of the form: gs://bucket_name/object_name. For more
+    /// details, see https://cloud.google.com/storage/docs/reference-uris.
+    /// NOTE: Cloud Storage object versioning is not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GcsContentUri {
@@ -329,17 +329,17 @@ namespace Google.Cloud.Language.V1 {
     public const int LanguageFieldNumber = 4;
     private string language_ = "";
     /// <summary>
-    ///  The language of the document (if not specified, the language is
-    ///  automatically detected). Both ISO and BCP-47 language codes are
-    ///  accepted.&lt;br>
-    ///  **Current Language Restrictions:**
+    /// The language of the document (if not specified, the language is
+    /// automatically detected). Both ISO and BCP-47 language codes are
+    /// accepted.&lt;br>
+    /// **Current Language Restrictions:**
     ///
-    ///   * Only English, Spanish, and Japanese textual content
-    ///     are supported, with the following additional restriction:
-    ///     * `analyzeSentiment` only supports English text.
-    ///  If the language (either specified by the caller or automatically detected)
-    ///  is not supported by the called API method, an `INVALID_ARGUMENT` error
-    ///  is returned.
+    ///  * Only English, Spanish, and Japanese textual content
+    ///    are supported, with the following additional restriction:
+    ///    * `analyzeSentiment` only supports English text.
+    /// If the language (either specified by the caller or automatically detected)
+    /// is not supported by the called API method, an `INVALID_ARGUMENT` error
+    /// is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -498,19 +498,19 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The document types enum.
+      /// The document types enum.
       /// </summary>
       public enum Type {
         /// <summary>
-        ///  The content type is not specified.
+        /// The content type is not specified.
         /// </summary>
         [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Plain text
+        /// Plain text
         /// </summary>
         [pbr::OriginalName("PLAIN_TEXT")] PlainText = 1,
         /// <summary>
-        ///  HTML
+        /// HTML
         /// </summary>
         [pbr::OriginalName("HTML")] Html = 2,
       }
@@ -521,7 +521,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents a sentence in the input document.
+  /// Represents a sentence in the input document.
   /// </summary>
   public sealed partial class Sentence : pb::IMessage<Sentence> {
     private static readonly pb::MessageParser<Sentence> _parser = new pb::MessageParser<Sentence>(() => new Sentence());
@@ -560,7 +560,7 @@ namespace Google.Cloud.Language.V1 {
     public const int TextFieldNumber = 1;
     private global::Google.Cloud.Language.V1.TextSpan text_;
     /// <summary>
-    ///  The sentence text.
+    /// The sentence text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.TextSpan Text {
@@ -574,9 +574,9 @@ namespace Google.Cloud.Language.V1 {
     public const int SentimentFieldNumber = 2;
     private global::Google.Cloud.Language.V1.Sentiment sentiment_;
     /// <summary>
-    ///  For calls to [AnalyzeSentiment][] or if
-    ///  [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
-    ///  true, this field will contain the sentiment for the sentence.
+    /// For calls to [AnalyzeSentiment][] or if
+    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment] is set to
+    /// true, this field will contain the sentiment for the sentence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Sentiment Sentiment {
@@ -689,9 +689,9 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents a phrase in the text that is a known entity, such as
-  ///  a person, an organization, or location. The API associates information, such
-  ///  as salience and mentions, with entities.
+  /// Represents a phrase in the text that is a known entity, such as
+  /// a person, an organization, or location. The API associates information, such
+  /// as salience and mentions, with entities.
   /// </summary>
   public sealed partial class Entity : pb::IMessage<Entity> {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
@@ -733,7 +733,7 @@ namespace Google.Cloud.Language.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The representative name for the entity.
+    /// The representative name for the entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -747,7 +747,7 @@ namespace Google.Cloud.Language.V1 {
     public const int TypeFieldNumber = 2;
     private global::Google.Cloud.Language.V1.Entity.Types.Type type_ = 0;
     /// <summary>
-    ///  The entity type.
+    /// The entity type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Entity.Types.Type Type {
@@ -763,10 +763,10 @@ namespace Google.Cloud.Language.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> metadata_ = new pbc::MapField<string, string>();
     /// <summary>
-    ///  Metadata associated with the entity.
+    /// Metadata associated with the entity.
     ///
-    ///  Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if
-    ///  available. The associated keys are "wikipedia_url" and "mid", respectively.
+    /// Currently, Wikipedia URLs and Knowledge Graph MIDs are provided, if
+    /// available. The associated keys are "wikipedia_url" and "mid", respectively.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Metadata {
@@ -777,12 +777,12 @@ namespace Google.Cloud.Language.V1 {
     public const int SalienceFieldNumber = 4;
     private float salience_;
     /// <summary>
-    ///  The salience score associated with the entity in the [0, 1.0] range.
+    /// The salience score associated with the entity in the [0, 1.0] range.
     ///
-    ///  The salience score for an entity provides information about the
-    ///  importance or centrality of that entity to the entire document text.
-    ///  Scores closer to 0 are less salient, while scores closer to 1.0 are highly
-    ///  salient.
+    /// The salience score for an entity provides information about the
+    /// importance or centrality of that entity to the entire document text.
+    /// Scores closer to 0 are less salient, while scores closer to 1.0 are highly
+    /// salient.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Salience {
@@ -798,8 +798,8 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Language.V1.EntityMention.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.EntityMention> mentions_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.EntityMention>();
     /// <summary>
-    ///  The mentions of this entity in the input document. The API currently
-    ///  supports proper noun mentions.
+    /// The mentions of this entity in the input document. The API currently
+    /// supports proper noun mentions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.EntityMention> Mentions {
@@ -933,39 +933,39 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The type of the entity.
+      /// The type of the entity.
       /// </summary>
       public enum Type {
         /// <summary>
-        ///  Unknown
+        /// Unknown
         /// </summary>
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Person
+        /// Person
         /// </summary>
         [pbr::OriginalName("PERSON")] Person = 1,
         /// <summary>
-        ///  Location
+        /// Location
         /// </summary>
         [pbr::OriginalName("LOCATION")] Location = 2,
         /// <summary>
-        ///  Organization
+        /// Organization
         /// </summary>
         [pbr::OriginalName("ORGANIZATION")] Organization = 3,
         /// <summary>
-        ///  Event
+        /// Event
         /// </summary>
         [pbr::OriginalName("EVENT")] Event = 4,
         /// <summary>
-        ///  Work of art
+        /// Work of art
         /// </summary>
         [pbr::OriginalName("WORK_OF_ART")] WorkOfArt = 5,
         /// <summary>
-        ///  Consumer goods
+        /// Consumer goods
         /// </summary>
         [pbr::OriginalName("CONSUMER_GOOD")] ConsumerGood = 6,
         /// <summary>
-        ///  Other types
+        /// Other types
         /// </summary>
         [pbr::OriginalName("OTHER")] Other = 7,
       }
@@ -976,7 +976,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents the smallest syntactic building block of the text.
+  /// Represents the smallest syntactic building block of the text.
   /// </summary>
   public sealed partial class Token : pb::IMessage<Token> {
     private static readonly pb::MessageParser<Token> _parser = new pb::MessageParser<Token>(() => new Token());
@@ -1017,7 +1017,7 @@ namespace Google.Cloud.Language.V1 {
     public const int TextFieldNumber = 1;
     private global::Google.Cloud.Language.V1.TextSpan text_;
     /// <summary>
-    ///  The token text.
+    /// The token text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.TextSpan Text {
@@ -1031,7 +1031,7 @@ namespace Google.Cloud.Language.V1 {
     public const int PartOfSpeechFieldNumber = 2;
     private global::Google.Cloud.Language.V1.PartOfSpeech partOfSpeech_;
     /// <summary>
-    ///  Parts of speech tag for this token.
+    /// Parts of speech tag for this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech PartOfSpeech {
@@ -1045,7 +1045,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DependencyEdgeFieldNumber = 3;
     private global::Google.Cloud.Language.V1.DependencyEdge dependencyEdge_;
     /// <summary>
-    ///  Dependency tree parse for this token.
+    /// Dependency tree parse for this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.DependencyEdge DependencyEdge {
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Language.V1 {
     public const int LemmaFieldNumber = 4;
     private string lemma_ = "";
     /// <summary>
-    ///  [Lemma](https://en.wikipedia.org/wiki/Lemma_%28morphology%29) of the token.
+    /// [Lemma](https://en.wikipedia.org/wiki/Lemma_%28morphology%29) of the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Lemma {
@@ -1210,8 +1210,8 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents the feeling associated with the entire text or entities in
-  ///  the text.
+  /// Represents the feeling associated with the entire text or entities in
+  /// the text.
   /// </summary>
   public sealed partial class Sentiment : pb::IMessage<Sentiment> {
     private static readonly pb::MessageParser<Sentiment> _parser = new pb::MessageParser<Sentiment>(() => new Sentiment());
@@ -1250,9 +1250,9 @@ namespace Google.Cloud.Language.V1 {
     public const int MagnitudeFieldNumber = 2;
     private float magnitude_;
     /// <summary>
-    ///  A non-negative number in the [0, +inf) range, which represents
-    ///  the absolute magnitude of sentiment regardless of score (positive or
-    ///  negative).
+    /// A non-negative number in the [0, +inf) range, which represents
+    /// the absolute magnitude of sentiment regardless of score (positive or
+    /// negative).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Magnitude {
@@ -1266,8 +1266,8 @@ namespace Google.Cloud.Language.V1 {
     public const int ScoreFieldNumber = 3;
     private float score_;
     /// <summary>
-    ///  Sentiment score between -1.0 (negative sentiment) and 1.0
-    ///  (positive sentiment.)
+    /// Sentiment score between -1.0 (negative sentiment) and 1.0
+    /// (positive sentiment.)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Score {
@@ -1368,9 +1368,9 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents part of speech information for a token. Parts of speech
-  ///  are as defined in
-  ///  http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
+  /// Represents part of speech information for a token. Parts of speech
+  /// are as defined in
+  /// http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
   /// </summary>
   public sealed partial class PartOfSpeech : pb::IMessage<PartOfSpeech> {
     private static readonly pb::MessageParser<PartOfSpeech> _parser = new pb::MessageParser<PartOfSpeech>(() => new PartOfSpeech());
@@ -1419,7 +1419,7 @@ namespace Google.Cloud.Language.V1 {
     public const int TagFieldNumber = 1;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag tag_ = 0;
     /// <summary>
-    ///  The part of speech tag.
+    /// The part of speech tag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tag Tag {
@@ -1433,7 +1433,7 @@ namespace Google.Cloud.Language.V1 {
     public const int AspectFieldNumber = 2;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect aspect_ = 0;
     /// <summary>
-    ///  The grammatical aspect.
+    /// The grammatical aspect.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Aspect Aspect {
@@ -1447,7 +1447,7 @@ namespace Google.Cloud.Language.V1 {
     public const int CaseFieldNumber = 3;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case case_ = 0;
     /// <summary>
-    ///  The grammatical case.
+    /// The grammatical case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Case Case {
@@ -1461,7 +1461,7 @@ namespace Google.Cloud.Language.V1 {
     public const int FormFieldNumber = 4;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form form_ = 0;
     /// <summary>
-    ///  The grammatical form.
+    /// The grammatical form.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Form Form {
@@ -1475,7 +1475,7 @@ namespace Google.Cloud.Language.V1 {
     public const int GenderFieldNumber = 5;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender gender_ = 0;
     /// <summary>
-    ///  The grammatical gender.
+    /// The grammatical gender.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Gender Gender {
@@ -1489,7 +1489,7 @@ namespace Google.Cloud.Language.V1 {
     public const int MoodFieldNumber = 6;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood mood_ = 0;
     /// <summary>
-    ///  The grammatical mood.
+    /// The grammatical mood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Mood Mood {
@@ -1503,7 +1503,7 @@ namespace Google.Cloud.Language.V1 {
     public const int NumberFieldNumber = 7;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number number_ = 0;
     /// <summary>
-    ///  The grammatical number.
+    /// The grammatical number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Number Number {
@@ -1517,7 +1517,7 @@ namespace Google.Cloud.Language.V1 {
     public const int PersonFieldNumber = 8;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person person_ = 0;
     /// <summary>
-    ///  The grammatical person.
+    /// The grammatical person.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Person Person {
@@ -1531,7 +1531,7 @@ namespace Google.Cloud.Language.V1 {
     public const int ProperFieldNumber = 9;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper proper_ = 0;
     /// <summary>
-    ///  The grammatical properness.
+    /// The grammatical properness.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Proper Proper {
@@ -1545,7 +1545,7 @@ namespace Google.Cloud.Language.V1 {
     public const int ReciprocityFieldNumber = 10;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity reciprocity_ = 0;
     /// <summary>
-    ///  The grammatical reciprocity.
+    /// The grammatical reciprocity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Reciprocity Reciprocity {
@@ -1559,7 +1559,7 @@ namespace Google.Cloud.Language.V1 {
     public const int TenseFieldNumber = 11;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense tense_ = 0;
     /// <summary>
-    ///  The grammatical tense.
+    /// The grammatical tense.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Tense Tense {
@@ -1573,7 +1573,7 @@ namespace Google.Cloud.Language.V1 {
     public const int VoiceFieldNumber = 12;
     private global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice voice_ = 0;
     /// <summary>
-    ///  The grammatical voice.
+    /// The grammatical voice.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.PartOfSpeech.Types.Voice Voice {
@@ -1836,408 +1836,408 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The part of speech tags enum.
+      /// The part of speech tags enum.
       /// </summary>
       public enum Tag {
         /// <summary>
-        ///  Unknown
+        /// Unknown
         /// </summary>
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Adjective
+        /// Adjective
         /// </summary>
         [pbr::OriginalName("ADJ")] Adj = 1,
         /// <summary>
-        ///  Adposition (preposition and postposition)
+        /// Adposition (preposition and postposition)
         /// </summary>
         [pbr::OriginalName("ADP")] Adp = 2,
         /// <summary>
-        ///  Adverb
+        /// Adverb
         /// </summary>
         [pbr::OriginalName("ADV")] Adv = 3,
         /// <summary>
-        ///  Conjunction
+        /// Conjunction
         /// </summary>
         [pbr::OriginalName("CONJ")] Conj = 4,
         /// <summary>
-        ///  Determiner
+        /// Determiner
         /// </summary>
         [pbr::OriginalName("DET")] Det = 5,
         /// <summary>
-        ///  Noun (common and proper)
+        /// Noun (common and proper)
         /// </summary>
         [pbr::OriginalName("NOUN")] Noun = 6,
         /// <summary>
-        ///  Cardinal number
+        /// Cardinal number
         /// </summary>
         [pbr::OriginalName("NUM")] Num = 7,
         /// <summary>
-        ///  Pronoun
+        /// Pronoun
         /// </summary>
         [pbr::OriginalName("PRON")] Pron = 8,
         /// <summary>
-        ///  Particle or other function word
+        /// Particle or other function word
         /// </summary>
         [pbr::OriginalName("PRT")] Prt = 9,
         /// <summary>
-        ///  Punctuation
+        /// Punctuation
         /// </summary>
         [pbr::OriginalName("PUNCT")] Punct = 10,
         /// <summary>
-        ///  Verb (all tenses and modes)
+        /// Verb (all tenses and modes)
         /// </summary>
         [pbr::OriginalName("VERB")] Verb = 11,
         /// <summary>
-        ///  Other: foreign words, typos, abbreviations
+        /// Other: foreign words, typos, abbreviations
         /// </summary>
         [pbr::OriginalName("X")] X = 12,
         /// <summary>
-        ///  Affix
+        /// Affix
         /// </summary>
         [pbr::OriginalName("AFFIX")] Affix = 13,
       }
 
       /// <summary>
-      ///  The characteristic of a verb that expresses time flow during an event.
+      /// The characteristic of a verb that expresses time flow during an event.
       /// </summary>
       public enum Aspect {
         /// <summary>
-        ///  Aspect is not applicable in the analyzed language or is not predicted.
+        /// Aspect is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("ASPECT_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Perfective
+        /// Perfective
         /// </summary>
         [pbr::OriginalName("PERFECTIVE")] Perfective = 1,
         /// <summary>
-        ///  Imperfective
+        /// Imperfective
         /// </summary>
         [pbr::OriginalName("IMPERFECTIVE")] Imperfective = 2,
         /// <summary>
-        ///  Progressive
+        /// Progressive
         /// </summary>
         [pbr::OriginalName("PROGRESSIVE")] Progressive = 3,
       }
 
       /// <summary>
-      ///  The grammatical function performed by a noun or pronoun in a phrase,
-      ///  clause, or sentence. In some languages, other parts of speech, such as
-      ///  adjective and determiner, take case inflection in agreement with the noun.
+      /// The grammatical function performed by a noun or pronoun in a phrase,
+      /// clause, or sentence. In some languages, other parts of speech, such as
+      /// adjective and determiner, take case inflection in agreement with the noun.
       /// </summary>
       public enum Case {
         /// <summary>
-        ///  Case is not applicable in the analyzed language or is not predicted.
+        /// Case is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("CASE_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Accusative
+        /// Accusative
         /// </summary>
         [pbr::OriginalName("ACCUSATIVE")] Accusative = 1,
         /// <summary>
-        ///  Adverbial
+        /// Adverbial
         /// </summary>
         [pbr::OriginalName("ADVERBIAL")] Adverbial = 2,
         /// <summary>
-        ///  Complementive
+        /// Complementive
         /// </summary>
         [pbr::OriginalName("COMPLEMENTIVE")] Complementive = 3,
         /// <summary>
-        ///  Dative
+        /// Dative
         /// </summary>
         [pbr::OriginalName("DATIVE")] Dative = 4,
         /// <summary>
-        ///  Genitive
+        /// Genitive
         /// </summary>
         [pbr::OriginalName("GENITIVE")] Genitive = 5,
         /// <summary>
-        ///  Instrumental
+        /// Instrumental
         /// </summary>
         [pbr::OriginalName("INSTRUMENTAL")] Instrumental = 6,
         /// <summary>
-        ///  Locative
+        /// Locative
         /// </summary>
         [pbr::OriginalName("LOCATIVE")] Locative = 7,
         /// <summary>
-        ///  Nominative
+        /// Nominative
         /// </summary>
         [pbr::OriginalName("NOMINATIVE")] Nominative = 8,
         /// <summary>
-        ///  Oblique
+        /// Oblique
         /// </summary>
         [pbr::OriginalName("OBLIQUE")] Oblique = 9,
         /// <summary>
-        ///  Partitive
+        /// Partitive
         /// </summary>
         [pbr::OriginalName("PARTITIVE")] Partitive = 10,
         /// <summary>
-        ///  Prepositional
+        /// Prepositional
         /// </summary>
         [pbr::OriginalName("PREPOSITIONAL")] Prepositional = 11,
         /// <summary>
-        ///  Reflexive
+        /// Reflexive
         /// </summary>
         [pbr::OriginalName("REFLEXIVE_CASE")] ReflexiveCase = 12,
         /// <summary>
-        ///  Relative
+        /// Relative
         /// </summary>
         [pbr::OriginalName("RELATIVE_CASE")] RelativeCase = 13,
         /// <summary>
-        ///  Vocative
+        /// Vocative
         /// </summary>
         [pbr::OriginalName("VOCATIVE")] Vocative = 14,
       }
 
       /// <summary>
-      ///  Depending on the language, Form can be categorizing different forms of
-      ///  verbs, adjectives, adverbs, etc. For example, categorizing inflected
-      ///  endings of verbs and adjectives or distinguishing between short and long
-      ///  forms of adjectives and participles
+      /// Depending on the language, Form can be categorizing different forms of
+      /// verbs, adjectives, adverbs, etc. For example, categorizing inflected
+      /// endings of verbs and adjectives or distinguishing between short and long
+      /// forms of adjectives and participles
       /// </summary>
       public enum Form {
         /// <summary>
-        ///  Form is not applicable in the analyzed language or is not predicted.
+        /// Form is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("FORM_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Adnomial
+        /// Adnomial
         /// </summary>
         [pbr::OriginalName("ADNOMIAL")] Adnomial = 1,
         /// <summary>
-        ///  Auxiliary
+        /// Auxiliary
         /// </summary>
         [pbr::OriginalName("AUXILIARY")] Auxiliary = 2,
         /// <summary>
-        ///  Complementizer
+        /// Complementizer
         /// </summary>
         [pbr::OriginalName("COMPLEMENTIZER")] Complementizer = 3,
         /// <summary>
-        ///  Final ending
+        /// Final ending
         /// </summary>
         [pbr::OriginalName("FINAL_ENDING")] FinalEnding = 4,
         /// <summary>
-        ///  Gerund
+        /// Gerund
         /// </summary>
         [pbr::OriginalName("GERUND")] Gerund = 5,
         /// <summary>
-        ///  Realis
+        /// Realis
         /// </summary>
         [pbr::OriginalName("REALIS")] Realis = 6,
         /// <summary>
-        ///  Irrealis
+        /// Irrealis
         /// </summary>
         [pbr::OriginalName("IRREALIS")] Irrealis = 7,
         /// <summary>
-        ///  Short form
+        /// Short form
         /// </summary>
         [pbr::OriginalName("SHORT")] Short = 8,
         /// <summary>
-        ///  Long form
+        /// Long form
         /// </summary>
         [pbr::OriginalName("LONG")] Long = 9,
         /// <summary>
-        ///  Order form
+        /// Order form
         /// </summary>
         [pbr::OriginalName("ORDER")] Order = 10,
         /// <summary>
-        ///  Specific form
+        /// Specific form
         /// </summary>
         [pbr::OriginalName("SPECIFIC")] Specific = 11,
       }
 
       /// <summary>
-      ///  Gender classes of nouns reflected in the behaviour of associated words.
+      /// Gender classes of nouns reflected in the behaviour of associated words.
       /// </summary>
       public enum Gender {
         /// <summary>
-        ///  Gender is not applicable in the analyzed language or is not predicted.
+        /// Gender is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("GENDER_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Feminine
+        /// Feminine
         /// </summary>
         [pbr::OriginalName("FEMININE")] Feminine = 1,
         /// <summary>
-        ///  Masculine
+        /// Masculine
         /// </summary>
         [pbr::OriginalName("MASCULINE")] Masculine = 2,
         /// <summary>
-        ///  Neuter
+        /// Neuter
         /// </summary>
         [pbr::OriginalName("NEUTER")] Neuter = 3,
       }
 
       /// <summary>
-      ///  The grammatical feature of verbs, used for showing modality and attitude.
+      /// The grammatical feature of verbs, used for showing modality and attitude.
       /// </summary>
       public enum Mood {
         /// <summary>
-        ///  Mood is not applicable in the analyzed language or is not predicted.
+        /// Mood is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("MOOD_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Conditional
+        /// Conditional
         /// </summary>
         [pbr::OriginalName("CONDITIONAL_MOOD")] ConditionalMood = 1,
         /// <summary>
-        ///  Imperative
+        /// Imperative
         /// </summary>
         [pbr::OriginalName("IMPERATIVE")] Imperative = 2,
         /// <summary>
-        ///  Indicative
+        /// Indicative
         /// </summary>
         [pbr::OriginalName("INDICATIVE")] Indicative = 3,
         /// <summary>
-        ///  Interrogative
+        /// Interrogative
         /// </summary>
         [pbr::OriginalName("INTERROGATIVE")] Interrogative = 4,
         /// <summary>
-        ///  Jussive
+        /// Jussive
         /// </summary>
         [pbr::OriginalName("JUSSIVE")] Jussive = 5,
         /// <summary>
-        ///  Subjunctive
+        /// Subjunctive
         /// </summary>
         [pbr::OriginalName("SUBJUNCTIVE")] Subjunctive = 6,
       }
 
       /// <summary>
-      ///  Count distinctions.
+      /// Count distinctions.
       /// </summary>
       public enum Number {
         /// <summary>
-        ///  Number is not applicable in the analyzed language or is not predicted.
+        /// Number is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("NUMBER_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Singular
+        /// Singular
         /// </summary>
         [pbr::OriginalName("SINGULAR")] Singular = 1,
         /// <summary>
-        ///  Plural
+        /// Plural
         /// </summary>
         [pbr::OriginalName("PLURAL")] Plural = 2,
         /// <summary>
-        ///  Dual
+        /// Dual
         /// </summary>
         [pbr::OriginalName("DUAL")] Dual = 3,
       }
 
       /// <summary>
-      ///  The distinction between the speaker, second person, third person, etc.
+      /// The distinction between the speaker, second person, third person, etc.
       /// </summary>
       public enum Person {
         /// <summary>
-        ///  Person is not applicable in the analyzed language or is not predicted.
+        /// Person is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("PERSON_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  First
+        /// First
         /// </summary>
         [pbr::OriginalName("FIRST")] First = 1,
         /// <summary>
-        ///  Second
+        /// Second
         /// </summary>
         [pbr::OriginalName("SECOND")] Second = 2,
         /// <summary>
-        ///  Third
+        /// Third
         /// </summary>
         [pbr::OriginalName("THIRD")] Third = 3,
         /// <summary>
-        ///  Reflexive
+        /// Reflexive
         /// </summary>
         [pbr::OriginalName("REFLEXIVE_PERSON")] ReflexivePerson = 4,
       }
 
       /// <summary>
-      ///  This category shows if the token is part of a proper name.
+      /// This category shows if the token is part of a proper name.
       /// </summary>
       public enum Proper {
         /// <summary>
-        ///  Proper is not applicable in the analyzed language or is not predicted.
+        /// Proper is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("PROPER_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Proper
+        /// Proper
         /// </summary>
         [pbr::OriginalName("PROPER")] Proper = 1,
         /// <summary>
-        ///  Not proper
+        /// Not proper
         /// </summary>
         [pbr::OriginalName("NOT_PROPER")] NotProper = 2,
       }
 
       /// <summary>
-      ///  Reciprocal features of a pronoun.
+      /// Reciprocal features of a pronoun.
       /// </summary>
       public enum Reciprocity {
         /// <summary>
-        ///  Reciprocity is not applicable in the analyzed language or is not
-        ///  predicted.
+        /// Reciprocity is not applicable in the analyzed language or is not
+        /// predicted.
         /// </summary>
         [pbr::OriginalName("RECIPROCITY_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Reciprocal
+        /// Reciprocal
         /// </summary>
         [pbr::OriginalName("RECIPROCAL")] Reciprocal = 1,
         /// <summary>
-        ///  Non-reciprocal
+        /// Non-reciprocal
         /// </summary>
         [pbr::OriginalName("NON_RECIPROCAL")] NonReciprocal = 2,
       }
 
       /// <summary>
-      ///  Time reference.
+      /// Time reference.
       /// </summary>
       public enum Tense {
         /// <summary>
-        ///  Tense is not applicable in the analyzed language or is not predicted.
+        /// Tense is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("TENSE_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Conditional
+        /// Conditional
         /// </summary>
         [pbr::OriginalName("CONDITIONAL_TENSE")] ConditionalTense = 1,
         /// <summary>
-        ///  Future
+        /// Future
         /// </summary>
         [pbr::OriginalName("FUTURE")] Future = 2,
         /// <summary>
-        ///  Past
+        /// Past
         /// </summary>
         [pbr::OriginalName("PAST")] Past = 3,
         /// <summary>
-        ///  Present
+        /// Present
         /// </summary>
         [pbr::OriginalName("PRESENT")] Present = 4,
         /// <summary>
-        ///  Imperfect
+        /// Imperfect
         /// </summary>
         [pbr::OriginalName("IMPERFECT")] Imperfect = 5,
         /// <summary>
-        ///  Pluperfect
+        /// Pluperfect
         /// </summary>
         [pbr::OriginalName("PLUPERFECT")] Pluperfect = 6,
       }
 
       /// <summary>
-      ///  The relationship between the action that a verb expresses and the
-      ///  participants identified by its arguments.
+      /// The relationship between the action that a verb expresses and the
+      /// participants identified by its arguments.
       /// </summary>
       public enum Voice {
         /// <summary>
-        ///  Voice is not applicable in the analyzed language or is not predicted.
+        /// Voice is not applicable in the analyzed language or is not predicted.
         /// </summary>
         [pbr::OriginalName("VOICE_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Active
+        /// Active
         /// </summary>
         [pbr::OriginalName("ACTIVE")] Active = 1,
         /// <summary>
-        ///  Causative
+        /// Causative
         /// </summary>
         [pbr::OriginalName("CAUSATIVE")] Causative = 2,
         /// <summary>
-        ///  Passive
+        /// Passive
         /// </summary>
         [pbr::OriginalName("PASSIVE")] Passive = 3,
       }
@@ -2248,9 +2248,9 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents dependency parse tree information for a token. (For more
-  ///  information on dependency labels, see
-  ///  http://www.aclweb.org/anthology/P13-2017
+  /// Represents dependency parse tree information for a token. (For more
+  /// information on dependency labels, see
+  /// http://www.aclweb.org/anthology/P13-2017
   /// </summary>
   public sealed partial class DependencyEdge : pb::IMessage<DependencyEdge> {
     private static readonly pb::MessageParser<DependencyEdge> _parser = new pb::MessageParser<DependencyEdge>(() => new DependencyEdge());
@@ -2289,11 +2289,11 @@ namespace Google.Cloud.Language.V1 {
     public const int HeadTokenIndexFieldNumber = 1;
     private int headTokenIndex_;
     /// <summary>
-    ///  Represents the head of this token in the dependency tree.
-    ///  This is the index of the token which has an arc going to this token.
-    ///  The index is the position of the token in the array of tokens returned
-    ///  by the API method. If this token is a root token, then the
-    ///  `head_token_index` is its own index.
+    /// Represents the head of this token in the dependency tree.
+    /// This is the index of the token which has an arc going to this token.
+    /// The index is the position of the token in the array of tokens returned
+    /// by the API method. If this token is a root token, then the
+    /// `head_token_index` is its own index.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int HeadTokenIndex {
@@ -2307,7 +2307,7 @@ namespace Google.Cloud.Language.V1 {
     public const int LabelFieldNumber = 2;
     private global::Google.Cloud.Language.V1.DependencyEdge.Types.Label label_ = 0;
     /// <summary>
-    ///  The parse label for the token.
+    /// The parse label for the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.DependencyEdge.Types.Label Label {
@@ -2410,315 +2410,315 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The parse label enum for the token.
+      /// The parse label enum for the token.
       /// </summary>
       public enum Label {
         /// <summary>
-        ///  Unknown
+        /// Unknown
         /// </summary>
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Abbreviation modifier
+        /// Abbreviation modifier
         /// </summary>
         [pbr::OriginalName("ABBREV")] Abbrev = 1,
         /// <summary>
-        ///  Adjectival complement
+        /// Adjectival complement
         /// </summary>
         [pbr::OriginalName("ACOMP")] Acomp = 2,
         /// <summary>
-        ///  Adverbial clause modifier
+        /// Adverbial clause modifier
         /// </summary>
         [pbr::OriginalName("ADVCL")] Advcl = 3,
         /// <summary>
-        ///  Adverbial modifier
+        /// Adverbial modifier
         /// </summary>
         [pbr::OriginalName("ADVMOD")] Advmod = 4,
         /// <summary>
-        ///  Adjectival modifier of an NP
+        /// Adjectival modifier of an NP
         /// </summary>
         [pbr::OriginalName("AMOD")] Amod = 5,
         /// <summary>
-        ///  Appositional modifier of an NP
+        /// Appositional modifier of an NP
         /// </summary>
         [pbr::OriginalName("APPOS")] Appos = 6,
         /// <summary>
-        ///  Attribute dependent of a copular verb
+        /// Attribute dependent of a copular verb
         /// </summary>
         [pbr::OriginalName("ATTR")] Attr = 7,
         /// <summary>
-        ///  Auxiliary (non-main) verb
+        /// Auxiliary (non-main) verb
         /// </summary>
         [pbr::OriginalName("AUX")] Aux = 8,
         /// <summary>
-        ///  Passive auxiliary
+        /// Passive auxiliary
         /// </summary>
         [pbr::OriginalName("AUXPASS")] Auxpass = 9,
         /// <summary>
-        ///  Coordinating conjunction
+        /// Coordinating conjunction
         /// </summary>
         [pbr::OriginalName("CC")] Cc = 10,
         /// <summary>
-        ///  Clausal complement of a verb or adjective
+        /// Clausal complement of a verb or adjective
         /// </summary>
         [pbr::OriginalName("CCOMP")] Ccomp = 11,
         /// <summary>
-        ///  Conjunct
+        /// Conjunct
         /// </summary>
         [pbr::OriginalName("CONJ")] Conj = 12,
         /// <summary>
-        ///  Clausal subject
+        /// Clausal subject
         /// </summary>
         [pbr::OriginalName("CSUBJ")] Csubj = 13,
         /// <summary>
-        ///  Clausal passive subject
+        /// Clausal passive subject
         /// </summary>
         [pbr::OriginalName("CSUBJPASS")] Csubjpass = 14,
         /// <summary>
-        ///  Dependency (unable to determine)
+        /// Dependency (unable to determine)
         /// </summary>
         [pbr::OriginalName("DEP")] Dep = 15,
         /// <summary>
-        ///  Determiner
+        /// Determiner
         /// </summary>
         [pbr::OriginalName("DET")] Det = 16,
         /// <summary>
-        ///  Discourse
+        /// Discourse
         /// </summary>
         [pbr::OriginalName("DISCOURSE")] Discourse = 17,
         /// <summary>
-        ///  Direct object
+        /// Direct object
         /// </summary>
         [pbr::OriginalName("DOBJ")] Dobj = 18,
         /// <summary>
-        ///  Expletive
+        /// Expletive
         /// </summary>
         [pbr::OriginalName("EXPL")] Expl = 19,
         /// <summary>
-        ///  Goes with (part of a word in a text not well edited)
+        /// Goes with (part of a word in a text not well edited)
         /// </summary>
         [pbr::OriginalName("GOESWITH")] Goeswith = 20,
         /// <summary>
-        ///  Indirect object
+        /// Indirect object
         /// </summary>
         [pbr::OriginalName("IOBJ")] Iobj = 21,
         /// <summary>
-        ///  Marker (word introducing a subordinate clause)
+        /// Marker (word introducing a subordinate clause)
         /// </summary>
         [pbr::OriginalName("MARK")] Mark = 22,
         /// <summary>
-        ///  Multi-word expression
+        /// Multi-word expression
         /// </summary>
         [pbr::OriginalName("MWE")] Mwe = 23,
         /// <summary>
-        ///  Multi-word verbal expression
+        /// Multi-word verbal expression
         /// </summary>
         [pbr::OriginalName("MWV")] Mwv = 24,
         /// <summary>
-        ///  Negation modifier
+        /// Negation modifier
         /// </summary>
         [pbr::OriginalName("NEG")] Neg = 25,
         /// <summary>
-        ///  Noun compound modifier
+        /// Noun compound modifier
         /// </summary>
         [pbr::OriginalName("NN")] Nn = 26,
         /// <summary>
-        ///  Noun phrase used as an adverbial modifier
+        /// Noun phrase used as an adverbial modifier
         /// </summary>
         [pbr::OriginalName("NPADVMOD")] Npadvmod = 27,
         /// <summary>
-        ///  Nominal subject
+        /// Nominal subject
         /// </summary>
         [pbr::OriginalName("NSUBJ")] Nsubj = 28,
         /// <summary>
-        ///  Passive nominal subject
+        /// Passive nominal subject
         /// </summary>
         [pbr::OriginalName("NSUBJPASS")] Nsubjpass = 29,
         /// <summary>
-        ///  Numeric modifier of a noun
+        /// Numeric modifier of a noun
         /// </summary>
         [pbr::OriginalName("NUM")] Num = 30,
         /// <summary>
-        ///  Element of compound number
+        /// Element of compound number
         /// </summary>
         [pbr::OriginalName("NUMBER")] Number = 31,
         /// <summary>
-        ///  Punctuation mark
+        /// Punctuation mark
         /// </summary>
         [pbr::OriginalName("P")] P = 32,
         /// <summary>
-        ///  Parataxis relation
+        /// Parataxis relation
         /// </summary>
         [pbr::OriginalName("PARATAXIS")] Parataxis = 33,
         /// <summary>
-        ///  Participial modifier
+        /// Participial modifier
         /// </summary>
         [pbr::OriginalName("PARTMOD")] Partmod = 34,
         /// <summary>
-        ///  The complement of a preposition is a clause
+        /// The complement of a preposition is a clause
         /// </summary>
         [pbr::OriginalName("PCOMP")] Pcomp = 35,
         /// <summary>
-        ///  Object of a preposition
+        /// Object of a preposition
         /// </summary>
         [pbr::OriginalName("POBJ")] Pobj = 36,
         /// <summary>
-        ///  Possession modifier
+        /// Possession modifier
         /// </summary>
         [pbr::OriginalName("POSS")] Poss = 37,
         /// <summary>
-        ///  Postverbal negative particle
+        /// Postverbal negative particle
         /// </summary>
         [pbr::OriginalName("POSTNEG")] Postneg = 38,
         /// <summary>
-        ///  Predicate complement
+        /// Predicate complement
         /// </summary>
         [pbr::OriginalName("PRECOMP")] Precomp = 39,
         /// <summary>
-        ///  Preconjunt
+        /// Preconjunt
         /// </summary>
         [pbr::OriginalName("PRECONJ")] Preconj = 40,
         /// <summary>
-        ///  Predeterminer
+        /// Predeterminer
         /// </summary>
         [pbr::OriginalName("PREDET")] Predet = 41,
         /// <summary>
-        ///  Prefix
+        /// Prefix
         /// </summary>
         [pbr::OriginalName("PREF")] Pref = 42,
         /// <summary>
-        ///  Prepositional modifier
+        /// Prepositional modifier
         /// </summary>
         [pbr::OriginalName("PREP")] Prep = 43,
         /// <summary>
-        ///  The relationship between a verb and verbal morpheme
+        /// The relationship between a verb and verbal morpheme
         /// </summary>
         [pbr::OriginalName("PRONL")] Pronl = 44,
         /// <summary>
-        ///  Particle
+        /// Particle
         /// </summary>
         [pbr::OriginalName("PRT")] Prt = 45,
         /// <summary>
-        ///  Associative or possessive marker
+        /// Associative or possessive marker
         /// </summary>
         [pbr::OriginalName("PS")] Ps = 46,
         /// <summary>
-        ///  Quantifier phrase modifier
+        /// Quantifier phrase modifier
         /// </summary>
         [pbr::OriginalName("QUANTMOD")] Quantmod = 47,
         /// <summary>
-        ///  Relative clause modifier
+        /// Relative clause modifier
         /// </summary>
         [pbr::OriginalName("RCMOD")] Rcmod = 48,
         /// <summary>
-        ///  Complementizer in relative clause
+        /// Complementizer in relative clause
         /// </summary>
         [pbr::OriginalName("RCMODREL")] Rcmodrel = 49,
         /// <summary>
-        ///  Ellipsis without a preceding predicate
+        /// Ellipsis without a preceding predicate
         /// </summary>
         [pbr::OriginalName("RDROP")] Rdrop = 50,
         /// <summary>
-        ///  Referent
+        /// Referent
         /// </summary>
         [pbr::OriginalName("REF")] Ref = 51,
         /// <summary>
-        ///  Remnant
+        /// Remnant
         /// </summary>
         [pbr::OriginalName("REMNANT")] Remnant = 52,
         /// <summary>
-        ///  Reparandum
+        /// Reparandum
         /// </summary>
         [pbr::OriginalName("REPARANDUM")] Reparandum = 53,
         /// <summary>
-        ///  Root
+        /// Root
         /// </summary>
         [pbr::OriginalName("ROOT")] Root = 54,
         /// <summary>
-        ///  Suffix specifying a unit of number
+        /// Suffix specifying a unit of number
         /// </summary>
         [pbr::OriginalName("SNUM")] Snum = 55,
         /// <summary>
-        ///  Suffix
+        /// Suffix
         /// </summary>
         [pbr::OriginalName("SUFF")] Suff = 56,
         /// <summary>
-        ///  Temporal modifier
+        /// Temporal modifier
         /// </summary>
         [pbr::OriginalName("TMOD")] Tmod = 57,
         /// <summary>
-        ///  Topic marker
+        /// Topic marker
         /// </summary>
         [pbr::OriginalName("TOPIC")] Topic = 58,
         /// <summary>
-        ///  Clause headed by an infinite form of the verb that modifies a noun
+        /// Clause headed by an infinite form of the verb that modifies a noun
         /// </summary>
         [pbr::OriginalName("VMOD")] Vmod = 59,
         /// <summary>
-        ///  Vocative
+        /// Vocative
         /// </summary>
         [pbr::OriginalName("VOCATIVE")] Vocative = 60,
         /// <summary>
-        ///  Open clausal complement
+        /// Open clausal complement
         /// </summary>
         [pbr::OriginalName("XCOMP")] Xcomp = 61,
         /// <summary>
-        ///  Name suffix
+        /// Name suffix
         /// </summary>
         [pbr::OriginalName("SUFFIX")] Suffix = 62,
         /// <summary>
-        ///  Name title
+        /// Name title
         /// </summary>
         [pbr::OriginalName("TITLE")] Title = 63,
         /// <summary>
-        ///  Adverbial phrase modifier
+        /// Adverbial phrase modifier
         /// </summary>
         [pbr::OriginalName("ADVPHMOD")] Advphmod = 64,
         /// <summary>
-        ///  Causative auxiliary
+        /// Causative auxiliary
         /// </summary>
         [pbr::OriginalName("AUXCAUS")] Auxcaus = 65,
         /// <summary>
-        ///  Helper auxiliary
+        /// Helper auxiliary
         /// </summary>
         [pbr::OriginalName("AUXVV")] Auxvv = 66,
         /// <summary>
-        ///  Rentaishi (Prenominal modifier)
+        /// Rentaishi (Prenominal modifier)
         /// </summary>
         [pbr::OriginalName("DTMOD")] Dtmod = 67,
         /// <summary>
-        ///  Foreign words
+        /// Foreign words
         /// </summary>
         [pbr::OriginalName("FOREIGN")] Foreign = 68,
         /// <summary>
-        ///  Keyword
+        /// Keyword
         /// </summary>
         [pbr::OriginalName("KW")] Kw = 69,
         /// <summary>
-        ///  List for chains of comparable items
+        /// List for chains of comparable items
         /// </summary>
         [pbr::OriginalName("LIST")] List = 70,
         /// <summary>
-        ///  Nominalized clause
+        /// Nominalized clause
         /// </summary>
         [pbr::OriginalName("NOMC")] Nomc = 71,
         /// <summary>
-        ///  Nominalized clausal subject
+        /// Nominalized clausal subject
         /// </summary>
         [pbr::OriginalName("NOMCSUBJ")] Nomcsubj = 72,
         /// <summary>
-        ///  Nominalized clausal passive
+        /// Nominalized clausal passive
         /// </summary>
         [pbr::OriginalName("NOMCSUBJPASS")] Nomcsubjpass = 73,
         /// <summary>
-        ///  Compound of numeric modifier
+        /// Compound of numeric modifier
         /// </summary>
         [pbr::OriginalName("NUMC")] Numc = 74,
         /// <summary>
-        ///  Copula
+        /// Copula
         /// </summary>
         [pbr::OriginalName("COP")] Cop = 75,
         /// <summary>
-        ///  Dislocated relation (for fronted/topicalized elements)
+        /// Dislocated relation (for fronted/topicalized elements)
         /// </summary>
         [pbr::OriginalName("DISLOCATED")] Dislocated = 76,
       }
@@ -2729,8 +2729,8 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents a mention for an entity in the text. Currently, proper noun
-  ///  mentions are supported.
+  /// Represents a mention for an entity in the text. Currently, proper noun
+  /// mentions are supported.
   /// </summary>
   public sealed partial class EntityMention : pb::IMessage<EntityMention> {
     private static readonly pb::MessageParser<EntityMention> _parser = new pb::MessageParser<EntityMention>(() => new EntityMention());
@@ -2769,7 +2769,7 @@ namespace Google.Cloud.Language.V1 {
     public const int TextFieldNumber = 1;
     private global::Google.Cloud.Language.V1.TextSpan text_;
     /// <summary>
-    ///  The mention text.
+    /// The mention text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.TextSpan Text {
@@ -2783,7 +2783,7 @@ namespace Google.Cloud.Language.V1 {
     public const int TypeFieldNumber = 2;
     private global::Google.Cloud.Language.V1.EntityMention.Types.Type type_ = 0;
     /// <summary>
-    ///  The type of the entity mention.
+    /// The type of the entity mention.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.EntityMention.Types.Type Type {
@@ -2892,19 +2892,19 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The supported types of mentions.
+      /// The supported types of mentions.
       /// </summary>
       public enum Type {
         /// <summary>
-        ///  Unknown
+        /// Unknown
         /// </summary>
         [pbr::OriginalName("TYPE_UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Proper name
+        /// Proper name
         /// </summary>
         [pbr::OriginalName("PROPER")] Proper = 1,
         /// <summary>
-        ///  Common noun (or noun compound)
+        /// Common noun (or noun compound)
         /// </summary>
         [pbr::OriginalName("COMMON")] Common = 2,
       }
@@ -2915,7 +2915,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  Represents an output piece of text.
+  /// Represents an output piece of text.
   /// </summary>
   public sealed partial class TextSpan : pb::IMessage<TextSpan> {
     private static readonly pb::MessageParser<TextSpan> _parser = new pb::MessageParser<TextSpan>(() => new TextSpan());
@@ -2954,7 +2954,7 @@ namespace Google.Cloud.Language.V1 {
     public const int ContentFieldNumber = 1;
     private string content_ = "";
     /// <summary>
-    ///  The content of the output text.
+    /// The content of the output text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Content {
@@ -2968,8 +2968,8 @@ namespace Google.Cloud.Language.V1 {
     public const int BeginOffsetFieldNumber = 2;
     private int beginOffset_;
     /// <summary>
-    ///  The API calculates the beginning offset of the content in the original
-    ///  document according to the [EncodingType][google.cloud.language.v1.EncodingType] specified in the API request.
+    /// The API calculates the beginning offset of the content in the original
+    /// document according to the [EncodingType][google.cloud.language.v1.EncodingType] specified in the API request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int BeginOffset {
@@ -3070,7 +3070,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The sentiment analysis request message.
+  /// The sentiment analysis request message.
   /// </summary>
   public sealed partial class AnalyzeSentimentRequest : pb::IMessage<AnalyzeSentimentRequest> {
     private static readonly pb::MessageParser<AnalyzeSentimentRequest> _parser = new pb::MessageParser<AnalyzeSentimentRequest>(() => new AnalyzeSentimentRequest());
@@ -3109,8 +3109,8 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    ///  Input document. Currently, `analyzeSentiment` only supports English text
-    ///  ([Document.language][google.cloud.language.v1.Document.language]="EN").
+    /// Input document. Currently, `analyzeSentiment` only supports English text
+    /// ([Document.language][google.cloud.language.v1.Document.language]="EN").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Document Document {
@@ -3124,7 +3124,7 @@ namespace Google.Cloud.Language.V1 {
     public const int EncodingTypeFieldNumber = 2;
     private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
     /// <summary>
-    ///  The encoding type used by the API to calculate sentence offsets.
+    /// The encoding type used by the API to calculate sentence offsets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.EncodingType EncodingType {
@@ -3231,7 +3231,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The sentiment analysis response message.
+  /// The sentiment analysis response message.
   /// </summary>
   public sealed partial class AnalyzeSentimentResponse : pb::IMessage<AnalyzeSentimentResponse> {
     private static readonly pb::MessageParser<AnalyzeSentimentResponse> _parser = new pb::MessageParser<AnalyzeSentimentResponse>(() => new AnalyzeSentimentResponse());
@@ -3271,7 +3271,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentSentimentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Sentiment documentSentiment_;
     /// <summary>
-    ///  The overall sentiment of the input document.
+    /// The overall sentiment of the input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Sentiment DocumentSentiment {
@@ -3285,9 +3285,9 @@ namespace Google.Cloud.Language.V1 {
     public const int LanguageFieldNumber = 2;
     private string language_ = "";
     /// <summary>
-    ///  The language of the text, which will be the same as the language specified
-    ///  in the request or, if not specified, the automatically-detected language.
-    ///  See `Document.language` field for more details.
+    /// The language of the text, which will be the same as the language specified
+    /// in the request or, if not specified, the automatically-detected language.
+    /// See `Document.language` field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -3303,7 +3303,7 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Language.V1.Sentence.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence> sentences_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence>();
     /// <summary>
-    ///  The sentiment for all the sentences in the document.
+    /// The sentiment for all the sentences in the document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence> Sentences {
@@ -3416,7 +3416,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The entity analysis request message.
+  /// The entity analysis request message.
   /// </summary>
   public sealed partial class AnalyzeEntitiesRequest : pb::IMessage<AnalyzeEntitiesRequest> {
     private static readonly pb::MessageParser<AnalyzeEntitiesRequest> _parser = new pb::MessageParser<AnalyzeEntitiesRequest>(() => new AnalyzeEntitiesRequest());
@@ -3455,7 +3455,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    ///  Input document.
+    /// Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Document Document {
@@ -3469,7 +3469,7 @@ namespace Google.Cloud.Language.V1 {
     public const int EncodingTypeFieldNumber = 2;
     private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
     /// <summary>
-    ///  The encoding type used by the API to calculate offsets.
+    /// The encoding type used by the API to calculate offsets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.EncodingType EncodingType {
@@ -3576,7 +3576,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The entity analysis response message.
+  /// The entity analysis response message.
   /// </summary>
   public sealed partial class AnalyzeEntitiesResponse : pb::IMessage<AnalyzeEntitiesResponse> {
     private static readonly pb::MessageParser<AnalyzeEntitiesResponse> _parser = new pb::MessageParser<AnalyzeEntitiesResponse>(() => new AnalyzeEntitiesResponse());
@@ -3617,7 +3617,7 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Language.V1.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.Entity>();
     /// <summary>
-    ///  The recognized entities in the input document.
+    /// The recognized entities in the input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.Entity> Entities {
@@ -3628,9 +3628,9 @@ namespace Google.Cloud.Language.V1 {
     public const int LanguageFieldNumber = 2;
     private string language_ = "";
     /// <summary>
-    ///  The language of the text, which will be the same as the language specified
-    ///  in the request or, if not specified, the automatically-detected language.
-    ///  See `Document.language` field for more details.
+    /// The language of the text, which will be the same as the language specified
+    /// in the request or, if not specified, the automatically-detected language.
+    /// See `Document.language` field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -3724,7 +3724,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The syntax analysis request message.
+  /// The syntax analysis request message.
   /// </summary>
   public sealed partial class AnalyzeSyntaxRequest : pb::IMessage<AnalyzeSyntaxRequest> {
     private static readonly pb::MessageParser<AnalyzeSyntaxRequest> _parser = new pb::MessageParser<AnalyzeSyntaxRequest>(() => new AnalyzeSyntaxRequest());
@@ -3763,7 +3763,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    ///  Input document.
+    /// Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Document Document {
@@ -3777,7 +3777,7 @@ namespace Google.Cloud.Language.V1 {
     public const int EncodingTypeFieldNumber = 2;
     private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
     /// <summary>
-    ///  The encoding type used by the API to calculate offsets.
+    /// The encoding type used by the API to calculate offsets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.EncodingType EncodingType {
@@ -3884,7 +3884,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The syntax analysis response message.
+  /// The syntax analysis response message.
   /// </summary>
   public sealed partial class AnalyzeSyntaxResponse : pb::IMessage<AnalyzeSyntaxResponse> {
     private static readonly pb::MessageParser<AnalyzeSyntaxResponse> _parser = new pb::MessageParser<AnalyzeSyntaxResponse>(() => new AnalyzeSyntaxResponse());
@@ -3926,7 +3926,7 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Language.V1.Sentence.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence> sentences_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence>();
     /// <summary>
-    ///  Sentences in the input document.
+    /// Sentences in the input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence> Sentences {
@@ -3939,7 +3939,7 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Language.V1.Token.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.Token> tokens_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.Token>();
     /// <summary>
-    ///  Tokens, along with their syntactic information, in the input document.
+    /// Tokens, along with their syntactic information, in the input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.Token> Tokens {
@@ -3950,9 +3950,9 @@ namespace Google.Cloud.Language.V1 {
     public const int LanguageFieldNumber = 3;
     private string language_ = "";
     /// <summary>
-    ///  The language of the text, which will be the same as the language specified
-    ///  in the request or, if not specified, the automatically-detected language.
-    ///  See `Document.language` field for more details.
+    /// The language of the text, which will be the same as the language specified
+    /// in the request or, if not specified, the automatically-detected language.
+    /// See `Document.language` field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {
@@ -4055,8 +4055,8 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The request message for the text annotation API, which can perform multiple
-  ///  analysis types (sentiment, entities, and syntax) in one call.
+  /// The request message for the text annotation API, which can perform multiple
+  /// analysis types (sentiment, entities, and syntax) in one call.
   /// </summary>
   public sealed partial class AnnotateTextRequest : pb::IMessage<AnnotateTextRequest> {
     private static readonly pb::MessageParser<AnnotateTextRequest> _parser = new pb::MessageParser<AnnotateTextRequest>(() => new AnnotateTextRequest());
@@ -4096,7 +4096,7 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentFieldNumber = 1;
     private global::Google.Cloud.Language.V1.Document document_;
     /// <summary>
-    ///  Input document.
+    /// Input document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Document Document {
@@ -4110,7 +4110,7 @@ namespace Google.Cloud.Language.V1 {
     public const int FeaturesFieldNumber = 2;
     private global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features features_;
     /// <summary>
-    ///  The enabled features.
+    /// The enabled features.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.AnnotateTextRequest.Types.Features Features {
@@ -4124,7 +4124,7 @@ namespace Google.Cloud.Language.V1 {
     public const int EncodingTypeFieldNumber = 3;
     private global::Google.Cloud.Language.V1.EncodingType encodingType_ = 0;
     /// <summary>
-    ///  The encoding type used by the API to calculate offsets.
+    /// The encoding type used by the API to calculate offsets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.EncodingType EncodingType {
@@ -4255,8 +4255,8 @@ namespace Google.Cloud.Language.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  All available features for sentiment, syntax, and semantic analysis.
-      ///  Setting each one to true will enable that specific analysis for the input.
+      /// All available features for sentiment, syntax, and semantic analysis.
+      /// Setting each one to true will enable that specific analysis for the input.
       /// </summary>
       public sealed partial class Features : pb::IMessage<Features> {
         private static readonly pb::MessageParser<Features> _parser = new pb::MessageParser<Features>(() => new Features());
@@ -4296,7 +4296,7 @@ namespace Google.Cloud.Language.V1 {
         public const int ExtractSyntaxFieldNumber = 1;
         private bool extractSyntax_;
         /// <summary>
-        ///  Extract syntax information.
+        /// Extract syntax information.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ExtractSyntax {
@@ -4310,7 +4310,7 @@ namespace Google.Cloud.Language.V1 {
         public const int ExtractEntitiesFieldNumber = 2;
         private bool extractEntities_;
         /// <summary>
-        ///  Extract entities.
+        /// Extract entities.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ExtractEntities {
@@ -4324,7 +4324,7 @@ namespace Google.Cloud.Language.V1 {
         public const int ExtractDocumentSentimentFieldNumber = 3;
         private bool extractDocumentSentiment_;
         /// <summary>
-        ///  Extract document-level sentiment.
+        /// Extract document-level sentiment.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool ExtractDocumentSentiment {
@@ -4446,7 +4446,7 @@ namespace Google.Cloud.Language.V1 {
   }
 
   /// <summary>
-  ///  The text annotations response message.
+  /// The text annotations response message.
   /// </summary>
   public sealed partial class AnnotateTextResponse : pb::IMessage<AnnotateTextResponse> {
     private static readonly pb::MessageParser<AnnotateTextResponse> _parser = new pb::MessageParser<AnnotateTextResponse>(() => new AnnotateTextResponse());
@@ -4490,8 +4490,8 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Language.V1.Sentence.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence> sentences_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence>();
     /// <summary>
-    ///  Sentences in the input document. Populated if the user enables
-    ///  [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1.AnnotateTextRequest.Features.extract_syntax].
+    /// Sentences in the input document. Populated if the user enables
+    /// [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1.AnnotateTextRequest.Features.extract_syntax].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.Sentence> Sentences {
@@ -4504,9 +4504,9 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Language.V1.Token.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.Token> tokens_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.Token>();
     /// <summary>
-    ///  Tokens, along with their syntactic information, in the input document.
-    ///  Populated if the user enables
-    ///  [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1.AnnotateTextRequest.Features.extract_syntax].
+    /// Tokens, along with their syntactic information, in the input document.
+    /// Populated if the user enables
+    /// [AnnotateTextRequest.Features.extract_syntax][google.cloud.language.v1.AnnotateTextRequest.Features.extract_syntax].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.Token> Tokens {
@@ -4519,9 +4519,9 @@ namespace Google.Cloud.Language.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Language.V1.Entity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Language.V1.Entity> entities_ = new pbc::RepeatedField<global::Google.Cloud.Language.V1.Entity>();
     /// <summary>
-    ///  Entities, along with their semantic information, in the input document.
-    ///  Populated if the user enables
-    ///  [AnnotateTextRequest.Features.extract_entities][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entities].
+    /// Entities, along with their semantic information, in the input document.
+    /// Populated if the user enables
+    /// [AnnotateTextRequest.Features.extract_entities][google.cloud.language.v1.AnnotateTextRequest.Features.extract_entities].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Language.V1.Entity> Entities {
@@ -4532,8 +4532,8 @@ namespace Google.Cloud.Language.V1 {
     public const int DocumentSentimentFieldNumber = 4;
     private global::Google.Cloud.Language.V1.Sentiment documentSentiment_;
     /// <summary>
-    ///  The overall sentiment for the document. Populated if the user enables
-    ///  [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment].
+    /// The overall sentiment for the document. Populated if the user enables
+    /// [AnnotateTextRequest.Features.extract_document_sentiment][google.cloud.language.v1.AnnotateTextRequest.Features.extract_document_sentiment].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Language.V1.Sentiment DocumentSentiment {
@@ -4547,9 +4547,9 @@ namespace Google.Cloud.Language.V1 {
     public const int LanguageFieldNumber = 5;
     private string language_ = "";
     /// <summary>
-    ///  The language of the text, which will be the same as the language specified
-    ///  in the request or, if not specified, the automatically-detected language.
-    ///  See `Document.language` field for more details.
+    /// The language of the text, which will be the same as the language specified
+    /// in the request or, if not specified, the automatically-detected language.
+    /// See `Document.language` field for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Language {

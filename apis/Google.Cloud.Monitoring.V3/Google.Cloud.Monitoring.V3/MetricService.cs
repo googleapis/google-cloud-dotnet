@@ -116,7 +116,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
   #region Messages
   /// <summary>
-  ///  The `ListMonitoredResourceDescriptors` request.
+  /// The `ListMonitoredResourceDescriptors` request.
   /// </summary>
   public sealed partial class ListMonitoredResourceDescriptorsRequest : pb::IMessage<ListMonitoredResourceDescriptorsRequest> {
     private static readonly pb::MessageParser<ListMonitoredResourceDescriptorsRequest> _parser = new pb::MessageParser<ListMonitoredResourceDescriptorsRequest>(() => new ListMonitoredResourceDescriptorsRequest());
@@ -157,8 +157,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    ///  The project on which to execute the request. The format is
-    ///  `"projects/{project_id_or_number}"`.
+    /// The project on which to execute the request. The format is
+    /// `"projects/{project_id_or_number}"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -172,13 +172,13 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    ///  An optional [filter](/monitoring/api/v3/filters) describing
-    ///  the descriptors to be returned.  The filter can reference
-    ///  the descriptor's type and labels. For example, the
-    ///  following filter returns only Google Compute Engine descriptors
-    ///  that have an `id` label:
+    /// An optional [filter](/monitoring/api/v3/filters) describing
+    /// the descriptors to be returned.  The filter can reference
+    /// the descriptor's type and labels. For example, the
+    /// following filter returns only Google Compute Engine descriptors
+    /// that have an `id` label:
     ///
-    ///      resource.type = starts_with("gce_") AND resource.label:id
+    ///     resource.type = starts_with("gce_") AND resource.label:id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -192,7 +192,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    ///  A positive number that is the maximum number of results to return.
+    /// A positive number that is the maximum number of results to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -206,9 +206,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    ///  If this field is not empty then it must contain the `nextPageToken` value
-    ///  returned by a previous call to this method.  Using this field causes the
-    ///  method to return additional results from the previous method call.
+    /// If this field is not empty then it must contain the `nextPageToken` value
+    /// returned by a previous call to this method.  Using this field causes the
+    /// method to return additional results from the previous method call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -341,7 +341,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `ListMonitoredResourcDescriptors` response.
+  /// The `ListMonitoredResourcDescriptors` response.
   /// </summary>
   public sealed partial class ListMonitoredResourceDescriptorsResponse : pb::IMessage<ListMonitoredResourceDescriptorsResponse> {
     private static readonly pb::MessageParser<ListMonitoredResourceDescriptorsResponse> _parser = new pb::MessageParser<ListMonitoredResourceDescriptorsResponse>(() => new ListMonitoredResourceDescriptorsResponse());
@@ -382,8 +382,8 @@ namespace Google.Cloud.Monitoring.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Api.MonitoredResourceDescriptor.Parser);
     private readonly pbc::RepeatedField<global::Google.Api.MonitoredResourceDescriptor> resourceDescriptors_ = new pbc::RepeatedField<global::Google.Api.MonitoredResourceDescriptor>();
     /// <summary>
-    ///  The monitored resource descriptors that are available to this project
-    ///  and that match `filter`, if present.
+    /// The monitored resource descriptors that are available to this project
+    /// and that match `filter`, if present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Api.MonitoredResourceDescriptor> ResourceDescriptors {
@@ -394,9 +394,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than have been returned, then this field is set
-    ///  to a non-empty value.  To see the additional results,
-    ///  use that value as `pageToken` in the next call to this method.
+    /// If there are more results than have been returned, then this field is set
+    /// to a non-empty value.  To see the additional results,
+    /// use that value as `pageToken` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -490,7 +490,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `GetMonitoredResourceDescriptor` request.
+  /// The `GetMonitoredResourceDescriptor` request.
   /// </summary>
   public sealed partial class GetMonitoredResourceDescriptorRequest : pb::IMessage<GetMonitoredResourceDescriptorRequest> {
     private static readonly pb::MessageParser<GetMonitoredResourceDescriptorRequest> _parser = new pb::MessageParser<GetMonitoredResourceDescriptorRequest>(() => new GetMonitoredResourceDescriptorRequest());
@@ -528,10 +528,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    ///  The monitored resource descriptor to get.  The format is
-    ///  `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
-    ///  The `{resource_type}` is a predefined type, such as
-    ///  `cloudsql_database`.
+    /// The monitored resource descriptor to get.  The format is
+    /// `"projects/{project_id_or_number}/monitoredResourceDescriptors/{resource_type}"`.
+    /// The `{resource_type}` is a predefined type, such as
+    /// `cloudsql_database`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -616,7 +616,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `ListMetricDescriptors` request.
+  /// The `ListMetricDescriptors` request.
   /// </summary>
   public sealed partial class ListMetricDescriptorsRequest : pb::IMessage<ListMetricDescriptorsRequest> {
     private static readonly pb::MessageParser<ListMetricDescriptorsRequest> _parser = new pb::MessageParser<ListMetricDescriptorsRequest>(() => new ListMetricDescriptorsRequest());
@@ -657,8 +657,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 5;
     private string name_ = "";
     /// <summary>
-    ///  The project on which to execute the request. The format is
-    ///  `"projects/{project_id_or_number}"`.
+    /// The project on which to execute the request. The format is
+    /// `"projects/{project_id_or_number}"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -672,14 +672,14 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    ///  If this field is empty, all custom and
-    ///  system-defined metric descriptors are returned.
-    ///  Otherwise, the [filter](/monitoring/api/v3/filters)
-    ///  specifies which metric descriptors are to be
-    ///  returned. For example, the following filter matches all
-    ///  [custom metrics](/monitoring/custom-metrics):
+    /// If this field is empty, all custom and
+    /// system-defined metric descriptors are returned.
+    /// Otherwise, the [filter](/monitoring/api/v3/filters)
+    /// specifies which metric descriptors are to be
+    /// returned. For example, the following filter matches all
+    /// [custom metrics](/monitoring/custom-metrics):
     ///
-    ///      metric.type = starts_with("custom.googleapis.com/")
+    ///     metric.type = starts_with("custom.googleapis.com/")
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -693,7 +693,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    ///  A positive number that is the maximum number of results to return.
+    /// A positive number that is the maximum number of results to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -707,9 +707,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    ///  If this field is not empty then it must contain the `nextPageToken` value
-    ///  returned by a previous call to this method.  Using this field causes the
-    ///  method to return additional results from the previous method call.
+    /// If this field is not empty then it must contain the `nextPageToken` value
+    /// returned by a previous call to this method.  Using this field causes the
+    /// method to return additional results from the previous method call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -842,7 +842,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `ListMetricDescriptors` response.
+  /// The `ListMetricDescriptors` response.
   /// </summary>
   public sealed partial class ListMetricDescriptorsResponse : pb::IMessage<ListMetricDescriptorsResponse> {
     private static readonly pb::MessageParser<ListMetricDescriptorsResponse> _parser = new pb::MessageParser<ListMetricDescriptorsResponse>(() => new ListMetricDescriptorsResponse());
@@ -883,8 +883,8 @@ namespace Google.Cloud.Monitoring.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Api.MetricDescriptor.Parser);
     private readonly pbc::RepeatedField<global::Google.Api.MetricDescriptor> metricDescriptors_ = new pbc::RepeatedField<global::Google.Api.MetricDescriptor>();
     /// <summary>
-    ///  The metric descriptors that are available to the project
-    ///  and that match the value of `filter`, if present.
+    /// The metric descriptors that are available to the project
+    /// and that match the value of `filter`, if present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Api.MetricDescriptor> MetricDescriptors {
@@ -895,9 +895,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than have been returned, then this field is set
-    ///  to a non-empty value.  To see the additional results,
-    ///  use that value as `pageToken` in the next call to this method.
+    /// If there are more results than have been returned, then this field is set
+    /// to a non-empty value.  To see the additional results,
+    /// use that value as `pageToken` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -991,7 +991,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `GetMetricDescriptor` request.
+  /// The `GetMetricDescriptor` request.
   /// </summary>
   public sealed partial class GetMetricDescriptorRequest : pb::IMessage<GetMetricDescriptorRequest> {
     private static readonly pb::MessageParser<GetMetricDescriptorRequest> _parser = new pb::MessageParser<GetMetricDescriptorRequest>(() => new GetMetricDescriptorRequest());
@@ -1029,10 +1029,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    ///  The metric descriptor on which to execute the request. The format is
-    ///  `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-    ///  An example value of `{metric_id}` is
-    ///  `"compute.googleapis.com/instance/disk/read_bytes_count"`.
+    /// The metric descriptor on which to execute the request. The format is
+    /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+    /// An example value of `{metric_id}` is
+    /// `"compute.googleapis.com/instance/disk/read_bytes_count"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1117,7 +1117,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `CreateMetricDescriptor` request.
+  /// The `CreateMetricDescriptor` request.
   /// </summary>
   public sealed partial class CreateMetricDescriptorRequest : pb::IMessage<CreateMetricDescriptorRequest> {
     private static readonly pb::MessageParser<CreateMetricDescriptorRequest> _parser = new pb::MessageParser<CreateMetricDescriptorRequest>(() => new CreateMetricDescriptorRequest());
@@ -1156,8 +1156,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    ///  The project on which to execute the request. The format is
-    ///  `"projects/{project_id_or_number}"`.
+    /// The project on which to execute the request. The format is
+    /// `"projects/{project_id_or_number}"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1171,8 +1171,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int MetricDescriptorFieldNumber = 2;
     private global::Google.Api.MetricDescriptor metricDescriptor_;
     /// <summary>
-    ///  The new [custom metric](/monitoring/custom-metrics)
-    ///  descriptor.
+    /// The new [custom metric](/monitoring/custom-metrics)
+    /// descriptor.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MetricDescriptor MetricDescriptor {
@@ -1279,7 +1279,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `DeleteMetricDescriptor` request.
+  /// The `DeleteMetricDescriptor` request.
   /// </summary>
   public sealed partial class DeleteMetricDescriptorRequest : pb::IMessage<DeleteMetricDescriptorRequest> {
     private static readonly pb::MessageParser<DeleteMetricDescriptorRequest> _parser = new pb::MessageParser<DeleteMetricDescriptorRequest>(() => new DeleteMetricDescriptorRequest());
@@ -1317,10 +1317,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    ///  The metric descriptor on which to execute the request. The format is
-    ///  `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
-    ///  An example of `{metric_id}` is:
-    ///  `"custom.googleapis.com/my_test_metric"`.
+    /// The metric descriptor on which to execute the request. The format is
+    /// `"projects/{project_id_or_number}/metricDescriptors/{metric_id}"`.
+    /// An example of `{metric_id}` is:
+    /// `"custom.googleapis.com/my_test_metric"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1405,7 +1405,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `ListTimeSeries` request.
+  /// The `ListTimeSeries` request.
   /// </summary>
   public sealed partial class ListTimeSeriesRequest : pb::IMessage<ListTimeSeriesRequest> {
     private static readonly pb::MessageParser<ListTimeSeriesRequest> _parser = new pb::MessageParser<ListTimeSeriesRequest>(() => new ListTimeSeriesRequest());
@@ -1450,8 +1450,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 10;
     private string name_ = "";
     /// <summary>
-    ///  The project on which to execute the request. The format is
-    ///  "projects/{project_id_or_number}".
+    /// The project on which to execute the request. The format is
+    /// "projects/{project_id_or_number}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1465,13 +1465,13 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int FilterFieldNumber = 2;
     private string filter_ = "";
     /// <summary>
-    ///  A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
-    ///  series should be returned.  The filter must specify a single metric type,
-    ///  and can additionally specify metric labels and other information. For
-    ///  example:
+    /// A [monitoring filter](/monitoring/api/v3/filters) that specifies which time
+    /// series should be returned.  The filter must specify a single metric type,
+    /// and can additionally specify metric labels and other information. For
+    /// example:
     ///
-    ///      metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
-    ///          metric.label.instance_name = "my-instance-name"
+    ///     metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
+    ///         metric.label.instance_name = "my-instance-name"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -1485,9 +1485,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int IntervalFieldNumber = 4;
     private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
-    ///  The time interval for which results should be returned. Only time series
-    ///  that contain data points in the specified interval are included
-    ///  in the response.
+    /// The time interval for which results should be returned. Only time series
+    /// that contain data points in the specified interval are included
+    /// in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
@@ -1501,9 +1501,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int AggregationFieldNumber = 5;
     private global::Google.Cloud.Monitoring.V3.Aggregation aggregation_;
     /// <summary>
-    ///  By default, the raw time series data is returned.
-    ///  Use this field to combine multiple time series for different
-    ///  views of the data.
+    /// By default, the raw time series data is returned.
+    /// Use this field to combine multiple time series for different
+    /// views of the data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.Aggregation Aggregation {
@@ -1517,9 +1517,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int OrderByFieldNumber = 6;
     private string orderBy_ = "";
     /// <summary>
-    ///  Specifies the order in which the points of the time series should
-    ///  be returned.  By default, results are not ordered.  Currently,
-    ///  this field must be left blank.
+    /// Specifies the order in which the points of the time series should
+    /// be returned.  By default, results are not ordered.  Currently,
+    /// this field must be left blank.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -1533,7 +1533,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ViewFieldNumber = 7;
     private global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView view_ = 0;
     /// <summary>
-    ///  Specifies which information is returned about the time series.
+    /// Specifies which information is returned about the time series.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.ListTimeSeriesRequest.Types.TimeSeriesView View {
@@ -1547,10 +1547,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageSizeFieldNumber = 8;
     private int pageSize_;
     /// <summary>
-    ///  A positive number that is the maximum number of results to return.
-    ///  When `view` field sets to `FULL`, it limits the number of `Points` server
-    ///  will return; if `view` field is `HEADERS`, it limits the number of
-    ///  `TimeSeries` server will return.
+    /// A positive number that is the maximum number of results to return.
+    /// When `view` field sets to `FULL`, it limits the number of `Points` server
+    /// will return; if `view` field is `HEADERS`, it limits the number of
+    /// `TimeSeries` server will return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1564,9 +1564,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int PageTokenFieldNumber = 9;
     private string pageToken_ = "";
     /// <summary>
-    ///  If this field is not empty then it must contain the `nextPageToken` value
-    ///  returned by a previous call to this method.  Using this field causes the
-    ///  method to return additional results from the previous method call.
+    /// If this field is not empty then it must contain the `nextPageToken` value
+    /// returned by a previous call to this method.  Using this field causes the
+    /// method to return additional results from the previous method call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1777,17 +1777,17 @@ namespace Google.Cloud.Monitoring.V3 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Controls which fields are returned by `ListTimeSeries`.
+      /// Controls which fields are returned by `ListTimeSeries`.
       /// </summary>
       public enum TimeSeriesView {
         /// <summary>
-        ///  Returns the identity of the metric(s), the time series,
-        ///  and the time series data.
+        /// Returns the identity of the metric(s), the time series,
+        /// and the time series data.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 0,
         /// <summary>
-        ///  Returns the identity of the metric and the time series resource,
-        ///  but not the time series data.
+        /// Returns the identity of the metric and the time series resource,
+        /// but not the time series data.
         /// </summary>
         [pbr::OriginalName("HEADERS")] Headers = 1,
       }
@@ -1798,7 +1798,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `ListTimeSeries` response.
+  /// The `ListTimeSeries` response.
   /// </summary>
   public sealed partial class ListTimeSeriesResponse : pb::IMessage<ListTimeSeriesResponse> {
     private static readonly pb::MessageParser<ListTimeSeriesResponse> _parser = new pb::MessageParser<ListTimeSeriesResponse>(() => new ListTimeSeriesResponse());
@@ -1839,7 +1839,7 @@ namespace Google.Cloud.Monitoring.V3 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Monitoring.V3.TimeSeries.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> timeSeries_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries>();
     /// <summary>
-    ///  One or more time series that match the filter included in the request.
+    /// One or more time series that match the filter included in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> TimeSeries {
@@ -1850,9 +1850,9 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there are more results than have been returned, then this field is set
-    ///  to a non-empty value.  To see the additional results,
-    ///  use that value as `pageToken` in the next call to this method.
+    /// If there are more results than have been returned, then this field is set
+    /// to a non-empty value.  To see the additional results,
+    /// use that value as `pageToken` in the next call to this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1946,7 +1946,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  The `CreateTimeSeries` request.
+  /// The `CreateTimeSeries` request.
   /// </summary>
   public sealed partial class CreateTimeSeriesRequest : pb::IMessage<CreateTimeSeriesRequest> {
     private static readonly pb::MessageParser<CreateTimeSeriesRequest> _parser = new pb::MessageParser<CreateTimeSeriesRequest>(() => new CreateTimeSeriesRequest());
@@ -1985,8 +1985,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    ///  The project on which to execute the request. The format is
-    ///  `"projects/{project_id_or_number}"`.
+    /// The project on which to execute the request. The format is
+    /// `"projects/{project_id_or_number}"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -2002,11 +2002,11 @@ namespace Google.Cloud.Monitoring.V3 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Monitoring.V3.TimeSeries.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> timeSeries_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries>();
     /// <summary>
-    ///  The new data to be added to a list of time series.
-    ///  Adds at most one data point to each of several time series.  The new data
-    ///  point must be more recent than any other point in its time series.  Each
-    ///  `TimeSeries` value must fully specify a unique time series by supplying
-    ///  all label values for the metric and the monitored resource.
+    /// The new data to be added to a list of time series.
+    /// Adds at most one data point to each of several time series.  The new data
+    /// point must be more recent than any other point in its time series.  Each
+    /// `TimeSeries` value must fully specify a unique time series by supplying
+    /// all label values for the metric and the monitored resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeries> TimeSeries {
@@ -2097,7 +2097,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  Describes the result of a failed request to write data to a time series.
+  /// Describes the result of a failed request to write data to a time series.
   /// </summary>
   public sealed partial class CreateTimeSeriesError : pb::IMessage<CreateTimeSeriesError> {
     private static readonly pb::MessageParser<CreateTimeSeriesError> _parser = new pb::MessageParser<CreateTimeSeriesError>(() => new CreateTimeSeriesError());
@@ -2136,10 +2136,10 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int TimeSeriesFieldNumber = 1;
     private global::Google.Cloud.Monitoring.V3.TimeSeries timeSeries_;
     /// <summary>
-    ///  The time series, including the `Metric`, `MonitoredResource`,
-    ///  and `Point`s (including timestamp and value) that resulted
-    ///  in the error. This field provides all of the context that
-    ///  would be needed to retry the operation.
+    /// The time series, including the `Metric`, `MonitoredResource`,
+    /// and `Point`s (including timestamp and value) that resulted
+    /// in the error. This field provides all of the context that
+    /// would be needed to retry the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.TimeSeries TimeSeries {
@@ -2153,7 +2153,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int StatusFieldNumber = 2;
     private global::Google.Rpc.Status status_;
     /// <summary>
-    ///  The status of the requested write operation.
+    /// The status of the requested write operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Status {

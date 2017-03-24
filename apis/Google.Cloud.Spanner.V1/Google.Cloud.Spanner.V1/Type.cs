@@ -49,58 +49,58 @@ namespace Google.Cloud.Spanner.V1 {
   }
   #region Enums
   /// <summary>
-  ///  `TypeCode` is used as part of [Type][google.spanner.v1.Type] to
-  ///  indicate the type of a Cloud Spanner value.
+  /// `TypeCode` is used as part of [Type][google.spanner.v1.Type] to
+  /// indicate the type of a Cloud Spanner value.
   ///
-  ///  Each legal value of a type can be encoded to or decoded from a JSON
-  ///  value, using the encodings described below. All Cloud Spanner values can
-  ///  be `null`, regardless of type; `null`s are always encoded as a JSON
-  ///  `null`.
+  /// Each legal value of a type can be encoded to or decoded from a JSON
+  /// value, using the encodings described below. All Cloud Spanner values can
+  /// be `null`, regardless of type; `null`s are always encoded as a JSON
+  /// `null`.
   /// </summary>
   public enum TypeCode {
     /// <summary>
-    ///  Not specified.
+    /// Not specified.
     /// </summary>
     [pbr::OriginalName("TYPE_CODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    ///  Encoded as JSON `true` or `false`.
+    /// Encoded as JSON `true` or `false`.
     /// </summary>
     [pbr::OriginalName("BOOL")] Bool = 1,
     /// <summary>
-    ///  Encoded as `string`, in decimal format.
+    /// Encoded as `string`, in decimal format.
     /// </summary>
     [pbr::OriginalName("INT64")] Int64 = 2,
     /// <summary>
-    ///  Encoded as `number`, or the strings `"NaN"`, `"Infinity"`, or
-    ///  `"-Infinity"`.
+    /// Encoded as `number`, or the strings `"NaN"`, `"Infinity"`, or
+    /// `"-Infinity"`.
     /// </summary>
     [pbr::OriginalName("FLOAT64")] Float64 = 3,
     /// <summary>
-    ///  Encoded as `string` in RFC 3339 timestamp format. The time zone
-    ///  must be present, and must be `"Z"`.
+    /// Encoded as `string` in RFC 3339 timestamp format. The time zone
+    /// must be present, and must be `"Z"`.
     /// </summary>
     [pbr::OriginalName("TIMESTAMP")] Timestamp = 4,
     /// <summary>
-    ///  Encoded as `string` in RFC 3339 date format.
+    /// Encoded as `string` in RFC 3339 date format.
     /// </summary>
     [pbr::OriginalName("DATE")] Date = 5,
     /// <summary>
-    ///  Encoded as `string`.
+    /// Encoded as `string`.
     /// </summary>
     [pbr::OriginalName("STRING")] String = 6,
     /// <summary>
-    ///  Encoded as a base64-encoded `string`, as described in RFC 4648,
-    ///  section 4.
+    /// Encoded as a base64-encoded `string`, as described in RFC 4648,
+    /// section 4.
     /// </summary>
     [pbr::OriginalName("BYTES")] Bytes = 7,
     /// <summary>
-    ///  Encoded as `list`, where the list elements are represented
-    ///  according to [array_element_type][google.spanner.v1.Type.array_element_type].
+    /// Encoded as `list`, where the list elements are represented
+    /// according to [array_element_type][google.spanner.v1.Type.array_element_type].
     /// </summary>
     [pbr::OriginalName("ARRAY")] Array = 8,
     /// <summary>
-    ///  Encoded as `list`, where list element `i` is represented according
-    ///  to [struct_type.fields[i]][google.spanner.v1.StructType.fields].
+    /// Encoded as `list`, where list element `i` is represented according
+    /// to [struct_type.fields[i]][google.spanner.v1.StructType.fields].
     /// </summary>
     [pbr::OriginalName("STRUCT")] Struct = 9,
   }
@@ -109,8 +109,8 @@ namespace Google.Cloud.Spanner.V1 {
 
   #region Messages
   /// <summary>
-  ///  `Type` indicates the type of a Cloud Spanner value, as might be stored in a
-  ///  table cell or returned from an SQL query.
+  /// `Type` indicates the type of a Cloud Spanner value, as might be stored in a
+  /// table cell or returned from an SQL query.
   /// </summary>
   public sealed partial class Type : pb::IMessage<Type> {
     private static readonly pb::MessageParser<Type> _parser = new pb::MessageParser<Type>(() => new Type());
@@ -150,7 +150,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int CodeFieldNumber = 1;
     private global::Google.Cloud.Spanner.V1.TypeCode code_ = 0;
     /// <summary>
-    ///  Required. The [TypeCode][google.spanner.v1.TypeCode] for this type.
+    /// Required. The [TypeCode][google.spanner.v1.TypeCode] for this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.TypeCode Code {
@@ -164,8 +164,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ArrayElementTypeFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.Type arrayElementType_;
     /// <summary>
-    ///  If [code][google.spanner.v1.Type.code] == [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type`
-    ///  is the type of the array elements.
+    /// If [code][google.spanner.v1.Type.code] == [ARRAY][google.spanner.v1.TypeCode.ARRAY], then `array_element_type`
+    /// is the type of the array elements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.Type ArrayElementType {
@@ -179,8 +179,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StructTypeFieldNumber = 3;
     private global::Google.Cloud.Spanner.V1.StructType structType_;
     /// <summary>
-    ///  If [code][google.spanner.v1.Type.code] == [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type`
-    ///  provides type information for the struct's fields.
+    /// If [code][google.spanner.v1.Type.code] == [STRUCT][google.spanner.v1.TypeCode.STRUCT], then `struct_type`
+    /// provides type information for the struct's fields.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.StructType StructType {
@@ -309,7 +309,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  `StructType` defines the fields of a [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
+  /// `StructType` defines the fields of a [STRUCT][google.spanner.v1.TypeCode.STRUCT] type.
   /// </summary>
   public sealed partial class StructType : pb::IMessage<StructType> {
     private static readonly pb::MessageParser<StructType> _parser = new pb::MessageParser<StructType>(() => new StructType());
@@ -349,12 +349,12 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.V1.StructType.Types.Field.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.StructType.Types.Field> fields_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.StructType.Types.Field>();
     /// <summary>
-    ///  The list of fields that make up this struct. Order is
-    ///  significant, because values of this struct type are represented as
-    ///  lists, where the order of field values matches the order of
-    ///  fields in the [StructType][google.spanner.v1.StructType]. In turn, the order of fields
-    ///  matches the order of columns in a read request, or the order of
-    ///  fields in the `SELECT` clause of a query.
+    /// The list of fields that make up this struct. Order is
+    /// significant, because values of this struct type are represented as
+    /// lists, where the order of field values matches the order of
+    /// fields in the [StructType][google.spanner.v1.StructType]. In turn, the order of fields
+    /// matches the order of columns in a read request, or the order of
+    /// fields in the `SELECT` clause of a query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.StructType.Types.Field> Fields {
@@ -431,7 +431,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Message representing a single field of a struct.
+      /// Message representing a single field of a struct.
       /// </summary>
       public sealed partial class Field : pb::IMessage<Field> {
         private static readonly pb::MessageParser<Field> _parser = new pb::MessageParser<Field>(() => new Field());
@@ -470,13 +470,13 @@ namespace Google.Cloud.Spanner.V1 {
         public const int NameFieldNumber = 1;
         private string name_ = "";
         /// <summary>
-        ///  The name of the field. For reads, this is the column name. For
-        ///  SQL queries, it is the column alias (e.g., `"Word"` in the
-        ///  query `"SELECT 'hello' AS Word"`), or the column name (e.g.,
-        ///  `"ColName"` in the query `"SELECT ColName FROM Table"`). Some
-        ///  columns might have an empty name (e.g., !"SELECT
-        ///  UPPER(ColName)"`). Note that a query result can contain
-        ///  multiple fields with the same name.
+        /// The name of the field. For reads, this is the column name. For
+        /// SQL queries, it is the column alias (e.g., `"Word"` in the
+        /// query `"SELECT 'hello' AS Word"`), or the column name (e.g.,
+        /// `"ColName"` in the query `"SELECT ColName FROM Table"`). Some
+        /// columns might have an empty name (e.g., !"SELECT
+        /// UPPER(ColName)"`). Note that a query result can contain
+        /// multiple fields with the same name.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Name {
@@ -490,7 +490,7 @@ namespace Google.Cloud.Spanner.V1 {
         public const int TypeFieldNumber = 2;
         private global::Google.Cloud.Spanner.V1.Type type_;
         /// <summary>
-        ///  The type of the field.
+        /// The type of the field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Spanner.V1.Type Type {

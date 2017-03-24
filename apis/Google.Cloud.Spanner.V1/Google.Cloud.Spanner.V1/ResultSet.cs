@@ -58,8 +58,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
   #region Messages
   /// <summary>
-  ///  Results from [Read][google.spanner.v1.Spanner.Read] or
-  ///  [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
+  /// Results from [Read][google.spanner.v1.Spanner.Read] or
+  /// [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql].
   /// </summary>
   public sealed partial class ResultSet : pb::IMessage<ResultSet> {
     private static readonly pb::MessageParser<ResultSet> _parser = new pb::MessageParser<ResultSet>(() => new ResultSet());
@@ -99,7 +99,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int MetadataFieldNumber = 1;
     private global::Google.Cloud.Spanner.V1.ResultSetMetadata metadata_;
     /// <summary>
-    ///  Metadata about the result set, such as row type information.
+    /// Metadata about the result set, such as row type information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ResultSetMetadata Metadata {
@@ -115,12 +115,12 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.ListValue.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> rows_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue>();
     /// <summary>
-    ///  Each element in `rows` is a row whose format is defined by
-    ///  [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. The ith element
-    ///  in each row matches the ith field in
-    ///  [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. Elements are
-    ///  encoded based on type as described
-    ///  [here][google.spanner.v1.TypeCode].
+    /// Each element in `rows` is a row whose format is defined by
+    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. The ith element
+    /// in each row matches the ith field in
+    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. Elements are
+    /// encoded based on type as described
+    /// [here][google.spanner.v1.TypeCode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> Rows {
@@ -131,9 +131,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StatsFieldNumber = 3;
     private global::Google.Cloud.Spanner.V1.ResultSetStats stats_;
     /// <summary>
-    ///  Query plan and execution statistics for the query that produced this
-    ///  result set. These can be requested by setting
-    ///  [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
+    /// Query plan and execution statistics for the query that produced this
+    /// result set. These can be requested by setting
+    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ResultSetStats Stats {
@@ -255,9 +255,9 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  Partial results from a streaming read or SQL query. Streaming reads and
-  ///  SQL queries better tolerate large result sets, large rows, and large
-  ///  values, but are a little trickier to consume.
+  /// Partial results from a streaming read or SQL query. Streaming reads and
+  /// SQL queries better tolerate large result sets, large rows, and large
+  /// values, but are a little trickier to consume.
   /// </summary>
   public sealed partial class PartialResultSet : pb::IMessage<PartialResultSet> {
     private static readonly pb::MessageParser<PartialResultSet> _parser = new pb::MessageParser<PartialResultSet>(() => new PartialResultSet());
@@ -299,8 +299,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int MetadataFieldNumber = 1;
     private global::Google.Cloud.Spanner.V1.ResultSetMetadata metadata_;
     /// <summary>
-    ///  Metadata about the result set, such as row type information.
-    ///  Only present in the first response.
+    /// Metadata about the result set, such as row type information.
+    /// Only present in the first response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ResultSetMetadata Metadata {
@@ -316,79 +316,79 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Value.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value> values_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value>();
     /// <summary>
-    ///  A streamed result set consists of a stream of values, which might
-    ///  be split into many `PartialResultSet` messages to accommodate
-    ///  large rows and/or large values. Every N complete values defines a
-    ///  row, where N is equal to the number of entries in
-    ///  [metadata.row_type.fields][google.spanner.v1.StructType.fields].
+    /// A streamed result set consists of a stream of values, which might
+    /// be split into many `PartialResultSet` messages to accommodate
+    /// large rows and/or large values. Every N complete values defines a
+    /// row, where N is equal to the number of entries in
+    /// [metadata.row_type.fields][google.spanner.v1.StructType.fields].
     ///
-    ///  Most values are encoded based on type as described
-    ///  [here][google.spanner.v1.TypeCode].
+    /// Most values are encoded based on type as described
+    /// [here][google.spanner.v1.TypeCode].
     ///
-    ///  It is possible that the last value in values is "chunked",
-    ///  meaning that the rest of the value is sent in subsequent
-    ///  `PartialResultSet`(s). This is denoted by the [chunked_value][google.spanner.v1.PartialResultSet.chunked_value]
-    ///  field. Two or more chunked values can be merged to form a
-    ///  complete value as follows:
+    /// It is possible that the last value in values is "chunked",
+    /// meaning that the rest of the value is sent in subsequent
+    /// `PartialResultSet`(s). This is denoted by the [chunked_value][google.spanner.v1.PartialResultSet.chunked_value]
+    /// field. Two or more chunked values can be merged to form a
+    /// complete value as follows:
     ///
-    ///    * `bool/number/null`: cannot be chunked
-    ///    * `string`: concatenate the strings
-    ///    * `list`: concatenate the lists. If the last element in a list is a
-    ///      `string`, `list`, or `object`, merge it with the first element in
-    ///      the next list by applying these rules recursively.
-    ///    * `object`: concatenate the (field name, field value) pairs. If a
-    ///      field name is duplicated, then apply these rules recursively
-    ///      to merge the field values.
+    ///   * `bool/number/null`: cannot be chunked
+    ///   * `string`: concatenate the strings
+    ///   * `list`: concatenate the lists. If the last element in a list is a
+    ///     `string`, `list`, or `object`, merge it with the first element in
+    ///     the next list by applying these rules recursively.
+    ///   * `object`: concatenate the (field name, field value) pairs. If a
+    ///     field name is duplicated, then apply these rules recursively
+    ///     to merge the field values.
     ///
-    ///  Some examples of merging:
+    /// Some examples of merging:
     ///
-    ///      # Strings are concatenated.
-    ///      "foo", "bar" => "foobar"
+    ///     # Strings are concatenated.
+    ///     "foo", "bar" => "foobar"
     ///
-    ///      # Lists of non-strings are concatenated.
-    ///      [2, 3], [4] => [2, 3, 4]
+    ///     # Lists of non-strings are concatenated.
+    ///     [2, 3], [4] => [2, 3, 4]
     ///
-    ///      # Lists are concatenated, but the last and first elements are merged
-    ///      # because they are strings.
-    ///      ["a", "b"], ["c", "d"] => ["a", "bc", "d"]
+    ///     # Lists are concatenated, but the last and first elements are merged
+    ///     # because they are strings.
+    ///     ["a", "b"], ["c", "d"] => ["a", "bc", "d"]
     ///
-    ///      # Lists are concatenated, but the last and first elements are merged
-    ///      # because they are lists. Recursively, the last and first elements
-    ///      # of the inner lists are merged because they are strings.
-    ///      ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"]
+    ///     # Lists are concatenated, but the last and first elements are merged
+    ///     # because they are lists. Recursively, the last and first elements
+    ///     # of the inner lists are merged because they are strings.
+    ///     ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"]
     ///
-    ///      # Non-overlapping object fields are combined.
-    ///      {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"}
+    ///     # Non-overlapping object fields are combined.
+    ///     {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"}
     ///
-    ///      # Overlapping object fields are merged.
-    ///      {"a": "1"}, {"a": "2"} => {"a": "12"}
+    ///     # Overlapping object fields are merged.
+    ///     {"a": "1"}, {"a": "2"} => {"a": "12"}
     ///
-    ///      # Examples of merging objects containing lists of strings.
-    ///      {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]}
+    ///     # Examples of merging objects containing lists of strings.
+    ///     {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]}
     ///
-    ///  For a more complete example, suppose a streaming SQL query is
-    ///  yielding a result set whose rows contain a single string
-    ///  field. The following `PartialResultSet`s might be yielded:
+    /// For a more complete example, suppose a streaming SQL query is
+    /// yielding a result set whose rows contain a single string
+    /// field. The following `PartialResultSet`s might be yielded:
     ///
-    ///      {
-    ///        "metadata": { ... }
-    ///        "values": ["Hello", "W"]
-    ///        "chunked_value": true
-    ///        "resume_token": "Af65..."
-    ///      }
-    ///      {
-    ///        "values": ["orl"]
-    ///        "chunked_value": true
-    ///        "resume_token": "Bqp2..."
-    ///      }
-    ///      {
-    ///        "values": ["d"]
-    ///        "resume_token": "Zx1B..."
-    ///      }
+    ///     {
+    ///       "metadata": { ... }
+    ///       "values": ["Hello", "W"]
+    ///       "chunked_value": true
+    ///       "resume_token": "Af65..."
+    ///     }
+    ///     {
+    ///       "values": ["orl"]
+    ///       "chunked_value": true
+    ///       "resume_token": "Bqp2..."
+    ///     }
+    ///     {
+    ///       "values": ["d"]
+    ///       "resume_token": "Zx1B..."
+    ///     }
     ///
-    ///  This sequence of `PartialResultSet`s encodes two rows, one
-    ///  containing the field value `"Hello"`, and a second containing the
-    ///  field value `"World" = "W" + "orl" + "d"`.
+    /// This sequence of `PartialResultSet`s encodes two rows, one
+    /// containing the field value `"Hello"`, and a second containing the
+    /// field value `"World" = "W" + "orl" + "d"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Value> Values {
@@ -399,9 +399,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ChunkedValueFieldNumber = 3;
     private bool chunkedValue_;
     /// <summary>
-    ///  If true, then the final value in [values][google.spanner.v1.PartialResultSet.values] is chunked, and must
-    ///  be combined with more values from subsequent `PartialResultSet`s
-    ///  to obtain a complete field value.
+    /// If true, then the final value in [values][google.spanner.v1.PartialResultSet.values] is chunked, and must
+    /// be combined with more values from subsequent `PartialResultSet`s
+    /// to obtain a complete field value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ChunkedValue {
@@ -415,11 +415,11 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ResumeTokenFieldNumber = 4;
     private pb::ByteString resumeToken_ = pb::ByteString.Empty;
     /// <summary>
-    ///  Streaming calls might be interrupted for a variety of reasons, such
-    ///  as TCP connection loss. If this occurs, the stream of results can
-    ///  be resumed by re-sending the original request and including
-    ///  `resume_token`. Note that executing any other transaction in the
-    ///  same session invalidates the token.
+    /// Streaming calls might be interrupted for a variety of reasons, such
+    /// as TCP connection loss. If this occurs, the stream of results can
+    /// be resumed by re-sending the original request and including
+    /// `resume_token`. Note that executing any other transaction in the
+    /// same session invalidates the token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString ResumeToken {
@@ -433,10 +433,10 @@ namespace Google.Cloud.Spanner.V1 {
     public const int StatsFieldNumber = 5;
     private global::Google.Cloud.Spanner.V1.ResultSetStats stats_;
     /// <summary>
-    ///  Query plan and execution statistics for the query that produced this
-    ///  streaming result set. These can be requested by setting
-    ///  [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] and are sent
-    ///  only once with the last response in the stream.
+    /// Query plan and execution statistics for the query that produced this
+    /// streaming result set. These can be requested by setting
+    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] and are sent
+    /// only once with the last response in the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ResultSetStats Stats {
@@ -590,7 +590,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  Metadata about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
+  /// Metadata about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
   public sealed partial class ResultSetMetadata : pb::IMessage<ResultSetMetadata> {
     private static readonly pb::MessageParser<ResultSetMetadata> _parser = new pb::MessageParser<ResultSetMetadata>(() => new ResultSetMetadata());
@@ -629,14 +629,14 @@ namespace Google.Cloud.Spanner.V1 {
     public const int RowTypeFieldNumber = 1;
     private global::Google.Cloud.Spanner.V1.StructType rowType_;
     /// <summary>
-    ///  Indicates the field names and types for the rows in the result
-    ///  set.  For example, a SQL query like `"SELECT UserId, UserName FROM
-    ///  Users"` could return a `row_type` value like:
+    /// Indicates the field names and types for the rows in the result
+    /// set.  For example, a SQL query like `"SELECT UserId, UserName FROM
+    /// Users"` could return a `row_type` value like:
     ///
-    ///      "fields": [
-    ///        { "name": "UserId", "type": { "code": "INT64" } },
-    ///        { "name": "UserName", "type": { "code": "STRING" } },
-    ///      ]
+    ///     "fields": [
+    ///       { "name": "UserId", "type": { "code": "INT64" } },
+    ///       { "name": "UserName", "type": { "code": "STRING" } },
+    ///     ]
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.StructType RowType {
@@ -650,8 +650,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TransactionFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.Transaction transaction_;
     /// <summary>
-    ///  If the read or SQL query began a transaction as a side-effect, the
-    ///  information about the new transaction is yielded here.
+    /// If the read or SQL query began a transaction as a side-effect, the
+    /// information about the new transaction is yielded here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.Transaction Transaction {
@@ -764,7 +764,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
+  /// Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
   public sealed partial class ResultSetStats : pb::IMessage<ResultSetStats> {
     private static readonly pb::MessageParser<ResultSetStats> _parser = new pb::MessageParser<ResultSetStats>(() => new ResultSetStats());
@@ -803,7 +803,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int QueryPlanFieldNumber = 1;
     private global::Google.Cloud.Spanner.V1.QueryPlan queryPlan_;
     /// <summary>
-    ///  [QueryPlan][google.spanner.v1.QueryPlan] for the query associated with this result.
+    /// [QueryPlan][google.spanner.v1.QueryPlan] for the query associated with this result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.QueryPlan QueryPlan {
@@ -817,15 +817,15 @@ namespace Google.Cloud.Spanner.V1 {
     public const int QueryStatsFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Struct queryStats_;
     /// <summary>
-    ///  Aggregated statistics from the execution of the query. Only present when
-    ///  the query is profiled. For example, a query could return the statistics as
-    ///  follows:
+    /// Aggregated statistics from the execution of the query. Only present when
+    /// the query is profiled. For example, a query could return the statistics as
+    /// follows:
     ///
-    ///      {
-    ///        "rows_returned": "3",
-    ///        "elapsed_time": "1.22 secs",
-    ///        "cpu_time": "1.19 secs"
-    ///      }
+    ///     {
+    ///       "rows_returned": "3",
+    ///       "elapsed_time": "1.22 secs",
+    ///       "cpu_time": "1.19 secs"
+    ///     }
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct QueryStats {

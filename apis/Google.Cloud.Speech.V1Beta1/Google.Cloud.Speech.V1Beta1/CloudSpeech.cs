@@ -112,8 +112,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  ///  `SyncRecognizeRequest` is the top-level message sent by the client for
-  ///  the `SyncRecognize` method.
+  /// `SyncRecognizeRequest` is the top-level message sent by the client for
+  /// the `SyncRecognize` method.
   /// </summary>
   public sealed partial class SyncRecognizeRequest : pb::IMessage<SyncRecognizeRequest> {
     private static readonly pb::MessageParser<SyncRecognizeRequest> _parser = new pb::MessageParser<SyncRecognizeRequest>(() => new SyncRecognizeRequest());
@@ -152,8 +152,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ConfigFieldNumber = 1;
     private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig config_;
     /// <summary>
-    ///  [Required] The `config` message provides information to the recognizer
-    ///  that specifies how to process the request.
+    /// [Required] The `config` message provides information to the recognizer
+    /// that specifies how to process the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig Config {
@@ -167,7 +167,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int AudioFieldNumber = 2;
     private global::Google.Cloud.Speech.V1Beta1.RecognitionAudio audio_;
     /// <summary>
-    ///  [Required] The audio data to be recognized.
+    /// [Required] The audio data to be recognized.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.RecognitionAudio Audio {
@@ -280,8 +280,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  `AsyncRecognizeRequest` is the top-level message sent by the client for
-  ///  the `AsyncRecognize` method.
+  /// `AsyncRecognizeRequest` is the top-level message sent by the client for
+  /// the `AsyncRecognize` method.
   /// </summary>
   public sealed partial class AsyncRecognizeRequest : pb::IMessage<AsyncRecognizeRequest> {
     private static readonly pb::MessageParser<AsyncRecognizeRequest> _parser = new pb::MessageParser<AsyncRecognizeRequest>(() => new AsyncRecognizeRequest());
@@ -320,8 +320,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ConfigFieldNumber = 1;
     private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig config_;
     /// <summary>
-    ///  [Required] The `config` message provides information to the recognizer
-    ///  that specifies how to process the request.
+    /// [Required] The `config` message provides information to the recognizer
+    /// that specifies how to process the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig Config {
@@ -335,7 +335,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int AudioFieldNumber = 2;
     private global::Google.Cloud.Speech.V1Beta1.RecognitionAudio audio_;
     /// <summary>
-    ///  [Required] The audio data to be recognized.
+    /// [Required] The audio data to be recognized.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.RecognitionAudio Audio {
@@ -448,11 +448,11 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  `StreamingRecognizeRequest` is the top-level message sent by the client for
-  ///  the `StreamingRecognize`. Multiple `StreamingRecognizeRequest` messages are
-  ///  sent. The first message must contain a `streaming_config` message and must
-  ///  not contain `audio` data. All subsequent messages must contain `audio` data
-  ///  and must not contain a `streaming_config` message.
+  /// `StreamingRecognizeRequest` is the top-level message sent by the client for
+  /// the `StreamingRecognize`. Multiple `StreamingRecognizeRequest` messages are
+  /// sent. The first message must contain a `streaming_config` message and must
+  /// not contain `audio` data. All subsequent messages must contain `audio` data
+  /// and must not contain a `streaming_config` message.
   /// </summary>
   public sealed partial class StreamingRecognizeRequest : pb::IMessage<StreamingRecognizeRequest> {
     private static readonly pb::MessageParser<StreamingRecognizeRequest> _parser = new pb::MessageParser<StreamingRecognizeRequest>(() => new StreamingRecognizeRequest());
@@ -497,11 +497,11 @@ namespace Google.Cloud.Speech.V1Beta1 {
     /// <summary>Field number for the "streaming_config" field.</summary>
     public const int StreamingConfigFieldNumber = 1;
     /// <summary>
-    ///  The `streaming_config` message provides information to the recognizer
-    ///  that specifies how to process the request.
+    /// The `streaming_config` message provides information to the recognizer
+    /// that specifies how to process the request.
     ///
-    ///  The first `StreamingRecognizeRequest` message must contain a
-    ///  `streaming_config`  message.
+    /// The first `StreamingRecognizeRequest` message must contain a
+    /// `streaming_config`  message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig StreamingConfig {
@@ -515,14 +515,14 @@ namespace Google.Cloud.Speech.V1Beta1 {
     /// <summary>Field number for the "audio_content" field.</summary>
     public const int AudioContentFieldNumber = 2;
     /// <summary>
-    ///  The audio data to be recognized. Sequential chunks of audio data are sent
-    ///  in sequential `StreamingRecognizeRequest` messages. The first
-    ///  `StreamingRecognizeRequest` message must not contain `audio_content` data
-    ///  and all subsequent `StreamingRecognizeRequest` messages must contain
-    ///  `audio_content` data. The audio bytes must be encoded as specified in
-    ///  `RecognitionConfig`. Note: as with all bytes fields, protobuffers use a
-    ///  pure binary representation (not base64). See
-    ///  [audio limits](https://cloud.google.com/speech/limits#content).
+    /// The audio data to be recognized. Sequential chunks of audio data are sent
+    /// in sequential `StreamingRecognizeRequest` messages. The first
+    /// `StreamingRecognizeRequest` message must not contain `audio_content` data
+    /// and all subsequent `StreamingRecognizeRequest` messages must contain
+    /// `audio_content` data. The audio bytes must be encoded as specified in
+    /// `RecognitionConfig`. Note: as with all bytes fields, protobuffers use a
+    /// pure binary representation (not base64). See
+    /// [audio limits](https://cloud.google.com/speech/limits#content).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString AudioContent {
@@ -653,8 +653,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  The `StreamingRecognitionConfig` message provides information to the
-  ///  recognizer that specifies how to process the request.
+  /// The `StreamingRecognitionConfig` message provides information to the
+  /// recognizer that specifies how to process the request.
   /// </summary>
   public sealed partial class StreamingRecognitionConfig : pb::IMessage<StreamingRecognitionConfig> {
     private static readonly pb::MessageParser<StreamingRecognitionConfig> _parser = new pb::MessageParser<StreamingRecognitionConfig>(() => new StreamingRecognitionConfig());
@@ -694,8 +694,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ConfigFieldNumber = 1;
     private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig config_;
     /// <summary>
-    ///  [Required] The `config` message provides information to the recognizer
-    ///  that specifies how to process the request.
+    /// [Required] The `config` message provides information to the recognizer
+    /// that specifies how to process the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig Config {
@@ -709,16 +709,16 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int SingleUtteranceFieldNumber = 2;
     private bool singleUtterance_;
     /// <summary>
-    ///  [Optional] If `false` or omitted, the recognizer will perform continuous
-    ///  recognition (continuing to process audio even if the user pauses speaking)
-    ///  until the client closes the output stream (gRPC API) or when the maximum
-    ///  time limit has been reached. Multiple `StreamingRecognitionResult`s with
-    ///  the `is_final` flag set to `true` may be returned.
+    /// [Optional] If `false` or omitted, the recognizer will perform continuous
+    /// recognition (continuing to process audio even if the user pauses speaking)
+    /// until the client closes the output stream (gRPC API) or when the maximum
+    /// time limit has been reached. Multiple `StreamingRecognitionResult`s with
+    /// the `is_final` flag set to `true` may be returned.
     ///
-    ///  If `true`, the recognizer will detect a single spoken utterance. When it
-    ///  detects that the user has paused or stopped speaking, it will return an
-    ///  `END_OF_UTTERANCE` event and cease recognition. It will return no more than
-    ///  one `StreamingRecognitionResult` with the `is_final` flag set to `true`.
+    /// If `true`, the recognizer will detect a single spoken utterance. When it
+    /// detects that the user has paused or stopped speaking, it will return an
+    /// `END_OF_UTTERANCE` event and cease recognition. It will return no more than
+    /// one `StreamingRecognitionResult` with the `is_final` flag set to `true`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool SingleUtterance {
@@ -732,10 +732,10 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int InterimResultsFieldNumber = 3;
     private bool interimResults_;
     /// <summary>
-    ///  [Optional] If `true`, interim results (tentative hypotheses) may be
-    ///  returned as they become available (these interim results are indicated with
-    ///  the `is_final=false` flag).
-    ///  If `false` or omitted, only `is_final=true` result(s) are returned.
+    /// [Optional] If `true`, interim results (tentative hypotheses) may be
+    /// returned as they become available (these interim results are indicated with
+    /// the `is_final=false` flag).
+    /// If `false` or omitted, only `is_final=true` result(s) are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool InterimResults {
@@ -858,8 +858,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  The `RecognitionConfig` message provides information to the recognizer
-  ///  that specifies how to process the request.
+  /// The `RecognitionConfig` message provides information to the recognizer
+  /// that specifies how to process the request.
   /// </summary>
   public sealed partial class RecognitionConfig : pb::IMessage<RecognitionConfig> {
     private static readonly pb::MessageParser<RecognitionConfig> _parser = new pb::MessageParser<RecognitionConfig>(() => new RecognitionConfig());
@@ -902,7 +902,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int EncodingFieldNumber = 1;
     private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding encoding_ = 0;
     /// <summary>
-    ///  [Required] Encoding of audio data sent in all `RecognitionAudio` messages.
+    /// [Required] Encoding of audio data sent in all `RecognitionAudio` messages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding Encoding {
@@ -916,11 +916,11 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int SampleRateFieldNumber = 2;
     private int sampleRate_;
     /// <summary>
-    ///  [Required] Sample rate in Hertz of the audio data sent in all
-    ///  `RecognitionAudio` messages. Valid values are: 8000-48000.
-    ///  16000 is optimal. For best results, set the sampling rate of the audio
-    ///  source to 16000 Hz. If that's not possible, use the native sample rate of
-    ///  the audio source (instead of re-sampling).
+    /// [Required] Sample rate in Hertz of the audio data sent in all
+    /// `RecognitionAudio` messages. Valid values are: 8000-48000.
+    /// 16000 is optimal. For best results, set the sampling rate of the audio
+    /// source to 16000 Hz. If that's not possible, use the native sample rate of
+    /// the audio source (instead of re-sampling).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SampleRate {
@@ -934,11 +934,11 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int LanguageCodeFieldNumber = 3;
     private string languageCode_ = "";
     /// <summary>
-    ///  [Optional] The language of the supplied audio as a BCP-47 language tag.
-    ///  Example: "en-GB"  https://www.rfc-editor.org/rfc/bcp/bcp47.txt
-    ///  If omitted, defaults to "en-US". See
-    ///  [Language Support](https://cloud.google.com/speech/docs/best-practices#language_support)
-    ///  for a list of the currently supported language codes.
+    /// [Optional] The language of the supplied audio as a BCP-47 language tag.
+    /// Example: "en-GB"  https://www.rfc-editor.org/rfc/bcp/bcp47.txt
+    /// If omitted, defaults to "en-US". See
+    /// [Language Support](https://cloud.google.com/speech/docs/best-practices#language_support)
+    /// for a list of the currently supported language codes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LanguageCode {
@@ -952,12 +952,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int MaxAlternativesFieldNumber = 4;
     private int maxAlternatives_;
     /// <summary>
-    ///  [Optional] Maximum number of recognition hypotheses to be returned.
-    ///  Specifically, the maximum number of `SpeechRecognitionAlternative` messages
-    ///  within each `SpeechRecognitionResult`.
-    ///  The server may return fewer than `max_alternatives`.
-    ///  Valid values are `0`-`30`. A value of `0` or `1` will return a maximum of
-    ///  `1`. If omitted, defaults to `1`.
+    /// [Optional] Maximum number of recognition hypotheses to be returned.
+    /// Specifically, the maximum number of `SpeechRecognitionAlternative` messages
+    /// within each `SpeechRecognitionResult`.
+    /// The server may return fewer than `max_alternatives`.
+    /// Valid values are `0`-`30`. A value of `0` or `1` will return a maximum of
+    /// `1`. If omitted, defaults to `1`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxAlternatives {
@@ -971,10 +971,10 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ProfanityFilterFieldNumber = 5;
     private bool profanityFilter_;
     /// <summary>
-    ///  [Optional] If set to `true`, the server will attempt to filter out
-    ///  profanities, replacing all but the initial character in each filtered word
-    ///  with asterisks, e.g. "f***". If set to `false` or omitted, profanities
-    ///  won't be filtered out.
+    /// [Optional] If set to `true`, the server will attempt to filter out
+    /// profanities, replacing all but the initial character in each filtered word
+    /// with asterisks, e.g. "f***". If set to `false` or omitted, profanities
+    /// won't be filtered out.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ProfanityFilter {
@@ -988,7 +988,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int SpeechContextFieldNumber = 6;
     private global::Google.Cloud.Speech.V1Beta1.SpeechContext speechContext_;
     /// <summary>
-    ///  [Optional] A means to provide context to assist the speech recognition.
+    /// [Optional] A means to provide context to assist the speech recognition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.SpeechContext SpeechContext {
@@ -1161,47 +1161,47 @@ namespace Google.Cloud.Speech.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Audio encoding of the data sent in the audio message. All encodings support
-      ///  only 1 channel (mono) audio. Only `FLAC` includes a header that describes
-      ///  the bytes of audio that follow the header. The other encodings are raw
-      ///  audio bytes with no header.
+      /// Audio encoding of the data sent in the audio message. All encodings support
+      /// only 1 channel (mono) audio. Only `FLAC` includes a header that describes
+      /// the bytes of audio that follow the header. The other encodings are raw
+      /// audio bytes with no header.
       ///
-      ///  For best results, the audio source should be captured and transmitted using
-      ///  a lossless encoding (`FLAC` or `LINEAR16`). Recognition accuracy may be
-      ///  reduced if lossy codecs (such as AMR, AMR_WB and MULAW) are used to capture
-      ///  or transmit the audio, particularly if background noise is present.
+      /// For best results, the audio source should be captured and transmitted using
+      /// a lossless encoding (`FLAC` or `LINEAR16`). Recognition accuracy may be
+      /// reduced if lossy codecs (such as AMR, AMR_WB and MULAW) are used to capture
+      /// or transmit the audio, particularly if background noise is present.
       /// </summary>
       public enum AudioEncoding {
         /// <summary>
-        ///  Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
+        /// Not specified. Will return result [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT].
         /// </summary>
         [pbr::OriginalName("ENCODING_UNSPECIFIED")] EncodingUnspecified = 0,
         /// <summary>
-        ///  Uncompressed 16-bit signed little-endian samples (Linear PCM).
-        ///  This is the only encoding that may be used by `AsyncRecognize`.
+        /// Uncompressed 16-bit signed little-endian samples (Linear PCM).
+        /// This is the only encoding that may be used by `AsyncRecognize`.
         /// </summary>
         [pbr::OriginalName("LINEAR16")] Linear16 = 1,
         /// <summary>
-        ///  This is the recommended encoding for `SyncRecognize` and
-        ///  `StreamingRecognize` because it uses lossless compression; therefore
-        ///  recognition accuracy is not compromised by a lossy codec.
+        /// This is the recommended encoding for `SyncRecognize` and
+        /// `StreamingRecognize` because it uses lossless compression; therefore
+        /// recognition accuracy is not compromised by a lossy codec.
         ///
-        ///  The stream FLAC (Free Lossless Audio Codec) encoding is specified at:
-        ///  http://flac.sourceforge.net/documentation.html.
-        ///  16-bit and 24-bit samples are supported.
-        ///  Not all fields in STREAMINFO are supported.
+        /// The stream FLAC (Free Lossless Audio Codec) encoding is specified at:
+        /// http://flac.sourceforge.net/documentation.html.
+        /// 16-bit and 24-bit samples are supported.
+        /// Not all fields in STREAMINFO are supported.
         /// </summary>
         [pbr::OriginalName("FLAC")] Flac = 2,
         /// <summary>
-        ///  8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
+        /// 8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
         /// </summary>
         [pbr::OriginalName("MULAW")] Mulaw = 3,
         /// <summary>
-        ///  Adaptive Multi-Rate Narrowband codec. `sample_rate` must be 8000 Hz.
+        /// Adaptive Multi-Rate Narrowband codec. `sample_rate` must be 8000 Hz.
         /// </summary>
         [pbr::OriginalName("AMR")] Amr = 4,
         /// <summary>
-        ///  Adaptive Multi-Rate Wideband codec. `sample_rate` must be 16000 Hz.
+        /// Adaptive Multi-Rate Wideband codec. `sample_rate` must be 16000 Hz.
         /// </summary>
         [pbr::OriginalName("AMR_WB")] AmrWb = 5,
       }
@@ -1212,8 +1212,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  Provides "hints" to the speech recognizer to favor specific words and phrases
-  ///  in the results.
+  /// Provides "hints" to the speech recognizer to favor specific words and phrases
+  /// in the results.
   /// </summary>
   public sealed partial class SpeechContext : pb::IMessage<SpeechContext> {
     private static readonly pb::MessageParser<SpeechContext> _parser = new pb::MessageParser<SpeechContext>(() => new SpeechContext());
@@ -1253,12 +1253,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> phrases_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  [Optional] A list of strings containing words and phrases "hints" so that
-    ///  the speech recognition is more likely to recognize them. This can be used
-    ///  to improve the accuracy for specific words and phrases, for example, if
-    ///  specific commands are typically spoken by the user. This can also be used
-    ///  to add additional words to the vocabulary of the recognizer. See
-    ///  [usage limits](https://cloud.google.com/speech/limits#content).
+    /// [Optional] A list of strings containing words and phrases "hints" so that
+    /// the speech recognition is more likely to recognize them. This can be used
+    /// to improve the accuracy for specific words and phrases, for example, if
+    /// specific commands are typically spoken by the user. This can also be used
+    /// to add additional words to the vocabulary of the recognizer. See
+    /// [usage limits](https://cloud.google.com/speech/limits#content).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Phrases {
@@ -1333,10 +1333,10 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  Contains audio data in the encoding specified in the `RecognitionConfig`.
-  ///  Either `content` or `uri` must be supplied. Supplying both or neither
-  ///  returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
-  ///  [audio limits](https://cloud.google.com/speech/limits#content).
+  /// Contains audio data in the encoding specified in the `RecognitionConfig`.
+  /// Either `content` or `uri` must be supplied. Supplying both or neither
+  /// returns [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]. See
+  /// [audio limits](https://cloud.google.com/speech/limits#content).
   /// </summary>
   public sealed partial class RecognitionAudio : pb::IMessage<RecognitionAudio> {
     private static readonly pb::MessageParser<RecognitionAudio> _parser = new pb::MessageParser<RecognitionAudio>(() => new RecognitionAudio());
@@ -1381,9 +1381,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 1;
     /// <summary>
-    ///  The audio data bytes encoded as specified in
-    ///  `RecognitionConfig`. Note: as with all bytes fields, protobuffers use a
-    ///  pure binary representation, whereas JSON representations use base64.
+    /// The audio data bytes encoded as specified in
+    /// `RecognitionConfig`. Note: as with all bytes fields, protobuffers use a
+    /// pure binary representation, whereas JSON representations use base64.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Content {
@@ -1397,12 +1397,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
     /// <summary>Field number for the "uri" field.</summary>
     public const int UriFieldNumber = 2;
     /// <summary>
-    ///  URI that points to a file that contains audio data bytes as specified in
-    ///  `RecognitionConfig`. Currently, only Google Cloud Storage URIs are
-    ///  supported, which must be specified in the following format:
-    ///  `gs://bucket_name/object_name` (other URI formats return
-    ///  [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
-    ///  [Request URIs](https://cloud.google.com/storage/docs/reference-uris).
+    /// URI that points to a file that contains audio data bytes as specified in
+    /// `RecognitionConfig`. Currently, only Google Cloud Storage URIs are
+    /// supported, which must be specified in the following format:
+    /// `gs://bucket_name/object_name` (other URI formats return
+    /// [google.rpc.Code.INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]). For more information, see
+    /// [Request URIs](https://cloud.google.com/storage/docs/reference-uris).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Uri {
@@ -1528,9 +1528,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  `SyncRecognizeResponse` is the only message returned to the client by
-  ///  `SyncRecognize`. It contains the result as zero or more sequential
-  ///  `SpeechRecognitionResult` messages.
+  /// `SyncRecognizeResponse` is the only message returned to the client by
+  /// `SyncRecognize`. It contains the result as zero or more sequential
+  /// `SpeechRecognitionResult` messages.
   /// </summary>
   public sealed partial class SyncRecognizeResponse : pb::IMessage<SyncRecognizeResponse> {
     private static readonly pb::MessageParser<SyncRecognizeResponse> _parser = new pb::MessageParser<SyncRecognizeResponse>(() => new SyncRecognizeResponse());
@@ -1570,8 +1570,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult>();
     /// <summary>
-    ///  [Output-only] Sequential list of transcription results corresponding to
-    ///  sequential portions of audio.
+    /// [Output-only] Sequential list of transcription results corresponding to
+    /// sequential portions of audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> Results {
@@ -1646,11 +1646,11 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  `AsyncRecognizeResponse` is the only message returned to the client by
-  ///  `AsyncRecognize`. It contains the result as zero or more sequential
-  ///  `SpeechRecognitionResult` messages. It is included in the `result.response`
-  ///  field of the `Operation` returned by the `GetOperation` call of the
-  ///  `google::longrunning::Operations` service.
+  /// `AsyncRecognizeResponse` is the only message returned to the client by
+  /// `AsyncRecognize`. It contains the result as zero or more sequential
+  /// `SpeechRecognitionResult` messages. It is included in the `result.response`
+  /// field of the `Operation` returned by the `GetOperation` call of the
+  /// `google::longrunning::Operations` service.
   /// </summary>
   public sealed partial class AsyncRecognizeResponse : pb::IMessage<AsyncRecognizeResponse> {
     private static readonly pb::MessageParser<AsyncRecognizeResponse> _parser = new pb::MessageParser<AsyncRecognizeResponse>(() => new AsyncRecognizeResponse());
@@ -1690,8 +1690,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult>();
     /// <summary>
-    ///  [Output-only] Sequential list of transcription results corresponding to
-    ///  sequential portions of audio.
+    /// [Output-only] Sequential list of transcription results corresponding to
+    /// sequential portions of audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> Results {
@@ -1766,10 +1766,10 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  `AsyncRecognizeMetadata` describes the progress of a long-running
-  ///  `AsyncRecognize` call. It is included in the `metadata` field of the
-  ///  `Operation` returned by the `GetOperation` call of the
-  ///  `google::longrunning::Operations` service.
+  /// `AsyncRecognizeMetadata` describes the progress of a long-running
+  /// `AsyncRecognize` call. It is included in the `metadata` field of the
+  /// `Operation` returned by the `GetOperation` call of the
+  /// `google::longrunning::Operations` service.
   /// </summary>
   public sealed partial class AsyncRecognizeMetadata : pb::IMessage<AsyncRecognizeMetadata> {
     private static readonly pb::MessageParser<AsyncRecognizeMetadata> _parser = new pb::MessageParser<AsyncRecognizeMetadata>(() => new AsyncRecognizeMetadata());
@@ -1809,8 +1809,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ProgressPercentFieldNumber = 1;
     private int progressPercent_;
     /// <summary>
-    ///  Approximate percentage of audio processed thus far. Guaranteed to be 100
-    ///  when the audio is fully processed and the results are available.
+    /// Approximate percentage of audio processed thus far. Guaranteed to be 100
+    /// when the audio is fully processed and the results are available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int ProgressPercent {
@@ -1824,7 +1824,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int StartTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    ///  Time when the request was received.
+    /// Time when the request was received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -1838,7 +1838,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int LastUpdateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
     /// <summary>
-    ///  Time of the most recent processing update.
+    /// Time of the most recent processing update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdateTime {
@@ -1967,63 +1967,63 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  `StreamingRecognizeResponse` is the only message returned to the client by
-  ///  `StreamingRecognize`. A series of one or more `StreamingRecognizeResponse`
-  ///  messages are streamed back to the client.
+  /// `StreamingRecognizeResponse` is the only message returned to the client by
+  /// `StreamingRecognize`. A series of one or more `StreamingRecognizeResponse`
+  /// messages are streamed back to the client.
   ///
-  ///  Here's an example of a series of ten `StreamingRecognizeResponse`s that might
-  ///  be returned while processing audio:
+  /// Here's an example of a series of ten `StreamingRecognizeResponse`s that might
+  /// be returned while processing audio:
   ///
-  ///  1. endpointer_type: START_OF_SPEECH
+  /// 1. endpointer_type: START_OF_SPEECH
   ///
-  ///  2. results { alternatives { transcript: "tube" } stability: 0.01 }
-  ///     result_index: 0
+  /// 2. results { alternatives { transcript: "tube" } stability: 0.01 }
+  ///    result_index: 0
   ///
-  ///  3. results { alternatives { transcript: "to be a" } stability: 0.01 }
-  ///     result_index: 0
+  /// 3. results { alternatives { transcript: "to be a" } stability: 0.01 }
+  ///    result_index: 0
   ///
-  ///  4. results { alternatives { transcript: "to be" } stability: 0.9 }
-  ///     results { alternatives { transcript: " or not to be" } stability: 0.01 }
-  ///     result_index: 0
+  /// 4. results { alternatives { transcript: "to be" } stability: 0.9 }
+  ///    results { alternatives { transcript: " or not to be" } stability: 0.01 }
+  ///    result_index: 0
   ///
-  ///  5. results { alternatives { transcript: "to be or not to be"
-  ///                              confidence: 0.92 }
-  ///               alternatives { transcript: "to bee or not to bee" }
-  ///               is_final: true }
-  ///     result_index: 0
+  /// 5. results { alternatives { transcript: "to be or not to be"
+  ///                             confidence: 0.92 }
+  ///              alternatives { transcript: "to bee or not to bee" }
+  ///              is_final: true }
+  ///    result_index: 0
   ///
-  ///  6. results { alternatives { transcript: " that's" } stability: 0.01 }
-  ///     result_index: 1
+  /// 6. results { alternatives { transcript: " that's" } stability: 0.01 }
+  ///    result_index: 1
   ///
-  ///  7. results { alternatives { transcript: " that is" } stability: 0.9 }
-  ///     results { alternatives { transcript: " the question" } stability: 0.01 }
-  ///     result_index: 1
+  /// 7. results { alternatives { transcript: " that is" } stability: 0.9 }
+  ///    results { alternatives { transcript: " the question" } stability: 0.01 }
+  ///    result_index: 1
   ///
-  ///  8. endpointer_type: END_OF_SPEECH
+  /// 8. endpointer_type: END_OF_SPEECH
   ///
-  ///  9. results { alternatives { transcript: " that is the question"
-  ///                              confidence: 0.98 }
-  ///               alternatives { transcript: " that was the question" }
-  ///               is_final: true }
-  ///     result_index: 1
+  /// 9. results { alternatives { transcript: " that is the question"
+  ///                             confidence: 0.98 }
+  ///              alternatives { transcript: " that was the question" }
+  ///              is_final: true }
+  ///    result_index: 1
   ///
-  ///  10. endpointer_type: END_OF_AUDIO
+  /// 10. endpointer_type: END_OF_AUDIO
   ///
-  ///  Notes:
+  /// Notes:
   ///
-  ///  - Only two of the above responses #5 and #9 contain final results, they are
-  ///    indicated by `is_final: true`. Concatenating these together generates the
-  ///    full transcript: "to be or not to be that is the question".
+  /// - Only two of the above responses #5 and #9 contain final results, they are
+  ///   indicated by `is_final: true`. Concatenating these together generates the
+  ///   full transcript: "to be or not to be that is the question".
   ///
-  ///  - The others contain interim `results`. #4 and #7 contain two interim
-  ///    `results`, the first portion has a high stability and is less likely to
-  ///    change, the second portion has a low stability and is very likely to
-  ///    change. A UI designer might choose to show only high stability `results`.
+  /// - The others contain interim `results`. #4 and #7 contain two interim
+  ///   `results`, the first portion has a high stability and is less likely to
+  ///   change, the second portion has a low stability and is very likely to
+  ///   change. A UI designer might choose to show only high stability `results`.
   ///
-  ///  - The `result_index` indicates the portion of audio that has had final
-  ///    results returned, and is no longer being processed. For example, the
-  ///    `results` in #6 and later correspond to the portion of audio after
-  ///    "to be or not to be".
+  /// - The `result_index` indicates the portion of audio that has had final
+  ///   results returned, and is no longer being processed. For example, the
+  ///   `results` in #6 and later correspond to the portion of audio after
+  ///   "to be or not to be".
   /// </summary>
   public sealed partial class StreamingRecognizeResponse : pb::IMessage<StreamingRecognizeResponse> {
     private static readonly pb::MessageParser<StreamingRecognizeResponse> _parser = new pb::MessageParser<StreamingRecognizeResponse>(() => new StreamingRecognizeResponse());
@@ -2064,8 +2064,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ErrorFieldNumber = 1;
     private global::Google.Rpc.Status error_;
     /// <summary>
-    ///  [Output-only] If set, returns a [google.rpc.Status][] message that
-    ///  specifies the error for the operation.
+    /// [Output-only] If set, returns a [google.rpc.Status][] message that
+    /// specifies the error for the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Error {
@@ -2081,10 +2081,10 @@ namespace Google.Cloud.Speech.V1Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult>();
     /// <summary>
-    ///  [Output-only] This repeated list contains zero or more results that
-    ///  correspond to consecutive portions of the audio currently being processed.
-    ///  It contains zero or one `is_final=true` result (the newly settled portion),
-    ///  followed by zero or more `is_final=false` results.
+    /// [Output-only] This repeated list contains zero or more results that
+    /// correspond to consecutive portions of the audio currently being processed.
+    /// It contains zero or one `is_final=true` result (the newly settled portion),
+    /// followed by zero or more `is_final=false` results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult> Results {
@@ -2095,9 +2095,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ResultIndexFieldNumber = 3;
     private int resultIndex_;
     /// <summary>
-    ///  [Output-only] Indicates the lowest index in the `results` array that has
-    ///  changed. The repeated `StreamingRecognitionResult` results overwrite past
-    ///  results at this index and higher.
+    /// [Output-only] Indicates the lowest index in the `results` array that has
+    /// changed. The repeated `StreamingRecognitionResult` results overwrite past
+    /// results at this index and higher.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int ResultIndex {
@@ -2111,7 +2111,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int EndpointerTypeFieldNumber = 4;
     private global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType endpointerType_ = 0;
     /// <summary>
-    ///  [Output-only] Indicates the type of endpointer event.
+    /// [Output-only] Indicates the type of endpointer event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType EndpointerType {
@@ -2245,30 +2245,30 @@ namespace Google.Cloud.Speech.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Indicates the type of endpointer event.
+      /// Indicates the type of endpointer event.
       /// </summary>
       public enum EndpointerType {
         /// <summary>
-        ///  No endpointer event specified.
+        /// No endpointer event specified.
         /// </summary>
         [pbr::OriginalName("ENDPOINTER_EVENT_UNSPECIFIED")] EndpointerEventUnspecified = 0,
         /// <summary>
-        ///  Speech has been detected in the audio stream.
+        /// Speech has been detected in the audio stream.
         /// </summary>
         [pbr::OriginalName("START_OF_SPEECH")] StartOfSpeech = 1,
         /// <summary>
-        ///  Speech has ceased to be detected in the audio stream.
+        /// Speech has ceased to be detected in the audio stream.
         /// </summary>
         [pbr::OriginalName("END_OF_SPEECH")] EndOfSpeech = 2,
         /// <summary>
-        ///  The end of the audio stream has been reached. and it is being processed.
+        /// The end of the audio stream has been reached. and it is being processed.
         /// </summary>
         [pbr::OriginalName("END_OF_AUDIO")] EndOfAudio = 3,
         /// <summary>
-        ///  This event is only sent when `single_utterance` is `true`. It indicates
-        ///  that the server has detected the end of the user's speech utterance and
-        ///  expects no additional speech. Therefore, the server will not process
-        ///  additional audio. The client should stop sending additional audio data.
+        /// This event is only sent when `single_utterance` is `true`. It indicates
+        /// that the server has detected the end of the user's speech utterance and
+        /// expects no additional speech. Therefore, the server will not process
+        /// additional audio. The client should stop sending additional audio data.
         /// </summary>
         [pbr::OriginalName("END_OF_UTTERANCE")] EndOfUtterance = 4,
       }
@@ -2279,8 +2279,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  A streaming speech recognition result corresponding to a portion of the audio
-  ///  that is currently being processed.
+  /// A streaming speech recognition result corresponding to a portion of the audio
+  /// that is currently being processed.
   /// </summary>
   public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult> {
     private static readonly pb::MessageParser<StreamingRecognitionResult> _parser = new pb::MessageParser<StreamingRecognitionResult>(() => new StreamingRecognitionResult());
@@ -2322,8 +2322,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> alternatives_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative>();
     /// <summary>
-    ///  [Output-only] May contain one or more recognition hypotheses (up to the
-    ///  maximum specified in `max_alternatives`).
+    /// [Output-only] May contain one or more recognition hypotheses (up to the
+    /// maximum specified in `max_alternatives`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> Alternatives {
@@ -2334,11 +2334,11 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int IsFinalFieldNumber = 2;
     private bool isFinal_;
     /// <summary>
-    ///  [Output-only] If `false`, this `StreamingRecognitionResult` represents an
-    ///  interim result that may change. If `true`, this is the final time the
-    ///  speech service will return this particular `StreamingRecognitionResult`,
-    ///  the recognizer will not return any further hypotheses for this portion of
-    ///  the transcript and corresponding audio.
+    /// [Output-only] If `false`, this `StreamingRecognitionResult` represents an
+    /// interim result that may change. If `true`, this is the final time the
+    /// speech service will return this particular `StreamingRecognitionResult`,
+    /// the recognizer will not return any further hypotheses for this portion of
+    /// the transcript and corresponding audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool IsFinal {
@@ -2352,13 +2352,13 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int StabilityFieldNumber = 3;
     private float stability_;
     /// <summary>
-    ///  [Output-only] An estimate of the probability that the recognizer will not
-    ///  change its guess about this interim result. Values range from 0.0
-    ///  (completely unstable) to 1.0 (completely stable). Note that this is not the
-    ///  same as `confidence`, which estimates the probability that a recognition
-    ///  result is correct.
-    ///  This field is only provided for interim results (`is_final=false`).
-    ///  The default of 0.0 is a sentinel value indicating stability was not set.
+    /// [Output-only] An estimate of the probability that the recognizer will not
+    /// change its guess about this interim result. Values range from 0.0
+    /// (completely unstable) to 1.0 (completely stable). Note that this is not the
+    /// same as `confidence`, which estimates the probability that a recognition
+    /// result is correct.
+    /// This field is only provided for interim results (`is_final=false`).
+    /// The default of 0.0 is a sentinel value indicating stability was not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Stability {
@@ -2468,7 +2468,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  A speech recognition result corresponding to a portion of the audio.
+  /// A speech recognition result corresponding to a portion of the audio.
   /// </summary>
   public sealed partial class SpeechRecognitionResult : pb::IMessage<SpeechRecognitionResult> {
     private static readonly pb::MessageParser<SpeechRecognitionResult> _parser = new pb::MessageParser<SpeechRecognitionResult>(() => new SpeechRecognitionResult());
@@ -2508,8 +2508,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> alternatives_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative>();
     /// <summary>
-    ///  [Output-only] May contain one or more recognition hypotheses (up to the
-    ///  maximum specified in `max_alternatives`).
+    /// [Output-only] May contain one or more recognition hypotheses (up to the
+    /// maximum specified in `max_alternatives`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> Alternatives {
@@ -2584,7 +2584,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
   }
 
   /// <summary>
-  ///  Alternative hypotheses (a.k.a. n-best list).
+  /// Alternative hypotheses (a.k.a. n-best list).
   /// </summary>
   public sealed partial class SpeechRecognitionAlternative : pb::IMessage<SpeechRecognitionAlternative> {
     private static readonly pb::MessageParser<SpeechRecognitionAlternative> _parser = new pb::MessageParser<SpeechRecognitionAlternative>(() => new SpeechRecognitionAlternative());
@@ -2623,7 +2623,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int TranscriptFieldNumber = 1;
     private string transcript_ = "";
     /// <summary>
-    ///  [Output-only] Transcript text representing the words that the user spoke.
+    /// [Output-only] Transcript text representing the words that the user spoke.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Transcript {
@@ -2637,11 +2637,11 @@ namespace Google.Cloud.Speech.V1Beta1 {
     public const int ConfidenceFieldNumber = 2;
     private float confidence_;
     /// <summary>
-    ///  [Output-only] The confidence estimate between 0.0 and 1.0. A higher number
-    ///  means the system is more confident that the recognition is correct.
-    ///  This field is typically provided only for the top hypothesis, and only for
-    ///  `is_final=true` results.
-    ///  The default of 0.0 is a sentinel value indicating confidence was not set.
+    /// [Output-only] The confidence estimate between 0.0 and 1.0. A higher number
+    /// means the system is more confident that the recognition is correct.
+    /// This field is typically provided only for the top hypothesis, and only for
+    /// `is_final=true` results.
+    /// The default of 0.0 is a sentinel value indicating confidence was not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Confidence {

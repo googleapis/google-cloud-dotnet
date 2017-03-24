@@ -20,7 +20,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Grpc.Core;
+using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Logging.V2 {
   /// <summary>
@@ -31,45 +31,45 @@ namespace Google.Cloud.Logging.V2 {
   {
     static readonly string __ServiceName = "google.logging.v2.ConfigServiceV2";
 
-    static readonly Marshaller<global::Google.Cloud.Logging.V2.ListSinksRequest> __Marshaller_ListSinksRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Logging.V2.ListSinksResponse> __Marshaller_ListSinksResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Logging.V2.GetSinkRequest> __Marshaller_GetSinkRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Logging.V2.LogSink> __Marshaller_LogSink = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogSink.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Logging.V2.CreateSinkRequest> __Marshaller_CreateSinkRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Logging.V2.UpdateSinkRequest> __Marshaller_UpdateSinkRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Logging.V2.DeleteSinkRequest> __Marshaller_DeleteSinkRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksRequest> __Marshaller_ListSinksRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.ListSinksResponse> __Marshaller_ListSinksResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.ListSinksResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.GetSinkRequest> __Marshaller_GetSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.GetSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.LogSink> __Marshaller_LogSink = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.LogSink.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.CreateSinkRequest> __Marshaller_CreateSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.CreateSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.UpdateSinkRequest> __Marshaller_UpdateSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.UpdateSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Logging.V2.DeleteSinkRequest> __Marshaller_DeleteSinkRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Logging.V2.DeleteSinkRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse> __Method_ListSinks = new Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse> __Method_ListSinks = new grpc::Method<global::Google.Cloud.Logging.V2.ListSinksRequest, global::Google.Cloud.Logging.V2.ListSinksResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "ListSinks",
         __Marshaller_ListSinksRequest,
         __Marshaller_ListSinksResponse);
 
-    static readonly Method<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_GetSink = new Method<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_GetSink = new grpc::Method<global::Google.Cloud.Logging.V2.GetSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetSink",
         __Marshaller_GetSinkRequest,
         __Marshaller_LogSink);
 
-    static readonly Method<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_CreateSink = new Method<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_CreateSink = new grpc::Method<global::Google.Cloud.Logging.V2.CreateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "CreateSink",
         __Marshaller_CreateSinkRequest,
         __Marshaller_LogSink);
 
-    static readonly Method<global::Google.Cloud.Logging.V2.UpdateSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_UpdateSink = new Method<global::Google.Cloud.Logging.V2.UpdateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.UpdateSinkRequest, global::Google.Cloud.Logging.V2.LogSink> __Method_UpdateSink = new grpc::Method<global::Google.Cloud.Logging.V2.UpdateSinkRequest, global::Google.Cloud.Logging.V2.LogSink>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "UpdateSink",
         __Marshaller_UpdateSinkRequest,
         __Marshaller_LogSink);
 
-    static readonly Method<global::Google.Cloud.Logging.V2.DeleteSinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSink = new Method<global::Google.Cloud.Logging.V2.DeleteSinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Logging.V2.DeleteSinkRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSink = new grpc::Method<global::Google.Cloud.Logging.V2.DeleteSinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "DeleteSink",
         __Marshaller_DeleteSinkRequest,
@@ -90,9 +90,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -101,9 +101,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -116,9 +116,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -134,9 +134,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Logging.V2.LogSink> UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -146,24 +146,24 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
     /// <summary>Client for ConfigServiceV2</summary>
-    public partial class ConfigServiceV2Client : ClientBase<ConfigServiceV2Client>
+    public partial class ConfigServiceV2Client : grpc::ClientBase<ConfigServiceV2Client>
     {
       /// <summary>Creates a new client for ConfigServiceV2</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ConfigServiceV2Client(Channel channel) : base(channel)
+      public ConfigServiceV2Client(grpc::Channel channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ConfigServiceV2 that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public ConfigServiceV2Client(CallInvoker callInvoker) : base(callInvoker)
+      public ConfigServiceV2Client(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
@@ -184,9 +184,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.ListSinksResponse ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.ListSinksResponse ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListSinks(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListSinks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists sinks.
@@ -194,7 +194,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.ListSinksResponse ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Logging.V2.ListSinksResponse ListSinks(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListSinks, null, options, request);
       }
@@ -206,9 +206,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Cloud.Logging.V2.ListSinksRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListSinksAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListSinksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists sinks.
@@ -216,7 +216,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Cloud.Logging.V2.ListSinksRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.ListSinksResponse> ListSinksAsync(global::Google.Cloud.Logging.V2.ListSinksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSinks, null, options, request);
       }
@@ -228,9 +228,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogSink GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetSink(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets a sink.
@@ -238,7 +238,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Logging.V2.LogSink GetSink(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetSink, null, options, request);
       }
@@ -250,9 +250,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> GetSinkAsync(global::Google.Cloud.Logging.V2.GetSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> GetSinkAsync(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets a sink.
@@ -260,7 +260,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> GetSinkAsync(global::Google.Cloud.Logging.V2.GetSinkRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> GetSinkAsync(global::Google.Cloud.Logging.V2.GetSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSink, null, options, request);
       }
@@ -276,9 +276,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return CreateSink(request, new CallOptions(headers, deadline, cancellationToken));
+        return CreateSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates a sink that exports specified log entries to a destination.  The
@@ -290,7 +290,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Logging.V2.LogSink CreateSink(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSink, null, options, request);
       }
@@ -306,9 +306,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return CreateSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return CreateSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates a sink that exports specified log entries to a destination.  The
@@ -320,7 +320,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> CreateSinkAsync(global::Google.Cloud.Logging.V2.CreateSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSink, null, options, request);
       }
@@ -339,9 +339,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return UpdateSink(request, new CallOptions(headers, deadline, cancellationToken));
+        return UpdateSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Updates a sink. If the named sink doesn't exist, then this method is
@@ -356,7 +356,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Logging.V2.LogSink UpdateSink(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSink, null, options, request);
       }
@@ -375,9 +375,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return UpdateSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return UpdateSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Updates a sink. If the named sink doesn't exist, then this method is
@@ -392,7 +392,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Logging.V2.LogSink> UpdateSinkAsync(global::Google.Cloud.Logging.V2.UpdateSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSink, null, options, request);
       }
@@ -405,9 +405,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DeleteSink(request, new CallOptions(headers, deadline, cancellationToken));
+        return DeleteSink(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Deletes a sink. If the sink has a unique `writer_identity`, then that
@@ -416,7 +416,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSink(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteSink, null, options, request);
       }
@@ -429,9 +429,9 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DeleteSinkAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return DeleteSinkAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Deletes a sink. If the sink has a unique `writer_identity`, then that
@@ -440,7 +440,7 @@ namespace Google.Cloud.Logging.V2 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSinkAsync(global::Google.Cloud.Logging.V2.DeleteSinkRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSink, null, options, request);
       }
@@ -453,9 +453,9 @@ namespace Google.Cloud.Logging.V2 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static ServerServiceDefinition BindService(ConfigServiceV2Base serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(ConfigServiceV2Base serviceImpl)
     {
-      return ServerServiceDefinition.CreateBuilder()
+      return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListSinks, serviceImpl.ListSinks)
           .AddMethod(__Method_GetSink, serviceImpl.GetSink)
           .AddMethod(__Method_CreateSink, serviceImpl.CreateSink)

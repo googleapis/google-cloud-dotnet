@@ -69,7 +69,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  ///  Description of a group of similar error events.
+  /// Description of a group of similar error events.
   /// </summary>
   public sealed partial class ErrorGroup : pb::IMessage<ErrorGroup> {
     private static readonly pb::MessageParser<ErrorGroup> _parser = new pb::MessageParser<ErrorGroup>(() => new ErrorGroup());
@@ -109,8 +109,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The group resource name.
-    ///  Example: &lt;code>projects/my-project-123/groups/my-groupid&lt;/code>
+    /// The group resource name.
+    /// Example: &lt;code>projects/my-project-123/groups/my-groupid&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -124,8 +124,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupIdFieldNumber = 2;
     private string groupId_ = "";
     /// <summary>
-    ///  Group IDs are unique for a given project. If the same kind of error
-    ///  occurs in different service contexts, it will receive the same group ID.
+    /// Group IDs are unique for a given project. If the same kind of error
+    /// occurs in different service contexts, it will receive the same group ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupId {
@@ -141,7 +141,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue> trackingIssues_ = new pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue>();
     /// <summary>
-    ///  Associated tracking issues.
+    /// Associated tracking issues.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TrackingIssue> TrackingIssues {
@@ -248,7 +248,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Information related to tracking the progress on resolving the error.
+  /// Information related to tracking the progress on resolving the error.
   /// </summary>
   public sealed partial class TrackingIssue : pb::IMessage<TrackingIssue> {
     private static readonly pb::MessageParser<TrackingIssue> _parser = new pb::MessageParser<TrackingIssue>(() => new TrackingIssue());
@@ -286,8 +286,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int UrlFieldNumber = 1;
     private string url_ = "";
     /// <summary>
-    ///  A URL pointing to a related entry in an issue tracking system.
-    ///  Example: https://github.com/user/project/issues/4
+    /// A URL pointing to a related entry in an issue tracking system.
+    /// Example: https://github.com/user/project/issues/4
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Url {
@@ -372,7 +372,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  An error event which is returned by the Error Reporting system.
+  /// An error event which is returned by the Error Reporting system.
   /// </summary>
   public sealed partial class ErrorEvent : pb::IMessage<ErrorEvent> {
     private static readonly pb::MessageParser<ErrorEvent> _parser = new pb::MessageParser<ErrorEvent>(() => new ErrorEvent());
@@ -413,9 +413,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int EventTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp eventTime_;
     /// <summary>
-    ///  Time when the event occurred as provided in the error report.
-    ///  If the report did not contain a timestamp, the time the error was received
-    ///  by the Error Reporting system is used.
+    /// Time when the event occurred as provided in the error report.
+    /// If the report did not contain a timestamp, the time the error was received
+    /// by the Error Reporting system is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EventTime {
@@ -429,7 +429,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceContextFieldNumber = 2;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext serviceContext_;
     /// <summary>
-    ///  The `ServiceContext` for which this error was reported.
+    /// The `ServiceContext` for which this error was reported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext ServiceContext {
@@ -443,7 +443,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int MessageFieldNumber = 3;
     private string message_ = "";
     /// <summary>
-    ///  The stack trace that was reported or logged by the service.
+    /// The stack trace that was reported or logged by the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
@@ -457,7 +457,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ContextFieldNumber = 5;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext context_;
     /// <summary>
-    ///  Data about the context in which the error occurred.
+    /// Data about the context in which the error occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext Context {
@@ -608,8 +608,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Describes a running service that sends errors.
-  ///  Its version changes over time and multiple versions can run in parallel.
+  /// Describes a running service that sends errors.
+  /// Its version changes over time and multiple versions can run in parallel.
   /// </summary>
   public sealed partial class ServiceContext : pb::IMessage<ServiceContext> {
     private static readonly pb::MessageParser<ServiceContext> _parser = new pb::MessageParser<ServiceContext>(() => new ServiceContext());
@@ -649,13 +649,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFieldNumber = 2;
     private string service_ = "";
     /// <summary>
-    ///  An identifier of the service, such as the name of the
-    ///  executable, job, or Google App Engine service name. This field is expected
-    ///  to have a low number of values that are relatively stable over time, as
-    ///  opposed to `version`, which can be changed whenever new code is deployed.
+    /// An identifier of the service, such as the name of the
+    /// executable, job, or Google App Engine service name. This field is expected
+    /// to have a low number of values that are relatively stable over time, as
+    /// opposed to `version`, which can be changed whenever new code is deployed.
     ///
-    ///  Contains the service name for error reports extracted from Google
-    ///  App Engine logs or `default` if the App Engine default service is used.
+    /// Contains the service name for error reports extracted from Google
+    /// App Engine logs or `default` if the App Engine default service is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Service {
@@ -669,8 +669,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int VersionFieldNumber = 3;
     private string version_ = "";
     /// <summary>
-    ///  Represents the source code version that the developer provided,
-    ///  which could represent a version label or a Git SHA-1 hash, for example.
+    /// Represents the source code version that the developer provided,
+    /// which could represent a version label or a Git SHA-1 hash, for example.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Version {
@@ -684,11 +684,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ResourceTypeFieldNumber = 4;
     private string resourceType_ = "";
     /// <summary>
-    ///  Type of the MonitoredResource. List of possible values:
-    ///  https://cloud.google.com/monitoring/api/resources
+    /// Type of the MonitoredResource. List of possible values:
+    /// https://cloud.google.com/monitoring/api/resources
     ///
-    ///  Value is set automatically for incoming errors and must not be set when
-    ///  reporting errors.
+    /// Value is set automatically for incoming errors and must not be set when
+    /// reporting errors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResourceType {
@@ -805,10 +805,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  A description of the context in which an error occurred.
-  ///  This data should be provided by the application when reporting an error,
-  ///  unless the
-  ///  error report has been generated automatically from Google App Engine logs.
+  /// A description of the context in which an error occurred.
+  /// This data should be provided by the application when reporting an error,
+  /// unless the
+  /// error report has been generated automatically from Google App Engine logs.
   /// </summary>
   public sealed partial class ErrorContext : pb::IMessage<ErrorContext> {
     private static readonly pb::MessageParser<ErrorContext> _parser = new pb::MessageParser<ErrorContext>(() => new ErrorContext());
@@ -848,8 +848,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int HttpRequestFieldNumber = 1;
     private global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext httpRequest_;
     /// <summary>
-    ///  The HTTP request which was processed when the error was
-    ///  triggered.
+    /// The HTTP request which was processed when the error was
+    /// triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.HttpRequestContext HttpRequest {
@@ -863,14 +863,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int UserFieldNumber = 2;
     private string user_ = "";
     /// <summary>
-    ///  The user who caused or was affected by the crash.
-    ///  This can be a user ID, an email address, or an arbitrary token that
-    ///  uniquely identifies the user.
-    ///  When sending an error report, leave this field empty if the user was not
-    ///  logged in. In this case the
-    ///  Error Reporting system will use other data, such as remote IP address, to
-    ///  distinguish affected users. See `affected_users_count` in
-    ///  `ErrorGroupStats`.
+    /// The user who caused or was affected by the crash.
+    /// This can be a user ID, an email address, or an arbitrary token that
+    /// uniquely identifies the user.
+    /// When sending an error report, leave this field empty if the user was not
+    /// logged in. In this case the
+    /// Error Reporting system will use other data, such as remote IP address, to
+    /// distinguish affected users. See `affected_users_count` in
+    /// `ErrorGroupStats`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string User {
@@ -884,12 +884,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ReportLocationFieldNumber = 3;
     private global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation reportLocation_;
     /// <summary>
-    ///  The location in the source code where the decision was made to
-    ///  report the error, usually the place where it was logged.
-    ///  For a logged exception this would be the source line where the
-    ///  exception is logged, usually close to the place where it was
-    ///  caught. This value is in contrast to `Exception.cause_location`,
-    ///  which describes the source line where the exception was thrown.
+    /// The location in the source code where the decision was made to
+    /// report the error, usually the place where it was logged.
+    /// For a logged exception this would be the source line where the
+    /// exception is logged, usually close to the place where it was
+    /// caught. This value is in contrast to `Exception.cause_location`,
+    /// which describes the source line where the exception was thrown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.SourceLocation ReportLocation {
@@ -1018,10 +1018,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  HTTP request data that is related to a reported error.
-  ///  This data should be provided by the application when reporting an error,
-  ///  unless the
-  ///  error report has been generated automatically from Google App Engine logs.
+  /// HTTP request data that is related to a reported error.
+  /// This data should be provided by the application when reporting an error,
+  /// unless the
+  /// error report has been generated automatically from Google App Engine logs.
   /// </summary>
   public sealed partial class HttpRequestContext : pb::IMessage<HttpRequestContext> {
     private static readonly pb::MessageParser<HttpRequestContext> _parser = new pb::MessageParser<HttpRequestContext>(() => new HttpRequestContext());
@@ -1064,7 +1064,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int MethodFieldNumber = 1;
     private string method_ = "";
     /// <summary>
-    ///  The type of HTTP request, such as `GET`, `POST`, etc.
+    /// The type of HTTP request, such as `GET`, `POST`, etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Method {
@@ -1078,7 +1078,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int UrlFieldNumber = 2;
     private string url_ = "";
     /// <summary>
-    ///  The URL of the request.
+    /// The URL of the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Url {
@@ -1092,7 +1092,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int UserAgentFieldNumber = 3;
     private string userAgent_ = "";
     /// <summary>
-    ///  The user agent information that is provided with the request.
+    /// The user agent information that is provided with the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserAgent {
@@ -1106,7 +1106,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ReferrerFieldNumber = 4;
     private string referrer_ = "";
     /// <summary>
-    ///  The referrer information that is provided with the request.
+    /// The referrer information that is provided with the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Referrer {
@@ -1120,7 +1120,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ResponseStatusCodeFieldNumber = 5;
     private int responseStatusCode_;
     /// <summary>
-    ///  The HTTP response status code for the request.
+    /// The HTTP response status code for the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int ResponseStatusCode {
@@ -1134,10 +1134,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int RemoteIpFieldNumber = 6;
     private string remoteIp_ = "";
     /// <summary>
-    ///  The IP address from which the request originated.
-    ///  This can be IPv4, IPv6, or a token which is derived from the
-    ///  IP address, depending on the data that has been provided
-    ///  in the error report.
+    /// The IP address from which the request originated.
+    /// This can be IPv4, IPv6, or a token which is derived from the
+    /// IP address, depending on the data that has been provided
+    /// in the error report.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RemoteIp {
@@ -1302,11 +1302,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Indicates a location in the source code of the service for which
-  ///  errors are reported.
-  ///  This data should be provided by the application when reporting an error,
-  ///  unless the error report has been generated automatically from Google App
-  ///  Engine logs. All fields are optional.
+  /// Indicates a location in the source code of the service for which
+  /// errors are reported.
+  /// This data should be provided by the application when reporting an error,
+  /// unless the error report has been generated automatically from Google App
+  /// Engine logs. All fields are optional.
   /// </summary>
   public sealed partial class SourceLocation : pb::IMessage<SourceLocation> {
     private static readonly pb::MessageParser<SourceLocation> _parser = new pb::MessageParser<SourceLocation>(() => new SourceLocation());
@@ -1346,8 +1346,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int FilePathFieldNumber = 1;
     private string filePath_ = "";
     /// <summary>
-    ///  The source code filename, which can include a truncated relative
-    ///  path, or a full path from a production machine.
+    /// The source code filename, which can include a truncated relative
+    /// path, or a full path from a production machine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FilePath {
@@ -1361,7 +1361,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int LineNumberFieldNumber = 2;
     private int lineNumber_;
     /// <summary>
-    ///  1-based. 0 indicates that the line number is unknown.
+    /// 1-based. 0 indicates that the line number is unknown.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int LineNumber {
@@ -1375,9 +1375,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int FunctionNameFieldNumber = 4;
     private string functionName_ = "";
     /// <summary>
-    ///  Human-readable name of a function or method.
-    ///  The value can include optional context like the class or package name.
-    ///  For example, `my.package.MyClass.method` in case of Java.
+    /// Human-readable name of a function or method.
+    /// The value can include optional context like the class or package name.
+    /// For example, `my.package.MyClass.method` in case of Java.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string FunctionName {

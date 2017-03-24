@@ -40,58 +40,58 @@ namespace Google.Cloud.Logging.Type {
   }
   #region Enums
   /// <summary>
-  ///  The severity of the event described in a log entry, expressed as one of the
-  ///  standard severity levels listed below.  For your reference, the levels are
-  ///  assigned the listed numeric values. The effect of using numeric values other
-  ///  than those listed is undefined.
+  /// The severity of the event described in a log entry, expressed as one of the
+  /// standard severity levels listed below.  For your reference, the levels are
+  /// assigned the listed numeric values. The effect of using numeric values other
+  /// than those listed is undefined.
   ///
-  ///  You can filter for log entries by severity.  For example, the following
-  ///  filter expression will match log entries with severities `INFO`, `NOTICE`,
-  ///  and `WARNING`:
+  /// You can filter for log entries by severity.  For example, the following
+  /// filter expression will match log entries with severities `INFO`, `NOTICE`,
+  /// and `WARNING`:
   ///
-  ///      severity > DEBUG AND severity &lt;= WARNING
+  ///     severity > DEBUG AND severity &lt;= WARNING
   ///
-  ///  If you are writing log entries, you should map other severity encodings to
-  ///  one of these standard levels. For example, you might map all of Java's FINE,
-  ///  FINER, and FINEST levels to `LogSeverity.DEBUG`. You can preserve the
-  ///  original severity level in the log entry payload if you wish.
+  /// If you are writing log entries, you should map other severity encodings to
+  /// one of these standard levels. For example, you might map all of Java's FINE,
+  /// FINER, and FINEST levels to `LogSeverity.DEBUG`. You can preserve the
+  /// original severity level in the log entry payload if you wish.
   /// </summary>
   public enum LogSeverity {
     /// <summary>
-    ///  (0) The log entry has no assigned severity level.
+    /// (0) The log entry has no assigned severity level.
     /// </summary>
     [pbr::OriginalName("DEFAULT")] Default = 0,
     /// <summary>
-    ///  (100) Debug or trace information.
+    /// (100) Debug or trace information.
     /// </summary>
     [pbr::OriginalName("DEBUG")] Debug = 100,
     /// <summary>
-    ///  (200) Routine information, such as ongoing status or performance.
+    /// (200) Routine information, such as ongoing status or performance.
     /// </summary>
     [pbr::OriginalName("INFO")] Info = 200,
     /// <summary>
-    ///  (300) Normal but significant events, such as start up, shut down, or
-    ///  a configuration change.
+    /// (300) Normal but significant events, such as start up, shut down, or
+    /// a configuration change.
     /// </summary>
     [pbr::OriginalName("NOTICE")] Notice = 300,
     /// <summary>
-    ///  (400) Warning events might cause problems.
+    /// (400) Warning events might cause problems.
     /// </summary>
     [pbr::OriginalName("WARNING")] Warning = 400,
     /// <summary>
-    ///  (500) Error events are likely to cause problems.
+    /// (500) Error events are likely to cause problems.
     /// </summary>
     [pbr::OriginalName("ERROR")] Error = 500,
     /// <summary>
-    ///  (600) Critical events cause more severe problems or outages.
+    /// (600) Critical events cause more severe problems or outages.
     /// </summary>
     [pbr::OriginalName("CRITICAL")] Critical = 600,
     /// <summary>
-    ///  (700) A person must take an action immediately.
+    /// (700) A person must take an action immediately.
     /// </summary>
     [pbr::OriginalName("ALERT")] Alert = 700,
     /// <summary>
-    ///  (800) One or more systems are unusable.
+    /// (800) One or more systems are unusable.
     /// </summary>
     [pbr::OriginalName("EMERGENCY")] Emergency = 800,
   }

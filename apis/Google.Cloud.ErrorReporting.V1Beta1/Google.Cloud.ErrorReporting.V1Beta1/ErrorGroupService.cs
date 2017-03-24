@@ -56,7 +56,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  ///  A request to return an individual group.
+  /// A request to return an individual group.
   /// </summary>
   public sealed partial class GetGroupRequest : pb::IMessage<GetGroupRequest> {
     private static readonly pb::MessageParser<GetGroupRequest> _parser = new pb::MessageParser<GetGroupRequest>(() => new GetGroupRequest());
@@ -94,14 +94,14 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupNameFieldNumber = 1;
     private string groupName_ = "";
     /// <summary>
-    ///  [Required] The group resource name. Written as
-    ///  &lt;code>projects/&lt;var>projectID&lt;/var>/groups/&lt;var>group_name&lt;/var>&lt;/code>.
-    ///  Call
-    ///  &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
-    ///  &lt;code>groupStats.list&lt;/code>&lt;/a> to return a list of groups belonging to
-    ///  this project.
+    /// [Required] The group resource name. Written as
+    /// &lt;code>projects/&lt;var>projectID&lt;/var>/groups/&lt;var>group_name&lt;/var>&lt;/code>.
+    /// Call
+    /// &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list">
+    /// &lt;code>groupStats.list&lt;/code>&lt;/a> to return a list of groups belonging to
+    /// this project.
     ///
-    ///  Example: &lt;code>projects/my-project-123/groups/my-group&lt;/code>
+    /// Example: &lt;code>projects/my-project-123/groups/my-group&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupName {
@@ -186,7 +186,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  A request to replace the existing data for the given group.
+  /// A request to replace the existing data for the given group.
   /// </summary>
   public sealed partial class UpdateGroupRequest : pb::IMessage<UpdateGroupRequest> {
     private static readonly pb::MessageParser<UpdateGroupRequest> _parser = new pb::MessageParser<UpdateGroupRequest>(() => new UpdateGroupRequest());
@@ -224,7 +224,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupFieldNumber = 1;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup group_;
     /// <summary>
-    ///  [Required] The group which replaces the resource on the server.
+    /// [Required] The group which replaces the resource on the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup Group {

@@ -48,36 +48,36 @@ namespace Google.Cloud.Iam.V1 {
   }
   #region Messages
   /// <summary>
-  ///  Defines an Identity and Access Management (IAM) policy. It is used to
-  ///  specify access control policies for Cloud Platform resources.
+  /// Defines an Identity and Access Management (IAM) policy. It is used to
+  /// specify access control policies for Cloud Platform resources.
   ///
-  ///  A `Policy` consists of a list of `bindings`. A `Binding` binds a list of
-  ///  `members` to a `role`, where the members can be user accounts, Google groups,
-  ///  Google domains, and service accounts. A `role` is a named list of permissions
-  ///  defined by IAM.
+  /// A `Policy` consists of a list of `bindings`. A `Binding` binds a list of
+  /// `members` to a `role`, where the members can be user accounts, Google groups,
+  /// Google domains, and service accounts. A `role` is a named list of permissions
+  /// defined by IAM.
   ///
-  ///  **Example**
+  /// **Example**
   ///
-  ///      {
-  ///        "bindings": [
-  ///          {
-  ///            "role": "roles/owner",
-  ///            "members": [
-  ///              "user:mike@example.com",
-  ///              "group:admins@example.com",
-  ///              "domain:google.com",
-  ///              "serviceAccount:my-other-app@appspot.gserviceaccount.com",
-  ///            ]
-  ///          },
-  ///          {
-  ///            "role": "roles/viewer",
-  ///            "members": ["user:sean@example.com"]
-  ///          }
-  ///        ]
-  ///      }
+  ///     {
+  ///       "bindings": [
+  ///         {
+  ///           "role": "roles/owner",
+  ///           "members": [
+  ///             "user:mike@example.com",
+  ///             "group:admins@example.com",
+  ///             "domain:google.com",
+  ///             "serviceAccount:my-other-app@appspot.gserviceaccount.com",
+  ///           ]
+  ///         },
+  ///         {
+  ///           "role": "roles/viewer",
+  ///           "members": ["user:sean@example.com"]
+  ///         }
+  ///       ]
+  ///     }
   ///
-  ///  For a description of IAM and its features, see the
-  ///  [IAM developer's guide](https://cloud.google.com/iam).
+  /// For a description of IAM and its features, see the
+  /// [IAM developer's guide](https://cloud.google.com/iam).
   /// </summary>
   public sealed partial class Policy : pb::IMessage<Policy> {
     private static readonly pb::MessageParser<Policy> _parser = new pb::MessageParser<Policy>(() => new Policy());
@@ -117,7 +117,7 @@ namespace Google.Cloud.Iam.V1 {
     public const int VersionFieldNumber = 1;
     private int version_;
     /// <summary>
-    ///  Version of the `Policy`. The default version is 0.
+    /// Version of the `Policy`. The default version is 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Version {
@@ -133,9 +133,9 @@ namespace Google.Cloud.Iam.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Iam.V1.Binding.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding> bindings_ = new pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding>();
     /// <summary>
-    ///  Associates a list of `members` to a `role`.
-    ///  Multiple `bindings` must not be specified for the same `role`.
-    ///  `bindings` with no members will result in an error.
+    /// Associates a list of `members` to a `role`.
+    /// Multiple `bindings` must not be specified for the same `role`.
+    /// `bindings` with no members will result in an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Iam.V1.Binding> Bindings {
@@ -146,16 +146,16 @@ namespace Google.Cloud.Iam.V1 {
     public const int EtagFieldNumber = 3;
     private pb::ByteString etag_ = pb::ByteString.Empty;
     /// <summary>
-    ///  `etag` is used for optimistic concurrency control as a way to help
-    ///  prevent simultaneous updates of a policy from overwriting each other.
-    ///  It is strongly suggested that systems make use of the `etag` in the
-    ///  read-modify-write cycle to perform policy updates in order to avoid race
-    ///  conditions: An `etag` is returned in the response to `getIamPolicy`, and
-    ///  systems are expected to put that etag in the request to `setIamPolicy` to
-    ///  ensure that their change will be applied to the same version of the policy.
+    /// `etag` is used for optimistic concurrency control as a way to help
+    /// prevent simultaneous updates of a policy from overwriting each other.
+    /// It is strongly suggested that systems make use of the `etag` in the
+    /// read-modify-write cycle to perform policy updates in order to avoid race
+    /// conditions: An `etag` is returned in the response to `getIamPolicy`, and
+    /// systems are expected to put that etag in the request to `setIamPolicy` to
+    /// ensure that their change will be applied to the same version of the policy.
     ///
-    ///  If no `etag` is provided in the call to `setIamPolicy`, then the existing
-    ///  policy is overwritten blindly.
+    /// If no `etag` is provided in the call to `setIamPolicy`, then the existing
+    /// policy is overwritten blindly.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Etag {
@@ -265,7 +265,7 @@ namespace Google.Cloud.Iam.V1 {
   }
 
   /// <summary>
-  ///  Associates `members` with a `role`.
+  /// Associates `members` with a `role`.
   /// </summary>
   public sealed partial class Binding : pb::IMessage<Binding> {
     private static readonly pb::MessageParser<Binding> _parser = new pb::MessageParser<Binding>(() => new Binding());
@@ -304,9 +304,9 @@ namespace Google.Cloud.Iam.V1 {
     public const int RoleFieldNumber = 1;
     private string role_ = "";
     /// <summary>
-    ///  Role that is assigned to `members`.
-    ///  For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
-    ///  Required
+    /// Role that is assigned to `members`.
+    /// For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
+    /// Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Role {
@@ -322,26 +322,26 @@ namespace Google.Cloud.Iam.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> members_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  Specifies the identities requesting access for a Cloud Platform resource.
-    ///  `members` can have the following values:
+    /// Specifies the identities requesting access for a Cloud Platform resource.
+    /// `members` can have the following values:
     ///
-    ///  * `allUsers`: A special identifier that represents anyone who is
-    ///     on the internet; with or without a Google account.
+    /// * `allUsers`: A special identifier that represents anyone who is
+    ///    on the internet; with or without a Google account.
     ///
-    ///  * `allAuthenticatedUsers`: A special identifier that represents anyone
-    ///     who is authenticated with a Google account or a service account.
+    /// * `allAuthenticatedUsers`: A special identifier that represents anyone
+    ///    who is authenticated with a Google account or a service account.
     ///
-    ///  * `user:{emailid}`: An email address that represents a specific Google
-    ///     account. For example, `alice@gmail.com` or `joe@example.com`.
+    /// * `user:{emailid}`: An email address that represents a specific Google
+    ///    account. For example, `alice@gmail.com` or `joe@example.com`.
     ///
-    ///  * `serviceAccount:{emailid}`: An email address that represents a service
-    ///     account. For example, `my-other-app@appspot.gserviceaccount.com`.
+    /// * `serviceAccount:{emailid}`: An email address that represents a service
+    ///    account. For example, `my-other-app@appspot.gserviceaccount.com`.
     ///
-    ///  * `group:{emailid}`: An email address that represents a Google group.
-    ///     For example, `admins@example.com`.
+    /// * `group:{emailid}`: An email address that represents a Google group.
+    ///    For example, `admins@example.com`.
     ///
-    ///  * `domain:{domain}`: A Google Apps domain name that represents all the
-    ///     users of that domain. For example, `google.com` or `example.com`.
+    /// * `domain:{domain}`: A Google Apps domain name that represents all the
+    ///    users of that domain. For example, `google.com` or `example.com`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Members {
@@ -432,7 +432,7 @@ namespace Google.Cloud.Iam.V1 {
   }
 
   /// <summary>
-  ///  The difference delta between two policies.
+  /// The difference delta between two policies.
   /// </summary>
   public sealed partial class PolicyDelta : pb::IMessage<PolicyDelta> {
     private static readonly pb::MessageParser<PolicyDelta> _parser = new pb::MessageParser<PolicyDelta>(() => new PolicyDelta());
@@ -472,7 +472,7 @@ namespace Google.Cloud.Iam.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Iam.V1.BindingDelta.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Iam.V1.BindingDelta> bindingDeltas_ = new pbc::RepeatedField<global::Google.Cloud.Iam.V1.BindingDelta>();
     /// <summary>
-    ///  The delta for Bindings between two policies.
+    /// The delta for Bindings between two policies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Iam.V1.BindingDelta> BindingDeltas {
@@ -547,8 +547,8 @@ namespace Google.Cloud.Iam.V1 {
   }
 
   /// <summary>
-  ///  One delta entry for Binding. Each individual change (only one member in each
-  ///  entry) to a binding will be a separate entry.
+  /// One delta entry for Binding. Each individual change (only one member in each
+  /// entry) to a binding will be a separate entry.
   /// </summary>
   public sealed partial class BindingDelta : pb::IMessage<BindingDelta> {
     private static readonly pb::MessageParser<BindingDelta> _parser = new pb::MessageParser<BindingDelta>(() => new BindingDelta());
@@ -588,8 +588,8 @@ namespace Google.Cloud.Iam.V1 {
     public const int ActionFieldNumber = 1;
     private global::Google.Cloud.Iam.V1.BindingDelta.Types.Action action_ = 0;
     /// <summary>
-    ///  The action that was performed on a Binding.
-    ///  Required
+    /// The action that was performed on a Binding.
+    /// Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Iam.V1.BindingDelta.Types.Action Action {
@@ -603,9 +603,9 @@ namespace Google.Cloud.Iam.V1 {
     public const int RoleFieldNumber = 2;
     private string role_ = "";
     /// <summary>
-    ///  Role that is assigned to `members`.
-    ///  For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
-    ///  Required
+    /// Role that is assigned to `members`.
+    /// For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
+    /// Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Role {
@@ -619,9 +619,9 @@ namespace Google.Cloud.Iam.V1 {
     public const int MemberFieldNumber = 3;
     private string member_ = "";
     /// <summary>
-    ///  A single identity requesting access for a Cloud Platform resource.
-    ///  Follows the same format of Binding.members.
-    ///  Required
+    /// A single identity requesting access for a Cloud Platform resource.
+    /// Follows the same format of Binding.members.
+    /// Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Member {
@@ -740,19 +740,19 @@ namespace Google.Cloud.Iam.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The type of action performed on a Binding in a policy.
+      /// The type of action performed on a Binding in a policy.
       /// </summary>
       public enum Action {
         /// <summary>
-        ///  Unspecified.
+        /// Unspecified.
         /// </summary>
         [pbr::OriginalName("ACTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Addition of a Binding.
+        /// Addition of a Binding.
         /// </summary>
         [pbr::OriginalName("ADD")] Add = 1,
         /// <summary>
-        ///  Removal of a Binding.
+        /// Removal of a Binding.
         /// </summary>
         [pbr::OriginalName("REMOVE")] Remove = 2,
       }

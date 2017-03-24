@@ -174,32 +174,32 @@ namespace Google.Cloud.Vision.V1 {
   }
   #region Enums
   /// <summary>
-  ///  A bucketized representation of likelihood, which is intended to give clients
-  ///  highly stable results across model upgrades.
+  /// A bucketized representation of likelihood, which is intended to give clients
+  /// highly stable results across model upgrades.
   /// </summary>
   public enum Likelihood {
     /// <summary>
-    ///  Unknown likelihood.
+    /// Unknown likelihood.
     /// </summary>
     [pbr::OriginalName("UNKNOWN")] Unknown = 0,
     /// <summary>
-    ///  It is very unlikely that the image belongs to the specified vertical.
+    /// It is very unlikely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("VERY_UNLIKELY")] VeryUnlikely = 1,
     /// <summary>
-    ///  It is unlikely that the image belongs to the specified vertical.
+    /// It is unlikely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("UNLIKELY")] Unlikely = 2,
     /// <summary>
-    ///  It is possible that the image belongs to the specified vertical.
+    /// It is possible that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("POSSIBLE")] Possible = 3,
     /// <summary>
-    ///  It is likely that the image belongs to the specified vertical.
+    /// It is likely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("LIKELY")] Likely = 4,
     /// <summary>
-    ///  It is very likely that the image belongs to the specified vertical.
+    /// It is very likely that the image belongs to the specified vertical.
     /// </summary>
     [pbr::OriginalName("VERY_LIKELY")] VeryLikely = 5,
   }
@@ -208,10 +208,10 @@ namespace Google.Cloud.Vision.V1 {
 
   #region Messages
   /// <summary>
-  ///  Users describe the type of Google Cloud Vision API tasks to perform over
-  ///  images by using *Feature*s. Each Feature indicates a type of image
-  ///  detection task to perform. Features encode the Cloud Vision API
-  ///  vertical to operate on and the number of top-scoring results to return.
+  /// Users describe the type of Google Cloud Vision API tasks to perform over
+  /// images by using *Feature*s. Each Feature indicates a type of image
+  /// detection task to perform. Features encode the Cloud Vision API
+  /// vertical to operate on and the number of top-scoring results to return.
   /// </summary>
   public sealed partial class Feature : pb::IMessage<Feature> {
     private static readonly pb::MessageParser<Feature> _parser = new pb::MessageParser<Feature>(() => new Feature());
@@ -250,7 +250,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int TypeFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.Feature.Types.Type type_ = 0;
     /// <summary>
-    ///  The feature type.
+    /// The feature type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Feature.Types.Type Type {
@@ -264,7 +264,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int MaxResultsFieldNumber = 2;
     private int maxResults_;
     /// <summary>
-    ///  Maximum number of results of this type.
+    /// Maximum number of results of this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxResults {
@@ -367,52 +367,52 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Type of image feature.
+      /// Type of image feature.
       /// </summary>
       public enum Type {
         /// <summary>
-        ///  Unspecified feature type.
+        /// Unspecified feature type.
         /// </summary>
         [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Run face detection.
+        /// Run face detection.
         /// </summary>
         [pbr::OriginalName("FACE_DETECTION")] FaceDetection = 1,
         /// <summary>
-        ///  Run landmark detection.
+        /// Run landmark detection.
         /// </summary>
         [pbr::OriginalName("LANDMARK_DETECTION")] LandmarkDetection = 2,
         /// <summary>
-        ///  Run logo detection.
+        /// Run logo detection.
         /// </summary>
         [pbr::OriginalName("LOGO_DETECTION")] LogoDetection = 3,
         /// <summary>
-        ///  Run label detection.
+        /// Run label detection.
         /// </summary>
         [pbr::OriginalName("LABEL_DETECTION")] LabelDetection = 4,
         /// <summary>
-        ///  Run OCR.
+        /// Run OCR.
         /// </summary>
         [pbr::OriginalName("TEXT_DETECTION")] TextDetection = 5,
         /// <summary>
-        ///  Run dense text document OCR. Takes precedence when both
-        ///  DOCUMENT_TEXT_DETECTION and TEXT_DETECTION are present.
+        /// Run dense text document OCR. Takes precedence when both
+        /// DOCUMENT_TEXT_DETECTION and TEXT_DETECTION are present.
         /// </summary>
         [pbr::OriginalName("DOCUMENT_TEXT_DETECTION")] DocumentTextDetection = 11,
         /// <summary>
-        ///  Run computer vision models to compute image safe-search properties.
+        /// Run computer vision models to compute image safe-search properties.
         /// </summary>
         [pbr::OriginalName("SAFE_SEARCH_DETECTION")] SafeSearchDetection = 6,
         /// <summary>
-        ///  Compute a set of image properties, such as the image's dominant colors.
+        /// Compute a set of image properties, such as the image's dominant colors.
         /// </summary>
         [pbr::OriginalName("IMAGE_PROPERTIES")] ImageProperties = 7,
         /// <summary>
-        ///  Run crop hints.
+        /// Run crop hints.
         /// </summary>
         [pbr::OriginalName("CROP_HINTS")] CropHints = 9,
         /// <summary>
-        ///  Run web detection.
+        /// Run web detection.
         /// </summary>
         [pbr::OriginalName("WEB_DETECTION")] WebDetection = 10,
       }
@@ -423,7 +423,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  External image source (Google Cloud Storage image location).
+  /// External image source (Google Cloud Storage image location).
   /// </summary>
   public sealed partial class ImageSource : pb::IMessage<ImageSource> {
     private static readonly pb::MessageParser<ImageSource> _parser = new pb::MessageParser<ImageSource>(() => new ImageSource());
@@ -462,12 +462,12 @@ namespace Google.Cloud.Vision.V1 {
     public const int GcsImageUriFieldNumber = 1;
     private string gcsImageUri_ = "";
     /// <summary>
-    ///  NOTE: For new code `image_uri` below is preferred.
-    ///  Google Cloud Storage image URI, which must be in the following form:
-    ///  `gs://bucket_name/object_name` (for details, see
-    ///  [Google Cloud Storage Request
-    ///  URIs](https://cloud.google.com/storage/docs/reference-uris)).
-    ///  NOTE: Cloud Storage object versioning is not supported.
+    /// NOTE: For new code `image_uri` below is preferred.
+    /// Google Cloud Storage image URI, which must be in the following form:
+    /// `gs://bucket_name/object_name` (for details, see
+    /// [Google Cloud Storage Request
+    /// URIs](https://cloud.google.com/storage/docs/reference-uris)).
+    /// NOTE: Cloud Storage object versioning is not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GcsImageUri {
@@ -481,16 +481,16 @@ namespace Google.Cloud.Vision.V1 {
     public const int ImageUriFieldNumber = 2;
     private string imageUri_ = "";
     /// <summary>
-    ///  Image URI which supports:
-    ///  1) Google Cloud Storage image URI, which must be in the following form:
-    ///  `gs://bucket_name/object_name` (for details, see
-    ///  [Google Cloud Storage Request
-    ///  URIs](https://cloud.google.com/storage/docs/reference-uris)).
-    ///  NOTE: Cloud Storage object versioning is not supported.
-    ///  2) Publicly accessible image HTTP/HTTPS URL.
-    ///  This is preferred over the legacy `gcs_image_uri` above. When both
-    ///  `gcs_image_uri` and `image_uri` are specified, `image_uri` takes
-    ///  precedence.
+    /// Image URI which supports:
+    /// 1) Google Cloud Storage image URI, which must be in the following form:
+    /// `gs://bucket_name/object_name` (for details, see
+    /// [Google Cloud Storage Request
+    /// URIs](https://cloud.google.com/storage/docs/reference-uris)).
+    /// NOTE: Cloud Storage object versioning is not supported.
+    /// 2) Publicly accessible image HTTP/HTTPS URL.
+    /// This is preferred over the legacy `gcs_image_uri` above. When both
+    /// `gcs_image_uri` and `image_uri` are specified, `image_uri` takes
+    /// precedence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ImageUri {
@@ -591,7 +591,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Client image to perform Google Cloud Vision API tasks over.
+  /// Client image to perform Google Cloud Vision API tasks over.
   /// </summary>
   public sealed partial class Image : pb::IMessage<Image> {
     private static readonly pb::MessageParser<Image> _parser = new pb::MessageParser<Image>(() => new Image());
@@ -630,9 +630,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int ContentFieldNumber = 1;
     private pb::ByteString content_ = pb::ByteString.Empty;
     /// <summary>
-    ///  Image content, represented as a stream of bytes.
-    ///  Note: as with all `bytes` fields, protobuffers use a pure binary
-    ///  representation, whereas JSON representations use base64.
+    /// Image content, represented as a stream of bytes.
+    /// Note: as with all `bytes` fields, protobuffers use a pure binary
+    /// representation, whereas JSON representations use base64.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Content {
@@ -646,9 +646,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int SourceFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.ImageSource source_;
     /// <summary>
-    ///  Google Cloud Storage image location. If both `content` and `source`
-    ///  are provided for an image, `content` takes precedence and is
-    ///  used to perform the image annotation request.
+    /// Google Cloud Storage image location. If both `content` and `source`
+    /// are provided for an image, `content` takes precedence and is
+    /// used to perform the image annotation request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.ImageSource Source {
@@ -755,7 +755,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  A face annotation object contains the results of face detection.
+  /// A face annotation object contains the results of face detection.
   /// </summary>
   public sealed partial class FaceAnnotation : pb::IMessage<FaceAnnotation> {
     private static readonly pb::MessageParser<FaceAnnotation> _parser = new pb::MessageParser<FaceAnnotation>(() => new FaceAnnotation());
@@ -807,13 +807,13 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingPolyFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingPoly_;
     /// <summary>
-    ///  The bounding polygon around the face. The coordinates of the bounding box
-    ///  are in the original image's scale, as returned in `ImageParams`.
-    ///  The bounding box is computed to "frame" the face in accordance with human
-    ///  expectations. It is based on the landmarker results.
-    ///  Note that one or more x and/or y coordinates may not be generated in the
-    ///  `BoundingPoly` (the polygon will be unbounded) if only a partial face
-    ///  appears in the image to be annotated.
+    /// The bounding polygon around the face. The coordinates of the bounding box
+    /// are in the original image's scale, as returned in `ImageParams`.
+    /// The bounding box is computed to "frame" the face in accordance with human
+    /// expectations. It is based on the landmarker results.
+    /// Note that one or more x and/or y coordinates may not be generated in the
+    /// `BoundingPoly` (the polygon will be unbounded) if only a partial face
+    /// appears in the image to be annotated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
@@ -827,12 +827,12 @@ namespace Google.Cloud.Vision.V1 {
     public const int FdBoundingPolyFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.BoundingPoly fdBoundingPoly_;
     /// <summary>
-    ///  The `fd_bounding_poly` bounding polygon is tighter than the
-    ///  `boundingPoly`, and encloses only the skin part of the face. Typically, it
-    ///  is used to eliminate the face from any image analysis that detects the
-    ///  "amount of skin" visible in an image. It is not based on the
-    ///  landmarker results, only on the initial face detection, hence
-    ///  the &lt;code>fd&lt;/code> (face detection) prefix.
+    /// The `fd_bounding_poly` bounding polygon is tighter than the
+    /// `boundingPoly`, and encloses only the skin part of the face. Typically, it
+    /// is used to eliminate the face from any image analysis that detects the
+    /// "amount of skin" visible in an image. It is not based on the
+    /// landmarker results, only on the initial face detection, hence
+    /// the &lt;code>fd&lt;/code> (face detection) prefix.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly FdBoundingPoly {
@@ -848,7 +848,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark> landmarks_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark>();
     /// <summary>
-    ///  Detected face landmarks.
+    /// Detected face landmarks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark> Landmarks {
@@ -859,9 +859,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int RollAngleFieldNumber = 4;
     private float rollAngle_;
     /// <summary>
-    ///  Roll angle, which indicates the amount of clockwise/anti-clockwise rotation
-    ///  of the face relative to the image vertical about the axis perpendicular to
-    ///  the face. Range [-180,180].
+    /// Roll angle, which indicates the amount of clockwise/anti-clockwise rotation
+    /// of the face relative to the image vertical about the axis perpendicular to
+    /// the face. Range [-180,180].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float RollAngle {
@@ -875,9 +875,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int PanAngleFieldNumber = 5;
     private float panAngle_;
     /// <summary>
-    ///  Yaw angle, which indicates the leftward/rightward angle that the face is
-    ///  pointing relative to the vertical plane perpendicular to the image. Range
-    ///  [-180,180].
+    /// Yaw angle, which indicates the leftward/rightward angle that the face is
+    /// pointing relative to the vertical plane perpendicular to the image. Range
+    /// [-180,180].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float PanAngle {
@@ -891,8 +891,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int TiltAngleFieldNumber = 6;
     private float tiltAngle_;
     /// <summary>
-    ///  Pitch angle, which indicates the upwards/downwards angle that the face is
-    ///  pointing relative to the image's horizontal plane. Range [-180,180].
+    /// Pitch angle, which indicates the upwards/downwards angle that the face is
+    /// pointing relative to the image's horizontal plane. Range [-180,180].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float TiltAngle {
@@ -906,7 +906,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int DetectionConfidenceFieldNumber = 7;
     private float detectionConfidence_;
     /// <summary>
-    ///  Detection confidence. Range [0, 1].
+    /// Detection confidence. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float DetectionConfidence {
@@ -920,7 +920,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int LandmarkingConfidenceFieldNumber = 8;
     private float landmarkingConfidence_;
     /// <summary>
-    ///  Face landmarking confidence. Range [0, 1].
+    /// Face landmarking confidence. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float LandmarkingConfidence {
@@ -934,7 +934,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int JoyLikelihoodFieldNumber = 9;
     private global::Google.Cloud.Vision.V1.Likelihood joyLikelihood_ = 0;
     /// <summary>
-    ///  Joy likelihood.
+    /// Joy likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood JoyLikelihood {
@@ -948,7 +948,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int SorrowLikelihoodFieldNumber = 10;
     private global::Google.Cloud.Vision.V1.Likelihood sorrowLikelihood_ = 0;
     /// <summary>
-    ///  Sorrow likelihood.
+    /// Sorrow likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood SorrowLikelihood {
@@ -962,7 +962,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int AngerLikelihoodFieldNumber = 11;
     private global::Google.Cloud.Vision.V1.Likelihood angerLikelihood_ = 0;
     /// <summary>
-    ///  Anger likelihood.
+    /// Anger likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood AngerLikelihood {
@@ -976,7 +976,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int SurpriseLikelihoodFieldNumber = 12;
     private global::Google.Cloud.Vision.V1.Likelihood surpriseLikelihood_ = 0;
     /// <summary>
-    ///  Surprise likelihood.
+    /// Surprise likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood SurpriseLikelihood {
@@ -990,7 +990,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int UnderExposedLikelihoodFieldNumber = 13;
     private global::Google.Cloud.Vision.V1.Likelihood underExposedLikelihood_ = 0;
     /// <summary>
-    ///  Under-exposed likelihood.
+    /// Under-exposed likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood UnderExposedLikelihood {
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int BlurredLikelihoodFieldNumber = 14;
     private global::Google.Cloud.Vision.V1.Likelihood blurredLikelihood_ = 0;
     /// <summary>
-    ///  Blurred likelihood.
+    /// Blurred likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood BlurredLikelihood {
@@ -1018,7 +1018,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int HeadwearLikelihoodFieldNumber = 15;
     private global::Google.Cloud.Vision.V1.Likelihood headwearLikelihood_ = 0;
     /// <summary>
-    ///  Headwear likelihood.
+    /// Headwear likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood HeadwearLikelihood {
@@ -1334,11 +1334,11 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  A face-specific landmark (for example, a face feature).
-      ///  Landmark positions may fall outside the bounds of the image
-      ///  if the face is near one or more edges of the image.
-      ///  Therefore it is NOT guaranteed that `0 &lt;= x &lt; width` or
-      ///  `0 &lt;= y &lt; height`.
+      /// A face-specific landmark (for example, a face feature).
+      /// Landmark positions may fall outside the bounds of the image
+      /// if the face is near one or more edges of the image.
+      /// Therefore it is NOT guaranteed that `0 &lt;= x &lt; width` or
+      /// `0 &lt;= y &lt; height`.
       /// </summary>
       public sealed partial class Landmark : pb::IMessage<Landmark> {
         private static readonly pb::MessageParser<Landmark> _parser = new pb::MessageParser<Landmark>(() => new Landmark());
@@ -1377,7 +1377,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int TypeFieldNumber = 3;
         private global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type type_ = 0;
         /// <summary>
-        ///  Face landmark type.
+        /// Face landmark type.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Vision.V1.FaceAnnotation.Types.Landmark.Types.Type Type {
@@ -1391,7 +1391,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int PositionFieldNumber = 4;
         private global::Google.Cloud.Vision.V1.Position position_;
         /// <summary>
-        ///  Face landmark position.
+        /// Face landmark position.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Vision.V1.Position Position {
@@ -1500,150 +1500,150 @@ namespace Google.Cloud.Vision.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
           /// <summary>
-          ///  Face landmark (feature) type.
-          ///  Left and right are defined from the vantage of the viewer of the image
-          ///  without considering mirror projections typical of photos. So, `LEFT_EYE`,
-          ///  typically, is the person's right eye.
+          /// Face landmark (feature) type.
+          /// Left and right are defined from the vantage of the viewer of the image
+          /// without considering mirror projections typical of photos. So, `LEFT_EYE`,
+          /// typically, is the person's right eye.
           /// </summary>
           public enum Type {
             /// <summary>
-            ///  Unknown face landmark detected. Should not be filled.
+            /// Unknown face landmark detected. Should not be filled.
             /// </summary>
             [pbr::OriginalName("UNKNOWN_LANDMARK")] UnknownLandmark = 0,
             /// <summary>
-            ///  Left eye.
+            /// Left eye.
             /// </summary>
             [pbr::OriginalName("LEFT_EYE")] LeftEye = 1,
             /// <summary>
-            ///  Right eye.
+            /// Right eye.
             /// </summary>
             [pbr::OriginalName("RIGHT_EYE")] RightEye = 2,
             /// <summary>
-            ///  Left of left eyebrow.
+            /// Left of left eyebrow.
             /// </summary>
             [pbr::OriginalName("LEFT_OF_LEFT_EYEBROW")] LeftOfLeftEyebrow = 3,
             /// <summary>
-            ///  Right of left eyebrow.
+            /// Right of left eyebrow.
             /// </summary>
             [pbr::OriginalName("RIGHT_OF_LEFT_EYEBROW")] RightOfLeftEyebrow = 4,
             /// <summary>
-            ///  Left of right eyebrow.
+            /// Left of right eyebrow.
             /// </summary>
             [pbr::OriginalName("LEFT_OF_RIGHT_EYEBROW")] LeftOfRightEyebrow = 5,
             /// <summary>
-            ///  Right of right eyebrow.
+            /// Right of right eyebrow.
             /// </summary>
             [pbr::OriginalName("RIGHT_OF_RIGHT_EYEBROW")] RightOfRightEyebrow = 6,
             /// <summary>
-            ///  Midpoint between eyes.
+            /// Midpoint between eyes.
             /// </summary>
             [pbr::OriginalName("MIDPOINT_BETWEEN_EYES")] MidpointBetweenEyes = 7,
             /// <summary>
-            ///  Nose tip.
+            /// Nose tip.
             /// </summary>
             [pbr::OriginalName("NOSE_TIP")] NoseTip = 8,
             /// <summary>
-            ///  Upper lip.
+            /// Upper lip.
             /// </summary>
             [pbr::OriginalName("UPPER_LIP")] UpperLip = 9,
             /// <summary>
-            ///  Lower lip.
+            /// Lower lip.
             /// </summary>
             [pbr::OriginalName("LOWER_LIP")] LowerLip = 10,
             /// <summary>
-            ///  Mouth left.
+            /// Mouth left.
             /// </summary>
             [pbr::OriginalName("MOUTH_LEFT")] MouthLeft = 11,
             /// <summary>
-            ///  Mouth right.
+            /// Mouth right.
             /// </summary>
             [pbr::OriginalName("MOUTH_RIGHT")] MouthRight = 12,
             /// <summary>
-            ///  Mouth center.
+            /// Mouth center.
             /// </summary>
             [pbr::OriginalName("MOUTH_CENTER")] MouthCenter = 13,
             /// <summary>
-            ///  Nose, bottom right.
+            /// Nose, bottom right.
             /// </summary>
             [pbr::OriginalName("NOSE_BOTTOM_RIGHT")] NoseBottomRight = 14,
             /// <summary>
-            ///  Nose, bottom left.
+            /// Nose, bottom left.
             /// </summary>
             [pbr::OriginalName("NOSE_BOTTOM_LEFT")] NoseBottomLeft = 15,
             /// <summary>
-            ///  Nose, bottom center.
+            /// Nose, bottom center.
             /// </summary>
             [pbr::OriginalName("NOSE_BOTTOM_CENTER")] NoseBottomCenter = 16,
             /// <summary>
-            ///  Left eye, top boundary.
+            /// Left eye, top boundary.
             /// </summary>
             [pbr::OriginalName("LEFT_EYE_TOP_BOUNDARY")] LeftEyeTopBoundary = 17,
             /// <summary>
-            ///  Left eye, right corner.
+            /// Left eye, right corner.
             /// </summary>
             [pbr::OriginalName("LEFT_EYE_RIGHT_CORNER")] LeftEyeRightCorner = 18,
             /// <summary>
-            ///  Left eye, bottom boundary.
+            /// Left eye, bottom boundary.
             /// </summary>
             [pbr::OriginalName("LEFT_EYE_BOTTOM_BOUNDARY")] LeftEyeBottomBoundary = 19,
             /// <summary>
-            ///  Left eye, left corner.
+            /// Left eye, left corner.
             /// </summary>
             [pbr::OriginalName("LEFT_EYE_LEFT_CORNER")] LeftEyeLeftCorner = 20,
             /// <summary>
-            ///  Right eye, top boundary.
+            /// Right eye, top boundary.
             /// </summary>
             [pbr::OriginalName("RIGHT_EYE_TOP_BOUNDARY")] RightEyeTopBoundary = 21,
             /// <summary>
-            ///  Right eye, right corner.
+            /// Right eye, right corner.
             /// </summary>
             [pbr::OriginalName("RIGHT_EYE_RIGHT_CORNER")] RightEyeRightCorner = 22,
             /// <summary>
-            ///  Right eye, bottom boundary.
+            /// Right eye, bottom boundary.
             /// </summary>
             [pbr::OriginalName("RIGHT_EYE_BOTTOM_BOUNDARY")] RightEyeBottomBoundary = 23,
             /// <summary>
-            ///  Right eye, left corner.
+            /// Right eye, left corner.
             /// </summary>
             [pbr::OriginalName("RIGHT_EYE_LEFT_CORNER")] RightEyeLeftCorner = 24,
             /// <summary>
-            ///  Left eyebrow, upper midpoint.
+            /// Left eyebrow, upper midpoint.
             /// </summary>
             [pbr::OriginalName("LEFT_EYEBROW_UPPER_MIDPOINT")] LeftEyebrowUpperMidpoint = 25,
             /// <summary>
-            ///  Right eyebrow, upper midpoint.
+            /// Right eyebrow, upper midpoint.
             /// </summary>
             [pbr::OriginalName("RIGHT_EYEBROW_UPPER_MIDPOINT")] RightEyebrowUpperMidpoint = 26,
             /// <summary>
-            ///  Left ear tragion.
+            /// Left ear tragion.
             /// </summary>
             [pbr::OriginalName("LEFT_EAR_TRAGION")] LeftEarTragion = 27,
             /// <summary>
-            ///  Right ear tragion.
+            /// Right ear tragion.
             /// </summary>
             [pbr::OriginalName("RIGHT_EAR_TRAGION")] RightEarTragion = 28,
             /// <summary>
-            ///  Left eye pupil.
+            /// Left eye pupil.
             /// </summary>
             [pbr::OriginalName("LEFT_EYE_PUPIL")] LeftEyePupil = 29,
             /// <summary>
-            ///  Right eye pupil.
+            /// Right eye pupil.
             /// </summary>
             [pbr::OriginalName("RIGHT_EYE_PUPIL")] RightEyePupil = 30,
             /// <summary>
-            ///  Forehead glabella.
+            /// Forehead glabella.
             /// </summary>
             [pbr::OriginalName("FOREHEAD_GLABELLA")] ForeheadGlabella = 31,
             /// <summary>
-            ///  Chin gnathion.
+            /// Chin gnathion.
             /// </summary>
             [pbr::OriginalName("CHIN_GNATHION")] ChinGnathion = 32,
             /// <summary>
-            ///  Chin left gonion.
+            /// Chin left gonion.
             /// </summary>
             [pbr::OriginalName("CHIN_LEFT_GONION")] ChinLeftGonion = 33,
             /// <summary>
-            ///  Chin right gonion.
+            /// Chin right gonion.
             /// </summary>
             [pbr::OriginalName("CHIN_RIGHT_GONION")] ChinRightGonion = 34,
           }
@@ -1659,7 +1659,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Detected entity location information.
+  /// Detected entity location information.
   /// </summary>
   public sealed partial class LocationInfo : pb::IMessage<LocationInfo> {
     private static readonly pb::MessageParser<LocationInfo> _parser = new pb::MessageParser<LocationInfo>(() => new LocationInfo());
@@ -1697,7 +1697,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int LatLngFieldNumber = 1;
     private global::Google.Type.LatLng latLng_;
     /// <summary>
-    ///  lat/long location coordinates.
+    /// lat/long location coordinates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng LatLng {
@@ -1788,7 +1788,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  A `Property` consists of a user-supplied name/value pair.
+  /// A `Property` consists of a user-supplied name/value pair.
   /// </summary>
   public sealed partial class Property : pb::IMessage<Property> {
     private static readonly pb::MessageParser<Property> _parser = new pb::MessageParser<Property>(() => new Property());
@@ -1827,7 +1827,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Name of the property.
+    /// Name of the property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1841,7 +1841,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ValueFieldNumber = 2;
     private string value_ = "";
     /// <summary>
-    ///  Value of the property.
+    /// Value of the property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Value {
@@ -1942,7 +1942,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Set of detected entity features.
+  /// Set of detected entity features.
   /// </summary>
   public sealed partial class EntityAnnotation : pb::IMessage<EntityAnnotation> {
     private static readonly pb::MessageParser<EntityAnnotation> _parser = new pb::MessageParser<EntityAnnotation>(() => new EntityAnnotation());
@@ -1988,8 +1988,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int MidFieldNumber = 1;
     private string mid_ = "";
     /// <summary>
-    ///  Opaque entity ID. Some IDs may be available in
-    ///  [Google Knowledge Graph Search API](https://developers.google.com/knowledge-graph/).
+    /// Opaque entity ID. Some IDs may be available in
+    /// [Google Knowledge Graph Search API](https://developers.google.com/knowledge-graph/).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Mid {
@@ -2003,8 +2003,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int LocaleFieldNumber = 2;
     private string locale_ = "";
     /// <summary>
-    ///  The language code for the locale in which the entity textual
-    ///  `description` is expressed.
+    /// The language code for the locale in which the entity textual
+    /// `description` is expressed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Locale {
@@ -2018,7 +2018,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int DescriptionFieldNumber = 3;
     private string description_ = "";
     /// <summary>
-    ///  Entity textual description, expressed in its `locale` language.
+    /// Entity textual description, expressed in its `locale` language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -2032,7 +2032,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ScoreFieldNumber = 4;
     private float score_;
     /// <summary>
-    ///  Overall score of the result. Range [0, 1].
+    /// Overall score of the result. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Score {
@@ -2046,10 +2046,10 @@ namespace Google.Cloud.Vision.V1 {
     public const int ConfidenceFieldNumber = 5;
     private float confidence_;
     /// <summary>
-    ///  The accuracy of the entity detection in an image.
-    ///  For example, for an image in which the "Eiffel Tower" entity is detected,
-    ///  this field represents the confidence that there is a tower in the query
-    ///  image. Range [0, 1].
+    /// The accuracy of the entity detection in an image.
+    /// For example, for an image in which the "Eiffel Tower" entity is detected,
+    /// this field represents the confidence that there is a tower in the query
+    /// image. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Confidence {
@@ -2063,11 +2063,11 @@ namespace Google.Cloud.Vision.V1 {
     public const int TopicalityFieldNumber = 6;
     private float topicality_;
     /// <summary>
-    ///  The relevancy of the ICA (Image Content Annotation) label to the
-    ///  image. For example, the relevancy of "tower" is likely higher to an image
-    ///  containing the detected "Eiffel Tower" than to an image containing a
-    ///  detected distant towering building, even though the confidence that
-    ///  there is a tower in each image may be the same. Range [0, 1].
+    /// The relevancy of the ICA (Image Content Annotation) label to the
+    /// image. For example, the relevancy of "tower" is likely higher to an image
+    /// containing the detected "Eiffel Tower" than to an image containing a
+    /// detected distant towering building, even though the confidence that
+    /// there is a tower in each image may be the same. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Topicality {
@@ -2081,10 +2081,10 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingPolyFieldNumber = 7;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingPoly_;
     /// <summary>
-    ///  Image region to which this entity belongs. Currently not produced
-    ///  for `LABEL_DETECTION` features. For `TEXT_DETECTION` (OCR), `boundingPoly`s
-    ///  are produced for the entire text detected in an image region, followed by
-    ///  `boundingPoly`s for each word within the detected text.
+    /// Image region to which this entity belongs. Currently not produced
+    /// for `LABEL_DETECTION` features. For `TEXT_DETECTION` (OCR), `boundingPoly`s
+    /// are produced for the entire text detected in an image region, followed by
+    /// `boundingPoly`s for each word within the detected text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
@@ -2100,11 +2100,11 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Vision.V1.LocationInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.LocationInfo> locations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.LocationInfo>();
     /// <summary>
-    ///  The location information for the detected entity. Multiple
-    ///  `LocationInfo` elements can be present because one location may
-    ///  indicate the location of the scene in the image, and another location
-    ///  may indicate the location of the place where the image was taken.
-    ///  Location information is usually present for landmarks.
+    /// The location information for the detected entity. Multiple
+    /// `LocationInfo` elements can be present because one location may
+    /// indicate the location of the scene in the image, and another location
+    /// may indicate the location of the place where the image was taken.
+    /// Location information is usually present for landmarks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.LocationInfo> Locations {
@@ -2117,8 +2117,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(74, global::Google.Cloud.Vision.V1.Property.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Property> properties_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Property>();
     /// <summary>
-    ///  Some entities may have optional user-supplied `Property` (name/value)
-    ///  fields, such a score or string that qualifies the entity.
+    /// Some entities may have optional user-supplied `Property` (name/value)
+    /// fields, such a score or string that qualifies the entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Property> Properties {
@@ -2320,9 +2320,9 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Set of features pertaining to the image, computed by computer vision
-  ///  methods over safe-search verticals (for example, adult, spoof, medical,
-  ///  violence).
+  /// Set of features pertaining to the image, computed by computer vision
+  /// methods over safe-search verticals (for example, adult, spoof, medical,
+  /// violence).
   /// </summary>
   public sealed partial class SafeSearchAnnotation : pb::IMessage<SafeSearchAnnotation> {
     private static readonly pb::MessageParser<SafeSearchAnnotation> _parser = new pb::MessageParser<SafeSearchAnnotation>(() => new SafeSearchAnnotation());
@@ -2363,7 +2363,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int AdultFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.Likelihood adult_ = 0;
     /// <summary>
-    ///  Represents the adult content likelihood for the image.
+    /// Represents the adult content likelihood for the image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Adult {
@@ -2377,9 +2377,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int SpoofFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.Likelihood spoof_ = 0;
     /// <summary>
-    ///  Spoof likelihood. The likelihood that an modification
-    ///  was made to the image's canonical version to make it appear
-    ///  funny or offensive.
+    /// Spoof likelihood. The likelihood that an modification
+    /// was made to the image's canonical version to make it appear
+    /// funny or offensive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Spoof {
@@ -2393,7 +2393,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int MedicalFieldNumber = 3;
     private global::Google.Cloud.Vision.V1.Likelihood medical_ = 0;
     /// <summary>
-    ///  Likelihood that this is a medical image.
+    /// Likelihood that this is a medical image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Medical {
@@ -2407,7 +2407,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ViolenceFieldNumber = 4;
     private global::Google.Cloud.Vision.V1.Likelihood violence_ = 0;
     /// <summary>
-    ///  Violence likelihood.
+    /// Violence likelihood.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Likelihood Violence {
@@ -2540,7 +2540,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Rectangle determined by min and max `LatLng` pairs.
+  /// Rectangle determined by min and max `LatLng` pairs.
   /// </summary>
   public sealed partial class LatLongRect : pb::IMessage<LatLongRect> {
     private static readonly pb::MessageParser<LatLongRect> _parser = new pb::MessageParser<LatLongRect>(() => new LatLongRect());
@@ -2579,7 +2579,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int MinLatLngFieldNumber = 1;
     private global::Google.Type.LatLng minLatLng_;
     /// <summary>
-    ///  Min lat/long pair.
+    /// Min lat/long pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng MinLatLng {
@@ -2593,7 +2593,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int MaxLatLngFieldNumber = 2;
     private global::Google.Type.LatLng maxLatLng_;
     /// <summary>
-    ///  Max lat/long pair.
+    /// Max lat/long pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng MaxLatLng {
@@ -2706,8 +2706,8 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Color information consists of RGB channels, score, and the fraction of
-  ///  the image that the color occupies in the image.
+  /// Color information consists of RGB channels, score, and the fraction of
+  /// the image that the color occupies in the image.
   /// </summary>
   public sealed partial class ColorInfo : pb::IMessage<ColorInfo> {
     private static readonly pb::MessageParser<ColorInfo> _parser = new pb::MessageParser<ColorInfo>(() => new ColorInfo());
@@ -2747,7 +2747,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ColorFieldNumber = 1;
     private global::Google.Type.Color color_;
     /// <summary>
-    ///  RGB components of the color.
+    /// RGB components of the color.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.Color Color {
@@ -2761,7 +2761,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ScoreFieldNumber = 2;
     private float score_;
     /// <summary>
-    ///  Image-specific score for this color. Value in range [0, 1].
+    /// Image-specific score for this color. Value in range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Score {
@@ -2775,8 +2775,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int PixelFractionFieldNumber = 3;
     private float pixelFraction_;
     /// <summary>
-    ///  The fraction of pixels the color occupies in the image.
-    ///  Value in range [0, 1].
+    /// The fraction of pixels the color occupies in the image.
+    /// Value in range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float PixelFraction {
@@ -2899,7 +2899,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Set of dominant colors and their corresponding scores.
+  /// Set of dominant colors and their corresponding scores.
   /// </summary>
   public sealed partial class DominantColorsAnnotation : pb::IMessage<DominantColorsAnnotation> {
     private static readonly pb::MessageParser<DominantColorsAnnotation> _parser = new pb::MessageParser<DominantColorsAnnotation>(() => new DominantColorsAnnotation());
@@ -2939,7 +2939,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.ColorInfo.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.ColorInfo> colors_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.ColorInfo>();
     /// <summary>
-    ///  RGB color values with their score and pixel fraction.
+    /// RGB color values with their score and pixel fraction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.ColorInfo> Colors {
@@ -3014,7 +3014,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Stores image properties, such as dominant colors.
+  /// Stores image properties, such as dominant colors.
   /// </summary>
   public sealed partial class ImageProperties : pb::IMessage<ImageProperties> {
     private static readonly pb::MessageParser<ImageProperties> _parser = new pb::MessageParser<ImageProperties>(() => new ImageProperties());
@@ -3052,7 +3052,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int DominantColorsFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.DominantColorsAnnotation dominantColors_;
     /// <summary>
-    ///  If present, dominant colors completed successfully.
+    /// If present, dominant colors completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.DominantColorsAnnotation DominantColors {
@@ -3143,7 +3143,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Single crop hint that is used to generate a new crop when serving an image.
+  /// Single crop hint that is used to generate a new crop when serving an image.
   /// </summary>
   public sealed partial class CropHint : pb::IMessage<CropHint> {
     private static readonly pb::MessageParser<CropHint> _parser = new pb::MessageParser<CropHint>(() => new CropHint());
@@ -3183,8 +3183,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingPolyFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingPoly_;
     /// <summary>
-    ///  The bounding polygon for the crop region. The coordinates of the bounding
-    ///  box are in the original image's scale, as returned in `ImageParams`.
+    /// The bounding polygon for the crop region. The coordinates of the bounding
+    /// box are in the original image's scale, as returned in `ImageParams`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingPoly {
@@ -3198,7 +3198,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ConfidenceFieldNumber = 2;
     private float confidence_;
     /// <summary>
-    ///  Confidence of this being a salient region.  Range [0, 1].
+    /// Confidence of this being a salient region.  Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Confidence {
@@ -3212,8 +3212,8 @@ namespace Google.Cloud.Vision.V1 {
     public const int ImportanceFractionFieldNumber = 3;
     private float importanceFraction_;
     /// <summary>
-    ///  Fraction of importance of this salient region with respect to the original
-    ///  image.
+    /// Fraction of importance of this salient region with respect to the original
+    /// image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float ImportanceFraction {
@@ -3336,7 +3336,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Set of crop hints that are used to generate new crops when serving images.
+  /// Set of crop hints that are used to generate new crops when serving images.
   /// </summary>
   public sealed partial class CropHintsAnnotation : pb::IMessage<CropHintsAnnotation> {
     private static readonly pb::MessageParser<CropHintsAnnotation> _parser = new pb::MessageParser<CropHintsAnnotation>(() => new CropHintsAnnotation());
@@ -3448,7 +3448,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Parameters for crop hints annotation request.
+  /// Parameters for crop hints annotation request.
   /// </summary>
   public sealed partial class CropHintsParams : pb::IMessage<CropHintsParams> {
     private static readonly pb::MessageParser<CropHintsParams> _parser = new pb::MessageParser<CropHintsParams>(() => new CropHintsParams());
@@ -3488,12 +3488,12 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForFloat(10);
     private readonly pbc::RepeatedField<float> aspectRatios_ = new pbc::RepeatedField<float>();
     /// <summary>
-    ///  Aspect ratios in floats, representing the ratio of the width to the height
-    ///  of the image. For example, if the desired aspect ratio is 4/3, the
-    ///  corresponding float value should be 1.33333.  If not specified, the
-    ///  best possible crop is returned. The number of provided aspect ratios is
-    ///  limited to a maximum of 16; any aspect ratios provided after the 16th are
-    ///  ignored.
+    /// Aspect ratios in floats, representing the ratio of the width to the height
+    /// of the image. For example, if the desired aspect ratio is 4/3, the
+    /// corresponding float value should be 1.33333.  If not specified, the
+    /// best possible crop is returned. The number of provided aspect ratios is
+    /// limited to a maximum of 16; any aspect ratios provided after the 16th are
+    /// ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<float> AspectRatios {
@@ -3569,7 +3569,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Image context and/or feature-specific parameters.
+  /// Image context and/or feature-specific parameters.
   /// </summary>
   public sealed partial class ImageContext : pb::IMessage<ImageContext> {
     private static readonly pb::MessageParser<ImageContext> _parser = new pb::MessageParser<ImageContext>(() => new ImageContext());
@@ -3609,7 +3609,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int LatLongRectFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.LatLongRect latLongRect_;
     /// <summary>
-    ///  lat/long rectangle that specifies the location of the image.
+    /// lat/long rectangle that specifies the location of the image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.LatLongRect LatLongRect {
@@ -3625,14 +3625,14 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> languageHints_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  List of languages to use for TEXT_DETECTION. In most cases, an empty value
-    ///  yields the best results since it enables automatic language detection. For
-    ///  languages based on the Latin alphabet, setting `language_hints` is not
-    ///  needed. In rare cases, when the language of the text in the image is known,
-    ///  setting a hint will help get better results (although it will be a
-    ///  significant hindrance if the hint is wrong). Text detection returns an
-    ///  error if one or more of the specified languages is not one of the
-    ///  [supported languages](/vision/docs/languages).
+    /// List of languages to use for TEXT_DETECTION. In most cases, an empty value
+    /// yields the best results since it enables automatic language detection. For
+    /// languages based on the Latin alphabet, setting `language_hints` is not
+    /// needed. In rare cases, when the language of the text in the image is known,
+    /// setting a hint will help get better results (although it will be a
+    /// significant hindrance if the hint is wrong). Text detection returns an
+    /// error if one or more of the specified languages is not one of the
+    /// [supported languages](/vision/docs/languages).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> LanguageHints {
@@ -3643,7 +3643,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int CropHintsParamsFieldNumber = 4;
     private global::Google.Cloud.Vision.V1.CropHintsParams cropHintsParams_;
     /// <summary>
-    ///  Parameters for crop hints annotation request.
+    /// Parameters for crop hints annotation request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.CropHintsParams CropHintsParams {
@@ -3765,8 +3765,8 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Request for performing Google Cloud Vision API tasks over a user-provided
-  ///  image, with user-requested features.
+  /// Request for performing Google Cloud Vision API tasks over a user-provided
+  /// image, with user-requested features.
   /// </summary>
   public sealed partial class AnnotateImageRequest : pb::IMessage<AnnotateImageRequest> {
     private static readonly pb::MessageParser<AnnotateImageRequest> _parser = new pb::MessageParser<AnnotateImageRequest>(() => new AnnotateImageRequest());
@@ -3806,7 +3806,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ImageFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.Image image_;
     /// <summary>
-    ///  The image to be processed.
+    /// The image to be processed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Image Image {
@@ -3822,7 +3822,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Vision.V1.Feature.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Feature> features_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Feature>();
     /// <summary>
-    ///  Requested features.
+    /// Requested features.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Feature> Features {
@@ -3833,7 +3833,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ImageContextFieldNumber = 3;
     private global::Google.Cloud.Vision.V1.ImageContext imageContext_;
     /// <summary>
-    ///  Additional context that may accompany the image.
+    /// Additional context that may accompany the image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.ImageContext ImageContext {
@@ -3955,7 +3955,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Response to an image annotation request.
+  /// Response to an image annotation request.
   /// </summary>
   public sealed partial class AnnotateImageResponse : pb::IMessage<AnnotateImageResponse> {
     private static readonly pb::MessageParser<AnnotateImageResponse> _parser = new pb::MessageParser<AnnotateImageResponse>(() => new AnnotateImageResponse());
@@ -4005,7 +4005,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.FaceAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation> faceAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation>();
     /// <summary>
-    ///  If present, face detection has completed successfully.
+    /// If present, face detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.FaceAnnotation> FaceAnnotations {
@@ -4018,7 +4018,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> landmarkAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, landmark detection has completed successfully.
+    /// If present, landmark detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LandmarkAnnotations {
@@ -4031,7 +4031,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> logoAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, logo detection has completed successfully.
+    /// If present, logo detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LogoAnnotations {
@@ -4044,7 +4044,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> labelAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, label detection has completed successfully.
+    /// If present, label detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> LabelAnnotations {
@@ -4057,8 +4057,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Vision.V1.EntityAnnotation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> textAnnotations_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation>();
     /// <summary>
-    ///  If present, text (OCR) detection or document (OCR) text detection has
-    ///  completed successfully.
+    /// If present, text (OCR) detection or document (OCR) text detection has
+    /// completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.EntityAnnotation> TextAnnotations {
@@ -4069,10 +4069,10 @@ namespace Google.Cloud.Vision.V1 {
     public const int FullTextAnnotationFieldNumber = 12;
     private global::Google.Cloud.Vision.V1.TextAnnotation fullTextAnnotation_;
     /// <summary>
-    ///  If present, text (OCR) detection or document (OCR) text detection has
-    ///  completed successfully.
-    ///  This annotation provides the structural hierarchy for the OCR detected
-    ///  text.
+    /// If present, text (OCR) detection or document (OCR) text detection has
+    /// completed successfully.
+    /// This annotation provides the structural hierarchy for the OCR detected
+    /// text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.TextAnnotation FullTextAnnotation {
@@ -4086,7 +4086,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int SafeSearchAnnotationFieldNumber = 6;
     private global::Google.Cloud.Vision.V1.SafeSearchAnnotation safeSearchAnnotation_;
     /// <summary>
-    ///  If present, safe-search annotation has completed successfully.
+    /// If present, safe-search annotation has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.SafeSearchAnnotation SafeSearchAnnotation {
@@ -4100,7 +4100,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ImagePropertiesAnnotationFieldNumber = 8;
     private global::Google.Cloud.Vision.V1.ImageProperties imagePropertiesAnnotation_;
     /// <summary>
-    ///  If present, image properties were extracted successfully.
+    /// If present, image properties were extracted successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.ImageProperties ImagePropertiesAnnotation {
@@ -4114,7 +4114,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int CropHintsAnnotationFieldNumber = 11;
     private global::Google.Cloud.Vision.V1.CropHintsAnnotation cropHintsAnnotation_;
     /// <summary>
-    ///  If present, crop hints have completed successfully.
+    /// If present, crop hints have completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.CropHintsAnnotation CropHintsAnnotation {
@@ -4128,7 +4128,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int WebDetectionFieldNumber = 13;
     private global::Google.Cloud.Vision.V1.WebDetection webDetection_;
     /// <summary>
-    ///  If present, web detection has completed successfully.
+    /// If present, web detection has completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.WebDetection WebDetection {
@@ -4142,9 +4142,9 @@ namespace Google.Cloud.Vision.V1 {
     public const int ErrorFieldNumber = 9;
     private global::Google.Rpc.Status error_;
     /// <summary>
-    ///  If set, represents the error message for the operation.
-    ///  Note that filled-in image annotations are guaranteed to be
-    ///  correct, even when `error` is set.
+    /// If set, represents the error message for the operation.
+    /// Note that filled-in image annotations are guaranteed to be
+    /// correct, even when `error` is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Error {
@@ -4390,7 +4390,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Multiple image annotation requests are batched into a single service call.
+  /// Multiple image annotation requests are batched into a single service call.
   /// </summary>
   public sealed partial class BatchAnnotateImagesRequest : pb::IMessage<BatchAnnotateImagesRequest> {
     private static readonly pb::MessageParser<BatchAnnotateImagesRequest> _parser = new pb::MessageParser<BatchAnnotateImagesRequest>(() => new BatchAnnotateImagesRequest());
@@ -4430,7 +4430,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.AnnotateImageRequest.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageRequest> requests_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageRequest>();
     /// <summary>
-    ///  Individual image annotation requests for this batch.
+    /// Individual image annotation requests for this batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageRequest> Requests {
@@ -4505,7 +4505,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Response to a batch image annotation request.
+  /// Response to a batch image annotation request.
   /// </summary>
   public sealed partial class BatchAnnotateImagesResponse : pb::IMessage<BatchAnnotateImagesResponse> {
     private static readonly pb::MessageParser<BatchAnnotateImagesResponse> _parser = new pb::MessageParser<BatchAnnotateImagesResponse>(() => new BatchAnnotateImagesResponse());
@@ -4545,7 +4545,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.AnnotateImageResponse.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageResponse> responses_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageResponse>();
     /// <summary>
-    ///  Individual responses to image annotation requests within the batch.
+    /// Individual responses to image annotation requests within the batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.AnnotateImageResponse> Responses {
