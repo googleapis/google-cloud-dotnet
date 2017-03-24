@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
@@ -651,12 +652,29 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             var matches = members.Where(member => IsMemberMatch(member.Id, idToMatch)).ToList();
             if (matches.Count > 1)
             {
-                errors.Add($"{sourceLocation}: Member ID '{idToMatch}' matches multiple members ({string.Join(", ", matches.Select(m => m.Id))}).");
+                errors.Add($"{sourceLocation}: Member ID '{idToMatch}' matches multiple members:");
+                foreach (var match in matches)
+                {
+                    errors.Add($"    {match.Id}");
+                }
                 return null;
             }
             else if (matches.Count == 0)
             {
                 errors.Add($"{sourceLocation}: Member ID '{idToMatch}' matches no members.");
+                var matchingNames = members.Where(member => IsMemberNameMatch(member.Id, idToMatch)).ToList();
+                if (matchingNames.Count == 0)
+                {
+                    errors.Add("  (No members match by name.)");
+                }
+                else
+                {
+                    errors.Add("  Members which match only by name:");
+                    foreach (var match in matchingNames)
+                    {
+                        errors.Add($"    {match.Id}");
+                    }
+                }
                 return null;
             }
             return matches[0];
@@ -709,6 +727,21 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
         }
 
+        private static bool IsMemberNameMatch(string memberId, string snippetId)
+        {
+            int openParen = snippetId.IndexOf("(");
+            if (openParen != -1)
+            {
+                return memberId.StartsWith(snippetId.Substring(0, openParen + 1));
+            }
+            else
+            {
+                // Parameterless methods have a UID without brackets.
+                return memberId.StartsWith(snippetId + "(") || memberId == snippetId;
+            }
+        }
+
+
         private static bool IsMemberMatch(string memberId, string snippetId)
         {
             int openParen = snippetId.IndexOf("(");
@@ -731,7 +764,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 }
 
                 string[] splitSnippetParameters = snippetParameters.Split(',');
-                string[] splitMemberParameters = memberParameters.Split(',');
+                string[] splitMemberParameters = SplitMemberParameters(memberParameters);
                 if (splitMemberParameters.Length != splitSnippetParameters.Length)
                 {
                     return false;
@@ -743,6 +776,37 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 // Parameterless methods have a UID without brackets.
                 return memberId.StartsWith(snippetId + "(") || memberId == snippetId;
             }
+        }
+
+        private static string[] SplitMemberParameters(string parameters)
+        {
+            // Commas can appear in generic parameter types as well as at the "top level".
+            // Temporarily replace any comma which appears within braces with #,
+            // then we can perform an element-wise reverse replacement.
+            var builder = new StringBuilder(parameters);
+            var arity = 0;
+            for (int i = 0; i < builder.Length; i++)
+            {
+                switch (builder[i])
+                {
+                    case '{':
+                        arity++;
+                        break;
+                    case '}':
+                        arity--;
+                        break;
+                    case ',':
+                        if (arity != 0)
+                        {
+                            builder[i] = '#';
+                        }
+                        break;
+                }
+            }
+            return builder.ToString()
+                .Split(',')
+                .Select(s => s.Replace('#', ','))
+                .ToArray();
         }
 
         // TODO: Unit tests for this...
