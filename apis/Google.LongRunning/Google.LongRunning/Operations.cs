@@ -68,8 +68,8 @@ namespace Google.LongRunning {
   }
   #region Messages
   /// <summary>
-  ///  This resource represents a long-running operation that is the result of a
-  ///  network API call.
+  /// This resource represents a long-running operation that is the result of a
+  /// network API call.
   /// </summary>
   public sealed partial class Operation : pb::IMessage<Operation> {
     private static readonly pb::MessageParser<Operation> _parser = new pb::MessageParser<Operation>(() => new Operation());
@@ -118,9 +118,9 @@ namespace Google.LongRunning {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The server-assigned name, which is only unique within the same service that
-    ///  originally returns it. If you use the default HTTP mapping, the
-    ///  `name` should have the format of `operations/some/unique/name`.
+    /// The server-assigned name, which is only unique within the same service that
+    /// originally returns it. If you use the default HTTP mapping, the
+    /// `name` should have the format of `operations/some/unique/name`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -134,10 +134,10 @@ namespace Google.LongRunning {
     public const int MetadataFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Any metadata_;
     /// <summary>
-    ///  Service-specific metadata associated with the operation.  It typically
-    ///  contains progress information and common metadata such as create time.
-    ///  Some services might not provide such metadata.  Any method that returns a
-    ///  long-running operation should document the metadata type, if any.
+    /// Service-specific metadata associated with the operation.  It typically
+    /// contains progress information and common metadata such as create time.
+    /// Some services might not provide such metadata.  Any method that returns a
+    /// long-running operation should document the metadata type, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Any Metadata {
@@ -151,9 +151,9 @@ namespace Google.LongRunning {
     public const int DoneFieldNumber = 3;
     private bool done_;
     /// <summary>
-    ///  If the value is `false`, it means the operation is still in progress.
-    ///  If true, the operation is completed, and either `error` or `response` is
-    ///  available.
+    /// If the value is `false`, it means the operation is still in progress.
+    /// If true, the operation is completed, and either `error` or `response` is
+    /// available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Done {
@@ -166,7 +166,7 @@ namespace Google.LongRunning {
     /// <summary>Field number for the "error" field.</summary>
     public const int ErrorFieldNumber = 4;
     /// <summary>
-    ///  The error result of the operation in case of failure or cancellation.
+    /// The error result of the operation in case of failure or cancellation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Rpc.Status Error {
@@ -180,14 +180,14 @@ namespace Google.LongRunning {
     /// <summary>Field number for the "response" field.</summary>
     public const int ResponseFieldNumber = 5;
     /// <summary>
-    ///  The normal response of the operation in case of success.  If the original
-    ///  method returns no data on success, such as `Delete`, the response is
-    ///  `google.protobuf.Empty`.  If the original method is standard
-    ///  `Get`/`Create`/`Update`, the response should be the resource.  For other
-    ///  methods, the response should have the type `XxxResponse`, where `Xxx`
-    ///  is the original method name.  For example, if the original method name
-    ///  is `TakeSnapshot()`, the inferred response type is
-    ///  `TakeSnapshotResponse`.
+    /// The normal response of the operation in case of success.  If the original
+    /// method returns no data on success, such as `Delete`, the response is
+    /// `google.protobuf.Empty`.  If the original method is standard
+    /// `Get`/`Create`/`Update`, the response should be the resource.  For other
+    /// methods, the response should have the type `XxxResponse`, where `Xxx`
+    /// is the original method name.  For example, if the original method name
+    /// is `TakeSnapshot()`, the inferred response type is
+    /// `TakeSnapshotResponse`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Any Response {
@@ -377,7 +377,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  ///  The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+  /// The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
   /// </summary>
   public sealed partial class GetOperationRequest : pb::IMessage<GetOperationRequest> {
     private static readonly pb::MessageParser<GetOperationRequest> _parser = new pb::MessageParser<GetOperationRequest>(() => new GetOperationRequest());
@@ -415,7 +415,7 @@ namespace Google.LongRunning {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the operation resource.
+    /// The name of the operation resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -500,7 +500,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  ///  The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
   public sealed partial class ListOperationsRequest : pb::IMessage<ListOperationsRequest> {
     private static readonly pb::MessageParser<ListOperationsRequest> _parser = new pb::MessageParser<ListOperationsRequest>(() => new ListOperationsRequest());
@@ -541,7 +541,7 @@ namespace Google.LongRunning {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    ///  The name of the operation collection.
+    /// The name of the operation collection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -555,7 +555,7 @@ namespace Google.LongRunning {
     public const int FilterFieldNumber = 1;
     private string filter_ = "";
     /// <summary>
-    ///  The standard list filter.
+    /// The standard list filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -569,7 +569,7 @@ namespace Google.LongRunning {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    ///  The standard list page size.
+    /// The standard list page size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -583,7 +583,7 @@ namespace Google.LongRunning {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    ///  The standard list page token.
+    /// The standard list page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -716,7 +716,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  ///  The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+  /// The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
   /// </summary>
   public sealed partial class ListOperationsResponse : pb::IMessage<ListOperationsResponse> {
     private static readonly pb::MessageParser<ListOperationsResponse> _parser = new pb::MessageParser<ListOperationsResponse>(() => new ListOperationsResponse());
@@ -757,7 +757,7 @@ namespace Google.LongRunning {
         = pb::FieldCodec.ForMessage(10, global::Google.LongRunning.Operation.Parser);
     private readonly pbc::RepeatedField<global::Google.LongRunning.Operation> operations_ = new pbc::RepeatedField<global::Google.LongRunning.Operation>();
     /// <summary>
-    ///  A list of operations that matches the specified filter in the request.
+    /// A list of operations that matches the specified filter in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.LongRunning.Operation> Operations {
@@ -768,7 +768,7 @@ namespace Google.LongRunning {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  The standard List next-page token.
+    /// The standard List next-page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -862,7 +862,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  ///  The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+  /// The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
   /// </summary>
   public sealed partial class CancelOperationRequest : pb::IMessage<CancelOperationRequest> {
     private static readonly pb::MessageParser<CancelOperationRequest> _parser = new pb::MessageParser<CancelOperationRequest>(() => new CancelOperationRequest());
@@ -900,7 +900,7 @@ namespace Google.LongRunning {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the operation resource to be cancelled.
+    /// The name of the operation resource to be cancelled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -985,7 +985,7 @@ namespace Google.LongRunning {
   }
 
   /// <summary>
-  ///  The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+  /// The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
   /// </summary>
   public sealed partial class DeleteOperationRequest : pb::IMessage<DeleteOperationRequest> {
     private static readonly pb::MessageParser<DeleteOperationRequest> _parser = new pb::MessageParser<DeleteOperationRequest>(() => new DeleteOperationRequest());
@@ -1023,7 +1023,7 @@ namespace Google.LongRunning {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the operation resource to be deleted.
+    /// The name of the operation resource to be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {

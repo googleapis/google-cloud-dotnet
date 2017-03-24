@@ -84,9 +84,9 @@ namespace Google.Cloud.Trace.V1 {
   }
   #region Messages
   /// <summary>
-  ///  A trace describes how long it takes for an application to perform an
-  ///  operation. It consists of a set of spans, each of which represent a single
-  ///  timed event within the operation.
+  /// A trace describes how long it takes for an application to perform an
+  /// operation. It consists of a set of spans, each of which represent a single
+  /// timed event within the operation.
   /// </summary>
   public sealed partial class Trace : pb::IMessage<Trace> {
     private static readonly pb::MessageParser<Trace> _parser = new pb::MessageParser<Trace>(() => new Trace());
@@ -126,7 +126,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    ///  Project ID of the Cloud project where the trace data is stored.
+    /// Project ID of the Cloud project where the trace data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -140,8 +140,8 @@ namespace Google.Cloud.Trace.V1 {
     public const int TraceIdFieldNumber = 2;
     private string traceId_ = "";
     /// <summary>
-    ///  Globally unique identifier for the trace. This identifier is a 128-bit
-    ///  numeric value formatted as a 32-byte hex string.
+    /// Globally unique identifier for the trace. This identifier is a 128-bit
+    /// numeric value formatted as a 32-byte hex string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TraceId {
@@ -157,7 +157,7 @@ namespace Google.Cloud.Trace.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Trace.V1.TraceSpan.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V1.TraceSpan> spans_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V1.TraceSpan>();
     /// <summary>
-    ///  Collection of spans in the trace.
+    /// Collection of spans in the trace.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Trace.V1.TraceSpan> Spans {
@@ -264,7 +264,7 @@ namespace Google.Cloud.Trace.V1 {
   }
 
   /// <summary>
-  ///  List of new or updated traces.
+  /// List of new or updated traces.
   /// </summary>
   public sealed partial class Traces : pb::IMessage<Traces> {
     private static readonly pb::MessageParser<Traces> _parser = new pb::MessageParser<Traces>(() => new Traces());
@@ -304,7 +304,7 @@ namespace Google.Cloud.Trace.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Trace.V1.Trace.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> traces_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace>();
     /// <summary>
-    ///  List of traces.
+    /// List of traces.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> Traces_ {
@@ -379,11 +379,11 @@ namespace Google.Cloud.Trace.V1 {
   }
 
   /// <summary>
-  ///  A span represents a single timed event within a trace. Spans can be nested
-  ///  and form a trace tree. Often, a trace contains a root span that describes the
-  ///  end-to-end latency of an operation and, optionally, one or more subspans for
-  ///  its suboperations. Spans do not need to be contiguous. There may be gaps
-  ///  between spans in a trace.
+  /// A span represents a single timed event within a trace. Spans can be nested
+  /// and form a trace tree. Often, a trace contains a root span that describes the
+  /// end-to-end latency of an operation and, optionally, one or more subspans for
+  /// its suboperations. Spans do not need to be contiguous. There may be gaps
+  /// between spans in a trace.
   /// </summary>
   public sealed partial class TraceSpan : pb::IMessage<TraceSpan> {
     private static readonly pb::MessageParser<TraceSpan> _parser = new pb::MessageParser<TraceSpan>(() => new TraceSpan());
@@ -427,8 +427,8 @@ namespace Google.Cloud.Trace.V1 {
     public const int SpanIdFieldNumber = 1;
     private ulong spanId_;
     /// <summary>
-    ///  Identifier for the span. Must be a 64-bit integer other than 0 and
-    ///  unique within a trace.
+    /// Identifier for the span. Must be a 64-bit integer other than 0 and
+    /// unique within a trace.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong SpanId {
@@ -442,9 +442,9 @@ namespace Google.Cloud.Trace.V1 {
     public const int KindFieldNumber = 2;
     private global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind kind_ = 0;
     /// <summary>
-    ///  Distinguishes between spans generated in a particular context. For example,
-    ///  two spans with the same name may be distinguished using `RPC_CLIENT`
-    ///  and `RPC_SERVER` to identify queueing latency associated with the span.
+    /// Distinguishes between spans generated in a particular context. For example,
+    /// two spans with the same name may be distinguished using `RPC_CLIENT`
+    /// and `RPC_SERVER` to identify queueing latency associated with the span.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Trace.V1.TraceSpan.Types.SpanKind Kind {
@@ -458,12 +458,12 @@ namespace Google.Cloud.Trace.V1 {
     public const int NameFieldNumber = 3;
     private string name_ = "";
     /// <summary>
-    ///  Name of the trace. The trace name is sanitized and displayed in the
-    ///  Stackdriver Trace tool in the Google Developers Console.
-    ///  The name may be a method name or some other per-call site name.
-    ///  For the same executable and the same call point, a best practice is
-    ///  to use a consistent name, which makes it easier to correlate
-    ///  cross-trace spans.
+    /// Name of the trace. The trace name is sanitized and displayed in the
+    /// Stackdriver Trace tool in the Google Developers Console.
+    /// The name may be a method name or some other per-call site name.
+    /// For the same executable and the same call point, a best practice is
+    /// to use a consistent name, which makes it easier to correlate
+    /// cross-trace spans.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -477,7 +477,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int StartTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    ///  Start time of the span in nanoseconds from the UNIX epoch.
+    /// Start time of the span in nanoseconds from the UNIX epoch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -491,7 +491,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int EndTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    ///  End time of the span in nanoseconds from the UNIX epoch.
+    /// End time of the span in nanoseconds from the UNIX epoch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -505,7 +505,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ParentSpanIdFieldNumber = 6;
     private ulong parentSpanId_;
     /// <summary>
-    ///  ID of the parent span, if any. Optional.
+    /// ID of the parent span, if any. Optional.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ulong ParentSpanId {
@@ -521,7 +521,7 @@ namespace Google.Cloud.Trace.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 58);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    ///  Collection of labels associated with the span.
+    /// Collection of labels associated with the span.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -706,22 +706,22 @@ namespace Google.Cloud.Trace.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Type of span. Can be used to specify additional relationships between spans
-      ///  in addition to a parent/child relationship.
+      /// Type of span. Can be used to specify additional relationships between spans
+      /// in addition to a parent/child relationship.
       /// </summary>
       public enum SpanKind {
         /// <summary>
-        ///  Unspecified.
+        /// Unspecified.
         /// </summary>
         [pbr::OriginalName("SPAN_KIND_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Indicates that the span covers server-side handling of an RPC or other
-        ///  remote network request.
+        /// Indicates that the span covers server-side handling of an RPC or other
+        /// remote network request.
         /// </summary>
         [pbr::OriginalName("RPC_SERVER")] RpcServer = 1,
         /// <summary>
-        ///  Indicates that the span covers the client-side wrapper around an RPC or
-        ///  other remote request.
+        /// Indicates that the span covers the client-side wrapper around an RPC or
+        /// other remote request.
         /// </summary>
         [pbr::OriginalName("RPC_CLIENT")] RpcClient = 2,
       }
@@ -732,8 +732,8 @@ namespace Google.Cloud.Trace.V1 {
   }
 
   /// <summary>
-  ///  The request message for the `ListTraces` method. All fields are required
-  ///  unless specified.
+  /// The request message for the `ListTraces` method. All fields are required
+  /// unless specified.
   /// </summary>
   public sealed partial class ListTracesRequest : pb::IMessage<ListTracesRequest> {
     private static readonly pb::MessageParser<ListTracesRequest> _parser = new pb::MessageParser<ListTracesRequest>(() => new ListTracesRequest());
@@ -778,7 +778,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    ///  ID of the Cloud project where the trace data is stored.
+    /// ID of the Cloud project where the trace data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -792,8 +792,8 @@ namespace Google.Cloud.Trace.V1 {
     public const int ViewFieldNumber = 2;
     private global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType view_ = 0;
     /// <summary>
-    ///  Type of data returned for traces in the list. Optional. Default is
-    ///  `MINIMAL`.
+    /// Type of data returned for traces in the list. Optional. Default is
+    /// `MINIMAL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Trace.V1.ListTracesRequest.Types.ViewType View {
@@ -807,9 +807,9 @@ namespace Google.Cloud.Trace.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    ///  Maximum number of traces to return. If not specified or &lt;= 0, the
-    ///  implementation selects a reasonable value.  The implementation may
-    ///  return fewer traces than the requested page size. Optional.
+    /// Maximum number of traces to return. If not specified or &lt;= 0, the
+    /// implementation selects a reasonable value.  The implementation may
+    /// return fewer traces than the requested page size. Optional.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -823,8 +823,8 @@ namespace Google.Cloud.Trace.V1 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    ///  Token identifying the page of results to return. If provided, use the
-    ///  value of the `next_page_token` field from a previous request. Optional.
+    /// Token identifying the page of results to return. If provided, use the
+    /// value of the `next_page_token` field from a previous request. Optional.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -838,8 +838,8 @@ namespace Google.Cloud.Trace.V1 {
     public const int StartTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    ///  End of the time interval (inclusive) during which the trace data was
-    ///  collected from the application.
+    /// End of the time interval (inclusive) during which the trace data was
+    /// collected from the application.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -853,8 +853,8 @@ namespace Google.Cloud.Trace.V1 {
     public const int EndTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    ///  Start of the time interval (inclusive) during which the trace data was
-    ///  collected from the application.
+    /// Start of the time interval (inclusive) during which the trace data was
+    /// collected from the application.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -868,7 +868,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int FilterFieldNumber = 7;
     private string filter_ = "";
     /// <summary>
-    ///  An optional filter for the request.
+    /// An optional filter for the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -882,19 +882,19 @@ namespace Google.Cloud.Trace.V1 {
     public const int OrderByFieldNumber = 8;
     private string orderBy_ = "";
     /// <summary>
-    ///  Field used to sort the returned traces. Optional.
-    ///  Can be one of the following:
+    /// Field used to sort the returned traces. Optional.
+    /// Can be one of the following:
     ///
-    ///  *   `trace_id`
-    ///  *   `name` (`name` field of root span in the trace)
-    ///  *   `duration` (difference between `end_time` and `start_time` fields of
-    ///       the root span)
-    ///  *   `start` (`start_time` field of the root span)
+    /// *   `trace_id`
+    /// *   `name` (`name` field of root span in the trace)
+    /// *   `duration` (difference between `end_time` and `start_time` fields of
+    ///      the root span)
+    /// *   `start` (`start_time` field of the root span)
     ///
-    ///  Descending order can be specified by appending `desc` to the sort field
-    ///  (for example, `name desc`).
+    /// Descending order can be specified by appending `desc` to the sort field
+    /// (for example, `name desc`).
     ///
-    ///  Only one sort field is permitted.
+    /// Only one sort field is permitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OrderBy {
@@ -1105,27 +1105,27 @@ namespace Google.Cloud.Trace.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Type of data returned for traces in the list.
+      /// Type of data returned for traces in the list.
       /// </summary>
       public enum ViewType {
         /// <summary>
-        ///  Default is `MINIMAL` if unspecified.
+        /// Default is `MINIMAL` if unspecified.
         /// </summary>
         [pbr::OriginalName("VIEW_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Minimal view of the trace record that contains only the project
-        ///  and trace IDs.
+        /// Minimal view of the trace record that contains only the project
+        /// and trace IDs.
         /// </summary>
         [pbr::OriginalName("MINIMAL")] Minimal = 1,
         /// <summary>
-        ///  Root span view of the trace record that returns the root spans along
-        ///  with the minimal trace data.
+        /// Root span view of the trace record that returns the root spans along
+        /// with the minimal trace data.
         /// </summary>
         [pbr::OriginalName("ROOTSPAN")] Rootspan = 2,
         /// <summary>
-        ///  Complete view of the trace record that contains the actual trace data.
-        ///  This is equivalent to calling the REST `get` or RPC `GetTrace` method
-        ///  using the ID of each listed trace.
+        /// Complete view of the trace record that contains the actual trace data.
+        /// This is equivalent to calling the REST `get` or RPC `GetTrace` method
+        /// using the ID of each listed trace.
         /// </summary>
         [pbr::OriginalName("COMPLETE")] Complete = 3,
       }
@@ -1136,7 +1136,7 @@ namespace Google.Cloud.Trace.V1 {
   }
 
   /// <summary>
-  ///  The response message for the `ListTraces` method.
+  /// The response message for the `ListTraces` method.
   /// </summary>
   public sealed partial class ListTracesResponse : pb::IMessage<ListTracesResponse> {
     private static readonly pb::MessageParser<ListTracesResponse> _parser = new pb::MessageParser<ListTracesResponse>(() => new ListTracesResponse());
@@ -1177,7 +1177,7 @@ namespace Google.Cloud.Trace.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Trace.V1.Trace.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> traces_ = new pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace>();
     /// <summary>
-    ///  List of trace records returned.
+    /// List of trace records returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Trace.V1.Trace> Traces {
@@ -1188,9 +1188,9 @@ namespace Google.Cloud.Trace.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If defined, indicates that there are more traces that match the request
-    ///  and that this value should be passed to the next request to continue
-    ///  retrieving additional traces.
+    /// If defined, indicates that there are more traces that match the request
+    /// and that this value should be passed to the next request to continue
+    /// retrieving additional traces.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1284,7 +1284,7 @@ namespace Google.Cloud.Trace.V1 {
   }
 
   /// <summary>
-  ///  The request message for the `GetTrace` method.
+  /// The request message for the `GetTrace` method.
   /// </summary>
   public sealed partial class GetTraceRequest : pb::IMessage<GetTraceRequest> {
     private static readonly pb::MessageParser<GetTraceRequest> _parser = new pb::MessageParser<GetTraceRequest>(() => new GetTraceRequest());
@@ -1323,7 +1323,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    ///  ID of the Cloud project where the trace data is stored.
+    /// ID of the Cloud project where the trace data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1337,7 +1337,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int TraceIdFieldNumber = 2;
     private string traceId_ = "";
     /// <summary>
-    ///  ID of the trace to return.
+    /// ID of the trace to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TraceId {
@@ -1438,7 +1438,7 @@ namespace Google.Cloud.Trace.V1 {
   }
 
   /// <summary>
-  ///  The request message for the `PatchTraces` method.
+  /// The request message for the `PatchTraces` method.
   /// </summary>
   public sealed partial class PatchTracesRequest : pb::IMessage<PatchTracesRequest> {
     private static readonly pb::MessageParser<PatchTracesRequest> _parser = new pb::MessageParser<PatchTracesRequest>(() => new PatchTracesRequest());
@@ -1477,7 +1477,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    ///  ID of the Cloud project where the trace data is stored.
+    /// ID of the Cloud project where the trace data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1491,7 +1491,7 @@ namespace Google.Cloud.Trace.V1 {
     public const int TracesFieldNumber = 2;
     private global::Google.Cloud.Trace.V1.Traces traces_;
     /// <summary>
-    ///  The body of the message.
+    /// The body of the message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Trace.V1.Traces Traces {

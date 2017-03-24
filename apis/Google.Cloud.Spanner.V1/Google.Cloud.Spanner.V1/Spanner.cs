@@ -117,7 +117,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
   #region Messages
   /// <summary>
-  ///  The request for [CreateSession][google.spanner.v1.Spanner.CreateSession].
+  /// The request for [CreateSession][google.spanner.v1.Spanner.CreateSession].
   /// </summary>
   public sealed partial class CreateSessionRequest : pb::IMessage<CreateSessionRequest> {
     private static readonly pb::MessageParser<CreateSessionRequest> _parser = new pb::MessageParser<CreateSessionRequest>(() => new CreateSessionRequest());
@@ -155,7 +155,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int DatabaseFieldNumber = 1;
     private string database_ = "";
     /// <summary>
-    ///  Required. The database in which the new session is created.
+    /// Required. The database in which the new session is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Database {
@@ -240,7 +240,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  A session in the Cloud Spanner API.
+  /// A session in the Cloud Spanner API.
   /// </summary>
   public sealed partial class Session : pb::IMessage<Session> {
     private static readonly pb::MessageParser<Session> _parser = new pb::MessageParser<Session>(() => new Session());
@@ -278,7 +278,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The name of the session.
+    /// Required. The name of the session.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -363,7 +363,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The request for [GetSession][google.spanner.v1.Spanner.GetSession].
+  /// The request for [GetSession][google.spanner.v1.Spanner.GetSession].
   /// </summary>
   public sealed partial class GetSessionRequest : pb::IMessage<GetSessionRequest> {
     private static readonly pb::MessageParser<GetSessionRequest> _parser = new pb::MessageParser<GetSessionRequest>(() => new GetSessionRequest());
@@ -401,7 +401,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The name of the session to retrieve.
+    /// Required. The name of the session to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -486,7 +486,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The request for [DeleteSession][google.spanner.v1.Spanner.DeleteSession].
+  /// The request for [DeleteSession][google.spanner.v1.Spanner.DeleteSession].
   /// </summary>
   public sealed partial class DeleteSessionRequest : pb::IMessage<DeleteSessionRequest> {
     private static readonly pb::MessageParser<DeleteSessionRequest> _parser = new pb::MessageParser<DeleteSessionRequest>(() => new DeleteSessionRequest());
@@ -524,7 +524,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The name of the session to delete.
+    /// Required. The name of the session to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -609,8 +609,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The request for [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
-  ///  [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql].
+  /// The request for [ExecuteSql][google.spanner.v1.Spanner.ExecuteSql] and
+  /// [ExecuteStreamingSql][google.spanner.v1.Spanner.ExecuteStreamingSql].
   /// </summary>
   public sealed partial class ExecuteSqlRequest : pb::IMessage<ExecuteSqlRequest> {
     private static readonly pb::MessageParser<ExecuteSqlRequest> _parser = new pb::MessageParser<ExecuteSqlRequest>(() => new ExecuteSqlRequest());
@@ -654,7 +654,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SessionFieldNumber = 1;
     private string session_ = "";
     /// <summary>
-    ///  Required. The session in which the SQL query should be performed.
+    /// Required. The session in which the SQL query should be performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Session {
@@ -668,8 +668,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TransactionFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.TransactionSelector transaction_;
     /// <summary>
-    ///  The transaction to use. If none is provided, the default is a
-    ///  temporary read-only transaction with strong concurrency.
+    /// The transaction to use. If none is provided, the default is a
+    /// temporary read-only transaction with strong concurrency.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
@@ -683,7 +683,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SqlFieldNumber = 3;
     private string sql_ = "";
     /// <summary>
-    ///  Required. The SQL query string.
+    /// Required. The SQL query string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Sql {
@@ -697,20 +697,20 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ParamsFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Struct params_;
     /// <summary>
-    ///  The SQL query string can contain parameter placeholders. A parameter
-    ///  placeholder consists of `'@'` followed by the parameter
-    ///  name. Parameter names consist of any combination of letters,
-    ///  numbers, and underscores.
+    /// The SQL query string can contain parameter placeholders. A parameter
+    /// placeholder consists of `'@'` followed by the parameter
+    /// name. Parameter names consist of any combination of letters,
+    /// numbers, and underscores.
     ///
-    ///  Parameters can appear anywhere that a literal value is expected.  The same
-    ///  parameter name can be used more than once, for example:
-    ///    `"WHERE id > @msg_id AND id &lt; @msg_id + 100"`
+    /// Parameters can appear anywhere that a literal value is expected.  The same
+    /// parameter name can be used more than once, for example:
+    ///   `"WHERE id > @msg_id AND id &lt; @msg_id + 100"`
     ///
-    ///  It is an error to execute an SQL query with unbound parameters.
+    /// It is an error to execute an SQL query with unbound parameters.
     ///
-    ///  Parameter values are specified using `params`, which is a JSON
-    ///  object whose keys are parameter names, and whose values are the
-    ///  corresponding parameter values.
+    /// Parameter values are specified using `params`, which is a JSON
+    /// object whose keys are parameter names, and whose values are the
+    /// corresponding parameter values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct Params {
@@ -726,14 +726,14 @@ namespace Google.Cloud.Spanner.V1 {
         = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.Type.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> paramTypes_ = new pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type>();
     /// <summary>
-    ///  It is not always possible for Cloud Spanner to infer the right SQL type
-    ///  from a JSON value.  For example, values of type `BYTES` and values
-    ///  of type `STRING` both appear in [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
+    /// It is not always possible for Cloud Spanner to infer the right SQL type
+    /// from a JSON value.  For example, values of type `BYTES` and values
+    /// of type `STRING` both appear in [params][google.spanner.v1.ExecuteSqlRequest.params] as JSON strings.
     ///
-    ///  In these cases, `param_types` can be used to specify the exact
-    ///  SQL type for some or all of the SQL query parameters. See the
-    ///  definition of [Type][google.spanner.v1.Type] for more information
-    ///  about SQL types.
+    /// In these cases, `param_types` can be used to specify the exact
+    /// SQL type for some or all of the SQL query parameters. See the
+    /// definition of [Type][google.spanner.v1.Type] for more information
+    /// about SQL types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> ParamTypes {
@@ -744,12 +744,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ResumeTokenFieldNumber = 6;
     private pb::ByteString resumeToken_ = pb::ByteString.Empty;
     /// <summary>
-    ///  If this request is resuming a previously interrupted SQL query
-    ///  execution, `resume_token` should be copied from the last
-    ///  [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
-    ///  enables the new SQL query execution to resume where the last one left
-    ///  off. The rest of the request parameters must exactly match the
-    ///  request that yielded this token.
+    /// If this request is resuming a previously interrupted SQL query
+    /// execution, `resume_token` should be copied from the last
+    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
+    /// enables the new SQL query execution to resume where the last one left
+    /// off. The rest of the request parameters must exactly match the
+    /// request that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString ResumeToken {
@@ -763,8 +763,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int QueryModeFieldNumber = 7;
     private global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode queryMode_ = 0;
     /// <summary>
-    ///  Used to control the amount of debugging information returned in
-    ///  [ResultSetStats][google.spanner.v1.ResultSetStats].
+    /// Used to control the amount of debugging information returned in
+    /// [ResultSetStats][google.spanner.v1.ResultSetStats].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode QueryMode {
@@ -952,22 +952,22 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Mode in which the query must be processed.
+      /// Mode in which the query must be processed.
       /// </summary>
       public enum QueryMode {
         /// <summary>
-        ///  The default mode where only the query result, without any information
-        ///  about the query plan is returned.
+        /// The default mode where only the query result, without any information
+        /// about the query plan is returned.
         /// </summary>
         [pbr::OriginalName("NORMAL")] Normal = 0,
         /// <summary>
-        ///  This mode returns only the query plan, without any result rows or
-        ///  execution statistics information.
+        /// This mode returns only the query plan, without any result rows or
+        /// execution statistics information.
         /// </summary>
         [pbr::OriginalName("PLAN")] Plan = 1,
         /// <summary>
-        ///  This mode returns both the query plan and the execution statistics along
-        ///  with the result rows.
+        /// This mode returns both the query plan and the execution statistics along
+        /// with the result rows.
         /// </summary>
         [pbr::OriginalName("PROFILE")] Profile = 2,
       }
@@ -978,8 +978,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The request for [Read][google.spanner.v1.Spanner.Read] and
-  ///  [StreamingRead][google.spanner.v1.Spanner.StreamingRead].
+  /// The request for [Read][google.spanner.v1.Spanner.Read] and
+  /// [StreamingRead][google.spanner.v1.Spanner.StreamingRead].
   /// </summary>
   public sealed partial class ReadRequest : pb::IMessage<ReadRequest> {
     private static readonly pb::MessageParser<ReadRequest> _parser = new pb::MessageParser<ReadRequest>(() => new ReadRequest());
@@ -1024,7 +1024,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SessionFieldNumber = 1;
     private string session_ = "";
     /// <summary>
-    ///  Required. The session in which the read should be performed.
+    /// Required. The session in which the read should be performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Session {
@@ -1038,8 +1038,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TransactionFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.TransactionSelector transaction_;
     /// <summary>
-    ///  The transaction to use. If none is provided, the default is a
-    ///  temporary read-only transaction with strong concurrency.
+    /// The transaction to use. If none is provided, the default is a
+    /// temporary read-only transaction with strong concurrency.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
@@ -1053,7 +1053,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TableFieldNumber = 3;
     private string table_ = "";
     /// <summary>
-    ///  Required. The name of the table in the database to be read.
+    /// Required. The name of the table in the database to be read.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Table {
@@ -1067,9 +1067,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int IndexFieldNumber = 4;
     private string index_ = "";
     /// <summary>
-    ///  If non-empty, the name of an index on [table][google.spanner.v1.ReadRequest.table]. This index is
-    ///  used instead of the table primary key when interpreting [key_set][google.spanner.v1.ReadRequest.key_set]
-    ///  and sorting result rows. See [key_set][google.spanner.v1.ReadRequest.key_set] for further information.
+    /// If non-empty, the name of an index on [table][google.spanner.v1.ReadRequest.table]. This index is
+    /// used instead of the table primary key when interpreting [key_set][google.spanner.v1.ReadRequest.key_set]
+    /// and sorting result rows. See [key_set][google.spanner.v1.ReadRequest.key_set] for further information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Index {
@@ -1085,8 +1085,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForString(42);
     private readonly pbc::RepeatedField<string> columns_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  The columns of [table][google.spanner.v1.ReadRequest.table] to be returned for each row matching
-    ///  this request.
+    /// The columns of [table][google.spanner.v1.ReadRequest.table] to be returned for each row matching
+    /// this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Columns {
@@ -1097,16 +1097,16 @@ namespace Google.Cloud.Spanner.V1 {
     public const int KeySetFieldNumber = 6;
     private global::Google.Cloud.Spanner.V1.KeySet keySet_;
     /// <summary>
-    ///  Required. `key_set` identifies the rows to be yielded. `key_set` names the
-    ///  primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to be yielded, unless [index][google.spanner.v1.ReadRequest.index]
-    ///  is present. If [index][google.spanner.v1.ReadRequest.index] is present, then [key_set][google.spanner.v1.ReadRequest.key_set] instead names
-    ///  index keys in [index][google.spanner.v1.ReadRequest.index].
+    /// Required. `key_set` identifies the rows to be yielded. `key_set` names the
+    /// primary keys of the rows in [table][google.spanner.v1.ReadRequest.table] to be yielded, unless [index][google.spanner.v1.ReadRequest.index]
+    /// is present. If [index][google.spanner.v1.ReadRequest.index] is present, then [key_set][google.spanner.v1.ReadRequest.key_set] instead names
+    /// index keys in [index][google.spanner.v1.ReadRequest.index].
     ///
-    ///  Rows are yielded in table primary key order (if [index][google.spanner.v1.ReadRequest.index] is empty)
-    ///  or index key order (if [index][google.spanner.v1.ReadRequest.index] is non-empty).
+    /// Rows are yielded in table primary key order (if [index][google.spanner.v1.ReadRequest.index] is empty)
+    /// or index key order (if [index][google.spanner.v1.ReadRequest.index] is non-empty).
     ///
-    ///  It is not an error for the `key_set` to name rows that do not
-    ///  exist in the database. Read yields nothing for nonexistent rows.
+    /// It is not an error for the `key_set` to name rows that do not
+    /// exist in the database. Read yields nothing for nonexistent rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.KeySet KeySet {
@@ -1120,8 +1120,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int LimitFieldNumber = 8;
     private long limit_;
     /// <summary>
-    ///  If greater than zero, only the first `limit` rows are yielded. If `limit`
-    ///  is zero, the default is no limit.
+    /// If greater than zero, only the first `limit` rows are yielded. If `limit`
+    /// is zero, the default is no limit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Limit {
@@ -1135,12 +1135,12 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ResumeTokenFieldNumber = 9;
     private pb::ByteString resumeToken_ = pb::ByteString.Empty;
     /// <summary>
-    ///  If this request is resuming a previously interrupted read,
-    ///  `resume_token` should be copied from the last
-    ///  [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
-    ///  enables the new read to resume where the last read left off. The
-    ///  rest of the request parameters must exactly match the request
-    ///  that yielded this token.
+    /// If this request is resuming a previously interrupted read,
+    /// `resume_token` should be copied from the last
+    /// [PartialResultSet][google.spanner.v1.PartialResultSet] yielded before the interruption. Doing this
+    /// enables the new read to resume where the last read left off. The
+    /// rest of the request parameters must exactly match the request
+    /// that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString ResumeToken {
@@ -1342,7 +1342,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The request for [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].
+  /// The request for [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
@@ -1381,7 +1381,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SessionFieldNumber = 1;
     private string session_ = "";
     /// <summary>
-    ///  Required. The session in which the transaction runs.
+    /// Required. The session in which the transaction runs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Session {
@@ -1395,7 +1395,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int OptionsFieldNumber = 2;
     private global::Google.Cloud.Spanner.V1.TransactionOptions options_;
     /// <summary>
-    ///  Required. Options for the new transaction.
+    /// Required. Options for the new transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.TransactionOptions Options {
@@ -1502,7 +1502,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The request for [Commit][google.spanner.v1.Spanner.Commit].
+  /// The request for [Commit][google.spanner.v1.Spanner.Commit].
   /// </summary>
   public sealed partial class CommitRequest : pb::IMessage<CommitRequest> {
     private static readonly pb::MessageParser<CommitRequest> _parser = new pb::MessageParser<CommitRequest>(() => new CommitRequest());
@@ -1550,7 +1550,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SessionFieldNumber = 1;
     private string session_ = "";
     /// <summary>
-    ///  Required. The session in which the transaction to be committed is running.
+    /// Required. The session in which the transaction to be committed is running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Session {
@@ -1563,7 +1563,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "transaction_id" field.</summary>
     public const int TransactionIdFieldNumber = 2;
     /// <summary>
-    ///  Commit a previously-started transaction.
+    /// Commit a previously-started transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString TransactionId {
@@ -1577,15 +1577,15 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "single_use_transaction" field.</summary>
     public const int SingleUseTransactionFieldNumber = 3;
     /// <summary>
-    ///  Execute mutations in a temporary transaction. Note that unlike
-    ///  commit of a previously-started transaction, commit with a
-    ///  temporary transaction is non-idempotent. That is, if the
-    ///  `CommitRequest` is sent to Cloud Spanner more than once (for
-    ///  instance, due to retries in the application, or in the
-    ///  transport library), it is possible that the mutations are
-    ///  executed more than once. If this is undesirable, use
-    ///  [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
-    ///  [Commit][google.spanner.v1.Spanner.Commit] instead.
+    /// Execute mutations in a temporary transaction. Note that unlike
+    /// commit of a previously-started transaction, commit with a
+    /// temporary transaction is non-idempotent. That is, if the
+    /// `CommitRequest` is sent to Cloud Spanner more than once (for
+    /// instance, due to retries in the application, or in the
+    /// transport library), it is possible that the mutations are
+    /// executed more than once. If this is undesirable, use
+    /// [BeginTransaction][google.spanner.v1.Spanner.BeginTransaction] and
+    /// [Commit][google.spanner.v1.Spanner.Commit] instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.V1.TransactionOptions SingleUseTransaction {
@@ -1602,9 +1602,9 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Spanner.V1.Mutation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Mutation> mutations_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Mutation>();
     /// <summary>
-    ///  The mutations to be executed when this transaction commits. All
-    ///  mutations are applied atomically, in the order they appear in
-    ///  this list.
+    /// The mutations to be executed when this transaction commits. All
+    /// mutations are applied atomically, in the order they appear in
+    /// this list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Mutation> Mutations {
@@ -1756,7 +1756,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The response for [Commit][google.spanner.v1.Spanner.Commit].
+  /// The response for [Commit][google.spanner.v1.Spanner.Commit].
   /// </summary>
   public sealed partial class CommitResponse : pb::IMessage<CommitResponse> {
     private static readonly pb::MessageParser<CommitResponse> _parser = new pb::MessageParser<CommitResponse>(() => new CommitResponse());
@@ -1794,7 +1794,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int CommitTimestampFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp commitTimestamp_;
     /// <summary>
-    ///  The Cloud Spanner timestamp at which the transaction committed.
+    /// The Cloud Spanner timestamp at which the transaction committed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CommitTimestamp {
@@ -1885,7 +1885,7 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  The request for [Rollback][google.spanner.v1.Spanner.Rollback].
+  /// The request for [Rollback][google.spanner.v1.Spanner.Rollback].
   /// </summary>
   public sealed partial class RollbackRequest : pb::IMessage<RollbackRequest> {
     private static readonly pb::MessageParser<RollbackRequest> _parser = new pb::MessageParser<RollbackRequest>(() => new RollbackRequest());
@@ -1924,7 +1924,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int SessionFieldNumber = 1;
     private string session_ = "";
     /// <summary>
-    ///  Required. The session in which the transaction to roll back is running.
+    /// Required. The session in which the transaction to roll back is running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Session {
@@ -1938,7 +1938,7 @@ namespace Google.Cloud.Spanner.V1 {
     public const int TransactionIdFieldNumber = 2;
     private pb::ByteString transactionId_ = pb::ByteString.Empty;
     /// <summary>
-    ///  Required. The transaction to roll back.
+    /// Required. The transaction to roll back.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString TransactionId {

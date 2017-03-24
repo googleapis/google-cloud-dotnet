@@ -76,8 +76,8 @@ namespace Google.Cloud.Logging.V2 {
   }
   #region Messages
   /// <summary>
-  ///  Describes a logs-based metric.  The value of the metric is the
-  ///  number of log entries that match a logs filter in a given time interval.
+  /// Describes a logs-based metric.  The value of the metric is the
+  /// number of log entries that match a logs filter in a given time interval.
   /// </summary>
   public sealed partial class LogMetric : pb::IMessage<LogMetric> {
     private static readonly pb::MessageParser<LogMetric> _parser = new pb::MessageParser<LogMetric>(() => new LogMetric());
@@ -118,21 +118,21 @@ namespace Google.Cloud.Logging.V2 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The client-assigned metric identifier.
-    ///  Examples: `"error_count"`, `"nginx/requests"`.
+    /// Required. The client-assigned metric identifier.
+    /// Examples: `"error_count"`, `"nginx/requests"`.
     ///
-    ///  Metric identifiers are limited to 100 characters and can include
-    ///  only the following characters: `A-Z`, `a-z`, `0-9`, and the
-    ///  special characters `_-.,+!*',()%/`.  The forward-slash character
-    ///  (`/`) denotes a hierarchy of name pieces, and it cannot be the
-    ///  first character of the name.
+    /// Metric identifiers are limited to 100 characters and can include
+    /// only the following characters: `A-Z`, `a-z`, `0-9`, and the
+    /// special characters `_-.,+!*',()%/`.  The forward-slash character
+    /// (`/`) denotes a hierarchy of name pieces, and it cannot be the
+    /// first character of the name.
     ///
-    ///  The metric identifier in this field must not be
-    ///  [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding).
-    ///  However, when the metric identifier appears as the `[METRIC_ID]`
-    ///  part of a `metric_name` API parameter, then the metric identifier
-    ///  must be URL-encoded. Example:
-    ///  `"projects/my-project/metrics/nginx%2Frequests"`.
+    /// The metric identifier in this field must not be
+    /// [URL-encoded](https://en.wikipedia.org/wiki/Percent-encoding).
+    /// However, when the metric identifier appears as the `[METRIC_ID]`
+    /// part of a `metric_name` API parameter, then the metric identifier
+    /// must be URL-encoded. Example:
+    /// `"projects/my-project/metrics/nginx%2Frequests"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -146,7 +146,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    ///  Optional. A description of this metric, which is used in documentation.
+    /// Optional. A description of this metric, which is used in documentation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Description {
@@ -160,13 +160,13 @@ namespace Google.Cloud.Logging.V2 {
     public const int FilterFieldNumber = 3;
     private string filter_ = "";
     /// <summary>
-    ///  Required. An [advanced logs filter](/logging/docs/view/advanced_filters)
-    ///  which is used to match log entries.
-    ///  Example:
+    /// Required. An [advanced logs filter](/logging/docs/view/advanced_filters)
+    /// which is used to match log entries.
+    /// Example:
     ///
-    ///      "resource.type=gae_app AND severity>=ERROR"
+    ///     "resource.type=gae_app AND severity>=ERROR"
     ///
-    ///  The maximum length of the filter is 20000 characters.
+    /// The maximum length of the filter is 20000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Filter {
@@ -180,9 +180,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int VersionFieldNumber = 4;
     private global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion version_ = 0;
     /// <summary>
-    ///  Output only. The API version that created or updated this metric.
-    ///  The version also dictates the syntax of the filter expression. When a value
-    ///  for this field is missing, the default value of V2 should be assumed.
+    /// Output only. The API version that created or updated this metric.
+    /// The version also dictates the syntax of the filter expression. When a value
+    /// for this field is missing, the default value of V2 should be assumed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogMetric.Types.ApiVersion Version {
@@ -317,15 +317,15 @@ namespace Google.Cloud.Logging.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Stackdriver Logging API version.
+      /// Stackdriver Logging API version.
       /// </summary>
       public enum ApiVersion {
         /// <summary>
-        ///  Stackdriver Logging API v2.
+        /// Stackdriver Logging API v2.
         /// </summary>
         [pbr::OriginalName("V2")] V2 = 0,
         /// <summary>
-        ///  Stackdriver Logging API v1.
+        /// Stackdriver Logging API v1.
         /// </summary>
         [pbr::OriginalName("V1")] V1 = 1,
       }
@@ -336,7 +336,7 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  The parameters to ListLogMetrics.
+  /// The parameters to ListLogMetrics.
   /// </summary>
   public sealed partial class ListLogMetricsRequest : pb::IMessage<ListLogMetricsRequest> {
     private static readonly pb::MessageParser<ListLogMetricsRequest> _parser = new pb::MessageParser<ListLogMetricsRequest>(() => new ListLogMetricsRequest());
@@ -376,9 +376,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The name of the project containing the metrics:
+    /// Required. The name of the project containing the metrics:
     ///
-    ///      "projects/[PROJECT_ID]"
+    ///     "projects/[PROJECT_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -392,10 +392,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int PageTokenFieldNumber = 2;
     private string pageToken_ = "";
     /// <summary>
-    ///  Optional. If present, then retrieve the next batch of results from the
-    ///  preceding call to this method.  `pageToken` must be the value of
-    ///  `nextPageToken` from the previous response.  The values of other method
-    ///  parameters should be identical to those in the previous call.
+    /// Optional. If present, then retrieve the next batch of results from the
+    /// preceding call to this method.  `pageToken` must be the value of
+    /// `nextPageToken` from the previous response.  The values of other method
+    /// parameters should be identical to those in the previous call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -409,9 +409,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    ///  Optional. The maximum number of results to return from this request.
-    ///  Non-positive values are ignored.  The presence of `nextPageToken` in the
-    ///  response indicates that more results might be available.
+    /// Optional. The maximum number of results to return from this request.
+    /// Non-positive values are ignored.  The presence of `nextPageToken` in the
+    /// response indicates that more results might be available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -528,7 +528,7 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  Result returned from ListLogMetrics.
+  /// Result returned from ListLogMetrics.
   /// </summary>
   public sealed partial class ListLogMetricsResponse : pb::IMessage<ListLogMetricsResponse> {
     private static readonly pb::MessageParser<ListLogMetricsResponse> _parser = new pb::MessageParser<ListLogMetricsResponse>(() => new ListLogMetricsResponse());
@@ -569,7 +569,7 @@ namespace Google.Cloud.Logging.V2 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Logging.V2.LogMetric.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogMetric> metrics_ = new pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogMetric>();
     /// <summary>
-    ///  A list of logs-based metrics.
+    /// A list of logs-based metrics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Logging.V2.LogMetric> Metrics {
@@ -580,9 +580,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If there might be more results than appear in this response, then
-    ///  `nextPageToken` is included.  To get the next set of results, call this
-    ///  method again using the value of `nextPageToken` as `pageToken`.
+    /// If there might be more results than appear in this response, then
+    /// `nextPageToken` is included.  To get the next set of results, call this
+    /// method again using the value of `nextPageToken` as `pageToken`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -676,7 +676,7 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  The parameters to GetLogMetric.
+  /// The parameters to GetLogMetric.
   /// </summary>
   public sealed partial class GetLogMetricRequest : pb::IMessage<GetLogMetricRequest> {
     private static readonly pb::MessageParser<GetLogMetricRequest> _parser = new pb::MessageParser<GetLogMetricRequest>(() => new GetLogMetricRequest());
@@ -714,9 +714,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    ///  The resource name of the desired metric:
+    /// The resource name of the desired metric:
     ///
-    ///      "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+    ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MetricName {
@@ -801,7 +801,7 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  The parameters to CreateLogMetric.
+  /// The parameters to CreateLogMetric.
   /// </summary>
   public sealed partial class CreateLogMetricRequest : pb::IMessage<CreateLogMetricRequest> {
     private static readonly pb::MessageParser<CreateLogMetricRequest> _parser = new pb::MessageParser<CreateLogMetricRequest>(() => new CreateLogMetricRequest());
@@ -840,11 +840,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  The resource name of the project in which to create the metric:
+    /// The resource name of the project in which to create the metric:
     ///
-    ///      "projects/[PROJECT_ID]"
+    ///     "projects/[PROJECT_ID]"
     ///
-    ///  The new metric must be provided in the request.
+    /// The new metric must be provided in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -858,8 +858,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricFieldNumber = 2;
     private global::Google.Cloud.Logging.V2.LogMetric metric_;
     /// <summary>
-    ///  The new logs-based metric, which must not have an identifier that
-    ///  already exists.
+    /// The new logs-based metric, which must not have an identifier that
+    /// already exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogMetric Metric {
@@ -966,7 +966,7 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  The parameters to UpdateLogMetric.
+  /// The parameters to UpdateLogMetric.
   /// </summary>
   public sealed partial class UpdateLogMetricRequest : pb::IMessage<UpdateLogMetricRequest> {
     private static readonly pb::MessageParser<UpdateLogMetricRequest> _parser = new pb::MessageParser<UpdateLogMetricRequest>(() => new UpdateLogMetricRequest());
@@ -1005,13 +1005,13 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    ///  The resource name of the metric to update:
+    /// The resource name of the metric to update:
     ///
-    ///      "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+    ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     ///
-    ///  The updated metric must be provided in the request and it's
-    ///  `name` field must be the same as `[METRIC_ID]` If the metric
-    ///  does not exist in `[PROJECT_ID]`, then a new metric is created.
+    /// The updated metric must be provided in the request and it's
+    /// `name` field must be the same as `[METRIC_ID]` If the metric
+    /// does not exist in `[PROJECT_ID]`, then a new metric is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MetricName {
@@ -1025,7 +1025,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricFieldNumber = 2;
     private global::Google.Cloud.Logging.V2.LogMetric metric_;
     /// <summary>
-    ///  The updated metric.
+    /// The updated metric.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogMetric Metric {
@@ -1132,7 +1132,7 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  The parameters to DeleteLogMetric.
+  /// The parameters to DeleteLogMetric.
   /// </summary>
   public sealed partial class DeleteLogMetricRequest : pb::IMessage<DeleteLogMetricRequest> {
     private static readonly pb::MessageParser<DeleteLogMetricRequest> _parser = new pb::MessageParser<DeleteLogMetricRequest>(() => new DeleteLogMetricRequest());
@@ -1170,9 +1170,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int MetricNameFieldNumber = 1;
     private string metricName_ = "";
     /// <summary>
-    ///  The resource name of the metric to delete:
+    /// The resource name of the metric to delete:
     ///
-    ///      "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
+    ///     "projects/[PROJECT_ID]/metrics/[METRIC_ID]"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MetricName {

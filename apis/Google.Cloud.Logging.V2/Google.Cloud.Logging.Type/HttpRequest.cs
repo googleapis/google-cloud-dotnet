@@ -47,9 +47,9 @@ namespace Google.Cloud.Logging.Type {
   }
   #region Messages
   /// <summary>
-  ///  A common proto for logging HTTP requests. Only contains semantics
-  ///  defined by the HTTP specification. Product-specific logging
-  ///  information MUST be defined in a separate message.
+  /// A common proto for logging HTTP requests. Only contains semantics
+  /// defined by the HTTP specification. Product-specific logging
+  /// information MUST be defined in a separate message.
   /// </summary>
   public sealed partial class HttpRequest : pb::IMessage<HttpRequest> {
     private static readonly pb::MessageParser<HttpRequest> _parser = new pb::MessageParser<HttpRequest>(() => new HttpRequest());
@@ -100,7 +100,7 @@ namespace Google.Cloud.Logging.Type {
     public const int RequestMethodFieldNumber = 1;
     private string requestMethod_ = "";
     /// <summary>
-    ///  The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
+    /// The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RequestMethod {
@@ -114,9 +114,9 @@ namespace Google.Cloud.Logging.Type {
     public const int RequestUrlFieldNumber = 2;
     private string requestUrl_ = "";
     /// <summary>
-    ///  The scheme (http, https), the host name, the path and the query
-    ///  portion of the URL that was requested.
-    ///  Example: `"http://example.com/some/info?color=red"`.
+    /// The scheme (http, https), the host name, the path and the query
+    /// portion of the URL that was requested.
+    /// Example: `"http://example.com/some/info?color=red"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RequestUrl {
@@ -130,8 +130,8 @@ namespace Google.Cloud.Logging.Type {
     public const int RequestSizeFieldNumber = 3;
     private long requestSize_;
     /// <summary>
-    ///  The size of the HTTP request message in bytes, including the request
-    ///  headers and the request body.
+    /// The size of the HTTP request message in bytes, including the request
+    /// headers and the request body.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long RequestSize {
@@ -145,8 +145,8 @@ namespace Google.Cloud.Logging.Type {
     public const int StatusFieldNumber = 4;
     private int status_;
     /// <summary>
-    ///  The response code indicating the status of response.
-    ///  Examples: 200, 404.
+    /// The response code indicating the status of response.
+    /// Examples: 200, 404.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Status {
@@ -160,8 +160,8 @@ namespace Google.Cloud.Logging.Type {
     public const int ResponseSizeFieldNumber = 5;
     private long responseSize_;
     /// <summary>
-    ///  The size of the HTTP response message sent back to the client, in bytes,
-    ///  including the response headers and the response body.
+    /// The size of the HTTP response message sent back to the client, in bytes,
+    /// including the response headers and the response body.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long ResponseSize {
@@ -175,8 +175,8 @@ namespace Google.Cloud.Logging.Type {
     public const int UserAgentFieldNumber = 6;
     private string userAgent_ = "";
     /// <summary>
-    ///  The user agent sent by the client. Example:
-    ///  `"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461; .NET CLR 1.0.3705)"`.
+    /// The user agent sent by the client. Example:
+    /// `"Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461; .NET CLR 1.0.3705)"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string UserAgent {
@@ -190,8 +190,8 @@ namespace Google.Cloud.Logging.Type {
     public const int RemoteIpFieldNumber = 7;
     private string remoteIp_ = "";
     /// <summary>
-    ///  The IP address (IPv4 or IPv6) of the client that issued the HTTP
-    ///  request. Examples: `"192.168.1.1"`, `"FE80::0202:B3FF:FE1E:8329"`.
+    /// The IP address (IPv4 or IPv6) of the client that issued the HTTP
+    /// request. Examples: `"192.168.1.1"`, `"FE80::0202:B3FF:FE1E:8329"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RemoteIp {
@@ -205,8 +205,8 @@ namespace Google.Cloud.Logging.Type {
     public const int ServerIpFieldNumber = 13;
     private string serverIp_ = "";
     /// <summary>
-    ///  The IP address (IPv4 or IPv6) of the origin server that the request was
-    ///  sent to.
+    /// The IP address (IPv4 or IPv6) of the origin server that the request was
+    /// sent to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ServerIp {
@@ -220,8 +220,8 @@ namespace Google.Cloud.Logging.Type {
     public const int RefererFieldNumber = 8;
     private string referer_ = "";
     /// <summary>
-    ///  The referer URL of the request, as defined in
-    ///  [HTTP/1.1 Header Field Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+    /// The referer URL of the request, as defined in
+    /// [HTTP/1.1 Header Field Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Referer {
@@ -235,8 +235,8 @@ namespace Google.Cloud.Logging.Type {
     public const int LatencyFieldNumber = 14;
     private global::Google.Protobuf.WellKnownTypes.Duration latency_;
     /// <summary>
-    ///  The request processing latency on the server, from the time the request was
-    ///  received until the response was sent.
+    /// The request processing latency on the server, from the time the request was
+    /// received until the response was sent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration Latency {
@@ -250,7 +250,7 @@ namespace Google.Cloud.Logging.Type {
     public const int CacheLookupFieldNumber = 11;
     private bool cacheLookup_;
     /// <summary>
-    ///  Whether or not a cache lookup was attempted.
+    /// Whether or not a cache lookup was attempted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool CacheLookup {
@@ -264,8 +264,8 @@ namespace Google.Cloud.Logging.Type {
     public const int CacheHitFieldNumber = 9;
     private bool cacheHit_;
     /// <summary>
-    ///  Whether or not an entity was served from cache
-    ///  (with or without validation).
+    /// Whether or not an entity was served from cache
+    /// (with or without validation).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool CacheHit {
@@ -279,9 +279,9 @@ namespace Google.Cloud.Logging.Type {
     public const int CacheValidatedWithOriginServerFieldNumber = 10;
     private bool cacheValidatedWithOriginServer_;
     /// <summary>
-    ///  Whether or not the response was validated with the origin server before
-    ///  being served from cache. This field is only meaningful if `cache_hit` is
-    ///  True.
+    /// Whether or not the response was validated with the origin server before
+    /// being served from cache. This field is only meaningful if `cache_hit` is
+    /// True.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool CacheValidatedWithOriginServer {
@@ -295,8 +295,8 @@ namespace Google.Cloud.Logging.Type {
     public const int CacheFillBytesFieldNumber = 12;
     private long cacheFillBytes_;
     /// <summary>
-    ///  The number of HTTP response bytes inserted into cache. Set only when a
-    ///  cache fill was attempted.
+    /// The number of HTTP response bytes inserted into cache. Set only when a
+    /// cache fill was attempted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long CacheFillBytes {

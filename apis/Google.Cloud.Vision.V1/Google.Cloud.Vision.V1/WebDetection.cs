@@ -51,7 +51,7 @@ namespace Google.Cloud.Vision.V1 {
   }
   #region Messages
   /// <summary>
-  ///  Relevant information for the image from the Internet.
+  /// Relevant information for the image from the Internet.
   /// </summary>
   public sealed partial class WebDetection : pb::IMessage<WebDetection> {
     private static readonly pb::MessageParser<WebDetection> _parser = new pb::MessageParser<WebDetection>(() => new WebDetection());
@@ -94,7 +94,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity> webEntities_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity>();
     /// <summary>
-    ///  Deduced entities from similar images on the Internet.
+    /// Deduced entities from similar images on the Internet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebEntity> WebEntities {
@@ -107,9 +107,9 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> fullMatchingImages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage>();
     /// <summary>
-    ///  Fully matching images from the Internet.
-    ///  They're definite neardups and most often a copy of the query image with
-    ///  merely a size change.
+    /// Fully matching images from the Internet.
+    /// They're definite neardups and most often a copy of the query image with
+    /// merely a size change.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> FullMatchingImages {
@@ -122,9 +122,9 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> partialMatchingImages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage>();
     /// <summary>
-    ///  Partial matching images from the Internet.
-    ///  Those images are similar enough to share some key-point features. For
-    ///  example an original image will likely have partial matching for its crops.
+    /// Partial matching images from the Internet.
+    /// Those images are similar enough to share some key-point features. For
+    /// example an original image will likely have partial matching for its crops.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebImage> PartialMatchingImages {
@@ -137,7 +137,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage> pagesWithMatchingImages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage>();
     /// <summary>
-    ///  Web pages containing the matching images from the Internet.
+    /// Web pages containing the matching images from the Internet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.WebDetection.Types.WebPage> PagesWithMatchingImages {
@@ -241,7 +241,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Entity deduced from similar images on the Internet.
+      /// Entity deduced from similar images on the Internet.
       /// </summary>
       public sealed partial class WebEntity : pb::IMessage<WebEntity> {
         private static readonly pb::MessageParser<WebEntity> _parser = new pb::MessageParser<WebEntity>(() => new WebEntity());
@@ -281,7 +281,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int EntityIdFieldNumber = 1;
         private string entityId_ = "";
         /// <summary>
-        ///  Opaque entity ID.
+        /// Opaque entity ID.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string EntityId {
@@ -295,8 +295,8 @@ namespace Google.Cloud.Vision.V1 {
         public const int ScoreFieldNumber = 2;
         private float score_;
         /// <summary>
-        ///  Overall relevancy score for the entity.
-        ///  Not normalized and not comparable across different image queries.
+        /// Overall relevancy score for the entity.
+        /// Not normalized and not comparable across different image queries.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float Score {
@@ -310,7 +310,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int DescriptionFieldNumber = 3;
         private string description_ = "";
         /// <summary>
-        ///  Canonical description of the entity, in English.
+        /// Canonical description of the entity, in English.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Description {
@@ -427,7 +427,7 @@ namespace Google.Cloud.Vision.V1 {
       }
 
       /// <summary>
-      ///  Metadata for online images.
+      /// Metadata for online images.
       /// </summary>
       public sealed partial class WebImage : pb::IMessage<WebImage> {
         private static readonly pb::MessageParser<WebImage> _parser = new pb::MessageParser<WebImage>(() => new WebImage());
@@ -466,7 +466,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int UrlFieldNumber = 1;
         private string url_ = "";
         /// <summary>
-        ///  The result image URL.
+        /// The result image URL.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Url {
@@ -480,8 +480,8 @@ namespace Google.Cloud.Vision.V1 {
         public const int ScoreFieldNumber = 2;
         private float score_;
         /// <summary>
-        ///  Overall relevancy score for the image.
-        ///  Not normalized and not comparable across different image queries.
+        /// Overall relevancy score for the image.
+        /// Not normalized and not comparable across different image queries.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float Score {
@@ -582,7 +582,7 @@ namespace Google.Cloud.Vision.V1 {
       }
 
       /// <summary>
-      ///  Metadata for web pages.
+      /// Metadata for web pages.
       /// </summary>
       public sealed partial class WebPage : pb::IMessage<WebPage> {
         private static readonly pb::MessageParser<WebPage> _parser = new pb::MessageParser<WebPage>(() => new WebPage());
@@ -621,7 +621,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int UrlFieldNumber = 1;
         private string url_ = "";
         /// <summary>
-        ///  The result web page URL.
+        /// The result web page URL.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Url {
@@ -635,8 +635,8 @@ namespace Google.Cloud.Vision.V1 {
         public const int ScoreFieldNumber = 2;
         private float score_;
         /// <summary>
-        ///  Overall relevancy score for the web page.
-        ///  Not normalized and not comparable across different image queries.
+        /// Overall relevancy score for the web page.
+        /// Not normalized and not comparable across different image queries.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float Score {

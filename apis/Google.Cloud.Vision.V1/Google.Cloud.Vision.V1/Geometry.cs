@@ -43,8 +43,8 @@ namespace Google.Cloud.Vision.V1 {
   }
   #region Messages
   /// <summary>
-  ///  A vertex represents a 2D point in the image.
-  ///  NOTE: the vertex coordinates are in the same scale as the original image.
+  /// A vertex represents a 2D point in the image.
+  /// NOTE: the vertex coordinates are in the same scale as the original image.
   /// </summary>
   public sealed partial class Vertex : pb::IMessage<Vertex> {
     private static readonly pb::MessageParser<Vertex> _parser = new pb::MessageParser<Vertex>(() => new Vertex());
@@ -83,7 +83,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int XFieldNumber = 1;
     private int x_;
     /// <summary>
-    ///  X coordinate.
+    /// X coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int X {
@@ -97,7 +97,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int YFieldNumber = 2;
     private int y_;
     /// <summary>
-    ///  Y coordinate.
+    /// Y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Y {
@@ -198,7 +198,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  A bounding polygon for the detected image annotation.
+  /// A bounding polygon for the detected image annotation.
   /// </summary>
   public sealed partial class BoundingPoly : pb::IMessage<BoundingPoly> {
     private static readonly pb::MessageParser<BoundingPoly> _parser = new pb::MessageParser<BoundingPoly>(() => new BoundingPoly());
@@ -238,7 +238,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.Vertex.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Vertex> vertices_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Vertex>();
     /// <summary>
-    ///  The bounding polygon vertices.
+    /// The bounding polygon vertices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Vertex> Vertices {
@@ -313,9 +313,9 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  A 3D position in the image, used primarily for Face detection landmarks.
-  ///  A valid Position must have both x and y coordinates.
-  ///  The position coordinates are in the same scale as the original image.
+  /// A 3D position in the image, used primarily for Face detection landmarks.
+  /// A valid Position must have both x and y coordinates.
+  /// The position coordinates are in the same scale as the original image.
   /// </summary>
   public sealed partial class Position : pb::IMessage<Position> {
     private static readonly pb::MessageParser<Position> _parser = new pb::MessageParser<Position>(() => new Position());
@@ -355,7 +355,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int XFieldNumber = 1;
     private float x_;
     /// <summary>
-    ///  X coordinate.
+    /// X coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float X {
@@ -369,7 +369,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int YFieldNumber = 2;
     private float y_;
     /// <summary>
-    ///  Y coordinate.
+    /// Y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Y {
@@ -383,7 +383,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int ZFieldNumber = 3;
     private float z_;
     /// <summary>
-    ///  Z coordinate (or depth).
+    /// Z coordinate (or depth).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Z {

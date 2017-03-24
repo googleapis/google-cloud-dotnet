@@ -20,7 +20,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Grpc.Core;
+using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   /// <summary>
@@ -50,90 +50,90 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
   {
     static readonly string __ServiceName = "google.spanner.admin.instance.v1.InstanceAdmin";
 
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest> __Marshaller_ListInstanceConfigsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Marshaller_ListInstanceConfigsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest> __Marshaller_GetInstanceConfigRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Marshaller_InstanceConfig = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest> __Marshaller_ListInstancesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Marshaller_ListInstancesResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest> __Marshaller_GetInstanceRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> __Marshaller_Instance = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest> __Marshaller_CreateInstanceRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest> __Marshaller_UpdateInstanceRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest> __Marshaller_ListInstanceConfigsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Marshaller_ListInstanceConfigsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest> __Marshaller_GetInstanceConfigRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Marshaller_InstanceConfig = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest> __Marshaller_ListInstancesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Marshaller_ListInstancesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest> __Marshaller_GetInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> __Marshaller_Instance = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.Instance.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest> __Marshaller_CreateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest> __Marshaller_UpdateInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest> __Marshaller_DeleteInstanceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Method_ListInstanceConfigs = new Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> __Method_ListInstanceConfigs = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "ListInstanceConfigs",
         __Marshaller_ListInstanceConfigsRequest,
         __Marshaller_ListInstanceConfigsResponse);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Method_GetInstanceConfig = new Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> __Method_GetInstanceConfig = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetInstanceConfig",
         __Marshaller_GetInstanceConfigRequest,
         __Marshaller_InstanceConfig);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Method_ListInstances = new Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "ListInstances",
         __Marshaller_ListInstancesRequest,
         __Marshaller_ListInstancesResponse);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> __Method_GetInstance = new Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> __Method_GetInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest, global::Google.Cloud.Spanner.Admin.Instance.V1.Instance>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetInstance",
         __Marshaller_GetInstanceRequest,
         __Marshaller_Instance);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "CreateInstance",
         __Marshaller_CreateInstanceRequest,
         __Marshaller_Operation);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation> __Method_UpdateInstance = new Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation> __Method_UpdateInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "UpdateInstance",
         __Marshaller_UpdateInstanceRequest,
         __Marshaller_Operation);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInstance = new Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteInstance = new grpc::Method<global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "DeleteInstance",
         __Marshaller_DeleteInstanceRequest,
         __Marshaller_Empty);
 
-    static readonly Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "SetIamPolicy",
         __Marshaller_SetIamPolicyRequest,
         __Marshaller_Policy);
 
-    static readonly Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetIamPolicy",
         __Marshaller_GetIamPolicyRequest,
         __Marshaller_Policy);
 
-    static readonly Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "TestIamPermissions",
         __Marshaller_TestIamPermissionsRequest,
@@ -154,9 +154,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -165,9 +165,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -176,9 +176,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -187,9 +187,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -231,9 +231,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -281,9 +281,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -302,9 +302,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -317,9 +317,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -332,9 +332,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -348,24 +348,24 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
     /// <summary>Client for InstanceAdmin</summary>
-    public partial class InstanceAdminClient : ClientBase<InstanceAdminClient>
+    public partial class InstanceAdminClient : grpc::ClientBase<InstanceAdminClient>
     {
       /// <summary>Creates a new client for InstanceAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public InstanceAdminClient(Channel channel) : base(channel)
+      public InstanceAdminClient(grpc::Channel channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for InstanceAdmin that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public InstanceAdminClient(CallInvoker callInvoker) : base(callInvoker)
+      public InstanceAdminClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
@@ -386,9 +386,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListInstanceConfigs(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListInstanceConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists the supported instance configurations for a given project.
@@ -396,7 +396,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse ListInstanceConfigs(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstanceConfigs, null, options, request);
       }
@@ -408,9 +408,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListInstanceConfigsAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListInstanceConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists the supported instance configurations for a given project.
@@ -418,7 +418,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsResponse> ListInstanceConfigsAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstanceConfigsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstanceConfigs, null, options, request);
       }
@@ -430,9 +430,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetInstanceConfig(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetInstanceConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets information about a particular instance configuration.
@@ -440,7 +440,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig GetInstanceConfig(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstanceConfig, null, options, request);
       }
@@ -452,9 +452,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetInstanceConfigAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetInstanceConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets information about a particular instance configuration.
@@ -462,7 +462,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.InstanceConfig> GetInstanceConfigAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstanceConfig, null, options, request);
       }
@@ -474,9 +474,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListInstances(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListInstances(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists all instances in the given project.
@@ -484,7 +484,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse ListInstances(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListInstances, null, options, request);
       }
@@ -496,9 +496,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListInstancesAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListInstancesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists all instances in the given project.
@@ -506,7 +506,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesResponse> ListInstancesAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.ListInstancesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListInstances, null, options, request);
       }
@@ -518,9 +518,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.Instance GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.Instance GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetInstance(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets information about a particular instance.
@@ -528,7 +528,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.Instance GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Spanner.Admin.Instance.V1.Instance GetInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetInstance, null, options, request);
       }
@@ -540,9 +540,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets information about a particular instance.
@@ -550,7 +550,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Instance.V1.Instance> GetInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.GetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstance, null, options, request);
       }
@@ -595,9 +595,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return CreateInstance(request, new CallOptions(headers, deadline, cancellationToken));
+        return CreateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates an instance and begins preparing it to begin serving. The
@@ -638,7 +638,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, CallOptions options)
+      public virtual global::Google.LongRunning.Operation CreateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateInstance, null, options, request);
       }
@@ -683,9 +683,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return CreateInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return CreateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates an instance and begins preparing it to begin serving. The
@@ -726,7 +726,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.CreateInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateInstance, null, options, request);
       }
@@ -777,9 +777,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return UpdateInstance(request, new CallOptions(headers, deadline, cancellationToken));
+        return UpdateInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Updates an instance, and begins allocating or releasing resources
@@ -826,7 +826,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, CallOptions options)
+      public virtual global::Google.LongRunning.Operation UpdateInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateInstance, null, options, request);
       }
@@ -877,9 +877,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return UpdateInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return UpdateInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Updates an instance, and begins allocating or releasing resources
@@ -926,7 +926,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.UpdateInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateInstance, null, options, request);
       }
@@ -948,9 +948,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DeleteInstance(request, new CallOptions(headers, deadline, cancellationToken));
+        return DeleteInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Deletes an instance.
@@ -968,7 +968,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteInstance(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteInstance, null, options, request);
       }
@@ -990,9 +990,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DeleteInstanceAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return DeleteInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Deletes an instance.
@@ -1010,7 +1010,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteInstanceAsync(global::Google.Cloud.Spanner.Admin.Instance.V1.DeleteInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
@@ -1026,9 +1026,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return SetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
+        return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Sets the access control policy on an instance resource. Replaces any
@@ -1040,7 +1040,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
@@ -1056,9 +1056,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return SetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Sets the access control policy on an instance resource. Replaces any
@@ -1070,7 +1070,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
@@ -1086,9 +1086,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets the access control policy for an instance resource. Returns an empty
@@ -1100,7 +1100,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
@@ -1116,9 +1116,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets the access control policy for an instance resource. Returns an empty
@@ -1130,7 +1130,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
@@ -1147,9 +1147,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return TestIamPermissions(request, new CallOptions(headers, deadline, cancellationToken));
+        return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns permissions that the caller has on the specified instance resource.
@@ -1162,7 +1162,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
@@ -1179,9 +1179,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return TestIamPermissionsAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns permissions that the caller has on the specified instance resource.
@@ -1194,7 +1194,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
@@ -1207,9 +1207,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static ServerServiceDefinition BindService(InstanceAdminBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(InstanceAdminBase serviceImpl)
     {
-      return ServerServiceDefinition.CreateBuilder()
+      return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListInstanceConfigs, serviceImpl.ListInstanceConfigs)
           .AddMethod(__Method_GetInstanceConfig, serviceImpl.GetInstanceConfig)
           .AddMethod(__Method_ListInstances, serviceImpl.ListInstances)

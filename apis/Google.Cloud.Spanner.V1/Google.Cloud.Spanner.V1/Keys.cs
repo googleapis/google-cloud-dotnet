@@ -48,93 +48,93 @@ namespace Google.Cloud.Spanner.V1 {
   }
   #region Messages
   /// <summary>
-  ///  KeyRange represents a range of rows in a table or index.
+  /// KeyRange represents a range of rows in a table or index.
   ///
-  ///  A range has a start key and an end key. These keys can be open or
-  ///  closed, indicating if the range includes rows with that key.
+  /// A range has a start key and an end key. These keys can be open or
+  /// closed, indicating if the range includes rows with that key.
   ///
-  ///  Keys are represented by lists, where the ith value in the list
-  ///  corresponds to the ith component of the table or index primary key.
-  ///  Individual values are encoded as described [here][google.spanner.v1.TypeCode].
+  /// Keys are represented by lists, where the ith value in the list
+  /// corresponds to the ith component of the table or index primary key.
+  /// Individual values are encoded as described [here][google.spanner.v1.TypeCode].
   ///
-  ///  For example, consider the following table definition:
+  /// For example, consider the following table definition:
   ///
-  ///      CREATE TABLE UserEvents (
-  ///        UserName STRING(MAX),
-  ///        EventDate STRING(10)
-  ///      ) PRIMARY KEY(UserName, EventDate);
+  ///     CREATE TABLE UserEvents (
+  ///       UserName STRING(MAX),
+  ///       EventDate STRING(10)
+  ///     ) PRIMARY KEY(UserName, EventDate);
   ///
-  ///  The following keys name rows in this table:
+  /// The following keys name rows in this table:
   ///
-  ///      ["Bob", "2014-09-23"]
-  ///      ["Alfred", "2015-06-12"]
+  ///     ["Bob", "2014-09-23"]
+  ///     ["Alfred", "2015-06-12"]
   ///
-  ///  Since the `UserEvents` table's `PRIMARY KEY` clause names two
-  ///  columns, each `UserEvents` key has two elements; the first is the
-  ///  `UserName`, and the second is the `EventDate`.
+  /// Since the `UserEvents` table's `PRIMARY KEY` clause names two
+  /// columns, each `UserEvents` key has two elements; the first is the
+  /// `UserName`, and the second is the `EventDate`.
   ///
-  ///  Key ranges with multiple components are interpreted
-  ///  lexicographically by component using the table or index key's declared
-  ///  sort order. For example, the following range returns all events for
-  ///  user `"Bob"` that occurred in the year 2015:
+  /// Key ranges with multiple components are interpreted
+  /// lexicographically by component using the table or index key's declared
+  /// sort order. For example, the following range returns all events for
+  /// user `"Bob"` that occurred in the year 2015:
   ///
-  ///      "start_closed": ["Bob", "2015-01-01"]
-  ///      "end_closed": ["Bob", "2015-12-31"]
+  ///     "start_closed": ["Bob", "2015-01-01"]
+  ///     "end_closed": ["Bob", "2015-12-31"]
   ///
-  ///  Start and end keys can omit trailing key components. This affects the
-  ///  inclusion and exclusion of rows that exactly match the provided key
-  ///  components: if the key is closed, then rows that exactly match the
-  ///  provided components are included; if the key is open, then rows
-  ///  that exactly match are not included.
+  /// Start and end keys can omit trailing key components. This affects the
+  /// inclusion and exclusion of rows that exactly match the provided key
+  /// components: if the key is closed, then rows that exactly match the
+  /// provided components are included; if the key is open, then rows
+  /// that exactly match are not included.
   ///
-  ///  For example, the following range includes all events for `"Bob"` that
-  ///  occurred during and after the year 2000:
+  /// For example, the following range includes all events for `"Bob"` that
+  /// occurred during and after the year 2000:
   ///
-  ///      "start_closed": ["Bob", "2000-01-01"]
-  ///      "end_closed": ["Bob"]
+  ///     "start_closed": ["Bob", "2000-01-01"]
+  ///     "end_closed": ["Bob"]
   ///
-  ///  The next example retrieves all events for `"Bob"`:
+  /// The next example retrieves all events for `"Bob"`:
   ///
-  ///      "start_closed": ["Bob"]
-  ///      "end_closed": ["Bob"]
+  ///     "start_closed": ["Bob"]
+  ///     "end_closed": ["Bob"]
   ///
-  ///  To retrieve events before the year 2000:
+  /// To retrieve events before the year 2000:
   ///
-  ///      "start_closed": ["Bob"]
-  ///      "end_open": ["Bob", "2000-01-01"]
+  ///     "start_closed": ["Bob"]
+  ///     "end_open": ["Bob", "2000-01-01"]
   ///
-  ///  The following range includes all rows in the table:
+  /// The following range includes all rows in the table:
   ///
-  ///      "start_closed": []
-  ///      "end_closed": []
+  ///     "start_closed": []
+  ///     "end_closed": []
   ///
-  ///  This range returns all users whose `UserName` begins with any
-  ///  character from A to C:
+  /// This range returns all users whose `UserName` begins with any
+  /// character from A to C:
   ///
-  ///      "start_closed": ["A"]
-  ///      "end_open": ["D"]
+  ///     "start_closed": ["A"]
+  ///     "end_open": ["D"]
   ///
-  ///  This range returns all users whose `UserName` begins with B:
+  /// This range returns all users whose `UserName` begins with B:
   ///
-  ///      "start_closed": ["B"]
-  ///      "end_open": ["C"]
+  ///     "start_closed": ["B"]
+  ///     "end_open": ["C"]
   ///
-  ///  Key ranges honor column sort order. For example, suppose a table is
-  ///  defined as follows:
+  /// Key ranges honor column sort order. For example, suppose a table is
+  /// defined as follows:
   ///
-  ///      CREATE TABLE DescendingSortedTable {
-  ///        Key INT64,
-  ///        ...
-  ///      ) PRIMARY KEY(Key DESC);
+  ///     CREATE TABLE DescendingSortedTable {
+  ///       Key INT64,
+  ///       ...
+  ///     ) PRIMARY KEY(Key DESC);
   ///
-  ///  The following range retrieves all rows with key values between 1
-  ///  and 100 inclusive:
+  /// The following range retrieves all rows with key values between 1
+  /// and 100 inclusive:
   ///
-  ///      "start_closed": ["100"]
-  ///      "end_closed": ["1"]
+  ///     "start_closed": ["100"]
+  ///     "end_closed": ["1"]
   ///
-  ///  Note that 100 is passed as the start, and 1 is passed as the end,
-  ///  because `Key` is a descending column in the schema.
+  /// Note that 100 is passed as the start, and 1 is passed as the end,
+  /// because `Key` is a descending column in the schema.
   /// </summary>
   public sealed partial class KeyRange : pb::IMessage<KeyRange> {
     private static readonly pb::MessageParser<KeyRange> _parser = new pb::MessageParser<KeyRange>(() => new KeyRange());
@@ -188,8 +188,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "start_closed" field.</summary>
     public const int StartClosedFieldNumber = 1;
     /// <summary>
-    ///  If the start is closed, then the range includes all rows whose
-    ///  first `len(start_closed)` key columns exactly match `start_closed`.
+    /// If the start is closed, then the range includes all rows whose
+    /// first `len(start_closed)` key columns exactly match `start_closed`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.ListValue StartClosed {
@@ -203,8 +203,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "start_open" field.</summary>
     public const int StartOpenFieldNumber = 2;
     /// <summary>
-    ///  If the start is open, then the range excludes rows whose first
-    ///  `len(start_open)` key columns exactly match `start_open`.
+    /// If the start is open, then the range excludes rows whose first
+    /// `len(start_open)` key columns exactly match `start_open`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.ListValue StartOpen {
@@ -218,8 +218,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "end_closed" field.</summary>
     public const int EndClosedFieldNumber = 3;
     /// <summary>
-    ///  If the end is closed, then the range includes all rows whose
-    ///  first `len(end_closed)` key columns exactly match `end_closed`.
+    /// If the end is closed, then the range includes all rows whose
+    /// first `len(end_closed)` key columns exactly match `end_closed`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.ListValue EndClosed {
@@ -233,8 +233,8 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "end_open" field.</summary>
     public const int EndOpenFieldNumber = 4;
     /// <summary>
-    ///  If the end is open, then the range excludes rows whose first
-    ///  `len(end_open)` key columns exactly match `end_open`.
+    /// If the end is open, then the range excludes rows whose first
+    /// `len(end_open)` key columns exactly match `end_open`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.ListValue EndOpen {
@@ -436,13 +436,13 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  ///  `KeySet` defines a collection of Cloud Spanner keys and/or key ranges. All
-  ///  the keys are expected to be in the same table or index. The keys need
-  ///  not be sorted in any particular way.
+  /// `KeySet` defines a collection of Cloud Spanner keys and/or key ranges. All
+  /// the keys are expected to be in the same table or index. The keys need
+  /// not be sorted in any particular way.
   ///
-  ///  If the same key is specified multiple times in the set (for example
-  ///  if two ranges, two keys, or a key and a range overlap), Cloud Spanner
-  ///  behaves as if the key were only specified once.
+  /// If the same key is specified multiple times in the set (for example
+  /// if two ranges, two keys, or a key and a range overlap), Cloud Spanner
+  /// behaves as if the key were only specified once.
   /// </summary>
   public sealed partial class KeySet : pb::IMessage<KeySet> {
     private static readonly pb::MessageParser<KeySet> _parser = new pb::MessageParser<KeySet>(() => new KeySet());
@@ -484,10 +484,10 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Protobuf.WellKnownTypes.ListValue.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> keys_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue>();
     /// <summary>
-    ///  A list of specific keys. Entries in `keys` should have exactly as
-    ///  many elements as there are columns in the primary or index key
-    ///  with which this `KeySet` is used.  Individual key values are
-    ///  encoded as described [here][google.spanner.v1.TypeCode].
+    /// A list of specific keys. Entries in `keys` should have exactly as
+    /// many elements as there are columns in the primary or index key
+    /// with which this `KeySet` is used.  Individual key values are
+    /// encoded as described [here][google.spanner.v1.TypeCode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> Keys {
@@ -500,8 +500,8 @@ namespace Google.Cloud.Spanner.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Spanner.V1.KeyRange.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange> ranges_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange>();
     /// <summary>
-    ///  A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more information about
-    ///  key range specifications.
+    /// A list of key ranges. See [KeyRange][google.spanner.v1.KeyRange] for more information about
+    /// key range specifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange> Ranges {
@@ -512,9 +512,9 @@ namespace Google.Cloud.Spanner.V1 {
     public const int AllFieldNumber = 3;
     private bool all_;
     /// <summary>
-    ///  For convenience `all` can be set to `true` to indicate that this
-    ///  `KeySet` matches all keys in the table or index. Note that any keys
-    ///  specified in `keys` or `ranges` are only yielded once.
+    /// For convenience `all` can be set to `true` to indicate that this
+    /// `KeySet` matches all keys in the table or index. Note that any keys
+    /// specified in `keys` or `ranges` are only yielded once.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool All {

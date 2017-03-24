@@ -62,7 +62,7 @@ namespace Google.Cloud.Logging.V2 {
   }
   #region Messages
   /// <summary>
-  ///  An individual entry in a log.
+  /// An individual entry in a log.
   /// </summary>
   public sealed partial class LogEntry : pb::IMessage<LogEntry> {
     private static readonly pb::MessageParser<LogEntry> _parser = new pb::MessageParser<LogEntry>(() => new LogEntry());
@@ -121,24 +121,24 @@ namespace Google.Cloud.Logging.V2 {
     public const int LogNameFieldNumber = 12;
     private string logName_ = "";
     /// <summary>
-    ///  Required. The resource name of the log to which this log entry belongs:
+    /// Required. The resource name of the log to which this log entry belongs:
     ///
-    ///      "projects/[PROJECT_ID]/logs/[LOG_ID]"
-    ///      "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
-    ///      "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
-    ///      "folders/[FOLDER_ID]/logs/[LOG_ID]"
+    ///     "projects/[PROJECT_ID]/logs/[LOG_ID]"
+    ///     "organizations/[ORGANIZATION_ID]/logs/[LOG_ID]"
+    ///     "billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]"
+    ///     "folders/[FOLDER_ID]/logs/[LOG_ID]"
     ///
-    ///  `[LOG_ID]` must be URL-encoded within `log_name`. Example:
-    ///  `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
-    ///  `[LOG_ID]` must be less than 512 characters long and can only include the
-    ///  following characters: upper and lower case alphanumeric characters,
-    ///  forward-slash, underscore, hyphen, and period.
+    /// `[LOG_ID]` must be URL-encoded within `log_name`. Example:
+    /// `"organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity"`.
+    /// `[LOG_ID]` must be less than 512 characters long and can only include the
+    /// following characters: upper and lower case alphanumeric characters,
+    /// forward-slash, underscore, hyphen, and period.
     ///
-    ///  For backward compatibility, if `log_name` begins with a forward-slash, such
-    ///  as `/projects/...`, then the log entry is ingested as usual but the
-    ///  forward-slash is removed. Listing the log entry will not show the leading
-    ///  slash and filtering for a log name with a leading slash will never return
-    ///  any results.
+    /// For backward compatibility, if `log_name` begins with a forward-slash, such
+    /// as `/projects/...`, then the log entry is ingested as usual but the
+    /// forward-slash is removed. Listing the log entry will not show the leading
+    /// slash and filtering for a log name with a leading slash will never return
+    /// any results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string LogName {
@@ -152,10 +152,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int ResourceFieldNumber = 8;
     private global::Google.Api.MonitoredResource resource_;
     /// <summary>
-    ///  Required. The monitored resource associated with this log entry.
-    ///  Example: a log entry that reports a database error would be
-    ///  associated with the monitored resource designating the particular
-    ///  database that reported the error.
+    /// Required. The monitored resource associated with this log entry.
+    /// Example: a log entry that reports a database error would be
+    /// associated with the monitored resource designating the particular
+    /// database that reported the error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResource Resource {
@@ -168,9 +168,9 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "proto_payload" field.</summary>
     public const int ProtoPayloadFieldNumber = 2;
     /// <summary>
-    ///  The log entry payload, represented as a protocol buffer.  Some
-    ///  Google Cloud Platform services use this field for their log
-    ///  entry payloads.
+    /// The log entry payload, represented as a protocol buffer.  Some
+    /// Google Cloud Platform services use this field for their log
+    /// entry payloads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Any ProtoPayload {
@@ -184,7 +184,7 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "text_payload" field.</summary>
     public const int TextPayloadFieldNumber = 3;
     /// <summary>
-    ///  The log entry payload, represented as a Unicode string (UTF-8).
+    /// The log entry payload, represented as a Unicode string (UTF-8).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string TextPayload {
@@ -198,8 +198,8 @@ namespace Google.Cloud.Logging.V2 {
     /// <summary>Field number for the "json_payload" field.</summary>
     public const int JsonPayloadFieldNumber = 6;
     /// <summary>
-    ///  The log entry payload, represented as a structure that is
-    ///  expressed as a JSON object.
+    /// The log entry payload, represented as a structure that is
+    /// expressed as a JSON object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Struct JsonPayload {
@@ -214,11 +214,11 @@ namespace Google.Cloud.Logging.V2 {
     public const int TimestampFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestamp_;
     /// <summary>
-    ///  Optional. The time the event described by the log entry occurred.  If
-    ///  omitted in a new log entry, Stackdriver Logging will insert the time the
-    ///  log entry is received.  Stackdriver Logging might reject log entries whose
-    ///  time stamps are more than a couple of hours in the future. Log entries
-    ///  with time stamps in the past are accepted.
+    /// Optional. The time the event described by the log entry occurred.  If
+    /// omitted in a new log entry, Stackdriver Logging will insert the time the
+    /// log entry is received.  Stackdriver Logging might reject log entries whose
+    /// time stamps are more than a couple of hours in the future. Log entries
+    /// with time stamps in the past are accepted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
@@ -232,8 +232,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int SeverityFieldNumber = 10;
     private global::Google.Cloud.Logging.Type.LogSeverity severity_ = 0;
     /// <summary>
-    ///  Optional. The severity of the log entry. The default value is
-    ///  `LogSeverity.DEFAULT`.
+    /// Optional. The severity of the log entry. The default value is
+    /// `LogSeverity.DEFAULT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.Type.LogSeverity Severity {
@@ -247,12 +247,12 @@ namespace Google.Cloud.Logging.V2 {
     public const int InsertIdFieldNumber = 4;
     private string insertId_ = "";
     /// <summary>
-    ///  Optional. A unique identifier for the log entry. If you provide a value,
-    ///  then Stackdriver Logging considers other log entries in the same project,
-    ///  with the same `timestamp`, and with the same `insert_id` to be duplicates
-    ///  which can be removed.  If omitted in new log entries, then Stackdriver
-    ///  Logging will insert its own unique identifier. The `insert_id` is used
-    ///  to order log entries that have the same `timestamp` value.
+    /// Optional. A unique identifier for the log entry. If you provide a value,
+    /// then Stackdriver Logging considers other log entries in the same project,
+    /// with the same `timestamp`, and with the same `insert_id` to be duplicates
+    /// which can be removed.  If omitted in new log entries, then Stackdriver
+    /// Logging will insert its own unique identifier. The `insert_id` is used
+    /// to order log entries that have the same `timestamp` value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string InsertId {
@@ -266,8 +266,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int HttpRequestFieldNumber = 7;
     private global::Google.Cloud.Logging.Type.HttpRequest httpRequest_;
     /// <summary>
-    ///  Optional. Information about the HTTP request associated with this
-    ///  log entry, if applicable.
+    /// Optional. Information about the HTTP request associated with this
+    /// log entry, if applicable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.Type.HttpRequest HttpRequest {
@@ -283,8 +283,8 @@ namespace Google.Cloud.Logging.V2 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 90);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    ///  Optional. A set of user-defined (key, value) data that provides additional
-    ///  information about the log entry.
+    /// Optional. A set of user-defined (key, value) data that provides additional
+    /// information about the log entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Labels {
@@ -295,8 +295,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int OperationFieldNumber = 15;
     private global::Google.Cloud.Logging.V2.LogEntryOperation operation_;
     /// <summary>
-    ///  Optional. Information about an operation associated with the log entry, if
-    ///  applicable.
+    /// Optional. Information about an operation associated with the log entry, if
+    /// applicable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogEntryOperation Operation {
@@ -310,10 +310,10 @@ namespace Google.Cloud.Logging.V2 {
     public const int TraceFieldNumber = 22;
     private string trace_ = "";
     /// <summary>
-    ///  Optional. Resource name of the trace associated with the log entry, if any.
-    ///  If it contains a relative resource name, the name is assumed to be relative
-    ///  to `//tracing.googleapis.com`. Example:
-    ///  `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
+    /// Optional. Resource name of the trace associated with the log entry, if any.
+    /// If it contains a relative resource name, the name is assumed to be relative
+    /// to `//tracing.googleapis.com`. Example:
+    /// `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Trace {
@@ -327,8 +327,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int SourceLocationFieldNumber = 23;
     private global::Google.Cloud.Logging.V2.LogEntrySourceLocation sourceLocation_;
     /// <summary>
-    ///  Optional. Source code location information associated with the log entry,
-    ///  if any.
+    /// Optional. Source code location information associated with the log entry,
+    /// if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Logging.V2.LogEntrySourceLocation SourceLocation {
@@ -663,8 +663,8 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  Additional information about a potentially long-running operation with which
-  ///  a log entry is associated.
+  /// Additional information about a potentially long-running operation with which
+  /// a log entry is associated.
   /// </summary>
   public sealed partial class LogEntryOperation : pb::IMessage<LogEntryOperation> {
     private static readonly pb::MessageParser<LogEntryOperation> _parser = new pb::MessageParser<LogEntryOperation>(() => new LogEntryOperation());
@@ -705,8 +705,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    ///  Optional. An arbitrary operation identifier. Log entries with the
-    ///  same identifier are assumed to be part of the same operation.
+    /// Optional. An arbitrary operation identifier. Log entries with the
+    /// same identifier are assumed to be part of the same operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {
@@ -720,9 +720,9 @@ namespace Google.Cloud.Logging.V2 {
     public const int ProducerFieldNumber = 2;
     private string producer_ = "";
     /// <summary>
-    ///  Optional. An arbitrary producer identifier. The combination of
-    ///  `id` and `producer` must be globally unique.  Examples for `producer`:
-    ///  `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
+    /// Optional. An arbitrary producer identifier. The combination of
+    /// `id` and `producer` must be globally unique.  Examples for `producer`:
+    /// `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Producer {
@@ -736,7 +736,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int FirstFieldNumber = 3;
     private bool first_;
     /// <summary>
-    ///  Optional. Set this to True if this is the first log entry in the operation.
+    /// Optional. Set this to True if this is the first log entry in the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool First {
@@ -750,7 +750,7 @@ namespace Google.Cloud.Logging.V2 {
     public const int LastFieldNumber = 4;
     private bool last_;
     /// <summary>
-    ///  Optional. Set this to True if this is the last log entry in the operation.
+    /// Optional. Set this to True if this is the last log entry in the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Last {
@@ -883,8 +883,8 @@ namespace Google.Cloud.Logging.V2 {
   }
 
   /// <summary>
-  ///  Additional information about the source code location that produced the log
-  ///  entry.
+  /// Additional information about the source code location that produced the log
+  /// entry.
   /// </summary>
   public sealed partial class LogEntrySourceLocation : pb::IMessage<LogEntrySourceLocation> {
     private static readonly pb::MessageParser<LogEntrySourceLocation> _parser = new pb::MessageParser<LogEntrySourceLocation>(() => new LogEntrySourceLocation());
@@ -924,8 +924,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int FileFieldNumber = 1;
     private string file_ = "";
     /// <summary>
-    ///  Optional. Source file name. Depending on the runtime environment, this
-    ///  might be a simple name or a fully-qualified name.
+    /// Optional. Source file name. Depending on the runtime environment, this
+    /// might be a simple name or a fully-qualified name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string File {
@@ -939,8 +939,8 @@ namespace Google.Cloud.Logging.V2 {
     public const int LineFieldNumber = 2;
     private long line_;
     /// <summary>
-    ///  Optional. Line within the source file. 1-based; 0 indicates no line number
-    ///  available.
+    /// Optional. Line within the source file. 1-based; 0 indicates no line number
+    /// available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Line {
@@ -954,12 +954,12 @@ namespace Google.Cloud.Logging.V2 {
     public const int FunctionFieldNumber = 3;
     private string function_ = "";
     /// <summary>
-    ///  Optional. Human-readable name of the function or method being invoked, with
-    ///  optional context such as the class or package name. This information may be
-    ///  used in contexts such as the logs viewer, where a file and line number are
-    ///  less meaningful. The format can vary by language. For example:
-    ///  `qual.if.ied.Class.method` (Java), `dir/package.func` (Go), `function`
-    ///  (Python).
+    /// Optional. Human-readable name of the function or method being invoked, with
+    /// optional context such as the class or package name. This information may be
+    /// used in contexts such as the logs viewer, where a file and line number are
+    /// less meaningful. The format can vary by language. For example:
+    /// `qual.if.ied.Class.method` (Java), `dir/package.func` (Go), `function`
+    /// (Python).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Function {
