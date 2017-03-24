@@ -46,6 +46,7 @@ namespace Google.Cloud.Storage.V1.Snippets
             var httpClient = new HttpClient();
 
             // Sample: SignedURLGet
+            // Additional: Sign(string,string,TimeSpan,*,*,*)
             // Create a signed URL which can be used to get a specific object for one hour.
             UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
             string url = urlSigner.Sign(
@@ -61,6 +62,13 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             Assert.Equal(_fixture.HelloWorldContent, content);
         }
+
+        // See-also: Sign(string,string,TimeSpan,*,*,*)
+        // Member: Sign(string,string,TimeSpan,*)
+        // Member: Sign(string,string,DateTimeOffset?,*)
+        // Member: Sign(string,string,DateTimeOffset?,*,*,*)
+        // See [Sign](ref) for an example using an alternative overload.
+        // End see-also
 
         [Fact]
         public async Task SignedURLPut()
