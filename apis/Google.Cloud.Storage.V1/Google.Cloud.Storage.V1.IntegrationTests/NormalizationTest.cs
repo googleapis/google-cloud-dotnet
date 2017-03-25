@@ -29,10 +29,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         [Theory]
         // Normalization Form C: a single character for e-acute.
-        // URL should end with Cafe%CC%81
+        // URL should end with Caf%C3%A9
         [InlineData("Caf\u00e9", "Normalization Form C")]
         // Normalization Form D: an ASCII e followed by U+0301 combining character
-        // URL should end with Caf%C3%A9
+        // URL should end with Cafe%CC%81
         [InlineData("Cafe\u0301", "Normalization Form D")]
         public void FetchObjectAndCheckContent(string name, string expectedContent)
         {
