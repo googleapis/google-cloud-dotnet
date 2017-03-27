@@ -21,6 +21,9 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
+    /// <summary>
+    /// Google Cloud Error Reporting Logger. Reports exceptions to Google Cloud Error Reporting.
+    /// </summary>
     internal sealed class GoogleExceptionLogger : IExceptionLogger
     {
         private readonly ErrorReportingExceptionLoggerBase _logger;

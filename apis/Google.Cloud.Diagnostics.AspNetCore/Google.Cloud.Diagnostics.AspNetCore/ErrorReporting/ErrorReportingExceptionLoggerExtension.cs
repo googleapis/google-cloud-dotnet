@@ -57,20 +57,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </remarks>
     public static class ErrorReportingExceptionLoggerExtension
     {
-
-
-
-
-
-
-
-        // TODO(talarico): UPDATE SNIPPETS AND EXAMPLES and add samples for injected reporter
-        // TODO(talarico): Write integration tests for IException logger use asp and asp core
-
-
-
-
-
         /// <summary>
         /// Uses middleware that will report all uncaught exceptions to the Stackdriver
         /// Error Reporting API.
@@ -137,12 +123,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             this IServiceCollection services, string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
-            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
-
-            options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = options.CreateConsumer();
-            var loggerBase = new ErrorReportingExceptionLoggerBase(consumer, serviceName, version);
+            var loggerBase = ErrorReportingExceptionLoggerBase.Create(projectId, serviceName, version, options);
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton(loggerBase);

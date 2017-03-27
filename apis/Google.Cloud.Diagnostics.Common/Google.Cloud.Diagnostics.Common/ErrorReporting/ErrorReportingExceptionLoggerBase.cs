@@ -22,6 +22,10 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.Diagnostics.Common
 {
+    /// <summary>
+    ///  Google Cloud Error Reporting Logger base.  Used to report exceptions to the
+    ///  Stackdriver Error Reporting API.
+    /// </summary>
     internal class ErrorReportingExceptionLoggerBase : IDisposable
     {
         // The service context in which this error has occurred.
@@ -40,6 +44,15 @@ namespace Google.Cloud.Diagnostics.Common
             };
         }
 
+        /// <summary>
+        /// Creates an instance of <see cref="ErrorReportingExceptionLoggerBase"/>
+        /// </summary>
+        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
+        ///     Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. 
+        ///     Cannot be null.</param>
+        /// <param name="options">Optional, error reporting options.</param>
         internal static ErrorReportingExceptionLoggerBase Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
