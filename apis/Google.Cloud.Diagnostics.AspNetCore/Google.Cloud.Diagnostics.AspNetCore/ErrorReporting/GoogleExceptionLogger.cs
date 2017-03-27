@@ -26,11 +26,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     /// </summary>
     internal sealed class GoogleExceptionLogger : IExceptionLogger
     {
-        private readonly ErrorReportingExceptionLoggerBase _logger;
+        private readonly IContextExceptionLogger _logger;
         private readonly IHttpContextAccessor _accesor;
 
         internal GoogleExceptionLogger(
-           ErrorReportingExceptionLoggerBase logger, IHttpContextAccessor accesor)   
+           IContextExceptionLogger logger, IHttpContextAccessor accesor)   
         {
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
             _accesor = GaxPreconditions.CheckNotNull(accesor, nameof(accesor));

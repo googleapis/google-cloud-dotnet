@@ -25,10 +25,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class ErrorReportingExceptionFilterTest
     {
-        /// <summary>
-        /// Creates an <see cref="ExceptionContext"/> that matches expected 
-        /// context of <see cref="ErrorReportingMatching.IsSimpleContext"/>.
-        /// </summary>
+        /// <summary>Creates an <see cref="ExceptionContext"/>.</summary>
         private ExceptionContext CreateSimpleContext()
         {
             var mockRequest = new Mock<HttpRequestBase>();
@@ -40,7 +37,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             return new ExceptionContext
             {
                 HttpContext = mockContext.Object,
-                Exception = new Exception(ErrorReportingMatching.ExceptionMessage)
+                Exception = new Exception()
             };
         }
 

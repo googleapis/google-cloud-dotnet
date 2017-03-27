@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Diagnostics.Common.Tests;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -49,7 +48,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         }
 
         [Fact]
-        public void ExceptionLoggerContextWrapper_Null()
+        public void ExceptionLoggerContextWrapper_Simple()
         {
             var exceptionContext = new ExceptionContext(new Exception(),
                 ExceptionCatchBlocks.HttpServer, new HttpRequestMessage(), new HttpResponseMessage());

@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    ///  Google Cloud Error Reporting Logger base.  Used to report exceptions to the
+    ///  Google Cloud Error Reporting Logger.  Used to report exceptions to the
     ///  Stackdriver Error Reporting API.
     /// </summary>
     internal class ErrorReportingContextExceptionLogger : IContextExceptionLogger
@@ -127,7 +127,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// Gets infromation about the exception that occured and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
-        internal ReportedErrorEvent CreateReportRequest(Exception exception, IContextWrapper context)
+        private ReportedErrorEvent CreateReportRequest(Exception exception, IContextWrapper context)
         {
             ErrorContext errorContext = new ErrorContext()
             {

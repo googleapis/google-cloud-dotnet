@@ -123,7 +123,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             this IServiceCollection services, string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
-            var loggerBase = ErrorReportingExceptionLoggerBase.Create(projectId, serviceName, version, options);
+            var loggerBase = ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options);
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton(loggerBase);
@@ -143,7 +143,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
 
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            var loggerBase = provider.GetServiceCheckNotNull<ErrorReportingExceptionLoggerBase>();
+            var loggerBase = provider.GetServiceCheckNotNull<ErrorReportingContextExceptionLogger>();
             return new GoogleExceptionLogger(loggerBase, accessor);
         }
     }

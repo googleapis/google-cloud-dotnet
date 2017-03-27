@@ -37,6 +37,17 @@ namespace Google.Cloud.Diagnostics.Common.Tests
             return projectId;
         }
 
+        public static bool IsWindows()
+        {
+#if NET45
+            return Environment.OSVersion.ToString().Contains("Windows");
+#else
+            return System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(
+                System.Runtime.InteropServices.OSPlatform.Windows);
+#endif
+
+        }
+
         /// <summary>A unique test Id.</summary>
         public static string GetTestId()
         {

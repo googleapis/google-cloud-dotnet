@@ -42,7 +42,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             var context = new ExceptionContext
             {
                 HttpContext = mockContext.Object,
-                Exception = new Exception(ErrorReportingMatching.ExceptionMessage)
+                Exception = new Exception()
             };
 
             var wrapper = new ExceptionContextWrapper(context);
@@ -53,7 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         }
 
         [Fact]
-        public void ExceptionContextWrapper_Null()
+        public void ExceptionContextWrapper_Simple()
         {
             var mockContext = new Mock<HttpContextBase>();
             mockContext.Setup(c => c.Request).Returns((HttpRequestBase) null);
@@ -62,7 +62,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             var context = new ExceptionContext
             {
                 HttpContext = mockContext.Object,
-                Exception = new Exception(ErrorReportingMatching.ExceptionMessage)
+                Exception = new Exception()
             };
 
             var wrapper = new ExceptionContextWrapper(context);

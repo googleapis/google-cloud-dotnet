@@ -13,13 +13,9 @@
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.Tests;
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Moq;
 using System;
-using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
@@ -29,14 +25,10 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class ErrorReportingExceptionLoggerTest
     {
-        /// <summary>
-        /// An <see cref="ExceptionContext"/> that matches expected 
-        /// context of <see cref="ErrorReportingMatching.IsSimpleContext"/>.
-        /// </summary>
+        /// <summary>An <see cref="ExceptionContext"/>.</summary>
         private static readonly ExceptionLoggerContext s_simpleContext =
             new ExceptionLoggerContext(new ExceptionContext(
-                new Exception(ErrorReportingMatching.ExceptionMessage),
-                    ExceptionCatchBlocks.HttpServer, new HttpRequestMessage()));
+                new Exception(), ExceptionCatchBlocks.HttpServer, new HttpRequestMessage()));
 
         [Fact]
         public void ShouldLog()
