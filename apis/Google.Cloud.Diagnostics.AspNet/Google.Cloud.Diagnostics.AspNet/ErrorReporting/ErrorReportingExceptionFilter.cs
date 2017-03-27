@@ -66,7 +66,8 @@ namespace Google.Cloud.Diagnostics.AspNet
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            return CreateBase(projectId, serviceName, version, options);
+            var baseLogger = ErrorReportingExceptionLoggerBase.Create(projectId, serviceName, version, options);
+            return new ErrorReportingExceptionFilter(baseLogger);
         }
 
         /// <summary>
@@ -84,28 +85,10 @@ namespace Google.Cloud.Diagnostics.AspNet
         ///     Cannot be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
         public static ErrorReportingExceptionFilter Create(
-            string serviceName, string version, ErrorReportingOptions options = null) =>
-                CreateBase(null, serviceName, version, options);
-
-        /// <summary>
-        /// Shared code for creating <see cref="ErrorReportingExceptionFilter"/>.
-        /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. If null the project Id will be auto detected.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
-        ///     Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer provided. 
-        ///     Cannot be null.</param>
-        /// <param name="options">Optional, error reporting options.</param>
-        private static ErrorReportingExceptionFilter CreateBase(string projectId, string serviceName, string version,
-            ErrorReportingOptions options = null)
+            string serviceName, string version, ErrorReportingOptions options = null)
         {
-            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
-            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
-
-            options = options ?? ErrorReportingOptions.Create(projectId);
-            var consumer = options.CreateConsumer();
-            var logger = new ErrorReportingExceptionLoggerBase(consumer, serviceName, version);
-            return new ErrorReportingExceptionFilter(logger);
+            var baseLogger = ErrorReportingExceptionLoggerBase.Create(null, serviceName, version, options);
+            return new ErrorReportingExceptionFilter(baseLogger);
         }
 
         internal ErrorReportingExceptionFilter(ErrorReportingExceptionLoggerBase logger)

@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -37,6 +38,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
         {
             // Use before handling any requests to ensure all unhandled exceptions are reported.
             app.UseGoogleExceptionLogging();
+        }
+        // End sample
+
+
+        // Sample: LogExceptions
+        /// <summary>
+        /// The <see cref="IExceptionLogger"/> is populated by dependency injection.
+        /// </summary>
+        public void ReadFile(IExceptionLogger exceptionLogger)
+        {
+            try
+            {
+                string scores = File.ReadAllText(@"C:\Scores.txt");
+                Console.WriteLine(scores);
+            }
+            catch (IOException e)
+            {
+                exceptionLogger.Log(e);
+            }
         }
         // End sample
 

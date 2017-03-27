@@ -40,6 +40,17 @@ namespace Google.Cloud.Diagnostics.Common
             };
         }
 
+        internal static ErrorReportingExceptionLoggerBase Create(string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
+        {
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = options.CreateConsumer();
+            return new ErrorReportingExceptionLoggerBase(consumer, serviceName, version);
+        }
+
         internal Task LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default(CancellationToken))
         {
             var errorEvent = CreateReportRequest(exception, context);

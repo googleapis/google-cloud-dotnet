@@ -8,7 +8,7 @@
     "Google.Api.Gax.Testing": "1.0.0-beta13",
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
     "Moq": "4.6.38-alpha",
-    "xunit": "2.2.0-rc3-build3528"
+    "xunit": "2.2.0-rc4-build3536"
   },
   "testRunner": "xunit",
 
@@ -22,6 +22,12 @@
           "type": "platform"
         }
       }
+    },
+	"net451": {		
+      "dependencies": {		
+        "System.Runtime": "4.0.10.0",		
+        "System.Threading.Tasks": "4.0.0" 		
+      }		
     }
   }
 }

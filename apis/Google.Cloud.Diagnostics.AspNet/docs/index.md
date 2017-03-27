@@ -32,6 +32,10 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#RegisterExceptionLoggerMvc)]
 
+## Log Exceptions
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#LogExceptions)]
+
 ## Initializing Tracing
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNet.AspNet.txt#InitializeTrace)]

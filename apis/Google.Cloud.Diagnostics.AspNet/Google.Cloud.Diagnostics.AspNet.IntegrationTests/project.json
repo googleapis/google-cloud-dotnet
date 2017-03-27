@@ -5,7 +5,6 @@
 
 
   "dependencies": {
-    "dotnet-test-xunit": "2.2.0-preview2-build1029",
     "Google.Cloud.Diagnostics.AspNet": { "target": "project" },
     "Google.Cloud.Diagnostics.AspNet.Tests": { "target": "project" },
     "Google.Cloud.Diagnostics.Common.Tests": { "target": "project" },
@@ -16,7 +15,8 @@
     "Microsoft.Owin.Host.HttpListener": "3.0.1",
     "Microsoft.Owin.Hosting": "3.0.1",
     "Microsoft.Owin.Testing": "3.0.1",
-    "xunit": "2.2.0-rc3-build3528"
+    "dotnet-test-xunit": "2.2.0-preview2-build1029",
+    "xunit": "2.2.0-rc4-build3536"
   },
   "testRunner": "xunit",
 

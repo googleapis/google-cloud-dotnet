@@ -29,6 +29,10 @@ installed, run the following command in a Google Cloud SDK Shell:
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#ReportUnandledExceptions)]
 
+## Log Exceptions
+
+[!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#LogExceptions)]
+
 ## Initializing Logging
 
 [!code-cs[](obj/snippets/Google.Cloud.Diagnostics.AspNetCore.AspNetCore.txt#RegisterGoogleLogger)]

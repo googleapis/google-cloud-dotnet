@@ -88,7 +88,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         private class ReportToErrorReportingApplication : BaseErrorReportingApplication
         {
             public override ErrorReportingOptions GetOptions() =>
-                ErrorReportingOptions.Create(EventTarget.ForErrorReporting());
+                ErrorReportingOptions.Create(EventTarget.ForErrorReporting(_projectId));
         }
 
         /// <summary>

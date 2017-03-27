@@ -18,6 +18,9 @@ using System.Web;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
+    /// <summary>
+    /// An <see cref="IContextWrapper"/> for an <see cref="HttpContext"/>.
+    /// </summary>
     internal class HttpContextWrapper : IContextWrapper
     {
         private readonly HttpContext _context;
@@ -27,9 +30,16 @@ namespace Google.Cloud.Diagnostics.AspNet
             _context = GaxPreconditions.CheckNotNull(context, nameof(context));
         }
 
+        /// <inheritdoc />
         public string GetMethod() => _context.Request?.HttpMethod;
+
+        /// <inheritdoc />
         public string GetUri() => _context.Request?.Url?.ToString();
+
+        /// <inheritdoc />
         public string GetUserAgent() => _context.Request?.UserAgent;
+
+        /// <inheritdoc />
         public int GetStatusCode() => _context.Response.StatusCode;
     }
 }

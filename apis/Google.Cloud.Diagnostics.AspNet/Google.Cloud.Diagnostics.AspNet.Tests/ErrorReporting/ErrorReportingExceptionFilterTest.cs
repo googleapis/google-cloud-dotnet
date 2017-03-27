@@ -74,7 +74,10 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         }
 
         private ErrorReportingExceptionFilter CreateFilter(IConsumer<ReportedErrorEvent> consumer)
-            => null;//new ErrorReportingExceptionFilter(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
+        {
+            var loggerBase = new ErrorReportingExceptionLoggerBase(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
+            return new ErrorReportingExceptionFilter(loggerBase);
+        }
 
         [Fact]
         public void Log()
