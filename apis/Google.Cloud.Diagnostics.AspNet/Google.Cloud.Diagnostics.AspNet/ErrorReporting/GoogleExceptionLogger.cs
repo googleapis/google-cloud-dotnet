@@ -24,11 +24,11 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <summary>
     /// Google Cloud Error Reporting Logger. Reports exceptions to Google Cloud Error Reporting.
     /// </summary>
-    public class GoogleExceptionLogger : IExceptionLogger
+    public class GoogleExceptionLogger : IExceptionLogger, IDisposable
     {
-        private readonly ErrorReportingExceptionLoggerBase _logger;
+        private readonly IContextExceptionLogger _logger;
 
-        internal GoogleExceptionLogger(ErrorReportingExceptionLoggerBase logger) {
+        internal GoogleExceptionLogger(IContextExceptionLogger logger) {
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }
 
@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            var loggerBase = ErrorReportingExceptionLoggerBase.Create(projectId, serviceName, version, options);
+            var loggerBase = ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options);
             return new GoogleExceptionLogger(loggerBase);
         }
 
@@ -65,8 +65,16 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static GoogleExceptionLogger Create(string serviceName, string version,
             ErrorReportingOptions options = null)
         {
-            var loggerBase = ErrorReportingExceptionLoggerBase.Create(null, serviceName, version, options);
+            var loggerBase = ErrorReportingContextExceptionLogger.Create(null, serviceName, version, options);
             return new GoogleExceptionLogger(loggerBase);
+        }
+
+        /// <inheritdoc />
+        public void Log(Exception exception, HttpContext context = null)
+        {
+            context = context ?? HttpContext.Current;
+            var contextWrapper = new HttpContextWrapper(context);
+            _logger.Log(exception, contextWrapper);
         }
 
         /// <inheritdoc />
@@ -78,11 +86,6 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public void Log(Exception exception, HttpContext context = null)
-        {
-            context = context ?? HttpContext.Current;
-            var contextWrapper = new HttpContextWrapper(context);
-            _logger.Log(exception, contextWrapper);
-        }
+        public void Dispose() => _logger.Dispose();
     }
 }

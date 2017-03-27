@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public class ErrorReportingExceptionFilter : IExceptionFilter, IDisposable
     {
-        private readonly ErrorReportingExceptionLoggerBase _logger;
+        private readonly IContextExceptionLogger _logger;
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
@@ -66,7 +66,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            var baseLogger = ErrorReportingExceptionLoggerBase.Create(projectId, serviceName, version, options);
+            var baseLogger = ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options);
             return new ErrorReportingExceptionFilter(baseLogger);
         }
 
@@ -87,11 +87,11 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static ErrorReportingExceptionFilter Create(
             string serviceName, string version, ErrorReportingOptions options = null)
         {
-            var baseLogger = ErrorReportingExceptionLoggerBase.Create(null, serviceName, version, options);
+            var baseLogger = ErrorReportingContextExceptionLogger.Create(null, serviceName, version, options);
             return new ErrorReportingExceptionFilter(baseLogger);
         }
 
-        internal ErrorReportingExceptionFilter(ErrorReportingExceptionLoggerBase logger)
+        internal ErrorReportingExceptionFilter(IContextExceptionLogger logger)
         {
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }

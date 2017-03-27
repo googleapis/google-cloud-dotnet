@@ -26,7 +26,7 @@ namespace Google.Cloud.Diagnostics.Common
     ///  Google Cloud Error Reporting Logger base.  Used to report exceptions to the
     ///  Stackdriver Error Reporting API.
     /// </summary>
-    internal class ErrorReportingExceptionLoggerBase : IDisposable
+    internal class ErrorReportingContextExceptionLogger : IContextExceptionLogger
     {
         // The service context in which this error has occurred.
         // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.Common
 
         private readonly IConsumer<ReportedErrorEvent> _consumer;
 
-        internal ErrorReportingExceptionLoggerBase(IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
+        internal ErrorReportingContextExceptionLogger(IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _serviceContext = new ServiceContext
@@ -45,15 +45,15 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLoggerBase"/>
+        /// Creates an instance of <see cref="ErrorReportingContextExceptionLogger"/>
         /// </summary>
-        /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
+        /// <param name="projectId">The Google Cloud Platform project ID. Can be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
         ///     Cannot be null.</param>
         /// <param name="version">Represents the source code version that the developer provided. 
         ///     Cannot be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
-        internal static ErrorReportingExceptionLoggerBase Create(string projectId, string serviceName, string version,
+        internal static IContextExceptionLogger Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
@@ -61,16 +61,18 @@ namespace Google.Cloud.Diagnostics.Common
 
             options = options ?? ErrorReportingOptions.Create(projectId);
             var consumer = options.CreateConsumer();
-            return new ErrorReportingExceptionLoggerBase(consumer, serviceName, version);
+            return new ErrorReportingContextExceptionLogger(consumer, serviceName, version);
         }
-
-        internal Task LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default(CancellationToken))
+        
+        /// <inheritdoc />
+        Task IContextExceptionLogger.LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default(CancellationToken))
         {
             var errorEvent = CreateReportRequest(exception, context);
             return _consumer.ReceiveAsync(new[] { errorEvent }, cancellationToken);
         }
 
-        internal void Log(Exception exception, IContextWrapper context)
+        /// <inheritdoc />
+        void IContextExceptionLogger.Log(Exception exception, IContextWrapper context)
         {
             var errorEvent = CreateReportRequest(exception, context);
             _consumer.Receive(new[] { errorEvent });

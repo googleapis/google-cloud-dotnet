@@ -15,10 +15,7 @@
 using Google.Api.Gax;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.ErrorReporting.V1Beta1;
-using Google.Protobuf.WellKnownTypes;
 using System;
-using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
@@ -50,7 +47,7 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// </remarks>
     public sealed class ErrorReportingExceptionLogger : ExceptionLogger, IDisposable
     {
-        private readonly ErrorReportingExceptionLoggerBase _logger;
+        private readonly IContextExceptionLogger _logger;
 
         /// <summary>
         /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/> using credentials as
@@ -64,7 +61,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            var baseLogger = ErrorReportingExceptionLoggerBase.Create(projectId, serviceName, version, options);
+            var baseLogger = ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options);
             return new ErrorReportingExceptionLogger(baseLogger);
         }
 
@@ -83,11 +80,11 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static ErrorReportingExceptionLogger Create(
             string serviceName, string version, ErrorReportingOptions options = null)
         {
-            var baseLogger = ErrorReportingExceptionLoggerBase.Create(null, serviceName, version, options);
+            var baseLogger = ErrorReportingContextExceptionLogger.Create(null, serviceName, version, options);
             return new ErrorReportingExceptionLogger(baseLogger);
         }
 
-        internal ErrorReportingExceptionLogger(ErrorReportingExceptionLoggerBase logger)
+        internal ErrorReportingExceptionLogger(IContextExceptionLogger logger)
         {
             _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
         }
