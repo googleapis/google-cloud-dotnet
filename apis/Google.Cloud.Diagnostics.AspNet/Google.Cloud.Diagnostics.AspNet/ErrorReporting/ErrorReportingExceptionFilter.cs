@@ -15,10 +15,7 @@
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
 using Google.Apis.Auth.OAuth2;
-using Google.Cloud.ErrorReporting.V1Beta1;
-using System.Web;
 using System.Web.Mvc;
-using Google.Protobuf.WellKnownTypes;
 using System;
 
 namespace Google.Cloud.Diagnostics.AspNet

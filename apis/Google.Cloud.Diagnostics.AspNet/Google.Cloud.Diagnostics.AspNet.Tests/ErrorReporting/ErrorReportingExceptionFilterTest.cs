@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.Tests;
 using Moq;
 using System;
 using System.Web;
