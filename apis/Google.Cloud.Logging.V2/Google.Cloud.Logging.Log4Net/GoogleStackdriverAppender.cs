@@ -269,6 +269,10 @@ namespace Google.Cloud.Logging.Log4Net
             {
                 labels.Add(nameof(MetaDataType.Level), loggingEvent.Level?.Name ?? unknown);
             }
+            if (SourceRevision.GitRevisionId != null)
+            {
+                labels.Add(SourceRevision.GitRevisionIdLogLabel, SourceRevision.GitRevisionId);
+            }
             foreach (var customLabel in _customLabels)
             {
                 labels.Add(customLabel.Key, customLabel.Value);
