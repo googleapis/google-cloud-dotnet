@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
         
         /// <inheritdoc />
-        Task IContextExceptionLogger.LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default(CancellationToken))
+        Task IContextExceptionLogger.LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken)
         {
             var errorEvent = CreateReportRequest(exception, context);
             return _consumer.ReceiveAsync(new[] { errorEvent }, cancellationToken);
@@ -82,7 +82,7 @@ namespace Google.Cloud.Diagnostics.Common
         public void Dispose() => _consumer.Dispose();
 
         /// <summary>
-        /// Gets information about the HTTP request and response when the exception occured 
+        /// Gets information about the HTTP request and response when the exception occurred 
         /// and populates a <see cref="HttpRequestContext"/> object.
         /// </summary>
         private HttpRequestContext CreateHttpRequestContext(IContextWrapper context)
@@ -97,7 +97,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Gets information about the source location where the exception occured 
+        /// Gets information about the source location where the exception occurred 
         /// and populates a <see cref="SourceLocation"/> object.
         /// </summary>
         private static SourceLocation CreateSourceLocation(Exception exception)
@@ -124,7 +124,7 @@ namespace Google.Cloud.Diagnostics.Common
         }
 
         /// <summary>
-        /// Gets infromation about the exception that occured and populates
+        /// Gets information about the exception that occurred and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
         private ReportedErrorEvent CreateReportRequest(Exception exception, IContextWrapper context)
@@ -137,7 +137,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             return new ReportedErrorEvent()
             {
-                Message = exception.ToString() ?? "",
+                Message = exception?.ToString() ?? "",
                 Context = errorContext,
                 ServiceContext = _serviceContext,
                 EventTime = Timestamp.FromDateTime(DateTime.UtcNow),

@@ -81,8 +81,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     provided. Cannot be null.</param> 
         /// <param name="options">Error reporting options for exception logging.</param>  
         public static void AddGoogleExceptionLogging(
-             this IServiceCollection services, string projectId, string serviceName, string version,
-             ErrorReportingOptions options = null)
+            this IServiceCollection services, string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
             AddGoogleExceptionLoggingBase(services, projectId, serviceName, version, options);

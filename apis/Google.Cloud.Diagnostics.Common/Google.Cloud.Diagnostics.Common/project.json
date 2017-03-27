@@ -34,7 +34,7 @@
         "System.Threading": "4.3.0"
       }
     },
-	"net45": {
+    "net45": {
       "frameworkAssemblies": {
         "System.Web": "4.0.0.0"
       }

@@ -23,7 +23,7 @@ using System.Web.Http.ExceptionHandling;
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    ///  Google Cloud Error Reporting <see cref="GoogleExceptionLogger"/>.
+    ///  Google Cloud Error Reporting <see cref="ExceptionLogger"/>.
     /// </summary>
     /// 
     /// <example>

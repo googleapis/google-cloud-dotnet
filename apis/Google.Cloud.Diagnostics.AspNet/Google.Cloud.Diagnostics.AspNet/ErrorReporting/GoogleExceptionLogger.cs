@@ -22,7 +22,7 @@ using System.Web;
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// Google Cloud Error Reporting Logger. Reports exceptions to Google Cloud Error Reporting.
+    /// Google Cloud Error Reporting Logger. Reports exceptions to Stackdriver Error Reporting API.
     /// </summary>
     public class GoogleExceptionLogger : IExceptionLogger, IDisposable
     {
