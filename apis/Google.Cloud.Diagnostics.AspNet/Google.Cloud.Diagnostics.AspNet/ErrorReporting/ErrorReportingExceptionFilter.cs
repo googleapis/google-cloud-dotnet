@@ -66,8 +66,8 @@ namespace Google.Cloud.Diagnostics.AspNet
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
-            var baseLogger = ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options);
-            return new ErrorReportingExceptionFilter(baseLogger);
+            var contextLogger = ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options);
+            return new ErrorReportingExceptionFilter(contextLogger);
         }
 
         /// <summary>
@@ -87,8 +87,8 @@ namespace Google.Cloud.Diagnostics.AspNet
         public static ErrorReportingExceptionFilter Create(
             string serviceName, string version, ErrorReportingOptions options = null)
         {
-            var baseLogger = ErrorReportingContextExceptionLogger.Create(null, serviceName, version, options);
-            return new ErrorReportingExceptionFilter(baseLogger);
+            var contextLogger = ErrorReportingContextExceptionLogger.Create(null, serviceName, version, options);
+            return new ErrorReportingExceptionFilter(contextLogger);
         }
 
         internal ErrorReportingExceptionFilter(IContextExceptionLogger logger)

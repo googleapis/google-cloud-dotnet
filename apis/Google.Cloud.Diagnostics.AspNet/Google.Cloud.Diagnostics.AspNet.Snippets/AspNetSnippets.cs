@@ -56,6 +56,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             string serviceName = "[Name of service]";
             string version = "[Version of service]";
             var exceptionLogger = GoogleExceptionLogger.Create(projectId, serviceName, version);
+
             try
             {
                 string scores = File.ReadAllText(@"C:\Scores.txt");

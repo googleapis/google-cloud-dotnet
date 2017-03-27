@@ -30,11 +30,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         public void Log()
         {
             var mockAccessor = new Mock<IHttpContextAccessor>();
-            var mockLoggerBase = new Mock<IContextExceptionLogger>();
-            var logger = new GoogleExceptionLogger(mockLoggerBase.Object, mockAccessor.Object);
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
 
             logger.Log(_exception, new DefaultHttpContext());
-            mockLoggerBase.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
+            mockContextLogger.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
         }
 
         [Fact]
@@ -42,25 +42,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var mockAccessor = new Mock<IHttpContextAccessor>();
             mockAccessor.Setup(a => a.HttpContext).Returns(new DefaultHttpContext());
-            var mockLoggerBase = new Mock<IContextExceptionLogger>();
-            var logger = new GoogleExceptionLogger(mockLoggerBase.Object, mockAccessor.Object);
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
 
             logger.Log(_exception);
-            mockLoggerBase.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
+            mockContextLogger.Verify(lb => lb.Log(_exception, It.IsAny<HttpContextWrapper>()));
         }
 
         [Fact]
         public async Task LogAsync()
         {
             var mockAccessor = new Mock<IHttpContextAccessor>();
-            var mockLoggerBase = new Mock<IContextExceptionLogger>();
-            mockLoggerBase.Setup(lb => lb.LogAsync(
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            mockContextLogger.Setup(lb => lb.LogAsync(
                 It.IsAny<Exception>(), It.IsAny<IContextWrapper>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.CompletedTask);
-            var logger = new GoogleExceptionLogger(mockLoggerBase.Object, mockAccessor.Object);
+            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
 
             await logger.LogAsync(_exception, new DefaultHttpContext());
-            mockLoggerBase.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
+            mockContextLogger.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
         }
 
         [Fact]
@@ -68,14 +68,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         {
             var mockAccessor = new Mock<IHttpContextAccessor>();
             mockAccessor.Setup(a => a.HttpContext).Returns(new DefaultHttpContext());
-            var mockLoggerBase = new Mock<IContextExceptionLogger>();
-            mockLoggerBase.Setup(lb => lb.LogAsync(
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            mockContextLogger.Setup(lb => lb.LogAsync(
                 It.IsAny<Exception>(), It.IsAny<IContextWrapper>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.CompletedTask);
-            var logger = new GoogleExceptionLogger(mockLoggerBase.Object, mockAccessor.Object);
+            var logger = new GoogleExceptionLogger(mockContextLogger.Object, mockAccessor.Object);
 
             await logger.LogAsync(_exception);
-            mockLoggerBase.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
+            mockContextLogger.Verify(lb => lb.LogAsync(_exception, It.IsAny<HttpContextWrapper>(), It.IsAny<CancellationToken>()));
         }
     }
 }

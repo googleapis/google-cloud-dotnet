@@ -135,8 +135,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         private static IExceptionLogger CreateExceptionLogger(IServiceProvider provider)
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
-            var loggerBase = provider.GetServiceCheckNotNull<IContextExceptionLogger>();
-            return new GoogleExceptionLogger(loggerBase, accessor);
+            var contextLogger = provider.GetServiceCheckNotNull<IContextExceptionLogger>();
+            return new GoogleExceptionLogger(contextLogger, accessor);
         }
     }
 }
