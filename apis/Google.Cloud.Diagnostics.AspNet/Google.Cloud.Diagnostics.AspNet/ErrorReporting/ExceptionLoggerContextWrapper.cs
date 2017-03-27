@@ -18,6 +18,9 @@ using System.Web.Http.ExceptionHandling;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
+    /// <summary>
+    /// An <see cref="IContextWrapper"/> for an <see cref="ExceptionLoggerContextWrapper"/>.
+    /// </summary>
     internal class ExceptionLoggerContextWrapper : IContextWrapper
     {
         private readonly ExceptionLoggerContext _context;
@@ -27,9 +30,16 @@ namespace Google.Cloud.Diagnostics.AspNet
             _context = GaxPreconditions.CheckNotNull(context, nameof(context));
         }
 
+        /// <inheritdoc />
         public string GetMethod() => _context.ExceptionContext?.Request?.Method?.ToString();
+
+        /// <inheritdoc />
         public string GetUri() => _context.ExceptionContext?.Request?.RequestUri?.ToString();
+
+        /// <inheritdoc />
         public string GetUserAgent() => _context.ExceptionContext?.Request?.Headers?.UserAgent?.ToString();
+
+        /// <inheritdoc />
         public int GetStatusCode() => (int) (_context.ExceptionContext?.Response?.StatusCode ?? 0);
     }
 }
