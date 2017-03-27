@@ -134,12 +134,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         private static IExceptionLogger CreateExceptionLogger(IServiceProvider provider)
         {
-
-
-            // TODO(talarico): this null check is wrong
-
-
-
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             var loggerBase = provider.GetServiceCheckNotNull<IContextExceptionLogger>();
             return new GoogleExceptionLogger(loggerBase, accessor);
