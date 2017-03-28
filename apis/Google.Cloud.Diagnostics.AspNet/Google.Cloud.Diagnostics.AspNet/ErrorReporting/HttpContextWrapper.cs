@@ -40,6 +40,6 @@ namespace Google.Cloud.Diagnostics.AspNet
         public string GetUserAgent() => _context.Request?.UserAgent;
 
         /// <inheritdoc />
-        public int GetStatusCode() => _context.Response.StatusCode;
+        public int GetStatusCode() => _context.Response?.StatusCode ?? 0;
     }
 }

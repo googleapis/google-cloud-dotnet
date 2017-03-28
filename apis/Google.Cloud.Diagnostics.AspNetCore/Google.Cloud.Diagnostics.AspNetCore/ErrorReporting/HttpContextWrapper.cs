@@ -20,7 +20,7 @@ using Microsoft.AspNetCore.Http.Extensions;
 namespace Google.Cloud.Diagnostics.AspNetCore
 {
     /// <summary>
-    /// An <see cref="IContextWrapper"/> for a <see cref="HttpContext"/>.
+    /// An <see cref="IContextWrapper"/> for an <see cref="HttpContext"/>.
     /// </summary>
     internal class HttpContextWrapper : IContextWrapper
     {
@@ -41,6 +41,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         public string GetUserAgent() => _context.Request?.Headers["User-Agent"].ToString();
 
         /// <inheritdoc />
-        public int GetStatusCode() => _context.Response.StatusCode;
+        public int GetStatusCode() => _context.Response?.StatusCode ?? 0;
     }
 }

@@ -27,7 +27,6 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         public void ExceptionLoggerContextWrapper()
         {
             var userAgent = new ProductInfoHeaderValue("user-agent", "user-agent-value");
-
             var requestMessage = new HttpRequestMessage();
             requestMessage.Method = new HttpMethod("POST");
             requestMessage.RequestUri = new Uri("http://google.com/");
@@ -37,7 +36,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             responseMessage.StatusCode = (HttpStatusCode) 409;
 
             var exceptionContext = new ExceptionContext(
-               new Exception(), ExceptionCatchBlocks.HttpServer, requestMessage, responseMessage);
+                new Exception(), ExceptionCatchBlocks.HttpServer, requestMessage, responseMessage);
             var context = new ExceptionLoggerContext(exceptionContext);
 
             var wrapper = new ExceptionLoggerContextWrapper(context);
@@ -50,8 +49,9 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void ExceptionLoggerContextWrapper_Simple()
         {
-            var exceptionContext = new ExceptionContext(new Exception(),
-                ExceptionCatchBlocks.HttpServer, new HttpRequestMessage(), new HttpResponseMessage());
+            var exceptionContext = new ExceptionContext(
+                new Exception(), ExceptionCatchBlocks.HttpServer,
+                new HttpRequestMessage(), new HttpResponseMessage());
             var context = new ExceptionLoggerContext(exceptionContext);
 
             var wrapper = new ExceptionLoggerContextWrapper(context);
