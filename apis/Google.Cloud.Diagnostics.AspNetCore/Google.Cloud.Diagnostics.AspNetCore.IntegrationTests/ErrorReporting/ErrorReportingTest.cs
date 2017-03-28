@@ -41,6 +41,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             => NoExceptions<ReportToErrorReportingTestApplication>();
 
         [Fact]
+        public Task ManualLog_ErrorReporting()
+            => ManualLog<ReportToErrorReportingTestApplication>();
+
+        [Fact]
         public Task LogsException_ErrorReporting()
             => LogsException<ReportToErrorReportingTestApplication>();
 
@@ -51,6 +55,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public Task NoExceptions_Logging()
             => NoExceptions<ReportToLoggingTestApplication>();
+
+        [Fact]
+        public Task ManualLog_Logging()
+            => ManualLog<ReportToLoggingTestApplication>();
 
         [Fact]
         public Task LogsException_Logging()
@@ -80,6 +88,29 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
                 var errorEvents = _polling.GetEvents(startTime, testId, 0);
                 Assert.Empty(errorEvents);
+            }
+        }
+
+        /// <summary>
+        /// Test helper that will run a <see cref="TestServer"/> with a start up class,
+        /// send a request to the server and ensure an error event was reported from 
+        /// the test server to the error reporting api.
+        /// </summary>
+        /// <typeparam name="T">The type of the start up class for the test server.</typeparam>
+        private async Task ManualLog<T>() where T : class
+        {
+            string testId = Utils.GetTestId();
+            DateTime startTime = DateTime.UtcNow;
+
+            var builder = new WebHostBuilder().UseStartup<T>();
+            using (TestServer server = new TestServer(builder))
+            {
+                var client = server.CreateClient();
+                await client.GetAsync($"/ErrorReporting/ThrowCatchLog/{testId}");
+
+                var errorEvents = _polling.GetEvents(startTime, testId, 1);
+                Assert.Single(errorEvents);
+                VerifyErrorEvent(errorEvents.First(), testId, "ThrowCatchLog");
             }
         }
 
@@ -229,7 +260,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// </summary>
     public class ErrorReportingController : Controller
     {
-        public ErrorReportingController() { }
+        private readonly IExceptionLogger _exceptionLogger;
+        public ErrorReportingController(IExceptionLogger exceptionLogger)
+        {
+            _exceptionLogger = exceptionLogger;
+        }
 
         /// <summary>Cathces and handles a thrown <see cref="Exception"/>.</summary>
         public string Index(string id)
@@ -258,6 +293,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             string message = GetMessage(nameof(ThrowsArgumentException), id);
             throw new ArgumentException(message);
+        }
+
+        /// <summary>Cathces and logs a thrown <see cref="Exception"/>.</summary>
+        public string ThrowCatchLog(string id)
+        {
+            var message = GetMessage(nameof(Index), id);
+            try
+            {
+                throw new Exception(message);
+            }
+            catch (Exception e)
+            {
+                _exceptionLogger.Log(e);
+            }
+            return message;
         }
 
         private string GetMessage(string message, string id) => $"{message} - {id}";
