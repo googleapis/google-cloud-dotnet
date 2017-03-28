@@ -506,23 +506,17 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.NotEmpty(jobs);
         }
 
-        [Fact(Skip = "The streaming buffer never empties quickly enough")]
-        public void ExportCsv()
+        [Fact]
+        public void CreateExtractJob()
         {
-            // TODO: Make this simpler in the wrapper
+            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string objectName = "tags.csv";
+
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string historyTableId = _fixture.HistoryTableId;
-            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
-            string objectName = "table.csv";
+            string tableId = _fixture.HistoryTableId;
 
-            if (!WaitForStreamingBufferToEmpty(historyTableId))
-            {
-                Console.WriteLine("Streaming buffer not empty after 30 seconds; not performing export");
-                return;
-            }
-
-            // Sample: ExportCsv
+            // Snippet: CreateExtractJob(string, string, string, string, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
 
             // Create a storage bucket; in normal use it's likely that one would exist already.
@@ -530,93 +524,25 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             storageClient.CreateBucket(projectId, bucket);
             string destinationUri = $"gs://{bucket}/{objectName}";
 
-            Job job = client.Service.Jobs.Insert(new Job
+            BigQueryJob job = client.CreateExtractJob(projectId, datasetId, tableId, destinationUri)
+                .PollUntilCompleted();
+            // If there are any errors, display them.
+            if (job.Status.ErrorResult != null)
             {
-                Configuration = new JobConfiguration
-                {
-                    Extract = new JobConfigurationExtract
-                    {
-                        DestinationFormat = "CSV",
-                        DestinationUris = new[] { destinationUri },
-                        SourceTable = client.GetTableReference(datasetId, historyTableId)
-                    }
-                }
-            }, projectId).Execute();
-
-            // Wait until the export has finished.
-            BigQueryJob result = client.PollJobUntilCompleted(job.JobReference);
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
+                foreach (ErrorProto error in job.Status.Errors)
                 {
                     Console.WriteLine(error.Message);
                 }
             }
-            Assert.Null(result.Status.ErrorResult);
-
-            MemoryStream stream = new MemoryStream();
-            storageClient.DownloadObject(bucket, objectName, stream);
-            Console.WriteLine(Encoding.UTF8.GetString(stream.ToArray()));
-            // End sample
+            else
+            {
+                var obj = storageClient.GetObject(bucket, objectName);
+                Console.WriteLine($"Extracted file size: {obj.Size}");
+            }
+            // End snippet
 
             storageClient.DeleteObject(bucket, objectName);
             storageClient.DeleteBucket(bucket);
-        }
-
-        // TODO: ExportJson
-        // TODO: ImportCsv
-        // TODO: ImportJson
-
-        [Fact(Skip = "The streaming buffer never empties quickly enough")]
-        public void CopyTable()
-        {
-            // TODO: Make this simpler in the wrapper
-            string projectId = _fixture.ProjectId;
-            string datasetId = _fixture.GameDatasetId;
-            string historyTableId = _fixture.HistoryTableId;
-            string destinationTableId = Guid.NewGuid().ToString().Replace('-', '_');
-
-            if (!WaitForStreamingBufferToEmpty(historyTableId))
-            {
-                Console.WriteLine("Streaming buffer not empty after 30 seconds; not performing export");
-                return;
-            }
-
-            // Sample: CopyTable
-            BigQueryClient client = BigQueryClient.Create(projectId);
-
-            Job job = client.Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Copy = new JobConfigurationTableCopy
-                    {
-                        DestinationTable = client.GetTableReference(datasetId, destinationTableId),
-                        SourceTable = client.GetTableReference(datasetId, historyTableId)
-                    }
-                }
-            }, projectId).Execute();
-
-            // Wait until the copy has finished.
-            client.PollJobUntilCompleted(job.JobReference);
-
-            // Now list its rows
-            PagedEnumerable<TableDataList, BigQueryRow> result = client.ListRows(datasetId, destinationTableId);
-            foreach (BigQueryRow row in result)
-            {
-                DateTime timestamp = (DateTime) row["game_started"];
-                long level = (long) row["level"];
-                long score = (long) row["score"];
-                string player = (string) row["player"];
-                Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
-            }
-            // End sample
-
-            int originalRows = client.ListRows(datasetId, historyTableId).Count();
-            int copiedRows = result.Count();
-
-            Assert.Equal(originalRows, copiedRows);
         }
 
         [Fact]
@@ -1167,117 +1093,43 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.NotEmpty(jobs);
         }
 
-        [Fact(Skip = "The streaming buffer never empties quickly enough")]
-        public async Task ExportCsvAsync()
+        [Fact]
+        public async Task CreateExtractJobAsync()
         {
-            // TODO: Make this simpler in the wrapper
+            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string objectName = "tags.csv";
+
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string historyTableId = _fixture.HistoryTableId;
-            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
-            string objectName = "table.csv";
+            string tableId = _fixture.HistoryTableId;
 
-            if (!WaitForStreamingBufferToEmpty(historyTableId))
-            {
-                Console.WriteLine("Streaming buffer not empty after 30 seconds; not performing export");
-                return;
-            }
-
-            // Sample: ExportCsvAsync
-            BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
+            // Snippet: CreateExtractJobAsync(string, string, string, string, *, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
 
             // Create a storage bucket; in normal use it's likely that one would exist already.
-            StorageClient storageClient = await StorageClient.CreateAsync();
-            await storageClient.CreateBucketAsync(projectId, bucket);
+            StorageClient storageClient = StorageClient.Create();
+            storageClient.CreateBucket(projectId, bucket);
             string destinationUri = $"gs://{bucket}/{objectName}";
 
-            Job job = await client.Service.Jobs.Insert(new Job
+            BigQueryJob job = await client.CreateExtractJobAsync(projectId, datasetId, tableId, destinationUri);
+            job = await job.PollUntilCompletedAsync();
+            // If there are any errors, display them.
+            if (job.Status.ErrorResult != null)
             {
-                Configuration = new JobConfiguration
-                {
-                    Extract = new JobConfigurationExtract
-                    {
-                        DestinationFormat = "CSV",
-                        DestinationUris = new[] { destinationUri },
-                        SourceTable = client.GetTableReference(datasetId, historyTableId)
-                    }
-                }
-            }, projectId).ExecuteAsync();
-
-            // Wait until the export has finished.
-            BigQueryJob result = await client.PollJobUntilCompletedAsync(job.JobReference);
-            // If there are any errors, display them *then* fail.
-            if (result.Status.ErrorResult != null)
-            {
-                foreach (ErrorProto error in result.Status.Errors)
+                foreach (ErrorProto error in job.Status.Errors)
                 {
                     Console.WriteLine(error.Message);
                 }
             }
-            Assert.Null(result.Status.ErrorResult);
-
-            MemoryStream stream = new MemoryStream();
-            await storageClient.DownloadObjectAsync(bucket, objectName, stream);
-            Console.WriteLine(Encoding.UTF8.GetString(stream.ToArray()));
-            // End sample
+            else
+            {
+                var obj = storageClient.GetObject(bucket, objectName);
+                Console.WriteLine($"Extracted file size: {obj.Size}");
+            }
+            // End snippet
 
             storageClient.DeleteObject(bucket, objectName);
             storageClient.DeleteBucket(bucket);
-        }
-
-        // TODO: ExportJson
-        // TODO: ImportCsv
-        // TODO: ImportJson
-
-        [Fact(Skip = "The streaming buffer never empties quickly enough")]
-        public async Task CopyTableAsync()
-        {
-            // TODO: Make this simpler in the wrapper
-            string projectId = _fixture.ProjectId;
-            string datasetId = _fixture.GameDatasetId;
-            string historyTableId = _fixture.HistoryTableId;
-            string destinationTableId = Guid.NewGuid().ToString().Replace('-', '_');
-
-            if (!WaitForStreamingBufferToEmpty(historyTableId))
-            {
-                Console.WriteLine("Streaming buffer not empty after 30 seconds; not performing export");
-                return;
-            }
-
-            // Sample: CopyTableAsync
-            BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
-
-            Job job = await client.Service.Jobs.Insert(new Job
-            {
-                Configuration = new JobConfiguration
-                {
-                    Copy = new JobConfigurationTableCopy
-                    {
-                        DestinationTable = client.GetTableReference(datasetId, destinationTableId),
-                        SourceTable = client.GetTableReference(datasetId, historyTableId)
-                    }
-                }
-            }, projectId).ExecuteAsync();
-
-            // Wait until the copy has finished.
-            await client.PollJobUntilCompletedAsync(job.JobReference);
-
-            // Now list its rows
-            PagedAsyncEnumerable<TableDataList, BigQueryRow> result = client.ListRowsAsync(datasetId, destinationTableId);
-            await result.ForEachAsync(row =>
-            {
-                DateTime timestamp = (DateTime) row["game_started"];
-                long level = (long) row["level"];
-                long score = (long) row["score"];
-                string player = (string) row["player"];
-                Console.WriteLine($"{player}: {level}/{score} ({timestamp:yyyy-MM-dd HH:mm:ss})");
-            });
-            // End sample
-
-            int originalRows = await client.ListRowsAsync(datasetId, historyTableId).Count();
-            int copiedRows = await result.Count();
-
-            Assert.Equal(originalRows, copiedRows);
         }
 
         [Fact]
@@ -1412,18 +1264,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             // End sample
 
             Assert.Equal(1, rows.Count);
-        }
-
-        private bool WaitForStreamingBufferToEmpty(string tableId)
-        {
-            BigQueryClient client = BigQueryClient.Create(_fixture.ProjectId);
-            BigQueryTable table = client.GetTable(_fixture.GameDatasetId, tableId);
-            for (int i = 0; i < 3 && table.Resource.StreamingBuffer != null; i++)
-            {
-                Thread.Sleep(TimeSpan.FromSeconds(10));
-                table = client.GetTable(table.Reference);
-            }
-            return table.Resource.StreamingBuffer == null;
         }
 
         // TODO: Repeated fields and record types.

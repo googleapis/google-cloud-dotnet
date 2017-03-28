@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Apis.Bigquery.v2.Data;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -150,6 +151,88 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <returns>The final state of the job.</returns>
         public virtual BigQueryJob CancelJob(JobReference jobReference, CancelJobOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJob(TableReference, string, CreateExtractJobOptions)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateExtractJob(string projectId, string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null)
+            => CreateExtractJob(GetTableReference(projectId, datasetId, tableId), destinationUri, options);
+
+        /// <summary>
+        /// Creates a job to extract data from the specified BigQuery table within this client's project to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJob(TableReference, string, CreateExtractJobOptions)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateExtractJob(string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null)
+            => CreateExtractJob(GetTableReference(datasetId, tableId), destinationUri, options);
+
+        /// <summary>
+        /// Creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
+        /// This method just creates a single-element array and delegates to <see cref="CreateExtractJob(TableReference, IEnumerable{String}, CreateExtractJobOptions)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateExtractJob(TableReference tableReference, string destinationUri, CreateExtractJobOptions options = null) =>
+            CreateExtractJob(
+                GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference)),
+                new[] { GaxPreconditions.CheckNotNull(destinationUri, nameof(destinationUri)) },
+                options);
+
+        /// <summary>
+        /// Creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJob(TableReference, IEnumerable{String}, CreateExtractJobOptions)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateExtractJob(string projectId, string datasetId, string tableId, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null)
+            => CreateExtractJob(GetTableReference(projectId, datasetId, tableId), destinationUris, options);
+
+        /// <summary>
+        /// Creates a job to extract data from the specified BigQuery table within this client's project to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJob(TableReference, IEnumerable{String}, CreateExtractJobOptions)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateExtractJob(string datasetId, string tableId, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null)
+            => CreateExtractJob(GetTableReference(datasetId, tableId), destinationUris, options);
+
+        /// <summary>
+        /// Creates a job to extract data from the specified BigQuery table within this client's project to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the extract operation.</returns>
+        public virtual BigQueryJob CreateExtractJob(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null)
         {
             throw new NotImplementedException();
         }
@@ -300,6 +383,94 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is
         /// the final state of job.</returns>
         public virtual Task<BigQueryJob> CancelJobAsync(JobReference jobReference, CancelJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJobAsync(TableReference, string, CreateExtractJobOptions, CancellationToken)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateExtractJobAsync(string projectId, string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            => CreateExtractJobAsync(GetTableReference(projectId, datasetId, tableId), destinationUri, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract data from the specified BigQuery table within this client's project to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJobAsync(TableReference, string, CreateExtractJobOptions, CancellationToken)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateExtractJobAsync(string datasetId, string tableId, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            => CreateExtractJobAsync(GetTableReference(datasetId, tableId), destinationUri, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
+        /// This method just creates a single-element array and delegates to <see cref="CreateExtractJobAsync(TableReference, IEnumerable{String}, CreateExtractJobOptions, CancellationToken)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="destinationUri">The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateExtractJobAsync(TableReference tableReference, string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            CreateExtractJobAsync(
+                GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference)),
+                new[] { GaxPreconditions.CheckNotNull(destinationUri, nameof(destinationUri)) },
+                options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract data from the specified BigQuery table to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJobAsync(TableReference, IEnumerable{String}, CreateExtractJobOptions, CancellationToken)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="projectId">The project ID. Must not be null.</param>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateExtractJobAsync(string projectId, string datasetId, string tableId, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            => CreateExtractJobAsync(GetTableReference(projectId, datasetId, tableId), destinationUris, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract data from the specified BigQuery table within this client's project to Google Cloud Storage.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="CreateExtractJobAsync(TableReference, IEnumerable{String}, CreateExtractJobOptions, CancellationToken)"/>.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="datasetId">The dataset ID. Must not be null.</param>
+        /// <param name="tableId">The table ID. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateExtractJobAsync(string datasetId, string tableId, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            => CreateExtractJobAsync(GetTableReference(datasetId, tableId), destinationUris, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to extract data from the specified BigQuery table within this client's project to Google Cloud Storage.
+        /// See [the BigQuery documentation](https://cloud.google.com/bigquery/docs/exporting-data) for more information on extract jobs.
+        /// </summary>
+        /// <param name="tableReference">A fully-qualified identifier for the table. Must not be null.</param>
+        /// <param name="destinationUris">The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateExtractJobAsync(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }
