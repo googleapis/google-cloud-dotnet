@@ -24,6 +24,25 @@ namespace Google.Cloud.Diagnostics.AspNet
     /// <summary>
     /// Google Cloud Error Reporting Logger. Reports exceptions to Stackdriver Error Reporting API.
     /// </summary>
+    /// 
+    /// <example>
+    /// <code>
+    /// string projectId = "[Google Cloud Platform project ID]";
+    /// string serviceName = "[Name of service]";
+    /// string version = "[Version of service]";
+    /// var exceptionLogger = GoogleExceptionLogger.Create(projectId, serviceName, version);
+    ///
+    /// try
+    /// {
+    ///     string scores = File.ReadAllText(@"C:\Scores.txt");
+    ///     Console.WriteLine(scores);
+    /// }
+    /// catch (IOException e)
+    /// {
+    ///     exceptionLogger.Log(e);
+    /// }
+    /// </code>
+    /// </example>
     public class GoogleExceptionLogger : IExceptionLogger, IDisposable
     {
         private readonly IContextExceptionLogger _logger;
