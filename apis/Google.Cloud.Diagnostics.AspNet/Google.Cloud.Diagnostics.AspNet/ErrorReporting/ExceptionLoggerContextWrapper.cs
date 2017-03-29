@@ -19,7 +19,7 @@ using System.Web.Http.ExceptionHandling;
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// An <see cref="IContextWrapper"/> for an <see cref="ExceptionLoggerContextWrapper"/>.
+    /// An <see cref="IContextWrapper"/> for an <see cref="ExceptionLoggerContext"/>.
     /// </summary>
     internal class ExceptionLoggerContextWrapper : IContextWrapper
     {
@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public string GetMethod() => _context.ExceptionContext?.Request?.Method?.ToString();
+        public string GetHttpMethod() => _context.ExceptionContext?.Request?.Method?.ToString();
 
         /// <inheritdoc />
         public string GetUri() => _context.ExceptionContext?.Request?.RequestUri?.ToString();

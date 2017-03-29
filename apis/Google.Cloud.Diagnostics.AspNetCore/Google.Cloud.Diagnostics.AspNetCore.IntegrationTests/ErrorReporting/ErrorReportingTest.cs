@@ -94,7 +94,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         /// <summary>
         /// Test helper that will run a <see cref="TestServer"/> with a start up class,
         /// send a request to the server and ensure an error event was reported from 
-        /// the test server to the error reporting api.
+        /// the test server that was manually logged.
         /// </summary>
         /// <typeparam name="T">The type of the start up class for the test server.</typeparam>
         private async Task ManualLog<T>() where T : class
@@ -116,7 +116,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         /// <summary>
         /// Test helper that will run a <see cref="TestServer"/> with a start up class,
-        /// send a request to the server and ensure an error event was reported from 
+        /// send a request to the server and ensure an uncaught error event was reported from 
         /// the test server to the error reporting api.
         /// </summary>
         /// <typeparam name="T">The type of the start up class for the test server.</typeparam>

@@ -32,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <inheritdoc />
-        public string GetMethod() => _context.Request?.Method?.ToString();
+        public string GetHttpMethod() => _context.Request?.Method?.ToString();
 
         /// <inheritdoc />
         public string GetUri() => _context.Request?.GetDisplayUrl();

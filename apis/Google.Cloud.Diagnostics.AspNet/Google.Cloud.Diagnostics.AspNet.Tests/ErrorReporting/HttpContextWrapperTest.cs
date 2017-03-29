@@ -29,7 +29,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             var context = new HttpContext(request, response);
 
             var wrapper = new HttpContextWrapper(context);
-            Assert.Equal("GET", wrapper.GetMethod());
+            Assert.Equal("GET", wrapper.GetHttpMethod());
             Assert.Equal(uri, wrapper.GetUri());
             Assert.Null(wrapper.GetUserAgent());
             Assert.Equal(200, wrapper.GetStatusCode());

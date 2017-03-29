@@ -45,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             };
 
             var wrapper = new ExceptionContextWrapper(context);
-            Assert.Equal("POST", wrapper.GetMethod());
+            Assert.Equal("POST", wrapper.GetHttpMethod());
             Assert.Equal(uri, wrapper.GetUri());
             Assert.Equal("user-agent", wrapper.GetUserAgent());
             Assert.Equal(409, wrapper.GetStatusCode());
@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             };
 
             var wrapper = new ExceptionContextWrapper(context);
-            Assert.Null(wrapper.GetMethod());
+            Assert.Null(wrapper.GetHttpMethod());
             Assert.Null(wrapper.GetUri());
             Assert.Null(wrapper.GetUserAgent());
             Assert.Equal(0, wrapper.GetStatusCode());

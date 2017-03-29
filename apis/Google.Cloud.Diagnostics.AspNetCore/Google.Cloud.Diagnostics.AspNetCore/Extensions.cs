@@ -30,9 +30,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// </summary>
         internal static T GetServiceCheckNotNull<T>(this IServiceProvider provider)
         {
-            var message = "No {0} service found. Ensure the Google service is properly set up.";
+            var message = $"No {typeof(T)} service found. Ensure the Google service is properly set up.";
             T service = provider.GetService<T>();
-            GaxPreconditions.CheckState(service != null, string.Format(message, typeof(T)));
+            GaxPreconditions.CheckState(service != null, message);
             return service;
         }
     }

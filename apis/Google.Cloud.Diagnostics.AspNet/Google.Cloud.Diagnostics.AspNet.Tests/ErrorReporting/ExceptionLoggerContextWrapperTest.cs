@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             var context = new ExceptionLoggerContext(exceptionContext);
 
             var wrapper = new ExceptionLoggerContextWrapper(context);
-            Assert.Equal("POST", wrapper.GetMethod());
+            Assert.Equal("POST", wrapper.GetHttpMethod());
             Assert.Equal("http://google.com/", wrapper.GetUri());
             Assert.Equal("user-agent/user-agent-value", wrapper.GetUserAgent());
             Assert.Equal(409, wrapper.GetStatusCode());
@@ -55,7 +55,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             var context = new ExceptionLoggerContext(exceptionContext);
 
             var wrapper = new ExceptionLoggerContextWrapper(context);
-            Assert.Equal("GET", wrapper.GetMethod());
+            Assert.Equal("GET", wrapper.GetHttpMethod());
             Assert.Null(wrapper.GetUri());
             Assert.Equal("", wrapper.GetUserAgent());
             Assert.Equal(200, wrapper.GetStatusCode());

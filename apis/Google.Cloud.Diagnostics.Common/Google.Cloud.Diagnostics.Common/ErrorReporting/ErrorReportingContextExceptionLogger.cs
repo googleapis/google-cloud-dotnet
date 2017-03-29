@@ -89,7 +89,7 @@ namespace Google.Cloud.Diagnostics.Common
         {
             return new HttpRequestContext()
             {
-                Method = context?.GetMethod() ?? "",
+                Method = context?.GetHttpMethod() ?? "",
                 Url = context?.GetUri() ?? "",
                 UserAgent = context?.GetUserAgent() ?? "",
                 ResponseStatusCode = context?.GetStatusCode() ?? 0,

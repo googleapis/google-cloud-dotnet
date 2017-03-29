@@ -30,6 +30,14 @@ namespace Google.Cloud.Diagnostics.Common
     public interface IExceptionLogger
     {
         /// <summary>
+        /// Logs an exception that occurred.
+        /// </summary>
+        /// <param name="exception">The exception to log. Cannot be null.</param>
+        /// <param name="context">Optional, the current http context. If unset the
+        ///     current context will be retrieved automatically.</param>
+        void Log(Exception exception, HttpContext context = null);
+
+        /// <summary>
         /// Asynchronously logs an exception that occurred.
         /// </summary>
         /// <param name="exception">The exception to log. Cannot be null.</param>
@@ -38,13 +46,5 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="cancellationToken">Optional, The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Logs an exception that occurred.
-        /// </summary>
-        /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">Optional, the current http context. If unset the
-        ///     current context will be retrieved automatically.</param>
-        void Log(Exception exception, HttpContext context = null);
     }
 }

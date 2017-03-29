@@ -113,7 +113,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         private class FakeContextWrapper : IContextWrapper
         {
-            string IContextWrapper.GetMethod() => _method;
+            string IContextWrapper.GetHttpMethod() => _method;
             int IContextWrapper.GetStatusCode() => _statusCode;
             string IContextWrapper.GetUri() => _uri;
             string IContextWrapper.GetUserAgent() => _userAgent;
@@ -121,7 +121,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 
         private class EmptyContextWrapper : IContextWrapper
         {
-            string IContextWrapper.GetMethod() => null;
+            string IContextWrapper.GetHttpMethod() => null;
             int IContextWrapper.GetStatusCode() => 0;
             string IContextWrapper.GetUri() => null;
             string IContextWrapper.GetUserAgent() => null;

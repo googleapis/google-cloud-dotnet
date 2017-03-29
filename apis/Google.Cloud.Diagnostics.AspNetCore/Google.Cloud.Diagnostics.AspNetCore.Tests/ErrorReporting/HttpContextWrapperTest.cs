@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             response.StatusCode = 409;
 
             var wrapper = new HttpContextWrapper(context);
-            Assert.Equal("POST", wrapper.GetMethod());
+            Assert.Equal("POST", wrapper.GetHttpMethod());
             Assert.Equal("http://google.com", wrapper.GetUri());
             Assert.Equal("user-agent", wrapper.GetUserAgent());
             Assert.Equal(409, wrapper.GetStatusCode());
@@ -50,7 +50,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             request.Scheme = "http";
 
             var wrapper = new HttpContextWrapper(context);
-            Assert.Equal("", wrapper.GetMethod());
+            Assert.Equal("", wrapper.GetHttpMethod());
             Assert.Equal("http://google.com", wrapper.GetUri());
             Assert.Equal("", wrapper.GetUserAgent());
             Assert.Equal(200, wrapper.GetStatusCode());

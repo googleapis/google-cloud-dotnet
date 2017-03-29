@@ -22,7 +22,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Gets the http method.  GET, POST, ect. Can be null.
         /// </summary>
-        string GetMethod();
+        string GetHttpMethod();
 
         /// <summary>
         /// Gets the http request uri. Can be null.

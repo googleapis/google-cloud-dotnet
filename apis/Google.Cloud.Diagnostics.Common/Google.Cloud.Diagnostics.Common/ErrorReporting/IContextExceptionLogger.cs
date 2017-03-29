@@ -24,6 +24,13 @@ namespace Google.Cloud.Diagnostics.Common
     internal interface IContextExceptionLogger : IDisposable
     {
         /// <summary>
+        /// Logs an exception that occurred.
+        /// </summary>
+        /// <param name="exception">The exception to log. Cannot be null.</param>
+        /// <param name="context">The current context. Cannot be null.</param>
+        void Log(Exception exception, IContextWrapper context);
+
+        /// <summary>
         /// Asynchronously logs an exception that occurred.
         /// </summary>
         /// <param name="exception">The exception to log. Cannot be null.</param>
@@ -31,12 +38,5 @@ namespace Google.Cloud.Diagnostics.Common
         /// <param name="cancellationToken">Optional, The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         Task LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Logs an exception that occurred.
-        /// </summary>
-        /// <param name="exception">The exception to log. Cannot be null.</param>
-        /// <param name="context">The current context. Cannot be null.</param>
-        void Log(Exception exception, IContextWrapper context);
     }
 }

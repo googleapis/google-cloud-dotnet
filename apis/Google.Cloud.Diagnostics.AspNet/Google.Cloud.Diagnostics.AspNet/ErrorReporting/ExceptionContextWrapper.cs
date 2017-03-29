@@ -31,7 +31,7 @@ namespace Google.Cloud.Diagnostics.AspNet
         }
 
         /// <inheritdoc />
-        public string GetMethod() => _context.HttpContext?.Request?.HttpMethod;
+        public string GetHttpMethod() => _context.HttpContext?.Request?.HttpMethod;
 
         /// <inheritdoc />
         public string GetUri() => _context.HttpContext?.Request?.Url?.ToString();
