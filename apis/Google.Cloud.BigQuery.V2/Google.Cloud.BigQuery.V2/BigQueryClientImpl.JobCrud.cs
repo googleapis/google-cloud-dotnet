@@ -174,6 +174,39 @@ namespace Google.Cloud.BigQuery.V2
             request.ModifyRequest += _versionHeaderAction;
             return request;
         }
+        
+        /// <inheritdoc />
+        public override BigQueryJob CreateCopyJob(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null)
+        {
+            var job = CreateCopyJobRequest(sources, destination, options).Execute();
+            return new BigQueryJob(this, job);
+        }
 
+        /// <inheritdoc />
+        public override async Task<BigQueryJob> CreateCopyJobAsync(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var job = await CreateCopyJobRequest(sources, destination, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
+        private InsertRequest CreateCopyJobRequest(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(sources, nameof(sources));
+            GaxPreconditions.CheckNotNull(destination, nameof(destination));
+            List<TableReference> sourceList = sources.ToList();
+            GaxPreconditions.CheckArgument(sourceList.Count != 0, nameof(sources), "Sources cannot be empty");
+
+            var copy = new JobConfigurationTableCopy { SourceTables = sourceList, DestinationTable = destination };
+            options?.ModifyRequest(copy);
+            var request = Service.Jobs.Insert(new Job
+            {
+                Configuration = new JobConfiguration
+                {
+                    Copy = copy
+                }
+            }, ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
+            return request;
+        }
     }
 }
