@@ -144,31 +144,25 @@ namespace Google.Cloud.BigQuery.V2
         /// <inheritdoc />
         public override BigQueryJob CreateExtractJob(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null)
         {
-            GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
-            GaxPreconditions.CheckNotNull(destinationUris, nameof(destinationUris));
-            List<string> destinationUriList = destinationUris.ToList();
-            GaxPreconditions.CheckArgument(destinationUriList.Count != 0, nameof(destinationUris), "Destination URIs cannot be empty");
-
-            var query = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceTable = tableReference };
-            var job = CreateExtractJobRequest(query, options).Execute();
+            var job = CreateExtractJobRequest(tableReference, destinationUris, options).Execute();
             return new BigQueryJob(this, job);
         }
 
         /// <inheritdoc />
         public override async Task<BigQueryJob> CreateExtractJobAsync(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
+            var job = await CreateExtractJobRequest(tableReference, destinationUris, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
+        private InsertRequest CreateExtractJobRequest(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options)
+        {
             GaxPreconditions.CheckNotNull(tableReference, nameof(tableReference));
             GaxPreconditions.CheckNotNull(destinationUris, nameof(destinationUris));
             List<string> destinationUriList = destinationUris.ToList();
             GaxPreconditions.CheckArgument(destinationUriList.Count != 0, nameof(destinationUris), "Destination URIs cannot be empty");
 
-            var query = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceTable = tableReference };
-            var job = await CreateExtractJobRequest(query, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
-            return new BigQueryJob(this, job);
-        }
-
-        private JobsResource.InsertRequest CreateExtractJobRequest(JobConfigurationExtract extract, CreateExtractJobOptions options)
-        {
+            var extract = new JobConfigurationExtract { DestinationUris = destinationUriList, SourceTable = tableReference };
             options?.ModifyRequest(extract);
             var request = Service.Jobs.Insert(new Job
             {
