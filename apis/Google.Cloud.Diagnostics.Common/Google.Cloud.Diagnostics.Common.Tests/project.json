@@ -17,13 +17,14 @@
       "imports": "netcore50",
       "dependencies": {
         "System.Diagnostics.StackTrace": "4.3.0",
+        "NETStandard.Library": "1.6.1",
         "Microsoft.NETCore.App": {
           "version": "1.0.0",
           "type": "platform"
         }
       }
     },
-	"net451": {		
+    "net451": {		
       "dependencies": {		
         "System.Runtime": "4.0.10.0",		
         "System.Threading.Tasks": "4.0.0" 		

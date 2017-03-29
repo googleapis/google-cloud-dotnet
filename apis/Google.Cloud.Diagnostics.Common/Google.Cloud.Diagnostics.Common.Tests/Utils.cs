@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -42,8 +43,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
 #if NET45
             return Environment.OSVersion.ToString().Contains("Windows");
 #else
-            return System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(
-                System.Runtime.InteropServices.OSPlatform.Windows);
+            return RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 #endif
 
         }
