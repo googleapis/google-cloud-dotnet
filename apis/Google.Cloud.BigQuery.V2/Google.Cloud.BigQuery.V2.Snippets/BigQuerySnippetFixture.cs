@@ -84,6 +84,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
         internal string GenerateDatasetId() => DatasetPrefix + Guid.NewGuid().ToString().Replace('-', '_');
 
+        internal string GenerateTableId() => Guid.NewGuid().ToString().Replace("-", "_");
+
+        internal string GenerateStorageBucketName() => "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+
         internal void RegisterDatasetToDelete(string id)
         {
             _datasetsToDelete.Add(id);

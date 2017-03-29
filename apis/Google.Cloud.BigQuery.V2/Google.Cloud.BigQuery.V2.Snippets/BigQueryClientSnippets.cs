@@ -20,7 +20,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -80,7 +79,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
             string tableId = "people";
-            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string bucket = _fixture.GenerateStorageBucketName();
             string objectName = "table.csv";
             StorageClient storageClient = StorageClient.Create();
             byte[] csvData = Encoding.UTF8.GetBytes("Jon,10\nChris,20");
@@ -234,7 +233,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+            string tableId = _fixture.GenerateTableId();
 
             // Snippet: CreateTable(string,string,*,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
@@ -456,7 +455,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
             string historyTableId = _fixture.HistoryTableId;
-            string queryTableId = Guid.NewGuid().ToString().Replace('-', '_');
+            string queryTableId = _fixture.GenerateTableId();
 
             // Snippet: CreateQueryJob(string,*)
             BigQueryClient client = BigQueryClient.Create(projectId);
@@ -509,7 +508,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public void CreateExtractJob()
         {
-            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string bucket = _fixture.GenerateStorageBucketName();
             string objectName = "tags.csv";
 
             string projectId = _fixture.ProjectId;
@@ -550,7 +549,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+            string tableId = _fixture.GenerateTableId();
             TableSchema schema = new TableSchemaBuilder
             {
                 { "from_player", BigQueryDbType.String },
@@ -821,7 +820,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+            string tableId = _fixture.GenerateTableId();
 
             // Snippet: CreateTableAsync(string,string,*,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
@@ -1043,7 +1042,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
             string historyTableId = _fixture.HistoryTableId;
-            string queryTableId = Guid.NewGuid().ToString().Replace('-', '_');
+            string queryTableId = _fixture.GenerateTableId();
 
             // Snippet: CreateQueryJobAsync(string,*,*)
             BigQueryClient client = await BigQueryClient.CreateAsync(projectId);
@@ -1096,7 +1095,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public async Task CreateExtractJobAsync()
         {
-            string bucket = "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+            string bucket = _fixture.GenerateStorageBucketName();
             string objectName = "tags.csv";
 
             string projectId = _fixture.ProjectId;
@@ -1137,7 +1136,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+            string tableId = _fixture.GenerateTableId();
             TableSchema schema = new TableSchemaBuilder
             {
                 { "from_player", BigQueryDbType.String },
@@ -1238,7 +1237,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = Guid.NewGuid().ToString().Replace("-", "_");
+            string tableId = _fixture.GenerateTableId();
 
             // Sample: CreatePartitionedTable
             BigQueryClient client = BigQueryClient.Create(projectId);
