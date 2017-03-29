@@ -183,6 +183,20 @@ namespace Google.Cloud.BigQuery.V2
             _client.CreateExtractJob(Reference, destinationUris, options);
 
         /// <summary>
+        /// Creates a job to copy data from this table to another.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.CreateCopyJob(TableReference, TableReference, CreateCopyJobOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// This method only allows one table (this one) to be used as the source table. To copy multiple tables to one destination table,
+        /// use <see cref="BigQueryClient.CreateCopyJob(IEnumerable{TableReference}, TableReference, CreateCopyJobOptions)"/>.
+        /// </remarks>
+        /// <param name="destination">The destination table to copy to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the copy operation.</returns>
+        public BigQueryJob CreateCopyJob(TableReference destination, CreateCopyJobOptions options = null) =>
+            _client.CreateCopyJob(Reference, destination, options);
+
+        /// <summary>
         /// Asynchronously uploads a stream of CSV data to this table.
         /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.UploadCsvAsync(TableReference, TableSchema, Stream, UploadCsvOptions, CancellationToken)"/>.
         /// </summary>
@@ -307,6 +321,21 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
         public Task<BigQueryJob> CreateExtractJobAsync(IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.CreateExtractJobAsync(Reference, destinationUris, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to copy data from this table to another.
+        /// This method just creates a <see cref="TableReference"/> and delegates to <see cref="BigQueryClient.CreateCopyJobAsync(TableReference, TableReference, CreateCopyJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// This method only allows one table (this one) to be used as the source table. To copy multiple tables to one destination table,
+        /// use <see cref="BigQueryClient.CreateCopyJobAsync(IEnumerable{TableReference}, TableReference, CreateCopyJobOptions, CancellationToken)"/>.
+        /// </remarks>
+        /// <param name="destination">The destination table to copy to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the copy operation.</returns>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        public Task<BigQueryJob> CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
+            _client.CreateCopyJobAsync(Reference, destination, options, cancellationToken);
 
         /// <summary>
         /// Returns the fully-qualified ID of the table in Legacy SQL format. The Legacy SQL

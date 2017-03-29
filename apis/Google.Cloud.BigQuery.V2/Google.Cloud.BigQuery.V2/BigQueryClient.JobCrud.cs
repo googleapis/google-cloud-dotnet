@@ -238,6 +238,39 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
+        /// Creates a job to copy one table to another.
+        /// This method creates a single-element array and delegates to <see cref="CreateCopyJob(IEnumerable{TableReference}, TableReference, CreateCopyJobOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="source">The source table to copy. Must not be null.</param>
+        /// <param name="destination">The destination to copy to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the copy operation.</returns>
+        public virtual BigQueryJob CreateCopyJob(TableReference source, TableReference destination, CreateCopyJobOptions options = null)
+            => CreateCopyJob(new[] { GaxPreconditions.CheckNotNull(source, nameof(source)) }, destination, options);
+
+        /// <summary>
+        /// Creates a job to copy data from at least one table to another.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="sources">The source tables to copy. Must not be null or empty.</param>
+        /// <param name="destination">The destination to copy to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the copy operation.</returns>
+        public virtual BigQueryJob CreateCopyJob(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Asynchronously lists the jobs within this client's project.
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListJobsAsync(ProjectReference, ListJobsOptions)"/>.
         /// </summary>
@@ -471,6 +504,41 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
         public virtual Task<BigQueryJob> CreateExtractJobAsync(TableReference tableReference, IEnumerable<string> destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously creates a job to copy one table to another.
+        /// This method creates a single-element array and delegates to <see cref="CreateCopyJobAsync(IEnumerable{TableReference}, TableReference, CreateCopyJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="source">The source table to copy. Must not be null.</param>
+        /// <param name="destination">The destination to copy to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateCopyJobAsync(TableReference source, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            => CreateCopyJobAsync(new[] { GaxPreconditions.CheckNotNull(source, nameof(source)) }, destination, options, cancellationToken);
+
+        /// <summary>
+        /// Asynchronously creates a job to copy data from at least one table to another.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="sources">The source tables to copy. Must not be null or empty.</param>
+        /// <param name="destination">The destination to copy to. Must not be null.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        public virtual Task<BigQueryJob> CreateCopyJobAsync(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }

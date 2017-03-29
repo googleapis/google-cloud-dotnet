@@ -540,8 +540,43 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             // End snippet
 
+            job.ThrowOnAnyError();
             storageClient.DeleteObject(bucket, objectName);
             storageClient.DeleteBucket(bucket);
+        }
+
+        [Fact]
+        public void CreateCopyJob()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string sourceTableId = _fixture.HistoryTableId;
+            string destinationTableId = _fixture.GenerateTableId();
+
+            // Snippet: CreateCopyJob(TableReference, TableReference, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            TableReference sourceTableReference = client.GetTableReference(datasetId, sourceTableId);
+            TableReference destinationTableReference = client.GetTableReference(datasetId, destinationTableId);
+
+            BigQueryJob job = client.CreateCopyJob(sourceTableReference, destinationTableReference)
+                .PollUntilCompleted();
+            // If there are any errors, display them.
+            if (job.Status.ErrorResult != null)
+            {
+                foreach (ErrorProto error in job.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            // End snippet
+
+            job.ThrowOnAnyError();
+            var sourceTable = client.GetTable(sourceTableReference);
+            var destinationTable = client.GetTable(destinationTableReference);
+
+            var sourceRows = sourceTable.ListRows().Count();
+            var destinationRows = sourceTable.ListRows().Count();
+            Assert.Equal(sourceRows, destinationRows);
         }
 
         [Fact]
@@ -1127,8 +1162,44 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             // End snippet
 
+            job.ThrowOnAnyError();
             storageClient.DeleteObject(bucket, objectName);
             storageClient.DeleteBucket(bucket);
+        }
+
+        [Fact]
+        public async Task CreateCopyJobAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string sourceTableId = _fixture.HistoryTableId;
+            string destinationTableId = _fixture.GenerateTableId();
+
+            // Snippet: CreateCopyJobAsync(TableReference, TableReference, *, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            TableReference sourceTableReference = client.GetTableReference(datasetId, sourceTableId);
+            TableReference destinationTableReference = client.GetTableReference(datasetId, destinationTableId);
+
+            BigQueryJob job = await client.CreateCopyJobAsync(sourceTableReference, destinationTableReference);
+            job = await job.PollUntilCompletedAsync();
+
+            // If there are any errors, display them.
+            if (job.Status.ErrorResult != null)
+            {
+                foreach (ErrorProto error in job.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            // End snippet
+
+            job.ThrowOnAnyError();
+            var sourceTable = client.GetTable(sourceTableReference);
+            var destinationTable = client.GetTable(destinationTableReference);
+
+            var sourceRows = sourceTable.ListRows().Count();
+            var destinationRows = sourceTable.ListRows().Count();
+            Assert.Equal(sourceRows, destinationRows);
         }
 
         [Fact]
