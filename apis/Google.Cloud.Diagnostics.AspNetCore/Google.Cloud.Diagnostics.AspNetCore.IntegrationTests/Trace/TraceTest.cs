@@ -48,7 +48,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var startTime = Timestamp.FromDateTime(DateTime.UtcNow);
 
             var client = _noBufferHighQps.CreateClient();
-            await client.GetAsync($"/Trace/Trace/{testId}");
+            var response = await client.GetAsync($"/Trace/Trace/{testId}");
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
             var trace = _polling.GetTrace(spanName, startTime);
@@ -59,6 +59,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.NotEmpty(span.Labels);
             Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
             Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
+
+            Assert.True(response.Headers.Contains(TraceHeaderContext.TraceHeader));
+            var returnedHeader = response.Headers.GetValues(TraceHeaderContext.TraceHeader).Single();
+            var headerContext = TraceHeaderContext.FromHeader(returnedHeader);
+            Assert.False(string.IsNullOrEmpty(headerContext.TraceId));
+            Assert.Equal((ulong)0, headerContext.SpanId);
+            Assert.True(headerContext.ShouldTrace);
         }
 
         [Fact]
@@ -113,7 +120,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 
             var header = TraceHeaderContext.Create(traceId, spanId, shouldTrace: true);
             client.DefaultRequestHeaders.Add(TraceHeaderContext.TraceHeader, header.ToString());
-            await client.GetAsync($"/Trace/Trace/{testId}");
+            var response = await client.GetAsync($"/Trace/Trace/{testId}");
 
             var spanName = TraceController.GetMessage(nameof(TraceController.Trace), testId);
             var trace = _polling.GetTrace(spanName, startTime);
@@ -123,6 +130,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(2, trace.Spans.Count);
             var span = trace.Spans.First(s => s.Name.StartsWith("/Trace"));
             Assert.Equal(spanId, span.ParentSpanId);
+
+            Assert.True(response.Headers.Contains(TraceHeaderContext.TraceHeader));
+            var returnedHeader = response.Headers.GetValues(TraceHeaderContext.TraceHeader).Single();
+            var headerContext = TraceHeaderContext.FromHeader(returnedHeader);
+            Assert.Equal(traceId, headerContext.TraceId);
+            Assert.Equal(spanId, headerContext.SpanId);
+            Assert.True(headerContext.ShouldTrace);
         }
 
         [Fact]
