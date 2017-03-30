@@ -53,6 +53,10 @@ namespace Google.Cloud.BigQuery.V2
         {
             if (DestinationFormat != null)
             {
+                if (DestinationFormat == FileFormat.DatastoreBackup)
+                {
+                    throw new ArgumentException($"{nameof(FileFormat.DatastoreBackup)} is not supported for extract operations", "options");
+                }
                 extract.DestinationFormat = EnumMap.ToApiValue(DestinationFormat.Value);
             }
             if (Compression != null)
