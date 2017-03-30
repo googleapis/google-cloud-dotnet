@@ -79,11 +79,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GenerateDatasetId();
             string tableId = "people";
-            string bucket = _fixture.GenerateStorageBucketName();
-            string objectName = "table.csv";
+            string bucket = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
             StorageClient storageClient = StorageClient.Create();
             byte[] csvData = Encoding.UTF8.GetBytes("Jon,10\nChris,20");
-            storageClient.CreateBucket(projectId, bucket);
             storageClient.UploadObject(bucket, objectName, "text/csv", new MemoryStream(csvData));
             BigQueryClient.Create(projectId).CreateDataset(datasetId);
             _fixture.RegisterDatasetToDelete(datasetId);
@@ -113,8 +112,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             Assert.Equal(2, rows.Count);
             Assert.Equal(new[] { "Jon", "Chris" }, rows.Select(r => (string) r["name"]));
             Assert.Equal(new[] { 10L, 20L }, rows.Select(r => (long) r["score"]));
-            storageClient.DeleteObject(bucket, objectName);
-            storageClient.DeleteBucket(bucket);
         }
 
         [Fact]
@@ -508,8 +505,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public void CreateExtractJob()
         {
-            string bucket = _fixture.GenerateStorageBucketName();
-            string objectName = "tags.csv";
+            string bucket = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
 
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
@@ -517,10 +514,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Snippet: CreateExtractJob(string, string, string, string, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
-
-            // Create a storage bucket; in normal use it's likely that one would exist already.
-            StorageClient storageClient = StorageClient.Create();
-            storageClient.CreateBucket(projectId, bucket);
             string destinationUri = $"gs://{bucket}/{objectName}";
 
             BigQueryJob job = client.CreateExtractJob(projectId, datasetId, tableId, destinationUri)
@@ -535,14 +528,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             else
             {
+                StorageClient storageClient = StorageClient.Create();
                 var obj = storageClient.GetObject(bucket, objectName);
                 Console.WriteLine($"Extracted file size: {obj.Size}");
             }
             // End snippet
 
             job.ThrowOnAnyError();
-            storageClient.DeleteObject(bucket, objectName);
-            storageClient.DeleteBucket(bucket);
         }
 
         [Fact]
@@ -575,7 +567,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             var destinationTable = client.GetTable(destinationTableReference);
 
             var sourceRows = sourceTable.ListRows().Count();
-            var destinationRows = sourceTable.ListRows().Count();
+            var destinationRows = destinationTable.ListRows().Count();
             Assert.Equal(sourceRows, destinationRows);
         }
 
@@ -1130,8 +1122,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         [Fact]
         public async Task CreateExtractJobAsync()
         {
-            string bucket = _fixture.GenerateStorageBucketName();
-            string objectName = "tags.csv";
+            string bucket = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
 
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
@@ -1139,10 +1131,6 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
             // Snippet: CreateExtractJobAsync(string, string, string, string, *, *)
             BigQueryClient client = BigQueryClient.Create(projectId);
-
-            // Create a storage bucket; in normal use it's likely that one would exist already.
-            StorageClient storageClient = StorageClient.Create();
-            storageClient.CreateBucket(projectId, bucket);
             string destinationUri = $"gs://{bucket}/{objectName}";
 
             BigQueryJob job = await client.CreateExtractJobAsync(projectId, datasetId, tableId, destinationUri);
@@ -1157,14 +1145,13 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             else
             {
+                StorageClient storageClient = StorageClient.Create();
                 var obj = storageClient.GetObject(bucket, objectName);
                 Console.WriteLine($"Extracted file size: {obj.Size}");
             }
             // End snippet
 
             job.ThrowOnAnyError();
-            storageClient.DeleteObject(bucket, objectName);
-            storageClient.DeleteBucket(bucket);
         }
 
         [Fact]
@@ -1198,7 +1185,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             var destinationTable = client.GetTable(destinationTableReference);
 
             var sourceRows = sourceTable.ListRows().Count();
-            var destinationRows = sourceTable.ListRows().Count();
+            var destinationRows = destinationTable.ListRows().Count();
             Assert.Equal(sourceRows, destinationRows);
         }
 
