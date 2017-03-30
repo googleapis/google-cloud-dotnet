@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Apis.Bigquery.v2.Data;
+using System;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
@@ -36,6 +37,14 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(false, extract.PrintHeader);
             Assert.Equal("NEWLINE_DELIMITED_JSON", extract.DestinationFormat);
             Assert.Equal("gronkle", extract.FieldDelimiter);
+        }
+
+        [Fact]
+        public void CannotExtractAsDatastoreBackup()
+        {
+            var options = new CreateExtractJobOptions { DestinationFormat = FileFormat.DatastoreBackup };
+            JobConfigurationExtract extract = new JobConfigurationExtract();
+            Assert.Throws<ArgumentException>(() => options.ModifyRequest(extract));
         }
     }
 }

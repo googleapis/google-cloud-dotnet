@@ -271,6 +271,45 @@ namespace Google.Cloud.BigQuery.V2
         }
 
         /// <summary>
+        /// Creates a job to load data from a Google Cloud Storage file to a BigQuery table.
+        /// This method creates a single-element array and delegates to <see cref="CreateLoadJob(IEnumerable{String}, TableReference, TableSchema, CreateLoadJobOptions)"/>.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="sourceUri">The Google Cloud Storage URI of the file to load. Must not be null.</param>
+        /// <param name="destination">The destination table to write data to. Must not be null.</param>
+        /// <param name="schema">The schema for the table. May be null if the load operation does not require a schema,
+        /// such as if the table already exists, the data is being loaded from a Google Cloud Datastore backup, or if
+        /// the options are set to autodetect the schema.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the load operation.</returns>
+        public virtual BigQueryJob CreateLoadJob(string sourceUri, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null)
+            => CreateLoadJob(new[] { GaxPreconditions.CheckNotNull(sourceUri, nameof(sourceUri)) }, destination, schema, options);
+
+        /// <summary>
+        /// Creates a job to load data from at least one Google Cloud Storage file to a BigQuery table.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="sourceUris">The Google Cloud Storage URIs of the files to load. Must not be null or empty.</param>
+        /// <param name="destination">The destination table to write data to. Must not be null.</param>
+        /// <param name="schema">The schema for the table. May be null if the load operation does not require a schema,
+        /// such as if the table already exists, the data is being loaded from a Google Cloud Datastore backup, or if
+        /// the options are set to autodetect the schema.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <returns>The job created for the load operation.</returns>
+        public virtual BigQueryJob CreateLoadJob(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Asynchronously lists the jobs within this client's project.
         /// This method just creates a <see cref="ProjectReference"/> and delegates to <see cref="ListJobsAsync(ProjectReference, ListJobsOptions)"/>.
         /// </summary>
@@ -539,6 +578,47 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the copy operation.</returns>
         public virtual Task<BigQueryJob> CreateCopyJobAsync(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Asynchronously creates a job to load data from a Google Cloud Storage file to a BigQuery table.
+        /// This method creates a single-element array and delegates to <see cref="CreateLoadJobAsync(IEnumerable{String}, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)"/>.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="sourceUri">The Google Cloud Storage URI of the file to load. Must not be null.</param>
+        /// <param name="destination">The destination table to write data to. Must not be null.</param>
+        /// <param name="schema">The schema for the table. May be null if the load operation does not require a schema,
+        /// such as if the table already exists, the data is being loaded from a Google Cloud Datastore backup, or if
+        /// the options are set to autodetect the schema.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the load operation.</returns>
+        public virtual Task<BigQueryJob> CreateLoadJobAsync(string sourceUri, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+            => CreateLoadJobAsync(new[] { GaxPreconditions.CheckNotNull(sourceUri, nameof(sourceUri)) }, destination, schema, options);
+
+        /// <summary>
+        /// Asynchronously creates a job to load data from at least one Google Cloud Storage file to a BigQuery table.
+        /// </summary>
+        /// <remarks>
+        /// To avoid confusion between source and destination tables, overloads are not provided that take the
+        /// individual components of table references. Instead, use <see cref="GetTableReference(string, string)"/> or
+        /// <see cref="GetTableReference(string, string, string)"/> to create table references.
+        /// </remarks>
+        /// <param name="sourceUris">The Google Cloud Storage URIs of the files to load. Must not be null or empty.</param>
+        /// <param name="destination">The destination table to write data to. Must not be null.</param>
+        /// <param name="schema">The schema for the table. May be null if the load operation does not require a schema,
+        /// such as if the table already exists, the data is being loaded from a Google Cloud Datastore backup, or if
+        /// the options are set to autodetect the schema.</param>
+        /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
+        /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the load operation.</returns>
+        public virtual Task<BigQueryJob> CreateLoadJobAsync(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
         }

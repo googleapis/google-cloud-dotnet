@@ -572,6 +572,55 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         }
 
         [Fact]
+        public void CreateLoadJob()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string originalTableId = _fixture.HistoryTableId;
+            string newTableId = _fixture.GenerateTableId();
+            string bucket = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
+            string objectUri = $"gs://{bucket}/{objectName}";
+
+            // Snippet: CreateLoadJob(string, TableReference, TableSchema, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            // First extract the data to Google Cloud Storage...
+            // (This is just a convenient way of getting data into Google Cloud Storage
+            // to demonstrate a load job. If you only wanted to copy a table,
+            // you'd create a copy job instead.)
+            BigQueryTable table = client.GetTable(datasetId, originalTableId);
+            table.CreateExtractJob(objectUri).PollUntilCompleted().ThrowOnAnyError();
+
+            TableReference newTableReference = client.GetTableReference(datasetId, newTableId);
+
+            // Then load it back again, with the same schema.
+            // The extracted file will contain a header row: we need to skip it when loading.
+            CreateLoadJobOptions options = new CreateLoadJobOptions
+            {
+                SkipLeadingRows = 1
+            };
+            BigQueryJob job = client.CreateLoadJob(objectUri, newTableReference, table.Schema, options).PollUntilCompleted();
+
+            // If there are any errors, display them.
+            if (job.Status.ErrorResult != null)
+            {
+                foreach (ErrorProto error in job.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            // End snippet
+
+            job.ThrowOnAnyError();
+            var newTable = client.GetTable(newTableReference);
+
+            var sourceRows = table.ListRows().Count();
+            var newTableRows = newTable.ListRows().Count();
+            Assert.Equal(sourceRows, newTableRows);
+        }
+
+        [Fact]
         public void DeleteTable()
         {
             string projectId = _fixture.ProjectId;
@@ -1187,6 +1236,57 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             var sourceRows = sourceTable.ListRows().Count();
             var destinationRows = destinationTable.ListRows().Count();
             Assert.Equal(sourceRows, destinationRows);
+        }
+
+        [Fact]
+        public async Task CreateLoadJobAsync()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string originalTableId = _fixture.HistoryTableId;
+            string newTableId = _fixture.GenerateTableId();
+            string bucket = _fixture.StorageBucketName;
+            string objectName = _fixture.GenerateStorageObjectName();
+            string objectUri = $"gs://{bucket}/{objectName}";
+
+            // Snippet: CreateLoadJobAsync(string, TableReference, TableSchema, *, *)
+            BigQueryClient client = BigQueryClient.Create(projectId);
+
+            // First extract the data to Google Cloud Storage...
+            // (This is just a convenient way of getting data into Google Cloud Storage
+            // to demonstrate a load job. If you only wanted to copy a table,
+            // you'd create a copy job instead.)
+            BigQueryTable table = await client.GetTableAsync(datasetId, originalTableId);
+            var extractJob = await table.CreateExtractJobAsync(objectUri);
+            extractJob = (await extractJob.PollUntilCompletedAsync()).ThrowOnAnyError();
+
+            TableReference newTableReference = client.GetTableReference(datasetId, newTableId);
+
+            // Then load it back again, with the same schema.
+            // The extracted file will contain a header row: we need to skip it when loading.
+            CreateLoadJobOptions options = new CreateLoadJobOptions
+            {
+                SkipLeadingRows = 1
+            };
+            BigQueryJob job = await client.CreateLoadJobAsync(objectUri, newTableReference, table.Schema, options);
+            await job.PollUntilCompletedAsync();
+
+            // If there are any errors, display them.
+            if (job.Status.ErrorResult != null)
+            {
+                foreach (ErrorProto error in job.Status.Errors)
+                {
+                    Console.WriteLine(error.Message);
+                }
+            }
+            // End snippet
+
+            job.ThrowOnAnyError();
+            var newTable = await client.GetTableAsync(newTableReference);
+
+            var sourceRows = await table.ListRowsAsync().Count();
+            var newTableRows = await newTable.ListRowsAsync().Count();
+            Assert.Equal(sourceRows, newTableRows);
         }
 
         [Fact]

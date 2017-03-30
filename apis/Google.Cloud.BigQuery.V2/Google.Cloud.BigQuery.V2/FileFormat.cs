@@ -34,6 +34,13 @@ namespace Google.Cloud.BigQuery.V2
         /// A file in Avro format
         /// </summary>
         [ApiValue("AVRO")]
-        Avro
+        Avro,
+
+        /// <summary>
+        /// A Datastore backup file. This option is not supported
+        /// for all operations.
+        /// </summary>
+        [ApiValue("DATASTORE_BACKUP")]
+        DatastoreBackup
     }
 }

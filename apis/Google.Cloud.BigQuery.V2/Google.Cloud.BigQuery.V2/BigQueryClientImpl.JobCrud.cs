@@ -208,5 +208,39 @@ namespace Google.Cloud.BigQuery.V2
             request.ModifyRequest += _versionHeaderAction;
             return request;
         }
+
+        /// <inheritdoc />
+        public override BigQueryJob CreateLoadJob(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null)
+        {
+            var job = CreateLoadJobRequest(sourceUris, destination, schema, options).Execute();
+            return new BigQueryJob(this, job);
+        }
+
+        /// <inheritdoc />
+        public override async Task<BigQueryJob> CreateLoadJobAsync(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            var job = await CreateLoadJobRequest(sourceUris, destination, schema, options).ExecuteAsync(cancellationToken).ConfigureAwait(false);
+            return new BigQueryJob(this, job);
+        }
+
+        private InsertRequest CreateLoadJobRequest(IEnumerable<string> sourceUris, TableReference destination, TableSchema schema, CreateLoadJobOptions options)
+        {
+            GaxPreconditions.CheckNotNull(sourceUris, nameof(sourceUris));
+            GaxPreconditions.CheckNotNull(destination, nameof(destination));
+            List<string> sourceList = sourceUris.ToList();
+            GaxPreconditions.CheckArgument(sourceList.Count != 0, nameof(sourceUris), "Source URIs collection cannot be empty");
+
+            var load = new JobConfigurationLoad { SourceUris = sourceList, DestinationTable = destination, Schema = schema };
+            options?.ModifyRequest(load);
+            var request = Service.Jobs.Insert(new Job
+            {
+                Configuration = new JobConfiguration
+                {
+                    Load = load
+                }
+            }, ProjectId);
+            request.ModifyRequest += _versionHeaderAction;
+            return request;
+        }
     }
 }
