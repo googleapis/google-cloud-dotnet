@@ -338,12 +338,12 @@ references:
   commentId: T:Google.Api.Gax.GcePlatformDetails
   fullName: Google.Api.Gax.GcePlatformDetails
   nameWithType: GcePlatformDetails
-- uid: Google.Api.Gax.GcePlatformDetails.#ctor(System.String)
-  name: GcePlatformDetails(String)
-  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_System_String_
-  commentId: M:Google.Api.Gax.GcePlatformDetails.#ctor(System.String)
-  fullName: Google.Api.Gax.GcePlatformDetails.GcePlatformDetails(System.String)
-  nameWithType: GcePlatformDetails.GcePlatformDetails(String)
+- uid: Google.Api.Gax.GcePlatformDetails.#ctor(System.String,System.String,System.String,System.String)
+  name: GcePlatformDetails(String, String, String, String)
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Api.Gax.GcePlatformDetails.#ctor(System.String,System.String,System.String,System.String)
+  fullName: Google.Api.Gax.GcePlatformDetails.GcePlatformDetails(System.String, System.String, System.String, System.String)
+  nameWithType: GcePlatformDetails.GcePlatformDetails(String, String, String, String)
 - uid: Google.Api.Gax.GcePlatformDetails.#ctor*
   name: GcePlatformDetails
   href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_
@@ -398,6 +398,18 @@ references:
   commentId: Overload:Google.Api.Gax.GcePlatformDetails.ToString
   fullName: Google.Api.Gax.GcePlatformDetails.ToString
   nameWithType: GcePlatformDetails.ToString
+- uid: Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  name: TryLoad(String)
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_TryLoad_System_String_
+  commentId: M:Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  fullName: Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  nameWithType: GcePlatformDetails.TryLoad(String)
+- uid: Google.Api.Gax.GcePlatformDetails.TryLoad*
+  name: TryLoad
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_TryLoad_
+  commentId: Overload:Google.Api.Gax.GcePlatformDetails.TryLoad
+  fullName: Google.Api.Gax.GcePlatformDetails.TryLoad
+  nameWithType: GcePlatformDetails.TryLoad
 - uid: Google.Api.Gax.GcePlatformDetails.ZoneName
   name: ZoneName
   href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_ZoneName
@@ -410,6 +422,108 @@ references:
   commentId: Overload:Google.Api.Gax.GcePlatformDetails.ZoneName
   fullName: Google.Api.Gax.GcePlatformDetails.ZoneName
   nameWithType: GcePlatformDetails.ZoneName
+- uid: Google.Api.Gax.GkePlatformDetails
+  name: GkePlatformDetails
+  href: api/Google.Api.Gax.GkePlatformDetails.html
+  commentId: T:Google.Api.Gax.GkePlatformDetails
+  fullName: Google.Api.Gax.GkePlatformDetails
+  nameWithType: GkePlatformDetails
+- uid: Google.Api.Gax.GkePlatformDetails.#ctor(System.String,System.String,System.String,System.String,System.String)
+  name: GkePlatformDetails(String, String, String, String, String)
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails__ctor_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Api.Gax.GkePlatformDetails.#ctor(System.String,System.String,System.String,System.String,System.String)
+  fullName: Google.Api.Gax.GkePlatformDetails.GkePlatformDetails(System.String, System.String, System.String, System.String, System.String)
+  nameWithType: GkePlatformDetails.GkePlatformDetails(String, String, String, String, String)
+- uid: Google.Api.Gax.GkePlatformDetails.#ctor*
+  name: GkePlatformDetails
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails__ctor_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.#ctor
+  fullName: Google.Api.Gax.GkePlatformDetails.GkePlatformDetails
+  nameWithType: GkePlatformDetails.GkePlatformDetails
+- uid: Google.Api.Gax.GkePlatformDetails.ClusterName
+  name: ClusterName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ClusterName
+  commentId: P:Google.Api.Gax.GkePlatformDetails.ClusterName
+  fullName: Google.Api.Gax.GkePlatformDetails.ClusterName
+  nameWithType: GkePlatformDetails.ClusterName
+- uid: Google.Api.Gax.GkePlatformDetails.ClusterName*
+  name: ClusterName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ClusterName_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ClusterName
+  fullName: Google.Api.Gax.GkePlatformDetails.ClusterName
+  nameWithType: GkePlatformDetails.ClusterName
+- uid: Google.Api.Gax.GkePlatformDetails.HostName
+  name: HostName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_HostName
+  commentId: P:Google.Api.Gax.GkePlatformDetails.HostName
+  fullName: Google.Api.Gax.GkePlatformDetails.HostName
+  nameWithType: GkePlatformDetails.HostName
+- uid: Google.Api.Gax.GkePlatformDetails.HostName*
+  name: HostName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_HostName_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.HostName
+  fullName: Google.Api.Gax.GkePlatformDetails.HostName
+  nameWithType: GkePlatformDetails.HostName
+- uid: Google.Api.Gax.GkePlatformDetails.Location
+  name: Location
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_Location
+  commentId: P:Google.Api.Gax.GkePlatformDetails.Location
+  fullName: Google.Api.Gax.GkePlatformDetails.Location
+  nameWithType: GkePlatformDetails.Location
+- uid: Google.Api.Gax.GkePlatformDetails.Location*
+  name: Location
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_Location_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.Location
+  fullName: Google.Api.Gax.GkePlatformDetails.Location
+  nameWithType: GkePlatformDetails.Location
+- uid: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  name: MetadataJson
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_MetadataJson
+  commentId: P:Google.Api.Gax.GkePlatformDetails.MetadataJson
+  fullName: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  nameWithType: GkePlatformDetails.MetadataJson
+- uid: Google.Api.Gax.GkePlatformDetails.MetadataJson*
+  name: MetadataJson
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_MetadataJson_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.MetadataJson
+  fullName: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  nameWithType: GkePlatformDetails.MetadataJson
+- uid: Google.Api.Gax.GkePlatformDetails.ProjectId
+  name: ProjectId
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ProjectId
+  commentId: P:Google.Api.Gax.GkePlatformDetails.ProjectId
+  fullName: Google.Api.Gax.GkePlatformDetails.ProjectId
+  nameWithType: GkePlatformDetails.ProjectId
+- uid: Google.Api.Gax.GkePlatformDetails.ProjectId*
+  name: ProjectId
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ProjectId_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ProjectId
+  fullName: Google.Api.Gax.GkePlatformDetails.ProjectId
+  nameWithType: GkePlatformDetails.ProjectId
+- uid: Google.Api.Gax.GkePlatformDetails.ToString
+  name: ToString()
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ToString
+  commentId: M:Google.Api.Gax.GkePlatformDetails.ToString
+  fullName: Google.Api.Gax.GkePlatformDetails.ToString()
+  nameWithType: GkePlatformDetails.ToString()
+- uid: Google.Api.Gax.GkePlatformDetails.ToString*
+  name: ToString
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ToString_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ToString
+  fullName: Google.Api.Gax.GkePlatformDetails.ToString
+  nameWithType: GkePlatformDetails.ToString
+- uid: Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  name: TryLoad(String)
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_TryLoad_System_String_
+  commentId: M:Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  fullName: Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  nameWithType: GkePlatformDetails.TryLoad(String)
+- uid: Google.Api.Gax.GkePlatformDetails.TryLoad*
+  name: TryLoad
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_TryLoad_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.TryLoad
+  fullName: Google.Api.Gax.GkePlatformDetails.TryLoad
+  nameWithType: GkePlatformDetails.TryLoad
 - uid: Google.Api.Gax.Grpc
   name: Google.Api.Gax.Grpc
   href: api/Google.Api.Gax.Grpc.html
@@ -2384,6 +2498,12 @@ references:
   commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GcePlatformDetails)
   fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GcePlatformDetails)
   nameWithType: Platform.Platform(GcePlatformDetails)
+- uid: Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GkePlatformDetails)
+  name: Platform(GkePlatformDetails)
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_Google_Api_Gax_GkePlatformDetails_
+  commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GkePlatformDetails)
+  fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GkePlatformDetails)
+  nameWithType: Platform.Platform(GkePlatformDetails)
 - uid: Google.Api.Gax.Platform.#ctor*
   name: Platform
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_
@@ -2414,6 +2534,18 @@ references:
   commentId: Overload:Google.Api.Gax.Platform.GceDetails
   fullName: Google.Api.Gax.Platform.GceDetails
   nameWithType: Platform.GceDetails
+- uid: Google.Api.Gax.Platform.GkeDetails
+  name: GkeDetails
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_GkeDetails
+  commentId: P:Google.Api.Gax.Platform.GkeDetails
+  fullName: Google.Api.Gax.Platform.GkeDetails
+  nameWithType: Platform.GkeDetails
+- uid: Google.Api.Gax.Platform.GkeDetails*
+  name: GkeDetails
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_GkeDetails_
+  commentId: Overload:Google.Api.Gax.Platform.GkeDetails
+  fullName: Google.Api.Gax.Platform.GkeDetails
+  nameWithType: Platform.GkeDetails
 - uid: Google.Api.Gax.Platform.Instance
   name: Instance()
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_Instance
@@ -2438,6 +2570,18 @@ references:
   commentId: Overload:Google.Api.Gax.Platform.InstanceAsync
   fullName: Google.Api.Gax.Platform.InstanceAsync
   nameWithType: Platform.InstanceAsync
+- uid: Google.Api.Gax.Platform.ProjectId
+  name: ProjectId
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ProjectId
+  commentId: P:Google.Api.Gax.Platform.ProjectId
+  fullName: Google.Api.Gax.Platform.ProjectId
+  nameWithType: Platform.ProjectId
+- uid: Google.Api.Gax.Platform.ProjectId*
+  name: ProjectId
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ProjectId_
+  commentId: Overload:Google.Api.Gax.Platform.ProjectId
+  fullName: Google.Api.Gax.Platform.ProjectId
+  nameWithType: Platform.ProjectId
 - uid: Google.Api.Gax.Platform.ToString
   name: ToString()
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ToString
@@ -2480,6 +2624,12 @@ references:
   commentId: F:Google.Api.Gax.PlatformType.Gce
   fullName: Google.Api.Gax.PlatformType.Gce
   nameWithType: PlatformType.Gce
+- uid: Google.Api.Gax.PlatformType.Gke
+  name: Gke
+  href: api/Google.Api.Gax.PlatformType.html#Google_Api_Gax_PlatformType_Gke
+  commentId: F:Google.Api.Gax.PlatformType.Gke
+  fullName: Google.Api.Gax.PlatformType.Gke
+  nameWithType: PlatformType.Gke
 - uid: Google.Api.Gax.PlatformType.Unknown
   name: Unknown
   href: api/Google.Api.Gax.PlatformType.html#Google_Api_Gax_PlatformType_Unknown
@@ -7699,12 +7849,12 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.CreateSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.CreateSnapshot(CreateSnapshotRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateSnapshot(String, String, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(System.String, System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.CreateSnapshot(String, String, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateSnapshot(SnapshotName, SubscriptionName, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.SnapshotName, Google.Cloud.PubSub.V1.SubscriptionName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.CreateSnapshot(SnapshotName, SubscriptionName, CallSettings)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot*
   name: CreateSnapshot
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_
@@ -7717,18 +7867,18 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.CreateSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.CreateSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.CreateSnapshotAsync(CreateSnapshotRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateSnapshotAsync(String, String, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String, System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.CreateSnapshotAsync(String, String, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String,System.String,System.Threading.CancellationToken)
-  name: CreateSnapshotAsync(String, String, CancellationToken)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_System_String_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String,System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String, System.String, System.Threading.CancellationToken)
-  nameWithType: SubscriberClient.CreateSnapshotAsync(String, String, CancellationToken)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)
+  name: CreateSnapshotAsync(SnapshotName, SubscriptionName, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName, Google.Cloud.PubSub.V1.SubscriptionName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.CreateSnapshotAsync(SnapshotName, SubscriptionName, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,System.Threading.CancellationToken)
+  name: CreateSnapshotAsync(SnapshotName, SubscriptionName, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName, Google.Cloud.PubSub.V1.SubscriptionName, System.Threading.CancellationToken)
+  nameWithType: SubscriberClient.CreateSnapshotAsync(SnapshotName, SubscriptionName, CancellationToken)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync*
   name: CreateSnapshotAsync
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_
@@ -7741,12 +7891,15 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.Subscription,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.Subscription, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.CreateSubscription(Subscription, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateSubscription(SubscriptionName, TopicName, PushConfig, Int32, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Int32_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Int32, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.CreateSubscription(SubscriptionName, TopicName, PushConfig, Int32, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: CreateSubscription(SubscriptionName, TopicName, PushConfig, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: CreateSubscription(SubscriptionName, TopicName, PushConfig, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.CreateSubscription(SubscriptionName, TopicName, PushConfig, Nullable<Int32>, CallSettings)
+  nameWithType.vb: SubscriberClient.CreateSubscription(SubscriptionName, TopicName, PushConfig, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription*
   name: CreateSubscription
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_
@@ -7759,18 +7912,24 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.Subscription,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.Subscription, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.CreateSubscriptionAsync(Subscription, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  name: CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Int32, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Int32_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Int32, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Int32, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,System.Threading.CancellationToken)
-  name: CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Int32, CancellationToken)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Int32_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,System.Threading.CancellationToken)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Int32, System.Threading.CancellationToken)
-  nameWithType: SubscriberClient.CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Int32, CancellationToken)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable<Int32>, CallSettings)
+  nameWithType.vb: SubscriberClient.CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  name: CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable<Int32>, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},System.Threading.CancellationToken)
+  name.vb: CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable(Of Int32), CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Nullable<System.Int32>, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName, Google.Cloud.PubSub.V1.TopicName, Google.Cloud.PubSub.V1.PushConfig, System.Nullable(Of System.Int32), System.Threading.CancellationToken)
+  nameWithType: SubscriberClient.CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable<Int32>, CancellationToken)
+  nameWithType.vb: SubscriberClient.CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable(Of Int32), CancellationToken)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync*
   name: CreateSubscriptionAsync
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_
@@ -7807,12 +7966,12 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.DeleteSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.DeleteSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.DeleteSnapshot(DeleteSnapshotRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteSnapshot(String, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshot_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.DeleteSnapshot(String, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.SnapshotName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteSnapshot(SnapshotName, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshot_Google_Cloud_PubSub_V1_SnapshotName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.SnapshotName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.SnapshotName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.DeleteSnapshot(SnapshotName, CallSettings)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot*
   name: DeleteSnapshot
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshot_
@@ -7825,18 +7984,18 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.DeleteSnapshotRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.DeleteSnapshotRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.DeleteSnapshotAsync(DeleteSnapshotRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  name: DeleteSnapshotAsync(String, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_System_String_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.DeleteSnapshotAsync(String, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String,System.Threading.CancellationToken)
-  name: DeleteSnapshotAsync(String, CancellationToken)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_System_String_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String,System.Threading.CancellationToken)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String, System.Threading.CancellationToken)
-  nameWithType: SubscriberClient.DeleteSnapshotAsync(String, CancellationToken)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Api.Gax.Grpc.CallSettings)
+  name: DeleteSnapshotAsync(SnapshotName, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Api.Gax.Grpc.CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.DeleteSnapshotAsync(SnapshotName, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,System.Threading.CancellationToken)
+  name: DeleteSnapshotAsync(SnapshotName, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,System.Threading.CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName, System.Threading.CancellationToken)
+  nameWithType: SubscriberClient.DeleteSnapshotAsync(SnapshotName, CancellationToken)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync*
   name: DeleteSnapshotAsync
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_
@@ -7987,15 +8146,15 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ListSnapshotsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ListSnapshotsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.ListSnapshots(ListSnapshotsRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListSnapshots(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshots_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListSnapshots(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.ListSnapshots(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: SubscriberClient.ListSnapshots(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListSnapshots(ProjectName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshots_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListSnapshots(ProjectName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ProjectName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.ListSnapshots(ProjectName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: SubscriberClient.ListSnapshots(ProjectName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots*
   name: ListSnapshots
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshots_
@@ -8008,15 +8167,15 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ListSnapshotsRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ListSnapshotsRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.ListSnapshotsAsync(ListSnapshotsRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name: ListSnapshotsAsync(String, String, Nullable<Int32>, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshotsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
-  name.vb: ListSnapshotsAsync(String, String, Nullable(Of Int32), CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(System.String, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
-  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(System.String, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.ListSnapshotsAsync(String, String, Nullable<Int32>, CallSettings)
-  nameWithType.vb: SubscriberClient.ListSnapshotsAsync(String, String, Nullable(Of Int32), CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name: ListSnapshotsAsync(ProjectName, String, Nullable<Int32>, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshotsAsync_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)
+  name.vb: ListSnapshotsAsync(ProjectName, String, Nullable(Of Int32), CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ProjectName, System.String, System.Nullable<System.Int32>, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ProjectName, System.String, System.Nullable(Of System.Int32), Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.ListSnapshotsAsync(ProjectName, String, Nullable<Int32>, CallSettings)
+  nameWithType.vb: SubscriberClient.ListSnapshotsAsync(ProjectName, String, Nullable(Of Int32), CallSettings)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync*
   name: ListSnapshotsAsync
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshotsAsync_
@@ -8164,12 +8323,15 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.PullRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.PullRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.Pull(PullRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  name: Pull(SubscriptionName, Boolean, Int32, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_Pull_Google_Cloud_PubSub_V1_SubscriptionName_System_Boolean_System_Int32_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName, System.Boolean, System.Int32, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.Pull(SubscriptionName, Boolean, Int32, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,Google.Api.Gax.Grpc.CallSettings)
+  name: Pull(SubscriptionName, Nullable<Boolean>, Int32, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_Pull_Google_Cloud_PubSub_V1_SubscriptionName_System_Nullable_System_Boolean__System_Int32_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,Google.Api.Gax.Grpc.CallSettings)
+  name.vb: Pull(SubscriptionName, Nullable(Of Boolean), Int32, CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName, System.Nullable<System.Boolean>, System.Int32, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName, System.Nullable(Of System.Boolean), System.Int32, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.Pull(SubscriptionName, Nullable<Boolean>, Int32, CallSettings)
+  nameWithType.vb: SubscriberClient.Pull(SubscriptionName, Nullable(Of Boolean), Int32, CallSettings)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.Pull*
   name: Pull
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_Pull_
@@ -8182,18 +8344,24 @@ references:
   commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.PullRequest,Google.Api.Gax.Grpc.CallSettings)
   fullName: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.PullRequest, Google.Api.Gax.Grpc.CallSettings)
   nameWithType: SubscriberClient.PullAsync(PullRequest, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  name: PullAsync(SubscriptionName, Boolean, Int32, CallSettings)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Boolean_System_Int32_Google_Api_Gax_Grpc_CallSettings_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,Google.Api.Gax.Grpc.CallSettings)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName, System.Boolean, System.Int32, Google.Api.Gax.Grpc.CallSettings)
-  nameWithType: SubscriberClient.PullAsync(SubscriptionName, Boolean, Int32, CallSettings)
-- uid: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,System.Threading.CancellationToken)
-  name: PullAsync(SubscriptionName, Boolean, Int32, CancellationToken)
-  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Boolean_System_Int32_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,System.Threading.CancellationToken)
-  fullName: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName, System.Boolean, System.Int32, System.Threading.CancellationToken)
-  nameWithType: SubscriberClient.PullAsync(SubscriptionName, Boolean, Int32, CancellationToken)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,Google.Api.Gax.Grpc.CallSettings)
+  name: PullAsync(SubscriptionName, Nullable<Boolean>, Int32, CallSettings)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Nullable_System_Boolean__System_Int32_Google_Api_Gax_Grpc_CallSettings_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,Google.Api.Gax.Grpc.CallSettings)
+  name.vb: PullAsync(SubscriptionName, Nullable(Of Boolean), Int32, CallSettings)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName, System.Nullable<System.Boolean>, System.Int32, Google.Api.Gax.Grpc.CallSettings)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName, System.Nullable(Of System.Boolean), System.Int32, Google.Api.Gax.Grpc.CallSettings)
+  nameWithType: SubscriberClient.PullAsync(SubscriptionName, Nullable<Boolean>, Int32, CallSettings)
+  nameWithType.vb: SubscriberClient.PullAsync(SubscriptionName, Nullable(Of Boolean), Int32, CallSettings)
+- uid: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,System.Threading.CancellationToken)
+  name: PullAsync(SubscriptionName, Nullable<Boolean>, Int32, CancellationToken)
+  href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Nullable_System_Boolean__System_Int32_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,System.Threading.CancellationToken)
+  name.vb: PullAsync(SubscriptionName, Nullable(Of Boolean), Int32, CancellationToken)
+  fullName: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName, System.Nullable<System.Boolean>, System.Int32, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName, System.Nullable(Of System.Boolean), System.Int32, System.Threading.CancellationToken)
+  nameWithType: SubscriberClient.PullAsync(SubscriptionName, Nullable<Boolean>, Int32, CancellationToken)
+  nameWithType.vb: SubscriberClient.PullAsync(SubscriptionName, Nullable(Of Boolean), Int32, CancellationToken)
 - uid: Google.Cloud.PubSub.V1.SubscriberClient.PullAsync*
   name: PullAsync
   href: api/Google.Cloud.PubSub.V1.SubscriberClient.html#Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_
@@ -9148,6 +9316,18 @@ references:
   commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.NonIdempotentRetryFilter
   fullName: Google.Cloud.PubSub.V1.SubscriberSettings.NonIdempotentRetryFilter
   nameWithType: SubscriberSettings.NonIdempotentRetryFilter
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter
+  name: PullRetryFilter
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_PullRetryFilter
+  commentId: P:Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter
+  nameWithType: SubscriberSettings.PullRetryFilter
+- uid: Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter*
+  name: PullRetryFilter
+  href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_PullRetryFilter_
+  commentId: Overload:Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter
+  fullName: Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter
+  nameWithType: SubscriberSettings.PullRetryFilter
 - uid: Google.Cloud.PubSub.V1.SubscriberSettings.PullSettings
   name: PullSettings
   href: api/Google.Cloud.PubSub.V1.SubscriberSettings.html#Google_Cloud_PubSub_V1_SubscriberSettings_PullSettings

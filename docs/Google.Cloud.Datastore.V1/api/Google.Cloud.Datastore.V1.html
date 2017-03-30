@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Cloud.Datastore.V1
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -152,6 +153,9 @@ merely add to a list of mutations which are performed in a single <a class="xref
 operation. This means the mutation methods are all synchronous and do not take call settings, as they don&#39;t perform any
 API operations.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation, and therefore one transaction. When modifying a large
+number of entities, partition the changes into multiple transactions. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 <p>
 Even though transactions aren&#39;t inherently related to a specific partition ID, the expected usage is that queries run inside
 a transaction are likely to be in a single partition, specified in a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html">DatastoreDb</a> used to create the transaction.

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigQueryTable
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -210,6 +211,336 @@ so the value of this property can be <code>null</code>.</p>
               </table>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJob_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)">CreateCopyJob(TableReference, CreateCopyJobOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates a job to copy data from this table to another.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_">CreateCopyJob(TableReference, TableReference, CreateCopyJobOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigQueryJob CreateCopyJob(TableReference destination, CreateCopyJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a></td>
+                    <td><span class="parametername">destination</span></td>
+                    <td><p>The destination table to copy to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html">CreateCopyJobOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a></td>
+                    <td><p>The job created for the copy operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJob_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method only allows one table (this one) to be used as the source table. To copy multiple tables to one destination table,
+use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_">CreateCopyJob(IEnumerable&lt;TableReference&gt;, TableReference, CreateCopyJobOptions)</a>.</p>
+</div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)">CreateCopyJobAsync(TableReference, CreateCopyJobOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a job to copy data from this table to another.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_">CreateCopyJobAsync(TableReference, TableReference, CreateCopyJobOptions, CancellationToken)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a></td>
+                    <td><span class="parametername">destination</span></td>
+                    <td><p>The destination table to copy to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html">CreateCopyJobOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. When complete, the result is the job created for the copy operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method only allows one table (this one) to be used as the source table. To copy multiple tables to one destination table,
+use <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_">CreateCopyJobAsync(IEnumerable&lt;TableReference&gt;, TableReference, CreateCopyJobOptions, CancellationToken)</a>.</p>
+</div>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJob_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)">CreateExtractJob(IEnumerable&lt;String&gt;, CreateExtractJobOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates a job to extract data from this table to Google Cloud Storage.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_">CreateExtractJob(TableReference, IEnumerable&lt;String&gt;, CreateExtractJobOptions)</a>.
+See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery documentation</a> for more information on extract jobs.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigQueryJob CreateExtractJob(IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">destinationUris</span></td>
+                    <td><p>The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html">CreateExtractJobOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a></td>
+                    <td><p>The job created for the extract operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJob_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJob_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)">CreateExtractJob(String, CreateExtractJobOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates a job to extract data from this table to Google Cloud Storage.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_Google_Apis_Bigquery_v2_Data_TableReference_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_">CreateExtractJob(TableReference, String, CreateExtractJobOptions)</a>.
+See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery documentation</a> for more information on extract jobs.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BigQueryJob CreateExtractJob(string destinationUri, CreateExtractJobOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">destinationUri</span></td>
+                    <td><p>The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html">CreateExtractJobOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a></td>
+                    <td><p>The job created for the extract operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJobAsync_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)">CreateExtractJobAsync(IEnumerable&lt;String&gt;, CreateExtractJobOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a job to extract data from this table to Google Cloud Storage.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_">CreateExtractJobAsync(TableReference, IEnumerable&lt;String&gt;, CreateExtractJobOptions, CancellationToken)</a>.
+See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery documentation</a> for more information on extract jobs.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateExtractJobAsync(IEnumerable&lt;string&gt; destinationUris, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">destinationUris</span></td>
+                    <td><p>The Google Cloud Storage URIs (possibly including a wildcard) to extract the data to. Must not be null or empty.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html">CreateExtractJobOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJobAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJobAsync_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)">CreateExtractJobAsync(String, CreateExtractJobOptions, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Asynchronously creates a job to extract data from this table to Google Cloud Storage.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_">CreateExtractJobAsync(TableReference, String, CreateExtractJobOptions, CancellationToken)</a>.
+See <a href="https://cloud.google.com/bigquery/docs/exporting-data">the BigQuery documentation</a> for more information on extract jobs.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task&lt;BigQueryJob&gt; CreateExtractJobAsync(string destinationUri, CreateExtractJobOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">destinationUri</span></td>
+                    <td><p>The Google Cloud Storage URI (possibly including a wildcard) to extract the data to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html">CreateExtractJobOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryJob.html">BigQueryJob</a>&gt;</td>
+                    <td><p>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_BigQuery_V2_BigQueryTable_Delete_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Delete*"></a>
               <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_Delete_Google_Cloud_BigQuery_V2_DeleteTableOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Delete(Google.Cloud.BigQuery.V2.DeleteTableOptions)">Delete(DeleteTableOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes this table.
@@ -288,15 +619,15 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_Insert_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Insert*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_Insert_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)">Insert(BigQueryInsertRow, InsertOptions)</h4>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRow_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRow_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)">InsertRow(BigQueryInsertRow, InsertOptions)</h4>
               <div class="markdown level1 summary"><p>Inserts a single row of data into this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_">Insert(TableReference, BigQueryInsertRow, InsertOptions)</a>.</p>
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRow_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_">InsertRow(TableReference, BigQueryInsertRow, InsertOptions)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Insert(BigQueryInsertRow row, InsertOptions options = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public void InsertRow(BigQueryInsertRow row, InsertOptions options = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -322,77 +653,15 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_Insert_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Insert*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_Insert_Google_Cloud_BigQuery_V2_BigQueryInsertRow___" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])">Insert(BigQueryInsertRow[])</h4>
-              <div class="markdown level1 summary"><p>Inserts all the given rows of data into this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___">Insert(TableReference, BigQueryInsertRow[])</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Insert(params BigQueryInsertRow[] rows)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html">BigQueryInsertRow</a>[]</td>
-                    <td><span class="parametername">rows</span></td>
-                    <td><p>The rows to insert. Must not be null or contain null entries.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_Insert_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Insert*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)">Insert(IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions)</h4>
-              <div class="markdown level1 summary"><p>Inserts all the given rows of data into this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_">Insert(TableReference, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions)</a>.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void Insert(IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html">BigQueryInsertRow</a>&gt;</td>
-                    <td><span class="parametername">rows</span></td>
-                    <td><p>The rows to insert. Must not be null or contain null entries.</p>
-</td>
-                  </tr>
-                  <tr>
-                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.InsertOptions.html">InsertOptions</a></td>
-                    <td><span class="parametername">options</span></td>
-                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
-</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)">InsertAsync(BigQueryInsertRow, InsertOptions, CancellationToken)</h4>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)">InsertRowAsync(BigQueryInsertRow, InsertOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously inserts a single row of data into this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_">InsertAsync(TableReference, BigQueryInsertRow, InsertOptions, CancellationToken)</a>.</p>
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_">InsertRowAsync(TableReference, BigQueryInsertRow, InsertOptions, CancellationToken)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task InsertAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public Task InsertRowAsync(BigQueryInsertRow row, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -440,15 +709,77 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow___" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])">InsertAsync(BigQueryInsertRow[])</h4>
-              <div class="markdown level1 summary"><p>Asynchronously inserts all the given rows of data into this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___">InsertAsync(TableReference, BigQueryInsertRow[])</a>.</p>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRows_Google_Cloud_BigQuery_V2_BigQueryInsertRow___" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])">InsertRows(BigQueryInsertRow[])</h4>
+              <div class="markdown level1 summary"><p>Inserts all the given rows of data into this table.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___">InsertRows(TableReference, BigQueryInsertRow[])</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task InsertAsync(params BigQueryInsertRow[] rows)</code></pre>
+                <pre><code class="lang-csharp hljs">public void InsertRows(params BigQueryInsertRow[] rows)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html">BigQueryInsertRow</a>[]</td>
+                    <td><span class="parametername">rows</span></td>
+                    <td><p>The rows to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRows_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRows_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)">InsertRows(IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions)</h4>
+              <div class="markdown level1 summary"><p>Inserts all the given rows of data into this table.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_">InsertRows(TableReference, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions)</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void InsertRows(IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryInsertRow.html">BigQueryInsertRow</a>&gt;</td>
+                    <td><span class="parametername">rows</span></td>
+                    <td><p>The rows to insert. Must not be null or contain null entries.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.BigQuery.V2.InsertOptions.html">InsertOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the operation. May be null, in which case defaults will be supplied.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowsAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow___" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])">InsertRowsAsync(BigQueryInsertRow[])</h4>
+              <div class="markdown level1 summary"><p>Asynchronously inserts all the given rows of data into this table.
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___">InsertRowsAsync(TableReference, BigQueryInsertRow[])</a>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Task InsertRowsAsync(params BigQueryInsertRow[] rows)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -484,15 +815,15 @@ This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.Ta
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync*"></a>
-              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)">InsertAsync(IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions, CancellationToken)</h4>
+              <a id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowsAsync_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync*"></a>
+              <h4 id="Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)">InsertRowsAsync(IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Asynchronously inserts all the given rows of data into this table.
-This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_">InsertAsync(TableReference, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions, CancellationToken)</a>.</p>
+This method just creates a <a class="xref" href="Google.Apis.Bigquery.v2.Data.TableReference.html">TableReference</a> and delegates to <a class="xref" href="Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_">InsertRowsAsync(TableReference, IEnumerable&lt;BigQueryInsertRow&gt;, InsertOptions, CancellationToken)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Task InsertAsync(IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public Task InsertRowsAsync(IEnumerable&lt;BigQueryInsertRow&gt; rows, InsertOptions options = null, CancellationToken cancellationToken = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">

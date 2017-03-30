@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UserAgentHelper
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -71,7 +72,7 @@
               
               <h1 id="Google_Api_Gax_Rest_UserAgentHelper" data-uid="Google.Api.Gax.Rest.UserAgentHelper">Class UserAgentHelper
               </h1>
-              <div class="markdown level0 summary"><p>Common code used for building user agents in REST libraries.</p>
+              <div class="markdown level0 summary"><p>Common code used for building user agents and related headers in REST libraries.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -111,6 +112,49 @@
               </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Api_Gax_Rest_UserAgentHelper_CreateRequestModifier_" data-uid="Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier*"></a>
+              <h4 id="Google_Api_Gax_Rest_UserAgentHelper_CreateRequestModifier_System_Type_" data-uid="Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)">CreateRequestModifier(Type)</h4>
+              <div class="markdown level1 summary"><p>Creates a request modifier which sets the Google-specific version header in HTTP requests.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Action&lt;HttpRequestMessage&gt; CreateRequestModifier(Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>The type to extract the version number from.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Net.Http.HttpRequestMessage</span>&gt;</td>
+                    <td><p>A request modifier.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Api_Gax_Rest_UserAgentHelper_GetDefaultUserAgent_" data-uid="Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent*"></a>
               <h4 id="Google_Api_Gax_Rest_UserAgentHelper_GetDefaultUserAgent_System_Type_" data-uid="Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)">GetDefaultUserAgent(Type)</h4>
               <div class="markdown level1 summary"><p>Formats a user agent suitable for REST client libraries.</p>

@@ -8,7 +8,7 @@
     <title>Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Vision.V1 | Google.Cloud.Vision.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -265,7 +266,7 @@ foreach (Status error in response.Responses.Select(r =&gt; r.Error))
 }
 </code></pre><h2 id="error-handling">Error handling</h2>
 <p>All the methods which annotate a single image (and therefore have a single response) throw
-(<a href="api/Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> if the response
+<a href="api/Google.Cloud.Vision.V1.AnnotateImageException.html">AnnotateImageException</a> if the response
 contains an error.</p>
 <pre><code class="lang-cs">Image image = new Image(); // No content or source!
 ImageAnnotatorClient client = ImageAnnotatorClient.Create();

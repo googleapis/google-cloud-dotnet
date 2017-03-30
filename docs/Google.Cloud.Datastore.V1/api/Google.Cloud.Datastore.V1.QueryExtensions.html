@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class QueryExtensions
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -102,6 +103,80 @@
               </div>
               <h3 id="methods">Methods
               </h3>
+              <a id="Google_Cloud_Datastore_V1_QueryExtensions_Add_" data-uid="Google.Cloud.Datastore.V1.QueryExtensions.Add*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_QueryExtensions_Add_Google_Protobuf_Collections_MapField_System_String_Google_Cloud_Datastore_V1_GqlQueryParameter__System_String_Google_Cloud_Datastore_V1_Value_" data-uid="Google.Cloud.Datastore.V1.QueryExtensions.Add(Google.Protobuf.Collections.MapField{System.String,Google.Cloud.Datastore.V1.GqlQueryParameter},System.String,Google.Cloud.Datastore.V1.Value)">Add(MapField&lt;String, GqlQueryParameter&gt;, String, Value)</h4>
+              <div class="markdown level1 summary"><p>Adds a GQL parameter with the specified value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void Add(this MapField&lt;string, GqlQueryParameter&gt; parameters, string parameterName, Value value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Collections.MapField</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="Google.Cloud.Datastore.V1.GqlQueryParameter.html">GqlQueryParameter</a>&gt;</td>
+                    <td><span class="parametername">parameters</span></td>
+                    <td><p>The mapping of GQL query parameters to add to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">parameterName</span></td>
+                    <td><p>The name of the parameter. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Value.html">Value</a></td>
+                    <td><span class="parametername">value</span></td>
+                    <td><p>The value to add.  May be null, which indicates
+a value with <a class="xref" href="Google.Cloud.Datastore.V1.Value.html#Google_Cloud_Datastore_V1_Value_NullValue">NullValue</a> set.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Datastore_V1_QueryExtensions_Add_" data-uid="Google.Cloud.Datastore.V1.QueryExtensions.Add*"></a>
+              <h4 id="Google_Cloud_Datastore_V1_QueryExtensions_Add_Google_Protobuf_Collections_RepeatedField_Google_Cloud_Datastore_V1_GqlQueryParameter__Google_Cloud_Datastore_V1_Value_" data-uid="Google.Cloud.Datastore.V1.QueryExtensions.Add(Google.Protobuf.Collections.RepeatedField{Google.Cloud.Datastore.V1.GqlQueryParameter},Google.Cloud.Datastore.V1.Value)">Add(RepeatedField&lt;GqlQueryParameter&gt;, Value)</h4>
+              <div class="markdown level1 summary"><p>Adds a GQL parameter with the specified value.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static void Add(this RepeatedField&lt;GqlQueryParameter&gt; parameters, Value value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Protobuf.Collections.RepeatedField</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.GqlQueryParameter.html">GqlQueryParameter</a>&gt;</td>
+                    <td><span class="parametername">parameters</span></td>
+                    <td><p>The list of positional GQL query parameters to add to. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Datastore.V1.Value.html">Value</a></td>
+                    <td><span class="parametername">value</span></td>
+                    <td><p>The value to add.  May be null, which indicates
+a value with <a class="xref" href="Google.Cloud.Datastore.V1.Value.html#Google_Cloud_Datastore_V1_Value_NullValue">NullValue</a> set.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Cloud_Datastore_V1_QueryExtensions_Add_" data-uid="Google.Cloud.Datastore.V1.QueryExtensions.Add*"></a>
               <h4 id="Google_Cloud_Datastore_V1_QueryExtensions_Add_Google_Protobuf_Collections_RepeatedField_Google_Cloud_Datastore_V1_Projection__System_String_" data-uid="Google.Cloud.Datastore.V1.QueryExtensions.Add(Google.Protobuf.Collections.RepeatedField{Google.Cloud.Datastore.V1.Projection},System.String)">Add(RepeatedField&lt;Projection&gt;, String)</h4>
               <div class="markdown level1 summary"><p>Adds a projection with the given property name to the repeated field.

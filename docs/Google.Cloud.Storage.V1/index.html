@@ -8,7 +8,7 @@
     <title>Google.Cloud.Storage.V1 | Google.Cloud.Storage.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Storage.V1 | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -147,6 +148,40 @@ using (FileStream stream = File.OpenRead(source))
 }
 
 HttpResponseMessage response = await httpClient.PutAsync(url, content);
+</code></pre><h2 id="upload-uris">Upload URIs</h2>
+<p>In some cases, it may not make sense for client applications to have permissions
+to begin an upload for an object, but an authenticated service may choose to grant
+this ability for individual uploads. Signed URLs are one option for this. Another
+option is for the service to start a resumable upload session, but instead of
+performing the upload, sending the resulting upload URI to the client application
+so it can perform the upload instead. Unlike sessions initiated with a signed URL,
+a pre-initated upload session will force the client application to upload through
+the region in which the session began, which will likely be close to the service,
+and not necessarily the client.</p>
+<pre><code class="lang-cs">var client = StorageClient.Create();
+var source = &quot;world.txt&quot;;
+var destination = &quot;places/world.txt&quot;;
+var contentType = &quot;text/plain&quot;;
+
+// var acl = PredefinedAcl.PublicRead // public
+var acl = PredefinedObjectAcl.AuthenticatedRead; // private
+var options = new UploadObjectOptions { PredefinedAcl = acl };
+// Create a temporary uploader so the upload session can be manually initiated without actually uploading.
+var tempUploader = client.CreateObjectUploader(bucketName, destination, contentType, new MemoryStream(), options);
+var uploadUri = await tempUploader.InitiateSessionAsync();
+
+// Send uploadUri to (unauthenticated) client application, so it can perform the upload:
+using (var stream = File.OpenRead(source))
+{
+    // IUploadProgress defined in Google.Apis.Upload namespace
+    IProgress&lt;IUploadProgress&gt; progress = new Progress&lt;IUploadProgress&gt;(
+      p =&gt; Console.WriteLine($&quot;bytes: {p.BytesSent}, status: {p.Status}&quot;)
+    );
+
+    var actualUploader = ResumableUpload.CreateFromUploadUri(uploadUri, stream);
+    actualUploader.ProgressChanged += progress.Report;
+    await actualUploader.UploadAsync();
+}
 </code></pre><h2 id="customer-supplied-encryption-keys">Customer-supplied encryption keys</h2>
 <p>Storage objects are always stored encrypted, but if you wish to
 specify your own encryption key instead of using the server-supplied

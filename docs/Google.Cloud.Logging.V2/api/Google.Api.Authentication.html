@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Authentication
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -75,16 +76,15 @@
 <p>Example for an API targeted for external use:</p>
 <p>name: calendar.googleapis.com
 authentication:
- rules:</p>
+ providers:</p>
 <ul>
-<li><p>selector: &quot;*&quot;
-oauth:
-  canonical_scopes: <a href="https://www.googleapis.com/auth/calendar">https://www.googleapis.com/auth/calendar</a></p>
-</li>
-<li><p>selector: google.calendar.Delegate
-oauth:
-  canonical_scopes: <a href="https://www.googleapis.com/auth/calendar.read">https://www.googleapis.com/auth/calendar.read</a></p>
-</li>
+<li>id: google_calendar_auth
+jwks_uri: <a href="https://www.googleapis.com/oauth2/v1/certs">https://www.googleapis.com/oauth2/v1/certs</a>
+issuer: <a href="https://securetoken.google.com">https://securetoken.google.com</a>
+rules:</li>
+<li>selector: &quot;*&quot;
+requirements:
+  provider_id: google_calendar_auth</li>
 </ul>
 </div>
               <div class="markdown level0 conceptual"></div>

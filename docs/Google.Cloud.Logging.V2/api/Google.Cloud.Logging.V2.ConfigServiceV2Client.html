@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConfigServiceV2Client
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -413,7 +414,9 @@ export log entries only from the resource owning the sink.</p>
                     <td><span class="parametername">parent</span></td>
                     <td><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
 <p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
@@ -529,7 +532,9 @@ export log entries only from the resource owning the sink.</p>
                     <td><span class="parametername">parent</span></td>
                     <td><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
 <p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
@@ -592,7 +597,9 @@ export log entries only from the resource owning the sink.</p>
                     <td><span class="parametername">parent</span></td>
                     <td><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
 <p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </td>
                   </tr>
@@ -687,10 +694,10 @@ service account is also deleted.</p>
                     <td><p>Required. The full resource name of the sink to delete, including the
 parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
-<p>It is an error if the sink does not exist.  Example:
-<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if
-the sink does not exist.</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
+<p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -777,10 +784,10 @@ service account is also deleted.</p>
                     <td><p>Required. The full resource name of the sink to delete, including the
 parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
-<p>It is an error if the sink does not exist.  Example:
-<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if
-the sink does not exist.</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
+<p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -833,10 +840,10 @@ service account is also deleted.</p>
                     <td><p>Required. The full resource name of the sink to delete, including the
 parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
-<p>It is an error if the sink does not exist.  Example:
-<code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.  It is an error if
-the sink does not exist.</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
+<p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
                   <tr>
@@ -934,9 +941,11 @@ the sink does not exist.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html">SinkNameOneof</a></td>
                     <td><span class="parametername">sinkName</span></td>
-                    <td><p>Required. The parent resource name of the sink:</p>
+                    <td><p>Required. The resource name of the sink:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
@@ -1035,9 +1044,11 @@ the sink does not exist.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html">SinkNameOneof</a></td>
                     <td><span class="parametername">sinkName</span></td>
-                    <td><p>Required. The parent resource name of the sink:</p>
+                    <td><p>Required. The resource name of the sink:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
@@ -1087,9 +1098,11 @@ the sink does not exist.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.SinkNameOneof.html">SinkNameOneof</a></td>
                     <td><span class="parametername">sinkName</span></td>
-                    <td><p>Required. The parent resource name of the sink:</p>
+                    <td><p>Required. The resource name of the sink:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
@@ -1188,8 +1201,11 @@ the sink does not exist.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
                     <td><span class="parametername">parent</span></td>
-                    <td><p>Required. The parent resource whose sinks are to be listed.
-Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
+                    <td><p>Required. The parent resource whose sinks are to be listed:</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
 </td>
                   </tr>
                   <tr>
@@ -1301,8 +1317,11 @@ A value of <code>null</code> or 0 uses a server-defined page size.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Logging.V2.ParentNameOneof.html">ParentNameOneof</a></td>
                     <td><span class="parametername">parent</span></td>
-                    <td><p>Required. The parent resource whose sinks are to be listed.
-Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
+                    <td><p>Required. The parent resource whose sinks are to be listed:</p>
+<p>&quot;projects/[PROJECT_ID]&quot;
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
 </td>
                   </tr>
                   <tr>
@@ -1407,7 +1426,9 @@ The updated filter might also have a new <code>writer_identity</code>; see the
                     <td><p>Required. The full resource name of the sink to update, including the
 parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
@@ -1531,7 +1552,9 @@ The updated filter might also have a new <code>writer_identity</code>; see the
                     <td><p>Required. The full resource name of the sink to update, including the
 parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>
@@ -1599,7 +1622,9 @@ The updated filter might also have a new <code>writer_identity</code>; see the
                     <td><p>Required. The full resource name of the sink to update, including the
 parent resource and the sink identifier:</p>
 <p>&quot;projects/[PROJECT_ID]/sinks/[SINK_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/sinks/[SINK_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/sinks/[SINK_ID]&quot;
+&quot;folders/[FOLDER_ID]/sinks/[SINK_ID]&quot;</p>
 <p>Example: <code>&quot;projects/my-project-id/sinks/my-sink-id&quot;</code>.</p>
 </td>
                   </tr>

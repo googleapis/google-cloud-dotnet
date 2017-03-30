@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BucketsResource
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -214,6 +215,48 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Storage_v1_BucketsResource_GetIamPolicy_" data-uid="Google.Apis.Storage.v1.BucketsResource.GetIamPolicy*"></a>
+              <h4 id="Google_Apis_Storage_v1_BucketsResource_GetIamPolicy_System_String_" data-uid="Google.Apis.Storage.v1.BucketsResource.GetIamPolicy(System.String)">GetIamPolicy(String)</h4>
+              <div class="markdown level1 summary"><p>Returns an IAM policy for the specified bucket.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BucketsResource.GetIamPolicyRequest GetIamPolicy(string bucket)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>Name of a bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html">BucketsResource.GetIamPolicyRequest</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Apis_Storage_v1_BucketsResource_Insert_" data-uid="Google.Apis.Storage.v1.BucketsResource.Insert*"></a>
               <h4 id="Google_Apis_Storage_v1_BucketsResource_Insert_Google_Apis_Storage_v1_Data_Bucket_System_String_" data-uid="Google.Apis.Storage.v1.BucketsResource.Insert(Google.Apis.Storage.v1.Data.Bucket,System.String)">Insert(Bucket, String)</h4>
               <div class="markdown level1 summary"><p>Creates a new bucket.</p>
@@ -349,6 +392,103 @@ configuration changes may take time to propagate. This method supports patch sem
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.BucketsResource.PatchRequest.html">BucketsResource.PatchRequest</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Storage_v1_BucketsResource_SetIamPolicy_" data-uid="Google.Apis.Storage.v1.BucketsResource.SetIamPolicy*"></a>
+              <h4 id="Google_Apis_Storage_v1_BucketsResource_SetIamPolicy_Google_Apis_Storage_v1_Data_Policy_System_String_" data-uid="Google.Apis.Storage.v1.BucketsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy,System.String)">SetIamPolicy(Policy, String)</h4>
+              <div class="markdown level1 summary"><p>Updates an IAM policy for the specified bucket.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BucketsResource.SetIamPolicyRequest SetIamPolicy(Policy body, string bucket)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a></td>
+                    <td><span class="parametername">body</span></td>
+                    <td><p>The body of the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>Name of a bucket.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html">BucketsResource.SetIamPolicyRequest</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Storage_v1_BucketsResource_TestIamPermissions_" data-uid="Google.Apis.Storage.v1.BucketsResource.TestIamPermissions*"></a>
+              <h4 id="Google_Apis_Storage_v1_BucketsResource_TestIamPermissions_System_String_Google_Apis_Util_Repeatable_System_String__" data-uid="Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String,Google.Apis.Util.Repeatable{System.String})">TestIamPermissions(String, Repeatable&lt;String&gt;)</h4>
+              <div class="markdown level1 summary"><p>Tests a set of permissions on the given bucket to see which, if any, are held by the
+caller.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual BucketsResource.TestIamPermissionsRequest TestIamPermissions(string bucket, Repeatable&lt;string&gt; permissions)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>Name of a bucket.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Util.Repeatable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">permissions</span></td>
+                    <td><p>Permissions to test.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html">BucketsResource.TestIamPermissionsRequest</a></td>
                     <td></td>
                   </tr>
                 </tbody>

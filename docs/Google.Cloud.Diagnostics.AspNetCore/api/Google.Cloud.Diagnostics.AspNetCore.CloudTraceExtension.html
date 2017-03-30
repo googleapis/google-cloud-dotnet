@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CloudTraceExtension
    | Google.Cloud.Diagnostics.AspNetCore ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -108,16 +109,14 @@ finely grained manual tracing.</p>
 Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/trace/docs/</a></p>
 </div>
               <h5 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_examples"><strong>Examples</strong></h5>
-              
-<pre><code>public void ConfigureServices(IServiceCollection services)
+              <pre><code>public void ConfigureServices(IServiceCollection services)
 {
     string projectId = "[Google Cloud Platform project ID]";
     services.AddGoogleTrace(projectId);
     ...
 }</code></pre>
 
-              
-<pre><code>public void Configure(IApplicationBuilder app)
+              <pre><code>public void Configure(IApplicationBuilder app)
 {
     // Use at the start of the request pipeline to ensure the entire
     // request is traced.
@@ -125,8 +124,7 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
     ...
 }</code></pre>
 
-              
-<pre><code>public void SomeFunction(IManagedTracer tracer)
+              <pre><code>public void SomeFunction(IManagedTracer tracer)
 {
     tracer.StartSpan(nameof(SomeFunction));
     ...
@@ -138,13 +136,13 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace*"></a>
-              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient)">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient)</h4>
+              <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.AddGoogleTrace(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String,Google.Cloud.Diagnostics.Common.TraceConfiguration,Google.Cloud.Trace.V1.TraceServiceClient,System.Func{Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Boolean}})">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, Func&lt;HttpRequest, Nullable&lt;Boolean&gt;&gt;)</h4>
               <div class="markdown level1 summary"><p>Adds the needed services for Google Cloud Tracing. Used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_Microsoft_AspNetCore_Builder_IApplicationBuilder_">UseGoogleTrace(IApplicationBuilder)</a>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, string projectId, TraceConfiguration config = null, TraceServiceClient client = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static void AddGoogleTrace(this IServiceCollection services, string projectId = null, TraceConfiguration config = null, TraceServiceClient client = null, Func&lt;HttpRequest, bool ? &gt; traceFallbackPredicate = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +163,9 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td><p>The Google Cloud Platform project ID. Cannot be null.</p>
+                    <td><p>Optional if running on Google App Engine or Google Compute Engine.
+    The Google Cloud Platform project ID. If unspecified and running on GAE or GCE the project ID will be
+    detected from the platform.</p>
 </td>
                   </tr>
                   <tr>
@@ -180,13 +180,23 @@ Docs: <a href="https://cloud.google.com/trace/docs/">https://cloud.google.com/tr
                     <td><p>Optional Trace client, if unset the default will be used.</p>
 </td>
                   </tr>
+                  <tr>
+                    <td><span class="xref">System.Func</span>&lt;<span class="xref">Microsoft.AspNetCore.Http.HttpRequest</span>, <span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+                    <td><span class="parametername">traceFallbackPredicate</span></td>
+                    <td><p>Optional function to trace requests. If the trace header is not set
+    then this function will be called to determine if a given request should be traced.  This will
+    not override trace headers. If the function returns true the request will be traced, if false
+    is returned the trace will not be traced and if null is returned it will not affect the
+    trace decision.</p>
+</td>
+                  </tr>
                 </tbody>
               </table>
               <a id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace*"></a>
               <h4 id="Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_UseGoogleTrace_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.UseGoogleTrace(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseGoogleTrace(IApplicationBuilder)</h4>
               <div class="markdown level1 summary"><p>Uses middleware that will trace time taken for all subsequent delegates to run.
 The time taken and metadata will be sent to the Stackdriver Trace API. To be
-used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient)</a>,</p>
+used with <a class="xref" href="Google.Cloud.Diagnostics.AspNetCore.CloudTraceExtension.html#Google_Cloud_Diagnostics_AspNetCore_CloudTraceExtension_AddGoogleTrace_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_Google_Cloud_Diagnostics_Common_TraceConfiguration_Google_Cloud_Trace_V1_TraceServiceClient_System_Func_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Boolean___">AddGoogleTrace(IServiceCollection, String, TraceConfiguration, TraceServiceClient, Func&lt;HttpRequest, Nullable&lt;Boolean&gt;&gt;)</a>,</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

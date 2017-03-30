@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SystemParameters
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -113,22 +114,20 @@ change the names of the system parameters.</p>
 implemented by the system. If this field is missing from the service
 config, default system parameters will be used. Default system parameters
 and names is implementation-dependent.</p>
-<p>Example: define api key and alt name for all methods</p>
+<p>Example: define api key for all methods</p>
 <p>system_parameters
-rules:</p>
+ rules:</p>
 <ul>
 <li>selector: &quot;*&quot;
 parameters:<ul>
 <li>name: api_key
 url_query_parameter: api_key</li>
-<li>name: alt
-http_header: Response-Content-Type</li>
 </ul>
 </li>
 </ul>
 <p>Example: define 2 api key names for a specific method.</p>
 <p>system_parameters
-rules:</p>
+ rules:</p>
 <ul>
 <li>selector: &quot;/ListShelves&quot;
 parameters:<ul>

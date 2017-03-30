@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Type
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -200,7 +201,7 @@ standard&lt;/a&gt;. Values must be within normalized ranges.</p>
  return r</p>
 <p>def NormalizeLatLng(latitude, longitude):
  &quot;&quot;&quot;Wraps decimal degrees latitude and longitude to
- [-180.0, 180.0] and [-90.0, 90.0], respectively.&quot;&quot;&quot;
+ [-90.0, 90.0] and [-180.0, 180.0], respectively.&quot;&quot;&quot;
  r = latitude % 360.0
  if r &lt;= 90.0:
    return r, NormalizeLongitude(longitude)
@@ -224,6 +225,24 @@ assert (90.0, 10.0) == NormalizeLatLng(-270.0, 10.0)</p>
 </section>
                   <h4><a class="xref" href="Google.Type.Money.html">Money</a></h4>
                   <section><p>Represents an amount of money with its currency type.</p>
+</section>
+                  <h4><a class="xref" href="Google.Type.PostalAddress.html">PostalAddress</a></h4>
+                  <section><p>Represents a postal address, e.g. for postal delivery or payments addresses.
+Given a postal address, a postal service can deliver items to a premise, P.O.
+Box or similar.
+It is not intended to model geographical locations (roads, towns,
+mountains).</p>
+<p>In typical usage an address would be created via user input or from importing
+existing data, depending on the type of process.</p>
+<p>Advice on address input / editing:</p>
+<ul>
+<li>Use an i18n-ready address widget such as
+<a href="https://github.com/googlei18n/libaddressinput">https://github.com/googlei18n/libaddressinput</a>)</li>
+<li>Users should not be presented with UI elements for input or editing of
+fields outside countries where that field is used.</li>
+</ul>
+<p>For more guidance on how to use this schema, please see:
+<a href="https://support.google.com/business/answer/6397478">https://support.google.com/business/answer/6397478</a></p>
 </section>
                   <h4><a class="xref" href="Google.Type.TimeOfDay.html">TimeOfDay</a></h4>
                   <section><p>Represents a time of day. The date and time zone are either not significant

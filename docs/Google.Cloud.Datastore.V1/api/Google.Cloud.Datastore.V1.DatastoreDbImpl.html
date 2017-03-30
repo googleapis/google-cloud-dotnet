@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreDbImpl
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -256,7 +257,8 @@ for manually obtaining an instance, including automatic client creation.</p>
               </h3>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Client_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Client*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Client" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Client">Client</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreClient.html">DatastoreClient</a> used for all remote operations.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -281,7 +283,8 @@ for manually obtaining an instance, including automatic client creation.</p>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Client">DatastoreDb.Client</a></div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_NamespaceId_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.NamespaceId*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_NamespaceId" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.NamespaceId">NamespaceId</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The ID of the namespace this instance operates on.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -306,7 +309,8 @@ for manually obtaining an instance, including automatic client creation.</p>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_NamespaceId">DatastoreDb.NamespaceId</a></div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_ProjectId_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.ProjectId*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_ProjectId" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.ProjectId">ProjectId</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The ID of the project this instance operates on.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -333,7 +337,8 @@ for manually obtaining an instance, including automatic client creation.</p>
               </h3>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_AllocateIds_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.AllocateIds*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.AllocateIds(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -352,12 +357,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
                     <td><span class="parametername">keys</span></td>
-                    <td></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -372,15 +379,22 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-                    <td></td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <span class="paramref">keys</span>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+number of keys, partition the allocations into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.AllocateIdsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.AllocateIdsAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -399,12 +413,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
                     <td><span class="parametername">keys</span></td>
-                    <td></td>
+                    <td><p>The incomplete keys. Must not be null or contain null elements.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -419,15 +435,22 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;&gt;</td>
-                    <td></td>
+                    <td><p>A collection of complete keys with allocated IDs, in the same order as <span class="paramref">keys</span>.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+number of keys, partition the allocations into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransaction_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Begins a transaction, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -446,7 +469,8 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -461,7 +485,8 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a></td>
-                    <td></td>
+                    <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&#39;s project.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -469,7 +494,8 @@ for manually obtaining an instance, including automatic client creation.</p>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.BeginTransaction(CallSettings)</a></div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransactionAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Begins a transaction asynchronously, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -488,7 +514,8 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -503,7 +530,8 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a>&gt;</td>
-                    <td></td>
+                    <td><p>A new <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> for this object&#39;s project.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -511,7 +539,8 @@ for manually obtaining an instance, including automatic client creation.</p>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.BeginTransactionAsync(CallSettings)</a></div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_CreateKeyFactory_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.CreateKeyFactory*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_CreateKeyFactory_System_String_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.CreateKeyFactory(System.String)">CreateKeyFactory(String)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a key factory for root entities in this objects&#39;s partition.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -530,7 +559,8 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">kind</span></td>
-                    <td></td>
+                    <td><p>The kind of entity key to create. Must not be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -545,7 +575,8 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.KeyFactory.html">KeyFactory</a></td>
-                    <td></td>
+                    <td><p>A key factory with the specified kind and this object&#39;s partition.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -553,7 +584,8 @@ for manually obtaining an instance, including automatic client creation.</p>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_CreateKeyFactory_System_String_">DatastoreDb.CreateKeyFactory(String)</a></div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -572,20 +604,29 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -604,20 +645,29 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
                     <td><span class="parametername">keys</span></td>
-                    <td></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.Delete(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -636,12 +686,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to delete. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -656,15 +708,23 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -683,12 +743,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
                     <td><span class="parametername">keys</span></td>
-                    <td></td>
+                    <td><p>The keys to delete. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -709,9 +771,16 @@ for manually obtaining an instance, including automatic client creation.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Insert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -730,12 +799,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -750,15 +821,26 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-                    <td></td>
+                    <td><p>A collection of keys of inserted entities, in the same order as <span class="paramref">entities</span>.
+Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+the collection.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, the entities will be updated in memory with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_InsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.InsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.InsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -777,12 +859,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to insert. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -797,15 +881,26 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
+a collection of keys of inserted entities, in the same order as <span class="paramref">entities</span>.
+Only keys allocated by the server will be returned; any entity with a predefined key will have a null value in
+the collection.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, the entities will be updated in memory with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Lookup*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Lookup(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -824,17 +919,20 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
                     <td><span class="parametername">keys</span></td>
-                    <td></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
                     <td><span class="parametername">readConsistency</span></td>
-                    <td></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -849,15 +947,24 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
-                    <td></td>
+                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.LookupAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -876,17 +983,20 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
                     <td><span class="parametername">keys</span></td>
-                    <td></td>
+                    <td><p>The keys to look up. Must not be null, and every element must be non-null and refer to a complete key.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
                     <td><span class="parametername">readConsistency</span></td>
-                    <td></td>
+                    <td><p>The desired read consistency of the lookup, or null to use the default.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -901,15 +1011,24 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;&gt;</td>
-                    <td></td>
+                    <td><p>A collection of entities with the same size as <span class="paramref">keys</span>, containing corresponding entity
+references, or <code>null</code> where the key was not found.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazily*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazily(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -928,17 +1047,20 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
                     <td><span class="parametername">gqlQuery</span></td>
-                    <td></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
                     <td><span class="parametername">readConsistency</span></td>
-                    <td></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -953,15 +1075,22 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.RunQueryLazily(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazily_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazily_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazily*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazily_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazily(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -980,17 +1109,20 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
                     <td><span class="parametername">query</span></td>
-                    <td></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
                     <td><span class="parametername">readConsistency</span></td>
-                    <td></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1005,15 +1137,22 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a></td>
-                    <td></td>
+                    <td><p>A <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazily_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.RunQueryLazily(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazily_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazilyAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lazily executes the given GQL query for asynchronous consumption.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1032,17 +1171,20 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.GqlQuery.html">GqlQuery</a></td>
                     <td><span class="parametername">gqlQuery</span></td>
-                    <td></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
                     <td><span class="parametername">readConsistency</span></td>
-                    <td></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1057,15 +1199,22 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
-                    <td></td>
+                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.RunQueryLazilyAsync(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazilyAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazilyAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.RunQueryLazilyAsync(Google.Cloud.Datastore.V1.Query,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lazily executes the given structured query for asynchronous consumption.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1084,17 +1233,20 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.Query.html">Query</a></td>
                     <td><span class="parametername">query</span></td>
-                    <td></td>
+                    <td><p>The query to execute. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency</span>&gt;</td>
                     <td><span class="parametername">readConsistency</span></td>
-                    <td></td>
+                    <td><p>If not null, overrides the read consistency of the query.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to RPC calls.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1109,15 +1261,22 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a></td>
-                    <td></td>
+                    <td><p>An <a class="xref" href="Google.Cloud.Datastore.V1.AsyncLazyDatastoreQuery.html">AsyncLazyDatastoreQuery</a> representing the lazy query results.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.RunQueryLazilyAsync(Query, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_RunQueryLazilyAsync_Google_Cloud_Datastore_V1_Query_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The results are requested lazily: no API calls will be made until the application starts
+iterating over the results. Iterating over the same <a class="xref" href="Google.Cloud.Datastore.V1.LazyDatastoreQuery.html">LazyDatastoreQuery</a> object
+multiple times will execute the query again, potentially returning different results.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Update_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Update*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Update(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Update(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1136,20 +1295,28 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.Update(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_UpdateAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.UpdateAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.UpdateAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1168,12 +1335,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to update. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1188,15 +1357,23 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Upsert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.Upsert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1215,12 +1392,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1235,15 +1414,27 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;</td>
-                    <td></td>
+                    <td><p>A collection of allocated keys, in the same order as <span class="paramref">entities</span>. Each inserted entity
+which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+with a predefined key will have a null value in the collection.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, any entities with incomplete keys will be updated in memory with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDbImpl_UpsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.UpsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDbImpl.UpsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1262,12 +1453,14 @@ for manually obtaining an instance, including automatic client creation.</p>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Entity.html">Entity</a>&gt;</td>
                     <td><span class="parametername">entities</span></td>
-                    <td></td>
+                    <td><p>The entities to upsert. Must not be null or contain null entries.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>If not null, applies overrides to this RPC call.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1282,12 +1475,24 @@ for manually obtaining an instance, including automatic client creation.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.IReadOnlyList</span>&lt;<a class="xref" href="Google.Cloud.Datastore.V1.Key.html">Key</a>&gt;&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation. The result of the task is
+a collection of allocated keys, in the same order as <span class="paramref">entities</span>. Each inserted entity
+which had an incomplete key - requiring the server to allocate a new key - will have a non-null
+value in the collection, equal to the new key for the entity. Each updated entity or inserted entity
+with a predefined key will have a null value in the collection.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DatastoreDb.UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a></div>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDbImpl_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, any entities with incomplete keys will be updated with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
                         </article>
           </div>
           

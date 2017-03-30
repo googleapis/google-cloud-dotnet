@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class HttpRule
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -81,22 +82,30 @@ for details.</p>
 method kind.  The path template can refer to fields in the request
 message, as in the example below which describes a REST GET
 operation on a resource collection of messages:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc GetMessage(GetMessageRequest) returns (Message) {
-option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
-}
+<p>service Messaging {
+ rpc GetMessage(GetMessageRequest) returns (Message) {
+   option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
+ }
 }
 message GetMessageRequest {
-message SubMessage {
-string subfield = 1;
-}
-string message_id = 1; // mapped to the URL
-SubMessage sub = 2;    // `sub.subfield` is url-mapped
+ message SubMessage {
+   string subfield = 1;
+ }
+ string message_id = 1; // mapped to the URL
+ SubMessage sub = 2;    // <code>sub.subfield</code> is url-mapped
 }
 message Message {
-string text = 1; // content of the resource
-}
-</code></pre><p>This definition enables an automatic, bidrectional mapping of HTTP
+ string text = 1; // content of the resource
+}</p>
+<p>The same http annotation can alternatively be expressed inside the
+<code>GRPC API Configuration</code> YAML file.</p>
+<p>http:
+ rules:</p>
+<ul>
+<li>selector: &lt;proto_package_name&gt;.Messaging.GetMessage
+get: /v1/messages/{message_id}/{sub.subfield}</li>
+</ul>
+<p>This definition enables an automatic, bidrectional mapping of HTTP
 JSON to RPC. Example:</p>
 <table>
 <thead>
@@ -118,15 +127,15 @@ repeated and must have a primitive (non-message) type.</p>
 <p>Any fields in the request message which are not bound by the path
 pattern automatically become (optional) HTTP query
 parameters. Assume the following definition of the request message:</p>
-<pre><code class="lang-proto">message GetMessageRequest {
-message SubMessage {
-string subfield = 1;
-}
-string message_id = 1; // mapped to the URL
-int64 revision = 2;    // becomes a parameter
-SubMessage sub = 3;    // `sub.subfield` becomes a parameter
-}
-</code></pre><p>This enables a HTTP JSON to RPC mapping as below:</p>
+<p>message GetMessageRequest {
+ message SubMessage {
+   string subfield = 1;
+ }
+ string message_id = 1; // mapped to the URL
+ int64 revision = 2;    // becomes a parameter
+ SubMessage sub = 3;    // <code>sub.subfield</code> becomes a parameter
+}</p>
+<p>This enables a HTTP JSON to RPC mapping as below:</p>
 <table>
 <thead>
 <tr>
@@ -148,19 +157,19 @@ repeated in the URL, as in <code>...?param=A&amp;amp;param=B</code>.</p>
 <p>For HTTP method kinds which allow a request body, the <code>body</code> field
 specifies the mapping. Consider a REST update method on the
 message resource collection:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
-option (google.api.http) = {
- put: &quot;/v1/messages/{message_id}&quot;
- body: &quot;message&quot;
-};
-}
+<p>service Messaging {
+ rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
+   option (google.api.http) = {
+     put: &quot;/v1/messages/{message_id}&quot;
+     body: &quot;message&quot;
+   };
+ }
 }
 message UpdateMessageRequest {
-string message_id = 1; // mapped to the URL
-Message message = 2;   // mapped to the body
-}
-</code></pre><p>The following HTTP JSON to RPC mapping is enabled, where the
+ string message_id = 1; // mapped to the URL
+ Message message = 2;   // mapped to the body
+}</p>
+<p>The following HTTP JSON to RPC mapping is enabled, where the
 representation of the JSON in the request body is determined by
 protos JSON encoding:</p>
 <table>
@@ -181,19 +190,19 @@ protos JSON encoding:</p>
 every field not bound by the path template should be mapped to the
 request body.  This enables the following alternative definition of
 the update method:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc UpdateMessage(Message) returns (Message) {
-option (google.api.http) = {
- put: &quot;/v1/messages/{message_id}&quot;
- body: &quot;*&quot;
-};
-}
+<p>service Messaging {
+ rpc UpdateMessage(Message) returns (Message) {
+   option (google.api.http) = {
+     put: &quot;/v1/messages/{message_id}&quot;
+     body: &quot;*&quot;
+   };
+ }
 }
 message Message {
-string message_id = 1;
-string text = 2;
-}
-</code></pre><p>The following HTTP JSON to RPC mapping is enabled:</p>
+ string message_id = 1;
+ string text = 2;
+}</p>
+<p>The following HTTP JSON to RPC mapping is enabled:</p>
 <table>
 <thead>
 <tr>
@@ -215,21 +224,21 @@ defining REST APIs. The common usage of <code>*</code> is in custom methods
 which don&#39;t use the URL at all for transferring data.</p>
 <p>It is possible to define multiple HTTP methods for one RPC by using
 the <code>additional_bindings</code> option. Example:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc GetMessage(GetMessageRequest) returns (Message) {
-option (google.api.http) = {
- get: &quot;/v1/messages/{message_id}&quot;
- additional_bindings {
-   get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
+<p>service Messaging {
+ rpc GetMessage(GetMessageRequest) returns (Message) {
+   option (google.api.http) = {
+     get: &quot;/v1/messages/{message_id}&quot;
+     additional_bindings {
+       get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
+     }
+   };
  }
-};
-}
 }
 message GetMessageRequest {
-string message_id = 1;
-string user_id = 2;
-}
-</code></pre><p>This enables the following two alternative HTTP JSON to RPC
+ string message_id = 1;
+ string user_id = 2;
+}</p>
+<p>This enables the following two alternative HTTP JSON to RPC
 mappings:</p>
 <table>
 <thead>
@@ -276,7 +285,7 @@ Verb     = &quot;:&quot; LITERAL ;</p>
 Expansion.</p>
 <p>The syntax <code>**</code> matches zero or more path segments. It follows the semantics
 of <a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> Section 3.2.3 Reserved
-Expansion.</p>
+Expansion. NOTE: it must be the last segment in the path except the Verb.</p>
 <p>The syntax <code>LITERAL</code> matches literal text in the URL path.</p>
 <p>The syntax <code>Variable</code> matches the entire path as specified by its template;
 this nested template must not contain further variables. If a variable
@@ -349,7 +358,7 @@ the nesting may only be one level deep).</p>
               <div class="markdown level1 summary"><p>The name of the request field whose value is mapped to the HTTP body, or
 <code>*</code> for mapping all fields not captured by the path pattern to the HTTP
 body. NOTE: the referred field must not be a repeated field and must be
-present at the top-level of response message type.</p>
+present at the top-level of request message type.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

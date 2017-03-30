@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CreateSinkRequest
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -106,7 +107,9 @@
               <h4 id="Google_Cloud_Logging_V2_CreateSinkRequest_Parent" data-uid="Google.Cloud.Logging.V2.CreateSinkRequest.Parent">Parent</h4>
               <div class="markdown level1 summary"><p>Required. The resource in which to create the sink:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
 <p>Examples: <code>&quot;projects/my-logging-project&quot;</code>, <code>&quot;organizations/123456789&quot;</code>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -183,9 +186,9 @@ is not already in use.</p>
               <div class="markdown level1 summary"><p>Optional. Determines the kind of IAM identity returned as <code>writer_identity</code>
 in the new sink.  If this value is omitted or set to false, and if the
 sink&#39;s parent is a project, then the value returned as <code>writer_identity</code> is
-<code>cloud-logs@google.com</code>, the same identity used before the addition of
-writer identities to this API. The sink&#39;s destination must be in the same
-project as the sink itself.</p>
+the same group or service account used by Stackdriver Logging before the
+addition of writer identities to this API. The sink&#39;s destination must be
+in the same project as the sink itself.</p>
 <p>If this field is set to true, or if the sink is owned by a non-project
 resource such as an organization, then the value of <code>writer_identity</code> will
 be a unique service account used only for exports from the new sink.  For

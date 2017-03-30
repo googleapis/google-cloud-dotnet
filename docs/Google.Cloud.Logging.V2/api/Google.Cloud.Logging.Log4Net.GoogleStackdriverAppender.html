@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GoogleStackdriverAppender
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -233,30 +234,6 @@ Default value is 30 seconds.</p>
                   </tr>
                 </tbody>
               </table>
-              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_File_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File*"></a>
-              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_File" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.File">File</h4>
-              <div class="markdown level1 summary"><p>The path prefix to the files that logging will be written to.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string File { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_LocalQueueType_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.LocalQueueType*"></a>
               <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_LocalQueueType" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.LocalQueueType">LocalQueueType</h4>
               <div class="markdown level1 summary"><p>The local queuing mechanism, used before the log is sent to Google Logging.
@@ -287,20 +264,13 @@ Defaults to <a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.ht
 This is usually for a very brief duration; but if there are problems connecting to Google Logging
 this local queue allows the application to continue functioning as normal, without blocking
 on log events or immediately throwing aware log entries.</p>
-<p>Two queue types are provided:
+<p>One queue type is provided:
 <ul><li>
 <a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType_Memory">Memory</a>: Log entries are queued locally in memory. The maximum amount of memory and/or the maximum
 number of log entries to queue can be configured. If the application exits or crashes before in-memory log entries have
 been uploaded to Google Logging, then these log entries are permanently lost. If Google Logging becomes temporarily unavailable
 then the number of log entries queued until Google Logging becomes available again will be limited by the configure maximum sizes;
 log entries in excess of this configured maximum will cause the oldest queued log entries to be permanently lost.
-</li><li>
-<a class="xref" href="Google.Cloud.Logging.Log4Net.LocalQueueType.html#Google_Cloud_Logging_Log4Net_LocalQueueType_Disk">Disk</a>: Log entries are queued locally on disk. The maximum file size and file counts can be
-configured. If the application exits or crashes before on-disk entries have been uplaoded to Google Logging, then these log
-entries will be uploaded to Google Logging on program re-start (assuming the logging disk location is unchanged). If Google
-Logging becomes temporarily unavailable then the number of log entries queued until Google Logging becomes available again will
-be limited by the configured maximum file size and maxmimum file count. Log entries in excess of this configured maximum will
-cause the oldest queued log entries to be permanently lost.
 </li></ul>
 </p>
 </div>
@@ -324,31 +294,6 @@ cause the oldest queued log entries to be permanently lost.
                 <tbody>
                   <tr>
                     <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize*"></a>
-              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxFileSize" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxFileSize">MaxFileSize</h4>
-              <div class="markdown level1 summary"><p>The maximum size in bytes that each log file is allowed to reach, before being rolled over.
-Default value is 10MB.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public long MaxFileSize { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int64</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -401,31 +346,6 @@ Not used for file-based queuing.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int64</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <a id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups_" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups*"></a>
-              <h4 id="Google_Cloud_Logging_Log4Net_GoogleStackdriverAppender_MaxSizeRollBackups" data-uid="Google.Cloud.Logging.Log4Net.GoogleStackdriverAppender.MaxSizeRollBackups">MaxSizeRollBackups</h4>
-              <div class="markdown level1 summary"><p>The maximum number of backup files that are kept before the oldest is erased.
-Default value is 10.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int MaxSizeRollBackups { get; set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
                     <td></td>
                   </tr>
                 </tbody>

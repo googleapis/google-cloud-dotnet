@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Endpoint
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -85,28 +86,8 @@ endpoints:</p>
 <h1 id="allowed-to-proceed">allowed to proceed.</h1>
 <ul>
 <li>name: library-example.googleapis.com
-apis: google.example.library.v1.Library
-allow_cors: true
-# Below entry makes &#39;google.example.library.v1.Library&#39;
-# API be served from endpoint address
-# google.example.library-example.v1.LibraryManager.</li>
-<li>name: library-manager.googleapis.com
-apis: google.example.library.v1.LibraryManager
-# BNS address for a borg job. Can specify a task by appending
-# &quot;/taskId&quot; (e.g. &quot;/0&quot;) to the job spec.</li>
+allow_cors: true</li>
 </ul>
-<p>Example OpenAPI extension for endpoint with allow_cors set to true:</p>
-<p>{
- &quot;swagger&quot;: &quot;2.0&quot;,
- &quot;info&quot;: {
-   &quot;description&quot;: &quot;A simple...&quot;
- },
- &quot;host&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
- &quot;x-google-endpoints&quot;: [{
-   &quot;name&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
-   &quot;allow_cors&quot;: &quot;true&quot;
- }]
-}</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -249,6 +230,33 @@ allowed to proceed.</p>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Endpoint_Target_" data-uid="Google.Api.Endpoint.Target*"></a>
+              <h4 id="Google_Api_Endpoint_Target" data-uid="Google.Api.Endpoint.Target">Target</h4>
+              <div class="markdown level1 summary"><p>The specification of an Internet routable address of API frontend that will
+handle requests to this <a href="https://cloud.google.com/apis/design/glossary">API Endpoint</a>.
+It should be either a valid IPv4 address or a fully-qualified domain name.
+For example, &quot;8.8.8.8&quot; or &quot;myservice.appspot.com&quot;.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Target { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">

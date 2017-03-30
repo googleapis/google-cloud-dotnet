@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LogEntry
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -129,11 +130,12 @@ log entry, if applicable.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LogEntry_InsertId_" data-uid="Google.Cloud.Logging.V2.LogEntry.InsertId*"></a>
               <h4 id="Google_Cloud_Logging_V2_LogEntry_InsertId" data-uid="Google.Cloud.Logging.V2.LogEntry.InsertId">InsertId</h4>
-              <div class="markdown level1 summary"><p>Optional. A unique ID for the log entry. If you provide this
-field, the logging service considers other log entries in the
-same project with the same ID as duplicates which can be removed.  If
-omitted, Stackdriver Logging will generate a unique ID for this
-log entry.</p>
+              <div class="markdown level1 summary"><p>Optional. A unique identifier for the log entry. If you provide a value,
+then Stackdriver Logging considers other log entries in the same project,
+with the same <code>timestamp</code>, and with the same <code>insert_id</code> to be duplicates
+which can be removed.  If omitted in new log entries, then Stackdriver
+Logging will insert its own unique identifier. The <code>insert_id</code> is used
+to order log entries that have the same <code>timestamp</code> value.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -209,7 +211,9 @@ information about the log entry.</p>
               <h4 id="Google_Cloud_Logging_V2_LogEntry_LogName" data-uid="Google.Cloud.Logging.V2.LogEntry.LogName">LogName</h4>
               <div class="markdown level1 summary"><p>Required. The resource name of the log to which this log entry belongs:</p>
 <p>&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/logs/[LOG_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/logs/[LOG_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]&quot;
+&quot;folders/[FOLDER_ID]/logs/[LOG_ID]&quot;</p>
 <p><code>[LOG_ID]</code> must be URL-encoded within <code>log_name</code>. Example:
 <code>&quot;organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity&quot;</code>.
 <code>[LOG_ID]</code> must be less than 512 characters long and can only include the
@@ -443,7 +447,10 @@ if any.</p>
               <a id="Google_Cloud_Logging_V2_LogEntry_Timestamp_" data-uid="Google.Cloud.Logging.V2.LogEntry.Timestamp*"></a>
               <h4 id="Google_Cloud_Logging_V2_LogEntry_Timestamp" data-uid="Google.Cloud.Logging.V2.LogEntry.Timestamp">Timestamp</h4>
               <div class="markdown level1 summary"><p>Optional. The time the event described by the log entry occurred.  If
-omitted, Stackdriver Logging will use the time the log entry is received.</p>
+omitted in a new log entry, Stackdriver Logging will insert the time the
+log entry is received.  Stackdriver Logging might reject log entries whose
+time stamps are more than a couple of hours in the future. Log entries
+with time stamps in the past are accepted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

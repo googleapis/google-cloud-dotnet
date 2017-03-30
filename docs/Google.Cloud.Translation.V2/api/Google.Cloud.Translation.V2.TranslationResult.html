@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TranslationResult
+   | Google.Cloud.Translation.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TranslationResult
+   | Google.Cloud.Translation.V2 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Translation_V2_TranslationResult" data-uid="Google.Cloud.Translation.V2.TranslationResult">Class TranslationResult
+              </h1>
+              <div class="markdown level0 summary"><p>The result of a translation operation.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">TranslationResult</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Translation.V2</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Translation.V2.dll</h6>
+              <h5 id="Google_Cloud_Translation_V2_TranslationResult_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public sealed class TranslationResult</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Cloud_Translation_V2_TranslationResult__ctor_" data-uid="Google.Cloud.Translation.V2.TranslationResult.#ctor*"></a>
+              <h4 id="Google_Cloud_Translation_V2_TranslationResult__ctor_System_String_System_String_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel__" data-uid="Google.Cloud.Translation.V2.TranslationResult.#ctor(System.String,System.String,System.String,System.String,System.String,System.Nullable{Google.Cloud.Translation.V2.TranslationModel})">TranslationResult(String, String, String, String, String, Nullable&lt;TranslationModel&gt;)</h4>
+              <div class="markdown level1 summary"><p>Constructs an instance.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TranslationResult(string originalText, string translatedText, string detectedSourceLanguage, string specifiedSourceLanguage, string targetLanguage, TranslationModel? model)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">originalText</span></td>
+                    <td><p>The original text.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">translatedText</span></td>
+                    <td><p>The translated text.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">detectedSourceLanguage</span></td>
+                    <td><p>The source language code detected by the server, if any.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">specifiedSourceLanguage</span></td>
+                    <td><p>The source language code specified by the API caller.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">targetLanguage</span></td>
+                    <td><p>The target language code.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationModel.html">TranslationModel</a>&gt;</td>
+                    <td><span class="parametername">model</span></td>
+                    <td><p>The model used to perform the translation, if known.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_Translation_V2_TranslationResult__ctor_System_String_System_String_System_String_System_String_System_String_System_Nullable_Google_Cloud_Translation_V2_TranslationModel___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This constructor is for the benefit of testability, in case you wish to provide your own
+fake implementation of <a class="xref" href="Google.Cloud.Translation.V2.TranslationClient.html">TranslationClient</a>.</p>
+</div>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Cloud_Translation_V2_TranslationResult_DetectedSourceLanguage_" data-uid="Google.Cloud.Translation.V2.TranslationResult.DetectedSourceLanguage*"></a>
+              <h4 id="Google_Cloud_Translation_V2_TranslationResult_DetectedSourceLanguage" data-uid="Google.Cloud.Translation.V2.TranslationResult.DetectedSourceLanguage">DetectedSourceLanguage</h4>
+              <div class="markdown level1 summary"><p>The source language code detected by the server. This may
+be null, typically due to the source language being supplied
+by the caller.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string DetectedSourceLanguage { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Translation_V2_TranslationResult_Model_" data-uid="Google.Cloud.Translation.V2.TranslationResult.Model*"></a>
+              <h4 id="Google_Cloud_Translation_V2_TranslationResult_Model" data-uid="Google.Cloud.Translation.V2.TranslationResult.Model">Model</h4>
+              <div class="markdown level1 summary"><p>The model used to perform the translation, if known.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public TranslationModel? Model { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Cloud.Translation.V2.TranslationModel.html">TranslationModel</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Translation_V2_TranslationResult_OriginalText_" data-uid="Google.Cloud.Translation.V2.TranslationResult.OriginalText*"></a>
+              <h4 id="Google_Cloud_Translation_V2_TranslationResult_OriginalText" data-uid="Google.Cloud.Translation.V2.TranslationResult.OriginalText">OriginalText</h4>
+              <div class="markdown level1 summary"><p>The original text (or HTML) that was translated.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string OriginalText { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Translation_V2_TranslationResult_SpecifiedSourceLanguage_" data-uid="Google.Cloud.Translation.V2.TranslationResult.SpecifiedSourceLanguage*"></a>
+              <h4 id="Google_Cloud_Translation_V2_TranslationResult_SpecifiedSourceLanguage" data-uid="Google.Cloud.Translation.V2.TranslationResult.SpecifiedSourceLanguage">SpecifiedSourceLanguage</h4>
+              <div class="markdown level1 summary"><p>The source language code supplied by the caller, if any.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string SpecifiedSourceLanguage { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Translation_V2_TranslationResult_TargetLanguage_" data-uid="Google.Cloud.Translation.V2.TranslationResult.TargetLanguage*"></a>
+              <h4 id="Google_Cloud_Translation_V2_TranslationResult_TargetLanguage" data-uid="Google.Cloud.Translation.V2.TranslationResult.TargetLanguage">TargetLanguage</h4>
+              <div class="markdown level1 summary"><p>The target language code that the text was translated into.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string TargetLanguage { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Translation_V2_TranslationResult_TranslatedText_" data-uid="Google.Cloud.Translation.V2.TranslationResult.TranslatedText*"></a>
+              <h4 id="Google_Cloud_Translation_V2_TranslationResult_TranslatedText" data-uid="Google.Cloud.Translation.V2.TranslationResult.TranslatedText">TranslatedText</h4>
+              <div class="markdown level1 summary"><p>The translated text.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string TranslatedText { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

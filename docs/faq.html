@@ -8,7 +8,7 @@
     <title>Frequently Asked Questions | Google Cloud APIs </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Frequently Asked Questions | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -142,7 +143,31 @@ GrpcEnvironment.SetLogger(new ConsoleLogger());
 it yourself to integrate with other systems - see the
 <a href="https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging">Grpc.Core.Logging</a>
 namespace for details.</p>
+<h2 id="how-can-i-use-emulators">How can I use emulators?</h2>
+<p>Some APIs (such as Datastore and PubSub) provide emulators in the
+<a href="https://cloud.google.com/sdk/">Cloud SDK</a>. Client libraries in some
+other languages automatically use emulators if specific environment
+variables are set, but the Google Cloud Libraries for .NET do not do
+this. (We are hoping to work with a more ambient emulator manager
+solution which does not require environment variables, and is
+therefore more amenable to IDEs such as Visual Studio.)</p>
+<p>However, it is quite simple to manually create the appropriate
+client for gRPC-based APIs, by first creating a channel and then
+passing that to the static <code>Create</code> method of the relevant client
+class. Note that in current emulator implementations, the channel
+credentials must be set to <code>ChannelCredentials.Insecure</code>.</p>
+<p>Example for PubSub:</p>
+<pre><code class="lang-cs">// For example, &quot;localhost:8615&quot;
+string emulatorHostAndPort = Environment.GetEnvironmentVariable(&quot;PUBSUB_EMULATOR_HOST&quot;);
 
+Channel channel = new Channel(emulatorHostAndPort, ChannelCredentials.Insecure);
+PublisherClient client = PublisherClient.Create(channel);
+client.CreateTopic(new TopicName(&quot;project&quot;, &quot;topic&quot;));
+foreach (var topic in client.ListTopics(new ProjectName(&quot;project&quot;)))
+{
+    Console.WriteLine(topic.Name);
+}
+</code></pre>
             </article>
           </div>
           

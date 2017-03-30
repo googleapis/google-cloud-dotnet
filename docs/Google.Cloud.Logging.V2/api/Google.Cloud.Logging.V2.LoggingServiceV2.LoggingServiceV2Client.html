@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LoggingServiceV2.LoggingServiceV2Client
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -205,7 +206,9 @@
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLog_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLog*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLog_Google_Cloud_Logging_V2_DeleteLogRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLog(Google.Cloud.Logging.V2.DeleteLogRequest,Grpc.Core.CallOptions)">DeleteLog(DeleteLogRequest, CallOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
-The log reappears if it receives new entries.</p>
+The log reappears if it receives new entries.
+Log entries written shortly before the delete operation might not be
+deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -255,7 +258,9 @@ The log reappears if it receives new entries.</p>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLog_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLog*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLog_Google_Cloud_Logging_V2_DeleteLogRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLog(Google.Cloud.Logging.V2.DeleteLogRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteLog(DeleteLogRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
-The log reappears if it receives new entries.</p>
+The log reappears if it receives new entries.
+Log entries written shortly before the delete operation might not be
+deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -317,7 +322,9 @@ The log reappears if it receives new entries.</p>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLogAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLogAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_DeleteLogRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLogAsync(Google.Cloud.Logging.V2.DeleteLogRequest,Grpc.Core.CallOptions)">DeleteLogAsync(DeleteLogRequest, CallOptions)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
-The log reappears if it receives new entries.</p>
+The log reappears if it receives new entries.
+Log entries written shortly before the delete operation might not be
+deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -367,7 +374,9 @@ The log reappears if it receives new entries.</p>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLogAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLogAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_DeleteLogAsync_Google_Cloud_Logging_V2_DeleteLogRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.DeleteLogAsync(Google.Cloud.Logging.V2.DeleteLogRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">DeleteLogAsync(DeleteLogRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
-The log reappears if it receives new entries.</p>
+The log reappears if it receives new entries.
+Log entries written shortly before the delete operation might not be
+deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -656,7 +665,7 @@ Stackdriver Logging.  For ways to export log entries, see
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)">ListLogs(ListLogsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -706,7 +715,7 @@ Only logs that have entries are listed.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListLogs(ListLogsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -768,7 +777,7 @@ Only logs that have entries are listed.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.CallOptions)">ListLogsAsync(ListLogsRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -818,7 +827,7 @@ Only logs that have entries are listed.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">ListLogsAsync(ListLogsRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -1147,8 +1156,7 @@ Logging.</p>
               <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Grpc.Core.CallOptions)">WriteLogEntries(WriteLogEntriesRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
-written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1197,8 +1205,7 @@ written by this method.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntries(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">WriteLogEntries(WriteLogEntriesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
-written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1259,8 +1266,7 @@ written by this method.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Grpc.Core.CallOptions)">WriteLogEntriesAsync(WriteLogEntriesRequest, CallOptions)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
-written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1309,8 +1315,7 @@ written by this method.</p>
               </table>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2_LoggingServiceV2Client_WriteLogEntriesAsync_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2.LoggingServiceV2Client.WriteLogEntriesAsync(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">WriteLogEntriesAsync(WriteLogEntriesRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
-written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

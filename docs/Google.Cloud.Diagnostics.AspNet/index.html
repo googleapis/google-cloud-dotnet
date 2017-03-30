@@ -8,7 +8,7 @@
     <title>Google.Cloud.Diagnostics.AspNet | Google.Cloud.Diagnostics.AspNet </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Diagnostics.AspNet | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -101,7 +102,7 @@ installed, run the following command in a Google Cloud SDK Shell:</p>
         base.Init();
         string projectId = &quot;[Google Cloud Platform project ID]&quot;;
         // Trace a sampling of incoming Http requests.
-        CloudTrace.Initialize(projectId, this);
+        CloudTrace.Initialize(this, projectId);
     }
 }
 </code></pre><h2 id="trace-outgoing-http-requests">Trace Outgoing HTTP Requests</h2>
@@ -113,12 +114,12 @@ using (var httpClient = new HttpClient(traceHeaderHandler))
 }
 </code></pre><h2 id="manual-tracing">Manual Tracing</h2>
 <pre><code class="lang-cs">// Manually trace a specific operation.
-using (CloudTrace.CurrentTracer.StartSpan(&quot;hello-world&quot;))
+using (CloudTrace.Tracer.StartSpan(&quot;hello-world&quot;))
 {
     Console.Out.WriteLine(&quot;Hello, World!&quot;);
 }
 </code></pre><pre><code class="lang-cs">// Manually trace a specific Action or Func&lt;T&gt;.
-CloudTrace.CurrentTracer.RunInSpan(
+CloudTrace.Tracer.RunInSpan(
     () =&gt; Console.Out.WriteLine(&quot;Hello, World!&quot;),
     &quot;hello-world&quot;);
 </code></pre>

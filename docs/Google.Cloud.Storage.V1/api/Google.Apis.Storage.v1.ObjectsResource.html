@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ObjectsResource
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -354,6 +355,55 @@ Encoding URI Path Parts.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Apis_Storage_v1_ObjectsResource_GetIamPolicy_" data-uid="Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy*"></a>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource_GetIamPolicy_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy(System.String,System.String)">GetIamPolicy(String, String)</h4>
+              <div class="markdown level1 summary"><p>Returns an IAM policy for the specified object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ObjectsResource.GetIamPolicyRequest GetIamPolicy(string bucket, string storageObject)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>Name of the bucket in which the object resides.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">storageObject</span></td>
+                    <td><p>Name of the object. For information about how to URL encode object names to be path safe, see
+Encoding URI Path Parts.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html">ObjectsResource.GetIamPolicyRequest</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Apis_Storage_v1_ObjectsResource_Insert_" data-uid="Google.Apis.Storage.v1.ObjectsResource.Insert*"></a>
               <h4 id="Google_Apis_Storage_v1_ObjectsResource_Insert_Google_Apis_Storage_v1_Data_Object_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.Insert(Google.Apis.Storage.v1.Data.Object,System.String)">Insert(Object, String)</h4>
               <div class="markdown level1 summary"><p>Stores a new object and metadata.</p>
@@ -627,6 +677,117 @@ safe, see Encoding URI Path Parts.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.html">ObjectsResource.RewriteRequest</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Storage_v1_ObjectsResource_SetIamPolicy_" data-uid="Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy*"></a>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource_SetIamPolicy_Google_Apis_Storage_v1_Data_Policy_System_String_System_String_" data-uid="Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy,System.String,System.String)">SetIamPolicy(Policy, String, String)</h4>
+              <div class="markdown level1 summary"><p>Updates an IAM policy for the specified object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ObjectsResource.SetIamPolicyRequest SetIamPolicy(Policy body, string bucket, string storageObject)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Policy.html">Policy</a></td>
+                    <td><span class="parametername">body</span></td>
+                    <td><p>The body of the request.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>Name of the bucket in which the object resides.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">storageObject</span></td>
+                    <td><p>Name of the object. For information about how to URL encode object names to be path safe, see
+Encoding URI Path Parts.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html">ObjectsResource.SetIamPolicyRequest</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_" data-uid="Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions*"></a>
+              <h4 id="Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_System_String_System_String_Google_Apis_Util_Repeatable_System_String__" data-uid="Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String,System.String,Google.Apis.Util.Repeatable{System.String})">TestIamPermissions(String, String, Repeatable&lt;String&gt;)</h4>
+              <div class="markdown level1 summary"><p>Tests a set of permissions on the given object to see which, if any, are held by the
+caller.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual ObjectsResource.TestIamPermissionsRequest TestIamPermissions(string bucket, string storageObject, Repeatable&lt;string&gt; permissions)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>Name of the bucket in which the object resides.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">storageObject</span></td>
+                    <td><p>Name of the object. For information about how to URL encode object names to be path safe, see
+Encoding URI Path Parts.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Util.Repeatable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><span class="parametername">permissions</span></td>
+                    <td><p>Permissions to test.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html">ObjectsResource.TestIamPermissionsRequest</a></td>
                     <td></td>
                   </tr>
                 </tbody>

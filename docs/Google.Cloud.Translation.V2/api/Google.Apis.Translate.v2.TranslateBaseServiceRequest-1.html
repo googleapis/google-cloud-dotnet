@@ -1,0 +1,577 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TranslateBaseServiceRequest&lt;TResponse&gt;
+   | Google.Cloud.Translation.V2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TranslateBaseServiceRequest&lt;TResponse&gt;
+   | Google.Cloud.Translation.V2 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1">Class TranslateBaseServiceRequest&lt;TResponse&gt;
+              </h1>
+              <div class="markdown level0 summary"><p>A base abstract class for Translate requests.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Google.Apis.Requests.ClientServiceRequest</span>&lt;TResponse&gt;</div>
+                  <div class="level2"><span class="xref">TranslateBaseServiceRequest&lt;TResponse&gt;</span></div>
+                  <div class="level3"><a class="xref" href="Google.Apis.Translate.v2.DetectionsResource.DetectRequest.html">DetectionsResource.DetectRequest</a></div>
+                  <div class="level3"><a class="xref" href="Google.Apis.Translate.v2.DetectionsResource.ListRequest.html">DetectionsResource.ListRequest</a></div>
+                  <div class="level3"><a class="xref" href="Google.Apis.Translate.v2.LanguagesResource.ListRequest.html">LanguagesResource.ListRequest</a></div>
+                  <div class="level3"><a class="xref" href="Google.Apis.Translate.v2.TranslationsResource.ListRequest.html">TranslationsResource.ListRequest</a></div>
+                  <div class="level3"><a class="xref" href="Google.Apis.Translate.v2.TranslationsResource.TranslateRequest.html">TranslationsResource.TranslateRequest</a></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.Execute()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.ExecuteAsStream()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.ExecuteAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.ExecuteAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.ExecuteAsStreamAsync()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.ExecuteAsStreamAsync(System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.CreateRequest(System.Nullable&lt;System.Boolean&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.GenerateRequestUri()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.GetBody()</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.GetDefaultETagAction(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.ETagAction</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.ModifyRequest</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.MethodName</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.RestPath</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.HttpMethod</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.RequestParameters</span>
+                </div>
+                <div>
+                  <span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.Service</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Apis.Translate.v2</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Translation.V2.dll</h6>
+              <h5 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class TranslateBaseServiceRequest&lt;TResponse&gt; : ClientServiceRequest&lt;TResponse&gt;, IClientServiceRequest&lt;TResponse&gt;, IClientServiceRequest</code></pre>
+              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TResponse</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1__ctor_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.#ctor*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1__ctor_Google_Apis_Services_IClientService_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">TranslateBaseServiceRequest(IClientService)</h4>
+              <div class="markdown level1 summary"><p>Constructs a new TranslateBaseServiceRequest instance.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected TranslateBaseServiceRequest(IClientService service)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Google.Apis.Services.IClientService</span></td>
+                    <td><span class="parametername">service</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_AccessToken_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.AccessToken*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_AccessToken" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.AccessToken">AccessToken</h4>
+              <div class="markdown level1 summary"><p>OAuth access token.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;access_token&quot;, RequestParameterType.Query)]
+public virtual string AccessToken { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Alt_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Alt*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Alt" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Alt">Alt</h4>
+              <div class="markdown level1 summary"><p>Data format for response.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;alt&quot;, RequestParameterType.Query)]
+public virtual TranslateBaseServiceRequest&lt;TResponse&gt;.AltEnum? Alt { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Translate.v2.TranslateBaseServiceRequest-1.AltEnum.html">TranslateBaseServiceRequest.AltEnum</a>&lt;&gt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_BearerToken_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.BearerToken*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_BearerToken" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.BearerToken">BearerToken</h4>
+              <div class="markdown level1 summary"><p>OAuth bearer token.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;bearer_token&quot;, RequestParameterType.Query)]
+public virtual string BearerToken { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Callback_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Callback*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Callback" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Callback">Callback</h4>
+              <div class="markdown level1 summary"><p>JSONP</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;callback&quot;, RequestParameterType.Query)]
+public virtual string Callback { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Fields_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Fields*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Fields" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Fields">Fields</h4>
+              <div class="markdown level1 summary"><p>Selector specifying which fields to include in a partial response.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;fields&quot;, RequestParameterType.Query)]
+public virtual string Fields { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Key_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Key*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Key" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Key">Key</h4>
+              <div class="markdown level1 summary"><p>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+Required unless you provide an OAuth 2.0 token.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;key&quot;, RequestParameterType.Query)]
+public virtual string Key { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_OauthToken_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.OauthToken*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_OauthToken" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.OauthToken">OauthToken</h4>
+              <div class="markdown level1 summary"><p>OAuth 2.0 token for the current user.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;oauth_token&quot;, RequestParameterType.Query)]
+public virtual string OauthToken { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Pp_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Pp*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Pp" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Pp">Pp</h4>
+              <div class="markdown level1 summary"><p>Pretty-print response.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;pp&quot;, RequestParameterType.Query)]
+public virtual bool ? Pp { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_PrettyPrint_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.PrettyPrint*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_PrettyPrint" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.PrettyPrint">PrettyPrint</h4>
+              <div class="markdown level1 summary"><p>Returns response with indentations and line breaks.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;prettyPrint&quot;, RequestParameterType.Query)]
+public virtual bool ? PrettyPrint { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_QuotaUser_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.QuotaUser*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_QuotaUser" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.QuotaUser">QuotaUser</h4>
+              <div class="markdown level1 summary"><p>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;quotaUser&quot;, RequestParameterType.Query)]
+public virtual string QuotaUser { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_UploadProtocol_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.UploadProtocol*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_UploadProtocol" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.UploadProtocol">UploadProtocol</h4>
+              <div class="markdown level1 summary"><p>Upload protocol for media (e.g. &quot;raw&quot;, &quot;multipart&quot;).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;upload_protocol&quot;, RequestParameterType.Query)]
+public virtual string UploadProtocol { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_UploadType_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.UploadType*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_UploadType" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.UploadType">UploadType</h4>
+              <div class="markdown level1 summary"><p>Legacy upload protocol for media (e.g. &quot;media&quot;, &quot;multipart&quot;).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;uploadType&quot;, RequestParameterType.Query)]
+public virtual string UploadType { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Xgafv_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Xgafv*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_Xgafv" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.Xgafv">Xgafv</h4>
+              <div class="markdown level1 summary"><p>V1 error format.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">[RequestParameter(&quot;$.xgafv&quot;, RequestParameterType.Query)]
+public virtual TranslateBaseServiceRequest&lt;TResponse&gt;.XgafvEnum? Xgafv { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Google.Apis.Translate.v2.TranslateBaseServiceRequest-1.XgafvEnum.html">TranslateBaseServiceRequest.XgafvEnum</a>&lt;&gt;&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_InitParameters_" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.InitParameters*"></a>
+              <h4 id="Google_Apis_Translate_v2_TranslateBaseServiceRequest_1_InitParameters" data-uid="Google.Apis.Translate.v2.TranslateBaseServiceRequest`1.InitParameters">InitParameters()</h4>
+              <div class="markdown level1 summary"><p>Initializes Translate parameter list.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override void InitParameters()</code></pre>
+              </div>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Google.Apis.Requests.ClientServiceRequest&lt;TResponse&gt;.InitParameters()</span></div>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

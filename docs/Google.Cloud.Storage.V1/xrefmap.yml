@@ -338,12 +338,12 @@ references:
   commentId: T:Google.Api.Gax.GcePlatformDetails
   fullName: Google.Api.Gax.GcePlatformDetails
   nameWithType: GcePlatformDetails
-- uid: Google.Api.Gax.GcePlatformDetails.#ctor(System.String)
-  name: GcePlatformDetails(String)
-  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_System_String_
-  commentId: M:Google.Api.Gax.GcePlatformDetails.#ctor(System.String)
-  fullName: Google.Api.Gax.GcePlatformDetails.GcePlatformDetails(System.String)
-  nameWithType: GcePlatformDetails.GcePlatformDetails(String)
+- uid: Google.Api.Gax.GcePlatformDetails.#ctor(System.String,System.String,System.String,System.String)
+  name: GcePlatformDetails(String, String, String, String)
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Api.Gax.GcePlatformDetails.#ctor(System.String,System.String,System.String,System.String)
+  fullName: Google.Api.Gax.GcePlatformDetails.GcePlatformDetails(System.String, System.String, System.String, System.String)
+  nameWithType: GcePlatformDetails.GcePlatformDetails(String, String, String, String)
 - uid: Google.Api.Gax.GcePlatformDetails.#ctor*
   name: GcePlatformDetails
   href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_
@@ -398,6 +398,18 @@ references:
   commentId: Overload:Google.Api.Gax.GcePlatformDetails.ToString
   fullName: Google.Api.Gax.GcePlatformDetails.ToString
   nameWithType: GcePlatformDetails.ToString
+- uid: Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  name: TryLoad(String)
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_TryLoad_System_String_
+  commentId: M:Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  fullName: Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  nameWithType: GcePlatformDetails.TryLoad(String)
+- uid: Google.Api.Gax.GcePlatformDetails.TryLoad*
+  name: TryLoad
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_TryLoad_
+  commentId: Overload:Google.Api.Gax.GcePlatformDetails.TryLoad
+  fullName: Google.Api.Gax.GcePlatformDetails.TryLoad
+  nameWithType: GcePlatformDetails.TryLoad
 - uid: Google.Api.Gax.GcePlatformDetails.ZoneName
   name: ZoneName
   href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_ZoneName
@@ -410,6 +422,108 @@ references:
   commentId: Overload:Google.Api.Gax.GcePlatformDetails.ZoneName
   fullName: Google.Api.Gax.GcePlatformDetails.ZoneName
   nameWithType: GcePlatformDetails.ZoneName
+- uid: Google.Api.Gax.GkePlatformDetails
+  name: GkePlatformDetails
+  href: api/Google.Api.Gax.GkePlatformDetails.html
+  commentId: T:Google.Api.Gax.GkePlatformDetails
+  fullName: Google.Api.Gax.GkePlatformDetails
+  nameWithType: GkePlatformDetails
+- uid: Google.Api.Gax.GkePlatformDetails.#ctor(System.String,System.String,System.String,System.String,System.String)
+  name: GkePlatformDetails(String, String, String, String, String)
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails__ctor_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Api.Gax.GkePlatformDetails.#ctor(System.String,System.String,System.String,System.String,System.String)
+  fullName: Google.Api.Gax.GkePlatformDetails.GkePlatformDetails(System.String, System.String, System.String, System.String, System.String)
+  nameWithType: GkePlatformDetails.GkePlatformDetails(String, String, String, String, String)
+- uid: Google.Api.Gax.GkePlatformDetails.#ctor*
+  name: GkePlatformDetails
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails__ctor_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.#ctor
+  fullName: Google.Api.Gax.GkePlatformDetails.GkePlatformDetails
+  nameWithType: GkePlatformDetails.GkePlatformDetails
+- uid: Google.Api.Gax.GkePlatformDetails.ClusterName
+  name: ClusterName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ClusterName
+  commentId: P:Google.Api.Gax.GkePlatformDetails.ClusterName
+  fullName: Google.Api.Gax.GkePlatformDetails.ClusterName
+  nameWithType: GkePlatformDetails.ClusterName
+- uid: Google.Api.Gax.GkePlatformDetails.ClusterName*
+  name: ClusterName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ClusterName_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ClusterName
+  fullName: Google.Api.Gax.GkePlatformDetails.ClusterName
+  nameWithType: GkePlatformDetails.ClusterName
+- uid: Google.Api.Gax.GkePlatformDetails.HostName
+  name: HostName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_HostName
+  commentId: P:Google.Api.Gax.GkePlatformDetails.HostName
+  fullName: Google.Api.Gax.GkePlatformDetails.HostName
+  nameWithType: GkePlatformDetails.HostName
+- uid: Google.Api.Gax.GkePlatformDetails.HostName*
+  name: HostName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_HostName_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.HostName
+  fullName: Google.Api.Gax.GkePlatformDetails.HostName
+  nameWithType: GkePlatformDetails.HostName
+- uid: Google.Api.Gax.GkePlatformDetails.Location
+  name: Location
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_Location
+  commentId: P:Google.Api.Gax.GkePlatformDetails.Location
+  fullName: Google.Api.Gax.GkePlatformDetails.Location
+  nameWithType: GkePlatformDetails.Location
+- uid: Google.Api.Gax.GkePlatformDetails.Location*
+  name: Location
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_Location_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.Location
+  fullName: Google.Api.Gax.GkePlatformDetails.Location
+  nameWithType: GkePlatformDetails.Location
+- uid: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  name: MetadataJson
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_MetadataJson
+  commentId: P:Google.Api.Gax.GkePlatformDetails.MetadataJson
+  fullName: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  nameWithType: GkePlatformDetails.MetadataJson
+- uid: Google.Api.Gax.GkePlatformDetails.MetadataJson*
+  name: MetadataJson
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_MetadataJson_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.MetadataJson
+  fullName: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  nameWithType: GkePlatformDetails.MetadataJson
+- uid: Google.Api.Gax.GkePlatformDetails.ProjectId
+  name: ProjectId
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ProjectId
+  commentId: P:Google.Api.Gax.GkePlatformDetails.ProjectId
+  fullName: Google.Api.Gax.GkePlatformDetails.ProjectId
+  nameWithType: GkePlatformDetails.ProjectId
+- uid: Google.Api.Gax.GkePlatformDetails.ProjectId*
+  name: ProjectId
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ProjectId_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ProjectId
+  fullName: Google.Api.Gax.GkePlatformDetails.ProjectId
+  nameWithType: GkePlatformDetails.ProjectId
+- uid: Google.Api.Gax.GkePlatformDetails.ToString
+  name: ToString()
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ToString
+  commentId: M:Google.Api.Gax.GkePlatformDetails.ToString
+  fullName: Google.Api.Gax.GkePlatformDetails.ToString()
+  nameWithType: GkePlatformDetails.ToString()
+- uid: Google.Api.Gax.GkePlatformDetails.ToString*
+  name: ToString
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ToString_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ToString
+  fullName: Google.Api.Gax.GkePlatformDetails.ToString
+  nameWithType: GkePlatformDetails.ToString
+- uid: Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  name: TryLoad(String)
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_TryLoad_System_String_
+  commentId: M:Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  fullName: Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  nameWithType: GkePlatformDetails.TryLoad(String)
+- uid: Google.Api.Gax.GkePlatformDetails.TryLoad*
+  name: TryLoad
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_TryLoad_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.TryLoad
+  fullName: Google.Api.Gax.GkePlatformDetails.TryLoad
+  nameWithType: GkePlatformDetails.TryLoad
 - uid: Google.Api.Gax.IClock
   name: IClock
   href: api/Google.Api.Gax.IClock.html
@@ -819,6 +933,12 @@ references:
   commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GcePlatformDetails)
   fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GcePlatformDetails)
   nameWithType: Platform.Platform(GcePlatformDetails)
+- uid: Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GkePlatformDetails)
+  name: Platform(GkePlatformDetails)
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_Google_Api_Gax_GkePlatformDetails_
+  commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GkePlatformDetails)
+  fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GkePlatformDetails)
+  nameWithType: Platform.Platform(GkePlatformDetails)
 - uid: Google.Api.Gax.Platform.#ctor*
   name: Platform
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_
@@ -849,6 +969,18 @@ references:
   commentId: Overload:Google.Api.Gax.Platform.GceDetails
   fullName: Google.Api.Gax.Platform.GceDetails
   nameWithType: Platform.GceDetails
+- uid: Google.Api.Gax.Platform.GkeDetails
+  name: GkeDetails
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_GkeDetails
+  commentId: P:Google.Api.Gax.Platform.GkeDetails
+  fullName: Google.Api.Gax.Platform.GkeDetails
+  nameWithType: Platform.GkeDetails
+- uid: Google.Api.Gax.Platform.GkeDetails*
+  name: GkeDetails
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_GkeDetails_
+  commentId: Overload:Google.Api.Gax.Platform.GkeDetails
+  fullName: Google.Api.Gax.Platform.GkeDetails
+  nameWithType: Platform.GkeDetails
 - uid: Google.Api.Gax.Platform.Instance
   name: Instance()
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_Instance
@@ -873,6 +1005,18 @@ references:
   commentId: Overload:Google.Api.Gax.Platform.InstanceAsync
   fullName: Google.Api.Gax.Platform.InstanceAsync
   nameWithType: Platform.InstanceAsync
+- uid: Google.Api.Gax.Platform.ProjectId
+  name: ProjectId
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ProjectId
+  commentId: P:Google.Api.Gax.Platform.ProjectId
+  fullName: Google.Api.Gax.Platform.ProjectId
+  nameWithType: Platform.ProjectId
+- uid: Google.Api.Gax.Platform.ProjectId*
+  name: ProjectId
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ProjectId_
+  commentId: Overload:Google.Api.Gax.Platform.ProjectId
+  fullName: Google.Api.Gax.Platform.ProjectId
+  nameWithType: Platform.ProjectId
 - uid: Google.Api.Gax.Platform.ToString
   name: ToString()
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ToString
@@ -915,6 +1059,12 @@ references:
   commentId: F:Google.Api.Gax.PlatformType.Gce
   fullName: Google.Api.Gax.PlatformType.Gce
   nameWithType: PlatformType.Gce
+- uid: Google.Api.Gax.PlatformType.Gke
+  name: Gke
+  href: api/Google.Api.Gax.PlatformType.html#Google_Api_Gax_PlatformType_Gke
+  commentId: F:Google.Api.Gax.PlatformType.Gke
+  fullName: Google.Api.Gax.PlatformType.Gke
+  nameWithType: PlatformType.Gke
 - uid: Google.Api.Gax.PlatformType.Unknown
   name: Unknown
   href: api/Google.Api.Gax.PlatformType.html#Google_Api_Gax_PlatformType_Unknown
@@ -1533,6 +1683,18 @@ references:
   commentId: T:Google.Api.Gax.Rest.UserAgentHelper
   fullName: Google.Api.Gax.Rest.UserAgentHelper
   nameWithType: UserAgentHelper
+- uid: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)
+  name: CreateRequestModifier(Type)
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_CreateRequestModifier_System_Type_
+  commentId: M:Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)
+  fullName: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)
+  nameWithType: UserAgentHelper.CreateRequestModifier(Type)
+- uid: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier*
+  name: CreateRequestModifier
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_CreateRequestModifier_
+  commentId: Overload:Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier
+  fullName: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier
+  nameWithType: UserAgentHelper.CreateRequestModifier
 - uid: Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
   name: GetDefaultUserAgent(Type)
   href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_GetDefaultUserAgent_System_Type_
@@ -2739,6 +2901,96 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.BucketsResource.Get
   fullName: Google.Apis.Storage.v1.BucketsResource.Get
   nameWithType: BucketsResource.Get
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicy(System.String)
+  name: GetIamPolicy(String)
+  href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicy_System_String_
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.GetIamPolicy(System.String)
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicy(System.String)
+  nameWithType: BucketsResource.GetIamPolicy(String)
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicy*
+  name: GetIamPolicy
+  href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicy_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.GetIamPolicy
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicy
+  nameWithType: BucketsResource.GetIamPolicy
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest
+  name: BucketsResource.GetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html
+  commentId: T:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest
+  nameWithType: BucketsResource.GetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  name: GetIamPolicyRequest(IClientService, String)
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_System_String_
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.GetIamPolicyRequest(Google.Apis.Services.IClientService, System.String)
+  nameWithType: BucketsResource.GetIamPolicyRequest.GetIamPolicyRequest(IClientService, String)
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.#ctor*
+  name: GetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.#ctor
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.GetIamPolicyRequest
+  nameWithType: BucketsResource.GetIamPolicyRequest.GetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.Bucket
+  nameWithType: BucketsResource.GetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.Bucket
+  nameWithType: BucketsResource.GetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.HttpMethod
+  nameWithType: BucketsResource.GetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.HttpMethod
+  nameWithType: BucketsResource.GetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.InitParameters()
+  nameWithType: BucketsResource.GetIamPolicyRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.InitParameters
+  nameWithType: BucketsResource.GetIamPolicyRequest.InitParameters
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.MethodName
+  nameWithType: BucketsResource.GetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.MethodName
+  nameWithType: BucketsResource.GetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.RestPath
+  nameWithType: BucketsResource.GetIamPolicyRequest.RestPath
+- uid: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_GetIamPolicyRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.BucketsResource.GetIamPolicyRequest.RestPath
+  nameWithType: BucketsResource.GetIamPolicyRequest.RestPath
 - uid: Google.Apis.Storage.v1.BucketsResource.GetRequest
   name: BucketsResource.GetRequest
   href: api/Google.Apis.Storage.v1.BucketsResource.GetRequest.html
@@ -3519,6 +3771,216 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.BucketsResource.PatchRequest.RestPath
   fullName: Google.Apis.Storage.v1.BucketsResource.PatchRequest.RestPath
   nameWithType: BucketsResource.PatchRequest.RestPath
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy,System.String)
+  name: SetIamPolicy(Policy, String)
+  href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicy_Google_Apis_Storage_v1_Data_Policy_System_String_
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy,System.String)
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy, System.String)
+  nameWithType: BucketsResource.SetIamPolicy(Policy, String)
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicy*
+  name: SetIamPolicy
+  href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicy_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicy
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicy
+  nameWithType: BucketsResource.SetIamPolicy
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest
+  name: BucketsResource.SetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html
+  commentId: T:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest
+  nameWithType: BucketsResource.SetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String)
+  name: SetIamPolicyRequest(IClientService, Policy, String)
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Policy_System_String_
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String)
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.SetIamPolicyRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Policy, System.String)
+  nameWithType: BucketsResource.SetIamPolicyRequest.SetIamPolicyRequest(IClientService, Policy, String)
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.#ctor*
+  name: SetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.#ctor
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.SetIamPolicyRequest
+  nameWithType: BucketsResource.SetIamPolicyRequest.SetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.Bucket
+  nameWithType: BucketsResource.SetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.Bucket
+  nameWithType: BucketsResource.SetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.GetBody
+  name: GetBody()
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_GetBody
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.GetBody
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.GetBody()
+  nameWithType: BucketsResource.SetIamPolicyRequest.GetBody()
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.GetBody*
+  name: GetBody
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_GetBody_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.GetBody
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.GetBody
+  nameWithType: BucketsResource.SetIamPolicyRequest.GetBody
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.HttpMethod
+  nameWithType: BucketsResource.SetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.HttpMethod
+  nameWithType: BucketsResource.SetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.InitParameters()
+  nameWithType: BucketsResource.SetIamPolicyRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.InitParameters
+  nameWithType: BucketsResource.SetIamPolicyRequest.InitParameters
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.MethodName
+  nameWithType: BucketsResource.SetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.MethodName
+  nameWithType: BucketsResource.SetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.RestPath
+  nameWithType: BucketsResource.SetIamPolicyRequest.RestPath
+- uid: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_BucketsResource_SetIamPolicyRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.BucketsResource.SetIamPolicyRequest.RestPath
+  nameWithType: BucketsResource.SetIamPolicyRequest.RestPath
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String,Google.Apis.Util.Repeatable{System.String})
+  name: TestIamPermissions(String, Repeatable<String>)
+  href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissions_System_String_Google_Apis_Util_Repeatable_System_String__
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String,Google.Apis.Util.Repeatable{System.String})
+  name.vb: TestIamPermissions(String, Repeatable(Of String))
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String, Google.Apis.Util.Repeatable<System.String>)
+  fullName.vb: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions(System.String, Google.Apis.Util.Repeatable(Of System.String))
+  nameWithType: BucketsResource.TestIamPermissions(String, Repeatable<String>)
+  nameWithType.vb: BucketsResource.TestIamPermissions(String, Repeatable(Of String))
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions*
+  name: TestIamPermissions
+  href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissions_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissions
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissions
+  nameWithType: BucketsResource.TestIamPermissions
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest
+  name: BucketsResource.TestIamPermissionsRequest
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html
+  commentId: T:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest
+  nameWithType: BucketsResource.TestIamPermissionsRequest
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,Google.Apis.Util.Repeatable{System.String})
+  name: TestIamPermissionsRequest(IClientService, String, Repeatable<String>)
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest__ctor_Google_Apis_Services_IClientService_System_String_Google_Apis_Util_Repeatable_System_String__
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,Google.Apis.Util.Repeatable{System.String})
+  name.vb: TestIamPermissionsRequest(IClientService, String, Repeatable(Of String))
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, Google.Apis.Util.Repeatable<System.String>)
+  fullName.vb: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, Google.Apis.Util.Repeatable(Of System.String))
+  nameWithType: BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, Repeatable<String>)
+  nameWithType.vb: BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, Repeatable(Of String))
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.#ctor*
+  name: TestIamPermissionsRequest
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.#ctor
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest
+  nameWithType: BucketsResource.TestIamPermissionsRequest.TestIamPermissionsRequest
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Bucket
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Bucket
+  nameWithType: BucketsResource.TestIamPermissionsRequest.Bucket
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Bucket
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Bucket
+  nameWithType: BucketsResource.TestIamPermissionsRequest.Bucket
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.HttpMethod
+  nameWithType: BucketsResource.TestIamPermissionsRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.HttpMethod
+  nameWithType: BucketsResource.TestIamPermissionsRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.InitParameters()
+  nameWithType: BucketsResource.TestIamPermissionsRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.InitParameters
+  nameWithType: BucketsResource.TestIamPermissionsRequest.InitParameters
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.MethodName
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.MethodName
+  nameWithType: BucketsResource.TestIamPermissionsRequest.MethodName
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.MethodName
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.MethodName
+  nameWithType: BucketsResource.TestIamPermissionsRequest.MethodName
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Permissions
+  name: Permissions
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_Permissions
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Permissions
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Permissions
+  nameWithType: BucketsResource.TestIamPermissionsRequest.Permissions
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Permissions*
+  name: Permissions
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_Permissions_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Permissions
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.Permissions
+  nameWithType: BucketsResource.TestIamPermissionsRequest.Permissions
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.RestPath
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.RestPath
+  nameWithType: BucketsResource.TestIamPermissionsRequest.RestPath
+- uid: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_BucketsResource_TestIamPermissionsRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.RestPath
+  fullName: Google.Apis.Storage.v1.BucketsResource.TestIamPermissionsRequest.RestPath
+  nameWithType: BucketsResource.TestIamPermissionsRequest.RestPath
 - uid: Google.Apis.Storage.v1.BucketsResource.Update(Google.Apis.Storage.v1.Data.Bucket,System.String)
   name: Update(Bucket, String)
   href: api/Google.Apis.Storage.v1.BucketsResource.html#Google_Apis_Storage_v1_BucketsResource_Update_Google_Apis_Storage_v1_Data_Bucket_System_String_
@@ -4023,6 +4485,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.Data.Bucket.Kind
   fullName: Google.Apis.Storage.v1.Data.Bucket.Kind
   nameWithType: Bucket.Kind
+- uid: Google.Apis.Storage.v1.Data.Bucket.Labels
+  name: Labels
+  href: api/Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket_Labels
+  commentId: P:Google.Apis.Storage.v1.Data.Bucket.Labels
+  fullName: Google.Apis.Storage.v1.Data.Bucket.Labels
+  nameWithType: Bucket.Labels
+- uid: Google.Apis.Storage.v1.Data.Bucket.Labels*
+  name: Labels
+  href: api/Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket_Labels_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Bucket.Labels
+  fullName: Google.Apis.Storage.v1.Data.Bucket.Labels
+  nameWithType: Bucket.Labels
 - uid: Google.Apis.Storage.v1.Data.Bucket.Lifecycle
   name: Lifecycle
   href: api/Google.Apis.Storage.v1.Data.Bucket.html#Google_Apis_Storage_v1_Data_Bucket_Lifecycle
@@ -4971,6 +5445,162 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.Data.ComposeRequest.SourceObjectsData.ObjectPreconditionsData.IfGenerationMatch
   fullName: Google.Apis.Storage.v1.Data.ComposeRequest.SourceObjectsData.ObjectPreconditionsData.IfGenerationMatch
   nameWithType: ComposeRequest.SourceObjectsData.ObjectPreconditionsData.IfGenerationMatch
+- uid: Google.Apis.Storage.v1.Data.Notification
+  name: Notification
+  href: api/Google.Apis.Storage.v1.Data.Notification.html
+  commentId: T:Google.Apis.Storage.v1.Data.Notification
+  fullName: Google.Apis.Storage.v1.Data.Notification
+  nameWithType: Notification
+- uid: Google.Apis.Storage.v1.Data.Notification.CustomAttributes
+  name: CustomAttributes
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_CustomAttributes
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.CustomAttributes
+  fullName: Google.Apis.Storage.v1.Data.Notification.CustomAttributes
+  nameWithType: Notification.CustomAttributes
+- uid: Google.Apis.Storage.v1.Data.Notification.CustomAttributes*
+  name: CustomAttributes
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_CustomAttributes_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.CustomAttributes
+  fullName: Google.Apis.Storage.v1.Data.Notification.CustomAttributes
+  nameWithType: Notification.CustomAttributes
+- uid: Google.Apis.Storage.v1.Data.Notification.ETag
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_ETag
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.ETag
+  fullName: Google.Apis.Storage.v1.Data.Notification.ETag
+  nameWithType: Notification.ETag
+- uid: Google.Apis.Storage.v1.Data.Notification.ETag*
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_ETag_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.ETag
+  fullName: Google.Apis.Storage.v1.Data.Notification.ETag
+  nameWithType: Notification.ETag
+- uid: Google.Apis.Storage.v1.Data.Notification.EventTypes
+  name: EventTypes
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_EventTypes
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.EventTypes
+  fullName: Google.Apis.Storage.v1.Data.Notification.EventTypes
+  nameWithType: Notification.EventTypes
+- uid: Google.Apis.Storage.v1.Data.Notification.EventTypes*
+  name: EventTypes
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_EventTypes_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.EventTypes
+  fullName: Google.Apis.Storage.v1.Data.Notification.EventTypes
+  nameWithType: Notification.EventTypes
+- uid: Google.Apis.Storage.v1.Data.Notification.Id
+  name: Id
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_Id
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.Id
+  fullName: Google.Apis.Storage.v1.Data.Notification.Id
+  nameWithType: Notification.Id
+- uid: Google.Apis.Storage.v1.Data.Notification.Id*
+  name: Id
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_Id_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.Id
+  fullName: Google.Apis.Storage.v1.Data.Notification.Id
+  nameWithType: Notification.Id
+- uid: Google.Apis.Storage.v1.Data.Notification.Kind
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_Kind
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.Kind
+  fullName: Google.Apis.Storage.v1.Data.Notification.Kind
+  nameWithType: Notification.Kind
+- uid: Google.Apis.Storage.v1.Data.Notification.Kind*
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_Kind_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.Kind
+  fullName: Google.Apis.Storage.v1.Data.Notification.Kind
+  nameWithType: Notification.Kind
+- uid: Google.Apis.Storage.v1.Data.Notification.ObjectNamePrefix
+  name: ObjectNamePrefix
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_ObjectNamePrefix
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.ObjectNamePrefix
+  fullName: Google.Apis.Storage.v1.Data.Notification.ObjectNamePrefix
+  nameWithType: Notification.ObjectNamePrefix
+- uid: Google.Apis.Storage.v1.Data.Notification.ObjectNamePrefix*
+  name: ObjectNamePrefix
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_ObjectNamePrefix_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.ObjectNamePrefix
+  fullName: Google.Apis.Storage.v1.Data.Notification.ObjectNamePrefix
+  nameWithType: Notification.ObjectNamePrefix
+- uid: Google.Apis.Storage.v1.Data.Notification.PayloadFormat
+  name: PayloadFormat
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_PayloadFormat
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.PayloadFormat
+  fullName: Google.Apis.Storage.v1.Data.Notification.PayloadFormat
+  nameWithType: Notification.PayloadFormat
+- uid: Google.Apis.Storage.v1.Data.Notification.PayloadFormat*
+  name: PayloadFormat
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_PayloadFormat_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.PayloadFormat
+  fullName: Google.Apis.Storage.v1.Data.Notification.PayloadFormat
+  nameWithType: Notification.PayloadFormat
+- uid: Google.Apis.Storage.v1.Data.Notification.SelfLink
+  name: SelfLink
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_SelfLink
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.SelfLink
+  fullName: Google.Apis.Storage.v1.Data.Notification.SelfLink
+  nameWithType: Notification.SelfLink
+- uid: Google.Apis.Storage.v1.Data.Notification.SelfLink*
+  name: SelfLink
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_SelfLink_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.SelfLink
+  fullName: Google.Apis.Storage.v1.Data.Notification.SelfLink
+  nameWithType: Notification.SelfLink
+- uid: Google.Apis.Storage.v1.Data.Notification.Topic
+  name: Topic
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_Topic
+  commentId: P:Google.Apis.Storage.v1.Data.Notification.Topic
+  fullName: Google.Apis.Storage.v1.Data.Notification.Topic
+  nameWithType: Notification.Topic
+- uid: Google.Apis.Storage.v1.Data.Notification.Topic*
+  name: Topic
+  href: api/Google.Apis.Storage.v1.Data.Notification.html#Google_Apis_Storage_v1_Data_Notification_Topic_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notification.Topic
+  fullName: Google.Apis.Storage.v1.Data.Notification.Topic
+  nameWithType: Notification.Topic
+- uid: Google.Apis.Storage.v1.Data.Notifications
+  name: Notifications
+  href: api/Google.Apis.Storage.v1.Data.Notifications.html
+  commentId: T:Google.Apis.Storage.v1.Data.Notifications
+  fullName: Google.Apis.Storage.v1.Data.Notifications
+  nameWithType: Notifications
+- uid: Google.Apis.Storage.v1.Data.Notifications.ETag
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.Notifications.html#Google_Apis_Storage_v1_Data_Notifications_ETag
+  commentId: P:Google.Apis.Storage.v1.Data.Notifications.ETag
+  fullName: Google.Apis.Storage.v1.Data.Notifications.ETag
+  nameWithType: Notifications.ETag
+- uid: Google.Apis.Storage.v1.Data.Notifications.ETag*
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.Notifications.html#Google_Apis_Storage_v1_Data_Notifications_ETag_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notifications.ETag
+  fullName: Google.Apis.Storage.v1.Data.Notifications.ETag
+  nameWithType: Notifications.ETag
+- uid: Google.Apis.Storage.v1.Data.Notifications.Items
+  name: Items
+  href: api/Google.Apis.Storage.v1.Data.Notifications.html#Google_Apis_Storage_v1_Data_Notifications_Items
+  commentId: P:Google.Apis.Storage.v1.Data.Notifications.Items
+  fullName: Google.Apis.Storage.v1.Data.Notifications.Items
+  nameWithType: Notifications.Items
+- uid: Google.Apis.Storage.v1.Data.Notifications.Items*
+  name: Items
+  href: api/Google.Apis.Storage.v1.Data.Notifications.html#Google_Apis_Storage_v1_Data_Notifications_Items_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notifications.Items
+  fullName: Google.Apis.Storage.v1.Data.Notifications.Items
+  nameWithType: Notifications.Items
+- uid: Google.Apis.Storage.v1.Data.Notifications.Kind
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.Notifications.html#Google_Apis_Storage_v1_Data_Notifications_Kind
+  commentId: P:Google.Apis.Storage.v1.Data.Notifications.Kind
+  fullName: Google.Apis.Storage.v1.Data.Notifications.Kind
+  nameWithType: Notifications.Kind
+- uid: Google.Apis.Storage.v1.Data.Notifications.Kind*
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.Notifications.html#Google_Apis_Storage_v1_Data_Notifications_Kind_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Notifications.Kind
+  fullName: Google.Apis.Storage.v1.Data.Notifications.Kind
+  nameWithType: Notifications.Kind
 - uid: Google.Apis.Storage.v1.Data.Object
   name: Object
   href: api/Google.Apis.Storage.v1.Data.Object.html
@@ -5709,6 +6339,90 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.Data.Objects.Prefixes
   fullName: Google.Apis.Storage.v1.Data.Objects.Prefixes
   nameWithType: Objects.Prefixes
+- uid: Google.Apis.Storage.v1.Data.Policy
+  name: Policy
+  href: api/Google.Apis.Storage.v1.Data.Policy.html
+  commentId: T:Google.Apis.Storage.v1.Data.Policy
+  fullName: Google.Apis.Storage.v1.Data.Policy
+  nameWithType: Policy
+- uid: Google.Apis.Storage.v1.Data.Policy.Bindings
+  name: Bindings
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_Bindings
+  commentId: P:Google.Apis.Storage.v1.Data.Policy.Bindings
+  fullName: Google.Apis.Storage.v1.Data.Policy.Bindings
+  nameWithType: Policy.Bindings
+- uid: Google.Apis.Storage.v1.Data.Policy.Bindings*
+  name: Bindings
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_Bindings_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Policy.Bindings
+  fullName: Google.Apis.Storage.v1.Data.Policy.Bindings
+  nameWithType: Policy.Bindings
+- uid: Google.Apis.Storage.v1.Data.Policy.BindingsData
+  name: Policy.BindingsData
+  href: api/Google.Apis.Storage.v1.Data.Policy.BindingsData.html
+  commentId: T:Google.Apis.Storage.v1.Data.Policy.BindingsData
+  fullName: Google.Apis.Storage.v1.Data.Policy.BindingsData
+  nameWithType: Policy.BindingsData
+- uid: Google.Apis.Storage.v1.Data.Policy.BindingsData.Members
+  name: Members
+  href: api/Google.Apis.Storage.v1.Data.Policy.BindingsData.html#Google_Apis_Storage_v1_Data_Policy_BindingsData_Members
+  commentId: P:Google.Apis.Storage.v1.Data.Policy.BindingsData.Members
+  fullName: Google.Apis.Storage.v1.Data.Policy.BindingsData.Members
+  nameWithType: Policy.BindingsData.Members
+- uid: Google.Apis.Storage.v1.Data.Policy.BindingsData.Members*
+  name: Members
+  href: api/Google.Apis.Storage.v1.Data.Policy.BindingsData.html#Google_Apis_Storage_v1_Data_Policy_BindingsData_Members_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Policy.BindingsData.Members
+  fullName: Google.Apis.Storage.v1.Data.Policy.BindingsData.Members
+  nameWithType: Policy.BindingsData.Members
+- uid: Google.Apis.Storage.v1.Data.Policy.BindingsData.Role
+  name: Role
+  href: api/Google.Apis.Storage.v1.Data.Policy.BindingsData.html#Google_Apis_Storage_v1_Data_Policy_BindingsData_Role
+  commentId: P:Google.Apis.Storage.v1.Data.Policy.BindingsData.Role
+  fullName: Google.Apis.Storage.v1.Data.Policy.BindingsData.Role
+  nameWithType: Policy.BindingsData.Role
+- uid: Google.Apis.Storage.v1.Data.Policy.BindingsData.Role*
+  name: Role
+  href: api/Google.Apis.Storage.v1.Data.Policy.BindingsData.html#Google_Apis_Storage_v1_Data_Policy_BindingsData_Role_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Policy.BindingsData.Role
+  fullName: Google.Apis.Storage.v1.Data.Policy.BindingsData.Role
+  nameWithType: Policy.BindingsData.Role
+- uid: Google.Apis.Storage.v1.Data.Policy.ETag
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_ETag
+  commentId: P:Google.Apis.Storage.v1.Data.Policy.ETag
+  fullName: Google.Apis.Storage.v1.Data.Policy.ETag
+  nameWithType: Policy.ETag
+- uid: Google.Apis.Storage.v1.Data.Policy.ETag*
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_ETag_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Policy.ETag
+  fullName: Google.Apis.Storage.v1.Data.Policy.ETag
+  nameWithType: Policy.ETag
+- uid: Google.Apis.Storage.v1.Data.Policy.Kind
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_Kind
+  commentId: P:Google.Apis.Storage.v1.Data.Policy.Kind
+  fullName: Google.Apis.Storage.v1.Data.Policy.Kind
+  nameWithType: Policy.Kind
+- uid: Google.Apis.Storage.v1.Data.Policy.Kind*
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_Kind_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Policy.Kind
+  fullName: Google.Apis.Storage.v1.Data.Policy.Kind
+  nameWithType: Policy.Kind
+- uid: Google.Apis.Storage.v1.Data.Policy.ResourceId
+  name: ResourceId
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_ResourceId
+  commentId: P:Google.Apis.Storage.v1.Data.Policy.ResourceId
+  fullName: Google.Apis.Storage.v1.Data.Policy.ResourceId
+  nameWithType: Policy.ResourceId
+- uid: Google.Apis.Storage.v1.Data.Policy.ResourceId*
+  name: ResourceId
+  href: api/Google.Apis.Storage.v1.Data.Policy.html#Google_Apis_Storage_v1_Data_Policy_ResourceId_
+  commentId: Overload:Google.Apis.Storage.v1.Data.Policy.ResourceId
+  fullName: Google.Apis.Storage.v1.Data.Policy.ResourceId
+  nameWithType: Policy.ResourceId
 - uid: Google.Apis.Storage.v1.Data.RewriteResponse
   name: RewriteResponse
   href: api/Google.Apis.Storage.v1.Data.RewriteResponse.html
@@ -5799,6 +6513,90 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.Data.RewriteResponse.TotalBytesRewritten
   fullName: Google.Apis.Storage.v1.Data.RewriteResponse.TotalBytesRewritten
   nameWithType: RewriteResponse.TotalBytesRewritten
+- uid: Google.Apis.Storage.v1.Data.ServiceAccount
+  name: ServiceAccount
+  href: api/Google.Apis.Storage.v1.Data.ServiceAccount.html
+  commentId: T:Google.Apis.Storage.v1.Data.ServiceAccount
+  fullName: Google.Apis.Storage.v1.Data.ServiceAccount
+  nameWithType: ServiceAccount
+- uid: Google.Apis.Storage.v1.Data.ServiceAccount.EmailAddress
+  name: EmailAddress
+  href: api/Google.Apis.Storage.v1.Data.ServiceAccount.html#Google_Apis_Storage_v1_Data_ServiceAccount_EmailAddress
+  commentId: P:Google.Apis.Storage.v1.Data.ServiceAccount.EmailAddress
+  fullName: Google.Apis.Storage.v1.Data.ServiceAccount.EmailAddress
+  nameWithType: ServiceAccount.EmailAddress
+- uid: Google.Apis.Storage.v1.Data.ServiceAccount.EmailAddress*
+  name: EmailAddress
+  href: api/Google.Apis.Storage.v1.Data.ServiceAccount.html#Google_Apis_Storage_v1_Data_ServiceAccount_EmailAddress_
+  commentId: Overload:Google.Apis.Storage.v1.Data.ServiceAccount.EmailAddress
+  fullName: Google.Apis.Storage.v1.Data.ServiceAccount.EmailAddress
+  nameWithType: ServiceAccount.EmailAddress
+- uid: Google.Apis.Storage.v1.Data.ServiceAccount.ETag
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.ServiceAccount.html#Google_Apis_Storage_v1_Data_ServiceAccount_ETag
+  commentId: P:Google.Apis.Storage.v1.Data.ServiceAccount.ETag
+  fullName: Google.Apis.Storage.v1.Data.ServiceAccount.ETag
+  nameWithType: ServiceAccount.ETag
+- uid: Google.Apis.Storage.v1.Data.ServiceAccount.ETag*
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.ServiceAccount.html#Google_Apis_Storage_v1_Data_ServiceAccount_ETag_
+  commentId: Overload:Google.Apis.Storage.v1.Data.ServiceAccount.ETag
+  fullName: Google.Apis.Storage.v1.Data.ServiceAccount.ETag
+  nameWithType: ServiceAccount.ETag
+- uid: Google.Apis.Storage.v1.Data.ServiceAccount.Kind
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.ServiceAccount.html#Google_Apis_Storage_v1_Data_ServiceAccount_Kind
+  commentId: P:Google.Apis.Storage.v1.Data.ServiceAccount.Kind
+  fullName: Google.Apis.Storage.v1.Data.ServiceAccount.Kind
+  nameWithType: ServiceAccount.Kind
+- uid: Google.Apis.Storage.v1.Data.ServiceAccount.Kind*
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.ServiceAccount.html#Google_Apis_Storage_v1_Data_ServiceAccount_Kind_
+  commentId: Overload:Google.Apis.Storage.v1.Data.ServiceAccount.Kind
+  fullName: Google.Apis.Storage.v1.Data.ServiceAccount.Kind
+  nameWithType: ServiceAccount.Kind
+- uid: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse
+  name: TestIamPermissionsResponse
+  href: api/Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.html
+  commentId: T:Google.Apis.Storage.v1.Data.TestIamPermissionsResponse
+  fullName: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse
+  nameWithType: TestIamPermissionsResponse
+- uid: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.ETag
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.html#Google_Apis_Storage_v1_Data_TestIamPermissionsResponse_ETag
+  commentId: P:Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.ETag
+  fullName: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.ETag
+  nameWithType: TestIamPermissionsResponse.ETag
+- uid: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.ETag*
+  name: ETag
+  href: api/Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.html#Google_Apis_Storage_v1_Data_TestIamPermissionsResponse_ETag_
+  commentId: Overload:Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.ETag
+  fullName: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.ETag
+  nameWithType: TestIamPermissionsResponse.ETag
+- uid: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Kind
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.html#Google_Apis_Storage_v1_Data_TestIamPermissionsResponse_Kind
+  commentId: P:Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Kind
+  fullName: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Kind
+  nameWithType: TestIamPermissionsResponse.Kind
+- uid: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Kind*
+  name: Kind
+  href: api/Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.html#Google_Apis_Storage_v1_Data_TestIamPermissionsResponse_Kind_
+  commentId: Overload:Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Kind
+  fullName: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Kind
+  nameWithType: TestIamPermissionsResponse.Kind
+- uid: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Permissions
+  name: Permissions
+  href: api/Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.html#Google_Apis_Storage_v1_Data_TestIamPermissionsResponse_Permissions
+  commentId: P:Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Permissions
+  fullName: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Permissions
+  nameWithType: TestIamPermissionsResponse.Permissions
+- uid: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Permissions*
+  name: Permissions
+  href: api/Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.html#Google_Apis_Storage_v1_Data_TestIamPermissionsResponse_Permissions_
+  commentId: Overload:Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Permissions
+  fullName: Google.Apis.Storage.v1.Data.TestIamPermissionsResponse.Permissions
+  nameWithType: TestIamPermissionsResponse.Permissions
 - uid: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource
   name: DefaultObjectAccessControlsResource
   href: api/Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.html
@@ -6465,6 +7263,420 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.RestPath
   fullName: Google.Apis.Storage.v1.DefaultObjectAccessControlsResource.UpdateRequest.RestPath
   nameWithType: DefaultObjectAccessControlsResource.UpdateRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource
+  name: NotificationsResource
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html
+  commentId: T:Google.Apis.Storage.v1.NotificationsResource
+  fullName: Google.Apis.Storage.v1.NotificationsResource
+  nameWithType: NotificationsResource
+- uid: Google.Apis.Storage.v1.NotificationsResource.#ctor(Google.Apis.Services.IClientService)
+  name: NotificationsResource(IClientService)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource__ctor_Google_Apis_Services_IClientService_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.#ctor(Google.Apis.Services.IClientService)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.NotificationsResource(Google.Apis.Services.IClientService)
+  nameWithType: NotificationsResource.NotificationsResource(IClientService)
+- uid: Google.Apis.Storage.v1.NotificationsResource.#ctor*
+  name: NotificationsResource
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.#ctor
+  fullName: Google.Apis.Storage.v1.NotificationsResource.NotificationsResource
+  nameWithType: NotificationsResource.NotificationsResource
+- uid: Google.Apis.Storage.v1.NotificationsResource.Delete(System.String,System.String)
+  name: Delete(String, String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_Delete_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.Delete(System.String,System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.Delete(System.String, System.String)
+  nameWithType: NotificationsResource.Delete(String, String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.Delete*
+  name: Delete
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_Delete_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.Delete
+  fullName: Google.Apis.Storage.v1.NotificationsResource.Delete
+  nameWithType: NotificationsResource.Delete
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest
+  name: NotificationsResource.DeleteRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html
+  commentId: T:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest
+  nameWithType: NotificationsResource.DeleteRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
+  name: DeleteRequest(IClientService, String, String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.DeleteRequest(Google.Apis.Services.IClientService, System.String, System.String)
+  nameWithType: NotificationsResource.DeleteRequest.DeleteRequest(IClientService, String, String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.#ctor*
+  name: DeleteRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.#ctor
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.DeleteRequest
+  nameWithType: NotificationsResource.DeleteRequest.DeleteRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Bucket
+  nameWithType: NotificationsResource.DeleteRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Bucket
+  nameWithType: NotificationsResource.DeleteRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.HttpMethod
+  nameWithType: NotificationsResource.DeleteRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.HttpMethod
+  nameWithType: NotificationsResource.DeleteRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.InitParameters()
+  nameWithType: NotificationsResource.DeleteRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.InitParameters
+  nameWithType: NotificationsResource.DeleteRequest.InitParameters
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.MethodName
+  nameWithType: NotificationsResource.DeleteRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.MethodName
+  nameWithType: NotificationsResource.DeleteRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Notification
+  name: Notification
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_Notification
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Notification
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Notification
+  nameWithType: NotificationsResource.DeleteRequest.Notification
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Notification*
+  name: Notification
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_Notification_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Notification
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.Notification
+  nameWithType: NotificationsResource.DeleteRequest.Notification
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.RestPath
+  nameWithType: NotificationsResource.DeleteRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.html#Google_Apis_Storage_v1_NotificationsResource_DeleteRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.DeleteRequest.RestPath
+  nameWithType: NotificationsResource.DeleteRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource.Get(System.String,System.String)
+  name: Get(String, String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_Get_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.Get(System.String,System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.Get(System.String, System.String)
+  nameWithType: NotificationsResource.Get(String, String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.Get*
+  name: Get
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_Get_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.Get
+  fullName: Google.Apis.Storage.v1.NotificationsResource.Get
+  nameWithType: NotificationsResource.Get
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest
+  name: NotificationsResource.GetRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html
+  commentId: T:Google.Apis.Storage.v1.NotificationsResource.GetRequest
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest
+  nameWithType: NotificationsResource.GetRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
+  name: GetRequest(IClientService, String, String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String, System.String)
+  nameWithType: NotificationsResource.GetRequest.GetRequest(IClientService, String, String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.#ctor*
+  name: GetRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.GetRequest.#ctor
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.GetRequest
+  nameWithType: NotificationsResource.GetRequest.GetRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.GetRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Bucket
+  nameWithType: NotificationsResource.GetRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.GetRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Bucket
+  nameWithType: NotificationsResource.GetRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.GetRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.HttpMethod
+  nameWithType: NotificationsResource.GetRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.GetRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.HttpMethod
+  nameWithType: NotificationsResource.GetRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.GetRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.InitParameters()
+  nameWithType: NotificationsResource.GetRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.GetRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.InitParameters
+  nameWithType: NotificationsResource.GetRequest.InitParameters
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.GetRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.MethodName
+  nameWithType: NotificationsResource.GetRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.GetRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.MethodName
+  nameWithType: NotificationsResource.GetRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Notification
+  name: Notification
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_Notification
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.GetRequest.Notification
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Notification
+  nameWithType: NotificationsResource.GetRequest.Notification
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Notification*
+  name: Notification
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_Notification_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.GetRequest.Notification
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.Notification
+  nameWithType: NotificationsResource.GetRequest.Notification
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.GetRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.RestPath
+  nameWithType: NotificationsResource.GetRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource.GetRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.GetRequest.html#Google_Apis_Storage_v1_NotificationsResource_GetRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.GetRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.GetRequest.RestPath
+  nameWithType: NotificationsResource.GetRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource.Insert(Google.Apis.Storage.v1.Data.Notification,System.String)
+  name: Insert(Notification, String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_Insert_Google_Apis_Storage_v1_Data_Notification_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.Insert(Google.Apis.Storage.v1.Data.Notification,System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.Insert(Google.Apis.Storage.v1.Data.Notification, System.String)
+  nameWithType: NotificationsResource.Insert(Notification, String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.Insert*
+  name: Insert
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_Insert_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.Insert
+  fullName: Google.Apis.Storage.v1.NotificationsResource.Insert
+  nameWithType: NotificationsResource.Insert
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest
+  name: NotificationsResource.InsertRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html
+  commentId: T:Google.Apis.Storage.v1.NotificationsResource.InsertRequest
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest
+  nameWithType: NotificationsResource.InsertRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Notification,System.String)
+  name: InsertRequest(IClientService, Notification, String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Notification_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Notification,System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InsertRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Notification, System.String)
+  nameWithType: NotificationsResource.InsertRequest.InsertRequest(IClientService, Notification, String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.#ctor*
+  name: InsertRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.#ctor
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InsertRequest
+  nameWithType: NotificationsResource.InsertRequest.InsertRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.Bucket
+  nameWithType: NotificationsResource.InsertRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.Bucket
+  nameWithType: NotificationsResource.InsertRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.GetBody
+  name: GetBody()
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_GetBody
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.GetBody
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.GetBody()
+  nameWithType: NotificationsResource.InsertRequest.GetBody()
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.GetBody*
+  name: GetBody
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_GetBody_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.GetBody
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.GetBody
+  nameWithType: NotificationsResource.InsertRequest.GetBody
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.HttpMethod
+  nameWithType: NotificationsResource.InsertRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.HttpMethod
+  nameWithType: NotificationsResource.InsertRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InitParameters()
+  nameWithType: NotificationsResource.InsertRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.InitParameters
+  nameWithType: NotificationsResource.InsertRequest.InitParameters
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.MethodName
+  nameWithType: NotificationsResource.InsertRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.MethodName
+  nameWithType: NotificationsResource.InsertRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.RestPath
+  nameWithType: NotificationsResource.InsertRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.InsertRequest.html#Google_Apis_Storage_v1_NotificationsResource_InsertRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.InsertRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.InsertRequest.RestPath
+  nameWithType: NotificationsResource.InsertRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource.List(System.String)
+  name: List(String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_List_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.List(System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.List(System.String)
+  nameWithType: NotificationsResource.List(String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.List*
+  name: List
+  href: api/Google.Apis.Storage.v1.NotificationsResource.html#Google_Apis_Storage_v1_NotificationsResource_List_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.List
+  fullName: Google.Apis.Storage.v1.NotificationsResource.List
+  nameWithType: NotificationsResource.List
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest
+  name: NotificationsResource.ListRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html
+  commentId: T:Google.Apis.Storage.v1.NotificationsResource.ListRequest
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest
+  nameWithType: NotificationsResource.ListRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  name: ListRequest(IClientService, String)
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest__ctor_Google_Apis_Services_IClientService_System_String_
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.ListRequest(Google.Apis.Services.IClientService, System.String)
+  nameWithType: NotificationsResource.ListRequest.ListRequest(IClientService, String)
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.#ctor*
+  name: ListRequest
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.ListRequest.#ctor
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.ListRequest
+  nameWithType: NotificationsResource.ListRequest.ListRequest
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.ListRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.Bucket
+  nameWithType: NotificationsResource.ListRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.ListRequest.Bucket
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.Bucket
+  nameWithType: NotificationsResource.ListRequest.Bucket
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.ListRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.HttpMethod
+  nameWithType: NotificationsResource.ListRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.ListRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.HttpMethod
+  nameWithType: NotificationsResource.ListRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.NotificationsResource.ListRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.InitParameters()
+  nameWithType: NotificationsResource.ListRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.ListRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.InitParameters
+  nameWithType: NotificationsResource.ListRequest.InitParameters
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.ListRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.MethodName
+  nameWithType: NotificationsResource.ListRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.ListRequest.MethodName
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.MethodName
+  nameWithType: NotificationsResource.ListRequest.MethodName
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.NotificationsResource.ListRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.RestPath
+  nameWithType: NotificationsResource.ListRequest.RestPath
+- uid: Google.Apis.Storage.v1.NotificationsResource.ListRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.NotificationsResource.ListRequest.html#Google_Apis_Storage_v1_NotificationsResource_ListRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.NotificationsResource.ListRequest.RestPath
+  fullName: Google.Apis.Storage.v1.NotificationsResource.ListRequest.RestPath
+  nameWithType: NotificationsResource.ListRequest.RestPath
 - uid: Google.Apis.Storage.v1.ObjectAccessControlsResource
   name: ObjectAccessControlsResource
   href: api/Google.Apis.Storage.v1.ObjectAccessControlsResource.html
@@ -8049,6 +9261,120 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.Get
   fullName: Google.Apis.Storage.v1.ObjectsResource.Get
   nameWithType: ObjectsResource.Get
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy(System.String,System.String)
+  name: GetIamPolicy(String, String)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicy_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy(System.String,System.String)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy(System.String, System.String)
+  nameWithType: ObjectsResource.GetIamPolicy(String, String)
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy*
+  name: GetIamPolicy
+  href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicy_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicy
+  nameWithType: ObjectsResource.GetIamPolicy
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest
+  name: ObjectsResource.GetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html
+  commentId: T:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest
+  nameWithType: ObjectsResource.GetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
+  name: GetIamPolicyRequest(IClientService, String, String)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.GetIamPolicyRequest(Google.Apis.Services.IClientService, System.String, System.String)
+  nameWithType: ObjectsResource.GetIamPolicyRequest.GetIamPolicyRequest(IClientService, String, String)
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.#ctor*
+  name: GetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.#ctor
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.GetIamPolicyRequest
+  nameWithType: ObjectsResource.GetIamPolicyRequest.GetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Bucket
+  nameWithType: ObjectsResource.GetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Bucket
+  nameWithType: ObjectsResource.GetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Generation
+  name: Generation
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_Generation
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Generation
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Generation
+  nameWithType: ObjectsResource.GetIamPolicyRequest.Generation
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Generation*
+  name: Generation
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_Generation_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Generation
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Generation
+  nameWithType: ObjectsResource.GetIamPolicyRequest.Generation
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.HttpMethod
+  nameWithType: ObjectsResource.GetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.HttpMethod
+  nameWithType: ObjectsResource.GetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.InitParameters()
+  nameWithType: ObjectsResource.GetIamPolicyRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.InitParameters
+  nameWithType: ObjectsResource.GetIamPolicyRequest.InitParameters
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.MethodName
+  nameWithType: ObjectsResource.GetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.MethodName
+  nameWithType: ObjectsResource.GetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Object
+  name: Object
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_Object
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Object
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Object
+  nameWithType: ObjectsResource.GetIamPolicyRequest.Object
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Object*
+  name: Object
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_Object_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Object
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.Object
+  nameWithType: ObjectsResource.GetIamPolicyRequest.Object
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.RestPath
+  nameWithType: ObjectsResource.GetIamPolicyRequest.RestPath
+- uid: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_GetIamPolicyRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ObjectsResource.GetIamPolicyRequest.RestPath
+  nameWithType: ObjectsResource.GetIamPolicyRequest.RestPath
 - uid: Google.Apis.Storage.v1.ObjectsResource.GetRequest
   name: ObjectsResource.GetRequest
   href: api/Google.Apis.Storage.v1.ObjectsResource.GetRequest.html
@@ -9651,6 +10977,264 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.SourceObject
   fullName: Google.Apis.Storage.v1.ObjectsResource.RewriteRequest.SourceObject
   nameWithType: ObjectsResource.RewriteRequest.SourceObject
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy,System.String,System.String)
+  name: SetIamPolicy(Policy, String, String)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicy_Google_Apis_Storage_v1_Data_Policy_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy,System.String,System.String)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy(Google.Apis.Storage.v1.Data.Policy, System.String, System.String)
+  nameWithType: ObjectsResource.SetIamPolicy(Policy, String, String)
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy*
+  name: SetIamPolicy
+  href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicy_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicy
+  nameWithType: ObjectsResource.SetIamPolicy
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest
+  name: ObjectsResource.SetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html
+  commentId: T:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest
+  nameWithType: ObjectsResource.SetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String,System.String)
+  name: SetIamPolicyRequest(IClientService, Policy, String, String)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest__ctor_Google_Apis_Services_IClientService_Google_Apis_Storage_v1_Data_Policy_System_String_System_String_
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Storage.v1.Data.Policy,System.String,System.String)
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.SetIamPolicyRequest(Google.Apis.Services.IClientService, Google.Apis.Storage.v1.Data.Policy, System.String, System.String)
+  nameWithType: ObjectsResource.SetIamPolicyRequest.SetIamPolicyRequest(IClientService, Policy, String, String)
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.#ctor*
+  name: SetIamPolicyRequest
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.#ctor
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.SetIamPolicyRequest
+  nameWithType: ObjectsResource.SetIamPolicyRequest.SetIamPolicyRequest
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Bucket
+  nameWithType: ObjectsResource.SetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Bucket
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Bucket
+  nameWithType: ObjectsResource.SetIamPolicyRequest.Bucket
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Generation
+  name: Generation
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_Generation
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Generation
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Generation
+  nameWithType: ObjectsResource.SetIamPolicyRequest.Generation
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Generation*
+  name: Generation
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_Generation_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Generation
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Generation
+  nameWithType: ObjectsResource.SetIamPolicyRequest.Generation
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.GetBody
+  name: GetBody()
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_GetBody
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.GetBody
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.GetBody()
+  nameWithType: ObjectsResource.SetIamPolicyRequest.GetBody()
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.GetBody*
+  name: GetBody
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_GetBody_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.GetBody
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.GetBody
+  nameWithType: ObjectsResource.SetIamPolicyRequest.GetBody
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.HttpMethod
+  nameWithType: ObjectsResource.SetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.HttpMethod
+  nameWithType: ObjectsResource.SetIamPolicyRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.InitParameters()
+  nameWithType: ObjectsResource.SetIamPolicyRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.InitParameters
+  nameWithType: ObjectsResource.SetIamPolicyRequest.InitParameters
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.MethodName
+  nameWithType: ObjectsResource.SetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.MethodName
+  nameWithType: ObjectsResource.SetIamPolicyRequest.MethodName
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Object
+  name: Object
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_Object
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Object
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Object
+  nameWithType: ObjectsResource.SetIamPolicyRequest.Object
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Object*
+  name: Object
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_Object_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Object
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.Object
+  nameWithType: ObjectsResource.SetIamPolicyRequest.Object
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.RestPath
+  nameWithType: ObjectsResource.SetIamPolicyRequest.RestPath
+- uid: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.html#Google_Apis_Storage_v1_ObjectsResource_SetIamPolicyRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ObjectsResource.SetIamPolicyRequest.RestPath
+  nameWithType: ObjectsResource.SetIamPolicyRequest.RestPath
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String,System.String,Google.Apis.Util.Repeatable{System.String})
+  name: TestIamPermissions(String, String, Repeatable<String>)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_System_String_System_String_Google_Apis_Util_Repeatable_System_String__
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String,System.String,Google.Apis.Util.Repeatable{System.String})
+  name.vb: TestIamPermissions(String, String, Repeatable(Of String))
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String, System.String, Google.Apis.Util.Repeatable<System.String>)
+  fullName.vb: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions(System.String, System.String, Google.Apis.Util.Repeatable(Of System.String))
+  nameWithType: ObjectsResource.TestIamPermissions(String, String, Repeatable<String>)
+  nameWithType.vb: ObjectsResource.TestIamPermissions(String, String, Repeatable(Of String))
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions*
+  name: TestIamPermissions
+  href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissions_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissions
+  nameWithType: ObjectsResource.TestIamPermissions
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest
+  name: ObjectsResource.TestIamPermissionsRequest
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html
+  commentId: T:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest
+  nameWithType: ObjectsResource.TestIamPermissionsRequest
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,Google.Apis.Util.Repeatable{System.String})
+  name: TestIamPermissionsRequest(IClientService, String, String, Repeatable<String>)
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest__ctor_Google_Apis_Services_IClientService_System_String_System_String_Google_Apis_Util_Repeatable_System_String__
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,Google.Apis.Util.Repeatable{System.String})
+  name.vb: TestIamPermissionsRequest(IClientService, String, String, Repeatable(Of String))
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, System.String, Google.Apis.Util.Repeatable<System.String>)
+  fullName.vb: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(Google.Apis.Services.IClientService, System.String, System.String, Google.Apis.Util.Repeatable(Of System.String))
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, String, Repeatable<String>)
+  nameWithType.vb: ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest(IClientService, String, String, Repeatable(Of String))
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.#ctor*
+  name: TestIamPermissionsRequest
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.#ctor
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.TestIamPermissionsRequest
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Bucket
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Bucket
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Bucket
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Bucket
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Bucket
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Bucket*
+  name: Bucket
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Bucket_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Bucket
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Bucket
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Bucket
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Generation
+  name: Generation
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Generation
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Generation
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Generation
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Generation
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Generation*
+  name: Generation
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Generation_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Generation
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Generation
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Generation
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.HttpMethod
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.HttpMethod
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.InitParameters()
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.InitParameters
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.InitParameters
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.MethodName
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.MethodName
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.MethodName
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.MethodName
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Object
+  name: Object
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Object
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Object
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Object
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Object
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Object*
+  name: Object
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Object_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Object
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Object
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Object
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Permissions
+  name: Permissions
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Permissions
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Permissions
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Permissions
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Permissions
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Permissions*
+  name: Permissions
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_Permissions_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Permissions
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.Permissions
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.Permissions
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.RestPath
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.RestPath
+- uid: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.html#Google_Apis_Storage_v1_ObjectsResource_TestIamPermissionsRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ObjectsResource.TestIamPermissionsRequest.RestPath
+  nameWithType: ObjectsResource.TestIamPermissionsRequest.RestPath
 - uid: Google.Apis.Storage.v1.ObjectsResource.Update(Google.Apis.Storage.v1.Data.Object,System.String,System.String)
   name: Update(Object, String, String)
   href: api/Google.Apis.Storage.v1.ObjectsResource.html#Google_Apis_Storage_v1_ObjectsResource_Update_Google_Apis_Storage_v1_Data_Object_System_String_System_String_
@@ -10143,6 +11727,144 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.Versions
   fullName: Google.Apis.Storage.v1.ObjectsResource.WatchAllRequest.Versions
   nameWithType: ObjectsResource.WatchAllRequest.Versions
+- uid: Google.Apis.Storage.v1.ProjectsResource
+  name: ProjectsResource
+  href: api/Google.Apis.Storage.v1.ProjectsResource.html
+  commentId: T:Google.Apis.Storage.v1.ProjectsResource
+  fullName: Google.Apis.Storage.v1.ProjectsResource
+  nameWithType: ProjectsResource
+- uid: Google.Apis.Storage.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)
+  name: ProjectsResource(IClientService)
+  href: api/Google.Apis.Storage.v1.ProjectsResource.html#Google_Apis_Storage_v1_ProjectsResource__ctor_Google_Apis_Services_IClientService_
+  commentId: M:Google.Apis.Storage.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ProjectsResource(Google.Apis.Services.IClientService)
+  nameWithType: ProjectsResource.ProjectsResource(IClientService)
+- uid: Google.Apis.Storage.v1.ProjectsResource.#ctor*
+  name: ProjectsResource
+  href: api/Google.Apis.Storage.v1.ProjectsResource.html#Google_Apis_Storage_v1_ProjectsResource__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.#ctor
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ProjectsResource
+  nameWithType: ProjectsResource.ProjectsResource
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccount
+  name: ServiceAccount
+  href: api/Google.Apis.Storage.v1.ProjectsResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccount
+  commentId: P:Google.Apis.Storage.v1.ProjectsResource.ServiceAccount
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccount
+  nameWithType: ProjectsResource.ServiceAccount
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccount*
+  name: ServiceAccount
+  href: api/Google.Apis.Storage.v1.ProjectsResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccount_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccount
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccount
+  nameWithType: ProjectsResource.ServiceAccount
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource
+  name: ProjectsResource.ServiceAccountResource
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.html
+  commentId: T:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource
+  nameWithType: ProjectsResource.ServiceAccountResource
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.#ctor(Google.Apis.Services.IClientService)
+  name: ServiceAccountResource(IClientService)
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource__ctor_Google_Apis_Services_IClientService_
+  commentId: M:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.#ctor(Google.Apis.Services.IClientService)
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.ServiceAccountResource(Google.Apis.Services.IClientService)
+  nameWithType: ProjectsResource.ServiceAccountResource.ServiceAccountResource(IClientService)
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.#ctor*
+  name: ServiceAccountResource
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.#ctor
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.ServiceAccountResource
+  nameWithType: ProjectsResource.ServiceAccountResource.ServiceAccountResource
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.Get(System.String)
+  name: Get(String)
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_Get_System_String_
+  commentId: M:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.Get(System.String)
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.Get(System.String)
+  nameWithType: ProjectsResource.ServiceAccountResource.Get(String)
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.Get*
+  name: Get
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_Get_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.Get
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.Get
+  nameWithType: ProjectsResource.ServiceAccountResource.Get
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest
+  name: ProjectsResource.ServiceAccountResource.GetRequest
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html
+  commentId: T:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  name: GetRequest(IClientService, String)
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest__ctor_Google_Apis_Services_IClientService_System_String_
+  commentId: M:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.GetRequest(Google.Apis.Services.IClientService, System.String)
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.GetRequest(IClientService, String)
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.#ctor*
+  name: GetRequest
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest__ctor_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.#ctor
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.GetRequest
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.GetRequest
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_HttpMethod
+  commentId: P:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod*
+  name: HttpMethod
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_HttpMethod_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.HttpMethod
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.InitParameters
+  name: InitParameters()
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_InitParameters
+  commentId: M:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.InitParameters()
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.InitParameters()
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.InitParameters*
+  name: InitParameters
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_InitParameters_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.InitParameters
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.InitParameters
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.InitParameters
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.MethodName
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_MethodName
+  commentId: P:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.MethodName
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.MethodName
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.MethodName*
+  name: MethodName
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_MethodName_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.MethodName
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.MethodName
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.MethodName
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.ProjectId
+  name: ProjectId
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_ProjectId
+  commentId: P:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.ProjectId
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.ProjectId
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.ProjectId
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.ProjectId*
+  name: ProjectId
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_ProjectId_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.ProjectId
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.ProjectId
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.ProjectId
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.RestPath
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_RestPath
+  commentId: P:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.RestPath
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.RestPath
+- uid: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.RestPath*
+  name: RestPath
+  href: api/Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.html#Google_Apis_Storage_v1_ProjectsResource_ServiceAccountResource_GetRequest_RestPath_
+  commentId: Overload:Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.RestPath
+  fullName: Google.Apis.Storage.v1.ProjectsResource.ServiceAccountResource.GetRequest.RestPath
+  nameWithType: ProjectsResource.ServiceAccountResource.GetRequest.RestPath
 - uid: Google.Apis.Storage.v1.StorageBaseServiceRequest`1
   name: StorageBaseServiceRequest<TResponse>
   href: api/Google.Apis.Storage.v1.StorageBaseServiceRequest-1.html
@@ -10361,6 +12083,30 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.StorageService.BaseUri
   fullName: Google.Apis.Storage.v1.StorageService.BaseUri
   nameWithType: StorageService.BaseUri
+- uid: Google.Apis.Storage.v1.StorageService.BatchPath
+  name: BatchPath
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_BatchPath
+  commentId: P:Google.Apis.Storage.v1.StorageService.BatchPath
+  fullName: Google.Apis.Storage.v1.StorageService.BatchPath
+  nameWithType: StorageService.BatchPath
+- uid: Google.Apis.Storage.v1.StorageService.BatchPath*
+  name: BatchPath
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_BatchPath_
+  commentId: Overload:Google.Apis.Storage.v1.StorageService.BatchPath
+  fullName: Google.Apis.Storage.v1.StorageService.BatchPath
+  nameWithType: StorageService.BatchPath
+- uid: Google.Apis.Storage.v1.StorageService.BatchUri
+  name: BatchUri
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_BatchUri
+  commentId: P:Google.Apis.Storage.v1.StorageService.BatchUri
+  fullName: Google.Apis.Storage.v1.StorageService.BatchUri
+  nameWithType: StorageService.BatchUri
+- uid: Google.Apis.Storage.v1.StorageService.BatchUri*
+  name: BatchUri
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_BatchUri_
+  commentId: Overload:Google.Apis.Storage.v1.StorageService.BatchUri
+  fullName: Google.Apis.Storage.v1.StorageService.BatchUri
+  nameWithType: StorageService.BatchUri
 - uid: Google.Apis.Storage.v1.StorageService.BucketAccessControls
   name: BucketAccessControls
   href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_BucketAccessControls
@@ -10439,6 +12185,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.StorageService.Name
   fullName: Google.Apis.Storage.v1.StorageService.Name
   nameWithType: StorageService.Name
+- uid: Google.Apis.Storage.v1.StorageService.Notifications
+  name: Notifications
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_Notifications
+  commentId: P:Google.Apis.Storage.v1.StorageService.Notifications
+  fullName: Google.Apis.Storage.v1.StorageService.Notifications
+  nameWithType: StorageService.Notifications
+- uid: Google.Apis.Storage.v1.StorageService.Notifications*
+  name: Notifications
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_Notifications_
+  commentId: Overload:Google.Apis.Storage.v1.StorageService.Notifications
+  fullName: Google.Apis.Storage.v1.StorageService.Notifications
+  nameWithType: StorageService.Notifications
 - uid: Google.Apis.Storage.v1.StorageService.ObjectAccessControls
   name: ObjectAccessControls
   href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_ObjectAccessControls
@@ -10463,6 +12221,18 @@ references:
   commentId: Overload:Google.Apis.Storage.v1.StorageService.Objects
   fullName: Google.Apis.Storage.v1.StorageService.Objects
   nameWithType: StorageService.Objects
+- uid: Google.Apis.Storage.v1.StorageService.Projects
+  name: Projects
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_Projects
+  commentId: P:Google.Apis.Storage.v1.StorageService.Projects
+  fullName: Google.Apis.Storage.v1.StorageService.Projects
+  nameWithType: StorageService.Projects
+- uid: Google.Apis.Storage.v1.StorageService.Projects*
+  name: Projects
+  href: api/Google.Apis.Storage.v1.StorageService.html#Google_Apis_Storage_v1_StorageService_Projects_
+  commentId: Overload:Google.Apis.Storage.v1.StorageService.Projects
+  fullName: Google.Apis.Storage.v1.StorageService.Projects
+  nameWithType: StorageService.Projects
 - uid: Google.Apis.Storage.v1.StorageService.Scope
   name: StorageService.Scope
   href: api/Google.Apis.Storage.v1.StorageService.Scope.html
@@ -11690,6 +13460,24 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClient.CreateBucketAsync
   nameWithType: StorageClient.CreateBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  name: CreateObjectUploader(Object, Stream, UploadObjectOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object, System.IO.Stream, Google.Cloud.Storage.V1.UploadObjectOptions)
+  nameWithType: StorageClient.CreateObjectUploader(Object, Stream, UploadObjectOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  name: CreateObjectUploader(String, String, String, Stream, UploadObjectOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader(System.String, System.String, System.String, System.IO.Stream, Google.Cloud.Storage.V1.UploadObjectOptions)
+  nameWithType: StorageClient.CreateObjectUploader(String, String, String, Stream, UploadObjectOptions)
+- uid: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader*
+  name: CreateObjectUploader
+  href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader
+  fullName: Google.Cloud.Storage.V1.StorageClient.CreateObjectUploader
+  nameWithType: StorageClient.CreateObjectUploader
 - uid: Google.Cloud.Storage.V1.StorageClient.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.DeleteBucketOptions)
   name: DeleteBucket(Bucket, DeleteBucketOptions)
   href: api/Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_
@@ -12164,6 +13952,24 @@ references:
   commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync
   fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync
   nameWithType: StorageClientImpl.CreateBucketAsync
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  name: CreateObjectUploader(Object, Stream, UploadObjectOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object, System.IO.Stream, Google.Cloud.Storage.V1.UploadObjectOptions)
+  nameWithType: StorageClientImpl.CreateObjectUploader(Object, Stream, UploadObjectOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  name: CreateObjectUploader(String, String, String, Stream, UploadObjectOptions)
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_
+  commentId: M:Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(System.String, System.String, System.String, System.IO.Stream, Google.Cloud.Storage.V1.UploadObjectOptions)
+  nameWithType: StorageClientImpl.CreateObjectUploader(String, String, String, Stream, UploadObjectOptions)
+- uid: Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader*
+  name: CreateObjectUploader
+  href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_
+  commentId: Overload:Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader
+  fullName: Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader
+  nameWithType: StorageClientImpl.CreateObjectUploader
 - uid: Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.DeleteBucketOptions)
   name: DeleteBucket(Bucket, DeleteBucketOptions)
   href: api/Google.Cloud.Storage.V1.StorageClientImpl.html#Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_

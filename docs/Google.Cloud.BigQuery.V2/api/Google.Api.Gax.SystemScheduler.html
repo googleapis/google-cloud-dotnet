@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SystemScheduler
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -130,7 +131,10 @@
               </h3>
               <a id="Google_Api_Gax_SystemScheduler_Delay_" data-uid="Google.Api.Gax.SystemScheduler.Delay*"></a>
               <h4 id="Google_Api_Gax_SystemScheduler_Delay_System_TimeSpan_System_Threading_CancellationToken_" data-uid="Google.Api.Gax.SystemScheduler.Delay(System.TimeSpan,System.Threading.CancellationToken)">Delay(TimeSpan, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Returns a task which will complete after the given delay. Whether the returned
+awaitable is configured to capture the current context or not is implementation-specific.
+(A test implementation may capture the current context to enable reliable testing.)</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -154,7 +158,8 @@
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The cancellation token that will be checked prior to completing the returned task.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -169,7 +174,8 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task which will complete after the given delay.</p>
+</td>
                   </tr>
                 </tbody>
               </table>

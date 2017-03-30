@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Logging
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -73,11 +74,9 @@
               </h1>
               <div class="markdown level0 summary"><p>Logging configuration of the service.</p>
 <p>The following example shows how to configure logs to be sent to the
-producer and consumer projects. In the example,
-the <code>library.googleapis.com/activity_history</code> log is
-sent to both the producer and consumer projects, whereas
-the <code>library.googleapis.com/purchase_history</code> log is only sent to the
-producer project:</p>
+producer and consumer projects. In the example, the <code>activity_history</code>
+log is sent to both the producer and consumer projects, whereas the
+<code>purchase_history</code> log is only sent to the producer project.</p>
 <p>monitored_resources:</p>
 <ul>
 <li>type: library.googleapis.com/branch
@@ -89,24 +88,24 @@ description: The name of the branch.
 logs:</li>
 </ul>
 </li>
-<li>name: library.googleapis.com/activity_history
+<li>name: activity_history
 labels:<ul>
 <li>key: /customer_id</li>
 </ul>
 </li>
-<li>name: library.googleapis.com/purchase_history
+<li>name: purchase_history
 logging:
 producer_destinations:<ul>
 <li>monitored_resource: library.googleapis.com/branch
 logs:<ul>
-<li>library.googleapis.com/activity_history</li>
-<li>library.googleapis.com/purchase_history
+<li>activity_history</li>
+<li>purchase_history
 consumer_destinations:</li>
 </ul>
 </li>
 <li>monitored_resource: library.googleapis.com/branch
 logs:<ul>
-<li>library.googleapis.com/activity_history</li>
+<li>activity_history</li>
 </ul>
 </li>
 </ul>

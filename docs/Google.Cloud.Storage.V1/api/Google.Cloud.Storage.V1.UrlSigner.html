@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UrlSigner
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -301,7 +302,8 @@ well or signature validation will fail.</p>
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
@@ -406,7 +408,8 @@ See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">h
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, DateTimeOffset? expiration, HttpRequestMessage request)</code></pre>
@@ -496,7 +499,19 @@ See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">h
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">// Create a signed URL which can be used to get a specific object for one hour.
+UrlSigner urlSigner = UrlSigner.FromServiceAccountCredential(credential);
+string url = urlSigner.Sign(
+    bucketName,
+    objectName,
+    TimeSpan.FromHours(1),
+    HttpMethod.Get);
+
+// Get the content at the created URL.
+HttpResponseMessage response = await httpClient.GetAsync(url);
+string content = await response.Content.ReadAsStringAsync();
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpMethod requestMethod = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; requestHeaders = null, Dictionary&lt;string, IEnumerable&lt;string&gt;&gt; contentHeaders = null)</code></pre>
@@ -600,7 +615,8 @@ See <a href="https://cloud.google.com/storage/docs/access-control/signed-urls">h
               <div class="markdown level1 summary"><p>Creates a signed URL which can be used to provide limited access to specific buckets and objects to anyone
 in possession of the URL, regardless of whether they have a Google account.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Storage.V1.UrlSigner.html#Google_Cloud_Storage_V1_UrlSigner_Sign_System_String_System_String_System_TimeSpan_System_Net_Http_HttpMethod_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_IEnumerable_System_String___">Sign</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public string Sign(string bucket, string objectName, TimeSpan duration, HttpRequestMessage request)</code></pre>

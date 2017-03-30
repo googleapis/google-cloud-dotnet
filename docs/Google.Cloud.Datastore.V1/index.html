@@ -8,7 +8,7 @@
     <title>Google.Cloud.Datastore.V1 | Google.Cloud.Datastore.V1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Google.Cloud.Datastore.V1 | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -89,8 +90,8 @@ are provided to simplify working with the protobuf messages.</p>
 <p>Inserting data:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 
-var keyFactory = db.CreateKeyFactory(&quot;message&quot;);
-var entity = new Entity
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Entity entity = new Entity
 {
     Key = keyFactory.CreateIncompleteKey(),
     [&quot;created&quot;] = DateTime.UtcNow,
@@ -100,9 +101,11 @@ var entity = new Entity
 using (DatastoreTransaction transaction = db.BeginTransaction())
 {
     transaction.Insert(entity);
-    var commitResponse = transaction.Commit();
-    var insertedKey = commitResponse.MutationResults[0].Key;
+    CommitResponse commitResponse = transaction.Commit();
+    Key insertedKey = commitResponse.MutationResults[0].Key;
     Console.WriteLine($&quot;Inserted key: {insertedKey}&quot;);
+    // The key is also propagated to the entity
+    Console.WriteLine($&quot;Entity key: {entity.Key}&quot;);
 }
 </code></pre><p>Querying data:</p>
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);

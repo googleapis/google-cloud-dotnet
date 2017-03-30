@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MetricDescriptor
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -71,7 +72,9 @@
               
               <h1 id="Google_Api_MetricDescriptor" data-uid="Google.Api.MetricDescriptor">Class MetricDescriptor
               </h1>
-              <div class="markdown level0 summary"><p>Defines a metric type and its schema.</p>
+              <div class="markdown level0 summary"><p>Defines a metric type and its schema. Once a metric descriptor is created,
+deleting or altering it stops data collection and makes the metric type&#39;s
+existing data unusable.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
@@ -153,11 +156,12 @@ Use sentence case without an ending period, for example &quot;Request count&quot
               </table>
               <a id="Google_Api_MetricDescriptor_Labels_" data-uid="Google.Api.MetricDescriptor.Labels*"></a>
               <h4 id="Google_Api_MetricDescriptor_Labels" data-uid="Google.Api.MetricDescriptor.Labels">Labels</h4>
-              <div class="markdown level1 summary"><p>The set of labels that can be used to describe a specific instance of this
-metric type. For example, the
-<code>compute.googleapis.com/instance/network/received_bytes_count</code> metric type
-has a label, <code>loadbalanced</code>, that specifies whether the traffic was
-received through a load balanced IP address.</p>
+              <div class="markdown level1 summary"><p>The set of labels that can be used to describe a specific
+instance of this metric type. For example, the
+<code>appengine.googleapis.com/http/server/response_latencies</code> metric
+type has a label for the HTTP response code, <code>response_code</code>, so
+you can look at latencies for successful responses or just
+for responses that failed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -181,7 +185,8 @@ received through a load balanced IP address.</p>
               </table>
               <a id="Google_Api_MetricDescriptor_MetricKind_" data-uid="Google.Api.MetricDescriptor.MetricKind*"></a>
               <h4 id="Google_Api_MetricDescriptor_MetricKind" data-uid="Google.Api.MetricDescriptor.MetricKind">MetricKind</h4>
-              <div class="markdown level1 summary"><p>Whether the metric records instantaneous values, changes to a value, etc.</p>
+              <div class="markdown level1 summary"><p>Whether the metric records instantaneous values, changes to a value, etc.
+Some combinations of <code>metric_kind</code> and <code>value_type</code> might not be supported.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -205,10 +210,13 @@ received through a load balanced IP address.</p>
               </table>
               <a id="Google_Api_MetricDescriptor_Name_" data-uid="Google.Api.MetricDescriptor.Name*"></a>
               <h4 id="Google_Api_MetricDescriptor_Name" data-uid="Google.Api.MetricDescriptor.Name">Name</h4>
-              <div class="markdown level1 summary"><p>Resource name. The format of the name may vary between different
-implementations. For examples:</p>
-<p>projects/{project_id}/metricDescriptors/{type=<strong>}
-metricDescriptors/{type=</strong>}</p>
+              <div class="markdown level1 summary"><p>The resource name of the metric descriptor. Depending on the
+implementation, the name typically includes: (1) the parent resource name
+that defines the scope of the metric type or of its data; and (2) the
+metric&#39;s URL-encoded type, which also appears in the <code>type</code> field of this
+descriptor. For example, following is the resource name of a custom
+metric within the GCP project <code>my-project-id</code>:</p>
+<p>&quot;projects/my-project-id/metricDescriptors/custom.googleapis.com%2Finvoice%2Fpaid%2Famount&quot;</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -232,16 +240,12 @@ metricDescriptors/{type=</strong>}</p>
               </table>
               <a id="Google_Api_MetricDescriptor_Type_" data-uid="Google.Api.MetricDescriptor.Type*"></a>
               <h4 id="Google_Api_MetricDescriptor_Type" data-uid="Google.Api.MetricDescriptor.Type">Type</h4>
-              <div class="markdown level1 summary"><p>The metric type including a DNS name prefix, for example
-<code>&quot;compute.googleapis.com/instance/cpu/utilization&quot;</code>. Metric types
-should use a natural hierarchical grouping such as the following:</p>
-<p>compute.googleapis.com/instance/cpu/utilization
-compute.googleapis.com/instance/disk/read_ops_count
-compute.googleapis.com/instance/network/received_bytes_count</p>
-<p>Note that if the metric type changes, the monitoring data will be
-discontinued, and anything depends on it will break, such as monitoring
-dashboards, alerting rules and quota limits. Therefore, once a metric has
-been published, its type should be immutable.</p>
+              <div class="markdown level1 summary"><p>The metric type, including its DNS name prefix. The type is not
+URL-encoded.  All user-defined custom metric types have the DNS name
+<code>custom.googleapis.com</code>.  Metric types should use a natural hierarchical
+grouping. For example:</p>
+<p>&quot;custom.googleapis.com/invoice/paid/amount&quot;
+&quot;appengine.googleapis.com/http/server/response_latencies&quot;</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -346,7 +350,8 @@ containing &#39;{&#39; or &#39;}&#39;.</li>
               </table>
               <a id="Google_Api_MetricDescriptor_ValueType_" data-uid="Google.Api.MetricDescriptor.ValueType*"></a>
               <h4 id="Google_Api_MetricDescriptor_ValueType" data-uid="Google.Api.MetricDescriptor.ValueType">ValueType</h4>
-              <div class="markdown level1 summary"><p>Whether the measurement is an integer, a floating-point number, etc.</p>
+              <div class="markdown level1 summary"><p>Whether the measurement is an integer, a floating-point number, etc.
+Some combinations of <code>metric_kind</code> and <code>value_type</code> might not be supported.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

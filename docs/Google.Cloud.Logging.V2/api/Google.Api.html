@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Google.Api
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -84,16 +85,15 @@ information about how a change will affect the existing service.</p>
 <p>Example for an API targeted for external use:</p>
 <p>name: calendar.googleapis.com
 authentication:
- rules:</p>
+ providers:</p>
 <ul>
-<li><p>selector: &quot;*&quot;
-oauth:
-  canonical_scopes: <a href="https://www.googleapis.com/auth/calendar">https://www.googleapis.com/auth/calendar</a></p>
-</li>
-<li><p>selector: google.calendar.Delegate
-oauth:
-  canonical_scopes: <a href="https://www.googleapis.com/auth/calendar.read">https://www.googleapis.com/auth/calendar.read</a></p>
-</li>
+<li>id: google_calendar_auth
+jwks_uri: <a href="https://www.googleapis.com/oauth2/v1/certs">https://www.googleapis.com/oauth2/v1/certs</a>
+issuer: <a href="https://securetoken.google.com">https://securetoken.google.com</a>
+rules:</li>
+<li>selector: &quot;*&quot;
+requirements:
+  provider_id: google_calendar_auth</li>
 </ul>
 </section>
                   <h4><a class="xref" href="Google.Api.AuthenticationRule.html">AuthenticationRule</a></h4>
@@ -104,6 +104,15 @@ It&#39;s an error to include more than one kind of credential in a single
 request.</p>
 <p>If a method doesn&#39;t have any auth requirements, request credentials will be
 ignored.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.AuthorizationConfig.html">AuthorizationConfig</a></h4>
+                  <section><p>Configuration of authorization.</p>
+<p>This section determines the authorization provider, if unspecified, then no
+authorization check will be done.</p>
+<p>Example:</p>
+<p>experimental:
+ authorization:
+   provider: firebaserules.googleapis.com</p>
 </section>
                   <h4><a class="xref" href="Google.Api.AuthProvider.html">AuthProvider</a></h4>
                   <section><p>Configuration for an anthentication provider, including support for
@@ -303,28 +312,12 @@ endpoints:</p>
 <h1 id="allowed-to-proceed">allowed to proceed.</h1>
 <ul>
 <li>name: library-example.googleapis.com
-apis: google.example.library.v1.Library
-allow_cors: true
-# Below entry makes &#39;google.example.library.v1.Library&#39;
-# API be served from endpoint address
-# google.example.library-example.v1.LibraryManager.</li>
-<li>name: library-manager.googleapis.com
-apis: google.example.library.v1.LibraryManager
-# BNS address for a borg job. Can specify a task by appending
-# &quot;/taskId&quot; (e.g. &quot;/0&quot;) to the job spec.</li>
+allow_cors: true</li>
 </ul>
-<p>Example OpenAPI extension for endpoint with allow_cors set to true:</p>
-<p>{
- &quot;swagger&quot;: &quot;2.0&quot;,
- &quot;info&quot;: {
-   &quot;description&quot;: &quot;A simple...&quot;
- },
- &quot;host&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
- &quot;x-google-endpoints&quot;: [{
-   &quot;name&quot;: &quot;MY_PROJECT_ID.appspot.com&quot;,
-   &quot;allow_cors&quot;: &quot;true&quot;
- }]
-}</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.Experimental.html">Experimental</a></h4>
+                  <section><p>Experimental service configuration. These configuration options can
+only be used by whitelisted users.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.Http.html">Http</a></h4>
                   <section><p>Defines the HTTP configuration for a service. It contains a list of
@@ -372,22 +365,30 @@ for details.</p>
 method kind.  The path template can refer to fields in the request
 message, as in the example below which describes a REST GET
 operation on a resource collection of messages:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc GetMessage(GetMessageRequest) returns (Message) {
-option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
-}
+<p>service Messaging {
+ rpc GetMessage(GetMessageRequest) returns (Message) {
+   option (google.api.http).get = &quot;/v1/messages/{message_id}/{sub.subfield}&quot;;
+ }
 }
 message GetMessageRequest {
-message SubMessage {
-string subfield = 1;
-}
-string message_id = 1; // mapped to the URL
-SubMessage sub = 2;    // `sub.subfield` is url-mapped
+ message SubMessage {
+   string subfield = 1;
+ }
+ string message_id = 1; // mapped to the URL
+ SubMessage sub = 2;    // <code>sub.subfield</code> is url-mapped
 }
 message Message {
-string text = 1; // content of the resource
-}
-</code></pre><p>This definition enables an automatic, bidrectional mapping of HTTP
+ string text = 1; // content of the resource
+}</p>
+<p>The same http annotation can alternatively be expressed inside the
+<code>GRPC API Configuration</code> YAML file.</p>
+<p>http:
+ rules:</p>
+<ul>
+<li>selector: &lt;proto_package_name&gt;.Messaging.GetMessage
+get: /v1/messages/{message_id}/{sub.subfield}</li>
+</ul>
+<p>This definition enables an automatic, bidrectional mapping of HTTP
 JSON to RPC. Example:</p>
 <table>
 <thead>
@@ -409,15 +410,15 @@ repeated and must have a primitive (non-message) type.</p>
 <p>Any fields in the request message which are not bound by the path
 pattern automatically become (optional) HTTP query
 parameters. Assume the following definition of the request message:</p>
-<pre><code class="lang-proto">message GetMessageRequest {
-message SubMessage {
-string subfield = 1;
-}
-string message_id = 1; // mapped to the URL
-int64 revision = 2;    // becomes a parameter
-SubMessage sub = 3;    // `sub.subfield` becomes a parameter
-}
-</code></pre><p>This enables a HTTP JSON to RPC mapping as below:</p>
+<p>message GetMessageRequest {
+ message SubMessage {
+   string subfield = 1;
+ }
+ string message_id = 1; // mapped to the URL
+ int64 revision = 2;    // becomes a parameter
+ SubMessage sub = 3;    // <code>sub.subfield</code> becomes a parameter
+}</p>
+<p>This enables a HTTP JSON to RPC mapping as below:</p>
 <table>
 <thead>
 <tr>
@@ -439,19 +440,19 @@ repeated in the URL, as in <code>...?param=A&amp;amp;param=B</code>.</p>
 <p>For HTTP method kinds which allow a request body, the <code>body</code> field
 specifies the mapping. Consider a REST update method on the
 message resource collection:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
-option (google.api.http) = {
- put: &quot;/v1/messages/{message_id}&quot;
- body: &quot;message&quot;
-};
-}
+<p>service Messaging {
+ rpc UpdateMessage(UpdateMessageRequest) returns (Message) {
+   option (google.api.http) = {
+     put: &quot;/v1/messages/{message_id}&quot;
+     body: &quot;message&quot;
+   };
+ }
 }
 message UpdateMessageRequest {
-string message_id = 1; // mapped to the URL
-Message message = 2;   // mapped to the body
-}
-</code></pre><p>The following HTTP JSON to RPC mapping is enabled, where the
+ string message_id = 1; // mapped to the URL
+ Message message = 2;   // mapped to the body
+}</p>
+<p>The following HTTP JSON to RPC mapping is enabled, where the
 representation of the JSON in the request body is determined by
 protos JSON encoding:</p>
 <table>
@@ -472,19 +473,19 @@ protos JSON encoding:</p>
 every field not bound by the path template should be mapped to the
 request body.  This enables the following alternative definition of
 the update method:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc UpdateMessage(Message) returns (Message) {
-option (google.api.http) = {
- put: &quot;/v1/messages/{message_id}&quot;
- body: &quot;*&quot;
-};
-}
+<p>service Messaging {
+ rpc UpdateMessage(Message) returns (Message) {
+   option (google.api.http) = {
+     put: &quot;/v1/messages/{message_id}&quot;
+     body: &quot;*&quot;
+   };
+ }
 }
 message Message {
-string message_id = 1;
-string text = 2;
-}
-</code></pre><p>The following HTTP JSON to RPC mapping is enabled:</p>
+ string message_id = 1;
+ string text = 2;
+}</p>
+<p>The following HTTP JSON to RPC mapping is enabled:</p>
 <table>
 <thead>
 <tr>
@@ -506,21 +507,21 @@ defining REST APIs. The common usage of <code>*</code> is in custom methods
 which don&#39;t use the URL at all for transferring data.</p>
 <p>It is possible to define multiple HTTP methods for one RPC by using
 the <code>additional_bindings</code> option. Example:</p>
-<pre><code class="lang-proto">service Messaging {
-rpc GetMessage(GetMessageRequest) returns (Message) {
-option (google.api.http) = {
- get: &quot;/v1/messages/{message_id}&quot;
- additional_bindings {
-   get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
+<p>service Messaging {
+ rpc GetMessage(GetMessageRequest) returns (Message) {
+   option (google.api.http) = {
+     get: &quot;/v1/messages/{message_id}&quot;
+     additional_bindings {
+       get: &quot;/v1/users/{user_id}/messages/{message_id}&quot;
+     }
+   };
  }
-};
-}
 }
 message GetMessageRequest {
-string message_id = 1;
-string user_id = 2;
-}
-</code></pre><p>This enables the following two alternative HTTP JSON to RPC
+ string message_id = 1;
+ string user_id = 2;
+}</p>
+<p>This enables the following two alternative HTTP JSON to RPC
 mappings:</p>
 <table>
 <thead>
@@ -567,7 +568,7 @@ Verb     = &quot;:&quot; LITERAL ;</p>
 Expansion.</p>
 <p>The syntax <code>**</code> matches zero or more path segments. It follows the semantics
 of <a href="https://tools.ietf.org/html/rfc6570">RFC 6570</a> Section 3.2.3 Reserved
-Expansion.</p>
+Expansion. NOTE: it must be the last segment in the path except the Verb.</p>
 <p>The syntax <code>LITERAL</code> matches literal text in the URL path.</p>
 <p>The syntax <code>Variable</code> matches the entire path as specified by its template;
 this nested template must not contain further variables. If a variable
@@ -599,11 +600,9 @@ description: Identifier of a library customer</li>
                   <h4><a class="xref" href="Google.Api.Logging.html">Logging</a></h4>
                   <section><p>Logging configuration of the service.</p>
 <p>The following example shows how to configure logs to be sent to the
-producer and consumer projects. In the example,
-the <code>library.googleapis.com/activity_history</code> log is
-sent to both the producer and consumer projects, whereas
-the <code>library.googleapis.com/purchase_history</code> log is only sent to the
-producer project:</p>
+producer and consumer projects. In the example, the <code>activity_history</code>
+log is sent to both the producer and consumer projects, whereas the
+<code>purchase_history</code> log is only sent to the producer project.</p>
 <p>monitored_resources:</p>
 <ul>
 <li>type: library.googleapis.com/branch
@@ -615,24 +614,24 @@ description: The name of the branch.
 logs:</li>
 </ul>
 </li>
-<li>name: library.googleapis.com/activity_history
+<li>name: activity_history
 labels:<ul>
 <li>key: /customer_id</li>
 </ul>
 </li>
-<li>name: library.googleapis.com/purchase_history
+<li>name: purchase_history
 logging:
 producer_destinations:<ul>
 <li>monitored_resource: library.googleapis.com/branch
 logs:<ul>
-<li>library.googleapis.com/activity_history</li>
-<li>library.googleapis.com/purchase_history
+<li>activity_history</li>
+<li>purchase_history
 consumer_destinations:</li>
 </ul>
 </li>
 <li>monitored_resource: library.googleapis.com/branch
 logs:<ul>
-<li>library.googleapis.com/activity_history</li>
+<li>activity_history</li>
 </ul>
 </li>
 </ul>
@@ -640,11 +639,19 @@ logs:<ul>
 </ul>
 </section>
                   <h4><a class="xref" href="Google.Api.Metric.html">Metric</a></h4>
-                  <section><p>A specific metric identified by specifying values for all of the
+                  <section><p>A specific metric, identified by specifying values for all of the
 labels of a [<code>MetricDescriptor</code>][google.api.MetricDescriptor].</p>
 </section>
                   <h4><a class="xref" href="Google.Api.MetricDescriptor.html">MetricDescriptor</a></h4>
-                  <section><p>Defines a metric type and its schema.</p>
+                  <section><p>Defines a metric type and its schema. Once a metric descriptor is created,
+deleting or altering it stops data collection and makes the metric type&#39;s
+existing data unusable.</p>
+</section>
+                  <h4><a class="xref" href="Google.Api.MetricRule.html">MetricRule</a></h4>
+                  <section><p>Bind API methods to metrics. Binding a method to a metric causes that
+metric&#39;s configured quota, billing, and monitoring behaviors to apply to the
+method call.</p>
+<p>Used by metric-based quotas only.</p>
 </section>
                   <h4><a class="xref" href="Google.Api.MonitoredResource.html">MonitoredResource</a></h4>
                   <section><p>An object representing a resource that can be used for monitoring, logging,
@@ -767,26 +774,92 @@ watermark in a result.</p>
 <p>These values can be set via API producer console. Only API providers can
 define and set these properties.</p>
 </section>
+                  <h4><a class="xref" href="Google.Api.Quota.html">Quota</a></h4>
+                  <section><p>Quota configuration helps to achieve fairness and budgeting in service
+usage.</p>
+<p>The quota configuration works this way:</p>
+<ul>
+<li>The service configuration defines a set of metrics.</li>
+<li>For API calls, the quota.metric_rules maps methods to metrics with
+corresponding costs.</li>
+<li>The quota.limits defines limits on the metrics, which will be used for
+quota checks at runtime.</li>
+</ul>
+<p>An example quota configuration in yaml format:</p>
+<p>quota:
+limits:</p>
+<ul>
+<li>name: apiWriteQpsPerProject
+metric: library.googleapis.com/write_calls
+unit: &quot;1/min/{project}&quot;  # rate limit for consumer projects
+values:
+  STANDARD: 10000</li>
+</ul>
+<h1 id="the-metric-rules-bind-all-methods-to-the-readcalls-metric">The metric rules bind all methods to the read_calls metric,</h1>
+<h1 id="except-for-the-updatebook-and-deletebook-methods-these-two-methods">except for the UpdateBook and DeleteBook methods. These two methods</h1>
+<h1 id="are-mapped-to-the-writecalls-metric-with-the-updatebook-method">are mapped to the write_calls metric, with the UpdateBook method</h1>
+<h1 id="consuming-at-twice-rate-as-the-deletebook-method">consuming at twice rate as the DeleteBook method.</h1>
+<p>metric_rules:</p>
+<ul>
+<li>selector: &quot;*&quot;
+metric_costs:
+  library.googleapis.com/read_calls: 1</li>
+<li>selector: google.example.library.v1.LibraryService.UpdateBook
+metric_costs:
+  library.googleapis.com/write_calls: 2</li>
+<li>selector: google.example.library.v1.LibraryService.DeleteBook
+metric_costs:
+  library.googleapis.com/write_calls: 1</li>
+</ul>
+<p>Corresponding Metric definition:</p>
+<p>metrics:</p>
+<ul>
+<li><p>name: library.googleapis.com/read_calls
+display_name: Read requests
+metric_kind: DELTA
+value_type: INT64</p>
+</li>
+<li><p>name: library.googleapis.com/write_calls
+display_name: Write requests
+metric_kind: DELTA
+value_type: INT64</p>
+</li>
+</ul>
+</section>
+                  <h4><a class="xref" href="Google.Api.QuotaLimit.html">QuotaLimit</a></h4>
+                  <section><p><code>QuotaLimit</code> defines a specific limit that applies over a specified duration
+for a limit type. There can be at most one limit for a duration and limit
+type combination defined within a <code>QuotaGroup</code>.</p>
+</section>
                   <h4><a class="xref" href="Google.Api.Service.html">Service</a></h4>
-                  <section><p><code>Service</code> is the root object of the configuration schema. It
-describes basic information like the name of the service and the
-exposed API interfaces, and delegates other aspects to configuration
-sub-sections.</p>
+                  <section><p><code>Service</code> is the root object of Google service configuration schema. It
+describes basic information about a service, such as the name and the
+title, and delegates other aspects to sub-sections. Each sub-section is
+either a proto message or a repeated proto message that configures a
+specific aspect, such as auth. See each proto message definition for details.</p>
 <p>Example:</p>
 <p>type: google.api.Service
-config_version: 1
+config_version: 3
 name: calendar.googleapis.com
 title: Google Calendar API
 apis:</p>
 <ul>
-<li>name: google.calendar.Calendar
-backend:
-rules:<ul>
+<li>name: google.calendar.v3.Calendar
+authentication:
+providers:<ul>
+<li>id: google_calendar_auth
+jwks_uri: <a href="https://www.googleapis.com/oauth2/v1/certs">https://www.googleapis.com/oauth2/v1/certs</a>
+issuer: <a href="https://securetoken.google.com">https://securetoken.google.com</a>
+rules:</li>
 <li>selector: &quot;*&quot;
-address: calendar.example.com</li>
+requirements:
+ provider_id: google_calendar_auth</li>
 </ul>
 </li>
 </ul>
+</section>
+                  <h4><a class="xref" href="Google.Api.SourceInfo.html">SourceInfo</a></h4>
+                  <section><p>Source information used to create a Service Config</p>
 </section>
                   <h4><a class="xref" href="Google.Api.SystemParameter.html">SystemParameter</a></h4>
                   <section><p>Define a parameter&#39;s name and location. The parameter may be passed as either

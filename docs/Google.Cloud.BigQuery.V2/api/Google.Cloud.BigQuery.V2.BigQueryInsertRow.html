@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BigQueryInsertRow
    | Google.Cloud.BigQuery.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -128,7 +129,8 @@ Although date values are retrieved as <code>System.DateTime</code>, they must be
 of the top-level row is relevant.
 </p>
 <p>
-Null elements within repeated fields are ignored by the server.
+Null elements within repeated fields are prohibited. This is validated client-side when the row is inserted; validating
+when a value is added to the row would be ineffective as the values could change before insertion.
 </p>
 </div>
               <h3 id="constructors">Constructors

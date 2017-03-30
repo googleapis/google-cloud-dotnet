@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class DatastoreDb
    | Google.Cloud.Datastore.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -359,12 +360,16 @@ IReadOnlyList&lt;Key&gt; keys = db.AllocateIds(keyFactory.CreateIncompleteKey(),
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+number of keys, partition the allocations into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIds*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIds(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIds(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_Google_Cloud_Datastore_V1_Key___">AllocateIds</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; AllocateIds(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -409,6 +414,11 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIds_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+number of keys, partition the allocations into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync(Google.Cloud.Datastore.V1.Key[])">AllocateIdsAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
@@ -462,12 +472,16 @@ IReadOnlyList&lt;Key&gt; keys = await db.AllocateIdsAsync(keyFactory.CreateIncom
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+number of keys, partition the allocations into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.AllocateIdsAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">AllocateIdsAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Allocates IDs for a collection of incomplete keys asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_Google_Cloud_Datastore_V1_Key___">AllocateIdsAsync</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; AllocateIdsAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -512,11 +526,31 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_AllocateIdsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of keys that can be allocated in a single operation. When allocating a large
+number of keys, partition the allocations into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransaction(Google.Api.Gax.Grpc.CallSettings)">BeginTransaction(CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a transaction, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+using (DatastoreTransaction transaction = db.BeginTransaction())
+{
+    // The return value from DatastoreTransaction.Get contains the fetched entities
+    // in the same order as they are in the call.
+    IReadOnlyList&lt;Entity&gt; entities = transaction.Lookup(fromKey, toKey);
+    Entity from = entities[0];
+    Entity to = entities[1];
+    from[&quot;balance&quot;] = (long)from[&quot;balance&quot;] - amount;
+    to[&quot;balance&quot;] = (long)to[&quot;balance&quot;] - amount;
+    transaction.Update(from);
+    transaction.Update(to);
+    transaction.Commit();
+}
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual DatastoreTransaction BeginTransaction(CallSettings callSettings = null)</code></pre>
@@ -559,7 +593,8 @@ To specify options, create a collection or array explicitly, and call <a class="
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_BeginTransactionAsync_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.BeginTransactionAsync(Google.Api.Gax.Grpc.CallSettings)">BeginTransactionAsync(CallSettings)</h4>
               <div class="markdown level1 summary"><p>Begins a transaction asynchronously, returning a <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreTransaction.html">DatastoreTransaction</a> which can be used to operate on the transaction.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_BeginTransaction_Google_Api_Gax_Grpc_CallSettings_">BeginTransaction</a> for an example of the synchronous equivalent of this method.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;DatastoreTransaction&gt; BeginTransactionAsync(CallSettings callSettings = null)</code></pre>
@@ -702,7 +737,28 @@ using default settings.</p>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Delete(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Entity message = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;text&quot;] = &quot;Hello&quot;,
+};
+db.Insert(message);
+
+Entity fetchedBeforeDeletion = db.Lookup(message.Key);
+
+// Only the key from the entity is used to determine what to delete.
+// If you already have the key but not the entity, use Delete(Key, CallSettings) or
+// a similar overload.
+db.Delete(message);
+
+Entity fetchedAfterDeletion = db.Lookup(message.Key);
+
+Console.WriteLine($&quot;Entity exists before deletion? {fetchedBeforeDeletion != null}&quot;);
+Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != null}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -738,7 +794,8 @@ using default settings.</p>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Entity[])">Delete(Entity[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(params Entity[] entities)</code></pre>
@@ -767,12 +824,37 @@ using default settings.</p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">Delete(Key, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;message&quot;);
+Entity message = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;text&quot;] = &quot;Hello&quot;,
+};
+Key key = db.Insert(message);
+
+Entity fetchedBeforeDeletion = db.Lookup(key);
+
+// Only the key is required to determine what to delete.
+// If you have an entity with the right key, you can use Delete(Entity, CallSettings)
+// or a similar overload for convenience.
+db.Delete(key);
+
+Entity fetchedAfterDeletion = db.Lookup(key);
+
+Console.WriteLine($&quot;Entity exists before deletion? {fetchedBeforeDeletion != null}&quot;);
+Console.WriteLine($&quot;Entity exists after deletion? {fetchedAfterDeletion != null}&quot;);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(Key key, CallSettings callSettings = null)</code></pre>
@@ -808,7 +890,8 @@ To specify options, create a collection or array explicitly, and call <a class="
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(Google.Cloud.Datastore.V1.Key[])">Delete(Key[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(params Key[] keys)</code></pre>
@@ -837,12 +920,17 @@ To specify options, create a collection or array explicitly, and call <a class="
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">Delete(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -871,11 +959,18 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Delete(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">Delete(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Delete(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -904,11 +999,18 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Delete_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -960,7 +1062,8 @@ To specify options, create a collection or array explicitly, and call <a class="
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Entity[])">DeleteAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(params Entity[] entities)</code></pre>
@@ -1005,12 +1108,17 @@ To specify options, create a collection or array explicitly, and call <a class="
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Key,Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(Key, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a single key, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(Key key, CallSettings callSettings = null)</code></pre>
@@ -1061,7 +1169,8 @@ To specify options, create a collection or array explicitly, and call <a class="
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(Google.Cloud.Datastore.V1.Key[])">DeleteAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(params Key[] keys)</code></pre>
@@ -1105,12 +1214,17 @@ To specify options, create a collection or array explicitly, and call <a class="
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -1155,11 +1269,18 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.DeleteAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},Google.Api.Gax.Grpc.CallSettings)">DeleteAsync(IEnumerable&lt;Key&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes a collection of keys, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Delete_Google_Cloud_Datastore_V1_Key_Google_Api_Gax_Grpc_CallSettings_">Delete</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task DeleteAsync(IEnumerable&lt;Key&gt; keys, CallSettings callSettings = null)</code></pre>
@@ -1203,11 +1324,18 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_DeleteAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Insert(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___">Insert</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Key Insert(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -1254,7 +1382,8 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>On success, the entity will be updated in memory with the server-allocated keys.</p>
+<p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert(Google.Cloud.Datastore.V1.Entity[])">Insert(Entity[])</h4>
@@ -1323,17 +1452,23 @@ the collection.</p>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>On success, the entities will be updated in memory with the server-allocated keys.</p>
+<p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Insert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Insert_Google_Cloud_Datastore_V1_Entity___">Insert</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Insert(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -1380,11 +1515,19 @@ the collection.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, the entities will be updated in memory with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">InsertAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___">InsertAsync</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; InsertAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -1431,8 +1574,8 @@ if it was allocated by the server, or <code>null</code> if the inserted entity h
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
-</div>
+              <div class="markdown level1 remarks"><p>On success, the entity will be updated in memory with the server-allocated keys.</p>
+<p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p></div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync(Google.Cloud.Datastore.V1.Entity[])">InsertAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
@@ -1501,17 +1644,23 @@ the collection.</p>
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity____remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>On success, the entities will be updated in memory with the server-allocated keys.</p>
+<p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.InsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">InsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Inserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_Google_Cloud_Datastore_V1_Entity___">InsertAsync</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; InsertAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -1559,11 +1708,18 @@ the collection.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, the entities will be updated in memory with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup(Google.Cloud.Datastore.V1.Key,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">Lookup(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a single entity by key.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key___">Lookup</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Entity Lookup(Key key, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -1680,12 +1836,16 @@ methods containing a parameter array and optional parameters.
 It simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the read consistency and call settings.
 </p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Lookup(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">Lookup(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Lookup_Google_Cloud_Datastore_V1_Key___">Lookup</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Entity&gt; Lookup(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -1739,12 +1899,16 @@ references, or <code>null</code> where the key was not found.</p>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Lookup_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync(Google.Cloud.Datastore.V1.Key,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(Key, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a single entity by key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___">LookupAsync</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Entity&gt; LookupAsync(Key key, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -1802,7 +1966,16 @@ references, or <code>null</code> where the key was not found.</p>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync(Google.Cloud.Datastore.V1.Key[])">LookupAsync(Key[])</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Key key1 = keyFactory.CreateKey(&quot;pride_and_prejudice&quot;);
+Key key2 = keyFactory.CreateKey(&quot;not_present&quot;);
+
+IReadOnlyList&lt;Entity&gt; entities = await db.LookupAsync(key1, key2);
+Console.WriteLine(entities[0]); // Pride and Prejudice entity
+Console.WriteLine(entities[1]); // Nothing (value is null reference)
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(params Key[] keys)</code></pre>
@@ -1852,12 +2025,16 @@ methods containing a parameter array and optional parameters.
 It simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</a>, passing in a <code>null</code>
 value for the read consistency and call settings.
 </p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.LookupAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Key},System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">LookupAsync(IEnumerable&lt;Key&gt;, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Looks up a collection of entities by key asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_Google_Cloud_Datastore_V1_Key___">LookupAsync</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Entity&gt;&gt; LookupAsync(IEnumerable&lt;Key&gt; keys, ReadOptions.Types.ReadConsistency? readConsistency = null, CallSettings callSettings = null)</code></pre>
@@ -1911,6 +2088,9 @@ references, or <code>null</code> where the key was not found.</p>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_LookupAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Key__System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This call may perform multiple RPC operations in order to look up all keys.</p>
+<p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_RunQuery_Google_Cloud_Datastore_V1_GqlQuery_System_Nullable_Google_Cloud_Datastore_V1_ReadOptions_Types_ReadConsistency__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.RunQuery(Google.Cloud.Datastore.V1.GqlQuery,System.Nullable{Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency},Google.Api.Gax.Grpc.CallSettings)">RunQuery(GqlQuery, Nullable&lt;ReadOptions.Types.ReadConsistency&gt;, CallSettings)</h4>
@@ -1924,9 +2104,9 @@ GqlQuery gqlQuery = new GqlQuery
 {
     QueryString = &quot;SELECT * FROM book WHERE author = @author LIMIT @limit&quot;,
     NamedBindings = {
-        { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } },
-        { &quot;limit&quot;, new GqlQueryParameter { Value = 10 } }
-    },
+        { &quot;author&quot;, &quot;Jane Austen&quot; },
+        { &quot;limit&quot;, 10 }
+    }
 };
 DatastoreQueryResults results = db.RunQuery(gqlQuery);
 // RunQuery fetches all the results into memory in a single call.
@@ -2072,7 +2252,7 @@ number of results, for example to build a web application which fetches results 
 GqlQuery gqlQuery = new GqlQuery
 {
     QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
 };
 DatastoreQueryResults results = await db.RunQueryAsync(gqlQuery);
 // RunQuery fetches all the results into memory in a single call.
@@ -2144,7 +2324,8 @@ number of results, for example to build a web application which fetches results 
 <pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
 Query query = new Query(&quot;book&quot;)
 {
-    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;)
+    Filter = Filter.Equal(&quot;author&quot;, &quot;Jane Austen&quot;),
+    Limit = 10
 };
 DatastoreQueryResults results = await db.RunQueryAsync(query);
 // RunQuery fetches all the results into memory in a single call.
@@ -2215,7 +2396,7 @@ foreach (Entity entity in results.Entities)
 GqlQuery gqlQuery = new GqlQuery
 {
     QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
 };
 LazyDatastoreQuery results = db.RunQueryLazily(gqlQuery);
 // LazyDatastoreQuery implements IEnumerable&lt;Entity&gt;, but you can
@@ -2366,7 +2547,7 @@ multiple times will execute the query again, potentially returning different res
 GqlQuery gqlQuery = new GqlQuery
 {
     QueryString = &quot;SELECT * FROM book WHERE author = @author&quot;,
-    NamedBindings = { { &quot;author&quot;, new GqlQueryParameter { Value = &quot;Jane Austen&quot; } } },
+    NamedBindings = { { &quot;author&quot;, &quot;Jane Austen&quot; } },
 };
 AsyncLazyDatastoreQuery results = db.RunQueryLazilyAsync(gqlQuery);
 // AsyncLazyDatastoreQuery implements IAsyncEnumerable&lt;Entity&gt;, but you can
@@ -2512,7 +2693,24 @@ multiple times will execute the query again, potentially returning different res
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Update(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;Tequila Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+db.Insert(book);
+
+// Correct the typo in memory
+book[&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;;
+// Then update the entity in Datastore
+db.Update(book);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Update(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -2548,7 +2746,8 @@ multiple times will execute the query again, potentially returning different res
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update(Google.Cloud.Datastore.V1.Entity[])">Update(Entity[])</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Update(params Entity[] entities)</code></pre>
@@ -2577,12 +2776,17 @@ multiple times will execute the query again, potentially returning different res
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Update(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Update_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Update(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Update(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual void Update(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -2611,11 +2815,17 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Update_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be looked up in a single operation. When looking up a large
+number of entities, partition the look-ups into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">UpdateAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -2667,7 +2877,8 @@ To specify options, create a collection or array explicitly, and call <a class="
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync(Google.Cloud.Datastore.V1.Entity[])">UpdateAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(params Entity[] entities)</code></pre>
@@ -2712,12 +2923,17 @@ To specify options, create a collection or array explicitly, and call <a class="
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpdateAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpdateAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Updates a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Update_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_">Update</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task UpdateAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -2762,11 +2978,18 @@ To specify options, create a collection or array explicitly, and call <a class="
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpdateAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">Upsert(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Upsert</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Key Upsert(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -2813,13 +3036,41 @@ To specify options, create a collection or array explicitly, and call <a class="
                 </tbody>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
-              <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+              <div class="markdown level1 remarks"><p>On success, if entity has an incomplete key it will be updated in memory with the server-allocated keys.</p>
+<p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert(Google.Cloud.Datastore.V1.Entity[])">Upsert(Entity[])</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>Example:</p>
+<pre><code class="lang-cs">DatastoreDb db = DatastoreDb.Create(projectId, namespaceId);
+KeyFactory keyFactory = db.CreateKeyFactory(&quot;book&quot;);
+Entity book1 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Harper Lee&quot;,
+    [&quot;title&quot;] = &quot;Tequila Mockingbird&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1960, 7, 11, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Southern drama&quot;, &quot;Courtroom drama&quot;, &quot;Bildungsroman&quot; }
+};
+db.Insert(book1);
+
+// Correct the typo in memory
+book1[&quot;title&quot;] = &quot;To Kill a Mockingbird&quot;;
+
+Entity book2 = new Entity
+{
+    Key = keyFactory.CreateIncompleteKey(),
+    [&quot;author&quot;] = &quot;Charlotte Bront&#235;&quot;,
+    [&quot;title&quot;] = &quot;Jane Eyre&quot;,
+    [&quot;publication_date&quot;] = new DateTime(1847, 10, 16, 0, 0, 0, DateTimeKind.Utc),
+    [&quot;genres&quot;] = new[] { &quot;Gothic&quot;, &quot;Romance&quot;, &quot;Bildungsroman&quot; }
+};
+
+// Update book1 and insert book2 into Datastore
+db.Upsert(book1, book2);
+</code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Upsert(params Entity[] entities)</code></pre>
@@ -2863,6 +3114,10 @@ with a predefined key will have a null value in the collection.</p>
               </table>
               <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity____remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>This method simply delegates to <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.</p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 <p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
@@ -2872,7 +3127,8 @@ To specify options, create a collection or array explicitly, and call <a class="
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.Upsert(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">Upsert(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Upsert</a> for an example using an alternative overload.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual IReadOnlyList&lt;Key&gt; Upsert(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -2920,11 +3176,19 @@ with a predefined key will have a null value in the collection.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_Upsert_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, any entities with incomplete keys will be updated in memory with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_Google_Cloud_Datastore_V1_Entity_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync(Google.Cloud.Datastore.V1.Entity,Google.Api.Gax.Grpc.CallSettings)">UpsertAsync(Entity, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a single entity, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;Key&gt; UpsertAsync(Entity entity, CallSettings callSettings = null)</code></pre>
@@ -2978,7 +3242,8 @@ new key if the entity was inserted and the mutation allocated the key.</p>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_Google_Cloud_Datastore_V1_Entity___" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync(Google.Cloud.Datastore.V1.Entity[])">UpsertAsync(Entity[])</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; UpsertAsync(params Entity[] entities)</code></pre>
@@ -3027,12 +3292,17 @@ with a predefined key will have a null value in the collection.</p>
 Call settings are not supported on this call due to restrictions with methods containing a parameter array and optional parameters.
 To specify options, create a collection or array explicitly, and call <a class="xref" href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</a>.
 </p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
 </div>
               <a id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync*"></a>
               <h4 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Datastore.V1.DatastoreDb.UpsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.Datastore.V1.Entity},Google.Api.Gax.Grpc.CallSettings)">UpsertAsync(IEnumerable&lt;Entity&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Upserts a collection of entities, non-transactionally and asynchronously.</p>
 </div>
-              <div class="markdown level1 conceptual"></div>
+              <div class="markdown level1 conceptual"><p>See <a href="Google.Cloud.Datastore.V1.DatastoreDb.html#Google_Cloud_Datastore_V1_DatastoreDb_Upsert_Google_Cloud_Datastore_V1_Entity___">Update</a> for a synchronous example.</p>
+</div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public virtual Task&lt;IReadOnlyList&lt;Key&gt;&gt; UpsertAsync(IEnumerable&lt;Entity&gt; entities, CallSettings callSettings = null)</code></pre>
@@ -3081,6 +3351,13 @@ with a predefined key will have a null value in the collection.</p>
                   </tr>
                 </tbody>
               </table>
+              <h5 id="Google_Cloud_Datastore_V1_DatastoreDb_UpsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_Datastore_V1_Entity__Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>On success, any entities with incomplete keys will be updated with the server-allocated keys.</p>
+<p>Datastore limits the number of entities that can be modified in a Commit operation. Although this method does not
+use an existing transaction, it still performs all the work in a single Commit operation. When modifying a large
+number of entities, partition the changes into batches. See
+<a href="https://cloud.google.com/datastore/docs/concepts/limits">Datastore limits</a> for more details on Datastore limits.</p>
+</div>
                         </article>
           </div>
           

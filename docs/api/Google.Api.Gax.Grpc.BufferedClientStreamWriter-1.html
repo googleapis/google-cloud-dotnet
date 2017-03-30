@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BufferedClientStreamWriter&lt;T&gt;
    | Google Cloud APIs ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -261,8 +262,9 @@ hasn&#39;t already been called.</p>
               </table>
               <a id="Google_Api_Gax_Grpc_BufferedClientStreamWriter_1_TryWriteCompleteAsync_" data-uid="Google.Api.Gax.Grpc.BufferedClientStreamWriter`1.TryWriteCompleteAsync*"></a>
               <h4 id="Google_Api_Gax_Grpc_BufferedClientStreamWriter_1_TryWriteCompleteAsync" data-uid="Google.Api.Gax.Grpc.BufferedClientStreamWriter`1.TryWriteCompleteAsync">TryWriteCompleteAsync()</h4>
-              <div class="markdown level1 summary"><p>Completes the stream when all buffered messages have been sent. This method can only be called
-once, and further messages cannot be written after it has been called.</p>
+              <div class="markdown level1 summary"><p>Completes the stream when all buffered messages have been sent, if there is enough space in the buffer.
+This method can only be successfully called once, and further messages cannot be written after it
+has been successfully called.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -280,7 +282,7 @@ once, and further messages cannot be written after it has been called.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td><p><code>null</code> if this stream has already be completed; otherwise a
+                    <td><p><code>null</code> if this stream has already be completed, or if the buffer is full; otherwise a
 <span class="xref">System.Threading.Tasks.Task</span> which will complete when the stream has finished being completed.</p>
 </td>
                   </tr>
@@ -416,8 +418,9 @@ or <a class="xref" href="Google.Api.Gax.Grpc.BufferedClientStreamWriter-1.html#G
               </table>
               <a id="Google_Api_Gax_Grpc_BufferedClientStreamWriter_1_WriteCompleteAsync_" data-uid="Google.Api.Gax.Grpc.BufferedClientStreamWriter`1.WriteCompleteAsync*"></a>
               <h4 id="Google_Api_Gax_Grpc_BufferedClientStreamWriter_1_WriteCompleteAsync" data-uid="Google.Api.Gax.Grpc.BufferedClientStreamWriter`1.WriteCompleteAsync">WriteCompleteAsync()</h4>
-              <div class="markdown level1 summary"><p>Completes the stream when all buffered messages have been sent. This method can only be called
-once, and further messages cannot be written after it has been called.</p>
+              <div class="markdown level1 summary"><p>Completes the stream when all buffered messages have been sent, if there is enough space in the buffer.
+This method can only be successfully called once, and further messages cannot be written after it
+has been successfully called.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -451,7 +454,7 @@ once, and further messages cannot be written after it has been called.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.InvalidOperationException</span></td>
-                    <td><p>This method has already been called.</p>
+                    <td><p>This stream has already be completed, or the buffer is full</p>
 </td>
                   </tr>
                 </tbody>

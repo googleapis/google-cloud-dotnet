@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LoggingServiceV2ClientImpl
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -217,7 +218,9 @@
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_DeleteLog_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.DeleteLog*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_DeleteLog_Google_Cloud_Logging_V2_DeleteLogRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.DeleteLog(Google.Cloud.Logging.V2.DeleteLogRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteLog(DeleteLogRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
-The log reappears if it receives new entries.</p>
+The log reappears if it receives new entries.
+Log entries written shortly before the delete operation might not be
+deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -253,7 +256,9 @@ The log reappears if it receives new entries.</p>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_DeleteLogAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.DeleteLogAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_DeleteLogAsync_Google_Cloud_Logging_V2_DeleteLogRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.DeleteLogAsync(Google.Cloud.Logging.V2.DeleteLogRequest,Google.Api.Gax.Grpc.CallSettings)">DeleteLogAsync(DeleteLogRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Deletes all the log entries in a log.
-The log reappears if it receives new entries.</p>
+The log reappears if it receives new entries.
+Log entries written shortly before the delete operation might not be
+deleted.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -410,7 +415,7 @@ Stackdriver Logging.  For ways to export log entries, see
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogEntriesAsync_Google_Cloud_Logging_V2_ListLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogEntriesAsync(ListLogEntriesRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogs_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogs(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogs(ListLogsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -462,7 +467,7 @@ Only logs that have entries are listed.</p>
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListLogs_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListLogs(ListLogsRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogsAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_ListLogsAsync_Google_Cloud_Logging_V2_ListLogsRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.ListLogsAsync(Google.Cloud.Logging.V2.ListLogsRequest,Google.Api.Gax.Grpc.CallSettings)">ListLogsAsync(ListLogsRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Lists the logs in projects or organizations.
+              <div class="markdown level1 summary"><p>Lists the logs in projects, organizations, folders, or billing accounts.
 Only logs that have entries are listed.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -618,8 +623,7 @@ Logging.</p>
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_ListMonitoredResourceDescriptorsAsync_Google_Cloud_Logging_V2_ListMonitoredResourceDescriptorsRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.ListMonitoredResourceDescriptorsAsync(ListMonitoredResourceDescriptorsRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_WriteLogEntries_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.WriteLogEntries*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.WriteLogEntries(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntries(WriteLogEntriesRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
-written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -670,8 +674,7 @@ written by this method.</p>
               <div><a class="xref" href="Google.Cloud.Logging.V2.LoggingServiceV2Client.html#Google_Cloud_Logging_V2_LoggingServiceV2Client_WriteLogEntries_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_">LoggingServiceV2Client.WriteLogEntries(WriteLogEntriesRequest, CallSettings)</a></div>
               <a id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_WriteLogEntriesAsync_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.WriteLogEntriesAsync*"></a>
               <h4 id="Google_Cloud_Logging_V2_LoggingServiceV2ClientImpl_WriteLogEntriesAsync_Google_Cloud_Logging_V2_WriteLogEntriesRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.Logging.V2.LoggingServiceV2ClientImpl.WriteLogEntriesAsync(Google.Cloud.Logging.V2.WriteLogEntriesRequest,Google.Api.Gax.Grpc.CallSettings)">WriteLogEntriesAsync(WriteLogEntriesRequest, CallSettings)</h4>
-              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.  All log entries are
-written by this method.</p>
+              <div class="markdown level1 summary"><p>Writes log entries to Stackdriver Logging.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

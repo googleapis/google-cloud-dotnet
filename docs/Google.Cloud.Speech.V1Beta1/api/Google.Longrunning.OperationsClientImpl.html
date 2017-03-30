@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OperationsClientImpl
    | Google.Cloud.Speech.V1Beta1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -191,7 +192,8 @@
               </h3>
               <a id="Google_LongRunning_OperationsClientImpl_Clock_" data-uid="Google.LongRunning.OperationsClientImpl.Clock*"></a>
               <h4 id="Google_LongRunning_OperationsClientImpl_Clock" data-uid="Google.LongRunning.OperationsClientImpl.Clock">Clock</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The clock used for timeouts, retries and polling.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -242,7 +244,8 @@
               <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GrpcClient">OperationsClient.GrpcClient</a></div>
               <a id="Google_LongRunning_OperationsClientImpl_Scheduler_" data-uid="Google.LongRunning.OperationsClientImpl.Scheduler*"></a>
               <h4 id="Google_LongRunning_OperationsClientImpl_Scheduler" data-uid="Google.LongRunning.OperationsClientImpl.Scheduler">Scheduler</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The scheduler used for timeouts, retries and polling.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -465,7 +468,10 @@ operation. If the server doesn&#39;t support this method, it returns
               <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_DeleteOperationAsync_Google_LongRunning_DeleteOperationRequest_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.DeleteOperationAsync(DeleteOperationRequest, CallSettings)</a></div>
               <a id="Google_LongRunning_OperationsClientImpl_GetEffectiveCallSettingsForGetOperation_" data-uid="Google.LongRunning.OperationsClientImpl.GetEffectiveCallSettingsForGetOperation*"></a>
               <h4 id="Google_LongRunning_OperationsClientImpl_GetEffectiveCallSettingsForGetOperation_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.GetEffectiveCallSettingsForGetOperation(Google.Api.Gax.Grpc.CallSettings)">GetEffectiveCallSettingsForGetOperation(CallSettings)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Return the <a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a> that would be used by a call to
+<a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetOperation_Google_LongRunning_GetOperationRequest_Google_Api_Gax_Grpc_CallSettings_">GetOperation(GetOperationRequest, CallSettings)</a>, using the base
+settings of this client and the specified per-call overrides.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -484,7 +490,8 @@ operation. If the server doesn&#39;t support this method, it returns
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
                     <td><span class="parametername">callSettings</span></td>
-                    <td></td>
+                    <td><p>The per-call override, if any.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -499,12 +506,17 @@ operation. If the server doesn&#39;t support this method, it returns
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.Grpc.CallSettings.html">CallSettings</a></td>
-                    <td></td>
+                    <td><p>The effective call settings for a GetOperation RPC.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.LongRunning.OperationsClient.html#Google_LongRunning_OperationsClient_GetEffectiveCallSettingsForGetOperation_Google_Api_Gax_Grpc_CallSettings_">OperationsClient.GetEffectiveCallSettingsForGetOperation(CallSettings)</a></div>
+              <h5 id="Google_LongRunning_OperationsClientImpl_GetEffectiveCallSettingsForGetOperation_Google_Api_Gax_Grpc_CallSettings__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method is used when polling, to determine the appropriate timeout and cancellation
+token to use for each call.</p>
+</div>
               <a id="Google_LongRunning_OperationsClientImpl_GetOperation_" data-uid="Google.LongRunning.OperationsClientImpl.GetOperation*"></a>
               <h4 id="Google_LongRunning_OperationsClientImpl_GetOperation_Google_LongRunning_GetOperationRequest_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.LongRunning.OperationsClientImpl.GetOperation(Google.LongRunning.GetOperationRequest,Google.Api.Gax.Grpc.CallSettings)">GetOperation(GetOperationRequest, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Gets the latest state of a long-running operation.  Clients can use this

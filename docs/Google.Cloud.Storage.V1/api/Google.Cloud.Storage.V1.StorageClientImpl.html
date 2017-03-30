@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StorageClientImpl
    | Google.Cloud.Storage.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -183,7 +184,10 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
 </div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_EncryptionKey_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.EncryptionKey*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_EncryptionKey" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.EncryptionKey">EncryptionKey</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The encryption key used by default for all relevant object-based operations. This can be overridden in call-specific options.
+This will never return null in the built-in implementation; if no encryption key is specified,
+<a class="xref" href="Google.Cloud.Storage.V1.EncryptionKey.html#Google_Cloud_Storage_V1_EncryptionKey_None">None</a> is returned.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -208,7 +212,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_EncryptionKey">StorageClient.EncryptionKey</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_Service_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.Service*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_Service" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.Service">Service</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The underlying storage service object used by this client.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -231,11 +236,19 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_Service">StorageClient.Service</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_Service_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html">StorageClient</a> class only provides convenience operations built on top of
+an existing service object. Any more complex operations which are not supported by this wrapper may wish
+to use the same service object as the wrapper, in order to take advantage of its configuration (for authentication,
+application naming etc).</p>
+</div>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_CopyObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CopyObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CopyObject(System.String,System.String,System.String,System.String,Google.Cloud.Storage.V1.CopyObjectOptions)">CopyObject(String, String, String, String, CopyObjectOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
+<code>rewriteObject</code> underlying API operation for more flexibility and reliability.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -254,27 +267,33 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">sourceBucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object to copy. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">sourceObjectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object to copy within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">destinationBucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket to copy the object to. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">destinationObjectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the destination bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.CopyObjectOptions.html">CopyObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the copy operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -289,7 +308,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the new storage object resulting from the copy.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -297,7 +317,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CopyObject_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_">StorageClient.CopyObject(String, String, String, String, CopyObjectOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_CopyObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CopyObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CopyObjectAsync_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CopyObjectAsync(System.String,System.String,System.String,System.String,Google.Cloud.Storage.V1.CopyObjectOptions,System.Threading.CancellationToken)">CopyObjectAsync(String, String, String, String, CopyObjectOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a copy of an object synchronously, potentially to a different bucket. This method uses the
+<code>rewriteObject</code> underlying API operation for more flexibility and reliability.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -316,32 +338,39 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">sourceBucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object to copy. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">sourceObjectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object to copy within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">destinationBucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket to copy the object to. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">destinationObjectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the destination bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.CopyObjectOptions.html">CopyObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the copy operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -356,7 +385,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the new storage object resulting from the copy.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -364,7 +395,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CopyObjectAsync_System_String_System_String_System_String_System_String_Google_Cloud_Storage_V1_CopyObjectOptions_System_Threading_CancellationToken_">StorageClient.CopyObjectAsync(String, String, String, String, CopyObjectOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucket_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucket(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.CreateBucketOptions)">CreateBucket(String, Bucket, CreateBucketOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a storage bucket synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -383,17 +415,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td></td>
+                    <td><p>The ID of the project to create the buckets in. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The resource representation of the bucket to create. Must not be null, and must have a name.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -408,7 +444,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
-                    <td></td>
+                    <td><p>The resource representation of the newly-created bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -416,7 +453,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions_">StorageClient.CreateBucket(String, Bucket, CreateBucketOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucket(System.String,System.String,Google.Cloud.Storage.V1.CreateBucketOptions)">CreateBucket(String, String, CreateBucketOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a storage bucket synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -435,17 +473,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td></td>
+                    <td><p>The ID of the project to create the buckets in. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket to create. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -460,7 +502,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
-                    <td></td>
+                    <td><p>The resource representation of the newly-created bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -468,7 +511,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucket_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_">StorageClient.CreateBucket(String, String, CreateBucketOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucketAsync_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync(System.String,Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)">CreateBucketAsync(String, Bucket, CreateBucketOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a storage bucket asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -487,22 +531,27 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td></td>
+                    <td><p>The ID of the project to create the buckets in. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The resource representation of the bucket to create. Must not be null, and must have a name.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -517,7 +566,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+resource representation of the newly-created bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -525,7 +576,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_System_String_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_">StorageClient.CreateBucketAsync(String, Bucket, CreateBucketOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateBucketAsync_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateBucketAsync(System.String,System.String,Google.Cloud.Storage.V1.CreateBucketOptions,System.Threading.CancellationToken)">CreateBucketAsync(String, String, CreateBucketOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Creates a storage bucket asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -544,22 +596,27 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td></td>
+                    <td><p>The ID of the project to create the buckets in. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket to create. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.CreateBucketOptions.html">CreateBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -574,15 +631,156 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+resource representation of the newly-created bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateBucketAsync_System_String_System_String_Google_Cloud_Storage_V1_CreateBucketOptions_System_Threading_CancellationToken_">StorageClient.CreateBucketAsync(String, String, CreateBucketOptions, CancellationToken)</a></div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)">CreateObjectUploader(Object, Stream, UploadObjectOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates an instance which is capable of starting a resumable upload for an object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override ObjectsResource.InsertMediaUpload CreateObjectUploader(Object destination, Stream source, UploadObjectOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
+                    <td><span class="parametername">destination</span></td>
+                    <td><p>Object to create or update. Must not be null, and must have the name,
+bucket and content type populated.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><span class="parametername">source</span></td>
+                    <td><p>The stream to read the data from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the upload. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html">ObjectsResource.InsertMediaUpload</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html">ObjectsResource.InsertMediaUpload</a> which can be used to upload the object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_">StorageClient.CreateObjectUploader(Object, Stream, UploadObjectOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions__seealso">See Also</h5>
+              <div class="seealso">
+                  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a>(<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>, <span class="xref">System.IO.Stream</span>, <a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a>, <span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;)</div>
+              </div>
+              <a id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader*"></a>
+              <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.CreateObjectUploader(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions)">CreateObjectUploader(String, String, String, Stream, UploadObjectOptions)</h4>
+              <div class="markdown level1 summary"><p>Creates an instance which is capable of starting a resumable upload for an object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override ObjectsResource.InsertMediaUpload CreateObjectUploader(string bucket, string objectName, string contentType, Stream source, UploadObjectOptions options = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">bucket</span></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">objectName</span></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">contentType</span></td>
+                    <td><p>The content type of the object. This should be a MIME type
+such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. May be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.IO.Stream</span></td>
+                    <td><span class="parametername">source</span></td>
+                    <td><p>The stream to read the data from. Must not be null.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>Additional options for the upload. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html">ObjectsResource.InsertMediaUpload</a></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.ObjectsResource.InsertMediaUpload.html">ObjectsResource.InsertMediaUpload</a> which can be used to upload the object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_CreateObjectUploader_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_">StorageClient.CreateObjectUploader(String, String, String, Stream, UploadObjectOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_CreateObjectUploader_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions__seealso">See Also</h5>
+              <div class="seealso">
+                  <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">UploadObject</a>(<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>, <span class="xref">System.IO.Stream</span>, <a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a>, <span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;)</div>
+              </div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.DeleteBucketOptions)">DeleteBucket(Bucket, DeleteBucketOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a bucket synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -601,12 +799,15 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>Bucket to delete. Must not be null, and must have the name populated.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -614,7 +815,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_">StorageClient.DeleteBucket(Bucket, DeleteBucketOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucket(System.String,Google.Cloud.Storage.V1.DeleteBucketOptions)">DeleteBucket(String, DeleteBucketOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a bucket synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -633,12 +835,15 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket to delete. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -646,7 +851,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucket_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_">StorageClient.DeleteBucket(String, DeleteBucketOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)">DeleteBucketAsync(Bucket, DeleteBucketOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes bucket asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -665,17 +871,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>Bucket to delete. Must not be null, and must have the name populated.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -690,7 +900,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -698,7 +909,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_">StorageClient.DeleteBucketAsync(Bucket, DeleteBucketOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteBucketAsync_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteBucketAsync(System.String,Google.Cloud.Storage.V1.DeleteBucketOptions,System.Threading.CancellationToken)">DeleteBucketAsync(String, DeleteBucketOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a bucket asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -717,17 +929,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket to delete. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteBucketOptions.html">DeleteBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -742,7 +958,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -750,7 +967,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteBucketAsync_System_String_Google_Cloud_Storage_V1_DeleteBucketOptions_System_Threading_CancellationToken_">StorageClient.DeleteBucketAsync(String, DeleteBucketOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.DeleteObjectOptions)">DeleteObject(Object, DeleteObjectOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -769,20 +987,44 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">obj</span></td>
-                    <td></td>
+                    <td><p>Object to delete. Must not be null, and must have the name and bucket populated.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_">StorageClient.DeleteObject(Object, DeleteObjectOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+By default this will delete the latest version of the object, but this can be
+controlled using <a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. Note that any generation information
+contained within <span class="paramref">obj</span> is ignored; the generation to delete is only controlled
+via <span class="paramref">options</span>. For buckets that support
+multiple versions, implicitly deleting the latest version only archives
+it so the object is still available and can be listed by specifying <a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
+If the version is explicitly specified, the object is permanently deleted.
+</p>
+<p>
+If the bucket containing the object supports versioning, after this operation
+completes successfully there may still be another version of the same object. In buckets which
+do not support versioning, this operation will permanently delete the object.
+</p>
+<p>
+If the request attempts to delete an object that does not exist or a specific version that does
+not exist, this counts as a failure with an HTTP status code of 404.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObject(System.String,System.String,Google.Cloud.Storage.V1.DeleteObjectOptions)">DeleteObject(String, String, DeleteObjectOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a version of the specified object synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -801,25 +1043,48 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_">StorageClient.DeleteObject(String, String, DeleteObjectOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObject_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+By default this will delete the latest version of the object, but this can be
+controlled using <a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. For buckets that support
+multiple versions, implicitly deleting the latest version only archives
+it so the object is still available and can be listed by specifying <a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
+If the version is explicitly specified, the object is permanently deleted.
+</p>
+<p>
+If the bucket containing the object supports versioning, after this operation
+completes successfully there may still be another version of the same object. In buckets which
+do not support versioning, this operation will permanently delete the object.
+</p>
+<p>
+If the request attempts to delete an object that does not exist or a specific version that does
+not exist, this counts as a failure with an HTTP status code of 404.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.DeleteObjectOptions,System.Threading.CancellationToken)">DeleteObjectAsync(Object, DeleteObjectOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a version of the specified object asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -838,17 +1103,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">obj</span></td>
-                    <td></td>
+                    <td><p>Object to delete. Must not be null, and must have the name and bucket populated.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -863,15 +1132,37 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_">StorageClient.DeleteObjectAsync(Object, DeleteObjectOptions, CancellationToken)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+By default this will delete the latest version of the object, but this can be
+controlled using <a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. Note that any generation information
+contained within <span class="paramref">obj</span> is ignored; the generation to delete is only controlled
+via <span class="paramref">options</span>. For buckets that support
+multiple versions, implicitly deleting the latest version only archives
+it so the object is still available and can be listed by specifying <a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
+If the version is explicitly specified, the object is permanently deleted.
+</p>
+<p>
+If the bucket containing the object supports versioning, after this operation
+completes successfully there may still be another version of the same object. In buckets which
+do not support versioning, this operation will permanently delete the object.
+</p>
+<p>
+If the request attempts to delete an object that does not exist or a specific version that does
+not exist, this counts as a failure with an HTTP status code of 404.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DeleteObjectAsync(System.String,System.String,Google.Cloud.Storage.V1.DeleteObjectOptions,System.Threading.CancellationToken)">DeleteObjectAsync(String, String, DeleteObjectOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Deletes a version of the specified object asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -890,22 +1181,27 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html">DeleteObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -920,15 +1216,35 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DeleteObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken_">StorageClient.DeleteObjectAsync(String, String, DeleteObjectOptions, CancellationToken)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_DeleteObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_DeleteObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+By default this will delete the latest version of the object, but this can be
+controlled using <a class="xref" href="Google.Cloud.Storage.V1.DeleteObjectOptions.html#Google_Cloud_Storage_V1_DeleteObjectOptions_Generation">Generation</a>. For buckets that support
+multiple versions, implicitly deleting the latest version only archives
+it so the object is still available and can be listed by specifying <a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html#Google_Cloud_Storage_V1_ListObjectsOptions_Versions">Versions</a>.
+If the version is explicitly specified, the object is permanently deleted.
+</p>
+<p>
+If the bucket containing the object supports versioning, after this operation
+completes successfully there may still be another version of the same object. In buckets which
+do not support versioning, this operation will permanently delete the object.
+</p>
+<p>
+If the request attempts to delete an object that does not exist or a specific version that does
+not exist, this counts as a failure with an HTTP status code of 404.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(Object, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -947,30 +1263,40 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">source</span></td>
-                    <td></td>
+                    <td><p>Source object to download the data from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">destination</span></td>
-                    <td></td>
+                    <td><p>The stream to write the data into. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the download. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the download. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">StorageClient.DownloadObject(Object, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The generation number within <span class="paramref">source</span> is ignored by this method.
+To download a specific generation, use <a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObject(System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Downloads the data for an object from storage synchronously, into a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -989,27 +1315,33 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">destination</span></td>
-                    <td></td>
+                    <td><p>The stream to write the data into. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the download. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the download. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1017,7 +1349,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">StorageClient.DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObjectAsync(Object, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Downloads the data for an object from storage asynchronously, into a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1036,27 +1369,33 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">source</span></td>
-                    <td></td>
+                    <td><p>Source object to download the data from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">destination</span></td>
-                    <td></td>
+                    <td><p>The stream to write the data into. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the download. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the download. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1071,15 +1410,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__">StorageClient.DownloadObjectAsync(Object, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress___remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The generation number within <span class="paramref">source</span> is ignored by this method.
+To download a specific generation, use <a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html#Google_Cloud_Storage_V1_DownloadObjectOptions_Generation">Generation</a>.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.DownloadObjectAsync(System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.DownloadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Download.IDownloadProgress})">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Downloads the data for an object from storage asynchronously, into a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1098,32 +1443,39 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">destination</span></td>
-                    <td></td>
+                    <td><p>The stream to write the data into. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.DownloadObjectOptions.html">DownloadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the download. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Download.IDownloadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the download. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1138,7 +1490,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span></td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1146,7 +1499,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__">StorageClient.DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucket_System_String_Google_Cloud_Storage_V1_GetBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucket(System.String,Google.Cloud.Storage.V1.GetBucketOptions)">GetBucket(String, GetBucketOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Fetches the information about a bucket synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1165,12 +1519,15 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketOptions.html">GetBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1185,7 +1542,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a> representation of the storage bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1193,7 +1551,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucket_System_String_Google_Cloud_Storage_V1_GetBucketOptions_">StorageClient.GetBucket(String, GetBucketOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetBucketAsync_System_String_Google_Cloud_Storage_V1_GetBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetBucketAsync(System.String,Google.Cloud.Storage.V1.GetBucketOptions,System.Threading.CancellationToken)">GetBucketAsync(String, GetBucketOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Fetches the information about a bucket asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1212,17 +1571,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.GetBucketOptions.html">GetBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1237,7 +1600,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a> representation of the storage bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1245,7 +1610,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetBucketAsync_System_String_Google_Cloud_Storage_V1_GetBucketOptions_System_Threading_CancellationToken_">StorageClient.GetBucketAsync(String, GetBucketOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObject(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions)">GetObject(String, String, GetObjectOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Fetches the information about an object synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1264,17 +1630,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.GetObjectOptions.html">GetObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1289,15 +1659,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the storage object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_">StorageClient.GetObject(String, String, GetObjectOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_GetObject_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObject_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObject(String, String, Stream, DownloadObjectOptions, IProgress&lt;IDownloadProgress&gt;)</a>
+to download the content.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_GetObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_GetObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.GetObjectAsync(System.String,System.String,Google.Cloud.Storage.V1.GetObjectOptions,System.Threading.CancellationToken)">GetObjectAsync(String, String, GetObjectOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Fetches the information about an object asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1316,22 +1692,27 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.GetObjectOptions.html">GetObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the fetch operation. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1346,15 +1727,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the storage object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_GetObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_System_Threading_CancellationToken_">StorageClient.GetObjectAsync(String, String, GetObjectOptions, CancellationToken)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_GetObjectAsync_System_String_System_String_Google_Cloud_Storage_V1_GetObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This does not retrieve the content of the object itself. Use <a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_DownloadObjectAsync_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_DownloadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Download_IDownloadProgress__">DownloadObjectAsync(String, String, Stream, DownloadObjectOptions, CancellationToken, IProgress&lt;IDownloadProgress&gt;)</a>
+to download the content.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListBuckets_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListBuckets*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListBuckets(System.String,Google.Cloud.Storage.V1.ListBucketsOptions)">ListBuckets(String, ListBucketsOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists the buckets for a given project, synchronously but lazily.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1373,12 +1761,15 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td></td>
+                    <td><p>The ID of the project to list the buckets from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.ListBucketsOptions.html">ListBucketsOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1393,15 +1784,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Buckets.html">Buckets</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
-                    <td></td>
+                    <td><p>A sequence of buckets within the project.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_">StorageClient.ListBuckets(String, ListBucketsOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ListBuckets_System_String_Google_Cloud_Storage_V1_ListBucketsOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
+for a page of results at a time, as required.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListBucketsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListBucketsAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListBucketsAsync_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListBucketsAsync(System.String,Google.Cloud.Storage.V1.ListBucketsOptions)">ListBucketsAsync(String, ListBucketsOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Asynchronously lists the buckets in a given project.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1420,12 +1817,15 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td></td>
+                    <td><p>The ID of the project to list the buckets from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.ListBucketsOptions.html">ListBucketsOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1440,15 +1840,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Buckets.html">Buckets</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
-                    <td></td>
+                    <td><p>An asynchronous sequence of buckets.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListBucketsAsync_System_String_Google_Cloud_Storage_V1_ListBucketsOptions_">StorageClient.ListBucketsAsync(String, ListBucketsOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ListBucketsAsync_System_String_Google_Cloud_Storage_V1_ListBucketsOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method fetches the buckets lazily, making requests to the underlying service
+for a page of results at a time, as required.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjects_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListObjects*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListObjects(System.String,System.String,Google.Cloud.Storage.V1.ListObjectsOptions)">ListObjects(String, String, ListObjectsOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Lists the objects in a given bucket, synchronously but lazily.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1467,17 +1873,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The bucket to list the objects from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">prefix</span></td>
-                    <td></td>
+                    <td><p>The prefix to match. Only objects with names that start with this string will be returned.
+This parameter may be null or empty, in which case no filtering is performed.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html">ListObjectsOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1492,15 +1903,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.PagedEnumerable-2.html">PagedEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Objects.html">Objects</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>A sequence of objects in the specified bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_">StorageClient.ListObjects(String, String, ListObjectsOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjects_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
+for a page of results at a time, as required.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjectsAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListObjectsAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjectsAsync_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.ListObjectsAsync(System.String,System.String,Google.Cloud.Storage.V1.ListObjectsOptions)">ListObjectsAsync(String, String, ListObjectsOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Asynchronously lists the objects in a given bucket.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1519,17 +1936,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The bucket to list the objects from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">prefix</span></td>
-                    <td></td>
+                    <td><p>The prefix to match. Only objects with names that start with this string will be returned.
+This parameter may be null or empty, in which case no filtering is performed.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.ListObjectsOptions.html">ListObjectsOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>The options for the operation. May be null, in which case
+defaults will be supplied.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1544,15 +1966,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Api.Gax.PagedAsyncEnumerable-2.html">PagedAsyncEnumerable</a>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Objects.html">Objects</a>, <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>An asynchronous sequence of objects in the specified bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_ListObjectsAsync_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions_">StorageClient.ListObjectsAsync(String, String, ListObjectsOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_ListObjectsAsync_System_String_System_String_Google_Cloud_Storage_V1_ListObjectsOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>This method fetches the objects lazily, making requests to the underlying service
+for a page of results at a time, as required.</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_PatchBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.PatchBucketOptions)">PatchBucket(Bucket, PatchBucketOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Patches the metadata for a storage bucket synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1571,12 +1999,15 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>Bucket to update. Must not be null, and must have a populated <code>Name</code> property.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.PatchBucketOptions.html">PatchBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1591,7 +2022,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a> representation of the updated storage bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1599,7 +2031,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_">StorageClient.PatchBucket(Bucket, PatchBucketOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_PatchBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_PatchBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.PatchBucketOptions,System.Threading.CancellationToken)">PatchBucketAsync(Bucket, PatchBucketOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Patches the metadata for a storage bucket asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1618,17 +2051,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>Bucket to update. Must not be null, and must have a populated <code>Name</code> property.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.PatchBucketOptions.html">PatchBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1643,7 +2080,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a> representation of the bucket storage bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1651,7 +2090,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_PatchBucketOptions_System_Threading_CancellationToken_">StorageClient.PatchBucketAsync(Bucket, PatchBucketOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_PatchObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.PatchObjectOptions)">PatchObject(Object, PatchObjectOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Patches the metadata for an object in storage synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1670,12 +2110,16 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">obj</span></td>
-                    <td></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code> and
+<code>Bucket</code> properties.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.PatchObjectOptions.html">PatchObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1690,7 +2134,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the updated storage object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1698,7 +2143,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_">StorageClient.PatchObject(Object, PatchObjectOptions)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_PatchObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.PatchObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.PatchObjectOptions,System.Threading.CancellationToken)">PatchObjectAsync(Object, PatchObjectOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Patches the metadata for an object in storage asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1717,17 +2163,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">obj</span></td>
-                    <td></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code> and
+<code>Bucket</code> properties.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.PatchObjectOptions.html">PatchObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1742,7 +2193,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the updated storage object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1750,7 +2203,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_PatchObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_PatchObjectOptions_System_Threading_CancellationToken_">StorageClient.PatchObjectAsync(Object, PatchObjectOptions, CancellationToken)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucket_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateBucket*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateBucket(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.UpdateBucketOptions)">UpdateBucket(Bucket, UpdateBucketOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates the metadata for a storage bucket synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1769,12 +2223,15 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>Bucket to update. Must not be null, and must have a populated <code>Name</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html">UpdateBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1789,15 +2246,24 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a> representation of the updated storage bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_">StorageClient.UpdateBucket(Bucket, UpdateBucketOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucket_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+If no preconditions are explicitly set in <span class="paramref">options</span>, the metageneration of <span class="paramref">bucket</span>
+is used as a precondition for the update, unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
+set to <code>true</code>.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucketAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateBucketAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateBucketAsync(Google.Apis.Storage.v1.Data.Bucket,Google.Cloud.Storage.V1.UpdateBucketOptions,System.Threading.CancellationToken)">UpdateBucketAsync(Bucket, UpdateBucketOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates the metadata for storage bucket asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1816,17 +2282,21 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>Bucket to update. Must not be null, and must have a populated <code>Name</code>.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html">UpdateBucketOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1841,15 +2311,25 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Bucket.html">Bucket</a> representation of the storage bucket.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken_">StorageClient.UpdateBucketAsync(Bucket, UpdateBucketOptions, CancellationToken)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateBucketAsync_Google_Apis_Storage_v1_Data_Bucket_Google_Cloud_Storage_V1_UpdateBucketOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+If no preconditions are explicitly set in <span class="paramref">options</span>, the metageneration of <span class="paramref">bucket</span>
+is used as a precondition for the update, unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateBucketOptions.html#Google_Cloud_Storage_V1_UpdateBucketOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
+set to <code>true</code>.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateObject(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.UpdateObjectOptions)">UpdateObject(Object, UpdateObjectOptions)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates the metadata for an object in storage synchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1868,12 +2348,16 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">obj</span></td>
-                    <td></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code> and
+<code>Bucket</code> properties.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html">UpdateObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1888,15 +2372,25 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the updated storage object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_">StorageClient.UpdateObject(Object, UpdateObjectOptions)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateObject_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+If no preconditions are explicitly set in <span class="paramref">options</span>, the generation and
+metageneration of <span class="paramref">obj</span> are used as a precondition for the update,
+unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
+set to <code>true</code>.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UpdateObjectAsync(Google.Apis.Storage.v1.Data.Object,Google.Cloud.Storage.V1.UpdateObjectOptions,System.Threading.CancellationToken)">UpdateObjectAsync(Object, UpdateObjectOptions, CancellationToken)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Updates the metadata for an object in storage asynchronously.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1915,17 +2409,22 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">obj</span></td>
-                    <td></td>
+                    <td><p>Object to update. Must not be null, and must have populated <code>Name</code> and
+<code>Bucket</code> properties.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html">UpdateObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the update. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1940,15 +2439,26 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the storage object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="overrides">Overrides</h5>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken_">StorageClient.UpdateObjectAsync(Object, UpdateObjectOptions, CancellationToken)</a></div>
+              <h5 id="Google_Cloud_Storage_V1_StorageClientImpl_UpdateObjectAsync_Google_Apis_Storage_v1_Data_Object_Google_Cloud_Storage_V1_UpdateObjectOptions_System_Threading_CancellationToken__remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>
+If no preconditions are explicitly set in <span class="paramref">options</span>, the generation and
+metageneration of <span class="paramref">obj</span> are used as a precondition for the update,
+unless <a class="xref" href="Google.Cloud.Storage.V1.UpdateObjectOptions.html#Google_Cloud_Storage_V1_UpdateObjectOptions_ForceNoPreconditions">ForceNoPreconditions</a> is
+set to <code>true</code>.
+</p>
+</div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObject(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObject(Object, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Uploads the data for an object in storage synchronously, from a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -1967,22 +2477,28 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">destination</span></td>
-                    <td></td>
+                    <td><p>Object to create or update. Must not be null, and must have the name,
+bucket and content type populated.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">source</span></td>
-                    <td></td>
+                    <td><p>The stream to read the data from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the upload. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the upload. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -1997,7 +2513,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the uploaded object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2005,7 +2522,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">StorageClient.UploadObject(Object, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObject_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObject*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObject(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObject(String, String, String, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Uploads the data for an object in storage synchronously, from a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2024,32 +2542,40 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">contentType</span></td>
-                    <td></td>
+                    <td><p>The content type of the object. This should be a MIME type
+such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. May be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">source</span></td>
-                    <td></td>
+                    <td><p>The stream to read the data from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the upload. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the upload. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2064,7 +2590,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
-                    <td></td>
+                    <td><p>The <a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the uploaded object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2072,7 +2599,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObject_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_IProgress_Google_Apis_Upload_IUploadProgress__">StorageClient.UploadObject(String, String, String, Stream, UploadObjectOptions, IProgress&lt;IUploadProgress&gt;)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObjectAsync(Google.Apis.Storage.v1.Data.Object,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObjectAsync(Object, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Uploads the data for an object in storage asynchronously, from a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2091,27 +2619,34 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a></td>
                     <td><span class="parametername">destination</span></td>
-                    <td></td>
+                    <td><p>Object to create or update. Must not be null, and must have the name,
+bucket and content type populated.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">source</span></td>
-                    <td></td>
+                    <td><p>The stream to read the data from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the upload. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the upload. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2126,7 +2661,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the uploaded object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2134,7 +2671,8 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
               <div><a class="xref" href="Google.Cloud.Storage.V1.StorageClient.html#Google_Cloud_Storage_V1_StorageClient_UploadObjectAsync_Google_Apis_Storage_v1_Data_Object_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__">StorageClient.UploadObjectAsync(Object, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</a></div>
               <a id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObjectAsync_" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObjectAsync*"></a>
               <h4 id="Google_Cloud_Storage_V1_StorageClientImpl_UploadObjectAsync_System_String_System_String_System_String_System_IO_Stream_Google_Cloud_Storage_V1_UploadObjectOptions_System_Threading_CancellationToken_System_IProgress_Google_Apis_Upload_IUploadProgress__" data-uid="Google.Cloud.Storage.V1.StorageClientImpl.UploadObjectAsync(System.String,System.String,System.String,System.IO.Stream,Google.Cloud.Storage.V1.UploadObjectOptions,System.Threading.CancellationToken,System.IProgress{Google.Apis.Upload.IUploadProgress})">UploadObjectAsync(String, String, String, Stream, UploadObjectOptions, CancellationToken, IProgress&lt;IUploadProgress&gt;)</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Uploads the data for an object in storage asynchronously, from a specified stream.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -2153,37 +2691,46 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">bucket</span></td>
-                    <td></td>
+                    <td><p>The name of the bucket containing the object. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">objectName</span></td>
-                    <td></td>
+                    <td><p>The name of the object within the bucket. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">contentType</span></td>
-                    <td></td>
+                    <td><p>The content type of the object. This should be a MIME type
+such as &quot;text/html&quot; or &quot;application/octet-stream&quot;. May be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IO.Stream</span></td>
                     <td><span class="parametername">source</span></td>
-                    <td></td>
+                    <td><p>The stream to read the data from. Must not be null.</p>
+</td>
                   </tr>
                   <tr>
                     <td><a class="xref" href="Google.Cloud.Storage.V1.UploadObjectOptions.html">UploadObjectOptions</a></td>
                     <td><span class="parametername">options</span></td>
-                    <td></td>
+                    <td><p>Additional options for the upload. May be null, in which case appropriate
+defaults will be used.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.Threading.CancellationToken</span></td>
                     <td><span class="parametername">cancellationToken</span></td>
-                    <td></td>
+                    <td><p>The token to monitor for cancellation requests.</p>
+</td>
                   </tr>
                   <tr>
                     <td><span class="xref">System.IProgress</span>&lt;<span class="xref">Google.Apis.Upload.IUploadProgress</span>&gt;</td>
                     <td><span class="parametername">progress</span></td>
-                    <td></td>
+                    <td><p>Progress reporter for the upload. May be null.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -2198,7 +2745,9 @@ Defaults to &quot;google-cloud-dotnet&quot;; must not be null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a>&gt;</td>
-                    <td></td>
+                    <td><p>A task representing the asynchronous operation, with a result returning the
+<a class="xref" href="Google.Apis.Storage.v1.Data.Object.html">Object</a> representation of the uploaded object.</p>
+</td>
                   </tr>
                 </tbody>
               </table>

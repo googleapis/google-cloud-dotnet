@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriberSettings
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -532,6 +533,35 @@ for &quot;NonIdempotent&quot; <a class="xref" href="Google.Cloud.PubSub.V1.Subsc
               <h5 id="Google_Cloud_PubSub_V1_SubscriberSettings_NonIdempotentRetryFilter_remarks">Remarks</h5>
               <div class="markdown level1 remarks"><p>The eligible RPC <span class="xref">Grpc.Core.StatusCode</span>s for retry for &quot;NonIdempotent&quot; RPC methods are:</p>
 <ul><li><span class="xref">Grpc.Core.StatusCode.Unavailable</span></li></ul>
+</div>
+              <a id="Google_Cloud_PubSub_V1_SubscriberSettings_PullRetryFilter_" data-uid="Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter*"></a>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberSettings_PullRetryFilter" data-uid="Google.Cloud.PubSub.V1.SubscriberSettings.PullRetryFilter">PullRetryFilter</h4>
+              <div class="markdown level1 summary"><p>The filter specifying which RPC <span class="xref">Grpc.Core.StatusCode</span>s are eligible for retry
+for &quot;Pull&quot; <a class="xref" href="Google.Cloud.PubSub.V1.SubscriberClient.html">SubscriberClient</a> RPC methods.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Predicate&lt;RpcException&gt; PullRetryFilter { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Predicate</span>&lt;<span class="xref">Grpc.Core.RpcException</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="Google_Cloud_PubSub_V1_SubscriberSettings_PullRetryFilter_remarks">Remarks</h5>
+              <div class="markdown level1 remarks"><p>The eligible RPC <span class="xref">Grpc.Core.StatusCode</span>s for retry for &quot;Pull&quot; RPC methods are:</p>
+<ul><li><span class="xref">Grpc.Core.StatusCode.Cancelled</span></li><li><span class="xref">Grpc.Core.StatusCode.DeadlineExceeded</span></li><li><span class="xref">Grpc.Core.StatusCode.ResourceExhausted</span></li><li><span class="xref">Grpc.Core.StatusCode.Internal</span></li><li><span class="xref">Grpc.Core.StatusCode.Unavailable</span></li></ul>
 </div>
               <a id="Google_Cloud_PubSub_V1_SubscriberSettings_PullSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberSettings.PullSettings*"></a>
               <h4 id="Google_Cloud_PubSub_V1_SubscriberSettings_PullSettings" data-uid="Google.Cloud.PubSub.V1.SubscriberSettings.PullSettings">PullSettings</h4>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Service
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -71,22 +72,28 @@
               
               <h1 id="Google_Api_Service" data-uid="Google.Api.Service">Class Service
               </h1>
-              <div class="markdown level0 summary"><p><code>Service</code> is the root object of the configuration schema. It
-describes basic information like the name of the service and the
-exposed API interfaces, and delegates other aspects to configuration
-sub-sections.</p>
+              <div class="markdown level0 summary"><p><code>Service</code> is the root object of Google service configuration schema. It
+describes basic information about a service, such as the name and the
+title, and delegates other aspects to sub-sections. Each sub-section is
+either a proto message or a repeated proto message that configures a
+specific aspect, such as auth. See each proto message definition for details.</p>
 <p>Example:</p>
 <p>type: google.api.Service
-config_version: 1
+config_version: 3
 name: calendar.googleapis.com
 title: Google Calendar API
 apis:</p>
 <ul>
-<li>name: google.calendar.Calendar
-backend:
-rules:<ul>
+<li>name: google.calendar.v3.Calendar
+authentication:
+providers:<ul>
+<li>id: google_calendar_auth
+jwks_uri: <a href="https://www.googleapis.com/oauth2/v1/certs">https://www.googleapis.com/oauth2/v1/certs</a>
+issuer: <a href="https://securetoken.google.com">https://securetoken.google.com</a>
+rules:</li>
 <li>selector: &quot;*&quot;
-address: calendar.example.com</li>
+requirements:
+ provider_id: google_calendar_auth</li>
 </ul>
 </li>
 </ul>
@@ -352,6 +359,30 @@ should be listed here by name. Example:</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Service_Experimental_" data-uid="Google.Api.Service.Experimental*"></a>
+              <h4 id="Google_Api_Service_Experimental" data-uid="Google.Api.Service.Experimental">Experimental</h4>
+              <div class="markdown level1 summary"><p>Experimental configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Experimental Experimental { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Experimental.html">Experimental</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Api_Service_Http_" data-uid="Google.Api.Service.Http*"></a>
               <h4 id="Google_Api_Service_Http" data-uid="Google.Api.Service.Http">Http</h4>
               <div class="markdown level1 summary"><p>HTTP configuration.</p>
@@ -404,7 +435,7 @@ generate one instead.</p>
               </table>
               <a id="Google_Api_Service_Logging_" data-uid="Google.Api.Service.Logging*"></a>
               <h4 id="Google_Api_Service_Logging" data-uid="Google.Api.Service.Logging">Logging</h4>
-              <div class="markdown level1 summary"><p>Logging configuration of the service.</p>
+              <div class="markdown level1 summary"><p>Logging configuration.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -501,7 +532,7 @@ by the [Service.monitoring][google.api.Service.monitoring] and [Service.logging]
               </table>
               <a id="Google_Api_Service_Monitoring_" data-uid="Google.Api.Service.Monitoring*"></a>
               <h4 id="Google_Api_Service_Monitoring" data-uid="Google.Api.Service.Monitoring">Monitoring</h4>
-              <div class="markdown level1 summary"><p>Monitoring configuration of the service.</p>
+              <div class="markdown level1 summary"><p>Monitoring configuration.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -574,9 +605,57 @@ manage consumption of the service, etc.</p>
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Api_Service_Quota_" data-uid="Google.Api.Service.Quota*"></a>
+              <h4 id="Google_Api_Service_Quota" data-uid="Google.Api.Service.Quota">Quota</h4>
+              <div class="markdown level1 summary"><p>Quota configuration.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Quota Quota { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.Quota.html">Quota</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Api_Service_SourceInfo_" data-uid="Google.Api.Service.SourceInfo*"></a>
+              <h4 id="Google_Api_Service_SourceInfo" data-uid="Google.Api.Service.SourceInfo">SourceInfo</h4>
+              <div class="markdown level1 summary"><p>Output only. The source information for this configuration if available.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SourceInfo SourceInfo { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Api.SourceInfo.html">SourceInfo</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <a id="Google_Api_Service_SystemParameters_" data-uid="Google.Api.Service.SystemParameters*"></a>
               <h4 id="Google_Api_Service_SystemParameters" data-uid="Google.Api.Service.SystemParameters">SystemParameters</h4>
-              <div class="markdown level1 summary"><p>Configuration for system parameters.</p>
+              <div class="markdown level1 summary"><p>System parameter configuration.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

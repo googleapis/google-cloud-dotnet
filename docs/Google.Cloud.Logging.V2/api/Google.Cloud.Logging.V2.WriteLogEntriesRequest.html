@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class WriteLogEntriesRequest
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -104,10 +105,15 @@
               </h3>
               <a id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries_" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries*"></a>
               <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_Entries" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.Entries">Entries</h4>
-              <div class="markdown level1 summary"><p>Required. The log entries to write. Values supplied for the fields
+              <div class="markdown level1 summary"><p>Required.  The log entries to write. Values supplied for the fields
 <code>log_name</code>, <code>resource</code>, and <code>labels</code> in this <code>entries.write</code> request are
-added to those log entries that do not provide their own values for the
-fields.</p>
+inserted into those log entries in this list that do not provide their own
+values.</p>
+<p>Stackdriver Logging also creates and inserts values for <code>timestamp</code> and
+<code>insert_id</code> if the entries do not provide them. The created <code>insert_id</code> for
+the N&#39;th entry in this list will be greater than earlier entries and less
+than later entries.  Otherwise, the order of log entries in this list does
+not matter.</p>
 <p>To improve throughput and to avoid exceeding the
 <a href="/logging/quota-policy">quota limit</a> for calls to <code>entries.write</code>,
 you should write multiple log entries at once rather than
@@ -165,7 +171,9 @@ See [LogEntry][google.logging.v2.LogEntry].</p>
               <div class="markdown level1 summary"><p>Optional. A default log resource name that is assigned to all log entries
 in <code>entries</code> that do not specify a value for <code>log_name</code>:</p>
 <p>&quot;projects/[PROJECT_ID]/logs/[LOG_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]/logs/[LOG_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]/logs/[LOG_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]/logs/[LOG_ID]&quot;
+&quot;folders/[FOLDER_ID]/logs/[LOG_ID]&quot;</p>
 <p><code>[LOG_ID]</code> must be URL-encoded. For example,
 <code>&quot;projects/my-project-id/logs/syslog&quot;</code> or
 <code>&quot;organizations/1234567890/logs/cloudresourcemanager.googleapis.com%2Factivity&quot;</code>.
@@ -220,9 +228,9 @@ For more information about log names, see
               <h4 id="Google_Cloud_Logging_V2_WriteLogEntriesRequest_PartialSuccess" data-uid="Google.Cloud.Logging.V2.WriteLogEntriesRequest.PartialSuccess">PartialSuccess</h4>
               <div class="markdown level1 summary"><p>Optional. Whether valid entries should be written even if some other
 entries fail due to INVALID_ARGUMENT or PERMISSION_DENIED errors. If any
-entry is not written, the response status will be the error associated
-with one of the failed entries and include error details in the form of
-WriteLogEntriesPartialErrors.</p>
+entry is not written, then the response status is the error associated
+with one of the failed entries and the response includes error details
+keyed by the entries&#39; zero-based index in the <code>entries.write</code> method.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

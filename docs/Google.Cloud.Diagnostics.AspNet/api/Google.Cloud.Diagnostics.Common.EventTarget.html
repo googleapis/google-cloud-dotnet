@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventTarget
    | Google.Cloud.Diagnostics.AspNet ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -246,10 +247,34 @@
                   </tr>
                 </tbody>
               </table>
+              <a id="Google_Cloud_Diagnostics_Common_EventTarget_ProjectId_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ProjectId*"></a>
+              <h4 id="Google_Cloud_Diagnostics_Common_EventTarget_ProjectId" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ProjectId">ProjectId</h4>
+              <div class="markdown level1 summary"><p>The Google Cloud Platform project Id.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string ProjectId { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <a id="Google_Cloud_Diagnostics_Common_EventTarget_ForErrorReporting_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting*"></a>
-              <h4 id="Google_Cloud_Diagnostics_Common_EventTarget_ForErrorReporting_Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting(Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient)">ForErrorReporting(ReportErrorsServiceClient)</h4>
+              <h4 id="Google_Cloud_Diagnostics_Common_EventTarget_ForErrorReporting_System_String_Google_Cloud_ErrorReporting_V1Beta1_ReportErrorsServiceClient_" data-uid="Google.Cloud.Diagnostics.Common.EventTarget.ForErrorReporting(System.String,Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient)">ForErrorReporting(String, ReportErrorsServiceClient)</h4>
               <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Google.Cloud.Diagnostics.Common.EventTarget.html">EventTarget</a> instance that will report to the Stackdriver Error Reporting API.
 To use this option you must enable the Stackdriver Error Reporting API
 (<a href="https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview">https://console.cloud.google.com/apis/api/clouderrorreporting.googleapis.com/overview</a>).</p>
@@ -257,7 +282,7 @@ To use this option you must enable the Stackdriver Error Reporting API
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static EventTarget ForErrorReporting(ReportErrorsServiceClient errorReportingClient = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static EventTarget ForErrorReporting(string projectId = null, ReportErrorsServiceClient errorReportingClient = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -269,6 +294,14 @@ To use this option you must enable the Stackdriver Error Reporting API
                   </tr>
                 </thead>
                 <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">projectId</span></td>
+                    <td><p>Optional if running on Google App Engine or Google Compute Engine.
+    The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+    detected from the platform.</p>
+</td>
+                  </tr>
                   <tr>
                     <td><span class="xref">Google.Cloud.ErrorReporting.V1Beta1.ReportErrorsServiceClient</span></td>
                     <td><span class="parametername">errorReportingClient</span></td>
@@ -369,7 +402,7 @@ Stackdriver Logging API.</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static EventTarget ForLogging(string projectId, string logName = &quot;stackdriver-error-reporting&quot;, LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public static EventTarget ForLogging(string projectId = null, string logName = &quot;stackdriver-error-reporting&quot;, LoggingServiceV2Client loggingClient = null, MonitoredResource monitoredResource = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -384,7 +417,9 @@ Stackdriver Logging API.</p>
                   <tr>
                     <td><span class="xref">System.String</span></td>
                     <td><span class="parametername">projectId</span></td>
-                    <td><p>The Google Cloud Platform project Id. Cannot be null.</p>
+                    <td><p>Optional if running on Google App Engine or Google Compute Engine.
+    The Google Cloud Platform project ID. If running on GAE or GCE the project ID will be
+    detected from the platform.</p>
 </td>
                   </tr>
                   <tr>

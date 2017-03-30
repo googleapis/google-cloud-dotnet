@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ListLogEntriesRequest
    | Google.Cloud.Logging.V2 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -139,7 +140,7 @@ values are <code>&quot;timestamp asc&quot;</code> (default) and <code>&quot;time
 option returns entries in order of increasing values of
 <code>LogEntry.timestamp</code> (oldest first), and the second option returns entries
 in order of decreasing timestamps (newest first).  Entries with equal
-timestamps are returned in order of <code>LogEntry.insertId</code>.</p>
+timestamps are returned in order of their <code>insert_id</code> values.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -164,7 +165,7 @@ timestamps are returned in order of <code>LogEntry.insertId</code>.</p>
               <a id="Google_Cloud_Logging_V2_ListLogEntriesRequest_PageSize_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.PageSize*"></a>
               <h4 id="Google_Cloud_Logging_V2_ListLogEntriesRequest_PageSize" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.PageSize">PageSize</h4>
               <div class="markdown level1 summary"><p>Optional. The maximum number of results to return from this request.
-Non-positive values are ignored.  The presence of <code>nextPageToken</code> in the
+Non-positive values are ignored.  The presence of <code>next_page_token</code> in the
 response indicates that more results might be available.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -192,8 +193,8 @@ response indicates that more results might be available.</p>
               <a id="Google_Cloud_Logging_V2_ListLogEntriesRequest_PageToken_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.PageToken*"></a>
               <h4 id="Google_Cloud_Logging_V2_ListLogEntriesRequest_PageToken" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.PageToken">PageToken</h4>
               <div class="markdown level1 summary"><p>Optional. If present, then retrieve the next batch of results from the
-preceding call to this method.  <code>pageToken</code> must be the value of
-<code>nextPageToken</code> from the previous response.  The values of other method
+preceding call to this method.  <code>page_token</code> must be the value of
+<code>next_page_token</code> from the previous response.  The values of other method
 parameters should be identical to those in the previous call.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -248,10 +249,12 @@ resource name format and added to the list of resources in
               </table>
               <a id="Google_Cloud_Logging_V2_ListLogEntriesRequest_ResourceNames_" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.ResourceNames*"></a>
               <h4 id="Google_Cloud_Logging_V2_ListLogEntriesRequest_ResourceNames" data-uid="Google.Cloud.Logging.V2.ListLogEntriesRequest.ResourceNames">ResourceNames</h4>
-              <div class="markdown level1 summary"><p>Required. Names of one or more resources from which to retrieve log
-entries:</p>
+              <div class="markdown level1 summary"><p>Required. Names of one or more parent resources from which to
+retrieve log entries:</p>
 <p>&quot;projects/[PROJECT_ID]&quot;
-&quot;organizations/[ORGANIZATION_ID]&quot;</p>
+&quot;organizations/[ORGANIZATION_ID]&quot;
+&quot;billingAccounts/[BILLING_ACCOUNT_ID]&quot;
+&quot;folders/[FOLDER_ID]&quot;</p>
 <p>Projects listed in the <code>project_ids</code> field are added to this list.</p>
 </div>
               <div class="markdown level1 conceptual"></div>

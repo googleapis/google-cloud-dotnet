@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubscriberClient
    | Google.Cloud.PubSub.V1 ">
-    <meta name="generator" content="docfx 2.11.2.0">
+    <meta name="generator" content="docfx 2.14.1.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -658,8 +659,8 @@ SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
 CreateSnapshotRequest request = new CreateSnapshotRequest
 {
-    Name = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString(),
-    Subscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;).ToString(),
+    SnapshotName = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;),
+    SubscriptionAsSubscriptionName = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;),
 };
 // Make the request
 Snapshot response = subscriberClient.CreateSnapshot(request);
@@ -709,7 +710,7 @@ Snapshot response = subscriberClient.CreateSnapshot(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshot(String, String, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshot_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshot(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshot(SnapshotName, SubscriptionName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
 If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -724,14 +725,14 @@ Note that for REST API requests, you must specify a name in the request.</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
-string formattedName = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString();
-string formattedSubscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;).ToString();
+SnapshotName name = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;);
+SubscriptionName subscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;);
 // Make the request
-Snapshot response = subscriberClient.CreateSnapshot(formattedName, formattedSubscription);
+Snapshot response = subscriberClient.CreateSnapshot(name, subscription);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Snapshot CreateSnapshot(string name, string subscription, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Snapshot CreateSnapshot(SnapshotName name, SubscriptionName subscription, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -744,7 +745,7 @@ Snapshot response = subscriberClient.CreateSnapshot(formattedName, formattedSubs
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SnapshotName.html">SnapshotName</a></td>
                     <td><span class="parametername">name</span></td>
                     <td><p>Optional user-provided name for this snapshot.
 If the name is not provided in the request, the server will assign a random
@@ -754,7 +755,7 @@ Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
                     <td><span class="parametername">subscription</span></td>
                     <td><p>The subscription whose backlog the snapshot retains.
 Specifically, the created snapshot is guaranteed to retain:
@@ -809,8 +810,8 @@ SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
 CreateSnapshotRequest request = new CreateSnapshotRequest
 {
-    Name = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString(),
-    Subscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;).ToString(),
+    SnapshotName = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;),
+    SubscriptionAsSubscriptionName = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;),
 };
 // Make the request
 Snapshot response = await subscriberClient.CreateSnapshotAsync(request);
@@ -860,7 +861,7 @@ Snapshot response = await subscriberClient.CreateSnapshotAsync(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_System_String_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String,System.String,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshotAsync(String, String, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,Google.Api.Gax.Grpc.CallSettings)">CreateSnapshotAsync(SnapshotName, SubscriptionName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
 If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -875,14 +876,14 @@ Note that for REST API requests, you must specify a name in the request.</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString();
-string formattedSubscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;).ToString();
+SnapshotName name = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;);
+SubscriptionName subscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;);
 // Make the request
-Snapshot response = await subscriberClient.CreateSnapshotAsync(formattedName, formattedSubscription);
+Snapshot response = await subscriberClient.CreateSnapshotAsync(name, subscription);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Snapshot&gt; CreateSnapshotAsync(string name, string subscription, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Snapshot&gt; CreateSnapshotAsync(SnapshotName name, SubscriptionName subscription, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -895,7 +896,7 @@ Snapshot response = await subscriberClient.CreateSnapshotAsync(formattedName, fo
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SnapshotName.html">SnapshotName</a></td>
                     <td><span class="parametername">name</span></td>
                     <td><p>Optional user-provided name for this snapshot.
 If the name is not provided in the request, the server will assign a random
@@ -905,7 +906,7 @@ Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
                     <td><span class="parametername">subscription</span></td>
                     <td><p>The subscription whose backlog the snapshot retains.
 Specifically, the created snapshot is guaranteed to retain:
@@ -943,7 +944,7 @@ Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_System_String_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(System.String,System.String,System.Threading.CancellationToken)">CreateSnapshotAsync(String, String, CancellationToken)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Cloud_PubSub_V1_SubscriptionName_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Cloud.PubSub.V1.SubscriptionName,System.Threading.CancellationToken)">CreateSnapshotAsync(SnapshotName, SubscriptionName, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a snapshot from the requested subscription.
 If the snapshot already exists, returns <code>ALREADY_EXISTS</code>.
 If the requested subscription doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -958,14 +959,14 @@ Note that for REST API requests, you must specify a name in the request.</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
-string formattedName = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString();
-string formattedSubscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;).ToString();
+SnapshotName name = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;);
+SubscriptionName subscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;);
 // Make the request
-Snapshot response = await subscriberClient.CreateSnapshotAsync(formattedName, formattedSubscription);
+Snapshot response = await subscriberClient.CreateSnapshotAsync(name, subscription);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Snapshot&gt; CreateSnapshotAsync(string name, string subscription, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Snapshot&gt; CreateSnapshotAsync(SnapshotName name, SubscriptionName subscription, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -978,7 +979,7 @@ Snapshot response = await subscriberClient.CreateSnapshotAsync(formattedName, fo
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SnapshotName.html">SnapshotName</a></td>
                     <td><span class="parametername">name</span></td>
                     <td><p>Optional user-provided name for this snapshot.
 If the name is not provided in the request, the server will assign a random
@@ -988,7 +989,7 @@ Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SubscriptionName.html">SubscriptionName</a></td>
                     <td><span class="parametername">subscription</span></td>
                     <td><p>The subscription whose backlog the snapshot retains.
 Specifically, the created snapshot is guaranteed to retain:
@@ -1094,7 +1095,7 @@ Subscription response = subscriberClient.CreateSubscription(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,Google.Api.Gax.Grpc.CallSettings)">CreateSubscription(SubscriptionName, TopicName, PushConfig, Int32, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscription_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscription(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">CreateSubscription(SubscriptionName, TopicName, PushConfig, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
 If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -1116,7 +1117,7 @@ Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Subscription CreateSubscription(SubscriptionName name, TopicName topic, PushConfig pushConfig, int ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Subscription CreateSubscription(SubscriptionName name, TopicName topic, PushConfig pushConfig, int ? ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1157,7 +1158,7 @@ will pull and ack messages using API methods.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><span class="parametername">ackDeadlineSeconds</span></td>
                     <td><p>This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1270,7 +1271,7 @@ Subscription response = await subscriberClient.CreateSubscriptionAsync(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,Google.Api.Gax.Grpc.CallSettings)">CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Int32, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
 If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -1292,7 +1293,7 @@ Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Subscription&gt; CreateSubscriptionAsync(SubscriptionName name, TopicName topic, PushConfig pushConfig, int ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Subscription&gt; CreateSubscriptionAsync(SubscriptionName name, TopicName topic, PushConfig pushConfig, int ? ackDeadlineSeconds, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1333,7 +1334,7 @@ will pull and ack messages using API methods.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><span class="parametername">ackDeadlineSeconds</span></td>
                     <td><p>This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1378,7 +1379,7 @@ system will eventually redeliver the message.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Int32,System.Threading.CancellationToken)">CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Int32, CancellationToken)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_CreateSubscriptionAsync_Google_Cloud_PubSub_V1_SubscriptionName_Google_Cloud_PubSub_V1_TopicName_Google_Cloud_PubSub_V1_PushConfig_System_Nullable_System_Int32__System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.CreateSubscriptionAsync(Google.Cloud.PubSub.V1.SubscriptionName,Google.Cloud.PubSub.V1.TopicName,Google.Cloud.PubSub.V1.PushConfig,System.Nullable{System.Int32},System.Threading.CancellationToken)">CreateSubscriptionAsync(SubscriptionName, TopicName, PushConfig, Nullable&lt;Int32&gt;, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Creates a subscription to a given topic.
 If the subscription already exists, returns <code>ALREADY_EXISTS</code>.
 If the corresponding topic doesn&#39;t exist, returns <code>NOT_FOUND</code>.</p>
@@ -1400,7 +1401,7 @@ Console.WriteLine($&quot;Created {subscription.Name} subscribed to {subscription
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;Subscription&gt; CreateSubscriptionAsync(SubscriptionName name, TopicName topic, PushConfig pushConfig, int ackDeadlineSeconds, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;Subscription&gt; CreateSubscriptionAsync(SubscriptionName name, TopicName topic, PushConfig pushConfig, int ? ackDeadlineSeconds, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1441,7 +1442,7 @@ will pull and ack messages using API methods.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
                     <td><span class="parametername">ackDeadlineSeconds</span></td>
                     <td><p>This value is the maximum time after a subscriber receives a message
 before the subscriber should acknowledge the message. After message
@@ -1498,7 +1499,7 @@ SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
 DeleteSnapshotRequest request = new DeleteSnapshotRequest
 {
-    Snapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString(),
+    SnapshotAsSnapshotName = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;),
 };
 // Make the request
 subscriberClient.DeleteSnapshot(request);
@@ -1532,7 +1533,7 @@ subscriberClient.DeleteSnapshot(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshot_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshot_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteSnapshot(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshot_Google_Cloud_PubSub_V1_SnapshotName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshot(Google.Cloud.PubSub.V1.SnapshotName,Google.Api.Gax.Grpc.CallSettings)">DeleteSnapshot(SnapshotName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
 are immediately dropped. After a snapshot is deleted, a new one may be
 created with the same name, but the new one has no association with the old
@@ -1542,13 +1543,13 @@ snapshot or its subscription, unless the same subscription is specified.</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
-string formattedSnapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString();
+SnapshotName snapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;);
 // Make the request
-subscriberClient.DeleteSnapshot(formattedSnapshot);
+subscriberClient.DeleteSnapshot(snapshot);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual void DeleteSnapshot(string snapshot, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual void DeleteSnapshot(SnapshotName snapshot, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1561,7 +1562,7 @@ subscriberClient.DeleteSnapshot(formattedSnapshot);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SnapshotName.html">SnapshotName</a></td>
                     <td><span class="parametername">snapshot</span></td>
                     <td><p>The name of the snapshot to delete.
 Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
@@ -1588,7 +1589,7 @@ SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
 DeleteSnapshotRequest request = new DeleteSnapshotRequest
 {
-    Snapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString(),
+    SnapshotAsSnapshotName = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;),
 };
 // Make the request
 await subscriberClient.DeleteSnapshotAsync(request);
@@ -1638,7 +1639,7 @@ await subscriberClient.DeleteSnapshotAsync(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_System_String_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String,Google.Api.Gax.Grpc.CallSettings)">DeleteSnapshotAsync(String, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,Google.Api.Gax.Grpc.CallSettings)">DeleteSnapshotAsync(SnapshotName, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
 are immediately dropped. After a snapshot is deleted, a new one may be
 created with the same name, but the new one has no association with the old
@@ -1648,13 +1649,13 @@ snapshot or its subscription, unless the same subscription is specified.</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
-string formattedSnapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString();
+SnapshotName snapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;);
 // Make the request
-await subscriberClient.DeleteSnapshotAsync(formattedSnapshot);
+await subscriberClient.DeleteSnapshotAsync(snapshot);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task DeleteSnapshotAsync(string snapshot, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteSnapshotAsync(SnapshotName snapshot, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1667,7 +1668,7 @@ await subscriberClient.DeleteSnapshotAsync(formattedSnapshot);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SnapshotName.html">SnapshotName</a></td>
                     <td><span class="parametername">snapshot</span></td>
                     <td><p>The name of the snapshot to delete.
 Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
@@ -1698,7 +1699,7 @@ Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_System_String_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(System.String,System.Threading.CancellationToken)">DeleteSnapshotAsync(String, CancellationToken)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_DeleteSnapshotAsync_Google_Cloud_PubSub_V1_SnapshotName_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.DeleteSnapshotAsync(Google.Cloud.PubSub.V1.SnapshotName,System.Threading.CancellationToken)">DeleteSnapshotAsync(SnapshotName, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Removes an existing snapshot. All messages retained in the snapshot
 are immediately dropped. After a snapshot is deleted, a new one may be
 created with the same name, but the new one has no association with the old
@@ -1708,13 +1709,13 @@ snapshot or its subscription, unless the same subscription is specified.</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
-string formattedSnapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;).ToString();
+SnapshotName snapshot = new SnapshotName(&quot;[PROJECT]&quot;, &quot;[SNAPSHOT]&quot;);
 // Make the request
-await subscriberClient.DeleteSnapshotAsync(formattedSnapshot);
+await subscriberClient.DeleteSnapshotAsync(snapshot);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task DeleteSnapshotAsync(string snapshot, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task DeleteSnapshotAsync(SnapshotName snapshot, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -1727,7 +1728,7 @@ await subscriberClient.DeleteSnapshotAsync(formattedSnapshot);
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.SnapshotName.html">SnapshotName</a></td>
                     <td><span class="parametername">snapshot</span></td>
                     <td><p>The name of the snapshot to delete.
 Format is <code>projects/{project}/snapshots/{snap}</code>.</p>
@@ -2635,7 +2636,7 @@ SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
 ListSnapshotsRequest request = new ListSnapshotsRequest
 {
-    Project = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 PagedEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
@@ -2716,17 +2717,17 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshots_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshots_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSnapshots(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshots_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshots(Google.Cloud.PubSub.V1.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSnapshots(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the existing snapshots.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
-string formattedProject = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName project = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
 PagedEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
-    subscriberClient.ListSnapshots(formattedProject);
+    subscriberClient.ListSnapshots(project);
 
 // Iterate over all response items, lazily performing RPCs as required
 foreach (Snapshot item in response)
@@ -2760,7 +2761,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; ListSnapshots(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; ListSnapshots(ProjectName project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2773,7 +2774,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ProjectName.html">ProjectName</a></td>
                     <td><span class="parametername">project</span></td>
                     <td><p>The name of the cloud project that snapshots belong to.
 Format is <code>projects/{project}</code>.</p>
@@ -2827,7 +2828,7 @@ SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
 ListSnapshotsRequest request = new ListSnapshotsRequest
 {
-    Project = new ProjectName(&quot;[PROJECT]&quot;).ToString(),
+    ProjectAsProjectName = new ProjectName(&quot;[PROJECT]&quot;),
 };
 // Make the request
 PagedAsyncEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
@@ -2908,17 +2909,17 @@ string nextPageToken = singlePage.NextPageToken;
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshotsAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshotsAsync_System_String_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(System.String,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSnapshotsAsync(String, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_ListSnapshotsAsync_Google_Cloud_PubSub_V1_ProjectName_System_String_System_Nullable_System_Int32__Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.ListSnapshotsAsync(Google.Cloud.PubSub.V1.ProjectName,System.String,System.Nullable{System.Int32},Google.Api.Gax.Grpc.CallSettings)">ListSnapshotsAsync(ProjectName, String, Nullable&lt;Int32&gt;, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Lists the existing snapshots.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
 <pre><code class="lang-cs">// Create client
 SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
-string formattedProject = new ProjectName(&quot;[PROJECT]&quot;).ToString();
+ProjectName project = new ProjectName(&quot;[PROJECT]&quot;);
 // Make the request
 PagedAsyncEnumerable&lt;ListSnapshotsResponse,Snapshot&gt; response =
-    subscriberClient.ListSnapshotsAsync(formattedProject);
+    subscriberClient.ListSnapshotsAsync(project);
 
 // Iterate over all response items, lazily performing RPCs as required
 await response.ForEachAsync((Snapshot item) =&gt;
@@ -2952,7 +2953,7 @@ string nextPageToken = singlePage.NextPageToken;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; ListSnapshotsAsync(string project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PagedAsyncEnumerable&lt;ListSnapshotsResponse, Snapshot&gt; ListSnapshotsAsync(ProjectName project, string pageToken = null, int ? pageSize = null, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -2965,7 +2966,7 @@ string nextPageToken = singlePage.NextPageToken;
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><a class="xref" href="Google.Cloud.PubSub.V1.ProjectName.html">ProjectName</a></td>
                     <td><span class="parametername">project</span></td>
                     <td><p>The name of the cloud project that snapshots belong to.
 Format is <code>projects/{project}</code>.</p>
@@ -4051,7 +4052,7 @@ PullResponse response = subscriberClient.Pull(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_Pull_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.Pull*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_Pull_Google_Cloud_PubSub_V1_SubscriptionName_System_Boolean_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,Google.Api.Gax.Grpc.CallSettings)">Pull(SubscriptionName, Boolean, Int32, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_Pull_Google_Cloud_PubSub_V1_SubscriptionName_System_Nullable_System_Boolean__System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.Pull(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,Google.Api.Gax.Grpc.CallSettings)">Pull(SubscriptionName, Nullable&lt;Boolean&gt;, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
 messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
@@ -4079,7 +4080,7 @@ client.Acknowledge(subscriptionName, ackIds);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual PullResponse Pull(SubscriptionName subscription, bool returnImmediately, int maxMessages, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual PullResponse Pull(SubscriptionName subscription, bool ? returnImmediately, int maxMessages, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -4099,7 +4100,7 @@ Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td><span class="parametername">returnImmediately</span></td>
                     <td><p>If this field set to true, the system will respond immediately even if
 it there are no messages available to return in the <code>Pull</code> response.
@@ -4204,7 +4205,7 @@ PullResponse response = await subscriberClient.PullAsync(request);
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.PullAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Boolean_System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,Google.Api.Gax.Grpc.CallSettings)">PullAsync(SubscriptionName, Boolean, Int32, CallSettings)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Nullable_System_Boolean__System_Int32_Google_Api_Gax_Grpc_CallSettings_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,Google.Api.Gax.Grpc.CallSettings)">PullAsync(SubscriptionName, Nullable&lt;Boolean&gt;, Int32, CallSettings)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
 messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
@@ -4232,7 +4233,7 @@ await client.AcknowledgeAsync(subscriptionName, ackIds);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;PullResponse&gt; PullAsync(SubscriptionName subscription, bool returnImmediately, int maxMessages, CallSettings callSettings = null)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;PullResponse&gt; PullAsync(SubscriptionName subscription, bool ? returnImmediately, int maxMessages, CallSettings callSettings = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -4252,7 +4253,7 @@ Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td><span class="parametername">returnImmediately</span></td>
                     <td><p>If this field set to true, the system will respond immediately even if
 it there are no messages available to return in the <code>Pull</code> response.
@@ -4294,7 +4295,7 @@ system may return fewer than the number specified.</p>
                 </tbody>
               </table>
               <a id="Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.PullAsync*"></a>
-              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Boolean_System_Int32_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Boolean,System.Int32,System.Threading.CancellationToken)">PullAsync(SubscriptionName, Boolean, Int32, CancellationToken)</h4>
+              <h4 id="Google_Cloud_PubSub_V1_SubscriberClient_PullAsync_Google_Cloud_PubSub_V1_SubscriptionName_System_Nullable_System_Boolean__System_Int32_System_Threading_CancellationToken_" data-uid="Google.Cloud.PubSub.V1.SubscriberClient.PullAsync(Google.Cloud.PubSub.V1.SubscriptionName,System.Nullable{System.Boolean},System.Int32,System.Threading.CancellationToken)">PullAsync(SubscriptionName, Nullable&lt;Boolean&gt;, Int32, CancellationToken)</h4>
               <div class="markdown level1 summary"><p>Pulls messages from the server. Returns an empty list if there are no
 messages available in the backlog. The server may return <code>UNAVAILABLE</code> if
 there are too many concurrent pull requests pending for the given
@@ -4322,7 +4323,7 @@ await client.AcknowledgeAsync(subscriptionName, ackIds);
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual Task&lt;PullResponse&gt; PullAsync(SubscriptionName subscription, bool returnImmediately, int maxMessages, CancellationToken cancellationToken)</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Task&lt;PullResponse&gt; PullAsync(SubscriptionName subscription, bool ? returnImmediately, int maxMessages, CancellationToken cancellationToken)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -4342,7 +4343,7 @@ Format is <code>projects/{project}/subscriptions/{sub}</code>.</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
                     <td><span class="parametername">returnImmediately</span></td>
                     <td><p>If this field set to true, the system will respond immediately even if
 it there are no messages available to return in the <code>Pull</code> response.
@@ -4394,7 +4395,7 @@ SubscriberClient subscriberClient = SubscriberClient.Create();
 // Initialize request argument(s)
 SeekRequest request = new SeekRequest
 {
-    Subscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;).ToString(),
+    SubscriptionAsSubscriptionName = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;),
 };
 // Make the request
 SeekResponse response = subscriberClient.Seek(request);
@@ -4454,7 +4455,7 @@ SubscriberClient subscriberClient = await SubscriberClient.CreateAsync();
 // Initialize request argument(s)
 SeekRequest request = new SeekRequest
 {
-    Subscription = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;).ToString(),
+    SubscriptionAsSubscriptionName = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;),
 };
 // Make the request
 SeekResponse response = await subscriberClient.SeekAsync(request);
@@ -4879,43 +4880,55 @@ stream. <code>UNAVAILABLE</code> may also be returned in the case of a transient
 control can be achieved by configuring the underlying RPC channel.</p>
 </div>
               <div class="markdown level1 conceptual"><p>Example:</p>
-<pre><code class="lang-cs">// Create client
-SubscriberClient subscriberClient = SubscriberClient.Create();
-// Initialize streaming call, retrieving the stream object
-SubscriberClient.StreamingPullStream duplexStream = subscriberClient.StreamingPull();
+<pre><code class="lang-cs">PublisherClient publisher = PublisherClient.Create();
+TopicName topicName = new TopicName(projectId, topicId);
+publisher.CreateTopic(topicName);
+SubscriberClient subscriber = SubscriberClient.Create();
+SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
+subscriber.CreateSubscription(subscriptionName, topicName, null, 60);
 
-// Sending requests and retrieving responses can be arbitrarily interleaved.
-// Exact sequence will depend on client/server behavior.
+// If we don&#39;t see all the messages we expect in 10 seconds, we&#39;ll cancel the call.
+CancellationTokenSource cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+CallSettings callSettings = CallSettings.FromCancellationToken(cancellationTokenSource.Token);
+SubscriberClient.StreamingPullStream stream = subscriber.StreamingPull(callSettings);
 
-// Create task to do something with responses from server
-Task.Run(async () =&gt;
+// The first request must include the subscription name and the stream ack deadline
+await stream.WriteAsync(new StreamingPullRequest { SubscriptionAsSubscriptionName = subscriptionName, StreamAckDeadlineSeconds = 20 });
+
+Task pullingTask = Task.Run(async () =&gt;
 {
-    IAsyncEnumerator&lt;StreamingPullResponse&gt; responseStream = duplexStream.ResponseStream;
+    int messagesSeen = 0;
+    IAsyncEnumerator&lt;StreamingPullResponse&gt; responseStream = stream.ResponseStream;
+
+    // Handle responses as we see them.
     while (await responseStream.MoveNext())
     {
         StreamingPullResponse response = responseStream.Current;
-        // Do something with streamed response
+        Console.WriteLine(&quot;Received streaming response&quot;);
+        foreach (ReceivedMessage message in response.ReceivedMessages)
+        {
+            // Messages can contain any data. We&#39;ll assume that we know this
+            // topic publishes UTF-8-encoded text.
+            Console.WriteLine($&quot;Message text: {message.Message.Data.ToStringUtf8()}&quot;);
+        }
+        // Acknowledge the messages we&#39;ve just seen
+        await stream.WriteAsync(new StreamingPullRequest { AckIds = { response.ReceivedMessages.Select(rm =&gt; rm.AckId) } });
+
+        // If we&#39;ve seen all the messages we expect, we can complete the streaming call,
+        // and our next MoveNext call will return false.
+        messagesSeen += response.ReceivedMessages.Count;
+        if (messagesSeen == 3)
+        {
+            await stream.WriteCompleteAsync();
+        }
     }
-    // The response stream has completed
 });
 
-// Send requests to the server
-bool done = false;
-while (!done)
-{
-    // Initialize a request
-    StreamingPullRequest request = new StreamingPullRequest
-    {
-        SubscriptionAsSubscriptionName = new SubscriptionName(&quot;[PROJECT]&quot;, &quot;[SUBSCRIPTION]&quot;),
-        StreamAckDeadlineSeconds = 0,
-    };
-    // Stream a request to the server
-    await duplexStream.WriteAsync(request);
+publisher.Publish(topicName, new[] { new PubsubMessage { Data = ByteString.CopyFromUtf8(&quot;Message 1&quot;) } });
+publisher.Publish(topicName, new[] { new PubsubMessage { Data = ByteString.CopyFromUtf8(&quot;Message 2&quot;) } });
+publisher.Publish(topicName, new[] { new PubsubMessage { Data = ByteString.CopyFromUtf8(&quot;Message 3&quot;) } });
 
-    // Set &quot;done&quot; to true when sending requests is complete
-}
-// Complete writing requests to the stream
-await duplexStream.WriteCompleteAsync();
+await pullingTask;
 </code></pre></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">

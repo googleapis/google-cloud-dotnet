@@ -338,12 +338,12 @@ references:
   commentId: T:Google.Api.Gax.GcePlatformDetails
   fullName: Google.Api.Gax.GcePlatformDetails
   nameWithType: GcePlatformDetails
-- uid: Google.Api.Gax.GcePlatformDetails.#ctor(System.String)
-  name: GcePlatformDetails(String)
-  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_System_String_
-  commentId: M:Google.Api.Gax.GcePlatformDetails.#ctor(System.String)
-  fullName: Google.Api.Gax.GcePlatformDetails.GcePlatformDetails(System.String)
-  nameWithType: GcePlatformDetails.GcePlatformDetails(String)
+- uid: Google.Api.Gax.GcePlatformDetails.#ctor(System.String,System.String,System.String,System.String)
+  name: GcePlatformDetails(String, String, String, String)
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Api.Gax.GcePlatformDetails.#ctor(System.String,System.String,System.String,System.String)
+  fullName: Google.Api.Gax.GcePlatformDetails.GcePlatformDetails(System.String, System.String, System.String, System.String)
+  nameWithType: GcePlatformDetails.GcePlatformDetails(String, String, String, String)
 - uid: Google.Api.Gax.GcePlatformDetails.#ctor*
   name: GcePlatformDetails
   href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails__ctor_
@@ -398,6 +398,18 @@ references:
   commentId: Overload:Google.Api.Gax.GcePlatformDetails.ToString
   fullName: Google.Api.Gax.GcePlatformDetails.ToString
   nameWithType: GcePlatformDetails.ToString
+- uid: Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  name: TryLoad(String)
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_TryLoad_System_String_
+  commentId: M:Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  fullName: Google.Api.Gax.GcePlatformDetails.TryLoad(System.String)
+  nameWithType: GcePlatformDetails.TryLoad(String)
+- uid: Google.Api.Gax.GcePlatformDetails.TryLoad*
+  name: TryLoad
+  href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_TryLoad_
+  commentId: Overload:Google.Api.Gax.GcePlatformDetails.TryLoad
+  fullName: Google.Api.Gax.GcePlatformDetails.TryLoad
+  nameWithType: GcePlatformDetails.TryLoad
 - uid: Google.Api.Gax.GcePlatformDetails.ZoneName
   name: ZoneName
   href: api/Google.Api.Gax.GcePlatformDetails.html#Google_Api_Gax_GcePlatformDetails_ZoneName
@@ -410,6 +422,108 @@ references:
   commentId: Overload:Google.Api.Gax.GcePlatformDetails.ZoneName
   fullName: Google.Api.Gax.GcePlatformDetails.ZoneName
   nameWithType: GcePlatformDetails.ZoneName
+- uid: Google.Api.Gax.GkePlatformDetails
+  name: GkePlatformDetails
+  href: api/Google.Api.Gax.GkePlatformDetails.html
+  commentId: T:Google.Api.Gax.GkePlatformDetails
+  fullName: Google.Api.Gax.GkePlatformDetails
+  nameWithType: GkePlatformDetails
+- uid: Google.Api.Gax.GkePlatformDetails.#ctor(System.String,System.String,System.String,System.String,System.String)
+  name: GkePlatformDetails(String, String, String, String, String)
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails__ctor_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:Google.Api.Gax.GkePlatformDetails.#ctor(System.String,System.String,System.String,System.String,System.String)
+  fullName: Google.Api.Gax.GkePlatformDetails.GkePlatformDetails(System.String, System.String, System.String, System.String, System.String)
+  nameWithType: GkePlatformDetails.GkePlatformDetails(String, String, String, String, String)
+- uid: Google.Api.Gax.GkePlatformDetails.#ctor*
+  name: GkePlatformDetails
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails__ctor_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.#ctor
+  fullName: Google.Api.Gax.GkePlatformDetails.GkePlatformDetails
+  nameWithType: GkePlatformDetails.GkePlatformDetails
+- uid: Google.Api.Gax.GkePlatformDetails.ClusterName
+  name: ClusterName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ClusterName
+  commentId: P:Google.Api.Gax.GkePlatformDetails.ClusterName
+  fullName: Google.Api.Gax.GkePlatformDetails.ClusterName
+  nameWithType: GkePlatformDetails.ClusterName
+- uid: Google.Api.Gax.GkePlatformDetails.ClusterName*
+  name: ClusterName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ClusterName_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ClusterName
+  fullName: Google.Api.Gax.GkePlatformDetails.ClusterName
+  nameWithType: GkePlatformDetails.ClusterName
+- uid: Google.Api.Gax.GkePlatformDetails.HostName
+  name: HostName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_HostName
+  commentId: P:Google.Api.Gax.GkePlatformDetails.HostName
+  fullName: Google.Api.Gax.GkePlatformDetails.HostName
+  nameWithType: GkePlatformDetails.HostName
+- uid: Google.Api.Gax.GkePlatformDetails.HostName*
+  name: HostName
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_HostName_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.HostName
+  fullName: Google.Api.Gax.GkePlatformDetails.HostName
+  nameWithType: GkePlatformDetails.HostName
+- uid: Google.Api.Gax.GkePlatformDetails.Location
+  name: Location
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_Location
+  commentId: P:Google.Api.Gax.GkePlatformDetails.Location
+  fullName: Google.Api.Gax.GkePlatformDetails.Location
+  nameWithType: GkePlatformDetails.Location
+- uid: Google.Api.Gax.GkePlatformDetails.Location*
+  name: Location
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_Location_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.Location
+  fullName: Google.Api.Gax.GkePlatformDetails.Location
+  nameWithType: GkePlatformDetails.Location
+- uid: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  name: MetadataJson
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_MetadataJson
+  commentId: P:Google.Api.Gax.GkePlatformDetails.MetadataJson
+  fullName: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  nameWithType: GkePlatformDetails.MetadataJson
+- uid: Google.Api.Gax.GkePlatformDetails.MetadataJson*
+  name: MetadataJson
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_MetadataJson_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.MetadataJson
+  fullName: Google.Api.Gax.GkePlatformDetails.MetadataJson
+  nameWithType: GkePlatformDetails.MetadataJson
+- uid: Google.Api.Gax.GkePlatformDetails.ProjectId
+  name: ProjectId
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ProjectId
+  commentId: P:Google.Api.Gax.GkePlatformDetails.ProjectId
+  fullName: Google.Api.Gax.GkePlatformDetails.ProjectId
+  nameWithType: GkePlatformDetails.ProjectId
+- uid: Google.Api.Gax.GkePlatformDetails.ProjectId*
+  name: ProjectId
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ProjectId_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ProjectId
+  fullName: Google.Api.Gax.GkePlatformDetails.ProjectId
+  nameWithType: GkePlatformDetails.ProjectId
+- uid: Google.Api.Gax.GkePlatformDetails.ToString
+  name: ToString()
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ToString
+  commentId: M:Google.Api.Gax.GkePlatformDetails.ToString
+  fullName: Google.Api.Gax.GkePlatformDetails.ToString()
+  nameWithType: GkePlatformDetails.ToString()
+- uid: Google.Api.Gax.GkePlatformDetails.ToString*
+  name: ToString
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_ToString_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.ToString
+  fullName: Google.Api.Gax.GkePlatformDetails.ToString
+  nameWithType: GkePlatformDetails.ToString
+- uid: Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  name: TryLoad(String)
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_TryLoad_System_String_
+  commentId: M:Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  fullName: Google.Api.Gax.GkePlatformDetails.TryLoad(System.String)
+  nameWithType: GkePlatformDetails.TryLoad(String)
+- uid: Google.Api.Gax.GkePlatformDetails.TryLoad*
+  name: TryLoad
+  href: api/Google.Api.Gax.GkePlatformDetails.html#Google_Api_Gax_GkePlatformDetails_TryLoad_
+  commentId: Overload:Google.Api.Gax.GkePlatformDetails.TryLoad
+  fullName: Google.Api.Gax.GkePlatformDetails.TryLoad
+  nameWithType: GkePlatformDetails.TryLoad
 - uid: Google.Api.Gax.IClock
   name: IClock
   href: api/Google.Api.Gax.IClock.html
@@ -819,6 +933,12 @@ references:
   commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GcePlatformDetails)
   fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GcePlatformDetails)
   nameWithType: Platform.Platform(GcePlatformDetails)
+- uid: Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GkePlatformDetails)
+  name: Platform(GkePlatformDetails)
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_Google_Api_Gax_GkePlatformDetails_
+  commentId: M:Google.Api.Gax.Platform.#ctor(Google.Api.Gax.GkePlatformDetails)
+  fullName: Google.Api.Gax.Platform.Platform(Google.Api.Gax.GkePlatformDetails)
+  nameWithType: Platform.Platform(GkePlatformDetails)
 - uid: Google.Api.Gax.Platform.#ctor*
   name: Platform
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform__ctor_
@@ -849,6 +969,18 @@ references:
   commentId: Overload:Google.Api.Gax.Platform.GceDetails
   fullName: Google.Api.Gax.Platform.GceDetails
   nameWithType: Platform.GceDetails
+- uid: Google.Api.Gax.Platform.GkeDetails
+  name: GkeDetails
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_GkeDetails
+  commentId: P:Google.Api.Gax.Platform.GkeDetails
+  fullName: Google.Api.Gax.Platform.GkeDetails
+  nameWithType: Platform.GkeDetails
+- uid: Google.Api.Gax.Platform.GkeDetails*
+  name: GkeDetails
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_GkeDetails_
+  commentId: Overload:Google.Api.Gax.Platform.GkeDetails
+  fullName: Google.Api.Gax.Platform.GkeDetails
+  nameWithType: Platform.GkeDetails
 - uid: Google.Api.Gax.Platform.Instance
   name: Instance()
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_Instance
@@ -873,6 +1005,18 @@ references:
   commentId: Overload:Google.Api.Gax.Platform.InstanceAsync
   fullName: Google.Api.Gax.Platform.InstanceAsync
   nameWithType: Platform.InstanceAsync
+- uid: Google.Api.Gax.Platform.ProjectId
+  name: ProjectId
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ProjectId
+  commentId: P:Google.Api.Gax.Platform.ProjectId
+  fullName: Google.Api.Gax.Platform.ProjectId
+  nameWithType: Platform.ProjectId
+- uid: Google.Api.Gax.Platform.ProjectId*
+  name: ProjectId
+  href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ProjectId_
+  commentId: Overload:Google.Api.Gax.Platform.ProjectId
+  fullName: Google.Api.Gax.Platform.ProjectId
+  nameWithType: Platform.ProjectId
 - uid: Google.Api.Gax.Platform.ToString
   name: ToString()
   href: api/Google.Api.Gax.Platform.html#Google_Api_Gax_Platform_ToString
@@ -915,6 +1059,12 @@ references:
   commentId: F:Google.Api.Gax.PlatformType.Gce
   fullName: Google.Api.Gax.PlatformType.Gce
   nameWithType: PlatformType.Gce
+- uid: Google.Api.Gax.PlatformType.Gke
+  name: Gke
+  href: api/Google.Api.Gax.PlatformType.html#Google_Api_Gax_PlatformType_Gke
+  commentId: F:Google.Api.Gax.PlatformType.Gke
+  fullName: Google.Api.Gax.PlatformType.Gke
+  nameWithType: PlatformType.Gke
 - uid: Google.Api.Gax.PlatformType.Unknown
   name: Unknown
   href: api/Google.Api.Gax.PlatformType.html#Google_Api_Gax_PlatformType_Unknown
@@ -1533,6 +1683,18 @@ references:
   commentId: T:Google.Api.Gax.Rest.UserAgentHelper
   fullName: Google.Api.Gax.Rest.UserAgentHelper
   nameWithType: UserAgentHelper
+- uid: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)
+  name: CreateRequestModifier(Type)
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_CreateRequestModifier_System_Type_
+  commentId: M:Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)
+  fullName: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier(System.Type)
+  nameWithType: UserAgentHelper.CreateRequestModifier(Type)
+- uid: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier*
+  name: CreateRequestModifier
+  href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_CreateRequestModifier_
+  commentId: Overload:Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier
+  fullName: Google.Api.Gax.Rest.UserAgentHelper.CreateRequestModifier
+  nameWithType: UserAgentHelper.CreateRequestModifier
 - uid: Google.Api.Gax.Rest.UserAgentHelper.GetDefaultUserAgent(System.Type)
   name: GetDefaultUserAgent(Type)
   href: api/Google.Api.Gax.Rest.UserAgentHelper.html#Google_Api_Gax_Rest_UserAgentHelper_GetDefaultUserAgent_System_Type_
@@ -2171,6 +2333,30 @@ references:
   commentId: Overload:Google.Apis.Bigquery.v2.BigqueryService.BaseUri
   fullName: Google.Apis.Bigquery.v2.BigqueryService.BaseUri
   nameWithType: BigqueryService.BaseUri
+- uid: Google.Apis.Bigquery.v2.BigqueryService.BatchPath
+  name: BatchPath
+  href: api/Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService_BatchPath
+  commentId: P:Google.Apis.Bigquery.v2.BigqueryService.BatchPath
+  fullName: Google.Apis.Bigquery.v2.BigqueryService.BatchPath
+  nameWithType: BigqueryService.BatchPath
+- uid: Google.Apis.Bigquery.v2.BigqueryService.BatchPath*
+  name: BatchPath
+  href: api/Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService_BatchPath_
+  commentId: Overload:Google.Apis.Bigquery.v2.BigqueryService.BatchPath
+  fullName: Google.Apis.Bigquery.v2.BigqueryService.BatchPath
+  nameWithType: BigqueryService.BatchPath
+- uid: Google.Apis.Bigquery.v2.BigqueryService.BatchUri
+  name: BatchUri
+  href: api/Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService_BatchUri
+  commentId: P:Google.Apis.Bigquery.v2.BigqueryService.BatchUri
+  fullName: Google.Apis.Bigquery.v2.BigqueryService.BatchUri
+  nameWithType: BigqueryService.BatchUri
+- uid: Google.Apis.Bigquery.v2.BigqueryService.BatchUri*
+  name: BatchUri
+  href: api/Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService_BatchUri_
+  commentId: Overload:Google.Apis.Bigquery.v2.BigqueryService.BatchUri
+  fullName: Google.Apis.Bigquery.v2.BigqueryService.BatchUri
+  nameWithType: BigqueryService.BatchUri
 - uid: Google.Apis.Bigquery.v2.BigqueryService.Datasets
   name: Datasets
   href: api/Google.Apis.Bigquery.v2.BigqueryService.html#Google_Apis_Bigquery_v2_BigqueryService_Datasets
@@ -8915,6 +9101,18 @@ references:
   commentId: Overload:Google.Apis.Bigquery.v2.TabledataResource.ListRequest.RestPath
   fullName: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.RestPath
   nameWithType: TabledataResource.ListRequest.RestPath
+- uid: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.SelectedFields
+  name: SelectedFields
+  href: api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.html#Google_Apis_Bigquery_v2_TabledataResource_ListRequest_SelectedFields
+  commentId: P:Google.Apis.Bigquery.v2.TabledataResource.ListRequest.SelectedFields
+  fullName: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.SelectedFields
+  nameWithType: TabledataResource.ListRequest.SelectedFields
+- uid: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.SelectedFields*
+  name: SelectedFields
+  href: api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.html#Google_Apis_Bigquery_v2_TabledataResource_ListRequest_SelectedFields_
+  commentId: Overload:Google.Apis.Bigquery.v2.TabledataResource.ListRequest.SelectedFields
+  fullName: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.SelectedFields
+  nameWithType: TabledataResource.ListRequest.SelectedFields
 - uid: Google.Apis.Bigquery.v2.TabledataResource.ListRequest.StartIndex
   name: StartIndex
   href: api/Google.Apis.Bigquery.v2.TabledataResource.ListRequest.html#Google_Apis_Bigquery_v2_TabledataResource_ListRequest_StartIndex
@@ -9173,6 +9371,18 @@ references:
   commentId: Overload:Google.Apis.Bigquery.v2.TablesResource.GetRequest.RestPath
   fullName: Google.Apis.Bigquery.v2.TablesResource.GetRequest.RestPath
   nameWithType: TablesResource.GetRequest.RestPath
+- uid: Google.Apis.Bigquery.v2.TablesResource.GetRequest.SelectedFields
+  name: SelectedFields
+  href: api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.html#Google_Apis_Bigquery_v2_TablesResource_GetRequest_SelectedFields
+  commentId: P:Google.Apis.Bigquery.v2.TablesResource.GetRequest.SelectedFields
+  fullName: Google.Apis.Bigquery.v2.TablesResource.GetRequest.SelectedFields
+  nameWithType: TablesResource.GetRequest.SelectedFields
+- uid: Google.Apis.Bigquery.v2.TablesResource.GetRequest.SelectedFields*
+  name: SelectedFields
+  href: api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.html#Google_Apis_Bigquery_v2_TablesResource_GetRequest_SelectedFields_
+  commentId: Overload:Google.Apis.Bigquery.v2.TablesResource.GetRequest.SelectedFields
+  fullName: Google.Apis.Bigquery.v2.TablesResource.GetRequest.SelectedFields
+  nameWithType: TablesResource.GetRequest.SelectedFields
 - uid: Google.Apis.Bigquery.v2.TablesResource.GetRequest.TableId
   name: TableId
   href: api/Google.Apis.Bigquery.v2.TablesResource.GetRequest.html#Google_Apis_Bigquery_v2_TablesResource_GetRequest_TableId
@@ -9761,6 +9971,48 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateAsync
   nameWithType: BigQueryClient.CreateAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  name: CreateCopyJob(TableReference, TableReference, CreateCopyJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  nameWithType: BigQueryClient.CreateCopyJob(TableReference, TableReference, CreateCopyJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  name: CreateCopyJob(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  name.vb: CreateCopyJob(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(System.Collections.Generic.IEnumerable<Google.Apis.Bigquery.v2.Data.TableReference>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob(System.Collections.Generic.IEnumerable(Of Google.Apis.Bigquery.v2.Data.TableReference), Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  nameWithType: BigQueryClient.CreateCopyJob(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions)
+  nameWithType.vb: BigQueryClient.CreateCopyJob(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob*
+  name: CreateCopyJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJob
+  nameWithType: BigQueryClient.CreateCopyJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  name: CreateCopyJobAsync(TableReference, TableReference, CreateCopyJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateCopyJobAsync(TableReference, TableReference, CreateCopyJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  name: CreateCopyJobAsync(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateCopyJobAsync(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(System.Collections.Generic.IEnumerable<Google.Apis.Bigquery.v2.Data.TableReference>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync(System.Collections.Generic.IEnumerable(Of Google.Apis.Bigquery.v2.Data.TableReference), Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateCopyJobAsync(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.CreateCopyJobAsync(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync*
+  name: CreateCopyJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateCopyJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateCopyJobAsync
+  nameWithType: BigQueryClient.CreateCopyJobAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.CreateDatasetOptions)
   name: CreateDataset(DatasetReference, CreateDatasetOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_CreateDatasetOptions_
@@ -9809,6 +10061,150 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateDatasetAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateDatasetAsync
   nameWithType: BigQueryClient.CreateDatasetAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(TableReference, IEnumerable<String>, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name.vb: CreateExtractJob(TableReference, IEnumerable(Of String), CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryClient.CreateExtractJob(TableReference, IEnumerable<String>, CreateExtractJobOptions)
+  nameWithType.vb: BigQueryClient.CreateExtractJob(TableReference, IEnumerable(Of String), CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(TableReference, String, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_Google_Apis_Bigquery_v2_Data_TableReference_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference, System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryClient.CreateExtractJob(TableReference, String, CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(String, String, IEnumerable<String>, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name.vb: CreateExtractJob(String, String, IEnumerable(Of String), CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryClient.CreateExtractJob(String, String, IEnumerable<String>, CreateExtractJobOptions)
+  nameWithType.vb: BigQueryClient.CreateExtractJob(String, String, IEnumerable(Of String), CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(String, String, String, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryClient.CreateExtractJob(String, String, String, CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(String, String, String, IEnumerable<String>, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name.vb: CreateExtractJob(String, String, String, IEnumerable(Of String), CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryClient.CreateExtractJob(String, String, String, IEnumerable<String>, CreateExtractJobOptions)
+  nameWithType.vb: BigQueryClient.CreateExtractJob(String, String, String, IEnumerable(Of String), CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(String, String, String, String, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_System_String_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob(System.String, System.String, System.String, System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryClient.CreateExtractJob(String, String, String, String, CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob*
+  name: CreateExtractJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJob
+  nameWithType: BigQueryClient.CreateExtractJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(TableReference, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateExtractJobAsync(TableReference, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateExtractJobAsync(TableReference, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.CreateExtractJobAsync(TableReference, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(TableReference, String, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateExtractJobAsync(TableReference, String, CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(String, String, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateExtractJobAsync(String, String, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateExtractJobAsync(String, String, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.CreateExtractJobAsync(String, String, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(String, String, String, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateExtractJobAsync(String, String, String, CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(String, String, String, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateExtractJobAsync(String, String, String, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateExtractJobAsync(String, String, String, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.CreateExtractJobAsync(String, String, String, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(String, String, String, String, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_System_String_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String,System.String,System.String,System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync(System.String, System.String, System.String, System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateExtractJobAsync(String, String, String, String, CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync*
+  name: CreateExtractJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateExtractJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateExtractJobAsync
+  nameWithType: BigQueryClient.CreateExtractJobAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  name: CreateLoadJob(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJob_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  name.vb: CreateLoadJob(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob(System.Collections.Generic.IEnumerable<System.String>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob(System.Collections.Generic.IEnumerable(Of System.String), Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  nameWithType: BigQueryClient.CreateLoadJob(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions)
+  nameWithType.vb: BigQueryClient.CreateLoadJob(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob(System.String,Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  name: CreateLoadJob(String, TableReference, TableSchema, CreateLoadJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJob_System_String_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob(System.String,Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob(System.String, Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  nameWithType: BigQueryClient.CreateLoadJob(String, TableReference, TableSchema, CreateLoadJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob*
+  name: CreateLoadJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJob
+  nameWithType: BigQueryClient.CreateLoadJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions,System.Threading.CancellationToken)
+  name: CreateLoadJobAsync(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJobAsync_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateLoadJobAsync(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.Collections.Generic.IEnumerable<System.String>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.Collections.Generic.IEnumerable(Of System.String), Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateLoadJobAsync(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.CreateLoadJobAsync(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.String,Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions,System.Threading.CancellationToken)
+  name: CreateLoadJobAsync(String, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJobAsync_System_String_Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.String,Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync(System.String, Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.CreateLoadJobAsync(String, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync*
+  name: CreateLoadJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateLoadJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.CreateLoadJobAsync
+  nameWithType: BigQueryClient.CreateLoadJobAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
   name: CreateQueryJob(BigQueryCommand, CreateQueryJobOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_
@@ -10379,162 +10775,174 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.GetTableReference
   fullName: Google.Cloud.BigQuery.V2.BigQueryClient.GetTableReference
   nameWithType: BigQueryClient.GetTableReference
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(TableReference, BigQueryInsertRow, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryClient.Insert(TableReference, BigQueryInsertRow, InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: Insert(TableReference, BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: Insert(TableReference, BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryClient.Insert(TableReference, BigQueryInsertRow[])
-  nameWithType.vb: BigQueryClient.Insert(TableReference, BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name.vb: Insert(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryClient.Insert(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  nameWithType.vb: BigQueryClient.Insert(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(String, String, BigQueryInsertRow, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryClient.Insert(String, String, BigQueryInsertRow, InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: Insert(String, String, BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: Insert(String, String, BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryClient.Insert(String, String, BigQueryInsertRow[])
-  nameWithType.vb: BigQueryClient.Insert(String, String, BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name.vb: Insert(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryClient.Insert(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  nameWithType.vb: BigQueryClient.Insert(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(String, String, String, BigQueryInsertRow, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryClient.Insert(String, String, String, BigQueryInsertRow, InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: Insert(String, String, String, BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: Insert(String, String, String, BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryClient.Insert(String, String, String, BigQueryInsertRow[])
-  nameWithType.vb: BigQueryClient.Insert(String, String, String, BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name.vb: Insert(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.Insert(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryClient.Insert(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  nameWithType.vb: BigQueryClient.Insert(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.Insert*
-  name: Insert
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_Insert_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.Insert
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.Insert
-  nameWithType: BigQueryClient.Insert
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(TableReference, BigQueryInsertRow, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.InsertAsync(TableReference, BigQueryInsertRow, InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: InsertAsync(TableReference, BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: InsertAsync(TableReference, BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryClient.InsertAsync(TableReference, BigQueryInsertRow[])
-  nameWithType.vb: BigQueryClient.InsertAsync(TableReference, BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name.vb: InsertAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.InsertAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  nameWithType.vb: BigQueryClient.InsertAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.InsertAsync(String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: InsertAsync(String, String, BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: InsertAsync(String, String, BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryClient.InsertAsync(String, String, BigQueryInsertRow[])
-  nameWithType.vb: BigQueryClient.InsertAsync(String, String, BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name.vb: InsertAsync(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.InsertAsync(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  nameWithType.vb: BigQueryClient.InsertAsync(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(String, String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.InsertAsync(String, String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: InsertAsync(String, String, String, BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: InsertAsync(String, String, String, BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryClient.InsertAsync(String, String, String, BigQueryInsertRow[])
-  nameWithType.vb: BigQueryClient.InsertAsync(String, String, String, BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name.vb: InsertAsync(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClient.InsertAsync(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  nameWithType.vb: BigQueryClient.InsertAsync(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync*
-  name: InsertAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertAsync
-  nameWithType: BigQueryClient.InsertAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRow(TableReference, BigQueryInsertRow, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRow_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryClient.InsertRow(TableReference, BigQueryInsertRow, InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRow(String, String, BigQueryInsertRow, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRow_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryClient.InsertRow(String, String, BigQueryInsertRow, InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRow(String, String, String, BigQueryInsertRow, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRow_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryClient.InsertRow(String, String, String, BigQueryInsertRow, InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow*
+  name: InsertRow
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRow_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRow
+  nameWithType: BigQueryClient.InsertRow
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowAsync(TableReference, BigQueryInsertRow, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.InsertRowAsync(TableReference, BigQueryInsertRow, InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowAsync(String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowAsync_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.InsertRowAsync(String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowAsync(String, String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.InsertRowAsync(String, String, String, BigQueryInsertRow, InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync*
+  name: InsertRowAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowAsync
+  nameWithType: BigQueryClient.InsertRowAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRows(TableReference, BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRows(TableReference, BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryClient.InsertRows(TableReference, BigQueryInsertRow[])
+  nameWithType.vb: BigQueryClient.InsertRows(TableReference, BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRows(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name.vb: InsertRows(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryClient.InsertRows(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  nameWithType.vb: BigQueryClient.InsertRows(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRows(String, String, BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRows(String, String, BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryClient.InsertRows(String, String, BigQueryInsertRow[])
+  nameWithType.vb: BigQueryClient.InsertRows(String, String, BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRows(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name.vb: InsertRows(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryClient.InsertRows(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  nameWithType.vb: BigQueryClient.InsertRows(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRows(String, String, String, BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRows(String, String, String, BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryClient.InsertRows(String, String, String, BigQueryInsertRow[])
+  nameWithType.vb: BigQueryClient.InsertRows(String, String, String, BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRows(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name.vb: InsertRows(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryClient.InsertRows(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  nameWithType.vb: BigQueryClient.InsertRows(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows*
+  name: InsertRows
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRows_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRows
+  nameWithType: BigQueryClient.InsertRows
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRowsAsync(TableReference, BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRowsAsync(TableReference, BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryClient.InsertRowsAsync(TableReference, BigQueryInsertRow[])
+  nameWithType.vb: BigQueryClient.InsertRowsAsync(TableReference, BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowsAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name.vb: InsertRowsAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.InsertRowsAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.InsertRowsAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRowsAsync(String, String, BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRowsAsync(String, String, BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryClient.InsertRowsAsync(String, String, BigQueryInsertRow[])
+  nameWithType.vb: BigQueryClient.InsertRowsAsync(String, String, BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowsAsync(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name.vb: InsertRowsAsync(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.InsertRowsAsync(String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.InsertRowsAsync(String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRowsAsync(String, String, String, BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_System_String_System_String_System_String_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,System.String,Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRowsAsync(String, String, String, BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, System.String, Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryClient.InsertRowsAsync(String, String, String, BigQueryInsertRow[])
+  nameWithType.vb: BigQueryClient.InsertRowsAsync(String, String, String, BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowsAsync(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name.vb: InsertRowsAsync(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClient.InsertRowsAsync(String, String, String, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  nameWithType.vb: BigQueryClient.InsertRowsAsync(String, String, String, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync*
+  name: InsertRowsAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_InsertRowsAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClient.InsertRowsAsync
+  nameWithType: BigQueryClient.InsertRowsAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClient.ListDatasets(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Cloud.BigQuery.V2.ListDatasetsOptions)
   name: ListDatasets(ProjectReference, ListDatasetsOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClient.html#Google_Cloud_BigQuery_V2_BigQueryClient_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Cloud_BigQuery_V2_ListDatasetsOptions_
@@ -11129,6 +11537,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CancelJobAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CancelJobAsync
   nameWithType: BigQueryClientImpl.CancelJobAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  name: CreateCopyJob(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateCopyJob_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  name.vb: CreateCopyJob(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob(System.Collections.Generic.IEnumerable<Google.Apis.Bigquery.v2.Data.TableReference>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob(System.Collections.Generic.IEnumerable(Of Google.Apis.Bigquery.v2.Data.TableReference), Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  nameWithType: BigQueryClientImpl.CreateCopyJob(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions)
+  nameWithType.vb: BigQueryClientImpl.CreateCopyJob(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob*
+  name: CreateCopyJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateCopyJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJob
+  nameWithType: BigQueryClientImpl.CreateCopyJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJobAsync(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  name: CreateCopyJobAsync(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateCopyJobAsync_System_Collections_Generic_IEnumerable_Google_Apis_Bigquery_v2_Data_TableReference__Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJobAsync(System.Collections.Generic.IEnumerable{Google.Apis.Bigquery.v2.Data.TableReference},Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateCopyJobAsync(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJobAsync(System.Collections.Generic.IEnumerable<Google.Apis.Bigquery.v2.Data.TableReference>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJobAsync(System.Collections.Generic.IEnumerable(Of Google.Apis.Bigquery.v2.Data.TableReference), Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.CreateCopyJobAsync(IEnumerable<TableReference>, TableReference, CreateCopyJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClientImpl.CreateCopyJobAsync(IEnumerable(Of TableReference), TableReference, CreateCopyJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJobAsync*
+  name: CreateCopyJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateCopyJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateCopyJobAsync
+  nameWithType: BigQueryClientImpl.CreateCopyJobAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateDataset(Google.Apis.Bigquery.v2.Data.DatasetReference,Google.Cloud.BigQuery.V2.CreateDatasetOptions)
   name: CreateDataset(DatasetReference, CreateDatasetOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateDataset_Google_Apis_Bigquery_v2_Data_DatasetReference_Google_Cloud_BigQuery_V2_CreateDatasetOptions_
@@ -11153,6 +11591,66 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateDatasetAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateDatasetAsync
   nameWithType: BigQueryClientImpl.CreateDatasetAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(TableReference, IEnumerable<String>, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateExtractJob_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name.vb: CreateExtractJob(TableReference, IEnumerable(Of String), CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJob(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryClientImpl.CreateExtractJob(TableReference, IEnumerable<String>, CreateExtractJobOptions)
+  nameWithType.vb: BigQueryClientImpl.CreateExtractJob(TableReference, IEnumerable(Of String), CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJob*
+  name: CreateExtractJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateExtractJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJob
+  nameWithType: BigQueryClientImpl.CreateExtractJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(TableReference, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateExtractJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateExtractJobAsync(TableReference, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJobAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.CreateExtractJobAsync(TableReference, IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClientImpl.CreateExtractJobAsync(TableReference, IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJobAsync*
+  name: CreateExtractJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateExtractJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateExtractJobAsync
+  nameWithType: BigQueryClientImpl.CreateExtractJobAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJob(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  name: CreateLoadJob(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateLoadJob_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJob(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  name.vb: CreateLoadJob(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJob(System.Collections.Generic.IEnumerable<System.String>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJob(System.Collections.Generic.IEnumerable(Of System.String), Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions)
+  nameWithType: BigQueryClientImpl.CreateLoadJob(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions)
+  nameWithType.vb: BigQueryClientImpl.CreateLoadJob(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJob*
+  name: CreateLoadJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateLoadJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJob
+  nameWithType: BigQueryClientImpl.CreateLoadJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions,System.Threading.CancellationToken)
+  name: CreateLoadJobAsync(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateLoadJobAsync_System_Collections_Generic_IEnumerable_System_String__Google_Apis_Bigquery_v2_Data_TableReference_Google_Apis_Bigquery_v2_Data_TableSchema_Google_Cloud_BigQuery_V2_CreateLoadJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Apis.Bigquery.v2.Data.TableReference,Google.Apis.Bigquery.v2.Data.TableSchema,Google.Cloud.BigQuery.V2.CreateLoadJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateLoadJobAsync(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync(System.Collections.Generic.IEnumerable<System.String>, Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync(System.Collections.Generic.IEnumerable(Of System.String), Google.Apis.Bigquery.v2.Data.TableReference, Google.Apis.Bigquery.v2.Data.TableSchema, Google.Cloud.BigQuery.V2.CreateLoadJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.CreateLoadJobAsync(IEnumerable<String>, TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryClientImpl.CreateLoadJobAsync(IEnumerable(Of String), TableReference, TableSchema, CreateLoadJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync*
+  name: CreateLoadJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateLoadJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateLoadJobAsync
+  nameWithType: BigQueryClientImpl.CreateLoadJobAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.CreateQueryJob(Google.Cloud.BigQuery.V2.BigQueryCommand,Google.Cloud.BigQuery.V2.CreateQueryJobOptions)
   name: CreateQueryJob(BigQueryCommand, CreateQueryJobOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_CreateQueryJob_Google_Cloud_BigQuery_V2_BigQueryCommand_Google_Cloud_BigQuery_V2_CreateQueryJobOptions_
@@ -11441,36 +11939,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.GetTableAsync
   fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.GetTableAsync
   nameWithType: BigQueryClientImpl.GetTableAsync
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Insert(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_Insert_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.Insert(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name.vb: Insert(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Insert(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Insert(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryClientImpl.Insert(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
-  nameWithType.vb: BigQueryClientImpl.Insert(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Insert*
-  name: Insert
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_Insert_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.Insert
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.Insert
-  nameWithType: BigQueryClientImpl.Insert
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_InsertAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name.vb: InsertAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryClientImpl.InsertAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  nameWithType.vb: BigQueryClientImpl.InsertAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertAsync*
-  name: InsertAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_InsertAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertAsync
-  nameWithType: BigQueryClientImpl.InsertAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRows(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_InsertRows_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name.vb: InsertRows(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRows(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryClientImpl.InsertRows(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions)
+  nameWithType.vb: BigQueryClientImpl.InsertRows(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRows*
+  name: InsertRows
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_InsertRows_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRows
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRows
+  nameWithType: BigQueryClientImpl.InsertRows
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowsAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_InsertRowsAsync_Google_Apis_Bigquery_v2_Data_TableReference_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference,System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name.vb: InsertRowsAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRowsAsync(Google.Apis.Bigquery.v2.Data.TableReference, System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryClientImpl.InsertRowsAsync(TableReference, IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  nameWithType.vb: BigQueryClientImpl.InsertRowsAsync(TableReference, IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRowsAsync*
+  name: InsertRowsAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_InsertRowsAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRowsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryClientImpl.InsertRowsAsync
+  nameWithType: BigQueryClientImpl.InsertRowsAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryClientImpl.ListDatasets(Google.Apis.Bigquery.v2.Data.ProjectReference,Google.Cloud.BigQuery.V2.ListDatasetsOptions)
   name: ListDatasets(ProjectReference, ListDatasetsOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryClientImpl.html#Google_Cloud_BigQuery_V2_BigQueryClientImpl_ListDatasets_Google_Apis_Bigquery_v2_Data_ProjectReference_Google_Cloud_BigQuery_V2_ListDatasetsOptions_
@@ -12949,6 +13447,72 @@ references:
   commentId: T:Google.Cloud.BigQuery.V2.BigQueryTable
   fullName: Google.Cloud.BigQuery.V2.BigQueryTable
   nameWithType: BigQueryTable
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  name: CreateCopyJob(TableReference, CreateCopyJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJob_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions)
+  nameWithType: BigQueryTable.CreateCopyJob(TableReference, CreateCopyJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob*
+  name: CreateCopyJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJob
+  nameWithType: BigQueryTable.CreateCopyJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  name: CreateCopyJobAsync(TableReference, CreateCopyJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJobAsync_Google_Apis_Bigquery_v2_Data_TableReference_Google_Cloud_BigQuery_V2_CreateCopyJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync(Google.Apis.Bigquery.v2.Data.TableReference,Google.Cloud.BigQuery.V2.CreateCopyJobOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync(Google.Apis.Bigquery.v2.Data.TableReference, Google.Cloud.BigQuery.V2.CreateCopyJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryTable.CreateCopyJobAsync(TableReference, CreateCopyJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync*
+  name: CreateCopyJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateCopyJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateCopyJobAsync
+  nameWithType: BigQueryTable.CreateCopyJobAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(IEnumerable<String>, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJob_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name.vb: CreateExtractJob(IEnumerable(Of String), CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryTable.CreateExtractJob(IEnumerable<String>, CreateExtractJobOptions)
+  nameWithType.vb: BigQueryTable.CreateExtractJob(IEnumerable(Of String), CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  name: CreateExtractJob(String, CreateExtractJobOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJob_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob(System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions)
+  nameWithType: BigQueryTable.CreateExtractJob(String, CreateExtractJobOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob*
+  name: CreateExtractJob
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJob_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJob
+  nameWithType: BigQueryTable.CreateExtractJob
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJobAsync_System_Collections_Generic_IEnumerable_System_String__Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.Collections.Generic.IEnumerable{System.String},Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name.vb: CreateExtractJobAsync(IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.Collections.Generic.IEnumerable<System.String>, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.Collections.Generic.IEnumerable(Of System.String), Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryTable.CreateExtractJobAsync(IEnumerable<String>, CreateExtractJobOptions, CancellationToken)
+  nameWithType.vb: BigQueryTable.CreateExtractJobAsync(IEnumerable(Of String), CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  name: CreateExtractJobAsync(String, CreateExtractJobOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJobAsync_System_String_Google_Cloud_BigQuery_V2_CreateExtractJobOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.String,Google.Cloud.BigQuery.V2.CreateExtractJobOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync(System.String, Google.Cloud.BigQuery.V2.CreateExtractJobOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryTable.CreateExtractJobAsync(String, CreateExtractJobOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync*
+  name: CreateExtractJobAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_CreateExtractJobAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.CreateExtractJobAsync
+  nameWithType: BigQueryTable.CreateExtractJobAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryTable.Delete(Google.Cloud.BigQuery.V2.DeleteTableOptions)
   name: Delete(DeleteTableOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Delete_Google_Cloud_BigQuery_V2_DeleteTableOptions_
@@ -12985,66 +13549,78 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.FullyQualifiedId
   fullName: Google.Cloud.BigQuery.V2.BigQueryTable.FullyQualifiedId
   nameWithType: BigQueryTable.FullyQualifiedId
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(BigQueryInsertRow, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Insert_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryTable.Insert(BigQueryInsertRow, InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: Insert(BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Insert_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: Insert(BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryTable.Insert(BigQueryInsertRow[])
-  nameWithType.vb: BigQueryTable.Insert(BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name: Insert(IEnumerable<BigQueryInsertRow>, InsertOptions)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Insert_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.Insert(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
-  name.vb: Insert(IEnumerable(Of BigQueryInsertRow), InsertOptions)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.Insert(System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
-  nameWithType: BigQueryTable.Insert(IEnumerable<BigQueryInsertRow>, InsertOptions)
-  nameWithType.vb: BigQueryTable.Insert(IEnumerable(Of BigQueryInsertRow), InsertOptions)
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.Insert*
-  name: Insert
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_Insert_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.Insert
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.Insert
-  nameWithType: BigQueryTable.Insert
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(BigQueryInsertRow, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryTable.InsertAsync(BigQueryInsertRow, InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name: InsertAsync(BigQueryInsertRow[])
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  name.vb: InsertAsync(BigQueryInsertRow())
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow())
-  nameWithType: BigQueryTable.InsertAsync(BigQueryInsertRow[])
-  nameWithType.vb: BigQueryTable.InsertAsync(BigQueryInsertRow())
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name: InsertAsync(IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
-  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
-  name.vb: InsertAsync(IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync(System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
-  nameWithType: BigQueryTable.InsertAsync(IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
-  nameWithType.vb: BigQueryTable.InsertAsync(IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
-- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync*
-  name: InsertAsync
-  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertAsync_
-  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync
-  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertAsync
-  nameWithType: BigQueryTable.InsertAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRow(BigQueryInsertRow, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRow_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow(Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryTable.InsertRow(BigQueryInsertRow, InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow*
+  name: InsertRow
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRow_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRow
+  nameWithType: BigQueryTable.InsertRow
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowAsync(BigQueryInsertRow, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow_Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow,Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryTable.InsertRowAsync(BigQueryInsertRow, InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync*
+  name: InsertRowAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowAsync
+  nameWithType: BigQueryTable.InsertRowAsync
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRows(BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRows_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRows(BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryTable.InsertRows(BigQueryInsertRow[])
+  nameWithType.vb: BigQueryTable.InsertRows(BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name: InsertRows(IEnumerable<BigQueryInsertRow>, InsertOptions)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRows_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions)
+  name.vb: InsertRows(IEnumerable(Of BigQueryInsertRow), InsertOptions)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows(System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions)
+  nameWithType: BigQueryTable.InsertRows(IEnumerable<BigQueryInsertRow>, InsertOptions)
+  nameWithType.vb: BigQueryTable.InsertRows(IEnumerable(Of BigQueryInsertRow), InsertOptions)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows*
+  name: InsertRows
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRows_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRows
+  nameWithType: BigQueryTable.InsertRows
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name: InsertRowsAsync(BigQueryInsertRow[])
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowsAsync_Google_Cloud_BigQuery_V2_BigQueryInsertRow___
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  name.vb: InsertRowsAsync(BigQueryInsertRow())
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow[])
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(Google.Cloud.BigQuery.V2.BigQueryInsertRow())
+  nameWithType: BigQueryTable.InsertRowsAsync(BigQueryInsertRow[])
+  nameWithType.vb: BigQueryTable.InsertRowsAsync(BigQueryInsertRow())
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name: InsertRowsAsync(IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowsAsync_System_Collections_Generic_IEnumerable_Google_Cloud_BigQuery_V2_BigQueryInsertRow__Google_Cloud_BigQuery_V2_InsertOptions_System_Threading_CancellationToken_
+  commentId: M:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(System.Collections.Generic.IEnumerable{Google.Cloud.BigQuery.V2.BigQueryInsertRow},Google.Cloud.BigQuery.V2.InsertOptions,System.Threading.CancellationToken)
+  name.vb: InsertRowsAsync(IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(System.Collections.Generic.IEnumerable<Google.Cloud.BigQuery.V2.BigQueryInsertRow>, Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  fullName.vb: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync(System.Collections.Generic.IEnumerable(Of Google.Cloud.BigQuery.V2.BigQueryInsertRow), Google.Cloud.BigQuery.V2.InsertOptions, System.Threading.CancellationToken)
+  nameWithType: BigQueryTable.InsertRowsAsync(IEnumerable<BigQueryInsertRow>, InsertOptions, CancellationToken)
+  nameWithType.vb: BigQueryTable.InsertRowsAsync(IEnumerable(Of BigQueryInsertRow), InsertOptions, CancellationToken)
+- uid: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync*
+  name: InsertRowsAsync
+  href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_InsertRowsAsync_
+  commentId: Overload:Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync
+  fullName: Google.Cloud.BigQuery.V2.BigQueryTable.InsertRowsAsync
+  nameWithType: BigQueryTable.InsertRowsAsync
 - uid: Google.Cloud.BigQuery.V2.BigQueryTable.ListRows(Google.Cloud.BigQuery.V2.ListRowsOptions)
   name: ListRows(ListRowsOptions)
   href: api/Google.Cloud.BigQuery.V2.BigQueryTable.html#Google_Cloud_BigQuery_V2_BigQueryTable_ListRows_Google_Cloud_BigQuery_V2_ListRowsOptions_
@@ -13297,6 +13873,54 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.CloudProject.Resource
   fullName: Google.Cloud.BigQuery.V2.CloudProject.Resource
   nameWithType: CloudProject.Resource
+- uid: Google.Cloud.BigQuery.V2.CompressionType
+  name: CompressionType
+  href: api/Google.Cloud.BigQuery.V2.CompressionType.html
+  commentId: T:Google.Cloud.BigQuery.V2.CompressionType
+  fullName: Google.Cloud.BigQuery.V2.CompressionType
+  nameWithType: CompressionType
+- uid: Google.Cloud.BigQuery.V2.CompressionType.Gzip
+  name: Gzip
+  href: api/Google.Cloud.BigQuery.V2.CompressionType.html#Google_Cloud_BigQuery_V2_CompressionType_Gzip
+  commentId: F:Google.Cloud.BigQuery.V2.CompressionType.Gzip
+  fullName: Google.Cloud.BigQuery.V2.CompressionType.Gzip
+  nameWithType: CompressionType.Gzip
+- uid: Google.Cloud.BigQuery.V2.CompressionType.None
+  name: None
+  href: api/Google.Cloud.BigQuery.V2.CompressionType.html#Google_Cloud_BigQuery_V2_CompressionType_None
+  commentId: F:Google.Cloud.BigQuery.V2.CompressionType.None
+  fullName: Google.Cloud.BigQuery.V2.CompressionType.None
+  nameWithType: CompressionType.None
+- uid: Google.Cloud.BigQuery.V2.CreateCopyJobOptions
+  name: CreateCopyJobOptions
+  href: api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.CreateCopyJobOptions
+  fullName: Google.Cloud.BigQuery.V2.CreateCopyJobOptions
+  nameWithType: CreateCopyJobOptions
+- uid: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html#Google_Cloud_BigQuery_V2_CreateCopyJobOptions_CreateDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.CreateCopyJobOptions.CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.CreateDisposition
+  nameWithType: CreateCopyJobOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.CreateDisposition*
+  name: CreateDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html#Google_Cloud_BigQuery_V2_CreateCopyJobOptions_CreateDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateCopyJobOptions.CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.CreateDisposition
+  nameWithType: CreateCopyJobOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html#Google_Cloud_BigQuery_V2_CreateCopyJobOptions_WriteDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.CreateCopyJobOptions.WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.WriteDisposition
+  nameWithType: CreateCopyJobOptions.WriteDisposition
+- uid: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.WriteDisposition*
+  name: WriteDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateCopyJobOptions.html#Google_Cloud_BigQuery_V2_CreateCopyJobOptions_WriteDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateCopyJobOptions.WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateCopyJobOptions.WriteDisposition
+  nameWithType: CreateCopyJobOptions.WriteDisposition
 - uid: Google.Cloud.BigQuery.V2.CreateDatasetOptions
   name: CreateDatasetOptions
   href: api/Google.Cloud.BigQuery.V2.CreateDatasetOptions.html
@@ -13357,6 +13981,222 @@ references:
   commentId: F:Google.Cloud.BigQuery.V2.CreateDisposition.CreateNever
   fullName: Google.Cloud.BigQuery.V2.CreateDisposition.CreateNever
   nameWithType: CreateDisposition.CreateNever
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions
+  name: CreateExtractJobOptions
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.CreateExtractJobOptions
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions
+  nameWithType: CreateExtractJobOptions
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.Compression
+  name: Compression
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_Compression
+  commentId: P:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.Compression
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.Compression
+  nameWithType: CreateExtractJobOptions.Compression
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.Compression*
+  name: Compression
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_Compression_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.Compression
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.Compression
+  nameWithType: CreateExtractJobOptions.Compression
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.DestinationFormat
+  name: DestinationFormat
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_DestinationFormat
+  commentId: P:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.DestinationFormat
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.DestinationFormat
+  nameWithType: CreateExtractJobOptions.DestinationFormat
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.DestinationFormat*
+  name: DestinationFormat
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_DestinationFormat_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.DestinationFormat
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.DestinationFormat
+  nameWithType: CreateExtractJobOptions.DestinationFormat
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.FieldDelimiter
+  name: FieldDelimiter
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_FieldDelimiter
+  commentId: P:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.FieldDelimiter
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.FieldDelimiter
+  nameWithType: CreateExtractJobOptions.FieldDelimiter
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.FieldDelimiter*
+  name: FieldDelimiter
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_FieldDelimiter_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.FieldDelimiter
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.FieldDelimiter
+  nameWithType: CreateExtractJobOptions.FieldDelimiter
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.PrintHeader
+  name: PrintHeader
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_PrintHeader
+  commentId: P:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.PrintHeader
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.PrintHeader
+  nameWithType: CreateExtractJobOptions.PrintHeader
+- uid: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.PrintHeader*
+  name: PrintHeader
+  href: api/Google.Cloud.BigQuery.V2.CreateExtractJobOptions.html#Google_Cloud_BigQuery_V2_CreateExtractJobOptions_PrintHeader_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateExtractJobOptions.PrintHeader
+  fullName: Google.Cloud.BigQuery.V2.CreateExtractJobOptions.PrintHeader
+  nameWithType: CreateExtractJobOptions.PrintHeader
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions
+  name: CreateLoadJobOptions
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html
+  commentId: T:Google.Cloud.BigQuery.V2.CreateLoadJobOptions
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions
+  nameWithType: CreateLoadJobOptions
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowJaggedRows
+  name: AllowJaggedRows
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_AllowJaggedRows
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowJaggedRows
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowJaggedRows
+  nameWithType: CreateLoadJobOptions.AllowJaggedRows
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowJaggedRows*
+  name: AllowJaggedRows
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_AllowJaggedRows_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowJaggedRows
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowJaggedRows
+  nameWithType: CreateLoadJobOptions.AllowJaggedRows
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowQuotedNewlines
+  name: AllowQuotedNewlines
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_AllowQuotedNewlines
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowQuotedNewlines
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowQuotedNewlines
+  nameWithType: CreateLoadJobOptions.AllowQuotedNewlines
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowQuotedNewlines*
+  name: AllowQuotedNewlines
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_AllowQuotedNewlines_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowQuotedNewlines
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.AllowQuotedNewlines
+  nameWithType: CreateLoadJobOptions.AllowQuotedNewlines
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Autodetect
+  name: Autodetect
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_Autodetect
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Autodetect
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Autodetect
+  nameWithType: CreateLoadJobOptions.Autodetect
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Autodetect*
+  name: Autodetect
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_Autodetect_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Autodetect
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Autodetect
+  nameWithType: CreateLoadJobOptions.Autodetect
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.CreateDisposition
+  name: CreateDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_CreateDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.CreateDisposition
+  nameWithType: CreateLoadJobOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.CreateDisposition*
+  name: CreateDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_CreateDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.CreateDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.CreateDisposition
+  nameWithType: CreateLoadJobOptions.CreateDisposition
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.FieldDelimiter
+  name: FieldDelimiter
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_FieldDelimiter
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.FieldDelimiter
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.FieldDelimiter
+  nameWithType: CreateLoadJobOptions.FieldDelimiter
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.FieldDelimiter*
+  name: FieldDelimiter
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_FieldDelimiter_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.FieldDelimiter
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.FieldDelimiter
+  nameWithType: CreateLoadJobOptions.FieldDelimiter
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.IgnoreUnknownValues
+  name: IgnoreUnknownValues
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_IgnoreUnknownValues
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.IgnoreUnknownValues
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.IgnoreUnknownValues
+  nameWithType: CreateLoadJobOptions.IgnoreUnknownValues
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.IgnoreUnknownValues*
+  name: IgnoreUnknownValues
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_IgnoreUnknownValues_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.IgnoreUnknownValues
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.IgnoreUnknownValues
+  nameWithType: CreateLoadJobOptions.IgnoreUnknownValues
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.MaxBadRecords
+  name: MaxBadRecords
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_MaxBadRecords
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.MaxBadRecords
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.MaxBadRecords
+  nameWithType: CreateLoadJobOptions.MaxBadRecords
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.MaxBadRecords*
+  name: MaxBadRecords
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_MaxBadRecords_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.MaxBadRecords
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.MaxBadRecords
+  nameWithType: CreateLoadJobOptions.MaxBadRecords
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.NullMarker
+  name: NullMarker
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_NullMarker
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.NullMarker
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.NullMarker
+  nameWithType: CreateLoadJobOptions.NullMarker
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.NullMarker*
+  name: NullMarker
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_NullMarker_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.NullMarker
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.NullMarker
+  nameWithType: CreateLoadJobOptions.NullMarker
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.ProjectionFields
+  name: ProjectionFields
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_ProjectionFields
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.ProjectionFields
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.ProjectionFields
+  nameWithType: CreateLoadJobOptions.ProjectionFields
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.ProjectionFields*
+  name: ProjectionFields
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_ProjectionFields_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.ProjectionFields
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.ProjectionFields
+  nameWithType: CreateLoadJobOptions.ProjectionFields
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Quote
+  name: Quote
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_Quote
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Quote
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Quote
+  nameWithType: CreateLoadJobOptions.Quote
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Quote*
+  name: Quote
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_Quote_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Quote
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.Quote
+  nameWithType: CreateLoadJobOptions.Quote
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SkipLeadingRows
+  name: SkipLeadingRows
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_SkipLeadingRows
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SkipLeadingRows
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SkipLeadingRows
+  nameWithType: CreateLoadJobOptions.SkipLeadingRows
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SkipLeadingRows*
+  name: SkipLeadingRows
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_SkipLeadingRows_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SkipLeadingRows
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SkipLeadingRows
+  nameWithType: CreateLoadJobOptions.SkipLeadingRows
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat
+  name: SourceFormat
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_SourceFormat
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat
+  nameWithType: CreateLoadJobOptions.SourceFormat
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat*
+  name: SourceFormat
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_SourceFormat_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.SourceFormat
+  nameWithType: CreateLoadJobOptions.SourceFormat
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
+  name: WriteDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_WriteDisposition
+  commentId: P:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
+  nameWithType: CreateLoadJobOptions.WriteDisposition
+- uid: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition*
+  name: WriteDisposition
+  href: api/Google.Cloud.BigQuery.V2.CreateLoadJobOptions.html#Google_Cloud_BigQuery_V2_CreateLoadJobOptions_WriteDisposition_
+  commentId: Overload:Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
+  fullName: Google.Cloud.BigQuery.V2.CreateLoadJobOptions.WriteDisposition
+  nameWithType: CreateLoadJobOptions.WriteDisposition
 - uid: Google.Cloud.BigQuery.V2.CreateQueryJobOptions
   name: CreateQueryJobOptions
   href: api/Google.Cloud.BigQuery.V2.CreateQueryJobOptions.html
@@ -13651,6 +14491,36 @@ references:
   commentId: Overload:Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache
   fullName: Google.Cloud.BigQuery.V2.ExecuteQueryOptions.UseQueryCache
   nameWithType: ExecuteQueryOptions.UseQueryCache
+- uid: Google.Cloud.BigQuery.V2.FileFormat
+  name: FileFormat
+  href: api/Google.Cloud.BigQuery.V2.FileFormat.html
+  commentId: T:Google.Cloud.BigQuery.V2.FileFormat
+  fullName: Google.Cloud.BigQuery.V2.FileFormat
+  nameWithType: FileFormat
+- uid: Google.Cloud.BigQuery.V2.FileFormat.Avro
+  name: Avro
+  href: api/Google.Cloud.BigQuery.V2.FileFormat.html#Google_Cloud_BigQuery_V2_FileFormat_Avro
+  commentId: F:Google.Cloud.BigQuery.V2.FileFormat.Avro
+  fullName: Google.Cloud.BigQuery.V2.FileFormat.Avro
+  nameWithType: FileFormat.Avro
+- uid: Google.Cloud.BigQuery.V2.FileFormat.Csv
+  name: Csv
+  href: api/Google.Cloud.BigQuery.V2.FileFormat.html#Google_Cloud_BigQuery_V2_FileFormat_Csv
+  commentId: F:Google.Cloud.BigQuery.V2.FileFormat.Csv
+  fullName: Google.Cloud.BigQuery.V2.FileFormat.Csv
+  nameWithType: FileFormat.Csv
+- uid: Google.Cloud.BigQuery.V2.FileFormat.DatastoreBackup
+  name: DatastoreBackup
+  href: api/Google.Cloud.BigQuery.V2.FileFormat.html#Google_Cloud_BigQuery_V2_FileFormat_DatastoreBackup
+  commentId: F:Google.Cloud.BigQuery.V2.FileFormat.DatastoreBackup
+  fullName: Google.Cloud.BigQuery.V2.FileFormat.DatastoreBackup
+  nameWithType: FileFormat.DatastoreBackup
+- uid: Google.Cloud.BigQuery.V2.FileFormat.NewlineDelimitedJson
+  name: NewlineDelimitedJson
+  href: api/Google.Cloud.BigQuery.V2.FileFormat.html#Google_Cloud_BigQuery_V2_FileFormat_NewlineDelimitedJson
+  commentId: F:Google.Cloud.BigQuery.V2.FileFormat.NewlineDelimitedJson
+  fullName: Google.Cloud.BigQuery.V2.FileFormat.NewlineDelimitedJson
+  nameWithType: FileFormat.NewlineDelimitedJson
 - uid: Google.Cloud.BigQuery.V2.GetDatasetOptions
   name: GetDatasetOptions
   href: api/Google.Cloud.BigQuery.V2.GetDatasetOptions.html
