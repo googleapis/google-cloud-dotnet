@@ -19,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 {
@@ -105,6 +106,41 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
                 using (var httpClient = new HttpClient(traceHeaderHandler))
                 {
                     return await httpClient.GetAsync("https://weather.com/");
+                }
+            }
+            // End sample
+
+            // Sample: TraceMVCConstructor
+            public class SampleConstructorController : Controller
+            {
+                private readonly IManagedTracer _tracer;
+
+                public SampleConstructorController(IManagedTracer tracer)
+                {
+                    _tracer = tracer;
+                }
+
+                public ActionResult Hello()
+                {
+                    using (_tracer.StartSpan(nameof(Hello)))
+                    {
+                        ViewData["text"] = "Hello, World!";
+                        return View();
+                    }
+                }
+            }
+            // End sample
+
+            // Sample: TraceMVCMethod
+            public class SampleMethodController : Controller
+            {
+                public ActionResult Hello([FromServices] IManagedTracer tracer)
+                {
+                    using (tracer.StartSpan(nameof(Hello)))
+                    {
+                        ViewData["text"] = "Hello, World!";
+                        return View();
+                    }
                 }
             }
             // End sample
