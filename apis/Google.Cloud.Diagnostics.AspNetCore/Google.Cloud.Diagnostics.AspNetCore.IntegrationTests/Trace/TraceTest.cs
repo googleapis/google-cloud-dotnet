@@ -60,12 +60,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.Equal(span.Labels[TraceLabels.HttpMethod], "GET");
             Assert.Equal(span.Labels[TraceLabels.HttpStatusCode], "200");
 
-            Assert.True(response.Headers.Contains(TraceHeaderContext.TraceHeader));
-            var returnedHeader = response.Headers.GetValues(TraceHeaderContext.TraceHeader).Single();
-            var headerContext = TraceHeaderContext.FromHeader(returnedHeader);
-            Assert.False(string.IsNullOrEmpty(headerContext.TraceId));
-            Assert.Equal((ulong)0, headerContext.SpanId);
-            Assert.True(headerContext.ShouldTrace);
+            Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
         [Fact]

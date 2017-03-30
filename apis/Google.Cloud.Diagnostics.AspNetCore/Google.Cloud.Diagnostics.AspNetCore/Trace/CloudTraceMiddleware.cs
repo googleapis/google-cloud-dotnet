@@ -68,11 +68,14 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
             else
             {
-                // Set the trace updated trace header on the response.
-                var updatedHeaderContext = TraceHeaderContext.Create(
-                    tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
-                httpContext.Response.Headers.Add(
-                    TraceHeaderContext.TraceHeader, updatedHeaderContext.ToString());
+                if (traceHeaderContext.TraceId != null)
+                {
+                    // Set the trace updated trace header on the response.
+                    var updatedHeaderContext = TraceHeaderContext.Create(
+                        tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
+                    httpContext.Response.Headers.Add(
+                        TraceHeaderContext.TraceHeader, updatedHeaderContext.ToString());
+                }
 
                 // Trace the delegate and annotate it with information from the current
                 // http context.

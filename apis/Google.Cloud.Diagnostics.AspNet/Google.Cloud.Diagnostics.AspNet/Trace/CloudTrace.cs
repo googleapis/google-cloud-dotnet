@@ -171,11 +171,14 @@ namespace Google.Cloud.Diagnostics.AspNet
 
             TracerManager.SetCurrentTracer(tracer);
 
-            // Set the updated trace header on the response.
-            var updatedHeaderContext = TraceHeaderContext.Create(
-                tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
-            HttpContext.Current.Response.Headers.Set(
-                TraceHeaderContext.TraceHeader, updatedHeaderContext.ToString());
+            if (headerContext.TraceId != null)
+            {
+                // Set the updated trace header on the response.
+                var updatedHeaderContext = TraceHeaderContext.Create(
+                    tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
+                HttpContext.Current.Response.Headers.Set(
+                    TraceHeaderContext.TraceHeader, updatedHeaderContext.ToString());
+            }
 
             // Start the span and annotate it with information from the current request.
             tracer.StartSpan(HttpContext.Current.Request.Path);
