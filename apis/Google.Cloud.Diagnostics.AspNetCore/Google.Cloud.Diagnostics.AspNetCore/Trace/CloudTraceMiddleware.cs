@@ -72,7 +72,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
                 var updatedHeaderContext = TraceHeaderContext.Create(
                     tracer.GetCurrentTraceId(), tracer.GetCurrentSpanId() ?? 0, true);
                 httpContext.Response.Headers.Add(
-                        TraceHeaderContext.TraceHeader, updatedHeaderContext.ToString());
+                    TraceHeaderContext.TraceHeader, updatedHeaderContext.ToString());
 
                 // Trace the delegate and annotate it with information from the current
                 // http context.
