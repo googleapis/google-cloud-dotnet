@@ -44,7 +44,7 @@ installed, run the following command in a Google Cloud SDK Shell:
 ## Tracing in MVC Controllers
 
 To use the `IManagedTracer` in MVC controllers you can either inject the singleton instance of 
-`IManagedTracer`into the controller's constructor (see `SampleConstructorController`) or you
+`IManagedTracer` into the controller's constructor (see `SampleConstructorController`) or you
 can in inject the `IManagedTracer` into the action method using the `[FromServices]` attribute
 (see `SampleMethodController`).
 
