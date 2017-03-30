@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -34,7 +35,11 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         public string GameDatasetId { get; }
         public BigQueryClient Client { get; }
         public string HistoryTableId => "game_history";
-        public string LevelsTableId => "levels";        
+        public string LevelsTableId => "levels";
+        /// <summary>
+        /// A GCS bucket created for this fixture.
+        /// </summary>
+        public string StorageBucketName { get; }
 
         private readonly List<string> _datasetsToDelete = new List<string>();
 
@@ -48,6 +53,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             Client = BigQueryClient.Create(ProjectId);
             GameDatasetId = CreateGameDataset();
+            StorageBucketName = GenerateStorageBucketName();
+            StorageClient.Create().CreateBucket(ProjectId, StorageBucketName);
         }
 
         private string CreateGameDataset()
@@ -86,7 +93,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
 
         internal string GenerateTableId() => Guid.NewGuid().ToString().Replace("-", "_");
 
-        internal string GenerateStorageBucketName() => "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+        private string GenerateStorageBucketName() => "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+        internal string GenerateStorageObjectName() => "file-" + Guid.NewGuid().ToString();
 
         internal void RegisterDatasetToDelete(string id)
         {
