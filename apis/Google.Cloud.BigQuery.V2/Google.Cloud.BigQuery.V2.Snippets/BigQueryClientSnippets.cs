@@ -278,7 +278,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
@@ -313,7 +313,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
@@ -362,7 +362,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
@@ -408,7 +408,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
@@ -944,7 +944,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
@@ -979,7 +979,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
@@ -1028,7 +1028,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();
@@ -1074,7 +1074,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         {
             string projectId = _fixture.ProjectId;
             string datasetId = _fixture.GameDatasetId;
-            string tableId = _fixture.HistoryTableId;
+            string tableId = _fixture.HistoryTableWithInsertsId;
 
             BigQueryTable table = BigQueryClient.Create(projectId).GetTable(datasetId, tableId);
             int rowsBefore = table.ListRows().Count();

@@ -34,7 +34,12 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         public string ProjectId { get; }
         public string GameDatasetId { get; }
         public BigQueryClient Client { get; }
+        // This table should not have inserts made during the test,
+        // as it's used as the source for copy operations.
         public string HistoryTableId => "game_history";
+        // This table has the same original data as HistoryTableId, but
+        // is not used for copying, so is suitable for inserts.
+        public string HistoryTableWithInsertsId => "game_history_for_inserts";
         public string LevelsTableId => "levels";
         /// <summary>
         /// A GCS bucket created for this fixture.
@@ -69,6 +74,7 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 { "game_started", BigQueryDbType.Timestamp }
             }.Build();
             var historyTable = game.CreateTable(HistoryTableId, historySchema);
+            var historyTableWithInserts = game.CreateTable(HistoryTableWithInsertsId, historySchema);
 
             string[] csvRows =
             {
@@ -82,6 +88,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             };
             MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join("\n", csvRows)));
             historyTable.UploadCsv(stream).PollUntilCompleted().ThrowOnAnyError();
+            stream.Position = 0;
+            historyTableWithInserts.UploadCsv(stream).PollUntilCompleted().ThrowOnAnyError();
             return id;
         }
 
