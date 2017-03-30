@@ -15,7 +15,6 @@
   "frameworks": {
     "net451": { },
     "netcoreapp1.0": {
-      "imports": "netcore50",
       "dependencies": {
         "System.Diagnostics.StackTrace": "4.3.0",
         "Microsoft.NETCore.App": {
