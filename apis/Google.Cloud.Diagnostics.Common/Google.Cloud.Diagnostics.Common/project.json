@@ -30,8 +30,7 @@
     "net45": {},
     "netstandard1.5": {
       "dependencies": {
-        "System.Diagnostics.StackTrace": "4.3.0",
-        "System.Threading": "4.3.0"
+        "System.Diagnostics.StackTrace": "4.3.0"
       }
     }
   }

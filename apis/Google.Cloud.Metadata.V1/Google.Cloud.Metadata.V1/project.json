@@ -25,23 +25,9 @@
   "frameworks": {
     "net45": {
       "frameworkAssemblies": {
-        "System.Net.Http": {
-          "type": "build"
-        },
-        "System.Runtime": {
-          "type": "build"
-        },
-        "System.IO": {
-          "type": "build"
-        }
+        "System.Net.Http": { "type": "build" }
       }
     },
-    "netstandard1.3": {
-      "dependencies": {
-        "System.Net.Http": "4.1.0",
-        "System.Net.NetworkInformation": "4.1.0",
-        "System.Threading.Thread": "4.0.0"
-      }
-    }
+    "netstandard1.3": { }
   }
 }
