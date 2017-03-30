@@ -521,7 +521,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="destination">The destination to copy to. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the copy operation.</returns>
         public virtual Task<BigQueryJob> CreateCopyJobAsync(TableReference source, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
             => CreateCopyJobAsync(new[] { GaxPreconditions.CheckNotNull(source, nameof(source)) }, destination, options, cancellationToken);
 
@@ -537,7 +537,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="destination">The destination to copy to. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
-        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the extract operation.</returns>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the copy operation.</returns>
         public virtual Task<BigQueryJob> CreateCopyJobAsync(IEnumerable<TableReference> sources, TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             throw new NotImplementedException();
