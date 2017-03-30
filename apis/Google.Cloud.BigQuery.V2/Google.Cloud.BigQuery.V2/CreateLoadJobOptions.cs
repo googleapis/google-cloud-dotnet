@@ -103,7 +103,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// The format of the source files.
         /// </summary>
-        public FileFormat SourceFormat { get; set; }
+        public FileFormat? SourceFormat { get; set; }
 
         internal void ModifyRequest(JobConfigurationLoad load)
         {
@@ -150,6 +150,14 @@ namespace Google.Cloud.BigQuery.V2
             if (ProjectionFields != null)
             {
                 load.ProjectionFields = ProjectionFields;
+            }
+            if (NullMarker != null)
+            {
+                load.NullMarker = NullMarker;
+            }
+            if (SourceFormat != null)
+            {
+                load.SourceFormat = EnumMap.ToApiValue(SourceFormat.Value);
             }
         }
     }
