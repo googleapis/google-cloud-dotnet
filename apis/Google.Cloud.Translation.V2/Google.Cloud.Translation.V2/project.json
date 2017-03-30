@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-beta13"
+    "Google.Api.Gax.Rest": "1.0.0"
   },
 
   "frameworks": {
