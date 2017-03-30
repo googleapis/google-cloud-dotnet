@@ -332,8 +332,8 @@ namespace Google.Cloud.BigQuery.V2
         /// </remarks>
         /// <param name="destination">The destination table to copy to. Must not be null.</param>
         /// <param name="options">The options for the operation. May be null, in which case defaults will be supplied.</param>
-        /// <returns>The job created for the copy operation.</returns>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
+        /// <returns>A task representing the asynchronous operation. When complete, the result is the job created for the copy operation.</returns>
         public Task<BigQueryJob> CreateCopyJobAsync(TableReference destination, CreateCopyJobOptions options = null, CancellationToken cancellationToken = default(CancellationToken)) =>
             _client.CreateCopyJobAsync(Reference, destination, options, cancellationToken);
 
