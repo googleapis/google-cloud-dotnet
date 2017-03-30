@@ -19,9 +19,7 @@
         "Microsoft.NETCore.App": {
           "version": "1.0.0",
           "type": "platform"
-        },
-        "System.Threading.Thread": "4.0.0",
-        "System.Threading.Tasks": "4.0.11"
+        }
       }
     }
   }
