@@ -1,0 +1,861 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Speech.SpeechClient
+   | Google.Cloud.Speech.V1 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Speech.SpeechClient
+   | Google.Cloud.Speech.V1 ">
+    <meta name="generator" content="docfx 2.14.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Google_Cloud_Speech_V1_Speech_SpeechClient" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient">Class Speech.SpeechClient
+              </h1>
+              <div class="markdown level0 summary"><p>Client for Speech</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">Grpc.Core.ClientBase</span></div>
+                  <div class="level2"><span class="xref">Grpc.Core.ClientBase</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1.Speech.SpeechClient.html">Speech.SpeechClient</a>&gt;</div>
+                  <div class="level3"><span class="xref">Speech.SpeechClient</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Speech.V1.Speech.SpeechClient&gt;.WithHost(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">Grpc.Core.ClientBase.CallInvoker</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Google.Cloud.Speech.V1</h6>
+              <h6><strong>Assembly</strong>:Google.Cloud.Speech.V1.dll</h6>
+              <h5 id="Google_Cloud_Speech_V1_Speech_SpeechClient_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class SpeechClient : ClientBase&lt;Speech.SpeechClient&gt;</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor">SpeechClient()</h4>
+              <div class="markdown level1 summary"><p>Protected parameterless constructor to allow creation of test doubles.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected SpeechClient()</code></pre>
+              </div>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor_Grpc_Core_CallInvoker_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor(Grpc.Core.CallInvoker)">SpeechClient(CallInvoker)</h4>
+              <div class="markdown level1 summary"><p>Creates a new client for Speech that uses a custom <code>CallInvoker</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SpeechClient(CallInvoker callInvoker)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallInvoker</span></td>
+                    <td><span class="parametername">callInvoker</span></td>
+                    <td><p>The callInvoker to use to make remote calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor_Grpc_Core_Channel_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor(Grpc.Core.Channel)">SpeechClient(Channel)</h4>
+              <div class="markdown level1 summary"><p>Creates a new client for Speech</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SpeechClient(Channel channel)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Channel</span></td>
+                    <td><span class="parametername">channel</span></td>
+                    <td><p>The channel to use to make remote calls.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient__ctor_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">SpeechClient(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"><p>Protected constructor to allow creation of configured clients.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected SpeechClient(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><span class="parametername">configuration</span></td>
+                    <td><p>The client configuration.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_CreateOperationsClient_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.CreateOperationsClient*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_CreateOperationsClient" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.CreateOperationsClient">CreateOperationsClient()</h4>
+              <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="Google.LongRunning.Operations.OperationsClient.html">Operations.OperationsClient</a> using the same call invoker as this client. </p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Operations.OperationsClient CreateOperationsClient()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.LongRunning.Operations.OperationsClient.html">Operations.OperationsClient</a></td>
+                    <td><p>A new Operations client for the same target as this client.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognize_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognize_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognize(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Grpc.Core.CallOptions)">LongRunningRecognize(LongRunningRecognizeRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Operation LongRunningRecognize(LongRunningRecognizeRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeRequest.html">LongRunningRecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognize_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognize_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognize(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">LongRunningRecognize(LongRunningRecognizeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual Operation LongRunningRecognize(LongRunningRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeRequest.html">LongRunningRecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.LongRunning.Operation.html">Operation</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Grpc.Core.CallOptions)">LongRunningRecognizeAsync(LongRunningRecognizeRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; LongRunningRecognizeAsync(LongRunningRecognizeRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeRequest.html">LongRunningRecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognizeAsync_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_LongRunningRecognizeAsync_Google_Cloud_Speech_V1_LongRunningRecognizeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.LongRunningRecognizeAsync(Google.Cloud.Speech.V1.LongRunningRecognizeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">LongRunningRecognizeAsync(LongRunningRecognizeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Performs asynchronous speech recognition: receive results via the
+google.longrunning.Operations interface. Returns either an
+<code>Operation.error</code> or an <code>Operation.response</code> which contains
+a <code>LongRunningRecognizeResponse</code> message.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;Operation&gt; LongRunningRecognizeAsync(LongRunningRecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.LongRunningRecognizeRequest.html">LongRunningRecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.LongRunning.Operation.html">Operation</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_NewInstance_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.NewInstance*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_NewInstance_Grpc_Core_ClientBase_ClientBaseConfiguration_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">NewInstance(ClientBase.ClientBaseConfiguration)</h4>
+              <div class="markdown level1 summary"><p>Creates a new instance of client from given <code>ClientBaseConfiguration</code>.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override Speech.SpeechClient NewInstance(ClientBase.ClientBaseConfiguration configuration)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.ClientBase.ClientBaseConfiguration</span></td>
+                    <td><span class="parametername">configuration</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.Speech.SpeechClient.html">Speech.SpeechClient</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">Grpc.Core.ClientBase&lt;Google.Cloud.Speech.V1.Speech.SpeechClient&gt;.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)</span></div>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_Recognize_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.Recognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_Recognize_Google_Cloud_Speech_V1_RecognizeRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.Recognize(Google.Cloud.Speech.V1.RecognizeRequest,Grpc.Core.CallOptions)">Recognize(RecognizeRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
+has been sent and processed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual RecognizeResponse Recognize(RecognizeRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.RecognizeRequest.html">RecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.RecognizeResponse.html">RecognizeResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_Recognize_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.Recognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_Recognize_Google_Cloud_Speech_V1_RecognizeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.Recognize(Google.Cloud.Speech.V1.RecognizeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">Recognize(RecognizeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
+has been sent and processed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual RecognizeResponse Recognize(RecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.RecognizeRequest.html">RecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.RecognizeResponse.html">RecognizeResponse</a></td>
+                    <td><p>The response received from the server.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_RecognizeAsync_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.RecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognizeRequest_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.RecognizeAsync(Google.Cloud.Speech.V1.RecognizeRequest,Grpc.Core.CallOptions)">RecognizeAsync(RecognizeRequest, CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
+has been sent and processed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;RecognizeResponse&gt; RecognizeAsync(RecognizeRequest request, CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.RecognizeRequest.html">RecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1.RecognizeResponse.html">RecognizeResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_RecognizeAsync_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.RecognizeAsync*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_RecognizeAsync_Google_Cloud_Speech_V1_RecognizeRequest_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.RecognizeAsync(Google.Cloud.Speech.V1.RecognizeRequest,Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">RecognizeAsync(RecognizeRequest, Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Performs synchronous speech recognition: receive results after all audio
+has been sent and processed.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncUnaryCall&lt;RecognizeResponse&gt; RecognizeAsync(RecognizeRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Google.Cloud.Speech.V1.RecognizeRequest.html">RecognizeRequest</a></td>
+                    <td><span class="parametername">request</span></td>
+                    <td><p>The request to send to the server.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncUnaryCall</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1.RecognizeResponse.html">RecognizeResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_StreamingRecognize_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.StreamingRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_StreamingRecognize_Grpc_Core_CallOptions_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.StreamingRecognize(Grpc.Core.CallOptions)">StreamingRecognize(CallOptions)</h4>
+              <div class="markdown level1 summary"><p>Performs bidirectional streaming speech recognition: receive results while
+sending audio. This method is only available via the gRPC API (not REST).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;StreamingRecognizeRequest, StreamingRecognizeResponse&gt; StreamingRecognize(CallOptions options)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.CallOptions</span></td>
+                    <td><span class="parametername">options</span></td>
+                    <td><p>The options for the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeRequest.html">StreamingRecognizeRequest</a>, <a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.html">StreamingRecognizeResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a id="Google_Cloud_Speech_V1_Speech_SpeechClient_StreamingRecognize_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.StreamingRecognize*"></a>
+              <h4 id="Google_Cloud_Speech_V1_Speech_SpeechClient_StreamingRecognize_Grpc_Core_Metadata_System_Nullable_System_DateTime__System_Threading_CancellationToken_" data-uid="Google.Cloud.Speech.V1.Speech.SpeechClient.StreamingRecognize(Grpc.Core.Metadata,System.Nullable{System.DateTime},System.Threading.CancellationToken)">StreamingRecognize(Metadata, Nullable&lt;DateTime&gt;, CancellationToken)</h4>
+              <div class="markdown level1 summary"><p>Performs bidirectional streaming speech recognition: receive results while
+sending audio. This method is only available via the gRPC API (not REST).</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public virtual AsyncDuplexStreamingCall&lt;StreamingRecognizeRequest, StreamingRecognizeResponse&gt; StreamingRecognize(Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.Metadata</span></td>
+                    <td><span class="parametername">headers</span></td>
+                    <td><p>The initial metadata to send with the call. This parameter is optional.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
+                    <td><span class="parametername">deadline</span></td>
+                    <td><p>An optional deadline for the call. The call will be cancelled if deadline is hit.</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Threading.CancellationToken</span></td>
+                    <td><span class="parametername">cancellationToken</span></td>
+                    <td><p>An optional token for canceling the call.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Grpc.Core.AsyncDuplexStreamingCall</span>&lt;<a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeRequest.html">StreamingRecognizeRequest</a>, <a class="xref" href="Google.Cloud.Speech.V1.StreamingRecognizeResponse.html">StreamingRecognizeResponse</a>&gt;</td>
+                    <td><p>The call object.</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+                        </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
