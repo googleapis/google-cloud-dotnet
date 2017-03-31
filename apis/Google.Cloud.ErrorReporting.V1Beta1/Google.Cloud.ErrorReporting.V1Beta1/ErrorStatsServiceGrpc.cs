@@ -20,7 +20,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Grpc.Core;
+using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.ErrorReporting.V1Beta1 {
   /// <summary>
@@ -31,29 +31,29 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   {
     static readonly string __ServiceName = "google.devtools.clouderrorreporting.v1beta1.ErrorStatsService";
 
-    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest> __Marshaller_ListGroupStatsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> __Marshaller_ListGroupStatsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest> __Marshaller_ListEventsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> __Marshaller_ListEventsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest> __Marshaller_DeleteEventsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> __Marshaller_DeleteEventsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest> __Marshaller_ListGroupStatsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> __Marshaller_ListGroupStatsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest> __Marshaller_ListEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> __Marshaller_ListEventsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest> __Marshaller_DeleteEventsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> __Marshaller_DeleteEventsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> __Method_ListGroupStats = new Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> __Method_ListGroupStats = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "ListGroupStats",
         __Marshaller_ListGroupStatsRequest,
         __Marshaller_ListGroupStatsResponse);
 
-    static readonly Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> __Method_ListEvents = new Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> __Method_ListEvents = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "ListEvents",
         __Marshaller_ListEventsRequest,
         __Marshaller_ListEventsResponse);
 
-    static readonly Method<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> __Method_DeleteEvents = new Method<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> __Method_DeleteEvents = new grpc::Method<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest, global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "DeleteEvents",
         __Marshaller_DeleteEventsRequest,
@@ -74,9 +74,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> ListGroupStats(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> ListGroupStats(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -85,9 +85,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> ListEvents(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> ListEvents(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -96,24 +96,24 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> DeleteEvents(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> DeleteEvents(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
     /// <summary>Client for ErrorStatsService</summary>
-    public partial class ErrorStatsServiceClient : ClientBase<ErrorStatsServiceClient>
+    public partial class ErrorStatsServiceClient : grpc::ClientBase<ErrorStatsServiceClient>
     {
       /// <summary>Creates a new client for ErrorStatsService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public ErrorStatsServiceClient(Channel channel) : base(channel)
+      public ErrorStatsServiceClient(grpc::Channel channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for ErrorStatsService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public ErrorStatsServiceClient(CallInvoker callInvoker) : base(callInvoker)
+      public ErrorStatsServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
@@ -134,9 +134,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse ListGroupStats(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse ListGroupStats(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListGroupStats(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListGroupStats(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists the specified groups.
@@ -144,7 +144,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse ListGroupStats(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse ListGroupStats(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListGroupStats, null, options, request);
       }
@@ -156,9 +156,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> ListGroupStatsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> ListGroupStatsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListGroupStatsAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListGroupStatsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists the specified groups.
@@ -166,7 +166,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> ListGroupStatsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsResponse> ListGroupStatsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListGroupStatsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListGroupStats, null, options, request);
       }
@@ -178,9 +178,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse ListEvents(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse ListEvents(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListEvents(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists the specified events.
@@ -188,7 +188,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse ListEvents(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse ListEvents(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListEvents, null, options, request);
       }
@@ -200,9 +200,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> ListEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> ListEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListEventsAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists the specified events.
@@ -210,7 +210,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> ListEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsResponse> ListEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.ListEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListEvents, null, options, request);
       }
@@ -222,9 +222,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse DeleteEvents(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse DeleteEvents(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DeleteEvents(request, new CallOptions(headers, deadline, cancellationToken));
+        return DeleteEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Deletes all error events of a given project.
@@ -232,7 +232,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse DeleteEvents(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse DeleteEvents(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEvents, null, options, request);
       }
@@ -244,9 +244,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> DeleteEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> DeleteEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DeleteEventsAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return DeleteEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Deletes all error events of a given project.
@@ -254,7 +254,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> DeleteEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsResponse> DeleteEventsAsync(global::Google.Cloud.ErrorReporting.V1Beta1.DeleteEventsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteEvents, null, options, request);
       }
@@ -267,9 +267,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static ServerServiceDefinition BindService(ErrorStatsServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(ErrorStatsServiceBase serviceImpl)
     {
-      return ServerServiceDefinition.CreateBuilder()
+      return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListGroupStats, serviceImpl.ListGroupStats)
           .AddMethod(__Method_ListEvents, serviceImpl.ListEvents)
           .AddMethod(__Method_DeleteEvents, serviceImpl.DeleteEvents).Build();

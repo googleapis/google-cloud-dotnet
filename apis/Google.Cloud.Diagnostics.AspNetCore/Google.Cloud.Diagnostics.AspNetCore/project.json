@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha07-*",
+  "version": "1.0.0-alpha08-*",
   "description": "Google Stackdriver Instrumentation Libraries for ASP.NET Core.",
   "authors": [ "Google Inc." ],
 
@@ -26,8 +26,7 @@
     "Microsoft.AspNetCore.Http.Extensions": "1.1.0",
     "Microsoft.Extensions.Logging": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
-    "System.Diagnostics.StackTrace": "4.3.0",
-    "System.Linq": "4.3.0"
+    "System.Diagnostics.StackTrace": "4.3.0"
   },
 
   "frameworks": {

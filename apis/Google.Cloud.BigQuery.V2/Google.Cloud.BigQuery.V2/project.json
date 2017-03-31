@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta09-*",
+  "version": "1.0.0-beta10-*",
   "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
   "authors": [ "Google Inc." ],
 
@@ -19,15 +19,11 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.0-beta13",
-    "Google.Apis.Bigquery.v2": "1.22.0.808"
+    "Google.Api.Gax.Rest": "1.0.1",
+    "Google.Apis.Bigquery.v2": "1.24.1.808"
   },
   "frameworks": {
     "net45": { },
-    "netstandard1.3": {
-      "dependencies": {
-        "System.Threading.Thread": "4.0.0"
-      }
-    }
+    "netstandard1.3": { }
   }
 }

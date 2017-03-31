@@ -20,7 +20,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Grpc.Core;
+using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Trace.V1 {
   /// <summary>
@@ -34,29 +34,29 @@ namespace Google.Cloud.Trace.V1 {
   {
     static readonly string __ServiceName = "google.devtools.cloudtrace.v1.TraceService";
 
-    static readonly Marshaller<global::Google.Cloud.Trace.V1.ListTracesRequest> __Marshaller_ListTracesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Trace.V1.ListTracesResponse> __Marshaller_ListTracesResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Trace.V1.GetTraceRequest> __Marshaller_GetTraceRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Trace.V1.Trace> __Marshaller_Trace = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.Trace.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Trace.V1.PatchTracesRequest> __Marshaller_PatchTracesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesRequest> __Marshaller_ListTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.ListTracesResponse> __Marshaller_ListTracesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.ListTracesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.GetTraceRequest> __Marshaller_GetTraceRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.GetTraceRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.Trace> __Marshaller_Trace = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.Trace.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Trace.V1.PatchTracesRequest> __Marshaller_PatchTracesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Trace.V1.PatchTracesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse> __Method_ListTraces = new Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse> __Method_ListTraces = new grpc::Method<global::Google.Cloud.Trace.V1.ListTracesRequest, global::Google.Cloud.Trace.V1.ListTracesResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "ListTraces",
         __Marshaller_ListTracesRequest,
         __Marshaller_ListTracesResponse);
 
-    static readonly Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace> __Method_GetTrace = new Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace> __Method_GetTrace = new grpc::Method<global::Google.Cloud.Trace.V1.GetTraceRequest, global::Google.Cloud.Trace.V1.Trace>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetTrace",
         __Marshaller_GetTraceRequest,
         __Marshaller_Trace);
 
-    static readonly Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PatchTraces = new Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PatchTraces = new grpc::Method<global::Google.Cloud.Trace.V1.PatchTracesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "PatchTraces",
         __Marshaller_PatchTracesRequest,
@@ -77,9 +77,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -88,9 +88,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Trace.V1.Trace> GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Trace.V1.Trace> GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -103,24 +103,24 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
     /// <summary>Client for TraceService</summary>
-    public partial class TraceServiceClient : ClientBase<TraceServiceClient>
+    public partial class TraceServiceClient : grpc::ClientBase<TraceServiceClient>
     {
       /// <summary>Creates a new client for TraceService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public TraceServiceClient(Channel channel) : base(channel)
+      public TraceServiceClient(grpc::Channel channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for TraceService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public TraceServiceClient(CallInvoker callInvoker) : base(callInvoker)
+      public TraceServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
@@ -141,9 +141,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Trace.V1.ListTracesResponse ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Trace.V1.ListTracesResponse ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListTraces(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListTraces(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns of a list of traces that match the specified filter conditions.
@@ -151,7 +151,7 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Trace.V1.ListTracesResponse ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Trace.V1.ListTracesResponse ListTraces(global::Google.Cloud.Trace.V1.ListTracesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListTraces, null, options, request);
       }
@@ -163,9 +163,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTracesAsync(global::Google.Cloud.Trace.V1.ListTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTracesAsync(global::Google.Cloud.Trace.V1.ListTracesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListTracesAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListTracesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns of a list of traces that match the specified filter conditions.
@@ -173,7 +173,7 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTracesAsync(global::Google.Cloud.Trace.V1.ListTracesRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Trace.V1.ListTracesResponse> ListTracesAsync(global::Google.Cloud.Trace.V1.ListTracesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTraces, null, options, request);
       }
@@ -185,9 +185,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Trace.V1.Trace GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Trace.V1.Trace GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetTrace(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetTrace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets a single trace by its ID.
@@ -195,7 +195,7 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Trace.V1.Trace GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Trace.V1.Trace GetTrace(global::Google.Cloud.Trace.V1.GetTraceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetTrace, null, options, request);
       }
@@ -207,9 +207,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.Trace> GetTraceAsync(global::Google.Cloud.Trace.V1.GetTraceRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Trace.V1.Trace> GetTraceAsync(global::Google.Cloud.Trace.V1.GetTraceRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetTraceAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetTraceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets a single trace by its ID.
@@ -217,7 +217,7 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Trace.V1.Trace> GetTraceAsync(global::Google.Cloud.Trace.V1.GetTraceRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Trace.V1.Trace> GetTraceAsync(global::Google.Cloud.Trace.V1.GetTraceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTrace, null, options, request);
       }
@@ -233,9 +233,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return PatchTraces(request, new CallOptions(headers, deadline, cancellationToken));
+        return PatchTraces(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -247,7 +247,7 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty PatchTraces(global::Google.Cloud.Trace.V1.PatchTracesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PatchTraces, null, options, request);
       }
@@ -263,9 +263,9 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Cloud.Trace.V1.PatchTracesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Cloud.Trace.V1.PatchTracesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return PatchTracesAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return PatchTracesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Sends new traces to Stackdriver Trace or updates existing traces. If the ID
@@ -277,7 +277,7 @@ namespace Google.Cloud.Trace.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Cloud.Trace.V1.PatchTracesRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PatchTracesAsync(global::Google.Cloud.Trace.V1.PatchTracesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PatchTraces, null, options, request);
       }
@@ -290,9 +290,9 @@ namespace Google.Cloud.Trace.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static ServerServiceDefinition BindService(TraceServiceBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(TraceServiceBase serviceImpl)
     {
-      return ServerServiceDefinition.CreateBuilder()
+      return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListTraces, serviceImpl.ListTraces)
           .AddMethod(__Method_GetTrace, serviceImpl.GetTrace)
           .AddMethod(__Method_PatchTraces, serviceImpl.PatchTraces).Build();

@@ -198,7 +198,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
   #region Messages
   /// <summary>
-  ///  A topic resource.
+  /// A topic resource.
   /// </summary>
   public sealed partial class Topic : pb::IMessage<Topic> {
     private static readonly pb::MessageParser<Topic> _parser = new pb::MessageParser<Topic>(() => new Topic());
@@ -236,12 +236,12 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the topic. It must have the format
-    ///  `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
-    ///  and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
-    ///  underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
-    ///  signs (`%`). It must be between 3 and 255 characters in length, and it
-    ///  must not start with `"goog"`.
+    /// The name of the topic. It must have the format
+    /// `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,
+    /// and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+    /// underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent
+    /// signs (`%`). It must be between 3 and 255 characters in length, and it
+    /// must not start with `"goog"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -326,8 +326,8 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  A message data and its attributes. The message payload must not be empty;
-  ///  it must contain either a non-empty data field, or at least one attribute.
+  /// A message data and its attributes. The message payload must not be empty;
+  /// it must contain either a non-empty data field, or at least one attribute.
   /// </summary>
   public sealed partial class PubsubMessage : pb::IMessage<PubsubMessage> {
     private static readonly pb::MessageParser<PubsubMessage> _parser = new pb::MessageParser<PubsubMessage>(() => new PubsubMessage());
@@ -368,7 +368,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
     /// <summary>
-    ///  The message payload.
+    /// The message payload.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Data {
@@ -384,7 +384,7 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
     /// <summary>
-    ///  Optional attributes for this message.
+    /// Optional attributes for this message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Attributes {
@@ -395,10 +395,10 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MessageIdFieldNumber = 3;
     private string messageId_ = "";
     /// <summary>
-    ///  ID of this message, assigned by the server when the message is published.
-    ///  Guaranteed to be unique within the topic. This value may be read by a
-    ///  subscriber that receives a `PubsubMessage` via a `Pull` call or a push
-    ///  delivery. It must not be populated by the publisher in a `Publish` call.
+    /// ID of this message, assigned by the server when the message is published.
+    /// Guaranteed to be unique within the topic. This value may be read by a
+    /// subscriber that receives a `PubsubMessage` via a `Pull` call or a push
+    /// delivery. It must not be populated by the publisher in a `Publish` call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string MessageId {
@@ -412,9 +412,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PublishTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp publishTime_;
     /// <summary>
-    ///  The time at which the message was published, populated by the server when
-    ///  it receives the `Publish` call. It must not be populated by the
-    ///  publisher in a `Publish` call.
+    /// The time at which the message was published, populated by the server when
+    /// it receives the `Publish` call. It must not be populated by the
+    /// publisher in a `Publish` call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PublishTime {
@@ -546,7 +546,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the GetTopic method.
+  /// Request for the GetTopic method.
   /// </summary>
   public sealed partial class GetTopicRequest : pb::IMessage<GetTopicRequest> {
     private static readonly pb::MessageParser<GetTopicRequest> _parser = new pb::MessageParser<GetTopicRequest>(() => new GetTopicRequest());
@@ -584,8 +584,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
     /// <summary>
-    ///  The name of the topic to get.
-    ///  Format is `projects/{project}/topics/{topic}`.
+    /// The name of the topic to get.
+    /// Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -670,7 +670,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the Publish method.
+  /// Request for the Publish method.
   /// </summary>
   public sealed partial class PublishRequest : pb::IMessage<PublishRequest> {
     private static readonly pb::MessageParser<PublishRequest> _parser = new pb::MessageParser<PublishRequest>(() => new PublishRequest());
@@ -709,8 +709,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
     /// <summary>
-    ///  The messages in the request will be published on this topic.
-    ///  Format is `projects/{project}/topics/{topic}`.
+    /// The messages in the request will be published on this topic.
+    /// Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -726,7 +726,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.PubSub.V1.PubsubMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.PubsubMessage> messages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.PubsubMessage>();
     /// <summary>
-    ///  The messages to publish.
+    /// The messages to publish.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.PubsubMessage> Messages {
@@ -817,7 +817,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Response for the `Publish` method.
+  /// Response for the `Publish` method.
   /// </summary>
   public sealed partial class PublishResponse : pb::IMessage<PublishResponse> {
     private static readonly pb::MessageParser<PublishResponse> _parser = new pb::MessageParser<PublishResponse>(() => new PublishResponse());
@@ -857,9 +857,9 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> messageIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  The server-assigned ID of each published message, in the same order as
-    ///  the messages in the request. IDs are guaranteed to be unique within
-    ///  the topic.
+    /// The server-assigned ID of each published message, in the same order as
+    /// the messages in the request. IDs are guaranteed to be unique within
+    /// the topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> MessageIds {
@@ -934,7 +934,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `ListTopics` method.
+  /// Request for the `ListTopics` method.
   /// </summary>
   public sealed partial class ListTopicsRequest : pb::IMessage<ListTopicsRequest> {
     private static readonly pb::MessageParser<ListTopicsRequest> _parser = new pb::MessageParser<ListTopicsRequest>(() => new ListTopicsRequest());
@@ -974,8 +974,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ProjectFieldNumber = 1;
     private string project_ = "";
     /// <summary>
-    ///  The name of the cloud project that topics belong to.
-    ///  Format is `projects/{project}`.
+    /// The name of the cloud project that topics belong to.
+    /// Format is `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Project {
@@ -989,7 +989,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    ///  Maximum number of topics to return.
+    /// Maximum number of topics to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1003,9 +1003,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    ///  The value returned by the last `ListTopicsResponse`; indicates that this is
-    ///  a continuation of a prior `ListTopics` call, and that the system should
-    ///  return the next page of data.
+    /// The value returned by the last `ListTopicsResponse`; indicates that this is
+    /// a continuation of a prior `ListTopics` call, and that the system should
+    /// return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1122,7 +1122,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Response for the `ListTopics` method.
+  /// Response for the `ListTopics` method.
   /// </summary>
   public sealed partial class ListTopicsResponse : pb::IMessage<ListTopicsResponse> {
     private static readonly pb::MessageParser<ListTopicsResponse> _parser = new pb::MessageParser<ListTopicsResponse>(() => new ListTopicsResponse());
@@ -1163,7 +1163,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Topic.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic> topics_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic>();
     /// <summary>
-    ///  The resulting topics.
+    /// The resulting topics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Topic> Topics {
@@ -1174,8 +1174,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If not empty, indicates that there may be more topics that match the
-    ///  request; this value should be passed in a new `ListTopicsRequest`.
+    /// If not empty, indicates that there may be more topics that match the
+    /// request; this value should be passed in a new `ListTopicsRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1269,7 +1269,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `ListTopicSubscriptions` method.
+  /// Request for the `ListTopicSubscriptions` method.
   /// </summary>
   public sealed partial class ListTopicSubscriptionsRequest : pb::IMessage<ListTopicSubscriptionsRequest> {
     private static readonly pb::MessageParser<ListTopicSubscriptionsRequest> _parser = new pb::MessageParser<ListTopicSubscriptionsRequest>(() => new ListTopicSubscriptionsRequest());
@@ -1309,8 +1309,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
     /// <summary>
-    ///  The name of the topic that subscriptions are attached to.
-    ///  Format is `projects/{project}/topics/{topic}`.
+    /// The name of the topic that subscriptions are attached to.
+    /// Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -1324,7 +1324,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    ///  Maximum number of subscription names to return.
+    /// Maximum number of subscription names to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1338,9 +1338,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    ///  The value returned by the last `ListTopicSubscriptionsResponse`; indicates
-    ///  that this is a continuation of a prior `ListTopicSubscriptions` call, and
-    ///  that the system should return the next page of data.
+    /// The value returned by the last `ListTopicSubscriptionsResponse`; indicates
+    /// that this is a continuation of a prior `ListTopicSubscriptions` call, and
+    /// that the system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1457,7 +1457,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Response for the `ListTopicSubscriptions` method.
+  /// Response for the `ListTopicSubscriptions` method.
   /// </summary>
   public sealed partial class ListTopicSubscriptionsResponse : pb::IMessage<ListTopicSubscriptionsResponse> {
     private static readonly pb::MessageParser<ListTopicSubscriptionsResponse> _parser = new pb::MessageParser<ListTopicSubscriptionsResponse>(() => new ListTopicSubscriptionsResponse());
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> subscriptions_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  The names of the subscriptions that match the request.
+    /// The names of the subscriptions that match the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Subscriptions {
@@ -1509,9 +1509,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If not empty, indicates that there may be more subscriptions that match
-    ///  the request; this value should be passed in a new
-    ///  `ListTopicSubscriptionsRequest` to get more subscriptions.
+    /// If not empty, indicates that there may be more subscriptions that match
+    /// the request; this value should be passed in a new
+    /// `ListTopicSubscriptionsRequest` to get more subscriptions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1605,7 +1605,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `DeleteTopic` method.
+  /// Request for the `DeleteTopic` method.
   /// </summary>
   public sealed partial class DeleteTopicRequest : pb::IMessage<DeleteTopicRequest> {
     private static readonly pb::MessageParser<DeleteTopicRequest> _parser = new pb::MessageParser<DeleteTopicRequest>(() => new DeleteTopicRequest());
@@ -1643,8 +1643,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
     /// <summary>
-    ///  Name of the topic to delete.
-    ///  Format is `projects/{project}/topics/{topic}`.
+    /// Name of the topic to delete.
+    /// Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -1729,7 +1729,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  A subscription resource.
+  /// A subscription resource.
   /// </summary>
   public sealed partial class Subscription : pb::IMessage<Subscription> {
     private static readonly pb::MessageParser<Subscription> _parser = new pb::MessageParser<Subscription>(() => new Subscription());
@@ -1772,12 +1772,12 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the subscription. It must have the format
-    ///  `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
-    ///  start with a letter, and contain only letters (`[A-Za-z]`), numbers
-    ///  (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
-    ///  plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
-    ///  in length, and it must not start with `"goog"`.
+    /// The name of the subscription. It must have the format
+    /// `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
+    /// start with a letter, and contain only letters (`[A-Za-z]`), numbers
+    /// (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
+    /// plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
+    /// in length, and it must not start with `"goog"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1791,10 +1791,10 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 2;
     private string topic_ = "";
     /// <summary>
-    ///  The name of the topic from which this subscription is receiving messages.
-    ///  Format is `projects/{project}/topics/{topic}`.
-    ///  The value of this field will be `_deleted-topic_` if the topic has been
-    ///  deleted.
+    /// The name of the topic from which this subscription is receiving messages.
+    /// Format is `projects/{project}/topics/{topic}`.
+    /// The value of this field will be `_deleted-topic_` if the topic has been
+    /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -1808,9 +1808,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PushConfigFieldNumber = 4;
     private global::Google.Cloud.PubSub.V1.PushConfig pushConfig_;
     /// <summary>
-    ///  If push delivery is used with this subscription, this field is
-    ///  used to configure it. An empty `pushConfig` signifies that the subscriber
-    ///  will pull and ack messages using API methods.
+    /// If push delivery is used with this subscription, this field is
+    /// used to configure it. An empty `pushConfig` signifies that the subscriber
+    /// will pull and ack messages using API methods.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.PushConfig PushConfig {
@@ -1824,25 +1824,25 @@ namespace Google.Cloud.PubSub.V1 {
     public const int AckDeadlineSecondsFieldNumber = 5;
     private int ackDeadlineSeconds_;
     /// <summary>
-    ///  This value is the maximum time after a subscriber receives a message
-    ///  before the subscriber should acknowledge the message. After message
-    ///  delivery but before the ack deadline expires and before the message is
-    ///  acknowledged, it is an outstanding message and will not be delivered
-    ///  again during that time (on a best-effort basis).
+    /// This value is the maximum time after a subscriber receives a message
+    /// before the subscriber should acknowledge the message. After message
+    /// delivery but before the ack deadline expires and before the message is
+    /// acknowledged, it is an outstanding message and will not be delivered
+    /// again during that time (on a best-effort basis).
     ///
-    ///  For pull subscriptions, this value is used as the initial value for the ack
-    ///  deadline. To override this value for a given message, call
-    ///  `ModifyAckDeadline` with the corresponding `ack_id` if using
-    ///  pull.
-    ///  The minimum custom deadline you can specify is 10 seconds.
-    ///  The maximum custom deadline you can specify is 600 seconds (10 minutes).
-    ///  If this parameter is 0, a default value of 10 seconds is used.
+    /// For pull subscriptions, this value is used as the initial value for the ack
+    /// deadline. To override this value for a given message, call
+    /// `ModifyAckDeadline` with the corresponding `ack_id` if using
+    /// pull.
+    /// The minimum custom deadline you can specify is 10 seconds.
+    /// The maximum custom deadline you can specify is 600 seconds (10 minutes).
+    /// If this parameter is 0, a default value of 10 seconds is used.
     ///
-    ///  For push delivery, this value is also used to set the request timeout for
-    ///  the call to the push endpoint.
+    /// For push delivery, this value is also used to set the request timeout for
+    /// the call to the push endpoint.
     ///
-    ///  If the subscriber never acknowledges the message, the Pub/Sub
-    ///  system will eventually redeliver the message.
+    /// If the subscriber never acknowledges the message, the Pub/Sub
+    /// system will eventually redeliver the message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AckDeadlineSeconds {
@@ -1856,10 +1856,10 @@ namespace Google.Cloud.PubSub.V1 {
     public const int RetainAckedMessagesFieldNumber = 7;
     private bool retainAckedMessages_;
     /// <summary>
-    ///  Indicates whether to retain acknowledged messages. If true, then
-    ///  messages are not expunged from the subscription's backlog, even if they are
-    ///  acknowledged, until they fall out of the `message_retention_duration`
-    ///  window.
+    /// Indicates whether to retain acknowledged messages. If true, then
+    /// messages are not expunged from the subscription's backlog, even if they are
+    /// acknowledged, until they fall out of the `message_retention_duration`
+    /// window.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool RetainAckedMessages {
@@ -1873,12 +1873,12 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MessageRetentionDurationFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Duration messageRetentionDuration_;
     /// <summary>
-    ///  How long to retain unacknowledged messages in the subscription's backlog,
-    ///  from the moment a message is published.
-    ///  If `retain_acked_messages` is true, then this also configures the retention
-    ///  of acknowledged messages, and thus configures how far back in time a `Seek`
-    ///  can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10
-    ///  minutes.
+    /// How long to retain unacknowledged messages in the subscription's backlog,
+    /// from the moment a message is published.
+    /// If `retain_acked_messages` is true, then this also configures the retention
+    /// of acknowledged messages, and thus configures how far back in time a `Seek`
+    /// can be done. Defaults to 7 days. Cannot be more than 7 days or less than 10
+    /// minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration MessageRetentionDuration {
@@ -2055,7 +2055,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Configuration for a push delivery endpoint.
+  /// Configuration for a push delivery endpoint.
   /// </summary>
   public sealed partial class PushConfig : pb::IMessage<PushConfig> {
     private static readonly pb::MessageParser<PushConfig> _parser = new pb::MessageParser<PushConfig>(() => new PushConfig());
@@ -2094,8 +2094,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PushEndpointFieldNumber = 1;
     private string pushEndpoint_ = "";
     /// <summary>
-    ///  A URL locating the endpoint to which messages should be pushed.
-    ///  For example, a Webhook endpoint might use "https://example.com/push".
+    /// A URL locating the endpoint to which messages should be pushed.
+    /// For example, a Webhook endpoint might use "https://example.com/push".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PushEndpoint {
@@ -2111,27 +2111,27 @@ namespace Google.Cloud.PubSub.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
     private readonly pbc::MapField<string, string> attributes_ = new pbc::MapField<string, string>();
     /// <summary>
-    ///  Endpoint configuration attributes.
+    /// Endpoint configuration attributes.
     ///
-    ///  Every endpoint has a set of API supported attributes that can be used to
-    ///  control different aspects of the message delivery.
+    /// Every endpoint has a set of API supported attributes that can be used to
+    /// control different aspects of the message delivery.
     ///
-    ///  The currently supported attribute is `x-goog-version`, which you can
-    ///  use to change the format of the pushed message. This attribute
-    ///  indicates the version of the data expected by the endpoint. This
-    ///  controls the shape of the pushed message (i.e., its fields and metadata).
-    ///  The endpoint version is based on the version of the Pub/Sub API.
+    /// The currently supported attribute is `x-goog-version`, which you can
+    /// use to change the format of the pushed message. This attribute
+    /// indicates the version of the data expected by the endpoint. This
+    /// controls the shape of the pushed message (i.e., its fields and metadata).
+    /// The endpoint version is based on the version of the Pub/Sub API.
     ///
-    ///  If not present during the `CreateSubscription` call, it will default to
-    ///  the version of the API used to make such call. If not present during a
-    ///  `ModifyPushConfig` call, its value will not be changed. `GetSubscription`
-    ///  calls will always return a valid version, even if the subscription was
-    ///  created without this attribute.
+    /// If not present during the `CreateSubscription` call, it will default to
+    /// the version of the API used to make such call. If not present during a
+    /// `ModifyPushConfig` call, its value will not be changed. `GetSubscription`
+    /// calls will always return a valid version, even if the subscription was
+    /// created without this attribute.
     ///
-    ///  The possible values for this attribute are:
+    /// The possible values for this attribute are:
     ///
-    ///  * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API.
-    ///  * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
+    /// * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API.
+    /// * `v1` or `v1beta2`: uses the push format defined in the v1 Pub/Sub API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Attributes {
@@ -2222,7 +2222,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  A message and its corresponding acknowledgment ID.
+  /// A message and its corresponding acknowledgment ID.
   /// </summary>
   public sealed partial class ReceivedMessage : pb::IMessage<ReceivedMessage> {
     private static readonly pb::MessageParser<ReceivedMessage> _parser = new pb::MessageParser<ReceivedMessage>(() => new ReceivedMessage());
@@ -2261,7 +2261,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int AckIdFieldNumber = 1;
     private string ackId_ = "";
     /// <summary>
-    ///  This ID can be used to acknowledge the received message.
+    /// This ID can be used to acknowledge the received message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string AckId {
@@ -2275,7 +2275,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MessageFieldNumber = 2;
     private global::Google.Cloud.PubSub.V1.PubsubMessage message_;
     /// <summary>
-    ///  The message.
+    /// The message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.PubsubMessage Message {
@@ -2382,7 +2382,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the GetSubscription method.
+  /// Request for the GetSubscription method.
   /// </summary>
   public sealed partial class GetSubscriptionRequest : pb::IMessage<GetSubscriptionRequest> {
     private static readonly pb::MessageParser<GetSubscriptionRequest> _parser = new pb::MessageParser<GetSubscriptionRequest>(() => new GetSubscriptionRequest());
@@ -2420,8 +2420,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The name of the subscription to get.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The name of the subscription to get.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -2506,7 +2506,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the UpdateSubscription method.
+  /// Request for the UpdateSubscription method.
   /// </summary>
   public sealed partial class UpdateSubscriptionRequest : pb::IMessage<UpdateSubscriptionRequest> {
     private static readonly pb::MessageParser<UpdateSubscriptionRequest> _parser = new pb::MessageParser<UpdateSubscriptionRequest>(() => new UpdateSubscriptionRequest());
@@ -2545,7 +2545,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private global::Google.Cloud.PubSub.V1.Subscription subscription_;
     /// <summary>
-    ///  The updated subscription object.
+    /// The updated subscription object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.Subscription Subscription {
@@ -2559,8 +2559,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    ///  Indicates which fields in the provided subscription to update.
-    ///  Must be specified and non-empty.
+    /// Indicates which fields in the provided subscription to update.
+    /// Must be specified and non-empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
@@ -2673,7 +2673,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `ListSubscriptions` method.
+  /// Request for the `ListSubscriptions` method.
   /// </summary>
   public sealed partial class ListSubscriptionsRequest : pb::IMessage<ListSubscriptionsRequest> {
     private static readonly pb::MessageParser<ListSubscriptionsRequest> _parser = new pb::MessageParser<ListSubscriptionsRequest>(() => new ListSubscriptionsRequest());
@@ -2713,8 +2713,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ProjectFieldNumber = 1;
     private string project_ = "";
     /// <summary>
-    ///  The name of the cloud project that subscriptions belong to.
-    ///  Format is `projects/{project}`.
+    /// The name of the cloud project that subscriptions belong to.
+    /// Format is `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Project {
@@ -2728,7 +2728,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    ///  Maximum number of subscriptions to return.
+    /// Maximum number of subscriptions to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -2742,9 +2742,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    ///  The value returned by the last `ListSubscriptionsResponse`; indicates that
-    ///  this is a continuation of a prior `ListSubscriptions` call, and that the
-    ///  system should return the next page of data.
+    /// The value returned by the last `ListSubscriptionsResponse`; indicates that
+    /// this is a continuation of a prior `ListSubscriptions` call, and that the
+    /// system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -2861,7 +2861,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Response for the `ListSubscriptions` method.
+  /// Response for the `ListSubscriptions` method.
   /// </summary>
   public sealed partial class ListSubscriptionsResponse : pb::IMessage<ListSubscriptionsResponse> {
     private static readonly pb::MessageParser<ListSubscriptionsResponse> _parser = new pb::MessageParser<ListSubscriptionsResponse>(() => new ListSubscriptionsResponse());
@@ -2902,7 +2902,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Subscription.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription> subscriptions_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription>();
     /// <summary>
-    ///  The subscriptions that match the request.
+    /// The subscriptions that match the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Subscription> Subscriptions {
@@ -2913,9 +2913,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If not empty, indicates that there may be more subscriptions that match
-    ///  the request; this value should be passed in a new
-    ///  `ListSubscriptionsRequest` to get more subscriptions.
+    /// If not empty, indicates that there may be more subscriptions that match
+    /// the request; this value should be passed in a new
+    /// `ListSubscriptionsRequest` to get more subscriptions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -3009,7 +3009,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the DeleteSubscription method.
+  /// Request for the DeleteSubscription method.
   /// </summary>
   public sealed partial class DeleteSubscriptionRequest : pb::IMessage<DeleteSubscriptionRequest> {
     private static readonly pb::MessageParser<DeleteSubscriptionRequest> _parser = new pb::MessageParser<DeleteSubscriptionRequest>(() => new DeleteSubscriptionRequest());
@@ -3047,8 +3047,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The subscription to delete.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The subscription to delete.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3133,7 +3133,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the ModifyPushConfig method.
+  /// Request for the ModifyPushConfig method.
   /// </summary>
   public sealed partial class ModifyPushConfigRequest : pb::IMessage<ModifyPushConfigRequest> {
     private static readonly pb::MessageParser<ModifyPushConfigRequest> _parser = new pb::MessageParser<ModifyPushConfigRequest>(() => new ModifyPushConfigRequest());
@@ -3172,8 +3172,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The name of the subscription.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The name of the subscription.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3187,12 +3187,12 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PushConfigFieldNumber = 2;
     private global::Google.Cloud.PubSub.V1.PushConfig pushConfig_;
     /// <summary>
-    ///  The push configuration for future deliveries.
+    /// The push configuration for future deliveries.
     ///
-    ///  An empty `pushConfig` indicates that the Pub/Sub system should
-    ///  stop pushing messages from the given subscription and allow
-    ///  messages to be pulled and acknowledged - effectively pausing
-    ///  the subscription if `Pull` is not called.
+    /// An empty `pushConfig` indicates that the Pub/Sub system should
+    /// stop pushing messages from the given subscription and allow
+    /// messages to be pulled and acknowledged - effectively pausing
+    /// the subscription if `Pull` is not called.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.PubSub.V1.PushConfig PushConfig {
@@ -3299,7 +3299,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `Pull` method.
+  /// Request for the `Pull` method.
   /// </summary>
   public sealed partial class PullRequest : pb::IMessage<PullRequest> {
     private static readonly pb::MessageParser<PullRequest> _parser = new pb::MessageParser<PullRequest>(() => new PullRequest());
@@ -3339,8 +3339,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The subscription from which messages should be pulled.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The subscription from which messages should be pulled.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3354,12 +3354,12 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ReturnImmediatelyFieldNumber = 2;
     private bool returnImmediately_;
     /// <summary>
-    ///  If this field set to true, the system will respond immediately even if
-    ///  it there are no messages available to return in the `Pull` response.
-    ///  Otherwise, the system may wait (for a bounded amount of time) until at
-    ///  least one message is available, rather than returning no messages. The
-    ///  client may cancel the request if it does not wish to wait any longer for
-    ///  the response.
+    /// If this field set to true, the system will respond immediately even if
+    /// it there are no messages available to return in the `Pull` response.
+    /// Otherwise, the system may wait (for a bounded amount of time) until at
+    /// least one message is available, rather than returning no messages. The
+    /// client may cancel the request if it does not wish to wait any longer for
+    /// the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ReturnImmediately {
@@ -3373,8 +3373,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int MaxMessagesFieldNumber = 3;
     private int maxMessages_;
     /// <summary>
-    ///  The maximum number of messages returned for this request. The Pub/Sub
-    ///  system may return fewer than the number specified.
+    /// The maximum number of messages returned for this request. The Pub/Sub
+    /// system may return fewer than the number specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxMessages {
@@ -3491,7 +3491,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Response for the `Pull` method.
+  /// Response for the `Pull` method.
   /// </summary>
   public sealed partial class PullResponse : pb::IMessage<PullResponse> {
     private static readonly pb::MessageParser<PullResponse> _parser = new pb::MessageParser<PullResponse>(() => new PullResponse());
@@ -3531,10 +3531,10 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage>();
     /// <summary>
-    ///  Received Pub/Sub messages. The Pub/Sub system will return zero messages if
-    ///  there are no more available in the backlog. The Pub/Sub system may return
-    ///  fewer than the `maxMessages` requested even if there are more messages
-    ///  available in the backlog.
+    /// Received Pub/Sub messages. The Pub/Sub system will return zero messages if
+    /// there are no more available in the backlog. The Pub/Sub system may return
+    /// fewer than the `maxMessages` requested even if there are more messages
+    /// available in the backlog.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> ReceivedMessages {
@@ -3609,7 +3609,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the ModifyAckDeadline method.
+  /// Request for the ModifyAckDeadline method.
   /// </summary>
   public sealed partial class ModifyAckDeadlineRequest : pb::IMessage<ModifyAckDeadlineRequest> {
     private static readonly pb::MessageParser<ModifyAckDeadlineRequest> _parser = new pb::MessageParser<ModifyAckDeadlineRequest>(() => new ModifyAckDeadlineRequest());
@@ -3649,8 +3649,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The name of the subscription.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The name of the subscription.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3666,7 +3666,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  List of acknowledgment IDs.
+    /// List of acknowledgment IDs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> AckIds {
@@ -3677,13 +3677,13 @@ namespace Google.Cloud.PubSub.V1 {
     public const int AckDeadlineSecondsFieldNumber = 3;
     private int ackDeadlineSeconds_;
     /// <summary>
-    ///  The new ack deadline with respect to the time this request was sent to
-    ///  the Pub/Sub system. For example, if the value is 10, the new
-    ///  ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
-    ///  was made. Specifying zero may immediately make the message available for
-    ///  another pull request.
-    ///  The minimum deadline you can specify is 0 seconds.
-    ///  The maximum deadline you can specify is 600 seconds (10 minutes).
+    /// The new ack deadline with respect to the time this request was sent to
+    /// the Pub/Sub system. For example, if the value is 10, the new
+    /// ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
+    /// was made. Specifying zero may immediately make the message available for
+    /// another pull request.
+    /// The minimum deadline you can specify is 0 seconds.
+    /// The maximum deadline you can specify is 600 seconds (10 minutes).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int AckDeadlineSeconds {
@@ -3793,7 +3793,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the Acknowledge method.
+  /// Request for the Acknowledge method.
   /// </summary>
   public sealed partial class AcknowledgeRequest : pb::IMessage<AcknowledgeRequest> {
     private static readonly pb::MessageParser<AcknowledgeRequest> _parser = new pb::MessageParser<AcknowledgeRequest>(() => new AcknowledgeRequest());
@@ -3832,8 +3832,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The subscription whose message is being acknowledged.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The subscription whose message is being acknowledged.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -3849,8 +3849,8 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  The acknowledgment ID for the messages being acknowledged that was returned
-    ///  by the Pub/Sub system in the `Pull` response. Must not be empty.
+    /// The acknowledgment ID for the messages being acknowledged that was returned
+    /// by the Pub/Sub system in the `Pull` response. Must not be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> AckIds {
@@ -3941,9 +3941,9 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `StreamingPull` streaming RPC method. This request is used to
-  ///  establish the initial stream as well as to stream acknowledgements and ack
-  ///  deadline modifications from the client to the server.
+  /// Request for the `StreamingPull` streaming RPC method. This request is used to
+  /// establish the initial stream as well as to stream acknowledgements and ack
+  /// deadline modifications from the client to the server.
   /// </summary>
   public sealed partial class StreamingPullRequest : pb::IMessage<StreamingPullRequest> {
     private static readonly pb::MessageParser<StreamingPullRequest> _parser = new pb::MessageParser<StreamingPullRequest>(() => new StreamingPullRequest());
@@ -3985,10 +3985,10 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The subscription for which to initialize the new stream. This must be
-    ///  provided in the first request on the stream, and must not be set in
-    ///  subsequent requests from client to server.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The subscription for which to initialize the new stream. This must be
+    /// provided in the first request on the stream, and must not be set in
+    /// subsequent requests from client to server.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -4004,11 +4004,11 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> ackIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  List of acknowledgement IDs for acknowledging previously received messages
-    ///  (received on this stream or a different stream). If an ack ID has expired,
-    ///  the corresponding message may be redelivered later. Acknowledging a message
-    ///  more than once will not result in an error. If the acknowledgement ID is
-    ///  malformed, the stream will be aborted with status `INVALID_ARGUMENT`.
+    /// List of acknowledgement IDs for acknowledging previously received messages
+    /// (received on this stream or a different stream). If an ack ID has expired,
+    /// the corresponding message may be redelivered later. Acknowledging a message
+    /// more than once will not result in an error. If the acknowledgement ID is
+    /// malformed, the stream will be aborted with status `INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> AckIds {
@@ -4021,17 +4021,17 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForInt32(26);
     private readonly pbc::RepeatedField<int> modifyDeadlineSeconds_ = new pbc::RepeatedField<int>();
     /// <summary>
-    ///  The list of new ack deadlines for the IDs listed in
-    ///  `modify_deadline_ack_ids`. The size of this list must be the same as the
-    ///  size of `modify_deadline_ack_ids`. If it differs the stream will be aborted
-    ///  with `INVALID_ARGUMENT`. Each element in this list is applied to the
-    ///  element in the same position in `modify_deadline_ack_ids`. The new ack
-    ///  deadline is with respect to the time this request was sent to the Pub/Sub
-    ///  system. Must be >= 0. For example, if the value is 10, the new ack deadline
-    ///  will expire 10 seconds after this request is received. If the value is 0,
-    ///  the message is immediately made available for another streaming or
-    ///  non-streaming pull request. If the value is &lt; 0 (an error), the stream will
-    ///  be aborted with status `INVALID_ARGUMENT`.
+    /// The list of new ack deadlines for the IDs listed in
+    /// `modify_deadline_ack_ids`. The size of this list must be the same as the
+    /// size of `modify_deadline_ack_ids`. If it differs the stream will be aborted
+    /// with `INVALID_ARGUMENT`. Each element in this list is applied to the
+    /// element in the same position in `modify_deadline_ack_ids`. The new ack
+    /// deadline is with respect to the time this request was sent to the Pub/Sub
+    /// system. Must be >= 0. For example, if the value is 10, the new ack deadline
+    /// will expire 10 seconds after this request is received. If the value is 0,
+    /// the message is immediately made available for another streaming or
+    /// non-streaming pull request. If the value is &lt; 0 (an error), the stream will
+    /// be aborted with status `INVALID_ARGUMENT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> ModifyDeadlineSeconds {
@@ -4044,11 +4044,11 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> modifyDeadlineAckIds_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  List of acknowledgement IDs whose deadline will be modified based on the
-    ///  corresponding element in `modify_deadline_seconds`. This field can be used
-    ///  to indicate that more time is needed to process a message by the
-    ///  subscriber, or to make the message available for redelivery if the
-    ///  processing was interrupted.
+    /// List of acknowledgement IDs whose deadline will be modified based on the
+    /// corresponding element in `modify_deadline_seconds`. This field can be used
+    /// to indicate that more time is needed to process a message by the
+    /// subscriber, or to make the message available for redelivery if the
+    /// processing was interrupted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ModifyDeadlineAckIds {
@@ -4059,10 +4059,10 @@ namespace Google.Cloud.PubSub.V1 {
     public const int StreamAckDeadlineSecondsFieldNumber = 5;
     private int streamAckDeadlineSeconds_;
     /// <summary>
-    ///  The ack deadline to use for the stream. This must be provided in the
-    ///  first request on the stream, but it can also be updated on subsequent
-    ///  requests from client to server. The minimum deadline you can specify is 10
-    ///  seconds. The maximum deadline you can specify is 600 seconds (10 minutes).
+    /// The ack deadline to use for the stream. This must be provided in the
+    /// first request on the stream, but it can also be updated on subsequent
+    /// requests from client to server. The minimum deadline you can specify is 10
+    /// seconds. The maximum deadline you can specify is 600 seconds (10 minutes).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int StreamAckDeadlineSeconds {
@@ -4191,8 +4191,8 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Response for the `StreamingPull` method. This response is used to stream
-  ///  messages from the server to the client.
+  /// Response for the `StreamingPull` method. This response is used to stream
+  /// messages from the server to the client.
   /// </summary>
   public sealed partial class StreamingPullResponse : pb::IMessage<StreamingPullResponse> {
     private static readonly pb::MessageParser<StreamingPullResponse> _parser = new pb::MessageParser<StreamingPullResponse>(() => new StreamingPullResponse());
@@ -4232,7 +4232,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.ReceivedMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> receivedMessages_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage>();
     /// <summary>
-    ///  Received Pub/Sub messages. This will not be empty.
+    /// Received Pub/Sub messages. This will not be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.ReceivedMessage> ReceivedMessages {
@@ -4307,7 +4307,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `CreateSnapshot` method.
+  /// Request for the `CreateSnapshot` method.
   /// </summary>
   public sealed partial class CreateSnapshotRequest : pb::IMessage<CreateSnapshotRequest> {
     private static readonly pb::MessageParser<CreateSnapshotRequest> _parser = new pb::MessageParser<CreateSnapshotRequest>(() => new CreateSnapshotRequest());
@@ -4346,11 +4346,11 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Optional user-provided name for this snapshot.
-    ///  If the name is not provided in the request, the server will assign a random
-    ///  name for this snapshot on the same project as the subscription.
-    ///  Note that for REST API requests, you must specify a name.
-    ///  Format is `projects/{project}/snapshots/{snap}`.
+    /// Optional user-provided name for this snapshot.
+    /// If the name is not provided in the request, the server will assign a random
+    /// name for this snapshot on the same project as the subscription.
+    /// Note that for REST API requests, you must specify a name.
+    /// Format is `projects/{project}/snapshots/{snap}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4364,15 +4364,15 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 2;
     private string subscription_ = "";
     /// <summary>
-    ///  The subscription whose backlog the snapshot retains.
-    ///  Specifically, the created snapshot is guaranteed to retain:
-    ///   (a) The existing backlog on the subscription. More precisely, this is
-    ///       defined as the messages in the subscription's backlog that are
-    ///       unacknowledged upon the successful completion of the
-    ///       `CreateSnapshot` request; as well as:
-    ///   (b) Any messages published to the subscription's topic following the
-    ///       successful completion of the CreateSnapshot request.
-    ///  Format is `projects/{project}/subscriptions/{sub}`.
+    /// The subscription whose backlog the snapshot retains.
+    /// Specifically, the created snapshot is guaranteed to retain:
+    ///  (a) The existing backlog on the subscription. More precisely, this is
+    ///      defined as the messages in the subscription's backlog that are
+    ///      unacknowledged upon the successful completion of the
+    ///      `CreateSnapshot` request; as well as:
+    ///  (b) Any messages published to the subscription's topic following the
+    ///      successful completion of the CreateSnapshot request.
+    /// Format is `projects/{project}/subscriptions/{sub}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -4473,7 +4473,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  A snapshot resource.
+  /// A snapshot resource.
   /// </summary>
   public sealed partial class Snapshot : pb::IMessage<Snapshot> {
     private static readonly pb::MessageParser<Snapshot> _parser = new pb::MessageParser<Snapshot>(() => new Snapshot());
@@ -4513,7 +4513,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the snapshot.
+    /// The name of the snapshot.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -4527,7 +4527,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int TopicFieldNumber = 2;
     private string topic_ = "";
     /// <summary>
-    ///  The name of the topic from which this snapshot is retaining messages.
+    /// The name of the topic from which this snapshot is retaining messages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Topic {
@@ -4541,15 +4541,15 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ExpirationTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expirationTime_;
     /// <summary>
-    ///  The snapshot is guaranteed to exist up until this time.
-    ///  A newly-created snapshot expires no later than 7 days from the time of its
-    ///  creation. Its exact lifetime is determined at creation by the existing
-    ///  backlog in the source subscription. Specifically, the lifetime of the
-    ///  snapshot is `7 days - (age of oldest unacked message in the subscription)`.
-    ///  For example, consider a subscription whose oldest unacked message is 3 days
-    ///  old. If a snapshot is created from this subscription, the snapshot -- which
-    ///  will always capture this 3-day-old backlog as long as the snapshot
-    ///  exists -- will expire in 4 days.
+    /// The snapshot is guaranteed to exist up until this time.
+    /// A newly-created snapshot expires no later than 7 days from the time of its
+    /// creation. Its exact lifetime is determined at creation by the existing
+    /// backlog in the source subscription. Specifically, the lifetime of the
+    /// snapshot is `7 days - (age of oldest unacked message in the subscription)`.
+    /// For example, consider a subscription whose oldest unacked message is 3 days
+    /// old. If a snapshot is created from this subscription, the snapshot -- which
+    /// will always capture this 3-day-old backlog as long as the snapshot
+    /// exists -- will expire in 4 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpirationTime {
@@ -4672,7 +4672,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `ListSnapshots` method.
+  /// Request for the `ListSnapshots` method.
   /// </summary>
   public sealed partial class ListSnapshotsRequest : pb::IMessage<ListSnapshotsRequest> {
     private static readonly pb::MessageParser<ListSnapshotsRequest> _parser = new pb::MessageParser<ListSnapshotsRequest>(() => new ListSnapshotsRequest());
@@ -4712,8 +4712,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int ProjectFieldNumber = 1;
     private string project_ = "";
     /// <summary>
-    ///  The name of the cloud project that snapshots belong to.
-    ///  Format is `projects/{project}`.
+    /// The name of the cloud project that snapshots belong to.
+    /// Format is `projects/{project}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Project {
@@ -4727,7 +4727,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    ///  Maximum number of snapshots to return.
+    /// Maximum number of snapshots to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -4741,9 +4741,9 @@ namespace Google.Cloud.PubSub.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    ///  The value returned by the last `ListSnapshotsResponse`; indicates that this
-    ///  is a continuation of a prior `ListSnapshots` call, and that the system
-    ///  should return the next page of data.
+    /// The value returned by the last `ListSnapshotsResponse`; indicates that this
+    /// is a continuation of a prior `ListSnapshots` call, and that the system
+    /// should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -4860,7 +4860,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Response for the `ListSnapshots` method.
+  /// Response for the `ListSnapshots` method.
   /// </summary>
   public sealed partial class ListSnapshotsResponse : pb::IMessage<ListSnapshotsResponse> {
     private static readonly pb::MessageParser<ListSnapshotsResponse> _parser = new pb::MessageParser<ListSnapshotsResponse>(() => new ListSnapshotsResponse());
@@ -4901,7 +4901,7 @@ namespace Google.Cloud.PubSub.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.PubSub.V1.Snapshot.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot> snapshots_ = new pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot>();
     /// <summary>
-    ///  The resulting snapshots.
+    /// The resulting snapshots.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.PubSub.V1.Snapshot> Snapshots {
@@ -4912,8 +4912,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If not empty, indicates that there may be more snapshot that match the
-    ///  request; this value should be passed in a new `ListSnapshotsRequest`.
+    /// If not empty, indicates that there may be more snapshot that match the
+    /// request; this value should be passed in a new `ListSnapshotsRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -5007,7 +5007,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `DeleteSnapshot` method.
+  /// Request for the `DeleteSnapshot` method.
   /// </summary>
   public sealed partial class DeleteSnapshotRequest : pb::IMessage<DeleteSnapshotRequest> {
     private static readonly pb::MessageParser<DeleteSnapshotRequest> _parser = new pb::MessageParser<DeleteSnapshotRequest>(() => new DeleteSnapshotRequest());
@@ -5045,8 +5045,8 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SnapshotFieldNumber = 1;
     private string snapshot_ = "";
     /// <summary>
-    ///  The name of the snapshot to delete.
-    ///  Format is `projects/{project}/snapshots/{snap}`.
+    /// The name of the snapshot to delete.
+    /// Format is `projects/{project}/snapshots/{snap}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Snapshot {
@@ -5131,7 +5131,7 @@ namespace Google.Cloud.PubSub.V1 {
   }
 
   /// <summary>
-  ///  Request for the `Seek` method.
+  /// Request for the `Seek` method.
   /// </summary>
   public sealed partial class SeekRequest : pb::IMessage<SeekRequest> {
     private static readonly pb::MessageParser<SeekRequest> _parser = new pb::MessageParser<SeekRequest>(() => new SeekRequest());
@@ -5178,7 +5178,7 @@ namespace Google.Cloud.PubSub.V1 {
     public const int SubscriptionFieldNumber = 1;
     private string subscription_ = "";
     /// <summary>
-    ///  The subscription to affect.
+    /// The subscription to affect.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Subscription {
@@ -5191,17 +5191,17 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "time" field.</summary>
     public const int TimeFieldNumber = 2;
     /// <summary>
-    ///  The time to seek to.
-    ///  Messages retained in the subscription that were published before this
-    ///  time are marked as acknowledged, and messages retained in the
-    ///  subscription that were published after this time are marked as
-    ///  unacknowledged. Note that this operation affects only those messages
-    ///  retained in the subscription (configured by the combination of
-    ///  `message_retention_duration` and `retain_acked_messages`). For example,
-    ///  if `time` corresponds to a point before the message retention
-    ///  window (or to a point before the system's notion of the subscription
-    ///  creation time), only retained messages will be marked as unacknowledged,
-    ///  and already-expunged messages will not be restored.
+    /// The time to seek to.
+    /// Messages retained in the subscription that were published before this
+    /// time are marked as acknowledged, and messages retained in the
+    /// subscription that were published after this time are marked as
+    /// unacknowledged. Note that this operation affects only those messages
+    /// retained in the subscription (configured by the combination of
+    /// `message_retention_duration` and `retain_acked_messages`). For example,
+    /// if `time` corresponds to a point before the message retention
+    /// window (or to a point before the system's notion of the subscription
+    /// creation time), only retained messages will be marked as unacknowledged,
+    /// and already-expunged messages will not be restored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Time {
@@ -5215,9 +5215,9 @@ namespace Google.Cloud.PubSub.V1 {
     /// <summary>Field number for the "snapshot" field.</summary>
     public const int SnapshotFieldNumber = 3;
     /// <summary>
-    ///  The snapshot to seek to. The snapshot's topic must be the same as that of
-    ///  the provided subscription.
-    ///  Format is `projects/{project}/snapshots/{snap}`.
+    /// The snapshot to seek to. The snapshot's topic must be the same as that of
+    /// the provided subscription.
+    /// Format is `projects/{project}/snapshots/{snap}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Snapshot {

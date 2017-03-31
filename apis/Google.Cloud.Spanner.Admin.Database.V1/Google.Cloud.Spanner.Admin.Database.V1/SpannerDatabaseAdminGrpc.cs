@@ -20,7 +20,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Grpc.Core;
+using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// <summary>
@@ -34,81 +34,81 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   {
     static readonly string __ServiceName = "google.spanner.admin.database.v1.DatabaseAdmin";
 
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest> __Marshaller_ListDatabasesRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Marshaller_ListDatabasesResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest> __Marshaller_CreateDatabaseRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest> __Marshaller_GetDatabaseRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.Database> __Marshaller_Database = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest> __Marshaller_UpdateDatabaseDdlRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest> __Marshaller_DropDatabaseRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest> __Marshaller_GetDatabaseDdlRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> __Marshaller_GetDatabaseDdlResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
-    static readonly Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest> __Marshaller_ListDatabasesRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Marshaller_ListDatabasesResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest> __Marshaller_CreateDatabaseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_Operation = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.LongRunning.Operation.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest> __Marshaller_GetDatabaseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.Database> __Marshaller_Database = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest> __Marshaller_UpdateDatabaseDdlRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest> __Marshaller_DropDatabaseRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest> __Marshaller_GetDatabaseDdlRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> __Marshaller_GetDatabaseDdlResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_SetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_Policy = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.Policy.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_GetIamPolicyRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_TestIamPermissionsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_TestIamPermissionsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser.ParseFrom);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Method_ListDatabases = new Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> __Method_ListDatabases = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "ListDatabases",
         __Marshaller_ListDatabasesRequest,
         __Marshaller_ListDatabasesResponse);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation> __Method_CreateDatabase = new Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation> __Method_CreateDatabase = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "CreateDatabase",
         __Marshaller_CreateDatabaseRequest,
         __Marshaller_Operation);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Database> __Method_GetDatabase = new Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Database>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Database> __Method_GetDatabase = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest, global::Google.Cloud.Spanner.Admin.Database.V1.Database>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetDatabase",
         __Marshaller_GetDatabaseRequest,
         __Marshaller_Database);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabaseDdl = new Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabaseDdl = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "UpdateDatabaseDdl",
         __Marshaller_UpdateDatabaseDdlRequest,
         __Marshaller_Operation);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DropDatabase = new Method<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DropDatabase = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "DropDatabase",
         __Marshaller_DropDatabaseRequest,
         __Marshaller_Empty);
 
-    static readonly Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest, global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> __Method_GetDatabaseDdl = new Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest, global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest, global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> __Method_GetDatabaseDdl = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest, global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetDatabaseDdl",
         __Marshaller_GetDatabaseDdlRequest,
         __Marshaller_GetDatabaseDdlResponse);
 
-    static readonly Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "SetIamPolicy",
         __Marshaller_SetIamPolicyRequest,
         __Marshaller_Policy);
 
-    static readonly Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "GetIamPolicy",
         __Marshaller_GetIamPolicyRequest,
         __Marshaller_Policy);
 
-    static readonly Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
-        MethodType.Unary,
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Method_TestIamPermissions = new grpc::Method<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(
+        grpc::MethodType.Unary,
         __ServiceName,
         "TestIamPermissions",
         __Marshaller_TestIamPermissionsRequest,
@@ -129,9 +129,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -147,9 +147,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -158,9 +158,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -175,9 +175,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -186,9 +186,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -199,9 +199,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -214,9 +214,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -229,9 +229,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       /// <summary>
@@ -245,24 +245,24 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
-        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
     }
 
     /// <summary>Client for DatabaseAdmin</summary>
-    public partial class DatabaseAdminClient : ClientBase<DatabaseAdminClient>
+    public partial class DatabaseAdminClient : grpc::ClientBase<DatabaseAdminClient>
     {
       /// <summary>Creates a new client for DatabaseAdmin</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public DatabaseAdminClient(Channel channel) : base(channel)
+      public DatabaseAdminClient(grpc::Channel channel) : base(channel)
       {
       }
       /// <summary>Creates a new client for DatabaseAdmin that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public DatabaseAdminClient(CallInvoker callInvoker) : base(callInvoker)
+      public DatabaseAdminClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
@@ -283,9 +283,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListDatabases(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListDatabases(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists Cloud Spanner databases.
@@ -293,7 +293,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ListDatabases, null, options, request);
       }
@@ -305,9 +305,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return ListDatabasesAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return ListDatabasesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Lists Cloud Spanner databases.
@@ -315,7 +315,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabasesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatabases, null, options, request);
       }
@@ -334,9 +334,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return CreateDatabase(request, new CallOptions(headers, deadline, cancellationToken));
+        return CreateDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates a new Cloud Spanner database and starts to prepare it for serving.
@@ -351,7 +351,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, CallOptions options)
+      public virtual global::Google.LongRunning.Operation CreateDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateDatabase, null, options, request);
       }
@@ -370,9 +370,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return CreateDatabaseAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return CreateDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Creates a new Cloud Spanner database and starts to prepare it for serving.
@@ -387,7 +387,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.CreateDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDatabase, null, options, request);
       }
@@ -399,9 +399,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Database GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Database GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetDatabase(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets the state of a Cloud Spanner database.
@@ -409,7 +409,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Database GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.Database GetDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDatabase, null, options, request);
       }
@@ -421,9 +421,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetDatabaseAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets the state of a Cloud Spanner database.
@@ -431,7 +431,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.Database> GetDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatabase, null, options, request);
       }
@@ -449,9 +449,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.LongRunning.Operation UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return UpdateDatabaseDdl(request, new CallOptions(headers, deadline, cancellationToken));
+        return UpdateDatabaseDdl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Updates the schema of a Cloud Spanner database by
@@ -465,7 +465,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.LongRunning.Operation UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, CallOptions options)
+      public virtual global::Google.LongRunning.Operation UpdateDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateDatabaseDdl, null, options, request);
       }
@@ -483,9 +483,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return UpdateDatabaseDdlAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return UpdateDatabaseDdlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Updates the schema of a Cloud Spanner database by
@@ -499,7 +499,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.UpdateDatabaseDdlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDatabaseDdl, null, options, request);
       }
@@ -511,9 +511,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DropDatabase(request, new CallOptions(headers, deadline, cancellationToken));
+        return DropDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Drops (aka deletes) a Cloud Spanner database.
@@ -521,7 +521,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, CallOptions options)
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DropDatabase(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_DropDatabase, null, options, request);
       }
@@ -533,9 +533,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return DropDatabaseAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return DropDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Drops (aka deletes) a Cloud Spanner database.
@@ -543,7 +543,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DropDatabaseAsync(global::Google.Cloud.Spanner.Admin.Database.V1.DropDatabaseRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DropDatabase, null, options, request);
       }
@@ -557,9 +557,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetDatabaseDdl(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetDatabaseDdl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns the schema of a Cloud Spanner database as a list of formatted
@@ -569,7 +569,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse GetDatabaseDdl(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDatabaseDdl, null, options, request);
       }
@@ -583,9 +583,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetDatabaseDdlAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetDatabaseDdlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns the schema of a Cloud Spanner database as a list of formatted
@@ -595,7 +595,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlResponse> GetDatabaseDdlAsync(global::Google.Cloud.Spanner.Admin.Database.V1.GetDatabaseDdlRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDatabaseDdl, null, options, request);
       }
@@ -611,9 +611,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return SetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
+        return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Sets the access control policy on a database resource. Replaces any
@@ -625,7 +625,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
@@ -641,9 +641,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return SetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Sets the access control policy on a database resource. Replaces any
@@ -655,7 +655,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
@@ -671,9 +671,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetIamPolicy(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets the access control policy for a database resource. Returns an empty
@@ -685,7 +685,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
@@ -701,9 +701,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return GetIamPolicyAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Gets the access control policy for a database resource. Returns an empty
@@ -715,7 +715,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
       }
@@ -732,9 +732,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return TestIamPermissions(request, new CallOptions(headers, deadline, cancellationToken));
+        return TestIamPermissions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns permissions that the caller has on the specified database resource.
@@ -747,7 +747,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
-      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
+      public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
@@ -764,9 +764,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
       {
-        return TestIamPermissionsAsync(request, new CallOptions(headers, deadline, cancellationToken));
+        return TestIamPermissionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
       /// Returns permissions that the caller has on the specified database resource.
@@ -779,7 +779,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
-      public virtual AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
@@ -792,9 +792,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static ServerServiceDefinition BindService(DatabaseAdminBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(DatabaseAdminBase serviceImpl)
     {
-      return ServerServiceDefinition.CreateBuilder()
+      return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
           .AddMethod(__Method_CreateDatabase, serviceImpl.CreateDatabase)
           .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)

@@ -14,7 +14,7 @@
 
 using static Google.LongRunning.Operations;
 
-namespace Google.Cloud.Speech.V1Beta1
+namespace Google.Cloud.Speech.V1
 {
     public static partial class Speech
     {

@@ -122,56 +122,56 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
   #region Enums
   /// <summary>
-  ///  Specifies how the time periods of error group counts are aligned.
+  /// Specifies how the time periods of error group counts are aligned.
   /// </summary>
   public enum TimedCountAlignment {
     /// <summary>
-    ///  No alignment specified.
+    /// No alignment specified.
     /// </summary>
     [pbr::OriginalName("ERROR_COUNT_ALIGNMENT_UNSPECIFIED")] ErrorCountAlignmentUnspecified = 0,
     /// <summary>
-    ///  The time periods shall be consecutive, have width equal to the
-    ///  requested duration, and be aligned at the `alignment_time` provided in
-    ///  the request.
-    ///  The `alignment_time` does not have to be inside the query period but
-    ///  even if it is outside, only time periods are returned which overlap
-    ///  with the query period.
-    ///  A rounded alignment will typically result in a
-    ///  different size of the first or the last time period.
+    /// The time periods shall be consecutive, have width equal to the
+    /// requested duration, and be aligned at the `alignment_time` provided in
+    /// the request.
+    /// The `alignment_time` does not have to be inside the query period but
+    /// even if it is outside, only time periods are returned which overlap
+    /// with the query period.
+    /// A rounded alignment will typically result in a
+    /// different size of the first or the last time period.
     /// </summary>
     [pbr::OriginalName("ALIGNMENT_EQUAL_ROUNDED")] AlignmentEqualRounded = 1,
     /// <summary>
-    ///  The time periods shall be consecutive, have width equal to the
-    ///  requested duration, and be aligned at the end of the requested time
-    ///  period. This can result in a different size of the
-    ///  first time period.
+    /// The time periods shall be consecutive, have width equal to the
+    /// requested duration, and be aligned at the end of the requested time
+    /// period. This can result in a different size of the
+    /// first time period.
     /// </summary>
     [pbr::OriginalName("ALIGNMENT_EQUAL_AT_END")] AlignmentEqualAtEnd = 2,
   }
 
   /// <summary>
-  ///  A sorting order of error groups.
+  /// A sorting order of error groups.
   /// </summary>
   public enum ErrorGroupOrder {
     /// <summary>
-    ///  No group order specified.
+    /// No group order specified.
     /// </summary>
     [pbr::OriginalName("GROUP_ORDER_UNSPECIFIED")] GroupOrderUnspecified = 0,
     /// <summary>
-    ///  Total count of errors in the given time window in descending order.
+    /// Total count of errors in the given time window in descending order.
     /// </summary>
     [pbr::OriginalName("COUNT_DESC")] CountDesc = 1,
     /// <summary>
-    ///  Timestamp when the group was last seen in the given time window
-    ///  in descending order.
+    /// Timestamp when the group was last seen in the given time window
+    /// in descending order.
     /// </summary>
     [pbr::OriginalName("LAST_SEEN_DESC")] LastSeenDesc = 2,
     /// <summary>
-    ///  Timestamp when the group was created in descending order.
+    /// Timestamp when the group was created in descending order.
     /// </summary>
     [pbr::OriginalName("CREATED_DESC")] CreatedDesc = 3,
     /// <summary>
-    ///  Number of affected users in the given time window in descending order.
+    /// Number of affected users in the given time window in descending order.
     /// </summary>
     [pbr::OriginalName("AFFECTED_USERS_DESC")] AffectedUsersDesc = 4,
   }
@@ -180,7 +180,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
 
   #region Messages
   /// <summary>
-  ///  Specifies a set of `ErrorGroupStats` to return.
+  /// Specifies a set of `ErrorGroupStats` to return.
   /// </summary>
   public sealed partial class ListGroupStatsRequest : pb::IMessage<ListGroupStatsRequest> {
     private static readonly pb::MessageParser<ListGroupStatsRequest> _parser = new pb::MessageParser<ListGroupStatsRequest>(() => new ListGroupStatsRequest());
@@ -227,12 +227,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ProjectNameFieldNumber = 1;
     private string projectName_ = "";
     /// <summary>
-    ///  [Required] The resource name of the Google Cloud Platform project. Written
-    ///  as &lt;code>projects/&lt;/code> plus the
-    ///  &lt;a href="https://support.google.com/cloud/answer/6158840">Google Cloud
-    ///  Platform project ID&lt;/a>.
+    /// [Required] The resource name of the Google Cloud Platform project. Written
+    /// as &lt;code>projects/&lt;/code> plus the
+    /// &lt;a href="https://support.google.com/cloud/answer/6158840">Google Cloud
+    /// Platform project ID&lt;/a>.
     ///
-    ///  Example: &lt;code>projects/my-project-123&lt;/code>.
+    /// Example: &lt;code>projects/my-project-123&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectName {
@@ -248,7 +248,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> groupId_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  [Optional] List all &lt;code>ErrorGroupStats&lt;/code> with these IDs.
+    /// [Optional] List all &lt;code>ErrorGroupStats&lt;/code> with these IDs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> GroupId {
@@ -259,9 +259,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFilterFieldNumber = 3;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter serviceFilter_;
     /// <summary>
-    ///  [Optional] List only &lt;code>ErrorGroupStats&lt;/code> which belong to a service
-    ///  context that matches the filter.
-    ///  Data for all service contexts is returned if this field is not specified.
+    /// [Optional] List only &lt;code>ErrorGroupStats&lt;/code> which belong to a service
+    /// context that matches the filter.
+    /// Data for all service contexts is returned if this field is not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter ServiceFilter {
@@ -275,13 +275,13 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimeRangeFieldNumber = 5;
     private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
-    ///  [Optional] List data for the given time range.
-    ///  If not set a default time range is used. The field time_range_begin
-    ///  in the response will specify the beginning of this time range.
-    ///  Only &lt;code>ErrorGroupStats&lt;/code> with a non-zero count in the given time
-    ///  range are returned, unless the request contains an explicit group_id list.
-    ///  If a group_id list is given, also &lt;code>ErrorGroupStats&lt;/code> with zero
-    ///  occurrences are returned.
+    /// [Optional] List data for the given time range.
+    /// If not set a default time range is used. The field time_range_begin
+    /// in the response will specify the beginning of this time range.
+    /// Only &lt;code>ErrorGroupStats&lt;/code> with a non-zero count in the given time
+    /// range are returned, unless the request contains an explicit group_id list.
+    /// If a group_id list is given, also &lt;code>ErrorGroupStats&lt;/code> with zero
+    /// occurrences are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange TimeRange {
@@ -295,8 +295,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimedCountDurationFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Duration timedCountDuration_;
     /// <summary>
-    ///  [Optional] The preferred duration for a single returned `TimedCount`.
-    ///  If not set, no timed counts are returned.
+    /// [Optional] The preferred duration for a single returned `TimedCount`.
+    /// If not set, no timed counts are returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Duration TimedCountDuration {
@@ -310,8 +310,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int AlignmentFieldNumber = 7;
     private global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment alignment_ = 0;
     /// <summary>
-    ///  [Optional] The alignment of the timed counts to be returned.
-    ///  Default is `ALIGNMENT_EQUAL_AT_END`.
+    /// [Optional] The alignment of the timed counts to be returned.
+    /// Default is `ALIGNMENT_EQUAL_AT_END`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.TimedCountAlignment Alignment {
@@ -325,8 +325,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int AlignmentTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp alignmentTime_;
     /// <summary>
-    ///  [Optional] Time where the timed counts shall be aligned if rounded
-    ///  alignment is chosen. Default is 00:00 UTC.
+    /// [Optional] Time where the timed counts shall be aligned if rounded
+    /// alignment is chosen. Default is 00:00 UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp AlignmentTime {
@@ -340,8 +340,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int OrderFieldNumber = 9;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder order_ = 0;
     /// <summary>
-    ///  [Optional] The sort order in which the results are returned.
-    ///  Default is `COUNT_DESC`.
+    /// [Optional] The sort order in which the results are returned.
+    /// Default is `COUNT_DESC`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupOrder Order {
@@ -355,8 +355,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageSizeFieldNumber = 11;
     private int pageSize_;
     /// <summary>
-    ///  [Optional] The maximum number of results to return per response.
-    ///  Default is 20.
+    /// [Optional] The maximum number of results to return per response.
+    /// Default is 20.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -370,9 +370,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageTokenFieldNumber = 12;
     private string pageToken_ = "";
     /// <summary>
-    ///  [Optional] A `next_page_token` provided by a previous response. To view
-    ///  additional results, pass this token along with the identical query
-    ///  parameters as the first request.
+    /// [Optional] A `next_page_token` provided by a previous response. To view
+    /// additional results, pass this token along with the identical query
+    /// parameters as the first request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -618,7 +618,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Contains a set of requested error group stats.
+  /// Contains a set of requested error group stats.
   /// </summary>
   public sealed partial class ListGroupStatsResponse : pb::IMessage<ListGroupStatsResponse> {
     private static readonly pb::MessageParser<ListGroupStatsResponse> _parser = new pb::MessageParser<ListGroupStatsResponse>(() => new ListGroupStatsResponse());
@@ -660,7 +660,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats> errorGroupStats_ = new pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats>();
     /// <summary>
-    ///  The error group stats which match the given request.
+    /// The error group stats which match the given request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroupStats> ErrorGroupStats {
@@ -671,9 +671,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If non-empty, more results are available.
-    ///  Pass this token, along with the same query parameters as the first
-    ///  request, to view the next page of results.
+    /// If non-empty, more results are available.
+    /// Pass this token, along with the same query parameters as the first
+    /// request, to view the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -687,10 +687,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimeRangeBeginFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timeRangeBegin_;
     /// <summary>
-    ///  The timestamp specifies the start time to which the request was restricted.
-    ///  The start time is set based on the requested time range. It may be adjusted
-    ///  to a later time if a project has exceeded the storage quota and older data
-    ///  has been deleted.
+    /// The timestamp specifies the start time to which the request was restricted.
+    /// The start time is set based on the requested time range. It may be adjusted
+    /// to a later time if a project has exceeded the storage quota and older data
+    /// has been deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp TimeRangeBegin {
@@ -806,8 +806,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Data extracted for a specific group based on certain filter criteria,
-  ///  such as a given time period and/or service filter.
+  /// Data extracted for a specific group based on certain filter criteria,
+  /// such as a given time period and/or service filter.
   /// </summary>
   public sealed partial class ErrorGroupStats : pb::IMessage<ErrorGroupStats> {
     private static readonly pb::MessageParser<ErrorGroupStats> _parser = new pb::MessageParser<ErrorGroupStats>(() => new ErrorGroupStats());
@@ -853,7 +853,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupFieldNumber = 1;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup group_;
     /// <summary>
-    ///  Group data that is independent of the filter criteria.
+    /// Group data that is independent of the filter criteria.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorGroup Group {
@@ -867,8 +867,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int CountFieldNumber = 2;
     private long count_;
     /// <summary>
-    ///  Approximate total number of events in the given group that match
-    ///  the filter criteria.
+    /// Approximate total number of events in the given group that match
+    /// the filter criteria.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Count {
@@ -882,18 +882,18 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int AffectedUsersCountFieldNumber = 3;
     private long affectedUsersCount_;
     /// <summary>
-    ///  Approximate number of affected users in the given group that
-    ///  match the filter criteria.
-    ///  Users are distinguished by data in the `ErrorContext` of the
-    ///  individual error events, such as their login name or their remote
-    ///  IP address in case of HTTP requests.
-    ///  The number of affected users can be zero even if the number of
-    ///  errors is non-zero if no data was provided from which the
-    ///  affected user could be deduced.
-    ///  Users are counted based on data in the request
-    ///  context that was provided in the error report. If more users are
-    ///  implicitly affected, such as due to a crash of the whole service,
-    ///  this is not reflected here.
+    /// Approximate number of affected users in the given group that
+    /// match the filter criteria.
+    /// Users are distinguished by data in the `ErrorContext` of the
+    /// individual error events, such as their login name or their remote
+    /// IP address in case of HTTP requests.
+    /// The number of affected users can be zero even if the number of
+    /// errors is non-zero if no data was provided from which the
+    /// affected user could be deduced.
+    /// Users are counted based on data in the request
+    /// context that was provided in the error report. If more users are
+    /// implicitly affected, such as due to a crash of the whole service,
+    /// this is not reflected here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long AffectedUsersCount {
@@ -909,12 +909,12 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount> timedCounts_ = new pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount>();
     /// <summary>
-    ///  Approximate number of occurrences over time.
-    ///  Timed counts returned by ListGroups are guaranteed to be:
+    /// Approximate number of occurrences over time.
+    /// Timed counts returned by ListGroups are guaranteed to be:
     ///
-    ///  - Inside the requested time interval
-    ///  - Non-overlapping, and
-    ///  - Ordered by ascending time.
+    /// - Inside the requested time interval
+    /// - Non-overlapping, and
+    /// - Ordered by ascending time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.TimedCount> TimedCounts {
@@ -925,9 +925,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int FirstSeenTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp firstSeenTime_;
     /// <summary>
-    ///  Approximate first occurrence that was ever seen for this group
-    ///  and which matches the given filter criteria, ignoring the
-    ///  time_range that was specified in the request.
+    /// Approximate first occurrence that was ever seen for this group
+    /// and which matches the given filter criteria, ignoring the
+    /// time_range that was specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp FirstSeenTime {
@@ -941,9 +941,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int LastSeenTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastSeenTime_;
     /// <summary>
-    ///  Approximate last occurrence that was ever seen for this group and
-    ///  which matches the given filter criteria, ignoring the time_range
-    ///  that was specified in the request.
+    /// Approximate last occurrence that was ever seen for this group and
+    /// which matches the given filter criteria, ignoring the time_range
+    /// that was specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastSeenTime {
@@ -959,9 +959,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext> affectedServices_ = new pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext>();
     /// <summary>
-    ///  Service contexts with a non-zero error count for the given filter
-    ///  criteria. This list can be truncated if multiple services are affected.
-    ///  Refer to `num_affected_services` for the total count.
+    /// Service contexts with a non-zero error count for the given filter
+    /// criteria. This list can be truncated if multiple services are affected.
+    /// Refer to `num_affected_services` for the total count.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext> AffectedServices {
@@ -972,8 +972,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int NumAffectedServicesFieldNumber = 8;
     private int numAffectedServices_;
     /// <summary>
-    ///  The total number of services with a non-zero error count for the given
-    ///  filter criteria.
+    /// The total number of services with a non-zero error count for the given
+    /// filter criteria.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int NumAffectedServices {
@@ -987,11 +987,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int RepresentativeFieldNumber = 9;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent representative_;
     /// <summary>
-    ///  An arbitrary event that is chosen as representative for the whole group.
-    ///  The representative event is intended to be used as a quick preview for
-    ///  the whole group. Events in the group are usually sufficiently similar
-    ///  to each other such that showing an arbitrary representative provides
-    ///  insight into the characteristics of the group as a whole.
+    /// An arbitrary event that is chosen as representative for the whole group.
+    /// The representative event is intended to be used as a quick preview for
+    /// the whole group. Events in the group are usually sufficiently similar
+    /// to each other such that showing an arbitrary representative provides
+    /// insight into the characteristics of the group as a whole.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent Representative {
@@ -1214,9 +1214,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  The number of errors in a given time period.
-  ///  All numbers are approximate since the error events are sampled
-  ///  before counting them.
+  /// The number of errors in a given time period.
+  /// All numbers are approximate since the error events are sampled
+  /// before counting them.
   /// </summary>
   public sealed partial class TimedCount : pb::IMessage<TimedCount> {
     private static readonly pb::MessageParser<TimedCount> _parser = new pb::MessageParser<TimedCount>(() => new TimedCount());
@@ -1256,7 +1256,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int CountFieldNumber = 1;
     private long count_;
     /// <summary>
-    ///  Approximate number of occurrences in the given time period.
+    /// Approximate number of occurrences in the given time period.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Count {
@@ -1270,7 +1270,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int StartTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    ///  Start of the time period to which `count` refers (included).
+    /// Start of the time period to which `count` refers (included).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
@@ -1284,7 +1284,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int EndTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    ///  End of the time period to which `count` refers (excluded).
+    /// End of the time period to which `count` refers (excluded).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
@@ -1413,7 +1413,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Specifies a set of error events to return.
+  /// Specifies a set of error events to return.
   /// </summary>
   public sealed partial class ListEventsRequest : pb::IMessage<ListEventsRequest> {
     private static readonly pb::MessageParser<ListEventsRequest> _parser = new pb::MessageParser<ListEventsRequest>(() => new ListEventsRequest());
@@ -1456,11 +1456,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ProjectNameFieldNumber = 1;
     private string projectName_ = "";
     /// <summary>
-    ///  [Required] The resource name of the Google Cloud Platform project. Written
-    ///  as `projects/` plus the
-    ///  [Google Cloud Platform project
-    ///  ID](https://support.google.com/cloud/answer/6158840).
-    ///  Example: `projects/my-project-123`.
+    /// [Required] The resource name of the Google Cloud Platform project. Written
+    /// as `projects/` plus the
+    /// [Google Cloud Platform project
+    /// ID](https://support.google.com/cloud/answer/6158840).
+    /// Example: `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectName {
@@ -1474,7 +1474,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int GroupIdFieldNumber = 2;
     private string groupId_ = "";
     /// <summary>
-    ///  [Required] The group for which events shall be returned.
+    /// [Required] The group for which events shall be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string GroupId {
@@ -1488,9 +1488,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFilterFieldNumber = 3;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter serviceFilter_;
     /// <summary>
-    ///  [Optional] List only ErrorGroups which belong to a service context that
-    ///  matches the filter.
-    ///  Data for all service contexts is returned if this field is not specified.
+    /// [Optional] List only ErrorGroups which belong to a service context that
+    /// matches the filter.
+    /// Data for all service contexts is returned if this field is not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContextFilter ServiceFilter {
@@ -1504,9 +1504,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimeRangeFieldNumber = 4;
     private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange timeRange_;
     /// <summary>
-    ///  [Optional] List only data for the given time range.
-    ///  If not set a default time range is used. The field time_range_begin
-    ///  in the response will specify the beginning of this time range.
+    /// [Optional] List only data for the given time range.
+    /// If not set a default time range is used. The field time_range_begin
+    /// in the response will specify the beginning of this time range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange TimeRange {
@@ -1520,7 +1520,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageSizeFieldNumber = 6;
     private int pageSize_;
     /// <summary>
-    ///  [Optional] The maximum number of results to return per response.
+    /// [Optional] The maximum number of results to return per response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -1534,7 +1534,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PageTokenFieldNumber = 7;
     private string pageToken_ = "";
     /// <summary>
-    ///  [Optional] A `next_page_token` provided by a previous response.
+    /// [Optional] A `next_page_token` provided by a previous response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -1711,7 +1711,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Contains a set of requested error events.
+  /// Contains a set of requested error events.
   /// </summary>
   public sealed partial class ListEventsResponse : pb::IMessage<ListEventsResponse> {
     private static readonly pb::MessageParser<ListEventsResponse> _parser = new pb::MessageParser<ListEventsResponse>(() => new ListEventsResponse());
@@ -1753,7 +1753,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent> errorEvents_ = new pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent>();
     /// <summary>
-    ///  The error events which match the given request.
+    /// The error events which match the given request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.ErrorReporting.V1Beta1.ErrorEvent> ErrorEvents {
@@ -1764,9 +1764,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  If non-empty, more results are available.
-    ///  Pass this token, along with the same query parameters as the first
-    ///  request, to view the next page of results.
+    /// If non-empty, more results are available.
+    /// Pass this token, along with the same query parameters as the first
+    /// request, to view the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -1780,7 +1780,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int TimeRangeBeginFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timeRangeBegin_;
     /// <summary>
-    ///  The timestamp specifies the start time to which the request was restricted.
+    /// The timestamp specifies the start time to which the request was restricted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp TimeRangeBegin {
@@ -1896,8 +1896,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Requests might be rejected or the resulting timed count durations might be
-  ///  adjusted for lower durations.
+  /// Requests might be rejected or the resulting timed count durations might be
+  /// adjusted for lower durations.
   /// </summary>
   public sealed partial class QueryTimeRange : pb::IMessage<QueryTimeRange> {
     private static readonly pb::MessageParser<QueryTimeRange> _parser = new pb::MessageParser<QueryTimeRange>(() => new QueryTimeRange());
@@ -1935,7 +1935,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int PeriodFieldNumber = 1;
     private global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period period_ = 0;
     /// <summary>
-    ///  Restricts the query to the specified time range.
+    /// Restricts the query to the specified time range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.QueryTimeRange.Types.Period Period {
@@ -2022,36 +2022,36 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The supported time ranges.
+      /// The supported time ranges.
       /// </summary>
       public enum Period {
         /// <summary>
-        ///  Do not use.
+        /// Do not use.
         /// </summary>
         [pbr::OriginalName("PERIOD_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Retrieve data for the last hour.
-        ///  Recommended minimum timed count duration: 1 min.
+        /// Retrieve data for the last hour.
+        /// Recommended minimum timed count duration: 1 min.
         /// </summary>
         [pbr::OriginalName("PERIOD_1_HOUR")] _1Hour = 1,
         /// <summary>
-        ///  Retrieve data for the last 6 hours.
-        ///  Recommended minimum timed count duration: 10 min.
+        /// Retrieve data for the last 6 hours.
+        /// Recommended minimum timed count duration: 10 min.
         /// </summary>
         [pbr::OriginalName("PERIOD_6_HOURS")] _6Hours = 2,
         /// <summary>
-        ///  Retrieve data for the last day.
-        ///  Recommended minimum timed count duration: 1 hour.
+        /// Retrieve data for the last day.
+        /// Recommended minimum timed count duration: 1 hour.
         /// </summary>
         [pbr::OriginalName("PERIOD_1_DAY")] _1Day = 3,
         /// <summary>
-        ///  Retrieve data for the last week.
-        ///  Recommended minimum timed count duration: 6 hours.
+        /// Retrieve data for the last week.
+        /// Recommended minimum timed count duration: 6 hours.
         /// </summary>
         [pbr::OriginalName("PERIOD_1_WEEK")] _1Week = 4,
         /// <summary>
-        ///  Retrieve data for the last 30 days.
-        ///  Recommended minimum timed count duration: 1 day.
+        /// Retrieve data for the last 30 days.
+        /// Recommended minimum timed count duration: 1 day.
         /// </summary>
         [pbr::OriginalName("PERIOD_30_DAYS")] _30Days = 5,
       }
@@ -2062,10 +2062,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Specifies criteria for filtering a subset of service contexts.
-  ///  The fields in the filter correspond to the fields in `ServiceContext`.
-  ///  Only exact, case-sensitive matches are supported.
-  ///  If a field is unset or empty, it matches arbitrary values.
+  /// Specifies criteria for filtering a subset of service contexts.
+  /// The fields in the filter correspond to the fields in `ServiceContext`.
+  /// Only exact, case-sensitive matches are supported.
+  /// If a field is unset or empty, it matches arbitrary values.
   /// </summary>
   public sealed partial class ServiceContextFilter : pb::IMessage<ServiceContextFilter> {
     private static readonly pb::MessageParser<ServiceContextFilter> _parser = new pb::MessageParser<ServiceContextFilter>(() => new ServiceContextFilter());
@@ -2105,8 +2105,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceFieldNumber = 2;
     private string service_ = "";
     /// <summary>
-    ///  [Optional] The exact value to match against
-    ///  [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
+    /// [Optional] The exact value to match against
+    /// [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Service {
@@ -2120,8 +2120,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int VersionFieldNumber = 3;
     private string version_ = "";
     /// <summary>
-    ///  [Optional] The exact value to match against
-    ///  [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
+    /// [Optional] The exact value to match against
+    /// [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Version {
@@ -2135,8 +2135,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ResourceTypeFieldNumber = 4;
     private string resourceType_ = "";
     /// <summary>
-    ///  [Optional] The exact value to match against
-    ///  [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
+    /// [Optional] The exact value to match against
+    /// [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ResourceType {
@@ -2253,7 +2253,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Deletes all events in the project.
+  /// Deletes all events in the project.
   /// </summary>
   public sealed partial class DeleteEventsRequest : pb::IMessage<DeleteEventsRequest> {
     private static readonly pb::MessageParser<DeleteEventsRequest> _parser = new pb::MessageParser<DeleteEventsRequest>(() => new DeleteEventsRequest());
@@ -2291,11 +2291,11 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ProjectNameFieldNumber = 1;
     private string projectName_ = "";
     /// <summary>
-    ///  [Required] The resource name of the Google Cloud Platform project. Written
-    ///  as `projects/` plus the
-    ///  [Google Cloud Platform project
-    ///  ID](https://support.google.com/cloud/answer/6158840).
-    ///  Example: `projects/my-project-123`.
+    /// [Required] The resource name of the Google Cloud Platform project. Written
+    /// as `projects/` plus the
+    /// [Google Cloud Platform project
+    /// ID](https://support.google.com/cloud/answer/6158840).
+    /// Example: `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectName {
@@ -2380,7 +2380,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Response message for deleting error events.
+  /// Response message for deleting error events.
   /// </summary>
   public sealed partial class DeleteEventsResponse : pb::IMessage<DeleteEventsResponse> {
     private static readonly pb::MessageParser<DeleteEventsResponse> _parser = new pb::MessageParser<DeleteEventsResponse>(() => new DeleteEventsResponse());

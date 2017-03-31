@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha03-*",
+  "version": "1.0.0-alpha04-*",
   "description": "Google Compute Engine Metadata v1 client library",
   "authors": [ "Google Inc." ],
 
@@ -19,29 +19,15 @@
   },
 
   "dependencies": {
-    "Google.Apis.Compute.v1": "1.20.0.692"
+    "Google.Apis.Compute.v1": "1.24.1.802"
   },
 
   "frameworks": {
     "net45": {
       "frameworkAssemblies": {
-        "System.Net.Http": {
-          "type": "build"
-        },
-        "System.Runtime": {
-          "type": "build"
-        },
-        "System.IO": {
-          "type": "build"
-        }
+        "System.Net.Http": { "type": "build" }
       }
     },
-    "netstandard1.3": {
-      "dependencies": {
-        "System.Net.Http": "4.1.0",
-        "System.Net.NetworkInformation": "4.1.0",
-        "System.Threading.Thread": "4.0.0"
-      }
-    }
+    "netstandard1.3": { }
   }
 }

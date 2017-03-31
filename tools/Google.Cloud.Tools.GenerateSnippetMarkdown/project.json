@@ -11,8 +11,6 @@
   },
 
   "frameworks": {
-    "net451": {
-      "imports": "dnx451"
-    }
+    "net451": { }
   }
 }

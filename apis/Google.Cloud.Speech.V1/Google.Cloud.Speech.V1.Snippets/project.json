@@ -7,7 +7,7 @@
   },
 
   "dependencies": {
-    "Google.Cloud.Speech.V1Beta1": { "target": "project" },
+    "Google.Cloud.Speech.V1": { "target": "project" },
     "xunit": "2.2.0-rc3-build3528",
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },
@@ -16,7 +16,6 @@
   "frameworks": {
     "net451": {},
     "netcoreapp1.0": {
-      "imports": "netcore50",
       "dependencies": {
         "Microsoft.NETCore.App": {
           "version": "1.0.0",

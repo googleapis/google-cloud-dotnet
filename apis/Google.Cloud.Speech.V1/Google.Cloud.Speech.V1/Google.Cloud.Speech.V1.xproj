@@ -7,7 +7,7 @@
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>a2d62ef9-1f25-42a3-98d9-01c1d5838cfe</ProjectGuid>
-    <RootNamespace>Google.Cloud.Speech.V1Beta1</RootNamespace>
+    <RootNamespace>Google.Cloud.Speech.V1</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>

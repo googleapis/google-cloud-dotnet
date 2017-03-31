@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta08-*",
+  "version": "1.0.0-beta09-*",
   "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
   "authors": [ "Google Inc." ],
 
@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Grpc": "1.0.0-beta13",
+    "Google.Api.Gax.Grpc": "1.0.1",
     "Google.Cloud.Iam.V1": { "target": "project" }
   },
 

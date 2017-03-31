@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Storage.V1;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
+using System.IO;
+using System.Text;
 using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Snippets
@@ -32,8 +34,17 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         public string ProjectId { get; }
         public string GameDatasetId { get; }
         public BigQueryClient Client { get; }
+        // This table should not have inserts made during the test,
+        // as it's used as the source for copy operations.
         public string HistoryTableId => "game_history";
-        public string LevelsTableId => "levels";        
+        // This table has the same original data as HistoryTableId, but
+        // is not used for copying, so is suitable for inserts.
+        public string HistoryTableWithInsertsId => "game_history_for_inserts";
+        public string LevelsTableId => "levels";
+        /// <summary>
+        /// A GCS bucket created for this fixture.
+        /// </summary>
+        public string StorageBucketName { get; }
 
         private readonly List<string> _datasetsToDelete = new List<string>();
 
@@ -47,6 +58,8 @@ namespace Google.Cloud.BigQuery.V2.Snippets
             }
             Client = BigQueryClient.Create(ProjectId);
             GameDatasetId = CreateGameDataset();
+            StorageBucketName = GenerateStorageBucketName();
+            StorageClient.Create().CreateBucket(ProjectId, StorageBucketName);
         }
 
         private string CreateGameDataset()
@@ -61,7 +74,10 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 { "game_started", BigQueryDbType.Timestamp }
             }.Build();
             var historyTable = game.CreateTable(HistoryTableId, historySchema);
-            historyTable.InsertRows(
+            var historyTableWithInserts = game.CreateTable(HistoryTableWithInsertsId, historySchema);
+
+            string[] csvRows =
+            {
                 CreateHistoryRow("Tim", 503, 1, "2015-05-03T23:01:05"),
                 CreateHistoryRow("Nadia", 450, 1, "2013-05-06T10:05:07"),
                 CreateHistoryRow("Nadia", 1320, 2, "2013-06-01T15:02:07"),
@@ -69,22 +85,24 @@ namespace Google.Cloud.BigQuery.V2.Snippets
                 CreateHistoryRow("Tim", 5310, 3, "2014-06-28T10:32:15"),
                 CreateHistoryRow("Tim", 2000, 2, "2014-07-01T08:12:25"),
                 CreateHistoryRow("Nadia", 8310, 5, "2015-03-20T14:55:10")
-            );
+            };
+            MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(string.Join("\n", csvRows)));
+            historyTable.UploadCsv(stream).PollUntilCompleted().ThrowOnAnyError();
+            stream.Position = 0;
+            historyTableWithInserts.UploadCsv(stream).PollUntilCompleted().ThrowOnAnyError();
             return id;
         }
 
-        private BigQueryInsertRow CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
-            new BigQueryInsertRow
-            {
-                ["player"] = player,
-                ["score"] = score,
-                ["level"] = level,
-                ["game_started"] = DateTime.ParseExact(gameStartedIso, "yyyy-MM-dd'T'HH:mm:ss",
-                    CultureInfo.InvariantCulture,
-                    DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal)
-            };
+        // We use CSV to prepopulate the table so that it's ready for extract operations etc.
+        private string CreateHistoryRow(string player, int score, int level, string gameStartedIso) =>
+            $"{player},{score},{level},{gameStartedIso}";
 
         internal string GenerateDatasetId() => DatasetPrefix + Guid.NewGuid().ToString().Replace('-', '_');
+
+        internal string GenerateTableId() => Guid.NewGuid().ToString().Replace("-", "_");
+
+        private string GenerateStorageBucketName() => "bigquerysnippets-" + Guid.NewGuid().ToString().ToLowerInvariant();
+        internal string GenerateStorageObjectName() => "file-" + Guid.NewGuid().ToString();
 
         internal void RegisterDatasetToDelete(string id)
         {

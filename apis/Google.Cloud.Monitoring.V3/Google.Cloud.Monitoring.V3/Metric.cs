@@ -50,7 +50,7 @@ namespace Google.Cloud.Monitoring.V3 {
   }
   #region Messages
   /// <summary>
-  ///  A single data point in a time series.
+  /// A single data point in a time series.
   /// </summary>
   public sealed partial class Point : pb::IMessage<Point> {
     private static readonly pb::MessageParser<Point> _parser = new pb::MessageParser<Point>(() => new Point());
@@ -89,14 +89,14 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int IntervalFieldNumber = 1;
     private global::Google.Cloud.Monitoring.V3.TimeInterval interval_;
     /// <summary>
-    ///  The time interval to which the data point applies.  For GAUGE metrics, only
-    ///  the end time of the interval is used.  For DELTA metrics, the start and end
-    ///  time should specify a non-zero interval, with subsequent points specifying
-    ///  contiguous and non-overlapping intervals.  For CUMULATIVE metrics, the
-    ///  start and end time should specify a non-zero interval, with subsequent
-    ///  points specifying the same start time and increasing end times, until an
-    ///  event resets the cumulative value to zero and sets a new start time for the
-    ///  following points.
+    /// The time interval to which the data point applies.  For GAUGE metrics, only
+    /// the end time of the interval is used.  For DELTA metrics, the start and end
+    /// time should specify a non-zero interval, with subsequent points specifying
+    /// contiguous and non-overlapping intervals.  For CUMULATIVE metrics, the
+    /// start and end time should specify a non-zero interval, with subsequent
+    /// points specifying the same start time and increasing end times, until an
+    /// event resets the cumulative value to zero and sets a new start time for the
+    /// following points.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
@@ -110,7 +110,7 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ValueFieldNumber = 2;
     private global::Google.Cloud.Monitoring.V3.TypedValue value_;
     /// <summary>
-    ///  The value of the data point.
+    /// The value of the data point.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Monitoring.V3.TypedValue Value {
@@ -223,10 +223,10 @@ namespace Google.Cloud.Monitoring.V3 {
   }
 
   /// <summary>
-  ///  A collection of data points that describes the time-varying values
-  ///  of a metric. A time series is identified by a combination of a
-  ///  fully-specified monitored resource and a fully-specified metric.
-  ///  This type is used for both listing and creating time series.
+  /// A collection of data points that describes the time-varying values
+  /// of a metric. A time series is identified by a combination of a
+  /// fully-specified monitored resource and a fully-specified metric.
+  /// This type is used for both listing and creating time series.
   /// </summary>
   public sealed partial class TimeSeries : pb::IMessage<TimeSeries> {
     private static readonly pb::MessageParser<TimeSeries> _parser = new pb::MessageParser<TimeSeries>(() => new TimeSeries());
@@ -268,8 +268,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int MetricFieldNumber = 1;
     private global::Google.Api.Metric metric_;
     /// <summary>
-    ///  The associated metric. A fully-specified metric used to identify the time
-    ///  series.
+    /// The associated metric. A fully-specified metric used to identify the time
+    /// series.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.Metric Metric {
@@ -283,8 +283,8 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ResourceFieldNumber = 2;
     private global::Google.Api.MonitoredResource resource_;
     /// <summary>
-    ///  The associated resource. A fully-specified monitored resource used to
-    ///  identify the time series.
+    /// The associated resource. A fully-specified monitored resource used to
+    /// identify the time series.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MonitoredResource Resource {
@@ -298,15 +298,15 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int MetricKindFieldNumber = 3;
     private global::Google.Api.MetricDescriptor.Types.MetricKind metricKind_ = 0;
     /// <summary>
-    ///  The metric kind of the time series. When listing time series, this metric
-    ///  kind might be different from the metric kind of the associated metric if
-    ///  this time series is an alignment or reduction of other time series.
+    /// The metric kind of the time series. When listing time series, this metric
+    /// kind might be different from the metric kind of the associated metric if
+    /// this time series is an alignment or reduction of other time series.
     ///
-    ///  When creating a time series, this field is optional. If present, it must be
-    ///  the same as the metric kind of the associated metric. If the associated
-    ///  metric's descriptor must be auto-created, then this field specifies the
-    ///  metric kind of the new descriptor and must be either `GAUGE` (the default)
-    ///  or `CUMULATIVE`.
+    /// When creating a time series, this field is optional. If present, it must be
+    /// the same as the metric kind of the associated metric. If the associated
+    /// metric's descriptor must be auto-created, then this field specifies the
+    /// metric kind of the new descriptor and must be either `GAUGE` (the default)
+    /// or `CUMULATIVE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MetricDescriptor.Types.MetricKind MetricKind {
@@ -320,12 +320,12 @@ namespace Google.Cloud.Monitoring.V3 {
     public const int ValueTypeFieldNumber = 4;
     private global::Google.Api.MetricDescriptor.Types.ValueType valueType_ = 0;
     /// <summary>
-    ///  The value type of the time series. When listing time series, this value
-    ///  type might be different from the value type of the associated metric if
-    ///  this time series is an alignment or reduction of other time series.
+    /// The value type of the time series. When listing time series, this value
+    /// type might be different from the value type of the associated metric if
+    /// this time series is an alignment or reduction of other time series.
     ///
-    ///  When creating a time series, this field is optional. If present, it must be
-    ///  the same as the type of the data in the `points` field.
+    /// When creating a time series, this field is optional. If present, it must be
+    /// the same as the type of the data in the `points` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Api.MetricDescriptor.Types.ValueType ValueType {
@@ -341,14 +341,14 @@ namespace Google.Cloud.Monitoring.V3 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Monitoring.V3.Point.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point> points_ = new pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point>();
     /// <summary>
-    ///  The data points of this time series. When listing time series, the order of
-    ///  the points is specified by the list method.
+    /// The data points of this time series. When listing time series, the order of
+    /// the points is specified by the list method.
     ///
-    ///  When creating a time series, this field must contain exactly one point and
-    ///  the point's type must be the same as the value type of the associated
-    ///  metric. If the associated metric's descriptor must be auto-created, then
-    ///  the value type of the descriptor is determined by the point's type, which
-    ///  must be `BOOL`, `INT64`, `DOUBLE`, or `DISTRIBUTION`.
+    /// When creating a time series, this field must contain exactly one point and
+    /// the point's type must be the same as the value type of the associated
+    /// metric. If the associated metric's descriptor must be auto-created, then
+    /// the value type of the descriptor is determined by the point's type, which
+    /// must be `BOOL`, `INT64`, `DOUBLE`, or `DISTRIBUTION`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point> Points {

@@ -106,3 +106,22 @@ it yourself to integrate with other systems - see the
 [Grpc.Core.Logging](https://github.com/grpc/grpc/tree/master/src/csharp/Grpc.Core/Logging)
 namespace for details.
 
+## How can I use emulators?
+
+Some APIs (such as Datastore and PubSub) provide emulators in the
+[Cloud SDK](https://cloud.google.com/sdk/). Client libraries in some
+other languages automatically use emulators if specific environment
+variables are set, but the Google Cloud Libraries for .NET do not do
+this. (We are hoping to work with a more ambient emulator manager
+solution which does not require environment variables, and is
+therefore more amenable to IDEs such as Visual Studio.)
+
+However, it is quite simple to manually create the appropriate
+client for gRPC-based APIs, by first creating a channel and then
+passing that to the static `Create` method of the relevant client
+class. Note that in current emulator implementations, the channel
+credentials must be set to `ChannelCredentials.Insecure`.
+
+Example for PubSub:
+
+[!code-cs[](obj/snippets/Google.Cloud.Docs.Faq.txt#Emulator)]

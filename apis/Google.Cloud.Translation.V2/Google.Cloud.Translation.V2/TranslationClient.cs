@@ -144,7 +144,8 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Lists the language supported by the Translate API synchronously.
         /// </summary>
-        /// <param name="target">The target language in which to return the results. May be null.</param>
+        /// <param name="target">The target language in which to return the language names in the results,
+        /// for display purposes. May be null, in which case only the language codes are returned.</param>
         /// <returns>A list of supported languages.</returns>
         public virtual IList<Language> ListLanguages(string target = null)
         {
@@ -241,7 +242,8 @@ namespace Google.Cloud.Translation.V2
         /// <summary>
         /// Lists the language supported by the Translate API asynchronously.
         /// </summary>
-        /// <param name="target">The target language in which to return the results. May be null.</param>
+        /// <param name="target">The target language in which to return the language names in the results,
+        /// for display purposes. May be null, in which case only the language codes are returned.</param>
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <returns>A list of supported languages.</returns>
         public virtual Task<IList<Language>> ListLanguagesAsync(string target = null, CancellationToken cancellationToken = default(CancellationToken))

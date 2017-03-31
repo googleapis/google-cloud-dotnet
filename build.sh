@@ -133,9 +133,9 @@ fi
 
 echo Packing
 
-# Assume each packagable project contains something like "version": "1.0.0-*"
-# and no other projects do.
-for package in `$FIND . -name project.json | xargs grep -le 'version.*-\*' | sed 's/\/project.json//g'`
+# Assume each packagable project has a version property exactly two spaces in.
+# This is nasty, but we can do something better after moving to csproj
+for package in $($FIND . -name project.json | xargs grep -le '^  \"version\"' | sed 's/\/project.json//g')
 do
   dotnet pack --no-build $DOTNET_BUILD_ARGS $package
 done

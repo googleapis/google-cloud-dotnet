@@ -7,8 +7,8 @@ set -e
 OS=linux
 [[ ${OS} = "windows" ]] && EXE_SUFFIX=.exe || EXE_SUFFIX=
 
-GRPC_VERSION=1.1.0
-PROTOBUF_VERSION=3.1.0
+GRPC_VERSION=1.2.0
+PROTOBUF_VERSION=3.2.0
 PROTOC=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/protoc${EXE_SUFFIX}
 GRPC_PLUGIN=packages/Grpc.Tools.$GRPC_VERSION/tools/${OS}_x64/grpc_csharp_plugin${EXE_SUFFIX}
 CORE_PROTOS_ROOT=packages/Google.Protobuf.Tools.$PROTOBUF_VERSION/tools
@@ -138,7 +138,7 @@ $PROTOC \
 # Now the per-API codegen  
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision.yaml
 generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language.yaml
-generate_api Google.Cloud.Speech.V1Beta1 google/cloud/speech/v1beta1 cloud_speech.yaml
+generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 cloud_speech.yaml
 generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
 generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 trace.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml

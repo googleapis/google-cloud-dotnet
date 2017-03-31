@@ -108,7 +108,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
   #region Messages
   /// <summary>
-  ///  A Cloud Spanner database.
+  /// A Cloud Spanner database.
   /// </summary>
   public sealed partial class Database : pb::IMessage<Database> {
     private static readonly pb::MessageParser<Database> _parser = new pb::MessageParser<Database>(() => new Database());
@@ -147,11 +147,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The name of the database. Values are of the form
-    ///  `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>`,
-    ///  where `&lt;database>` is as specified in the `CREATE DATABASE`
-    ///  statement. This name can be passed to other API methods to
-    ///  identify the database.
+    /// Required. The name of the database. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>`,
+    /// where `&lt;database>` is as specified in the `CREATE DATABASE`
+    /// statement. This name can be passed to other API methods to
+    /// identify the database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -165,7 +165,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int StateFieldNumber = 2;
     private global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State state_ = 0;
     /// <summary>
-    ///  Output only. The current database state.
+    /// Output only. The current database state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Spanner.Admin.Database.V1.Database.Types.State State {
@@ -268,20 +268,20 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Indicates the current state of the database.
+      /// Indicates the current state of the database.
       /// </summary>
       public enum State {
         /// <summary>
-        ///  Not specified.
+        /// Not specified.
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  The database is still being created. Operations on the database may fail
-        ///  with `FAILED_PRECONDITION` in this state.
+        /// The database is still being created. Operations on the database may fail
+        /// with `FAILED_PRECONDITION` in this state.
         /// </summary>
         [pbr::OriginalName("CREATING")] Creating = 1,
         /// <summary>
-        ///  The database is fully created and ready for use.
+        /// The database is fully created and ready for use.
         /// </summary>
         [pbr::OriginalName("READY")] Ready = 2,
       }
@@ -292,7 +292,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  The request for [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
+  /// The request for [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
   /// </summary>
   public sealed partial class ListDatabasesRequest : pb::IMessage<ListDatabasesRequest> {
     private static readonly pb::MessageParser<ListDatabasesRequest> _parser = new pb::MessageParser<ListDatabasesRequest>(() => new ListDatabasesRequest());
@@ -332,8 +332,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The instance whose databases should be listed.
-    ///  Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// Required. The instance whose databases should be listed.
+    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -347,8 +347,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    ///  Number of databases to be returned in the response. If 0 or less,
-    ///  defaults to the server's maximum allowed page size.
+    /// Number of databases to be returned in the response. If 0 or less,
+    /// defaults to the server's maximum allowed page size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int PageSize {
@@ -362,9 +362,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    ///  If non-empty, `page_token` should contain a
-    ///  [next_page_token][google.spanner.admin.database.v1.ListDatabasesResponse.next_page_token] from a
-    ///  previous [ListDatabasesResponse][google.spanner.admin.database.v1.ListDatabasesResponse].
+    /// If non-empty, `page_token` should contain a
+    /// [next_page_token][google.spanner.admin.database.v1.ListDatabasesResponse.next_page_token] from a
+    /// previous [ListDatabasesResponse][google.spanner.admin.database.v1.ListDatabasesResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string PageToken {
@@ -481,7 +481,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  The response for [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
+  /// The response for [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases].
   /// </summary>
   public sealed partial class ListDatabasesResponse : pb::IMessage<ListDatabasesResponse> {
     private static readonly pb::MessageParser<ListDatabasesResponse> _parser = new pb::MessageParser<ListDatabasesResponse>(() => new ListDatabasesResponse());
@@ -522,7 +522,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Spanner.Admin.Database.V1.Database.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Database.V1.Database> databases_ = new pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Database.V1.Database>();
     /// <summary>
-    ///  Databases that matched the request.
+    /// Databases that matched the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.Admin.Database.V1.Database> Databases {
@@ -533,9 +533,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    ///  `next_page_token` can be sent in a subsequent
-    ///  [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases] call to fetch more
-    ///  of the matching databases.
+    /// `next_page_token` can be sent in a subsequent
+    /// [ListDatabases][google.spanner.admin.database.v1.DatabaseAdmin.ListDatabases] call to fetch more
+    /// of the matching databases.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NextPageToken {
@@ -629,7 +629,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  The request for [CreateDatabase][google.spanner.admin.database.v1.DatabaseAdmin.CreateDatabase].
+  /// The request for [CreateDatabase][google.spanner.admin.database.v1.DatabaseAdmin.CreateDatabase].
   /// </summary>
   public sealed partial class CreateDatabaseRequest : pb::IMessage<CreateDatabaseRequest> {
     private static readonly pb::MessageParser<CreateDatabaseRequest> _parser = new pb::MessageParser<CreateDatabaseRequest>(() => new CreateDatabaseRequest());
@@ -669,8 +669,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    ///  Required. The name of the instance that will serve the new database.
-    ///  Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
+    /// Required. The name of the instance that will serve the new database.
+    /// Values are of the form `projects/&lt;project>/instances/&lt;instance>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Parent {
@@ -684,9 +684,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int CreateStatementFieldNumber = 2;
     private string createStatement_ = "";
     /// <summary>
-    ///  Required. A `CREATE DATABASE` statement, which specifies the ID of the
-    ///  new database.  The database ID must conform to the regular expression
-    ///  `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
+    /// Required. A `CREATE DATABASE` statement, which specifies the ID of the
+    /// new database.  The database ID must conform to the regular expression
+    /// `[a-z][a-z0-9_\-]*[a-z0-9]` and be between 2 and 30 characters in length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CreateStatement {
@@ -702,10 +702,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         = pb::FieldCodec.ForString(26);
     private readonly pbc::RepeatedField<string> extraStatements_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  An optional list of DDL statements to run inside the newly created
-    ///  database. Statements can create tables, indexes, etc. These
-    ///  statements execute atomically with the creation of the database:
-    ///  if there is an error in any statement, the database is not created.
+    /// An optional list of DDL statements to run inside the newly created
+    /// database. Statements can create tables, indexes, etc. These
+    /// statements execute atomically with the creation of the database:
+    /// if there is an error in any statement, the database is not created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> ExtraStatements {
@@ -812,8 +812,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  Metadata type for the operation returned by
-  ///  [CreateDatabase][google.spanner.admin.database.v1.DatabaseAdmin.CreateDatabase].
+  /// Metadata type for the operation returned by
+  /// [CreateDatabase][google.spanner.admin.database.v1.DatabaseAdmin.CreateDatabase].
   /// </summary>
   public sealed partial class CreateDatabaseMetadata : pb::IMessage<CreateDatabaseMetadata> {
     private static readonly pb::MessageParser<CreateDatabaseMetadata> _parser = new pb::MessageParser<CreateDatabaseMetadata>(() => new CreateDatabaseMetadata());
@@ -851,7 +851,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int DatabaseFieldNumber = 1;
     private string database_ = "";
     /// <summary>
-    ///  The database being created.
+    /// The database being created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Database {
@@ -936,7 +936,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  The request for [GetDatabase][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabase].
+  /// The request for [GetDatabase][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabase].
   /// </summary>
   public sealed partial class GetDatabaseRequest : pb::IMessage<GetDatabaseRequest> {
     private static readonly pb::MessageParser<GetDatabaseRequest> _parser = new pb::MessageParser<GetDatabaseRequest>(() => new GetDatabaseRequest());
@@ -974,8 +974,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  Required. The name of the requested database. Values are of the form
-    ///  `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>`.
+    /// Required. The name of the requested database. Values are of the form
+    /// `projects/&lt;project>/instances/&lt;instance>/databases/&lt;database>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -1060,22 +1060,22 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  Enqueues the given DDL statements to be applied, in order but not
-  ///  necessarily all at once, to the database schema at some point (or
-  ///  points) in the future. The server checks that the statements
-  ///  are executable (syntactically valid, name tables that exist, etc.)
-  ///  before enqueueing them, but they may still fail upon
-  ///  later execution (e.g., if a statement from another batch of
-  ///  statements is applied first and it conflicts in some way, or if
-  ///  there is some data-related problem like a `NULL` value in a column to
-  ///  which `NOT NULL` would be added). If a statement fails, all
-  ///  subsequent statements in the batch are automatically cancelled.
+  /// Enqueues the given DDL statements to be applied, in order but not
+  /// necessarily all at once, to the database schema at some point (or
+  /// points) in the future. The server checks that the statements
+  /// are executable (syntactically valid, name tables that exist, etc.)
+  /// before enqueueing them, but they may still fail upon
+  /// later execution (e.g., if a statement from another batch of
+  /// statements is applied first and it conflicts in some way, or if
+  /// there is some data-related problem like a `NULL` value in a column to
+  /// which `NOT NULL` would be added). If a statement fails, all
+  /// subsequent statements in the batch are automatically cancelled.
   ///
-  ///  Each batch of statements is assigned a name which can be used with
-  ///  the [Operations][google.longrunning.Operations] API to monitor
-  ///  progress. See the
-  ///  [operation_id][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.operation_id] field for more
-  ///  details.
+  /// Each batch of statements is assigned a name which can be used with
+  /// the [Operations][google.longrunning.Operations] API to monitor
+  /// progress. See the
+  /// [operation_id][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.operation_id] field for more
+  /// details.
   /// </summary>
   public sealed partial class UpdateDatabaseDdlRequest : pb::IMessage<UpdateDatabaseDdlRequest> {
     private static readonly pb::MessageParser<UpdateDatabaseDdlRequest> _parser = new pb::MessageParser<UpdateDatabaseDdlRequest>(() => new UpdateDatabaseDdlRequest());
@@ -1115,7 +1115,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int DatabaseFieldNumber = 1;
     private string database_ = "";
     /// <summary>
-    ///  Required. The database to update.
+    /// Required. The database to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Database {
@@ -1131,7 +1131,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> statements_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  DDL statements to be applied to the database.
+    /// DDL statements to be applied to the database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Statements {
@@ -1142,25 +1142,25 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int OperationIdFieldNumber = 3;
     private string operationId_ = "";
     /// <summary>
-    ///  If empty, the new update request is assigned an
-    ///  automatically-generated operation ID. Otherwise, `operation_id`
-    ///  is used to construct the name of the resulting
-    ///  [Operation][google.longrunning.Operation].
+    /// If empty, the new update request is assigned an
+    /// automatically-generated operation ID. Otherwise, `operation_id`
+    /// is used to construct the name of the resulting
+    /// [Operation][google.longrunning.Operation].
     ///
-    ///  Specifying an explicit operation ID simplifies determining
-    ///  whether the statements were executed in the event that the
-    ///  [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl] call is replayed,
-    ///  or the return value is otherwise lost: the [database][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.database] and
-    ///  `operation_id` fields can be combined to form the
-    ///  [name][google.longrunning.Operation.name] of the resulting
-    ///  [longrunning.Operation][google.longrunning.Operation]: `&lt;database>/operations/&lt;operation_id>`.
+    /// Specifying an explicit operation ID simplifies determining
+    /// whether the statements were executed in the event that the
+    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl] call is replayed,
+    /// or the return value is otherwise lost: the [database][google.spanner.admin.database.v1.UpdateDatabaseDdlRequest.database] and
+    /// `operation_id` fields can be combined to form the
+    /// [name][google.longrunning.Operation.name] of the resulting
+    /// [longrunning.Operation][google.longrunning.Operation]: `&lt;database>/operations/&lt;operation_id>`.
     ///
-    ///  `operation_id` should be unique within the database, and must be
-    ///  a valid identifier: `[a-z][a-z0-9_]*`. Note that
-    ///  automatically-generated operation IDs always begin with an
-    ///  underscore. If the named operation already exists,
-    ///  [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl] returns
-    ///  `ALREADY_EXISTS`.
+    /// `operation_id` should be unique within the database, and must be
+    /// a valid identifier: `[a-z][a-z0-9_]*`. Note that
+    /// automatically-generated operation IDs always begin with an
+    /// underscore. If the named operation already exists,
+    /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl] returns
+    /// `ALREADY_EXISTS`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string OperationId {
@@ -1270,8 +1270,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  Metadata type for the operation returned by
-  ///  [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl].
+  /// Metadata type for the operation returned by
+  /// [UpdateDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.UpdateDatabaseDdl].
   /// </summary>
   public sealed partial class UpdateDatabaseDdlMetadata : pb::IMessage<UpdateDatabaseDdlMetadata> {
     private static readonly pb::MessageParser<UpdateDatabaseDdlMetadata> _parser = new pb::MessageParser<UpdateDatabaseDdlMetadata>(() => new UpdateDatabaseDdlMetadata());
@@ -1311,7 +1311,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int DatabaseFieldNumber = 1;
     private string database_ = "";
     /// <summary>
-    ///  The database being modified.
+    /// The database being modified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Database {
@@ -1327,8 +1327,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> statements_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  For an update this list contains all the statements. For an
-    ///  individual statement, this list contains only that statement.
+    /// For an update this list contains all the statements. For an
+    /// individual statement, this list contains only that statement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Statements {
@@ -1341,9 +1341,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Protobuf.WellKnownTypes.Timestamp.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Timestamp> commitTimestamps_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Timestamp>();
     /// <summary>
-    ///  Reports the commit timestamps of all statements that have
-    ///  succeeded so far, where `commit_timestamps[i]` is the commit
-    ///  timestamp for the statement `statements[i]`.
+    /// Reports the commit timestamps of all statements that have
+    /// succeeded so far, where `commit_timestamps[i]` is the commit
+    /// timestamp for the statement `statements[i]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Timestamp> CommitTimestamps {
@@ -1443,7 +1443,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  The request for [DropDatabase][google.spanner.admin.database.v1.DatabaseAdmin.DropDatabase].
+  /// The request for [DropDatabase][google.spanner.admin.database.v1.DatabaseAdmin.DropDatabase].
   /// </summary>
   public sealed partial class DropDatabaseRequest : pb::IMessage<DropDatabaseRequest> {
     private static readonly pb::MessageParser<DropDatabaseRequest> _parser = new pb::MessageParser<DropDatabaseRequest>(() => new DropDatabaseRequest());
@@ -1481,7 +1481,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int DatabaseFieldNumber = 1;
     private string database_ = "";
     /// <summary>
-    ///  Required. The database to be dropped.
+    /// Required. The database to be dropped.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Database {
@@ -1566,7 +1566,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  The request for [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
+  /// The request for [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
   /// </summary>
   public sealed partial class GetDatabaseDdlRequest : pb::IMessage<GetDatabaseDdlRequest> {
     private static readonly pb::MessageParser<GetDatabaseDdlRequest> _parser = new pb::MessageParser<GetDatabaseDdlRequest>(() => new GetDatabaseDdlRequest());
@@ -1604,7 +1604,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     public const int DatabaseFieldNumber = 1;
     private string database_ = "";
     /// <summary>
-    ///  Required. The database whose schema we wish to get.
+    /// Required. The database whose schema we wish to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Database {
@@ -1689,7 +1689,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   }
 
   /// <summary>
-  ///  The response for [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
+  /// The response for [GetDatabaseDdl][google.spanner.admin.database.v1.DatabaseAdmin.GetDatabaseDdl].
   /// </summary>
   public sealed partial class GetDatabaseDdlResponse : pb::IMessage<GetDatabaseDdlResponse> {
     private static readonly pb::MessageParser<GetDatabaseDdlResponse> _parser = new pb::MessageParser<GetDatabaseDdlResponse>(() => new GetDatabaseDdlResponse());
@@ -1729,8 +1729,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> statements_ = new pbc::RepeatedField<string>();
     /// <summary>
-    ///  A list of formatted DDL statements defining the schema of the database
-    ///  specified in the request.
+    /// A list of formatted DDL statements defining the schema of the database
+    /// specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Statements {

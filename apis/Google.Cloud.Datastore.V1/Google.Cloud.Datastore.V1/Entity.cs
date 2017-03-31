@@ -67,25 +67,25 @@ namespace Google.Cloud.Datastore.V1 {
   }
   #region Messages
   /// <summary>
-  ///  A partition ID identifies a grouping of entities. The grouping is always
-  ///  by project and namespace, however the namespace ID may be empty.
+  /// A partition ID identifies a grouping of entities. The grouping is always
+  /// by project and namespace, however the namespace ID may be empty.
   ///
-  ///  A partition ID contains several dimensions:
-  ///  project ID and namespace ID.
+  /// A partition ID contains several dimensions:
+  /// project ID and namespace ID.
   ///
-  ///  Partition dimensions:
+  /// Partition dimensions:
   ///
-  ///  - May be `""`.
-  ///  - Must be valid UTF-8 bytes.
-  ///  - Must have values that match regex `[A-Za-z\d\.\-_]{1,100}`
-  ///  If the value of any dimension matches regex `__.*__`, the partition is
-  ///  reserved/read-only.
-  ///  A reserved/read-only partition ID is forbidden in certain documented
-  ///  contexts.
+  /// - May be `""`.
+  /// - Must be valid UTF-8 bytes.
+  /// - Must have values that match regex `[A-Za-z\d\.\-_]{1,100}`
+  /// If the value of any dimension matches regex `__.*__`, the partition is
+  /// reserved/read-only.
+  /// A reserved/read-only partition ID is forbidden in certain documented
+  /// contexts.
   ///
-  ///  Foreign partition IDs (in which the project ID does
-  ///  not match the context project ID ) are discouraged.
-  ///  Reads and writes of foreign partition IDs may fail if the project is not in an active state.
+  /// Foreign partition IDs (in which the project ID does
+  /// not match the context project ID ) are discouraged.
+  /// Reads and writes of foreign partition IDs may fail if the project is not in an active state.
   /// </summary>
   public sealed partial class PartitionId : pb::IMessage<PartitionId> {
     private static readonly pb::MessageParser<PartitionId> _parser = new pb::MessageParser<PartitionId>(() => new PartitionId());
@@ -124,7 +124,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 2;
     private string projectId_ = "";
     /// <summary>
-    ///  The ID of the project to which the entities belong.
+    /// The ID of the project to which the entities belong.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -138,7 +138,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int NamespaceIdFieldNumber = 4;
     private string namespaceId_ = "";
     /// <summary>
-    ///  If not empty, the ID of the namespace to which the entities belong.
+    /// If not empty, the ID of the namespace to which the entities belong.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string NamespaceId {
@@ -239,10 +239,10 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A unique identifier for an entity.
-  ///  If a key's partition ID or any of its path kinds or names are
-  ///  reserved/read-only, the key is reserved/read-only.
-  ///  A reserved/read-only key is forbidden in certain documented contexts.
+  /// A unique identifier for an entity.
+  /// If a key's partition ID or any of its path kinds or names are
+  /// reserved/read-only, the key is reserved/read-only.
+  /// A reserved/read-only key is forbidden in certain documented contexts.
   /// </summary>
   public sealed partial class Key : pb::IMessage<Key> {
     private static readonly pb::MessageParser<Key> _parser = new pb::MessageParser<Key>(() => new Key());
@@ -281,9 +281,9 @@ namespace Google.Cloud.Datastore.V1 {
     public const int PartitionIdFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.PartitionId partitionId_;
     /// <summary>
-    ///  Entities are partitioned into subsets, currently identified by a project
-    ///  ID and namespace ID.
-    ///  Queries are scoped to a single partition.
+    /// Entities are partitioned into subsets, currently identified by a project
+    /// ID and namespace ID.
+    /// Queries are scoped to a single partition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PartitionId PartitionId {
@@ -299,22 +299,22 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.Key.Types.PathElement.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key.Types.PathElement> path_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key.Types.PathElement>();
     /// <summary>
-    ///  The entity path.
-    ///  An entity path consists of one or more elements composed of a kind and a
-    ///  string or numerical identifier, which identify entities. The first
-    ///  element identifies a _root entity_, the second element identifies
-    ///  a _child_ of the root entity, the third element identifies a child of the
-    ///  second entity, and so forth. The entities identified by all prefixes of
-    ///  the path are called the element's _ancestors_.
+    /// The entity path.
+    /// An entity path consists of one or more elements composed of a kind and a
+    /// string or numerical identifier, which identify entities. The first
+    /// element identifies a _root entity_, the second element identifies
+    /// a _child_ of the root entity, the third element identifies a child of the
+    /// second entity, and so forth. The entities identified by all prefixes of
+    /// the path are called the element's _ancestors_.
     ///
-    ///  An entity path is always fully complete: *all* of the entity's ancestors
-    ///  are required to be in the path along with the entity identifier itself.
-    ///  The only exception is that in some documented cases, the identifier in the
-    ///  last path element (for the entity) itself may be omitted. For example,
-    ///  the last path element of the key of `Mutation.insert` may have no
-    ///  identifier.
+    /// An entity path is always fully complete: *all* of the entity's ancestors
+    /// are required to be in the path along with the entity identifier itself.
+    /// The only exception is that in some documented cases, the identifier in the
+    /// last path element (for the entity) itself may be omitted. For example,
+    /// the last path element of the key of `Mutation.insert` may have no
+    /// identifier.
     ///
-    ///  A path can never be empty, and a path can have at most 100 elements.
+    /// A path can never be empty, and a path can have at most 100 elements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key.Types.PathElement> Path {
@@ -413,10 +413,10 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  A (kind, ID/name) pair used to construct a key path.
+      /// A (kind, ID/name) pair used to construct a key path.
       ///
-      ///  If either name or ID is set, the element is complete.
-      ///  If neither is set, the element is incomplete.
+      /// If either name or ID is set, the element is complete.
+      /// If neither is set, the element is incomplete.
       /// </summary>
       public sealed partial class PathElement : pb::IMessage<PathElement> {
         private static readonly pb::MessageParser<PathElement> _parser = new pb::MessageParser<PathElement>(() => new PathElement());
@@ -463,10 +463,10 @@ namespace Google.Cloud.Datastore.V1 {
         public const int KindFieldNumber = 1;
         private string kind_ = "";
         /// <summary>
-        ///  The kind of the entity.
-        ///  A kind matching regex `__.*__` is reserved/read-only.
-        ///  A kind must not contain more than 1500 bytes when UTF-8 encoded.
-        ///  Cannot be `""`.
+        /// The kind of the entity.
+        /// A kind matching regex `__.*__` is reserved/read-only.
+        /// A kind must not contain more than 1500 bytes when UTF-8 encoded.
+        /// Cannot be `""`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Kind {
@@ -479,9 +479,9 @@ namespace Google.Cloud.Datastore.V1 {
         /// <summary>Field number for the "id" field.</summary>
         public const int IdFieldNumber = 2;
         /// <summary>
-        ///  The auto-allocated ID of the entity.
-        ///  Never equal to zero. Values less than zero are discouraged and may not
-        ///  be supported in the future.
+        /// The auto-allocated ID of the entity.
+        /// Never equal to zero. Values less than zero are discouraged and may not
+        /// be supported in the future.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public long Id {
@@ -495,10 +495,10 @@ namespace Google.Cloud.Datastore.V1 {
         /// <summary>Field number for the "name" field.</summary>
         public const int NameFieldNumber = 3;
         /// <summary>
-        ///  The name of the entity.
-        ///  A name matching regex `__.*__` is reserved/read-only.
-        ///  A name must not be more than 1500 bytes when UTF-8 encoded.
-        ///  Cannot be `""`.
+        /// The name of the entity.
+        /// A name matching regex `__.*__` is reserved/read-only.
+        /// A name must not be more than 1500 bytes when UTF-8 encoded.
+        /// Cannot be `""`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Name {
@@ -645,7 +645,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  An array value.
+  /// An array value.
   /// </summary>
   public sealed partial class ArrayValue : pb::IMessage<ArrayValue> {
     private static readonly pb::MessageParser<ArrayValue> _parser = new pb::MessageParser<ArrayValue>(() => new ArrayValue());
@@ -685,9 +685,9 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Datastore.V1.Value.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Value> values_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Value>();
     /// <summary>
-    ///  Values in the array.
-    ///  The order of this array may not be preserved if it contains a mix of
-    ///  indexed and unindexed values.
+    /// Values in the array.
+    /// The order of this array may not be preserved if it contains a mix of
+    /// indexed and unindexed values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Value> Values {
@@ -762,8 +762,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A message that can hold any of the supported value types and associated
-  ///  metadata.
+  /// A message that can hold any of the supported value types and associated
+  /// metadata.
   /// </summary>
   public sealed partial class Value : pb::IMessage<Value> {
     private static readonly pb::MessageParser<Value> _parser = new pb::MessageParser<Value>(() => new Value());
@@ -837,7 +837,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "null_value" field.</summary>
     public const int NullValueFieldNumber = 11;
     /// <summary>
-    ///  A null value.
+    /// A null value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.NullValue NullValue {
@@ -851,7 +851,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "boolean_value" field.</summary>
     public const int BooleanValueFieldNumber = 1;
     /// <summary>
-    ///  A boolean value.
+    /// A boolean value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool BooleanValue {
@@ -865,7 +865,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "integer_value" field.</summary>
     public const int IntegerValueFieldNumber = 2;
     /// <summary>
-    ///  An integer value.
+    /// An integer value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long IntegerValue {
@@ -879,7 +879,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "double_value" field.</summary>
     public const int DoubleValueFieldNumber = 3;
     /// <summary>
-    ///  A double value.
+    /// A double value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public double DoubleValue {
@@ -893,9 +893,9 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "timestamp_value" field.</summary>
     public const int TimestampValueFieldNumber = 10;
     /// <summary>
-    ///  A timestamp value.
-    ///  When stored in the Datastore, precise only to microseconds;
-    ///  any additional precision is rounded down.
+    /// A timestamp value.
+    /// When stored in the Datastore, precise only to microseconds;
+    /// any additional precision is rounded down.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp TimestampValue {
@@ -909,7 +909,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "key_value" field.</summary>
     public const int KeyValueFieldNumber = 5;
     /// <summary>
-    ///  A key value.
+    /// A key value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Key KeyValue {
@@ -923,9 +923,9 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "string_value" field.</summary>
     public const int StringValueFieldNumber = 17;
     /// <summary>
-    ///  A UTF-8 encoded string value.
-    ///  When `exclude_from_indexes` is false (it is indexed) , may have at most 1500 bytes.
-    ///  Otherwise, may be set to at least 1,000,000 bytes.
+    /// A UTF-8 encoded string value.
+    /// When `exclude_from_indexes` is false (it is indexed) , may have at most 1500 bytes.
+    /// Otherwise, may be set to at least 1,000,000 bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string StringValue {
@@ -939,10 +939,10 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "blob_value" field.</summary>
     public const int BlobValueFieldNumber = 18;
     /// <summary>
-    ///  A blob value.
-    ///  May have at most 1,000,000 bytes.
-    ///  When `exclude_from_indexes` is false, may have at most 1500 bytes.
-    ///  In JSON requests, must be base64-encoded.
+    /// A blob value.
+    /// May have at most 1,000,000 bytes.
+    /// When `exclude_from_indexes` is false, may have at most 1500 bytes.
+    /// In JSON requests, must be base64-encoded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString BlobValue {
@@ -956,7 +956,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "geo_point_value" field.</summary>
     public const int GeoPointValueFieldNumber = 8;
     /// <summary>
-    ///  A geo point value representing a point on the surface of Earth.
+    /// A geo point value representing a point on the surface of Earth.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Type.LatLng GeoPointValue {
@@ -970,11 +970,11 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "entity_value" field.</summary>
     public const int EntityValueFieldNumber = 6;
     /// <summary>
-    ///  An entity value.
+    /// An entity value.
     ///
-    ///  - May have no key.
-    ///  - May have a key with an incomplete key path.
-    ///  - May have a reserved/read-only key.
+    /// - May have no key.
+    /// - May have a key with an incomplete key path.
+    /// - May have a reserved/read-only key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Entity EntityValue {
@@ -988,10 +988,10 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "array_value" field.</summary>
     public const int ArrayValueFieldNumber = 9;
     /// <summary>
-    ///  An array value.
-    ///  Cannot contain another array value.
-    ///  A `Value` instance that sets field `array_value` must not set fields
-    ///  `meaning` or `exclude_from_indexes`.
+    /// An array value.
+    /// Cannot contain another array value.
+    /// A `Value` instance that sets field `array_value` must not set fields
+    /// `meaning` or `exclude_from_indexes`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.ArrayValue ArrayValue {
@@ -1006,7 +1006,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int MeaningFieldNumber = 14;
     private int meaning_;
     /// <summary>
-    ///  The `meaning` field should only be populated for backwards compatibility.
+    /// The `meaning` field should only be populated for backwards compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Meaning {
@@ -1020,8 +1020,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ExcludeFromIndexesFieldNumber = 19;
     private bool excludeFromIndexes_;
     /// <summary>
-    ///  If the value should be excluded from all indexes including those defined
-    ///  explicitly.
+    /// If the value should be excluded from all indexes including those defined
+    /// explicitly.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ExcludeFromIndexes {
@@ -1357,11 +1357,11 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A Datastore data object.
+  /// A Datastore data object.
   ///
-  ///  An entity is limited to 1 megabyte when stored. That _roughly_
-  ///  corresponds to a limit of 1 megabyte for the serialized form of this
-  ///  message.
+  /// An entity is limited to 1 megabyte when stored. That _roughly_
+  /// corresponds to a limit of 1 megabyte for the serialized form of this
+  /// message.
   /// </summary>
   public sealed partial class Entity : pb::IMessage<Entity> {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
@@ -1400,12 +1400,12 @@ namespace Google.Cloud.Datastore.V1 {
     public const int KeyFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.Key key_;
     /// <summary>
-    ///  The entity's key.
+    /// The entity's key.
     ///
-    ///  An entity must have a key, unless otherwise documented (for example,
-    ///  an entity in `Value.entity_value` may have no key).
-    ///  An entity's kind is its key path's last element's kind,
-    ///  or null if it has no key.
+    /// An entity must have a key, unless otherwise documented (for example,
+    /// an entity in `Value.entity_value` may have no key).
+    /// An entity's kind is its key path's last element's kind,
+    /// or null if it has no key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Key Key {
@@ -1421,12 +1421,12 @@ namespace Google.Cloud.Datastore.V1 {
         = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.Value.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value> properties_ = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value>();
     /// <summary>
-    ///  The entity's properties.
-    ///  The map's keys are property names.
-    ///  A property name matching regex `__.*__` is reserved.
-    ///  A reserved property name is forbidden in certain documented contexts.
-    ///  The name must not contain more than 500 characters.
-    ///  The name cannot be `""`.
+    /// The entity's properties.
+    /// The map's keys are property names.
+    /// A property name matching regex `__.*__` is reserved.
+    /// A reserved property name is forbidden in certain documented contexts.
+    /// The name must not contain more than 500 characters.
+    /// The name cannot be `""`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Datastore.V1.Value> Properties {

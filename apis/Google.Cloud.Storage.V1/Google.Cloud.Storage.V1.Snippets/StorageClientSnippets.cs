@@ -114,6 +114,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Contains(buckets, b => _fixture.BucketName == b.Name);
         }
 
+        // See-also: ListBuckets
+        // Member: ListBucketsAsync
+        // See [ListBuckets](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void CreateBucket()
         {
@@ -134,6 +139,18 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal(bucketName, bucket.Name);
             Assert.True(!string.IsNullOrWhiteSpace(bucket.Id));
         }
+
+        // See-also: CreateBucket(string,string,*)
+        // Member: CreateBucket(string,Bucket,*)
+        // See [CreateBucket](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: CreateBucket(string,string,*)
+        // Member: CreateBucketAsync(string,Bucket,*,*)
+        // Member: CreateBucketAsync(string,string,*,*)
+        // See [CreateBucket](ref) for a synchronous example.
+        // End see-also
+
 
         [Fact]
         public void UpdateBucket()
@@ -162,6 +179,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal(bucketName, fetchedBucket.Name);
             Assert.Equal(bucket.Website.MainPageSuffix, fetchedBucket.Website.MainPageSuffix);
         }
+
+        // See-also: UpdateBucket
+        // Member: UpdateBucketAsync
+        // See [UpdateBucket](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void PatchBucket()
@@ -196,6 +218,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal(bucket.Website.MainPageSuffix, fetchedBucket.Website.MainPageSuffix);
         }
 
+        // See-also: PatchBucket
+        // Member: PatchBucketAsync
+        // See [PatchBucket](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void ListObjects()
         {
@@ -211,13 +238,18 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Contains(objects, o => _fixture.HelloStorageObjectName == o.Name);
         }
 
+        // See-also: ListObjects
+        // Member: ListObjectsAsync
+        // See [ListObjects](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void DownloadObject()
         {
             var bucketName = _fixture.BucketName;
             var projectId = _fixture.ProjectId;
 
-            // Snippet: DownloadObject(string,*,*,*,*)
+            // Snippet: DownloadObject(string,string,*,*,*)
             var client = StorageClient.Create();
             var source = "greetings/hello.txt";
             var destination = "hello.txt";
@@ -243,12 +275,23 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal(_fixture.HelloWorldContent, File.ReadAllText(destination));
         }
 
+        // See-also: DownloadObject(string,string,*,*,*)
+        // Member: DownloadObject(Object,*,*,*)
+        // See [DownloadObject](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: DownloadObject(string,string,*,*,*)
+        // Member: DownloadObjectAsync(string,string,*,*,*,*)
+        // Member: DownloadObjectAsync(Object,*,*,*,*)
+        // See [DownloadObject](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void UploadObject()
         {
             var bucketName = _fixture.BucketName;
 
-            // Snippet: UploadObject(string,*,*,*,*,*)
+            // Snippet: UploadObject(string,string,*,*,*,*)
             var client = StorageClient.Create();
             var source = "world.txt";
             var destination = "places/world.txt";
@@ -273,6 +316,16 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal(source, _fixture.WorldLocalFileName);
         }
 
+        // See-also: UploadObject(string,string,*,*,*,*)
+        // Member: UploadObject(Object,*,*,*)
+        // See [UploadObject](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: UploadObject(string,string,*,*,*,*)
+        // Member: UploadObjectAsync(string,string,*,*,*,*,*)
+        // Member: UploadObjectAsync(Object,*,*,*,*)
+        // See [UploadObject](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public async Task UploadObjectWithSessionUri()
@@ -328,6 +381,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             // End snippet
         }
 
+        // See-also: GetObject
+        // Member: GetObjectAsync
+        // See [GetObject](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void UpdateObject()
         {
@@ -363,6 +421,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal("updated-value2", fetchedObject.Metadata["key2"]);
             Assert.Equal("value3", fetchedObject.Metadata["key3"]);
         }
+
+        // See-also: UpdateObject
+        // Member: UpdateObjectAsync
+        // See [UpdateObject](ref) for a synchronous example.
+        // End see-also
 
         [Fact]
         public void PatchObject()
@@ -411,6 +474,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal("value3", fetchedObject.Metadata["key3"]);
         }
 
+        // See-also: PatchObject
+        // Member: PatchObjectAsync
+        // See [PatchObject](ref) for a synchronous example.
+        // End see-also
+
         [Fact]
         public void CopyObject()
         {
@@ -434,6 +502,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.Equal((ulong)Encoding.UTF8.GetByteCount(_fixture.HelloWorldContent), obj.Size.Value);
         }
 
+        // See-also: CopyObject
+        // Member: CopyObjectAsync
+        // See [CopyObject](ref) for a synchronous example.
+        // End see-also
+
         // TODO:
         // - ComposeObject? (or ConcatenateObjects?)
         // - MoveObject? (Copy then delete, as per node)
@@ -454,6 +527,11 @@ namespace Google.Cloud.Storage.V1.Snippets
             Console.WriteLine($"TimeCreated: {bucket.TimeCreated}");
             // End snippet
         }
+
+        // See-also: GetBucket
+        // Member: GetBucketAsync
+        // See [GetBucket](ref) for a synchronous example.
+        // End see-also
 
         // TODO: Flag to delete all versions of an object?
 
@@ -479,6 +557,18 @@ namespace Google.Cloud.Storage.V1.Snippets
             Assert.DoesNotContain(client.ListObjects(bucketName, ""), o => o.Name == objectName);
         }
 
+        // See-also: DeleteObject(string,string,*)
+        // Member: DeleteObject(Object,*)
+        // See [DeleteObject](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: DeleteObject(string,string,*)
+        // Member: DeleteObjectAsync(Object,*,*)
+        // Member: DeleteObjectAsync(string,string,*,*)
+        // See [DeleteObject](ref) for a synchronous example.
+        // End see-also
+
+
         [Fact]
         public void DeleteBucket()
         {
@@ -493,5 +583,16 @@ namespace Google.Cloud.Storage.V1.Snippets
 
             Assert.DoesNotContain(client.ListBuckets(_fixture.ProjectId), b => b.Name == bucketName);
         }
+
+        // See-also: DeleteBucket(string,*)
+        // Member: DeleteBucket(Bucket,*)
+        // See [DeleteBucket](ref) for an example using an alternative overload.
+        // End see-also
+
+        // See-also: DeleteBucket(string,*)
+        // Member: DeleteBucketAsync(Bucket,*,*)
+        // Member: DeleteBucketAsync(string,*,*)
+        // See [DeleteBucket](ref) for a synchronous example.
+        // End see-also
     }
 }

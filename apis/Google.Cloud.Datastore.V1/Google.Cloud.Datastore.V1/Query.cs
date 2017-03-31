@@ -106,7 +106,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
   #region Messages
   /// <summary>
-  ///  The result of fetching an entity from Datastore.
+  /// The result of fetching an entity from Datastore.
   /// </summary>
   public sealed partial class EntityResult : pb::IMessage<EntityResult> {
     private static readonly pb::MessageParser<EntityResult> _parser = new pb::MessageParser<EntityResult>(() => new EntityResult());
@@ -146,7 +146,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int EntityFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.Entity entity_;
     /// <summary>
-    ///  The resulting entity.
+    /// The resulting entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Entity Entity {
@@ -160,15 +160,15 @@ namespace Google.Cloud.Datastore.V1 {
     public const int VersionFieldNumber = 4;
     private long version_;
     /// <summary>
-    ///  The version of the entity, a strictly positive number that monotonically
-    ///  increases with changes to the entity.
+    /// The version of the entity, a strictly positive number that monotonically
+    /// increases with changes to the entity.
     ///
-    ///  This field is set for [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity
-    ///  results.
+    /// This field is set for [`FULL`][google.datastore.v1.EntityResult.ResultType.FULL] entity
+    /// results.
     ///
-    ///  For [missing][google.datastore.v1.LookupResponse.missing] entities in `LookupResponse`, this
-    ///  is the version of the snapshot that was used to look up the entity, and it
-    ///  is always set except for eventually consistent reads.
+    /// For [missing][google.datastore.v1.LookupResponse.missing] entities in `LookupResponse`, this
+    /// is the version of the snapshot that was used to look up the entity, and it
+    /// is always set except for eventually consistent reads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Version {
@@ -182,8 +182,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int CursorFieldNumber = 3;
     private pb::ByteString cursor_ = pb::ByteString.Empty;
     /// <summary>
-    ///  A cursor that points to the position after the result entity.
-    ///  Set only when the `EntityResult` is part of a `QueryResultBatch` message.
+    /// A cursor that points to the position after the result entity.
+    /// Set only when the `EntityResult` is part of a `QueryResultBatch` message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Cursor {
@@ -308,27 +308,27 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Specifies what data the 'entity' field contains.
-      ///  A `ResultType` is either implied (for example, in `LookupResponse.missing`
-      ///  from `datastore.proto`, it is always `KEY_ONLY`) or specified by context
-      ///  (for example, in message `QueryResultBatch`, field `entity_result_type`
-      ///  specifies a `ResultType` for all the values in field `entity_results`).
+      /// Specifies what data the 'entity' field contains.
+      /// A `ResultType` is either implied (for example, in `LookupResponse.missing`
+      /// from `datastore.proto`, it is always `KEY_ONLY`) or specified by context
+      /// (for example, in message `QueryResultBatch`, field `entity_result_type`
+      /// specifies a `ResultType` for all the values in field `entity_results`).
       /// </summary>
       public enum ResultType {
         /// <summary>
-        ///  Unspecified. This value is never used.
+        /// Unspecified. This value is never used.
         /// </summary>
         [pbr::OriginalName("RESULT_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  The key and properties.
+        /// The key and properties.
         /// </summary>
         [pbr::OriginalName("FULL")] Full = 1,
         /// <summary>
-        ///  A projected subset of properties. The entity may have no key.
+        /// A projected subset of properties. The entity may have no key.
         /// </summary>
         [pbr::OriginalName("PROJECTION")] Projection = 2,
         /// <summary>
-        ///  Only the key.
+        /// Only the key.
         /// </summary>
         [pbr::OriginalName("KEY_ONLY")] KeyOnly = 3,
       }
@@ -339,7 +339,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A query for entities.
+  /// A query for entities.
   /// </summary>
   public sealed partial class Query : pb::IMessage<Query> {
     private static readonly pb::MessageParser<Query> _parser = new pb::MessageParser<Query>(() => new Query());
@@ -387,7 +387,7 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.Projection.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Projection> projection_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Projection>();
     /// <summary>
-    ///  The projection to return. Defaults to returning all properties.
+    /// The projection to return. Defaults to returning all properties.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Projection> Projection {
@@ -400,8 +400,8 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Datastore.V1.KindExpression.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.KindExpression> kind_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.KindExpression>();
     /// <summary>
-    ///  The kinds to query (if empty, returns entities of all kinds).
-    ///  Currently at most 1 kind may be specified.
+    /// The kinds to query (if empty, returns entities of all kinds).
+    /// Currently at most 1 kind may be specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.KindExpression> Kind {
@@ -412,7 +412,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int FilterFieldNumber = 4;
     private global::Google.Cloud.Datastore.V1.Filter filter_;
     /// <summary>
-    ///  The filter to apply.
+    /// The filter to apply.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Filter Filter {
@@ -428,7 +428,7 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Datastore.V1.PropertyOrder.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyOrder> order_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyOrder>();
     /// <summary>
-    ///  The order to apply to the query results (if empty, order is unspecified).
+    /// The order to apply to the query results (if empty, order is unspecified).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyOrder> Order {
@@ -441,9 +441,9 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Datastore.V1.PropertyReference.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyReference> distinctOn_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyReference>();
     /// <summary>
-    ///  The properties to make distinct. The query results will contain the first
-    ///  result for each distinct combination of values for the given properties
-    ///  (if empty, all results are returned).
+    /// The properties to make distinct. The query results will contain the first
+    /// result for each distinct combination of values for the given properties
+    /// (if empty, all results are returned).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.PropertyReference> DistinctOn {
@@ -454,9 +454,9 @@ namespace Google.Cloud.Datastore.V1 {
     public const int StartCursorFieldNumber = 7;
     private pb::ByteString startCursor_ = pb::ByteString.Empty;
     /// <summary>
-    ///  A starting point for the query results. Query cursors are
-    ///  returned in query result batches and
-    ///  [can only be used to continue the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
+    /// A starting point for the query results. Query cursors are
+    /// returned in query result batches and
+    /// [can only be used to continue the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString StartCursor {
@@ -470,9 +470,9 @@ namespace Google.Cloud.Datastore.V1 {
     public const int EndCursorFieldNumber = 8;
     private pb::ByteString endCursor_ = pb::ByteString.Empty;
     /// <summary>
-    ///  An ending point for the query results. Query cursors are
-    ///  returned in query result batches and
-    ///  [can only be used to limit the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
+    /// An ending point for the query results. Query cursors are
+    /// returned in query result batches and
+    /// [can only be used to limit the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString EndCursor {
@@ -486,8 +486,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int OffsetFieldNumber = 10;
     private int offset_;
     /// <summary>
-    ///  The number of results to skip. Applies before limit, but after all other
-    ///  constraints. Optional. Must be >= 0 if specified.
+    /// The number of results to skip. Applies before limit, but after all other
+    /// constraints. Optional. Must be >= 0 if specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Offset {
@@ -502,10 +502,10 @@ namespace Google.Cloud.Datastore.V1 {
     private static readonly pb::FieldCodec<int?> _single_limit_codec = pb::FieldCodec.ForStructWrapper<int>(98);
     private int? limit_;
     /// <summary>
-    ///  The maximum number of results to return. Applies after all other
-    ///  constraints. Optional.
-    ///  Unspecified is interpreted as no limit.
-    ///  Must be >= 0 if specified.
+    /// The maximum number of results to return. Applies after all other
+    /// constraints. Optional.
+    /// Unspecified is interpreted as no limit.
+    /// Must be >= 0 if specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int? Limit {
@@ -700,7 +700,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A representation of a kind.
+  /// A representation of a kind.
   /// </summary>
   public sealed partial class KindExpression : pb::IMessage<KindExpression> {
     private static readonly pb::MessageParser<KindExpression> _parser = new pb::MessageParser<KindExpression>(() => new KindExpression());
@@ -738,7 +738,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    ///  The name of the kind.
+    /// The name of the kind.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -823,7 +823,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A reference to a property relative to the kind expressions.
+  /// A reference to a property relative to the kind expressions.
   /// </summary>
   public sealed partial class PropertyReference : pb::IMessage<PropertyReference> {
     private static readonly pb::MessageParser<PropertyReference> _parser = new pb::MessageParser<PropertyReference>(() => new PropertyReference());
@@ -861,8 +861,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    ///  The name of the property.
-    ///  If name includes "."s, it may be interpreted as a property name path.
+    /// The name of the property.
+    /// If name includes "."s, it may be interpreted as a property name path.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
@@ -947,7 +947,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A representation of a property in a projection.
+  /// A representation of a property in a projection.
   /// </summary>
   public sealed partial class Projection : pb::IMessage<Projection> {
     private static readonly pb::MessageParser<Projection> _parser = new pb::MessageParser<Projection>(() => new Projection());
@@ -985,7 +985,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.PropertyReference property_;
     /// <summary>
-    ///  The property to project.
+    /// The property to project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PropertyReference Property {
@@ -1076,7 +1076,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The desired order for a specific property.
+  /// The desired order for a specific property.
   /// </summary>
   public sealed partial class PropertyOrder : pb::IMessage<PropertyOrder> {
     private static readonly pb::MessageParser<PropertyOrder> _parser = new pb::MessageParser<PropertyOrder>(() => new PropertyOrder());
@@ -1115,7 +1115,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.PropertyReference property_;
     /// <summary>
-    ///  The property to order by.
+    /// The property to order by.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PropertyReference Property {
@@ -1129,7 +1129,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int DirectionFieldNumber = 2;
     private global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction direction_ = 0;
     /// <summary>
-    ///  The direction to order by. Defaults to `ASCENDING`.
+    /// The direction to order by. Defaults to `ASCENDING`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PropertyOrder.Types.Direction Direction {
@@ -1238,19 +1238,19 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The sort direction.
+      /// The sort direction.
       /// </summary>
       public enum Direction {
         /// <summary>
-        ///  Unspecified. This value must not be used.
+        /// Unspecified. This value must not be used.
         /// </summary>
         [pbr::OriginalName("DIRECTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Ascending.
+        /// Ascending.
         /// </summary>
         [pbr::OriginalName("ASCENDING")] Ascending = 1,
         /// <summary>
-        ///  Descending.
+        /// Descending.
         /// </summary>
         [pbr::OriginalName("DESCENDING")] Descending = 2,
       }
@@ -1261,7 +1261,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A holder for any type of filter.
+  /// A holder for any type of filter.
   /// </summary>
   public sealed partial class Filter : pb::IMessage<Filter> {
     private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
@@ -1306,7 +1306,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "composite_filter" field.</summary>
     public const int CompositeFilterFieldNumber = 1;
     /// <summary>
-    ///  A composite filter.
+    /// A composite filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.CompositeFilter CompositeFilter {
@@ -1320,7 +1320,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "property_filter" field.</summary>
     public const int PropertyFilterFieldNumber = 2;
     /// <summary>
-    ///  A filter on a property.
+    /// A filter on a property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PropertyFilter PropertyFilter {
@@ -1456,7 +1456,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A filter that merges multiple other filters using the given operator.
+  /// A filter that merges multiple other filters using the given operator.
   /// </summary>
   public sealed partial class CompositeFilter : pb::IMessage<CompositeFilter> {
     private static readonly pb::MessageParser<CompositeFilter> _parser = new pb::MessageParser<CompositeFilter>(() => new CompositeFilter());
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int OpFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator op_ = 0;
     /// <summary>
-    ///  The operator for combining multiple filters.
+    /// The operator for combining multiple filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.CompositeFilter.Types.Operator Op {
@@ -1511,8 +1511,8 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.Filter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Filter> filters_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Filter>();
     /// <summary>
-    ///  The list of filters to combine.
-    ///  Must contain at least one filter.
+    /// The list of filters to combine.
+    /// Must contain at least one filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Filter> Filters {
@@ -1605,15 +1605,15 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  A composite filter operator.
+      /// A composite filter operator.
       /// </summary>
       public enum Operator {
         /// <summary>
-        ///  Unspecified. This value must not be used.
+        /// Unspecified. This value must not be used.
         /// </summary>
         [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  The results are required to satisfy each of the combined filters.
+        /// The results are required to satisfy each of the combined filters.
         /// </summary>
         [pbr::OriginalName("AND")] And = 1,
       }
@@ -1624,7 +1624,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A filter on a specific property.
+  /// A filter on a specific property.
   /// </summary>
   public sealed partial class PropertyFilter : pb::IMessage<PropertyFilter> {
     private static readonly pb::MessageParser<PropertyFilter> _parser = new pb::MessageParser<PropertyFilter>(() => new PropertyFilter());
@@ -1664,7 +1664,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.PropertyReference property_;
     /// <summary>
-    ///  The property to filter by.
+    /// The property to filter by.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PropertyReference Property {
@@ -1678,7 +1678,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int OpFieldNumber = 2;
     private global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator op_ = 0;
     /// <summary>
-    ///  The operator to filter by.
+    /// The operator to filter by.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PropertyFilter.Types.Operator Op {
@@ -1692,7 +1692,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ValueFieldNumber = 3;
     private global::Google.Cloud.Datastore.V1.Value value_;
     /// <summary>
-    ///  The value to compare the property to.
+    /// The value to compare the property to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Value Value {
@@ -1823,35 +1823,35 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  A property filter operator.
+      /// A property filter operator.
       /// </summary>
       public enum Operator {
         /// <summary>
-        ///  Unspecified. This value must not be used.
+        /// Unspecified. This value must not be used.
         /// </summary>
         [pbr::OriginalName("OPERATOR_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Less than.
+        /// Less than.
         /// </summary>
         [pbr::OriginalName("LESS_THAN")] LessThan = 1,
         /// <summary>
-        ///  Less than or equal.
+        /// Less than or equal.
         /// </summary>
         [pbr::OriginalName("LESS_THAN_OR_EQUAL")] LessThanOrEqual = 2,
         /// <summary>
-        ///  Greater than.
+        /// Greater than.
         /// </summary>
         [pbr::OriginalName("GREATER_THAN")] GreaterThan = 3,
         /// <summary>
-        ///  Greater than or equal.
+        /// Greater than or equal.
         /// </summary>
         [pbr::OriginalName("GREATER_THAN_OR_EQUAL")] GreaterThanOrEqual = 4,
         /// <summary>
-        ///  Equal.
+        /// Equal.
         /// </summary>
         [pbr::OriginalName("EQUAL")] Equal = 5,
         /// <summary>
-        ///  Has ancestor.
+        /// Has ancestor.
         /// </summary>
         [pbr::OriginalName("HAS_ANCESTOR")] HasAncestor = 11,
       }
@@ -1862,7 +1862,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A [GQL query](https://cloud.google.com/datastore/docs/apis/gql/gql_reference).
+  /// A [GQL query](https://cloud.google.com/datastore/docs/apis/gql/gql_reference).
   /// </summary>
   public sealed partial class GqlQuery : pb::IMessage<GqlQuery> {
     private static readonly pb::MessageParser<GqlQuery> _parser = new pb::MessageParser<GqlQuery>(() => new GqlQuery());
@@ -1903,8 +1903,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int QueryStringFieldNumber = 1;
     private string queryString_ = "";
     /// <summary>
-    ///  A string of the format described
-    ///  [here](https://cloud.google.com/datastore/docs/apis/gql/gql_reference).
+    /// A string of the format described
+    /// [here](https://cloud.google.com/datastore/docs/apis/gql/gql_reference).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string QueryString {
@@ -1918,10 +1918,10 @@ namespace Google.Cloud.Datastore.V1 {
     public const int AllowLiteralsFieldNumber = 2;
     private bool allowLiterals_;
     /// <summary>
-    ///  When false, the query string must not contain any literals and instead must
-    ///  bind all values. For example,
-    ///  `SELECT * FROM Kind WHERE a = 'string literal'` is not allowed, while
-    ///  `SELECT * FROM Kind WHERE a = @value` is.
+    /// When false, the query string must not contain any literals and instead must
+    /// bind all values. For example,
+    /// `SELECT * FROM Kind WHERE a = 'string literal'` is not allowed, while
+    /// `SELECT * FROM Kind WHERE a = @value` is.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool AllowLiterals {
@@ -1937,11 +1937,11 @@ namespace Google.Cloud.Datastore.V1 {
         = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.GqlQueryParameter.Parser), 42);
     private readonly pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter> namedBindings_ = new pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter>();
     /// <summary>
-    ///  For each non-reserved named binding site in the query string, there must be
-    ///  a named parameter with that name, but not necessarily the inverse.
+    /// For each non-reserved named binding site in the query string, there must be
+    /// a named parameter with that name, but not necessarily the inverse.
     ///
-    ///  Key must match regex `[A-Za-z_$][A-Za-z_$0-9]*`, must not match regex
-    ///  `__.*__`, and must not be `""`.
+    /// Key must match regex `[A-Za-z_$][A-Za-z_$0-9]*`, must not match regex
+    /// `__.*__`, and must not be `""`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, global::Google.Cloud.Datastore.V1.GqlQueryParameter> NamedBindings {
@@ -1954,11 +1954,11 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Datastore.V1.GqlQueryParameter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.GqlQueryParameter> positionalBindings_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.GqlQueryParameter>();
     /// <summary>
-    ///  Numbered binding site @1 references the first numbered parameter,
-    ///  effectively using 1-based indexing, rather than the usual 0.
+    /// Numbered binding site @1 references the first numbered parameter,
+    /// effectively using 1-based indexing, rather than the usual 0.
     ///
-    ///  For each binding site numbered i in `query_string`, there must be an i-th
-    ///  numbered parameter. The inverse must also be true.
+    /// For each binding site numbered i in `query_string`, there must be an i-th
+    /// numbered parameter. The inverse must also be true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.GqlQueryParameter> PositionalBindings {
@@ -2074,7 +2074,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A binding parameter for a GQL query.
+  /// A binding parameter for a GQL query.
   /// </summary>
   public sealed partial class GqlQueryParameter : pb::IMessage<GqlQueryParameter> {
     private static readonly pb::MessageParser<GqlQueryParameter> _parser = new pb::MessageParser<GqlQueryParameter>(() => new GqlQueryParameter());
@@ -2119,7 +2119,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
     /// <summary>
-    ///  A value parameter.
+    /// A value parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Value Value {
@@ -2133,8 +2133,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "cursor" field.</summary>
     public const int CursorFieldNumber = 3;
     /// <summary>
-    ///  A query cursor. Query cursors are returned in query
-    ///  result batches.
+    /// A query cursor. Query cursors are returned in query
+    /// result batches.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Cursor {
@@ -2265,7 +2265,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A batch of results produced by a query.
+  /// A batch of results produced by a query.
   /// </summary>
   public sealed partial class QueryResultBatch : pb::IMessage<QueryResultBatch> {
     private static readonly pb::MessageParser<QueryResultBatch> _parser = new pb::MessageParser<QueryResultBatch>(() => new QueryResultBatch());
@@ -2309,7 +2309,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int SkippedResultsFieldNumber = 6;
     private int skippedResults_;
     /// <summary>
-    ///  The number of results skipped, typically because of an offset.
+    /// The number of results skipped, typically because of an offset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int SkippedResults {
@@ -2323,8 +2323,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int SkippedCursorFieldNumber = 3;
     private pb::ByteString skippedCursor_ = pb::ByteString.Empty;
     /// <summary>
-    ///  A cursor that points to the position after the last skipped result.
-    ///  Will be set when `skipped_results` != 0.
+    /// A cursor that points to the position after the last skipped result.
+    /// Will be set when `skipped_results` != 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString SkippedCursor {
@@ -2338,7 +2338,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int EntityResultTypeFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType entityResultType_ = 0;
     /// <summary>
-    ///  The result type for every entity in `entity_results`.
+    /// The result type for every entity in `entity_results`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.EntityResult.Types.ResultType EntityResultType {
@@ -2354,7 +2354,7 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.EntityResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult> entityResults_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult>();
     /// <summary>
-    ///  The results for this batch.
+    /// The results for this batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult> EntityResults {
@@ -2365,7 +2365,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int EndCursorFieldNumber = 4;
     private pb::ByteString endCursor_ = pb::ByteString.Empty;
     /// <summary>
-    ///  A cursor that points to the position after the last result in the batch.
+    /// A cursor that points to the position after the last result in the batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString EndCursor {
@@ -2379,7 +2379,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int MoreResultsFieldNumber = 5;
     private global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType moreResults_ = 0;
     /// <summary>
-    ///  The state of the query after the current batch.
+    /// The state of the query after the current batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.QueryResultBatch.Types.MoreResultsType MoreResults {
@@ -2393,15 +2393,15 @@ namespace Google.Cloud.Datastore.V1 {
     public const int SnapshotVersionFieldNumber = 7;
     private long snapshotVersion_;
     /// <summary>
-    ///  The version number of the snapshot this batch was returned from.
-    ///  This applies to the range of results from the query's `start_cursor` (or
-    ///  the beginning of the query if no cursor was given) to this batch's
-    ///  `end_cursor` (not the query's `end_cursor`).
+    /// The version number of the snapshot this batch was returned from.
+    /// This applies to the range of results from the query's `start_cursor` (or
+    /// the beginning of the query if no cursor was given) to this batch's
+    /// `end_cursor` (not the query's `end_cursor`).
     ///
-    ///  In a single transaction, subsequent query result batches for the same query
-    ///  can have a greater snapshot version number. Each batch's snapshot version
-    ///  is valid for all preceding batches.
-    ///  The value will be zero for eventually consistent queries.
+    /// In a single transaction, subsequent query result batches for the same query
+    /// can have a greater snapshot version number. Each batch's snapshot version
+    /// is valid for all preceding batches.
+    /// The value will be zero for eventually consistent queries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long SnapshotVersion {
@@ -2577,28 +2577,28 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The possible values for the `more_results` field.
+      /// The possible values for the `more_results` field.
       /// </summary>
       public enum MoreResultsType {
         /// <summary>
-        ///  Unspecified. This value is never used.
+        /// Unspecified. This value is never used.
         /// </summary>
         [pbr::OriginalName("MORE_RESULTS_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  There may be additional batches to fetch from this query.
+        /// There may be additional batches to fetch from this query.
         /// </summary>
         [pbr::OriginalName("NOT_FINISHED")] NotFinished = 1,
         /// <summary>
-        ///  The query is finished, but there may be more results after the limit.
+        /// The query is finished, but there may be more results after the limit.
         /// </summary>
         [pbr::OriginalName("MORE_RESULTS_AFTER_LIMIT")] MoreResultsAfterLimit = 2,
         /// <summary>
-        ///  The query is finished, but there may be more results after the end
-        ///  cursor.
+        /// The query is finished, but there may be more results after the end
+        /// cursor.
         /// </summary>
         [pbr::OriginalName("MORE_RESULTS_AFTER_CURSOR")] MoreResultsAfterCursor = 4,
         /// <summary>
-        ///  The query has been exhausted.
+        /// The query has been exhausted.
         /// </summary>
         [pbr::OriginalName("NO_MORE_RESULTS")] NoMoreResults = 3,
       }

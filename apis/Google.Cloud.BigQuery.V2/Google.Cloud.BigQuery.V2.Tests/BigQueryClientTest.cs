@@ -13,21 +13,19 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Rest;
 using Google.Apis.Bigquery.v2.Data;
 using Google.Cloud.ClientTesting;
 using Moq;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using Xunit;
-using System.Collections;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace Google.Cloud.BigQuery.V2.Tests
 {
@@ -70,6 +68,10 @@ namespace Google.Cloud.BigQuery.V2.Tests
             if (parameter.ParameterType == typeof(BigQueryInsertRow))
             {
                 return new BigQueryInsertRow();
+            }
+            if (parameter.ParameterType == typeof(TableReference))
+            {
+                return new TableReference();
             }
             return base.GetArgument(parameter);
         }
@@ -448,6 +450,43 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void CreateExtractJobEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var tableReference = GetTableReference(datasetId, tableId);
+            var uri = "gs://bucket/object";
+            var options = new CreateExtractJobOptions();
+
+            VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.CreateExtractJob(MatchesWhenSerialized(tableReference), new[] { uri }, options),
+                client => client.CreateExtractJob(ProjectId, datasetId, tableId, uri, options),
+                client => client.CreateExtractJob(datasetId, tableId, uri, options),
+                client => client.CreateExtractJob(tableReference, uri, options),
+                client => client.CreateExtractJob(ProjectId, datasetId, tableId, new[] { uri }, options),
+                client => client.CreateExtractJob(datasetId, tableId, uri, options),
+                client => client.CreateExtractJob(datasetId, tableId, uri, options),
+                client => client.CreateExtractJob(ProjectId, datasetId, tableId, uri, options),
+                client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJob(uri, options),
+                client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJob(new[] { uri }, options));
+        }
+
+        [Fact]
+        public void CreateCopyJobEquivalents()
+        {
+            var jobReference = GetJobReference("job");
+            var sourceTableReference = GetTableReference("sourceDataset", "sourceTable");
+            var destinationTableReference = GetTableReference("destDataset", "destTable");
+            var options = new CreateCopyJobOptions();
+
+            VerifyEquivalent(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.CreateCopyJob(MatchesWhenSerialized(new[] { sourceTableReference }), MatchesWhenSerialized(destinationTableReference), options),
+                client => client.CreateCopyJob(sourceTableReference, destinationTableReference, options),
+                client => new BigQueryTable(client, GetTable(sourceTableReference)).CreateCopyJob(destinationTableReference, options));
+        }
+
+        [Fact]
         public void CreateDatasetAsyncEquivalents()
         {
             var datasetId = "dataset";
@@ -780,6 +819,45 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 client => client.InsertRowsAsync(datasetId, tableId, rows[0], rows[1]),
                 client => client.InsertRowsAsync(ProjectId, datasetId, tableId, rows[0], rows[1]),
                 client => new BigQueryTable(client, GetTable(reference)).InsertRowsAsync(rows[0], rows[1]));
+        }
+
+        [Fact]
+        public void CreateExtractJobAsyncEquivalents()
+        {
+            var datasetId = "dataset";
+            var tableId = "table";
+            var jobReference = GetJobReference("job");
+            var tableReference = GetTableReference(datasetId, tableId);
+            var uri = "gs://bucket/object";
+            var options = new CreateExtractJobOptions();
+            var token = new CancellationTokenSource().Token;
+
+            VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.CreateExtractJobAsync(MatchesWhenSerialized(tableReference), new[] { uri }, options, token),
+                client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, uri, options, token),
+                client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
+                client => client.CreateExtractJobAsync(tableReference, uri, options, token),
+                client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, new[] { uri }, options, token),
+                client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
+                client => client.CreateExtractJobAsync(datasetId, tableId, uri, options, token),
+                client => client.CreateExtractJobAsync(ProjectId, datasetId, tableId, uri, options, token),
+                client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJobAsync(uri, options, token),
+                client => new BigQueryTable(client, GetTable(tableReference)).CreateExtractJobAsync(new[] { uri }, options, token));
+        }
+
+        [Fact]
+        public void CreateCopyJobAsyncEquivalents()
+        {
+            var jobReference = GetJobReference("job");
+            var sourceTableReference = GetTableReference("sourceDataset", "sourceTable");
+            var destinationTableReference = GetTableReference("destDataset", "destTable");
+            var options = new CreateCopyJobOptions();
+            var token = new CancellationTokenSource().Token;
+
+            VerifyEquivalentAsync(new BigQueryJob(new DerivedBigQueryClient(), new Job { JobReference = jobReference }),
+                client => client.CreateCopyJobAsync(MatchesWhenSerialized(new[] { sourceTableReference }), MatchesWhenSerialized(destinationTableReference), options, token),
+                client => client.CreateCopyJobAsync(sourceTableReference, destinationTableReference, options, token),
+                client => new BigQueryTable(client, GetTable(sourceTableReference)).CreateCopyJobAsync(destinationTableReference, options, token));
         }
 
         private T MatchesWhenSerialized<T>(T expected)

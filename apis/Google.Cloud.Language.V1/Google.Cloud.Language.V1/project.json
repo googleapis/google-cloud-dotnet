@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta05-*",
+  "version": "1.0.0-beta06-*",
   "description": "Recommended Google client library to access the Google Cloud Natural Language API, which provides natural language understanding technologies to developers. Examples include sentiment analysis, entity recognition, and text annotations.",
   "authors": [ "Google Inc." ],
 
@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Grpc": "1.0.0-beta13"
+    "Google.Api.Gax.Grpc": "1.0.1"
   },
 
   "frameworks": {

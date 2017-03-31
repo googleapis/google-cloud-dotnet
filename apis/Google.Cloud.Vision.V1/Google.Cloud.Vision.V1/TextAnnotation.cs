@@ -81,13 +81,13 @@ namespace Google.Cloud.Vision.V1 {
   }
   #region Messages
   /// <summary>
-  ///  TextAnnotation contains a structured representation of OCR extracted text.
-  ///  The hierarchy of an OCR extracted text structure is like this:
-  ///      TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
-  ///  Each structural component, starting from Page, may further have their own
-  ///  properties. Properties describe detected languages, breaks etc.. Please
-  ///  refer to the [google.cloud.vision.v1.TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty] message
-  ///  definition below for more detail.
+  /// TextAnnotation contains a structured representation of OCR extracted text.
+  /// The hierarchy of an OCR extracted text structure is like this:
+  ///     TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
+  /// Each structural component, starting from Page, may further have their own
+  /// properties. Properties describe detected languages, breaks etc.. Please
+  /// refer to the [google.cloud.vision.v1.TextAnnotation.TextProperty][google.cloud.vision.v1.TextAnnotation.TextProperty] message
+  /// definition below for more detail.
   /// </summary>
   public sealed partial class TextAnnotation : pb::IMessage<TextAnnotation> {
     private static readonly pb::MessageParser<TextAnnotation> _parser = new pb::MessageParser<TextAnnotation>(() => new TextAnnotation());
@@ -128,7 +128,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.Page.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Page> pages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Page>();
     /// <summary>
-    ///  List of pages detected by OCR.
+    /// List of pages detected by OCR.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Page> Pages {
@@ -139,7 +139,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int TextFieldNumber = 2;
     private string text_ = "";
     /// <summary>
-    ///  UTF-8 text detected on the pages.
+    /// UTF-8 text detected on the pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -235,7 +235,7 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Detected language for a structural component.
+      /// Detected language for a structural component.
       /// </summary>
       public sealed partial class DetectedLanguage : pb::IMessage<DetectedLanguage> {
         private static readonly pb::MessageParser<DetectedLanguage> _parser = new pb::MessageParser<DetectedLanguage>(() => new DetectedLanguage());
@@ -274,9 +274,9 @@ namespace Google.Cloud.Vision.V1 {
         public const int LanguageCodeFieldNumber = 1;
         private string languageCode_ = "";
         /// <summary>
-        ///  The BCP-47 language code, such as "en-US" or "sr-Latn". For more
-        ///  information, see
-        ///  http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+        /// The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+        /// information, see
+        /// http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string LanguageCode {
@@ -290,7 +290,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int ConfidenceFieldNumber = 2;
         private float confidence_;
         /// <summary>
-        ///  Confidence of detected language. Range [0, 1].
+        /// Confidence of detected language. Range [0, 1].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public float Confidence {
@@ -391,7 +391,7 @@ namespace Google.Cloud.Vision.V1 {
       }
 
       /// <summary>
-      ///  Detected start or end of a structural component.
+      /// Detected start or end of a structural component.
       /// </summary>
       public sealed partial class DetectedBreak : pb::IMessage<DetectedBreak> {
         private static readonly pb::MessageParser<DetectedBreak> _parser = new pb::MessageParser<DetectedBreak>(() => new DetectedBreak());
@@ -441,7 +441,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int IsPrefixFieldNumber = 2;
         private bool isPrefix_;
         /// <summary>
-        ///  True if break prepends the element.
+        /// True if break prepends the element.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public bool IsPrefix {
@@ -544,33 +544,33 @@ namespace Google.Cloud.Vision.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static partial class Types {
           /// <summary>
-          ///  Enum to denote the type of break found. New line, space etc.
+          /// Enum to denote the type of break found. New line, space etc.
           /// </summary>
           public enum BreakType {
             /// <summary>
-            ///  Unknown break label type.
+            /// Unknown break label type.
             /// </summary>
             [pbr::OriginalName("UNKNOWN")] Unknown = 0,
             /// <summary>
-            ///  Regular space.
+            /// Regular space.
             /// </summary>
             [pbr::OriginalName("SPACE")] Space = 1,
             /// <summary>
-            ///  Sure space (very wide).
+            /// Sure space (very wide).
             /// </summary>
             [pbr::OriginalName("SURE_SPACE")] SureSpace = 2,
             /// <summary>
-            ///  Line-wrapping break.
+            /// Line-wrapping break.
             /// </summary>
             [pbr::OriginalName("EOL_SURE_SPACE")] EolSureSpace = 3,
             /// <summary>
-            ///  End-line hyphen that is not present in text; does
+            /// End-line hyphen that is not present in text; does
             /// </summary>
             [pbr::OriginalName("HYPHEN")] Hyphen = 4,
             /// <summary>
-            ///  not co-occur with SPACE, LEADER_SPACE, or
-            ///  LINE_BREAK.
-            ///  Line break that ends a paragraph.
+            /// not co-occur with SPACE, LEADER_SPACE, or
+            /// LINE_BREAK.
+            /// Line break that ends a paragraph.
             /// </summary>
             [pbr::OriginalName("LINE_BREAK")] LineBreak = 5,
           }
@@ -581,7 +581,7 @@ namespace Google.Cloud.Vision.V1 {
       }
 
       /// <summary>
-      ///  Additional information detected on the structural component.
+      /// Additional information detected on the structural component.
       /// </summary>
       public sealed partial class TextProperty : pb::IMessage<TextProperty> {
         private static readonly pb::MessageParser<TextProperty> _parser = new pb::MessageParser<TextProperty>(() => new TextProperty());
@@ -622,7 +622,7 @@ namespace Google.Cloud.Vision.V1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage> detectedLanguages_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage>();
         /// <summary>
-        ///  A list of detected languages together with confidence.
+        /// A list of detected languages together with confidence.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public pbc::RepeatedField<global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedLanguage> DetectedLanguages {
@@ -633,7 +633,7 @@ namespace Google.Cloud.Vision.V1 {
         public const int DetectedBreakFieldNumber = 2;
         private global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak detectedBreak_;
         /// <summary>
-        ///  Detected start or end of a text segment.
+        /// Detected start or end of a text segment.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public global::Google.Cloud.Vision.V1.TextAnnotation.Types.DetectedBreak DetectedBreak {
@@ -738,7 +738,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Detected page from OCR.
+  /// Detected page from OCR.
   /// </summary>
   public sealed partial class Page : pb::IMessage<Page> {
     private static readonly pb::MessageParser<Page> _parser = new pb::MessageParser<Page>(() => new Page());
@@ -779,7 +779,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty property_;
     /// <summary>
-    ///  Additional information detected on the page.
+    /// Additional information detected on the page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty Property {
@@ -793,7 +793,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int WidthFieldNumber = 2;
     private int width_;
     /// <summary>
-    ///  Page width in pixels.
+    /// Page width in pixels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Width {
@@ -807,7 +807,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int HeightFieldNumber = 3;
     private int height_;
     /// <summary>
-    ///  Page height in pixels.
+    /// Page height in pixels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Height {
@@ -823,7 +823,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Vision.V1.Block.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Block> blocks_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Block>();
     /// <summary>
-    ///  List of blocks of text, images etc on this page.
+    /// List of blocks of text, images etc on this page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Block> Blocks {
@@ -952,7 +952,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Logical element on the page.
+  /// Logical element on the page.
   /// </summary>
   public sealed partial class Block : pb::IMessage<Block> {
     private static readonly pb::MessageParser<Block> _parser = new pb::MessageParser<Block>(() => new Block());
@@ -993,7 +993,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty property_;
     /// <summary>
-    ///  Additional information detected for the block.
+    /// Additional information detected for the block.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty Property {
@@ -1007,21 +1007,21 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingBoxFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingBox_;
     /// <summary>
-    ///  The bounding box for the block.
-    ///  The vertices are in the order of top-left, top-right, bottom-right,
-    ///  bottom-left. When a rotation of the bounding box is detected the rotation
-    ///  is represented as around the top-left corner as defined when the text is
-    ///  read in the 'natural' orientation.
-    ///  For example:
-    ///    * when the text is horizontal it might look like:
-    ///       0----1
-    ///       |    |
-    ///       3----2
-    ///    * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///       2----3
-    ///       |    |
-    ///       1----0
-    ///    and the vertice order will still be (0, 1, 2, 3).
+    /// The bounding box for the block.
+    /// The vertices are in the order of top-left, top-right, bottom-right,
+    /// bottom-left. When a rotation of the bounding box is detected the rotation
+    /// is represented as around the top-left corner as defined when the text is
+    /// read in the 'natural' orientation.
+    /// For example:
+    ///   * when the text is horizontal it might look like:
+    ///      0----1
+    ///      |    |
+    ///      3----2
+    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
+    ///      2----3
+    ///      |    |
+    ///      1----0
+    ///   and the vertice order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
@@ -1037,7 +1037,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.Paragraph.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Paragraph> paragraphs_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Paragraph>();
     /// <summary>
-    ///  List of paragraphs in this block (if this blocks is of type text).
+    /// List of paragraphs in this block (if this blocks is of type text).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Paragraph> Paragraphs {
@@ -1048,7 +1048,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int BlockTypeFieldNumber = 4;
     private global::Google.Cloud.Vision.V1.Block.Types.BlockType blockType_ = 0;
     /// <summary>
-    ///  Detected block type (text, image etc) for this block.
+    /// Detected block type (text, image etc) for this block.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.Block.Types.BlockType BlockType {
@@ -1188,31 +1188,31 @@ namespace Google.Cloud.Vision.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  Type of a block (text, image etc) as identified by OCR.
+      /// Type of a block (text, image etc) as identified by OCR.
       /// </summary>
       public enum BlockType {
         /// <summary>
-        ///  Unknown block type.
+        /// Unknown block type.
         /// </summary>
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         /// <summary>
-        ///  Regular text block.
+        /// Regular text block.
         /// </summary>
         [pbr::OriginalName("TEXT")] Text = 1,
         /// <summary>
-        ///  Table block.
+        /// Table block.
         /// </summary>
         [pbr::OriginalName("TABLE")] Table = 2,
         /// <summary>
-        ///  Image block.
+        /// Image block.
         /// </summary>
         [pbr::OriginalName("PICTURE")] Picture = 3,
         /// <summary>
-        ///  Horizontal/vertical line box.
+        /// Horizontal/vertical line box.
         /// </summary>
         [pbr::OriginalName("RULER")] Ruler = 4,
         /// <summary>
-        ///  Barcode block.
+        /// Barcode block.
         /// </summary>
         [pbr::OriginalName("BARCODE")] Barcode = 5,
       }
@@ -1223,7 +1223,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  Structural unit of text representing a number of words in certain order.
+  /// Structural unit of text representing a number of words in certain order.
   /// </summary>
   public sealed partial class Paragraph : pb::IMessage<Paragraph> {
     private static readonly pb::MessageParser<Paragraph> _parser = new pb::MessageParser<Paragraph>(() => new Paragraph());
@@ -1263,7 +1263,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty property_;
     /// <summary>
-    ///  Additional information detected for the paragraph.
+    /// Additional information detected for the paragraph.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty Property {
@@ -1277,21 +1277,21 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingBoxFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingBox_;
     /// <summary>
-    ///  The bounding box for the paragraph.
-    ///  The vertices are in the order of top-left, top-right, bottom-right,
-    ///  bottom-left. When a rotation of the bounding box is detected the rotation
-    ///  is represented as around the top-left corner as defined when the text is
-    ///  read in the 'natural' orientation.
-    ///  For example:
-    ///    * when the text is horizontal it might look like:
-    ///       0----1
-    ///       |    |
-    ///       3----2
-    ///    * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///       2----3
-    ///       |    |
-    ///       1----0
-    ///    and the vertice order will still be (0, 1, 2, 3).
+    /// The bounding box for the paragraph.
+    /// The vertices are in the order of top-left, top-right, bottom-right,
+    /// bottom-left. When a rotation of the bounding box is detected the rotation
+    /// is represented as around the top-left corner as defined when the text is
+    /// read in the 'natural' orientation.
+    /// For example:
+    ///   * when the text is horizontal it might look like:
+    ///      0----1
+    ///      |    |
+    ///      3----2
+    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
+    ///      2----3
+    ///      |    |
+    ///      1----0
+    ///   and the vertice order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
@@ -1307,7 +1307,7 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.Word.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Word> words_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Word>();
     /// <summary>
-    ///  List of words in this paragraph.
+    /// List of words in this paragraph.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Word> Words {
@@ -1426,7 +1426,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  A word representation.
+  /// A word representation.
   /// </summary>
   public sealed partial class Word : pb::IMessage<Word> {
     private static readonly pb::MessageParser<Word> _parser = new pb::MessageParser<Word>(() => new Word());
@@ -1466,7 +1466,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty property_;
     /// <summary>
-    ///  Additional information detected for the word.
+    /// Additional information detected for the word.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty Property {
@@ -1480,21 +1480,21 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingBoxFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingBox_;
     /// <summary>
-    ///  The bounding box for the word.
-    ///  The vertices are in the order of top-left, top-right, bottom-right,
-    ///  bottom-left. When a rotation of the bounding box is detected the rotation
-    ///  is represented as around the top-left corner as defined when the text is
-    ///  read in the 'natural' orientation.
-    ///  For example:
-    ///    * when the text is horizontal it might look like:
-    ///       0----1
-    ///       |    |
-    ///       3----2
-    ///    * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///       2----3
-    ///       |    |
-    ///       1----0
-    ///    and the vertice order will still be (0, 1, 2, 3).
+    /// The bounding box for the word.
+    /// The vertices are in the order of top-left, top-right, bottom-right,
+    /// bottom-left. When a rotation of the bounding box is detected the rotation
+    /// is represented as around the top-left corner as defined when the text is
+    /// read in the 'natural' orientation.
+    /// For example:
+    ///   * when the text is horizontal it might look like:
+    ///      0----1
+    ///      |    |
+    ///      3----2
+    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
+    ///      2----3
+    ///      |    |
+    ///      1----0
+    ///   and the vertice order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
@@ -1510,8 +1510,8 @@ namespace Google.Cloud.Vision.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Vision.V1.Symbol.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Vision.V1.Symbol> symbols_ = new pbc::RepeatedField<global::Google.Cloud.Vision.V1.Symbol>();
     /// <summary>
-    ///  List of symbols in the word.
-    ///  The order of the symbols follows the natural reading order.
+    /// List of symbols in the word.
+    /// The order of the symbols follows the natural reading order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Vision.V1.Symbol> Symbols {
@@ -1630,7 +1630,7 @@ namespace Google.Cloud.Vision.V1 {
   }
 
   /// <summary>
-  ///  A single symbol representation.
+  /// A single symbol representation.
   /// </summary>
   public sealed partial class Symbol : pb::IMessage<Symbol> {
     private static readonly pb::MessageParser<Symbol> _parser = new pb::MessageParser<Symbol>(() => new Symbol());
@@ -1670,7 +1670,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int PropertyFieldNumber = 1;
     private global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty property_;
     /// <summary>
-    ///  Additional information detected for the symbol.
+    /// Additional information detected for the symbol.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.TextAnnotation.Types.TextProperty Property {
@@ -1684,21 +1684,21 @@ namespace Google.Cloud.Vision.V1 {
     public const int BoundingBoxFieldNumber = 2;
     private global::Google.Cloud.Vision.V1.BoundingPoly boundingBox_;
     /// <summary>
-    ///  The bounding box for the symbol.
-    ///  The vertices are in the order of top-left, top-right, bottom-right,
-    ///  bottom-left. When a rotation of the bounding box is detected the rotation
-    ///  is represented as around the top-left corner as defined when the text is
-    ///  read in the 'natural' orientation.
-    ///  For example:
-    ///    * when the text is horizontal it might look like:
-    ///       0----1
-    ///       |    |
-    ///       3----2
-    ///    * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///       2----3
-    ///       |    |
-    ///       1----0
-    ///    and the vertice order will still be (0, 1, 2, 3).
+    /// The bounding box for the symbol.
+    /// The vertices are in the order of top-left, top-right, bottom-right,
+    /// bottom-left. When a rotation of the bounding box is detected the rotation
+    /// is represented as around the top-left corner as defined when the text is
+    /// read in the 'natural' orientation.
+    /// For example:
+    ///   * when the text is horizontal it might look like:
+    ///      0----1
+    ///      |    |
+    ///      3----2
+    ///   * when it's rotated 180 degrees around the top-left corner it becomes:
+    ///      2----3
+    ///      |    |
+    ///      1----0
+    ///   and the vertice order will still be (0, 1, 2, 3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Vision.V1.BoundingPoly BoundingBox {
@@ -1712,7 +1712,7 @@ namespace Google.Cloud.Vision.V1 {
     public const int TextFieldNumber = 3;
     private string text_ = "";
     /// <summary>
-    ///  The actual UTF-8 representation of the symbol.
+    /// The actual UTF-8 representation of the symbol.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {

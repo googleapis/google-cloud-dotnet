@@ -117,7 +117,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
   #region Messages
   /// <summary>
-  ///  The request for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
+  /// The request for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
   /// </summary>
   public sealed partial class LookupRequest : pb::IMessage<LookupRequest> {
     private static readonly pb::MessageParser<LookupRequest> _parser = new pb::MessageParser<LookupRequest>(() => new LookupRequest());
@@ -157,7 +157,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  The ID of the project against which to make the request.
+    /// The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -171,7 +171,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ReadOptionsFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.ReadOptions readOptions_;
     /// <summary>
-    ///  The options for this lookup request.
+    /// The options for this lookup request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.ReadOptions ReadOptions {
@@ -187,7 +187,7 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Datastore.V1.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> keys_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key>();
     /// <summary>
-    ///  Keys of entities to look up.
+    /// Keys of entities to look up.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> Keys {
@@ -300,7 +300,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The response for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
+  /// The response for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
   /// </summary>
   public sealed partial class LookupResponse : pb::IMessage<LookupResponse> {
     private static readonly pb::MessageParser<LookupResponse> _parser = new pb::MessageParser<LookupResponse>(() => new LookupResponse());
@@ -342,9 +342,9 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Datastore.V1.EntityResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult> found_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult>();
     /// <summary>
-    ///  Entities found as `ResultType.FULL` entities. The order of results in this
-    ///  field is undefined and has no relation to the order of the keys in the
-    ///  input.
+    /// Entities found as `ResultType.FULL` entities. The order of results in this
+    /// field is undefined and has no relation to the order of the keys in the
+    /// input.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult> Found {
@@ -357,9 +357,9 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Datastore.V1.EntityResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult> missing_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult>();
     /// <summary>
-    ///  Entities not found as `ResultType.KEY_ONLY` entities. The order of results
-    ///  in this field is undefined and has no relation to the order of the keys
-    ///  in the input.
+    /// Entities not found as `ResultType.KEY_ONLY` entities. The order of results
+    /// in this field is undefined and has no relation to the order of the keys
+    /// in the input.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.EntityResult> Missing {
@@ -372,9 +372,9 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Datastore.V1.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> deferred_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key>();
     /// <summary>
-    ///  A list of keys that were not looked up due to resource constraints. The
-    ///  order of results in this field is undefined and has no relation to the
-    ///  order of the keys in the input.
+    /// A list of keys that were not looked up due to resource constraints. The
+    /// order of results in this field is undefined and has no relation to the
+    /// order of the keys in the input.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> Deferred {
@@ -467,7 +467,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The request for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
+  /// The request for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
   public sealed partial class RunQueryRequest : pb::IMessage<RunQueryRequest> {
     private static readonly pb::MessageParser<RunQueryRequest> _parser = new pb::MessageParser<RunQueryRequest>(() => new RunQueryRequest());
@@ -516,7 +516,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  The ID of the project against which to make the request.
+    /// The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -530,10 +530,10 @@ namespace Google.Cloud.Datastore.V1 {
     public const int PartitionIdFieldNumber = 2;
     private global::Google.Cloud.Datastore.V1.PartitionId partitionId_;
     /// <summary>
-    ///  Entities are partitioned into subsets, identified by a partition ID.
-    ///  Queries are scoped to a single partition.
-    ///  This partition ID is normalized with the standard default context
-    ///  partition ID.
+    /// Entities are partitioned into subsets, identified by a partition ID.
+    /// Queries are scoped to a single partition.
+    /// This partition ID is normalized with the standard default context
+    /// partition ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.PartitionId PartitionId {
@@ -547,7 +547,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ReadOptionsFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.ReadOptions readOptions_;
     /// <summary>
-    ///  The options for this query.
+    /// The options for this query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.ReadOptions ReadOptions {
@@ -560,7 +560,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "query" field.</summary>
     public const int QueryFieldNumber = 3;
     /// <summary>
-    ///  The query to run.
+    /// The query to run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Query Query {
@@ -574,7 +574,7 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "gql_query" field.</summary>
     public const int GqlQueryFieldNumber = 7;
     /// <summary>
-    ///  The GQL query to run.
+    /// The GQL query to run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.GqlQuery GqlQuery {
@@ -770,7 +770,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The response for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
+  /// The response for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
   /// </summary>
   public sealed partial class RunQueryResponse : pb::IMessage<RunQueryResponse> {
     private static readonly pb::MessageParser<RunQueryResponse> _parser = new pb::MessageParser<RunQueryResponse>(() => new RunQueryResponse());
@@ -809,7 +809,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int BatchFieldNumber = 1;
     private global::Google.Cloud.Datastore.V1.QueryResultBatch batch_;
     /// <summary>
-    ///  A batch of query results (always present).
+    /// A batch of query results (always present).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.QueryResultBatch Batch {
@@ -823,7 +823,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int QueryFieldNumber = 2;
     private global::Google.Cloud.Datastore.V1.Query query_;
     /// <summary>
-    ///  The parsed form of the `GqlQuery` from the request, if it was set.
+    /// The parsed form of the `GqlQuery` from the request, if it was set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Query Query {
@@ -936,7 +936,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The request for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+  /// The request for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionRequest : pb::IMessage<BeginTransactionRequest> {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
@@ -974,7 +974,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  The ID of the project against which to make the request.
+    /// The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1059,7 +1059,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The response for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+  /// The response for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   /// </summary>
   public sealed partial class BeginTransactionResponse : pb::IMessage<BeginTransactionResponse> {
     private static readonly pb::MessageParser<BeginTransactionResponse> _parser = new pb::MessageParser<BeginTransactionResponse>(() => new BeginTransactionResponse());
@@ -1097,7 +1097,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int TransactionFieldNumber = 1;
     private pb::ByteString transaction_ = pb::ByteString.Empty;
     /// <summary>
-    ///  The transaction identifier (always present).
+    /// The transaction identifier (always present).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
@@ -1182,7 +1182,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The request for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
+  /// The request for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
   /// </summary>
   public sealed partial class RollbackRequest : pb::IMessage<RollbackRequest> {
     private static readonly pb::MessageParser<RollbackRequest> _parser = new pb::MessageParser<RollbackRequest>(() => new RollbackRequest());
@@ -1221,7 +1221,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  The ID of the project against which to make the request.
+    /// The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1235,8 +1235,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int TransactionFieldNumber = 1;
     private pb::ByteString transaction_ = pb::ByteString.Empty;
     /// <summary>
-    ///  The transaction identifier, returned by a call to
-    ///  [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+    /// The transaction identifier, returned by a call to
+    /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
@@ -1337,8 +1337,8 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The response for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
-  ///  (an empty message).
+  /// The response for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
+  /// (an empty message).
   /// </summary>
   public sealed partial class RollbackResponse : pb::IMessage<RollbackResponse> {
     private static readonly pb::MessageParser<RollbackResponse> _parser = new pb::MessageParser<RollbackResponse>(() => new RollbackResponse());
@@ -1430,7 +1430,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The request for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
+  /// The request for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
   /// </summary>
   public sealed partial class CommitRequest : pb::IMessage<CommitRequest> {
     private static readonly pb::MessageParser<CommitRequest> _parser = new pb::MessageParser<CommitRequest>(() => new CommitRequest());
@@ -1476,7 +1476,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  The ID of the project against which to make the request.
+    /// The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1490,7 +1490,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ModeFieldNumber = 5;
     private global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode mode_ = 0;
     /// <summary>
-    ///  The type of commit to perform. Defaults to `TRANSACTIONAL`.
+    /// The type of commit to perform. Defaults to `TRANSACTIONAL`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.CommitRequest.Types.Mode Mode {
@@ -1503,9 +1503,9 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 1;
     /// <summary>
-    ///  The identifier of the transaction associated with the commit. A
-    ///  transaction identifier is returned by a call to
-    ///  [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+    /// The identifier of the transaction associated with the commit. A
+    /// transaction identifier is returned by a call to
+    /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
@@ -1522,19 +1522,19 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Datastore.V1.Mutation.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Mutation> mutations_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Mutation>();
     /// <summary>
-    ///  The mutations to perform.
+    /// The mutations to perform.
     ///
-    ///  When mode is `TRANSACTIONAL`, mutations affecting a single entity are
-    ///  applied in order. The following sequences of mutations affecting a single
-    ///  entity are not permitted in a single `Commit` request:
+    /// When mode is `TRANSACTIONAL`, mutations affecting a single entity are
+    /// applied in order. The following sequences of mutations affecting a single
+    /// entity are not permitted in a single `Commit` request:
     ///
-    ///  - `insert` followed by `insert`
-    ///  - `update` followed by `insert`
-    ///  - `upsert` followed by `insert`
-    ///  - `delete` followed by `update`
+    /// - `insert` followed by `insert`
+    /// - `update` followed by `insert`
+    /// - `upsert` followed by `insert`
+    /// - `delete` followed by `update`
     ///
-    ///  When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
-    ///  entity.
+    /// When mode is `NON_TRANSACTIONAL`, no two mutations may affect a single
+    /// entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Mutation> Mutations {
@@ -1682,20 +1682,20 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The modes available for commits.
+      /// The modes available for commits.
       /// </summary>
       public enum Mode {
         /// <summary>
-        ///  Unspecified. This value must not be used.
+        /// Unspecified. This value must not be used.
         /// </summary>
         [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Transactional: The mutations are either all applied, or none are applied.
-        ///  Learn about transactions [here](https://cloud.google.com/datastore/docs/concepts/transactions).
+        /// Transactional: The mutations are either all applied, or none are applied.
+        /// Learn about transactions [here](https://cloud.google.com/datastore/docs/concepts/transactions).
         /// </summary>
         [pbr::OriginalName("TRANSACTIONAL")] Transactional = 1,
         /// <summary>
-        ///  Non-transactional: The mutations may not apply as all or none.
+        /// Non-transactional: The mutations may not apply as all or none.
         /// </summary>
         [pbr::OriginalName("NON_TRANSACTIONAL")] NonTransactional = 2,
       }
@@ -1706,7 +1706,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The response for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
+  /// The response for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
   /// </summary>
   public sealed partial class CommitResponse : pb::IMessage<CommitResponse> {
     private static readonly pb::MessageParser<CommitResponse> _parser = new pb::MessageParser<CommitResponse>(() => new CommitResponse());
@@ -1747,8 +1747,8 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Datastore.V1.MutationResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.MutationResult> mutationResults_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.MutationResult>();
     /// <summary>
-    ///  The result of performing the mutations.
-    ///  The i-th mutation result corresponds to the i-th mutation in the request.
+    /// The result of performing the mutations.
+    /// The i-th mutation result corresponds to the i-th mutation in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.MutationResult> MutationResults {
@@ -1759,8 +1759,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int IndexUpdatesFieldNumber = 4;
     private int indexUpdates_;
     /// <summary>
-    ///  The number of index entries updated during the commit, or zero if none were
-    ///  updated.
+    /// The number of index entries updated during the commit, or zero if none were
+    /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int IndexUpdates {
@@ -1854,7 +1854,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The request for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+  /// The request for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
   public sealed partial class AllocateIdsRequest : pb::IMessage<AllocateIdsRequest> {
     private static readonly pb::MessageParser<AllocateIdsRequest> _parser = new pb::MessageParser<AllocateIdsRequest>(() => new AllocateIdsRequest());
@@ -1893,7 +1893,7 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ProjectIdFieldNumber = 8;
     private string projectId_ = "";
     /// <summary>
-    ///  The ID of the project against which to make the request.
+    /// The ID of the project against which to make the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectId {
@@ -1909,8 +1909,8 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Datastore.V1.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> keys_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key>();
     /// <summary>
-    ///  A list of keys with incomplete key paths for which to allocate IDs.
-    ///  No key may be reserved/read-only.
+    /// A list of keys with incomplete key paths for which to allocate IDs.
+    /// No key may be reserved/read-only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> Keys {
@@ -2001,7 +2001,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The response for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+  /// The response for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
   /// </summary>
   public sealed partial class AllocateIdsResponse : pb::IMessage<AllocateIdsResponse> {
     private static readonly pb::MessageParser<AllocateIdsResponse> _parser = new pb::MessageParser<AllocateIdsResponse>(() => new AllocateIdsResponse());
@@ -2041,8 +2041,8 @@ namespace Google.Cloud.Datastore.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Datastore.V1.Key.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> keys_ = new pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key>();
     /// <summary>
-    ///  The keys specified in the request (in the same order), each with
-    ///  its key path completed with a newly allocated ID.
+    /// The keys specified in the request (in the same order), each with
+    /// its key path completed with a newly allocated ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Google.Cloud.Datastore.V1.Key> Keys {
@@ -2117,7 +2117,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  A mutation to apply to an entity.
+  /// A mutation to apply to an entity.
   /// </summary>
   public sealed partial class Mutation : pb::IMessage<Mutation> {
     private static readonly pb::MessageParser<Mutation> _parser = new pb::MessageParser<Mutation>(() => new Mutation());
@@ -2174,8 +2174,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "insert" field.</summary>
     public const int InsertFieldNumber = 4;
     /// <summary>
-    ///  The entity to insert. The entity must not already exist.
-    ///  The entity key's final path element may be incomplete.
+    /// The entity to insert. The entity must not already exist.
+    /// The entity key's final path element may be incomplete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Entity Insert {
@@ -2189,8 +2189,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "update" field.</summary>
     public const int UpdateFieldNumber = 5;
     /// <summary>
-    ///  The entity to update. The entity must already exist.
-    ///  Must have a complete key path.
+    /// The entity to update. The entity must already exist.
+    /// Must have a complete key path.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Entity Update {
@@ -2204,8 +2204,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "upsert" field.</summary>
     public const int UpsertFieldNumber = 6;
     /// <summary>
-    ///  The entity to upsert. The entity may or may not already exist.
-    ///  The entity key's final path element may be incomplete.
+    /// The entity to upsert. The entity may or may not already exist.
+    /// The entity key's final path element may be incomplete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Entity Upsert {
@@ -2219,8 +2219,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "delete" field.</summary>
     public const int DeleteFieldNumber = 7;
     /// <summary>
-    ///  The key of the entity to delete. The entity may or may not already exist.
-    ///  Must have a complete key path and must not be reserved/read-only.
+    /// The key of the entity to delete. The entity may or may not already exist.
+    /// Must have a complete key path and must not be reserved/read-only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Key Delete {
@@ -2234,8 +2234,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "base_version" field.</summary>
     public const int BaseVersionFieldNumber = 8;
     /// <summary>
-    ///  The version of the entity that this mutation is being applied to. If this
-    ///  does not match the current version on the server, the mutation conflicts.
+    /// The version of the entity that this mutation is being applied to. If this
+    /// does not match the current version on the server, the mutation conflicts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long BaseVersion {
@@ -2454,7 +2454,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The result of applying a mutation.
+  /// The result of applying a mutation.
   /// </summary>
   public sealed partial class MutationResult : pb::IMessage<MutationResult> {
     private static readonly pb::MessageParser<MutationResult> _parser = new pb::MessageParser<MutationResult>(() => new MutationResult());
@@ -2494,8 +2494,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int KeyFieldNumber = 3;
     private global::Google.Cloud.Datastore.V1.Key key_;
     /// <summary>
-    ///  The automatically allocated key.
-    ///  Set only when the mutation allocated a key.
+    /// The automatically allocated key.
+    /// Set only when the mutation allocated a key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.Key Key {
@@ -2509,11 +2509,11 @@ namespace Google.Cloud.Datastore.V1 {
     public const int VersionFieldNumber = 4;
     private long version_;
     /// <summary>
-    ///  The version of the entity on the server after processing the mutation. If
-    ///  the mutation doesn't change anything on the server, then the version will
-    ///  be the version of the current entity or, if no entity is present, a version
-    ///  that is strictly greater than the version of any previous entity and less
-    ///  than the version of any possible future entity.
+    /// The version of the entity on the server after processing the mutation. If
+    /// the mutation doesn't change anything on the server, then the version will
+    /// be the version of the current entity or, if no entity is present, a version
+    /// that is strictly greater than the version of any previous entity and less
+    /// than the version of any possible future entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Version {
@@ -2527,8 +2527,8 @@ namespace Google.Cloud.Datastore.V1 {
     public const int ConflictDetectedFieldNumber = 5;
     private bool conflictDetected_;
     /// <summary>
-    ///  Whether a conflict was detected for this mutation. Always false when a
-    ///  conflict detection strategy field is not set in the mutation.
+    /// Whether a conflict was detected for this mutation. Always false when a
+    /// conflict detection strategy field is not set in the mutation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool ConflictDetected {
@@ -2651,7 +2651,7 @@ namespace Google.Cloud.Datastore.V1 {
   }
 
   /// <summary>
-  ///  The options shared by read requests.
+  /// The options shared by read requests.
   /// </summary>
   public sealed partial class ReadOptions : pb::IMessage<ReadOptions> {
     private static readonly pb::MessageParser<ReadOptions> _parser = new pb::MessageParser<ReadOptions>(() => new ReadOptions());
@@ -2696,8 +2696,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "read_consistency" field.</summary>
     public const int ReadConsistencyFieldNumber = 1;
     /// <summary>
-    ///  The non-transactional read consistency to use.
-    ///  Cannot be set to `STRONG` for global queries.
+    /// The non-transactional read consistency to use.
+    /// Cannot be set to `STRONG` for global queries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.Datastore.V1.ReadOptions.Types.ReadConsistency ReadConsistency {
@@ -2711,9 +2711,9 @@ namespace Google.Cloud.Datastore.V1 {
     /// <summary>Field number for the "transaction" field.</summary>
     public const int TransactionFieldNumber = 2;
     /// <summary>
-    ///  The identifier of the transaction in which to read. A
-    ///  transaction identifier is returned by a call to
-    ///  [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+    /// The identifier of the transaction in which to read. A
+    /// transaction identifier is returned by a call to
+    /// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString Transaction {
@@ -2842,19 +2842,19 @@ namespace Google.Cloud.Datastore.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       /// <summary>
-      ///  The possible values for read consistencies.
+      /// The possible values for read consistencies.
       /// </summary>
       public enum ReadConsistency {
         /// <summary>
-        ///  Unspecified. This value must not be used.
+        /// Unspecified. This value must not be used.
         /// </summary>
         [pbr::OriginalName("READ_CONSISTENCY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        ///  Strong consistency.
+        /// Strong consistency.
         /// </summary>
         [pbr::OriginalName("STRONG")] Strong = 1,
         /// <summary>
-        ///  Eventual consistency.
+        /// Eventual consistency.
         /// </summary>
         [pbr::OriginalName("EVENTUAL")] Eventual = 2,
       }

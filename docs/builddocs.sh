@@ -25,7 +25,7 @@ build_api_docs() {
   else
     dotnet run -p ../tools/Google.Cloud.Tools.GenerateDocfxSources -- $api
   fi
-  
+  cp filterConfig.yml output/$api
   docfx metadata -f output/$api/docfx.json | tee errors.txt
   (! grep --quiet 'Build failed.' errors.txt)
   dotnet run -p ../tools/Google.Cloud.Tools.GenerateSnippetMarkdown -- $api

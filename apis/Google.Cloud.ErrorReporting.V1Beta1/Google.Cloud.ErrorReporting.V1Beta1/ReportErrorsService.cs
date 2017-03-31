@@ -60,7 +60,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  ///  A request for reporting an individual error event.
+  /// A request for reporting an individual error event.
   /// </summary>
   public sealed partial class ReportErrorEventRequest : pb::IMessage<ReportErrorEventRequest> {
     private static readonly pb::MessageParser<ReportErrorEventRequest> _parser = new pb::MessageParser<ReportErrorEventRequest>(() => new ReportErrorEventRequest());
@@ -99,10 +99,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ProjectNameFieldNumber = 1;
     private string projectName_ = "";
     /// <summary>
-    ///  [Required] The resource name of the Google Cloud Platform project. Written
-    ///  as `projects/` plus the
-    ///  [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
-    ///  Example: `projects/my-project-123`.
+    /// [Required] The resource name of the Google Cloud Platform project. Written
+    /// as `projects/` plus the
+    /// [Google Cloud Platform project ID](https://support.google.com/cloud/answer/6158840).
+    /// Example: `projects/my-project-123`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ProjectName {
@@ -116,7 +116,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int EventFieldNumber = 2;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent event_;
     /// <summary>
-    ///  [Required] The error event to be reported.
+    /// [Required] The error event to be reported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ReportedErrorEvent Event {
@@ -223,8 +223,8 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  Response for reporting an individual error event.
-  ///  Data may be added to this message in the future.
+  /// Response for reporting an individual error event.
+  /// Data may be added to this message in the future.
   /// </summary>
   public sealed partial class ReportErrorEventResponse : pb::IMessage<ReportErrorEventResponse> {
     private static readonly pb::MessageParser<ReportErrorEventResponse> _parser = new pb::MessageParser<ReportErrorEventResponse>(() => new ReportErrorEventResponse());
@@ -316,7 +316,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
   }
 
   /// <summary>
-  ///  An error event which is reported to the Error Reporting system.
+  /// An error event which is reported to the Error Reporting system.
   /// </summary>
   public sealed partial class ReportedErrorEvent : pb::IMessage<ReportedErrorEvent> {
     private static readonly pb::MessageParser<ReportedErrorEvent> _parser = new pb::MessageParser<ReportedErrorEvent>(() => new ReportedErrorEvent());
@@ -357,9 +357,9 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int EventTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp eventTime_;
     /// <summary>
-    ///  [Optional] Time when the event occurred.
-    ///  If not provided, the time when the event was received by the
-    ///  Error Reporting system will be used.
+    /// [Optional] Time when the event occurred.
+    /// If not provided, the time when the event was received by the
+    /// Error Reporting system will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EventTime {
@@ -373,7 +373,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ServiceContextFieldNumber = 2;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext serviceContext_;
     /// <summary>
-    ///  [Required] The service context in which this error has occurred.
+    /// [Required] The service context in which this error has occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ServiceContext ServiceContext {
@@ -387,10 +387,10 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int MessageFieldNumber = 3;
     private string message_ = "";
     /// <summary>
-    ///  [Required] A message describing the error. The message can contain an
-    ///  exception stack in one of the supported programming languages and formats.
-    ///  In that case, the message is parsed and detailed exception information
-    ///  is returned when retrieving the error event again.
+    /// [Required] A message describing the error. The message can contain an
+    /// exception stack in one of the supported programming languages and formats.
+    /// In that case, the message is parsed and detailed exception information
+    /// is returned when retrieving the error event again.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Message {
@@ -404,7 +404,7 @@ namespace Google.Cloud.ErrorReporting.V1Beta1 {
     public const int ContextFieldNumber = 4;
     private global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext context_;
     /// <summary>
-    ///  [Optional] A description of the context in which the error occurred.
+    /// [Optional] A description of the context in which the error occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Google.Cloud.ErrorReporting.V1Beta1.ErrorContext Context {

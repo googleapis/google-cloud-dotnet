@@ -37,7 +37,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
         private static Mock<IManagedTracer> CreateIManagedTracerMock(HttpContext context)
         {
             var tracerMock = new Mock<IManagedTracer>();
-            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns("trace-id");
+            tracerMock.Setup(t => t.GetCurrentTraceId()).Returns(_traceHeaderContext.TraceId);
             tracerMock.Setup(t => t.StartSpan(context.Request.Path, null));
             tracerMock.Setup(t => t.AnnotateSpan(It.IsAny<Dictionary<string, string>>()));
             tracerMock.Setup(t => t.EndSpan());
@@ -75,6 +75,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));
 
+            Assert.True(context.Response.Headers.ContainsKey(TraceHeaderContext.TraceHeader));
+            Assert.Equal(_traceHeaderContext.ToString(), context.Response.Headers[TraceHeaderContext.TraceHeader]);
+
             delegateMock.VerifyAll();
             tracerMock.VerifyAll();
         }
@@ -97,6 +100,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             await Assert.ThrowsAsync<Exception>(
                 () => middleware.Invoke(context, _traceHeaderContext));
 
+            Assert.True(context.Response.Headers.ContainsKey(TraceHeaderContext.TraceHeader));
+            Assert.Equal(_traceHeaderContext.ToString(), context.Response.Headers[TraceHeaderContext.TraceHeader]);
+
             delegateMock.VerifyAll();
             tracerMock.VerifyAll();
         }
@@ -116,6 +122,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
             await middleware.Invoke(context, _traceHeaderContext);
 
             Assert.Equal(tracerMock.Object, ContextTracerManager.GetCurrentTracer(accessor));
+            Assert.False(context.Response.Headers.ContainsKey(TraceHeaderContext.TraceHeader));
 
             delegateMock.Verify(d => d(context), Times.Once());
             tracerMock.Verify(t => t.StartSpan(It.IsAny<string>(), null), Times.Never());

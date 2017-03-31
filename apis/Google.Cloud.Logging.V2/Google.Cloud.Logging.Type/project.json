@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta09-*",
+  "version": "1.0.0-*",
   "description": "Version-agnostic types for the Google Stackdriver Logging API.",
   "authors": [ "Google Inc." ],
 
@@ -19,7 +19,7 @@
   },
 
   "dependencies": {
-    "Google.Api.CommonProtos": "1.0.0-beta05"
+    "Google.Api.CommonProtos": "1.0.0"
   },
 
   "frameworks": {
