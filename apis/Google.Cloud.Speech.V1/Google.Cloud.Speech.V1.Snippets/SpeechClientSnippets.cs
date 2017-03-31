@@ -15,9 +15,9 @@
 using System;
 using System.Reflection;
 using Xunit;
-using static Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types;
+using static Google.Cloud.Speech.V1.RecognitionConfig.Types;
 
-namespace Google.Cloud.Speech.V1Beta1.Snippets
+namespace Google.Cloud.Speech.V1.Snippets
 {
     public class SpeechClientSnippets
     {

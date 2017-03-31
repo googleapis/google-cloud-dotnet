@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Google.Cloud.Speech.V1Beta1
+namespace Google.Cloud.Speech.V1
 {
     /// <summary>
     /// A helper class forming a hierarchy of supported language codes, via nested classes.
