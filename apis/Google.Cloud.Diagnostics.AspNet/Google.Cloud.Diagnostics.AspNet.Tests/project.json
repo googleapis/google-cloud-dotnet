@@ -9,9 +9,9 @@
     "Google.Cloud.Diagnostics.AspNet": { "target": "project" },
     "Google.Cloud.Diagnostics.Common": { "target": "project" },
     "Google.Cloud.Diagnostics.Common.Tests": { "target": "project" },
+    "xunit": "2.2.0-rc3-build3528",
     "Moq": "4.6.38-alpha",
-    "Microsoft.AspNet.Http": "1.0.0-rc1-final",
-    "xunit": "2.2.0-rc3-build3528"
+    "Microsoft.AspNet.Http": "1.0.0-rc1-final"
   },
   "testRunner": "xunit",
 
