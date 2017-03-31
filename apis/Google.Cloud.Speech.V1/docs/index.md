@@ -45,36 +45,25 @@ instances to be constructed from files, streams, byte arrays and URIs.
 
 ## Detect speech in a single file
 
-[!code-cs[](obj/snippets/Google.Cloud.Speech.V1.SpeechClient.txt#SyncRecognize)]
+[!code-cs[](obj/snippets/Google.Cloud.Speech.V1.SpeechClient.txt#Recognize)]
 
-# Synchronous, asynchronous and streaming operations
+# Immediate, long-running and streaming operations
 
 The underlying RPC API contains three modes of operation.
 
-The simplest is via the SyncRecognize method. You make a single
+The simplest is via the Recognize method. You make a single
 request, and get a single response with the result of the analysis.
-Despite the name, this can still be invoked asynchronously from C#
-with `SpeechClient.SyncRecognizeAsync`.
 
-The AsyncRecognize method still requires all of the audio data to be
+The LongRunningRecognize method still requires all of the audio data to be
 passed in a single request, but the response from the RPC is a
 Google.Longrunning.Operation, representing an operation which could
 take some time to complete. It contains a token which can be used to
 retrieve the results later - you can think of it as a more
-persistent and remote `Task<T>` to a first approximation. While this
-RPC works in the current Google.Cloud.Speech.V1 library, more
-work will be done to expose this functionality idiomatically.
+persistent and remote `Task<T>` to a first approximation.
 
 Finally, the RPC API supports StreamingRecognize, which is a
 bidirectional streaming API: the client makes a number of requests,
 and the server emits a number of responses. This enables a
 conversation to be transcribed in near real time, for example,
 without the client needing to split it into chunks for single
-operations. The streaming API is not exposed in the
-Google.Cloud.Speech.V1.SpeechClient type yet, but you can use
-the underlying gRPC client directly for this functionality. Again,
-more work will be done to expose the streaming API in a friendly way.
-
-It is very likely that we will add a very thin abstraction layer
-over the top of the generated code, partly to avoid method names
-such as `AsyncRecognizeAsync` which are confusing.
+operations.
