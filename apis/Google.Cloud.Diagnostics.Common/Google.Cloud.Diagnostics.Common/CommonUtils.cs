@@ -15,7 +15,6 @@
 using Google.Api;
 using Google.Api.Gax.Grpc;
 using System;
-using System.Diagnostics;
 using System.Reflection;
 using System.Threading.Tasks;
 

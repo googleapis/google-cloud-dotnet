@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -25,13 +26,37 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
     public class AspNetCoreSnippets
     {
         // Sample: ReportUnandledExceptions
-        public void Configure(IApplicationBuilder app)
+        public void ConfigureServices(IServiceCollection services)
         {
-            // Use before handling any requests to ensure all unhandled exceptions are reported.
             string projectId = "[Google Cloud Platform project ID]";
             string serviceName = "[Name of service]";
             string version = "[Version of service]";
-            app.UseGoogleExceptionLogging(projectId, serviceName, version);
+            services.AddGoogleExceptionLogging(projectId, serviceName, version);
+        }
+
+        public void Configure(IApplicationBuilder app)
+        {
+            // Use before handling any requests to ensure all unhandled exceptions are reported.
+            app.UseGoogleExceptionLogging();
+        }
+        // End sample
+
+
+        // Sample: LogExceptions
+        /// <summary>
+        /// The <see cref="IExceptionLogger"/> is populated by dependency injection.
+        /// </summary>
+        public void ReadFile(IExceptionLogger exceptionLogger)
+        {
+            try
+            {
+                string scores = File.ReadAllText(@"C:\Scores.txt");
+                Console.WriteLine(scores);
+            }
+            catch (IOException e)
+            {
+                exceptionLogger.Log(e);
+            }
         }
         // End sample
 

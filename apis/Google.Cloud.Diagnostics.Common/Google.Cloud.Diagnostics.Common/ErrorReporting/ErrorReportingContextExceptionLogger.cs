@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,61 +13,28 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.ErrorReporting.V1Beta1;
 using Google.Protobuf.WellKnownTypes;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.Extensions;
 using System;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Diagnostics.AspNetCore
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    ///  Google Cloud Error Reporting Exception Logger.
+    ///  Google Cloud Error Reporting Logger.  Used to report exceptions to the
+    ///  Stackdriver Error Reporting API.
     /// </summary>
-    /// 
-    /// <example>
-    /// <code>
-    /// public void Configure(IApplicationBuilder app)
-    /// {
-    ///     // Use first to ensure all unhandled exceptions are reported.
-    ///     string projectId = "[Google Cloud Platform project ID]";
-    ///     string serviceName = "[Name of service]";
-    ///     string version = "[Version of service]";
-    ///     app.UseGoogleExceptionLogging(projectId, serviceName, version);
-    ///     ...
-    /// }
-    /// </code>
-    /// </example>
-    /// 
-    /// <remarks>
-    /// Reports unhandled exceptions to Google Cloud Error Reporting.
-    /// See <see cref="ErrorReportingExceptionLoggerExtension"/>.
-    /// Docs: https://cloud.google.com/error-reporting/docs/
-    /// </remarks>
-    internal sealed class ErrorReportingExceptionLogger : IExceptionLogger
+    internal class ErrorReportingContextExceptionLogger : IContextExceptionLogger
     {
-        ///<summary>
-        /// The service context in which this error has occurred.
-        /// See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
-        /// </summary>
+        // The service context in which this error has occurred.
+        // See: https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events#ServiceContext
         private readonly ServiceContext _serviceContext;
 
-        /// <summary>The consumer to report errors to.</summary>
         private readonly IConsumer<ReportedErrorEvent> _consumer;
 
-        /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionLogger"/>
-        /// </summary>
-        /// <param name="consumer">The consumer to report errors to. Cannot be null.</param>
-        /// <param name="serviceName">An identifier of the service, such as the name of the 
-        ///     executable or job. Cannot be null.</param>
-        /// <param name="version">Represents the source code version that the developer
-        ///     provided. Cannot be null.</param>
-        internal ErrorReportingExceptionLogger(
-           IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
+        internal ErrorReportingContextExceptionLogger(IConsumer<ReportedErrorEvent> consumer, string serviceName, string version)
         {
             _consumer = GaxPreconditions.CheckNotNull(consumer, nameof(consumer));
             _serviceContext = new ServiceContext
@@ -78,30 +45,54 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         }
 
         /// <summary>
-        /// Asynchronously logs an exception that occurred.
+        /// Creates an instance of <see cref="ErrorReportingContextExceptionLogger"/>
         /// </summary>
-        /// <returns>A task containing an empty response on success.</returns>
-        public Task LogAsync(HttpContext context, Exception exception)
+        /// <param name="projectId">The Google Cloud Platform project ID. Can be null.</param>
+        /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
+        ///     Cannot be null.</param>
+        /// <param name="version">Represents the source code version that the developer provided. 
+        ///     Cannot be null.</param>
+        /// <param name="options">Optional, error reporting options.</param>
+        internal static IContextExceptionLogger Create(string projectId, string serviceName, string version,
+            ErrorReportingOptions options = null)
         {
-            var errorEvent = CreateReportRequest(context, exception);
-            return _consumer.ReceiveAsync(new[] { errorEvent });
+            GaxPreconditions.CheckNotNullOrEmpty(serviceName, nameof(serviceName));
+            GaxPreconditions.CheckNotNullOrEmpty(version, nameof(version));
+
+            options = options ?? ErrorReportingOptions.Create(projectId);
+            var consumer = options.CreateConsumer();
+            return new ErrorReportingContextExceptionLogger(consumer, serviceName, version);
         }
+        
+        /// <inheritdoc />
+        Task IContextExceptionLogger.LogAsync(Exception exception, IContextWrapper context, CancellationToken cancellationToken)
+        {
+            var errorEvent = CreateReportRequest(exception, context);
+            return _consumer.ReceiveAsync(new[] { errorEvent }, cancellationToken);
+        }
+
+        /// <inheritdoc />
+        void IContextExceptionLogger.Log(Exception exception, IContextWrapper context)
+        {
+            var errorEvent = CreateReportRequest(exception, context);
+            _consumer.Receive(new[] { errorEvent });
+        }
+
+        /// <inheritdoc />
+        public void Dispose() => _consumer.Dispose();
 
         /// <summary>
         /// Gets information about the HTTP request and response when the exception occurred 
         /// and populates a <see cref="HttpRequestContext"/> object.
         /// </summary>
-        private HttpRequestContext CreateHttpRequestContext(HttpContext context)
+        private HttpRequestContext CreateHttpRequestContext(IContextWrapper context)
         {
-            HttpRequest request = context?.Request;
-            HttpResponse response = context?.Response;
-
             return new HttpRequestContext()
             {
-                Method = request?.Method?.ToString() ?? "",
-                Url = request?.GetDisplayUrl() ?? "",
-                UserAgent = request?.Headers["User-Agent"].ToString() ?? "",
-                ResponseStatusCode = response?.StatusCode ?? 0,
+                Method = context?.GetHttpMethod() ?? "",
+                Url = context?.GetUri() ?? "",
+                UserAgent = context?.GetUserAgent() ?? "",
+                ResponseStatusCode = context?.GetStatusCode() ?? 0,
             };
         }
 
@@ -109,7 +100,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Gets information about the source location where the exception occurred 
         /// and populates a <see cref="SourceLocation"/> object.
         /// </summary>
-        private SourceLocation CreateSourceLocation(Exception exception)
+        private static SourceLocation CreateSourceLocation(Exception exception)
         {
             if (exception == null)
             {
@@ -124,7 +115,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
 
             StackFrame frame = frames[0];
-            return new SourceLocation()
+            return new SourceLocation
             {
                 FilePath = frame.GetFileName() ?? "",
                 LineNumber = frame.GetFileLineNumber(),
@@ -136,7 +127,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         /// Gets information about the exception that occurred and populates
         /// a <see cref="ReportedErrorEvent"/> object.
         /// </summary>
-        private ReportedErrorEvent CreateReportRequest(HttpContext context, Exception exception)
+        private ReportedErrorEvent CreateReportRequest(Exception exception, IContextWrapper context)
         {
             ErrorContext errorContext = new ErrorContext()
             {

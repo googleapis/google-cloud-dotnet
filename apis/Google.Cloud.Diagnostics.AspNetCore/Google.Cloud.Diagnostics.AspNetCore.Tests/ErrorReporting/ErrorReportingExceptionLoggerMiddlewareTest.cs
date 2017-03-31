@@ -12,9 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 using Moq;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -31,7 +33,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             await middleware.Invoke(new DefaultHttpContext());
 
-            mockLogger.Verify(l => l.LogAsync(It.IsAny<DefaultHttpContext>(), It.IsAny<Exception>()), Times.Never());
+            mockLogger.Verify(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None), Times.Never());
         }
 
         [Fact]
@@ -43,7 +45,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             await Assert.ThrowsAsync<Exception>(() => middleware.Invoke(new DefaultHttpContext()));
 
-            mockLogger.Verify(l => l.LogAsync(It.IsAny<DefaultHttpContext>(), It.IsAny<Exception>()), Times.Once());
+            mockLogger.Verify(l => l.LogAsync(It.IsAny<Exception>(), It.IsAny<DefaultHttpContext>(), CancellationToken.None), Times.Once());
         }
     }
 }

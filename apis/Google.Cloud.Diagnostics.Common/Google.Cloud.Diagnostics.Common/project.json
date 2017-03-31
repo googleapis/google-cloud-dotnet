@@ -27,10 +27,16 @@
   },
 
   "frameworks": {
-    "net45": {},
     "netstandard1.5": {
       "dependencies": {
-        "System.Diagnostics.StackTrace": "4.3.0"
+        "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
+        "System.Diagnostics.StackTrace": "4.3.0",
+        "System.Threading": "4.3.0"
+      }
+    },
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Web": "4.0.0.0"
       }
     }
   }

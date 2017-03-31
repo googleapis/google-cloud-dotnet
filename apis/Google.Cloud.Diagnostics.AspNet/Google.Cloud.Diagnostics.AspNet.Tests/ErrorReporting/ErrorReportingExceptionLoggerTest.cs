@@ -13,13 +13,9 @@
 // limitations under the License.using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.Tests;
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Moq;
 using System;
-using System.Net;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
@@ -29,49 +25,16 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class ErrorReportingExceptionLoggerTest
     {
-        private static readonly ErrorReportingMatching s_matcher = 
-            new ErrorReportingMatching(ErrorReportingUtils.IsWindows, defaultMethod: "GET");
-
-        private static readonly ProductInfoHeaderValue s_userAgentValue = 
-            new ProductInfoHeaderValue(ErrorReportingMatching.UserAgentKey, ErrorReportingMatching.UserAgentValue);
-
-        /// <summary>
-        /// An <see cref="ExceptionContext"/> that matches expected 
-        /// context of <see cref="ErrorReportingMatching.IsSimpleContext"/>.
-        /// </summary>
+        /// <summary>An <see cref="ExceptionContext"/>.</summary>
         private static readonly ExceptionLoggerContext s_simpleContext =
             new ExceptionLoggerContext(new ExceptionContext(
-                new Exception(ErrorReportingMatching.ExceptionMessage),
-                    ExceptionCatchBlocks.HttpServer, new HttpRequestMessage()));
-
-        /// <summary>
-        /// Creates an <see cref="ExceptionLoggerContext"/> that matches expected 
-        /// context of <see cref="ErrorReportingMatching.IsComplexContext"/>.
-        /// </summary>
-        private ExceptionLoggerContext CreateComplexContext()
-        {
-            var requestMessage = new HttpRequestMessage();
-            requestMessage.Method = new HttpMethod(ErrorReportingMatching.DeleteMethod);
-            requestMessage.RequestUri = ErrorReportingMatching.GoogleUri;
-            requestMessage.Headers.UserAgent.Add(s_userAgentValue);
-
-            var responseMessage = new HttpResponseMessage();
-            responseMessage.StatusCode = (HttpStatusCode)ErrorReportingMatching.ConflictStatusCode;
-
-            var exceptionContext = new ExceptionContext(
-                s_matcher.CreateException(), ExceptionCatchBlocks.HttpServer, requestMessage, responseMessage);
-            return new ExceptionLoggerContext(exceptionContext);
-        }
-
-        private ErrorReportingExceptionLogger CreateLogger(IConsumer<ReportedErrorEvent> consumer) 
-            => new ErrorReportingExceptionLogger(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
+                new Exception(), ExceptionCatchBlocks.HttpServer, new HttpRequestMessage()));
 
         [Fact]
         public void ShouldLog()
         {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-
-            var logger = CreateLogger(mockConsumer.Object);
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var logger = new ErrorReportingExceptionLogger(mockContextLogger.Object);
 
             Assert.True(logger.ShouldLog(s_simpleContext));
             Assert.False(logger.ShouldLog(null));
@@ -80,38 +43,25 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
         [Fact]
         public void Log()
         {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            mockConsumer.Setup(c => c.Receive(s_matcher.IsComplexContext()));
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var logger = new ErrorReportingExceptionLogger(mockContextLogger.Object);
 
-            var logger = CreateLogger(mockConsumer.Object);
-            logger.Log(CreateComplexContext());
-
-            mockConsumer.VerifyAll();
-        }
-
-        [Fact]
-        public void Log_Simple()
-        {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            mockConsumer.Setup(c => c.Receive(s_matcher.IsSimpleContext()));
-
-            var logger = CreateLogger(mockConsumer.Object);
             logger.Log(s_simpleContext);
-
-            mockConsumer.VerifyAll();
+            mockContextLogger.Verify(cl => cl.Log(s_simpleContext.Exception, It.IsAny<ExceptionLoggerContextWrapper>()));
         }
 
         [Fact]
         public async Task LogAsync()
         {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            mockConsumer.Setup(c => c.ReceiveAsync(s_matcher.IsComplexContext(), default(CancellationToken)))
-                .Returns(Task.FromResult(new ReportErrorEventResponse()));
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            mockContextLogger.Setup(cl => cl.LogAsync(
+                It.IsAny<Exception>(), It.IsAny<IContextWrapper>(), It.IsAny<CancellationToken>()))
+                .Returns(Task.FromResult(true));
+            var logger = new ErrorReportingExceptionLogger(mockContextLogger.Object);
 
-            var logger = CreateLogger(mockConsumer.Object);
-            await logger.LogAsync(CreateComplexContext(), CancellationToken.None);
-
-            mockConsumer.VerifyAll();
+            await logger.LogAsync(s_simpleContext, CancellationToken.None);
+            mockContextLogger.Verify(cl => cl.LogAsync(
+                s_simpleContext.Exception, It.IsAny<ExceptionLoggerContextWrapper>(), It.IsAny<CancellationToken>()));
         }
     }
 }

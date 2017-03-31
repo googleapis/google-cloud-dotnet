@@ -22,7 +22,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.ExceptionHandling;
 using Xunit;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
@@ -88,7 +87,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
         private class ReportToErrorReportingApplication : BaseErrorReportingApplication
         {
             public override ErrorReportingOptions GetOptions() =>
-                ErrorReportingOptions.Create(EventTarget.ForErrorReporting());
+                ErrorReportingOptions.Create(EventTarget.ForErrorReporting(_projectId));
         }
 
         /// <summary>
@@ -111,7 +110,7 @@ namespace Google.Cloud.Diagnostics.AspNet.IntegrationTests
             {
                 HttpConfiguration config = new HttpConfiguration();
                 config.Routes.MapHttpRoute("", "", null, null, new ThrowErrorHandler());
-                config.Services.Add(typeof(IExceptionLogger),
+                config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
                     ErrorReportingExceptionLogger.Create(_projectId, _testId, _testId, GetOptions()));
                 app.UseWebApi(config);
             }

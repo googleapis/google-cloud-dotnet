@@ -13,14 +13,12 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.Grpc;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Trace.V1;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Threading.Tasks;
 
 using TraceProto = Google.Cloud.Trace.V1.Trace;
 
@@ -176,19 +174,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         {
             var accessor = provider.GetServiceCheckNotNull<IHttpContextAccessor>();
             return new DelegatingTracer(() => ContextTracerManager.GetCurrentTracer(accessor));
-        }
-
-        /// <summary>
-        /// Extension for the <see cref="IServiceProvider"/> that will call and return 
-        /// <see cref="IServiceProvider.GetService(System.Type)"/>.  If the result of the
-        /// call is null it will throw.
-        /// </summary>
-        internal static T GetServiceCheckNotNull<T>(this IServiceProvider provider)
-        {
-            var message = "No {0} service found. Ensure Google Cloud Trace is properly set up.";
-            T service = provider.GetService<T>();
-            GaxPreconditions.CheckState(service != null, string.Format(message, typeof(T)));
-            return service;
         }
     }
 }

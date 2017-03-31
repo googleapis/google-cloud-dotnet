@@ -14,6 +14,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -35,6 +36,16 @@ namespace Google.Cloud.Diagnostics.Common.Tests
                     $"Please set the {_projectEnvironmentVariable} environment variable before running tests");
             }
             return projectId;
+        }
+
+        public static bool IsWindows()
+        {
+#if NET451
+            return Environment.OSVersion.ToString().Contains("Windows");
+#else
+            return RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+#endif
+
         }
 
         /// <summary>A unique test Id.</summary>

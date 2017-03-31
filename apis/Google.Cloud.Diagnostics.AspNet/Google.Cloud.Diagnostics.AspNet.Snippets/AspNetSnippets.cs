@@ -14,11 +14,11 @@
 
 using Google.Cloud.Diagnostics.Common;
 using System;
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.ExceptionHandling;
 using System.Web.Mvc;
 
 namespace Google.Cloud.Diagnostics.AspNet.Snippets
@@ -32,7 +32,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             string serviceName = "[Name of service]";
             string version = "[Version of service]";
             // Add a catch all for the uncaught exceptions.
-            config.Services.Add(typeof(IExceptionLogger),
+            config.Services.Add(typeof(System.Web.Http.ExceptionHandling.IExceptionLogger),
                 ErrorReportingExceptionLogger.Create(projectId, serviceName, version));
         }
         // End sample
@@ -47,6 +47,27 @@ namespace Google.Cloud.Diagnostics.AspNet.Snippets
             filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
         }
         // End sample
+
+        
+        public void ReadFile()
+        {
+            // Sample: LogExceptions
+            string projectId = "[Google Cloud Platform project ID]";
+            string serviceName = "[Name of service]";
+            string version = "[Version of service]";
+            var exceptionLogger = GoogleExceptionLogger.Create(projectId, serviceName, version);
+
+            try
+            {
+                string scores = File.ReadAllText(@"C:\Scores.txt");
+                Console.WriteLine(scores);
+            }
+            catch (IOException e)
+            {
+                exceptionLogger.Log(e);
+            }
+            // End sample
+        }
 
         // Sample: InitializeTrace
         public class Global : HttpApplication

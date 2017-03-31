@@ -13,8 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Diagnostics.Common;
-using Google.Cloud.Diagnostics.Common.Tests;
-using Google.Cloud.ErrorReporting.V1Beta1;
 using Moq;
 using System;
 using System.Web;
@@ -26,13 +24,7 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
 {
     public class ErrorReportingExceptionFilterTest
     {
-        private static readonly ErrorReportingMatching s_matcher =
-            new ErrorReportingMatching(ErrorReportingUtils.IsWindows);
-
-        /// <summary>
-        /// Creates an <see cref="ExceptionContext"/> that matches expected 
-        /// context of <see cref="ErrorReportingMatching.IsSimpleContext"/>.
-        /// </summary>
+        /// <summary>Creates an <see cref="ExceptionContext"/>.</summary>
         private ExceptionContext CreateSimpleContext()
         {
             var mockRequest = new Mock<HttpRequestBase>();
@@ -44,60 +36,19 @@ namespace Google.Cloud.Diagnostics.AspNet.Tests
             return new ExceptionContext
             {
                 HttpContext = mockContext.Object,
-                Exception = new Exception(ErrorReportingMatching.ExceptionMessage)
+                Exception = new Exception()
             };
         }
-
-        /// <summary>
-        /// Creates an <see cref="ExceptionContext"/> that matches expected 
-        /// context of <see cref="ErrorReportingMatching.IsComplexContext"/>.
-        /// </summary>
-        private ExceptionContext CreateComplexContext()
-        {
-            var mockRequest = new Mock<HttpRequestBase>();
-            mockRequest.Setup(r => r.HttpMethod).Returns(ErrorReportingMatching.DeleteMethod);
-            mockRequest.Setup(r => r.Url).Returns(ErrorReportingMatching.GoogleUri);
-            mockRequest.Setup(r => r.UserAgent).Returns(ErrorReportingMatching.UserAgent);
-
-            var mockResponse = new Mock<HttpResponseBase>();
-            mockResponse.Setup(r => r.StatusCode).Returns(ErrorReportingMatching.ConflictStatusCode);
-
-            var mockContext = new Mock<HttpContextBase>();
-            mockContext.Setup(c => c.Request).Returns(mockRequest.Object);
-            mockContext.Setup(c => c.Response).Returns(mockResponse.Object);
-
-            return new ExceptionContext
-            {
-                HttpContext = mockContext.Object,
-                Exception = s_matcher.CreateException()
-            };
-        }
-        
-        private ErrorReportingExceptionFilter CreateFilter(IConsumer<ReportedErrorEvent> consumer)
-            => new ErrorReportingExceptionFilter(consumer, ErrorReportingMatching.ServiceName, ErrorReportingMatching.VersionName);
 
         [Fact]
         public void Log()
         {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            mockConsumer.Setup(c => c.Receive(s_matcher.IsComplexContext()));
+            ExceptionContext context = CreateSimpleContext();
+            var mockContextLogger = new Mock<IContextExceptionLogger>();
+            var filter = new ErrorReportingExceptionFilter(mockContextLogger.Object);
 
-            ErrorReportingExceptionFilter filter = CreateFilter(mockConsumer.Object);
-            filter.OnException(CreateComplexContext());
-
-            mockConsumer.VerifyAll();
-        }
-
-        [Fact]
-        public void Log_Simple()
-        {
-            var mockConsumer = new Mock<IConsumer<ReportedErrorEvent>>();
-            mockConsumer.Setup(c => c.Receive(s_matcher.IsSimpleContext()));
-
-            ErrorReportingExceptionFilter filter = CreateFilter(mockConsumer.Object);
-            filter.OnException(CreateSimpleContext());
-
-            mockConsumer.VerifyAll();
+            filter.OnException(context);
+            mockContextLogger.Verify(cl => cl.Log(context.Exception, It.IsAny<ExceptionContextWrapper>()));
         }
     }
 }

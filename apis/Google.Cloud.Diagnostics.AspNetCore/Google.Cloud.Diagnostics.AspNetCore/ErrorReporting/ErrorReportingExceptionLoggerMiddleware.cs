@@ -13,7 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Cloud.ErrorReporting.V1Beta1;
+using Google.Cloud.Diagnostics.Common;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Threading.Tasks;
@@ -54,7 +54,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
             }
             catch (Exception exception)
             {
-                await _logger.LogAsync(httpContext, exception);
+                await _logger.LogAsync(exception, httpContext);
                 throw;
             }
         }

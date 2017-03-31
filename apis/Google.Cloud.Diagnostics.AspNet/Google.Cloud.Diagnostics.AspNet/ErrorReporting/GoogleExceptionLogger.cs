@@ -14,44 +14,45 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Diagnostics.Common;
-using Google.Apis.Auth.OAuth2;
-using System.Web.Mvc;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Web;
 
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    ///  Google Cloud Error Reporting <see cref="IExceptionFilter"/>.
+    /// Google Cloud Error Reporting Logger. Reports exceptions to Stackdriver Error Reporting API.
     /// </summary>
     /// 
     /// <example>
     /// <code>
-    /// public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+    /// string projectId = "[Google Cloud Platform project ID]";
+    /// string serviceName = "[Name of service]";
+    /// string version = "[Version of service]";
+    /// var exceptionLogger = GoogleExceptionLogger.Create(projectId, serviceName, version);
+    ///
+    /// try
     /// {
-    ///   // Add a catch all for the uncaught exceptions.
-    ///   string projectId = "[Google Cloud Platform project ID]";
-    ///   string serviceName = "[Name of service]";
-    ///   string version = "[Version of service]";
-    ///   // Add a catch all for the uncaught exceptions.
-    ///   filters.Add(ErrorReportingExceptionFilter.Create(projectId, serviceName, version));
+    ///     string scores = File.ReadAllText(@"C:\Scores.txt");
+    ///     Console.WriteLine(scores);
+    /// }
+    /// catch (IOException e)
+    /// {
+    ///     exceptionLogger.Log(e);
     /// }
     /// </code>
     /// </example>
-    /// 
-    /// <remarks>
-    /// Reports unhandled exceptions to Google Cloud Error Reporting.
-    /// The filter should be registered first in ASP.NET MVC versions 1 and 2 and last
-    /// in ASP.NET MVC versions 3 and higher. See:
-    /// https://msdn.microsoft.com/en-us/library/system.web.mvc.iexceptionfilter.onexception(v=vs.118).aspx
-    /// Docs: https://cloud.google.com/error-reporting/docs/
-    /// </remarks>
-    public class ErrorReportingExceptionFilter : IExceptionFilter, IDisposable
+    public class GoogleExceptionLogger : IExceptionLogger, IDisposable
     {
         private readonly IContextExceptionLogger _logger;
 
+        internal GoogleExceptionLogger(IContextExceptionLogger logger) {
+            _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
+        }
+
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
-        /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
+        /// Creates an instance of <see cref="GoogleExceptionLogger"/>.
         /// </summary>
         /// <param name="projectId">The Google Cloud Platform project ID. Cannot be null.</param>
         /// <param name="serviceName">An identifier of the service, such as the name of the executable or job.
@@ -59,17 +60,16 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="version">Represents the source code version that the developer provided. 
         ///     Cannot be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
-        public static ErrorReportingExceptionFilter Create(string projectId, string serviceName, string version,
+        public static GoogleExceptionLogger Create(string projectId, string serviceName, string version,
             ErrorReportingOptions options = null)
         {
             GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId));
             var contextLogger = ErrorReportingContextExceptionLogger.Create(projectId, serviceName, version, options);
-            return new ErrorReportingExceptionFilter(contextLogger);
+            return new GoogleExceptionLogger(contextLogger);
         }
 
         /// <summary>
-        /// Creates an instance of <see cref="ErrorReportingExceptionFilter"/> using credentials as
-        /// defined by <see cref="GoogleCredential.GetApplicationDefaultAsync"/>.
+        /// Creates an instance of <see cref="GoogleExceptionLogger"/>.
         /// <para>
         /// Can be used when running on Google App Engine or Google Compute Engine.
         /// The Google Cloud Platform project to report errors to will detected from the
@@ -81,23 +81,27 @@ namespace Google.Cloud.Diagnostics.AspNet
         /// <param name="version">Represents the source code version that the developer provided. 
         ///     Cannot be null.</param>
         /// <param name="options">Optional, error reporting options.</param>
-        public static ErrorReportingExceptionFilter Create(
-            string serviceName, string version, ErrorReportingOptions options = null)
+        public static GoogleExceptionLogger Create(string serviceName, string version,
+            ErrorReportingOptions options = null)
         {
             var contextLogger = ErrorReportingContextExceptionLogger.Create(null, serviceName, version, options);
-            return new ErrorReportingExceptionFilter(contextLogger);
-        }
-
-        internal ErrorReportingExceptionFilter(IContextExceptionLogger logger)
-        {
-            _logger = GaxPreconditions.CheckNotNull(logger, nameof(logger));
+            return new GoogleExceptionLogger(contextLogger);
         }
 
         /// <inheritdoc />
-        public void OnException(ExceptionContext context)
+        public void Log(Exception exception, HttpContext context = null)
         {
-            var contextWrapper = new ExceptionContextWrapper(context);
-            _logger.Log(context.Exception, contextWrapper);
+            context = context ?? HttpContext.Current;
+            var contextWrapper = new HttpContextWrapper(context);
+            _logger.Log(exception, contextWrapper);
+        }
+
+        /// <inheritdoc />
+        public Task LogAsync(Exception exception, HttpContext context = null, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            context = context ?? HttpContext.Current;
+            var contextWrapper = new HttpContextWrapper(context);
+            return _logger.LogAsync(exception, contextWrapper, cancellationToken);
         }
 
         /// <inheritdoc />

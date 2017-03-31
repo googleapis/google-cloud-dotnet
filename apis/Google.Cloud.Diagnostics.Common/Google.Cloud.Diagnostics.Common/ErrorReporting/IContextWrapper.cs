@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+﻿// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,23 +12,31 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Threading.Tasks;
-
-namespace Google.Cloud.Diagnostics.AspNetCore
+namespace Google.Cloud.Diagnostics.Common
 {
     /// <summary>
-    /// A generic exception logger.
+    /// Wraps an http context.
     /// </summary>
-    public interface IExceptionLogger
+    internal interface IContextWrapper
     {
         /// <summary>
-        /// Asynchronously logs an exception that occurred.
+        /// Gets the http method.  GET, POST, ect. Can be null.
         /// </summary>
-        /// <param name="context">The current http context.  Cannot be null.</param>
-        /// <param name="exception">The exception to log.  Cannot be null.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        Task LogAsync(HttpContext context, Exception exception);
+        string GetHttpMethod();
+
+        /// <summary>
+        /// Gets the http request uri. Can be null.
+        /// </summary>
+        string GetUri();
+
+        /// <summary>
+        /// Gets the user agent. Can be null.
+        /// </summary>
+        string GetUserAgent();
+
+        /// <summary>
+        /// Gets the http status code. If not set 0 will be returned.
+        /// </summary>
+        int GetStatusCode();
     }
 }
