@@ -29,7 +29,7 @@ namespace Google.Cloud.Speech.V1
         // (to just before the closing brace of this class) with the generated text in
         // language-codes.tmp.txt.
 
-        // Generated 2017-01-26; 88 entries.
+        // Generated 2017-03-31; 89 entries.
 
         /// <summary>Language codes for Afrikaans.</summary>
         public static class Afrikaans
@@ -218,6 +218,9 @@ namespace Google.Cloud.Speech.V1
         /// <summary>Language codes for French.</summary>
         public static class French
         {
+            /// <summary>Language code for French (Canada)</summary>
+            public const string Canada = "fr-CA";
+
             /// <summary>Language code for French (France)</summary>
             public const string France = "fr-FR";
 
