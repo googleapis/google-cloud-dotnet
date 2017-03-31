@@ -22,19 +22,19 @@ namespace Google.Cloud.Speech.V1.Snippets
     public class SpeechClientSnippets
     {
         [Fact]
-        public void SyncRecognize()
+        public void Recognize()
         {
             var audio = LoadResourceAudio("speech.raw");
-            // Sample: SyncRecognize
-            // Additional: SyncRecognize(*,*,*)
+            // Sample: Recognize
+            // Additional: Recognize(*,*,*)
             SpeechClient client = SpeechClient.Create();
             RecognitionConfig config = new RecognitionConfig
             {
                 Encoding = AudioEncoding.Linear16,
-                SampleRate = 16000,
+                SampleRateHertz = 16000,
                 LanguageCode = LanguageCodes.English.UnitedStates
             };
-            SyncRecognizeResponse response = client.SyncRecognize(config, audio);
+            RecognizeResponse response = client.Recognize(config, audio);
             Console.WriteLine(response);
             // End sample
 
