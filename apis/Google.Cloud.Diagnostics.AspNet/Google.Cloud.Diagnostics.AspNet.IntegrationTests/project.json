@@ -16,7 +16,7 @@
     "Microsoft.Owin.Hosting": "3.0.1",
     "Microsoft.Owin.Testing": "3.0.1",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "xunit": "2.2.0-rc4-build3536"
+    "xunit": "2.2.0-rc3-build3528"
   },
   "testRunner": "xunit",
 

@@ -19,7 +19,7 @@ using System.Web.Mvc;
 namespace Google.Cloud.Diagnostics.AspNet
 {
     /// <summary>
-    /// An <see cref="IContextWrapper"/> for a <see cref="ExceptionContext"/>.
+    /// An <see cref="IContextWrapper"/> for an <see cref="ExceptionContext"/>.
     /// </summary>
     internal class ExceptionContextWrapper : IContextWrapper
     {

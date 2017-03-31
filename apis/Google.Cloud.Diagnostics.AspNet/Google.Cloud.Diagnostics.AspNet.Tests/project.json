@@ -10,8 +10,8 @@
     "Google.Cloud.Diagnostics.Common.Tests": { "target": "project" },
     "Moq": "4.6.38-alpha",
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "xunit": "2.2.0-rc4-build3536",
-    "Microsoft.AspNet.Http": "1.0.0-rc1-final"
+    "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+    "xunit": "2.2.0-rc3-build3528"
   },
   "testRunner": "xunit",
 

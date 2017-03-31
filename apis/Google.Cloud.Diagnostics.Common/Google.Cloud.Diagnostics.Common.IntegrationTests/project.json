@@ -10,7 +10,7 @@
     "Google.Cloud.ErrorReporting.V1Beta1": { "target": "project" },
     "Google.Cloud.Diagnostics.Common.Tests": { "target": "project" },
     "dotnet-test-xunit": "2.2.0-preview2-build1029",
-    "xunit": "2.2.0-rc4-build3536"
+    "xunit": "2.2.0-rc3-build3528"
   },
   "testRunner": "xunit",
 
