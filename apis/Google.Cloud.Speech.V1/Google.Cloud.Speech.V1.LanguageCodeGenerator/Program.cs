@@ -20,7 +20,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
-namespace Google.Cloud.Speech.V1Beta1.LanguageCodeGenerator
+namespace Google.Cloud.Speech.V1.LanguageCodeGenerator
 {
     /// <summary>
     /// Somewhat "quick and dirty" program to parse the table on

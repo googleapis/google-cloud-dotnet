@@ -16,7 +16,7 @@
 
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
-using Google.Cloud.Speech.V1Beta1;
+using Google.Cloud.Speech.V1;
 using Google.LongRunning;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
@@ -29,7 +29,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Speech.V1Beta1.Snippets
+namespace Google.Cloud.Speech.V1.Snippets
 {
     public class GeneratedSpeechClientSnippets
     {

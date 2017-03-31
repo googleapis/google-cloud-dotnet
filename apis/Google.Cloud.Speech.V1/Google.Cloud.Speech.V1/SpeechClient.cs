@@ -26,7 +26,7 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Speech.V1Beta1
+namespace Google.Cloud.Speech.V1
 {
     /// <summary>
     /// Settings for a <see cref="SpeechClient"/>.

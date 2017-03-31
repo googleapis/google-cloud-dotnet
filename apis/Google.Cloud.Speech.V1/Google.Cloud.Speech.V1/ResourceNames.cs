@@ -18,7 +18,7 @@ using Google.Api.Gax;
 using System;
 using System.Linq;
 
-namespace Google.Cloud.Speech.V1Beta1
+namespace Google.Cloud.Speech.V1
 {
 
 

@@ -19,7 +19,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Google.Cloud.Speech.V1Beta1
+namespace Google.Cloud.Speech.V1
 {
     public partial class RecognitionAudio
     {

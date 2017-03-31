@@ -7,7 +7,7 @@
   },
 
   "dependencies": {
-    "Google.Cloud.Speech.V1Beta1": { "target": "project" },
+    "Google.Cloud.Speech.V1": { "target": "project" },
     "xunit": "2.2.0-rc3-build3528",
     "dotnet-test-xunit": "2.2.0-preview2-build1029"
   },

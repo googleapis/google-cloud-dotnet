@@ -7,7 +7,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Cloud.Speech.V1Beta1 {
+namespace Google.Cloud.Speech.V1 {
 
   /// <summary>Holder for reflection information generated from google/cloud/speech/v1beta1/cloud_speech.proto</summary>
   public static partial class CloudSpeechReflection {
@@ -91,20 +91,20 @@ namespace Google.Cloud.Speech.V1Beta1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest), global::Google.Cloud.Speech.V1Beta1.SyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest), global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeRequest.Parser, new[]{ "StreamingConfig", "AudioContent" }, new[]{ "StreamingRequest" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig), global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig.Parser, new[]{ "Config", "SingleUtterance", "InterimResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.RecognitionConfig), global::Google.Cloud.Speech.V1Beta1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRate", "LanguageCode", "MaxAlternatives", "ProfanityFilter", "SpeechContext" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SpeechContext), global::Google.Cloud.Speech.V1Beta1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.RecognitionAudio), global::Google.Cloud.Speech.V1Beta1.RecognitionAudio.Parser, new[]{ "Content", "Uri" }, new[]{ "AudioSource" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse), global::Google.Cloud.Speech.V1Beta1.SyncRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeMetadata), global::Google.Cloud.Speech.V1Beta1.AsyncRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "ResultIndex", "EndpointerType" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult.Parser, new[]{ "Alternatives" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative), global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SyncRecognizeRequest), global::Google.Cloud.Speech.V1.SyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.AsyncRecognizeRequest), global::Google.Cloud.Speech.V1.AsyncRecognizeRequest.Parser, new[]{ "Config", "Audio" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeRequest), global::Google.Cloud.Speech.V1.StreamingRecognizeRequest.Parser, new[]{ "StreamingConfig", "AudioContent" }, new[]{ "StreamingRequest" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionConfig), global::Google.Cloud.Speech.V1.StreamingRecognitionConfig.Parser, new[]{ "Config", "SingleUtterance", "InterimResults" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionConfig), global::Google.Cloud.Speech.V1.RecognitionConfig.Parser, new[]{ "Encoding", "SampleRate", "LanguageCode", "MaxAlternatives", "ProfanityFilter", "SpeechContext" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechContext), global::Google.Cloud.Speech.V1.SpeechContext.Parser, new[]{ "Phrases" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.RecognitionAudio), global::Google.Cloud.Speech.V1.RecognitionAudio.Parser, new[]{ "Content", "Uri" }, new[]{ "AudioSource" }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SyncRecognizeResponse), global::Google.Cloud.Speech.V1.SyncRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.AsyncRecognizeResponse), global::Google.Cloud.Speech.V1.AsyncRecognizeResponse.Parser, new[]{ "Results" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.AsyncRecognizeMetadata), global::Google.Cloud.Speech.V1.AsyncRecognizeMetadata.Parser, new[]{ "ProgressPercent", "StartTime", "LastUpdateTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse), global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Parser, new[]{ "Error", "Results", "ResultIndex", "EndpointerType" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.EndpointerType) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.StreamingRecognitionResult), global::Google.Cloud.Speech.V1.StreamingRecognitionResult.Parser, new[]{ "Alternatives", "IsFinal", "Stability" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionResult), global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser, new[]{ "Alternatives" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative), global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Parser, new[]{ "Transcript", "Confidence" }, null, null, null)
           }));
     }
     #endregion
@@ -122,7 +122,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -150,13 +150,13 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "config" field.</summary>
     public const int ConfigFieldNumber = 1;
-    private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig config_;
+    private global::Google.Cloud.Speech.V1.RecognitionConfig config_;
     /// <summary>
     /// [Required] The `config` message provides information to the recognizer
     /// that specifies how to process the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig Config {
+    public global::Google.Cloud.Speech.V1.RecognitionConfig Config {
       get { return config_; }
       set {
         config_ = value;
@@ -165,12 +165,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "audio" field.</summary>
     public const int AudioFieldNumber = 2;
-    private global::Google.Cloud.Speech.V1Beta1.RecognitionAudio audio_;
+    private global::Google.Cloud.Speech.V1.RecognitionAudio audio_;
     /// <summary>
     /// [Required] The audio data to be recognized.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.RecognitionAudio Audio {
+    public global::Google.Cloud.Speech.V1.RecognitionAudio Audio {
       get { return audio_; }
       set {
         audio_ = value;
@@ -239,13 +239,13 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionConfig();
+          config_ = new global::Google.Cloud.Speech.V1.RecognitionConfig();
         }
         Config.MergeFrom(other.Config);
       }
       if (other.audio_ != null) {
         if (audio_ == null) {
-          audio_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionAudio();
+          audio_ = new global::Google.Cloud.Speech.V1.RecognitionAudio();
         }
         Audio.MergeFrom(other.Audio);
       }
@@ -261,14 +261,14 @@ namespace Google.Cloud.Speech.V1Beta1 {
             break;
           case 10: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionConfig();
+              config_ = new global::Google.Cloud.Speech.V1.RecognitionConfig();
             }
             input.ReadMessage(config_);
             break;
           }
           case 18: {
             if (audio_ == null) {
-              audio_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionAudio();
+              audio_ = new global::Google.Cloud.Speech.V1.RecognitionAudio();
             }
             input.ReadMessage(audio_);
             break;
@@ -290,7 +290,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -318,13 +318,13 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "config" field.</summary>
     public const int ConfigFieldNumber = 1;
-    private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig config_;
+    private global::Google.Cloud.Speech.V1.RecognitionConfig config_;
     /// <summary>
     /// [Required] The `config` message provides information to the recognizer
     /// that specifies how to process the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig Config {
+    public global::Google.Cloud.Speech.V1.RecognitionConfig Config {
       get { return config_; }
       set {
         config_ = value;
@@ -333,12 +333,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "audio" field.</summary>
     public const int AudioFieldNumber = 2;
-    private global::Google.Cloud.Speech.V1Beta1.RecognitionAudio audio_;
+    private global::Google.Cloud.Speech.V1.RecognitionAudio audio_;
     /// <summary>
     /// [Required] The audio data to be recognized.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.RecognitionAudio Audio {
+    public global::Google.Cloud.Speech.V1.RecognitionAudio Audio {
       get { return audio_; }
       set {
         audio_ = value;
@@ -407,13 +407,13 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionConfig();
+          config_ = new global::Google.Cloud.Speech.V1.RecognitionConfig();
         }
         Config.MergeFrom(other.Config);
       }
       if (other.audio_ != null) {
         if (audio_ == null) {
-          audio_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionAudio();
+          audio_ = new global::Google.Cloud.Speech.V1.RecognitionAudio();
         }
         Audio.MergeFrom(other.Audio);
       }
@@ -429,14 +429,14 @@ namespace Google.Cloud.Speech.V1Beta1 {
             break;
           case 10: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionConfig();
+              config_ = new global::Google.Cloud.Speech.V1.RecognitionConfig();
             }
             input.ReadMessage(config_);
             break;
           }
           case 18: {
             if (audio_ == null) {
-              audio_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionAudio();
+              audio_ = new global::Google.Cloud.Speech.V1.RecognitionAudio();
             }
             input.ReadMessage(audio_);
             break;
@@ -461,7 +461,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -504,8 +504,8 @@ namespace Google.Cloud.Speech.V1Beta1 {
     /// `streaming_config`  message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig StreamingConfig {
-      get { return streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig ? (global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig) streamingRequest_ : null; }
+    public global::Google.Cloud.Speech.V1.StreamingRecognitionConfig StreamingConfig {
+      get { return streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig ? (global::Google.Cloud.Speech.V1.StreamingRecognitionConfig) streamingRequest_ : null; }
       set {
         streamingRequest_ = value;
         streamingRequestCase_ = value == null ? StreamingRequestOneofCase.None : StreamingRequestOneofCase.StreamingConfig;
@@ -634,7 +634,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
             input.SkipLastField();
             break;
           case 10: {
-            global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig subBuilder = new global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionConfig();
+            global::Google.Cloud.Speech.V1.StreamingRecognitionConfig subBuilder = new global::Google.Cloud.Speech.V1.StreamingRecognitionConfig();
             if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
               subBuilder.MergeFrom(StreamingConfig);
             }
@@ -663,7 +663,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -692,13 +692,13 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "config" field.</summary>
     public const int ConfigFieldNumber = 1;
-    private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig config_;
+    private global::Google.Cloud.Speech.V1.RecognitionConfig config_;
     /// <summary>
     /// [Required] The `config` message provides information to the recognizer
     /// that specifies how to process the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig Config {
+    public global::Google.Cloud.Speech.V1.RecognitionConfig Config {
       get { return config_; }
       set {
         config_ = value;
@@ -816,7 +816,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       if (other.config_ != null) {
         if (config_ == null) {
-          config_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionConfig();
+          config_ = new global::Google.Cloud.Speech.V1.RecognitionConfig();
         }
         Config.MergeFrom(other.Config);
       }
@@ -838,7 +838,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
             break;
           case 10: {
             if (config_ == null) {
-              config_ = new global::Google.Cloud.Speech.V1Beta1.RecognitionConfig();
+              config_ = new global::Google.Cloud.Speech.V1.RecognitionConfig();
             }
             input.ReadMessage(config_);
             break;
@@ -868,7 +868,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -900,12 +900,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "encoding" field.</summary>
     public const int EncodingFieldNumber = 1;
-    private global::Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding encoding_ = 0;
+    private global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding encoding_ = 0;
     /// <summary>
     /// [Required] Encoding of audio data sent in all `RecognitionAudio` messages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding Encoding {
+    public global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding Encoding {
       get { return encoding_; }
       set {
         encoding_ = value;
@@ -986,12 +986,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "speech_context" field.</summary>
     public const int SpeechContextFieldNumber = 6;
-    private global::Google.Cloud.Speech.V1Beta1.SpeechContext speechContext_;
+    private global::Google.Cloud.Speech.V1.SpeechContext speechContext_;
     /// <summary>
     /// [Optional] A means to provide context to assist the speech recognition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.SpeechContext SpeechContext {
+    public global::Google.Cloud.Speech.V1.SpeechContext SpeechContext {
       get { return speechContext_; }
       set {
         speechContext_ = value;
@@ -1111,7 +1111,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
       }
       if (other.speechContext_ != null) {
         if (speechContext_ == null) {
-          speechContext_ = new global::Google.Cloud.Speech.V1Beta1.SpeechContext();
+          speechContext_ = new global::Google.Cloud.Speech.V1.SpeechContext();
         }
         SpeechContext.MergeFrom(other.SpeechContext);
       }
@@ -1126,7 +1126,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
             input.SkipLastField();
             break;
           case 8: {
-            encoding_ = (global::Google.Cloud.Speech.V1Beta1.RecognitionConfig.Types.AudioEncoding) input.ReadEnum();
+            encoding_ = (global::Google.Cloud.Speech.V1.RecognitionConfig.Types.AudioEncoding) input.ReadEnum();
             break;
           }
           case 16: {
@@ -1147,7 +1147,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
           }
           case 50: {
             if (speechContext_ == null) {
-              speechContext_ = new global::Google.Cloud.Speech.V1Beta1.SpeechContext();
+              speechContext_ = new global::Google.Cloud.Speech.V1.SpeechContext();
             }
             input.ReadMessage(speechContext_);
             break;
@@ -1222,7 +1222,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1345,7 +1345,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1539,7 +1539,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1566,15 +1566,15 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "results" field.</summary>
     public const int ResultsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> _repeated_results_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1.SpeechRecognitionResult> _repeated_results_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionResult>();
     /// <summary>
     /// [Output-only] Sequential list of transcription results corresponding to
     /// sequential portions of audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> Results {
+    public pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionResult> Results {
       get { return results_; }
     }
 
@@ -1659,7 +1659,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1686,15 +1686,15 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "results" field.</summary>
     public const int ResultsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> _repeated_results_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1.SpeechRecognitionResult> _repeated_results_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1.SpeechRecognitionResult.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionResult>();
     /// <summary>
     /// [Output-only] Sequential list of transcription results corresponding to
     /// sequential portions of audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionResult> Results {
+    public pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionResult> Results {
       get { return results_; }
     }
 
@@ -1778,7 +1778,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2032,7 +2032,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2077,9 +2077,9 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "results" field.</summary>
     public const int ResultsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult> _repeated_results_codec
-        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1.StreamingRecognitionResult> _repeated_results_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.Speech.V1.StreamingRecognitionResult.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1.StreamingRecognitionResult> results_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1.StreamingRecognitionResult>();
     /// <summary>
     /// [Output-only] This repeated list contains zero or more results that
     /// correspond to consecutive portions of the audio currently being processed.
@@ -2087,7 +2087,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
     /// followed by zero or more `is_final=false` results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.StreamingRecognitionResult> Results {
+    public pbc::RepeatedField<global::Google.Cloud.Speech.V1.StreamingRecognitionResult> Results {
       get { return results_; }
     }
 
@@ -2109,12 +2109,12 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "endpointer_type" field.</summary>
     public const int EndpointerTypeFieldNumber = 4;
-    private global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType endpointerType_ = 0;
+    private global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.EndpointerType endpointerType_ = 0;
     /// <summary>
     /// [Output-only] Indicates the type of endpointer event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType EndpointerType {
+    public global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.EndpointerType EndpointerType {
       get { return endpointerType_; }
       set {
         endpointerType_ = value;
@@ -2233,7 +2233,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
             break;
           }
           case 32: {
-            endpointerType_ = (global::Google.Cloud.Speech.V1Beta1.StreamingRecognizeResponse.Types.EndpointerType) input.ReadEnum();
+            endpointerType_ = (global::Google.Cloud.Speech.V1.StreamingRecognizeResponse.Types.EndpointerType) input.ReadEnum();
             break;
           }
         }
@@ -2289,7 +2289,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2318,15 +2318,15 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "alternatives" field.</summary>
     public const int AlternativesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> _repeated_alternatives_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> alternatives_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative> _repeated_alternatives_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative> alternatives_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative>();
     /// <summary>
     /// [Output-only] May contain one or more recognition hypotheses (up to the
     /// maximum specified in `max_alternatives`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> Alternatives {
+    public pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative> Alternatives {
       get { return alternatives_; }
     }
 
@@ -2477,7 +2477,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2504,15 +2504,15 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     /// <summary>Field number for the "alternatives" field.</summary>
     public const int AlternativesFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> _repeated_alternatives_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative.Parser);
-    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> alternatives_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative>();
+    private static readonly pb::FieldCodec<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative> _repeated_alternatives_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative> alternatives_ = new pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative>();
     /// <summary>
     /// [Output-only] May contain one or more recognition hypotheses (up to the
     /// maximum specified in `max_alternatives`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Google.Cloud.Speech.V1Beta1.SpeechRecognitionAlternative> Alternatives {
+    public pbc::RepeatedField<global::Google.Cloud.Speech.V1.SpeechRecognitionAlternative> Alternatives {
       get { return alternatives_; }
     }
 
@@ -2593,7 +2593,7 @@ namespace Google.Cloud.Speech.V1Beta1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Speech.V1Beta1.CloudSpeechReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Speech.V1.CloudSpeechReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

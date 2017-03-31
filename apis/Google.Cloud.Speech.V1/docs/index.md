@@ -1,11 +1,11 @@
-# Google.Cloud.Speech.V1Beta1
+# Google.Cloud.Speech.V1
 
-`Google.Cloud.Speech.V1Beta1` is a .NET client library for the [Google
+`Google.Cloud.Speech.V1` is a .NET client library for the [Google
 Cloud Speech API](https://cloud.google.com/speech).
 
 # Installation
 
-Install the `Google.Cloud.Speech.V1Beta1` package from NuGet. Add it to
+Install the `Google.Cloud.Speech.V1` package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
 project in Visual Studio and choosing "Manage NuGet Packages...").
 Please ensure you enable pre-release packages (for example, in the
@@ -38,14 +38,14 @@ format needs to be explicitly specified in the request.
 ## Constructing a RecognitionAudio object
 
 There are various factory methods on the
-[RecognitionAudio](obj/api/Google.Cloud.Speech.V1Beta1.RecognitionAudio.yml) class to allow
+[RecognitionAudio](obj/api/Google.Cloud.Speech.V1.RecognitionAudio.yml) class to allow
 instances to be constructed from files, streams, byte arrays and URIs.
 
-[!code-cs[](obj/snippets/Google.Cloud.Speech.V1Beta1.RecognitionAudio.txt#FactoryMethods)]
+[!code-cs[](obj/snippets/Google.Cloud.Speech.V1.RecognitionAudio.txt#FactoryMethods)]
 
 ## Detect speech in a single file
 
-[!code-cs[](obj/snippets/Google.Cloud.Speech.V1Beta1.SpeechClient.txt#SyncRecognize)]
+[!code-cs[](obj/snippets/Google.Cloud.Speech.V1.SpeechClient.txt#SyncRecognize)]
 
 # Synchronous, asynchronous and streaming operations
 
@@ -62,7 +62,7 @@ Google.Longrunning.Operation, representing an operation which could
 take some time to complete. It contains a token which can be used to
 retrieve the results later - you can think of it as a more
 persistent and remote `Task<T>` to a first approximation. While this
-RPC works in the current Google.Cloud.Speech.V1Beta1 library, more
+RPC works in the current Google.Cloud.Speech.V1 library, more
 work will be done to expose this functionality idiomatically.
 
 Finally, the RPC API supports StreamingRecognize, which is a
@@ -71,7 +71,7 @@ and the server emits a number of responses. This enables a
 conversation to be transcribed in near real time, for example,
 without the client needing to split it into chunks for single
 operations. The streaming API is not exposed in the
-Google.Cloud.Speech.V1Beta1.SpeechClient type yet, but you can use
+Google.Cloud.Speech.V1.SpeechClient type yet, but you can use
 the underlying gRPC client directly for this functionality. Again,
 more work will be done to expose the streaming API in a friendly way.
 
