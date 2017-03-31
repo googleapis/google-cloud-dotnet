@@ -14,25 +14,29 @@ supported here.
 
 ## APIs with supporting libraries
 
-Late beta:
+GA:
 
-- [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
 - [Google.Cloud.Datastore.V1](Google.Cloud.Datastore.V1/index.html)
 - [Google.Cloud.Logging.V2](Google.Cloud.Logging.V2/index.html)
 - [Google.Cloud.Storage.V1](Google.Cloud.Storage.V1/index.html)
 
+Late beta:
+
+- [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
+- [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
+- [Google.Cloud.Speech.V1](Google.Cloud.Speech.V1/index.html)
+- [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
+
 Beta:
 
-- [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
-- [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - [Google.Cloud.Diagnostics.AspNet](Google.Cloud.Diagnostics.AspNet/index.html)
 - [Google.Cloud.ErrorReporting.V1Beta1](Google.Cloud.ErrorReporting.V1Beta1/index.html)
 - [Google.Cloud.Monitoring.V3](Google.Cloud.Monitoring.V3/index.html)
+- [Google.Cloud.PubSub.V1](Google.Cloud.PubSub.V1/index.html)
 - [Google.Cloud.Trace.V1](Google.Cloud.Trace.V1/index.html)
-- [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 
 Alpha:
 
 - [Google.Cloud.Diagnostics.AspNetCore](Google.Cloud.Diagnostics.AspNetCore/index.html)
 - [Google.Cloud.Metadata.V1](Google.Cloud.Metadata.V1/index.html)
-- [Google.Cloud.Speech.V1Beta1](Google.Cloud.Speech.V1Beta1/index.html)
+- [Google.Cloud.Translation.V2](Google.Cloud.Translation.V2/index.html)
