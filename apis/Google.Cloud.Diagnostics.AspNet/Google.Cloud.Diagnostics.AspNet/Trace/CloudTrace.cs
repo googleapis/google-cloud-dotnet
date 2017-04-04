@@ -114,6 +114,7 @@ namespace Google.Cloud.Diagnostics.AspNet
             // Create the default values if not set.
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
+            traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             _traceFallbackPredicate = traceFallbackPredicate;
 

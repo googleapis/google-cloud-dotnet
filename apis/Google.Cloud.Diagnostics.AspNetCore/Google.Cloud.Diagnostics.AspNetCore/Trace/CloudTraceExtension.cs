@@ -112,7 +112,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
         ///     then this function will be called to determine if a given request should be traced.  This will
         ///     not override trace headers. If the function returns true the request will be traced, if false
         ///     is returned the trace will not be traced and if null is returned it will not affect the
-        ///     trace decision.</param>
+        ///     trace decision.  If unset the default will be used.</param>
         public static void AddGoogleTrace(
             this IServiceCollection services, string projectId = null,
             TraceConfiguration config = null, TraceServiceClient client = null,
@@ -122,6 +122,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore
 
             client = client ?? TraceServiceClient.Create();
             config = config ?? TraceConfiguration.Create();
+            traceFallbackPredicate = traceFallbackPredicate ?? TraceDecisionPredicate.Default;
 
             projectId = CommonUtils.GetAndCheckProjectId(projectId);
 
