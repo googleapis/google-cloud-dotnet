@@ -145,9 +145,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             {
                 var client = server.CreateClient();
 
-                // Wait for 2 seconds to ensure the next time we make a request it will be
+                // Wait for 4 seconds to ensure the next time we make a request it will be
                 // traced.  Then make two request, one of the two should be traced.
-                Thread.Sleep(TimeSpan.FromSeconds(2));
+                Thread.Sleep(TimeSpan.FromSeconds(4));
                 var traceTask = client.GetAsync($"/Trace/Trace/{testId}");
                 var traceLabelsTask = client.GetAsync($"/Trace/TraceLabels/{testId}");
                 await traceTask;
@@ -227,11 +227,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
-    /// This app does not use a buffer and will sample 1 QPS.
+    /// This app does not use a buffer and will sample .5 QPS.
     /// </summary>
     public class TraceTestNoBufferApplication : AbstractTraceTestApplication
     {
-        public override double GetSampleRate() => 1;
+        public override double GetSampleRate() => .5;
         public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
     }
 
