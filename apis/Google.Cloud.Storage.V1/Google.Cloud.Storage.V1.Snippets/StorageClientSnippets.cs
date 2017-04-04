@@ -594,5 +594,29 @@ namespace Google.Cloud.Storage.V1.Snippets
         // Member: DeleteBucketAsync(string,*,*)
         // See [DeleteBucket](ref) for a synchronous example.
         // End see-also
+
+        [Fact]
+        public void GetBucketIamPolicy()
+        {
+            var bucketName = _fixture.BucketName;
+            // Snippet: GetBucketIamPolicy(string,*)
+            StorageClient client = StorageClient.Create();
+
+            Policy policy = client.GetBucketIamPolicy(bucketName);
+            foreach (Policy.BindingsData binding in policy.Bindings)
+            {
+                Console.WriteLine($"Role: {binding.Role}");
+                foreach (var permission in binding.Members)
+                {
+                    Console.WriteLine($"  {permission}");
+                }
+            }
+            // End snippet
+        }
+
+        // See-also: GetBucketIamPolicy(string,*)
+        // Member: GetBucketIamPolicyAsync(string,*,*)
+        // See [GetBucketIamPolicy](ref) for a synchronous example.
+        // End see-also
     }
 }
