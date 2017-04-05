@@ -137,8 +137,9 @@ $PROTOC \
 
 # Now the per-API codegen  
 generate_api Google.Cloud.Vision.V1 google/cloud/vision/v1 vision.yaml
-generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language.yaml
-generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 cloud_speech.yaml
+generate_api Google.Cloud.Language.V1 google/cloud/language/v1 language_v1.yaml
+generate_api Google.Cloud.Language.V1.Experimental google/cloud/language/v1beta2 language_v1beta2.yaml
+generate_api Google.Cloud.Speech.V1 google/cloud/speech/v1 cloud_speech_v1.yaml
 generate_api Google.Cloud.Logging.V2 google/logging/v2 logging.yaml google/logging/type
 generate_api Google.Cloud.Trace.V1 google/devtools/cloudtrace/v1 trace.yaml
 generate_api Google.Cloud.ErrorReporting.V1Beta1 google/devtools/clouderrorreporting/v1beta1 errorreporting.yaml
