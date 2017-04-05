@@ -334,9 +334,7 @@ namespace Google.Cloud.Language.V1 {
     /// accepted.&lt;br>
     /// **Current Language Restrictions:**
     ///
-    ///  * Only English, Spanish, and Japanese textual content
-    ///    are supported, with the following additional restriction:
-    ///    * `analyzeSentiment` only supports English text.
+    ///  * Only English, Spanish, and Japanese textual content are supported.
     /// If the language (either specified by the caller or automatically detected)
     /// is not supported by the called API method, an `INVALID_ARGUMENT` error
     /// is returned.
@@ -1267,7 +1265,7 @@ namespace Google.Cloud.Language.V1 {
     private float score_;
     /// <summary>
     /// Sentiment score between -1.0 (negative sentiment) and 1.0
-    /// (positive sentiment.)
+    /// (positive sentiment).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Score {

@@ -445,8 +445,9 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
         /// </summary>
         /// <param name="document">
         /// Input document.
@@ -472,8 +473,9 @@ namespace Google.Cloud.Language.V1
                 callSettings);
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
         /// </summary>
         /// <param name="document">
         /// Input document.
@@ -496,8 +498,9 @@ namespace Google.Cloud.Language.V1
                 CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
         /// </summary>
         /// <param name="document">
         /// Input document.
@@ -523,8 +526,9 @@ namespace Google.Cloud.Language.V1
                 callSettings);
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -543,8 +547,9 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -905,8 +910,9 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
@@ -926,8 +932,9 @@ namespace Google.Cloud.Language.V1
         }
 
         /// <summary>
-        /// Finds named entities (currently finds proper names) in the text,
-        /// entity types, salience, mentions for each entity, and other properties.
+        /// Finds named entities (currently proper names and common nouns) in the text
+        /// along with entity types, salience, mentions for each entity, and
+        /// other properties.
         /// </summary>
         /// <param name="request">
         /// The request object containing all of the parameters for the API call.
