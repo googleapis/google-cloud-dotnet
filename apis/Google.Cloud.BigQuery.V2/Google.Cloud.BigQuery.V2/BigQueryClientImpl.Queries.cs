@@ -218,7 +218,9 @@ namespace Google.Cloud.BigQuery.V2
             {
                 Configuration = new JobConfiguration
                 {
-                    Query = query
+                    Query = query,
+                    // It's slightly annoying that this is set here rather than in ModifyRequest, but at least it's in a single place.
+                    DryRun = options?.DryRun
                 },
             }, ProjectId);
             request.ModifyRequest += _versionHeaderAction;

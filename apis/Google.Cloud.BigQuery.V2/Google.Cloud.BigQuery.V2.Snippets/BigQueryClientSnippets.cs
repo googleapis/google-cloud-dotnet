@@ -1428,5 +1428,54 @@ namespace Google.Cloud.BigQuery.V2.Snippets
         // TODO:
         // Dataset update/patch
         // Table update/patch
+
+        [Fact]
+        public void DryRunValidQuery()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            // Sample: DryRunValidQuery
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryTable table = client.GetTable(projectId, datasetId, tableId);
+            CreateQueryJobOptions options = new CreateQueryJobOptions { DryRun = true };
+            BigQueryJob job = client.CreateQueryJob($"SELECT player, game_started FROM {table}", options);
+            // There are no rows in the result, but we do have the schema as if we'd run the query.
+            TableSchema schema = job.Resource.Statistics.Query.Schema;
+            foreach (var field in schema.Fields)
+            {
+                Console.WriteLine($"{field.Name}: {field.Type}");
+            }
+            // End sample
+
+            // Although the JobReference itself isn't null, the job ID is, showing that this hasn't
+            // created a job.
+            Assert.Null(job.Reference.JobId);
+        }
+
+        [Fact]
+        public void DryRunInvalidQuery()
+        {
+            string projectId = _fixture.ProjectId;
+            string datasetId = _fixture.GameDatasetId;
+            string tableId = _fixture.HistoryTableId;
+
+            // Sample: DryRunInvalidQuery
+            BigQueryClient client = BigQueryClient.Create(projectId);
+            BigQueryTable table = client.GetTable(projectId, datasetId, tableId);
+            CreateQueryJobOptions options = new CreateQueryJobOptions { DryRun = true };
+            // Note deliberate typo in field name
+            try
+            {
+                // Output includes "Unrecognized name: playr; Did you mean player? at [1:8] [400]"
+                client.CreateQueryJob($"SELECT playr, game_started FROM {table}", options);
+            }
+            catch (GoogleApiException e)
+            {
+                Console.WriteLine(e.Error);
+            }
+            // End sample
+        }
     }
 }
