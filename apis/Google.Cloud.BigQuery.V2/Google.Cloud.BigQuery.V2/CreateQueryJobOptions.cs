@@ -93,6 +93,15 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         public bool? UseLegacySql { get; set; }
 
+        /// <summary>
+        /// If set to true, don't actually run this job. A valid query will return a mostly empty response
+        /// with some processing statistics, while an invalid query will return the same error it would if it wasn't a dry run.
+        /// This option can be used to determine the schema of the query without running it. The resulting
+        /// <see cref="BigQueryJob"/> has no job ID, so cannot be polled for completion, but the <see cref="BigQueryJob.Resource"/>
+        /// contains all the information returned by the server.
+        /// </summary>
+        public bool? DryRun { get; set; }
+
         internal void ModifyRequest(JobConfigurationQuery query)
         {
             // Note: no validation of combinations (flatten results etc). Leave this to the server,
