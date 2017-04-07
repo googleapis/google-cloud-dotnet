@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta00-*",
+  "version": "1.0.0-beta01-*",
   "description": "Experimental library for the Google Cloud Natural Language API, containing features which may still change before final release.",
   "authors": [ "Google Inc." ],
 
