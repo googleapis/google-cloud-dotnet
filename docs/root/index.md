@@ -24,6 +24,7 @@ Late beta:
 
 - [Google.Cloud.BigQuery.V2](Google.Cloud.BigQuery.V2/index.html)
 - [Google.Cloud.Language.V1](Google.Cloud.Language.V1/index.html)
+  - Additionally, [a separate package containing experimental features](Google.Cloud.Language.V1.Experimental/index.html) is available
 - [Google.Cloud.Speech.V1](Google.Cloud.Speech.V1/index.html)
 - [Google.Cloud.Vision.V1](Google.Cloud.Vision.V1/index.html)
 
