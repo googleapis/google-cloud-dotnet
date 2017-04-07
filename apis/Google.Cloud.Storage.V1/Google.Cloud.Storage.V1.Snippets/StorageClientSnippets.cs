@@ -670,5 +670,27 @@ namespace Google.Cloud.Storage.V1.Snippets
         // Member: SetBucketIamPolicyAsync(string,*,*,*)
         // See [SetBucketIamPolicy](ref) for a synchronous example.
         // End see-also
+
+        [Fact]
+        public void TestBucketIamPermissions()
+        {
+            var bucketName = _fixture.BucketName;
+            // Snippet: TestBucketIamPermissions(string,*,*)
+            StorageClient client = StorageClient.Create();
+            
+            IList<string> permissions = client.TestBucketIamPermissions(bucketName,
+                new[] { "storage.buckets.get", "storage.objects.list" });
+            Console.WriteLine("Permissions held:");
+            foreach (string permission in permissions)
+            {
+                Console.WriteLine($"  {permission}");
+            }
+            // End snippet
+        }
+
+        // See-also: TestBucketIamPermissions(string,*,*)
+        // Member: TestBucketIamPermissionsAsync(string,*,*,*)
+        // See [TestBucketIamPermissions](ref) for a synchronous example.
+        // End see-also
     }
 }
