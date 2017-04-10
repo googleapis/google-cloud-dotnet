@@ -29,7 +29,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         private HttpRequest CreateRequest(string path)
         {
 #if NET451
-             return new HttpRequest("somefile", $"https://www.google.com{path}", "");
+            return new HttpRequest("somefile", $"https://www.google.com{path}", "");
 #else
             return new DefaultHttpRequest(new DefaultHttpContext())
             {
