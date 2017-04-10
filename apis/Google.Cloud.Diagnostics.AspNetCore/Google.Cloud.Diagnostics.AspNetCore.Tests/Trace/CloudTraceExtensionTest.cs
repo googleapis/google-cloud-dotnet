@@ -49,8 +49,8 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Tests
 
             Mock<IServiceProvider> mockProvider = new Mock<IServiceProvider>();
             mockProvider.Setup(p => p.GetService(typeof(IHttpContextAccessor))).Returns(accessor);
-            mockProvider.Setup(p => p.GetService(typeof(ShouldTraceRequest))).Returns(
-                new ShouldTraceRequest(shouldTraceFunc));
+            mockProvider.Setup(p => p.GetService(typeof(TraceDecisionPredicate))).Returns(
+                TraceDecisionPredicate.Create(shouldTraceFunc));
             mockProvider.Setup(p => p.GetService(typeof(TraceIdFactory))).Returns(traceIdFactory);
             return mockProvider.Object;
         }
