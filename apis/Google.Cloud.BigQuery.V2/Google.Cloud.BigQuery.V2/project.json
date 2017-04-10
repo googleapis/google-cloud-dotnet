@@ -20,7 +20,7 @@
 
   "dependencies": {
     "Google.Api.Gax.Rest": "1.0.1",
-    "Google.Apis.Bigquery.v2": "1.24.1.808"
+    "Google.Apis.Bigquery.v2": "1.25.0.819"
   },
   "frameworks": {
     "net45": { },
