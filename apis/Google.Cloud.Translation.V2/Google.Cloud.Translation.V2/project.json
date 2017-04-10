@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha01-*",
+  "version": "1.0.0-alpha02-*",
   "description": "Recommended Google client library to access the Translation API. It wraps the Google.Apis.Translate.v2 client library, making common operations simpler in client code. The Translate API translates text from one language to another.",
   "authors": [ "Google Inc." ],
 
@@ -19,7 +19,10 @@
   },
 
   "dependencies": {
-    "Google.Api.Gax.Rest": "1.0.1"
+    "Google.Api.Gax.Rest": "1.0.1",
+    "Google.Apis": "1.25.0",
+    "Google.Apis.Auth": "1.25.0",
+    "Google.Apis.Core": "1.25.0"
   },
 
   "frameworks": {
