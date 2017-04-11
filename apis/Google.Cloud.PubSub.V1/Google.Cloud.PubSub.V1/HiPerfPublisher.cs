@@ -1,8 +1,10 @@
 ﻿using Google.Api.Gax;
+using Google.Protobuf;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1
@@ -37,7 +39,7 @@ namespace Google.Cloud.PubSub.V1
             /// Batch settings.
             /// If <c>null</c>, uses batch settings from <see cref="DefaultBatchingSettings"/>. 
             /// </summary>
-            BatchingSettings BatchSettings { get; set; }
+            BatchingSettings BatchingSettings { get; set; }
 
             /// <summary>
             /// Flow control settings.
@@ -65,7 +67,7 @@ namespace Google.Cloud.PubSub.V1
         };
 
         /// <summary>
-        /// Create a <see cref="HiPerfPublisher"/> associated with the specified <see cref="TopicName"/>.  
+        /// Create a <see cref="HiPerfPublisher"/> associated with the specified <see cref="TopicName"/>.
         /// </summary>
         /// <param name="topicName">The <see cref="TopicName"/> with which to publish messages.</param>
         /// <param name="settings">Optional <see cref="Settings"/> for this instance.</param>
@@ -79,15 +81,65 @@ namespace Google.Cloud.PubSub.V1
         public virtual TopicName TopicName { get { throw new NotImplementedException(); } }
 
         /// <summary>
-        /// Publish a message to the topic specified in <see cref="TopicName"/>. 
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
         /// </summary>
         /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
         /// <returns>A task which completes once the message has been published.
         /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
-        public Task<string> PublishAsync(PubsubMessage message)
+        public virtual Task<string> PublishAsync(PubsubMessage message)
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <param name="encoding">The encoding for string to byte conversion.
+        /// If <c>null</c>, defaults to <see cref="Encoding.UTF8"/>.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(string message, Encoding encoding = null) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = encoding == null ? ByteString.CopyFromUtf8(message) : ByteString.CopyFrom(encoding.GetBytes(message))
+            });
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(IMessage message) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = message.ToByteString()
+            });
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(ByteString message) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = message
+            });
+
+        /// <summary>
+        /// Publish a message to the topic specified in <see cref="TopicName"/>.
+        /// </summary>
+        /// <param name="message">The <see cref="PubsubMessage"/> to publish.</param>
+        /// <returns>A task which completes once the message has been published.
+        /// The task <see cref="Task{String}.Result"/> contains the message ID.</returns>
+        public virtual Task<string> PublishAsync(byte[] message) =>
+            PublishAsync(new PubsubMessage
+            {
+                Data = ByteString.CopyFrom(message)
+            });
     }
 
     /// <summary>
