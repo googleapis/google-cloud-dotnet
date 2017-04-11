@@ -11,7 +11,7 @@ namespace Google.Cloud.PubSub.V1
     // TODO: Class name still to be decided, but can't be Subscriber
     // TODO: Should this implement IDisposable?
     /// <summary>
-    /// A PubSub subscriber that is associated with a specific subscription.
+    /// A PubSub subscriber that is associated with a specific <see cref="SubscriptionName"/>.
     /// </summary>
     /// <remarks>
     /// <para>To receive messages, The <see cref="Start(Func{PubsubMessage, Reply})"/>  or
