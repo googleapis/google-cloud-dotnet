@@ -117,7 +117,9 @@ namespace Google.Cloud.PubSub.V1
         /// <see cref="Reply.Ack"/> or <see cref="Reply.Nack"/> the handled messages.
         /// If the task fails or the handler throws an exception, then the message will be
         /// <see cref="Reply.Nack"/>ed.</param>
-        /// <param name="cancellationToken">Used to abort this operation.</param>
+        /// <param name="cancellationToken">Used to abort this operation.
+        /// If cancelled, this resets this <see cref="HiPerfSubscriber"/> back to a fully
+        /// stopped state, and the task returned will be faulted.</param>
         /// <returns>A task which completes once the message receiver is fully operational.</returns>
         /// <exception cref="InvalidOperationException">
         /// Thrown if this <see cref="HiPerfSubscriber"/> has already been started.</exception>
