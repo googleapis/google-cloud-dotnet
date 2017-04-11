@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Google.Cloud.PubSub.V1
 {
-    // class name still to be decided, but can't be Publisher
+    // TODO: Class name still to be decided, but can't be Publisher
     public abstract class HiPerfPublisher
     {
         // All entries will use defaults if null
