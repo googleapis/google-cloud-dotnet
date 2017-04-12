@@ -19,7 +19,4 @@ apiRules:
     uidRegex: Equals\(
 - exclude:
     type: Type
-    uidRegex: \.Types$
-- exclude:
-    type: Type
     uidRegex: Reflection$
