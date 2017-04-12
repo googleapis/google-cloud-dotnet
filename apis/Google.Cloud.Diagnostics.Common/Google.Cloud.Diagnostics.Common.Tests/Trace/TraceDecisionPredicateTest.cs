@@ -66,7 +66,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void ShouldTrace_NoHealthCheck_Fallback(bool? returnValue)
         {
             var request = CreateRequest("/_ah/health");
-            Func<HttpRequest, bool?> fallback = (HttpRequest r) => { return returnValue; };
+            Func<HttpRequest, bool?> fallback = (HttpRequest r) => returnValue;
             var predicate = TraceDecisionPredicate.Create(fallback, ignoreHealthChecks: false);
             Assert.Equal(returnValue, predicate.ShouldTrace(request));
         }
@@ -75,7 +75,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void ShouldTrace_HealthCheck_Fallback()
         {
             var request = CreateRequest("/_ah/health");
-            Func<HttpRequest, bool?> fallback = (HttpRequest r) => { return false; };
+            Func<HttpRequest, bool?> fallback = (HttpRequest r) => true;
             var predicate = TraceDecisionPredicate.Create(fallback);
             Assert.False(predicate.ShouldTrace(request));
         }
@@ -84,7 +84,7 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void ShouldTrace_HealthCheck_Fallback_UseFunc()
         {
             var request = CreateRequest("/_ah/somepath");
-            Func<HttpRequest, bool?> fallback = (HttpRequest r) => { return true; };
+            Func<HttpRequest, bool?> fallback = (HttpRequest r) => true;
             var predicate = TraceDecisionPredicate.Create(fallback);
             Assert.True(predicate.ShouldTrace(request));
         }

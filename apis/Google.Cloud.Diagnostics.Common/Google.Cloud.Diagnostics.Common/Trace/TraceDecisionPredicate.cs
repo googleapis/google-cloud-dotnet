@@ -47,13 +47,18 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// Creates a <see cref="TraceDecisionPredicate"/>.
         /// </summary>
+        /// <remarks>
+        /// Ignoring of health checks (<paramref name="ignoreHealthChecks"/>) takes precedence over the
+        /// predicate (<paramref name="traceDecisionPredicate"/>).  If <paramref name="ignoreHealthChecks"/>
+        /// is true and the request is a health check (<paramref name="traceDecisionPredicate"/>) will not
+        /// be called.
+        /// </remarks>
         /// <param name="traceDecisionPredicate">Optional. Used to determine if a request should be traced.
         ///     Takes an <see cref="HttpRequest"/>.  It should return true if the request should be traced,
         ///     false if the request should not be traced and null if the decision should be left to other
         ///     sampling mechanisms. Can be null.</param>
         /// <param name="ignoreHealthChecks">Optional. True if Google App Engine health check requests should
         ///     not be traced. Defaults to true.</param>
-        /// <returns></returns>
         public static TraceDecisionPredicate Create(
             Func<HttpRequest, bool?> traceDecisionPredicate = null, bool ignoreHealthChecks = true) =>
                 new TraceDecisionPredicate(traceDecisionPredicate, ignoreHealthChecks);
