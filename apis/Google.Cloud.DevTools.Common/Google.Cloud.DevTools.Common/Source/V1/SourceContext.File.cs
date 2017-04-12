@@ -20,18 +20,24 @@ using System.Security;
 namespace Google.Cloud.DevTools.Source.V1
 {
     /// <summary>
-    /// Utilities that reads source-context.json file from app root.
+    /// Partial class to SourceContext proto.
+    /// The class here reads source-context.json file from app root.
     /// </summary>
-    public static class SourceContextFile
+    public sealed partial class SourceContext
     {
         private const string SourceContextFileName = "source-context.json";
         private static Lazy<string> s_filePath = new Lazy<string>(GetFilePath);
         private static Lazy<SourceContext> s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
 
         /// <summary>
+        /// Gets the custom log label of Stackdriver Logging entry for Git commit id.
+        /// </summary>
+        public const string GitRevisionIdLogLabel = "git_revision_id";
+
+        /// <summary>
         /// Gets the <seealso cref="SourceContext"/> for the application.
         /// </summary>
-        public static SourceContext Context => s_sourceContext.Value;
+        public static SourceContext ApplicationSourceContext => s_sourceContext.Value;
 
         /// <summary>
         /// Open the source context file and parse it with <seealso cref="SourceContext"/> proto.
