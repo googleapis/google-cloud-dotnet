@@ -15,6 +15,7 @@
 using Google.Protobuf;
 using System;
 using System.IO;
+using System.Security;
 
 namespace Google.Cloud.DevTools.Source.V1
 {
@@ -26,18 +27,11 @@ namespace Google.Cloud.DevTools.Source.V1
         private const string SourceContextFileName = "source-context.json";
         private static Lazy<string> s_filePath = new Lazy<string>(GetFilePath);
         private static Lazy<SourceContext> s_sourceContext = new Lazy<SourceContext>(OpenParseFile);
-        private static Lazy<string> s_gitRevisionId => new Lazy<string>(() => s_sourceContext.Value?.Git.RevisionId);
 
         /// <summary>
-        /// Gets the custom log label of Stackdriver Logging entry for Git commit id.
+        /// Gets the <seealso cref="SourceContext"/> for the application.
         /// </summary>
-        public const string GitRevisionIdLogLabel = "git_revision_id";
-
-        /// <summary>
-        /// Gets the Git revision id if it is present. 
-        /// Returns null if there is no Git Repo source context found.
-        /// </summary>
-        public static string GitRevisionId => s_gitRevisionId.Value;
+        public static SourceContext Context => s_sourceContext.Value;
 
         /// <summary>
         /// Open the source context file and parse it with <seealso cref="SourceContext"/> proto.
@@ -71,12 +65,9 @@ namespace Google.Cloud.DevTools.Source.V1
         {
             try
             {
-                using (StreamReader sr = File.OpenText(s_filePath.Value))
-                {
-                    return sr.ReadToEnd();
-                }
+                return File.ReadAllText(s_filePath.Value);
             }
-            catch (Exception ex) when (IsIOException(ex))
+            catch (Exception ex) when (IsReadFailureException(ex))
             {
                 return null;
             }
@@ -93,19 +84,15 @@ namespace Google.Cloud.DevTools.Source.V1
             return File.Exists(fullPath) ? fullPath : null;
         }
 
-        private static bool IsIOException(Exception ex)
-        {
-            return ex is FileNotFoundException
-                || ex is DirectoryNotFoundException
-                || ex is IOException
-                || ex is UnauthorizedAccessException
-                || ex is PathTooLongException;
-        }
+        private static bool IsReadFailureException(Exception ex) =>
+            ex is IOException
+            || ex is ArgumentNullException
+            || ex is NotSupportedException
+            || ex is SecurityException
+            || ex is UnauthorizedAccessException;
 
-        private static bool IsProtobufParserException(Exception ex)
-        {
-            return ex is InvalidProtocolBufferException
-                || ex is InvalidJsonException;
-        }
+        private static bool IsProtobufParserException(Exception ex) =>
+            ex is InvalidProtocolBufferException
+            || ex is InvalidJsonException;
     }
 }
