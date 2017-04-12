@@ -134,7 +134,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.True(headerContext.ShouldTrace);
         }
 
-        [Fact(Skip = "Disabling as this text is about 50% flaky.  Enable once #966 is fixed.")]
+        [Fact(Skip = "Disabling as this test is about 50% flaky.  Enable once #966 is fixed.")]
         public async Task Trace_QPS()
         {
             string testId = Utils.GetTestId();
