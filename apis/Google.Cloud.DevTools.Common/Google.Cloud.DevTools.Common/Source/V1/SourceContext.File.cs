@@ -37,7 +37,7 @@ namespace Google.Cloud.DevTools.Source.V1
         /// <summary>
         /// Gets the <seealso cref="SourceContext"/> for the application.
         /// </summary>
-        public static SourceContext ApplicationSourceContext => s_sourceContext.Value;
+        public static SourceContext AppSourceContext => s_sourceContext.Value;
 
         /// <summary>
         /// Open the source context file and parse it with <seealso cref="SourceContext"/> proto.
